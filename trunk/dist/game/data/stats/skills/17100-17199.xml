@@ -392,14 +392,14 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
-		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing...\nFor 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
+		<!-- A strange sensation fogs your brain. Your heart is racing. Your weapon seems to be changing shape. Is that a lady orc? Her muscles are mesmerizing... For 2 minutes, P. Atk. / M. Atk. / Atk. Spd. / Casting Spd. x 2. Effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<itemConsumeId>37704</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -432,10 +432,13 @@
 	<skill id="17155" toLevel="1" name="Coco's Magic">
 		<!-- Equipped weapon changes shape. Is it the sweet magic Coco emits? The effect disappears upon logout. -->
 		<icon>icon.etc_whiteday_herb</icon>
+		<operateType>A2</operateType>
 		<abnormalTime>300</abnormalTime>
-		<targetType>ONE</targetType>
+		<abnormalType>TRANSFORM</abnormalType>
+		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
 		<hitCancelTime>0</hitCancelTime>
 		<reuseDelay>2000</reuseDelay>
+		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PAtk">

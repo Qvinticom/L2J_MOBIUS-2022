@@ -85,12 +85,20 @@
 	</item>
 	<item id="37704" name="Love Potion" type="EtcItem">
 		<!-- Herb that modifies the appearance of weapons for Valentine's Day. -->
+		<set name="immediate_effect" val="true" />
+		<set name="ex_immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="icon" val="icon.etc_whiteday_herb" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="17154" level="1" /> <!-- Love Potion -->
+		</skills>
 	</item>
 	<item id="37705" name="Chocolate Truffle" type="EtcItem">
 		<!-- Recovers vitality in peace zones. Double click to cast Decadence on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. Cannot be stored in a warehouse. -->
