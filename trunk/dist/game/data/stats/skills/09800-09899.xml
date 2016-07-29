@@ -198,9 +198,10 @@
 		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9828" toLevel="1" name="XP Buff 50% (1-hour)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Obtained XP + 50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
+		<itemConsumeId>36400</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
@@ -226,9 +227,10 @@
 		<reuseDelay>-1000</reuseDelay>
 	</skill>
 	<skill id="9832" toLevel="1" name="Scroll: Midsummer Passion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., obtained XP/SP + 30%. -->
 		<icon>icon.etc_aidcharm_cancel_deathfire_i00</icon>
+		<itemConsumeId>36404</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>4</isMagic>
@@ -261,6 +263,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lineage II All Together Friends Cube. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>36573</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<reuseDelay>-1000</reuseDelay>
 	</skill>

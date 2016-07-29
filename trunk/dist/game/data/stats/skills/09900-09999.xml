@@ -307,6 +307,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Heine. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37127</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -372,6 +374,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Town of Oren. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37124</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -409,6 +413,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Town of Goddard. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37120</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -446,6 +452,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Town of Goddard. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37122</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -455,6 +463,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Town of Goddard. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37123</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -568,25 +578,78 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9955" toLevel="1" name="Strawberry Cake (HP)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 50% of HP. Cooldown is 2 min. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37008</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<abnormalTime>120</abnormalTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
 		<reuseDelay>120000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>HP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpRegen">
+				<amount>1.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9956" toLevel="1" name="Blueberry Cake (MP)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 20% of MP. Cooldown is 2 min. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37009</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<abnormalTime>120</abnormalTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
 		<reuseDelay>120000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalType>MP_RECOVER</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MpRegen">
+				<amount>1.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9957" toLevel="1" name="Cheesecake (CP)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 50% of CP. Cooldown is 2 min. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37010</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<abnormalTime>120</abnormalTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
 		<reuseDelay>120000</reuseDelay>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CpRegen">
+				<amount>1.5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9958" toLevel="1" name="Horn Melody (9th Anniversary)">
 		<!-- AUTO GENERATED SKILL -->
@@ -924,6 +987,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Ketra Orc Outpost. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37035</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -933,6 +998,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Den of Evil. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37036</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -942,6 +1009,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Sel Mahum Training Grounds. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37037</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -951,6 +1020,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Plains of the Lizardmen. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37038</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -960,6 +1031,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Field of Silence. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37039</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -969,6 +1042,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Field of Whispers. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37040</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -978,6 +1053,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., Max HP/MP/CP + 30%, and M. Def. + 30%. Effect disappears when Art of Seduction is applied by the Rose Spirit. Cooldown is 5 min. -->
 		<icon>icon.etc_evil_soul_core_i00</icon>
+		<itemConsumeId>37041</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1003,6 +1080,8 @@
 	<skill id="9985" toLevel="7" name="High-grade Elixir of Life (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37097</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
@@ -1010,6 +1089,8 @@
 	<skill id="9986" toLevel="7" name="High-grade Elixir of Mind (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37098</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
@@ -1017,6 +1098,8 @@
 	<skill id="9987" toLevel="7" name="High-grade Elixir of CP (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37099</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<isDebuff>false</isDebuff>
@@ -1025,6 +1108,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., selected party member's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, and Speed + 8. -->
 		<icon>icon.skill11524</icon>
+		<itemConsumeId>37102</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>100</effectPoint>
@@ -1034,6 +1119,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., selected party member's P. Atk. + 12% P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
 		<icon>icon.skill11523</icon>
+		<itemConsumeId>37100</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>100</effectPoint>
@@ -1043,6 +1130,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., selected party member's M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Speed + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. M. Skill MP Consumption - 15%, P. Skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
 		<icon>icon.skill11525</icon>
+		<itemConsumeId>37101</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>100</effectPoint>
@@ -1164,6 +1253,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Town of Oren. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37125</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

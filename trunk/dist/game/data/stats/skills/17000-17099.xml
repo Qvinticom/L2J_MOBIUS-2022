@@ -3,6 +3,8 @@
 	<skill id="17000" toLevel="1" name="Scroll: 10,000,000 SP">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37395</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -21,6 +23,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeId>37536</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 	</skill>
 	<skill id="17004" toLevel="1" name="Blessed Weapon Appearance Stone (B-grade) (30-day)">
 		<!-- AUTO GENERATED SKILL -->
@@ -268,6 +272,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Gainak. -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37019</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -306,6 +312,8 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Land of Chaos -->
 		<icon>icon.skill0000</icon>
+		<itemConsumeId>37018</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
@@ -559,9 +567,10 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="17085" toLevel="1" name="Kisung's Power Up">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., obtained XP + 10%, Max HP/MP/CP + 30%, P. Def./M. Def. + 30%, Speed + 20, P. Atk. + 10%, and M. Atk. + 20%. Skill MP Consumption - 15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
+		<itemConsumeId>37554</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>1</effectPoint>
