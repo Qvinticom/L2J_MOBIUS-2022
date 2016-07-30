@@ -43,7 +43,7 @@ import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheB
  */
 public final class MuseumDungeon extends AbstractInstance
 {
-	// NPC's
+	// NPCs
 	private static final int PANTHEON = 32972;
 	private static final int TOYRON = 33004;
 	private static final int DESK = 33126;
@@ -118,8 +118,10 @@ public final class MuseumDungeon extends AbstractInstance
 				switch (event)
 				{
 					case "TOYRON_FOLLOW":
+					{
 						npc.getAI().startFollow(player);
 						break;
+					}
 					case "SPAWN_THIEFS_STAGE_1":
 					{
 						final List<L2Npc> thiefs = world.spawnGroup("thiefs");
@@ -145,18 +147,21 @@ public final class MuseumDungeon extends AbstractInstance
 						break;
 					}
 					case "SKILL_MSG":
+					{
 						showOnScreenMsg(player, NpcStringId.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ExShowScreenMessage.TOP_CENTER, 4500);
 						break;
+					}
 					case "TOYRON_MSG_1":
+					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOUR_NORMAL_ATTACKS_AREN_T_WORKING);
 						startQuestTimer("TOYRON_MSG_2", 2500, npc, player);
 						break;
+					}
 					case "TOYRON_MSG_2":
+					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM);
 						break;
-					case "KILL_THIEF":
-						npc.doDie(player);
-						break;
+					}
 				}
 			}
 		}
@@ -206,12 +211,11 @@ public final class MuseumDungeon extends AbstractInstance
 		if (instance != null)
 		{
 			final L2Npc toyron = instance.getNpc(TOYRON);
-			if (skill != null)
+			if (!toyron.isInCombat())
 			{
 				toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
 				toyron.reduceCurrentHp(1, npc, null); // TODO: Find better way for attack
 				npc.reduceCurrentHp(1, toyron, null);
-				startQuestTimer("KILL_THIEF", 2500, npc, attacker);
 				startQuestTimer("TOYRON_FOLLOW", 3000, toyron, attacker);
 			}
 		}
@@ -230,7 +234,7 @@ public final class MuseumDungeon extends AbstractInstance
 		{
 			final L2PcInstance player = world.getFirstPlayer();
 			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
-			if ((qs != null) && qs.isCond(2) && world.getAliveNpcs(THIEF).isEmpty())
+			if ((qs != null) && qs.isCond(2) && (world.getAliveNpcs(THIEF).size() <= 1))
 			{
 				qs.setCond(3, true);
 				showOnScreenMsg(player, NpcStringId.TALK_TO_TOYRON_TO_RETURN_TO_THE_MUSEUM_LOBBY, ExShowScreenMessage.TOP_CENTER, 4500);
