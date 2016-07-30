@@ -576,7 +576,7 @@ public final class Raina extends AbstractNpcAI
 				}
 				
 				final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
-				if ((qs == null) || !qs.isCompleted())
+				if (((qs == null) || !qs.isCompleted()) && !Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
 				{
 					break;
 				}
