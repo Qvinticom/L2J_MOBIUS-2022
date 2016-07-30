@@ -34,7 +34,7 @@ public class ExVitalityEffectInfo implements IClientOutgoingPacket
 	{
 		_points = cha.getVitalityPoints();
 		_vitalityBonus = (int) cha.getStat().getVitalityExpBonus() * 100;
-		_vitalityItemsRemaining = cha.getVitalityItemsUsed() - Config.VITALITY_MAX_ITEMS_ALLOWED;
+		_vitalityItemsRemaining = Config.VITALITY_MAX_ITEMS_ALLOWED - cha.getVitalityItemsUsed();
 	}
 	
 	@Override
