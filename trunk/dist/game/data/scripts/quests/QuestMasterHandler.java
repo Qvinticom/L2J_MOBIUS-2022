@@ -349,7 +349,7 @@ import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
 import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
 import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTheValley;
-import quests.Q10800_ReconnaissanceADragonValley.Q10800_ReconnaissanceADragonValley;
+import quests.Q10800_ReconnaissanceAtDragonValley.Q10800_ReconnaissanceAtDragonValley;
 import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
 import quests.Q10812_FacingSadness.Q10812_FacingSadness;
 import quests.Q10813_ForGlory.Q10813_ForGlory;
@@ -357,6 +357,7 @@ import quests.Q10814_BefittingOfTheStatus.Q10814_BefittingOfTheStatus;
 import quests.Q10815_StepUp.Q10815_StepUp;
 import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 import quests.Q10818_ConfrontingAGiantMonster.Q10818_ConfrontingAGiantMonster;
+import quests.Q10819_ForHonor.Q10819_ForHonor;
 
 /**
  * @author NosBit
@@ -697,14 +698,15 @@ public class QuestMasterHandler
 		Q10795_LettersFromTheQueenWallOfAgros.class,
 		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10799_StrangeThingsAfootInTheValley.class,
-		Q10800_ReconnaissanceADragonValley.class,
+		Q10800_ReconnaissanceAtDragonValley.class,
 		Q10811_ExaltedOneWhoFacesTheLimit.class,
 		Q10812_FacingSadness.class,
 		Q10813_ForGlory.class,
 		Q10814_BefittingOfTheStatus.class,
 		Q10815_StepUp.class,
 		Q10817_ExaltedOneWhoOvercomesTheLimit.class,
-		Q10818_ConfrontingAGiantMonster.class
+		Q10818_ConfrontingAGiantMonster.class,
+		Q10819_ForHonor.class
 	};
 	
 	public static void main(String[] args)
