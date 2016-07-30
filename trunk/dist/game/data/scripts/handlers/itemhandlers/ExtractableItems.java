@@ -17,7 +17,9 @@
 package handlers.itemhandlers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
@@ -61,7 +63,7 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		final List<L2ItemInstance> extractedItems = new ArrayList<>();
+		final Map<L2ItemInstance, Long> extractedItems = new HashMap<>();
 		final List<L2ItemInstance> enchantedItems = new ArrayList<>();
 		if (etcitem.getExtractableCountMin() > 0)
 		{
@@ -87,7 +89,7 @@ public class ExtractableItems implements IItemHandler
 						
 						// Do not extract the same item.
 						boolean alreadyExtracted = false;
-						for (L2ItemInstance i : extractedItems)
+						for (L2ItemInstance i : extractedItems.keySet())
 						{
 							if (i.getItem().getId() == expi.getId())
 							{
@@ -108,8 +110,7 @@ public class ExtractableItems implements IItemHandler
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 								enchantedItems.add(newItem);
 							}
-							extractedItems.add(newItem);
-							sendMessage(activeChar, newItem);
+							addItem(extractedItems, newItem);
 						}
 						else
 						{
@@ -121,8 +122,7 @@ public class ExtractableItems implements IItemHandler
 									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 									enchantedItems.add(newItem);
 								}
-								extractedItems.add(newItem);
-								sendMessage(activeChar, newItem);
+								addItem(extractedItems, newItem);
 								createItemAmount--;
 							}
 						}
@@ -158,8 +158,7 @@ public class ExtractableItems implements IItemHandler
 							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 							enchantedItems.add(newItem);
 						}
-						extractedItems.add(newItem);
-						sendMessage(activeChar, newItem);
+						addItem(extractedItems, newItem);
 					}
 					else
 					{
@@ -171,8 +170,7 @@ public class ExtractableItems implements IItemHandler
 								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
 								enchantedItems.add(newItem);
 							}
-							extractedItems.add(newItem);
-							sendMessage(activeChar, newItem);
+							addItem(extractedItems, newItem);
 							createItemAmount--;
 						}
 					}
@@ -194,17 +192,34 @@ public class ExtractableItems implements IItemHandler
 			activeChar.sendPacket(playerIU);
 		}
 		
+		for (L2ItemInstance i : extractedItems.keySet())
+		{
+			sendMessage(activeChar, i, extractedItems.get(i));
+		}
+		
 		return true;
 	}
 	
-	private void sendMessage(L2PcInstance player, L2ItemInstance item)
+	private void addItem(Map<L2ItemInstance, Long> extractedItems, L2ItemInstance newItem)
+	{
+		if (extractedItems.get(newItem) != null)
+		{
+			extractedItems.put(newItem, extractedItems.get(newItem) + 1);
+		}
+		else
+		{
+			extractedItems.put(newItem, 1L);
+		}
+	}
+	
+	private void sendMessage(L2PcInstance player, L2ItemInstance item, Long count)
 	{
 		final SystemMessage sm;
-		if (item.getCount() > 1)
+		if (count > 1)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 			sm.addItemName(item);
-			sm.addLong(item.getCount());
+			sm.addLong(count);
 		}
 		else if (item.getEnchantLevel() > 0)
 		{
