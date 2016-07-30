@@ -361,6 +361,7 @@ import quests.Q10819_ForHonor.Q10819_ForHonor;
 import quests.Q10820_RelationshipsBefittingOfTheStatus.Q10820_RelationshipsBefittingOfTheStatus;
 import quests.Q10821_HelpingOthers.Q10821_HelpingOthers;
 import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersTheLimit;
+import quests.Q10824_ConfrontingTheGreatestDanger.Q10824_ConfrontingTheGreatestDanger;
 
 /**
  * @author NosBit
@@ -712,7 +713,8 @@ public class QuestMasterHandler
 		Q10819_ForHonor.class,
 		Q10820_RelationshipsBefittingOfTheStatus.class,
 		Q10821_HelpingOthers.class,
-		Q10823_ExaltedOneWhoShattersTheLimit.class
+		Q10823_ExaltedOneWhoShattersTheLimit.class,
+		Q10824_ConfrontingTheGreatestDanger.class
 	};
 	
 	public static void main(String[] args)
