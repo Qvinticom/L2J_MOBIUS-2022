@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10817_ExaltedOneWhoOvercomesTheLimit;
+package quests.Q10823_ExaltedOneWhoShattersTheLimit;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -22,38 +22,40 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
+import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 
 /**
- * Exalted, One Who Overcomes the Limit (10817)
- * @URL https://l2wiki.com/Exalted,_One_Who_Overcomes_the_Limit
+ * Exalted, One Who Shatters the Limit (10823)
+ * @URL https://l2wiki.com/Exalted,_One_Who_Shatters_the_Limit
  * @author Mobius
  */
-public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
+public final class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 {
 	// NPC
 	private static final int LIONEL = 33907;
 	// Items
-	private static final int DAICHIR_SERTIFICATE = 45628;
-	private static final int OLYMPIAD_MANAGER_CERTIFICATE = 45629;
-	private static final int ISHUMA_CERTIFICATE = 45630;
-	private static final int SIR_KRISTOF_RODEMAI_CERTIFICATE = 45631;
-	private static final int LIONEL_MISSION_LIST_2 = 45632;
+	private static final int MERLOT_SERTIFICATE = 46056;
+	private static final int KURTIZ_CERTIFICATE = 46057;
+	private static final int MAMMON_CERTIFICATE = 45635;
+	private static final int GUSTAV_CERTIFICATE = 45636;
+	private static final int LIONEL_MISSION_LIST_3 = 45637;
 	// Rewards
-	private static final int SPELLBOOK_DIGNITY_OF_THE_EXALTED = 45923;
-	private static final int SPELLBOOK_BELIEF_OF_THE_EXALTED = 45925;
+	private static final int EXALTED_CLOAK = 37763;
+	private static final int OBTAIN_EXALTED_STATUS = 45638;
+	private static final int EXALTED_TIARA = 45644;
+	private static final int DIGNITY_OF_THE_EXALTED = 45924;
 	// Misc
-	private static final int MIN_LEVEL = 99;
-	private static final int MIN_COMPLETE_LEVEL = 100;
+	private static final int MIN_LEVEL = 100;
+	private static final int MIN_DUALCLASS_LEVEL = 100;
 	
-	public Q10817_ExaltedOneWhoOvercomesTheLimit()
+	public Q10823_ExaltedOneWhoShattersTheLimit()
 	{
-		super(10817);
+		super(10823);
 		addStartNpc(LIONEL);
 		addTalkId(LIONEL);
-		addCondMinLevel(MIN_LEVEL, "33907-07.html");
-		addCondCompletedQuest(Q10811_ExaltedOneWhoFacesTheLimit.class.getSimpleName(), "33907-02.html");
-		registerQuestItems(LIONEL_MISSION_LIST_2, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE);
+		addCondMinLevel(MIN_LEVEL, "");
+		addCondCompletedQuest(Q10817_ExaltedOneWhoOvercomesTheLimit.class.getSimpleName(), "33907-02.html");
+		registerQuestItems(LIONEL_MISSION_LIST_3, MERLOT_SERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE);
 	}
 	
 	@Override
@@ -78,7 +80,7 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			{
 				if (qs.isCreated())
 				{
-					giveItems(player, LIONEL_MISSION_LIST_2, 1);
+					giveItems(player, LIONEL_MISSION_LIST_3, 1);
 					qs.startQuest();
 					htmltext = event;
 				}
@@ -86,10 +88,12 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			}
 			case "33907-08.html":
 			{
-				if (hasQuestItems(player, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				if (hasQuestItems(player, MERLOT_SERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE) && ((player.getDualClass() != null) && (player.getDualClass().getLevel() >= MIN_DUALCLASS_LEVEL)))
 				{
-					giveItems(player, SPELLBOOK_DIGNITY_OF_THE_EXALTED, 1);
-					giveItems(player, SPELLBOOK_BELIEF_OF_THE_EXALTED, 1);
+					giveItems(player, EXALTED_CLOAK, 1);
+					giveItems(player, OBTAIN_EXALTED_STATUS, 1);
+					giveItems(player, EXALTED_TIARA, 1);
+					giveItems(player, DIGNITY_OF_THE_EXALTED, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -118,7 +122,7 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 			}
 			case State.STARTED:
 			{
-				if (hasQuestItems(player, DAICHIR_SERTIFICATE, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE) && (player.getLevel() >= MIN_COMPLETE_LEVEL))
+				if (hasQuestItems(player, MERLOT_SERTIFICATE, KURTIZ_CERTIFICATE, MAMMON_CERTIFICATE, GUSTAV_CERTIFICATE) && ((player.getDualClass() != null) && (player.getDualClass().getLevel() >= MIN_DUALCLASS_LEVEL)))
 				{
 					htmltext = "33907-07.html";
 				}
