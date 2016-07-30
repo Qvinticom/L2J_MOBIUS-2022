@@ -358,6 +358,7 @@ import quests.Q10815_StepUp.Q10815_StepUp;
 import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 import quests.Q10818_ConfrontingAGiantMonster.Q10818_ConfrontingAGiantMonster;
 import quests.Q10819_ForHonor.Q10819_ForHonor;
+import quests.Q10820_RelationshipsBefittingOfTheStatus.Q10820_RelationshipsBefittingOfTheStatus;
 
 /**
  * @author NosBit
@@ -706,7 +707,8 @@ public class QuestMasterHandler
 		Q10815_StepUp.class,
 		Q10817_ExaltedOneWhoOvercomesTheLimit.class,
 		Q10818_ConfrontingAGiantMonster.class,
-		Q10819_ForHonor.class
+		Q10819_ForHonor.class,
+		Q10820_RelationshipsBefittingOfTheStatus.class
 	};
 	
 	public static void main(String[] args)

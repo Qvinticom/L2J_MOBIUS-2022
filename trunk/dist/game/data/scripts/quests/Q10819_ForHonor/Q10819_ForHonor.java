@@ -103,7 +103,6 @@ public final class Q10819_ForHonor extends Quest
 						giveItems(player, BATTLE_QUICK_HEALING_POTION, 180);
 						giveItems(player, OLYMPIAD_MANAGER_CERTIFICATE, 1);
 						qs.exitQuest(false, true);
-						htmltext = event;
 					}
 					else
 					{
