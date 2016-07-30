@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.quest.State;
 import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
 
 /**
- * For Honor (10821)
+ * Helping Others (10821)
  * @URL https://l2wiki.com/Helping_Others
  * @author Mobius
  */

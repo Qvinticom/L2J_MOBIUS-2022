@@ -16,6 +16,7 @@
  */
 package handlers.itemhandlers;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
@@ -27,10 +28,12 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Extractable Items handler.
- * @author HorridoJoho
+ * @author HorridoJoho, Mobius
  */
 public class ExtractableItems implements IItemHandler
 {
@@ -45,8 +48,8 @@ public class ExtractableItems implements IItemHandler
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
 		final L2EtcItem etcitem = (L2EtcItem) item.getItem();
-		final List<L2ExtractableProduct> exitem = etcitem.getExtractableItems();
-		if (exitem == null)
+		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
+		if (exitems == null)
 		{
 			_log.info("No extractable data defined for " + etcitem);
 			return false;
@@ -58,40 +61,162 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
-		boolean created = false;
-		for (L2ExtractableProduct expi : exitem)
+		final List<L2ItemInstance> extractedItems = new ArrayList<>();
+		final List<L2ItemInstance> enchantedItems = new ArrayList<>();
+		if (etcitem.getExtractableCountMin() > 0)
 		{
-			if (Rnd.get(100000) <= expi.getChance())
+			while (extractedItems.size() < etcitem.getExtractableCountMin())
 			{
-				final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
-				final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
-				
-				int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
-				if (createItemAmount == 0)
+				for (L2ExtractableProduct expi : exitems)
 				{
-					continue;
-				}
-				
-				if (item.isStackable() || (createItemAmount == 1))
-				{
-					activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, true);
-				}
-				else
-				{
-					while (createItemAmount > 0)
+					if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
 					{
-						activeChar.addItem("Extract", expi.getId(), 1, activeChar, true);
-						createItemAmount--;
+						break;
+					}
+					
+					if (Rnd.get(100000) <= expi.getChance())
+					{
+						final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
+						final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
+						
+						int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
+						if (createItemAmount == 0)
+						{
+							continue;
+						}
+						
+						// Do not extract the same item.
+						boolean alreadyExtracted = false;
+						for (L2ItemInstance i : extractedItems)
+						{
+							if (i.getItem().getId() == expi.getId())
+							{
+								alreadyExtracted = true;
+								break;
+							}
+						}
+						if (alreadyExtracted && (exitems.size() >= etcitem.getExtractableCountMax()))
+						{
+							continue;
+						}
+						
+						if (item.isStackable() || (createItemAmount == 1))
+						{
+							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+							if (expi.getMaxEnchant() > 0)
+							{
+								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
+								enchantedItems.add(newItem);
+							}
+							extractedItems.add(newItem);
+							sendMessage(activeChar, newItem);
+						}
+						else
+						{
+							while (createItemAmount > 0)
+							{
+								final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+								if (expi.getMaxEnchant() > 0)
+								{
+									newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
+									enchantedItems.add(newItem);
+								}
+								extractedItems.add(newItem);
+								sendMessage(activeChar, newItem);
+								createItemAmount--;
+							}
+						}
 					}
 				}
-				created = true;
+			}
+		}
+		else
+		{
+			for (L2ExtractableProduct expi : exitems)
+			{
+				if ((etcitem.getExtractableCountMax() > 0) && (extractedItems.size() == etcitem.getExtractableCountMax()))
+				{
+					break;
+				}
+				
+				if (Rnd.get(100000) <= expi.getChance())
+				{
+					final int min = (int) (expi.getMin() * Config.RATE_EXTRACTABLE);
+					final int max = (int) (expi.getMax() * Config.RATE_EXTRACTABLE);
+					
+					int createItemAmount = (max == min) ? min : (Rnd.get((max - min) + 1) + min);
+					if (createItemAmount == 0)
+					{
+						continue;
+					}
+					
+					if (item.isStackable() || (createItemAmount == 1))
+					{
+						final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
+						if (expi.getMaxEnchant() > 0)
+						{
+							newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
+							enchantedItems.add(newItem);
+						}
+						extractedItems.add(newItem);
+						sendMessage(activeChar, newItem);
+					}
+					else
+					{
+						while (createItemAmount > 0)
+						{
+							final L2ItemInstance newItem = activeChar.addItem("Extract", expi.getId(), 1, activeChar, false);
+							if (expi.getMaxEnchant() > 0)
+							{
+								newItem.setEnchantLevel(Rnd.get(expi.getMinEnchant(), expi.getMaxEnchant()));
+								enchantedItems.add(newItem);
+							}
+							extractedItems.add(newItem);
+							sendMessage(activeChar, newItem);
+							createItemAmount--;
+						}
+					}
+				}
 			}
 		}
 		
-		if (!created)
+		if (extractedItems.size() == 0)
 		{
 			activeChar.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 		}
+		if (!enchantedItems.isEmpty())
+		{
+			final InventoryUpdate playerIU = new InventoryUpdate();
+			for (L2ItemInstance i : enchantedItems)
+			{
+				playerIU.addModifiedItem(i);
+			}
+			activeChar.sendPacket(playerIU);
+		}
+		
 		return true;
+	}
+	
+	private void sendMessage(L2PcInstance player, L2ItemInstance item)
+	{
+		final SystemMessage sm;
+		if (item.getCount() > 1)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+			sm.addItemName(item);
+			sm.addLong(item.getCount());
+		}
+		else if (item.getEnchantLevel() > 0)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			sm.addInt(item.getEnchantLevel());
+			sm.addItemName(item);
+		}
+		else
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+			sm.addItemName(item);
+		}
+		player.sendPacket(sm);
 	}
 }

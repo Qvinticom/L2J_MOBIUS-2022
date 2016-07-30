@@ -174,7 +174,9 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader
 						final int min = parseInteger(b.getAttributes(), "min");
 						final int max = parseInteger(b.getAttributes(), "max");
 						final double chance = parseDouble(b.getAttributes(), "chance");
-						_currentItem.item.addCapsuledItem(new L2ExtractableProduct(id, min, max, chance));
+						final int minEnchant = parseInteger(b.getAttributes(), "minEnchant", 0);
+						final int maxEnchant = parseInteger(b.getAttributes(), "maxEnchant", 0);
+						_currentItem.item.addCapsuledItem(new L2ExtractableProduct(id, min, max, chance, minEnchant, maxEnchant));
 					}
 				}
 			}
