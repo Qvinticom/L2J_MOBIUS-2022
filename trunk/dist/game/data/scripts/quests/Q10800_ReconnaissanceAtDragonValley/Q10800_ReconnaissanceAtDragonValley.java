@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10800_ReconnaissanceADragonValley;
+package quests.Q10800_ReconnaissanceAtDragonValley;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -36,7 +36,7 @@ import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTh
  * @URL https://l2wiki.com/Reconnaissance_at_Dragon_Valley
  * @author Gigi
  */
-public class Q10800_ReconnaissanceADragonValley extends Quest
+public class Q10800_ReconnaissanceAtDragonValley extends Quest
 {
 	// NPC
 	private static final int NAMO = 33973;
@@ -60,7 +60,7 @@ public class Q10800_ReconnaissanceADragonValley extends Quest
 	private static final int MAX_LEVEL = 85;
 	private static final String KILL_COUNT_VAR = "KillCounts";
 	
-	public Q10800_ReconnaissanceADragonValley()
+	public Q10800_ReconnaissanceAtDragonValley()
 	{
 		super(10800);
 		addStartNpc(NAMO);
