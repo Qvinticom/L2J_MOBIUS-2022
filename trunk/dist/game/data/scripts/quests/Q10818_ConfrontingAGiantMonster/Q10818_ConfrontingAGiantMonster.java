@@ -33,7 +33,7 @@ import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercome
  */
 public final class Q10818_ConfrontingAGiantMonster extends Quest
 {
-	// Npc
+	// NPC
 	private static final int DAICHIR = 30537;
 	// Monsters
 	private static final int ISTINA = 29196; // Extreme
@@ -42,13 +42,12 @@ public final class Q10818_ConfrontingAGiantMonster extends Quest
 	private static final int EKIMUS = 29251; // correct id?
 	private static final int TRASKEN = 29197; // correct id?
 	// Items
-	private static final int LIONEL_MISSION_LIST_2 = 45632;
+	private static final int DARK_SOUL_STONE = 46055;
 	private static final int OLYMPIAD_MANAGER_CERTIFICATE = 45629;
 	private static final int ISHUMA_CERTIFICATE = 45630;
 	private static final int SIR_KRISTOF_RODEMAI_CERTIFICATE = 45631;
-	private static final int DARK_SOUL_STONE = 46055;
 	// Rewards
-	private static final int EXP_AMOUNT = 45923;
+	private static final int EXP_AMOUNT = 542310795;
 	private static final int DAICHIR_SERTIFICATE = 45628;
 	// Misc
 	private static final int MIN_LEVEL = 99;
@@ -85,7 +84,7 @@ public final class Q10818_ConfrontingAGiantMonster extends Quest
 			}
 			case "30537-06a.html":
 			{
-				if (qs.isCreated() && hasQuestItems(player, LIONEL_MISSION_LIST_2))
+				if (qs.isCreated())
 				{
 					qs.startQuest();
 				}
@@ -94,21 +93,32 @@ public final class Q10818_ConfrontingAGiantMonster extends Quest
 			}
 			case "30537-09.html":
 			{
-				if (hasQuestItems(player, DARK_SOUL_STONE) && qs.get("" + ISTINA).equals("true") && qs.get("" + OCTAVIS).equals("true") && qs.get("" + TAUTI).equals("true") && qs.get("" + EKIMUS).equals("true"))
+				if ((player.getLevel() >= MIN_LEVEL))
 				{
-					if (hasQuestItems(player, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE))
+					if (hasQuestItems(player, DARK_SOUL_STONE) && qs.get("" + ISTINA).equals("true") && qs.get("" + OCTAVIS).equals("true") && qs.get("" + TAUTI).equals("true") && qs.get("" + EKIMUS).equals("true"))
 					{
-						htmltext = "30537-10.html";
+						if (hasQuestItems(player, OLYMPIAD_MANAGER_CERTIFICATE, ISHUMA_CERTIFICATE, SIR_KRISTOF_RODEMAI_CERTIFICATE))
+						{
+							htmltext = "30537-10.html";
+						}
+						else
+						{
+							htmltext = event;
+						}
+						takeItems(player, DARK_SOUL_STONE, -1);
+						giveItems(player, DAICHIR_SERTIFICATE, 1);
+						addExpAndSp(player, EXP_AMOUNT, 0);
+						qs.unset("" + ISTINA);
+						qs.unset("" + OCTAVIS);
+						qs.unset("" + TAUTI);
+						qs.unset("" + EKIMUS);
+						qs.exitQuest(false, true);
 					}
-					addExpAndSp(player, EXP_AMOUNT, 0);
-					giveItems(player, DAICHIR_SERTIFICATE, 1);
-					qs.unset("" + ISTINA);
-					qs.unset("" + OCTAVIS);
-					qs.unset("" + TAUTI);
-					qs.unset("" + EKIMUS);
-					qs.exitQuest(false, true);
 				}
-				htmltext = event;
+				else
+				{
+					htmltext = getNoQuestLevelRewardMsg(player);
+				}
 				break;
 			}
 		}
