@@ -1313,10 +1313,37 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13770" toLevel="1" name="Exalted Tiara">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Attack Attribute Bonus by 50. -->
 		<icon>icon.accessory_noblesse2_tiara_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13771" toLevel="1" name="Exalted Cloak">
 		<!-- AUTO GENERATED SKILL -->

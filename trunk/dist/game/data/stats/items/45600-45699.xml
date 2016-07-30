@@ -668,6 +668,9 @@
 		<!-- Hair accessory exclusively used by those with the Exalted status. Increases Atk. Attribute Bonus by 50 when equipped. -->
 		<set name="icon" val="icon.accessory_noblesse2_tiara_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="WOOD" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -677,7 +680,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="isAppearanceable" val="true" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="13770" level="1" /> <!-- Exalted Tiara -->
+		</skills>
 	</item>
 	<item id="45645" name="Lady's Ornamental Silver Knife" type="Weapon">
 		<!-- An ornamental silver knife received from the Blacksmith of Mammon in order to test your qualifications. Not valuable as a weapon. Enchant this and take it to the Blacksmith of Mammon to be recognized for your qualifications. -->
