@@ -302,7 +302,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 						{
 							case 2:
 							{
-								htmltext = "33943-01.htm";
+								htmltext = "33943-01.html";
 								break;
 							}
 							case 4:
