@@ -438,10 +438,12 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 						break;
 					}
 				}
+				break;
 			}
 			case State.COMPLETED:
 			{
 				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;
