@@ -363,6 +363,7 @@ import quests.Q10821_HelpingOthers.Q10821_HelpingOthers;
 import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersTheLimit;
 import quests.Q10824_ConfrontingTheGreatestDanger.Q10824_ConfrontingTheGreatestDanger;
 import quests.Q10825_ForVictory.Q10825_ForVictory;
+import quests.Q10826_LuckBefittingOfTheStatus.Q10826_LuckBefittingOfTheStatus;
 
 /**
  * @author NosBit
@@ -716,7 +717,8 @@ public class QuestMasterHandler
 		Q10821_HelpingOthers.class,
 		Q10823_ExaltedOneWhoShattersTheLimit.class,
 		Q10824_ConfrontingTheGreatestDanger.class,
-		Q10825_ForVictory.class
+		Q10825_ForVictory.class,
+		Q10826_LuckBefittingOfTheStatus.class
 	};
 	
 	public static void main(String[] args)
