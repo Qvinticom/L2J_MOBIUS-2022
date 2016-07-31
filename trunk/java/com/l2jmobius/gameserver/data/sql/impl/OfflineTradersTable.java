@@ -242,7 +242,8 @@ public class OfflineTradersTable
 									{
 										if (player.getBuyList().addItemByItemId(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
 										{
-											throw new NullPointerException();
+											continue;
+											// throw new NullPointerException();
 										}
 									}
 									player.getBuyList().setTitle(rs.getString("title"));
@@ -264,7 +265,8 @@ public class OfflineTradersTable
 										{
 											if (player.getSellList().addItem(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
 											{
-												throw new NullPointerException();
+												continue;
+												// throw new NullPointerException();
 											}
 										}
 									}
