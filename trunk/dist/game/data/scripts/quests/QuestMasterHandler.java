@@ -146,6 +146,7 @@ import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
 import quests.Q00553_OlympiadUndefeated.Q00553_OlympiadUndefeated;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
+import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00621_EggDelivery.Q00621_EggDelivery;
 import quests.Q00622_SpecialtyLiquorDelivery.Q00622_SpecialtyLiquorDelivery;
 import quests.Q00623_TheFinestFood.Q00623_TheFinestFood;
@@ -503,6 +504,7 @@ public class QuestMasterHandler
 		Q00553_OlympiadUndefeated.class,
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
+		Q00620_FourGoblets.class,
 		Q00621_EggDelivery.class,
 		Q00622_SpecialtyLiquorDelivery.class,
 		Q00623_TheFinestFood.class,

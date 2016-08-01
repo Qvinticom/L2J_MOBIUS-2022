@@ -72,7 +72,6 @@ public final class Q10794_InvestigateTheForest extends Quest
 		21596, // Requiem Lord
 		21597, // Requiem Lord
 		21599, // Requiem Priest
-	
 	};
 	// Misc
 	private static final int MIN_LEVEL = 65;
