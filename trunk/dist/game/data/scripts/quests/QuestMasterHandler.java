@@ -346,6 +346,7 @@ import quests.Q10790_AMercenaryHelper.Q10790_AMercenaryHelper;
 import quests.Q10791_TheManOfMystery.Q10791_TheManOfMystery;
 import quests.Q10792_LettersFromTheQueenForestOfTheDead.Q10792_LettersFromTheQueenForestOfTheDead;
 import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
+import quests.Q10794_InvestigateTheForest.Q10794_InvestigateTheForest;
 import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
 import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTheValley;
@@ -702,6 +703,7 @@ public class QuestMasterHandler
 		Q10791_TheManOfMystery.class,
 		Q10792_LettersFromTheQueenForestOfTheDead.class,
 		Q10793_SaveTheSouls.class,
+		Q10794_InvestigateTheForest.class,
 		Q10795_LettersFromTheQueenWallOfAgros.class,
 		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10799_StrangeThingsAfootInTheValley.class,
