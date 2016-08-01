@@ -596,8 +596,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="HpRegen">
-				<amount>1.5</amount>
+			<effect name="Hp">
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -621,8 +621,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MpRegen">
-				<amount>1.5</amount>
+			<effect name="Mp">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -645,8 +645,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="CpRegen">
-				<amount>1.5</amount>
+			<effect name="Cp">
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
