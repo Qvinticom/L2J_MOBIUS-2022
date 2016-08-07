@@ -1146,15 +1146,31 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8890" toLevel="1" name="Dignity">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, Speed + 100 and becomes resistant to all Debuffs. Requires 1 Dragon Blood. Cooldown is 10 minutes. -->
 		<icon>icon.skill5662</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A2</operateType>
+		<abnormalTime>120</abnormalTime>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>600000</reuseDelay>
-	</skill>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>
+			<value level="1">1</value>
+		</itemConsumeCount>
+		<itemConsumeId>36415</itemConsumeId>
+		<effects>
+		<effect name="DebuffBlock" />
+		<effect name="Speed">
+				<amount>
+					<value level="1">100</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+			</skill>
 	<skill id="8891" toLevel="1" name="Worship">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Renders nearby enemies unconscious for 5 sec. Requires 1 Dragon Blood. Cooldown is 5 minutes. -->
