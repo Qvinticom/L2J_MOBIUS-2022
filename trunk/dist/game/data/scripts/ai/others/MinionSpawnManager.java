@@ -251,6 +251,10 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(25322); // Demon's Agent Falston
 		NPC.add(25325); // Flame of Splendor Barakiel
 		NPC.add(25328); // Eilhalder von Hellmann
+		NPC.add(25339); // Halisha's Shadow
+		NPC.add(25342); // Halisha's Shadow
+		NPC.add(25346); // Halisha's Shadow
+		NPC.add(25349); // Halisha's Shadow
 		NPC.add(25352); // Giant Wasteland Basilisk
 		NPC.add(25354); // Gargoyle Lord Sirocco
 		NPC.add(25357); // Sukar Wererat Chief

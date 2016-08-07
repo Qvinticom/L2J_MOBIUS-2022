@@ -117,7 +117,6 @@ import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.FactionManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
-import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -349,7 +348,6 @@ public class GameServer
 		
 		SpawnTable.getInstance().load();
 		SpawnsData.getInstance().init();
-		FourSepulchersManager.getInstance().init();
 		DBSpawnManager.getInstance();
 		
 		printSection("Event Engine");

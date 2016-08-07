@@ -54,9 +54,6 @@ public enum InstanceType
 	FriendlyNpcInstance(L2Attackable),
 	// FlyMobs
 	L2FlyTerrainObjectInstance(L2Npc),
-	// Sepulchers
-	L2SepulcherNpcInstance(L2NpcInstance),
-	L2SepulcherMonsterInstance(L2MonsterInstance),
 	// Vehicles
 	L2Vehicle(L2Character),
 	L2BoatInstance(L2Vehicle),

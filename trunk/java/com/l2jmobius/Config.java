@@ -526,11 +526,6 @@ public final class Config
 	public static boolean ALT_ITEM_AUCTION_ENABLED;
 	public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
 	public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-	public static int FS_TIME_ATTACK;
-	public static int FS_TIME_COOLDOWN;
-	public static int FS_TIME_ENTRY;
-	public static int FS_TIME_WARMUP;
-	public static int FS_PARTY_MEMBER_COUNT;
 	public static int RIFT_MIN_PARTY_SIZE;
 	public static int RIFT_SPAWN_DELAY;
 	public static int RIFT_MAX_JUMPS;
@@ -1728,31 +1723,6 @@ public final class Config
 			ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
 			ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
 			ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
-			FS_TIME_ATTACK = General.getInt("TimeOfAttack", 50);
-			FS_TIME_COOLDOWN = General.getInt("TimeOfCoolDown", 5);
-			FS_TIME_ENTRY = General.getInt("TimeOfEntry", 3);
-			FS_TIME_WARMUP = General.getInt("TimeOfWarmUp", 2);
-			FS_PARTY_MEMBER_COUNT = General.getInt("NumberOfNecessaryPartyMembers", 4);
-			if (FS_TIME_ATTACK <= 0)
-			{
-				FS_TIME_ATTACK = 50;
-			}
-			if (FS_TIME_COOLDOWN <= 0)
-			{
-				FS_TIME_COOLDOWN = 5;
-			}
-			if (FS_TIME_ENTRY <= 0)
-			{
-				FS_TIME_ENTRY = 3;
-			}
-			if (FS_TIME_ENTRY <= 0)
-			{
-				FS_TIME_ENTRY = 3;
-			}
-			if (FS_TIME_ENTRY <= 0)
-			{
-				FS_TIME_ENTRY = 3;
-			}
 			RIFT_MIN_PARTY_SIZE = General.getInt("RiftMinPartySize", 5);
 			RIFT_MAX_JUMPS = General.getInt("MaxRiftJumps", 4);
 			RIFT_SPAWN_DELAY = General.getInt("RiftSpawnDelay", 10000);

@@ -18,7 +18,6 @@ package quests.Q00620_FourGoblets;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.QuestSound;
-import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -1006,15 +1005,6 @@ public class Q00620_FourGoblets extends Quest
 				htmltext = "31454-17.htm";
 				break;
 			}
-			case "Enter":
-			{
-				if (st.getCond() > 0)
-				{
-					FourSepulchersManager.getInstance().tryEntry(npc, player);
-					return null;
-				}
-				break;
-			}
 		}
 		return htmltext;
 	}
@@ -1156,33 +1146,33 @@ public class Q00620_FourGoblets extends Quest
 						}
 					}
 				}
-			}
 				break;
+			}
 			case CONQ_SM:
 			{
 				htmltext = "31921-E.htm";
-			}
 				break;
+			}
 			case EMPER_SM:
 			{
 				htmltext = "31922-E.htm";
-			}
 				break;
+			}
 			case SAGES_SM:
 			{
 				htmltext = "31923-E.htm";
-			}
 				break;
+			}
 			case JUDGE_SM:
 			{
 				htmltext = "31924-E.htm";
-			}
 				break;
+			}
 			case GHOST_CHAMBERLAIN_1:
 			{
 				htmltext = "31919-1.htm";
-			}
 				break;
+			}
 		}
 		return htmltext;
 	}

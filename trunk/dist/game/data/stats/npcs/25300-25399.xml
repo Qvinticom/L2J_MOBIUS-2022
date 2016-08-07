@@ -1724,12 +1724,12 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="25339" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25339" level="80" type="L2Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25340" count="2" respawnTime="360" weightPoint="1" />
-				<npc id="25341" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25340" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25341" count="1" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="RangeDDMagic_a" id="4178" level="9" />
@@ -1855,13 +1855,13 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="25342" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25342" level="80" type="L2Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25343" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="25345" count="1" respawnTime="360" weightPoint="1" />
-				<npc id="25344" count="2" respawnTime="360" weightPoint="1" />
+				<npc id="25344" count="1" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<skill name="PhysicalSpecial_b" id="4748" level="9" />
@@ -2030,11 +2030,11 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25346" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25346" level="80" type="L2Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25347" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25347" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="25348" count="1" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -2168,11 +2168,11 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25349" level="80" type="L2SepulcherMonster" name="Halisha's Shadow" title="Ruler of Sepulcher">
+	<npc id="25349" level="80" type="L2Monster" name="Halisha's Shadow" title="Ruler of Sepulcher">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25350" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="25350" count="1" respawnTime="360" weightPoint="1" />
 				<npc id="25351" count="1" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
