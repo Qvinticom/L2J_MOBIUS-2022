@@ -491,34 +491,90 @@
 	<item id="24333" name="La Vie En Rose's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of La Vie En Rose's jewels. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<skills>
+			<skill id="17824" level="1" /> <!-- La Vie En Rose's Jewelry Box -->
+		</skills>
 	</item>
 	<item id="24334" name="La Vie En Rose's Jewelry Pack" type="EtcItem">
 		<!-- Double-click to acquire 10 La Vie En Rose's Jewelry Boxes. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="38941" min="10" max="10" chance="100" /> <!-- Pearl lvl 1 -->
+		</capsuled_items>
 	</item>
 	<item id="24335" name="La Vie En Rose's Noble Brooch" type="EtcItem">
 		<!-- Double-click to acquire 30 La Vie En Rose's Jewelry Boxes and 1 Noble Brooch Chest. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="38767" min="1" max="1" chance="100" /> 
+		</capsuled_items>
 	</item>
 	<item id="24336" name="La Vie En Rose's Brilliant Brooch" type="EtcItem">
 		<!-- Double-click to acquire 55 La Vie En Rose's Jewelry Boxes and 1 Noble Brooch Chest. Cannot be used in the auction house. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="38768" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="24337" name="Starlight Jar Pouch" type="EtcItem">
 		<!-- Double-click to acquire a Starlight Jar. Cannot be used in the auction house. -->

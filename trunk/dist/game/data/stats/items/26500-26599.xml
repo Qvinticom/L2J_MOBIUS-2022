@@ -91,18 +91,46 @@
 	<item id="26507" name="La Vie En Rose's Cat's Eye Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Cat's Eye. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_catseye_i00" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="26497" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="26508" name="La Vie En Rose's Amethyst Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Amethyst. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_amethyst_i00" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="26502" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="26509" name="Summon Scroll: Pomona" additionalName="Event" type="EtcItem">
 		<!-- Scroll for summoning Pomona once. You receive a power-up buff -->

@@ -695,10 +695,24 @@
 	<item id="27479" name="La Vie En Rose's Tanzanite Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="26486" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="27480" name="Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Vitality Status Bonus EXP by 3%. Effect does not stack with additional jewels of the same type. -->
@@ -748,10 +762,24 @@
 	<item id="27483" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="26476" min="1" max="1" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="27484" name="Maphr's Wind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Deleted after event. -->

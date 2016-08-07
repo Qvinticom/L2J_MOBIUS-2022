@@ -165,9 +165,55 @@
 		</effects>
 	</skill>
 	<skill id="17824" toLevel="1" name="La Vie En Rose's Jewelry Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_bm_jewelbox_main_i00</icon>
+		<itemConsumeId>38941</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<value level="1">
+						<item chance="12.5">
+							<item id="38895" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38885" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38880" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38870" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38875" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38850" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38927" count="1" />
+						</item>
+						<item chance="12.5">
+							<item id="38855" count="1" />
+						</item>
+					</value>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17825" toLevel="5" name="Emerald">
 		<!-- CON + 1, MEN + 1 -->
