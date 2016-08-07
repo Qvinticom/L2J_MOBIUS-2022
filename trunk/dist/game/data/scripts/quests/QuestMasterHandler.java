@@ -66,6 +66,7 @@ import quests.Q00140_ShadowFoxPart2.Q00140_ShadowFoxPart2;
 import quests.Q00141_ShadowFoxPart3.Q00141_ShadowFoxPart3;
 import quests.Q00142_FallenAngelRequestOfDawn.Q00142_FallenAngelRequestOfDawn;
 import quests.Q00143_FallenAngelRequestOfDusk.Q00143_FallenAngelRequestOfDusk;
+import quests.Q00144_PailakaInjuredDragon.Q00144_PailakaInjuredDragon;
 import quests.Q00146_TheZeroHour.Q00146_TheZeroHour;
 import quests.Q00177_SplitDestiny.Q00177_SplitDestiny;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
@@ -430,6 +431,7 @@ public class QuestMasterHandler
 		Q00141_ShadowFoxPart3.class,
 		Q00142_FallenAngelRequestOfDawn.class,
 		Q00143_FallenAngelRequestOfDusk.class,
+		Q00144_PailakaInjuredDragon.class,
 		Q00146_TheZeroHour.class,
 		Q00177_SplitDestiny.class,
 		Q00183_RelicExploration.class,
@@ -459,7 +461,6 @@ public class QuestMasterHandler
 		Q00298_LizardmensConspiracy.class,
 		Q00307_ControlDeviceOfTheGiants.class,
 		Q00310_OnlyWhatRemains.class,
-		Q00359_ForASleeplessDeadman.class,
 		Q00336_CoinsOfMagic.class,
 		Q00337_AudienceWithTheLandDragon.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
