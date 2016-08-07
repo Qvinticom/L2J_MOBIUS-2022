@@ -2056,6 +2056,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="crystal_type" val="R" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="SoulShots" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
