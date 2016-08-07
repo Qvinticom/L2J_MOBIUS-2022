@@ -175,10 +175,61 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="13524" toLevel="1" name="Lindvior's Earring">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Petrification Attack/Resistance + 50%, Knock Back/Knock Down Attack/Resistance + 40%, Pull Attack/Resistance + 40%, P. Critical Damage + 10%, M. Critical Damage + 10%, and P./M. Abnormal State Reflect + 10%. Has a 10% chance of returning damage magic back to the attacking target. Speed + 5, DEX + 3, and WIT + 3. Increases Wind/Dark Resistance. Equipping two will only give the effect of one. -->
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<TURN_STONE>50</TURN_STONE>
+				<KNOCKDOWN>40</KNOCKDOWN>
+				<SLEEP>50</SLEEP>
+				<PULL>40</PULL>
+			</effect>
+			<effect name="AttackTrait">
+				<TURN_STONE>50</TURN_STONE>
+				<KNOCKDOWN>40</KNOCKDOWN>
+				<SLEEP>50</SLEEP>
+				<PULL>40</PULL>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAbnormalResist">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAbnormalResist">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<!-- TODO: 10% Magical Skills Reflect -->
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+				<weaponType>RUN</weaponType> <!-- TODO: Change my name to speedType -->
+			</effect>
+			<effect name="StatUp">
+				<stat>DEX</stat>
+				<amount>3</amount>
+			</effect>
+			<effect name="StatUp">
+				<stat>WIT</stat>
+				<amount>3</amount>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13525" toLevel="1" name="Blessed Lindvior's Earring">
 		<!-- AUTO GENERATED SKILL -->
