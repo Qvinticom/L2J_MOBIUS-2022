@@ -958,7 +958,7 @@
 	<skill id="9975" toLevel="1" name="Scroll of Escape: Varka Silenos Barracks">
 		<!-- Return to the Varka Silenos Barracks. -->
 		<icon>icon.skill0000</icon>
-		<hitTime>1500</hitTime>
+		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37034</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -984,15 +984,32 @@
 		</effects>
 	</skill>
 	<skill id="9976" toLevel="1" name="Scroll of Escape: Ketra Orc Outpost">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Ketra Orc Outpost. -->
 		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37035</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>1500</hitTime>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>146718</x>
+				<y>-67185</y>
+				<z>-3652</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9977" toLevel="1" name="Scroll of Escape: Den of Evil">
 		<!-- AUTO GENERATED SKILL -->

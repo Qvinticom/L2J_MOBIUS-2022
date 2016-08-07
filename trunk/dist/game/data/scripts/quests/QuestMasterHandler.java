@@ -282,6 +282,7 @@ import quests.Q10419_KekropusLetterKampfsWhereabouts.Q10419_KekropusLetterKampfs
 import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
 import quests.Q10422_AssassinationOfTheVarkaSilenosChief.Q10422_AssassinationOfTheVarkaSilenosChief;
+import quests.Q10424_KekropusLetterBelosWhereabouts.Q10424_KekropusLetterBelosWhereabouts;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
 import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
@@ -647,6 +648,7 @@ public class QuestMasterHandler
 		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
+		Q10424_KekropusLetterBelosWhereabouts.class,
 		Q10442_TheAnnihilatedPlains1.class,
 		Q10445_AnImpendingThreat.class,
 		Q10450_ADarkAmbition.class,
