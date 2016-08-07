@@ -97,6 +97,7 @@ import quests.Q00307_ControlDeviceOfTheGiants.Q00307_ControlDeviceOfTheGiants;
 import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
 import quests.Q00336_CoinsOfMagic.Q00336_CoinsOfMagic;
 import quests.Q00337_AudienceWithTheLandDragon.Q00337_AudienceWithTheLandDragon;
+import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
 import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
 import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
@@ -138,6 +139,7 @@ import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealou
 import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 import quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains;
 import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
+import quests.Q00503_PursuitOfClanAmbition.Q00503_PursuitOfClanAmbition;
 import quests.Q00508_AClansReputation.Q00508_AClansReputation;
 import quests.Q00509_AClansFame.Q00509_AClansFame;
 import quests.Q00510_AClansPrestige.Q00510_AClansPrestige;
@@ -276,6 +278,7 @@ import quests.Q10414_KekropusLetterWithCourage.Q10414_KekropusLetterWithCourage;
 import quests.Q10415_KekropusLetterWithWisdom.Q10415_KekropusLetterWithWisdom;
 import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
 import quests.Q10417_DaimonTheWhiteEyed.Q10417_DaimonTheWhiteEyed;
+import quests.Q10419_KekropusLetterKampfsWhereabouts.Q10419_KekropusLetterKampfsWhereabouts;
 import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
 import quests.Q10422_AssassinationOfTheVarkaSilenosChief.Q10422_AssassinationOfTheVarkaSilenosChief;
@@ -458,6 +461,8 @@ public class QuestMasterHandler
 		Q00359_ForASleeplessDeadman.class,
 		Q00336_CoinsOfMagic.class,
 		Q00337_AudienceWithTheLandDragon.class,
+		Q00344_1000YearsTheEndOfLamentation.class,
+		Q00359_ForASleeplessDeadman.class,
 		Q00371_ShrieksOfGhosts.class,
 		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
@@ -498,6 +503,7 @@ public class QuestMasterHandler
 		Q00499_IncarnationOfGluttonyKaliosSolo.class,
 		Q00500_BrothersBoundInChains.class,
 		Q00501_ProofOfClanAlliance.class,
+		Q00503_PursuitOfClanAmbition.class,
 		Q00508_AClansReputation.class,
 		Q00509_AClansFame.class,
 		Q00510_AClansPrestige.class,
@@ -636,6 +642,8 @@ public class QuestMasterHandler
 		Q10415_KekropusLetterWithWisdom.class,
 		Q10416_InSearchOfTheEyeOfArgos.class,
 		Q10417_DaimonTheWhiteEyed.class,
+		Q10419_KekropusLetterKampfsWhereabouts.class,
+		Q10420_TheVarkaSilenosSupporters.class,
 		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
