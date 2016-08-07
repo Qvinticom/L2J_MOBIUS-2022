@@ -276,6 +276,7 @@ import quests.Q10414_KekropusLetterWithCourage.Q10414_KekropusLetterWithCourage;
 import quests.Q10415_KekropusLetterWithWisdom.Q10415_KekropusLetterWithWisdom;
 import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
 import quests.Q10417_DaimonTheWhiteEyed.Q10417_DaimonTheWhiteEyed;
+import quests.Q10420_TheVarkaSilenosSupporters.Q10420_TheVarkaSilenosSupporters;
 import quests.Q10421_AssassinationOfTheVarkaSilenosCommander.Q10421_AssassinationOfTheVarkaSilenosCommander;
 import quests.Q10422_AssassinationOfTheVarkaSilenosChief.Q10422_AssassinationOfTheVarkaSilenosChief;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
@@ -635,6 +636,7 @@ public class QuestMasterHandler
 		Q10415_KekropusLetterWithWisdom.class,
 		Q10416_InSearchOfTheEyeOfArgos.class,
 		Q10417_DaimonTheWhiteEyed.class,
+		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
 		Q10442_TheAnnihilatedPlains1.class,
