@@ -48,7 +48,6 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 		21351, // Varka Silenos Footman
 		21353, // Varka Silenos Scout
 		21354, // Varka Silenos Hunter
-		21355, // Varka Silenos Shaman
 		21356, // Grazing Nepenthes
 		21358, // Varka Silenos Warrior
 		21369, // Varka's Commander
@@ -56,6 +55,7 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 	};
 	private static final int[] WIZARD_MONSTERS =
 	{
+		21355, // Varka Silenos Shaman
 		21357, // Varka Silenos Priest
 		27515, // Varka Backup Wizard
 	};
