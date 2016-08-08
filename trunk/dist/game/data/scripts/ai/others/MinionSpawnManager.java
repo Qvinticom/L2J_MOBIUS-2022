@@ -362,6 +362,7 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(25794); // Kernon
 		NPC.add(25797); // Meanas Anor
 		NPC.add(25800); // Mammon Collector Talos
+		NPC.add(25927); // Krogel
 		NPC.add(27036); // Calpico
 		NPC.add(27041); // Varangka's Messenger
 		NPC.add(27062); // Tanukia
