@@ -41,6 +41,8 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.model.zone.type.L2EffectZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -165,7 +167,23 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	// @formatter:on
 	// Skill
 	private static final SkillHolder PETRIFY = new SkillHolder(4616, 1);
+	private static final Map<Integer, Integer> CHARM_SKILLS = new HashMap<>();
+	static
+	{
+		CHARM_SKILLS.put(ROOM_4_CHARM_1, 4146);
+		CHARM_SKILLS.put(ROOM_4_CHARM_2, 4145);
+		CHARM_SKILLS.put(ROOM_4_CHARM_3, 4148);
+		CHARM_SKILLS.put(ROOM_4_CHARM_4, 4624);
+	}
 	// Misc
+	private static final Map<Integer, NpcStringId> CHARM_MSG = new HashMap<>();
+	static
+	{
+		CHARM_MSG.put(ROOM_4_CHARM_1, NpcStringId.THE_P_ATK_REDUCTION_DEVICE_HAS_NOW_BEEN_DESTROYED);
+		CHARM_MSG.put(ROOM_4_CHARM_2, NpcStringId.THE_DEFENSE_REDUCTION_DEVICE_HAS_BEEN_DESTROYED);
+		CHARM_MSG.put(ROOM_4_CHARM_3, NpcStringId.THE_POISON_DEVICE_HAS_NOW_BEEN_DESTROYED);
+		CHARM_MSG.put(ROOM_4_CHARM_4, NpcStringId.THE_POISON_DEVICE_HAS_NOW_BEEN_DESTROYED); // TODO: THE_HP_REGENERATION_REDUCTION_DEVICE_WILL_BE_ACTIVATED_IN_3_MINUTES2
+	}
 	private static final NpcStringId[] VICTIM_MSG =
 	{
 		NpcStringId.HELP_ME,
@@ -247,13 +265,13 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 						}
 						if (currentWave < 7)
 						{
-							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_MONSTERS_HAVE_SPAWNED);
 							spawnMysteriousChest(player);
 						}
 						else
 						{
 							spawnNextWave(player);
 						}
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_MONSTERS_HAVE_SPAWNED);
 					}
 					else
 					{
@@ -403,8 +421,15 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 			case ROOM_4_CHARM_3:
 			case ROOM_4_CHARM_4:
 			{
-				// TODO: Proper messages?
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_DEFENSE_REDUCTION_DEVICE_HAS_BEEN_DESTROYED);
+				for (L2ZoneType zone : ZoneManager.getInstance().getZones(killer))
+				{
+					if ((zone instanceof L2EffectZone) && (((L2EffectZone) zone).getSkillLevel(CHARM_SKILLS.get(npc.getId())) > 0))
+					{
+						zone.setEnabled(false);
+						break;
+					}
+				}
+				npc.broadcastSay(ChatType.NPC_GENERAL, CHARM_MSG.get(npc.getId()));
 				break;
 			}
 			case CONQUEROR_BOSS:
@@ -509,7 +534,21 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 				cha.deleteMe();
 			}
 		}
-		
+		// Disable EffectZones
+		for (int[] spawnInfo : CHEST_SPAWN_LOCATIONS)
+		{
+			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == 4))
+			{
+				for (L2ZoneType zone : ZoneManager.getInstance().getZones(spawnInfo[2], spawnInfo[3], spawnInfo[4]))
+				{
+					if (zone instanceof L2EffectZone)
+					{
+						zone.setEnabled(false);
+					}
+				}
+				break;
+			}
+		}
 		// Close all doors
 		for (int[] doorInfo : DOORS)
 		{
@@ -568,6 +607,16 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		for (L2Npc monster : STORED_MONSTER_SPAWNS.get(sepulcherId))
 		{
 			monster.broadcastInfo(); // TODO: Why sometimes we cannot see some monsters?
+		}
+		if (currentWave == 4)
+		{
+			for (L2ZoneType zone : ZoneManager.getInstance().getZones(player))
+			{
+				if (zone instanceof L2EffectZone)
+				{
+					zone.setEnabled(true);
+				}
+			}
 		}
 		if ((currentWave == 2) || (currentWave == 5))
 		{
