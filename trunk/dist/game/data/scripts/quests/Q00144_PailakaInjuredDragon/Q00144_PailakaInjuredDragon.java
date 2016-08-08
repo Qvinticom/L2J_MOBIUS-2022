@@ -33,23 +33,23 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	// NPCs
 	private static final int KETRA_ORC_SHAMAN = 32499;
 	private static final int KETRA_ORC_SUPPORTER = 32502;
+	private static final int KETRA_ORC_SUPPORTER_END = 32512;
 	private static final int KETRA_ORC_INTELLIGENCE_OFFICIER = 32509;
-	// Monster
+	// Monsters
 	private static final int LATANA = 18660;
-	// Area Monsters
 	private static final int[] MONSTERS =
 	{
-		18650,
-		18649,
-		18659,
-		18653,
-		18654,
-		18646,
 		18635,
 		18636,
 		18642,
+		18646,
+		18649,
+		18650,
+		18653,
+		18654,
+		18655,
 		18657,
-		18655
+		18659
 	};
 	// Buffs
 	private static final SkillHolder[] BUFFS =
@@ -76,9 +76,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	// Usable Quest Items
 	private static final int SHIELD_POTION = 13032;
 	private static final int HEAL_POTION = 13033;
-	// Conditions
-	private static final int MIN_LEVEL = 73;
-	private static final int MAX_LEVEL = 77;
 	// Rewards
 	private static final long REWARD_EXP = 24570000;
 	private static final int REWARD_SP = 5896;
@@ -86,15 +83,18 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private static final int REWARD_ADENA = 798840;
 	private static final int SCROLL_OF_ESCAPE = 736;
 	// Misc
+	private static final int MIN_LEVEL = 73;
+	private static final int MAX_LEVEL = 77;
 	private boolean WEAPON_UPGRADE_STAGE_1_DROPED = false;
 	private boolean WEAPON_UPGRADE_STAGE_2_DROPED = false;
-	private int BUFF_COUNT = 0; // TODO: need retail info about how buff works
+	private int BUFF_COUNT = 0;
 	
 	public Q00144_PailakaInjuredDragon()
 	{
 		super(144);
 		addStartNpc(KETRA_ORC_SHAMAN);
-		addTalkId(KETRA_ORC_SHAMAN, KETRA_ORC_SUPPORTER, KETRA_ORC_INTELLIGENCE_OFFICIER);
+		addFirstTalkId(KETRA_ORC_SUPPORTER_END);
+		addTalkId(KETRA_ORC_SHAMAN, KETRA_ORC_SUPPORTER, KETRA_ORC_INTELLIGENCE_OFFICIER, KETRA_ORC_SUPPORTER_END);
 		addKillId(LATANA);
 		addKillId(MONSTERS);
 		addCondMinLevel(MIN_LEVEL, "32499-03.html");
@@ -146,10 +146,10 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				}
 				break;
 			}
-			case "32502-08.html":
+			case "32512-02.html":
 			{
 				final Instance inst = InstanceManager.getInstance().getPlayerInstance(player, true);
-				if ((inst != null) && qs.isCond(4) && hasQuestItems(player, SPEAR_OF_SILENOS_COMPLETED))
+				if ((inst != null) && qs.isCond(4))
 				{
 					takeItems(player, SPEAR_OF_SILENOS_COMPLETED, -1);
 					rewardItems(player, 57, REWARD_ADENA);
@@ -159,10 +159,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 					qs.exitQuest(false, true);
 					inst.finishInstance();
 					htmltext = event;
-				}
-				else
-				{
-					htmltext = "32509-04.html";
 				}
 				break;
 			}
@@ -302,6 +298,10 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				htmltext = !qs.isCond(3) && !qs.isCond(4) ? "32509-01a.html" : "32509-01.html";
 				break;
 			}
+			case KETRA_ORC_SUPPORTER_END:
+			{
+				htmltext = hasQuestItems(talker, SPEAR_OF_SILENOS_COMPLETED) ? "32512-01.html" : "32512-03.html";
+			}
 		}
 		return htmltext;
 	}
@@ -309,7 +309,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (npc.getId() != LATANA)
+		final int npcId = npc.getId();
+		if (npcId != LATANA)
 		{
 			if (!WEAPON_UPGRADE_STAGE_1_DROPED && !hasQuestItems(killer, WEAPON_UPGRADE_STAGE_1) && hasQuestItems(killer, SPEAR_OF_SILENOS))
 			{
@@ -325,20 +326,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				{
 					giveItems(killer, WEAPON_UPGRADE_STAGE_2, 1, true);
 					WEAPON_UPGRADE_STAGE_2_DROPED = true;
-				}
-			}
-			
-			switch (getRandom(1, 3))
-			{
-				case 1:
-				{
-					npc.dropItem(killer, SHIELD_POTION, getRandom(1, 8));
-					break;
-				}
-				case 2:
-				{
-					npc.dropItem(killer, HEAL_POTION, getRandom(1, 4));
-					break;
 				}
 			}
 		}

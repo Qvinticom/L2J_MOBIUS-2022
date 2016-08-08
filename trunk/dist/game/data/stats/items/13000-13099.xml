@@ -628,7 +628,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="for_npc" val="true" />
 		<cond addName="1" msgId="113">
 			<player instanceId="43,44,45" />
@@ -657,7 +657,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_questitem" val="false" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="for_npc" val="true" />
 		<cond addName="1" msgId="113">
