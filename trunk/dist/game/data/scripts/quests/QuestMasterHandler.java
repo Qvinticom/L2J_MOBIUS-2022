@@ -650,7 +650,6 @@ public class QuestMasterHandler
 		Q10417_DaimonTheWhiteEyed.class,
 		Q10419_KekropusLetterKampfsWhereabouts.class,
 		Q10420_TheVarkaSilenosSupporters.class,
-		Q10420_TheVarkaSilenosSupporters.class,
 		Q10421_AssassinationOfTheVarkaSilenosCommander.class,
 		Q10422_AssassinationOfTheVarkaSilenosChief.class,
 		Q10424_KekropusLetterBelosWhereabouts.class,
