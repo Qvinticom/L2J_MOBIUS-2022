@@ -287,6 +287,7 @@ import quests.Q10424_KekropusLetterBelosWhereabouts.Q10424_KekropusLetterBelosWh
 import quests.Q10425_TheKetraOrcSupporters.Q10425_TheKetraOrcSupporters;
 import quests.Q10426_AssassinationOfTheKetraOrcCommander.Q10426_AssassinationOfTheKetraOrcCommander;
 import quests.Q10427_AssassinationOfTheKetraOrcChief.Q10427_AssassinationOfTheKetraOrcChief;
+import quests.Q10430_KekropusLetterTrackingTheEvil.Q10430_KekropusLetterTrackingTheEvil;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10443_TheAnnihilatedPlains2.Q10443_TheAnnihilatedPlains2;
 import quests.Q10444_TheOriginOfMonsters.Q10444_TheOriginOfMonsters;
@@ -657,6 +658,7 @@ public class QuestMasterHandler
 		Q10425_TheKetraOrcSupporters.class,
 		Q10426_AssassinationOfTheKetraOrcCommander.class,
 		Q10427_AssassinationOfTheKetraOrcChief.class,
+		Q10430_KekropusLetterTrackingTheEvil.class,
 		Q10442_TheAnnihilatedPlains1.class,
 		Q10443_TheAnnihilatedPlains2.class,
 		Q10444_TheOriginOfMonsters.class,
