@@ -307,6 +307,17 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		return qs.getState() == State.COMPLETED ? "32512-03.html" : "32512-01.html";
+	}
+	
+	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final int npcId = npc.getId();

@@ -19,6 +19,7 @@ package instances.PailakaInjuredDragon;
 import java.util.HashMap;
 import java.util.List;
 
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -26,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.spawns.SpawnGroup;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 
 import instances.AbstractInstance;
@@ -61,33 +63,20 @@ public class PailakaInjuredDragon extends AbstractInstance
 	// Usable Quest Items
 	private static final int SHIELD_POTION = 13032;
 	private static final int HEAL_POTION = 13033;
-	// Zones
-	private static final int[] ZONES =
-	{
-		200001,
-		200002,
-		200003,
-		200004,
-		200005,
-		200006,
-		200007,
-		200008,
-		200009
-	};
 	// Walls
-	private final HashMap<Integer, MonsterWall> WALLS = new HashMap<>();
-	private static final Location[] ZONES_TELEPORTS =
+	private static final HashMap<Integer, Location> ZONES_TELEPORTS = new HashMap<>();
+	static
 	{
-		new Location(122452, -45808, -2981),
-		new Location(116610, -46418, -2641),
-		new Location(116237, -50961, -2636),
-		new Location(117384, -52141, -2544),
-		new Location(112169, -44004, -2707),
-		new Location(109460, -45869, -2265),
-		new Location(117111, -55927, -2380),
-		new Location(109274, -41277, -2271),
-		new Location(110023, -40263, -2001)
-	};
+		ZONES_TELEPORTS.put(200001, new Location(122452, -45808, -2981));
+		ZONES_TELEPORTS.put(200002, new Location(116610, -46418, -2641));
+		ZONES_TELEPORTS.put(200003, new Location(116237, -50961, -2636));
+		ZONES_TELEPORTS.put(200004, new Location(117384, -52141, -2544));
+		ZONES_TELEPORTS.put(200005, new Location(112169, -44004, -2707));
+		ZONES_TELEPORTS.put(200006, new Location(109460, -45869, -2265));
+		ZONES_TELEPORTS.put(200007, new Location(117111, -55927, -2380));
+		ZONES_TELEPORTS.put(200008, new Location(109274, -41277, -2271));
+		ZONES_TELEPORTS.put(200009, new Location(110023, -40263, -2001));
+	}
 	// Skill
 	private static final SkillHolder LATANA_PRESENTATION_SKILL = new SkillHolder(5759, 1);
 	// Misc
@@ -97,11 +86,10 @@ public class PailakaInjuredDragon extends AbstractInstance
 	{
 		addInstanceEnterId(TEMPLATE_ID);
 		addStartNpc(KETRA_ORC_SHAMAN);
-		addKillId(ANTELOPE1, ANTELOPE2, ANTELOPE3, GENERAL, GREAT_MAGUS, PROPHET, ELITE_GUARD, COMMANDER, OFFICER, RECRUIT, FOOTMAN, WARRIOR, PROPHET_GUARD, HEAD_GUARD, LATANA);
-		addAttackId(SHAMAN, GRAND_PRIEST, CHIEF_PRIEST);
-		addSpawnId(LATANA, SHAMAN, CHIEF_PRIEST, GRAND_PRIEST);
+		addKillId(ANTELOPE1, ANTELOPE2, ANTELOPE3, GENERAL, GREAT_MAGUS, PROPHET, ELITE_GUARD, COMMANDER, OFFICER, RECRUIT, FOOTMAN, WARRIOR, PROPHET_GUARD, HEAD_GUARD, SHAMAN, CHIEF_PRIEST, GRAND_PRIEST, LATANA);
+		addSpawnId(LATANA);
 		addAggroRangeEnterId(LATANA);
-		addEnterZoneId(ZONES);
+		addEnterZoneId(ZONES_TELEPORTS.keySet());
 		addInstanceCreatedId(TEMPLATE_ID);
 	}
 	
@@ -161,27 +149,13 @@ public class PailakaInjuredDragon extends AbstractInstance
 	{
 		for (int i = 0; i < 9; i++)
 		{
-			final int zoneId = ZONES[i];
-			final List<L2Npc> npcs = instance.spawnGroup("wall_" + (i + 1));
+			final int zoneId = 200000 + (i + 1);
+			final List<L2Npc> npcs = instance.spawnGroup("wall_" + zoneId);
 			npcs.forEach(k -> k.setScriptValue(zoneId));
-			WALLS.put(zoneId, new MonsterWall((i + 1), zoneId, npcs, ZONES_TELEPORTS[i]));
+			instance.getParameters().set("wall_" + zoneId, npcs.size());
 		}
+		
 		super.onInstanceCreated(instance, player);
-	}
-	
-	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
-	{
-		final MonsterWall wall = WALLS.get(npc.getScriptValue());
-		if ((wall != null) && !wall.isUnlocked())
-		{
-			if (wall.getMobs().stream().filter(mob -> !mob.isDead()).count() == 0)
-			{
-				wall.unlock();
-			}
-			attacker.teleToLocation(wall.getZoneTeleportBack());
-		}
-		return super.onAttack(npc, attacker, damage, isSummon);
 	}
 	
 	@Override
@@ -209,12 +183,27 @@ public class PailakaInjuredDragon extends AbstractInstance
 				}
 			}
 			
-			if ((npcId != ANTELOPE1) && (npcId != ANTELOPE2) && (npcId != ANTELOPE3))
+			if ((npcId != ANTELOPE1) && (npcId != ANTELOPE2) && (npcId != ANTELOPE3) && (npcId != SHAMAN) && (npcId != CHIEF_PRIEST) && (npcId != GRAND_PRIEST))
 			{
-				final MonsterWall wall = WALLS.get(npc.getScriptValue());
-				if ((wall != null) && !wall.isUnlocked() && !wall.isPriestSpawned())
+				final Instance world = npc.getInstanceWorld();
+				final int zoneId = npc.getScriptValue();
+				int killcount = world.getParameters().getInt("wall_" + zoneId);
+				killcount--;
+				world.setParameter("wall_" + zoneId, killcount);
+				
+				if (killcount <= 0)
 				{
-					wall.spawnPriest(npc.getInstanceWorld());
+					world.getSpawnGroup("wall_" + zoneId).forEach(SpawnGroup::despawnAll);
+					world.getSpawnGroup("wall_" + zoneId + "_add").forEach(SpawnGroup::despawnAll);
+				}
+				else if (!world.getParameters().getBoolean("wall_" + zoneId + "_add", false))
+				{
+					world.setParameter("wall_" + zoneId + "_add", true);
+					world.spawnGroup("wall_" + zoneId + "_add").forEach(mage ->
+					{
+						mage.setTarget(killer);
+						mage.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, killer);
+					});
 				}
 			}
 		}
@@ -225,10 +214,6 @@ public class PailakaInjuredDragon extends AbstractInstance
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setIsImmobilized(true);
-		if (npc.getId() != LATANA)
-		{
-			npc.setIsInvul(true);
-		}
 		return super.onSpawn(npc);
 	}
 	
@@ -240,73 +225,13 @@ public class PailakaInjuredDragon extends AbstractInstance
 			return super.onEnterZone(character, zone);
 		}
 		
-		final MonsterWall wall = WALLS.get(zone.getId());
-		if ((wall != null) && !wall.isUnlocked())
+		final Instance world = character.getInstanceWorld();
+		if (world.getParameters().getInt("wall_" + zone.getId()) > 0)
 		{
-			if ((wall.getMobs().stream().filter(mob -> !mob.isDead()).count() > 0) || wall.isPriestSpawned())
-			{
-				character.teleToLocation(wall.getZoneTeleportBack());
-			}
+			character.teleToLocation(ZONES_TELEPORTS.get(zone.getId()));
 		}
 		
 		return super.onEnterZone(character, zone);
-	}
-	
-	private class MonsterWall
-	{
-		private final int _wallNumber;
-		private final int _zoneId;
-		private boolean _unlocked;
-		private boolean _priestSpawned;
-		private final List<L2Npc> _mobs;
-		private List<L2Npc> _priests;
-		private final Location _zoneTeleportBack;
-		
-		MonsterWall(int wallNumber, int zoneId, List<L2Npc> mobs, Location loc)
-		{
-			_unlocked = false;
-			_priestSpawned = false;
-			_wallNumber = wallNumber;
-			_zoneId = zoneId;
-			_mobs = mobs;
-			_priests = null;
-			_zoneTeleportBack = loc;
-		}
-		
-		boolean isUnlocked()
-		{
-			return _unlocked;
-		}
-		
-		boolean isPriestSpawned()
-		{
-			return _priestSpawned;
-		}
-		
-		List<L2Npc> getMobs()
-		{
-			return _mobs;
-		}
-		
-		Location getZoneTeleportBack()
-		{
-			return _zoneTeleportBack;
-		}
-		
-		void spawnPriest(Instance instance)
-		{
-			_priests = instance.spawnGroup("wall_" + _wallNumber + "_add");
-			_priests.forEach(k -> k.setScriptValue(_zoneId));
-			_priestSpawned = true;
-		}
-		
-		void unlock()
-		{
-			_unlocked = true;
-			_priestSpawned = false;
-			_priests.forEach(L2Npc::deleteMe);
-			_mobs.forEach(L2Npc::deleteMe);
-		}
 	}
 	
 	public static void main(String[] args)
