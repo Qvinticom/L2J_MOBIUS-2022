@@ -205,7 +205,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/spawnZones/seed_of_destruction.xml");
+		parseDatapackFile("data/scripts/instances/SeedOfDestruction/SeedOfDestruction.xml");
 		_log.info("[Seed of Destruction] Loaded " + _spawnZoneList.size() + " spawn zones data.");
 	}
 	

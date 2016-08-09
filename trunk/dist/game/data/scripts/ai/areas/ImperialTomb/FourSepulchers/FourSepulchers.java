@@ -685,7 +685,8 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	public void load()
 	{
 		ROOM_SPAWN_DATA.clear();
-		parseDatapackFile("data/spawnZones/FourSepulchers.xml");
+		parseDatapackFile("data/scripts/ai/areas/ImperialTomb/FourSepulchers/FourSepulchers.xml");
+		_log.info("[Four Sepulchers] Loaded " + ROOM_SPAWN_DATA.size() + " spawn zones data.");
 	}
 	
 	@Override
