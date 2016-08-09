@@ -289,6 +289,7 @@ import quests.Q10426_AssassinationOfTheKetraOrcCommander.Q10426_AssassinationOfT
 import quests.Q10427_AssassinationOfTheKetraOrcChief.Q10427_AssassinationOfTheKetraOrcChief;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10443_TheAnnihilatedPlains2.Q10443_TheAnnihilatedPlains2;
+import quests.Q10444_TheOriginOfMonsters.Q10444_TheOriginOfMonsters;
 import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
 import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
 import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
@@ -658,6 +659,7 @@ public class QuestMasterHandler
 		Q10427_AssassinationOfTheKetraOrcChief.class,
 		Q10442_TheAnnihilatedPlains1.class,
 		Q10443_TheAnnihilatedPlains2.class,
+		Q10444_TheOriginOfMonsters.class,
 		Q10445_AnImpendingThreat.class,
 		Q10450_ADarkAmbition.class,
 		Q10453_StoppingTheWindDragon.class,
