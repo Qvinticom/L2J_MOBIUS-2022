@@ -50,10 +50,9 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	
 	public Q10430_KekropusLetterTrackingTheEvil()
 	{
-		super(10419);
+		super(10430);
 		addTalkId(VISHOTSKY, JOKEL);
 		addSeeCreatureId(INVISIBLE_NPC);
-		
 		setIsErtheiaQuest(false);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartQuestSound("Npcdialog1.kekrops_quest_10");
@@ -65,8 +64,8 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -81,20 +80,20 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 			}
 			case "31981-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					takeItems(player, SOE_TOWN_OF_SCHUTTGART, -1);
 					giveItems(player, SOE_DEN_OF_EVIL, 1);
-					st.setCond(2, true);
+					qs.setCond(2, true);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33868-02.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					giveItems(player, EWS, 1);
 					giveItems(player, EAS, 10);
 					giveStoryQuestReward(player, 235);
@@ -115,20 +114,20 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, false);
+		final QuestState qs = getQuestState(player, false);
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		if (st.isStarted())
+		if (qs.isStarted())
 		{
-			if ((npc.getId() == VISHOTSKY) && st.isCond(1))
+			if ((npc.getId() == VISHOTSKY) && qs.isCond(1))
 			{
 				htmltext = "31981-01.html";
 			}
-			else if (st.isCond(2))
+			else if (qs.isCond(2))
 			{
 				htmltext = npc.getId() == VISHOTSKY ? "31981-04.html" : "33868-01.html";
 			}
@@ -142,9 +141,9 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 		if (creature.isPlayer())
 		{
 			final L2PcInstance player = creature.getActingPlayer();
-			final QuestState st = getQuestState(player, false);
+			final QuestState qs = getQuestState(player, false);
 			
-			if ((st != null) && st.isCond(2))
+			if ((qs != null) && qs.isCond(2))
 			{
 				showOnScreenMsg(player, NpcStringId.DEN_OF_EVIL_IS_A_GOOD_HUNTING_ZONE_FOR_LV_81_OR_ABOVE, ExShowScreenMessage.TOP_CENTER, 6000);
 			}
