@@ -464,11 +464,30 @@
 		<!-- Return to the Town of Goddard. -->
 		<icon>icon.skill0000</icon>
 		<itemConsumeId>37123</itemConsumeId>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeId>37027</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>1500</hitTime>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>86404</x>
+				<y>-142221</y>
+				<z>-1341</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9938" toLevel="1" name="9th Anniversary Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -1015,12 +1034,30 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Den of Evil. -->
 		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37036</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>1500</hitTime>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>70255</x>
+				<y>-112141</y>
+				<z>-1744</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9978" toLevel="1" name="Scroll of Escape: Sel Mahum Training Grounds">
 		<!-- AUTO GENERATED SKILL -->
