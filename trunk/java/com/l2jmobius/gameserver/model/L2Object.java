@@ -143,6 +143,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public void onSpawn()
 	{
+		broadcastInfo(); // Tempfix for invisible spawns.
 	}
 	
 	@Override

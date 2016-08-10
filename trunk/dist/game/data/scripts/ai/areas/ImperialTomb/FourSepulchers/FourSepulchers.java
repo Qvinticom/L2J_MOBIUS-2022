@@ -412,8 +412,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		{
 			case ROOM_3_VICTIM:
 			{
-				final L2Npc boss = addSpawn(ROOM_3_CHEST_REWARDER, npc);
-				boss.broadcastInfo(); // TODO: Why sometimes we cannot see some monsters?
+				addSpawn(ROOM_3_CHEST_REWARDER, npc);
 				break;
 			}
 			case ROOM_4_CHARM_1:
@@ -458,8 +457,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 				
 				spawnNextWave(killer);
 				
-				final L2Npc teleporter = addSpawn(TELEPORTER, npc, true, 0, false);
-				teleporter.broadcastInfo(); // TODO: Why sometimes we cannot see some npcs?
+				addSpawn(TELEPORTER, npc, true, 0, false);
 				break;
 			}
 			case ROOM_6_REWARD_CHEST:
@@ -604,10 +602,6 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 				STORED_MONSTER_SPAWNS.get(sepulcherId).add(addSpawn(spawnInfo[2], spawnInfo[3], spawnInfo[4], spawnInfo[5], spawnInfo[6], false, 0));
 			}
 		}
-		for (L2Npc monster : STORED_MONSTER_SPAWNS.get(sepulcherId))
-		{
-			monster.broadcastInfo(); // TODO: Why sometimes we cannot see some monsters?
-		}
 		if (currentWave == 4)
 		{
 			for (L2ZoneType zone : ZoneManager.getInstance().getZones(player))
@@ -636,8 +630,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		{
 			if ((spawnInfo[0] == sepulcherId) && (spawnInfo[1] == currentWave))
 			{
-				final L2Npc chest = addSpawn(MYSTERIOUS_CHEST, spawnInfo[2], spawnInfo[3], spawnInfo[4], spawnInfo[5], false, 0);
-				chest.broadcastInfo(); // TODO: Why sometimes we cannot see some chests?
+				addSpawn(MYSTERIOUS_CHEST, spawnInfo[2], spawnInfo[3], spawnInfo[4], spawnInfo[5], false, 0);
 				break;
 			}
 		}
@@ -645,8 +638,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	
 	private void spawnKeyChest(L2PcInstance player, Location loc)
 	{
-		final L2Npc chest = addSpawn(KEY_CHEST, loc != null ? loc : player);
-		chest.broadcastInfo(); // TODO: Why sometimes we cannot see some chests?
+		addSpawn(KEY_CHEST, loc != null ? loc : player);
 	}
 	
 	private int getSepulcherId(L2PcInstance player)
