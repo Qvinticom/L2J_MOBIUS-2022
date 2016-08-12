@@ -38,8 +38,8 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	private static final int JOKEL = 33868;
 	private static final int INVISIBLE_NPC = 19543;
 	// Items
-	private static final int SOE_TOWN_OF_SCHUTTGART = 37121; // Scroll of Escape: Town of Schuttgart
-	private static final int SOE_DEN_OF_EVIL = 37034; // Scroll of Escape: Den of Evil
+	private static final int SOE_TOWN_OF_SCHUTTGART = 37123; // Scroll of Escape: Town of Schuttgart
+	private static final int SOE_DEN_OF_EVIL = 37036; // Scroll of Escape: Den of Evil
 	private static final int EWS = 959; // Scroll: Enchant Weapon (S-grade)
 	private static final int EAS = 960; // Scroll: Enchant Armor (S-grade)
 	// Location
@@ -55,10 +55,10 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 		addSeeCreatureId(INVISIBLE_NPC);
 		setIsErtheiaQuest(false);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
-		setStartQuestSound("Npcdialog1.kekrops_quest_10");
+		setStartQuestSound("Npcdialog1.kekrops_quest_9");
 		setStartLocation(SOE_TOWN_OF_SCHUTTGART, TELEPORT_LOC);
 		registerQuestItems(SOE_TOWN_OF_SCHUTTGART, SOE_DEN_OF_EVIL);
-		addCondInCategory(CategoryType.THIRD_CLASS_GROUP, "nocond.html");
+		addCondInCategory(CategoryType.MAGE_GROUP, "nocond.html");
 	}
 	
 	@Override
@@ -101,7 +101,6 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 					{
 						addExpAndSp(player, 1_412_040, 338);
 					}
-					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_81, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;
 				}
 				break;
@@ -154,6 +153,6 @@ public final class Q10430_KekropusLetterTrackingTheEvil extends LetterQuest
 	@Override
 	public boolean canShowTutorialMark(L2PcInstance player)
 	{
-		return !player.isMageClass();
+		return player.isInCategory(CategoryType.FIGHTER_GROUP);
 	}
 }
