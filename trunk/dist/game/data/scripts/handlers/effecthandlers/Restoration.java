@@ -32,11 +32,13 @@ public final class Restoration extends AbstractEffect
 {
 	private final int _itemId;
 	private final int _itemCount;
+	private final int _itemEnchant;
 	
 	public Restoration(StatsSet params)
 	{
 		_itemId = params.getInt("itemId", 0);
 		_itemCount = params.getInt("itemCount", 0);
+		_itemEnchant = params.getInt("itemEnchant", 0);
 	}
 	
 	@Override
@@ -62,11 +64,19 @@ public final class Restoration extends AbstractEffect
 		
 		if (effected.isPlayer())
 		{
-			effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
+			final L2ItemInstance newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
+			if (_itemEnchant > 0)
+			{
+				newItem.setEnchantLevel(_itemEnchant);
+			}
 		}
 		else if (effected.isPet())
 		{
-			effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
+			final L2ItemInstance newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
+			if (_itemEnchant > 0)
+			{
+				newItem.setEnchantLevel(_itemEnchant);
+			}
 			effected.getActingPlayer().sendPacket(new PetItemList(effected.getInventory().getItems()));
 		}
 	}
