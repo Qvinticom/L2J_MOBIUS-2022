@@ -124,7 +124,7 @@ public class Q00466_PlacingMySmallPower extends Quest
 				{
 					qs.setCond(5);
 				}
-				break;
+				htmltext = event;
 			}
 		}
 		return htmltext;
@@ -202,6 +202,8 @@ public class Q00466_PlacingMySmallPower extends Quest
 								else
 								{
 									htmltext = "32895-07.html";
+									// TODO: Remove timer.
+									startQuestTimer("32895-07.html", 100, npc, player, false);
 								}
 								break;
 							}
