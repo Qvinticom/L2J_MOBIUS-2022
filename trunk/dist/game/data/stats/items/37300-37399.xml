@@ -443,6 +443,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="FatedSupportBox" />
 	</item>
 	<item id="37315" name="Fated Support Box: Fighter (C-grade)" type="EtcItem">
 		<!-- Double-click to receive C-grade equipment items necessary for fighter-type characters. Can be used by characters Lv. 40 - 84. -->
