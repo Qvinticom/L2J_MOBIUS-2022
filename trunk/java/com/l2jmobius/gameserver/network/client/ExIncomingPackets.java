@@ -261,7 +261,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_GOODS_INVENTORY_ITEM(0xAB, null, ConnectionState.IN_GAME),
 	REQUEST_FIRST_PLAY_START(0xAC, null, ConnectionState.IN_GAME),
 	REQUEST_FLY_MOVE_START(0xAD, RequestFlyMoveStart::new, ConnectionState.IN_GAME),
-	REQUEST_HARDWARE_INFO(0xAE, null, ConnectionState.IN_GAME),
+	REQUEST_HARDWARE_INFO(0xAE, RequestHardWareInfo::new, ConnectionState.IN_GAME),
 	SEND_CHANGE_ATTRIBUTE_TARGET_ITEM(0xB0, null, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_ATTRIBUTE_ITEM(0xB1, null, ConnectionState.IN_GAME),
 	REQUEST_CHANGE_ATTRIBUTE_CANCEL(0xB2, null, ConnectionState.IN_GAME),

@@ -86,6 +86,7 @@ import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminGrandBoss;
 import handlers.admincommandhandlers.AdminHeal;
 import handlers.admincommandhandlers.AdminHtml;
+import handlers.admincommandhandlers.AdminHwid;
 import handlers.admincommandhandlers.AdminInstance;
 import handlers.admincommandhandlers.AdminInstanceZone;
 import handlers.admincommandhandlers.AdminInvul;
@@ -363,6 +364,7 @@ public class MasterHandler
 			AdminGrandBoss.class,
 			AdminHeal.class,
 			AdminHtml.class,
+			AdminHwid.class,
 			AdminInstance.class,
 			AdminInstanceZone.class,
 			AdminInvul.class,

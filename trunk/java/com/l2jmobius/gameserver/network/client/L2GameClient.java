@@ -53,6 +53,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -86,7 +87,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 	private L2PcInstance _activeChar;
 	private final ReentrantLock _activeCharLock = new ReentrantLock();
 	private SecondaryPasswordAuth _secondaryAuth;
-	
+	private ClientHardwareInfoHolder _hardwareInfo;
 	private boolean _isAuthedGG;
 	private final long _connectionStartTime = System.currentTimeMillis();
 	private CharSelectInfoPackage[] _charSlotMapping = null;
@@ -940,5 +941,21 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 	public ICrypt getCrypt()
 	{
 		return _crypt;
+	}
+	
+	/**
+	 * @return the hardwareInfo
+	 */
+	public ClientHardwareInfoHolder getHardwareInfo()
+	{
+		return _hardwareInfo;
+	}
+	
+	/**
+	 * @param hardwareInfo
+	 */
+	public void setHardwareInfo(ClientHardwareInfoHolder hardwareInfo)
+	{
+		_hardwareInfo = hardwareInfo;
 	}
 }

@@ -322,6 +322,10 @@
 	<admin command="admin_html" accessLevel="100" />
 	<admin command="admin_loadhtml" accessLevel="100" />
 
+	<!-- ADMIN HWID -->
+	<admin command="admin_hwid" accessLevel="100" />
+	<admin command="admin_hwinfo" accessLevel="100" />
+
 	<!-- ADMIN INSTANCE -->
 	<admin command="admin_instance" accessLevel="100" />
 	<admin command="admin_instances" accessLevel="100" />

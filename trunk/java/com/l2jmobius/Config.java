@@ -850,6 +850,8 @@ public final class Config
 	public static int DATABASE_MAX_CONNECTIONS;
 	public static int DATABASE_MAX_IDLE_TIME;
 	public static int MAXIMUM_ONLINE_USERS;
+	public static boolean HARDWARE_INFO_ENABLED;
+	public static int MAX_PLAYERS_PER_HWID;
 	public static Pattern CHARNAME_TEMPLATE_PATTERN;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
@@ -1109,6 +1111,9 @@ public final class Config
 			
 			MAX_CHARACTERS_NUMBER_PER_ACCOUNT = serverSettings.getInt("CharMaxNumber", 7);
 			MAXIMUM_ONLINE_USERS = serverSettings.getInt("MaximumOnlineUsers", 100);
+			
+			HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
+			MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
 			
 			final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "603;606;607").split(";");
 			PROTOCOL_LIST = new ArrayList<>(protocols.length);

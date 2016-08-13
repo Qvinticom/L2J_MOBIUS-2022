@@ -94,6 +94,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
+import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SkillList;
@@ -138,6 +139,32 @@ public class EnterWorld implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
+		// HWID
+		if (Config.HARDWARE_INFO_ENABLED)
+		{
+			if (client.getHardwareInfo() == null)
+			{
+				client.close(ServerClose.STATIC_PACKET);
+				return;
+			}
+			if (Config.MAX_PLAYERS_PER_HWID > 0)
+			{
+				int count = 0;
+				for (L2PcInstance player : L2World.getInstance().getPlayers())
+				{
+					if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo())))
+					{
+						count++;
+					}
+				}
+				if (count >= Config.MAX_PLAYERS_PER_HWID)
+				{
+					client.close(ServerClose.STATIC_PACKET);
+					return;
+				}
+			}
+		}
+		
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
