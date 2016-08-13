@@ -26,19 +26,19 @@ import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 
 /**
  * Restoration effect implementation.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public final class Restoration extends AbstractEffect
 {
 	private final int _itemId;
 	private final int _itemCount;
-	private final int _itemEnchant;
+	private final int _itemEnchantmentLevel;
 	
 	public Restoration(StatsSet params)
 	{
 		_itemId = params.getInt("itemId", 0);
 		_itemCount = params.getInt("itemCount", 0);
-		_itemEnchant = params.getInt("itemEnchant", 0);
+		_itemEnchantmentLevel = params.getInt("itemEnchantmentLevel", 0);
 	}
 	
 	@Override
@@ -65,17 +65,17 @@ public final class Restoration extends AbstractEffect
 		if (effected.isPlayer())
 		{
 			final L2ItemInstance newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
-			if (_itemEnchant > 0)
+			if (_itemEnchantmentLevel > 0)
 			{
-				newItem.setEnchantLevel(_itemEnchant);
+				newItem.setEnchantLevel(_itemEnchantmentLevel);
 			}
 		}
 		else if (effected.isPet())
 		{
 			final L2ItemInstance newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
-			if (_itemEnchant > 0)
+			if (_itemEnchantmentLevel > 0)
 			{
-				newItem.setEnchantLevel(_itemEnchant);
+				newItem.setEnchantLevel(_itemEnchantmentLevel);
 			}
 			effected.getActingPlayer().sendPacket(new PetItemList(effected.getInventory().getItems()));
 		}

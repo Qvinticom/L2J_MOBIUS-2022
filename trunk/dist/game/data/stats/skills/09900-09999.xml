@@ -1321,18 +1321,102 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="9997" toLevel="1" name="Steel Door Guild Reward Box (Low-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37391</itemConsumeId>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="36517" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36522" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36527" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36562" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="9998" toLevel="1" name="Steel Door Guild Reward Box (Mid-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37392</itemConsumeId>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="36523" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36528" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36563" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36518" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9999" toLevel="1" name="Steel Door Guild Reward Box (High-grade)">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37393</itemConsumeId>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="36557" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36562" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36552" count="1" />
+					</item>
+					<item chance="25">
+						<item id="36547" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 </list>

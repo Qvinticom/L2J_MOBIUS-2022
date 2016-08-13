@@ -671,6 +671,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27318" level="1" />
+		</skills>
 	</item>
 	<item id="26196" name="+ 5 Blessed Apocalypse Retributer Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
@@ -678,6 +684,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27319" level="1" />
+		</skills>
 	</item>
 	<item id="26197" name="+ 6 Blessed Apocalypse Retributer Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
@@ -685,6 +697,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27320" level="1" />
+		</skills>
 	</item>
 	<item id="26198" name="+ 7 Blessed Apocalypse Retributer Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
@@ -692,6 +710,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27321" level="1" />
+		</skills>
 	</item>
 	<item id="26199" name="+ 8 Blessed Apocalypse Retributer Pack" type="EtcItem">
 		<!-- Double-click to obtain the item as described in the pack name. -->
@@ -699,5 +723,11 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27322" level="1" />
+		</skills>
 	</item>
 </list>
