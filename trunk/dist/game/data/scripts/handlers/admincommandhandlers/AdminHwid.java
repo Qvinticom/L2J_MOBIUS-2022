@@ -51,7 +51,6 @@ public class AdminHwid implements IAdminCommandHandler
 		html.replace("%cpuName%", target.getClient().getHardwareInfo().getCpuName());
 		html.replace("%cpuSpeed%", target.getClient().getHardwareInfo().getCpuSpeed());
 		html.replace("%cpuCoreCount%", target.getClient().getHardwareInfo().getCpuCoreCount());
-		html.replace("%vgaVersion%", target.getClient().getHardwareInfo().getVgaVersion());
 		html.replace("%vgaName%", target.getClient().getHardwareInfo().getVgaName());
 		html.replace("%vgaDriverVersion%", target.getClient().getHardwareInfo().getVgaDriverVersion());
 		activeChar.sendPacket(html);

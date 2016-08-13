@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 
@@ -55,10 +58,7 @@ public final class RequestHardWareInfo implements IClientIncomingPacket
 		_windowsBuildNumber = packet.readD();
 		_directxVersion = packet.readD();
 		_directxRevision = packet.readD();
-		for (int i = 0; i < 16; i++)
-		{
-			packet.readC();
-		}
+		packet.readB(16);
 		_cpuName = packet.readS();
 		_cpuSpeed = packet.readD();
 		_cpuCoreCount = packet.readC();
@@ -71,7 +71,7 @@ public final class RequestHardWareInfo implements IClientIncomingPacket
 		packet.readC();
 		_videoMemory = packet.readD();
 		packet.readD();
-		_vgaVersion = packet.readD();
+		_vgaVersion = packet.readH();
 		_vgaName = packet.readS();
 		_vgaDriverVersion = packet.readS();
 		return true;
@@ -81,5 +81,21 @@ public final class RequestHardWareInfo implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		client.setHardwareInfo(new ClientHardwareInfoHolder(_macAddress, _windowsPlatformId, _windowsMajorVersion, _windowsMinorVersion, _windowsBuildNumber, _directxVersion, _directxRevision, _cpuName, _cpuSpeed, _cpuCoreCount, _vgaCount, _vgaPcxSpeed, _physMemorySlot1, _physMemorySlot2, _physMemorySlot3, _videoMemory, _vgaVersion, _vgaName, _vgaDriverVersion));
+		if (Config.HARDWARE_INFO_ENABLED && (Config.MAX_PLAYERS_PER_HWID > 0))
+		{
+			int count = 0;
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
+			{
+				if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo())))
+				{
+					count++;
+				}
+			}
+			if (count >= Config.MAX_PLAYERS_PER_HWID)
+			{
+				client.closeNow();
+				return;
+			}
+		}
 	}
 }

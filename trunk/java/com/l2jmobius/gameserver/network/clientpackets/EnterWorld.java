@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
@@ -94,7 +95,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
-import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SkillList;
@@ -119,13 +119,6 @@ public class EnterWorld implements IClientIncomingPacket
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		packet.readB(32); // Unknown Byte Array
-		packet.readD(); // Unknown Value
-		packet.readD(); // Unknown Value
-		packet.readD(); // Unknown Value
-		packet.readD(); // Unknown Value
-		packet.readB(32); // Unknown Byte Array
-		packet.readD(); // Unknown Value
 		for (int i = 0; i < 5; i++)
 		{
 			for (int o = 0; o < 4; o++)
@@ -133,38 +126,18 @@ public class EnterWorld implements IClientIncomingPacket
 				tracert[i][o] = packet.readC();
 			}
 		}
+		packet.readD(); // Unknown Value
+		packet.readD(); // Unknown Value
+		packet.readD(); // Unknown Value
+		packet.readD(); // Unknown Value
+		packet.readB(64); // Unknown Byte Array
+		packet.readD(); // Unknown Value
 		return true;
 	}
 	
 	@Override
 	public void run(L2GameClient client)
 	{
-		// HWID
-		if (Config.HARDWARE_INFO_ENABLED)
-		{
-			if (client.getHardwareInfo() == null)
-			{
-				client.close(ServerClose.STATIC_PACKET);
-				return;
-			}
-			if (Config.MAX_PLAYERS_PER_HWID > 0)
-			{
-				int count = 0;
-				for (L2PcInstance player : L2World.getInstance().getPlayers())
-				{
-					if ((player.isOnlineInt() == 1) && (player.getClient().getHardwareInfo().equals(client.getHardwareInfo())))
-					{
-						count++;
-					}
-				}
-				if (count >= Config.MAX_PLAYERS_PER_HWID)
-				{
-					client.close(ServerClose.STATIC_PACKET);
-					return;
-				}
-			}
-		}
-		
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
@@ -355,7 +328,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Send GG check
-		activeChar.queryGameGuard();
+		// activeChar.queryGameGuard();
 		
 		// Send Dye Information
 		activeChar.sendPacket(new HennaInfo(activeChar));
@@ -655,6 +628,18 @@ public class EnterWorld implements IClientIncomingPacket
 			activeChar.sendPacket(new ExAutoSoulShot(0, false, 1));
 			activeChar.sendPacket(new ExAutoSoulShot(0, false, 2));
 			activeChar.sendPacket(new ExAutoSoulShot(0, false, 3));
+		}
+		
+		if (Config.HARDWARE_INFO_ENABLED)
+		{
+			ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			{
+				if (client.getHardwareInfo() == null)
+				{
+					client.closeNow();
+					return;
+				}
+			}, 5000);
 		}
 	}
 	
