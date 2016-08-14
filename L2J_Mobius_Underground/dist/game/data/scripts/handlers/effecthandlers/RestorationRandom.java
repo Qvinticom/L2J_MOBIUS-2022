@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -103,5 +104,11 @@ public final class RestorationRandom extends AbstractEffect
 			}
 			player.addItem("Extract", createdItem.getId(), (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE), effector, true);
 		}
+	}
+	
+	@Override
+	public L2EffectType getEffectType()
+	{
+		return L2EffectType.EXTRACT_ITEM;
 	}
 }

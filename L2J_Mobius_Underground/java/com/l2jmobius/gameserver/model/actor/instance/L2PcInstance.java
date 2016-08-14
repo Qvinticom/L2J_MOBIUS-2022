@@ -12696,7 +12696,7 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Test if player inventory is under 90% capaity
+	 * Test if player inventory is under 90% capacity
 	 * @param includeQuestInv check also quest inventory
 	 * @return
 	 */
@@ -12706,7 +12706,7 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Test if player inventory is under 80% capaity
+	 * Test if player inventory is under 80% capacity
 	 * @param includeQuestInv check also quest inventory
 	 * @return
 	 */

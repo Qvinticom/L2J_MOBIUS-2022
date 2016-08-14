@@ -57,6 +57,12 @@ public class ExtractableItems implements IItemHandler
 			return false;
 		}
 		
+		if (!activeChar.isInventoryUnder80(false))
+		{
+			activeChar.sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
+			return false;
+		}
+		
 		// destroy item
 		if (!activeChar.destroyItem("Extract", item.getObjectId(), 1, activeChar, true))
 		{

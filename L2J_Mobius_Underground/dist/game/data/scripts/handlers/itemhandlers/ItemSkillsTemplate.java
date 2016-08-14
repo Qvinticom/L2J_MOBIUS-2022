@@ -79,6 +79,13 @@ public class ItemSkillsTemplate implements IItemHandler
 			
 			if (itemSkill != null)
 			{
+				
+				if (itemSkill.hasEffectType(L2EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
+				{
+					playable.getActingPlayer().sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
+					return false;
+				}
+				
 				if (itemSkill.getItemConsumeId() > 0)
 				{
 					hasConsumeSkill = true;

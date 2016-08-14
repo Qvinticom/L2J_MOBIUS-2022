@@ -57,6 +57,12 @@ public class FatedSupportBox implements IItemHandler
 		final Race race = player.getRace();
 		final ClassId classId = player.getClassId();
 		
+		if (!player.isInventoryUnder80(false))
+		{
+			player.sendPacket(SystemMessageId.YOU_VE_EXCEEDED_THE_LIMIT_AND_CANNOT_RETRIEVE_THE_ITEM_PLEASE_CHECK_YOUR_LIMIT_IN_THE_INVENTORY);
+			return false;
+		}
+		
 		// Characters that have gone through their 2nd class transfer/1st liberation will be able to open the Fated Support Box at level 40.
 		if ((player.getLevel() < 40) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP) || ((race != Race.ERTHEIA) && player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))
 		{
