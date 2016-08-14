@@ -2717,7 +2717,7 @@
 			<height normal="74" />
 		</collision>
 	</npc>
-	<npc id="3473" level="96" type="L2Monster" name="Omega Golem" title="Raid Boss">
+	<npc id="3473" level="96" type="L2RaidBoss" name="Omega Golem" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
@@ -2896,7 +2896,7 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="3477" level="88" type="L2Monster" name="Reinforced Super Kat the Cat" title="Raid Boss">
+	<npc id="3477" level="88" type="L2RaidBoss" name="Reinforced Super Kat the Cat" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="2" />
@@ -2992,7 +2992,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="3479" level="92" type="L2Monster" name="Darkened Super Feline Queen" title="Raid Boss">
+	<npc id="3479" level="92" type="L2RaidBoss" name="Darkened Super Feline Queen" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="400" />
@@ -3085,7 +3085,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="3481" level="94" type="L2Monster" name="Control-crazed Mew the Cat" title="Raid Boss">
+	<npc id="3481" level="94" type="L2RaidBoss" name="Control-crazed Mew the Cat" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="300" />

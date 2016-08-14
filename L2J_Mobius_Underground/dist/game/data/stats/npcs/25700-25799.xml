@@ -1915,7 +1915,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="25732" level="85" type="L2Monster" name="Dragon Beast" title="Raid Boss">
+	<npc id="25732" level="85" type="L2RaidBoss" name="Dragon Beast" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="selfheal_skill" id="6886" level="1" />
@@ -3674,7 +3674,7 @@
 			<height normal="84" />
 		</collision>
 	</npc>
-	<npc id="25761" level="97" type="L2Monster" name="Georgios" title="Raid Boss">
+	<npc id="25761" level="97" type="L2RaidBoss" name="Georgios" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14012" level="2" />
@@ -3743,7 +3743,7 @@
 			<height normal="91" />
 		</collision>
 	</npc>
-	<npc id="25762" level="97" type="L2Monster" name="Angelos" title="Raid Boss">
+	<npc id="25762" level="97" type="L2RaidBoss" name="Angelos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14001" level="3" />
@@ -3896,7 +3896,7 @@
 			<height normal="78" />
 		</collision>
 	</npc>
-	<npc id="25764" level="97" type="L2Monster" name="Steregos" title="Raid Boss">
+	<npc id="25764" level="97" type="L2RaidBoss" name="Steregos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14034" level="1" />
@@ -4183,7 +4183,7 @@
 			<height normal="86" />
 		</collision>
 	</npc>
-	<npc id="25768" level="97" type="L2Monster" name="Evangelos" title="Raid Boss">
+	<npc id="25768" level="97" type="L2RaidBoss" name="Evangelos" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
@@ -4247,7 +4247,7 @@
 			<height normal="59" />
 		</collision>
 	</npc>
-	<npc id="25769" level="97" type="L2Monster" name="Sotiris" title="Raid Boss">
+	<npc id="25769" level="97" type="L2RaidBoss" name="Sotiris" title="Raid Boss">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14009" level="3" />
