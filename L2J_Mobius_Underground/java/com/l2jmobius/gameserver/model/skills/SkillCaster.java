@@ -55,6 +55,7 @@ import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.options.OptionsSkillHolder;
 import com.l2jmobius.gameserver.model.options.OptionsSkillType;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
@@ -314,9 +315,16 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Consume the required items. Should happen after use message is displayed and SetupGauge
-		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && !caster.destroyItemByItemId(_skill.toString(), _skill.getItemConsumeId(), _skill.getItemConsumeCount(), null, true))
+		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0))
 		{
-			return false;
+			if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE))
+			{
+				return false;
+			}
+			if (!caster.destroyItemByItemId(_skill.toString(), _skill.getItemConsumeId(), _skill.getItemConsumeCount(), target, true))
+			{
+				return false;
+			}
 		}
 		
 		// Trigger any skill cast start effects.
