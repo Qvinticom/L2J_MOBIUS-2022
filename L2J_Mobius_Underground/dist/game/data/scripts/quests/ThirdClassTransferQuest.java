@@ -16,6 +16,10 @@
  */
 package quests;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.CategoryType;
@@ -55,12 +59,16 @@ public abstract class ThirdClassTransferQuest extends Quest
 		33169,
 	};
 	// Items
-	private static final int SOLDIER_TAG_HUMAN = 17748;
-	private static final int SOLDIER_TAG_ELF = 17749;
-	private static final int SOLDIER_TAG_DARK_ELF = 17750;
-	private static final int SOLDIER_TAG_ORC = 17751;
-	private static final int SOLDIER_TAG_DWARF = 17752;
-	private static final int SOLDIER_TAG_KAMAEL = 17753;
+	private static final Map<Race, Integer> RACE_TAGS = new HashMap<>();
+	static
+	{
+		RACE_TAGS.put(Race.HUMAN, 17748);
+		RACE_TAGS.put(Race.ELF, 17749);
+		RACE_TAGS.put(Race.DARK_ELF, 17750);
+		RACE_TAGS.put(Race.ORC, 17751);
+		RACE_TAGS.put(Race.DWARF, 17752);
+		RACE_TAGS.put(Race.KAMAEL, 17753);
+	}
 	private static final int STEEL_DOOR_COIN = 37045;
 	private static final int SOUL_SHOT_PACK = 22576;
 	private static final int SPIRIT_SHOT_PACK = 22607;
@@ -75,14 +83,12 @@ public abstract class ThirdClassTransferQuest extends Quest
 		super(questId);
 		addTalkId(QUARTERMASTER, VANGUARD_MEMBER);
 		addTalkId(VANGUARDS);
+		for (Entry<Race, Integer> tag : RACE_TAGS.entrySet())
+		{
+			registerQuestItems(tag.getValue());
+		}
 		//@formatter:off
 		registerQuestItems(
-			SOLDIER_TAG_HUMAN,
-			SOLDIER_TAG_ELF,
-			SOLDIER_TAG_DARK_ELF,
-			SOLDIER_TAG_ORC,
-			SOLDIER_TAG_DWARF,
-			SOLDIER_TAG_KAMAEL,
 			17484, // Cry of Destiny - Gladiator
 			17485, // Cry of Destiny - Warlord
 			17486, // Cry of Destiny - Paladin
@@ -151,7 +157,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 				{
 					st.setCond(4, true);
 					st.unset("vanguard");
-					takeItems(player, getSoldierTag(player), -1);
+					takeItems(player, RACE_TAGS.get(player.getRace()), -1);
 					htmltext = event;
 				}
 				break;
@@ -173,10 +179,10 @@ public abstract class ThirdClassTransferQuest extends Quest
 					final int vanguard = st.getInt("vanguard");
 					if ((vanguard & bit) != bit)
 					{
-						giveItems(player, getSoldierTag(player), 1);
+						giveItems(player, RACE_TAGS.get(player.getRace()), 1);
 						st.set("vanguard", vanguard | bit);
 						
-						if (getQuestItemsCount(player, getSoldierTag(player)) == 4)
+						if (getQuestItemsCount(player, RACE_TAGS.get(player.getRace())) == 4)
 						{
 							st.setCond(3, true);
 							htmltext = "vanguard-04.html";
@@ -243,42 +249,6 @@ public abstract class ThirdClassTransferQuest extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	/**
-	 * @param player
-	 * @return
-	 */
-	private int getSoldierTag(L2PcInstance player)
-	{
-		switch (player.getRace())
-		{
-			case HUMAN:
-			{
-				return SOLDIER_TAG_HUMAN;
-			}
-			case ELF:
-			{
-				return SOLDIER_TAG_ELF;
-			}
-			case DARK_ELF:
-			{
-				return SOLDIER_TAG_DARK_ELF;
-			}
-			case ORC:
-			{
-				return SOLDIER_TAG_ORC;
-			}
-			case DWARF:
-			{
-				return SOLDIER_TAG_DWARF;
-			}
-			case KAMAEL:
-			{
-				return SOLDIER_TAG_KAMAEL;
-			}
-		}
-		return 0;
 	}
 	
 	@Override
