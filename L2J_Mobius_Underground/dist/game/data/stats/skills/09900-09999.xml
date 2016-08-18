@@ -1031,7 +1031,6 @@
 		</effects>
 	</skill>
 	<skill id="9977" toLevel="1" name="Scroll of Escape: Den of Evil">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Den of Evil. -->
 		<icon>icon.skill0000</icon>
 		<hitTime>500</hitTime>
@@ -1060,15 +1059,32 @@
 		</effects>
 	</skill>
 	<skill id="9978" toLevel="1" name="Scroll of Escape: Sel Mahum Training Grounds">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Sel Mahum Training Grounds. -->
 		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37037</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>1500</hitTime>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>79337</x>
+				<y>72531</y>
+				<z>-3547</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9979" toLevel="1" name="Scroll of Escape: Plains of the Lizardmen">
 		<!-- AUTO GENERATED SKILL -->

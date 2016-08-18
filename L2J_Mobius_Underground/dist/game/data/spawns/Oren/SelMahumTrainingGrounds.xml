@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
+	<spawn name="SelMahumTrainingGrounds">
+		<group>
+			<npc id="33841" x="78473" y="72679" z="-3542" heading="44641" respawnTime="60sec" /> <!-- Investigator Rua -->
+			<npc id="19543" x="78563" y="72558" z="-3542" heading="782" respawnTime="60sec" /> <!-- Invisible NPC -->
+		</group>
+	</spawn>
 	<!-- oren22_2219_a01 -->
 	<spawn name="smtg_drill_group_01" ai="NoRandomActivity">
 		<parameters>
