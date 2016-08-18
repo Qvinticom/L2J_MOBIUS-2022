@@ -2770,6 +2770,59 @@
 			<radius normal="50" />
 			<height normal="68" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17404" min="1" max="1" chance="1.074" /> <!-- Seraph Leather Leggings -->
+				<item id="17398" min="1" max="1" chance="1.043" /> <!-- Seraph Gaiters -->
+				<item id="17409" min="1" max="1" chance="0.974" /> <!-- Seraph Stockings -->
+				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic -->
+				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor -->
+				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate -->
+				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
+				<item id="17391" min="1" max="1" chance="0.3" /> <!-- Specter Caster -->
+				<item id="17390" min="1" max="1" chance="0.3" /> <!-- Specter Buster -->
+				<item id="17389" min="1" max="1" chance="0.3" /> <!-- Specter Shooter -->
+				<item id="17388" min="1" max="1" chance="0.3" /> <!-- Specter Thrower -->
+				<item id="17387" min="1" max="1" chance="0.3" /> <!-- Specter Stormer -->
+				<item id="17386" min="1" max="1" chance="0.3" /> <!-- Specter Fighter -->
+				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
+				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
+				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
+				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
+				<item id="17526" min="1" max="1" chance="1.476" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35445" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35431" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35450" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="35448" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3474" level="95" type="L2Monster" name="Super Kat the Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2949,6 +3002,22 @@
 			<radius normal="22.5" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17308" min="1" max="1" chance="23.3" /> <!-- Immortal Boots -->
+				<item id="17318" min="1" max="1" chance="22.9" /> <!-- Immortal Gloves -->
+				<item id="17304" min="1" max="1" chance="16.58" /> <!-- Immortal Helmet -->
+				<item id="17310" min="1" max="1" chance="15.71" /> <!-- Immortal Leather Helmet -->
+				<item id="17313" min="1" max="3" chance="12.32" /> <!-- Immortal Leather Gloves -->
+				<item id="17319" min="2" max="4" chance="7.951" /> <!-- Immortal Shoes -->
+				<item id="17300" min="1" max="1" chance="1.546" /> <!-- Requiem Retributer -->
+				<item id="17290" min="1" max="1" chance="1.512" /> <!-- Requiem Shaper -->
+				<item id="17296" min="1" max="1" chance="1.503" /> <!-- Requiem Thrower -->
+				<item id="17291" min="1" max="1" chance="1.482" /> <!-- Requiem Cutter -->
+				<item id="17527" min="1" max="1" chance="46.38" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.604" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3478" level="87" type="L2Monster" name="Reinforced Kat the Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3042,6 +3111,17 @@
 			<radius normal="22.5" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17343" min="1" max="1" chance="66.6" /> <!-- Twilight Shield -->
+				<item id="17339" min="1" max="1" chance="17.44" /> <!-- Twilight Breastplate -->
+				<item id="17350" min="1" max="1" chance="16.67" /> <!-- Twilight Tunic -->
+				<item id="17325" min="1" max="1" chance="0.75" /> <!-- Apocalypse Cutter -->
+				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
+				<item id="17527" min="1" max="1" chance="46.65" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.631" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3480" level="91" type="L2Monster" name="Mind-controlling Feline Queen" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3135,6 +3215,15 @@
 			<radius normal="22.5" />
 			<height normal="37.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="17352" min="1" max="1" chance="91.435" /> <!-- Twilight Gloves -->
+				<item id="17347" min="1" max="1" chance="19.86" /> <!-- Twilight Leather Gloves -->
+				<item id="17330" min="1" max="1" chance="7.489" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="1.587" /> <!-- Apocalypse Retributer -->
+				<item id="17526" min="1" max="1" chance="35.82" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="3482" level="93" type="L2Monster" name="Traitorous Mew the Cat" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

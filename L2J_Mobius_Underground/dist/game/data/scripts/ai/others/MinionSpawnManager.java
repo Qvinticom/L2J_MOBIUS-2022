@@ -34,10 +34,11 @@ import ai.AbstractNpcAI;
  */
 public final class MinionSpawnManager extends AbstractNpcAI
 {
-	private static final Set<Integer> NPC = new HashSet<>(358);
+	private static final Set<Integer> NPC = new HashSet<>(432);
 	
 	static
 	{
+		NPC.add(3473); // Omega Golem
 		NPC.add(18344); // Ancient Egg
 		NPC.add(18352); // Kamael Guard
 		NPC.add(18353); // Guardian of Records
@@ -362,7 +363,74 @@ public final class MinionSpawnManager extends AbstractNpcAI
 		NPC.add(25794); // Kernon
 		NPC.add(25797); // Meanas Anor
 		NPC.add(25800); // Mammon Collector Talos
+		NPC.add(25922); // Nerva Chief Turakan
 		NPC.add(25927); // Krogel
+		NPC.add(25945); // Megaloprepis
+		NPC.add(25946); // Antharas' Herald Komabor
+		NPC.add(25947); // Skellrus' Herald Iskios
+		NPC.add(25948); // Valakas' Herald Potigia
+		NPC.add(25949); // Lindvior's Herald Numa
+		NPC.add(25950); // Fafurion's Herald Aquarion
+		NPC.add(25956); // Vengeful Eligos
+		NPC.add(25957); // Vengeful Agarez
+		NPC.add(25958); // Vengeful Lerazia
+		NPC.add(25959); // Vengeful Oretross
+		NPC.add(25960); // Vengeful Edaire
+		NPC.add(25961); // Vengeful Agonia
+		NPC.add(25967); // Zetahl
+		NPC.add(25968); // Tabris
+		NPC.add(25969); // Stelos
+		NPC.add(25970); // Ravolas
+		NPC.add(25971); // Stelo Soma
+		NPC.add(25972); // Dephracor
+		NPC.add(25978); // Garamor's Herald Gariott
+		NPC.add(25979); // Varvacion
+		NPC.add(25980); // Varmoni
+		NPC.add(25981); // Varvinos
+		NPC.add(25982); // Varmonia
+		NPC.add(25983); // Varkaron
+		NPC.add(25989); // Harp's Clone
+		NPC.add(25990); // Isadora's Avatar
+		NPC.add(25991); // Maliss' Avatar
+		NPC.add(25992); // Embryo Garron
+		NPC.add(25993); // Embryo Nigel
+		NPC.add(25994); // Embryo Dabos
+		NPC.add(26000); // Amden Orc Turahot
+		NPC.add(26001); // Amden Orc Turation
+		NPC.add(26002); // Amden Orc Turamathia
+		NPC.add(26003); // Amden Orc Turabait
+		NPC.add(26004); // Nerva Orc Nermion
+		NPC.add(26005); // Nerva Orc Nergatt
+		NPC.add(26011); // Bloody Earth Dragon Gagia
+		NPC.add(26012); // Demon Fardune
+		NPC.add(26013); // Demon Harsia
+		NPC.add(26014); // Demon Bedukel
+		NPC.add(26015); // Bloody Witch Rumilla
+		NPC.add(26016); // Shilen's Priest Sasia
+		NPC.add(26022); // Dark Messenger Afjak
+		NPC.add(26023); // Dusk Knight Feilnor
+		NPC.add(26024); // Chaos Wizard Amormio
+		NPC.add(26025); // Insolence Knight Lahav
+		NPC.add(26026); // Death Priest Borhunt
+		NPC.add(26027); // Destruction Knight Zeruel
+		NPC.add(26044); // Evil Magikus
+		NPC.add(26045); // Kerfaus
+		NPC.add(26046); // Milinaus
+		NPC.add(26047); // Sarkaus
+		NPC.add(26048); // Shimeus
+		NPC.add(26049); // Evil Kinigos
+		NPC.add(26066); // Enhanced Mahum Radium
+		NPC.add(26067); // Typheron
+		NPC.add(26068); // Timarga
+		NPC.add(26069); // Tycepton
+		NPC.add(26070); // Tiverga
+		NPC.add(26071); // Enhanced Mahum Supercium
+		NPC.add(26077); // Monster Laum
+		NPC.add(26078); // Monster Minotaur
+		NPC.add(26079); // Monster Sarga
+		NPC.add(26080); // Monster Hogliff
+		NPC.add(26081); // Monster Artarot
+		NPC.add(26082); // Monster Centaur
 		NPC.add(27036); // Calpico
 		NPC.add(27041); // Varangka's Messenger
 		NPC.add(27062); // Tanukia
