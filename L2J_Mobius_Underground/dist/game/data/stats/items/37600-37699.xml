@@ -63,6 +63,18 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37608" min="1" max="1" chance="10" />
+			<item id="37609" min="1" max="1" chance="5" />
+			<item id="37612" min="1" max="1" chance="57" />
+			<item id="37611" min="1" max="1" chance="23" />
+			<item id="37610" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="37608" name="Hair Accessory Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a hair accessory on which you can add a pendant. -->
@@ -71,6 +83,25 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="34631" min="1" max="1" chance="8.33" />
+			<item id="34630" min="1" max="1" chance="8.33" />
+			<item id="34629" min="1" max="1" chance="8.33" />
+			<item id="8921" min="1" max="1" chance="8.33" />
+			<item id="6843" min="1" max="1" chance="8.33" />
+			<item id="8565" min="1" max="1" chance="8.33" />
+			<item id="8920" min="1" max="1" chance="8.33" />
+			<item id="34632" min="1" max="1" chance="8.33" />
+			<item id="7680" min="1" max="1" chance="8.33" />
+			<item id="7683" min="1" max="1" chance="8.33" />
+			<item id="34634" min="1" max="1" chance="8.33" />
+			<item id="34633" min="1" max="1" chance="8.37" />
+		</capsuled_items>
 	</item>
 	<item id="37609" name="Pendant Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a pendant. -->
@@ -79,6 +110,27 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35903" min="1" max="1" chance="7.14" />
+			<item id="35904" min="1" max="1" chance="7.14" />
+			<item id="35905" min="1" max="1" chance="7.14" />
+			<item id="35902" min="1" max="1" chance="7.14" />
+			<item id="35913" min="1" max="1" chance="7.14" />
+			<item id="35910" min="1" max="1" chance="7.14" />
+			<item id="35906" min="1" max="1" chance="7.14" />
+			<item id="35901" min="1" max="1" chance="7.14" />
+			<item id="35908" min="1" max="1" chance="7.14" />
+			<item id="35914" min="1" max="1" chance="7.14" />
+			<item id="35911" min="1" max="1" chance="7.14" />
+			<item id="35912" min="1" max="1" chance="7.14" />
+			<item id="35909" min="1" max="1" chance="7.14" />
+			<item id="35907" min="1" max="1" chance="7.18" />
+		</capsuled_items>
 	</item>
 	<item id="37610" name="Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Enchant Scroll (S or R-grade), or have a low chance of receiving a Blessed Enchant Scroll. -->
@@ -87,6 +139,21 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19448" min="1" max="1" chance="10" />
+			<item id="6578" min="1" max="1" chance="12" />
+			<item id="19447" min="1" max="1" chance="6" />
+			<item id="6577" min="1" max="1" chance="8" />
+			<item id="17527" min="1" max="1" chance="16" />
+			<item id="960" min="1" max="1" chance="26" />
+			<item id="17526" min="1" max="1" chance="10" />
+			<item id="959" min="1" max="1" chance="12" />
+		</capsuled_items>
 	</item>
 	<item id="37611" name="Attribute Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either an attribute stone or crystal. -->
@@ -95,6 +162,25 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="9555" min="1" max="1" chance="6" />
+			<item id="9553" min="1" max="1" chance="6" />
+			<item id="9554" min="1" max="1" chance="6" />
+			<item id="9552" min="1" max="1" chance="6" />
+			<item id="9557" min="1" max="1" chance="6" />
+			<item id="9556" min="1" max="1" chance="6" />
+			<item id="9549" min="1" max="1" chance="10.6" />
+			<item id="9547" min="1" max="1" chance="10.6" />
+			<item id="9548" min="1" max="1" chance="10.6" />
+			<item id="9546" min="1" max="1" chance="10.6" />
+			<item id="9551" min="1" max="1" chance="10.6" />
+			<item id="9550" min="1" max="1" chance="11" />
+		</capsuled_items>
 	</item>
 	<item id="37612" name="Ingredient Box" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either an Energy of Destruction or a crafting ingredient. -->
@@ -103,6 +189,26 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36557" min="1" max="1" chance="13" />
+			<item id="36558" min="1" max="1" chance="7" />
+			<item id="36559" min="1" max="1" chance="4" />
+			<item id="36562" min="1" max="1" chance="13" />
+			<item id="36563" min="1" max="1" chance="7" />
+			<item id="36564" min="1" max="1" chance="4" />
+			<item id="36552" min="1" max="1" chance="13" />
+			<item id="36553" min="1" max="1" chance="7" />
+			<item id="36554" min="1" max="1" chance="4" />
+			<item id="36547" min="1" max="1" chance="13" />
+			<item id="36548" min="1" max="1" chance="7" />
+			<item id="36549" min="1" max="1" chance="4" />
+			<item id="35562" min="1" max="1" chance="4" />
+		</capsuled_items>
 	</item>
 	<item id="37613" name="Hero's Treasure Chest" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Hero's Lucky Enchant Stone Pack, Hero's Giant Enchant Scroll Pack, Hero's Blessed Enchant Scroll Pack, Hero's Unbind Scroll Pack, Hero's Attribute Crystal Pack, PK Pack, Reputation Pack, Mysterious Shot Box, Kaliel's Energy Box, Soul Bottle Pack, or Spirit Stone Pack. -->
@@ -112,6 +218,24 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37623" min="1" max="1" chance="4.05" />
+			<item id="37619" min="1" max="1" chance="6" />
+			<item id="37616" min="1" max="1" chance="4" />
+			<item id="37614" min="1" max="1" chance="6" />
+			<item id="37618" min="1" max="1" chance="12" />
+			<item id="37615" min="1" max="1" chance="4" />
+			<item id="37617" min="1" max="1" chance="7" />
+			<item id="37620" min="1" max="1" chance="8" />
+			<item id="37624" min="1" max="1" chance="20" />
+			<item id="37622" min="1" max="1" chance="5" />
+			<item id="37621" min="1" max="1" chance="23.95" />
+		</capsuled_items>
 	</item>
 	<item id="37614" name="Hero's Lucky Enchant Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Lucky Enchant Stone (S or R-grade). -->
@@ -120,6 +244,17 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="33861" min="1" max="1" chance="20" />
+			<item id="33860" min="1" max="1" chance="46" />
+			<item id="33855" min="1" max="1" chance="10" />
+			<item id="33854" min="1" max="1" chance="24" />
+		</capsuled_items>
 	</item>
 	<item id="37615" name="Hero's Giant Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Giant's Enchant Scroll (S or R-grade). -->
@@ -128,6 +263,17 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36390" min="1" max="1" chance="20" />
+			<item id="36386" min="1" max="1" chance="46" />
+			<item id="36387" min="1" max="1" chance="10" />
+			<item id="36378" min="1" max="1" chance="24" />
+		</capsuled_items>
 	</item>
 	<item id="37616" name="Hero's Blessed Enchant Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Enchant Scroll (S or R-grade). -->
@@ -136,6 +282,17 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19448" min="1" max="1" chance="10" />
+			<item id="6578" min="1" max="1" chance="24" />
+			<item id="19447" min="1" max="1" chance="20" />
+			<item id="6577" min="1" max="1" chance="46" />
+		</capsuled_items>
 	</item>
 	<item id="37617" name="Hero's Unbind Scroll Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an Unbind Scroll (R, R95, or R99-grade). -->
@@ -144,6 +301,16 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19444" min="1" max="1" chance="50" />
+			<item id="19445" min="1" max="1" chance="30" />
+			<item id="19446" min="1" max="1" chance="20" />
+		</capsuled_items>
 	</item>
 	<item id="37618" name="Hero's Attribute Crystal Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain an attribute crystal, or either a Super 60 or Super 150 attribute Stone. -->
@@ -152,6 +319,31 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="9555" min="1" max="1" chance="10.6" />
+			<item id="9553" min="1" max="1" chance="10.6" />
+			<item id="9554" min="1" max="1" chance="10.6" />
+			<item id="9552" min="1" max="1" chance="10.6" />
+			<item id="9557" min="1" max="1" chance="10.6" />
+			<item id="9556" min="1" max="1" chance="11" />
+			<item id="33872" min="1" max="1" chance="2" />
+			<item id="33866" min="1" max="1" chance="4" />
+			<item id="33870" min="1" max="1" chance="2" />
+			<item id="33864" min="1" max="1" chance="4" />
+			<item id="33871" min="1" max="1" chance="2" />
+			<item id="33865" min="1" max="1" chance="4" />
+			<item id="33869" min="1" max="1" chance="2" />
+			<item id="33863" min="1" max="1" chance="4" />
+			<item id="33874" min="1" max="1" chance="2" />
+			<item id="33868" min="1" max="1" chance="4" />
+			<item id="33873" min="1" max="1" chance="2" />
+			<item id="33867" min="1" max="1" chance="4" />
+		</capsuled_items>
 	</item>
 	<item id="37619" name="PK Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a random Scroll: PK. -->
@@ -160,6 +352,17 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35753" min="1" max="1" chance="15" />
+			<item id="35754" min="1" max="1" chance="10" />
+			<item id="35741" min="1" max="1" chance="50" />
+			<item id="35752" min="1" max="1" chance="25" />
+		</capsuled_items>
 	</item>
 	<item id="37620" name="Reputation Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain a random Scroll: Reputation. -->
@@ -168,6 +371,17 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35756" min="1" max="1" chance="15" />
+			<item id="35757" min="1" max="1" chance="10" />
+			<item id="35742" min="1" max="1" chance="50" />
+			<item id="35755" min="1" max="1" chance="25" />
+		</capsuled_items>
 	</item>
 	<item id="37621" name="Mysterious Shot Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Mysterious Soulshot or a Mysterious Blessed Spiritshot. -->
@@ -176,6 +390,15 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="34616" min="3000" max="3000" chance="50" />
+			<item id="34609" min="10000" max="10000" chance="50" />
+		</capsuled_items>
 	</item>
 	<item id="37622" name="Kaliel's Energy Box" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain one of Kaliel's Energies. -->
@@ -184,6 +407,16 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="36184" min="1" max="1" chance="85" />
+			<item id="36185" min="1" max="1" chance="10" />
+			<item id="36186" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="37623" name="Soul Bottle Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Bottle of Antharas' Soul, or a Bottle of Valakas' Soul. -->
@@ -192,6 +425,15 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19465" min="1" max="1" chance="50" />
+			<item id="19466" min="1" max="1" chance="50" />
+		</capsuled_items>
 	</item>
 	<item id="37624" name="Top-grade Life Stone Pack" additionalName="Western Winds" type="EtcItem">
 		<!-- Double-click to obtain either a Spirit Stone, or a Life Stone Instilled with Giants' Power. -->
@@ -200,6 +442,16 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="18571" min="1" max="1" chance="54" />
+			<item id="18576" min="1" max="1" chance="34" />
+			<item id="36731" min="1" max="1" chance="12" />
+		</capsuled_items>
 	</item>
 	<item id="37625" name="Legendary Card: Frintezza" type="EtcItem">
 		<set name="icon" val="icon.card_devil_frintessa" />
