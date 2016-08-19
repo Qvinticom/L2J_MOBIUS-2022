@@ -17,7 +17,6 @@
 package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
@@ -52,10 +51,5 @@ public final class PetAttack implements IPlayerActionHandler
 			pet.doAttack(activeChar.getTarget());
 		}
 		
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new PetAttack());
 	}
 }

@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -88,10 +87,5 @@ public final class SitStand implements IPlayerActionHandler
 			activeChar.sitDown();
 		}
 		return true;
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new SitStand());
 	}
 }

@@ -19,7 +19,6 @@ package handlers.playeractions;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
@@ -71,10 +70,5 @@ public final class PetSkillUse implements IPlayerActionHandler
 				pet.switchMode();
 			}
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new PetSkillUse());
 	}
 }

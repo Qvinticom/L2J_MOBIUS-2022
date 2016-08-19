@@ -17,7 +17,6 @@
 package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -63,10 +62,5 @@ public final class UnsummonPet implements IPlayerActionHandler
 		{
 			pet.unSummon(activeChar);
 		}
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new UnsummonPet());
 	}
 }

@@ -17,7 +17,6 @@
 package handlers.playeractions;
 
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -31,10 +30,5 @@ public final class Ride implements IPlayerActionHandler
 	public void useAction(L2PcInstance activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		activeChar.mountPlayer(activeChar.getPet());
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new Ride());
 	}
 }

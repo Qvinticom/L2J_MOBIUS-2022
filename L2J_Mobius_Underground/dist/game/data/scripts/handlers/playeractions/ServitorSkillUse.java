@@ -19,7 +19,6 @@ package handlers.playeractions;
 import com.l2jmobius.gameserver.data.sql.impl.SummonSkillsTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -61,10 +60,5 @@ public final class ServitorSkillUse implements IPlayerActionHandler
 				servitor.useMagic(SkillData.getInstance().getSkill(data.getOptionId(), skillLevel), null, ctrlPressed, shiftPressed);
 			}
 		});
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new ServitorSkillUse());
 	}
 }

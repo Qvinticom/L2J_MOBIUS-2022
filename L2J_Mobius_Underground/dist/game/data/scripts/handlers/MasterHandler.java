@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.handler.ChatHandler;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
+import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.handler.PunishmentHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.handler.UserCommandHandler;
@@ -204,6 +205,30 @@ import handlers.itemhandlers.SoulShots;
 import handlers.itemhandlers.SpecialXMas;
 import handlers.itemhandlers.SpiritShot;
 import handlers.itemhandlers.SummonItems;
+import handlers.playeractions.AirshipAction;
+import handlers.playeractions.BotReport;
+import handlers.playeractions.InstanceZoneInfo;
+import handlers.playeractions.PetAttack;
+import handlers.playeractions.PetHold;
+import handlers.playeractions.PetMove;
+import handlers.playeractions.PetSkillUse;
+import handlers.playeractions.PetStop;
+import handlers.playeractions.PrivateStore;
+import handlers.playeractions.Ride;
+import handlers.playeractions.RunWalk;
+import handlers.playeractions.ServitorAttack;
+import handlers.playeractions.ServitorHold;
+import handlers.playeractions.ServitorMode;
+import handlers.playeractions.ServitorMove;
+import handlers.playeractions.ServitorSkillUse;
+import handlers.playeractions.ServitorStop;
+import handlers.playeractions.SitStand;
+import handlers.playeractions.SocialAction;
+import handlers.playeractions.TacticalSignTarget;
+import handlers.playeractions.TacticalSignUse;
+import handlers.playeractions.TeleportBookmark;
+import handlers.playeractions.UnsummonPet;
+import handlers.playeractions.UnsummonServitor;
 import handlers.punishmenthandlers.BanHandler;
 import handlers.punishmenthandlers.ChatBanHandler;
 import handlers.punishmenthandlers.JailHandler;
@@ -304,6 +329,7 @@ public class MasterHandler
 		TargetHandler.getInstance(),
 		AffectObjectHandler.getInstance(),
 		AffectScopeHandler.getInstance(),
+		PlayerActionHandler.getInstance()
 	};
 	
 	private static final Class<?>[][] HANDLERS =
@@ -590,6 +616,32 @@ public class MasterHandler
 			SquarePB.class,
 			StaticObjectScope.class,
 			SummonExceptMaster.class,
+		},
+		{
+			AirshipAction.class,
+			BotReport.class,
+			InstanceZoneInfo.class,
+			PetAttack.class,
+			PetHold.class,
+			PetMove.class,
+			PetSkillUse.class,
+			PetStop.class,
+			PrivateStore.class,
+			Ride.class,
+			RunWalk.class,
+			ServitorAttack.class,
+			ServitorHold.class,
+			ServitorMode.class,
+			ServitorMove.class,
+			ServitorSkillUse.class,
+			ServitorStop.class,
+			SitStand.class,
+			SocialAction.class,
+			TacticalSignTarget.class,
+			TacticalSignUse.class,
+			TeleportBookmark.class,
+			UnsummonPet.class,
+			UnsummonServitor.class
 		}
 	};
 	

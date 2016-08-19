@@ -18,7 +18,6 @@ package handlers.playeractions;
 
 import com.l2jmobius.gameserver.ai.L2SummonAI;
 import com.l2jmobius.gameserver.handler.IPlayerActionHandler;
-import com.l2jmobius.gameserver.handler.PlayerActionHandler;
 import com.l2jmobius.gameserver.model.ActionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -48,10 +47,5 @@ public final class ServitorHold implements IPlayerActionHandler
 			
 			((L2SummonAI) s.getAI()).notifyFollowStatusChange();
 		});
-	}
-	
-	public static void main(String[] args)
-	{
-		PlayerActionHandler.getInstance().registerHandler(new ServitorHold());
 	}
 }
