@@ -24,14 +24,14 @@ import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * Obtain a Wolf Pet (210)
- * @author Gladicek
+ * @author Stayway
  */
-public final class Q00210_ObtainAWolfPet extends Quest
+public class Q00210_ObtainAWolfPet extends Quest
 {
 	// NPCs
 	private static final int LUNDY = 30827;
 	private static final int BELLA = 30256;
-	private static final int BRYNN = 30335;
+	private static final int BYNN = 30335;
 	private static final int SYDNIA = 30321;
 	// Item
 	private static final int WOLF_COLLAR = 2375;
@@ -42,42 +42,59 @@ public final class Q00210_ObtainAWolfPet extends Quest
 	{
 		super(210);
 		addStartNpc(LUNDY);
-		addTalkId(LUNDY, BELLA, BRYNN, SYDNIA);
-		addCondMinLevel(MIN_LEVEL, "30827-07.html");
+		addTalkId(LUNDY, BELLA, BYNN, SYDNIA);
+		addCondMinLevel(MIN_LEVEL, "no_level.htm");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return htmltext;
 		}
 		
-		String htmltext = null;
 		switch (event)
 		{
 			case "30827-02.htm":
+			case "30827-04.htm":
 			case "30256-02.html":
 			case "30256-03.html":
-			case "30335-02.html":
-			case "30321-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "30827-03.html":
+			case "30827-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "30827-06.html":
+			case "30335-02.html":
+			{
+				if (qs.isCond(2))
+				{
+					qs.setCond(3);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30321-02.html":
+			{
+				if (qs.isCond(3))
+				{
+					qs.setCond(4);
+					htmltext = event;
+				}
+				break;
+			}
+			case "30827-05.html":
 			{
 				if (qs.isCond(4))
 				{
-					giveItems(player, WOLF_COLLAR, 1);
+					rewardItems(player, WOLF_COLLAR, 1);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -90,8 +107,12 @@ public final class Q00210_ObtainAWolfPet extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
+		final QuestState qs = getQuestState(player, true);
+		if (qs == null)
+		{
+			return htmltext;
+		}
 		
 		switch (qs.getState())
 		{
@@ -100,8 +121,8 @@ public final class Q00210_ObtainAWolfPet extends Quest
 				if (npc.getId() == LUNDY)
 				{
 					htmltext = "30827-01.htm";
-					break;
 				}
+				break;
 			}
 			case State.STARTED:
 			{
@@ -111,13 +132,15 @@ public final class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "30827-04.html";
-							break;
+							htmltext = "30827-07.html";
+						}
+						else if (qs.isCond(2))
+						{
+							htmltext = "30827-07.html";
 						}
 						else if (qs.isCond(4))
 						{
-							htmltext = "30827-05.html";
-							break;
+							htmltext = "30827-04.html";
 						}
 						break;
 					}
@@ -125,16 +148,15 @@ public final class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							qs.setCond(2, true);
+							qs.setCond(2);
 							htmltext = "30256-01.html";
 						}
 						break;
 					}
-					case BRYNN:
+					case BYNN:
 					{
 						if (qs.isCond(2))
 						{
-							qs.setCond(3, true);
 							htmltext = "30335-01.html";
 						}
 						break;
@@ -143,7 +165,6 @@ public final class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(3))
 						{
-							qs.setCond(4, true);
 							htmltext = "30321-01.html";
 						}
 						break;
@@ -153,11 +174,7 @@ public final class Q00210_ObtainAWolfPet extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if (npc.getId() == LUNDY)
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}
