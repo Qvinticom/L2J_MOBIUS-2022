@@ -6,6 +6,9 @@
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
 			<param name="MoveAroundSocial2" value="40" />
+			<minions name="Privates">
+				<npc id="22099" count="9" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -168,6 +171,9 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
+			<minions name="Privates">
+				<npc id="22101" count="9" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="20" />
 			<param name="LongRangeGuardRate" value="5" />
@@ -298,6 +304,9 @@
 			<param name="MoveAroundSocial" value="78" />
 			<param name="MoveAroundSocial1" value="78" />
 			<param name="MoveAroundSocial2" value="78" />
+			<minions name="Privates">
+				<npc id="22103" count="9" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -3674,6 +3683,11 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="98" />
+			<minions name="Privates">
+				<npc id="22156" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22157" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22158" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="PhysicalSpecial" id="15432" level="1" />
 			<skill name="PhysicalSpecial2" id="15436" level="1" />
@@ -3971,6 +3985,11 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="98" />
+			<minions name="Privates">
+				<npc id="22160" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22161" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22162" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="PhysicalSpecial" id="15432" level="1" />
 			<skill name="PhysicalSpecial2" id="15436" level="1" />
@@ -4246,6 +4265,11 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="98" />
+			<minions name="Privates">
+				<npc id="22164" count="1" respawnTime="2" weightPoint="1" />
+				<npc id="22165" count="2" respawnTime="1" weightPoint="1" />
+				<npc id="22166" count="2" respawnTime="2" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<param name="SpecialDDMagicUse" value="30" />
 			<skill name="SpecialAttack" id="15445" level="1" />
@@ -4527,6 +4551,11 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="98" />
+			<minions name="Privates">
+				<npc id="22168" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22169" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22170" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="PhysicalSpecial" id="15432" level="1" />
 			<skill name="PhysicalSpecial2" id="15436" level="1" />
@@ -4802,6 +4831,11 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="98" />
+			<minions name="Privates">
+				<npc id="22172" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22173" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22174" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<param name="SpecialDDMagicUse" value="30" />
 			<skill name="SpecialAttack" id="15445" level="1" />
@@ -5278,6 +5312,10 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="98" />
+			<minions name="Privates">
+				<npc id="22189" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22190" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<skill name="PhysicalSpecial" id="15432" level="1" />
 			<skill name="PhysicalSpecial2" id="15436" level="1" />
@@ -5924,6 +5962,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
+			<minions name="Privates">
+				<npc id="22197" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="10" />
 			<param name="ProbPhysicalSpecial2" value="20" />
@@ -6096,6 +6137,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="mobile_type" value="1" />
+			<minions name="Privates">
+				<npc id="22197" count="4" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="10" />
 			<param name="ProbPhysicalSpecial2" value="20" />

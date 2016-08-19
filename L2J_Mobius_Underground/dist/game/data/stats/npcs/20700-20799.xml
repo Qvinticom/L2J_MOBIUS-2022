@@ -158,6 +158,9 @@
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
+			<minions name="Privates">
+				<npc id="20746" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -336,6 +339,9 @@
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
 			<param name="MoveAroundSocial2" value="110" />
+			<minions name="Privates">
+				<npc id="20748" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -485,6 +491,9 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
+			<minions name="Privates">
+				<npc id="20750" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -1039,6 +1048,10 @@
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
 			<param name="MoveAroundSocial2" value="90" />
+			<minions name="Privates">
+				<npc id="20756" count="1" respawnTime="300" weightPoint="1" />
+				<npc id="20757" count="1" respawnTime="300" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -1250,6 +1263,9 @@
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
 			<param name="MoveAroundSocial2" value="60" />
+			<minions name="Privates">
+				<npc id="20762" count="2" respawnTime="300" weightPoint="1" />
+			</minions>
 			<param name="ShoutTarget" value="1" />
 			<param name="SetHateGroup" value="attacker_group" />
 			<param name="SetHateGroupRatio" value="20" />
@@ -1387,6 +1403,11 @@
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
 			<param name="MoveAroundSocial2" value="60" />
+			<minions name="Privates">
+				<npc id="20768" count="1" respawnTime="1200" weightPoint="1" />
+				<npc id="20769" count="1" respawnTime="1200" weightPoint="1" />
+				<npc id="20770" count="1" respawnTime="1200" weightPoint="1" />
+			</minions>
 			<param name="RandomAggressive" value="30" />
 			<param name="SummonPrivateRate" value="50" />
 			<param name="SoulShot" value="100" />

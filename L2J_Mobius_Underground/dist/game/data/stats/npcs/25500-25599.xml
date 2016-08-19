@@ -1503,6 +1503,10 @@
 	<npc id="25536" level="81" type="L2RaidBoss" name="Hannibal" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="25537" count="1" respawnTime="60" weightPoint="1" />
+				<npc id="25538" count="1" respawnTime="60" weightPoint="1" />
+			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<skill name="DDMagic_a" id="4191" level="9" />
 			<skill name="SelfRangeDebuff_a" id="4183" level="9" />
