@@ -61,9 +61,17 @@ public class Q00210_ObtainAWolfPet extends Quest
 			case "30827-02.htm":
 			case "30827-04.htm":
 			case "30256-02.html":
-			case "30256-03.html":
 			{
 				htmltext = event;
+				break;
+			}
+			case "30256-03.html":
+			{
+				if (qs.isCond(1))
+				{
+					qs.setCond(2);
+					htmltext = event;
+				}
 				break;
 			}
 			case "30827-03.htm":
@@ -148,7 +156,6 @@ public class Q00210_ObtainAWolfPet extends Quest
 					{
 						if (qs.isCond(1))
 						{
-							qs.setCond(2);
 							htmltext = "30256-01.html";
 						}
 						break;
