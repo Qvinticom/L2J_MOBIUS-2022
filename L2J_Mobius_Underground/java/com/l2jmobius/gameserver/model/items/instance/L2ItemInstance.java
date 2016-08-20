@@ -1811,7 +1811,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				player.getWarehouse().destroyItem("L2ItemInstance", this, player, null);
 			}
-			player.sendPacket(SystemMessageId.THE_LIMITED_TIME_ITEM_HAS_DISAPPEARED_BECAUSE_THE_REMAINING_TIME_RAN_OUT);
+			player.sendPacket(SystemMessageId.AN_ITEM_IN_YOUR_POSSESSION_HAS_EXPIRED);
 			// delete from world
 			L2World.getInstance().removeObject(this);
 		}
