@@ -278,7 +278,7 @@
 	<skill id="9928" toLevel="1" name="Scroll of Escape: Heine">
 		<!-- Return to Heine. -->
 		<icon>icon.skill0000</icon>
-		<hitTime>1500</hitTime>
+		<hitTime>500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37112</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1098,26 +1098,62 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="9980" toLevel="1" name="Scroll of Escape: Field of Silence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Field of Silence. -->
 		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>37039</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>1500</hitTime>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>86922</x>
+				<y>162508</y>
+				<z>-3579</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9981" toLevel="1" name="Scroll of Escape: Field of Whispers">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to the Field of Whispers. -->
 		<icon>icon.skill0000</icon>
+		<hitTime>500</hitTime>
 		<itemConsumeId>37040</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<hitTime>1500</hitTime>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<cond msgId="113" addName="1">
+			<and>
+				<player canEscape="true" />
+				<not>
+					<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
+				</not>
+			</and>
+		</cond>
+		<effects>
+			<effect name="Teleport">
+				<x>81307</x>
+				<y>226534</y>
+				<z>-3588</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9982" toLevel="1" name="Elixir: Divine Protection">
 		<!-- AUTO GENERATED SKILL -->
