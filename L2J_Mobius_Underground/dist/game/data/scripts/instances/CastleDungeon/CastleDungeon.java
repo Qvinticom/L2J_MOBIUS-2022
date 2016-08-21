@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.model.quest.QuestState;
@@ -165,8 +165,8 @@ public final class CastleDungeon extends AbstractInstance
 	protected boolean validateConditions(List<L2PcInstance> group, L2Npc npc, InstanceTemplate template)
 	{
 		final L2PcInstance groupLeader = group.get(0);
-		final Fort fort = npc.getFort();
-		if (fort == null)
+		final Castle castle = npc.getCastle();
+		if (castle == null)
 		{
 			showHtmlFile(groupLeader, "noProperPledge.html");
 			return false;
