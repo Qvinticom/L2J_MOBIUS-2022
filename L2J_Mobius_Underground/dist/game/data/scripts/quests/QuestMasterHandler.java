@@ -169,6 +169,8 @@ import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
+import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
+import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
 import quests.Q00754_AssistingTheRebelForces.Q00754_AssistingTheRebelForces;
 import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
 import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
@@ -545,6 +547,8 @@ public class QuestMasterHandler
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
 		Q00688_DefeatTheElrokianRaiders.class,
+		Q00726_LightWithinTheDarkness.class,
+		Q00727_HopeWithinTheDarkness.class,
 		Q00754_AssistingTheRebelForces.class,
 		Q00755_InNeedOfPetras.class,
 		Q00756_TopQualityPetra.class,
