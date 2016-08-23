@@ -211,15 +211,20 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 	private void giveItem(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, player, false) && (getQuestItemsCount(player, EVIL_FREED_SOUL) >= 50))
+		if (qs != null)
 		{
 			giveItems(player, EVIL_FREED_SOUL, 1);
-			qs.setCond(3, true);
-		}
-		else if (getQuestItemsCount(player, EVIL_FREED_SOUL) < 50)
-		{
-			giveItems(player, EVIL_FREED_SOUL, 1);
-			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			if (qs.isCond(2))
+			{
+				if (getQuestItemsCount(player, EVIL_FREED_SOUL) >= 50)
+				{
+					qs.setCond(3, true);
+				}
+				else
+				{
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+			}
 		}
 	}
 	
@@ -230,7 +235,10 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 		{
 			for (L2PcInstance member : killer.getParty().getMembers())
 			{
-				giveItem(npc, member);
+				if (Util.checkIfInRange(1500, npc, member, false))
+				{
+					giveItem(npc, member);
+				}
 			}
 		}
 		else
