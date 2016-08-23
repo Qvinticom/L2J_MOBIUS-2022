@@ -42,13 +42,10 @@ import com.l2jmobius.gameserver.handler.AffectScopeHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
-import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
-import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -1404,71 +1401,31 @@ public final class Skill implements IIdentifiable
 	 */
 	public final void activateSkill(L2Character caster, CubicInstance cubic, L2ItemInstance item, L2Object... targets)
 	{
-		// TODO: replace with AI
-		switch (getId())
+		for (L2Object targetObject : targets)
 		{
-			case 5852:
-			case 5853:
+			if (!targetObject.isCharacter())
 			{
-				final L2BlockInstance block = targets[0] instanceof L2BlockInstance ? (L2BlockInstance) targets[0] : null;
-				final L2PcInstance player = caster.isPlayer() ? (L2PcInstance) caster : null;
-				if ((block == null) || (player == null))
-				{
-					return;
-				}
-				
-				final int arena = player.getBlockCheckerArena();
-				if (arena != -1)
-				{
-					final ArenaParticipantsHolder holder = HandysBlockCheckerManager.getInstance().getHolder(arena);
-					if (holder == null)
-					{
-						return;
-					}
-					
-					final int team = holder.getPlayerTeam(player);
-					final int color = block.getColorEffect();
-					if ((team == 0) && (color == 0x00))
-					{
-						block.changeColor(player, holder, team);
-					}
-					else if ((team == 1) && (color == 0x53))
-					{
-						block.changeColor(player, holder, team);
-					}
-				}
-				break;
+				continue;
 			}
-			default:
+			
+			final L2Character target = (L2Character) targetObject;
+			if (Formulas.calcBuffDebuffReflection(target, this))
 			{
-				for (L2Object targetObject : targets)
-				{
-					if (!targetObject.isCharacter())
-					{
-						continue;
-					}
-					
-					final L2Character target = (L2Character) targetObject;
-					if (Formulas.calcBuffDebuffReflection(target, this))
-					{
-						// if skill is reflected instant effects should be casted on target
-						// and continuous effects on caster
-						applyEffects(target, caster, false, 0);
-						
-						final BuffInfo info = new BuffInfo(caster, target, this, false, item, null);
-						applyEffectScope(EffectScope.GENERAL, info, true, false);
-						
-						final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
-						applyEffectScope(pvpOrPveEffectScope, info, true, false);
-						
-						applyEffectScope(EffectScope.CHANNELING, info, true, false);
-					}
-					else
-					{
-						applyEffects(caster, target, item);
-					}
-				}
-				break;
+				// if skill is reflected instant effects should be casted on target
+				// and continuous effects on caster
+				applyEffects(target, caster, false, 0);
+				
+				final BuffInfo info = new BuffInfo(caster, target, this, false, item, null);
+				applyEffectScope(EffectScope.GENERAL, info, true, false);
+				
+				final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
+				applyEffectScope(pvpOrPveEffectScope, info, true, false);
+				
+				applyEffectScope(EffectScope.CHANNELING, info, true, false);
+			}
+			else
+			{
+				applyEffects(caster, target, item);
 			}
 		}
 		

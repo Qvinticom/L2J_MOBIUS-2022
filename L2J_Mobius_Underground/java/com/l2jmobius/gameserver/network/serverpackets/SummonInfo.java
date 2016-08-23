@@ -158,7 +158,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.CLAN);
 		}
 		
-		addComponentType(NpcInfoType.UNKNOWN8);
+		addComponentType(NpcInfoType.COLOR_EFFECT);
 		
 		// TODO: Confirm me
 		if (summon.isInCombat())
@@ -312,7 +312,7 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeD(0x00); // Player ObjectId with Decoy
 		}
-		if (containsMask(NpcInfoType.UNKNOWN8))
+		if (containsMask(NpcInfoType.COLOR_EFFECT))
 		{
 			// No visual effect
 			packet.writeD(0x00); // Unknown

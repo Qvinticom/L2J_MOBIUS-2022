@@ -184,7 +184,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 			}
 		}
 		
-		addComponentType(NpcInfoType.UNKNOWN8);
+		addComponentType(NpcInfoType.COLOR_EFFECT);
 		
 		if (npc.getPvpFlag() > 0)
 		{
@@ -345,10 +345,9 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeD(_npc.getCloneObjId()); // Player ObjectId with Decoy
 		}
-		if (containsMask(NpcInfoType.UNKNOWN8))
+		if (containsMask(NpcInfoType.COLOR_EFFECT))
 		{
-			// No visual effect
-			packet.writeD(0x00); // Unknown
+			packet.writeD(_npc.getColorEffect()); // Color effect
 		}
 		if (containsMask(NpcInfoType.DISPLAY_EFFECT))
 		{

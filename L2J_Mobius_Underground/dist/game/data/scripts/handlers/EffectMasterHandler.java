@@ -130,6 +130,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Fear", Fear::new);
 		EffectHandler.getInstance().registerHandler("Feed", Feed::new);
 		EffectHandler.getInstance().registerHandler("Flag", Flag::new);
+		EffectHandler.getInstance().registerHandler("FlipBlock", FlipBlock::new);
 		EffectHandler.getInstance().registerHandler("FlyMove", FlyMove::new);
 		EffectHandler.getInstance().registerHandler("FocusEnergy", FocusEnergy::new);
 		EffectHandler.getInstance().registerHandler("FocusMomentum", FocusMomentum::new);
