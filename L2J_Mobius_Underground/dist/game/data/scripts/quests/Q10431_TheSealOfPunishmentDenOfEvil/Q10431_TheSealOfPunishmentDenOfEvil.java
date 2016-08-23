@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * The Seal of Punishment: Den of Evil (10431)
@@ -39,19 +40,19 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 	// Item
 	private static final int EVIL_FREED_SOUL = 36715;
 	// Misc
-	private static final Map<Integer, Double> RAGNA_ORC = new HashMap<>();
+	private static final Map<Integer, Integer> RAGNA_ORC = new HashMap<>();
 	static
 	{
-		RAGNA_ORC.put(22692, 0.888); // Ragna Orc Warriors
-		RAGNA_ORC.put(22693, 0.888); // Ragna Orc Heroes
-		RAGNA_ORC.put(22694, 0.888); // Ragna Orc Commanders
-		RAGNA_ORC.put(22695, 0.888); // Ragna Orc Healers
-		RAGNA_ORC.put(22696, 0.888); // Ragna Orc Shamans
-		RAGNA_ORC.put(22697, 0.888); // Ragna Orc Priests
-		RAGNA_ORC.put(22698, 0.888); // Ragna Orc Archers
-		RAGNA_ORC.put(22699, 0.888); // Ragna Orc Snipers
-		RAGNA_ORC.put(22701, 0.888); // Varangka's Dre Vanuls
-		RAGNA_ORC.put(22702, 0.888); // Varangka's Destroyers
+		RAGNA_ORC.put(22692, 888); // Ragna Orc Warriors
+		RAGNA_ORC.put(22693, 888); // Ragna Orc Heroes
+		RAGNA_ORC.put(22694, 888); // Ragna Orc Commanders
+		RAGNA_ORC.put(22695, 888); // Ragna Orc Healers
+		RAGNA_ORC.put(22696, 888); // Ragna Orc Shamans
+		RAGNA_ORC.put(22697, 888); // Ragna Orc Priests
+		RAGNA_ORC.put(22698, 888); // Ragna Orc Archers
+		RAGNA_ORC.put(22699, 888); // Ragna Orc Snipers
+		RAGNA_ORC.put(22701, 888); // Varangka's Dre Vanuls
+		RAGNA_ORC.put(22702, 888); // Varangka's Destroyers
 	}
 	private static final int MIN_LEVEL = 81;
 	private static final int MAX_LEVEL = 84;
@@ -64,7 +65,7 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 		addKillId(RAGNA_ORC.keySet());
 		registerQuestItems(EVIL_FREED_SOUL);
 		addCondMaxLevel(MAX_LEVEL, "33868-06.html");
-		addCondMaxLevel(MIN_LEVEL, "33868-06.html");
+		addCondMinLevel(MIN_LEVEL, "33868-06.html");
 		addCondNotRace(Race.ERTHEIA, "noErtheia.html");
 		addCondInCategory(CategoryType.FOURTH_CLASS_GROUP, "nocond.html");
 	}
@@ -110,7 +111,6 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 				{
 					break;
 				}
-				takeItems(player, EVIL_FREED_SOUL, -1);
 				final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
 				giveItems(player, stoneId, 15);
 				giveStoryQuestReward(player, 60);
@@ -208,30 +208,34 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 		return htmltext;
 	}
 	
+	private void giveItem(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2) && Util.checkIfInRange(1500, npc, player, false) && (getQuestItemsCount(player, EVIL_FREED_SOUL) >= 50))
+		{
+			giveItems(player, EVIL_FREED_SOUL, 1);
+			qs.setCond(3, true);
+		}
+		else if (getQuestItemsCount(player, EVIL_FREED_SOUL) < 50)
+		{
+			giveItems(player, EVIL_FREED_SOUL, 1);
+			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+		}
+	}
+	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		
-		if (qs == null)
+		if (killer.isInParty())
 		{
-			return null;
+			for (L2PcInstance member : killer.getParty().getMembers())
+			{
+				giveItem(npc, member);
+			}
 		}
-		
-		final int npcId = npc.getId();
-		
-		if (RAGNA_ORC.containsKey(npcId))
+		else
 		{
-			giveItemRandomly(qs.getPlayer(), npc, EVIL_FREED_SOUL, 1, 0, RAGNA_ORC.get(npcId), true);
-		}
-		if (getQuestItemsCount(killer, EVIL_FREED_SOUL) < 50)
-		{
-			giveItems(killer, EVIL_FREED_SOUL, 1);
-			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-		}
-		else if (getQuestItemsCount(killer, EVIL_FREED_SOUL) >= 50)
-		{
-			qs.setCond(3, true);
+			giveItem(npc, killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
