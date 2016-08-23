@@ -295,6 +295,7 @@ import quests.Q10430_KekropusLetterTrackingTheEvil.Q10430_KekropusLetterTracking
 import quests.Q10431_TheSealOfPunishmentDenOfEvil.Q10431_TheSealOfPunishmentDenOfEvil;
 import quests.Q10433_KekropusLetterRegardingASeal.Q10433_KekropusLetterRegardingASeal;
 import quests.Q10436_KekropusLetterTheSealOfPunishment.Q10436_KekropusLetterTheSealOfPunishment;
+import quests.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen;
 import quests.Q10439_KekropusLetterTheOriginsOfARumor.Q10439_KekropusLetterTheOriginsOfARumor;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10443_TheAnnihilatedPlains2.Q10443_TheAnnihilatedPlains2;
@@ -674,6 +675,7 @@ public class QuestMasterHandler
 		Q10431_TheSealOfPunishmentDenOfEvil.class,
 		Q10433_KekropusLetterRegardingASeal.class,
 		Q10436_KekropusLetterTheSealOfPunishment.class,
+		Q10437_TheSealOfPunishmentPlainsOfTheLizardmen.class,
 		Q10439_KekropusLetterTheOriginsOfARumor.class,
 		Q10442_TheAnnihilatedPlains1.class,
 		Q10443_TheAnnihilatedPlains2.class,
