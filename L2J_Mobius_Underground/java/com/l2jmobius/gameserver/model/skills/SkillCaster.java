@@ -315,12 +315,8 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Consume the required items. Should happen after use message is displayed and SetupGauge
-		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0))
+		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && !((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE)))
 		{
-			if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE))
-			{
-				return false;
-			}
 			if (!caster.destroyItemByItemId(_skill.toString(), _skill.getItemConsumeId(), _skill.getItemConsumeCount(), target, true))
 			{
 				return false;
