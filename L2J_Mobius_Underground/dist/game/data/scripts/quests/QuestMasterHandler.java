@@ -292,6 +292,7 @@ import quests.Q10425_TheKetraOrcSupporters.Q10425_TheKetraOrcSupporters;
 import quests.Q10426_AssassinationOfTheKetraOrcCommander.Q10426_AssassinationOfTheKetraOrcCommander;
 import quests.Q10427_AssassinationOfTheKetraOrcChief.Q10427_AssassinationOfTheKetraOrcChief;
 import quests.Q10430_KekropusLetterTrackingTheEvil.Q10430_KekropusLetterTrackingTheEvil;
+import quests.Q10431_TheSealOfPunishmentDenOfEvil.Q10431_TheSealOfPunishmentDenOfEvil;
 import quests.Q10433_KekropusLetterRegardingASeal.Q10433_KekropusLetterRegardingASeal;
 import quests.Q10436_KekropusLetterTheSealOfPunishment.Q10436_KekropusLetterTheSealOfPunishment;
 import quests.Q10439_KekropusLetterTheOriginsOfARumor.Q10439_KekropusLetterTheOriginsOfARumor;
@@ -670,6 +671,7 @@ public class QuestMasterHandler
 		Q10426_AssassinationOfTheKetraOrcCommander.class,
 		Q10427_AssassinationOfTheKetraOrcChief.class,
 		Q10430_KekropusLetterTrackingTheEvil.class,
+		Q10431_TheSealOfPunishmentDenOfEvil.class,
 		Q10433_KekropusLetterRegardingASeal.class,
 		Q10436_KekropusLetterTheSealOfPunishment.class,
 		Q10439_KekropusLetterTheOriginsOfARumor.class,
