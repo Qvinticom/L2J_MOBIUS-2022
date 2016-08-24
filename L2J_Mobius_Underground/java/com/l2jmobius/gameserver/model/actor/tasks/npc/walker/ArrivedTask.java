@@ -38,6 +38,7 @@ public class ArrivedTask implements Runnable
 	@Override
 	public void run()
 	{
+		_npc.broadcastInfo();
 		_walk.setBlocked(false);
 		WalkingManager.getInstance().startMoving(_npc, _walk.getRoute().getName());
 	}

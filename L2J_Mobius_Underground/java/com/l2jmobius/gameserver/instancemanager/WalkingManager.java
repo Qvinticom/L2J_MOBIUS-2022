@@ -53,10 +53,12 @@ public final class WalkingManager implements IGameXmlReader
 	private static final Logger LOGGER = Logger.getLogger(WalkingManager.class.getName());
 	
 	// Repeat style:
+	// -1 - no repeat
 	// 0 - go back
 	// 1 - go to first point (circle style)
 	// 2 - teleport to first point (conveyor style)
 	// 3 - random walking between points.
+	public static final byte NO_REPEAT = -1;
 	public static final byte REPEAT_GO_BACK = 0;
 	public static final byte REPEAT_GO_FIRST = 1;
 	public static final byte REPEAT_TELE_FIRST = 2;
@@ -88,27 +90,36 @@ public final class WalkingManager implements IGameXmlReader
 			{
 				final String routeName = parseString(d.getAttributes(), "name");
 				final boolean repeat = parseBoolean(d.getAttributes(), "repeat");
-				final String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue();
-				byte repeatType;
-				if (repeatStyle.equalsIgnoreCase("back"))
+				final String repeatStyle = d.getAttributes().getNamedItem("repeatStyle").getNodeValue().toLowerCase();
+				
+				final byte repeatType;
+				switch (repeatStyle)
 				{
-					repeatType = REPEAT_GO_BACK;
-				}
-				else if (repeatStyle.equalsIgnoreCase("cycle"))
-				{
-					repeatType = REPEAT_GO_FIRST;
-				}
-				else if (repeatStyle.equalsIgnoreCase("conveyor"))
-				{
-					repeatType = REPEAT_TELE_FIRST;
-				}
-				else if (repeatStyle.equalsIgnoreCase("random"))
-				{
-					repeatType = REPEAT_RANDOM;
-				}
-				else
-				{
-					repeatType = -1;
+					case "back":
+					{
+						repeatType = REPEAT_GO_BACK;
+						break;
+					}
+					case "cycle":
+					{
+						repeatType = REPEAT_GO_FIRST;
+						break;
+					}
+					case "conveyor":
+					{
+						repeatType = REPEAT_TELE_FIRST;
+						break;
+					}
+					case "random":
+					{
+						repeatType = REPEAT_RANDOM;
+						break;
+					}
+					default:
+					{
+						repeatType = NO_REPEAT;
+						break;
+					}
 				}
 				
 				final List<L2NpcWalkerNode> list = new ArrayList<>();
@@ -419,12 +430,7 @@ public final class WalkingManager implements IGameXmlReader
 				{
 					npc.sendDebugMessage("Route '" + walk.getRoute().getName() + "', arrived to node " + walk.getCurrentNodeId());
 					npc.sendDebugMessage("Done in " + ((System.currentTimeMillis() - walk.getLastAction()) / 1000) + " s");
-					
-					if (!walk.calculateNextNode(npc))
-					{
-						return;
-					}
-					
+					walk.calculateNextNode(npc);
 					walk.setBlocked(true); // prevents to be ran from walk check task, if there is delay in this node.
 					
 					if (node.getNpcString() != null)
@@ -441,18 +447,7 @@ public final class WalkingManager implements IGameXmlReader
 						walk.setLastAction(System.currentTimeMillis());
 					}
 					
-					if (_activeRoutes.containsKey(npc.getObjectId()))
-					{
-						if (node.getDelay() > 0)
-						{
-							ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), node.getDelay() * 1000L);
-						}
-						else
-						{
-							walk.setBlocked(false);
-							WalkingManager.getInstance().startMoving(npc, walk.getRoute().getName());
-						}
-					}
+					ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
 				}
 			}
 		}
