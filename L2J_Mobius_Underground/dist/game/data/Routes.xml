@@ -1028,20 +1028,6 @@
 		<point string="" X="96506" Y="69958" Z="-3851" delay="0" run="false" />
 		<point string="" X="94265" Y="68391" Z="-3851" delay="0" run="false" />
 	</route>
-	<route name="ye_segira_guard1" repeat="false" repeatStyle="cycle">
-		<point string="" X="-115838" Y="236162" Z="-3088" delay="0" run="true" />
-		<point string="" X="-114903" Y="235294" Z="-3088" delay="0" run="true" />
-		<point npcStringId="1811262" X="-114178" Y="235791" Z="-3088" delay="0" run="true" />
-		<point string="" X="-113666" Y="236330" Z="-3040" delay="0" run="true" />
-		<point string="" X="-113654" Y="237202" Z="-3040" delay="0" run="true" />
-	</route>
-	<route name="ye_segira_guard2" repeat="false" repeatStyle="cycle">
-		<point string="" X="-115737" Y="235908" Z="-3088" delay="0" run="true" />
-		<point string="" X="-115084" Y="235362" Z="-3088" delay="0" run="true" />
-		<point npcStringId="1811262" X="-114124" Y="235703" Z="-3088" delay="0" run="true" />
-		<point string="" X="-113724" Y="236337" Z="-3040" delay="0" run="true" />
-		<point string="" X="-113501" Y="237212" Z="-3040" delay="0" run="true" />
-	</route>
 	<route name="ricky_quest" repeat="false" repeatStyle="cycle"> <!-- Ricky - Quest 10742 A Furry Friend -->
 		<target id="19552" spawnX="-78119" spawnY="237377" spawnZ="-3536" />
 		<point X="-78384" Y="237240" Z="-3528" delay="0" run="true" />
@@ -2324,5 +2310,45 @@
 		<point X="176777" Y="-184128" Z="-3784" delay="0" run="true" />
 		<point X="177217" Y="-185543" Z="-3800" delay="0" run="true" />
 		<point X="175210" Y="-186053" Z="-3792" delay="0" run="true" />
+	</route>
+	<!-- YeSagira - Guard 1 -->
+	<route name="YeS_1" repeat="true" repeatStyle="conveyor">
+		<target id="33119" spawnX="-115105" spawnY="237378" spawnZ="-3089" /> 
+		<point X="-115428" Y="236690" Z="-3089" delay="1" run="true" />
+		<point X="-115545" Y="236003" Z="-3089" delay="0" run="true" />
+		<point X="-114689" Y="235415" Z="-3089" delay="2" run="true" />
+		<point X="-114203" Y="235531" Z="-3089" delay="0" run="true" />
+		<point X="-113715" Y="236304" Z="-3044" delay="1" run="true" />
+		<point X="-113667" Y="236689" Z="-3044" delay="2" run="true" />
+	</route>
+	<!-- YeSagira - Guard 2 -->
+	<route name="YeS_2" repeat="true" repeatStyle="conveyor">
+		<target id="33119" spawnX="-115169" spawnY="237486" spawnZ="-3089" /> 
+		<point X="-115430" Y="236690" Z="-3089" delay="0" run="true" />
+		<point X="-115545" Y="236003" Z="-3089" delay="0" run="true" />
+		<point X="-114692" Y="235415" Z="-3089" delay="1" run="true" />
+		<point X="-114203" Y="235531" Z="-3089" delay="0" run="true" />
+		<point X="-113715" Y="236304" Z="-3044" delay="0" run="true" />
+		<point X="-113667" Y="236689" Z="-3044" delay="2" run="true" />
+	</route>
+	<!-- YeSagira - Guard 3 -->
+	<route name="YeS_3" repeat="true" repeatStyle="conveyor">
+		<target id="33119" spawnX="-115175" spawnY="237373" spawnZ="-3089" /> 
+		<point X="-115440" Y="236694" Z="-3089" delay="2" run="true" />
+		<point X="-115547" Y="236004" Z="-3089" delay="1" run="true" />
+		<point X="-114692" Y="235415" Z="-3089" delay="0" run="true" />
+		<point X="-114205" Y="235530" Z="-3089" delay="0" run="true" />
+		<point X="-113714" Y="236304" Z="-3044" delay="1" run="true" />
+		<point X="-113669" Y="236689" Z="-3044" delay="3" run="true" />
+	</route>
+	<!-- YeSagira - Guard 4 -->
+	<route name="YeS_4" repeat="true" repeatStyle="conveyor">
+		<target id="33119" spawnX="-115202" spawnY="237414" spawnZ="-3089" /> 
+		<point X="-115440" Y="236694" Z="-3089" delay="1" run="true" />
+		<point X="-115548" Y="236004" Z="-3089" delay="1" run="true" />
+		<point X="-114691" Y="235415" Z="-3089" delay="1" run="true" />
+		<point X="-114205" Y="235530" Z="-3089" delay="0" run="true" />
+		<point X="-113715" Y="236304" Z="-3044" delay="1" run="true" />
+		<point X="-113670" Y="236689" Z="-3044" delay="0" run="true" />
 	</route>
 </routes>
