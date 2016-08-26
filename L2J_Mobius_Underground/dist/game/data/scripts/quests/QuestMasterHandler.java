@@ -213,6 +213,7 @@ import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishR
 import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
 import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
 import quests.Q10306_TheCorruptedLeader.Q10306_TheCorruptedLeader;
+import quests.Q10310_TwistedCreationTree.Q10310_TwistedCreationTree;
 import quests.Q10317_OrbisWitch.Q10317_OrbisWitch;
 import quests.Q10318_DecayingDarkness.Q10318_DecayingDarkness;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
@@ -596,6 +597,7 @@ public class QuestMasterHandler
 		Q10302_UnsettlingShadowAndRumors.class,
 		Q10305_UnstoppableFutileEfforts.class,
 		Q10306_TheCorruptedLeader.class,
+		Q10310_TwistedCreationTree.class,
 		Q10317_OrbisWitch.class,
 		Q10318_DecayingDarkness.class,
 		Q10320_LetsGoToTheCentralSquare.class,
