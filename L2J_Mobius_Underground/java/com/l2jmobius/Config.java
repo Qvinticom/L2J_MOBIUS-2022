@@ -455,7 +455,6 @@ public final class Config
 	public static int INSTANCE_FINISH_TIME;
 	public static boolean RESTORE_PLAYER_INSTANCE;
 	public static int EJECT_DEAD_PLAYER_TIME;
-	public static boolean ALLOW_LOTTERY;
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
 	public static boolean ALLOW_RENTPET;
@@ -517,12 +516,6 @@ public final class Config
 	public static int ALT_MANOR_MAINTENANCE_MIN;
 	public static boolean ALT_MANOR_SAVE_ALL_ACTIONS;
 	public static int ALT_MANOR_SAVE_PERIOD_RATE;
-	public static long ALT_LOTTERY_PRIZE;
-	public static long ALT_LOTTERY_TICKET_PRICE;
-	public static float ALT_LOTTERY_5_NUMBER_RATE;
-	public static float ALT_LOTTERY_4_NUMBER_RATE;
-	public static float ALT_LOTTERY_3_NUMBER_RATE;
-	public static long ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
 	public static boolean ALT_ITEM_AUCTION_ENABLED;
 	public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
 	public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
@@ -1682,7 +1675,6 @@ public final class Config
 			INSTANCE_FINISH_TIME = General.getInt("DefaultFinishTime", 5);
 			RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
 			EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);
-			ALLOW_LOTTERY = General.getBoolean("AllowLottery", true);
 			ALLOW_RACE = General.getBoolean("AllowRace", true);
 			ALLOW_WATER = General.getBoolean("AllowWater", true);
 			ALLOW_RENTPET = General.getBoolean("AllowRentPet", false);
@@ -1719,12 +1711,6 @@ public final class Config
 			ALT_MANOR_MAINTENANCE_MIN = General.getInt("AltManorMaintenanceMin", 6);
 			ALT_MANOR_SAVE_ALL_ACTIONS = General.getBoolean("AltManorSaveAllActions", false);
 			ALT_MANOR_SAVE_PERIOD_RATE = General.getInt("AltManorSavePeriodRate", 2);
-			ALT_LOTTERY_PRIZE = General.getLong("AltLotteryPrize", 50000);
-			ALT_LOTTERY_TICKET_PRICE = General.getLong("AltLotteryTicketPrice", 2000);
-			ALT_LOTTERY_5_NUMBER_RATE = General.getFloat("AltLottery5NumberRate", 0.6f);
-			ALT_LOTTERY_4_NUMBER_RATE = General.getFloat("AltLottery4NumberRate", 0.2f);
-			ALT_LOTTERY_3_NUMBER_RATE = General.getFloat("AltLottery3NumberRate", 0.2f);
-			ALT_LOTTERY_2_AND_1_NUMBER_PRIZE = General.getLong("AltLottery2and1NumberPrize", 200);
 			ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
 			ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
 			ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;

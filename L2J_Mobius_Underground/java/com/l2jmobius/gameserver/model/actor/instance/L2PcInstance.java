@@ -719,9 +719,6 @@ public final class L2PcInstance extends L2Playable
 	
 	private byte _handysBlockCheckerEventArena = -1;
 	
-	/** new loto ticket **/
-	private final int _loto[] = new int[5];
-	// public static int _loto_nums[] = {0,1,2,3,4,5,6,7,8,9,};
 	/** new race ticket **/
 	private final int _race[] = new int[2];
 	
@@ -8945,16 +8942,6 @@ public final class L2PcInstance extends L2Playable
 	public void setTeleMode(AdminTeleportType type)
 	{
 		_teleportType = type;
-	}
-	
-	public void setLoto(int i, int val)
-	{
-		_loto[i] = val;
-	}
-	
-	public int getLoto(int i)
-	{
-		return _loto[i];
 	}
 	
 	public void setRace(int i, int val)
