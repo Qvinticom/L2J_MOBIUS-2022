@@ -148,7 +148,6 @@ public class Q10440_TheSealOfPunishmentTheFields extends Quest
 				{
 					addExpAndSp(player, 282408000, 67770);
 				}
-				qs.exitQuest(false, true);
 				if ((qs.isCond(2)) && (qs.isMemoState(1)))
 				{
 					htmltext = "32641-07.html";
@@ -157,6 +156,7 @@ public class Q10440_TheSealOfPunishmentTheFields extends Quest
 				{
 					htmltext = "32643-07.html";
 				}
+				qs.exitQuest(false, true);
 				break;
 			}
 			
