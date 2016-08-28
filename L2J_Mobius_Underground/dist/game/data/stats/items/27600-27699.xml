@@ -48,6 +48,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27618" level="1" />
+		</skills>
 	</item>
 	<item id="27604" name="Amaranthine Double Crystal Enhancement Box" type="EtcItem">
 		<!-- Double-click to obtain ingredients needed for Double Crystal Enhancement of R99 weapons. -->
@@ -455,7 +461,26 @@
 	<item id="27663" name="Supply Box" additionalName="Top-grade" type="EtcItem">
 		<!-- You can obtain a Daily Coin. If you are lucky, you may obtain a Special Supply Box or a timed rare accesory. -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FISH" />
+		<set name="is_tradable" val="true" />
+		<set name="is_dropable" val="true" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="is_clan_depositable" val="true" />
+		<set name="is_mailable" val="true" />
+		<set name="is_freightable" val="true" />
+		<set name="is_destroyable" val="true" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<capsuled_items>
+			<item id="27593" min="5" max="5" chance="95" />
+			<item id="27585" min="1" max="1" chance="5" />
+		</capsuled_items>
 	</item>
 	<item id="27664" name="Tauti's Ring" additionalName="7-day" type="Armor">
 		<!-- Tauti's Ring. Fire/Dark Resistance + 25, MP + 38, Critical Damage + 15%, Skill Power + 5%, PvP damage + 5%, Paralysis/Binding/Banishment Resistance + 10, Damage Reflect Resistance + 5, Absorption Resistance + 5, received PvP damage - 5%, and critical + 54 when a blunt is equipped. Even if you wear two identical rings, only the effects of one apply (excluding attributes/M. Def.). -->

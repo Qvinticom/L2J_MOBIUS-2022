@@ -7,6 +7,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27572" level="1" />
+		</skills>
 	</item>
 	<item id="27501" name="Greater Attribute Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Super Attribute Stone or a Super Crystal. -->
@@ -15,6 +21,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27573" level="1" />
+		</skills>
 	</item>
 	<item id="27502" name="Enchant Scroll Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain an Enchant Scroll Pack (R-grade), a Blessed Enchant Scroll, a Giant's Enchant Scroll, a Scroll: Enchant Hair Accessory, or a Destruction Enchant Scroll. -->
@@ -23,6 +35,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27574" level="1" />
+		</skills>
 	</item>
 	<item id="27503" name="Greater Enchant Scroll Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Enchant Scroll or a Destruction Enchant Scroll. -->
@@ -31,6 +49,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27575" level="1" />
+		</skills>
 	</item>
 	<item id="27504" name="Lucky Enchant Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Lucky Enchant Stone (R-grade), a Giant's Lucky Enchant Stone, or a regular Lucky Enchant Stone. -->
@@ -39,6 +63,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27576" level="1" />
+		</skills>
 	</item>
 	<item id="27505" name="Greater Lucky Enchant Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Blessed Lucky Enchant Stone (R-grade), Giant's Lucky Enchant Stone, regular Lucky Enchant Stone, Blessed Greater Lucky Enchant Stone, Wind Lucky Enchant Stone, regular Greater Lucky Enchant Stone. -->
@@ -47,6 +77,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27577" level="1" />
+		</skills>
 	</item>
 	<item id="27506" name="Treasure Chest" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Rare Accessory pack, Soul Crystal Coupon Pack, Talisman - Abundance Pack, Spirit Stone Pack, Hair Accessory Pack, Pendant Pack, Enchant Scroll Pack, Attribute Stone Pack, Ingredient Box, Lucky Enchant Stone Pack. -->
@@ -55,6 +91,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27578" level="1" />
+		</skills>
 	</item>
 	<item id="27507" name="Hero's Treasure Chest" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the foolowing: Rare Accessory Pack, Soul Bottle Pack, Greater Rare Accessory Pack, Talisman - Abundance Pack, Pendant Pack, Greater Enchant Scroll Pack, Greater Attribute Stone Pack, Greater Lucky Enchant Stone Pack. -->
@@ -63,6 +105,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27579" level="1" />
+		</skills>
 	</item>
 	<item id="27508" name="Talisman - Abundance Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the basic Talisman - Abundance. -->
@@ -700,6 +748,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38693" min="1" max="1" chance="100" /> <!-- Steel Yaksa Mace -->
+			<item id="38694" min="1" max="1" chance="100" /> <!-- Steel Saber*Sword of Revolution -->
+			<item id="38695" min="1" max="1" chance="100" /> <!-- Steel Mysterious Sword -->
+			<item id="38696" min="1" max="1" chance="100" /> <!-- Steel Body Slasher -->
+			<item id="38697" min="1" max="1" chance="100" /> <!-- Steel Soulfire Dirk -->
+			<item id="38698" min="1" max="1" chance="100" /> <!-- Steel Crystallized Ice Bow -->
+			<item id="38699" min="1" max="1" chance="100" /> <!-- Steel Schlager -->
+			<item id="38700" min="1" max="1" chance="100" /> <!-- Steel Soldat Estoc -->
+			<item id="38701" min="1" max="1" chance="100" /> <!-- Steel Arbalest -->
+			<item id="38702" min="1" max="1" chance="100" /> <!-- Steel Flamberge -->
+			<item id="38703" min="1" max="1" chance="100" /> <!-- Steel Chakram -->
+			<item id="40291" min="1" max="1" chance="100" /> <!-- Steel Demon's Staff - Magic Chaos -->
+		</capsuled_items>
 	</item>
 	<item id="27566" name="Weapon Pack (B-grade)" type="EtcItem">
 		<!-- Double-click to obtain a B-grade Steel weapon. -->
@@ -712,6 +777,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38705" min="1" max="1" chance="100" /> <!-- Steel Spell Breaker -->
+			<item id="38706" min="1" max="1" chance="100" /> <!-- Steel StormBringer*Ultimate Sword -->
+			<item id="38707" min="1" max="1" chance="100" /> <!-- Steel Wizard's Tear -->
+			<item id="38708" min="1" max="1" chance="100" /> <!-- Steel Great Axe -->
+			<item id="38709" min="1" max="1" chance="100" /> <!-- Steel Twilight Knife -->
+			<item id="38710" min="1" max="1" chance="100" /> <!-- Steel Dark Elven Longbow -->
+			<item id="38711" min="1" max="1" chance="100" /> <!-- Steel Innominate Victory -->
+			<item id="38712" min="1" max="1" chance="100" /> <!-- Steel Military Fleuret -->
+			<item id="38713" min="1" max="1" chance="100" /> <!-- Steel Hell Hound -->
+			<item id="38714" min="1" max="1" chance="100" /> <!-- Steel Great Sword -->
+			<item id="38715" min="1" max="1" chance="100" /> <!-- Steel Arthro Nail -->
+			<item id="40292" min="1" max="1" chance="100" /> <!-- Steel Spirit's Staff - Magic Mental Shield -->
+		</capsuled_items>
 	</item>
 	<item id="27567" name="Weapon Pack (A-grade)" type="EtcItem">
 		<!-- Double-click to obtain a A-grade Steel weapon. -->
@@ -724,6 +806,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38718" min="1" max="1" chance="100" /> <!-- Steel Keshanberk*Keshanberk -->
+			<item id="38719" min="1" max="1" chance="100" /> <!-- Steel Sword of Miracles -->
+			<item id="38720" min="1" max="1" chance="100" /> <!-- Steel Halberd-->
+			<item id="38721" min="1" max="1" chance="100" /> <!-- Steel Bloody Orchid -->
+			<item id="38722" min="1" max="1" chance="100" /> <!-- Steel Carnage Bow-->
+			<item id="38723" min="1" max="1" chance="100" /> <!-- Steel White Lightning -->
+			<item id="38724" min="1" max="1" chance="100" /> <!-- Steel Doomchanter -->
+			<item id="38725" min="1" max="1" chance="100" /> <!-- Steel Divine Pain -->
+			<item id="38726" min="1" max="1" chance="100" /> <!-- Steel Infernal Master -->
+			<item id="38727" min="1" max="1" chance="100" /> <!-- Steel Blood Tornado -->
+			<item id="40293" min="1" max="1" chance="100" /> <!-- Steel Dasparion's Staff -->
+		</capsuled_items>
 	</item>
 	<item id="27568" name="Weapon Pack (S-grade)" type="EtcItem">
 		<!-- Double-click to obtain a S-grade Steel weapon. -->
@@ -736,6 +834,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38598" min="1" max="1" chance="100" /> <!-- Steel Draconic Bow -->
+			<item id="38728" min="1" max="1" chance="100" /> <!-- Steel Forgotten Blade -->
+			<item id="38729" min="1" max="1" chance="100" /> <!-- Steel Basalt Battlehammer 1-->
+			<item id="38730" min="1" max="1" chance="100" /> <!-- Steel Tallum Blade*Dark Legion's Edge -->
+			<item id="38731" min="1" max="1" chance="100" /> <!-- Steel Arcana Mace 1-->
+			<item id="38732" min="1" max="1" chance="100" /> <!-- Steel Saint Spear -->
+			<item id="38733" min="1" max="1" chance="100" /> <!-- Steel Angel Slayer 1-->
+			<item id="38734" min="1" max="1" chance="100" /> <!-- Steel Gram -->
+			<item id="38735" min="1" max="1" chance="100" /> <!-- Steel Laevateinn -->
+			<item id="38736" min="1" max="1" chance="100" /> <!-- Steel Sarunga -->
+			<item id="38737" min="1" max="1" chance="100" /> <!-- Steel Heaven's Divider -->
+			<item id="38738" min="1" max="1" chance="100" /> <!-- Steel Demon Splinter 1-->
+		</capsuled_items>
 	</item>
 	<item id="27569" name="Dynasty Weapon Pack" type="EtcItem">
 		<!-- Double-click to obtain a Steel Dynasty weapon. -->
@@ -748,6 +863,23 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="38599" min="1" max="1" chance="100" /> <!-- Steel Dynasty Sword -->
+			<item id="38739" min="1" max="1" chance="100" /> <!-- Steel Dynasty Phantom -->
+			<item id="38740" min="1" max="1" chance="100" /> <!-- Steel Dynasty Cudgel -->
+			<item id="38741" min="1" max="1" chance="100" /> <!-- Steel Dynasty Dualsword -->
+			<item id="38742" min="1" max="1" chance="100" /> <!-- Steel Dynasty Halberd -->
+			<item id="38743" min="1" max="1" chance="100" /> <!-- Steel Dynasty Knife -->
+			<item id="38744" min="1" max="1" chance="100" /> <!-- Steel Dynasty Crossbow -->
+			<item id="38745" min="1" max="1" chance="100" /> <!-- Steel Dynasty Ancient Sword -->
+			<item id="38746" min="1" max="1" chance="100" /> <!-- Steel Dynasty Rapier -->
+			<item id="38747" min="1" max="1" chance="100" /> <!-- Steel Dynasty Blade -->
+			<item id="38748" min="1" max="1" chance="100" /> <!-- Steel Dynasty Bagh-Nakh -->
+			<item id="38749" min="1" max="1" chance="100" /> <!-- Steel Dynasty Bow -->
+		</capsuled_items>
 	</item>
 	<item id="27570" name="Weekend Login Reward Pack" type="EtcItem">
 		<!-- Double-click to obtain a crafting ingredient. -->
@@ -1097,6 +1229,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27615" level="1" /> <!-- Maphr's Wind Scroll -->
+		</skills>
 	</item>
 	<item id="27595" name="Vitality Maintaining Potion" type="EtcItem">
 		<!-- Retains Vitality for 10 min. Cooldown is 30min. Vitality item with limited usage. -->
