@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen;
+package quests.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds;
 
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
@@ -27,40 +27,48 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * The Seal of Punishment: Plains Of The Lizardmen (10437)
+ * The Seal of Punishment: Sel Mahum Training Grounds (10434)
  * @author Stayway
  */
-public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
+public class Q10434_TheSealOfPunishmentSelMahumTrainingGrounds extends Quest
 {
 	// NPCs
-	private static final int LAKI = 32742;
-	private static final int[] TANTA_LIZARDMAN =
+	private static final int RUA = 33841;
+	private static final int[] SEL_MAHUMS =
 	{
-		22768, // Tanta Lizardman Scouts
-		22769, // Tanta Lizardman Warriors
-		22770, // Tanta Lizardman Soldiers
-		22771, // Tanta Lizardman Berserkers
-		22772, // Tanta Lizardman Archers
-		22773, // Tanta Lizardman Wizards
-		22774, // Tanta Lizardman Summoners
+		18908, // Sel Mahum Chef
+		22775, // Sel Mahum Drill Sergeant (Wizard)
+		22776, // Sel Mahum Training Officer
+		22777, // Sel Mahum Drill Sergeant(Warrior)
+		22778, // Sel Mahum Drill Sergeant(Archer)
+		22779, // Sel Mahum Warrior
+		22780, // Sel Mahum Recruit(Wizard)
+		22781, // Sel Mahum Soldier(Wizard)
+		22782, // Sel Mahum Recruit(Warrior)
+		22783, // Sel Mahum Soldier(Warrior)
+		22784, // Sel Mahum Recruit(Archer)
+		22785, // Sel Mahum Soldier(Archer)
+		22786, // Sel Mahum Squad Leader(Wizard)
+		22787, // Sel Mahum Squad Leader(Warrior)
+		22788, // Sel Mahum Squad Leader(Archer)
 	};
 	// Item
-	private static final int EMBRYO_FRAGMENT = 36687;
+	private static final int EVIDENCE_OF_CONSPIRACY = 36692;
 	// Misc
 	private static final int MIN_LEVEL = 81;
 	private static final int MAX_LEVEL = 84;
 	
-	public Q10437_TheSealOfPunishmentPlainsOfTheLizardmen()
+	public Q10434_TheSealOfPunishmentSelMahumTrainingGrounds()
 	{
-		super(10437);
-		addStartNpc(LAKI);
-		addTalkId(LAKI);
-		addKillId(TANTA_LIZARDMAN);
-		registerQuestItems(EMBRYO_FRAGMENT);
+		super(10434);
+		addStartNpc(RUA);
+		addTalkId(RUA);
+		addKillId(SEL_MAHUMS);
+		registerQuestItems(EVIDENCE_OF_CONSPIRACY);
 		addCondMaxLevel(MAX_LEVEL, "noLevel.html");
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		addCondNotRace(Race.ERTHEIA, "noErtheia.html");
-		addCondInCategory(CategoryType.BOW_MASTER, "nocond.html");
+		addCondInCategory(CategoryType.WEAPON_MASTER, "nocond.html");
 	}
 	
 	@Override
@@ -74,12 +82,12 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 		String htmltext = event;
 		switch (event)
 		{
-			case "32742-02.htm":
+			case "33841-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "32742-03.htm":
+			case "33841-03.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
@@ -99,7 +107,7 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 				final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
 				giveItems(player, stoneId, 15);
 				giveStoryQuestReward(player, 60);
-				final long count = getQuestItemsCount(player, EMBRYO_FRAGMENT);
+				final long count = getQuestItemsCount(player, EVIDENCE_OF_CONSPIRACY);
 				if ((count >= 50) && (count < 100))
 				{
 					addExpAndSp(player, 28240800, 6777);
@@ -141,7 +149,7 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 					addExpAndSp(player, 282408000, 67770);
 				}
 				qs.exitQuest(false, true);
-				htmltext = "32742-06.html";
+				htmltext = "33841-06.html";
 				break;
 			}
 		}
@@ -162,22 +170,22 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 			
 			case State.CREATED:
 			{
-				if (npc.getId() == LAKI)
+				if (npc.getId() == RUA)
 				{
-					htmltext = "32742-01.htm";
+					htmltext = "33841-01.htm";
 				}
 				break;
 			}
 			case State.STARTED:
 			{
-				if ((qs.isCond(1)) && (npc.getId() == LAKI))
+				if ((qs.isCond(1)) && (npc.getId() == RUA))
 				{
-					htmltext = "32742-04.html";
+					htmltext = "33841-04.html";
 					break;
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "32742-05.html";
+					htmltext = "33841-05.html";
 				}
 				break;
 			}
@@ -195,10 +203,10 @@ public class Q10437_TheSealOfPunishmentPlainsOfTheLizardmen extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if (qs != null)
 		{
-			giveItems(player, EMBRYO_FRAGMENT, 1);
+			giveItems(player, EVIDENCE_OF_CONSPIRACY, 1);
 			if (qs.isCond(1))
 			{
-				if (getQuestItemsCount(player, EMBRYO_FRAGMENT) >= 50)
+				if (getQuestItemsCount(player, EVIDENCE_OF_CONSPIRACY) >= 50)
 				{
 					qs.setCond(2, true);
 				}

@@ -16,9 +16,6 @@
  */
 package quests.Q10431_TheSealOfPunishmentDenOfEvil;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
@@ -34,26 +31,25 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 {
-	// Npcs
+	// NPCs
 	private static final int JOKEL = 33868;
 	private static final int CHAIREN = 32655;
+	private static final int[] RAGNA_ORC =
+	{
+		22692, // Ragna Orc Warriors
+		22693, // Ragna Orc Heroes
+		22694, // Ragna Orc Commanders
+		22695, // Ragna Orc Healers
+		22696, // Ragna Orc Shamans
+		22697, // Ragna Orc Priests
+		22698, // Ragna Orc Archers
+		22699, // Ragna Orc Snipers
+		22701, // Varangka's Dre Vanuls
+		22702, // Varangka's Destroyers
+	};
 	// Item
 	private static final int EVIL_FREED_SOUL = 36715;
 	// Misc
-	private static final Map<Integer, Integer> RAGNA_ORC = new HashMap<>();
-	static
-	{
-		RAGNA_ORC.put(22692, 888); // Ragna Orc Warriors
-		RAGNA_ORC.put(22693, 888); // Ragna Orc Heroes
-		RAGNA_ORC.put(22694, 888); // Ragna Orc Commanders
-		RAGNA_ORC.put(22695, 888); // Ragna Orc Healers
-		RAGNA_ORC.put(22696, 888); // Ragna Orc Shamans
-		RAGNA_ORC.put(22697, 888); // Ragna Orc Priests
-		RAGNA_ORC.put(22698, 888); // Ragna Orc Archers
-		RAGNA_ORC.put(22699, 888); // Ragna Orc Snipers
-		RAGNA_ORC.put(22701, 888); // Varangka's Dre Vanuls
-		RAGNA_ORC.put(22702, 888); // Varangka's Destroyers
-	}
 	private static final int MIN_LEVEL = 81;
 	private static final int MAX_LEVEL = 84;
 	
@@ -62,7 +58,7 @@ public class Q10431_TheSealOfPunishmentDenOfEvil extends Quest
 		super(10431);
 		addStartNpc(JOKEL);
 		addTalkId(JOKEL, CHAIREN);
-		addKillId(RAGNA_ORC.keySet());
+		addKillId(RAGNA_ORC);
 		registerQuestItems(EVIL_FREED_SOUL);
 		addCondMaxLevel(MAX_LEVEL, "33868-06.html");
 		addCondMinLevel(MIN_LEVEL, "33868-06.html");
