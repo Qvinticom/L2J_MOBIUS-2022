@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ChanceLocation;
@@ -87,6 +88,11 @@ public class SpawnsData implements IGameXmlReader
 	 */
 	public void init()
 	{
+		if (Config.ALT_DEV_NO_SPAWNS)
+		{
+			return;
+		}
+		
 		LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
 		_spawns.stream().filter(SpawnTemplate::isSpawningByDefault).forEach(template ->
 		{

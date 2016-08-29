@@ -537,8 +537,6 @@ public final class Config
 	public static boolean JAIL_IS_PVP;
 	public static boolean JAIL_DISABLE_CHAT;
 	public static boolean JAIL_DISABLE_TRANSACTION;
-	public static boolean CUSTOM_SPAWNLIST_TABLE;
-	public static boolean SAVE_GMSPAWN_ON_CUSTOM;
 	public static boolean CUSTOM_NPC_DATA;
 	public static boolean CUSTOM_TELEPORT_TABLE;
 	public static boolean CUSTOM_NPCBUFFER_TABLES;
@@ -1732,8 +1730,6 @@ public final class Config
 			JAIL_IS_PVP = General.getBoolean("JailIsPvp", false);
 			JAIL_DISABLE_CHAT = General.getBoolean("JailDisableChat", true);
 			JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
-			CUSTOM_SPAWNLIST_TABLE = General.getBoolean("CustomSpawnlistTable", false);
-			SAVE_GMSPAWN_ON_CUSTOM = General.getBoolean("SaveGmSpawnOnCustom", false);
 			CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
 			CUSTOM_TELEPORT_TABLE = General.getBoolean("CustomTeleportTable", false);
 			CUSTOM_NPCBUFFER_TABLES = General.getBoolean("CustomNpcBufferTables", false);

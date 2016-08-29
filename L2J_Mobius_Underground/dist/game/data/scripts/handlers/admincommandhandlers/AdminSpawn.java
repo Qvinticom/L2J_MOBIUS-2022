@@ -220,7 +220,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			L2World.getInstance().deleteVisibleNpcSpawns();
 			// now respawn all
 			NpcData.getInstance().load();
-			SpawnTable.getInstance().load();
 			DBSpawnManager.getInstance().load();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC Respawn completed!");

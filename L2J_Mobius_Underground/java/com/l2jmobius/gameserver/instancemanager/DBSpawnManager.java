@@ -75,6 +75,11 @@ public class DBSpawnManager
 	 */
 	public void load()
 	{
+		if (Config.ALT_DEV_NO_SPAWNS)
+		{
+			return;
+		}
+		
 		_npcs.clear();
 		_spawns.clear();
 		_storedInfo.clear();

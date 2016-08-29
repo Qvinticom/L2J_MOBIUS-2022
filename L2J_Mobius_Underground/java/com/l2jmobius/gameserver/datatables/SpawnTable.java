@@ -16,10 +16,11 @@
  */
 package com.l2jmobius.gameserver.datatables;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -28,145 +29,18 @@ import java.util.function.Function;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.L2World;
 
 /**
  * Spawn data retriever.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public final class SpawnTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
-	// SQL
-	private static final String SELECT_CUSTOM_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM custom_spawnlist";
-	private static final String INSERT_CUSTOM_SPAWN = "INSERT INTO custom_spawnlist (count,npc_templateid,locx,locy,locz,heading,respawn_delay,respawn_random,loc_id) values(?,?,?,?,?,?,?,?,?)";
-	private static final String DELETE_CUSTOM_SPAWN = "DELETE FROM custom_spawnlist WHERE locx=? AND locy=? AND locz=? AND npc_templateid=? AND heading=?";
 	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
-	
-	/**
-	 * Wrapper to load all spawns.
-	 */
-	public void load()
-	{
-		if (!Config.ALT_DEV_NO_SPAWNS && Config.CUSTOM_SPAWNLIST_TABLE)
-		{
-			fillSpawnTable();
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTable.size() + " custom npc spawns.");
-		}
-	}
-	
-	private boolean checkTemplate(int npcId)
-	{
-		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(npcId);
-		if (npcTemplate == null)
-		{
-			LOGGER.warning(getClass().getSimpleName() + ": Data missing in NPC table for ID: " + npcId + ".");
-			return false;
-		}
-		
-		if (npcTemplate.isType("L2SiegeGuard") || npcTemplate.isType("L2RaidBoss"))
-		{
-			// Don't spawn
-			return false;
-		}
-		
-		return true;
-	}
-	
-	/**
-	 * Retrieves spawn data from database.
-	 * @return the spawn count
-	 */
-	private int fillSpawnTable()
-	{
-		int npcSpawnCount = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery(SELECT_CUSTOM_SPAWNS))
-		{
-			while (rs.next())
-			{
-				final StatsSet spawnInfo = new StatsSet();
-				final int npcId = rs.getInt("npc_templateid");
-				
-				// Check basic requirements first
-				if (!checkTemplate(npcId))
-				{
-					// Don't spawn
-					continue;
-				}
-				
-				spawnInfo.set("npcTemplateid", npcId);
-				spawnInfo.set("count", rs.getInt("count"));
-				spawnInfo.set("x", rs.getInt("locx"));
-				spawnInfo.set("y", rs.getInt("locy"));
-				spawnInfo.set("z", rs.getInt("locz"));
-				spawnInfo.set("heading", rs.getInt("heading"));
-				spawnInfo.set("respawnDelay", rs.getInt("respawn_delay"));
-				spawnInfo.set("respawnRandom", rs.getInt("respawn_random"));
-				spawnInfo.set("locId", rs.getInt("loc_id"));
-				spawnInfo.set("periodOfDay", rs.getInt("periodOfDay"));
-				npcSpawnCount += addSpawn(spawnInfo);
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.warning(getClass().getSimpleName() + ": Spawn could not be initialized: " + e);
-		}
-		return npcSpawnCount;
-	}
-	
-	/**
-	 * Creates NPC spawn
-	 * @param spawnInfo StatsSet of spawn parameters
-	 * @param AIData Map of specific AI parameters for this spawn
-	 * @return count NPC instances, spawned by this spawn
-	 */
-	private int addSpawn(StatsSet spawnInfo, Map<String, Integer> AIData)
-	{
-		L2Spawn spawnDat;
-		int ret = 0;
-		try
-		{
-			spawnDat = new L2Spawn(spawnInfo.getInt("npcTemplateid"));
-			spawnDat.setAmount(spawnInfo.getInt("count", 1));
-			spawnDat.setX(spawnInfo.getInt("x", 0));
-			spawnDat.setY(spawnInfo.getInt("y", 0));
-			spawnDat.setZ(spawnInfo.getInt("z", 0));
-			spawnDat.setHeading(spawnInfo.getInt("heading", -1));
-			spawnDat.setRespawnDelay(spawnInfo.getInt("respawnDelay", 0), spawnInfo.getInt("respawnRandom", 0));
-			spawnDat.setLocationId(spawnInfo.getInt("locId", 0));
-			final String spawnName = spawnInfo.getString("spawnName", "");
-			if (!spawnName.isEmpty())
-			{
-				spawnDat.setName(spawnName);
-			}
-			addSpawn(spawnDat);
-			
-			ret += spawnDat.init();
-		}
-		catch (Exception e)
-		{
-			// problem with initializing spawn, go to next one
-			LOGGER.warning(getClass().getSimpleName() + ": Spawn could not be initialized: " + e);
-		}
-		
-		return ret;
-	}
-	
-	/**
-	 * Wrapper for {@link #addSpawn(StatsSet, Map)}.
-	 * @param spawnInfo StatsSet of spawn parameters
-	 * @return count NPC instances, spawned by this spawn
-	 */
-	private int addSpawn(StatsSet spawnInfo)
-	{
-		return addSpawn(spawnInfo, null);
-	}
 	
 	/**
 	 * Gets the spawn data.
@@ -210,31 +84,101 @@ public final class SpawnTable
 	/**
 	 * Adds a new spawn to the spawn table.
 	 * @param spawn the spawn to add
-	 * @param storeInDb if {@code true} it'll be saved in the database
+	 * @param store if {@code true} it'll be saved in the spawn XML files
 	 */
-	public void addNewSpawn(L2Spawn spawn, boolean storeInDb)
+	public void addNewSpawn(L2Spawn spawn, boolean store)
 	{
 		addSpawn(spawn);
 		
-		if (storeInDb)
+		if (store)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(INSERT_CUSTOM_SPAWN))
+			// Create output directory if it doesn't exist
+			final File outputDirectory = new File("data/spawns/Others");
+			if (!outputDirectory.exists())
 			{
-				ps.setInt(1, spawn.getAmount());
-				ps.setInt(2, spawn.getId());
-				ps.setInt(3, spawn.getX());
-				ps.setInt(4, spawn.getY());
-				ps.setInt(5, spawn.getZ());
-				ps.setInt(6, spawn.getHeading());
-				ps.setInt(7, spawn.getRespawnDelay() / 1000);
-				ps.setInt(8, spawn.getRespawnMaxDelay() - spawn.getRespawnMinDelay());
-				ps.setInt(9, spawn.getLocationId());
-				ps.execute();
+				boolean result = false;
+				try
+				{
+					outputDirectory.mkdir();
+					result = true;
+				}
+				catch (SecurityException se)
+				{
+					// empty
+				}
+				if (result)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Created directory: data/spawns/Others");
+				}
 			}
-			catch (Exception e)
+			
+			// XML file for spawn
+			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final File spawnFile = new File("data/spawns/Others/" + x + "_" + y + ".xml");
+			if (spawnFile.isDirectory())
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": Could not store spawn in the DB: " + e);
+				LOGGER.warning(getClass().getSimpleName() + ": Could not save spawn. Target path seems to be a directory.");
+				return;
+			}
+			
+			// Write info to XML
+			final String spawnId = String.valueOf(spawn.getId());
+			final String spawnCount = String.valueOf(spawn.getAmount());
+			final String spawnX = String.valueOf(spawn.getX());
+			final String spawnY = String.valueOf(spawn.getY());
+			final String spawnZ = String.valueOf(spawn.getZ());
+			final String spawnHeading = String.valueOf(spawn.getHeading());
+			final String spawnDelay = String.valueOf(spawn.getRespawnDelay() / 1000);
+			// Update
+			if (spawnFile.exists())
+			{
+				final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+				try
+				{
+					final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
+					final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+					String currentLine;
+					while ((currentLine = reader.readLine()) != null)
+					{
+						if (currentLine.contains("</group>"))
+						{
+							writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + Config.EOL);
+							writer.write(currentLine + Config.EOL);
+							continue;
+						}
+						writer.write(currentLine + Config.EOL);
+					}
+					writer.close();
+					reader.close();
+					spawnFile.delete();
+					tempFile.renameTo(spawnFile);
+				}
+				catch (Exception e)
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Could not store spawn in the spawn XML files: " + e);
+				}
+			}
+			else // New file
+			{
+				try
+				{
+					final BufferedWriter writer = new BufferedWriter(new FileWriter(spawnFile));
+					writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + Config.EOL);
+					writer.write("<list xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"../../xsd/spawns.xsd\">" + Config.EOL);
+					writer.write("	<spawn name=\"" + x + "_" + y + "\">" + Config.EOL);
+					writer.write("		<group>" + Config.EOL);
+					writer.write("			<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnTime=\"" + spawnDelay + "sec\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + Config.EOL);
+					writer.write("		</group>" + Config.EOL);
+					writer.write("	</spawn>" + Config.EOL);
+					writer.write("</list>" + Config.EOL);
+					writer.close();
+					LOGGER.info(getClass().getSimpleName() + ": Created file: data/spawns/Others/" + x + "_" + y + ".xml");
+				}
+				catch (Exception e)
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be added to the spawn XML files: " + e);
+				}
 			}
 		}
 	}
@@ -242,30 +186,84 @@ public final class SpawnTable
 	/**
 	 * Delete an spawn from the spawn table.
 	 * @param spawn the spawn to delete
-	 * @param updateDb if {@code true} database will be updated
+	 * @param update if {@code true} the spawn XML files will be updated
 	 */
-	public void deleteSpawn(L2Spawn spawn, boolean updateDb)
+	public void deleteSpawn(L2Spawn spawn, boolean update)
 	{
 		if (!removeSpawn(spawn))
 		{
 			return;
 		}
 		
-		if (updateDb)
+		if (update)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(DELETE_CUSTOM_SPAWN))
+			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File("data/spawns/Others/" + x + "_" + y + ".xml");
+			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+			try
 			{
-				ps.setInt(1, spawn.getX());
-				ps.setInt(2, spawn.getY());
-				ps.setInt(3, spawn.getZ());
-				ps.setInt(4, spawn.getId());
-				ps.setInt(5, spawn.getHeading());
-				ps.execute();
+				final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
+				final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+				final String spawnId = String.valueOf(spawn.getId());
+				final String spawnX = String.valueOf(spawn.getX());
+				final String spawnY = String.valueOf(spawn.getY());
+				final String spawnZ = String.valueOf(spawn.getZ());
+				boolean found = false; // in XML you can have more than one spawn with same coords
+				boolean isMultiLine = false; // in case spawn has more stats
+				boolean lastLineFound = false; // used to check for empty file
+				int lineCount = 0;
+				String currentLine;
+				while ((currentLine = reader.readLine()) != null)
+				{
+					if (!found)
+					{
+						if (isMultiLine)
+						{
+							if (currentLine.contains("</npc>"))
+							{
+								isMultiLine = false;
+								found = true;
+							}
+							continue;
+						}
+						if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ))
+						{
+							if (!currentLine.contains("/>"))
+							{
+								isMultiLine = true;
+							}
+							else
+							{
+								found = true;
+							}
+							continue;
+						}
+					}
+					writer.write(currentLine + Config.EOL);
+					if (currentLine.contains("</list>"))
+					{
+						lastLineFound = true;
+					}
+					if (!lastLineFound)
+					{
+						lineCount++;
+					}
+				}
+				writer.close();
+				reader.close();
+				spawnFile.delete();
+				tempFile.renameTo(spawnFile);
+				// Delete empty file
+				if (lineCount < 7)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Deleted empty file: " + spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/'));
+					spawnFile.delete();
+				}
 			}
 			catch (Exception e)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be removed from DB: " + e);
+				LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be removed from the spawn XML files: " + e);
 			}
 		}
 	}
