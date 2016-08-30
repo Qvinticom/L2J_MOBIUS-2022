@@ -41,6 +41,7 @@ public final class SpawnTable
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
+	private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 	
 	/**
 	 * Gets the spawn data.
@@ -93,7 +94,7 @@ public final class SpawnTable
 		if (store)
 		{
 			// Create output directory if it doesn't exist
-			final File outputDirectory = new File("data/spawns/Others");
+			final File outputDirectory = new File(OTHER_XML_FOLDER);
 			if (!outputDirectory.exists())
 			{
 				boolean result = false;
@@ -108,19 +109,14 @@ public final class SpawnTable
 				}
 				if (result)
 				{
-					LOGGER.info(getClass().getSimpleName() + ": Created directory: data/spawns/Others");
+					LOGGER.info(getClass().getSimpleName() + ": Created directory: " + OTHER_XML_FOLDER);
 				}
 			}
 			
 			// XML file for spawn
 			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
 			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
-			final File spawnFile = new File("data/spawns/Others/" + x + "_" + y + ".xml");
-			if (spawnFile.isDirectory())
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": Could not save spawn. Target path seems to be a directory.");
-				return;
-			}
+			final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			
 			// Write info to XML
 			final String spawnId = String.valueOf(spawn.getId());
@@ -130,8 +126,7 @@ public final class SpawnTable
 			final String spawnZ = String.valueOf(spawn.getZ());
 			final String spawnHeading = String.valueOf(spawn.getHeading());
 			final String spawnDelay = String.valueOf(spawn.getRespawnDelay() / 1000);
-			// Update
-			if (spawnFile.exists())
+			if (spawnFile.exists()) // update
 			{
 				final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 				try
@@ -159,7 +154,7 @@ public final class SpawnTable
 					LOGGER.warning(getClass().getSimpleName() + ": Could not store spawn in the spawn XML files: " + e);
 				}
 			}
-			else // New file
+			else // new file
 			{
 				try
 				{
@@ -173,7 +168,7 @@ public final class SpawnTable
 					writer.write("	</spawn>" + Config.EOL);
 					writer.write("</list>" + Config.EOL);
 					writer.close();
-					LOGGER.info(getClass().getSimpleName() + ": Created file: data/spawns/Others/" + x + "_" + y + ".xml");
+					LOGGER.info(getClass().getSimpleName() + ": Created file: " + OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 				}
 				catch (Exception e)
 				{
@@ -199,7 +194,7 @@ public final class SpawnTable
 		{
 			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
 			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
-			final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File("data/spawns/Others/" + x + "_" + y + ".xml");
+			final File spawnFile = spawn.getNpcSpawnTemplate() != null ? spawn.getNpcSpawnTemplate().getSpawnTemplate().getFile() : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 			try
 			{
@@ -222,14 +217,13 @@ public final class SpawnTable
 						{
 							if (currentLine.contains("</npc>"))
 							{
-								isMultiLine = false;
 								found = true;
 							}
 							continue;
 						}
 						if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ))
 						{
-							if (!currentLine.contains("/>"))
+							if (!currentLine.contains("/>") && !currentLine.contains("</npc>"))
 							{
 								isMultiLine = true;
 							}
