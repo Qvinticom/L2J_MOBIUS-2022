@@ -45,7 +45,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	private static final int DARK_JUDGE = 30981;
 	// Items
 	private static final int GEMSTONE_B = 2132;
-	private static final int PENITENT_MANACLES = 36060; // TODO: check: why multiple items with this name
+	private static final int PENITENT_MANACLES = 36060;
 	private static final int CRUMBS_OF_PENITENCE = 36077;
 	// Skills
 	private static final int HOUR_OF_PENITENCE[] =
@@ -56,8 +56,8 @@ public class Q00500_BrothersBoundInChains extends Quest
 		15328,
 		15329
 	};
-	// Agathion
-	private static final int SIN_EATER[] =
+	// Agathions
+	private static final int SIN_EATERS[] =
 	{
 		16098,
 		16099,
@@ -92,13 +92,13 @@ public class Q00500_BrothersBoundInChains extends Quest
 		{
 			case "buff":
 			{
-				if ((player != null) && IntStream.of(SIN_EATER).anyMatch(x -> x == player.getAgathionId()))
+				if (player != null)
 				{
 					final Skill skill = SkillData.getInstance().getSkill(15325, 1); // Hour of Penitence
 					skill.activateSkill(player, player);
 					startQuestTimer("buff", 270000, null, player); // Rebuff every 4min30 (retail like)
 				}
-				break;
+				return null;
 			}
 			case "30981-02.htm":
 			case "30981-03.htm":
@@ -200,7 +200,10 @@ public class Q00500_BrothersBoundInChains extends Quest
 	@Override
 	public void onSummonAgathion(L2PcInstance player, int agathionId)
 	{
-		startQuestTimer("buff", 2500, null, player);
+		if (IntStream.of(SIN_EATERS).anyMatch(x -> x == agathionId)) // TODO: Register IDs
+		{
+			startQuestTimer("buff", 2500, null, player);
+		}
 	}
 	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)

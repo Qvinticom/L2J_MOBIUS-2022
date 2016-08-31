@@ -58,12 +58,12 @@ public final class SummonAgathion extends AbstractEffect
 			return;
 		}
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonAgathion(effector.getActingPlayer(), _npcId));
-		
 		final L2PcInstance player = effected.getActingPlayer();
 		
 		player.setAgathionId(_npcId);
 		player.sendPacket(new ExUserInfoCubic(player));
 		player.broadcastCharInfo();
+		
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonAgathion(effector.getActingPlayer(), _npcId));
 	}
 }
