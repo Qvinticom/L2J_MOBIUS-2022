@@ -42,6 +42,7 @@ public class Q00498_IncarnationOfJealousyPellineSolo extends Quest
 		super(498);
 		addStartNpc(KARTIA_RESEARCHER);
 		addTalkId(KARTIA_RESEARCHER);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33647-00.htm");
 	}
 	
 	@Override
@@ -80,14 +81,7 @@ public class Q00498_IncarnationOfJealousyPellineSolo extends Quest
 		{
 			case State.CREATED:
 			{
-				if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
-				{
-					htmltext = "33647-00.htm";
-				}
-				else
-				{
-					htmltext = "33647-01.htm";
-				}
+				htmltext = "33647-01.htm";
 				break;
 			}
 			case State.STARTED:
@@ -111,11 +105,7 @@ public class Q00498_IncarnationOfJealousyPellineSolo extends Quest
 			}
 			case State.COMPLETED:
 			{
-				if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
-				{
-					htmltext = "33647-00.htm";
-				}
-				else if (!qs.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					htmltext = "33647-07.html";
 				}
