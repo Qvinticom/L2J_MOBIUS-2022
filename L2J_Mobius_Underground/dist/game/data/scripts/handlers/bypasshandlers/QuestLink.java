@@ -17,9 +17,12 @@
 package handlers.bypasshandlers;
 
 import java.util.Collection;
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -93,6 +96,16 @@ public class QuestLink implements IBypassHandler
 			.distinct()
 			.collect(Collectors.toSet());
 		//@formatter:on
+		
+		if (Config.ORDER_QUEST_LIST_BY_QUESTID)
+		{
+			final Map<Integer, Quest> orderedQuests = new TreeMap<>(); // Use TreeMap to order quests
+			for (Quest q : quests)
+			{
+				orderedQuests.put(q.getId(), q);
+			}
+			quests = orderedQuests.values();
+		}
 		
 		for (Quest quest : quests)
 		{
