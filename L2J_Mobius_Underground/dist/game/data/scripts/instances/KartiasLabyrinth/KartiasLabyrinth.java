@@ -16,7 +16,6 @@
  */
 package instances.KartiasLabyrinth;
 
-import java.util.Calendar;
 import java.util.List;
 
 import com.l2jmobius.commons.util.CommonUtil;
@@ -37,7 +36,6 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 import instances.AbstractInstance;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
@@ -156,14 +154,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 	private static final int TEMPLATE_ID_GROUP_85 = 208;
 	private static final int TEMPLATE_ID_GROUP_90 = 209;
 	private static final int TEMPLATE_ID_GROUP_95 = 210;
-	private static final int MIN_LVL_85 = 85;
-	private static final int MIN_LVL_90 = 90;
-	private static final int MIN_LVL_95 = 95;
-	private static final int MAX_LVL_85 = 89;
-	private static final int MAX_LVL_90 = 94;
-	private static final int MAX_LVL_95 = 99;
-	private static final String KARTIA_ENTRY_VAR = "Last_Kartia_entry";
-	private static final String KARTIA_PARTY_ENTRY_VAR = "Last_Kartia_party_entry";
 	
 	public KartiasLabyrinth()
 	{
@@ -206,123 +196,33 @@ public final class KartiasLabyrinth extends AbstractInstance
 			}
 			case "request_zellaka_solo":
 			{
-				if (!checkConditions(player, TEMPLATE_ID_SOLO_85))
-				{
-					return "33647-8.htm";
-				}
-				else if ((player.getLevel() >= MIN_LVL_85) && (player.getLevel() <= MAX_LVL_85))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
-					savePlayer(player);
-					return "33647-5.htm";
-				}
-				else
-				{
-					return "33647-6.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_85);
+				return null;
 			}
 			case "request_pelline_solo":
 			{
-				if (!checkConditions(player, TEMPLATE_ID_SOLO_90))
-				{
-					return "33647-8.htm";
-				}
-				else if ((player.getLevel() >= MIN_LVL_90) && (player.getLevel() <= MAX_LVL_90))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
-					savePlayer(player);
-					return "33647-5.htm";
-				}
-				else
-				{
-					return "33647-6.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_90);
+				return null;
 			}
 			case "request_kalios_solo":
 			{
-				if (!checkConditions(player, TEMPLATE_ID_SOLO_95))
-				{
-					return "33647-8.htm";
-				}
-				else if ((player.getLevel() >= MIN_LVL_95) && (player.getLevel() <= MAX_LVL_95))
-				{
-					enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
-					savePlayer(player);
-					return "33647-5.htm";
-				}
-				else
-				{
-					return "33647-6.htm";
-				}
+				enterInstance(player, npc, TEMPLATE_ID_SOLO_95);
+				return null;
 			}
 			case "request_zellaka_party":
 			{
-				if ((player.getParty() == null) || !player.getParty().isLeader(player))
-				{
-					return "33647-7.htm";
-				}
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					if (!checkConditions(member, TEMPLATE_ID_GROUP_85) || (member.getLevel() < MIN_LVL_85) || (member.getLevel() > MAX_LVL_85) || (Util.calculateDistance(player, member, false, false) > 500))
-					{
-						return "33647-8.htm";
-					}
-				}
 				enterInstance(player, npc, TEMPLATE_ID_GROUP_85);
-				savePlayer(player);
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					player.getInstanceWorld().addAllowed(member);
-					member.teleToLocation(player, true);
-					savePlayer(member);
-				}
-				return "33647-5.htm";
+				return null;
 			}
 			case "request_pelline_party":
 			{
-				if ((player.getParty() == null) || !player.getParty().isLeader(player))
-				{
-					return "33647-7.htm";
-				}
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					if (!checkConditions(member, TEMPLATE_ID_GROUP_90) || (member.getLevel() < MIN_LVL_90) || (member.getLevel() > MAX_LVL_90) || (Util.calculateDistance(player, member, false, false) > 500))
-					{
-						return "33647-8.htm";
-					}
-				}
 				enterInstance(player, npc, TEMPLATE_ID_GROUP_90);
-				savePlayer(player);
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					player.getInstanceWorld().addAllowed(member);
-					member.teleToLocation(player, true);
-					savePlayer(member);
-				}
-				return "33647-5.htm";
+				return null;
 			}
 			case "request_kalios_party":
 			{
-				if ((player.getParty() == null) || !player.getParty().isLeader(player))
-				{
-					return "33647-7.htm";
-				}
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					if (!checkConditions(member, TEMPLATE_ID_GROUP_95) || (member.getLevel() < MIN_LVL_95) || (member.getLevel() > MAX_LVL_95) || (Util.calculateDistance(player, member, false, false) > 500))
-					{
-						return "33647-8.htm";
-					}
-				}
 				enterInstance(player, npc, TEMPLATE_ID_GROUP_95);
-				savePlayer(player);
-				for (L2PcInstance member : player.getParty().getMembers())
-				{
-					player.getInstanceWorld().addAllowed(member);
-					member.teleToLocation(player, true);
-					savePlayer(member);
-				}
-				return "33647-5.htm";
+				return null;
 			}
 			default:
 			{
@@ -1092,36 +992,6 @@ public final class KartiasLabyrinth extends AbstractInstance
 	private boolean isSoloKartia(Instance instance)
 	{
 		return (instance.getTemplateId() == TEMPLATE_ID_SOLO_85) || (instance.getTemplateId() == TEMPLATE_ID_SOLO_90) || (instance.getTemplateId() == TEMPLATE_ID_SOLO_95);
-	}
-	
-	protected void savePlayer(L2PcInstance player)
-	{
-		if (isSoloKartia(player.getInstanceWorld()))
-		{
-			player.getVariables().set(KARTIA_ENTRY_VAR, System.currentTimeMillis());
-		}
-		else
-		{
-			player.getVariables().set(KARTIA_PARTY_ENTRY_VAR, System.currentTimeMillis());
-		}
-	}
-	
-	protected boolean checkConditions(L2PcInstance player, int templateId)
-	{
-		long lastEntry = 0;
-		if ((templateId == TEMPLATE_ID_SOLO_85) || (templateId == TEMPLATE_ID_SOLO_90) || (templateId == TEMPLATE_ID_SOLO_95))
-		{
-			lastEntry = player.getVariables().getLong(KARTIA_ENTRY_VAR, 0);
-		}
-		else
-		{
-			lastEntry = player.getVariables().getLong(KARTIA_PARTY_ENTRY_VAR, 0);
-		}
-		final Calendar entryResetTime = Calendar.getInstance();
-		entryResetTime.set(Calendar.HOUR, 6);
-		entryResetTime.set(Calendar.MINUTE, 30);
-		entryResetTime.set(Calendar.AM_PM, Calendar.AM);
-		return lastEntry < entryResetTime.getTimeInMillis();
 	}
 	
 	public static void main(String[] args)

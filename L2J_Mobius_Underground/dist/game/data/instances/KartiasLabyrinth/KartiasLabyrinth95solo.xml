@@ -55,13 +55,13 @@
 	<conditions>
 		<condition type="Level" showMessageAndHtml="true">
 			<param name="min" value="95" />
-			<param name="html" value="condNoLevel.html" />
+			<param name="html" value="33647-6.htm" />
 		</condition>
 		<condition type="Distance" showMessageAndHtml="true">
-			<param name="html" value="condOtherError.html" />
+			<param name="html" value="33647-8.htm" />
 		</condition>
 		<condition type="Reenter" showMessageAndHtml="true">
-			<param name="html" value="otherError.html" />
+			<param name="html" value="33647-8.htm" />
 		</condition>
 	</conditions>
 	<reenter apply="ON_FINISH">

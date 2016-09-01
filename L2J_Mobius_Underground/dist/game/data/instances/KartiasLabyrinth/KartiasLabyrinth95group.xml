@@ -26,10 +26,10 @@
 	</parameters>
 	<conditions>
 		<condition type="Party" showMessageAndHtml="true">
-			<param name="html" value="condNoParty.html" />
+			<param name="html" value="33647-7.htm" />
 		</condition>
 		<condition type="PartyLeader" showMessageAndHtml="true">
-			<param name="html" value="condNoParty.html" />
+			<param name="html" value="33647-7.htm" />
 		</condition>
 		<condition type="GroupMin">
 			<param name="limit" value="2" />
@@ -39,13 +39,13 @@
 		</condition>
 		<condition type="Level" showMessageAndHtml="true">
 			<param name="min" value="95" />
-			<param name="html" value="condNoLevel.html" />
+			<param name="html" value="33647-6.htm" />
 		</condition>
 		<condition type="Distance" showMessageAndHtml="true">
-			<param name="html" value="condOtherError.html" />
+			<param name="html" value="33647-8.htm" />
 		</condition>
 		<condition type="Reenter" showMessageAndHtml="true">
-			<param name="html" value="condOtherError.html" />
+			<param name="html" value="33647-8.htm" />
 		</condition>
 	</conditions>
 	<reenter apply="ON_FINISH">
