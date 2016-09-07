@@ -299,6 +299,7 @@ import quests.Q10433_KekropusLetterRegardingASeal.Q10433_KekropusLetterRegarding
 import quests.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds;
 import quests.Q10436_KekropusLetterTheSealOfPunishment.Q10436_KekropusLetterTheSealOfPunishment;
 import quests.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen;
+import quests.Q10438_ChasingLoygen.Q10438_ChasingLoygen;
 import quests.Q10439_KekropusLetterTheOriginsOfARumor.Q10439_KekropusLetterTheOriginsOfARumor;
 import quests.Q10440_TheSealOfPunishmentTheFields.Q10440_TheSealOfPunishmentTheFields;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
@@ -685,6 +686,7 @@ public class QuestMasterHandler
 		Q10434_TheSealOfPunishmentSelMahumTrainingGrounds.class,
 		Q10436_KekropusLetterTheSealOfPunishment.class,
 		Q10437_TheSealOfPunishmentPlainsOfTheLizardmen.class,
+		Q10438_ChasingLoygen.class,
 		Q10439_KekropusLetterTheOriginsOfARumor.class,
 		Q10440_TheSealOfPunishmentTheFields.class,
 		Q10442_TheAnnihilatedPlains1.class,
