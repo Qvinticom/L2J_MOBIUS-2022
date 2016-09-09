@@ -502,7 +502,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
-			<condition name="Op2hWeapon">
+			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
@@ -925,7 +925,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="Op2hWeapon">
+			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
