@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
-import com.l2jmobius.gameserver.network.client.ConnectionState;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 public class OfflineTradersTable
@@ -218,7 +217,7 @@ public class OfflineTradersTable
 					client.setActiveChar(player);
 					player.setOnlineStatus(true, false);
 					client.setAccountName(player.getAccountNamePlayer());
-					client.setConnectionState(ConnectionState.IN_GAME);
+					// client.setConnectionState(ConnectionState.IN_GAME);
 					player.setClient(client);
 					player.setOfflineStartTime(time);
 					
