@@ -295,6 +295,7 @@ import quests.Q10426_AssassinationOfTheKetraOrcCommander.Q10426_AssassinationOfT
 import quests.Q10427_AssassinationOfTheKetraOrcChief.Q10427_AssassinationOfTheKetraOrcChief;
 import quests.Q10430_KekropusLetterTrackingTheEvil.Q10430_KekropusLetterTrackingTheEvil;
 import quests.Q10431_TheSealOfPunishmentDenOfEvil.Q10431_TheSealOfPunishmentDenOfEvil;
+import quests.Q10432_ChasingVarangka.Q10432_ChasingVarangka;
 import quests.Q10433_KekropusLetterRegardingASeal.Q10433_KekropusLetterRegardingASeal;
 import quests.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds;
 import quests.Q10436_KekropusLetterTheSealOfPunishment.Q10436_KekropusLetterTheSealOfPunishment;
@@ -682,6 +683,7 @@ public class QuestMasterHandler
 		Q10427_AssassinationOfTheKetraOrcChief.class,
 		Q10430_KekropusLetterTrackingTheEvil.class,
 		Q10431_TheSealOfPunishmentDenOfEvil.class,
+		Q10432_ChasingVarangka.class,
 		Q10433_KekropusLetterRegardingASeal.class,
 		Q10434_TheSealOfPunishmentSelMahumTrainingGrounds.class,
 		Q10436_KekropusLetterTheSealOfPunishment.class,
