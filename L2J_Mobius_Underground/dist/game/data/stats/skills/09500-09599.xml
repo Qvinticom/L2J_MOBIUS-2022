@@ -1072,52 +1072,82 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9554" toLevel="1" name="Hair Accessory: STR">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 3. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9555" toLevel="1" name="Hair Accessory: DEX">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- DEX + 3. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9556" toLevel="1" name="Hair Accessory: CON">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON + 3. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9557" toLevel="1" name="Hair Accessory: MEN">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- MEN + 3. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9558" toLevel="1" name="Hair Accessory: INT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- INT + 3. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9559" toLevel="1" name="Hair Accessory: WIT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 3. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
+		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9560" toLevel="1" name="Hair Accessory: Critical Rate">
 		<!-- AUTO GENERATED SKILL -->
