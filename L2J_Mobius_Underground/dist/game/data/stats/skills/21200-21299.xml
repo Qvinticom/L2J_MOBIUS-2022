@@ -1477,18 +1477,21 @@
 		</conditions>
 	</skill>
 	<skill id="21273" toLevel="7" name="Release Agathion's Seal - Valakas">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
-		<isMagic>2</isMagic>
-		<hitTime>3000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>16104</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21274" toLevel="6" name="Start of Evolution">
 		<!-- AUTO GENERATED SKILL -->
