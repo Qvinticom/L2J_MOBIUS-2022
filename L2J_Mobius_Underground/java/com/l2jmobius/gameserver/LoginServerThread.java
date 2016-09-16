@@ -550,7 +550,7 @@ public class LoginServerThread extends Thread
 		{
 			if (client.isDetached())
 			{
-				client.closeNow();
+				client.getActiveChar().logout();
 			}
 			else
 			{

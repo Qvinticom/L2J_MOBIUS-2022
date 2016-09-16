@@ -211,7 +211,7 @@ public final class AntiFeedManager
 	 */
 	public final void onDisconnect(L2GameClient client)
 	{
-		if (client == null)
+		if ((client == null) || client.isDetached())
 		{
 			return;
 		}
