@@ -242,6 +242,7 @@ import quests.Q10343_DayOfDestinyDarkElfsFate.Q10343_DayOfDestinyDarkElfsFate;
 import quests.Q10344_DayOfDestinyOrcsFate.Q10344_DayOfDestinyOrcsFate;
 import quests.Q10345_DayOfDestinyDwarfsFate.Q10345_DayOfDestinyDwarfsFate;
 import quests.Q10346_DayOfDestinyKamaelsFate.Q10346_DayOfDestinyKamaelsFate;
+import quests.Q10351_OwnerOfHall.Q10351_OwnerOfHall;
 import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
 import quests.Q10359_TracesOfEvil.Q10359_TracesOfEvil;
 import quests.Q10360_CertificationOfFate.Q10360_CertificationOfFate;
@@ -630,6 +631,7 @@ public class QuestMasterHandler
 		Q10344_DayOfDestinyOrcsFate.class,
 		Q10345_DayOfDestinyDwarfsFate.class,
 		Q10346_DayOfDestinyKamaelsFate.class,
+		Q10351_OwnerOfHall.class,
 		Q10358_DividedSakumPoslof.class,
 		Q10359_TracesOfEvil.class,
 		Q10360_CertificationOfFate.class,
