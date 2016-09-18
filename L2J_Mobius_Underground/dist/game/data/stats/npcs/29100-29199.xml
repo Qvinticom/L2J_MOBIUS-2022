@@ -4021,7 +4021,6 @@
 		</collision>
 	</npc>
 	<npc id="29194" level="98" type="L2RaidBoss" name="Octavis" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14030" level="1" />
 			<skill name="boss_skill_02" id="14031" level="1" />
@@ -4032,10 +4031,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="16629786992" sp="26607659" raidPoints="21" />
+		<acquire exp="16629786992" sp="3991787" raidPoints="21" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="15691245" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="37360855" hpRegen="8.5" mp="45646" mpRegen="30" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -4062,75 +4061,90 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="1.125">
-					<item id="17401" min="1" max="1" chance="26.666666666667" /> <!-- Seraph Shield Heavy Armor -->
-					<item id="38013" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Cutter Crafting Pack -->
-					<item id="38014" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Slasher Crafting Pack -->
-					<item id="38015" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Avenger Crafting Pack -->
-					<item id="38016" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Fighter Crafting Pack -->
-					<item id="38017" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Stormer Crafting Pack -->
-					<item id="38018" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Thrower Crafting Pack -->
-					<item id="38019" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Shooter Crafting Pack -->
-					<item id="38020" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Buster Crafting Pack -->
-					<item id="38021" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Caster Crafting Pack -->
-					<item id="38022" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Retributer Crafting Pack -->
-					<item id="38012" min="1" max="1" chance="6.6666666666667" /> <!-- Specter Shaper Crafting Pack -->
-				</group>
-				<group chance="9.125">
-					<item id="19462" min="1" max="1" chance="23.506849315068" /> <!-- Octavis' Shirt -->
-					<item id="38024" min="1" max="1" chance="13.446575342466" /> <!-- Seraph Breastplate Crafting Pack Heavy Armor -->
-					<item id="38031" min="1" max="1" chance="13.07397260274" /> <!-- Seraph Leather Leggings Crafting Pack Light Armor -->
-					<item id="38025" min="1" max="1" chance="12.865753424658" /> <!-- Seraph Gaiters Crafting Pack Heavy Armor -->
-					<item id="38036" min="1" max="1" chance="12.78904109589" /> <!-- Seraph Stockings Crafting Pack Robe -->
-					<item id="38030" min="1" max="1" chance="12.164383561644" /> <!-- Seraph Leather Armor Crafting Pack Light Armor -->
-					<item id="38035" min="1" max="1" chance="12.153424657534" /> <!-- Seraph Tunic Crafting Pack Robe -->
-				</group>
-				<group chance="15.934">
-					<item id="17412" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Sigil Robe -->
-					<item id="17411" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Shoes Robe -->
-					<item id="17410" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Gloves Robe -->
-					<item id="17407" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Circlet Robe -->
-					<item id="17406" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Leather Boots Light Armor -->
-					<item id="17405" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Leather Gloves Light Armor -->
-					<item id="17402" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Leather Helmet Light Armor -->
-					<item id="17400" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Boots Heavy Armor -->
-					<item id="17399" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Gauntlets Heavy Armor -->
-					<item id="17396" min="1" max="1" chance="1.8827664114472" /> <!-- Seraph Helmet Heavy Armor -->
-					<item id="38032" min="1" max="1" chance="7.7695493912389" /> <!-- Seraph Leather Gloves Crafting Pack Light Armor -->
-					<item id="38039" min="1" max="1" chance="7.6754110706665" /> <!-- Seraph Sigil Crafting Pack Robe -->
-					<item id="38038" min="1" max="1" chance="7.656583406552" /> <!-- Seraph Shoes Crafting Pack Robe -->
-					<item id="38033" min="1" max="1" chance="7.6377557424376" /> <!-- Seraph Leather Boots Crafting Pack Light Armor -->
-					<item id="38027" min="1" max="1" chance="7.5122379816744" /> <!-- Seraph Boots Crafting Pack Heavy Armor -->
-					<item id="38029" min="1" max="1" chance="7.418099661102" /> <!-- Seraph Leather Helmet Crafting Pack Light Armor -->
-					<item id="38034" min="1" max="1" chance="7.2486506840718" /> <!-- Seraph Circlet Crafting Pack Robe -->
-					<item id="38026" min="1" max="1" chance="7.1231329233086" /> <!-- Seraph Gauntlets Crafting Pack Heavy Armor -->
-					<item id="38023" min="1" max="1" chance="7.1105811472323" /> <!-- Seraph Helmet Crafting Pack Heavy Armor -->
-					<item id="38028" min="1" max="1" chance="7.0540981548889" /> <!-- Seraph Shield Crafting Pack Heavy Armor -->
-					<item id="38037" min="1" max="1" chance="6.9662357223547" /> <!-- Seraph Gloves Crafting Pack Robe -->
-				</group>
-				<group chance="0.9">
-					<item id="19459" min="1" max="1" chance="33.333333333333" /> <!-- Octavis' Necklace -->
-					<item id="19458" min="1" max="1" chance="33.333333333333" /> <!-- Octavis' Earring -->
-					<item id="19457" min="1" max="1" chance="33.333333333333" /> <!-- Octavis' Ring -->
-				</group>
-				<group chance="100">
-					<item id="39738" min="1" max="1" chance="71.3617971755" /> <!-- Rune Stone -->
-					<item id="19448" min="1" max="1" chance="17.176784580143" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-					<item id="17747" min="1" max="1" chance="7.1847057396293" /> <!-- Trace of Decaying Darkness -->
-					<item id="19447" min="1" max="1" chance="4.2767125047277" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="500" />
 		<collision>
 			<radius normal="30" />
 			<height normal="81" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="19462" min="1" max="1" chance="1.370" /> <!-- Octavis' Shirt -->
+				<item id="19459" min="1" max="1" chance="0.3" /> <!-- Octavis' Necklace -->
+				<item id="19458" min="1" max="1" chance="0.3" /> <!-- Octavis' Earring -->
+				<item id="19457" min="1" max="1" chance="0.3" /> <!-- Octavis' Ring -->
+				<item id="17412" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil -->
+				<item id="17411" min="1" max="1" chance="0.3" /> <!-- Seraph Shoes -->
+				<item id="17410" min="1" max="1" chance="0.3" /> <!-- Seraph Gloves -->
+				<item id="17407" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet -->
+				<item id="17406" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots -->
+				<item id="17405" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves -->
+				<item id="17402" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet -->
+				<item id="17401" min="1" max="1" chance="0.3" /> <!-- Seraph Shield -->
+				<item id="17400" min="1" max="1" chance="0.3" /> <!-- Seraph Boots -->
+				<item id="17399" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlets -->
+				<item id="17396" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet -->
+				<item id="39738" min="1" max="1" chance="99" /> <!-- Rune Stone -->
+				<item id="19448" min="1" max="1" chance="24.02" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="17747" min="1" max="1" chance="9.977" /> <!-- Trace of Decaying Darkness -->
+				<item id="19447" min="1" max="1" chance="6.260" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="46489" min="1" max="1" chance="1.531" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.525" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.519" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="1.345" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.317" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="1.364" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="38026" min="1" max="1" chance="1.316" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="1.255" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="1.253" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="1.230" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="38032" min="1" max="1" chance="1.224" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="1.220" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="1.219" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="1.216" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38027" min="1" max="1" chance="1.207" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="1.197" /> <!-- Seraph Gaiters Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="1.189" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="1.187" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="1.186" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38030" min="1" max="1" chance="1.183" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="1.163" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38029" min="1" max="1" chance="1.160" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="46476" min="1" max="1" chance="1.132" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.125" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="38031" min="1" max="1" chance="1.137" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="46459" min="1" max="1" chance="1.101" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46444" min="1" max="1" chance="1.116" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="1.114" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38016" min="1" max="1" chance="0.075" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.075" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.075" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.075" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.075" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.075" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.075" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.075" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.075" /> <!-- Specter Thrower Crafting Pack -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="2" max="2" chance="99" /> <!-- Fortune Bag - Stage 1 -->
+			</lucky_corpse>	
+		</drop_lists>
 	</npc>
 	<npc id="29195" level="94" type="L2RaidBoss" name="Istina" title="Queen of Annihilation">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

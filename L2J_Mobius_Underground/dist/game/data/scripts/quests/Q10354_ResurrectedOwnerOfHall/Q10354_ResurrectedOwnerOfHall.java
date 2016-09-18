@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10351_OwnerOfHall;
+package quests.Q10354_ResurrectedOwnerOfHall;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -23,31 +23,31 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
-import quests.Q10318_DecayingDarkness.Q10318_DecayingDarkness;
+import quests.Q10351_OwnerOfHall.Q10351_OwnerOfHall;
 
 /**
- * Owner of Hall (10351)
- * @URL https://l2wiki.com/Owner_of_Hall
+ * Resurrected Owner of Hall (10354)
+ * @URL https://l2wiki.com/index.php?title=Resurrected_Owner_of_Hall&mobileaction=toggle_view_desktop
  * @author Gigi
  */
-public final class Q10351_OwnerOfHall extends Quest
+public final class Q10354_ResurrectedOwnerOfHall extends Quest
 {
 	// NPCs
 	private static final int LYDIA = 32892;
-	private static final int OCTAVIS = 29194; // Octavis common mode
+	private static final int OCTAVIS = 29212; // Octavis extreme mode
 	// Item
-	private static final int OCTAVIS_BRACELET = 19461;
+	private static final int OCTAVIS_SOUL_BOTTLE = 34884;
 	// Misc
 	private static final int MIN_LEVEL = 95;
 	
-	public Q10351_OwnerOfHall()
+	public Q10354_ResurrectedOwnerOfHall()
 	{
-		super(10351);
+		super(10354);
 		addStartNpc(LYDIA);
 		addTalkId(LYDIA);
 		addKillId(OCTAVIS);
 		addCondMinLevel(MIN_LEVEL, "32892-00.htm");
-		addCondCompletedQuest(Q10318_DecayingDarkness.class.getSimpleName(), "32892-00a.htm");
+		addCondCompletedQuest(Q10351_OwnerOfHall.class.getSimpleName(), "32892-00a.htm");
 	}
 	
 	@Override
@@ -64,24 +64,23 @@ public final class Q10351_OwnerOfHall extends Quest
 		{
 			case "32892-02.htm":
 			case "32892-03.htm":
-			case "32892-04.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "32892-05.htm":
+			case "32892-04.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32892-08.html":
+			case "32892-07.html":
 			{
 				giveAdena(player, 23655000, false);
 				addExpAndSp(player, 897850000, 215484);
-				giveItems(player, OCTAVIS_BRACELET, 1);
+				giveItems(player, OCTAVIS_SOUL_BOTTLE, 1);
 				qs.exitQuest(false, true);
-				htmltext = getHtm(player.getHtmlPrefix(), "32892-08.html").replace("%name%", player.getName());
+				htmltext = getHtm(player.getHtmlPrefix(), "32892-07.html").replace("%name%", player.getName());
 				break;
 			}
 		}
@@ -112,11 +111,11 @@ public final class Q10351_OwnerOfHall extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = "32892-06.html";
+					htmltext = "32892-05.html";
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = "32892-07.html";
+					htmltext = "32892-06.html";
 				}
 				break;
 			}
