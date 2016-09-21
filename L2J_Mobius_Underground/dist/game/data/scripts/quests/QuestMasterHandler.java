@@ -123,6 +123,7 @@ import quests.Q00458_PerfectForm.Q00458_PerfectForm;
 import quests.Q00463_IMustBeaGenius.Q00463_IMustBeaGenius;
 import quests.Q00464_Oath.Q00464_Oath;
 import quests.Q00466_PlacingMySmallPower.Q00466_PlacingMySmallPower;
+import quests.Q00468_BeLostInTheMysteriousScent.Q00468_BeLostInTheMysteriousScent;
 import quests.Q00470_DivinityProtector.Q00470_DivinityProtector;
 import quests.Q00474_WaitingForTheSummer.Q00474_WaitingForTheSummer;
 import quests.Q00476_PlainMission.Q00476_PlainMission;
@@ -513,6 +514,7 @@ public class QuestMasterHandler
 		Q00463_IMustBeaGenius.class,
 		Q00464_Oath.class,
 		Q00466_PlacingMySmallPower.class,
+		Q00468_BeLostInTheMysteriousScent.class,
 		Q00470_DivinityProtector.class,
 		Q00474_WaitingForTheSummer.class,
 		Q00476_PlainMission.class,
