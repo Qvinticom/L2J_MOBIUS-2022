@@ -23,6 +23,8 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.MinionList;
 
 /**
@@ -238,5 +240,16 @@ public class L2MonsterInstance extends L2Attackable
 	public boolean giveRaidCurse()
 	{
 		return (isRaidMinion() && (getLeader() != null)) ? getLeader().giveRaidCurse() : super.giveRaidCurse();
+	}
+	
+	@Override
+	public synchronized void doCast(Skill skill, L2ItemInstance item, boolean ctrlPressed, boolean shiftPressed)
+	{
+		// Might need some exceptions here, but it will prevent the monster buffing player bug.
+		if (!skill.isBad() && (getTarget() != null) && getTarget().isPlayer())
+		{
+			return;
+		}
+		super.doCast(skill, item, ctrlPressed, shiftPressed);
 	}
 }
