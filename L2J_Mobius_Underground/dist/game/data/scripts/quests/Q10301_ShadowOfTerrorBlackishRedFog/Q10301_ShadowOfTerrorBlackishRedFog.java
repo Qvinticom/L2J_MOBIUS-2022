@@ -50,7 +50,7 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	// Items
 	private static final int LADA_LETTER = 17725; // Lada's Letter
 	private static final int GLIMMER_CRYSTAL = 17604; // Glimmer Crystal
-	private static final int CAPSULED_WHISP = 17588; // Calsuled Whisp
+	private static final int SPIRIT_ITEM = 17588; // Calsuled Whisp
 	private static final int FAIRY = 17380; // Agathion - Fairy
 	// Skills
 	private static final int WHISP_SKILL = 12001;
@@ -60,13 +60,13 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	public Q10301_ShadowOfTerrorBlackishRedFog()
 	{
 		super(10301);
-		addStartNpc(LADA);
+		addStartNpc(LADA_LETTER);
 		addTalkId(LADA, SLASKI);
 		addSkillSeeId(LARGE_VERDANT_WILDS);
 		addAttackId(WHISP);
 		
 		addCondMinLevel(MIN_LEVEL, "33100-08.htm");
-		registerQuestItems(CAPSULED_WHISP, GLIMMER_CRYSTAL);
+		registerQuestItems(SPIRIT_ITEM, GLIMMER_CRYSTAL);
 	}
 	
 	@Override
@@ -77,6 +77,13 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		if (qs == null)
 		{
 			return htmltext;
+		}
+		
+		if (event.equals("start"))
+		{
+			qs.startQuest();
+			takeItems(player, LADA_LETTER, -1);
+			htmltext = "start.htm";
 		}
 		
 		switch (event)
@@ -93,11 +100,9 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 			}
 			case "33100-04.htm":
 			{
-				qs.startQuest();
 				qs.setCond(2);
 				htmltext = event;
 				giveItems(player, GLIMMER_CRYSTAL, 10);
-				takeItems(player, LADA_LETTER, -1);
 				break;
 			}
 			case "giveCrystals":
@@ -108,7 +113,7 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 			}
 			default:
 			{
-				if (event.startsWith("giveReward_") && qs.isCond(3) && (player.getLevel() >= MIN_LEVEL))
+				if (event.startsWith("giveReward_") && qs.isCond(3) && (player.getLevel() >= MIN_LEVEL) && (getQuestItemsCount(player, SPIRIT_ITEM) >= 1))
 				{
 					final int itemId = Integer.parseInt(event.replace("giveReward_", ""));
 					qs.exitQuest(false, true);
@@ -131,19 +136,15 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		
 		switch (qs.getState())
 		{
-			case State.CREATED:
-			{
-				if (npc.getId() == LADA)
-				{
-					htmltext = "33100-01.htm";
-				}
-				break;
-			}
 			case State.STARTED:
 			{
 				if (npc.getId() == LADA)
 				{
-					if (qs.isCond(2))
+					if (qs.isCond(1))
+					{
+						htmltext = "33100-01.htm";
+					}
+					else if (qs.isCond(2))
 					{
 						htmltext = "33100-05.html";
 					}
@@ -179,9 +180,13 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		final QuestState qs = getQuestState(caster, false);
 		if ((qs != null) && qs.isCond(2) && (skill.getId() == WHISP_SKILL))
 		{
-			final L2Npc whisp = addSpawn(WHISP, caster, true, 20000);
-			whisp.setTitle(caster.getName());
-			whisp.broadcastInfo();
+			// takeItems(caster, GLIMMER_CRYSTAL, 1);
+			for (int i1 = 0; i1 < 3; i1++)
+			{
+				final L2Npc whisp = addSpawn(WHISP, caster.getX() + getRandom(-20, 20), caster.getY() + getRandom(-20, 20), caster.getZ(), 0, true, 30000, false);
+				whisp.setTitle(caster.getName());
+				whisp.broadcastInfo();
+			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
@@ -192,10 +197,12 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		final QuestState qs = getQuestState(attacker, false);
 		if ((qs != null) && qs.isCond(2))
 		{
-			if (getRandom(1000) < 500)
+			if (getRandom(1000) < 300)
 			{
 				showOnScreenMsg(attacker, NpcStringId.YOU_VE_CAPTURED_A_WISP_SUCCESSFULLY, ExShowScreenMessage.TOP_CENTER, 10000);
+				giveItems(attacker, SPIRIT_ITEM, 1);
 				takeItems(attacker, GLIMMER_CRYSTAL, -1);
+				qs.setCond(1);
 				qs.setCond(3, true);
 			}
 		}
@@ -239,7 +246,10 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		{
 			final String html = getHtm(player.getHtmlPrefix(), "popup.html");
 			player.sendPacket(new TutorialShowHtml(html));
-			giveItems(player, LADA_LETTER, 1);
+			if (!hasQuestItems(player, LADA_LETTER))
+			{
+				giveItems(player, LADA_LETTER, 1);
+			}
 		}
 	}
 }
