@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -38,7 +39,7 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 
 /**
  * Shadow of Terror: Blackish Red Fog (10301)
- * @author St3eT
+ * @author St3eT, Gigi
  */
 public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 {
@@ -60,11 +61,10 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	public Q10301_ShadowOfTerrorBlackishRedFog()
 	{
 		super(10301);
-		addStartNpc(LADA_LETTER);
+		addItemTalkId(LADA_LETTER);
 		addTalkId(LADA, SLASKI);
 		addSkillSeeId(LARGE_VERDANT_WILDS);
 		addAttackId(WHISP);
-		
 		addCondMinLevel(MIN_LEVEL, "33100-08.htm");
 		registerQuestItems(SPIRIT_ITEM, GLIMMER_CRYSTAL);
 	}
@@ -78,14 +78,6 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		{
 			return htmltext;
 		}
-		
-		if (event.equals("start"))
-		{
-			qs.startQuest();
-			takeItems(player, LADA_LETTER, -1);
-			htmltext = "start.htm";
-		}
-		
 		switch (event)
 		{
 			case "33100-02.htm":
@@ -100,15 +92,20 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 			}
 			case "33100-04.htm":
 			{
-				qs.setCond(2);
+				qs.setCond(2, true);
 				htmltext = event;
 				giveItems(player, GLIMMER_CRYSTAL, 10);
 				break;
 			}
 			case "giveCrystals":
 			{
-				giveItems(player, GLIMMER_CRYSTAL, 5);
-				htmltext = "33100-06.html";
+				if (getQuestItemsCount(player, GLIMMER_CRYSTAL) < 1)
+				{
+					giveItems(player, GLIMMER_CRYSTAL, 5);
+					htmltext = "33100-06.html";
+					break;
+				}
+				htmltext = "33100-06a.html";
 				break;
 			}
 			default:
@@ -123,6 +120,38 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 					addExpAndSp(player, 26_920_620, 6_460);
 					htmltext = "32893-06.html";
 				}
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
+	{
+		String htmltext = getNoQuestMsg(player);
+		final QuestState qs = getQuestState(player, true);
+		
+		boolean startQuest = false;
+		switch (qs.getState())
+		{
+			case State.CREATED:
+			{
+				startQuest = true;
+				break;
+			}
+		}
+		
+		if (startQuest)
+		{
+			if (player.getLevel() >= MIN_LEVEL)
+			{
+				qs.startQuest();
+				takeItems(player, LADA_LETTER, -1);
+				htmltext = "start.htm";
+			}
+			else
+			{
+				htmltext = "33100-08.htm";
 			}
 		}
 		return htmltext;
@@ -180,7 +209,6 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		final QuestState qs = getQuestState(caster, false);
 		if ((qs != null) && qs.isCond(2) && (skill.getId() == WHISP_SKILL))
 		{
-			// takeItems(caster, GLIMMER_CRYSTAL, 1);
 			for (int i1 = 0; i1 < 3; i1++)
 			{
 				final L2Npc whisp = addSpawn(WHISP, caster.getX() + getRandom(-20, 20), caster.getY() + getRandom(-20, 20), caster.getZ(), 0, true, 30000, false);
