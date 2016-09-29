@@ -301,11 +301,13 @@ import quests.Q10431_TheSealOfPunishmentDenOfEvil.Q10431_TheSealOfPunishmentDenO
 import quests.Q10432_ChasingVarangka.Q10432_ChasingVarangka;
 import quests.Q10433_KekropusLetterRegardingASeal.Q10433_KekropusLetterRegardingASeal;
 import quests.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds.Q10434_TheSealOfPunishmentSelMahumTrainingGrounds;
+import quests.Q10435_ChasingKeltron.Q10435_ChasingKeltron;
 import quests.Q10436_KekropusLetterTheSealOfPunishment.Q10436_KekropusLetterTheSealOfPunishment;
 import quests.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen.Q10437_TheSealOfPunishmentPlainsOfTheLizardmen;
 import quests.Q10438_ChasingLoygen.Q10438_ChasingLoygen;
 import quests.Q10439_KekropusLetterTheOriginsOfARumor.Q10439_KekropusLetterTheOriginsOfARumor;
 import quests.Q10440_TheSealOfPunishmentTheFields.Q10440_TheSealOfPunishmentTheFields;
+import quests.Q10441_ChasingMeccadan.Q10441_ChasingMeccadan;
 import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10443_TheAnnihilatedPlains2.Q10443_TheAnnihilatedPlains2;
 import quests.Q10444_TheOriginOfMonsters.Q10444_TheOriginOfMonsters;
@@ -692,11 +694,13 @@ public class QuestMasterHandler
 		Q10432_ChasingVarangka.class,
 		Q10433_KekropusLetterRegardingASeal.class,
 		Q10434_TheSealOfPunishmentSelMahumTrainingGrounds.class,
+		Q10435_ChasingKeltron.class,
 		Q10436_KekropusLetterTheSealOfPunishment.class,
 		Q10437_TheSealOfPunishmentPlainsOfTheLizardmen.class,
 		Q10438_ChasingLoygen.class,
 		Q10439_KekropusLetterTheOriginsOfARumor.class,
 		Q10440_TheSealOfPunishmentTheFields.class,
+		Q10441_ChasingMeccadan.class,
 		Q10442_TheAnnihilatedPlains1.class,
 		Q10443_TheAnnihilatedPlains2.class,
 		Q10444_TheOriginOfMonsters.class,
