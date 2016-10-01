@@ -55,6 +55,8 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		addStartNpc(WOOD);
 		addTalkId(WOOD, ORVEN, LEOPARD, LAWRENCE, SOPHIA);
 		addKillId(SHILENS_EVIL_THOUGHTS);
+		addCondMinLevel(MIN_LEVEL, "32593-05.html");
+		addCondCompletedQuest(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName(), "32593-05.html");
 		registerQuestItems(MYSTERIOUS_HAND_WRITTEN_TEXT, SCULPTURE_OF_DOUBT);
 	}
 	
@@ -258,8 +260,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 			{
 				if (npc.getId() == WOOD)
 				{
-					st = player.getQuestState(Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-05.html";
+					htmltext = "32593-01.htm";
 				}
 				break;
 			}

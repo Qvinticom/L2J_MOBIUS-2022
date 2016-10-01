@@ -21,6 +21,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
+import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
+
 /**
  * Seven Signs, One Who Seeks the Power of the Seal (10296)
  * @URL https://l2wiki.com/Seven_Signs,_One_Who_Seeks_the_Power_of_the_Seal
@@ -31,13 +33,15 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 	// NPCs
 	private static final int ERIS_EVIL_THOUGHTS = 32792;
 	// Misc
-	// private static final int MIN_LEVEL = 81;
+	private static final int MIN_LEVEL = 81;
 	
 	public Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal()
 	{
 		super(10296);
 		addStartNpc(ERIS_EVIL_THOUGHTS);
 		addTalkId(ERIS_EVIL_THOUGHTS);
+		addCondMinLevel(MIN_LEVEL, ""); // TODO: HTML
+		addCondCompletedQuest(Q10295_SevenSignsSolinasTomb.class.getSimpleName(), ""); // TODO: HTML
 	}
 	
 	@Override

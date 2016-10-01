@@ -57,6 +57,8 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 		super(194);
 		addStartNpc(SIR_GUSTAV_ATHEBALDT);
 		addTalkId(SIR_GUSTAV_ATHEBALDT, COLIN, FROG, TESS, KUTA, CLAUDIA_ATHEBALDT);
+		addCondMinLevel(MIN_LEVEL, "30760-05.html");
+		addCondCompletedQuest(Q00193_SevenSignsDyingMessage.class.getSimpleName(), "30760-05.html");
 		registerQuestItems(ATHEBALDTS_INTRODUCTION, NATIVES_GLOVE, FROG_KINGS_BEAD, GRANDA_TESS_CANDY_POUCH);
 	}
 	
@@ -358,8 +360,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 			{
 				if (npc.getId() == SIR_GUSTAV_ATHEBALDT)
 				{
-					st = player.getQuestState(Q00193_SevenSignsDyingMessage.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && st.isCompleted()) ? "30760-01.htm" : "30760-05.html";
+					htmltext = "30760-01.htm";
 				}
 				break;
 			}

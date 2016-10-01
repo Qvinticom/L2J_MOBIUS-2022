@@ -54,6 +54,8 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 		addFirstTalkId(MERCHANT_OF_MAMMON);
 		addStartNpc(IASON_HEINE);
 		addTalkId(IASON_HEINE, MERCHANT_OF_MAMMON, SHUNAIMAN, WOOD, COURT_MAGICIAN);
+		addCondMinLevel(MIN_LEVEL, "30969-08.html");
+		addCondCompletedQuest(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName(), "30969-08.html");
 		registerQuestItems(ELMOREDEN_HOLY_WATER, COURT_MAGICIANS_MAGIC_STAFF, SEAL_OF_BINDING, SACRED_SWORD_OF_EINHASAD);
 	}
 	
@@ -245,8 +247,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 			{
 				if (npc.getId() == IASON_HEINE)
 				{
-					st = player.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30969-01.htm" : "30969-08.html";
+					htmltext = "30969-01.htm";
 				}
 				break;
 			}

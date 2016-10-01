@@ -64,6 +64,8 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 		addTalkId(WOOD, FRANZ, JAINA, ELCADIA, HARDIN);
 		addKillId(MOBS);
 		addKillId(CREATURE_OF_THE_DUSK1, CREATURE_OF_THE_DUSK2);
+		addCondMinLevel(MIN_LEVEL, "32593-03.htm");
+		addCondCompletedQuest(Q00198_SevenSignsEmbryo.class.getSimpleName(), "32593-03.htm");
 		registerQuestItems(ELCADIAS_MARK.getId());
 	}
 	
@@ -239,8 +241,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 				}
 				else if (st.isCreated())
 				{
-					st = player.getQuestState(Q00198_SevenSignsEmbryo.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "32593-01.htm" : "32593-03.htm";
+					htmltext = "32593-01.htm";
 				}
 				else if (st.isStarted())
 				{

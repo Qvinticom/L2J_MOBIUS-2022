@@ -47,6 +47,7 @@ public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 		super(192);
 		addStartNpc(CROOP, UNIDENTIFIED_BODY);
 		addTalkId(CROOP, STAN, UNIDENTIFIED_BODY, HECTOR, HOLLINT);
+		addCondMinLevel(MIN_LEVEL, "30676-04.html");
 		registerQuestItems(CROOPS_INTRODUCTION, JACOBS_NECKLACE, CROOPS_LETTER);
 	}
 	
@@ -209,7 +210,7 @@ public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 			{
 				if (npc.getId() == CROOP)
 				{
-					htmltext = (player.getLevel() >= MIN_LEVEL) ? "30676-01.htm" : "30676-04.html";
+					htmltext = "30676-01.htm";
 				}
 				else if (npc.getId() == UNIDENTIFIED_BODY)
 				{

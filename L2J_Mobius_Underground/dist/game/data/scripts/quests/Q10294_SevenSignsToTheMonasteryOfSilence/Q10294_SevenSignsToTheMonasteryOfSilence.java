@@ -89,6 +89,8 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 		super(10294);
 		addFirstTalkId(ELCADIA_INSTANCE);
 		addStartNpc(ELCADIA, ODD_GLOBE, ELCADIA_INSTANCE, RELIC_GUARDIAN);
+		addCondMinLevel(MIN_LEVEL, "32784-07.htm");
+		addCondCompletedQuest(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName(), "32784-07.htm");
 		addTalkId(ELCADIA, ELCADIA_INSTANCE, ERIS_EVIL_THOUGHTS, RELIC_GUARDIAN, ODD_GLOBE, READING_DESK1, READING_DESK2, READING_DESK3, READING_DESK4, READING_DESK5, READING_DESK6, READING_DESK7, READING_DESK8, READING_DESK9, READING_DESK10, READING_DESK11, READING_DESK12, READING_DESK13, READING_DESK14, READING_DESK15, READING_DESK16, JUDE_VAN_ETINA, SOLINAS_EVIL_THOUGHTS, RELIC_WATCHER1, RELIC_WATCHER2, RELIC_WATCHER3, RELIC_WATCHER4);
 	}
 	
@@ -313,8 +315,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				}
 				else if (qs.isCreated())
 				{
-					qs = player.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && (qs.isCompleted())) ? "32784-01.htm" : "32784-07.htm";
+					htmltext = "32784-01.htm";
 				}
 				else if (qs.isStarted())
 				{

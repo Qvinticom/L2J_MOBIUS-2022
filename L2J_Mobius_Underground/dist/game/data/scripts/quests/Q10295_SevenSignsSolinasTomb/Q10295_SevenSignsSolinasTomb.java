@@ -21,6 +21,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
+import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
+
 /**
  * Seven Signs, Solina's Tomb (10295)
  * @URL https://l2wiki.com/Seven_Signs,_Solina%27s_Tomb
@@ -31,13 +33,15 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	// NPCs
 	private static final int ERIS_EVIL_THOUGHTS = 32792;
 	// Misc
-	// private static final int MIN_LEVEL = 81;
+	private static final int MIN_LEVEL = 81;
 	
 	public Q10295_SevenSignsSolinasTomb()
 	{
 		super(10295);
 		addStartNpc(ERIS_EVIL_THOUGHTS);
 		addTalkId(ERIS_EVIL_THOUGHTS);
+		addCondMinLevel(MIN_LEVEL, ""); // TODO: HTML
+		addCondCompletedQuest(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName(), ""); // TODO: HTML
 	}
 	
 	@Override

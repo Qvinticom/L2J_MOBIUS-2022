@@ -59,6 +59,8 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 		addStartNpc(HOLLINT);
 		addTalkId(HOLLINT, CAIN, ERIC, SIR_GUSTAV_ATHEBALDT);
 		addKillId(SHILENS_EVIL_THOUGHTS);
+		addCondMinLevel(MIN_LEVEL, "30191-03.html");
+		addCondCompletedQuest(Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName(), "30191-03.html");
 		registerQuestItems(JACOBS_NECKLACE, DEADMANS_HERB, SCULPTURE_OF_DOUBT);
 	}
 	
@@ -244,8 +246,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 			{
 				if (npc.getId() == HOLLINT)
 				{
-					st = player.getQuestState(Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName());
-					htmltext = ((player.getLevel() >= MIN_LEVEL) && (st != null) && (st.isCompleted())) ? "30191-01.htm" : "30191-03.html";
+					htmltext = "30191-01.htm";
 				}
 				break;
 			}
