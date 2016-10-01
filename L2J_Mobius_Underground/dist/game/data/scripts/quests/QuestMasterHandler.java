@@ -209,6 +209,8 @@ import quests.Q10291_FireDragonDestroyer.Q10291_FireDragonDestroyer;
 import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
+import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
+import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal;
 import quests.Q10297_GrandOpeningComeToOurPub.Q10297_GrandOpeningComeToOurPub;
 import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishRedFog;
 import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
@@ -602,6 +604,8 @@ public class QuestMasterHandler
 		Q10292_SevenSignsGirlOfDoubt.class,
 		Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class,
 		Q10294_SevenSignsToTheMonasteryOfSilence.class,
+		Q10295_SevenSignsSolinasTomb.class,
+		Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class,
 		Q10297_GrandOpeningComeToOurPub.class,
 		Q10301_ShadowOfTerrorBlackishRedFog.class,
 		Q10302_UnsettlingShadowAndRumors.class,
