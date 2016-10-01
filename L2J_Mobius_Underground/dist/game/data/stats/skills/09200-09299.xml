@@ -1008,15 +1008,21 @@
 		</effects>
 	</skill>
 	<skill id="9240" toLevel="2" name="XP Rune I (Lv. 1-85)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Obtained XP/SP + 100%. -->
+		<!-- Lvl 1 Obtained XP/SP + 100%. -->	
+		<!-- Lvl 2 Obtained XP/SP + 200%. -->
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
 		</icon>
-		<operateType>P</operateType>
+		<abnormalTime>3600</abnormalTime>
+		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>35985</itemConsumeId>
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>1</minLevel>
@@ -1024,7 +1030,23 @@
 				<affectType>CASTER</affectType>
 			</condition>
 		</passiveConditions>
-	</skill>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+ 				    <value level="1">100</value>
+ 				    <value level="2">200</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+ 				    <value level="1">100</value>
+ 				    <value level="2">200</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+		</skill>
 	<skill id="9241" toLevel="1" name="Giant's Box">
 		<!-- AUTO GENERATED SKILL -->
 		<itemConsumeId>34062</itemConsumeId>

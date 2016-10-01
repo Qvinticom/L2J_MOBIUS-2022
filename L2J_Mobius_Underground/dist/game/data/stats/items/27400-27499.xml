@@ -857,12 +857,22 @@
 	<item id="27484" name="Maphr's Wind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Deleted after event. -->
 		<set name="icon" val="icon.freya_scroll" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27615" level="1" /> <!-- Maphr's Wind Scroll -->
+		</skills>
 	</item>
 	<item id="27485" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" additionalName="Event" type="EtcItem">
 		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 solo dungeon. Deleted after event. -->

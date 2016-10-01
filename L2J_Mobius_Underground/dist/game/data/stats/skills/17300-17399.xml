@@ -188,14 +188,60 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17320" toLevel="1" name="Leona's Scroll: Buffs">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 min., XP/SP gain + 30%, Max HP/MP/CP + 30%, P. Def./ M. Def. + 30%, Speed + 20, P. Atk. + 10%, M. Atk. + 20%. Skill MP Consumption - 15%. Cannot use with the Art of Seduction. Cooldown is 30min. -->
 		<icon>icon.event_altair_enchant_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
-	</skill>
+		<effects>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+			</skill>
 	<skill id="17321" toLevel="1" name="Leona's Scroll: 1,000,000 SP">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gives 1,000,000 SP. -->

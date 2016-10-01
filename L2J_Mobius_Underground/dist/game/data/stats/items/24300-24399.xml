@@ -693,6 +693,8 @@
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Extra defense against skill damage in PvP. Note: Equipping 2 will give the effect of 1. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -702,11 +704,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
+		<set name="useSkillDisTime" val="1" />
+		<skills>
+			<skill id="21365" level="1" /> 
+		</skills>
 	</item>
 	<item id="24352" name="Talisman - Slaughterer" additionalName="Abundance / 3-day" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Note: Equipping 2 will give the effect of 1. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -716,11 +724,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
+		<set name="useSkillDisTime" val="1" />
+		<skills>
+			<skill id="21370" level="1" /> 
+		</skills>
 	</item>
 	<item id="24353" name="Talisman - Conquerer" additionalName="Abundance / 3-day" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, P./M. Critical Rate + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Note: Equipping 2 will give the effect of 1. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -730,11 +744,17 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
+		<set name="useSkillDisTime" val="1" />
+		<skills>
+			<skill id="21371" level="1" /> 
+		</skills>
 	</item>
 	<item id="24354" name="Talisman - Outlaw" additionalName="Abundance / 3-day" type="Armor">
 		<!-- Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP/MP/CP + 490, HP/MP/CP Recovery Bonus + 7. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Note: Equipping 2 will give the effect of 1. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="deco1" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -744,6 +764,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="4320" />
+		<set name="useSkillDisTime" val="1" />
+		<skills>
+			<skill id="21372" level="1" /> 
+		</skills>
 	</item>
 	<item id="24355" name="Premium Account: Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, P./Atk. + 10%, M. Atk. + 20%. Effect disappears if active while receiving Art of Seduction. Cannot be exchanged, dropped, or used in the Olympiad. Can be used in the Ceremony of Chaos. Can be stored in the private warehouse. -->

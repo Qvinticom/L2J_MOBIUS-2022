@@ -1220,6 +1220,7 @@
 		<!-- Vitality consumption + 200% and XP/SP acquisition + 200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="etcitem_type" val="SCROLL" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

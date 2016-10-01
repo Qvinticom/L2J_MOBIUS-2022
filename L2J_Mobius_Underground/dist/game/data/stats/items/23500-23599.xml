@@ -612,6 +612,10 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
+		<set name="useSkillDisTime" val="1" />
+		<skills>
+			<skill id="3489" level="1" /> <!-- Yellow Talisman - M. Atk. -->
+		</skills>
 	</item>
 	<item id="23555" name="Ninja Pants" additionalName="Modified Set Test" type="Armor">
 		<!-- Ninja pants. Used in costumes. Gives you active skills. -->

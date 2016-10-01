@@ -1623,6 +1623,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="60" />
+ 		<set name="handler" val="ItemSkills" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
