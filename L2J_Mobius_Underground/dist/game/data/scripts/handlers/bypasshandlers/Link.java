@@ -16,6 +16,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -44,10 +45,9 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		final String filename = "data/html/" + htmlPath;
+		final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/" + htmlPath);
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
-		html.setFile(activeChar.getHtmlPrefix(), filename);
-		html.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0));
+		html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
 		activeChar.sendPacket(html);
 		return true;
 	}
