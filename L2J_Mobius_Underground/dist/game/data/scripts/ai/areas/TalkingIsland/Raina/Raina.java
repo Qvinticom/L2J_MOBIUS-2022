@@ -47,6 +47,7 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -206,8 +207,8 @@ public final class Raina extends AbstractNpcAI
 						if (subClass != null)
 						{
 							final int classId = subClass.ordinal();
-							final int npcStringId = 11170000 + classId;
-							sb.append("<fstring p1=\"0\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
+							final String sClassName = NpcStringId.getNpcStringId(11170000 + classId).getName();
+							sb.append("<button icon=\"normal\" align=\"left\" action=\"bypass -h menu_select?ask=0&reply=" + classId + "\">" + sClassName + "</button>");
 						}
 					}
 					html.replace("%subclassList%", sb.toString());
@@ -247,8 +248,8 @@ public final class Raina extends AbstractNpcAI
 						if (subClass != null)
 						{
 							final int classId = subClass.getClassId();
-							final int npcStringId = 11170000 + classId;
-							sb.append("<fstring p1=\"2\" p2=\"" + subClass.getClassIndex() + "\">" + npcStringId + "</fstring>");
+							final String sClassName = NpcStringId.getNpcStringId(11170000 + classId).getName();
+							sb.append("<button icon=\"normal\" align=\"left\" action=\"bypass -h menu_select?ask=2&reply=" + subClass.getClassIndex() + "\">" + sClassName + "</button>");
 						}
 					}
 					html.replace("%removeList%", sb.toString());
@@ -434,8 +435,8 @@ public final class Raina extends AbstractNpcAI
 					return;
 				}
 				
-				final int npcStringId = 11170000 + classId;
-				sb.append("<fstring p1=\"1\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
+				final String sClassName = NpcStringId.getNpcStringId(11170000 + classId).getName();
+				sb.append("<button icon=\"normal\" align=\"left\" action=\"bypass -h menu_select?ask=1&reply=" + classId + "\">" + sClassName + "</button>");
 				html.replace("%confirmButton%", sb.toString());
 				player.sendPacket(html);
 				break;
@@ -476,8 +477,8 @@ public final class Raina extends AbstractNpcAI
 					if (subClass != null)
 					{
 						final int classId = subClass.ordinal();
-						final int npcStringId = 11170000 + classId;
-						sb.append("<fstring p1=\"3\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
+						final String sClassName = NpcStringId.getNpcStringId(11170000 + classId).getName();
+						sb.append("<button icon=\"normal\" align=\"left\" action=\"bypass -h menu_select?ask=3&reply=" + classId + "\">" + sClassName + "</button>");
 					}
 				}
 				npc.getVariables().set("SUBCLASS_INDEX_" + player.getObjectId(), subclassIndex);
@@ -496,8 +497,8 @@ public final class Raina extends AbstractNpcAI
 				
 				final StringBuilder sb = new StringBuilder();
 				final NpcHtmlMessage html = getNpcHtmlMessage(player, npc, "addConfirm2.html");
-				final int npcStringId = 11170000 + classId;
-				sb.append("<fstring p1=\"4\" p2=\"" + classId + "\">" + npcStringId + "</fstring>");
+				final String sClassName = NpcStringId.getNpcStringId(11170000 + classId).getName();
+				sb.append("<button icon=\"normal\" align=\"left\" action=\"bypass -h menu_select?ask=4&reply=" + classId + "\">" + sClassName + "</button>");
 				html.replace("%confirmButton%", sb.toString());
 				player.sendPacket(html);
 				break;
