@@ -35484,224 +35484,224 @@ public final class NpcStringId
 	@ClientString(id = 11022202, message = "Armor has been added to your Inventory.")
 	public static NpcStringId ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY;
 	
-	@ClientString(id = 11170000, message = "Original Class")
-	public static NpcStringId ORIGINAL_CLASS_BUTTON;
+	@ClientString(id = 11170000, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Original Class(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ORIGINAL_CLASS_BUTTON;
 	
-	@ClientString(id = 11170002, message = "Gladiator / Duelist")
-	public static NpcStringId GLADIATOR_DUELIST_BUTTON;
+	@ClientString(id = 11170002, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Gladiator / Duelist(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_GLADIATOR_DUELIST_BUTTON;
 	
-	@ClientString(id = 11170003, message = "Warlord / Dreadnought")
-	public static NpcStringId WARLORD_DREADNOUGHT_BUTTON;
+	@ClientString(id = 11170003, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warlord / Dreadnought(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARLORD_DREADNOUGHT_BUTTON;
 	
-	@ClientString(id = 11170005, message = "Paladin / Phoenix Knight")
-	public static NpcStringId PALADIN_PHOENIX_KNIGHT_BUTTON;
+	@ClientString(id = 11170005, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Paladin / Phoenix Knight(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PALADIN_PHOENIX_KNIGHT_BUTTON;
 	
-	@ClientString(id = 11170006, message = "Dark Avenger / Hell Knight")
-	public static NpcStringId DARK_AVENGER_HELL_KNIGHT_BUTTON;
+	@ClientString(id = 11170006, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Dark Avenger / Hell Knight(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_DARK_AVENGER_HELL_KNIGHT_BUTTON;
 	
-	@ClientString(id = 11170008, message = "Treasure Hunter / Adventurer")
-	public static NpcStringId TREASURE_HUNTER_ADVENTURER_BUTTON;
+	@ClientString(id = 11170008, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Treasure Hunter / Adventurer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_TREASURE_HUNTER_ADVENTURER_BUTTON;
 	
-	@ClientString(id = 11170009, message = "Hawkeye / Sagittarius")
-	public static NpcStringId HAWKEYE_SAGITTARIUS_BUTTON;
+	@ClientString(id = 11170009, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Hawkeye / Sagittarius(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_HAWKEYE_SAGITTARIUS_BUTTON;
 	
-	@ClientString(id = 11170012, message = "Sorcerer / Archmage")
-	public static NpcStringId SORCERER_ARCHMAGE_BUTTON;
+	@ClientString(id = 11170012, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Sorcerer / Archmage(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SORCERER_ARCHMAGE_BUTTON;
 	
-	@ClientString(id = 11170013, message = "Necromancer / Soultaker")
-	public static NpcStringId NECROMANCER_SOULTAKER_BUTTON;
+	@ClientString(id = 11170013, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Necromancer / Soultaker(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_NECROMANCER_SOULTAKER_BUTTON;
 	
-	@ClientString(id = 11170014, message = "Warlock / Arcana Lord")
-	public static NpcStringId WARLOCK_ARCANA_LORD_BUTTON;
+	@ClientString(id = 11170014, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warlock / Arcana Lord(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARLOCK_ARCANA_LORD_BUTTON;
 	
-	@ClientString(id = 11170016, message = "Bishop / Cardinal")
-	public static NpcStringId BISHOP_CARDINAL_BUTTON;
+	@ClientString(id = 11170016, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Bishop / Cardinal(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BISHOP_CARDINAL_BUTTON;
 	
-	@ClientString(id = 11170017, message = "Prophet / Hierophant")
-	public static NpcStringId PROPHET_HIEROPHANT_BUTTON;
+	@ClientString(id = 11170017, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Prophet / Hierophant(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PROPHET_HIEROPHANT_BUTTON;
 	
-	@ClientString(id = 11170020, message = "Temple Knight / Eva's Templar")
-	public static NpcStringId TEMPLE_KNIGHT_EVA_S_TEMPLAR_BUTTON;
+	@ClientString(id = 11170020, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Temple Knight / Eva's Templar(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_TEMPLE_KNIGHT_EVA_S_TEMPLAR_BUTTON;
 	
-	@ClientString(id = 11170021, message = "Swordsinger / Sword Muse")
-	public static NpcStringId SWORDSINGER_SWORD_MUSE_BUTTON;
+	@ClientString(id = 11170021, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Swordsinger / Sword Muse(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SWORDSINGER_SWORD_MUSE_BUTTON;
 	
-	@ClientString(id = 11170023, message = "Plains Walker / Wind Rider")
-	public static NpcStringId PLAINS_WALKER_WIND_RIDER_BUTTON;
+	@ClientString(id = 11170023, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Plains Walker / Wind Rider(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PLAINS_WALKER_WIND_RIDER_BUTTON;
 	
-	@ClientString(id = 11170024, message = " Silver Ranger / Moonlight Sentinel")
-	public static NpcStringId SILVER_RANGER_MOONLIGHT_SENTINEL_BUTTON;
+	@ClientString(id = 11170024, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2') Silver Ranger / Moonlight Sentinel(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SILVER_RANGER_MOONLIGHT_SENTINEL_BUTTON;
 	
-	@ClientString(id = 11170027, message = "Spellsinger / Mystic Muse")
-	public static NpcStringId SPELLSINGER_MYSTIC_MUSE_BUTTON;
+	@ClientString(id = 11170027, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Spellsinger / Mystic Muse(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SPELLSINGER_MYSTIC_MUSE_BUTTON;
 	
-	@ClientString(id = 11170028, message = "Elemental Summoner / Elemental Master")
-	public static NpcStringId ELEMENTAL_SUMMONER_ELEMENTAL_MASTER_BUTTON;
+	@ClientString(id = 11170028, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Elemental Summoner / Elemental Master(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ELEMENTAL_SUMMONER_ELEMENTAL_MASTER_BUTTON;
 	
-	@ClientString(id = 11170030, message = "Elder / Eva's Saint")
-	public static NpcStringId ELDER_EVA_S_SAINT_BUTTON;
+	@ClientString(id = 11170030, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Elder / Eva's Saint(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ELDER_EVA_S_SAINT_BUTTON;
 	
-	@ClientString(id = 11170033, message = "Shillien Knight / Shillien Templar")
-	public static NpcStringId SHILLIEN_KNIGHT_SHILLIEN_TEMPLAR_BUTTON;
+	@ClientString(id = 11170033, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Shillien Knight / Shillien Templar(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SHILLIEN_KNIGHT_SHILLIEN_TEMPLAR_BUTTON;
 	
-	@ClientString(id = 11170034, message = "Blade Dancer / Spectral Dancer")
-	public static NpcStringId BLADE_DANCER_SPECTRAL_DANCER_BUTTON;
+	@ClientString(id = 11170034, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Blade Dancer / Spectral Dancer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BLADE_DANCER_SPECTRAL_DANCER_BUTTON;
 	
-	@ClientString(id = 11170036, message = "Abyss Walker / Ghost Hunter")
-	public static NpcStringId ABYSS_WALKER_GHOST_HUNTER_BUTTON;
+	@ClientString(id = 11170036, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Abyss Walker / Ghost Hunter(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ABYSS_WALKER_GHOST_HUNTER_BUTTON;
 	
-	@ClientString(id = 11170037, message = " Phantom Ranger / Ghost Sentinel")
-	public static NpcStringId PHANTOM_RANGER_GHOST_SENTINEL_BUTTON;
+	@ClientString(id = 11170037, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2') Phantom Ranger / Ghost Sentinel(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PHANTOM_RANGER_GHOST_SENTINEL_BUTTON;
 	
-	@ClientString(id = 11170040, message = "Spellhowler / Storm Screamer")
-	public static NpcStringId SPELLHOWLER_STORM_SCREAMER_BUTTON;
+	@ClientString(id = 11170040, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Spellhowler / Storm Screamer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SPELLHOWLER_STORM_SCREAMER_BUTTON;
 	
-	@ClientString(id = 11170041, message = "Phantom Summoner / Spectral Master")
-	public static NpcStringId PHANTOM_SUMMONER_SPECTRAL_MASTER_BUTTON;
+	@ClientString(id = 11170041, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Phantom Summoner / Spectral Master(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PHANTOM_SUMMONER_SPECTRAL_MASTER_BUTTON;
 	
-	@ClientString(id = 11170043, message = "Shillien Elder / Shillien Saint")
-	public static NpcStringId SHILLIEN_ELDER_SHILLIEN_SAINT_BUTTON;
+	@ClientString(id = 11170043, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Shillien Elder / Shillien Saint(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SHILLIEN_ELDER_SHILLIEN_SAINT_BUTTON;
 	
-	@ClientString(id = 11170046, message = "Destroyer / Titan")
-	public static NpcStringId DESTROYER_TITAN_BUTTON;
+	@ClientString(id = 11170046, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Destroyer / Titan(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_DESTROYER_TITAN_BUTTON;
 	
-	@ClientString(id = 11170048, message = "Tyrant / Grand Khavatari")
-	public static NpcStringId TYRANT_GRAND_KHAVATARI_BUTTON;
+	@ClientString(id = 11170048, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Tyrant / Grand Khavatari(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_TYRANT_GRAND_KHAVATARI_BUTTON;
 	
-	@ClientString(id = 11170051, message = "Overlord / Dominator")
-	public static NpcStringId OVERLORD_DOMINATOR_BUTTON;
+	@ClientString(id = 11170051, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Overlord / Dominator(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_OVERLORD_DOMINATOR_BUTTON;
 	
-	@ClientString(id = 11170052, message = "Warcryer / Doomcryer")
-	public static NpcStringId WARCRYER_DOOMCRYER_BUTTON;
+	@ClientString(id = 11170052, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warcryer / Doomcryer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARCRYER_DOOMCRYER_BUTTON;
 	
-	@ClientString(id = 11170055, message = "Bounty Hunter / Fortune Seeker")
-	public static NpcStringId BOUNTY_HUNTER_FORTUNE_SEEKER_BUTTON;
+	@ClientString(id = 11170055, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Bounty Hunter / Fortune Seeker(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BOUNTY_HUNTER_FORTUNE_SEEKER_BUTTON;
 	
-	@ClientString(id = 11170057, message = "Warsmith / Maestro")
-	public static NpcStringId WARSMITH_MAESTRO_BUTTON;
+	@ClientString(id = 11170057, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warsmith / Maestro(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARSMITH_MAESTRO_BUTTON;
 	
-	@ClientString(id = 11170088, message = "Gladiator / Duelist")
-	public static NpcStringId GLADIATOR_DUELIST_BUTTON2;
+	@ClientString(id = 11170088, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Gladiator / Duelist(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_GLADIATOR_DUELIST_BUTTON2;
 	
-	@ClientString(id = 11170089, message = "Warlord / Dreadnought")
-	public static NpcStringId WARLORD_DREADNOUGHT_BUTTON2;
+	@ClientString(id = 11170089, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warlord / Dreadnought(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARLORD_DREADNOUGHT_BUTTON2;
 	
-	@ClientString(id = 11170090, message = "Paladin / Phoenix Knight")
-	public static NpcStringId PALADIN_PHOENIX_KNIGHT_BUTTON2;
+	@ClientString(id = 11170090, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Paladin / Phoenix Knight(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PALADIN_PHOENIX_KNIGHT_BUTTON2;
 	
-	@ClientString(id = 11170091, message = "Dark Avenger / Hell Knight")
-	public static NpcStringId DARK_AVENGER_HELL_KNIGHT_BUTTON2;
+	@ClientString(id = 11170091, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Dark Avenger / Hell Knight(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_DARK_AVENGER_HELL_KNIGHT_BUTTON2;
 	
-	@ClientString(id = 11170092, message = "Hawkeye / Sagittarius")
-	public static NpcStringId HAWKEYE_SAGITTARIUS_BUTTON2;
+	@ClientString(id = 11170092, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Hawkeye / Sagittarius(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_HAWKEYE_SAGITTARIUS_BUTTON2;
 	
-	@ClientString(id = 11170093, message = "Treasure Hunter / Adventurer")
-	public static NpcStringId TREASURE_HUNTER_ADVENTURER_BUTTON2;
+	@ClientString(id = 11170093, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Treasure Hunter / Adventurer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_TREASURE_HUNTER_ADVENTURER_BUTTON2;
 	
-	@ClientString(id = 11170094, message = "Sorcerer / Archmage")
-	public static NpcStringId SORCERER_ARCHMAGE_BUTTON2;
+	@ClientString(id = 11170094, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Sorcerer / Archmage(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SORCERER_ARCHMAGE_BUTTON2;
 	
-	@ClientString(id = 11170095, message = "Necromancer / Soultaker")
-	public static NpcStringId NECROMANCER_SOULTAKER_BUTTON2;
+	@ClientString(id = 11170095, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Necromancer / Soultaker(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_NECROMANCER_SOULTAKER_BUTTON2;
 	
-	@ClientString(id = 11170096, message = "Warlock / Arcana Lord")
-	public static NpcStringId WARLOCK_ARCANA_LORD_BUTTON2;
+	@ClientString(id = 11170096, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warlock / Arcana Lord(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARLOCK_ARCANA_LORD_BUTTON2;
 	
-	@ClientString(id = 11170097, message = "Bishop / Cardinal")
-	public static NpcStringId BISHOP_CARDINAL_BUTTON2;
+	@ClientString(id = 11170097, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Bishop / Cardinal(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BISHOP_CARDINAL_BUTTON2;
 	
-	@ClientString(id = 11170098, message = "Prophet / Hierophant")
-	public static NpcStringId PROPHET_HIEROPHANT_BUTTON2;
+	@ClientString(id = 11170098, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Prophet / Hierophant(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PROPHET_HIEROPHANT_BUTTON2;
 	
-	@ClientString(id = 11170099, message = "Temple Knight / Eva's Templar")
-	public static NpcStringId TEMPLE_KNIGHT_EVA_S_TEMPLAR_BUTTON2;
+	@ClientString(id = 11170099, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Temple Knight / Eva's Templar(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_TEMPLE_KNIGHT_EVA_S_TEMPLAR_BUTTON2;
 	
-	@ClientString(id = 11170100, message = "Swordsinger / Sword Muse")
-	public static NpcStringId SWORDSINGER_SWORD_MUSE_BUTTON2;
+	@ClientString(id = 11170100, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Swordsinger / Sword Muse(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SWORDSINGER_SWORD_MUSE_BUTTON2;
 	
-	@ClientString(id = 11170101, message = "Plains Walker / Wind Rider")
-	public static NpcStringId PLAINS_WALKER_WIND_RIDER_BUTTON2;
+	@ClientString(id = 11170101, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Plains Walker / Wind Rider(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PLAINS_WALKER_WIND_RIDER_BUTTON2;
 	
-	@ClientString(id = 11170102, message = "Silver Ranger / Moonlight Sentinel")
-	public static NpcStringId SILVER_RANGER_MOONLIGHT_SENTINEL_BUTTON2;
+	@ClientString(id = 11170102, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Silver Ranger / Moonlight Sentinel(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SILVER_RANGER_MOONLIGHT_SENTINEL_BUTTON2;
 	
-	@ClientString(id = 11170103, message = "Spellsinger / Mystic Muse")
-	public static NpcStringId SPELLSINGER_MYSTIC_MUSE_BUTTON2;
+	@ClientString(id = 11170103, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Spellsinger / Mystic Muse(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SPELLSINGER_MYSTIC_MUSE_BUTTON2;
 	
-	@ClientString(id = 11170104, message = "Elemental Summoner / Elemental Master")
-	public static NpcStringId ELEMENTAL_SUMMONER_ELEMENTAL_MASTER_BUTTON2;
+	@ClientString(id = 11170104, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Elemental Summoner / Elemental Master(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ELEMENTAL_SUMMONER_ELEMENTAL_MASTER_BUTTON2;
 	
-	@ClientString(id = 11170105, message = "Elder / Eva's Saint")
-	public static NpcStringId ELDER_EVA_S_SAINT_BUTTON2;
+	@ClientString(id = 11170105, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Elder / Eva's Saint(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ELDER_EVA_S_SAINT_BUTTON2;
 	
-	@ClientString(id = 11170106, message = "Shillien Knight / Shillien Templar")
-	public static NpcStringId SHILLIEN_KNIGHT_SHILLIEN_TEMPLAR_BUTTON2;
+	@ClientString(id = 11170106, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Shillien Knight / Shillien Templar(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SHILLIEN_KNIGHT_SHILLIEN_TEMPLAR_BUTTON2;
 	
-	@ClientString(id = 11170107, message = "Blade Dancer / Spectral Dancer")
-	public static NpcStringId BLADE_DANCER_SPECTRAL_DANCER_BUTTON2;
+	@ClientString(id = 11170107, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Blade Dancer / Spectral Dancer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BLADE_DANCER_SPECTRAL_DANCER_BUTTON2;
 	
-	@ClientString(id = 11170108, message = "Abyss Walker / Ghost Hunter")
-	public static NpcStringId ABYSS_WALKER_GHOST_HUNTER_BUTTON2;
+	@ClientString(id = 11170108, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Abyss Walker / Ghost Hunter(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ABYSS_WALKER_GHOST_HUNTER_BUTTON2;
 	
-	@ClientString(id = 11170109, message = "Phantom Ranger / Ghost Sentinel")
-	public static NpcStringId PHANTOM_RANGER_GHOST_SENTINEL_BUTTON2;
+	@ClientString(id = 11170109, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Phantom Ranger / Ghost Sentinel(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PHANTOM_RANGER_GHOST_SENTINEL_BUTTON2;
 	
-	@ClientString(id = 11170110, message = "Spellhowler / Storm Screamer")
-	public static NpcStringId SPELLHOWLER_STORM_SCREAMER_BUTTON2;
+	@ClientString(id = 11170110, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Spellhowler / Storm Screamer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SPELLHOWLER_STORM_SCREAMER_BUTTON2;
 	
-	@ClientString(id = 11170111, message = "Phantom Summoner / Spectral Master")
-	public static NpcStringId PHANTOM_SUMMONER_SPECTRAL_MASTER_BUTTON2;
+	@ClientString(id = 11170111, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Phantom Summoner / Spectral Master(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_PHANTOM_SUMMONER_SPECTRAL_MASTER_BUTTON2;
 	
-	@ClientString(id = 11170112, message = "Shillien Elder / Shillien Saint")
-	public static NpcStringId SHILLIEN_ELDER_SHILLIEN_SAINT_BUTTON2;
+	@ClientString(id = 11170112, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Shillien Elder / Shillien Saint(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SHILLIEN_ELDER_SHILLIEN_SAINT_BUTTON2;
 	
-	@ClientString(id = 11170113, message = "Destroyer / Titan")
-	public static NpcStringId DESTROYER_TITAN_BUTTON2;
+	@ClientString(id = 11170113, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Destroyer / Titan(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_DESTROYER_TITAN_BUTTON2;
 	
-	@ClientString(id = 11170114, message = "Tyrant / Grand Khavatari")
-	public static NpcStringId TYRANT_GRAND_KHAVATARI_BUTTON2;
+	@ClientString(id = 11170114, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Tyrant / Grand Khavatari(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_TYRANT_GRAND_KHAVATARI_BUTTON2;
 	
-	@ClientString(id = 11170115, message = "Overlord / Dominator")
-	public static NpcStringId OVERLORD_DOMINATOR_BUTTON2;
+	@ClientString(id = 11170115, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Overlord / Dominator(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_OVERLORD_DOMINATOR_BUTTON2;
 	
-	@ClientString(id = 11170116, message = "Warcryer / Doomcryer")
-	public static NpcStringId WARCRYER_DOOMCRYER_BUTTON2;
+	@ClientString(id = 11170116, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warcryer / Doomcryer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARCRYER_DOOMCRYER_BUTTON2;
 	
-	@ClientString(id = 11170117, message = "Bounty Hunter / Fortune Seeker")
-	public static NpcStringId BOUNTY_HUNTER_FORTUNE_SEEKER_BUTTON2;
+	@ClientString(id = 11170117, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Bounty Hunter / Fortune Seeker(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BOUNTY_HUNTER_FORTUNE_SEEKER_BUTTON2;
 	
-	@ClientString(id = 11170118, message = "Warsmith / Maestro")
-	public static NpcStringId WARSMITH_MAESTRO_BUTTON2;
+	@ClientString(id = 11170118, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Warsmith / Maestro(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_WARSMITH_MAESTRO_BUTTON2;
 	
-	@ClientString(id = 11170127, message = "Berserker / Doombringer")
-	public static NpcStringId BERSERKER_DOOMBRINGER_BUTTON;
+	@ClientString(id = 11170127, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Berserker / Doombringer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BERSERKER_DOOMBRINGER_BUTTON;
 	
-	@ClientString(id = 11170128, message = "Soul Breaker (Male) / Soulhound (Male)")
-	public static NpcStringId SOUL_BREAKER_MALE_SOULHOUND_MALE_BUTTON;
+	@ClientString(id = 11170128, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Soul Breaker (Male) / Soulhound (Male)(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SOUL_BREAKER_MALE_SOULHOUND_MALE_BUTTON;
 	
-	@ClientString(id = 11170129, message = "Soul Breaker (Female) / Soulhound (Female)")
-	public static NpcStringId SOUL_BREAKER_FEMALE_SOULHOUND_FEMALE_BUTTON;
+	@ClientString(id = 11170129, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Soul Breaker (Female) / Soulhound (Female)(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SOUL_BREAKER_FEMALE_SOULHOUND_FEMALE_BUTTON;
 	
-	@ClientString(id = 11170130, message = "Arbalester / Trickster")
-	public static NpcStringId ARBALESTER_TRICKSTER_BUTTON;
+	@ClientString(id = 11170130, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Arbalester / Trickster(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ARBALESTER_TRICKSTER_BUTTON;
 	
-	@ClientString(id = 11170131, message = "Berserker / DoomBringer")
-	public static NpcStringId BERSERKER_DOOMBRINGER_BUTTON2;
+	@ClientString(id = 11170131, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Berserker / DoomBringer(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_BERSERKER_DOOMBRINGER_BUTTON2;
 	
-	@ClientString(id = 11170132, message = "Soul Breaker (Male) / Soul Hound")
-	public static NpcStringId SOUL_BREAKER_MALE_SOUL_HOUND_BUTTON;
+	@ClientString(id = 11170132, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Soul Breaker (Male) / Soul Hound(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SOUL_BREAKER_MALE_SOUL_HOUND_BUTTON;
 	
-	@ClientString(id = 11170133, message = "Soul Breaker (Female) / Soul Hound")
-	public static NpcStringId SOUL_BREAKER_FEMALE_SOUL_HOUND_BUTTON;
+	@ClientString(id = 11170133, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Soul Breaker (Female) / Soul Hound(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_SOUL_BREAKER_FEMALE_SOUL_HOUND_BUTTON;
 	
-	@ClientString(id = 11170134, message = "Arbalester / Trickster")
-	public static NpcStringId ARBALESTER_TRICKSTER_BUTTON2;
+	@ClientString(id = 11170134, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Arbalester / Trickster(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_ARBALESTER_TRICKSTER_BUTTON2;
 	
-	@ClientString(id = 11170135, message = "Inspector / Judicator")
-	public static NpcStringId INSPECTOR_JUDICATOR_BUTTON;
+	@ClientString(id = 11170135, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Inspector / Judicator(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_INSPECTOR_JUDICATOR_BUTTON;
 	
-	@ClientString(id = 11170136, message = "Inspector / Judicator")
-	public static NpcStringId INSPECTOR_JUDICATOR_BUTTON2;
+	@ClientString(id = 11170136, message = "(Button ALIGN=LEFT ICON='NORMAL' action='bypass -h menu_select?ask=$s1andreply=$s2')Inspector / Judicator(/button)")
+	public static NpcStringId BUTTON_ALIGN_LEFT_ICON_NORMAL_ACTION_BYPASS_H_MENU_SELECT_ASK_S1ANDREPLY_S2_INSPECTOR_JUDICATOR_BUTTON2;
 	
 	@ClientString(id = 14211701, message = "You must activate the 4 Generators.")
 	public static NpcStringId YOU_MUST_ACTIVATE_THE_4_GENERATORS;
