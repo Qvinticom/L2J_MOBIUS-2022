@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.MonasteryOfSilence;
+package instances.SSQMonasteryOfSilence;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
@@ -31,7 +31,7 @@ import instances.AbstractInstance;
  * Monastery of Silence instance zone.
  * @author Adry_85
  */
-public final class MonasteryOfSilence extends AbstractInstance
+public final class SSQMonasteryOfSilence extends AbstractInstance
 {
 	// NPCs
 	private static final int ELCADIA_INSTANCE = 32787;
@@ -70,7 +70,7 @@ public final class MonasteryOfSilence extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 151;
 	
-	public MonasteryOfSilence()
+	public SSQMonasteryOfSilence()
 	{
 		addFirstTalkId(TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4, ERIS_EVIL_THOUGHTS);
 		addStartNpc(ODD_GLOBE, TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4, ERIS_EVIL_THOUGHTS);
@@ -183,6 +183,6 @@ public final class MonasteryOfSilence extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new MonasteryOfSilence();
+		new SSQMonasteryOfSilence();
 	}
 }

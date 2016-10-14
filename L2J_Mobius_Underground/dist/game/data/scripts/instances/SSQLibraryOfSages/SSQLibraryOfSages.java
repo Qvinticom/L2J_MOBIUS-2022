@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.LibraryOfSages;
+package instances.SSQLibraryOfSages;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.Location;
@@ -29,7 +29,7 @@ import instances.AbstractInstance;
  * Library of Sages instance zone.
  * @author Adry_85
  */
-public final class LibraryOfSages extends AbstractInstance
+public final class SSQLibraryOfSages extends AbstractInstance
 {
 	// NPCs
 	private static final int SOPHIA1 = 32596;
@@ -54,7 +54,7 @@ public final class LibraryOfSages extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 156;
 	
-	public LibraryOfSages()
+	public SSQLibraryOfSages()
 	{
 		addFirstTalkId(SOPHIA2, ELCADIA_INSTANCE, PILE_OF_BOOKS1, PILE_OF_BOOKS2, PILE_OF_BOOKS3, PILE_OF_BOOKS4, PILE_OF_BOOKS5);
 		addStartNpc(SOPHIA1, SOPHIA2, SOPHIA3);
@@ -124,6 +124,6 @@ public final class LibraryOfSages extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new LibraryOfSages();
+		new SSQLibraryOfSages();
 	}
 }

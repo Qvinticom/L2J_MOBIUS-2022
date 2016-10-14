@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.DisciplesNecropolisPast;
+package instances.SSQDisciplesNecropolisPast;
 
 import java.util.HashMap;
 import java.util.List;
@@ -41,7 +41,7 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  * Disciple's Necropolis Past instance zone.
  * @author Adry_85
  */
-public final class DisciplesNecropolisPast extends AbstractInstance
+public final class SSQDisciplesNecropolisPast extends AbstractInstance
 {
 	// NPCs
 	private static final int SEAL_DEVICE = 27384;
@@ -80,7 +80,6 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 	// Skills
 	private static final SkillHolder SEAL_ISOLATION = new SkillHolder(5980, 3);
 	private static final Map<Integer, SkillHolder> SKILLS = new HashMap<>();
-	
 	static
 	{
 		SKILLS.put(32715, new SkillHolder(6187, 1)); // Presentation - Lilith Battle
@@ -91,7 +90,6 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		SKILLS.put(32720, new SkillHolder(6194, 1)); // Presentation - Anakim's Guard Battle
 		SKILLS.put(32721, new SkillHolder(6195, 1)); // Presentation - Anakim's Executor Battle
 	}
-	
 	// Locations
 	private static final Location ENTER = new Location(-89554, 216078, -7488);
 	// NpcStringId
@@ -110,7 +108,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 	private static final int DOOR_5 = 17240110;
 	private static final int DISCIPLES_NECROPOLIS_DOOR = 17240111;
 	
-	public DisciplesNecropolisPast()
+	public SSQDisciplesNecropolisPast()
 	{
 		addAttackId(SEAL_DEVICE);
 		addFirstTalkId(SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
@@ -433,6 +431,6 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new DisciplesNecropolisPast();
+		new SSQDisciplesNecropolisPast();
 	}
 }

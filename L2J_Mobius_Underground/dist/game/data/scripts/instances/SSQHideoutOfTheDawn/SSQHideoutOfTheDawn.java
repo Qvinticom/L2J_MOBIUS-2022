@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.HideoutOfTheDawn;
+package instances.SSQHideoutOfTheDawn;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -25,7 +25,7 @@ import instances.AbstractInstance;
  * Hideout of the Dawn instance zone.
  * @author Adry_85
  */
-public final class HideoutOfTheDawn extends AbstractInstance
+public final class SSQHideoutOfTheDawn extends AbstractInstance
 {
 	// NPCs
 	private static final int WOOD = 32593;
@@ -33,7 +33,7 @@ public final class HideoutOfTheDawn extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 113;
 	
-	public HideoutOfTheDawn()
+	public SSQHideoutOfTheDawn()
 	{
 		addStartNpc(WOOD);
 		addTalkId(WOOD, JAINA);
@@ -53,6 +53,6 @@ public final class HideoutOfTheDawn extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new HideoutOfTheDawn();
+		new SSQHideoutOfTheDawn();
 	}
 }

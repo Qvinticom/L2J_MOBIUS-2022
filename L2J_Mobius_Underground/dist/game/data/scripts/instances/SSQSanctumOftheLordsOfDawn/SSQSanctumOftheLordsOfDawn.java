@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.SanctumOftheLordsOfDawn;
+package instances.SSQSanctumOftheLordsOfDawn;
 
 import java.util.List;
 
@@ -37,7 +37,7 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
  * Sanctum of the Lords of Dawn instance zone.
  * @author Adry_85
  */
-public final class SanctumOftheLordsOfDawn extends AbstractInstance
+public final class SSQSanctumOftheLordsOfDawn extends AbstractInstance
 {
 	// NPCs
 	private static final int GUARDS_OF_THE_DAWN = 18834;
@@ -65,7 +65,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 		new Location(-79939, 205857, -7888),
 	};
 	
-	public SanctumOftheLordsOfDawn()
+	public SSQSanctumOftheLordsOfDawn()
 	{
 		addStartNpc(LIGHT_OF_DAWN);
 		addTalkId(LIGHT_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
@@ -207,6 +207,6 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 	
 	public static void main(String[] args)
 	{
-		new SanctumOftheLordsOfDawn();
+		new SSQSanctumOftheLordsOfDawn();
 	}
 }
