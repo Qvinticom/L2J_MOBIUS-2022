@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Nightmare Kamaloka" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<activityTime val="60" />
+	<allowSummon val="false" />
+	<emptyDestroyTime val="300" />
+	<exitPoint x="147743" y="26718" z="-2200" />
+	<reenter additionStyle="ON_INSTANCE_FINISH" >
+		<reset hour="6" minute="30" />
+	</reenter>
+	<doorlist>
+		<door doorId="18170002" />
+		<door doorId="18170004" />
+		<door doorId="18170006" />
+		<door doorId="18170008" />
+	</doorlist>
+	<spawnlist>
+		<group name="general">
+			<!-- Mino -->
+			<spawn npcId="26093" x="-43383" y="-16241" z="-12228" heading="0" respawn="0" />
+		</group>
+	</spawnlist>
+</instance>

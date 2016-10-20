@@ -1,0 +1,4071 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25800" level="98" type="L2Monster" name="Michaela" title="Grand Judge">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="2541012" sp="95136" />
+		<stats>
+			<vitals hp="1775523" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="282826" magical="162336" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6747" magical="7793" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="120" />
+				<run ground="240" />
+			</speed>
+			<hitTime>3819</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5238" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14716" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14619" level="1" />
+			<skill id="14621" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="25801" level="22" type="L2Monster" name="Teredor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats>
+			<vitals hp="3042201" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="255273" magical="91765" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5239" magical="5762" />
+			<attribute>
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="6268" level="1" />
+			<skill id="4441" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="12" />
+			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14747" level="1" />
+			<skill id="14765" level="2" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="90" />
+			<height normal="190" />
+		</collision>
+	</npc>
+	<npc id="25802" level="89" type="L2Monster" name="Pan Direm" title="Faithful Servant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>FAIRY</race>
+		<acquire exp="165181" sp="333" />
+		<stats>
+			<vitals hp="14059" hpRegen="7.5" mp="2933" mpRegen="2.7" />
+			<attack physical="20746" magical="6864" random="30" critical="4" accuracy="95.25" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="768" magical="626" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4415" level="12" />
+			<skill id="5463" level="1" />
+			<skill id="14074" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="4416" level="13" />
+		</skillList>
+		<collision>
+			<radius normal="42" />
+			<height normal="73" />
+		</collision>
+	</npc>
+	<npc id="25803" level="87" type="L2Npc" name="Escort Captain" title="Successor Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="318932" hpRegen="7.5" mp="43564" mpRegen="2.7" />
+			<attack physical="87328" magical="47788" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="584" magical="605" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="14099" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25804" level="87" type="L2Npc" name="Escort Captain" title="Successor Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="318932" hpRegen="7.5" mp="29043" mpRegen="2.7" />
+			<attack physical="87328" magical="23822" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="730" magical="605" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25805" level="88" type="L2Npc" name="Escort" title="Queen's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="319306" hpRegen="7.5" mp="29579" mpRegen="2.7" />
+			<attack physical="92089" magical="25214" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="749" magical="623" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="14099" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25806" level="88" type="L2Npc" name="Escort" title="Queen's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="319306" hpRegen="7.5" mp="29579" mpRegen="2.7" />
+			<attack physical="92089" magical="25214" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="749" magical="623" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25807" level="89" type="L2Npc" name="Escort Captain" title="Queen's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="328202" hpRegen="7.5" mp="30119" mpRegen="2.7" />
+			<attack physical="97107" magical="26687" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="4045" level="1" />
+			<skill id="14108" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25808" level="89" type="L2Npc" name="Escort Captain" title="Queen's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="328202" hpRegen="7.5" mp="30119" mpRegen="2.7" />
+			<attack physical="97107" magical="26687" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="768" magical="643" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="14100" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="25809" level="59" type="L2Monster" name="Vladimir" title="Executioner">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25810" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="433095" sp="22539" />
+		<stats>
+			<vitals hp="323718" hpRegen="7.5" mp="1486" mpRegen="2.7" />
+			<attack physical="2119" magical="1316" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1079" magical="776" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14327" level="1" />
+			<skill id="14758" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="31.68" />
+			<height normal="60.72" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="948" min="1" max="3" chance="75" />
+				<item id="2475" min="1" max="1" chance="66" />
+				<item id="2403" min="1" max="1" chance="34" />
+				<item id="947" min="1" max="1" chance="25" />
+				<item id="210" min="1" max="1" chance="5" />
+				<item id="7901" min="1" max="1" chance="5" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25810" level="58" type="L2Npc" name="Vladimir's Follower">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="3164" hpRegen="7.5" mp="1481" mpRegen="2.7" />
+			<attack physical="1213" magical="1051" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="350" magical="388" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="14420" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="25811" level="62" type="L2Monster" name="Lazearth" title="Destroyer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25812" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="433606" sp="104" />
+		<stats>
+			<vitals hp="539492" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="5894" magical="7194" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1166" magical="1263" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="33" dark="53" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="14421" level="1" />
+			<skill id="14759" level="1" /> <!-- Raid Boss (Lv. 62) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skillList>
+		<collision>
+			<radius normal="31.68" />
+			<height normal="60.72" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="5305" min="1" max="1" chance="7.264" /> <!-- Sealed Tallum Stockings -->
+				<item id="5289" min="1" max="1" chance="4.559" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5297" min="1" max="1" chance="4.526" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="8678" min="1" max="1" chance="0.3" /> <!-- Sirra's Blade -->
+				<item id="8688" min="1" max="1" chance="0.3" /> <!-- Daimon Crystal -->
+				<item id="730" min="1" max="1" chance="16.27" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008169" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25812" level="62" type="L2Monster" name="Lazearth" title="Destroyer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="433606" sp="10218" />
+		<stats>
+			<vitals hp="3526" hpRegen="7.5" mp="1662" mpRegen="2.7" />
+			<attack physical="1465" magical="1305" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="389" magical="431" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="14421" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14759" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="31.68" />
+			<height normal="60.72" />
+		</collision>
+	</npc>
+	<npc id="25813" level="66" type="L2RaidBoss" name="Byron" title="Queen of Blood">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25814" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>DEMONIC</race>
+		<acquire exp="470082" sp="112" />
+		<stats>
+			<vitals hp="601041" hpRegen="7.5" mp="1219" mpRegen="2.7" />
+			<attack physical="9350" magical="7005" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="515" magical="766" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="13" dark="184" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="14760" level="1" /> <!-- Raid Boss (Lv. 66) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="14423" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="34" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="5313" min="1" max="1" chance="9.946" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="4.926" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5311" min="1" max="1" chance="1.48" /> <!-- Sealed Armor of Nightmare -->
+				<item id="8679" min="1" max="1" chance="0.3" /> <!-- Sword of Ipos -->
+				<item id="8682" min="1" max="1" chance="0.3" /> <!-- Naga Storm -->
+				<item id="730" min="1" max="1" chance="17.92" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008057" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25814" level="65" type="L2Npc" name="Byron's Maid">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats>
+			<vitals hp="3795" hpRegen="7.5" mp="1802" mpRegen="2.7" />
+			<attack physical="1671" magical="1518" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="419" magical="465" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="14295" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="25815" level="70" type="L2Monster" name="Ken" title="Savage">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DIVINE</race>
+		<acquire exp="502954" sp="120" />
+		<stats>
+			<vitals hp="653011" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<attack physical="16652" magical="42487" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1412" magical="1529" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<skillList>
+			<skill id="14761" level="1" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="14424" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="48" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="5294" min="1" max="1" chance="13.93" /> <!-- Sealed Tallum Helmet -->
+				<item id="5293" min="1" max="1" chance="3.124" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="8685" min="1" max="1" chance="0.75" /> <!-- Sobekk's Hurricane -->
+				<item id="8686" min="1" max="1" chance="0.75" /> <!-- Themis' Tongue -->
+				<item id="729" min="1" max="1" chance="2.691" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.008164" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25816" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DIVINE</race>
+		<acquire exp="518128" sp="124" />
+		<stats>
+			<vitals hp="676247" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="971" magical="663" random="30" critical="8" accuracy="95.25" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<skillList>
+			<skill id="14762" level="1" /> <!-- Raid Boss (Lv. 72) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="14293" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="5295" min="1" max="1" chance="10.24" /> <!-- Sealed Tallum Gloves -->
+				<item id="5304" min="1" max="1" chance="6.978" /> <!-- Sealed Tallum Tunic -->
+				<item id="8683" min="1" max="1" chance="0.75" /> <!-- Tiphon's Spear -->
+				<item id="8684" min="1" max="1" chance="0.75" /> <!-- Shyeed's Bow -->
+				<item id="729" min="1" max="1" chance="2.821" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007861" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25817" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<acquire exp="518228" sp="9055" />
+		<stats>
+			<vitals hp="4395" hpRegen="7.5" mp="2137" mpRegen="2.7" />
+			<attack physical="3972" magical="2082" random="30" critical="8" accuracy="95.25" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="492" magical="546" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="14429" level="1" />
+			<skill id="4415" level="9" />
+			<skill id="14762" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="25818" level="75" type="L2Monster" name="Emperor of Heaven's Palace">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25819" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>DIVINE</race>
+		<acquire exp="540998" sp="129" />
+		<stats>
+			<vitals hp="708833" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="150" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<skillList>
+			<skill id="14763" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="14431" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="5318" min="1" max="1" chance="4.854" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="3.181" /> <!-- Sealed Majestic Boots -->
+				<item id="5315" min="1" max="1" chance="2.323" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="1.551" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="7901" min="1" max="1" chance="1.335" /> <!-- Star Buster -->
+				<item id="8687" min="1" max="1" chance="0.3" /> <!-- Cabrio's Hand -->
+				<item id="730" min="1" max="1" chance="10.58" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.007935" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25819" level="75" type="L2Npc" name="Heaven's Palace Healer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<stats>
+			<vitals hp="4631" hpRegen="7.5" mp="2285" mpRegen="2.7" />
+			<attack physical="2427" magical="2347" random="30" critical="1" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="165" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="14329" level="1" />
+			<skill id="4415" level="5" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="38.5" />
+		</collision>
+	</npc>
+	<npc id="25820" level="75" type="L2Monster" name="Heaven's Palace Goddess">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25821" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>DIVINE</race>
+		<acquire exp="540998" sp="129" />
+		<stats>
+			<vitals hp="708833" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<attack physical="971" magical="663" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="53" dark="33" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="150" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="14764" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="14431" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="49" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="5308" min="1" max="1" chance="3.596" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5329" min="1" max="1" chance="2.44" /> <!-- Sealed Majestic Robe -->
+				<item id="5326" min="1" max="1" chance="2.401" /> <!-- Sealed Robe of Nightmare -->
+				<item id="8683" min="1" max="1" chance="0.75" /> <!-- Tiphon's Spear -->
+				<item id="8685" min="1" max="1" chance="0.75" /> <!-- Sobekk's Hurricane -->
+				<item id="729" min="1" max="1" chance="1.538" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="6570" min="1" max="1" chance="1.426" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="39629" min="1" max="1" chance="0.00808" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25821" level="75" type="L2Npc" name="Heaven's Palace Goddess Warrior">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<stats>
+			<vitals hp="4631" hpRegen="7.5" mp="2285" mpRegen="2.7" />
+			<attack physical="2427" magical="2347" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="524" magical="581" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="14293" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="25822" level="95" type="L2Npc" name="Lakielo" title="Cursed Hero">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="68534" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="180000" magical="135000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="3300" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="5259" level="12" />
+			<skill id="4416" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="14" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25823" level="95" type="L2Npc" name="Brakiera" title="Cursed Hero">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="68534" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="180000" magical="135000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3200" magical="3300" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="14265" level="1" />
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="14" />
+			<height normal="32.5" />
+		</collision>
+	</npc>
+	<npc id="25824" level="97" type="L2RaidBoss" name="Ron" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="441282100" sp="105907" />
+		<stats>
+			<vitals hp="562311" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="336000" magical="252000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14728" level="1" />
+			<skill id="4172" level="12" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="30" />
+			<height normal="77" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="3" max="3" chance="30.22" /> <!-- Elcyum Powder -->
+				<item id="17526" min="1" max="1" chance="2.037" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack -->
+				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Pack -->
+				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack -->
+				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack -->
+				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack -->
+				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack -->
+				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack -->
+				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack -->
+				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack -->
+				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack -->
+				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack -->
+				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack -->
+				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack -->
+				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack -->
+				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack -->
+				<item id="38012" min="1" max="1" chance="0.075" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.075" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.075" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.075" /> <!-- Specter Avenger Crafting Pack -->
+				<item id="38016" min="1" max="1" chance="0.075" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.075" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.075" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.075" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.075" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.075" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.075" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack -->
+				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25825" level="97" type="L2RaidBoss" name="Ron" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25826" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="441282100" sp="1765128" />
+		<stats>
+			<vitals hp="562311" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="281313" magical="160605" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6711" magical="7751" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14728" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="4172" level="12" />
+		</skillList>
+		<ai aggroRange="900" clanHelpRange="900" />
+		<collision>
+			<radius normal="15" />
+			<height normal="62" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="1" max="3" chance="20" />
+				<item id="17526" min="1" max="1" chance="10" />
+				<item id="17414" min="1" max="1" chance="0.5" />
+				<item id="17415" min="1" max="1" chance="0.5" />
+				<item id="17342" min="1" max="1" chance="0.4" />
+				<item id="17347" min="1" max="1" chance="0.4" />
+				<item id="17348" min="1" max="1" chance="0.4" />
+				<item id="17349" min="1" max="1" chance="0.4" />
+				<item id="17350" min="1" max="1" chance="0.4" />
+				<item id="17351" min="1" max="1" chance="0.4" />
+				<item id="17352" min="1" max="1" chance="0.4" />
+				<item id="17353" min="1" max="1" chance="0.4" />
+				<item id="17346" min="1" max="1" chance="0.4" />
+				<item id="17345" min="1" max="1" chance="0.4" />
+				<item id="17344" min="1" max="1" chance="0.4" />
+				<item id="17341" min="1" max="1" chance="0.4" />
+				<item id="17340" min="1" max="1" chance="0.4" />
+				<item id="17339" min="1" max="1" chance="0.4" />
+				<item id="17338" min="1" max="1" chance="0.4" />
+				<item id="17413" min="1" max="1" chance="0.4" />
+				<item id="17412" min="1" max="1" chance="0.33333" />
+				<item id="17401" min="1" max="1" chance="0.33333" />
+				<item id="22828" min="1" max="1" chance="0.1" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25826" level="95" type="L2Monster" name="Nameless Subject" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="34741" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="92554" magical="28198" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3128" magical="2694" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5462" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14258" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="28" />
+			<height normal="41" />
+		</collision>
+	</npc>
+	<npc id="25827" level="45" type="L2Npc" name="Accencio" title="Event Monster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="384151" hpRegen="7.5" mp="901" mpRegen="2.7" />
+			<attack physical="1481" magical="372" random="30" critical="1" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="515" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="5" />
+			<skill id="4416" level="2" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="14264" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="25828" level="45" type="L2Monster" name="Malicio" title="Event Monster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="2508637" sp="602" />
+		<stats>
+			<vitals hp="577076" hpRegen="5.5" mp="610" mpRegen="2.1" />
+			<attack physical="971" magical="663" random="30" critical="1" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341" magical="250" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="14286" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="2497" min="1" max="1" chance="8.294" /> <!-- Full Plate Shield -->
+				<item id="473" min="1" max="1" chance="3.553" /> <!-- Divine Stockings -->
+				<item id="2438" min="1" max="1" chance="2.639" /> <!-- Full Plate Boots -->
+				<item id="2503" min="1" max="1" chance="1.592" /> <!-- Yaksa Mace -->
+				<item id="7897" min="1" max="1" chance="1.567" /> <!-- Dwarven Hammer -->
+				<item id="7891" min="1" max="1" chance="1.51" /> <!-- Ecliptic Axe -->
+				<item id="6573" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+				<item id="39629" min="1" max="1" chance="0.00608" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25829" level="45" type="L2Monster" name="Mertes">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25830" count="4" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="384151" hpRegen="7.5" mp="901" mpRegen="2.7" />
+			<attack physical="1481" magical="372" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="515" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="86" />
+			<height normal="133.5" />
+		</collision>
+	</npc>
+	<npc id="25830" level="45" type="L2Npc" name="Golem of Repairs">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<stats>
+			<vitals hp="2048" hpRegen="7.5" mp="926" mpRegen="2.7" />
+			<attack physical="586" magical="464" random="30" critical="1" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="239" magical="265" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="170" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4415" level="5" />
+			<skill id="4416" level="2" />
+			<skill id="14276" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="25831" level="10" type="L2Npc" name="Eyesaroch" title="Husk">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats>
+			<vitals hp="259" hpRegen="7.5" mp="160" mpRegen="2.7" />
+			<attack physical="32" magical="19" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="62" magical="67" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="14159" level="1" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="25832" level="20" type="L2Npc" name="Overseer" title="Embryo">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMAN</race>
+		<stats>
+			<vitals hp="543" hpRegen="7.5" mp="284" mpRegen="2.7" />
+			<attack physical="81" magical="53" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="95" magical="103" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="14172" level="1" />
+			<skill id="4416" level="14" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="25833" level="97" type="L2Monster" name="Orbis' Victim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="8697466" sp="18920" />
+		<stats>
+			<vitals hp="38541" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="22425" magical="42156" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3290" magical="2861" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="120" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="4" />
+			<skill id="14001" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="51" />
+		</collision>
+	</npc>
+	<npc id="25834" level="97" type="L2Monster" name="Orbis' Guard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="8697466" sp="18920" />
+		<stats>
+			<vitals hp="38541" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="26012" magical="42156" random="30" critical="4" accuracy="95.25" attackSpeed="216" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3290" magical="2861" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="190" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="12" />
+			<skill id="5467" level="1" />
+			<skill id="14005" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="54" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17724" min="1" max="1" chance="1" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25835" level="97" type="L2Monster" name="Orbis' Thrower">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="8494188" sp="18330" />
+		<stats>
+			<vitals hp="38541" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="22425" magical="42156" random="30" critical="8" accuracy="95.25" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="3290" magical="2861" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="190" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="10" />
+			<skill id="14008" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="25836" level="97" type="L2Monster" name="Orbis' Curator">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="8697466" sp="18920" />
+		<stats>
+			<vitals hp="38541" hpRegen="7.5" mp="51813" mpRegen="2.7" />
+			<attack physical="30946" magical="84312" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2303" magical="2861" />
+			<attribute>
+				<defence fire="300" water="350" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="14619" level="1" />
+			<skill id="14009" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="56" />
+		</collision>
+	</npc>
+	<npc id="25837" level="92" type="L2RaidBoss" name="Weeping Yui" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>DEMONIC</race>
+		<acquire exp="79392320" sp="19054" />
+		<stats>
+			<vitals hp="1325472" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="194250" magical="138750" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2700" magical="2600" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="187" dark="384" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14729" level="1" /> <!-- Raid Boss (Lv. 92) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="10" />
+			<height normal="37.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="70.8" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36785" min="1" max="1" chance="4.587" /> <!-- Recipe: Twilight Circlet (60%) -->
+				<item id="36845" min="1" max="1" chance="4.585" /> <!-- Twilight Leather Glove Ingredient -->
+				<item id="36789" min="1" max="1" chance="4.581" /> <!-- Recipe: Twilight Shoes (60%) -->
+				<item id="36851" min="1" max="1" chance="4.571" /> <!-- Twilight Shoe Ingredient -->
+				<item id="36790" min="1" max="1" chance="4.565" /> <!-- Recipe: Twilight Sigil (60%) -->
+				<item id="36777" min="1" max="1" chance="4.56" /> <!-- Recipe: Twilight Gauntlets (60%) -->
+				<item id="36788" min="1" max="1" chance="4.555" /> <!-- Recipe: Twilight Gloves (60%) -->
+				<item id="36850" min="1" max="1" chance="4.553" /> <!-- Twilight Glove Ingredient -->
+				<item id="36842" min="1" max="1" chance="4.545" /> <!-- Twilight Leather Helmet Ingredient -->
+				<item id="36839" min="1" max="1" chance="4.538" /> <!-- Twilight Gauntlet Ingredient -->
+				<item id="36846" min="1" max="1" chance="4.531" /> <!-- Twilight Leather Boot Ingredient -->
+				<item id="36836" min="1" max="1" chance="4.525" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36779" min="1" max="1" chance="4.517" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="36778" min="1" max="1" chance="4.511" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="36780" min="1" max="1" chance="4.504" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+				<item id="36840" min="1" max="1" chance="4.5" /> <!-- Twilight Boot Ingredient -->
+				<item id="36774" min="1" max="1" chance="4.498" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="36783" min="1" max="1" chance="4.497" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
+				<item id="36841" min="1" max="1" chance="4.495" /> <!-- Twilight Shield Ingredient -->
+				<item id="36784" min="1" max="1" chance="4.488" /> <!-- Recipe: Twilight Leather Boots (60%) -->
+				<item id="36847" min="1" max="1" chance="4.485" /> <!-- Twilight Circlet Ingredient -->
+				<item id="36852" min="1" max="1" chance="4.475" /> <!-- Twilight Sigil Ingredient -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25838" level="93" type="L2RaidBoss" name="Mukshu the Coward" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="102758769" sp="24662" />
+		<stats>
+			<vitals hp="407030" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="199500" magical="142500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2750" magical="2650" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14733" level="1" /> <!-- Raid Boss (Lv. 93) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="11" />
+			<height normal="16" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="70.36" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36843" min="1" max="1" chance="4.2325" /> <!-- Twilight Leather Armor Ingredient -->
+				<item id="36781" min="1" max="1" chance="4.2245" /> <!-- Recipe: Twilight Leather Armor (60%) -->
+				<item id="36849" min="1" max="1" chance="4.2195" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36838" min="1" max="1" chance="4.213" /> <!-- Twilight Gaiter Ingredient -->
+				<item id="36786" min="1" max="1" chance="4.2035" /> <!-- Recipe: Twilight Tunic (60%) -->
+				<item id="36848" min="1" max="1" chance="4.186" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36837" min="1" max="1" chance="4.1505" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36782" min="1" max="1" chance="4.1395" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+				<item id="36775" min="1" max="1" chance="4.1395" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="36776" min="1" max="1" chance="4.1235" /> <!-- Recipe: Twilight Gaiters (60%) -->
+				<item id="36787" min="1" max="1" chance="4.1155" /> <!-- Recipe: Twilight Stockings (60%) -->
+				<item id="36844" min="1" max="1" chance="4.109" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25839" level="96" type="L2RaidBoss" name="Blind Hornafi" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="201701376" sp="48408" />
+		<stats>
+			<vitals hp="1416943" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="246000" magical="184500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6560" magical="6720" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4073" level="12" />
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14734" level="1" /> <!-- Raid Boss (Lv. 96) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="24" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="51" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35296" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Fragment -->
+				<item id="35298" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Fragment -->
+				<item id="35299" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Fragment -->
+				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Fragment -->
+				<item id="35301" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Fragment -->
+				<item id="35302" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Fragment -->
+				<item id="35303" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Fragment -->
+				<item id="35304" min="1" max="1" chance="0.3" /> <!-- Specter Buster Fragment -->
+				<item id="35305" min="1" max="1" chance="0.3" /> <!-- Specter Caster Fragment -->
+				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25840" level="94" type="L2RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="116034352" sp="464137" />
+		<stats>
+			<vitals hp="1370512" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="220536" magical="141703" random="30" critical="4" accuracy="95.25" attackSpeed="208" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5077" magical="2904" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="7" />
+			<skill id="4414" level="3" />
+			<skill id="4486" level="12" />
+			<skill id="4494" level="1" />
+			<skill id="14730" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14619" level="1" />
+			<skill id="14621" level="1" />
+		</skillList>
+		<ai aggroRange="900" clanHelpRange="900" />
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="1" max="3" chance="15" />
+				<item id="17342" min="1" max="1" chance="0.66667" />
+				<item id="17348" min="1" max="1" chance="0.66667" />
+				<item id="17353" min="1" max="1" chance="0.66667" />
+				<item id="17527" min="1" max="1" chance="0.66667" />
+				<item id="17292" min="1" max="1" chance="0.25" />
+				<item id="17294" min="1" max="1" chance="0.25" />
+				<item id="17297" min="1" max="1" chance="0.25" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25841" level="95" type="L2RaidBoss" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25842" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="186239900" sp="44697" />
+		<stats>
+			<vitals hp="1402678" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="240000" magical="180000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="3300" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="207" dark="293" />
+				<attack type="DARK" value="320" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14731" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="14357" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="21" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="80" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35311" min="1" max="1" chance="0.3" /> <!-- Seraph Boot Ingredient -->
+				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
+				<item id="35313" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35316" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35318" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
+				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25842" level="95" type="L2Monster" name="Black Beast" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<stats>
+			<vitals hp="357621" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="37605" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="894" magical="770" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="4065" level="12" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="25843" level="96" type="L2RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DRAGON</race>
+		<acquire exp="224759808" sp="53942" />
+		<stats>
+			<vitals hp="1416943" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="246000" magical="184500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3280" magical="3360" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="227" dark="424" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="14358" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14732" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="18" />
+			<height normal="63" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="30.04" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35309" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35315" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25844" level="96" type="L2RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="224759808" sp="531659" />
+		<stats>
+			<vitals hp="1416943" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="279801" magical="158882" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5340" magical="7709" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="9" />
+			<skill id="5462" level="1" />
+			<skill id="14359" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14732" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+			<skill id="14621" level="1" />
+		</skillList>
+		<ai aggroRange="900" clanHelpRange="900" />
+		<collision>
+			<radius normal="14.5" />
+			<height normal="48" />
+		</collision>
+	</npc>
+	<npc id="25845" level="96" type="L2RaidBoss" name="Magical Warrior Konyar" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<acquire exp="224759808" sp="899039" />
+		<stats>
+			<vitals hp="1416943" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="279801" magical="158882" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6675" magical="6167" />
+			<attribute>
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="10" />
+			<skill id="5462" level="1" />
+			<skill id="14360" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14732" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<ai aggroRange="900" clanHelpRange="900" />
+		<collision>
+			<radius normal="25" />
+			<height normal="49.9" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="3" chance="20" />
+				<item id="17343" min="1" max="1" chance="1" />
+				<item id="17354" min="1" max="1" chance="1" />
+				<item id="17527" min="1" max="1" chance="1" />
+				<item id="17526" min="1" max="1" chance="0.66667" />
+				<item id="17290" min="1" max="1" chance="0.33333" />
+				<item id="17293" min="1" max="1" chance="0.33333" />
+				<item id="17300" min="1" max="1" chance="0.33333" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25846" level="96" type="L2RaidBoss" name="Yoentumak the Waiter" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="328495104" sp="78838" />
+		<stats>
+			<vitals hp="723562" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="246000" magical="184500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3280" magical="3360" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="227" dark="424" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="9" />
+			<skill id="5464" level="1" />
+			<skill id="4118" level="12" />
+			<skill id="4494" level="1" />
+			<skill id="14735" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="15" />
+			<height normal="35" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="17527" min="1" max="1" chance="50.13" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35308" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35320" min="1" max="1" chance="0.3" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25855" level="96" type="L2Npc" name="Maliss" title="Grand Priest of Blood">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats>
+			<vitals hp="1262410" hpRegen="7.5" mp="4491" mpRegen="2.7" />
+			<attack physical="419701" magical="158882" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6675" magical="7709" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14519" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14516" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14713" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="25856" level="96" type="L2Npc" name="Isadora" title="Great Magus of Greed">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats>
+			<vitals hp="1262410" hpRegen="7.5" mp="4491" mpRegen="2.7" />
+			<attack physical="419701" magical="158882" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6675" magical="7709" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14520" level="1" />
+			<skill id="14519" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14712" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="25857" level="95" type="L2Monster" name="Corrupted Captain">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="49522882" sp="11885" />
+		<stats>
+			<vitals hp="581586" hpRegen="10.5" mp="22058" mpRegen="3.6" />
+			<attack physical="160000" magical="120000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4800" magical="4950" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="45" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17413" min="1" max="1" chance="0.3" /> <!-- Seraph Necklace -->
+				<item id="17414" min="1" max="1" chance="0.3" /> <!-- Seraph Earring -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25858" level="95" type="L2Monster" name="Corrupted High Priest">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="49522882" sp="11885" />
+		<stats>
+			<vitals hp="581586" hpRegen="10.5" mp="33087" mpRegen="3.6" />
+			<attack physical="160000" magical="120000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4800" magical="4950" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17415" min="1" max="1" chance="0.75" /> <!-- Seraph Ring -->
+				<item id="17414" min="1" max="1" chance="0.3" /> <!-- Seraph Earring -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25859" level="97" type="L2RaidBoss" name="Flynt" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25860" count="2" respawnTime= "3" weightPoint="4" />
+				<npc id="25861" count="2" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="458933384" sp="110144" raidPoints="1"/>
+		<stats>
+			<vitals hp="4470423" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="210" earth="340" holy="250" dark="250" />
+				<attack type="EARTH" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="120" />
+				<run ground="300" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14710" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4191" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="60" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17406" min="1" max="1" chance="1.956" /> <!-- Seraph Leather Boots -->
+				<item id="17410" min="1" max="1" chance="1.945" /> <!-- Seraph Gloves -->
+				<item id="17400" min="1" max="1" chance="1.86" /> <!-- Seraph Boots -->
+				<item id="17399" min="1" max="1" chance="1.853" /> <!-- Seraph Gauntlets -->
+				<item id="17402" min="1" max="1" chance="1.322" /> <!-- Seraph Leather Helmet -->
+				<item id="17407" min="1" max="1" chance="1.232" /> <!-- Seraph Circlet -->
+				<item id="30297" min="1" max="1" chance="21.95" /> <!-- Superior Giant's Codex -->
+				<item id="17526" min="1" max="1" chance="6.413" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25860" level="96" type="L2Monster" name="Flynt's Disciple" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="959037" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="140925" magical="39792" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="917" magical="794" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4192" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="21.12" />
+			<height normal="40.48" />
+		</collision>
+	</npc>
+	<npc id="25861" level="96" type="L2Monster" name="Flynt's Servant" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="959037" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="140925" magical="39792" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="917" magical="794" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4739" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="21.12" />
+			<height normal="40.48" />
+		</collision>
+	</npc>
+	<npc id="25862" level="97" type="L2RaidBoss" name="Harp" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="25863" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="25864" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="458933384" sp="110144" raidPoints="1"/>
+		<stats>
+			<vitals hp="4470423" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="210" earth="340" holy="250" dark="250" />
+				<attack type="EARTH" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14711" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4192" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="44" />
+			<height normal="78" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17405" min="1" max="2" chance="1.883" /> <!-- Seraph Leather Gloves -->
+				<item id="17411" min="1" max="2" chance="1.851" /> <!-- Seraph Shoes -->
+				<item id="17396" min="1" max="2" chance="1.337" /> <!-- Seraph Helmet -->
+				<item id="30297" min="1" max="1" chance="23.75" /> <!-- Superior Giant's Codex -->
+				<item id="17526" min="1" max="1" chance="6.424" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25863" level="96" type="L2Monster" name="Harp's Guard" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="959037" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="255298" magical="39792" random="30" critical="8" accuracy="95.25" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="917" magical="794" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="170" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="9" />
+			<skill id="4739" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="27.5" />
+		</collision>
+	</npc>
+	<npc id="25864" level="96" type="L2Monster" name="Harp's Subordinate" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="959037" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="255298" magical="39792" random="30" critical="8" accuracy="95.25" attackSpeed="162" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="917" magical="794" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="150" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4171" level="1" />
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="9" />
+			<skill id="4416" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="34" />
+		</collision>
+	</npc>
+	<npc id="25865" level="93" type="L2Npc" name="Apherus Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<stats>
+			<vitals hp="610815" hpRegen="7.5" mp="32306" mpRegen="2.7" />
+			<attack physical="120144" magical="33536" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2974" magical="2537" />
+			<attribute>
+				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14466" level="1" />
+			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="76.5" />
+		</collision>
+	</npc>
+	<npc id="25866" level="94" type="L2RaidBoss" name="Apherus">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>PLANT</race>
+		<acquire exp="198916032" sp="47739" raidPoints="1"/>
+		<stats>
+			<vitals hp="8223069" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="68250" magical="48750" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2800" magical="2700" />
+			<attribute>
+				<defence fire="250" water="250" wind="210" earth="340" holy="250" dark="250" />
+				<attack type="EARTH" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="14087" level="1" />
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14723" level="1" /> <!-- Raid Boss (Lv. 94) -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="35" />
+			<height normal="93" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17347" min="1" max="1" chance="5.315" /> <!-- Twilight Leather Gloves -->
+				<item id="17352" min="1" max="1" chance="5.297" /> <!-- Twilight Gloves -->
+				<item id="17330" min="1" max="1" chance="0.3" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="0.3" /> <!-- Apocalypse Retributer -->
+				<item id="17526" min="1" max="1" chance="5.537" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25867" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
+		<!-- Source http://l2on.net/en/?c=npc&id=25867 -->
+		<race>HUMANOID</race>
+		<acquire exp="1099043344" sp="263770" raidPoints="1"/>
+		<stats>
+			<vitals hp="2278804" hpRegen="7.5" mp="227880" mpRegen="2.7" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3806.32183" magical="516.72362" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="210" earth="340" holy="250" dark="250" />
+				<attack type="EARTH" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14152" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14722" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="30" />
+			<height normal="81" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38017" min="1" max="1" chance="0.3" /> <!-- Specter Stormer Crafting Pack -->
+				<item id="38018" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Crafting Pack -->
+				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
+				<item id="38020" min="1" max="1" chance="0.60419" /> <!-- Specter Buster Crafting Pack -->
+				<item id="38021" min="1" max="1" chance="0.3" /> <!-- Specter Caster Crafting Pack -->
+				<item id="38022" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Crafting Pack -->
+				<item id="17747" min="1" max="1" chance="0.30209" /> <!-- Trace of Decaying darkness -->
+				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shaper (60%) -->
+				<item id="35421" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Cutter (60%) -->
+				<item id="36574" min="1" max="1" chance="9.981" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Avenger (60%) -->
+				<item id="35296" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Fragment -->
+				<item id="35424" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Fighter (60%) -->
+				<item id="36513" min="2" max="2" chance="77.41935" /> <!-- Elcyum Powder -->
+				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
+				<item id="35425" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Stormer (60%) -->
+				<item id="35298" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Fragment -->
+				<item id="35426" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Thrower (60%) -->
+				<item id="35299" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Fragment -->
+				<item id="35427" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.60419" /> <!-- Recipe:Β Specter Buster (60%) -->
+				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Fragment -->
+				<item id="35301" min="1" max="1" chance="0.60419" /> <!-- Specter Stormer Fragment -->
+				<item id="35429" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Caster (60%) -->
+				<item id="35302" min="1" max="1" chance="0.3" /> <!-- Specter Thrower Fragment -->
+				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe:Β Specter Retributer (60%) -->
+				<item id="35303" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Fragment -->
+				<item id="35304" min="1" max="1" chance="0.60419" /> <!-- Specter Buster Fragment -->
+				<item id="35305" min="1" max="1" chance="0.3" /> <!-- Specter Caster Fragment -->
+				<item id="36586" min="1" max="1" chance="69.14" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="35306" min="1" max="1" chance="0.60419" /> <!-- Specter Retributer Fragment -->
+				<item id="45430" min="1" max="1" chance="22.58064" /> <!-- Entrance Pass: Spezion (Epic) -->
+				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="2.11479" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.60419" /> <!-- Specter Cutter Crafting Pack -->
+				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25868" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1011156496" sp="2494705" />
+		<stats>
+			<vitals hp="2278805" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="93123" magical="147965" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6485" magical="7417" />
+			<attribute>
+				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14152" level="1" />
+			<skill id="4415" level="4" />
+			<skill id="4494" level="1" />
+			<skill id="14722" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<ai aggroRange="900" clanHelpRange="900" />
+		<collision>
+			<radius normal="30" />
+			<height normal="81" />
+		</collision>
+	</npc>
+	<npc id="25869" level="98" type="L2RaidBoss" name="Berserk Spezion" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats>
+			<vitals hp="2278805" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="93123" magical="147965" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6485" magical="7417" />
+			<attribute>
+				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="14152" level="1" />
+			<skill id="4415" level="4" />
+			<skill id="4494" level="1" />
+			<skill id="14722" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+			<skill id="14621" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="81" />
+		</collision>
+	</npc>
+	<npc id="25870" level="43" type="L2RaidBoss" name="Rose" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ELEMENTAL</race>
+		<acquire exp="520530" sp="25500" />
+		<stats>
+			<vitals hp="517916" hpRegen="7.5" mp="1116" mpRegen="2.7" />
+			<attack physical="2586" magical="1214" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="536" magical="655" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="150" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="7" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14724" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4175" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="2437" min="1" max="1" chance="33.3333" />
+				<item id="2462" min="4" max="4" chance="33.3333" />
+				<item id="2463" min="1" max="1" chance="33.3333" />
+				<item id="6574" min="1" max="1" chance="33.3333" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25871" level="43" type="L2RaidBoss" name="Thorn" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>GIANT</race>
+		<acquire exp="3818045" sp="916" />
+		<stats>
+			<vitals hp="517918" hpRegen="5.5" mp="557" mpRegen="2.1" />
+			<attack physical="3497" magical="4210" random="30" critical="1" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="670" magical="726" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="150" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14725" level="1" /> <!-- Raid Boss (Lv. 43) -->
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4175" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="2462" min="1" max="1" chance="5.836" /> <!-- Full Plate Gauntlets -->
+				<item id="2414" min="1" max="1" chance="3.818" /> <!-- Full Plate Helmet -->
+				<item id="401" min="1" max="1" chance="1.155" /> <!-- Drake Leather Armor -->
+				<item id="135" min="1" max="1" chance="0.3" /> <!-- Samurai Long Sword -->
+				<item id="5286" min="1" max="1" chance="0.3" /> <!-- Berserker Blade -->
+				<item id="7888" min="1" max="1" chance="0.3" /> <!-- Ecliptic Sword -->
+				<item id="39629" min="1" max="1" chance="0.006134" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25872" level="97" type="L2Npc" name="Spezion's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats>
+			<vitals hp="34850" hpRegen="7.5" mp="3455" mpRegen="2.7" />
+			<attack physical="127435" magical="12045" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="940" magical="818" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="25873" level="97" type="L2Npc" name="Spezion's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats>
+			<vitals hp="34850" hpRegen="7.5" mp="3455" mpRegen="2.7" />
+			<attack physical="127435" magical="12045" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="940" magical="818" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="60" />
+		</collision>
+	</npc>
+	<npc id="25874" level="97" type="L2Npc" name="Spezion's Subordinate">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats>
+			<vitals hp="34850" hpRegen="7.5" mp="3455" mpRegen="2.7" />
+			<attack physical="127435" magical="12045" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="940" magical="818" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="25875" level="88" type="L2RaidBoss" name="Queen of Darkness" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>UNDEAD</race>
+		<acquire exp="159805184" sp="38353" raidPoints="1"/>
+		<stats>
+			<vitals hp="3042201" hpRegen="9.5" mp="22800" mpRegen="3.3" />
+			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2341" magical="2250" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14720" level="1" />
+			<skill id="14645" level="1" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="33.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17308" min="1" max="1" chance="4.288" /> <!-- Immortal Boots -->
+				<item id="17318" min="1" max="1" chance="4.236" /> <!-- Immortal Gloves -->
+				<item id="17310" min="1" max="1" chance="2.848" /> <!-- Immortal Leather Helmet -->
+				<item id="17304" min="1" max="1" chance="2.842" /> <!-- Immortal Helmet -->
+				<item id="17313" min="1" max="1" chance="2.136" /> <!-- Immortal Leather Gloves -->
+				<item id="17319" min="1" max="1" chance="1.414" /> <!-- Immortal Shoes -->
+				<item id="17300" min="1" max="1" chance="0.3" /> <!-- Requiem Retributer -->
+				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
+				<item id="17291" min="1" max="1" chance="0.3" /> <!-- Requiem Cutter -->
+				<item id="17290" min="1" max="1" chance="0.3" /> <!-- Requiem Shaper -->
+				<item id="17527" min="1" max="1" chance="29.44" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="2.294" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25876" level="96" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="708857856" sp="170125" raidPoints="1"/>
+		<stats>
+			<vitals hp="1262411" hpRegen="10.5" mp="2242" mpRegen="3.6" />
+			<attack physical="164000" magical="123000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6560" magical="6720" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14519" level="1" />
+			<skill id="14516" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14713" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="60" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings -->
+				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic -->
+				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings -->
+				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor -->
+				<item id="17398" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters -->
+				<item id="17397" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate -->
+				<item id="17392" min="1" max="1" chance="0.075" /> <!-- Specter Retributer -->
+				<item id="17391" min="1" max="1" chance="0.075" /> <!-- Specter Caster -->
+				<item id="17390" min="1" max="1" chance="0.075" /> <!-- Specter Buster -->
+				<item id="17389" min="1" max="1" chance="0.075" /> <!-- Specter Shooter -->
+				<item id="17388" min="1" max="1" chance="0.075" /> <!-- Specter Thrower -->
+				<item id="17387" min="1" max="1" chance="0.075" /> <!-- Specter Stormer -->
+				<item id="17386" min="1" max="1" chance="0.075" /> <!-- Specter Fighter -->
+				<item id="17385" min="1" max="1" chance="0.075" /> <!-- Specter Avenger -->
+				<item id="17384" min="1" max="1" chance="0.075" /> <!-- Specter Slasher -->
+				<item id="17383" min="1" max="1" chance="0.075" /> <!-- Specter Cutter -->
+				<item id="17382" min="1" max="1" chance="0.075" /> <!-- Specter Shaper -->
+				<item id="17527" min="3" max="9" chance="20.7" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="9.976" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25877" level="96" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
+		<!-- Source http://l2on.net/en/?c=npc&id=25877 -->
+		<race>HUMANOID</race>
+		<acquire exp="708857856" sp="170125" raidPoints="1"/>
+		<stats>
+			<vitals hp="1262409" hpRegen="7.5" mp="2242" mpRegen="2.7" />
+			<attack physical="164000" magical="123000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6560" magical="6720" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="160" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="14520" level="1" />
+			<skill id="14519" level="1" />
+			<skill id="4494" level="1" />
+			<skill id="14712" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="60" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17408" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Robe -->
+				<item id="17409" min="1" max="1" chance="0.3" /> <!-- Seraph Stockings Robe -->
+				<item id="17382" min="1" max="1" chance="0.075" /> <!-- Specter Shaper -->
+				<item id="17383" min="1" max="1" chance="0.075" /> <!-- Specter Cutter -->
+				<item id="17384" min="1" max="1" chance="0.075" /> <!-- Specter Slasher -->
+				<item id="17385" min="1" max="1" chance="0.075" /> <!-- Specter Avenger -->
+				<item id="17386" min="1" max="1" chance="0.075" /> <!-- Specter Fighter -->
+				<item id="17387" min="1" max="1" chance="0.075" /> <!-- Specter Stormer -->
+				<item id="17388" min="1" max="1" chance="0.075" /> <!-- Specter Thrower -->
+				<item id="17389" min="1" max="1" chance="0.075" /> <!-- Specter Shooter -->
+				<item id="17390" min="1" max="1" chance="0.075" /> <!-- Specter Buster -->
+				<item id="17391" min="1" max="1" chance="0.075" /> <!-- Specter Caster -->
+				<item id="17392" min="1" max="1" chance="0.075" /> <!-- Specter Retributer -->
+				<item id="17397" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Heavy Armor -->
+				<item id="17526" min="1" max="1" chance="9.907" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17398" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiters Heavy Armor -->
+				<item id="17527" min="3" max="3" chance="21.21" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17403" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Light Armor -->
+				<item id="17404" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Leggings Light Armor -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25878" level="85" type="L2Monster" name="Arbitor of Darkness" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="253903" sp="485" />
+		<stats>
+			<vitals hp="31326" hpRegen="7.5" mp="27980" mpRegen="2.7" />
+			<attack physical="27349" magical="7241" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2427" magical="1991" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="14638" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="38" />
+		</collision>
+	</npc>
+	<npc id="25879" level="88" type="L2RaidBoss" name="Queen of Darkness" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="159805184" sp="449865" />
+		<stats>
+			<vitals hp="3042201" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="132924" magical="73412" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5239" magical="5762" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="14470" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="2" />
+			<skill id="4045" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="25880" level="97" type="L2RaidBoss" name="Georgios" title="Raid Boss">
+		<!-- Source http://l2on.net/en/?c=npc&id=25880 -->
+		<race>HUMANOID</race>
+		<acquire exp="42359318" sp="169452" raidPoints="1"/>
+		<stats>
+			<vitals hp="1580452" hpRegen="7.5" mp="158045" mpRegen="2.7" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="120" />
+				<run ground="300" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="14012" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="14749" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="91" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="9557" min="1" max="1" chance="2.304" /> <!-- Holy Crystal -->
+				<item id="17526" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17387" min="1" max="1" chance="0.03" /> <!-- Specter Stormer -->
+				<item id="17390" min="1" max="1" chance="0.03" /> <!-- Specter Buster -->
+				<item id="17391" min="1" max="1" chance="0.03" /> <!-- Specter Caster -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25881" level="98" type="L2RaidBoss" name="Veridan" title="Hell's Warden">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<acquire exp="234222352" sp="936890" />
+		<stats>
+			<vitals hp="1775523" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="282826" magical="162336" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6747" magical="7793" />
+			<attribute>
+				<defence fire="300" water="350" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="34" />
+				<run ground="180" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="4437" level="3" />
+			<skill id="4441" level="3" />
+			<skill id="4435" level="3" />
+			<skill id="4436" level="3" />
+			<skill id="4440" level="3" />
+			<skill id="4439" level="3" />
+			<skill id="4438" level="3" />
+			<skill id="4416" level="9" />
+			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14714" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="13" />
+			<height normal="55" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17431" min="1" max="1" chance="0.06667" />
+				<item id="17433" min="1" max="1" chance="0.06667" />
+				<item id="17438" min="1" max="1" chance="0.06667" />
+				<item id="17440" min="1" max="1" chance="0.06667" />
+				<item id="17441" min="1" max="1" chance="0.06667" />
+				<item id="17442" min="1" max="1" chance="0.06667" />
+				<item id="17417" min="1" max="1" chance="0.025" />
+				<item id="17422" min="1" max="1" chance="0.025" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25882" level="88" type="L2RaidBoss" name="Zellaka" title="Lord of Kartia">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="2658577152" sp="638058" raidPoints="1" />
+		<stats>
+			<vitals hp="3194997" hpRegen="9.5" mp="1846" mpRegen="3.3" />
+			<attack physical="49500" magical="33000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1980" magical="1920" evasion="3" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="14951" level="1" />
+			<skill id="14950" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="14948" level="1" />
+			<skill id="14952" level="1" />
+			<skill id="14940" level="1" />
+			<skill id="14943" level="1" />
+			<skill id="14949" level="1" />
+		</skillList>
+		<ai aggroRange="500" clanHelpRange="1000" />
+		<collision>
+			<radius normal="30" />
+			<height normal="54" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17526" min="1" max="1" chance="49.86" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="49.59" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36513" min="2" max="5" chance="24.26" /> <!-- Elcyum Powder -->
+				<item id="36816" min="1" max="1" chance="3.64" /> <!-- Immortal Circlet Ingredient -->
+				<item id="36752" min="1" max="1" chance="3.634" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="36806" min="1" max="1" chance="3.631" /> <!-- Immortal Breastplate Ingredient -->
+				<item id="36757" min="1" max="1" chance="3.629" /> <!-- Recipe: Immortal Gloves (60%) -->
+				<item id="36751" min="1" max="1" chance="3.627" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+				<item id="36758" min="1" max="1" chance="3.626" /> <!-- Recipe: Immortal Shoes (60%) -->
+				<item id="36817" min="1" max="1" chance="3.626" /> <!-- Immortal Tunic Ingredient -->
+				<item id="36794" min="1" max="1" chance="3.621" /> <!-- Requiem Shaper Fragment -->
+				<item id="36737" min="1" max="1" chance="3.621" /> <!-- Recipe: Requiem Stormer (60%) -->
+				<item id="36753" min="1" max="1" chance="3.617" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="36750" min="1" max="1" chance="3.615" /> <!-- Recipe: Immortal Leather Armor (60%) -->
+				<item id="36742" min="1" max="1" chance="3.614" /> <!-- Recipe: Requiem Retributer (60%) -->
+				<item id="36733" min="1" max="1" chance="3.614" /> <!-- Recipe: Requiem Cutter (60%) -->
+				<item id="36738" min="1" max="1" chance="3.613" /> <!-- Recipe: Requiem Thrower (60%) -->
+				<item id="36739" min="1" max="1" chance="3.61" /> <!-- Recipe: Requiem Shooter (60%) -->
+				<item id="36748" min="1" max="1" chance="3.609" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="36821" min="1" max="1" chance="3.609" /> <!-- Immortal Sigil Ingredient -->
+				<item id="36799" min="1" max="1" chance="3.598" /> <!-- Requiem Stormer Fragment -->
+				<item id="36749" min="1" max="1" chance="3.597" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+				<item id="36755" min="1" max="1" chance="3.593" /> <!-- Recipe: Immortal Tunic (60%) -->
+				<item id="36734" min="1" max="1" chance="3.583" /> <!-- Recipe: Requiem Slasher (60%) -->
+				<item id="36747" min="1" max="1" chance="3.581" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="36796" min="1" max="1" chance="3.576" /> <!-- Requiem Slasher Fragment -->
+				<item id="36815" min="1" max="1" chance="3.569" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="36732" min="1" max="1" chance="3.569" /> <!-- Recipe: Requiem Shaper (60%) -->
+				<item id="36813" min="1" max="1" chance="3.568" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="36803" min="1" max="1" chance="3.566" /> <!-- Requiem Caster Fragment -->
+				<item id="36804" min="1" max="1" chance="3.564" /> <!-- Requiem Retributer Fragment -->
+				<item id="36797" min="1" max="1" chance="3.561" /> <!-- Requiem Avenger Fragment -->
+				<item id="36800" min="1" max="1" chance="3.559" /> <!-- Requiem Thrower Fragment -->
+				<item id="36759" min="1" max="1" chance="3.562" /> <!-- Recipe: Immortal Sigil (60%) -->
+				<item id="36735" min="1" max="1" chance="3.552" /> <!-- Recipe: Requiem Avenger (60%) -->
+				<item id="36807" min="1" max="1" chance="3.552" /> <!-- Immortal Gaiter Ingredient -->
+				<item id="36808" min="1" max="1" chance="3.549" /> <!-- Immortal Gauntlet Ingredient -->
+				<item id="36736" min="1" max="1" chance="3.538" /> <!-- Recipe: Requiem Fighter (60%) -->
+				<item id="36756" min="1" max="1" chance="3.537" /> <!-- Recipe: Immortal Stockings (60%) -->
+				<item id="36810" min="1" max="1" chance="3.532" /> <!-- Immortal Shield Ingredient -->
+				<item id="36801" min="1" max="1" chance="3.525" /> <!-- Requiem Shooter Fragment -->
+				<item id="36746" min="1" max="1" chance="3.524" /> <!-- Recipe: Immortal Gauntlets (60%) -->
+				<item id="36802" min="1" max="1" chance="3.524" /> <!-- Requiem Buster Fragment -->
+				<item id="36809" min="1" max="1" chance="3.524" /> <!-- Immortal Boot Ingredient -->
+				<item id="36814" min="1" max="1" chance="3.522" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36745" min="1" max="1" chance="3.521" /> <!-- Recipe: Immortal Gaiters (60%) -->
+				<item id="36812" min="1" max="1" chance="3.517" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="36741" min="1" max="1" chance="3.516" /> <!-- Recipe: Requiem Caster (60%) -->
+				<item id="36811" min="1" max="1" chance="3.513" /> <!-- Immortal Leather Helmet Ingredient -->
+				<item id="36743" min="1" max="1" chance="3.513" /> <!-- Recipe: Immortal Helmet (60%) -->
+				<item id="36805" min="1" max="1" chance="3.511" /> <!-- Immortal Helmet Ingredient -->
+				<item id="36819" min="1" max="1" chance="3.51" /> <!-- Immortal Glove Ingredient -->
+				<item id="36798" min="1" max="1" chance="3.508" /> <!-- Requiem Fighter Fragment -->
+				<item id="36754" min="1" max="1" chance="3.504" /> <!-- Recipe: Immortal Circlet (60%) -->
+				<item id="36744" min="1" max="1" chance="3.502" /> <!-- Recipe: Immortal Breastplate (60%) -->
+				<item id="36740" min="1" max="1" chance="3.501" /> <!-- Recipe: Requiem Buster (60%) -->
+				<item id="36818" min="1" max="1" chance="3.501" /> <!-- Immortal Stocking Ingredient -->
+				<item id="36795" min="1" max="1" chance="3.501" /> <!-- Requiem Cutter Fragment -->
+				<item id="36820" min="1" max="1" chance="3.5" /> <!-- Immortal Shoe Ingredient -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25883" level="93" type="L2RaidBoss" name="Pelline" title="Lord of Kartia">
+		<!-- Source http://l2on.net/en/?c=npc&id=25883 -->
+		<race>DEMONIC</race>
+		<acquire exp="2968720370" sp="712625" raidPoints="1" />
+		<stats>
+			<vitals hp="3497549" hpRegen="7.5" mp="3497549" mpRegen="2.7" />
+			<attack physical="66500" magical="47500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2750" magical="2650" />
+			<attribute>
+				<defence fire="340" water="210" wind="250" earth="250" holy="250" dark="250" />
+				<attack type="FIRE" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="14955" level="1" />
+			<skill id="14954" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="14947" level="1" />
+			<skill id="5462" level="1" />
+			<skill id="14957" level="1" />
+			<skill id="14956" level="1" />
+			<skill id="14941" level="1" />
+			<skill id="14944" level="1" />
+			<skill id="14953" level="1" />
+		</skillList>
+		<ai aggroRange="500" clanHelpRange="1000" />
+		<collision>
+			<radius normal="18" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36763" min="1" max="1" chance="3.33333" /> <!-- Recipe: Apocalypse Shaper (60%) -->
+				<item id="36764" min="1" max="1" chance="4.44444" /> <!-- Recipe: Apocalypse Cutter (60%) -->
+				<item id="36765" min="1" max="1" chance="2.22222" /> <!-- Recipe: Apocalypse Slasher (60%) -->
+				<item id="36766" min="1" max="1" chance="2.22222" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+				<item id="36767" min="1" max="1" chance="3.33333" /> <!-- Recipe: Apocalypse Fighter (60%) -->
+				<item id="36768" min="1" max="1" chance="3.33333" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<item id="36513" min="2" max="2" chance="100" /> <!-- Elcyum Powder -->
+				<item id="36769" min="1" max="1" chance="1.11111" /> <!-- Recipe: Apocalypse Thrower (60%) -->
+				<item id="36770" min="1" max="1" chance="1.11111" /> <!-- Recipe: Apocalypse Shooter (60%) -->
+				<item id="36771" min="1" max="1" chance="1.11111" /> <!-- Recipe: Apocalypse Buster (60%) -->
+				<item id="36772" min="1" max="1" chance="2.22222" /> <!-- Recipe: Apocalypse Caster (60%) -->
+				<item id="36773" min="1" max="1" chance="5.55555" /> <!-- Recipe: Apocalypse Retributer (60%) -->
+				<item id="36774" min="1" max="1" chance="4.44444" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="36775" min="1" max="1" chance="7.77777" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="36776" min="1" max="1" chance="3.4621" /> <!-- Recipe: Twilight Gaiters (60%) -->
+				<item id="36777" min="1" max="1" chance="6.66666" /> <!-- Recipe: Twilight Gauntlets (60%) -->
+				<item id="36778" min="1" max="1" chance="1.11111" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="36779" min="1" max="1" chance="2.22222" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="36780" min="1" max="1" chance="4.44444" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+				<item id="36781" min="1" max="1" chance="4.44444" /> <!-- Recipe: Twilight Leather Armor (60%) -->
+				<item id="36782" min="1" max="1" chance="5.55555" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+				<item id="36783" min="1" max="1" chance="2.22222" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
+				<item id="36784" min="1" max="1" chance="3.33333" /> <!-- Recipe: Twilight Leather Boots (60%) -->
+				<item id="36785" min="1" max="1" chance="3.33333" /> <!-- Recipe: Twilight Circlet (60%) -->
+				<item id="36786" min="1" max="1" chance="7.77777" /> <!-- Recipe: Twilight Tunic (60%) -->
+				<item id="36787" min="1" max="1" chance="1.11111" /> <!-- Recipe: Twilight Stockings (60%) -->
+				<item id="36788" min="1" max="1" chance="11.11111" /> <!-- Recipe: Twilight Gloves (60%) -->
+				<item id="36789" min="1" max="1" chance="2.22222" /> <!-- Recipe: Twilight Shoes (60%) -->
+				<item id="36790" min="1" max="1" chance="2.22222" /> <!-- Recipe: Twilight Sigil (60%) -->
+				<item id="36825" min="1" max="1" chance="6.66666" /> <!-- Apocalypse Shaper Fragment -->
+				<item id="36826" min="1" max="1" chance="2.22222" /> <!-- Apocalypse Cutter Fragment -->
+				<item id="36827" min="1" max="1" chance="2.22222" /> <!-- Apocalypse Slasher Fragment -->
+				<item id="36828" min="1" max="1" chance="6.66666" /> <!-- Apocalypse Avenger Fragment -->
+				<item id="36829" min="1" max="1" chance="6.66666" /> <!-- Apocalypse Fighter Fragment -->
+				<item id="36574" min="1" max="1" chance="49.7" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36830" min="1" max="1" chance="8.88888" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36831" min="1" max="1" chance="4.44444" /> <!-- Apocalypse Thrower Fragment -->
+				<item id="36832" min="1" max="1" chance="5.55555" /> <!-- Apocalypse Shooter Fragment -->
+				<item id="36833" min="1" max="1" chance="4.44444" /> <!-- Apocalypse Buster Fragment -->
+				<item id="36834" min="1" max="1" chance="2.22222" /> <!-- Apocalypse Caster Fragment -->
+				<item id="36835" min="1" max="1" chance="2.22222" /> <!-- Apocalypse Retributer Fragment -->
+				<item id="36836" min="1" max="1" chance="3.33333" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36837" min="1" max="1" chance="6.66666" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36838" min="1" max="1" chance="2.22222" /> <!-- Twilight Gaiter Ingredient -->
+				<item id="36839" min="1" max="1" chance="2.22222" /> <!-- Twilight Gauntlet Ingredient -->
+				<item id="36840" min="1" max="1" chance="2.22222" /> <!-- Twilight Boot Ingredient -->
+				<item id="36841" min="1" max="1" chance="3.33333" /> <!-- Twilight Shield Ingredient -->
+				<item id="36586" min="1" max="1" chance="49.73" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="36842" min="1" max="1" chance="2.22222" /> <!-- Twilight Leather Helmet Ingredient -->
+				<item id="36843" min="1" max="1" chance="3.33333" /> <!-- Twilight Leather Armor Ingredient -->
+				<item id="36844" min="1" max="1" chance="2.22222" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="36845" min="1" max="1" chance="3.33333" /> <!-- Twilight Leather Glove Ingredient -->
+				<item id="36846" min="1" max="1" chance="2.22222" /> <!-- Twilight Leather Boot Ingredient -->
+				<item id="36847" min="1" max="1" chance="3.33333" /> <!-- Twilight Circlet Ingredient -->
+				<item id="36848" min="1" max="1" chance="3.33333" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36849" min="1" max="1" chance="2.22222" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36850" min="1" max="1" chance="2.22222" /> <!-- Twilight Glove Ingredient -->
+				<item id="36851" min="1" max="1" chance="2.22222" /> <!-- Twilight Shoe Ingredient -->
+				<item id="36852" min="1" max="1" chance="1.11111" /> <!-- Twilight Sigil Ingredient -->
+				<item id="17526" min="1" max="1" chance="52.22222" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="47.77777" /> <!-- Scroll: Enchant Armor (R-grade) -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25884" level="98" type="L2RaidBoss" name="Kalios" title="Lord of Kartia">
+		<!-- Source http://l2on.net/en/?c=npc&id=25884 -->
+		<race>DEMONIC</race>
+		<acquire exp="3297130032" sp="791311" />
+		<stats>
+			<vitals hp="3916294" hpRegen="7.5" mp="3916294" mpRegen="2.7" />
+			<attack physical="86000" magical="64500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3440" magical="3480" />
+			<attribute>
+				<defence fire="250" water="250" wind="340" earth="210" holy="250" dark="250" />
+				<attack type="WIND" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<skillList>
+			<skill id="14946" level="1" />
+			<skill id="14960" level="1" />
+			<skill id="14959" level="1" />
+			<skill id="4416" level="9" />
+			<skill id="5464" level="1" />
+			<skill id="14962" level="1" />
+			<skill id="14961" level="1" />
+			<skill id="14942" level="1" />
+			<skill id="14945" level="1" />
+			<skill id="14958" level="1" />
+		</skillList>
+		<ai aggroRange="500" clanHelpRange="1000" />
+		<collision>
+			<radius normal="25" />
+			<height normal="65.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="2" max="2" chance="85.56701" /> <!-- Elcyum Powder -->
+				<item id="35420" min="1" max="1" chance="3.43642" /> <!-- Recipe:Β Specter Shaper (60%) -->
+				<item id="35421" min="1" max="1" chance="3.78006" /> <!-- Recipe:Β Specter Cutter (60%) -->
+				<item id="36574" min="1" max="1" chance="14.35" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="35422" min="1" max="1" chance="3.43642" /> <!-- Recipe:Β Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="2.06185" /> <!-- Recipe:Β Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="4.81099" /> <!-- Recipe:Β Specter Fighter (60%) -->
+				<item id="35296" min="1" max="1" chance="3.78006" /> <!-- Specter Shaper Fragment -->
+				<item id="35425" min="1" max="1" chance="3.78006" /> <!-- Recipe:Β Specter Stormer (60%) -->
+				<item id="35297" min="1" max="1" chance="3.43642" /> <!-- Specter Cutter Fragment -->
+				<item id="35298" min="1" max="1" chance="4.12371" /> <!-- Specter Slasher Fragment -->
+				<item id="35426" min="1" max="1" chance="2.40549" /> <!-- Recipe:Β Specter Thrower (60%) -->
+				<item id="35299" min="1" max="1" chance="2.40549" /> <!-- Specter Avenger Fragment -->
+				<item id="35427" min="1" max="1" chance="2.40549" /> <!-- Recipe:Β Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="5.15463" /> <!-- Recipe:Β Specter Buster (60%) -->
+				<item id="35300" min="1" max="1" chance="2.74914" /> <!-- Specter Fighter Fragment -->
+				<item id="35429" min="1" max="1" chance="7.21649" /> <!-- Recipe:Β Specter Caster (60%) -->
+				<item id="35301" min="1" max="1" chance="2.74914" /> <!-- Specter Stormer Fragment -->
+				<item id="35302" min="1" max="1" chance="3.78006" /> <!-- Specter Thrower Fragment -->
+				<item id="35430" min="1" max="1" chance="2.40549" /> <!-- Recipe:Β Specter Retributer (60%) -->
+				<item id="35431" min="1" max="1" chance="5.15463" /> <!-- Recipe:Β Seraph Helmet (60%) -->
+				<item id="35303" min="1" max="1" chance="3.43642" /> <!-- Specter Shooter Fragment -->
+				<item id="35432" min="1" max="1" chance="3.09278" /> <!-- Recipe:Β Seraph Breastplate (60%) -->
+				<item id="35304" min="1" max="1" chance="2.74914" /> <!-- Specter Buster Fragment -->
+				<item id="35305" min="1" max="1" chance="4.12371" /> <!-- Specter Caster Fragment -->
+				<item id="35433" min="1" max="1" chance="3.43642" /> <!-- Recipe:Β Seraph Gaiters (60%) -->
+				<item id="36586" min="1" max="1" chance="73.8399" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="35306" min="1" max="1" chance="2.40549" /> <!-- Specter Retributer Fragment -->
+				<item id="35434" min="1" max="1" chance="1.37457" /> <!-- Recipe:Β Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="1.71821" /> <!-- Recipe:Β Seraph Boots (60%) -->
+				<item id="35307" min="1" max="1" chance="1.71821" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35308" min="1" max="1" chance="5.15463" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35436" min="1" max="1" chance="4.46735" /> <!-- Recipe:Β Seraph Shield (60%) -->
+				<item id="35309" min="1" max="1" chance="4.12371" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35437" min="1" max="1" chance="2.06185" /> <!-- Recipe:Β Seraph Leather Helmet (60%) -->
+				<item id="35310" min="1" max="1" chance="5.15463" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35438" min="1" max="1" chance="3.78006" /> <!-- Recipe:Β Seraph Leather Armor (60%) -->
+				<item id="35311" min="1" max="1" chance="4.81099" /> <!-- Seraph Boot Ingredient -->
+				<item id="35439" min="1" max="1" chance="4.81099" /> <!-- Recipe:Β Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="2.40549" /> <!-- Recipe:Β Seraph Leather Gloves (60%) -->
+				<item id="35312" min="1" max="1" chance="2.06185" /> <!-- Seraph Shield Ingredient -->
+				<item id="35441" min="1" max="1" chance="3.43642" /> <!-- Recipe:Β Seraph Leather Boots (60%) -->
+				<item id="35313" min="1" max="1" chance="1.71821" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="1" chance="5.84192" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35442" min="1" max="1" chance="5.84192" /> <!-- Recipe:Β Seraph Circlet (60%) -->
+				<item id="35443" min="1" max="1" chance="5.15463" /> <!-- Recipe:Β Seraph Tunic (60%) -->
+				<item id="35315" min="1" max="1" chance="3.43642" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="1" chance="3.43642" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35444" min="1" max="1" chance="1.71821" /> <!-- Recipe:Β Seraph Stockings (60%) -->
+				<item id="35317" min="1" max="1" chance="5.84192" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35445" min="1" max="1" chance="2.74914" /> <!-- Recipe:Β Seraph Gloves (60%) -->
+				<item id="17526" min="1" max="1" chance="52.92096" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35446" min="1" max="1" chance="5.49828" /> <!-- Recipe:Β Seraph Shoes (60%) -->
+				<item id="35318" min="1" max="1" chance="3.09278" /> <!-- Seraph Circlet Ingredient -->
+				<item id="17527" min="1" max="1" chance="46.73539" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35319" min="1" max="1" chance="3.09278" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35447" min="1" max="1" chance="2.40549" /> <!-- Recipe:Β Seraph Sigil (60%) -->
+				<item id="45432" min="1" max="1" chance="14.43298" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Party -->
+				<item id="35320" min="1" max="1" chance="3.43642" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35321" min="1" max="1" chance="4.46735" /> <!-- Seraph Glove Ingredient -->
+				<item id="35322" min="1" max="1" chance="3.78006" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35323" min="1" max="1" chance="3.09278" /> <!-- Seraph Sigil Ingredient -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25885" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="1329730061" sp="89034960" />
+		<stats>
+			<vitals hp="8952505" hpRegen="7.5" mp="45646" mpRegen="2.7" />
+			<attack physical="804758" magical="230136" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6312" magical="7257" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="15078" level="1" />
+			<skill id="15215" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="23" />
+			<height normal="64" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="1" max="2" chance="50" />
+				<item id="36979" min="1" max="1" chance="35" />
+				<item id="36978" min="1" max="1" chance="15" />
+				<item id="35319" min="1" max="1" chance="5" />
+				<item id="35320" min="1" max="1" chance="5" />
+				<item id="35321" min="1" max="1" chance="5" />
+				<item id="35322" min="1" max="1" chance="5" />
+				<item id="35323" min="1" max="1" chance="5" />
+				<item id="35324" min="1" max="1" chance="5" />
+				<item id="35325" min="1" max="1" chance="5" />
+				<item id="35326" min="1" max="1" chance="5" />
+				<item id="35318" min="1" max="1" chance="5" />
+				<item id="35317" min="1" max="1" chance="5" />
+				<item id="35307" min="1" max="1" chance="5" />
+				<item id="35308" min="1" max="1" chance="5" />
+				<item id="35309" min="1" max="1" chance="5" />
+				<item id="35310" min="1" max="1" chance="5" />
+				<item id="35311" min="1" max="1" chance="5" />
+				<item id="35312" min="1" max="1" chance="5" />
+				<item id="35313" min="1" max="1" chance="5" />
+				<item id="35314" min="1" max="1" chance="5" />
+				<item id="35315" min="1" max="1" chance="5" />
+				<item id="35316" min="1" max="1" chance="5" />
+				<item id="35306" min="1" max="1" chance="3" />
+				<item id="35305" min="1" max="1" chance="3" />
+				<item id="35304" min="1" max="1" chance="3" />
+				<item id="35303" min="1" max="1" chance="3" />
+				<item id="35302" min="1" max="1" chance="3" />
+				<item id="35301" min="1" max="1" chance="3" />
+				<item id="35300" min="1" max="1" chance="3" />
+				<item id="35299" min="1" max="1" chance="3" />
+				<item id="35298" min="1" max="1" chance="3" />
+				<item id="35297" min="1" max="1" chance="3" />
+				<item id="35296" min="1" max="1" chance="3" />
+				<item id="35442" min="1" max="1" chance="1" />
+				<item id="35441" min="1" max="1" chance="1" />
+				<item id="35440" min="1" max="1" chance="1" />
+				<item id="35439" min="1" max="1" chance="1" />
+				<item id="35438" min="1" max="1" chance="1" />
+				<item id="35443" min="1" max="1" chance="1" />
+				<item id="35444" min="1" max="1" chance="1" />
+				<item id="35445" min="1" max="1" chance="1" />
+				<item id="35446" min="1" max="1" chance="1" />
+				<item id="35447" min="1" max="1" chance="1" />
+				<item id="35448" min="1" max="1" chance="1" />
+				<item id="35449" min="1" max="1" chance="1" />
+				<item id="35450" min="1" max="1" chance="1" />
+				<item id="35437" min="1" max="1" chance="1" />
+				<item id="35436" min="1" max="1" chance="1" />
+				<item id="35435" min="1" max="1" chance="1" />
+				<item id="35421" min="1" max="1" chance="1" />
+				<item id="35420" min="1" max="1" chance="1" />
+				<item id="35422" min="1" max="1" chance="1" />
+				<item id="35423" min="1" max="1" chance="1" />
+				<item id="35424" min="1" max="1" chance="1" />
+				<item id="35425" min="1" max="1" chance="1" />
+				<item id="35426" min="1" max="1" chance="1" />
+				<item id="35427" min="1" max="1" chance="1" />
+				<item id="35428" min="1" max="1" chance="1" />
+				<item id="35434" min="1" max="1" chance="1" />
+				<item id="35433" min="1" max="1" chance="1" />
+				<item id="35432" min="1" max="1" chance="1" />
+				<item id="35431" min="1" max="1" chance="1" />
+				<item id="35430" min="1" max="1" chance="1" />
+				<item id="35429" min="1" max="1" chance="1" />
+				<item id="17386" min="1" max="1" chance="0.5" />
+				<item id="17385" min="1" max="1" chance="0.5" />
+				<item id="17384" min="1" max="1" chance="0.5" />
+				<item id="17383" min="1" max="1" chance="0.5" />
+				<item id="17382" min="1" max="1" chance="0.5" />
+				<item id="17414" min="1" max="1" chance="0.5" />
+				<item id="17415" min="1" max="1" chance="0.5" />
+				<item id="17387" min="1" max="1" chance="0.5" />
+				<item id="17388" min="1" max="1" chance="0.5" />
+				<item id="17389" min="1" max="1" chance="0.5" />
+				<item id="17390" min="1" max="1" chance="0.5" />
+				<item id="17391" min="1" max="1" chance="0.5" />
+				<item id="17392" min="1" max="1" chance="0.5" />
+				<item id="17404" min="1" max="1" chance="0.5" />
+				<item id="17413" min="1" max="1" chance="0.5" />
+				<item id="17412" min="1" max="1" chance="0.5" />
+				<item id="17397" min="1" max="1" chance="0.5" />
+				<item id="17398" min="1" max="1" chance="0.5" />
+				<item id="17399" min="1" max="1" chance="0.5" />
+				<item id="17400" min="1" max="1" chance="0.5" />
+				<item id="17401" min="1" max="1" chance="0.5" />
+				<item id="17402" min="1" max="1" chance="0.5" />
+				<item id="17403" min="1" max="1" chance="0.5" />
+				<item id="17405" min="1" max="1" chance="0.5" />
+				<item id="17406" min="1" max="1" chance="0.5" />
+				<item id="17407" min="1" max="1" chance="0.5" />
+				<item id="17408" min="1" max="1" chance="0.5" />
+				<item id="17409" min="1" max="1" chance="0.5" />
+				<item id="17410" min="1" max="1" chance="0.5" />
+				<item id="17411" min="1" max="1" chance="0.5" />
+				<item id="17396" min="1" max="1" chance="0.5" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25886" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<acquire exp="458933384" sp="110144" />
+		<stats>
+			<vitals hp="3533887" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="15217" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="52" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="35326" min="1" max="1" chance="9.481" /> <!-- Seraph Ring Gem -->
+				<item id="35313" min="1" max="1" chance="8.211" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35318" min="1" max="1" chance="8.207" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35307" min="1" max="1" chance="8.174" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35325" min="1" max="1" chance="6.305" /> <!-- Seraph Earring Gem -->
+				<item id="35310" min="1" max="3" chance="6.094" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35303" min="1" max="1" chance="5.072" /> <!-- Specter Shooter Fragment -->
+				<item id="35306" min="1" max="1" chance="5.056" /> <!-- Specter Retributer Fragment -->
+				<item id="35298" min="1" max="1" chance="5.045" /> <!-- Specter Slasher Fragment -->
+				<item id="35299" min="1" max="1" chance="5.032" /> <!-- Specter Avenger Fragment -->
+				<item id="35302" min="1" max="1" chance="5.031" /> <!-- Specter Thrower Fragment -->
+				<item id="35296" min="1" max="1" chance="5.025" /> <!-- Specter Shaper Fragment -->
+				<item id="35297" min="1" max="1" chance="5.018" /> <!-- Specter Cutter Fragment -->
+				<item id="35305" min="1" max="1" chance="5.009" /> <!-- Specter Caster Fragment -->
+				<item id="35320" min="1" max="1" chance="4.979" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35304" min="1" max="1" chance="4.985" /> <!-- Specter Buster Fragment -->
+				<item id="35301" min="1" max="1" chance="4.979" /> <!-- Specter Stormer Fragment -->
+				<item id="17527" min="1" max="1" chance="4.964" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35309" min="1" max="1" chance="4.945" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35300" min="1" max="1" chance="4.947" /> <!-- Specter Fighter Fragment -->
+				<item id="35315" min="1" max="1" chance="4.867" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35324" min="1" max="1" chance="4.783" /> <!-- Seraph Necklace Gem -->
+				<item id="35311" min="1" max="3" chance="4.092" /> <!-- Seraph Boot Ingredient -->
+				<item id="35312" min="2" max="6" chance="3.141" /> <!-- Seraph Shield Ingredient -->
+				<item id="35314" min="1" max="1" chance="3.118" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35319" min="1" max="1" chance="3.07" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35308" min="1" max="1" chance="3.014" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35316" min="2" max="6" chance="2.45" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="3" max="9" chance="2.101" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35321" min="3" max="9" chance="1.786" /> <!-- Seraph Glove Ingredient -->
+				<item id="35322" min="4" max="12" chance="1.55" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35323" min="4" max="12" chance="1.328" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35450" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
+				<item id="35443" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35448" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35439" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35422" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25887" level="97" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="458933384" sp="110144" raidPoints="1"/>
+		<stats>
+			<vitals hp="3533887" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="84000" magical="63000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="15216" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="45" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="35326" min="1" max="1" chance="9.441" /> <!-- Seraph Ring Gem -->
+				<item id="35313" min="1" max="1" chance="8.257" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35307" min="1" max="1" chance="8.231" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35318" min="1" max="1" chance="8.144" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35325" min="1" max="1" chance="6.312" /> <!-- Seraph Earring Gem -->
+				<item id="35310" min="1" max="3" chance="6.134" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35303" min="1" max="1" chance="5.067" /> <!-- Specter Shooter Fragment -->
+				<item id="35298" min="1" max="1" chance="5.055" /> <!-- Specter Slasher Fragment -->
+				<item id="35305" min="1" max="1" chance="5.047" /> <!-- Specter Caster Fragment -->
+				<item id="35297" min="1" max="1" chance="5.035" /> <!-- Specter Cutter Fragment -->
+				<item id="35302" min="1" max="1" chance="5.024" /> <!-- Specter Thrower Fragment -->
+				<item id="35299" min="1" max="1" chance="5.011" /> <!-- Specter Avenger Fragment -->
+				<item id="35306" min="1" max="1" chance="4.994" /> <!-- Specter Retributer Fragment -->
+				<item id="35296" min="1" max="1" chance="4.993" /> <!-- Specter Shaper Fragment -->
+				<item id="35300" min="1" max="1" chance="4.982" /> <!-- Specter Fighter Fragment -->
+				<item id="17527" min="1" max="1" chance="4.971" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35309" min="1" max="1" chance="4.957" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35304" min="1" max="1" chance="4.95" /> <!-- Specter Buster Fragment -->
+				<item id="35301" min="1" max="1" chance="4.943" /> <!-- Specter Stormer Fragment -->
+				<item id="35320" min="1" max="1" chance="4.93" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35315" min="1" max="1" chance="4.88" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35324" min="1" max="1" chance="4.679" /> <!-- Seraph Necklace Gem -->
+				<item id="35311" min="1" max="3" chance="4.125" /> <!-- Seraph Boot Ingredient -->
+				<item id="35312" min="2" max="6" chance="3.032" /> <!-- Seraph Shield Ingredient -->
+				<item id="35314" min="1" max="1" chance="3.02" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35319" min="1" max="1" chance="3.009" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35308" min="1" max="1" chance="3.009" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35316" min="2" max="6" chance="2.471" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="3" max="9" chance="2.116" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35321" min="3" max="9" chance="1.824" /> <!-- Seraph Glove Ingredient -->
+				<item id="35322" min="4" max="12" chance="1.562" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35323" min="4" max="12" chance="1.407" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35450" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Ring (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35449" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Earring (60%) -->
+				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35448" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Necklace (60%) -->
+				<item id="35439" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35444" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35443" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35421" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Cutter (60%) -->
+				<item id="35422" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Slasher (60%) -->
+				<item id="35423" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Avenger (60%) -->
+				<item id="35424" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="35425" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Stormer (60%) -->
+				<item id="35426" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Thrower (60%) -->
+				<item id="35427" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shooter (60%) -->
+				<item id="35428" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Buster (60%) -->
+				<item id="35429" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Caster (60%) -->
+				<item id="35430" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Retributer (60%) -->
+				<item id="35432" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25888" level="97" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="497862" hpRegen="10.5" mp="22428" mpRegen="3.6" />
+			<attack physical="420000" magical="315000" random="30" critical="8" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3360" magical="3420" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="174" dark="346" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="58" />
+		</collision>
+	</npc>
+	<npc id="25889" level="97" type="L2Monster" name="Revenant of Sir Calibus" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="2301925" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1316" magical="1145" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="25890" level="97" type="L2Monster" name="Soul Collector Acheron" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats>
+			<vitals hp="2301925" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1316" magical="1145" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="18" />
+			<height normal="63" />
+		</collision>
+	</npc>
+	<npc id="25891" level="97" type="L2Monster" name="Evil Spirit Tempest" title="Raid Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats>
+			<vitals hp="2301925" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1316" magical="1145" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="4416" level="9" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="14620" level="1" />
+			<skill id="14622" level="1" />
+			<skill id="14623" level="1" />
+			<skill id="14617" level="1" />
+			<skill id="14619" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="54" />
+		</collision>
+	</npc>
+	<npc id="25892" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<acquire exp="3989190184" sp="957405" />
+		<stats>
+			<vitals hp="9264416" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="840000" magical="630000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6720" magical="6840" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="210" dark="340" />
+				<attack type="DARK" value="360" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" attackable="true" />
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="300" isAggressive="false" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="15078" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="82" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17404" min="1" max="1" chance="1.832" /> <!-- Seraph Leather Leggings -->
+				<item id="17401" min="1" max="1" chance="1.832" /> <!-- Seraph Shield -->
+				<item id="17410" min="1" max="1" chance="1.826" /> <!-- Seraph Gloves -->
+				<item id="17399" min="1" max="1" chance="1.8" /> <!-- Seraph Gauntlets -->
+				<item id="17403" min="1" max="1" chance="1.798" /> <!-- Seraph Leather Armor -->
+				<item id="17405" min="1" max="1" chance="1.795" /> <!-- Seraph Leather Gloves -->
+				<item id="17408" min="1" max="1" chance="1.791" /> <!-- Seraph Tunic -->
+				<item id="17411" min="1" max="1" chance="1.79" /> <!-- Seraph Shoes -->
+				<item id="17412" min="1" max="1" chance="1.787" /> <!-- Seraph Sigil -->
+				<item id="17396" min="1" max="1" chance="1.761" /> <!-- Seraph Helmet -->
+				<item id="17400" min="1" max="1" chance="1.756" /> <!-- Seraph Boots -->
+				<item id="17409" min="1" max="1" chance="1.75" /> <!-- Seraph Stockings -->
+				<item id="17406" min="1" max="1" chance="1.735" /> <!-- Seraph Leather Boots -->
+				<item id="17398" min="1" max="1" chance="1.73" /> <!-- Seraph Gaiters -->
+				<item id="17407" min="1" max="1" chance="1.71" /> <!-- Seraph Circlet -->
+				<item id="17402" min="1" max="1" chance="1.697" /> <!-- Seraph Leather Helmet -->
+				<item id="17397" min="1" max="1" chance="1.695" /> <!-- Seraph Breastplate -->
+				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
+				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
+				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
+				<item id="17391" min="1" max="1" chance="0.3" /> <!-- Specter Caster -->
+				<item id="17386" min="1" max="1" chance="0.3" /> <!-- Specter Fighter -->
+				<item id="17387" min="1" max="1" chance="0.3" /> <!-- Specter Stormer -->
+				<item id="17388" min="1" max="1" chance="0.3" /> <!-- Specter Thrower -->
+				<item id="17389" min="1" max="1" chance="0.3" /> <!-- Specter Shooter -->
+				<item id="17390" min="1" max="1" chance="0.3" /> <!-- Specter Buster -->
+				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
+				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
+				<item id="19448" min="1" max="1" chance="78.2" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="45937" min="1" max="1" chance="24.18" /> <!-- Spirit Stone: Hair Accessory -->
+				<item id="36978" min="1" max="1" chance="23.75" /> <!-- Scroll: Enchant Hair Accessory -->
+				<item id="37780" min="1" max="1" chance="23.64" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
+				<item id="19447" min="1" max="1" chance="20.82" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17705" min="1" max="1" chance="16.89" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17706" min="1" max="1" chance="16.66" /> <!-- Lv. 5 Ancient INT Dye -->
+				<item id="17704" min="1" max="1" chance="16.52" /> <!-- Lv. 5 Ancient DEX Dye -->
+				<item id="17708" min="1" max="1" chance="16.35" /> <!-- Lv. 5 Ancient MEN Dye -->
+				<item id="17703" min="1" max="1" chance="15.89" /> <!-- Lv. 5 Ancient STR Dye -->
+				<item id="17707" min="1" max="1" chance="15.86" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="37771" min="1" max="1" chance="6.043" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
+				<item id="19506" min="1" max="1" chance="1.731" /> <!-- Teal Soul Crystal (R95-grade) -->
+				<item id="19505" min="1" max="1" chance="1.726" /> <!-- Yellow Soul Crystal (R95-grade) -->
+				<item id="19507" min="1" max="1" chance="1.721" /> <!-- Purple Soul Crystal (R95-grade) -->
+				<item id="39629" min="2" max="2" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25893" level="97" type="L2Npc" name="Strain">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="17300" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="21469" magical="9457" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="614" magical="677" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="25894" level="94" type="L2RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="116034352" sp="27848" />
+		<stats>
+			<vitals hp="1370513" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="273000" magical="195000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2240" magical="2700" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="207" dark="404" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14730" level="1" /> <!-- Raid Boss (Lv. 94) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="900" />
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="36513" min="3" max="3" chance="31.07" /> <!-- Elcyum Powder -->
+				<item id="17526" min="1" max="1" chance="1.935" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="38001" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Gloves Crafting Pack -->
+				<item id="38002" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Boots Crafting Pack -->
+				<item id="38003" min="1" max="1" chance="0.75" /> <!-- Twilight Circlet Crafting Pack -->
+				<item id="38004" min="1" max="1" chance="0.75" /> <!-- Twilight Tunic Crafting Pack -->
+				<item id="38005" min="1" max="1" chance="0.75" /> <!-- Twilight Stockings Crafting Pack -->
+				<item id="38006" min="1" max="1" chance="0.75" /> <!-- Twilight Gloves Crafting Pack -->
+				<item id="38007" min="1" max="1" chance="0.75" /> <!-- Twilight Shoes Crafting Pack -->
+				<item id="38000" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Leggings Crafting Pack -->
+				<item id="37999" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Armor Crafting Pack -->
+				<item id="37998" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Helmet Crafting Pack -->
+				<item id="37997" min="1" max="1" chance="0.75" /> <!-- Twilight Shield Crafting Pack -->
+				<item id="37996" min="1" max="1" chance="0.75" /> <!-- Twilight Boots Crafting Pack -->
+				<item id="37995" min="1" max="1" chance="0.75" /> <!-- Twilight Gauntlets Crafting Pack -->
+				<item id="37994" min="1" max="1" chance="0.75" /> <!-- Twilight Gaiters Crafting Pack -->
+				<item id="37993" min="1" max="1" chance="0.75" /> <!-- Twilight Breastplate Crafting Pack -->
+				<item id="37992" min="1" max="1" chance="0.75" /> <!-- Twilight Helmet Crafting Pack -->
+				<item id="38008" min="1" max="1" chance="0.75" /> <!-- Twilight Sigil Crafting Pack -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="25895" level="99" type="L2Npc" name="Lyn Draco">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats>
+			<vitals hp="1594380" hpRegen="7.5" mp="27817" mpRegen="2.7" />
+			<attack physical="121440" magical="66000" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="3840" magical="3540" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="22" />
+		</collision>
+	</npc>
+	<npc id="25896" level="99" type="L2Npc" name="Lyn Draco">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats>
+			<vitals hp="1594380" hpRegen="7.5" mp="27817" mpRegen="2.7" />
+			<attack physical="121440" magical="66000" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="3840" magical="3540" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="35" />
+			<height normal="37" />
+		</collision>
+	</npc>
+	<npc id="25897" level="99" type="L2Npc" name="Lyn Draco">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats>
+			<vitals hp="1594380" hpRegen="7.5" mp="27817" mpRegen="2.7" />
+			<attack physical="121440" magical="66000" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="3540" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="25898" level="99" type="L2Npc" name="Cyclone">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats>
+			<vitals hp="20111" hpRegen="7.5" mp="27817" mpRegen="2.7" />
+			<attack physical="345000" magical="200001" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="3540" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="20" />
+				<run ground="40" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="15599" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<ai aggroRange="400" clanHelpRange="400" />
+		<collision>
+			<radius normal="30" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="25899" level="99" type="L2Npc" name="Lindvior" title="Wind Dragon">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DRAGON</race>
+		<stats>
+			<vitals hp="1534550390" hpRegen="7.5" mp="27817" mpRegen="2.7" />
+			<attack physical="121440" magical="66000" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3840" magical="3540" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="10" />
+			<skill id="5464" level="1" />
+			<skill id="15638" level="1" />
+			<skill id="4415" level="1" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="350" />
+			<height normal="210" />
+		</collision>
+	</npc>
+</list>

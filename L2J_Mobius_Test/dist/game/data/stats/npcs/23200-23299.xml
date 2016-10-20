@@ -1,0 +1,4952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="23200" level="97" type="L2Monster" name="Turan the Severed Ghost">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="13288424" sp="36629" />
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="17.5" />
+			<height normal="52.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20173" max="46689" chance="70" />
+				<item id="35296" min="1" max="1" chance="0.4" />
+				<item id="35420" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="72.37" />
+				<item id="36534" min="1" max="1" chance="6.805" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23201" level="95" type="L2Monster" name="Nagdu the Deformed Merman">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="12348772" sp="33498" />
+		<stats>
+			<vitals hp="1084382" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="214450" magical="96804" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="401" magical="432" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="18958" max="44286" chance="70" />
+				<item id="36558" min="1" max="1" chance="4.4" />
+				<item id="35312" min="1" max="1" chance="1.38" />
+				<item id="36559" min="1" max="1" chance="0.42017" />
+				<item id="17401" min="1" max="1" chance="0.04299" />
+				<item id="35436" min="1" max="1" chance="0.022" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="32.74" />
+				<item id="36559" min="1" max="1" chance="3.032" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23202" level="96" type="L2Monster" name="Hakal the Butchered">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BEAST</race>
+		<acquire exp="12663060" sp="34626" />
+		<stats>
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="226107" magical="102434" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="616" magical="445" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="3" />
+			<skill id="15093" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+			<skill id="15061" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="27" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="19442" max="45306" chance="70" />
+				<item id="35314" min="1" max="1" chance="0.75188" />
+				<item id="35438" min="1" max="1" chance="0.013" />
+			</death>
+			<corpse>
+				<item id="36559" min="1" max="1" chance="6.027" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23203" level="95" type="L2Monster" name="Centa the Standing Beast">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ANIMAL</race>
+		<acquire exp="12348772" sp="2963" />
+		<stats>
+			<vitals hp="650630" hpRegen="10.5" mp="22058" mpRegen="3.6" />
+			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1920" magical="1650" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="44.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17386" min="1" max="1" chance="0.003" /> <!-- Specter Fighter -->
+				<item id="57" min="7836" max="18277" chance="70" /> <!-- Adena -->
+				<item id="35300" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Fragment -->
+				<item id="35424" min="1" max="1" chance="0.03" /> <!-- Recipe: Specter Fighter (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="14.24" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.384" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23204" level="95" type="L2Monster" name="Adidaiu of the Killer Fangs">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ANIMAL</race>
+		<acquire exp="12348772" sp="33498" />
+		<stats>
+			<vitals hp="650630" hpRegen="7.5" mp="22058" mpRegen="2.7" />
+			<attack physical="40000" magical="30000" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1920" magical="1650" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="32.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17405" min="1" max="1" chance="0.03" /> <!-- Seraph Leather Gloves -->
+				<item id="57" min="7836" max="18277" chance="70" /> <!-- Adena -->
+				<item id="35316" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35440" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36559" min="1" max="1" chance="2.734" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23205" level="97" type="L2Monster" name="Haskal the Floating Ghost">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="13288424" sp="36629" />
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="41" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20081" max="46671" chance="70" />
+				<item id="35320" min="1" max="1" chance="0.86207" />
+				<item id="35444" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="68.56" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23206" level="97" type="L2Monster" name="Samita the Ex-Torture Expert">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>GIANT</race>
+		<acquire exp="13288424" sp="36629" />
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="11" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="46" />
+			<height normal="71.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20071" max="46798" chance="70" />
+				<item id="35323" min="1" max="1" chance="1.6" />
+				<item id="35447" min="1" max="1" chance="0.09497" />
+				<item id="17412" min="1" max="1" chance="0.046" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="66.91" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23207" level="96" type="L2Monster" name="Gazem" title="Fortress Scout">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="12663060" sp="34626" />
+		<stats>
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="409615" magical="102434" random="30" critical="4" accuracy="95.25" attackSpeed="162" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="616" magical="445" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4415" level="9" />
+			<skill id="4416" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="18" />
+			<height normal="27.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="19656" max="44639" chance="70" />
+				<item id="35302" min="1" max="1" chance="0.86207" />
+				<item id="35426" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36563" min="1" max="1" chance="16.69" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23208" level="96" type="L2Monster" name="Rosenia's Divine Spirit">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="12663060" sp="34626" />
+		<stats>
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="226107" magical="102434" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="411" magical="445" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="15074" level="1" />
+			<skill id="15117" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="15093" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="38" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="19440" max="45305" chance="70" />
+				<item id="35319" min="1" max="1" chance="0.70922" />
+				<item id="35443" min="1" max="1" chance="0.018" />
+			</death>
+			<corpse>
+				<item id="19440" min="1" max="1" chance="8.43799" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23209" level="97" type="L2Monster" name="Kelbara the Dualsword Slaughterer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="13288424" sp="36629" />
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="28" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20097" max="46650" chance="70" />
+				<item id="36558" min="1" max="1" chance="4.7" />
+				<item id="35315" min="1" max="1" chance="1.18" />
+				<item id="36559" min="1" max="1" chance="0.3003" />
+				<item id="35439" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="22.03" />
+				<item id="36559" min="1" max="1" chance="2.134" />
+				<item id="36893" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23210" level="95" type="L2Monster" name="Mandragora of Joy and Sorrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="5340345" sp="22864" />
+		<stats>
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="80473" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="17.8" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="4746" max="11062" chance="70" />
+				<item id="36558" min="1" max="1" chance="9.65" />
+				<item id="36559" min="1" max="1" chance="0.6993" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="8.03399" />
+				<item id="36559" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23211" level="95" type="L2Monster" name="Mandragora of Prayer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="5340345" sp="22864" />
+		<stats>
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="80473" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="26" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="4742" max="11070" chance="70" />
+				<item id="36558" min="1" max="1" chance="9.25" />
+				<item id="36559" min="1" max="1" chance="0.9009" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="5.364" />
+				<item id="36559" min="1" max="1" chance="0.3003" />
+				<item id="36911" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23212" level="97" type="L2Monster" name="Scaldisect the Furious">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="131345081" sp="36204" />
+		<stats>
+			<vitals hp="4795678" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="35" />
+			<height normal="32.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20126" max="46788" chance="70" />
+				<item id="36558" min="1" max="1" chance="4.4" />
+				<item id="35324" min="1" max="1" chance="1.12" />
+				<item id="36559" min="1" max="1" chance="0.3003" />
+				<item id="35448" min="1" max="1" chance="0.0055" />
+			</death>
+			<corpse>
+				<item id="36534" min="1" max="1" chance="6.813" />
+				<item id="36559" min="1" max="1" chance="3.14199" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23213" level="97" type="L2Monster" name="Beggar Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="3972480" sp="953" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="1419" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2695" max="6292" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.4" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="3.333" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23214" level="97" type="L2Monster" name="Beggar Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="3972480" sp="953" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="1419" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2695" max="6292" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.9" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="4.917" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23215" level="98" type="L2Monster" name="Zofan">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="5516540" sp="1323" />
+		<stats>
+			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
+			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2064" magical="1444" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="7524" max="17534" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="7.935" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23216" level="98" type="L2Monster" name="Zofan">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="5516540" sp="1323" />
+		<stats>
+			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
+			<attack physical="43000" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2064" magical="1444" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="37" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="7524" max="17534" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="7.864" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23217" level="97" type="L2Monster" name="Young Zofan">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="3433144" sp="823" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="1419" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2692" max="6284" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="4.19" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23218" level="97" type="L2Monster" name="Young Zofan">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="3433144" sp="14936" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="42000" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="1419" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2692" max="6284" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="4.247" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23219" level="98" type="L2Monster" name="Engineer Zofan">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="6107876" sp="16954" />
+		<stats>
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="304316" magical="167646" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1960" magical="979" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="15515" max="35914" chance="70" />
+				<item id="35332" min="1" max="1" chance="0.2" />
+				<item id="35456" min="1" max="1" chance="0.01333" />
+			</death>
+			<corpse>
+				<item id="36534" min="1" max="1" chance="5.301" />
+				<item id="19440" min="1" max="1" chance="3.411" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23220" level="99" type="L2Monster" name="Kunda Watchman">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="27497785" sp="76814" />
+		<stats>
+			<vitals hp="1536019" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="387132" magical="259992" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2425" magical="1775" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="21232" max="49406" chance="70" />
+				<item id="35333" min="1" max="1" chance="0.4" />
+				<item id="35334" min="1" max="1" chance="0.4" />
+				<item id="35457" min="1" max="1" chance="0.01333" />
+				<item id="35458" min="1" max="1" chance="0.01333" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="78.32" />
+				<item id="36534" min="1" max="1" chance="7.205" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23221" level="98" type="L2Monster" name="Adac the Engineer" title="Chief Engineer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="21918329" sp="5260" />
+		<stats>
+			<vitals hp="921001" hpRegen="10.5" mp="23174" mpRegen="3.6" />
+			<attack physical="62780" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2081" magical="2105" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="10030" max="23373" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="2.409" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="12.69" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="19440" min="1" max="1" chance="1.104" /> <!-- Gemstone (R-grade) -->
+				<item id="36559" min="1" max="1" chance="1.112" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23222" level="98" type="L2Monster" name="Borok the Engineer" title="Chief Engineer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="21918329" sp="5260" />
+		<stats>
+			<vitals hp="921001" hpRegen="10.5" mp="23174" mpRegen="3.6" />
+			<attack physical="62780" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2081" magical="2105" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="10030" max="23373" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="2.385" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="12.17" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.166" /> <!-- Accessory Gem (High-grade) -->
+				<item id="19440" min="1" max="1" chance="1.11" /> <!-- Gemstone (R-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23223" level="98" type="L2Monster" name="Koja the Engineer" title="Chief Engineer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="14612219" sp="202801" />
+		<stats>
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="367191" magical="167646" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1960" magical="1427" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20722" max="48026" chance="70" />
+				<item id="36558" min="1" max="1" chance="36.7" />
+				<item id="36559" min="1" max="1" chance="4.15" />
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="23224" level="99" type="L2Monster" name="Kunda Guardian">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="36600943" sp="161369" />
+		<stats>
+			<vitals hp="2465242" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="585033" magical="137807" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1732" magical="1051" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="10289" max="23983" chance="70" />
+				<item id="35328" min="1" max="1" chance="0.25" />
+				<item id="35452" min="1" max="1" chance="0.01333" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="36.69" />
+				<item id="36534" min="1" max="1" chance="3.563" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23225" level="99" type="L2Monster" name="Kunda Berserker">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="36600943" sp="161369" />
+		<stats>
+			<vitals hp="2465242" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="585033" magical="137807" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1732" magical="1051" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="10277" max="23982" chance="70" />
+				<item id="35330" min="1" max="1" chance="0.34965" />
+				<item id="35454" min="1" max="1" chance="0.01333" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="38.42" />
+				<item id="36534" min="1" max="1" chance="3.52299" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23226" level="99" type="L2Monster" name="Kunda Executor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="36600943" sp="161369" />
+		<stats>
+			<vitals hp="2465242" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="491767" magical="137807" random="30" critical="4" accuracy="95.25" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="1732" magical="1051" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="4415" level="12" />
+			<skill id="5462" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="10279" max="23972" chance="70" />
+				<item id="35337" min="1" max="1" chance="0.25974" />
+				<item id="35461" min="1" max="1" chance="0.01333" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="38.09" />
+				<item id="36534" min="1" max="1" chance="3.46" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23227" level="97" type="L2Monster" name="Beggar Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="5830877" sp="1399" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="2069" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.921" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="4.91" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23228" level="97" type="L2Monster" name="Beggar Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="5830877" sp="1399" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="2069" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="4.942" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="4.924" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="36898" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Leather Braid - Combination -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23229" level="98" type="L2Monster" name="Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="17467748" sp="4192" />
+		<stats>
+			<vitals hp="921001" hpRegen="10.5" mp="23174" mpRegen="3.6" />
+			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2064" magical="2105" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
+				<item id="57" min="10020" max="23350" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="13.19" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.211" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.0075" /> <!-- Recipe: Adamantite Wire - Downgrade -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23230" level="98" type="L2Monster" name="Zofan">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="9982682" sp="2395" />
+		<stats>
+			<vitals hp="460500" hpRegen="10.5" mp="23174" mpRegen="3.6" />
+			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2064" magical="2105" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="37" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17434" min="1" max="1" chance="0.0075" /> <!-- Eternal Boots -->
+				<item id="57" min="7533" max="17555" chance="70" /> <!-- Adena -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="7.888" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23231" level="97" type="L2Monster" name="Young Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="9291987" sp="2230" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="2069" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="4.258" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23232" level="97" type="L2Monster" name="Young Zofan">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="9291987" sp="2230" />
+		<stats>
+			<vitals hp="369449" hpRegen="10.5" mp="22800" mpRegen="3.6" />
+			<attack physical="61320" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="2069" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2701" max="6304" chance="70" /> <!-- Adena -->
+				<item id="35355" min="1" max="1" chance="0.075" /> <!-- Eternal Necklace Gem -->
+				<item id="35479" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Necklace (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="4.258" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (High-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23233" level="98" type="L2Monster" name="Engineer Zofan" title="Northern Device Supervisor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="6107876" sp="16954" />
+		<stats>
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="304316" magical="167646" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1960" magical="979" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="15494" max="36134" chance="70" />
+				<item id="35332" min="1" max="1" chance="0.52083" />
+				<item id="35456" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36534" min="1" max="1" chance="5.235" />
+				<item id="19440" min="1" max="1" chance="3.299" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23234" level="98" type="L2Monster" name="Engineer Zofan" title="Southern Device Supervisor">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="20292155" sp="56327" />
+		<stats>
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="367191" magical="167646" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1620" magical="1427" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20634" max="48122" chance="70" />
+				<item id="35332" min="1" max="1" chance="0.5" />
+				<item id="35456" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36534" min="1" max="1" chance="7.059" />
+				<item id="19440" min="1" max="1" chance="4.487" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23235" level="99" type="L2Monster" name="Kunda">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="19798405" sp="55306" />
+		<stats>
+			<vitals hp="1536019" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="320842" magical="177378" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2010" magical="1216" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="21976" max="48928" chance="70" />
+				<item id="35328" min="1" max="1" chance="0.75188" />
+				<item id="35452" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="79.16" />
+				<item id="36534" min="1" max="1" chance="7.226" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23236" level="99" type="L2Monster" name="Kunda">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="36384750" sp="101639" />
+		<stats>
+			<vitals hp="3072038" hpRegen="7.5" mp="35679" mpRegen="2.7" />
+			<attack physical="387132" magical="177378" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1661" magical="1471" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="46" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="28488" max="65662" chance="70" />
+				<item id="35328" min="1" max="1" chance="0.75188" />
+				<item id="35452" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="3" chance="51.62" />
+				<item id="36534" min="1" max="1" chance="9.592" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23237" level="98" type="L2Monster" name="Engineer Zofan">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="20292155" sp="56327" />
+		<stats>
+			<vitals hp="1535001" hpRegen="7.5" mp="35109" mpRegen="2.7" />
+			<attack physical="367191" magical="167646" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1620" magical="1427" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="24" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="20627" max="48130" chance="70" />
+				<item id="35332" min="1" max="1" chance="0.54945" />
+				<item id="35456" min="1" max="1" chance="0.023" />
+			</death>
+			<corpse>
+				<item id="36534" min="1" max="1" chance="7.04999" />
+				<item id="19440" min="1" max="1" chance="4.501" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23238" level="97" type="L2Npc" name="Kurklin the Shredder">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="65" />
+		</collision>
+	</npc>
+	<npc id="23239" level="97" type="L2Npc" name="Heidmann">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="64" />
+		</collision>
+	</npc>
+	<npc id="23240" level="95" type="L2Monster" name="Mandragora">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="4844514" sp="20741" />
+		<stats>
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="37605" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="13" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="6162" max="14394" chance="70" />
+				<item id="36558" min="1" max="1" chance="11" />
+				<item id="36559" min="1" max="1" chance="1" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="6.885" />
+				<item id="19440" min="1" max="1" chance="0.75188" />
+				<item id="36559" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23241" level="95" type="L2Monster" name="Mandragora">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>PLANT</race>
+		<acquire exp="4844514" sp="20741" />
+		<stats>
+			<vitals hp="556924" hpRegen="7.5" mp="33418" mpRegen="2.7" />
+			<attack physical="133659" magical="37605" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="715" magical="770" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="4416" level="5" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="14" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="6162" max="14394" chance="70" />
+				<item id="36558" min="1" max="1" chance="10.9" />
+				<item id="36559" min="1" max="1" chance="1.05" />
+			</death>
+			<corpse>
+				<item id="36558" min="1" max="1" chance="6.935" />
+				<item id="19440" min="1" max="1" chance="0.75188" />
+				<item id="36559" min="1" max="1" chance="0.75188" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23242" level="97" type="L2Monster" name="Pafuron">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="13288424" sp="36629" />
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="422" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="65" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="26094" max="60839" chance="70" />
+				<item id="35318" min="1" max="1" chance="0.82645" />
+				<item id="35442" min="1" max="1" chance="0.07502" />
+				<item id="17407" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36534" min="1" max="1" chance="8.904" />
+				<item id="36886" min="1" max="1" chance="0.3003" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23243" level="97" type="L2Monster" name="Krutati">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="13288424" sp="36629" />
+		<stats>
+			<vitals hp="1198920" hpRegen="7.5" mp="34542" mpRegen="2.7" />
+			<attack physical="238542" magical="108522" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="632" magical="458" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="64" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="26108" max="60828" chance="70" />
+				<item id="35307" min="1" max="1" chance="1.65" />
+				<item id="35431" min="1" max="1" chance="0.07502" />
+				<item id="17396" min="1" max="1" chance="0.03" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="5" chance="65.32" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23244" level="97" type="L2Monster" name="Alluring Irene">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DEMONIC</race>
+		<acquire exp="12928248" sp="3102" />
+		<stats>
+			<vitals hp="651824" hpRegen="10.5" mp="22428" mpRegen="3.6" />
+			<attack physical="42000" magical="31500" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1344" magical="1710" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="247" dark="444" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="49" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="10635" max="24827" chance="70" /> <!-- Adena -->
+				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35444" min="1" max="1" chance="0.03" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="43.67" /> <!-- Synthetic Braid -->
+				<item id="19440" min="1" max="1" chance="2.566" /> <!-- Gemstone (R-grade) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23245" level="96" type="L2Monster" name="Isaad" title="Watchman of the Eye of Infinity">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="13015848" sp="36629" />
+		<stats>
+			<vitals hp="1086371" hpRegen="7.5" mp="33979" mpRegen="2.7" />
+			<attack physical="409615" magical="102434" random="30" critical="4" accuracy="95.25" attackSpeed="162" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="616" magical="445" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="200" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5464" level="1" />
+			<skill id="4415" level="9" />
+			<skill id="4416" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai aggroRange="600" clanHelpRange="600" />
+		<collision>
+			<radius normal="18" />
+			<height normal="27.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="25577" max="59523" chance="70" />
+				<item id="35304" min="1" max="1" chance="1.35" />
+				<item id="35428" min="1" max="1" chance="0.03" />
+				<item id="17390" min="1" max="1" chance="0.003" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="93.63" />
+				<item id="36534" min="1" max="1" chance="8.729" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23246" level="93" type="L2Monster" name="Spicula 1">
+		<race>HUMANOID</race>
+		<acquire exp="1023772" sp="245" />
+		<stats>
+			<vitals hp="30036" hpRegen="7.5" mp="2132" mpRegen="2.7" />
+			<attack physical="18150" magical="43800" random="30" critical="4" accuracy="95.25" attackSpeed="353" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="924" magical="825" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4411" level="13" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="13" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="974" max="2266" chance="70" />
+				<item id="36528" min="1" max="1" chance="4.5" />
+				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.66667" />
+				<item id="19440" min="1" max="1" chance="0.13004" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23247" level="93" type="L2Monster" name="Spicula 2">
+		<race>HUMANOID</race>
+		<acquire exp="1023772" sp="245" />
+		<stats>
+			<vitals hp="30036" hpRegen="7.5" mp="2132" mpRegen="2.7" />
+			<attack physical="18150" magical="43800" random="30" critical="4" accuracy="95.25" attackSpeed="353" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="924" magical="825" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4411" level="13" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="13" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="974" max="2266" chance="70" />
+				<item id="36528" min="1" max="1" chance="4.5" />
+				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.66667" />
+				<item id="19440" min="1" max="1" chance="0.13298" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23248" level="95" type="L2Monster" name="Spicula 3">
+		<race>HUMANOID</race>
+		<acquire exp="1244208" sp="298" />
+		<stats>
+			<vitals hp="46109" hpRegen="7.5" mp="3308" mpRegen="2.7" />
+			<attack physical="53200" magical="53100" random="30" critical="8" accuracy="95.25" attackSpeed="353" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="1056" magical="1045" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1502" max="3467" chance="70" />
+				<item id="36528" min="1" max="1" chance="4.5" />
+				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.64516" />
+				<item id="19440" min="1" max="1" chance="0.13004" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23249" level="95" type="L2Monster" name="Spicula 4">
+		<race>HUMANOID</race>
+		<acquire exp="1244208" sp="298" />
+		<stats>
+			<vitals hp="46109" hpRegen="7.5" mp="3308" mpRegen="2.7" />
+			<attack physical="53200" magical="53100" random="30" critical="8" accuracy="95.25" attackSpeed="353" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="1056" magical="1045" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1533" max="3474" chance="70" />
+				<item id="36528" min="1" max="1" chance="4.5" />
+				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.64516" />
+				<item id="19440" min="1" max="1" chance="0.13004" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23250" level="94" type="L2Monster" name="Spicula 5">
+		<race>HUMANOID</race>
+		<acquire exp="1318110" sp="316" />
+		<stats>
+			<vitals hp="45302" hpRegen="7.5" mp="2169" mpRegen="2.7" />
+			<attack physical="17290" magical="26550" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1188" magical="1155" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1182" max="2757" chance="70" />
+				<item id="36528" min="1" max="1" chance="4.5" />
+				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.64516" />
+				<item id="19440" min="1" max="1" chance="0.13298" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23251" level="94" type="L2Monster" name="Spicula 6">
+		<race>HUMANOID</race>
+		<acquire exp="1318110" sp="316" />
+		<stats>
+			<vitals hp="45302" hpRegen="7.5" mp="2169" mpRegen="2.7" />
+			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1848" magical="1485" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1181" max="2756" chance="70" />
+				<item id="36528" min="1" max="1" chance="4.5" />
+				<item id="36529" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.64516" />
+				<item id="19440" min="1" max="1" chance="0.13298" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23252" level="93" type="L2Monster" name="Yin Spicula 1">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="1386150" sp="332" />
+		<stats>
+			<vitals hp="45053" hpRegen="10.5" mp="2132" mpRegen="3.6" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1749" magical="1403" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4411" level="12" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="23253" level="93" type="L2Monster" name="Yin Spicula 2">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="1386150" sp="332" />
+		<stats>
+			<vitals hp="45053" hpRegen="10.5" mp="2132" mpRegen="3.6" />
+			<attack physical="34650" magical="27225" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1749" magical="1403" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4411" level="12" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="23254" level="93" type="L2Monster" name="Yin Spicula">
+		<!-- Source: www.l2wiki.com (2015-10-31) -->
+		<race>HUMANOID</race>
+		<acquire exp="1386150" sp="332" />
+		<stats>
+			<vitals hp="45053" hpRegen="10.5" mp="2132" mpRegen="3.6" />
+			<attack physical="18975" magical="28738" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1419" magical="1128" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="1" />
+			<skill id="4411" level="12" />
+			<skill id="4413" level="12" />
+			<skill id="4410" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="826" max="1925" chance="70" /> <!-- Adena -->
+				<item id="36837" min="1" max="1" chance="1.338" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36775" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="13.99" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="2.88" /> <!-- Synthetic Braid -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23255" level="94" type="L2Monster" name="Light Golem">
+		<race>CONSTRUCT</race>
+		<acquire exp="1453348" sp="348" />
+		<stats>
+			<vitals hp="45302" hpRegen="7.5" mp="2169" mpRegen="2.7" />
+			<attack physical="18786" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1265" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="15" />
+			<height normal="47.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1181" max="2758" chance="70" />
+				<item id="36528" min="1" max="1" chance="4" />
+				<item id="36529" min="1" max="1" chance="1" />
+				<item id="9548" min="1" max="1" chance="0.5" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="0.64516" />
+				<item id="36908" min="1" max="1" chance="0.45045" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23256" level="95" type="L2Monster" name="Draw Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1371630" sp="329" />
+		<stats>
+			<vitals hp="46109" hpRegen="10.5" mp="2205" mpRegen="3.6" />
+			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1848" magical="1485" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="130" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="21" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="130" max="304" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.3" /> <!-- Dark Stone -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36884" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Upgrade -->
+				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
+				<item id="36886" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Upgrade -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23257" level="95" type="L2Monster" name="Twosword Golem">
+		<race>CONSTRUCT</race>
+		<acquire exp="1371630" sp="329" />
+		<stats>
+			<vitals hp="46109" hpRegen="7.5" mp="2205" mpRegen="2.7" />
+			<attack physical="18786" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1265" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="53" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="41.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1219" max="2849" chance="70" />
+				<item id="36827" min="1" max="1" chance="0.4" />
+				<item id="9546" min="1" max="1" chance="0.15015" />
+				<item id="36765" min="1" max="1" chance="0.01333" />
+				<item id="17326" min="1" max="1" chance="0.005" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="10" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23258" level="94" type="L2Monster" name="Crane Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1453348" sp="348" />
+		<stats>
+			<vitals hp="45302" hpRegen="10.5" mp="2169" mpRegen="3.6" />
+			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1848" magical="1485" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="72" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
+	</npc>
+	<npc id="23259" level="96" type="L2Monster" name="Broken-bodied Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1402250" sp="336" />
+		<stats>
+			<vitals hp="46371" hpRegen="10.5" mp="2242" mpRegen="3.6" />
+			<attack physical="26600" magical="35400" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1373" magical="1188" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="30" />
+			<height normal="36" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17338" min="1" max="1" chance="0.0075" /> <!-- Twilight Helmet -->
+				<item id="57" min="732" max="1709" chance="70" /> <!-- Adena -->
+				<item id="36836" min="1" max="1" chance="1.564" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36774" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="24.78" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23260" level="94" type="L2Monster" name="Summoned Golem Body">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="1453348" sp="6160" />
+		<stats>
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="24070" magical="8974" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1151" magical="822" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="15" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1182" max="2755" chance="70" />
+				<item id="36838" min="1" max="1" chance="1.5" />
+				<item id="36776" min="1" max="1" chance="0.04" />
+				<item id="17527" min="1" max="1" chance="0.02" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="5" />
+				<item id="36908" min="1" max="1" chance="0.5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23261" level="96" type="L2Monster" name="Broken Berserk Golem">
+		<race>CONSTRUCT</race>
+		<acquire exp="1494765" sp="358" />
+		<stats>
+			<vitals hp="61479" hpRegen="7.5" mp="2205" mpRegen="2.7" />
+			<attack physical="22943" magical="42038" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1419" magical="1128" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="18" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="40.8" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1553" max="7197" chance="70" />
+				<item id="36839" min="1" max="1" chance="2.5" />
+				<item id="36777" min="1" max="1" chance="0.1" />
+				<item id="17341" min="1" max="1" chance="0.01333" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+		</dropLists>
+	</npc>
+	<npc id="23262" level="95" type="L2Monster" name="Spicula Elite Soldier">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="1494765" sp="358" />
+		<stats>
+			<vitals hp="61479" hpRegen="10.5" mp="2205" mpRegen="3.6" />
+			<attack physical="19950" magical="53100" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1155" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<ai type="BALANCED" aggroRange="600" clanHelpRange="500" isAggressive="true">
+			<clanList>
+				<clan>SPICULA_AGGRO</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17342" min="1" max="1" chance="0.03" /> <!-- Twilight Boots -->
+				<item id="57" min="801" max="1868" chance="70" /> <!-- Adena -->
+				<item id="36840" min="1" max="1" chance="2.304" /> <!-- Twilight Boot Ingredient -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="36778" min="1" max="1" chance="0.03" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="9552" min="1" max="1" chance="0.03" /> <!-- Fire Crystal -->
+				<item id="9554" min="1" max="1" chance="0.03" /> <!-- Earth Crystal -->
+				<item id="9556" min="1" max="1" chance="0.03" /> <!-- Dark Crystal -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23263" level="93" type="L2Monster" name="Broken Golem of Repairs">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1791830" sp="430" />
+		<stats>
+			<vitals hp="60071" hpRegen="10.5" mp="2132" mpRegen="3.6" />
+			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1155" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="72" />
+				<run ground="190" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17343" min="1" max="1" chance="0.03" /> <!-- Twilight Shield -->
+				<item id="57" min="754" max="1757" chance="70" /> <!-- Adena -->
+				<item id="36841" min="1" max="1" chance="2.105" /> <!-- Twilight Shield Ingredient -->
+				<item id="36779" min="1" max="1" chance="0.3" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25.56" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23264" level="94" type="L2Monster" name="Broken Drill Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1833182" sp="439" />
+		<stats>
+			<vitals hp="60403" hpRegen="10.5" mp="2169" mpRegen="3.6" />
+			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1155" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="72" />
+				<run ground="190" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17329" min="1" max="1" chance="0.003" /> <!-- Apocalypse Stormer -->
+				<item id="57" min="775" max="1808" chance="70" /> <!-- Adena -->
+				<item id="36830" min="1" max="1" chance="0.3" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36768" min="1" max="1" chance="0.03" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="27.3" /> <!-- Thin Braid -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23265" level="93" type="L2Monster" name="Broken Excavator Golem">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="1791830" sp="7529" />
+		<stats>
+			<vitals hp="125145" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="22828" magical="8480" random="30" critical="4" accuracy="95.25" attackSpeed="308" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1122" magical="798" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="72" />
+				<run ground="190" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="23" />
+			<height normal="32.8" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1425" max="3320" chance="70" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="4" />
+				<item id="36883" min="1" max="1" chance="0.4" />
+				<item id="36884" min="1" max="1" chance="0.4" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23266" level="95" type="L2Monster" name="Broken Pincer Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="1730317" sp="415" />
+		<stats>
+			<vitals hp="61479" hpRegen="10.5" mp="2205" mpRegen="3.6" />
+			<attack physical="18786" magical="25444" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1155" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="130" />
+				<run ground="190" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>GOLEM</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" />
+			<height normal="30" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="801" max="1868" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="12.03" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="1.006" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="9.018" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23267" level="94" type="L2Monster" name="Screw Golem">
+		<race>CONSTRUCT</race>
+		<acquire exp="1833182" sp="7770" />
+		<stats>
+			<vitals hp="60403" hpRegen="7.5" mp="2169" mpRegen="2.7" />
+			<attack physical="18786" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="433" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1320" magical="1265" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4411" level="14" />
+			<skill id="4410" level="14" />
+			<skill id="4414" level="1" />
+			<skill id="4413" level="12" />
+			<skill id="4412" level="12" />
+		</skillList>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clanList>
+				<clan>GOLEMS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="31" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1330" max="3104" chance="70" />
+				<item id="36828" min="1" max="1" chance="0.4" />
+				<item id="36766" min="1" max="1" chance="0.02" />
+				<item id="17327" min="1" max="1" chance="0.005" />
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="7" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="81" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="12" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="10" />
+				<item id="36533" min="1" max="1" chance="2" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23268" level="93" type="L2Monster" name="Spicula Scout Golem">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>CONSTRUCT</race>
+		<acquire exp="3221283" sp="13535" />
+		<stats>
+			<vitals hp="175202" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="22828" magical="8480" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1122" magical="798" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>553</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5465" level="1" />
+			<skill id="4416" level="2" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="43.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1745" max="4067" chance="70" />
+				<item id="36528" min="1" max="1" chance="5" />
+				<item id="36529" min="1" max="1" chance="1" />
+				<item id="9550" min="1" max="1" chance="0.66667" />
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="1" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23269" level="94" type="L2Monster" name="Battle Golem">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="3295625" sp="790" />
+		<stats>
+			<vitals hp="201339" hpRegen="7.5" mp="201339" mpRegen="2.7" />
+			<attack physical="45386" magical="43144" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1848" magical="1485" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="53" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="18" />
+			<height normal="41.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1045" max="2438" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="14.79" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="1.395" /> <!-- Quality Fiber -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="40206" min="1" max="1" chance="12.17" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23270" level="93" type="L2Monster" name="Patrol Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="4608118" sp="19362" />
+		<stats>
+			<vitals hp="125145" hpRegen="7.5" mp="3231" mpRegen="2.7" />
+			<attack physical="18880" magical="5797" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="748" magical="798" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1928" max="4494" chance="70" />
+				<item id="36528" min="1" max="1" chance="2.5" />
+				<item id="36529" min="1" max="1" chance="0.4" />
+				<item id="35317" min="1" max="1" chance="0.13333" />
+				<item id="35441" min="1" max="1" chance="0.01333" />
+				<item id="17406" min="1" max="1" chance="0.004" />
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="15" />
+				<item id="36529" min="1" max="1" chance="1.5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23271" level="94" type="L2Monster" name="Patrol Archer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="4714465" sp="19982" />
+		<stats>
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="36063" magical="6135" random="30" critical="8" accuracy="95.25" attackSpeed="162" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="767" magical="822" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="9" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1981" max="4625" chance="70" />
+				<item id="35302" min="1" max="1" chance="0.13333" />
+				<item id="35426" min="1" max="1" chance="0.01333" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="36533" min="1" max="1" chance="2.5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23272" level="95" type="L2Monster" name="Spicula Fighter">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="3266048" sp="13983" />
+		<stats>
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="19907" magical="6135" random="30" critical="4" accuracy="95.25" attackSpeed="393" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="767" magical="822" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="8" />
+			<height normal="18" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1850" max="4323" chance="70" />
+				<item id="35311" min="1" max="1" chance="0.15015" />
+				<item id="35435" min="1" max="1" chance="0.015" />
+				<item id="17400" min="1" max="1" chance="0.00667" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="36533" min="1" max="1" chance="5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23273" level="94" type="L2Monster" name="Spicula Archer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="3460476" sp="14667" />
+		<stats>
+			<vitals hp="125838" hpRegen="7.5" mp="3287" mpRegen="2.7" />
+			<attack physical="36063" magical="6135" random="30" critical="8" accuracy="95.25" attackSpeed="290" type="SWORD" range="400" distance="80" width="120" />
+			<defence physical="767" magical="822" />
+			<attribute>
+				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="9" />
+			<skill id="14765" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1793" max="4186" chance="70" />
+				<item id="36832" min="1" max="1" chance="0.5" />
+				<item id="36563" min="1" max="1" chance="0.125" />
+				<item id="36564" min="1" max="1" chance="0.05" />
+				<item id="36770" min="1" max="1" chance="0.01" />
+				<item id="17331" min="1" max="1" chance="0.005" />
+			</death>
+			<corpse>
+				<item id="36563" min="1" max="1" chance="1" />
+				<item id="36564" min="1" max="1" chance="0.25" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23274" level="95" type="L2Monster" name="Spicula Elite Captain">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="7687705" sp="32914" />
+		<stats>
+			<vitals hp="179310" hpRegen="7.5" mp="3342" mpRegen="2.7" />
+			<attack physical="25396" magical="9509" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1180" magical="847" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="3" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2091" max="4885" chance="70" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="2.5" />
+				<item id="36534" min="1" max="1" chance="0.4" />
+				<item id="36883" min="1" max="1" chance="0.4" />
+				<item id="36884" min="1" max="1" chance="0.4" />
+				<item id="36885" min="1" max="1" chance="0.4" />
+				<item id="36886" min="1" max="1" chance="0.4" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23275" level="96" type="L2Monster" name="Spicula Captain" title="Elite">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="23272" count="2" respawnTime= "3" weightPoint="4" />
+				<npc id="23268" count="1" respawnTime= "3" weightPoint="4" />
+				<npc id="23273" count="1" respawnTime= "3" weightPoint="4" />
+			</minions>
+		</parameters>
+		<race>HUMANOID</race>
+		<acquire exp="6338492" sp="27355" />
+		<stats>
+			<vitals hp="180319" hpRegen="7.5" mp="3398" mpRegen="2.7" />
+			<attack physical="22146" magical="6879" random="30" critical="4" accuracy="95.25" attackSpeed="180" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="807" magical="873" />
+			<attribute>
+				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>333</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5465" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="40" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="2271" max="5292" chance="70" />
+				<item id="35298" min="1" max="1" chance="0.13333" />
+				<item id="35422" min="1" max="1" chance="0.01333" />
+				<item id="17384" min="1" max="1" chance="0.005" />
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="25" />
+				<item id="9556" min="1" max="1" chance="1" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23276" level="95" type="L2Monster" name="Chief Scout">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>HUMANOID</race>
+		<acquire exp="5694446" sp="1366" />
+		<stats>
+			<vitals hp="169066" hpRegen="10.5" mp="2205" mpRegen="3.6" />
+			<attack physical="13310" magical="43800" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3960" magical="3355" />
+			<attribute>
+				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
+			</attribute>
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="17399" min="1" max="1" chance="0.003" /> <!-- Seraph Gauntlets -->
+				<item id="57" min="1240" max="2892" chance="70" /> <!-- Adena -->
+				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35434" min="1" max="1" chance="0.0075" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36532" min="1" max="1" chance="21.27" /> <!-- Thin Braid -->
+				<item id="9554" min="1" max="1" chance="0.075" /> <!-- Earth Crystal -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23277" level="98" type="L2Monster" name="Ritual Offering">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="SelfRangePhysicalSpecial" id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill name="DeBuff" id="4615" level="9" /> <!-- Bleed -->
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="4910598" sp="3142" />
+		<stats>
+			<vitals hp="785324" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="52030" magical="47085" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2081" magical="905" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4615" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
+					<item id="35327" min="1" max="1" chance="0.01" /> <!-- Amaranthine Shaper Fragment -->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="2.869" /> <!-- Synthetic Braid -->
+				<item id="19440" min="1" max="1" chance="0.1" /> <!-- Gemstone (R-grade) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="17" />
+			<height normal="22.3" />
+		</collision>
+	</npc>
+	<npc id="23278" level="98" type="L2Monster" name="Triol's Layperson">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="99" />
+			<param name="party_members" value="5" />
+			<param name="TelPosX1" value="-16128" />
+			<param name="TelPosY1" value="-35888" />
+			<param name="TelPosZ1" value="-10726" />
+			<param name="TelPosX2" value="-17029" />
+			<param name="TelPosY2" value="-39617" />
+			<param name="TelPosZ2" value="-10724" />
+			<param name="TelPosX3" value="-15729" />
+			<param name="TelPosY3" value="-42001" />
+			<param name="TelPosZ3" value="-10724" />
+			<skill name="PhysicalSpecial2" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8207" lhand="8207" /> <!-- rhand: Monster Only (Heretic Private Axe) lhand: Monster Only (Heretic Private Axe) -->
+		<acquire exp="4453839" sp="2850" />
+		<stats>
+			<vitals hp="196331" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="92.25" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="80" />
+			</attribute>
+			<speed>
+				<walk ground="58" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
+					<item id="36523" min="1" max="1" chance="0.1" /> <!-- Adamantite -->
+					<item id="35341" min="1" max="1" chance="0.01" /> <!-- Eternal Gauntlet Ingredient -->
+					<item id="36524" min="1" max="1" chance="0.01" /> <!-- Orichalcum -->
+					<item id="35465" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36523" min="1" max="1" chance="2.095" /> <!-- Adamantite -->
+				<item id="36524" min="1" max="1" chance="0.1" /> <!-- Orichalcum -->
+				<item id="19447" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="7.7" />
+			<height normal="28.4" />
+		</collision>
+	</npc>
+	<npc id="23279" level="99" type="L2Monster" name="Triol's Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="99" />
+			<param name="party_members" value="5" />
+			<param name="TelPosX1" value="-16128" />
+			<param name="TelPosY1" value="-35888" />
+			<param name="TelPosZ1" value="-10726" />
+			<param name="TelPosX2" value="-16368" />
+			<param name="TelPosY2" value="-43339" />
+			<param name="TelPosZ2" value="-10724" />
+			<param name="TelPosX3" value="-16363" />
+			<param name="TelPosY3" value="-47026" />
+			<param name="TelPosZ3" value="-10825" />
+			<skill name="PhysicalSpecial2" id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
+		<acquire exp="8776110" sp="14041" />
+		<stats>
+			<vitals hp="986640" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
+			<attack physical="1009.3950039" magical="719.599557852" random="30" critical="4" accuracy="94" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="373.969485" magical="273.65463924" evasion="2" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="80" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="0.1424" /> <!-- Adena -->
+					<item id="35333" min="1" max="1" chance="0.01" /> <!-- Amaranthine Thrower Fragment-->
+					<item id="36563" min="1" max="1" chance="0.01" /> <!-- Synthetic Cokes -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="36564" min="1" max="1" chance="0.001" /> <!-- Greater Synthetic Cokes -->
+					<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36563" min="1" max="1" chance="0.1" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.01" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="7.7" />
+			<height normal="28.4" />
+		</collision>
+	</npc>
+	<npc id="23280" level="99" type="L2Monster" name="Temple Guard">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="SelfRangePhysicalSpecial" id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill name="DeBuff" id="4615" level="9" /> <!-- Bleed -->
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="8812387" sp="14096" />
+		<stats>
+			<vitals hp="785324" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
+			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3766" magical="1469" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="38" />
+				<run ground="180" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4615" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="1024" max="2383" chance="70" /> <!-- Adena -->
+					<item id="35340" min="1" max="1" chance="0.01" /> <!-- Eternal Gaiter Ingredient-->
+					<item id="17526" min="1" max="1" chance="0.001" />
+					<!--Scroll: Enchant Weapon (R-grade) -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="35464" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="40207" min="1" max="1" chance="7.486" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="17" />
+			<height normal="22.3" />
+		</collision>
+	</npc>
+	<npc id="23281" level="99" type="L2Monster" name="Temple Guard Captain">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="DeBuff" id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill name="W_ShortRangeDDMagic" id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
+			<skill name="W_LongRangeDDMagic" id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+		</parameters>
+		<race>UNDEAD</race>
+		<acquire exp="8776110" sp="14041" />
+		<stats>
+			<vitals hp="785324" hpRegen="8.874" mp="1848.24" mpRegen="3.1314" />
+			<attack physical="1009.3950039" magical="719.599557852" random="30" critical="4" accuracy="89.25" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="373.969485" magical="273.65463924" evasion="2" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="38" />
+				<run ground="180" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill id="4622" level="9" /> <!-- NPC AE - 80% HP Drain - Magic -->
+			<skill id="4665" level="9" /> <!-- NPC 100% HP Drain - Magic -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="1024" max="2383" chance="0.1131" /> <!-- Adena-->
+					<item id="35329" min="1" max="1" chance="0.01" /> <!-- Amaranthine Slasher Fragment -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					<item id="35453" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Slasher (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="40207" min="1" max="1" chance="7.480" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="17" />
+			<height normal="22.3" />
+		</collision>
+	</npc>
+	<npc id="23282" level="99" type="L2Monster" name="Ritual Offering">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="118" />
+			<skill name="SelfRangePhysicalSpecial" id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill name="DeBuff" id="4615" level="9" /> <!-- Bleed -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="4910598" sp="3142" />
+		<stats>
+			<vitals hp="785324" hpRegen="8.823" mp="1812.948" mpRegen="3.111" />
+			<attack physical="985.66600746" magical="699.2575207596" random="50" critical="1" accuracy="86" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="367.3536375" magical="268.81344996" evasion="5" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="38" />
+				<run ground="180" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="35" /> <!-- Undead -->
+			<skill id="4612" level="9" /> <!-- NPC Wide Wild Sweep -->
+			<skill id="4615" level="9" /> <!-- Bleed -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="1024" max="2383" chance="70" /> <!-- Adena-->
+					<item id="35327" min="1" max="1" chance="0.01" /> <!-- Amaranthine Shaper Fragment -->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					<item id="35451" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="40207" min="1" max="1" chance="7.391" /> <!-- Amaranthine Fragment -->
+				<item id="40212" min="1" max="1" chance="0.0009" /> <!-- Recipe: R99 (100%) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="17" />
+			<height normal="22.3" />
+		</collision>
+	</npc>
+	<npc id="23283" level="99" type="L2Monster" name="Triol's Believer">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="99" />
+			<param name="party_members" value="5" />
+			<param name="TelPosX1" value="-16128" />
+			<param name="TelPosY1" value="-35888" />
+			<param name="TelPosZ1" value="-10726" />
+			<param name="TelPosX2" value="-15729" />
+			<param name="TelPosY2" value="-42001" />
+			<param name="TelPosZ2" value="-10724" />
+			<param name="TelPosX3" value="-16397" />
+			<param name="TelPosY3" value="-44970" />
+			<param name="TelPosZ3" value="-10724" />
+			<skill name="DeBuff" id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill name="W_ShortRangeDDMagic" id="4629" level="9" /> <!-- NPC MR - HP Drain -->
+			<skill name="W_LongRangeDDMagic" id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8205" /> <!-- rhand: Monster Only (Heretic Priest Sigil) -->
+		<acquire exp="4593482" sp="2939" />
+		<stats>
+			<vitals hp="981655" hpRegen="8.772" mp="1777.86" mpRegen="3.1008" />
+			<attack physical="961.93701102" magical="677.644106544" random="30" critical="4" accuracy="96" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="361.0859925" magical="264.22705872" evasion="4" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-32" dark="80" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4417" level="26" /> <!-- Humanoids -->
+			<skill id="4466" level="3" /> <!-- Surrender To Darkness -->
+			<skill id="4629" level="9" /> <!-- NPC MR - HP Drain -->
+			<skill id="4668" level="9" /> <!-- NPC Strong 100% HP Drain - Magic -->
+			<skill id="4789" level="9" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="70" /> <!-- Adena -->
+					<item id="35338" min="1" max="1" chance="0.01" /> <!--  Eternal Helmet Ingredient -->
+					<item id="17526" min="1" max="1" chance="0.001" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					<item id="35462" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Helmet (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="19448" min="1" max="1" chance="0.01" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="7.7" />
+			<height normal="28.4" />
+		</collision>
+	</npc>
+	<npc id="23284" level="99" type="L2Monster" name="Ritual Sacrifice">
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="111" />
+			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="PhysicalSpecial2" id="4614" level="9" /> <!-- NPC Death Bomb -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="8451407" sp="13522" />
+		<stats>
+			<vitals hp="785324" hpRegen="8.976" mp="1919.436" mpRegen="3.16812" />
+			<attack physical="1055.0276874" magical="760.9193205984" random="30" critical="4" accuracy="87.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="386.504775" magical="282.8274207" evasion="8" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="200" />
+			</speed>
+			<hitTime>430</hitTime>
+		</stats>
+		<status undying="false" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4417" level="36" /> <!-- Undead -->
+			<skill id="4614" level="9" /> <!-- NPC Death Bomb -->
+			<skill id="4789" level="10" /> <!-- NPC High Level -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>4</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="500">
+			<clanList>
+				<clan>TRIOLL</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="100.0">
+					<item id="57" min="915" max="2133" chance="0.1424" /> <!-- Adena -->
+					<item id="35333" min="1" max="1" chance="0.01" /> <!-- Amaranthine Thrower Fragment-->
+					<item id="36563" min="1" max="1" chance="0.01" /> <!-- Synthetic Cokes -->
+					<item id="19448" min="1" max="1" chance="0.001" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					<item id="36564" min="1" max="1" chance="0.001" /> <!-- Greater Synthetic Cokes -->
+					<item id="35457" min="1" max="1" chance="0.0009" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="36563" min="1" max="1" chance="0.1" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.01" /> <!-- Greater Synthetic Cokes -->
+				<item id="17526" min="1" max="1" chance="0.005" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="23285" level="97" type="L2Monster" name="Triol's Trooper">
+		<race>UNDEAD</race>
+		<acquire exp="21323560" sp="13647" />
+		<stats>
+			<vitals hp="195385" hpRegen="7.5" mp="2280" mpRegen="2.7" />
+			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2033" magical="889" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+		</skillList>
+		<ai clanHelpRange="300">
+			<clanList>
+				<clan>TRIOL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="24.6" />
+		</collision>
+	</npc>
+	<npc id="23286" level="97" type="L2Monster" name="Triol's Trooper">
+		<race>UNDEAD</race>
+		<acquire exp="21323560" sp="13647" />
+		<stats>
+			<vitals hp="196385" hpRegen="7.5" mp="2280" mpRegen="2.7" />
+			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2033" magical="889" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+		</skillList>
+		<ai clanHelpRange="300">
+			<clanList>
+				<clan>TRIOL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="17" />
+			<height normal="22.3" />
+		</collision>
+	</npc>
+	<npc id="23287" level="97" type="L2Monster" name="Triol's Trooper">
+		<race>UNDEAD</race>
+		<acquire exp="21323560" sp="13547" />
+		<stats>
+			<vitals hp="195385" hpRegen="7.5" mp="13647" mpRegen="2.7" />
+			<attack physical="50820" magical="45990" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2033" magical="889" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+			<skill id="4416" level="1" />
+		</skillList>
+		<ai clanHelpRange="300">
+			<clanList>
+				<clan>TRIOL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="24.6" />
+		</collision>
+	</npc>
+	<npc id="23288" level="99" type="L2Monster" name="Triol's Trooper">
+		<race>UNDEAD</race>
+		<acquire exp="26328332" sp="42125" />
+		<stats>
+			<vitals hp="197328" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<attack physical="58520" magical="58410" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="2112" magical="1770" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai clanHelpRange="300">
+			<clanList>
+				<clan>TRIOL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="40" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="23289" level="99" type="L2Monster" name="Triol's Trooper">
+		<race>UNDEAD</race>
+		<acquire exp="6487486" sp="28603" />
+		<stats>
+			<vitals hp="369786" hpRegen="7.5" mp="10380" mpRegen="2.7" />
+			<attack physical="40040" magical="27390" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3766" magical="1469" />
+			<attribute>
+				<attack type="DARK" value="300" />
+				<defence fire="20" water="20" wind="20" earth="20" holy="-83" dark="103" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="186" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<ai clanHelpRange="300">
+			<clanList>
+				<clan>TRIOL</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.8" />
+		</collision>
+	</npc>
+	<npc id="23290" level="97" type="L2Monster" name="Royal Knight">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1566445" sp="6814" />
+		<stats>
+			<vitals hp="27135" hpRegen="7.5" mp="2782" mpRegen="2.7" />
+			<attack physical="230553" magical="193496" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2922" magical="622" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="33" />
+			<height normal="58.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="809" max="1886" chance="70" />
+				<item id="36528" min="1" max="1" chance="0.4" />
+				<item id="36529" min="1" max="1" chance="0.13333" />
+				<item id="9546" min="1" max="1" chance="0.1" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="35350" min="1" max="1" chance="0.01995" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+				<item id="35474" min="1" max="1" chance="0.00105" />
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="1" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23291" level="97" type="L2Monster" name="Personal Magician">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1176698" sp="5119" />
+		<stats>
+			<vitals hp="27135" hpRegen="7.5" mp="2782" mpRegen="2.7" />
+			<attack physical="230553" magical="193496" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2435" magical="466" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="19" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="746" max="1741" chance="70" />
+				<item id="35349" min="1" max="1" chance="0.05" />
+				<item id="35473" min="1" max="1" chance="0.005" />
+				<item id="17441" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="2.5" />
+				<item id="36534" min="1" max="1" chance="0.5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23292" level="97" type="L2Monster" name="Royal Guard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<acquire exp="1176698" sp="5119" />
+		<stats>
+			<vitals hp="27135" hpRegen="7.5" mp="2782" mpRegen="2.7" />
+			<attack physical="230553" magical="193496" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2922" magical="466" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="746" max="1741" chance="70" />
+				<item id="9546" min="1" max="1" chance="0.1" />
+				<item id="35335" min="1" max="1" chance="0.05" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+				<item id="35459" min="1" max="1" chance="0.005" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="7.5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23293" level="99" type="L2Monster" name="Royal Guard Captain">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<acquire exp="1226281" sp="5406" />
+		<stats>
+			<vitals hp="27406" hpRegen="7.5" mp="2875" mpRegen="2.7" />
+			<attack physical="256279" magical="216621" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3072" magical="495" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="32.4" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="796" max="1854" chance="70" />
+				<item id="36528" min="1" max="1" chance="0.4" />
+				<item id="36529" min="1" max="1" chance="0.2" />
+				<item id="9548" min="1" max="1" chance="0.1" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="1" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23294" level="97" type="L2Monster" name="Chief Magician">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>UNDEAD</race>
+		<acquire exp="1176698" sp="753" />
+		<stats>
+			<vitals hp="16282" hpRegen="10.5" mp="2280" mpRegen="3.6" />
+			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3481" magical="975" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="15" />
+			<height normal="25" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="435" max="1014" chance="70" /> <!-- Adena -->
+				<item id="9550" min="1" max="1" chance="0.03" /> <!-- Dark Stone -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35351" min="1" max="1" chance="0.03" /> <!-- Eternal Stocking Ingredient -->
+				<item id="17526" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35475" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="3" /> <!-- Synthetic Braid -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23295" level="98" type="L2Monster" name="Operations Manager">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<acquire exp="1599543" sp="7007" />
+		<stats>
+			<vitals hp="27267" hpRegen="7.5" mp="2828" mpRegen="2.7" />
+			<attack physical="243354" magical="204953" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2997" magical="641" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="33" />
+			<height normal="58.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="833" max="1944" chance="70" />
+				<item id="36528" min="1" max="1" chance="0.4" />
+				<item id="36529" min="1" max="1" chance="0.2" />
+				<item id="9548" min="1" max="1" chance="0.1" />
+				<item id="35343" min="1" max="1" chance="0.05" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+				<item id="35467" min="1" max="1" chance="0.005" />
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="1" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23296" level="97" type="L2Monster" name="Chief Quartermaster">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<race>DIVINE</race>
+		<acquire exp="1176698" sp="753" />
+		<stats>
+			<vitals hp="16282" hpRegen="10.5" mp="2280" mpRegen="3.6" />
+			<attack physical="89880" magical="144585" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5221" magical="975" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
+		<collision>
+			<radius normal="11" />
+			<height normal="32.4" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="435" max="1014" chance="70" /> <!-- Adena -->
+				<item id="36528" min="1" max="1" chance="1.867" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
+				<item id="9546" min="1" max="1" chance="0.075" /> <!-- Fire Stone -->
+				<item id="9548" min="1" max="1" chance="0.075" /> <!-- Earth Stone -->
+				<item id="9550" min="1" max="1" chance="0.075" /> <!-- Dark Stone -->
+				<item id="17527" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="4.924" /> <!-- Metallic Fiber -->
+				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23297" level="98" type="L2Monster" name="Escort">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<acquire exp="1201561" sp="5263" />
+		<stats>
+			<vitals hp="27267" hpRegen="7.5" mp="2828" mpRegen="2.7" />
+			<attack physical="243354" magical="204953" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1998" magical="481" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="3" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="20.5" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="770" max="1796" chance="70" />
+				<item id="9546" min="1" max="1" chance="0.1" />
+				<item id="35352" min="1" max="1" chance="0.05" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+				<item id="35476" min="1" max="1" chance="0.005" />
+				<item id="17444" min="1" max="1" chance="0.001" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="7.5" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23298" level="98" type="L2Monster" name="Royal Quartermaster">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<acquire exp="1201561" sp="5263" />
+		<stats>
+			<vitals hp="27267" hpRegen="7.5" mp="2828" mpRegen="2.7" />
+			<attack physical="243354" magical="204953" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2997" magical="481" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="5467" level="1" />
+			<skill id="4416" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="31" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="770" max="1795" chance="70" />
+				<item id="36528" min="1" max="1" chance="0.4" />
+				<item id="36529" min="1" max="1" chance="0.2" />
+				<item id="9548" min="1" max="1" chance="0.1" />
+				<item id="17527" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+			</death>
+			<corpse>
+				<item id="36528" min="1" max="1" chance="10" />
+				<item id="36529" min="1" max="1" chance="1" />
+			</corpse>
+		</dropLists>
+	</npc>
+	<npc id="23299" level="99" type="L2Monster" name="Operations Chief of the 7th Division">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DIVINE</race>
+		<acquire exp="2856790" sp="12595" />
+		<stats>
+			<vitals hp="54812" hpRegen="7.5" mp="2875" mpRegen="2.7" />
+			<attack physical="256279" magical="216621" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3072" magical="660" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hitTime>500</hitTime>
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="8" />
+			<skill id="5467" level="1" />
+			<skill id="4414" level="1" />
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="33" />
+		</collision>
+		<dropLists>
+			<death>
+				<item id="57" min="1150" max="2686" chance="70" />
+				<item id="35354" min="1" max="1" chance="0.05" />
+				<item id="17526" min="1" max="1" chance="0.0125" />
+				<item id="19448" min="1" max="1" chance="0.0125" />
+				<item id="35478" min="1" max="1" chance="0.005" />
+				<item id="17446" min="1" max="1" chance="0.0025" />
+			</death>
+			<corpse>
+				<item id="36533" min="1" max="1" chance="10" />
+			</corpse>
+		</dropLists>
+	</npc>
+</list>

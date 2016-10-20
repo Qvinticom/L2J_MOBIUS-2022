@@ -1,0 +1,65 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package com.l2jmobius.gameserver.network.serverpackets;
+
+import java.util.Collection;
+
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+
+public class GMViewSkillInfo extends L2GameServerPacket
+{
+	private final L2PcInstance _activeChar;
+	private final Collection<Skill> _skills;
+	
+	public GMViewSkillInfo(L2PcInstance cha)
+	{
+		_activeChar = cha;
+		_skills = _activeChar.getAllSkills();
+	}
+	
+	@Override
+	protected final void writeImpl()
+	{
+		writeC(0x97);
+		writeS(_activeChar.getName());
+		writeD(_skills.size());
+		
+		final boolean isDisabled = (_activeChar.getClan() != null) && (_activeChar.getClan().getReputationScore() < 0);
+		
+		for (Skill skill : _skills)
+		{
+			writeD(skill.isPassive() ? 1 : 0);
+			if (skill.getDisplayLevel() < 100)
+			{
+				writeD(skill.getDisplayLevel());
+			}
+			else
+			{
+				final int maxLevel = SkillData.getInstance().getMaxLevel(skill.getDisplayLevel());
+				writeH(maxLevel);
+				writeH(skill.getDisplayLevel());
+			}
+			writeD(skill.getDisplayId());
+			writeD(0x00);
+			writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
+			writeC(SkillData.getInstance().isEnchantable(skill.getDisplayId()) ? 1 : 0);
+		}
+	}
+}

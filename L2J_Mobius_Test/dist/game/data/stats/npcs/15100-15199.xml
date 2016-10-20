@@ -1,0 +1,2381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="15100" level="89" type="L2Servitor" name="Wynn Spectral Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16022" hpRegen="7.5" mp="1580" mpRegen="2.7" />
+			<attack physical="3056" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1771" magical="3398" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="15101" level="91" type="L2Servitor" name="Wynn Spectral Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16399" hpRegen="7.5" mp="1637" mpRegen="2.7" />
+			<attack physical="3280" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1863" magical="3608" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="15102" level="93" type="L2Servitor" name="Wynn Spectral Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16783" hpRegen="7.5" mp="1695" mpRegen="2.7" />
+			<attack physical="3519" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1961" magical="3834" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="15103" level="95" type="L2Servitor" name="Wynn Spectral Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="21140" hpRegen="7.5" mp="1753" mpRegen="2.7" />
+			<attack physical="5031" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2404" magical="4750" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="15104" level="97" type="L2Servitor" name="Wynn Spectral Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22395" hpRegen="7.5" mp="1814" mpRegen="2.7" />
+			<attack physical="5397" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2529" magical="5047" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="15105" level="99" type="L2Servitor" name="Wynn Spectral Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="15106" level="85" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="10929" hpRegen="7.5" mp="1049" mpRegen="2.7" />
+			<attack physical="2653" magical="1368" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1144" magical="2147" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15107" level="87" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11182" hpRegen="7.5" mp="1087" mpRegen="2.7" />
+			<attack physical="2846" magical="1494" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1202" magical="2283" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15108" level="89" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11443" hpRegen="7.5" mp="1128" mpRegen="2.7" />
+			<attack physical="3054" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1265" magical="2427" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15109" level="91" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11713" hpRegen="7.5" mp="1170" mpRegen="2.7" />
+			<attack physical="3277" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1331" magical="2577" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15110" level="93" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11987" hpRegen="7.5" mp="1211" mpRegen="2.7" />
+			<attack physical="3516" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1400" magical="2737" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15111" level="95" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15101" hpRegen="7.5" mp="1252" mpRegen="2.7" />
+			<attack physical="5030" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1718" magical="3395" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15112" level="97" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15996" hpRegen="7.5" mp="1296" mpRegen="2.7" />
+			<attack physical="5393" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1807" magical="3606" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15113" level="99" type="L2Servitor" name="Wynn Soulless">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16154" hpRegen="7.5" mp="1338" mpRegen="2.7" />
+			<attack physical="5782" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1901" magical="3827" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="7" />
+			<height normal="33" />
+		</collision>
+	</npc>
+	<npc id="15114" level="85" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="21857" hpRegen="7.5" mp="2097" mpRegen="2.7" />
+			<attack physical="1859" magical="1368" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2286" magical="4299" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15115" level="87" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22367" hpRegen="7.5" mp="2177" mpRegen="2.7" />
+			<attack physical="1995" magical="1494" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2406" magical="4568" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15116" level="89" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22889" hpRegen="7.5" mp="2259" mpRegen="2.7" />
+			<attack physical="2139" magical="1620" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2531" magical="4855" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15117" level="91" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="23427" hpRegen="7.5" mp="2339" mpRegen="2.7" />
+			<attack physical="2295" magical="1756" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2663" magical="5158" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15118" level="93" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="23977" hpRegen="7.5" mp="2423" mpRegen="2.7" />
+			<attack physical="2462" magical="1906" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2800" magical="5480" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15119" level="95" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="30202" hpRegen="7.5" mp="2506" mpRegen="2.7" />
+			<attack physical="3519" magical="3674" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3438" magical="6791" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15120" level="97" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="31992" hpRegen="7.5" mp="2590" mpRegen="2.7" />
+			<attack physical="3777" magical="3982" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3615" magical="7211" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15121" level="99" type="L2Servitor" name="Wynn Merrow">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="13.5" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="15122" level="85" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15298" hpRegen="7.5" mp="1467" mpRegen="2.7" />
+			<attack physical="2658" magical="1368" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1599" magical="3005" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15123" level="87" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15657" hpRegen="7.5" mp="1522" mpRegen="2.7" />
+			<attack physical="2850" magical="1494" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1682" magical="3195" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15124" level="89" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16022" hpRegen="7.5" mp="1580" mpRegen="2.7" />
+			<attack physical="3056" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1771" magical="3398" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15125" level="91" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16399" hpRegen="7.5" mp="1637" mpRegen="2.7" />
+			<attack physical="3280" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1863" magical="3608" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15126" level="93" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16783" hpRegen="7.5" mp="1695" mpRegen="2.7" />
+			<attack physical="3519" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1961" magical="3834" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15127" level="95" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="21140" hpRegen="7.5" mp="1753" mpRegen="2.7" />
+			<attack physical="5031" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2404" magical="4750" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15128" level="97" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22395" hpRegen="7.5" mp="1814" mpRegen="2.7" />
+			<attack physical="5397" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2529" magical="5047" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15129" level="99" type="L2Servitor" name="Wynn Magnus">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15130" level="85" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="10929" hpRegen="7.5" mp="1049" mpRegen="2.7" />
+			<attack physical="2653" magical="1368" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1144" magical="2147" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15131" level="87" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11182" hpRegen="7.5" mp="1087" mpRegen="2.7" />
+			<attack physical="2846" magical="1494" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1202" magical="2283" />
+			<attribute>
+				<defence fire="180" water="180" wind="180" earth="180" holy="180" dark="180" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15132" level="89" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11443" hpRegen="7.5" mp="1128" mpRegen="2.7" />
+			<attack physical="3054" magical="1620" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1265" magical="2427" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15133" level="91" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11713" hpRegen="7.5" mp="1170" mpRegen="2.7" />
+			<attack physical="3277" magical="1756" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1331" magical="2577" />
+			<attribute>
+				<defence fire="220" water="220" wind="220" earth="220" holy="220" dark="220" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15134" level="93" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="11987" hpRegen="7.5" mp="1211" mpRegen="2.7" />
+			<attack physical="3516" magical="1906" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1400" magical="2737" />
+			<attribute>
+				<defence fire="240" water="240" wind="240" earth="240" holy="240" dark="240" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15135" level="95" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15101" hpRegen="7.5" mp="1252" mpRegen="2.7" />
+			<attack physical="5030" magical="3674" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1718" magical="3395" />
+			<attribute>
+				<defence fire="260" water="260" wind="260" earth="260" holy="260" dark="260" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15136" level="97" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15996" hpRegen="7.5" mp="1296" mpRegen="2.7" />
+			<attack physical="5393" magical="3982" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1807" magical="3606" />
+			<attribute>
+				<defence fire="280" water="280" wind="280" earth="280" holy="280" dark="280" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15137" level="99" type="L2Servitor" name="Wynn Seraphim">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16154" hpRegen="7.5" mp="1338" mpRegen="2.7" />
+			<attack physical="5782" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="343" type="SWORD" range="1000" distance="80" width="120" />
+			<defence physical="1901" magical="3827" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="9" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="15138" level="85" type="L2Servitor" name="Blood Panther">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="15298" hpRegen="7.5" mp="1467" mpRegen="2.7" />
+			<attack physical="1952" magical="1368" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1371" magical="1718" />
+			<attribute>
+				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15139" level="90" type="L2Servitor" name="Blood Panther">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16399" hpRegen="7.5" mp="1637" mpRegen="2.7" />
+			<attack physical="2395" magical="1737" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1588" magical="2051" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15140" level="95" type="L2Servitor" name="Blood Panther">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="21140" hpRegen="7.5" mp="1753" mpRegen="2.7" />
+			<attack physical="3695" magical="3674" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2060" magical="2715" />
+			<attribute>
+				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15141" level="99" type="L2Servitor" name="Blood Panther">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="4252" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="360" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2280" magical="3061" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="14.5" />
+		</collision>
+	</npc>
+	<npc id="15142" level="77" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="3099" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15143" level="80" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="3185" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15144" level="85" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="8159" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15145" level="90" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="8856" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15146" level="95" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="11418" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15147" level="99" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15148" level="80" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="3099" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15149" level="83" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="3185" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15150" level="85" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="9180" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15151" level="90" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="9840" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15152" level="95" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="12685" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15153" level="99" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15155" level="107" type="L2Servitor" name="Commando Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="16928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15156" level="107" type="L2Servitor" name="Commando Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="17928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15157" level="107" type="L2Servitor" name="Commando Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="18928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15158" level="107" type="L2Servitor" name="Commando Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="20928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15159" level="107" type="L2Servitor" name="Commando Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="22928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="6649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15160" level="107" type="L2Servitor" name="Commando Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="26928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="9649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15161" level="107" type="L2Servitor" name="Witch Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="16928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15162" level="107" type="L2Servitor" name="Witch Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="17928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15163" level="107" type="L2Servitor" name="Witch Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="18928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15164" level="107" type="L2Servitor" name="Witch Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="20928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="5649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15165" level="107" type="L2Servitor" name="Witch Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="22928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="6649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15166" level="107" type="L2Servitor" name="Witch Cat">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ANIMAL</race>
+		<stats>
+			<vitals hp="26928" hpRegen="7.5" mp="1784" mpRegen="2.7" />
+			<attack physical="9649" magical="5490" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="5104" />
+			<attribute>
+				<defence fire="200" water="200" wind="200" earth="200" holy="200" dark="200" />
+			</attribute>
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="4" />
+			<skill id="4121" level="9" />
+			<skill id="4415" level="3" />
+			<skill id="5038" level="15" />
+			<skill id="11315" level="1" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="6" />
+			<height normal="16.01" />
+		</collision>
+	</npc>
+	<npc id="15167" level="107" type="L2Servitor" name="Unicorn Lancer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15168" level="107" type="L2Servitor" name="Unicorn Lancer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15169" level="107" type="L2Servitor" name="Unicorn Lancer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15170" level="107" type="L2Servitor" name="Unicorn Lancer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15171" level="107" type="L2Servitor" name="Unicorn Lancer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15172" level="107" type="L2Servitor" name="Unicorn Lancer">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="25617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="7788" magical="6313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15173" level="107" type="L2Servitor" name="Unicorn Cherub">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15174" level="107" type="L2Servitor" name="Unicorn Cherub">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15175" level="107" type="L2Servitor" name="Unicorn Cherub">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15176" level="107" type="L2Servitor" name="Unicorn Cherub">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="12617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15177" level="107" type="L2Servitor" name="Unicorn Cherub">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="22617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="5788" magical="4313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="15178" level="107" type="L2Servitor" name="Unicorn Cherub">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="25617" hpRegen="7.5" mp="1872" mpRegen="2.7" />
+			<attack physical="7788" magical="6313" random="30" critical="142" accuracy="95.25" attackSpeed="491" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2660" magical="5358" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="151879" level="107" type="L2Servitor" name="Dark Crusader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15180" level="107" type="L2Servitor" name="Dark Crusader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15181" level="107" type="L2Servitor" name="Dark Crusader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15182" level="107" type="L2Servitor" name="Dark Crusader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15183" level="107" type="L2Servitor" name="Dark Crusader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="4050" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15184" level="107" type="L2Servitor" name="Dark Crusader">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="32312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="7550" magical="4313" random="30" critical="95" accuracy="95.25" attackSpeed="343" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15185" level="107" type="L2Servitor" name="Banshee Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15186" level="107" type="L2Servitor" name="Banshee Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15187" level="107" type="L2Servitor" name="Banshee Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15188" level="107" type="L2Servitor" name="Banshee Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15189" level="107" type="L2Servitor" name="Banshee Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="16312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="5050" magical="4313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15190" level="107" type="L2Servitor" name="Banshee Queen">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats>
+			<vitals hp="26312" hpRegen="7.5" mp="2676" mpRegen="2.7" />
+			<attack physical="9050" magical="6313" random="30" critical="145" accuracy="95.25" attackSpeed="443" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3802" magical="7655" />
+			<attribute>
+				<defence fire="300" water="300" wind="300" earth="300" holy="300" dark="300" />
+			</attribute>
+			<speed>
+				<walk ground="99" />
+				<run ground="198" />
+			</speed>
+			<hitTime>398</hitTime>
+		</stats>
+		<status attackable="false" />
+		<skillList>
+			<skill id="5038" level="15" />
+			<skill id="11496" level="2" />
+		</skillList>
+		<collision>
+			<radius normal="10" />
+			<height normal="35.5" />
+		</collision>
+	</npc>
+	<npc id="15194" level="101" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15195" level="103" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15196" level="105" type="L2Servitor" name="Cursed Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="12214" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="15197" level="101" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15198" level="103" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="15199" level="105" type="L2Servitor" name="Reanimated Man">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats>
+			<vitals hp="13571" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="25" />
+		</collision>
+	</npc>
+</list>

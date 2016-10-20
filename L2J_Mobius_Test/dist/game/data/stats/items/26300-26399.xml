@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="26350" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 4 for one-handed swords/ blunts, daggers, spears, etc. (A-grade). P. Atk. + 5 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. P. Atk./M. Atk. Increase dou -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2006-1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="26351" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
+		<!-- When enchanted, P. Def. + 1 for armor and accessories (A-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting fro -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2007-1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="26352" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 5 for one-handed swords/ blunts, daggers, spears, etc. (S-grade). P. Atk. + 6 for two-handed swords/ blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. P. Atk./M. Atk. Increase do -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2021-1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="26353" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
+		<!-- P. Def. + 1 for armor and accessories (S-grade). Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="2022-1" /> <!-- Scroll: Enchant Armor (S-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="26355" name="Pirate Captain Outfit" type="Armor">
+		<!-- Pirate captain's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed.  -->
+		<set name="icon" val="BranchSys3.iconArmor.g_co_captain_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+	</item>
+	<item id="26356" name="Pirate Crew Outfit" type="Armor">
+		<!-- Pirate crew member's outfit. When equipped, armor is removed and cannot be used. Hair accessories, weapons, and magic armor are not removed.  -->
+		<set name="icon" val="BranchSys3.iconArmor.g_co_pirate_i00" />
+		<set name="bodypart" val="onepiece" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="1000" />
+	</item>
+	<item id="26357" name="Pirate Captain Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor into that of a Pirate Captain. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Captain. Appearance is restored through the use of a Restoration -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="26358" name="Pirate Crew Appeareance Stone" type="EtcItem">
+		<!-- Changes the appearance of the entire armor into that of a Pirate Crew member. Can be used as a top or a one piece. It changes everything, making the appearance of all armor into that of a Pirate Crew member. Appearance is restored through the use of a Res -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+	</item>
+	<item id="26359" name="Automatic Appearance Stone: Tears Weapon" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types for 30 days. Can be used on shields and sigils. Double-click to use.. . Note: Appearance may reset when the Change Weapon skill is used. -->
+		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26360" name="Automatic Appearance Stone: Tears Weapon" type="EtcItem">
+		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types. Can be used on shields and sigils. Double-click to use.. . Note: Appearance may reset when the Change Weapon skill is used. -->
+		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="26361" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Metal Suit for 30 days. Can be used only on hair accessories that take up 2 slots. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26362" name="Metal Suit Top Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Metal Suit for 30 days. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26363" name="Metal Suit Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of pants into that of a Metal Suit for 30 days. An appearance-modified item has no change in abilities. All armor types. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26364" name="Metal Suit Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of gloves into that of a Metal Suit fpr 30 days. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26365" name="Metal Suit Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of shoes into that of a Metal Suit for 30 days. An appearance-modified item has no change in abilities. Modifying the full set creates a new skill. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26366" name="Ninja Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Ninja Outfit for 30 days. Can be used only on hair accessories that take up 2 slots. Gives you active skills upon modification. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26367" name="Ninja Top Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26368" name="Ninja Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26369" name="Ninja Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26370" name="Ninja Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Ninja Outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26371" name="Tribal Warrior Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit for 30 days. Can only be used on hair accessories that use 2 slots. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26372" name="Tribal Warrior Top Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26373" name="Tribal Warrior Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26374" name="Tribal Warrior Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26375" name="Tribal Warrior Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26376" name="Military Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory into that of a Military look for 30 days. Can be used only on hair accessories that take up 2 slots. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26377" name="Military Top Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26378" name="Military Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. All armor types. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26379" name="Military Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26380" name="Military Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Changes the appearance of a top into that of a Military look for 30 days. An appearance-modified item has no change in abilities. Gives you passive skills upon modification of top, pants, gloves, and shoes. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26381" name="Samurai Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit for 30 days. Only for 2-slot hair accessories.. . Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26382" name="Samurai Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of armor into that of a Samurai for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.. . Note: Upgrading or bestowing options on modified armor will reset the appe -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26383" name="Vampire Top Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26384" name="Vampire Pants Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. An appearance-modified item has no change in abilities. All armor types. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26385" name="Vampire Gloves Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26386" name="Vampire Shoes Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of armor into that of a Vampire Outfit for 30 days. No change in stats. All armor types. -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26387" name="Vampire Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of a hair accessory into that of a Vampire Outfit for 30 days. Only for 2-slot hair accessories. -->
+		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26388" name="Anakim Outfit Appearance Stone" additionalName="30-day" type="EtcItem">
+		<!-- Modifies the appearance of armor into that of Anakim for 30 days. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone.. . Note: Upgrading or bestowing options on modified armor will reset the appeara -->
+		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="Appearance" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="STEEL" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="26389" name="Agathion - Anakim" additionalName="30-day" type="Armor">
+		<!-- Equip to summon the Anakim Agathion. 30-day. -->
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="SILVER" />
+		<set name="time" val="43200" />
+		<set name="weight" val="150" />
+	</item>
+	<item id="26390" name="Mysterious Quick Healing Potion" type="EtcItem">
+		<!-- Magical, liquid medicine that greatly restores HP for 15 seconds. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
+		<set name="icon" val="icon.etc_reagent_white_i00" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+	</item>
+	<item id="26391" name="Rune of Feather Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing Rune of Feather (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+	</item>
+	<item id="26392" name="Rune of Feather" additionalName="7-day" type="EtcItem">
+		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases the weight limit by 20%. The remaining time decreases even when not playing. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="time" val="10080" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="26393" name="Transformation Scroll: Rose (F)" type="EtcItem">
+		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 30 min. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="26394" name="Transformation Scroll: Rose (M)" type="EtcItem">
+		<!-- Inflicts warrior-type attack. Transforms into a Rose (M) for 30 min. -->
+		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="26395" name="Sealed Shadow Shaper" type="EtcItem">
+		<!-- Double-click to get a Shadow Shaper. Cannot be exchanged or dropped once open. -->
+		<set name="icon" val="icon.weapon_shadow_dagger" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="26396" name="Sealed Shadow Cutter" type="EtcItem">
+		<!-- Double-click to get a Shadow Cutter. Cannot be exchanged or dropped once open. -->
+		<set name="icon" val="icon.weapon_shadow_onehand_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="26397" name="Sealed Shadow Slasher" type="EtcItem">
+		<!-- Double-click to get a Shadow Slasher. Cannot be exchanged or dropped once open. -->
+		<set name="icon" val="icon.weapon_shadow_twohand_sword" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="26398" name="Sealed Shadow Fighter" type="EtcItem">
+		<!-- Double-click to get a Shadow Fighter. Cannot be exchanged or dropped once open. -->
+		<set name="icon" val="icon.weapon_shadow_fist" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="26399" name="Sealed Shadow Stormer" type="EtcItem">
+		<!-- Double-click to get a Shadow Stormer. Cannot be exchanged or dropped once open. -->
+		<set name="icon" val="icon.weapon_shadow_spear" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+</list>

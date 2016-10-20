@@ -1,0 +1,2055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="22500" level="78" type="L2Monster" name="Lost Watchman">
+		<parameters>
+			<param name="MoveAroundSocial" value="50" />
+			<param name="MoveAroundSocial1" value="50" />
+			<param name="MoveAroundSocial2" value="50" />
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="is_private" value="0" />
+			<param name="silhouette" value="22501" /> <!-- Lost Watcher -->
+			<param name="ai_type" value="kamaloka_78_a_false" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Skill01_ID" id="4032" level="8" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4047" level="8" /> <!-- Hold -->
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
+		<stats>
+			<vitals hp="56858.2456738639" hpRegen="198.90530317677" mp="1607.4" mpRegen="3" />
+			<attack physical="9019.5082798992" magical="6159.15501893583" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="532.320976" magical="584.294088" />
+			<attribute>
+				<attack type="WIND" value="100" />
+				<defence fire="90" water="90" wind="150" earth="40" holy="90" dark="90" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4047" level="8" /> <!-- Hold -->
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>ABYSS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13.5" grown="16" />
+			<height normal="36.5" grown="42.5" />
+		</collision>
+	</npc>
+	<npc id="22501" level="78" type="L2Monster" name="Lost Watchman">
+		<parameters>
+			<param name="MoveAroundSocial" value="50" />
+			<param name="MoveAroundSocial1" value="50" />
+			<param name="MoveAroundSocial2" value="50" />
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Skill01_ID" id="4032" level="8" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4047" level="8" /> <!-- Hold -->
+		</parameters>
+		<race>DIVINE</race>
+		<sex>MALE</sex>
+		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
+		<stats>
+			<vitals hp="56858.2456738639" hpRegen="198.90530317677" mp="1607.4" mpRegen="3" />
+			<attack physical="9019.5082798992" magical="6159.15501893583" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="532.320976" magical="584.294088" />
+			<attribute>
+				<attack type="WIND" value="100" />
+				<defence fire="90" water="90" wind="150" earth="40" holy="90" dark="90" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="170" />
+			</speed>
+			<hitTime>520</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4047" level="8" /> <!-- Hold -->
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>ABYSS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="13.5" grown="16" />
+			<height normal="36.5" grown="42.5" />
+		</collision>
+	</npc>
+	<npc id="22502" level="78" type="L2Monster" name="Lost Beholder">
+		<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill03_Type" value="2" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Skill01_ID" id="4032" level="8" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4613" level="8" /> <!-- NPC Clan Heal -->
+			<skill name="Skill03_ID" id="4098" level="9" /> <!-- Silence -->
+		</parameters>
+		<race>DIVINE</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="6717" /> <!-- rhand: Monster Only(Einhasad Warrior) -->
+		<stats>
+			<vitals hp="113626.925313575" hpRegen="198.74864024278" mp="1607.4" mpRegen="3" />
+			<attack physical="8818.27285168418" magical="6021.73730621634" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="532.320976" magical="584.294088" />
+			<attribute>
+				<attack type="EARTH" value="100" />
+				<defence fire="90" water="90" wind="30" earth="150" holy="90" dark="90" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<hitTime>460</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4098" level="9" /> <!-- Silence -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="4" /> <!-- One-handed Sword -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4613" level="8" /> <!-- NPC Clan Heal -->
+			<skill id="5465" level="1" /> <!-- Earth Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>ABYSS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="30" grown="36.5" />
+		</collision>
+	</npc>
+	<npc id="22503" level="81" type="L2Monster" name="Lost Watchman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="is_private" value="0" />
+			<param name="silhouette" value="22504" /> <!-- Lost Watcher -->
+			<param name="ai_type" value="kamaloka_81_a_false" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4047" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="10278" lhand="10278" /> <!-- rhand: Monster Only (Behamah Dual) lhand: Monster Only (Behamah Dual) -->
+		<stats>
+			<vitals hp="56505.8603512852" hpRegen="194.184225975005" mp="1708.8" mpRegen="3" />
+			<attack physical="9242.50952208013" magical="6311.43587965133" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="552.978032" magical="606.967992" />
+			<attribute>
+				<attack type="DARK" value="100" />
+				<defence fire="90" water="90" wind="90" earth="90" holy="65" dark="130" default="80" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="190" />
+			</speed>
+			<hitTime>470</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>ABYSS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="32" />
+			<height normal="37.5" grown="46.8" />
+		</collision>
+	</npc>
+	<npc id="22504" level="81" type="L2Monster" name="Lost Watchman">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Type" value="2" />
+			<param name="Skill02_Probablity" value="500" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4047" level="9" /> <!-- Hold -->
+		</parameters>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="10278" lhand="10278" /> <!-- rhand: Monster Only (Behamah Dual) lhand: Monster Only (Behamah Dual) -->
+		<stats>
+			<vitals hp="56505.8603512852" hpRegen="194.184225975005" mp="1708.8" mpRegen="3" />
+			<attack physical="9242.50952208013" magical="6311.43587965133" random="30" critical="4" accuracy="95" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<defence physical="552.978032" magical="606.967992" />
+			<attribute>
+				<attack type="DARK" value="100" />
+				<defence fire="90" water="90" wind="90" earth="90" holy="65" dark="130" default="80" />
+			</attribute>
+			<speed>
+				<walk ground="70" />
+				<run ground="190" />
+			</speed>
+			<hitTime>470</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4047" level="9" /> <!-- Hold -->
+			<skill id="4410" level="7" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4415" level="19" /> <!-- Dual-Sword Weapons -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>ABYSS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" grown="32" />
+			<height normal="37.5" grown="46.8" />
+		</collision>
+	</npc>
+	<npc id="22505" level="81" type="L2Monster" name="Lost Beholder">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="IsAggressive" value="1" />
+			<param name="MoveArounding" value="0" />
+			<param name="Skill02_Target" value="3" />
+			<param name="Skill02_Type" value="3" />
+			<param name="Skill02_AttackSplash" value="1" />
+			<param name="Skill03_Type" value="2" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Skill01_ID" id="4032" level="9" /> <!-- NPC Strike -->
+			<skill name="Skill02_ID" id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill name="Skill03_ID" id="4098" level="10" /> <!-- Silence -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats>
+			<vitals hp="112922.200722637" hpRegen="194.030406814438" mp="1708.8" mpRegen="3" />
+			<attack physical="9025.28600814905" magical="6163.10037872993" random="10" critical="4" accuracy="95.25" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="552.978032" magical="606.967992" />
+			<attribute>
+				<attack type="WIND" value="100" />
+				<defence fire="90" water="90" wind="150" earth="40" holy="90" dark="90" default="85" />
+			</attribute>
+			<speed>
+				<walk ground="30" />
+				<run ground="170" />
+			</speed>
+			<hitTime>540</hitTime>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skillList>
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4098" level="10" /> <!-- Silence -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4613" level="9" /> <!-- NPC Clan Heal -->
+			<skill id="5464" level="1" /> <!-- Wind Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>ABYSS</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="21" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="22506" level="75" type="L2Monster" name="Boom - Child">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5814" level="1" /> <!-- Self-Destruction -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="15066" sp="3" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="476.825406" magical="325.609944" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="287.321607" magical="210.249477" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="250" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5814" level="1" /> <!-- Self-Destruction -->
+		</skillList>
+		<corpseTime>0</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="33" />
+			<height normal="13.5" />
+		</collision>
+	</npc>
+	<npc id="22507" level="77" type="L2Monster" name="Boom - Child">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5814" level="1" /> <!-- Self-Destruction -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="18121" sp="4" />
+		<stats>
+			<vitals hp="2856.7687256316" hpRegen="8.5" mp="1574.0" mpRegen="3" />
+			<attack physical="513.864335372484" magical="350.902732161345" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.443657" magical="216.192843" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="250" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5814" level="1" /> <!-- Self-Destruction -->
+		</skillList>
+		<corpseTime>0</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="33" />
+			<height normal="13.5" />
+		</collision>
+	</npc>
+	<npc id="22508" level="80" type="L2Monster" name="Boom - Child">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="Skill01_Target" value="3" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<skill name="Skill01_ID" id="5814" level="1" /> <!-- Self-Destruction -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="18897" sp="4" />
+		<stats>
+			<vitals hp="3290.11306877694" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="582.322529102768" magical="397.650797477647" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="307.2375" magical="224.823069" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="250" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5814" level="1" /> <!-- Self-Destruction -->
+		</skillList>
+		<corpseTime>0</corpseTime>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="33" />
+			<height normal="13.5" />
+		</collision>
+	</npc>
+	<npc id="22536" level="95" type="L2Monster" name="Royal Guard Captain">
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="3333" />
+			<param name="SelfRangeDD_Prob" value="500" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Breath" id="5826" level="1" /> <!-- Fire Breath -->
+			<skill name="SelfRangeDD_ID" id="4072" level="10" /> <!-- Stun -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="600558" sp="12198" />
+		<stats>
+			<vitals hp="2227692" hpRegen="110.577296732991" mp="1812.0" mpRegen="3" />
+			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="100" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="582.692054494118" magical="639.583141129412" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="200" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4072" level="10" /> <!-- Stun -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5826" level="1" /> <!-- Fire Breath -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>2</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="28417" max="56889" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="27.986499786376953">
+					<item id="6326" min="1" max="1" chance="0.1424" /> <!-- Sealed Majestic Necklace -->
+					<item id="6344" min="1" max="1" chance="20.8518" /> <!-- Sealed Majestic Necklace Beads -->
+					<item id="6327" min="1" max="1" chance="0.1899" /> <!-- Sealed Majestic Earring -->
+					<item id="6342" min="1" max="1" chance="32.2213" /> <!-- Sealed Majestic Earring Gemstone -->
+					<item id="6328" min="1" max="1" chance="0.2848" /> <!-- Sealed Majestic Ring -->
+					<item id="6346" min="1" max="1" chance="46.3098" /> <!-- Sealed Majestic Ring Gemstone -->
+				</group>
+				<group chance="32.65729904174805">
+					<item id="1879" min="2" max="6" chance="43.5397" /> <!-- Cokes -->
+					<item id="1885" min="3" max="9" chance="14.5132" /> <!-- High-Grade Suede -->
+					<item id="9628" min="1" max="1" chance="8.1957" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="5.4998" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="4.5433" /> <!-- Adamantine -->
+					<item id="6853" min="1" max="1" chance="0.4872" /> <!-- Recipe: Sealed Imperial Crusader Breastplate (60%) -->
+					<item id="1345" min="300" max="900" chance="23.2211" /> <!-- Shining Arrow -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1894" min="1" max="3" chance="85.074" /> <!-- Crafted Leather -->
+				<item id="6702" min="1" max="1" chance="33.2343" /> <!-- Sealed Imperial Crusader Gaiters Pattern -->
+				<item id="6863" min="1" max="1" chance="6.0201" /> <!-- Recipe: Sealed Imperial Crusader Helmet (60%) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="40" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="22537" level="95" type="L2Monster" name="Dragontroop Spellshifter">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5328" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Dark -->
+			<skill name="Skill02_ID" id="5829" level="1" /> <!-- Fire Flare -->
+			<skill name="Breath" id="5826" level="1" /> <!-- Fire Breath -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="334154" hpRegen="10.5" mp="33087" mpRegen="3.6" />
+			<attack physical="5940.3994655008" magical="4128.10845732292" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="582.692054494118" magical="639.583141129412" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="43" />
+				<run ground="170" />
+			</speed>
+			<hitTime>420</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5328" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Dark -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5826" level="1" /> <!-- Fire Breath -->
+			<skill id="5829" level="1" /> <!-- Fire Flare -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="29" />
+			<height normal="49.9" />
+		</collision>
+	</npc>
+	<npc id="22538" level="95" type="L2Monster" name="Dragontroop Commander">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5830" level="1" /> <!-- Polearm Thrust -->
+			<skill name="Breath" id="5827" level="5" /> <!-- Fireball -->
+			<skill name="SelfRangeDD_ID" id="5831" level="1" /> <!-- Polearm Swing -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13978" /> <!-- rhand: Exclusive to Monsters (Mounted Troops High Level Leader) -->
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="444425" hpRegen="10.5" mp="22058" mpRegen="3.6" />
+			<attack physical="5883.7041177888" magical="4065.07551523469" random="30" critical="4" accuracy="100" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="572.839225223529" magical="628.768339764706" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="210" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="5" /> <!-- Fireball -->
+			<skill id="5830" level="1" /> <!-- Polearm Thrust -->
+			<skill id="5831" level="1" /> <!-- Polearm Swing -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="46.5" />
+		</collision>
+	</npc>
+	<npc id="22539" level="95" type="L2Monster" name="Dragontroop Commando">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5830" level="1" /> <!-- Polearm Thrust -->
+			<skill name="Breath" id="5827" level="4" /> <!-- Fireball -->
+			<skill name="SelfRangeDD_ID" id="5831" level="1" /> <!-- Polearm Swing -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13978" /> <!-- rhand: Exclusive to Monsters (Mounted Troops High Level Leader) -->
+		<acquire exp="176544" sp="3725" />
+		<stats>
+			<vitals hp="740707" hpRegen="112.558039826218" mp="1743.0" mpRegen="3" />
+			<attack physical="5827.40072171705" magical="4002.76724651153" random="30" critical="4" accuracy="100" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="562.931629835294" magical="617.893411764706" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="55" />
+				<run ground="210" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="4" /> <!-- Fireball -->
+			<skill id="5830" level="1" /> <!-- Polearm Thrust -->
+			<skill id="5831" level="1" /> <!-- Polearm Swing -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="46.5" />
+		</collision>
+	</npc>
+	<npc id="22540" level="95" type="L2Monster" name="Dragontroop Centurion">
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Breath" id="5827" level="4" /> <!-- Fireball -->
+			<skill name="SelfRangeDD_ID" id="5832" level="1" /> <!-- Hate Aura -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13979" lhand="13980" /> <!-- rhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword) lhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield) -->
+		<acquire exp="147841" sp="3135" />
+		<stats>
+			<vitals hp="278461.5" hpRegen="113.419259781018" mp="1708.8" mpRegen="3" />
+			<attack physical="5770.14557436436" magical="3940.26143244462" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="552.978032" magical="606.967992" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="210" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="4" /> <!-- Fireball -->
+			<skill id="5832" level="1" /> <!-- Hate Aura -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8055" max="16494" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.8154000043869019">
+					<item id="164" min="1" max="1" chance="0.0876" /> <!-- Elysian -->
+					<item id="5533" min="1" max="1" chance="24.9198" /> <!-- Elysian Head -->
+					<item id="213" min="1" max="1" chance="0.0876" /> <!-- Branch of the Mother Tree -->
+					<item id="5544" min="1" max="1" chance="24.8952" /> <!-- Branch of the Mother Tree Head -->
+					<item id="7895" min="1" max="1" chance="0.0876" /> <!-- Flaming Dragon Skull -->
+					<item id="8342" min="1" max="1" chance="24.9198" /> <!-- Flaming Dragon Skull Piece -->
+					<item id="7902" min="1" max="1" chance="0.0876" /> <!-- Doom Crusher -->
+					<item id="8349" min="1" max="1" chance="24.9148" /> <!-- Doom Crusher Head -->
+				</group>
+				<group chance="26.590200424194336">
+					<item id="1879" min="1" max="1" chance="61.9056" /> <!-- Cokes -->
+					<item id="1885" min="1" max="1" chance="30.9528" /> <!-- High-Grade Suede -->
+					<item id="9628" min="1" max="1" chance="2.9132" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="1.9549" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="1.6149" /> <!-- Adamantine -->
+					<item id="6861" min="1" max="1" chance="0.6586" /> <!-- Recipe: Sealed Imperial Crusader Shield (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="3036" min="1" max="1" chance="0.5346" /> <!-- Recipe: Spiritshot S -->
+				<item id="5487" min="1" max="1" chance="5.417" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="1894" min="1" max="1" chance="42.209" /> <!-- Crafted Leather -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="22541" level="94" type="L2Monster" name="Dragontroop Infantry">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Breath" id="5827" level="3" /> <!-- Fireball -->
+			<skill name="SelfRangeDD_ID" id="5832" level="1" /> <!-- Hate Aura -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13979" lhand="13980" /> <!-- rhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword) lhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield) -->
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="21690" mpRegen="3.6" />
+			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="546.2" magical="599.528184" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="210" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="3" /> <!-- Fireball -->
+			<skill id="5832" level="1" /> <!-- Hate Aura -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="22" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="22542" level="95" type="L2Monster" name="Dragontroop Archmage">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill name="Skill02_ID" id="5829" level="5" /> <!-- Fire Flare -->
+			<skill name="Breath" id="5827" level="4" /> <!-- Fireball -->
+			<skill name="Buff" id="5833" level="1" /> <!-- Shield -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="444425" hpRegen="10.5" mp="33087" mpRegen="3.6" />
+			<attack physical="5827.40072171705" magical="4002.76724651153" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="562.931629835294" magical="617.893411764706" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="92" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="4" /> <!-- Fireball -->
+			<skill id="5829" level="5" /> <!-- Fire Flare -->
+			<skill id="5833" level="1" /> <!-- Shield -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="28" />
+			<height normal="39.5" />
+		</collision>
+	</npc>
+	<npc id="22543" level="95" type="L2Monster" name="Dragontroop Wizard">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill name="Skill02_ID" id="5829" level="4" /> <!-- Fire Flare -->
+			<skill name="Breath" id="5827" level="4" /> <!-- Fireball -->
+			<skill name="Buff" id="5833" level="1" /> <!-- Shield -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="334154" hpRegen="10.5" mp="33087" mpRegen="3.6" />
+			<attack physical="5770.14557436436" magical="3940.26143244462" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="552.978032" magical="606.967992" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="92" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="4" /> <!-- Fireball -->
+			<skill id="5829" level="4" /> <!-- Fire Flare -->
+			<skill id="5833" level="1" /> <!-- Shield -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="7755" max="15880" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.7854999899864197">
+					<item id="236" min="1" max="1" chance="0.3502" /> <!-- Soul Separator -->
+					<item id="5537" min="1" max="1" chance="99.6498" /> <!-- Soul Separator Head -->
+				</group>
+				<group chance="49.120399475097656">
+					<item id="1879" min="1" max="1" chance="27.6556" /> <!-- Cokes -->
+					<item id="1885" min="1" max="1" chance="13.8278" /> <!-- High-Grade Suede -->
+					<item id="9628" min="1" max="1" chance="1.3014" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="0.8733" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="0.7215" /> <!-- Adamantine -->
+					<item id="6867" min="1" max="1" chance="0.309" /> <!-- Recipe: Sealed DraconicВ LeatherВ Gloves (60%) -->
+					<item id="1345" min="20" max="60" chance="55.3114" /> <!-- Shining Arrow -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1894" min="1" max="1" chance="40.6392" /> <!-- Crafted Leather -->
+				<item id="1894" min="1" max="1" chance="40.6392" /> <!-- Crafted Leather -->
+				<item id="5503" min="1" max="1" chance="19.5612" /> <!-- Sealed Majestic Boots Lining -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="28" />
+			<height normal="39.5" />
+		</collision>
+	</npc>
+	<npc id="22544" level="94" type="L2Monster" name="Dragontroop Magic Blader">
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill name="Skill02_ID" id="5829" level="4" /> <!-- Fire Flare -->
+			<skill name="Breath" id="5827" level="3" /> <!-- Fireball -->
+			<skill name="Buff" id="5834" level="1" /> <!-- Magic Barrier -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="32535" mpRegen="3.6" />
+			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="546.2" magical="599.528184" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="82" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="3" /> <!-- Fireball -->
+			<skill id="5829" level="4" /> <!-- Fire Flare -->
+			<skill id="5834" level="1" /> <!-- Magic Barrier -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8405" max="17160" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.3941999673843384">
+					<item id="5320" min="1" max="1" chance="0.3352" /> <!-- Sealed Leather Armor of Nightmare -->
+					<item id="5480" min="1" max="1" chance="49.6648" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+					<item id="5323" min="1" max="1" chance="0.3352" /> <!-- Sealed Majestic Leather Armor -->
+					<item id="5481" min="1" max="1" chance="49.6648" /> <!-- Sealed Majestic Leather Armor Fabric -->
+				</group>
+				<group chance="27.701799392700195">
+					<item id="1879" min="1" max="1" chance="61.8851" /> <!-- Cokes -->
+					<item id="1885" min="1" max="1" chance="30.9425" /> <!-- High-Grade Suede -->
+					<item id="9628" min="1" max="1" chance="2.9122" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="1.9543" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="1.6144" /> <!-- Adamantine -->
+					<item id="6869" min="1" max="1" chance="0.6915" /> <!-- Recipe: Sealed DraconicВ LeatherВ Boots (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="5162" min="1" max="1" chance="0.5568" /> <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+				<item id="5514" min="1" max="1" chance="21.1591" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5167" min="1" max="1" chance="0.5568" /> <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="25" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="22545" level="95" type="L2Monster" name="Dark Dragoness">
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5328" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Dark -->
+			<skill name="Skill02_ID" id="5828" level="1" /> <!-- Unholy Flare -->
+			<skill name="Breath" id="5827" level="5" /> <!-- Fireball -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="366688" sp="7920" />
+		<stats>
+			<vitals hp="740707" hpRegen="111.50705124295" mp="1777.4" mpRegen="3" />
+			<attack physical="5883.7041177888" magical="4065.07551523469" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="572.839225223529" magical="628.768339764706" />
+			<attribute>
+				<attack type="DARK" value="130" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="160" />
+			</speed>
+			<hitTime>490</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5328" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Dark -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5827" level="5" /> <!-- Fireball -->
+			<skill id="5828" level="1" /> <!-- Unholy Flare -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000" isAggressive="false">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="17815" max="35735" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.5708999633789062">
+					<item id="5311" min="1" max="1" chance="0.3313" /> <!-- Sealed Armor of Nightmare -->
+					<item id="5522" min="1" max="1" chance="49.6687" /> <!-- Sealed Armor of Nightmare Pattern -->
+					<item id="5316" min="1" max="1" chance="0.3313" /> <!-- Sealed Majestic Plate Armor -->
+					<item id="5523" min="1" max="1" chance="49.6687" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				</group>
+				<group chance="46.33319854736328">
+					<item id="1879" min="1" max="3" chance="44.957" /> <!-- Cokes -->
+					<item id="1885" min="1" max="1" chance="44.957" /> <!-- High-Grade Suede -->
+					<item id="9628" min="1" max="1" chance="4.2312" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="2.8394" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="2.3456" /> <!-- Adamantine -->
+					<item id="6871" min="1" max="1" chance="0.6698" /> <!-- Recipe: Sealed Draconic Leather Helmet (60%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="6688" min="1" max="1" chance="6.5807" /> <!-- Forgotten Blade Edge -->
+				<item id="960" min="1" max="1" chance="1.2178" /> <!-- Scroll: Enchant Armor (S-Grade) -->
+				<item id="1894" min="1" max="3" chance="53.4125" /> <!-- Crafted Leather -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="60" />
+			<height normal="66" />
+		</collision>
+	</npc>
+	<npc id="22546" level="93" type="L2Monster" name="Berserker">
+		<parameters>
+			<param name="Skill01_Prob" value="3333" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Buff" id="4211" level="9" /> <!-- BOSS Might -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="148519" sp="3115" />
+		<stats>
+			<vitals hp="135305" hpRegen="115.295936105422" mp="1641.0" mpRegen="3" />
+			<attack physical="5679.07860126925" magical="3878.0744848375" random="10" critical="4" accuracy="95.25" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="539.312128" magical="591.967824" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="100" />
+				<run ground="200" />
+			</speed>
+			<hitTime>570</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4211" level="9" /> <!-- BOSS Might -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="6" /> <!-- Very Weak P. Def. -->
+			<skill id="4413" level="6" /> <!-- Very Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8197" max="16729" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.3638999462127686">
+					<item id="5326" min="1" max="1" chance="0.3341" /> <!-- Sealed Robe of Nightmare -->
+					<item id="5487" min="1" max="1" chance="49.6659" /> <!-- Sealed Robe of Nightmare Fabric -->
+					<item id="5329" min="1" max="1" chance="0.3341" /> <!-- Sealed Majestic Robe -->
+					<item id="5488" min="1" max="1" chance="49.6659" /> <!-- Sealed Majestic Robe Fabric -->
+				</group>
+				<group chance="32.57720184326172">
+					<item id="1879" min="1" max="1" chance="43.9814" /> <!-- Cokes -->
+					<item id="1885" min="1" max="1" chance="21.9907" /> <!-- High-Grade Suede -->
+					<item id="9628" min="1" max="1" chance="2.0697" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="1.3889" /> <!-- Orichalcum -->
+					<item id="9629" min="1" max="1" chance="1.1473" /> <!-- Adamantine -->
+					<item id="6873" min="1" max="1" chance="0.1011" /> <!-- Recipe: Sealed Major Arcana Robe (60%) -->
+					<item id="1345" min="60" max="180" chance="29.3209" /> <!-- Shining Arrow -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1894" min="1" max="1" chance="42.863" /> <!-- Crafted Leather -->
+				<item id="5480" min="1" max="1" chance="5.4816" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5272" min="1" max="1" chance="0.5429" /> <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="50" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="22547" level="93" type="L2Monster" name="Dragontroop Healer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Skill01_Prob" value="2000" />
+			<skill name="Skill01_ID" id="5835" level="1" /> <!-- Major Heal -->
+			<skill name="Skill02_ID" id="5836" level="1" /> <!-- Greater Heal -->
+			<skill name="Buff" id="4608" level="2" /> <!-- NPC Clan Buff - Berserk -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="324733" hpRegen="10.5" mp="31986" mpRegen="3.6" />
+			<attack physical="5679.07860126925" magical="3878.0744848375" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="539.312128" magical="591.967824" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="82" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4608" level="2" /> <!-- NPC Clan Buff - Berserk -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5835" level="1" /> <!-- Major Heal -->
+			<skill id="5836" level="1" /> <!-- Greater Heal -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="22548" level="94" type="L2Monster" name="Dragontroop Lancer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Skill01_Prob" value="1000" />
+			<param name="Skill02_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5837" level="1" /> <!-- Double Throwing Javelin -->
+			<skill name="Skill02_ID" id="5838" level="1" /> <!-- Throwing Javelin -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13843" /> <!-- rhand: Draconic Peltast Weapon -->
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="21690" mpRegen="3.6" />
+			<attack physical="5746.81895750842" magical="3924.33235398589" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="546.2" magical="599.528184" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="89" />
+				<run ground="220" />
+			</speed>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5837" level="1" /> <!-- Double Throwing Javelin -->
+			<skill id="5838" level="1" /> <!-- Throwing Javelin -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="46.5" />
+		</collision>
+	</npc>
+	<npc id="22549" level="94" type="L2Monster" name="Dragontroop Lancer">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Skill01_Prob" value="1000" />
+			<param name="Skill02_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5837" level="1" /> <!-- Double Throwing Javelin -->
+			<skill name="Skill02_ID" id="5838" level="1" /> <!-- Throwing Javelin -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13843" /> <!-- rhand: Draconic Peltast Weapon -->
+		<acquire exp="170942" sp="3694" />
+		<stats>
+			<vitals hp="542125" hpRegen="114.399578021039" mp="1674.8" mpRegen="3" />
+			<attack physical="5746.81895750842" magical="3924.33235398589" random="10" critical="8" accuracy="100" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="546.2" magical="599.528184" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="89" />
+				<run ground="220" />
+			</speed>
+		</stats>
+		<status undying="false" canMove="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5837" level="1" /> <!-- Double Throwing Javelin -->
+			<skill id="5838" level="1" /> <!-- Throwing Javelin -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="46.5" />
+		</collision>
+	</npc>
+	<npc id="22550" level="93" type="L2Monster" name="Savage Warrior">
+		<parameters>
+			<param name="Skill01_Prob" value="1000" />
+			<param name="Skill02_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Skill02_ID" id="5309" level="5" /> <!-- Bleed -->
+			<skill name="SelfRangeDD_ID" id="5202" level="9" /> <!-- Stun -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="13987" /> <!-- rhand: Exclusive to Monsters (Savage Warrior) -->
+		<acquire exp="186514" sp="3861" />
+		<stats>
+			<vitals hp="270610" hpRegen="69.074398826847" mp="1574.0" mpRegen="3" />
+			<attack physical="4149.83975268227" magical="2833.8026342934" random="50" critical="1" accuracy="91" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="525.233168" magical="576.514248" />
+			<attribute>
+				<attack type="DARK" value="130" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="92" />
+				<run ground="200" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5202" level="9" /> <!-- Stun -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5309" level="5" /> <!-- Bleed -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8218" max="16827" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.0336999893188477">
+					<item id="80" min="1" max="1" chance="0.1383" /> <!-- Tallum Blade -->
+					<item id="5548" min="1" max="1" chance="33.163" /> <!-- Tallum Blade Edge -->
+					<item id="150" min="1" max="1" chance="0.1383" /> <!-- Elemental Sword -->
+					<item id="5547" min="1" max="1" chance="33.163" /> <!-- Elemental Sword Edge -->
+					<item id="7884" min="1" max="1" chance="0.1383" /> <!-- Infernal Master -->
+					<item id="8331" min="1" max="1" chance="33.2591" /> <!-- Infernal Master Blade -->
+				</group>
+				<group chance="13.409899711608887">
+					<item id="1894" min="1" max="1" chance="31.6406" /> <!-- Crafted Leather -->
+					<item id="4039" min="1" max="1" chance="30.0586" /> <!-- Mold Glue -->
+					<item id="4041" min="1" max="1" chance="7.8414" /> <!-- Mold Hardener -->
+					<item id="4044" min="1" max="1" chance="30.0586" /> <!-- Thons -->
+					<item id="1808" min="1" max="1" chance="0.4008" /> <!-- Recipe: Soulshot (S-Grade) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="5502" min="1" max="1" chance="27.6561" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="1894" min="1" max="1" chance="57.4568" /> <!-- Crafted Leather -->
+				<item id="1894" min="1" max="1" chance="57.4568" /> <!-- Crafted Leather -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="27" />
+			<height normal="48.5" />
+		</collision>
+	</npc>
+	<npc id="22551" level="93" type="L2Monster" name="Priest of Darkness">
+		<parameters>
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5328" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Dark -->
+			<skill name="Skill02_ID" id="5828" level="1" /> <!-- Unholy Flare -->
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="172400" sp="3513" />
+		<stats>
+			<vitals hp="270610" hpRegen="69.5153124125026" mp="1540.8" mpRegen="3" />
+			<attack physical="4090.13416907694" magical="2793.03141458148" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="518.05528" magical="568.635576" />
+			<attribute>
+				<attack type="DARK" value="130" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="120" dark="180" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="73" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5328" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Dark -->
+			<skill id="5467" level="1" /> <!-- Dark Attacks -->
+			<skill id="5828" level="1" /> <!-- Unholy Flare -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="7866" max="16108" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.9821000099182129">
+					<item id="212" min="1" max="1" chance="0.1045" /> <!-- Dasparion's Staff -->
+					<item id="5543" min="1" max="1" chance="25.0791" /> <!-- Dasparion's Staff Head -->
+					<item id="2504" min="1" max="1" chance="0.1045" /> <!-- Meteor Shower -->
+					<item id="5532" min="1" max="1" chance="24.8449" /> <!-- Meteor Shower Head -->
+					<item id="7894" min="1" max="1" chance="0.1045" /> <!-- Spiritual Eye -->
+					<item id="8341" min="1" max="1" chance="24.8131" /> <!-- Spiritual Eye Piece -->
+					<item id="7899" min="1" max="1" chance="0.1045" /> <!-- Destroyer Hammer -->
+					<item id="8346" min="1" max="1" chance="24.8449" /> <!-- Hammer Piece of Destroyer -->
+				</group>
+				<group chance="45.07320022583008">
+					<item id="1895" min="1" max="1" chance="61.1455" /> <!-- Metallic Fiber -->
+					<item id="4040" min="1" max="1" chance="4.2802" /> <!-- Mold Lubricant -->
+					<item id="4042" min="1" max="1" chance="3.5668" /> <!-- Enria -->
+					<item id="4043" min="1" max="1" chance="7.1336" /> <!-- Asofe -->
+					<item id="3036" min="1" max="1" chance="0.0951" /> <!-- Recipe: Spiritshot S -->
+					<item id="1345" min="60" max="180" chance="23.7788" /> <!-- Shining Arrow -->
+				</group>
+			</death>
+			<corpse>
+				<item id="5503" min="1" max="1" chance="26.4734" /> <!-- Sealed Majestic Boots Lining -->
+				<item id="3036" min="1" max="1" chance="0.6967" /> <!-- Recipe: Spiritshot S -->
+				<item id="5514" min="1" max="1" chance="26.4734" /> <!-- Sealed Gauntlets of Nightmare Design -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="19" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="22552" level="93" type="L2Monster" name="Mutated Drake">
+		<parameters>
+			<param name="Skill01_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="166224" sp="3461" />
+		<stats>
+			<vitals hp="270610" hpRegen="116.187487396794" mp="1607.4" mpRegen="3" />
+			<attack physical="5606.1418676707" magical="3828.26821037257" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="532.320976" magical="584.294088" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="200" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8566" max="17478" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="1.0643999576568604">
+					<item id="269" min="1" max="1" chance="0.4189" /> <!-- Blood Tornado -->
+					<item id="5539" min="1" max="1" chance="99.5811" /> <!-- Blood Tornado Edge -->
+				</group>
+				<group chance="13.942000389099121">
+					<item id="1894" min="1" max="1" chance="31.6406" /> <!-- Crafted Leather -->
+					<item id="4039" min="1" max="1" chance="30.0586" /> <!-- Mold Glue -->
+					<item id="4041" min="1" max="1" chance="7.8414" /> <!-- Mold Hardener -->
+					<item id="4044" min="1" max="1" chance="30.0586" /> <!-- Thons -->
+					<item id="3957" min="1" max="1" chance="0.4008" /> <!-- Recipe: Blessed Spiritshot S -->
+				</group>
+			</death>
+			<corpse>
+				<item id="3957" min="1" max="1" chance="0.7567" /> <!-- Recipe: Blessed Spiritshot S -->
+				<item id="5515" min="1" max="1" chance="28.7536" /> <!-- Sealed Majestic Gauntlets Design -->
+				<item id="1894" min="1" max="1" chance="59.7368" /> <!-- Crafted Leather -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="48" />
+			<height normal="53.5" />
+		</collision>
+	</npc>
+	<npc id="22553" level="75" type="L2Monster" name="Large Crystal Core">
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="12129" sp="2" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="62" />
+			<height normal="140" />
+		</collision>
+	</npc>
+	<npc id="22554" level="75" type="L2Monster" name="Small Crystal Core">
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="12129" sp="2" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="62" />
+			<height normal="140" />
+		</collision>
+	</npc>
+	<npc id="22555" level="75" type="L2Monster" name="Small Crystal Core">
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="12129" sp="2" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="62" />
+			<height normal="140" />
+		</collision>
+	</npc>
+	<npc id="22556" level="75" type="L2Monster" name="Small Crystal Core">
+		<race>CONSTRUCT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="12129" sp="2" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="62" />
+			<height normal="140" />
+		</collision>
+	</npc>
+	<npc id="22557" level="75" type="L2Monster" name="Defense Mechanism">
+		<parameters>
+			<param name="MoveAroundSocial" value="134" />
+			<param name="MoveAroundSocial1" value="134" />
+			<param name="MoveAroundSocial2" value="134" />
+			<param name="Skill01_AttackSplash" value="1" />
+			<param name="IsAggressive" value="1" />
+			<param name="MovingAttack" value="0" />
+			<param name="MoveArounding" value="0" />
+			<skill name="Skill01_ID" id="5961" level="1" /> <!-- Barrier Thunder Storm -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="12129" sp="2" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" canMove="false" canBeSown="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5961" level="1" /> <!-- Barrier Thunder Storm -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="86" />
+			<height normal="133.5" />
+		</collision>
+	</npc>
+	<npc id="22558" level="75" type="L2Monster" name="Defense Battery">
+		<parameters>
+			<param name="MoveAroundSocial" value="134" />
+			<param name="MoveAroundSocial1" value="134" />
+			<param name="MoveAroundSocial2" value="134" />
+			<param name="IsAggressive" value="1" />
+			<param name="MovingAttack" value="0" />
+			<param name="MoveArounding" value="0" />
+			<skill name="Skill01_ID" id="5962" level="1" /> <!-- Air Defense Cannon -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="12129" sp="2" />
+		<stats>
+			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="794.70901" magical="542.68324" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="319.24623" magical="233.61053" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="300" />
+			</speed>
+		</stats>
+		<status undying="false" flying="true" canMove="false" canBeSown="true" />
+		<skillList>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5962" level="1" /> <!-- Air Defense Cannon -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<collision>
+			<radius normal="86" />
+			<height normal="133.5" />
+		</collision>
+	</npc>
+	<npc id="22593" level="94" type="L2Monster" name="Dragontroop Magic Blader">
+		<!-- Source: www.l2wiki.com (2015-04-08) -->
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="10000" />
+			<param name="Skill02_Prob" value="10000" />
+			<skill name="Skill01_ID" id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill name="Skill02_ID" id="5829" level="4" /> <!-- Fire Flare -->
+			<skill name="Breath" id="5827" level="3" /> <!-- Fireball -->
+			<skill name="Buff" id="5834" level="1" /> <!-- Magic Barrier -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13981" /> <!-- rhand: Exclusive to Monsters (Mounted Troops Tactics) -->
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="325276" hpRegen="10.5" mp="32535" mpRegen="3.6" />
+			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="95" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="546.2" magical="599.528184" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="82" />
+				<run ground="170" />
+			</speed>
+			<hitTime>480</hitTime>
+		</stats>
+		<status undying="false" canMove="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5312" level="5" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="3" /> <!-- Fireball -->
+			<skill id="5829" level="4" /> <!-- Fire Flare -->
+			<skill id="5834" level="1" /> <!-- Magic Barrier -->
+		</skillList>
+		<exCrtEffect>false</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="22596" level="95" type="L2Monster" name="Dragontroop Centurion">
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Breath" id="5827" level="4" /> <!-- Fireball -->
+			<skill name="SelfRangeDD_ID" id="5832" level="1" /> <!-- Hate Aura -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13979" lhand="13980" /> <!-- rhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword) lhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield) -->
+		<acquire exp="158337" sp="3368" />
+		<stats>
+			<vitals hp="278461.5" hpRegen="113.419259781018" mp="1708.8" mpRegen="3" />
+			<attack physical="5770.14557436436" magical="3940.26143244462" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="552.978032" magical="606.967992" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="210" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canMove="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="4" /> <!-- Fireball -->
+			<skill id="5832" level="1" /> <!-- Hate Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8654" max="17721" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.8762999773025513">
+					<item id="270" min="1" max="1" chance="0.3503" /> <!-- Dragon Grinder -->
+					<item id="5538" min="1" max="1" chance="99.6497" /> <!-- Dragon Grinder Edge -->
+				</group>
+				<group chance="40.7682991027832">
+					<item id="1895" min="1" max="1" chance="89.2383" /> <!-- Metallic Fiber -->
+					<item id="4040" min="1" max="1" chance="6.2467" /> <!-- Mold Lubricant -->
+					<item id="9628" min="1" max="1" chance="2.4497" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="1.6439" /> <!-- Orichalcum -->
+					<item id="6851" min="1" max="1" chance="0.4214" /> <!-- Recipe: Sealed Tateossian Necklace(70%) -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1894" min="1" max="1" chance="45.3485" /> <!-- Crafted Leather -->
+				<item id="1894" min="1" max="1" chance="45.3485" /> <!-- Crafted Leather -->
+				<item id="5487" min="1" max="1" chance="5.8199" /> <!-- Sealed Robe of Nightmare Fabric -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="42" />
+		</collision>
+	</npc>
+	<npc id="22597" level="94" type="L2Monster" name="Dragontroop Infantry">
+		<parameters>
+			<param name="Breath_Prob" value="1000" />
+			<param name="Skill01_Prob" value="1000" />
+			<param name="SelfRangeDD_Prob" value="1000" />
+			<skill name="Skill01_ID" id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill name="Breath" id="5827" level="3" /> <!-- Fireball -->
+			<skill name="SelfRangeDD_ID" id="5832" level="1" /> <!-- Hate Aura -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<equipment rhand="13979" lhand="13980" /> <!-- rhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Sword) lhand: Exclusive to Monsters (Dragon Steed Troop Battle Infantry Shield) -->
+		<acquire exp="160682" sp="3464" />
+		<stats>
+			<vitals hp="271062.5" hpRegen="114.399578021039" mp="1674.8" mpRegen="3" />
+			<attack physical="5746.81895750842" magical="3924.33235398589" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="546.2" magical="599.528184" />
+			<attribute>
+				<attack type="FIRE" value="130" />
+				<defence fire="180" water="120" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="56" />
+				<run ground="210" />
+			</speed>
+			<hitTime>450</hitTime>
+		</stats>
+		<status undying="false" canMove="false" noSleepMode="true" canBeSown="true" />
+		<skillList>
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
+			<skill id="5274" level="5" /> <!-- NPC(party) - Physical Single Long Range Attack -->
+			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="5827" level="3" /> <!-- Fireball -->
+			<skill id="5832" level="1" /> <!-- Hate Aura -->
+		</skillList>
+		<exCrtEffect>true</exCrtEffect>
+		<sNpcPropHpRate>0.5</sNpcPropHpRate>
+		<ai type="BALANCED" aggroRange="450" clanHelpRange="1000">
+			<clanList>
+				<clan>DES_DRAGON</clan>
+			</clanList>
+		</ai>
+		<dropLists>
+			<death>
+				<group chance="70">
+					<item id="57" min="8894" max="18157" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.8996000289916992">
+					<item id="289" min="1" max="1" chance="0.35" /> <!-- Soul Bow -->
+					<item id="5534" min="1" max="1" chance="99.65" /> <!-- Soul Bow Stave -->
+				</group>
+				<group chance="46.84379959106445">
+					<item id="1895" min="1" max="1" chance="66.3838" /> <!-- Metallic Fiber -->
+					<item id="4040" min="1" max="1" chance="4.6469" /> <!-- Mold Lubricant -->
+					<item id="9628" min="1" max="1" chance="1.8223" /> <!-- Leonard -->
+					<item id="9630" min="1" max="1" chance="1.2229" /> <!-- Orichalcum -->
+					<item id="6853" min="1" max="1" chance="0.1083" /> <!-- Recipe: Sealed Imperial Crusader Breastplate (60%) -->
+					<item id="1345" min="60" max="180" chance="25.8158" /> <!-- Shining Arrow -->
+				</group>
+			</death>
+			<corpse>
+				<item id="3036" min="1" max="1" chance="0.5892" /> <!-- Recipe: Spiritshot S -->
+				<item id="5488" min="1" max="1" chance="5.9695" /> <!-- Sealed Majestic Robe Fabric -->
+				<item id="3957" min="1" max="1" chance="0.5892" /> <!-- Recipe: Blessed Spiritshot S -->
+			</corpse>
+		</dropLists>
+		<collision>
+			<radius normal="22" />
+			<height normal="42" />
+		</collision>
+	</npc>
+</list>

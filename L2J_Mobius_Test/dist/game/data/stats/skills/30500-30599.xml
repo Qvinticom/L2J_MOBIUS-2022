@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="30500" levels="28" name="Lateral Hit" enchantGroup1="10" enchantGroup2="10" enchantGroup3="5">
+		<!-- Source: https://l2wiki.com/Lateral_Hit_-_Eviscerator -->
+		<table name="#magicLevel"> 1 20 28 36 42 46 50 54 60 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 22 77 141 221 669 856 1073 1323 1602 1913 2256 2629 3034 3879 4149 4434 4733 18990 20811 23098 25950 29500 33928 39478 46478 47996 49514 51032 </table>
+		<table name="#mpConsumes"> 8 17 23 29 35 39 44 47 52 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 78 79 80 </table>
+		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench1Chance"> 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 </table>
+		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<set name="castRange" val="40" />
+		<set name="coolTime" val="500" />
+		<set name="hitTime" val="1000" />
+		<set name="icon" val="icon.skill30500" />
+		<set name="activateRate" val="60" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="overHit" val="true" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="reuseDelay" val="2000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<set name="isDebuff" val="true" />
+		<enchant2 name="activateRate" val="#ench1Chance" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Debuff">
+				<mul stat="pDef" val="0.3" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#ench1Power" > <!-- Phisical skill power Chance from side +1% to +20%-->
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="critRatePos" val="#ench2rCrit"> <!-- Critical Chance from side +1% to +20%-->
+					<and>
+						<player front="false" />
+						<player behind="false" />
+					</and>
+				</mul>
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30501" levels="27" name="Backspin Blow" enchantGroup1="10" enchantGroup2="5">
+	<!-- Source: https://l2wiki.com/Backspin_Blow_-_Eviscerator -->
+		<table name="#magicLevel"> 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 129 235 369 1116 1428 1789 2205 2671 3189 3760 4383 5058 6466 6916 7390 7888 28134 30832 34221 38446 43706 50268 58492 68865 71115 73365 75615 </table>
+		<table name="#mpConsumes"> 17 23 29 35 39 44 47 54 55 59 63 67 69 70 71 73 73 74 75 75 75 76 76 77 78 79 80 </table>
+		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<set name="icon" val="icon.skill30501" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#ench1Power" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="critRate" val="#ench2rCrit">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30502" levels="24" name="Chin Strike" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Chin_Strike -->
+		<table name="#magicLevel"> 40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsumes"> 34 37 41 45 49 54 57 61 65 68 70 71 72 73 74 75 75 75 76 76 77 78 79 80 </table>
+		<table name="#ench1Chance"> 61 62 63 64 65 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81</table>
+		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30502" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="effectRange" val="600" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="activateRate" val="60" />
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="150" />
+		<set name="effectPoint" val="-100" /> <!-- Need verify -->
+		<set name="flyRadius" val="55" />
+		<set name="trait" val="KNOCKDOWN" />
+		<enchant1 name="activateRate" val="#ench1Chance" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="KnockDown" />
+		</for>
+		<enchant2for>
+			<effect name="KnockDown">
+				<mul stat="pDef" val="#ench2Hex" />
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30503" levels="11" name="Spinning Kick" enchantGroup1="10" enchantGroup2="5">
+	<!-- Source: https://l2wiki.com/Spinning_Kick_-_Eviscerator -->
+		<table name="#magicLevel"> 85 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#power"> 35167 36755 40540 45273 51165 58506 67683 79217 88893 91705 94517 </table>
+		<table name="#mpConsumes"> 81 81 82 83 83 83 84 84 84 84 84 </table>
+		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<set name="icon" val="icon.skill30503" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="power" val="#power" />
+		<set name="castRange" val="60" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="EnergyAttack">
+				<param power="#power" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#ench1Power" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="critRate" val="#ench2rCrit">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30504" levels="16" name="Gravity Hit" enchantGroup1="10" enchantGroup2="5">
+	<!-- Source: https://l2wiki.com/Gravity_Hit_-_Eviscerator -->
+		<table name="#magicLevel"> 76 78 80 82 84 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 10417 11147 11917 12727 13577 35167 38540 42776 48058 54633 62836 73116 86081 88893 91705 94517 </table>
+		<table name="#mpConsumes"> 75 77 78 79 80 81 82 82 83 83 84 84 85 86 87 88 </table>
+		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench2rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<set name="icon" val="icon.skill30504" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="9000" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#ench1Power" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="critRate" val="#ench2rCrit">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30505" levels="10" name="Pressure Punch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Pressure_Punch_-_Eviscerator -->
+		<table name="#magicLevel"> 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 17266 19164 21530 24475 28150 32755 38563 39823 41083 42343 </table>
+		<table name="#mpConsumes"> 149 150 151 151 152 153 155 157 159 161 </table>
+		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench1Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30505" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="1" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="trait" val="KNOCKDOWN" />
+		<enchant2 name="activateRate" val="#ench1Chance" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="KnockDown">
+				<param speed="700" distance="0" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#ench1Power" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant3for>
+			<effect name="KnockDown">
+				<mul stat="pDef" val="#ench2Hex"  >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant3for>
+	</skill>
+	<skill id="30506" levels="14" name="Distant Kick" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Distant_Kick_-_Eviscerator -->
+		<table name="#magicLevel"> 79 81 83 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#power"> 5164 5518 5890 19693 21581 23953 26909 30589 35181 40936 48185 49769 51343 52917 </table>
+		<table name="#mpConsumes"> 141 143 146 147 149 150 151 151 152 153 155  157 156 161</table>
+		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535 -535 -535 -535</table>
+		<table name="#ench1Power"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench2Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30506" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="abnormalTime" val="5" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="activateRate" val="60" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="80" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="1000" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="trait" val="KNOCKDOWN" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="EnergyAttack">
+				<param power="#power" />
+				<param criticalChance="15" />
+				<param ignoreShieldDefence="true" />
+			</effect>
+			<effect name="KnockDown">
+				<param speed="700" distance="50" />
+			</effect>
+		</for>
+		<enchant2 name="activateRate" val="#ench2Chance" />
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#ench1Power" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant3for>
+			<effect name="KnockDown">
+				<mul stat="pDef" val="#ench3Hex" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant3for>
+	</skill>
+	<skill id="30507" levels="24" name="Left Sidestep" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Left_Sidestep_-_Eviscerator -->
+		<table name="#mpConsumes"> 13 14 16 18 19 21 23 24 26 27 28 28 29 29 29 30 30 30 30 30 30 30 30 30 </table>
+		<table name="#magicLevel"> 40 44 48 52 56 60 64 68 72 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#ench1EffectRange"> 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700</table>
+		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30507" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLevel"/>
+		<set name="abnormalTime" val="7" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="60" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="600" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="300" />
+		<set name="coolTime" val="300" />
+		<set name="effectPoint" val="-100" /> <!-- Need verify -->
+		<set name="effectRange" val="500" />
+		<set name="fanRange" val="0,0,600,60" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="100" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="reuseDelay" val="7000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="ONE" />
+		<set name="trait" val="SHOCK" />
+		<set name="nextActionAttack" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<enchant1 name="effectRange" val="#ench1EffectRange" />
+		<for>
+			<effect name="Stun"/> <!-- need Disables targeting -->
+		</for>
+		<enchant2for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#ench2Hex" />
+				<param DUALFIST="1.3" />
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30508" levels="27" name="Right Sidestep" enchantGroup1="10" enchantGroup2="10">
+		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by for 5 seconds 10%. -->
+		<!-- The decrease in resistance is not canceled when striking. Requires a fist weapon.. -->
+		<table name="#magicLvl"> 20 28 36 42 46 50 54 58 62 66 70 74 77 79 81 83 85 87 89 91 93 95 97 99 101 103 105</table>
+		<table name="#mpConsume"> 7 9 11 14 15 17 19 20 22 23 25 26 27 28 28 29 29 29 30 30 30 30 30 31 31 31 31</table>
+		<table name="#ench1EffectRange"> 510 520 530 540 550 560 570 580 590 600 610 620 630 640 650 660 670 680 690 700</table>
+		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30508" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="abnormalLvl" val="85" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="60" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="600" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-669" />
+		<set name="effectRange" val="800" />
+		<set name="flyType" val="CHARGE" />
+		<set name="hitTime" val="800" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="mpInitialConsume" val="83" />
+		<set name="nextActionAttack" val="true" />
+		<set name="operateType" val="DIRECTIONAL_CONTINUOUS" />
+		<set name="power" val="4224" />
+		<set name="reuseDelay" val="20000" />
+		<set name="rideState" val="NONE" />
+		<set name="soulMaxConsumeCount" val="5" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="SHOCK" />
+		<set name="nextActionAttack" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<using kind="FIST,DUALFIST" />
+				<target mindistance="200" />
+			</and>
+		</cond>
+		<for>
+			<effect name="PhysicalSoulAttack" />
+			<effect name="Stun" />
+		</for>
+		<enchant1 name="effectRange" val="#ench1EffectRange" />
+		<enchant2for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#ench2Hex" />
+				<param DUALFIST="1.3" />
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30509" levels="4" name="Back Step">
+		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by for 5 seconds 10%. -->
+		<table name="#magicLvl"> 76 89 93 97 101</table>
+		<table name="#mpConsume"> 27 30 35 44 48</table>
+		<table name="#pAtks">1.10 1.15 1.20 1.20 1.20</table>
+		<set name="icon" val="icon.skill30509" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="abnormalTime" val="5" />
+		<set name="effectRange" val="280" />
+		<set name="hitTime" val="100" />
+		<set name="reuseDelay" val="7000" />
+		<set name="targetType" val="SELF" />
+		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="100" />
+		<set name="castRange" val="150" />
+		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-659" />
+		<set name="flyCourse" val="0" /> <!-- Teleport to Back -->
+		<set name="flyRadius" val="150" />
+		<set name="flyType" val="CHARGE" />
+		<set name="mpInitialConsume" val="50" />
+		<set name="power" val="100" />
+		<set name="rideState" val="NONE" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="RemoveTarget">
+				<param chance="80" />
+			</effect>
+			<effect name="Buff">
+				<add stat="pAtk" val="#pAtks" />
+			</effect>
+		</for>
+		<selfEffects>
+			<effect name="Blink" />
+		</selfEffects>
+	</skill>
+	<skill id="30510" levels="1" name="Infighter">
+		<!-- Using Right Sidestep increases P. Critical Rate. -->
+		<set name="icon" val="icon.skill30510" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="97" />
+		<set name="castRange" val="0" />
+		<for>
+			<effect name="Buff">
+				<mul stat="critDmgPos" val="1.03"> <!-- Increases side critical attack damage by 3% Need Verifi -->
+					<player front="false" behind="false" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30511" levels="5" name="Air Light" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Air_Light_-_Eviscerator -->
+		<table name="#magicLvl"> 40 85 95 99 101 </table>
+		<table name="#abnormalLvls"> 1 2 3 4 5 </table>
+		<table name="#mpConsumes"> 20 44 45 45 45 </table>
+		<table name="#pAtk"> 1.1 1.15 1.2 1.25 1.25 </table>
+		<table name="#pAtkSpd"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086</table>
+		<table name="#ench2pDef"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086</table>
+		<table name="#ench3mDef"> 1.01 1.014 1.018 1.022 1.026 1.03 1.034 1.038 1.042 1.046 1.05 1.054 1.058 1.062 1.066 1.07 1.074 1.078 1.082 1.086</table>
+		<set name="icon" val="icon.skill30511" />
+		<set name="abnormalLvl" val="#abnormalLvls" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="1800" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<enchant1for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="pDef" val="#ench2pDef" />
+			</effect>
+		</enchant2for>
+		<enchant3for>
+			<effect name="Buff">
+				<mul stat="mDef" val="#ench3mDef" />
+			</effect>
+		</enchant3for>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="#pAtk" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30512" levels="3" name="Distortion" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Distortion_-_Eviscerator -->
+		<table name="#magicLvl"> 76 85 101 </table>
+		<table name="#enchTime"> 61 62 63 64 65 66 67 68 69 70 70.5 71 71.5 72 72.5 73 73.5 74 74.5 75</table>
+		<table name="#ench2defCritDamage"> 0.99 0.985 0.98 0.975 0.97 0.965 0.96 0.955 0.95 0.945 0.94 0.935 0.93 0.925 0.92 0.915 0.91 0.905 0.90 0.895</table>
+		<set name="icon" val="icon.skill30512" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="60" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="41" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="180000" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="60" />
+		<set name="magicLvl" val="#magicLvl" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<enchant1 name="abnormalTime" val="#enchTime" />
+		<enchant2for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.15" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="physicalSkillPower" val="1.15" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="critDmgAdd" val="1.15" >
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="defCritDamage" val="#ench2defCritDamage">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant2for>
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="physicalSkillPower" val="1.05" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="critDmgAdd" val="1.05" >
+					<using kind="HEAVY" />
+				</mul>
+				<mul stat="physicalSkillPower" val="1.05" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30514" levels="3" name="Fluid Weave">
+	<!-- Source: https://l2wiki.com/Fluid_Weave -->
+		<table name="#magicLvl"> 40 85 101 </table>
+		<table name="#abnormalLvls"> 1 2 3 </table>
+		<table name="#mpConsumes"> 13 29 45 </table>
+		<table name="#rEvas"> 50 70 70 </table>
+		<table name="#mEvas"> 50 70 70 </table>
+		<table name="#pSkillEvas"> 50 70 70 </table>
+		<set name="icon" val="icon.skill30514" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="abnormalTime" val="3" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<effect name="Buff">
+			<add stat="pSkillEvas" val="#pSkillEvas" />
+			<add stat="rEvas" val="#rEvas" />
+			<add stat="mEvas" val="#mEvas" />
+		</effect>
+	</skill>
+	<skill id="30515" levels="1" name="Spallation" enchantGroup1="10" enchantGroup2="10">
+		<table name="#enchTime"> 31 32 33 34 35 36 37 38 39 40 40.5 41 41.5 42 42.5 43 43.5 44 44.5 45</table>
+		<table name="#ench1runSpd"> 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40</table>
+		<table name="#bonus"> 1 1 1 1 1 2 2 2 2 2 3 3 3 3 3 4 4 4 4 4</table>
+		<set name="icon" val="icon.skill30515" />
+		<set name="magicLvl" val="99" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalTime" val="30" />
+		<set name="mpConsume" val="31" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<enchant1 name="abnormalTime" val="#enchTime" />
+		<enchant1for>
+			<effect name="Buff">
+				<add stat="runSpd" val="#ench1runSpd" />
+			</effect>
+			<effect name="Buff">
+				<add stat="runSpd" val="#bonus">
+					<player incombat="false" />
+				</add>
+			</effect>
+		</enchant1for>
+		<effect name="Buff">
+			<add stat="runSpd" val="34" />
+			<add stat="rEvas" val="40" />
+			<add stat="pSkillEvas" val="45" />
+			<sub stat="debuffVuln" val="100" />
+		</effect>
+	</skill>
+	<skill id="30516" levels="1" name="Gravity Barrier" enchantGroup1="10">
+		<!-- Level 1 : Cancels all debuffs and becomes invincible against all debuffs and damage. -->
+		<table name="#ench1abnormalTime"> 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 19 20</table>
+		<set name="icon" val="icon.skill30516" />
+		<set name="magicLvl" val="93" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalType" val="INVINCIBILITY" />
+		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
+		<set name="mpConsume" val="30" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="300000" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalLvl" val="26" />
+		<set name="abnormalTime" val="10" />
+		<set name="activateRate" val="0" />
+		<set name="blockedInOlympiad" val="true" />
+		<set name="castRange" val="0" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
+		<for>
+			<effect name="BlockDamage">
+				<param block="HP"/>
+			</effect>
+			<effect name="BlockDamage">
+				<param block="MP"/>
+			</effect>
+			<effect name="BlockDebuff" />
+			<effect name="Buff">
+				<sub stat="cancelVuln" val="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30517" levels="11" name="Heavy Hand" enchantGroup1="10" enchantGroup2="10">
+	<!-- Source: https://l2wiki.com/Heavy_Hand_-_Eviscerator -->
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105 </table>
+		<table name="#mpConsume"> 73 74 75 75 75 76 76 77 78 79 80 </table>
+		<table name="#ench1Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+		<table name="#ench2Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30517" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="SILENCE_PHYSICAL" />
+		<set name="abnormalVisualEffect" val="SILENCE" />
+		<set name="activateRate" val="60" />
+		<set name="basicProperty" val="MEN" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="70" />
+		<set name="castRange" val="200" />
+		<set name="reuseDelay" val="60000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="900" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="150" />
+		<set name="targetType" val="AREA" />
+		<set name="overHit" val="true" />
+		<set name="isDebuff" val="true" />
+		<set name="trait" val="DERANGEMENT" />
+		<cond msgId="113" addName="1">
+			<using kind="DUALFIST, FIST" />
+		</cond>
+		<enchant1 name="activateRate" val="#ench1Chance" />
+		<for>
+			<effect name="PhysicalMute" />
+			<effect name="Debuff">
+				<mul stat="runSpd" val="0.5" />
+			</effect>
+		</for>
+		<enchant2for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#ench2Hex" />
+			</effect>
+		</enchant2for>
+	</skill>
+	<skill id="30518" levels="11" name="Reverse Weight" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Reverse_Weight_-_Eviscerator -->
+		<table name="#power"> 19693 20582 22701 25350 28648 32757 37894 44352 49769 51343 52917 </table>
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105</table>
+		<table name="#mpConsume"> 147 149 150 151 151 152 153 155 157 159 161</table>
+		<table name="#effectPoints"> -318 -432 -482 -511 -535 -535 -535 -535 -535 -535 -535</table>
+		<table name="#pPower"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20</table>
+		<table name="#ench2Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30518" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="abnormalLvl" val="4" />
+		<set name="abnormalTime" val="2" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="activateRate" val="60" />
+		<set name="affectRange" val="400" />
+		<set name="basicProperty" val="CON" />
+		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-1500" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="hitTime" val="2500" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="6" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="reuseDelay" val="30000" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="KNOCKDOWN" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="KnockDown">
+				<param speed="700" distance="50" />
+			</effect>
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack">
+				<mul stat="physicalSkillPower" val="#pPower" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+		<enchant2 name="activateRate" val="#ench2Chance" />
+		<enchant3for>
+			<effect name="KnockDown">
+				<mul stat="pDef" val="#ench3Hex" >
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant3for>
+	</skill>
+	<skill id="30519" levels="1" name="Warped Space">
+		<set name="icon" val="icon.skill30519" />
+		<set name="mpConsume" val="772" />
+		<set name="hitTime" val="2500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="6000" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="120" />
+		<set name="abnormalType" val="PARALYZE" />
+		<set name="abnormalVisualEffect" val="PARALYZE" />
+		<set name="activateRate" val="30" />
+		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="800" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1300" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLvl" val="98" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="rideState" val="NONE" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="PARALYZE" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<for>
+			<effect name="Paralyze">
+				<mul stat="pDef" val="0.90" />
+				<mul stat="mDef" val="0.90" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30520" levels="3" name="Steel Mind" enchantGroup1="10">
+	<!-- Source: https://l2wiki.com/Steel_Mind_-_Eviscerator -->
+		<table name="#spd"> 50 70 70 </table>
+		<table name="#pAtks">1.15 1.30 1.30</table>
+		<table name="#cAtk">1.10 1.15 15</table>
+		<table name="#magicLvl"> 85 99 101 </table>
+		<table name="#mpConsumes"> 221 232 243</table>
+		<table name="#ench1abnormalTime">31 32 33 34 35 36 37 38 39 40 40.5 41 41.5 42 42.5 43 43.5 44 44.5 45</table>
+		<set name="icon" val="icon.skill30520" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="abnormalTime" val="30" />
+		<set name="hitTime" val="1500" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<enchant1 name="abnormalTime" val="#ench1abnormalTime" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="#spd" />
+				<add stat="pAtk" val="#pAtks" />
+				<add stat="critDmg" val="#cAtk" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30521" levels="1" name="Damage Up">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Inflicts normal damage x 5. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="1000" />
+	</skill>
+	<skill id="30522" levels="1" name="Eminent Attack Movement">
+		<set name="icon" val="icon.skill30522" />
+		<set name="magicLvl" val="40" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="runSpd" val="1.05" />
+				<mul stat="pDef" val="1.05" />
+				<mul stat="mDef" val="1.05" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30523" levels="3" name="Battle Dash">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Speed + 10. -->
+		<set name="icon" val="icon.skill30523" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="30524" levels="1" name="Reliable Hit">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Fixed damage. -->
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<set name="mpConsume" val="1" />
+	</skill>
+	<skill id="30526" levels="1" name="Heavy Punch">
+		<!-- Level 1 : Has a chance to inflict normal damage x 5. Requires a Fist Weapon to activate. -->
+		<set name="icon" val="icon.skill30526" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<set name="activateRate" val="60" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.05" >
+					<using kind="FIST, DUALFIST" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30527" levels="1" name="Twisted Space - NPC">
+		<!-- AUTO GENERATED SKILL -->
+		<set name="icon" val="icon.skill1042" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30528" levels="1" name="Spatial Trap">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Trapped in some space, your battle strength is weakened. -->
+		<set name="icon" val="icon.skill30525" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="isDebuff" val="true" />
+	</skill>
+	<skill id="30530" levels="15" name="Crushing Air" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+	<!-- Source: https://l2wiki.com/Crushing_Air_-_Eviscerator -->
+		<table name="#power"> 11159 11936 12714 13941 14269 15046 15824 16601 16638 16679 17000 17059 17118 17177 17236 </table>
+		<table name="#magicLvl"> 76 78 80 82 84 86 88 90 92 94 96 98 101 103 105 </table>
+		<table name="#mpConsume"> 34 35 35 36 36 37 37 37 37 38 38 38 38 38 38 </table>
+		<table name="#ench1Chance">61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80</table>
+		<table name="#ench2EffectRange"> 610 620 630 640 650 660 670 680 690 700 710 720 730 740 750 760 770 780 790 800</table>
+		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill30530" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="power" val="#power" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="effectRange" val="600" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="30000" />
+		<set name="isDebuff" val="true" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="10" />
+		<set name="abnormalType" val="SILENCE_PHYSICAL" />
+		<set name="abnormalVisualEffect" val="AIR_BATTLE_SLOW" />
+		<set name="activateRate" val="60" />
+		<set name="basicProperty" val="MEN" />
+		<set name="hitTime" val="1000" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="150" />
+		<set name="trait" val="DERANGEMENT" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<enchant1 name="activateRate" val="#ench1Chance" />
+		<enchant2 name="effectRange" val="#ench2EffectRange" />
+		<enchant3for>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#ench3Hex" />
+			</effect>
+		</enchant3for>
+		<effect name="Debuff">
+			<mul stat="mAtk" val="0.50" />
+			<mul stat="pAtk" val="0.50" />
+		</effect>
+	</skill>
+	<skill id="30532" levels="3" name="Inside Position">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P. Critical Rate by 10. -->
+		<set name="icon" val="icon.skill30510" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="SELF" />
+		<set name="isMagic" val="4" />
+	</skill>
+	<skill id="30540" levels="14" name="Eminent Fist Weapon Mastery">
+	<!-- Source: https://l2wiki.com/Eminent_Fist_Weapon_Mastery_-_Eviscerator -->
+		<table name="#accCombat"> 0 2 3 3 3 4 4 8 8 8 8 8 8 8 </table>
+		<table name="#cAtkAdd"> 0 0 0 0 0 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 100 102 104 </table>
+		<table name="#pAtkAdd"> 4 13 63 124 208 306 471 3378 3916 4540 5110 5790 6143 6517 </table>
+		<table name="#pAtkMul"> 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.45 1.45 1.45 1.45 1.45 1.45 1.45 </table>
+		<table name="#rCrit"> 0 0 10 10 10 20 20 60 60 60 60 60 60 60 </table>
+		<set name="icon" val="icon.skill30524" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="critRate" val="#rCrit">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<mul stat="pAtk" val="#pAtkMul">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<add stat="pAtk" val="#pAtkAdd">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<add stat="accCombat" val="#accCombat">
+					<using kind="FIST,DUALFIST" />
+				</add>
+				<mul stat="critDmgAdd" val="#cAtkAdd">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+				<mul stat="pAtkSpd" val="1.10">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30541" levels="14" name="Eminent Light Armor Mastery">
+	<!-- Source: https://l2wiki.com/Eminent_Light_Armor_Mastery_-_Eviscerator -->
+		<table name="#magicLvl"> 5 20 40 52 64 76 80 85 90 95 99 100 102 104 </table>
+		<table name="#pDef"> 14 17 34 51 69 91 99 1657 1819 1999 2155 2415 2506 2601 </table>
+		<table name="#mDef"> 14 17 34 51 69 91 99 949 1073 1214 1340 1511 1588 1668</table>
+		<table name="#rEvas"> 1 2 3 4 5 6 7 12 12 12 12 12 12 12</table>
+		<set name="icon" val="icon.skill10254" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="pDef" val="#pDef">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="mDef" val="#mDef">
+					<using kind="LIGHT" />
+				</add>
+				<add stat="rEvas" val="#rEvas">
+					<using kind="LIGHT" />
+				</add>
+				<mul stat="pDef" val="1.10">
+					<using kind="LIGHT" />
+				</mul>
+				<mul stat="mDef" val="1.10">
+					<using kind="LIGHT" />
+				</mul>
+				<mul stat="defCritRate" val="0.65">
+					<using kind="LIGHT" />
+				</mul>
+			</effect>
+		</for>
+	</skill>
+	<skill id="30542" levels="10" name="Eminent Stability">
+		<!-- Max HP + 58, HP Recovery Bonus + 2.5, MP Recovery Bonus + 1.2. -->
+		<table name="#maxHp"> 58 196 473 6004 6305 6620 6883 6951 7088 7227</table>
+		<table name="#maxCp"> 0 0 231 545 573 601 625 631 644 657</table>
+		<table name="#regHp"> 2.5 4.5 66.5 12 12 12 12 12 12 12</table>
+		<table name="#regMp"> 1.2 1.8 2.4 6 6 6 6 6 6 6</table>
+		<table name="#regCp"> 0 0 2.4 12 12 12 12 12 12 12</table>
+		<table name="#runSpd"> 0 0 10 14 14 14 14 14 14 14</table>
+		<table name="#magicLvl"> 20 40 76 85 90 95 99 100 102 104</table>
+		<set name="icon" val="icon.skill11506" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="maxHp" val="#maxHp" />
+				<add stat="maxCp" val="#maxCp" />
+				<add stat="regCp" val="#regHp" />
+				<add stat="regHp" val="#regHp" />
+				<add stat="regMp" val="#regMp" />
+				<add stat="runSpd" val="#runSpd" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30543" levels="8" name="Eminent Attribute Resistance">
+		<table name="#magicLvl"> 76 85 90 95 99 100 102 104</table>
+		<table name="#resistance"> 10 20 22 24 26 30 32 34</table>
+		<set name="icon" val="icon.skill11006" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="windPower" val="#resistance" />
+				<add stat="earthPower" val="#resistance" />
+				<add stat="firePower" val="#resistance" />
+				<add stat="waterPower" val="#resistance" />
+				<add stat="darkPower" val="#resistance" />
+				<add stat="holyPower" val="#resistance" />
+				<add stat="windRes" val="#resistance" />
+				<add stat="earthRes" val="#resistance" />
+				<add stat="fireRes" val="#resistance" />
+				<add stat="waterRes" val="#resistance" />
+				<add stat="darkRes" val="#resistance" />
+				<add stat="holyRes" val="#resistance" />
+			</effect>
+		</for>
+	</skill>
+	<!-- Level 1 : Hold/Mental Resistance + 30. -->
+	<!-- Level 2 : Hold / Mental / Pull / Knock Back / Knock Down Resistance + 30. -->
+	<skill id="30544" levels="2" name="Eminent Trait Resistance">
+		<table name="#magicLvl"> 76 85 </table>
+		<set name="icon" val="icon.skill10005" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DefenceTrait">
+				<param HOLD="30" />
+				<param SLEEP="30" />
+				<param BLEED="30" />
+				<param DERANGEMENT="30" />
+				<param POISON="30" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30545" levels="3" name="Eminent Ability">
+		<table name="#magicLvl"> 40 76 85 </table>
+		<table name="#base">2 4 14</table>
+		<set name="icon" val="icon.skill0430" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="PASSIVE" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<add stat="STR" val="#base" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="30546" levels="11" name="Flying Knee Kick" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10">
+		<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. -->
+		<table name="#mpConsumes"> 29 29 30 30 30 30 30 31 32 33 34</table>
+		<table name="#magicLvl"> 85 87 89 91 93 95 97 99 101 103 105</table>
+		<table name="#ench1Chance"> 61 62 63 64 65 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81</table>
+		<table name="#ench2EffectRange"> 310 320 330 340 350 360 370 380 390 400 410 420 430 440 450 460 470 480 490 500</table>
+		<table name="#ench3Hex">0.99 0.986 0.982 0.978 0.974 0.97 0.966 0.962 0.958 0.954 0.95 0.946 0.942 0.938 0.934 0.93 0.926 0.922 0.918 0.914</table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="targetType" val="ONE" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="castRange" val="300" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="70000" />
+		<set name="isDebuff" val="true" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
+		<set name="activateRate" val="60" />
+		<set name="fanRange" val="0,0,80,150" />
+		<set name="flyType" val="CHARGE" />
+		<set name="affectLimit" val="5-12" />
+		<set name="affectRange" val="300" />
+		<set name="effectPoint" val="-100" /> <!-- Need verify -->
+		<set name="flyRadius" val="55" />
+		<set name="nextActionAttack" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="trait" val="KNOCKDOWN" />
+		<cond msgId="113" addName="1">
+			<using kind="FIST,DUALFIST" />
+		</cond>
+		<enchant1 name="activateRate" val="#ench1Chance" />
+		<enchant2 name="effectRange" val="#ench2EffectRange" />
+		<for>
+			<effect name="PhysicalAttack"/>
+			<effect name="KnockDown">
+				<param speed="700" distance="50" />
+			</effect>
+		</for>
+		<enchant3for>
+			<effect name="PhysicalAttack" />
+			<effect name="KnockDown">
+				<mul stat="pDef" val="#ench3Hex" />
+				<param speed="700" distance="50" />
+			</effect>
+		</enchant3for>
+	</skill>
+	<skill id="30547" levels="4" name="Stamp Punch" enchantGroup1="5">
+		<!-- Throws a powerful punch to a fallen target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Fist weapon must be equipped. -->
+		<table name="#rCrit"> 1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.10 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.20 </table>
+		<table name="#mpConsumes"> 85 85 85 85 </table>
+		<table name="#magicLevel"> 99 101 103 105 </table>
+		<table name="#power"> 91570 95080 98736 102392 </table>
+		<set name="icon" val="icon.skill0000" />
+		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="targetType" val="ONE" />
+		<set name="castRange" val="80" />
+		<set name="effectRange" val="80" />
+		<set name="power" val="#power" />
+		<set name="magicLvl" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="2000" />
+		<set name="coolTime" val="500" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+		<set name="abnormalTime" val="5" />
+		<set name="ignorePhysDefPercent" val="50" />
+		<set name="isDebuff" val="true" />
+		<set name="nextActionAttack" val="true" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<cond msgId="113" addName="1">
+			<using kind="DUALFIST, FIST" />
+		</cond>
+		<enchant1 name="magicLvl" val="105" />
+		<for>
+			<effect name="PhysicalAttack" />
+		</for>
+		<enchant1for>
+			<effect name="PhysicalAttack" >
+				<mul stat="critRate" val="#rCrit">
+					<using kind="FIST,DUALFIST" />
+				</mul>
+			</effect>
+		</enchant1for>
+	</skill>
+</list>

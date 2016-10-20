@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/teleporterData.xsd">
+	<npc id="32912"> <!-- Sookie -->
+		<teleport type="NORMAL">
+			<location npcStringId="1010020" x="117088" y="76931" z="-2688" feeCount="9200" /> <!-- Hunter's Village -->
+			<location npcStringId="1010007" x="83463" y="148045" z="-3400" feeCount="14000" /> <!-- The Town of Giran -->
+			<location npcStringId="1010023" x="146783" y="25808" z="-2008" feeCount="8800" /> <!-- Town of Aden -->
+			<location npcStringId="1010200" x="43835" y="-47749" z="-792" feeCount="6400" /> <!-- Town of Rune -->
+		</teleport>
+		<teleport type="NOBLES_TOKEN">
+			<location npcStringId="1010020" x="117088" y="76931" z="-2688" feeId="13722" feeCount="1" /> <!-- Hunter's Village -->
+			<location npcStringId="1010007" x="83463" y="148045" z="-3400" feeId="13722" feeCount="1" /> <!-- The Town of Giran -->
+			<location npcStringId="1010023" x="146783" y="25808" z="-2008" feeId="13722" feeCount="1" /> <!-- Town of Aden -->
+			<location npcStringId="1010200" x="43835" y="-47749" z="-792" feeId="13722" feeCount="1" /> <!-- Town of Rune -->
+		</teleport>
+		<teleport type="NOBLES_ADENA">
+			<location npcStringId="1010020" x="117088" y="76931" z="-2688" feeCount="1000" /> <!-- Hunter's Village -->
+			<location npcStringId="1010007" x="83463" y="148045" z="-3400" feeCount="1000" /> <!-- The Town of Giran -->
+			<location npcStringId="1010023" x="146783" y="25808" z="-2008" feeCount="1000" /> <!-- Town of Aden -->
+			<location npcStringId="1010200" x="43835" y="-47749" z="-792" feeCount="1000" /> <!-- Town of Rune -->
+		</teleport>
+	</npc>
+</list>

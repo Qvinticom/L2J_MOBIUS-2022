@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="17200" name="Olympic Athlete's Earring" type="Armor">
+		<!-- Olympic Athlete's Earring. MP + 31, Stun/Mental Attack Resistance + 20%, Stun/Mental Atk. Rate + 20% and Vampiric Rage. Only one effect is applied even when the two identical earrings are worn. -->
+		<set name="icon" val="icon.accessory_earring_of_hero_i00" />
+		<set name="bodypart" val="rear;lear" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<for>
+			<add stat="maxMp" val="31" />
+			<add stat="mDef" val="71" order="0" />
+		</for>
+	</item>
+	<item id="17201" name="Mark of Cheers" type="EtcItem">
+		<!-- Olympic Athlete's tenacity. Mark needed to use the Spell of Blessing and Energy of Victory skill. -->
+		<set name="icon" val="BranchSys2.icon.br_cheer_symbol_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17202" name="Mark of Cheers 10-unit Pack" type="EtcItem">
+		<!-- Wrapped Pack containing 10 proofs of cheers. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17203" name="Agathion - Ball Trapping Gnosian" type="Armor">
+		<!-- Bracelet that summons a ball trapping Gnosian. It wears a red uniform. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8515-1;23236-1;23237-1;3267-1" /> <!-- Release Agathion's Seal - Ball Trapping Gnosian, Agathion Cute Trick - Zaken's Spirit Swords, Swords' Song, Seal Agathion -->
+		<set name="material" val="SILVER" />
+		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
+		<set name="weight" val="150" />
+	</item>
+	<item id="17204" name="Agathion - Ball Trapping Orodriel" type="Armor">
+		<!-- Bracelet that summons a ball trapping Orodriel. It wears a red uniform. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8516-1;23236-1;23237-1;3267-1" /> <!-- Release Agathion's Seal - Ball Trapping Orodriel, Agathion Cute Trick - Zaken's Spirit Swords, Swords' Song, Seal Agathion -->
+		<set name="material" val="SILVER" />
+		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
+		<set name="weight" val="150" />
+	</item>
+	<item id="17205" name="Agathion - Penalty Kick" type="Armor">
+		<!-- Bracelet that summons a Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8517-1;23236-1;23237-1;3267-1" /> <!-- Release Agathion's Seal - Penalty Kick, Agathion Cute Trick - Zaken's Spirit Swords, Swords' Song, Seal Agathion -->
+		<set name="material" val="SILVER" />
+		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
+		<set name="weight" val="150" />
+	</item>
+	<item id="17206" name="XP Buff 50% (1-hour)" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="9167-1" /> <!-- XP Buff 50% (1-hour) -->
+		<set name="material" val="LIQUID" />
+		<set name="shared_reuse_group" val="16" />
+		<set name="time" val="60" />
+	</item>
+	<item id="17207" name="XP Buff 50% (1.5-hour)" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="30" />
+	</item>
+	<item id="17208" name="XP Buff 50% (2-hour)" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="120" />
+	</item>
+	<item id="17209" name="XP Buff 50% (2.5-hour)" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="30" />
+	</item>
+	<item id="17210" name="XP Buff 50% (3-hour)" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="180" />
+	</item>
+	<item id="17211" name="XP Buff 50% (4-hour)" type="EtcItem">
+		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="240" />
+	</item>
+	<item id="17212" name="Nevit's Voice" type="EtcItem">
+		<!-- Seashell containing Nevit's voice. Item that raises your evaluation value by 10. Can acquire 100,000 Adena by Double-clicking. -->
+		<set name="icon" val="icon.etc_fish_scale_i01" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="17213" name="Solina's Biography" type="EtcItem">
+		<!-- Biography containing the life story of Solina, a saintess of the Elmoreden kingdom. This text Has been banned throughout the kingdom and is incredibly difficult to find and intact copy. Double-click for more information. -->
+		<set name="icon" val="icon.etc_old_evil_book_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17214" name="Kaerun's Memoir" type="EtcItem">
+		<!-- Complete copy of Kaerun's Memoir. It is a detailed look at Solina's life written by Kaerun from his perspective. This book was never circulated but it's original print Has been archived inside the monastery. Double-click for more information. -->
+		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17215" name="Kaerun's Memoir Part 1" type="EtcItem">
+		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17216" name="Kaerun's Memoir Part 2" type="EtcItem">
+		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17217" name="Kaerun's Memoir Part 3" type="EtcItem">
+		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17218" name="Kaerun's Memoir Part 4" type="EtcItem">
+		<!-- Incomplete portion of Kaerun's Memoir. This is only part of Solina's life story as written by Kaerun. The book is divided into a 4 parts and is kept inside the Monastery of Silence. Double-click for more information. -->
+		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17219" name="Eris' Chronicle" type="EtcItem">
+		<!-- Book chronicling the early life and events of Solina written by Eris, the abbot of the Monastery of Silence. Double-click for more information. -->
+		<set name="icon" val="icon.etc_spell_books_red_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17220" name="Catalog Card" type="EtcItem">
+		<!-- Librarian Sophia Has given the catalog card containing the location of the book. Double-click for more information. -->
+		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17221" name="Key to the Passageway" type="EtcItem">
+		<!-- Key that opens the passageway gate to the Seal of the Saintess entrance. You can enter the passageway with this key. -->
+		<set name="icon" val="icon.etc_old_key_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17222" name="Key to the Tomb" type="EtcItem">
+		<!-- Key that opens the door to the Tomb inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Tomb without this key. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17223" name="Key to the Library" type="EtcItem">
+		<!-- Key that opens the door to the Library inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Library without this key. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17224" name="Key to the Warehouse" type="EtcItem">
+		<!-- Key that opens the door to the Warehouse inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Warehouse without this key. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17225" name="Key to the Armory" type="EtcItem">
+		<!-- Key that opens the door to the Armory inside the Relic Safehouse of the Seal of the Saintess. You cannot enter the Armory without this key. -->
+		<set name="icon" val="icon.etc_old_key_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17226" name="Elcadia's Mark" type="EtcItem">
+		<!-- Rune mark created by magic for Elcadia's test. -->
+		<set name="icon" val="icon.etc_fire_mantra_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17227" name="Elcadia's Mark" type="EtcItem">
+		<!-- Rune token created by magic for Elcadia's test. -->
+		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17228" name="Scroll of Abstinence" type="EtcItem">
+		<!-- One of the relics stored inside the Seal of the Saintess. This scroll emanates an unusual energy. The scroll is very old and worn. It must be handled with care. -->
+		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17229" name="Shield of Sacrifice" type="EtcItem">
+		<!-- One of the relics stored inside the Seal of the Saintess. This shield emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
+		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17230" name="Sword of Holy Spirit" type="EtcItem">
+		<!-- One of the relics stored inside the Seal of the Saintess. The sword emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
+		<set name="icon" val="icon.weapon_raid_sword_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17231" name="Staff of Blessing" type="EtcItem">
+		<!-- One of the relics stored inside the Seal of the Saintess. This staff emanates an unusual energy. But it is very worn and heavy. It is fragile cannot be used in battle. -->
+		<set name="icon" val="icon.weapon_mace_of_prayer_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17232" name="Agathion - Ball Trapping Gnosian Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Ball Trapping Gnosian. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17233" name="Agathion - Ball Trapping Orodriel Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Ball Trapping Orodriel. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17234" name="Agathion - Penalty Kick Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Agathion - Penalty Kick. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17235" name="World Cup Special Gift" type="EtcItem">
+		<!-- Special gift in commemoration of the World Cup. Can obtain various items by using it. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17236" name="Gift of Victory Box" type="EtcItem">
+		<!-- Gift in commemoration of the World Cup victory. Can obtain XP Buff 50% and Nevit's Voice by using it. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17237" name="Luxury Gift of Victory Box" type="EtcItem">
+		<!-- Gift in commemoration of the World Cup victory. Can obtain XP Buff 50% and Nevit's Voice by using it. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17238" name="Olympiad Match 3 Participation Certificate" type="EtcItem">
+		<!-- Document that proves participation in the Olympiad Match 3. Take this document to the Olympiad Operator to receive the minimum reward. -->
+		<set name="icon" val="icon.mercenary_certification_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17239" name="Olympiad Match 5 Participation Certificate" type="EtcItem">
+		<!-- Document that proves participation in the Olympiad Match 5. Take this document to the Olympiad Operator to receive an incomplete reward. -->
+		<set name="icon" val="icon.mercenary_certification_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17240" name="Olympiad Match 10 Participation Certificate" type="EtcItem">
+		<!-- Document that proves participation in the Olympiad Match 10. Take this document to the Olympiad Operator to receive a whole reward. -->
+		<set name="icon" val="icon.mercenary_certification_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17241" name="Olympiad Team Event Certificate" type="EtcItem">
+		<!-- Certificate that proves participation in the Olympiad team event 5 matches. Take the certificate to the Olympiad Operator. If you take it with the all-class and class battle certificates, you can expect a greater reward. -->
+		<set name="icon" val="icon.scroll_of_verification_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17242" name="Olympiad All-Class Battle Certificate" type="EtcItem">
+		<!-- Certificate that proves participation in 5 Olympiad All-Class Battles. Take the certificate to the Olympiad Operator. If you take it with the team event and class battle certificates, you can expect a greater reward. -->
+		<set name="icon" val="icon.scroll_of_verification_i03" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17243" name="Olympiad Class Battle Certificate" type="EtcItem">
+		<!-- Certificate that proves participation in 5 Olympiad All-Class Battles. Take the certificate to the Olympiad Operator. If you take it with the team event and All-Class Battle certificates, you can expect a greater reward. -->
+		<set name="icon" val="icon.scroll_of_verification_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17244" name="Olympiad 2 Consecutive Wins Confirmation" type="EtcItem">
+		<!-- Document needed to confirm 2 consecutive wins in the Olympiad. Take this confirmation to the Olympiad Operator to receive the minimum reward. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i01" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17245" name="Olympiad 5 Consecutive Wins Confirmation" type="EtcItem">
+		<!-- Document needed to confirm 5 consecutive wins in the Olympiad. Take this document to the Olympiad Operator to receive an incomplete reward. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i02" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17246" name="Olympiad 10 Consecutive Wins Confirmation" type="EtcItem">
+		<!-- Document needed to confirm 10 consecutive wins in the Olympiad. Take this document to the Olympiad Operator to receive a whole reward. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i03" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17247" name="Party Vitality Replenishing Herb" type="EtcItem">
+		<!-- Herb that recovers Vitality for 5 minutes upon use. The effect applies to all party members. -->
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17248" name="Large Dragon Bone" type="EtcItem">
+		<!-- Summoning item, you can call a raid monster at a certain location in the Dragon Valley. But if the raid monster Has already been summoned, it cannot be called. -->
+		<set name="icon" val="icon.big_dragon_bone_summon" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17249" name="Large Dragon Skull" type="EtcItem">
+		<!-- Dragon Skull obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the dragon skulls from all 7 different raid monsters, bring them to Gilmore. -->
+		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17250" name="Large Baby Dragon" type="EtcItem">
+		<!-- Baby Dragon obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the baby dragon, bring it to the separated soul in the Dragon Valley. -->
+		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17251" name="Drake Lord's Essence" type="EtcItem">
+		<!-- Drake Lord's essence. Bring it to Theodric. -->
+		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17252" name="Behemoth Leader's Essence" type="EtcItem">
+		<!-- Behemoth Leader's Essence. Bring it to Theodric. -->
+		<set name="icon" val="icon.etc_crystal_green_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17253" name="Dragon Beast's Essence" type="EtcItem">
+		<!-- Dragon Beast's Essence. Bring it to Theodric. -->
+		<set name="icon" val="icon.etc_crystal_gold_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17254" name="Box of Theodric" type="EtcItem">
+		<!-- Old and tattered box. You can hear a rattling sound when you shake it. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+	</item>
+	<item id="17255" name="Blessed Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weap -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2027-1" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="15000000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17256" name="Blessed Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fa -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2209-1" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="1800000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17257" name="Blessed Scroll: Enchant Weapon (B-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weap -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_b_i03" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2028-1" /> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="7000000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17258" name="Blessed Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fa -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2210-1" /> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="750000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17259" name="Blessed Scroll: Enchant Weapon (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weap -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_c_i02" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2029-1" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="3000000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17260" name="Blessed Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanti -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2211-1" /> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="350000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17261" name="Blessed Scroll: Enchant Weapon (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bow, which increases by 4. M. Atk. + 2 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crys -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_d_i01" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2030-1" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="900000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17262" name="Blessed Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
+		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanti -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2212-1" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="100000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17263" name="Blessed Scroll: Enchant Weapon (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all wea -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_s_i05" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_WP" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2026-1" /> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="30000000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17264" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
+		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. If enchanting fails, the -->
+		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="BLESS_SCRL_ENCHANT_AM" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="2208-1" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+		<set name="material" val="PAPER" />
+		<set name="price" val="4500000" />
+		<set name="weight" val="120" />
+	</item>
+	<item id="17265" name="Certificate of Dawn" type="EtcItem">
+		<!-- Certificate received from the Witness of Dawn Franz. It says that if you show this certificate to Priest Wood, he will exchange it for an occupation specific Forgotten Scroll that can be learned at level 81. -->
+		<set name="icon" val="icon.etc_charm_of_courage_i05" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17266" name="Will of Antharas" type="EtcItem">
+		<!-- Command stone made by Antharas embedded in his high commanding minions so he will always have control over them. Used to create Antharas Blood Crystal. Bring it to a Separated Soul. -->
+		<set name="icon" val="icon.etc_unholy_potion_i00" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17267" name="Sealed Blood Crystal" type="EtcItem">
+		<!-- Small crystal particles made from the blood of Antharas. After his blood was spilt, the land absorbed the blood and acted as a filter that separated the Poison from the blood creating a pure form of his blood that crystallized over time. Used to create an -->
+		<set name="icon" val="icon.etc_powder_red_i00" />
+		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="is_stackable" val="true" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17268" name="Antharas Blood Crystal" type="EtcItem">
+		<!-- Using the power held within the blood of Antharas, this crystal can revive and fully restore XP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Cooldown is 1 hour. -->
+		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
+		<set name="commissionItemType" val="CRYSTAL" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="9179-1" /> <!-- Antharas' Blood Crystal -->
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<cond msgId="113" addName="1">
+			<player insideZoneId="70050" />
+		</cond>
+	</item>
+	<item id="17269" name="Agathion - Antharas" type="Armor">
+		<!-- Bracelet that summons a cute Agathion - Antharas. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="8521-1;6916-1;3267-1" /> <!-- Release Agathion's Seal - Antharas, Antharas' Cute Tricks, Seal Agathion -->
+		<set name="material" val="SILVER" />
+		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
+		<set name="weight" val="150" />
+	</item>
+	<item id="17270" name="Agathion - Nevit's Messenger Kanna" type="Armor">
+		<!-- Bracelet that summons an Agathion - Nevit's Messenger Kanna. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3267-1;8522-1" /> <!-- Seal Agathion, Release Agathion's Seal - Nevit's Messenger Kanna -->
+		<set name="material" val="SILVER" />
+		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
+		<set name="weight" val="150" />
+	</item>
+	<item id="17271" name="Agathion - Guardian of Dawn Kallesin" type="Armor">
+		<!-- Bracelet that summons an Agathion - Guardian of Dawn Kallesin. -->
+		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="item_skill" val="3267-1;8523-1" /> <!-- Seal Agathion, Release Agathion's Seal - Guardian of Dawn Kallesin -->
+		<set name="material" val="SILVER" />
+		<set name="unequip_skill" val="3267-1" /> <!-- Seal Agathion -->
+		<set name="weight" val="150" />
+	</item>
+	<item id="17272" name="Agathion - Antharas Pack" type="EtcItem">
+		<!-- Special gift that commemorates the conquest of Dragon Valley. When used, you can obtain an Agathion - Antharas. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17273" name="Agathion - Nevit's Messenger Kanna Pack" type="EtcItem">
+		<!-- Special gift that commemorates the completion of the Seven Sign quest. When used, you can obtain an Agathion - Nevit's Messenger Kanna. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17274" name="Agathion - Guardian of Dawn Kallesin Pack" type="EtcItem">
+		<!-- Special gift that commemorates the completion of the Seven Sign quest. When used, you can obtain an Agathion - Guardian of Dawn Kallesin. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17275" name="Strider Pet Coupon" type="EtcItem">
+		<!-- Certificate that shows receipt of a Strider pet. You can exchange the coupon for the Strider pet through the News Informer. -->
+		<set name="icon" val="icon.etc_ticket_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="20" />
+	</item>
+	<item id="17276" name="Scroll: 50,000 SP" type="EtcItem">
+		<!-- Scroll that replenishes 50,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="9180-1" /> <!-- Scroll: 50,000 SP -->
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="17277" name="Scroll: 100,000 SP" type="EtcItem">
+		<!-- Scroll that replenishes 100,000 SP. -->
+		<set name="icon" val="icon.etc_sp_scroll3_i00" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="item_skill" val="9180-2" /> <!-- Scroll: 50,000 SP -->
+		<set name="material" val="PAPER" />
+		<set name="weight" val="30" />
+	</item>
+	<item id="17278" name="Strider Pet Exchange Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Strider pet coupon. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17279" name="Transformation Scroll: Anakim Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Anakim Transformation Scroll. When used, you can obtain a Transformation Sealbook: Anakim. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17280" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
+		<!-- Wrapped Pack containing Anakim Transformation Sealbook. When used, you can obtain a Transformation Sealbook: Anakim. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17281" name="Delivery Box" type="EtcItem">
+		<!-- Box that Isabel Silvershadow in Hunter's Village asks you to deliver. Bring it to Valley Trader Kitzka in Dragon's Valley. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="PAPER" />
+	</item>
+	<item id="17282" name="2010 Summer Special Pack" type="EtcItem">
+		<!-- Wrapped Pack containing XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17283" name="XP Buff 50% (4-hour)" type="EtcItem">
+		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hours. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="240" />
+		<set name="weight" val="1" />
+	</item>
+	<item id="17284" name="XP Buff 50% (4-hour)" additionalName="Event" type="EtcItem">
+		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hours. All levels. -->
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="time" val="240" />
+		<set name="weight" val="1" />
+	</item>
+	<item id="17285" name="Freya's Refreshing Breeze" type="EtcItem">
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Vitality buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+	</item>
+	<item id="17286" name="Freya's Refreshing Breeze" additionalName="Event" type="EtcItem">
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the Birthday Joy buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="1" />
+	</item>
+	<item id="17287" name="2010 Summer Special Pack" additionalName="Event" type="EtcItem">
+		<!-- Wrapped Pack containing XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
+		<set name="icon" val="icon.etc_pi_gift_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="FISH" />
+	</item>
+	<item id="17288" name="Ice Watermelon Hat" additionalName="Event" type="Armor">
+		<!-- Hat that looks like a watermelon. Just looking at it is refreshing. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
+		<set name="bodypart" val="hairall" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17289" name="Ice Watermelon Hat" type="Armor">
+		<!-- Hat that looks like a watermelon. Just looking at it is refreshing. Uses 2 hair accessory slots. -->
+		<set name="icon" val="BranchSys.icon.br_watermelon_cap_a_i00" />
+		<set name="bodypart" val="hairall" />
+		<set name="default_action" val="EQUIP" />
+		<set name="is_auctionable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="10" />
+	</item>
+	<item id="17290" name="Requiem Shaper" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="1520" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="380" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="17291" name="Requiem Cutter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Accuracy and P. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_estia_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="189" />
+			<set stat="pAtk" val="435" />
+		</for>
+	</item>
+	<item id="17292" name="Requiem Slasher" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_polion_i00" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1740" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="189" />
+			<set stat="pAtk" val="529" />
+		</for>
+	</item>
+	<item id="17293" name="Requiem Avenger" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_batista_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1740" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="189" />
+			<set stat="pAtk" val="435" />
+		</for>
+	</item>
+	<item id="17294" name="Requiem Fighter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. and P. Atk. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_fantasma_i00" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="1550" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="189" />
+			<set stat="pAtk" val="529" />
+		</for>
+	</item>
+	<item id="17295" name="Requiem Stormer" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Multi Attack when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_soryu_i00" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="BRONZE" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="2010" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="435" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="17296" name="Requiem Thrower" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases P. Skill Power when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_grabathus_i00" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="1520" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="856" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="17297" name="Requiem Shooter" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases Atk. Spd. when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_shyayaka_i00" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="1580" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="771" />
+			<set stat="mAtk" val="189" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="17298" name="Requiem Buster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Rate when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_kaynon_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="1520" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="252" />
+			<set stat="pAtk" val="348" />
+		</for>
+	</item>
+	<item id="17299" name="Requiem Caster" type="Weapon">
+		<!-- Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. Increases M. Accuracy and M. Critical Damage when enchanted to + 4. -->
+		<set name="icon" val="icon.weapon_anatrian_i00" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
+		<set name="crystal_count" val="1202" />
+		<set name="crystal_type" val="R" />
+		<set name="default_action" val="EQUIP" />
+		<set name="element_enabled" val="true" />
+		<set name="enchant_enabled" val="1" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="56345583" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="1080" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="252" />
+			<set stat="pAtk" val="348" />
+		</for>
+	</item>
+</list>

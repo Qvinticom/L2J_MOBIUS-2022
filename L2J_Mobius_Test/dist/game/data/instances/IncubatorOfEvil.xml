@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Incubator of Evil" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<allowSummon val="false" />
+	<emptyDestroyTime val="1" />  
+	<exitPoint x="185798" y="20400" z="-3345" />
+	<spawnlist>
+		<group name="general">
+			<spawn npcId="33170" x="56168" y="-172664" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33171" x="56280" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33172" x="56376" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33173" x="56056" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33174" x="55976" y="-172632" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33416" x="56280" y="-176296" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="33416" x="56072" y="-176296" z="-7976" heading="16383" respawn="0" />
+			<spawn npcId="33416" x="56504" y="-176296" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="33416" x="55880" y="-176296" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="archers">
+			<spawn npcId="33414" x="56392" y="-176232" z="-7980" heading="49151" respawn="0" />
+			<spawn npcId="33414" x="56184" y="-176168" z="-7974" heading="49151" respawn="0" />
+			<spawn npcId="33414" x="55976" y="-176136" z="-7980" heading="49151" respawn="0" />
+		</group>
+		<group name="infantry">
+			<spawn npcId="33415" x="56168" y="-176712" z="-7973" heading="49151" respawn="0" />
+			<spawn npcId="33415" x="55960" y="-176696" z="-7973" heading="49151" respawn="0" />
+			<spawn npcId="33415" x="56376" y="-176712" z="-7973" heading="49151" respawn="0" />
+		</group>
+		<group name="wave1">
+			<spawn npcId="27431" x="56168" y="-177592" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56248" y="-177576" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56072" y="-177544" z="-7977" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56312" y="-177576" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="wave2">
+			<spawn npcId="27431" x="56808" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56824" y="-176792" z="-7979" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56760" y="-176712" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56824" y="-176584" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="wave3">
+			<spawn npcId="27431" x="56808" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56824" y="-176792" z="-7979" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56760" y="-176712" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56824" y="-176584" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="wave4">
+			<spawn npcId="27430" x="56216" y="-177624" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="56088" y="-177624" z="-7975" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56168" y="-177544" z="-7975" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56296" y="-177512" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="56376" y="-177512" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="55944" y="-177512" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56296" y="-177448" z="-7979" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55992" y="-177384" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="wave5">
+			<spawn npcId="27430" x="55448" y="-176760" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="55464" y="-176664" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="55560" y="-176744" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="55512" y="-176824" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55448" y="-176808" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55400" y="-176776" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55384" y="-176696" z="-7974" heading="16383" respawn="0" />
+		</group>
+		<group name="wave6">
+			<spawn npcId="27430" x="56840" y="-176712" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="56824" y="-176648" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="56824" y="-176584" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="56872" y="-176632" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56904" y="-176696" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56904" y="-176792" z="-7976" heading="16383" respawn="0" />
+		</group>
+		<group name="wave7">
+			<spawn npcId="27430" x="55432" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="55432" y="-176744" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="55432" y="-176648" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="55464" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55416" y="-176776" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55368" y="-176664" z="-7974" heading="16383" respawn="0" />
+		</group>
+		<group name="wave8">
+			<spawn npcId="27430" x="55432" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="55432" y="-176744" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="55432" y="-176648" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="55496" y="-176792" z="-7976" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="55464" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="55576" y="-176584" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55416" y="-176776" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55368" y="-176664" z="-7974" heading="16383" respawn="0" />
+		</group>
+		<group name="wave9">
+			<spawn npcId="27430" x="56696" y="-176744" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="56712" y="-176664" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="56776" y="-176808" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27431" x="56696" y="-176808" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56616" y="-176728" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56600" y="-176648" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56584" y="-176584" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56712" y="-176552" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="wave10">
+			<spawn npcId="27430" x="56184" y="-177672" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="56088" y="-177704" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="56152" y="-177592" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="56264" y="-177496" z="-7978" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56184" y="-177464" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56104" y="-177448" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56024" y="-177448" z="-7980" heading="16383" respawn="0" />
+		</group>
+		<group name="wave11">
+			<spawn npcId="27430" x="55512" y="-176648" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="55512" y="-176712" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="55576" y="-176696" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="55544" y="-176776" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="55432" y="-176808" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55432" y="-176680" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55592" y="-176632" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="55640" y="-176712" z="-7974" heading="16383" respawn="0" />
+		</group>
+		<group name="wave12">
+			<spawn npcId="27430" x="56872" y="-176648" z="-7975" heading="16383" respawn="0" />
+			<spawn npcId="27430" x="56904" y="-176744" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="56824" y="-176728" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="56728" y="-176664" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="56680" y="-176776" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56664" y="-176712" z="-7974" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56696" y="-176632" z="-7974" heading="16383" respawn="0" />
+		</group>
+		<group name="wave13">
+			<spawn npcId="27430" x="55976" y="-177544" z="-7980" heading="16383" respawn="0" />
+			<spawn npcId="27433" x="55864" y="-177544" z="-8320" heading="16383" respawn="0" />
+			<spawn npcId="27432" x="55768" y="-177544" z="-8320" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56376" y="-177544" z="-8320" heading="16383" respawn="0" />
+			<spawn npcId="27434" x="56336" y="-177544" z="-8320" heading="16383" respawn="0" />
+			<spawn npcId="27425" x="56168" y="-177544" z="-7974" heading="16383" respawn="0" />
+		</group>
+	</spawnlist>
+</instance>

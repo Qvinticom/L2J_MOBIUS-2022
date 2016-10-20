@@ -1,0 +1,85 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.l2jmobius.gameserver.network.serverpackets;
+
+import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.model.Shortcut;
+
+public final class ShortCutRegister extends L2GameServerPacket
+{
+	private final Shortcut _shortcut;
+	
+	/**
+	 * Register new skill shortcut
+	 * @param shortcut
+	 */
+	public ShortCutRegister(Shortcut shortcut)
+	{
+		_shortcut = shortcut;
+	}
+	
+	@Override
+	protected final void writeImpl()
+	{
+		writeC(0x44);
+		writeD(_shortcut.getType().ordinal());
+		writeD(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
+		switch (_shortcut.getType())
+		{
+			case ITEM:
+			{
+				writeD(_shortcut.getId());
+				writeD(_shortcut.getCharacterType());
+				writeD(_shortcut.getSharedReuseGroup());
+				writeD(0x00); // unknown
+				writeD(0x00); // unknown
+				writeD(0x00); // item augment id
+				writeD(0x00); // TODO: Find me, item visual id ?
+				writeD(0x00);
+				break;
+			}
+			case SKILL:
+			{
+				writeD(_shortcut.getId());
+				if ((_shortcut.getLevel() < 100) || (_shortcut.getLevel() > 10000))
+				{
+					writeD(_shortcut.getLevel());
+				}
+				else
+				{
+					final int _maxLevel = SkillData.getInstance().getMaxLevel(_shortcut.getId());
+					writeH(_maxLevel);
+					writeH(_shortcut.getLevel());
+				}
+				writeD(_shortcut.getSharedReuseGroup());
+				writeC(0x00); // C5
+				writeD(_shortcut.getCharacterType());
+				writeD(0x00); // TODO: Find me
+				writeD(0x00); // TODO: Find me
+				break;
+			}
+			case ACTION:
+			case MACRO:
+			case RECIPE:
+			case BOOKMARK:
+			{
+				writeD(_shortcut.getId());
+				writeD(_shortcut.getCharacterType());
+			}
+		}
+	}
+}

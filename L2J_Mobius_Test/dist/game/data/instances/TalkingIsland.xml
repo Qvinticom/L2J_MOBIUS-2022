@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="TalkingIsland" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
+	<activityTime val="60" />
+	<allowSummon val="false" />
+	<emptyDestroyTime val="30"   />
+	<exitPoint x="-19006" y="277065" z="-13383"/>
+	<spawnlist>
+		<group name="general">
+			<spawn npcId="33748" x="210584" y="13256" z="-3754" heading="0" respawn="0" />
+			<spawn npcId="33749" x="210312" y="13768" z="-3754" heading="0" respawn="0" />
+			<spawn npcId="30031" x="210344" y="16024" z="-3748" heading="0" respawn="0" />
+		</group>
+	</spawnlist>
+</instance>

@@ -1,0 +1,2681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="11800" name="Common Item - Grace Dagger" type="Weapon">
+		<!-- Grace Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_grace_dagger_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="340" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="122" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11801" name="Common Item - Ultimate Sword" type="Weapon">
+		<!-- Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sword_of_limit_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11812" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="467" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="139" />
+		</for>
+	</item>
+	<item id="11802" name="Common Item - Nirvana Axe" type="Weapon">
+		<!-- Nirvana Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_nirvana_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="383" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="101" />
+			<set stat="pAtk" val="111" />
+		</for>
+	</item>
+	<item id="11803" name="Common Item - Dark Screamer" type="Weapon">
+		<!-- Dark Screamer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dark_screamer_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="337" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="122" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11804" name="Common Item - Club of Nature" type="Weapon">
+		<!-- Club of Nature with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_club_of_nature_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="367" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="101" />
+			<set stat="pAtk" val="111" />
+		</for>
+	</item>
+	<item id="11805" name="Common Item - Sword of Whispering Death" type="Weapon">
+		<!-- Sword of Whispering Death with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_deathbreath_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="307" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="101" />
+			<set stat="pAtk" val="111" />
+		</for>
+	</item>
+	<item id="11806" name="Common Item - Mace of Underworld" type="Weapon">
+		<!-- Mace of Underworld with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_mace_of_underworld_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="363" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="101" />
+			<set stat="pAtk" val="111" />
+		</for>
+	</item>
+	<item id="11807" name="Common Item - Sword of Delusion" type="Weapon">
+		<!-- Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11809" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="MITHRIL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="467" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="139" />
+		</for>
+	</item>
+	<item id="11808" name="Common Item - Blinzlasher" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Caliburs conversion. Blinzlasher with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11821" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="467" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11809" name="Common Item - Blinzlasher" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Sword of Delusion conversion. Blinzlasher with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11807" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="467" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11810" name="Common Item - Blinzlasher" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Tsurugi conversion. Blinzlasher with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11820" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="467" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11811" name="Common Item - Blinzlasher" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Sword of Nightmare conversion. Blinzlasher with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11815" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="467" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11812" name="Common Item - Blinzlasher" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Ultimate Sword conversion. Blinzlasher with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11801" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="467" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="126" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11813" name="Common Item - Pa'agrian Sword" type="Weapon">
+		<!-- Pa'agrian Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sword_of_paagrio_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11818" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="660" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="169" />
+		</for>
+	</item>
+	<item id="11814" name="Common Item - Akat Longbow" type="Weapon">
+		<!-- Akat Longbow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_akat_long_bow_i00" />
+		<set name="attack_range" val="500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11823" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="HORN" />
+		<set name="mp_consume" val="3" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="820" />
+		<set name="soulshots" val="9" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="580" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="316" />
+			<set stat="mAtk" val="84" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11815" name="Common Item - Sword of Nightmare" type="Weapon">
+		<!-- Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sword_of_nightmare_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11811" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="467" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="139" />
+		</for>
+	</item>
+	<item id="11816" name="Common Item - War Axe" type="Weapon">
+		<!-- War Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_war_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="553" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="139" />
+		</for>
+	</item>
+	<item id="11817" name="Common Item - Heathen's Book" type="Weapon">
+		<!-- Heathen's Book with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_heathens_book_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="OTHER_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="ETC" />
+		<set name="weight" val="187" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="101" />
+			<set stat="pAtk" val="111" />
+		</for>
+	</item>
+	<item id="11818" name="Common Item - Immortal Edge" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Sword of Pa'agrio conversion. Immortal Edge with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_invincible_blade_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11813" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="660" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="151" />
+		</for>
+	</item>
+	<item id="11819" name="Common Item - Inferno Staff" type="Weapon">
+		<!-- Inferno Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_inferno_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="333" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="111" />
+			<set stat="pAtk" val="135" />
+		</for>
+	</item>
+	<item id="11820" name="Common Item - Tsurugi" type="Weapon">
+		<!-- Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_tsurugi_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11810" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="467" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="139" />
+		</for>
+	</item>
+	<item id="11821" name="Common Item - Caliburs" type="Weapon">
+		<!-- Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_caliburs_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11808" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="467" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="139" />
+		</for>
+	</item>
+	<item id="11822" name="Common Item - Karik Horn" type="Weapon">
+		<!-- Karik Horn with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_horn_of_karik_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="673" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="169" />
+		</for>
+	</item>
+	<item id="11823" name="Common Item - Tathlum" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Akat Longbow conversion. Tathlum with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_taslam_i00" />
+		<set name="attack_range" val="400" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11814" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
+		<set name="soulshots" val="5" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="587" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="176" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11824" name="Common Item - Pa'agrio Hammer" type="Weapon">
+		<!-- Pa'agrio Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_paagrio_hammer_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="337" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="111" />
+			<set stat="pAtk" val="135" />
+		</for>
+	</item>
+	<item id="11825" name="Common Item - Paradia Staff" type="Weapon">
+		<!-- Paradia Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_paradia_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="337" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="111" />
+			<set stat="pAtk" val="135" />
+		</for>
+	</item>
+	<item id="11826" name="Common Item - Poleaxe" type="Weapon">
+		<!-- Poleaxe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_poleaxe_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="BRONZE" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="670" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="139" />
+			<set stat="mAtk" val="76" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11827" name="Common Item - Fisted Blade" type="Weapon">
+		<!-- Fisted Blade with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_fist_blade_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;90" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="493" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="76" />
+			<set stat="pAtk" val="169" />
+		</for>
+	</item>
+	<item id="11828" name="Common Item - Sage's Staff" type="Weapon">
+		<!-- Sage's Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sages_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="333" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="111" />
+			<set stat="pAtk" val="135" />
+		</for>
+	</item>
+	<item id="11829" name="Common Item - Homunkulus' Sword" type="Weapon">
+		<!-- Homunkulus' Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_homunkuluss_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="10" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="price" val="36440" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="317" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="101" />
+			<set stat="pAtk" val="111" />
+		</for>
+	</item>
+	<item id="11830" name="Common Item - Scorpion" type="Weapon">
+		<!-- Scorpion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_scorpion_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="38880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="663" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="144" />
+			<set stat="mAtk" val="78" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11831" name="Common Item - StormBringer*StormBringer" type="Weapon">
+		<!-- StormBringer*StormBringer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-6" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="38880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="777" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="78" />
+			<set stat="pAtk" val="175" />
+		</for>
+	</item>
+	<item id="11832" name="Common Item - Widow Maker" type="Weapon">
+		<!-- Widow Maker with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_widow_maker_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="38880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="660" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="144" />
+			<set stat="mAtk" val="78" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11833" name="Common Item - Pa'agrio Axe" type="Weapon">
+		<!-- Pa'agrio Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_paagrio_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="11" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="price" val="38880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="330" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="114" />
+			<set stat="pAtk" val="141" />
+		</for>
+	</item>
+	<item id="11834" name="Common Item - StormBringer*Raid Sword" type="Weapon">
+		<!-- StormBringer*Raid Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="12" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-7" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="41400" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="780" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="81" />
+			<set stat="pAtk" val="183" />
+		</for>
+	</item>
+	<item id="11835" name="Common Item - StormBringer*Shamshir" type="Weapon">
+		<!-- StormBringer*Shamshir with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="12" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-7" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="41400" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="767" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="81" />
+			<set stat="pAtk" val="183" />
+		</for>
+	</item>
+	<item id="11836" name="Common Item - StormBringer*Spirit Sword" type="Weapon">
+		<!-- StormBringer*Spirit Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="12" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-7" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="41400" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="770" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="81" />
+			<set stat="pAtk" val="183" />
+		</for>
+	</item>
+	<item id="11837" name="Common Item - StormBringer*Katana" type="Weapon">
+		<!-- StormBringer*Katana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="12" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="41400" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="773" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="81" />
+			<set stat="pAtk" val="183" />
+		</for>
+	</item>
+	<item id="11838" name="Common Item - Ghoul's Staff" type="Weapon">
+		<!-- Ghoul's Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="BONE" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="333" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="122" />
+			<set stat="pAtk" val="152" />
+		</for>
+	</item>
+	<item id="11839" name="Common Item - Great Pata" type="Weapon">
+		<!-- Great Pata with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_great_pata_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;90" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="weight" val="487" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11840" name="Common Item - Dwarven Hammer" type="Weapon">
+		<!-- Dwarven Hammer with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="670" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11841" name="Common Item - Raid Sword*Raid Sword" type="Weapon">
+		<!-- Raid Sword*Raid Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-8" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="750" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11842" name="Common Item - Deadman's Staff" type="Weapon">
+		<!-- Deadman's Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="BONE" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="337" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="122" />
+			<set stat="pAtk" val="152" />
+		</for>
+	</item>
+	<item id="11843" name="Common Item - Berserker Blade" type="Weapon">
+		<!-- Berserker Blade with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_berserker_blade_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11849" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="460" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11844" name="Common Item - Sharpshooter" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Eminence Bow of Nobility conversion. Sharpshooter with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_taslam_i00" />
+		<set name="attack_range" val="400" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11857" />
+		<set name="commissionItemType" val="CROSSBOW" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="reuse_delay" val="400" />
+		<set name="soulshots" val="6" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="CROSSBOW" />
+		<set name="weight" val="580" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="303" />
+			<set stat="pAtk" val="198" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11845" name="Common Item - Shamshir*Raid Sword" type="Weapon">
+		<!-- Shamshir*Raid Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-8" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="760" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11846" name="Common Item - Shamshir*Shamshir" type="Weapon">
+		<!-- Shamshir*Shamshir with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-8" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="777" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11847" name="Common Item - Shamshir*Spirit Sword" type="Weapon">
+		<!-- Shamshir*Spirit Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="760" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11848" name="Common Item - Shamshir*Katana" type="Weapon">
+		<!-- Shamshir*Katana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-8" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="770" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11849" name="Common Item - Saber Tooth" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Berserker Blade conversion. Saber Tooth with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_invincible_blade_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11843" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="650" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="169" />
+		</for>
+	</item>
+	<item id="11850" name="Common Item - Ecliptic Sword" type="Weapon">
+		<!-- Ecliptic Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="460" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="111" />
+			<set stat="pAtk" val="125" />
+		</for>
+	</item>
+	<item id="11851" name="Common Item - Spirit Sword*Raid Sword" type="Weapon">
+		<!-- Spirit Sword*Raid Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-8" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="753" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11852" name="Common Item - Spirit Sword*Spirit Sword" type="Weapon">
+		<!-- Spirit Sword*Spirit Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="747" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11853" name="Common Item - Samurai Long Sword" type="Weapon">
+		<!-- Samurai Long Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11854" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="460" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="156" />
+		</for>
+	</item>
+	<item id="11854" name="Common Item - Admiral's Estoc" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Samurai Long Sword conversion. Admiral's Estoc with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_blink_slasher_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="change_weaponId" val="11853" />
+		<set name="commissionItemType" val="RAPIER" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3426-1" /> <!-- Maximum Ability -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="40" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="RAPIER" />
+		<set name="weight" val="460" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="critRate" val="10" />
+			<set stat="pAtkSpd" val="406" />
+			<set stat="pAtk" val="141" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="1.5" />
+		</for>
+	</item>
+	<item id="11855" name="Common Item - Demon's Staff" type="Weapon">
+		<!-- Demon's Staff with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_demons_staff_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;46;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="WOOD" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="330" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="122" />
+			<set stat="pAtk" val="152" />
+		</for>
+	</item>
+	<item id="11856" name="Common Item - Yaksa Mace" type="Weapon">
+		<!-- Yaksa Mace with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="547" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="156" />
+		</for>
+	</item>
+	<item id="11857" name="Common Item - Eminence Bow" type="Weapon">
+		<!-- Eminence Bow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_eminence_bow_i00" />
+		<set name="attack_range" val="500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11844" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CHRYSOLITE" />
+		<set name="mp_consume" val="3" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="1500" />
+		<set name="soulshots" val="10" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="573" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="293" />
+			<set stat="pAtk" val="323" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11858" name="Common Item - Orcish Poleaxe" type="Weapon">
+		<!-- Orcish Poleaxe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="650" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="156" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11859" name="Common Item - Ecliptic Axe" type="Weapon">
+		<!-- Ecliptic Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_magic_weapon" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="20" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="weight" val="547" />
+		<for>
+			<add stat="accCombat" val="8" />
+			<add stat="critRate" val="6" />
+			<set stat="pAtkSpd" val="379" />
+			<set stat="mAtk" val="111" />
+			<set stat="pAtk" val="125" />
+		</for>
+	</item>
+	<item id="11860" name="Common Item - Katana*Raid Sword" type="Weapon">
+		<!-- Katana*Raid Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-8" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="757" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11861" name="Common Item - Katana*Spirit Sword" type="Weapon">
+		<!-- Katana*Spirit Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-8" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="750" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11862" name="Common Item - Katana*Katana" type="Weapon">
+		<!-- Katana*Katana with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-8" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="757" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="83" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11863" name="Common Item - Crystal Dagger" type="Weapon">
+		<!-- Crystal Dagger with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="rhand" />
+		<set name="commissionItemType" val="DAGGER" />
+		<set name="crystal_count" val="15" />
+		<set name="crystal_type" val="C" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CRYSTAL" />
+		<set name="price" val="55880" />
+		<set name="random_damage" val="5" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="weight" val="333" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="433" />
+			<set stat="pAtk" val="136" />
+			<set stat="mAtk" val="83" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11864" name="Common Item - StormBringer*Ultimate Sword" type="Weapon">
+		<!-- StormBringer*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-9" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="61700" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="747" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="86" />
+			<set stat="pAtk" val="197" />
+		</for>
+	</item>
+	<item id="11865" name="Common Item - StormBringer*Sword of Delusion" type="Weapon">
+		<!-- StormBringer*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="61700" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="743" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="86" />
+			<set stat="pAtk" val="197" />
+		</for>
+	</item>
+	<item id="11866" name="Common Item - StormBringer*Sword of Nightmare" type="Weapon">
+		<!-- StormBringer*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-9" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="61700" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="750" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="86" />
+			<set stat="pAtk" val="197" />
+		</for>
+	</item>
+	<item id="11867" name="Common Item - StormBringer*Tsurugi" type="Weapon">
+		<!-- StormBringer*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-9" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="61700" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="740" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="86" />
+			<set stat="pAtk" val="197" />
+		</for>
+	</item>
+	<item id="11868" name="Common Item - StormBringer*Caliburs" type="Weapon">
+		<!-- StormBringer*Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-9" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="61700" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="753" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="86" />
+			<set stat="pAtk" val="197" />
+		</for>
+	</item>
+	<item id="11869" name="Common Item - Raid Sword*Ultimate Sword" type="Weapon">
+		<!-- Raid Sword*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="723" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11870" name="Common Item - Raid Sword*Sword of Delusion" type="Weapon">
+		<!-- Raid Sword*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="727" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11871" name="Common Item - Raid Sword*Sword of Nightmare" type="Weapon">
+		<!-- Raid Sword*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="723" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11872" name="Common Item - Raid Sword*Tsurugi" type="Weapon">
+		<!-- Raid Sword*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="723" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11873" name="Common Item - Raid Sword*Caliburs" type="Weapon">
+		<!-- Raid Sword*Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="730" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11874" name="Common Item - Shamshir*Ultimate Sword" type="Weapon">
+		<!-- Shamshir*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="747" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11875" name="Common Item - Shamshir*Sword of Delusion" type="Weapon">
+		<!-- Shamshir*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="733" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11876" name="Common Item - Shamshir*Sword of Nightmare" type="Weapon">
+		<!-- Shamshir*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="737" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11877" name="Common Item - Shamshir*Tsurugi" type="Weapon">
+		<!-- Shamshir*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="740" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11878" name="Common Item - Shamshir*Caliburs" type="Weapon">
+		<!-- Shamshir*Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="743" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11879" name="Common Item - Spirit Sword*Ultimate Sword" type="Weapon">
+		<!-- Spirit Sword*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="747" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11880" name="Common Item - Spirit Sword*Sword of Delusion" type="Weapon">
+		<!-- Spirit Sword*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="750" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11881" name="Common Item - Spirit Sword*Sword of Nightmare" type="Weapon">
+		<!-- Spirit Sword*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="750" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11882" name="Common Item - Spirit Sword*Tsurugi" type="Weapon">
+		<!-- Spirit Sword*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="740" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11883" name="Common Item - Spirit Sword*Caliburs" type="Weapon">
+		<!-- Spirit Sword*Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="747" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11884" name="Common Item - Katana*Ultimate Sword" type="Weapon">
+		<!-- Katana*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-10" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="727" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11885" name="Common Item - Katana*Sword of Delusion" type="Weapon">
+		<!-- Katana*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="730" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11886" name="Common Item - Katana*Sword of Nightmare" type="Weapon">
+		<!-- Katana*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-10" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="723" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11887" name="Common Item - Katana*Tsurugi" type="Weapon">
+		<!-- Katana*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-10" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="737" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11888" name="Common Item - Katana*Caliburs" type="Weapon">
+		<!-- Katana*Caliburs with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="6" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-10" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="65920" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="740" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="89" />
+			<set stat="pAtk" val="204" />
+		</for>
+	</item>
+	<item id="11889" name="Common Item - Great Sword" type="Weapon">
+		<!-- Great Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_great_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11895" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="weight" val="643" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11890" name="Common Item - Great Axe" type="Weapon">
+		<!-- Great Axe with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_great_axe_i00" />
+		<set name="attack_range" val="80" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="SPEAR" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;66;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="item_skill" val="3599-1" /> <!-- Polearm Multi-attack -->
+		<set name="material" val="DAMASCUS" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="POLE" />
+		<set name="weight" val="647" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="pAtk" val="175" />
+			<set stat="mAtk" val="91" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11891" name="Common Item - Ultimate Sword*Ultimate Sword" type="Weapon">
+		<!-- Ultimate Sword*Ultimate Sword with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-11" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="713" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11892" name="Common Item - Ultimate Sword*Sword of Delusion" type="Weapon">
+		<!-- Ultimate Sword*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="713" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11893" name="Common Item - Ultimate Sword*Sword of Nightmare" type="Weapon">
+		<!-- Ultimate Sword*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3044-11" /> <!-- Special Ability: Focus -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="710" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11894" name="Common Item - Ultimate Sword*Tsurugi" type="Weapon">
+		<!-- Ultimate Sword*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3045-11" /> <!-- Special Ability: Haste -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="707" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11895" name="Common Item - Innominate Victory" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Shadow weapon - Great Sword conversion. Innominate Victory with limited ability enhancement. Enchantment, special abilities and augmentation are not possible. -->
+		<set name="icon" val="icon.weapon_nameless_victory_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11889" />
+		<set name="commissionItemType" val="ANCIENT_SWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="15" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="weight" val="643" />
+		<cond msgId="1518">
+			<player races="KAMAEL" />
+		</cond>
+		<for>
+			<add stat="accCombat" val="2" />
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="350" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="190" />
+		</for>
+	</item>
+	<item id="11896" name="Common Item - Dark Elven Longbow" type="Weapon">
+		<!-- Dark Elven Longbow with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
+		<set name="attack_range" val="500" />
+		<set name="bodypart" val="lrhand" />
+		<set name="change_weaponId" val="11917" />
+		<set name="commissionItemType" val="BOW" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;10;0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="ORIHARUKON" />
+		<set name="mp_consume" val="4" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="5" />
+		<set name="reuse_delay" val="820" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="BOW" />
+		<set name="weight" val="573" />
+		<for>
+			<add stat="critRate" val="12" />
+			<set stat="pAtkSpd" val="227" />
+			<set stat="pAtk" val="397" />
+			<set stat="mAtk" val="100" />
+			<sub stat="accCombat" val="3.75" />
+		</for>
+	</item>
+	<item id="11897" name="Common Item - Sword of Delusion*Sword of Delusion" type="Weapon">
+		<!-- Sword of Delusion*Sword of Delusion with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3046-11" /> <!-- Special Ability: Guidance -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="717" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11898" name="Common Item - Sword of Delusion*Sword of Nightmare" type="Weapon">
+		<!-- Sword of Delusion*Sword of Nightmare with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3042-11" /> <!-- Special Ability: Critical Damage -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="710" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+	<item id="11899" name="Common Item - Sword of Delusion*Tsurugi" type="Weapon">
+		<!-- Sword of Delusion*Tsurugi with limited enhancement options. Enchantment, soul storing and augmenting are impossible. -->
+		<set name="icon" val="icon.weapon_dual_sword_i00" />
+		<set name="attack_range" val="40" />
+		<set name="bodypart" val="lrhand" />
+		<set name="commissionItemType" val="DUALSWORD" />
+		<set name="crystal_count" val="7" />
+		<set name="crystal_type" val="B" />
+		<set name="damage_range" val="0;0;44;120" />
+		<set name="default_action" val="EQUIP" />
+		<set name="enchant4_skill" val="3013-1" /> <!-- Special Ability: Health -->
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="price" val="69900" />
+		<set name="random_damage" val="10" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="weight" val="713" />
+		<for>
+			<add stat="critRate" val="8" />
+			<set stat="pAtkSpd" val="325" />
+			<set stat="mAtk" val="91" />
+			<set stat="pAtk" val="213" />
+		</for>
+	</item>
+</list>
