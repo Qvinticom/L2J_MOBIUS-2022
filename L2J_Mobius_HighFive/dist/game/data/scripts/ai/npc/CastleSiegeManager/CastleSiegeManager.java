@@ -25,7 +25,7 @@ import ai.npc.AbstractNpcAI;
  * Castle Siege Manager AI.
  * @author St3eT
  */
-final class CastleSiegeManager extends AbstractNpcAI
+public final class CastleSiegeManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] SIEGE_MANAGER =

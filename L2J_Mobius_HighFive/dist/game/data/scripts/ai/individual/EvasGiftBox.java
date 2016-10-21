@@ -27,7 +27,7 @@ import ai.npc.AbstractNpcAI;
  * Eva's Gift Box AI.
  * @author St3eT
  */
-final class EvasGiftBox extends AbstractNpcAI
+public final class EvasGiftBox extends AbstractNpcAI
 {
 	// NPC
 	private static final int BOX = 32342; // Eva's Gift Box

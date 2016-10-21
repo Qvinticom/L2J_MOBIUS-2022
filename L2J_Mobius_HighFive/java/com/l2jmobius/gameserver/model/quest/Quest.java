@@ -63,7 +63,6 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
-import com.l2jmobius.gameserver.scripting.ScriptManager;
 import com.l2jmobius.util.Rnd;
 import com.l2jmobius.util.Util;
 
@@ -203,7 +202,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 		return _initialState;
 	}
 	
-	@Override
 	public String getName()
 	{
 		return _name;
@@ -1385,7 +1383,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public boolean showError(L2PcInstance player, Throwable t)
 	{
-		_log.log(Level.WARNING, getScriptFile().getAbsolutePath(), t);
+		_log.log(Level.WARNING, getScriptFile().toAbsolutePath().toString(), t);
 		if (t.getMessage() == null)
 		{
 			_log.warning(getClass().getSimpleName() + ": " + t.getMessage());
@@ -2596,6 +2594,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	@Override
+	public String getScriptName()
+	{
+		return getName();
+	}
+	
+	@Override
 	public void setActive(boolean status)
 	{
 		// TODO: Implement me.
@@ -2650,12 +2654,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 			return QuestManager.getInstance().removeScript(this) && super.unload();
 		}
 		return super.unload();
-	}
-	
-	@Override
-	public ScriptManager<?> getManager()
-	{
-		return QuestManager.getInstance();
 	}
 	
 	public void setOnEnterWorld(boolean state)

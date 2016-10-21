@@ -40,6 +40,7 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Siegable;
 import com.l2jmobius.gameserver.model.entity.clanhall.ClanHallSiegeEngine;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jmobius.gameserver.model.zone.type.L2ResidenceHallTeleportZone;
@@ -498,17 +499,20 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		
 		// Schedule open doors closement and siege start in 2 minutes
-		ThreadPoolManager.getInstance().scheduleGeneral(new CloseOutterDoorsTask(), 300000);
+		ThreadPoolManager.getInstance().scheduleGeneral(new CloseOutterDoorsTask(this), 300000);
 	}
 	
 	/**
 	 * Runnable class to schedule doors closing and siege start.
 	 * @author Zoey76
 	 */
-	private class CloseOutterDoorsTask implements Runnable
+	protected class CloseOutterDoorsTask implements Runnable
 	{
-		public CloseOutterDoorsTask()
+		private final Siegable _siegable;
+		
+		protected CloseOutterDoorsTask(Siegable clanHallSiege)
 		{
+			_siegable = clanHallSiege;
 		}
 		
 		@Override
@@ -520,7 +524,8 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 			}
 			
 			_hall.getZone().banishNonSiegeParticipants();
-			_hall.getSiege().startSiege();
+			
+			_siegable.startSiege();
 		}
 	}
 	

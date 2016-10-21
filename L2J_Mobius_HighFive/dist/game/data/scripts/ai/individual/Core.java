@@ -37,7 +37,7 @@ import ai.npc.AbstractNpcAI;
  * Core AI.
  * @author DrLecter, Emperorc
  */
-final class Core extends AbstractNpcAI
+public final class Core extends AbstractNpcAI
 {
 	private static final int CORE = 29006;
 	private static final int DEATH_KNIGHT = 29007;

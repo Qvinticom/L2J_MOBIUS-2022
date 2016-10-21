@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * Original Jython script by Emperorc and Kerberos_20.
  * @authors Nyaran
  */
-final class KetraOrcSupport extends AbstractNpcAI
+public final class KetraOrcSupport extends AbstractNpcAI
 {
 	private static class BuffsData
 	{

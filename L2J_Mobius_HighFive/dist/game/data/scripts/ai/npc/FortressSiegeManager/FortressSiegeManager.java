@@ -33,7 +33,7 @@ import ai.npc.AbstractNpcAI;
  * Fortress Siege Manager AI.
  * @author St3eT
  */
-final class FortressSiegeManager extends AbstractNpcAI
+public final class FortressSiegeManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] MANAGERS =

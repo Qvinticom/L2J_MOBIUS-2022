@@ -134,7 +134,7 @@ import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.L2GamePacketHandler;
 import com.l2jmobius.gameserver.pathfinding.PathFinding;
-import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 import com.l2jmobius.status.Status;
@@ -171,8 +171,8 @@ public final class GameServer
 		new File("log/game").mkdirs();
 		
 		// load script engines
-		printSection("Engines");
-		L2ScriptEngineManager.getInstance();
+		printSection("Scripting Engines");
+		ScriptEngineManager.getInstance();
 		
 		printSection("World");
 		// start game time control early
@@ -294,15 +294,12 @@ public final class GameServer
 		
 		try
 		{
-			_log.info(getClass().getSimpleName() + ": Loading server scripts:");
-			if (!Config.ALT_DEV_NO_HANDLERS || !Config.ALT_DEV_NO_QUESTS)
-			{
-				L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "data/scripts.cfg"));
-			}
+			_log.info("Loading server scripts...");
+			ScriptEngineManager.getInstance().executeScriptList();
 		}
-		catch (IOException ioe)
+		catch (Exception e)
 		{
-			_log.severe(getClass().getSimpleName() + ": Failed loading scripts.cfg, scripts are not going to be loaded!");
+			_log.log(Level.WARNING, "Failed to execute script list!", e);
 		}
 		
 		SpawnTable.getInstance().load();

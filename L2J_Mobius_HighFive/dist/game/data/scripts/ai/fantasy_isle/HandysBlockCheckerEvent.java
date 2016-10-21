@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameTeamList;
  * Handys Block Checker Event AI.
  * @authors BiggBoss, Gigiikun
  */
-final class HandysBlockCheckerEvent extends Quest
+public final class HandysBlockCheckerEvent extends Quest
 {
 	// Arena Managers
 	private static final int A_MANAGER_1 = 32521;

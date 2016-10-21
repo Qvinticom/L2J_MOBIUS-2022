@@ -32,7 +32,7 @@ import ai.npc.AbstractNpcAI;
  * None of them provide actual class transfers, they only talk about it.
  * @author jurchiks, xban1x
  */
-final class FirstClassTransferTalk extends AbstractNpcAI
+public final class FirstClassTransferTalk extends AbstractNpcAI
 {
 	private static final Map<Integer, Race> MASTERS = new HashMap<>();
 	static
