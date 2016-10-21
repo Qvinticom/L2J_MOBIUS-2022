@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. -->
 		<set name="icon" val="icon.skill11760" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -16,7 +16,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 sec., received damage - 50%. -->
 		<set name="icon" val="icon.skill0340" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2400" />
 		<set name="reuseDelay" val="3000" />
@@ -26,7 +26,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Fear on nearby enemies for 5 sec. -->
 		<set name="icon" val="icon.skill1169" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2400" />
 		<set name="reuseDelay" val="3000" />
@@ -37,7 +37,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sentence target to death. 150,000 damage. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -48,7 +48,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sentence enemies to the front to death. 150,000 damage. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -59,7 +59,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sentence all nearby enemies to death. 150,000 damage. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="3000" />
@@ -69,7 +69,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Fear on target for 5 sec. -->
 		<set name="icon" val="icon.skill1169" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="2400" />
@@ -80,7 +80,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stops target from resurrecting for 60 sec. -->
 		<set name="icon" val="icon.skill_resurrection" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1000" />
@@ -93,7 +93,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Moving against your will due to Fear. -->
 		<set name="icon" val="icon.skill1381" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
@@ -102,7 +102,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<set name="icon" val="icon.skill4047" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
@@ -111,7 +111,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<set name="icon" val="icon.skill11050" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
@@ -120,7 +120,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
@@ -129,7 +129,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Immobilized. -->
 		<set name="icon" val="icon.skill4111" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
@@ -138,7 +138,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Poisoned and losing 1,000 HP/second. -->
 		<set name="icon" val="icon.skill4035" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 		<set name="isDebuff" val="true" />
@@ -147,7 +147,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -155,7 +155,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M./ Atk. - 10%, and P./M. Critical Rate - 30. -->
 		<set name="icon" val="icon.skill1298" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -163,21 +163,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Resistance to Bluff. -->
 		<set name="icon" val="icon.skill0358" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16417" levels="10" name="Wind Stun Resistance">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Resistance to Wind Stun. -->
 		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16418" levels="10" name="Seduction Resistance">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Seduction Resistance. -->
 		<set name="icon" val="icon.skill5934" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16419" levels="2" name="Stocking Fairy's Blessing">
@@ -189,7 +189,7 @@
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
 		<set name="isMagic" val="4" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -213,7 +213,7 @@
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
 		<set name="isMagic" val="4" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -238,7 +238,7 @@
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="#hitTimes" />
 		<set name="isMagic" val="4" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="stayAfterDeath" val="true" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -258,14 +258,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Receive a Santa's Mark when the blessing from the Stocking/Tree/Snowman Fairy expires. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16423" levels="1" name="Noelle's Gift">
 		<!-- Recover Vitality for 6 hr. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="abnormalTime" val="21600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="3000" />
 		<set name="isMagic" val="4" />
@@ -279,14 +279,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16425" levels="1" name="Appearance Stone: Santa Suit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 	</skill>
@@ -294,77 +294,77 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16427" levels="1" name="Greater Sapyros Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16428" levels="1" name="Greater Ashagen Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16429" levels="1" name="Greater Cranigg Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16430" levels="1" name="Greater Soltkreig Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16431" levels="1" name="Greater Naviarope Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16432" levels="1" name="Greater Leister Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16433" levels="1" name="Greater Lakcis Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16434" levels="1" name="Greater Sayha Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16435" levels="1" name="Greater Sayha Cloak (20-day)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 1, CON + 1, INT + 1, MEN + 1 -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16436" levels="1" name="Rush">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Charges into the enemy. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="20" />
 		<set name="castRange" val="400" />
@@ -375,7 +375,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. XP and SP increases by 100% for 1 hr. Cannot be stacked with Fall of the Dragon. -->
 		<set name="icon" val="icon.skill0919" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1200" />
 		<set name="isMagic" val="4" />
@@ -384,42 +384,42 @@
 	<skill id="16438" levels="1" name="Horn Melody Lv. 2 (Adventurer)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 60 min., party members get Max MP + 20%%, HP Recovery Bonus + 20%%, M. Critical Rate + 20, Critical Damage in standard attack + 20%%, P. Atk. + 10%%, P. Def. + 20%%, Atk. Spd. + 20%%, M. Atk./Def. + 20%%, Casting Spd. +60, anad Debuff Resistance + 10%%, Received Critical Damage - 30%%, and Speed - 10%%. Party members equipped with melee/bows/crossbows have increased Critical Damage after receiving an amount of damage. --> 
 	<skill id="16439" levels="1" name="Drum Melody Lv. 2 (Adventurer)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 60 min., party members get Max HP/MP/CP + 39%%, and HP Recovery Bonus + 20%%. --> 
 	<skill id="16440" levels="1" name="Pipe Organ Melody Lv. 2 (Adventurer)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 60 min., party members get P. Critical Rate + 34%%, P. Critical Damage + 35%%, M. Critical Rate + 20. M. Skill Consumption - 10%%, and Iss enchanter's Enchant Skill MP Consumption - 20%%. --> 
 	<skill id="16441" levels="1" name="Guitar Melody Lv. 2 (Adventurer)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 60 min., party members get P. Accuracy + 6, P./M. Evasion + 6, Speed + 35. Received Critical Damage - 30%%. --> 
 	<skill id="16442" levels="1" name="Harp Melody Lv. 2 (Adventurer)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 60 min., party members get Atk. Spd. + 35%%, Casting Spd. + 32%%, and have a chance of applying 9%% Vampiric Rage. --> 
 	<skill id="16443" levels="1" name="Lute Melody Lv. 2 (Adventurer)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
@@ -432,7 +432,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="magicLvl" val="100" />
 		<set name="mpConsume" val="121" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="24563" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
@@ -456,7 +456,7 @@
 		<set name="magicLvl" val="100" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="328" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -475,7 +475,7 @@
 		<set name="elementPower" val="20" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="100" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="385" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -488,7 +488,7 @@
 	<skill id="16447" levels="1" name="Mass Poison">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Throws nearby enemies into the air and binds them for 10 sec. --> 
@@ -505,7 +505,7 @@
 		<set name="magicLvl" val="100" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="95" />
 		<set name="activateRate" val="70" />
 		<set name="targetType" val="AREA" />			
@@ -533,7 +533,7 @@
 		<set name="magicLvl" val="100" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="HOLD" />
@@ -566,7 +566,7 @@
 		<set name="magicLvl" val="100" />
 		<set name="mpConsume" val="88" />
 		<set name="mpInitialConsume" val="22" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="20000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
@@ -597,7 +597,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="rideState" val="NONE" />
 		<set name="effectPoint" val="-100" /> <!-- temp fix -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
@@ -610,119 +610,119 @@
 	<skill id="16452" levels="1" name="Raid Boss (Lv. 99)">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16453" levels="1" name="Exalted Production">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Pushes back enemies nearby and cancels target. --> 
 	<skill id="16454" levels="1" name="Spinning Slasher">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Pushes back enemies nearby, cancels target and decreases speed. --> 
 	<skill id="16455" levels="1" name="Spinning Power Slasher">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Speed decreases momentarily. Effect 1. --> 
 	<skill id="16456" levels="1" name="Decrease Speed">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Deal powerful attack and knock down enemies nearby. Cancels target. --> 
 	<skill id="16457" levels="1" name="Mass Knock Down">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Deal powerful attack and knock down enemies nearby. Cancels target and decreases speed. --> 
 	<skill id="16458" levels="1" name="Mass Power Knock Down">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- P. Def. decreased. --> 
 	<skill id="16459" levels="1" name="Decrease P. Def.">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Leaves Blood Seal to enemies in range for 20 seconds, making them bleed. --> 
 	<skill id="16460" levels="1" name="Maliss Bloody Mark">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Leaves Dark Seal to enemies in range for 20 seconds, decreasing their defense. --> 
 	<skill id="16461" levels="1" name="Isadora Chaos Mark">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Explodes Chaos Mark left to enemies in range, dealing additional Magic Damage. --> 
 	<skill id="16462" levels="1" name="Chaos Mark Retriever">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Explodes Bloody Mark left to enemies in range, dealing additional Magic Damage. --> 
 	<skill id="16463" levels="1" name="Bloody Mark Retriever">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Explodes powerful Blood Splash to enemies in range, dealing Magic Damage. --> 
 	<skill id="16464" levels="1" name="Maliss Blood Splash">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Explodes powerful Dark Splash to enemies in range, dealing Magic Damage. --> 
 	<skill id="16465" levels="1" name="Isadora Dark Splash">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Explodes bomb and deals great damage and pushes back enemies within range. --> 
 	<skill id="16466" levels="1" name="Explosion">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Blessing that can be obtained through Merlot. Your chances of receiving a better reward from Merlot increase next time you have this buff. --> 
 	<skill id="16467" levels="1" name="Dimensional Raid Blessing">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="16468" levels="1" name="Tauti's Temporary Invincibility">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A temporary buff that makes Tauti immune to attacks when he's down. -->
 		<set name="icon" val="icon.skill1427" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 	</skill>
@@ -730,217 +730,217 @@
 	<skill id="16469" levels="1" name="Poison Arrow">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Front Fan Sector Range Blow. --> 
 	<skill id="16470" levels="1" name="Scream Penetration">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Rushes in with all your strength for knock back. --> 
 	<skill id="16471" levels="1" name="Mighty Rush">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16472" levels="1" name="Holy Spike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16473" levels="1" name="Dark Spike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16474" levels="1" name="Fire Spike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16475" levels="1" name="Water Spike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16476" levels="1" name="Wind Spike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16477" levels="1" name="Earth Spike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16478" levels="1" name="Holy Buster">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16479" levels="1" name="Fire Buster">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16480" levels="1" name="Water Buster">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16481" levels="1" name="Wind Buster">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16482" levels="1" name="Earth Buster">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16483" levels="1" name="Holy Blast">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16484" levels="1" name="Fire Blast">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16485" levels="1" name="Water Blast">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16486" levels="1" name="Wind Blast">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16487" levels="1" name="Earth Blast">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="16488" levels="1" name="Fatal Strike">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Knocked down. --> 
 	<skill id="16489" levels="1" name="Luminosity">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Shilen's blood seeped into a criminal's corpse and came back to life against as one of the Undead. Currently aiming for Giran from another dimension in order to complete the darkness. --> 
 	<skill id="16490" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood, and is aiming for the Giran from another dimension. --> 
 	<skill id="16491" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen, and is aiming for the Giran from another dimension. --> 
 	<skill id="16492" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Messenger sent by Lindvior to help with Shilen's resurrection. Has the power of wind as strong as Lindvior, and is aiming for Goddard from another dimension. --> 
 	<skill id="16493" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Messenger sent by Valakas to help with Shilen's resurrection. Has the power of fire as strong as Valakas, and is aiming for Goddard from another dimension. --> 
 	<skill id="16494" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Messenger sent by Antharas to help with Shilen's resurrection. Has the power of earth as strong as Antharas, and is aiming for Goddard from another dimension. --> 
 	<skill id="16495" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Agarez. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. --> 
 	<skill id="16496" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Part of the Krakia was affected by the darkness of Nemis and was reborn as Vengeful Oretross. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. --> 
 	<skill id="16497" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Eligos. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. --> 
 	<skill id="16498" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Part of the Weiss was affected by the darkness of Nemis and was reborn as Vengeful Lerazia. Currently aiming for Gludin from another dimension in order to carry out Nemis' will. --> 
 	<skill id="16499" levels="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

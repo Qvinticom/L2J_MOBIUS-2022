@@ -10,7 +10,7 @@
 		<table name="#pAtk"> 1.05 1.06 1.07 1.1 </table>
 		<set name="icon" val="icon.skill11872" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -31,7 +31,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11874" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -48,7 +48,7 @@
 		<!-- Attacks target with 29176 Power added to P. Atk. Damage increases as your HP decreases. Requires a bow. Over-hit. -->
 		<table name="#mpConsumes"> 93 96 99 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -66,7 +66,7 @@
 		<table name="#pAtk"> 1.05 1.06 1.07 1.1 </table>
 		<set name="icon" val="icon.skill11873" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -87,7 +87,7 @@
 		<table name="#pAtk"> 1.05 1.07 1.1 1.15 </table>
 		<set name="icon" val="icon.skill10951" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -117,7 +117,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="abnormalTime" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -164,7 +164,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="abnormalTime" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -201,7 +201,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="abnormalTime" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -234,7 +234,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="600000" />
 		<set name="abnormalTime" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -252,20 +252,20 @@
 	<skill id="10956" levels="1" name="Divine Expansion">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10997" levels="1" name="Archer - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0217" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10998" levels="1" name="Archer - Individual">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
 		<set name="icon" val="icon.skill1543" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="5000" />
@@ -275,7 +275,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks long-range enemies. Hurls arrows like rain near target to inflict damage with 19158 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. -->
 		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="castRange" val="700" />

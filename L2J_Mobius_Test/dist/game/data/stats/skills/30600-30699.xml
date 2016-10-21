@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful hit on target. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="coolTime" val="500" />
@@ -14,7 +14,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful hit on target. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -24,7 +24,7 @@
 	<skill id="30602" levels="1" name="Eviscerator Aura">
 		<set name="icon" val="icon.icon_lender" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
@@ -38,7 +38,7 @@
 	<skill id="30603" levels="1" name="Eviscerator Force">
 		<!-- P. Skill Critical Rate + 1%. -->
 		<set name="icon" val="icon.icon_lender_01" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -53,13 +53,13 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks Eviscerator Force. -->
 		<set name="icon" val="icon.icon_lender" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="30605" levels="1" name="Sayha's Seer Aura">
 		<set name="icon" val="icon.icon_Er_wizard" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="reuseDelay" val="5000" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
@@ -72,7 +72,7 @@
 	</skill>
 	<skill id="30606" levels="1" name="Sayha's Seer Force">
 		<set name="icon" val="icon.icon_Er_wizard_01" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -87,14 +87,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blocks Sayha's Seer Force. -->
 		<set name="icon" val="icon.icon_Er_wizard" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- P. Atk. + $s1. --> 
 	<skill id="30608" levels="1" name="Fury of Eviscerator">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

@@ -10,7 +10,7 @@
 		<table name="#ench2Hp"> 11 12 13 14 15 16 17 18 19 20 </table>
 		<set name="icon" val="icon.skill10300" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="castRange" val="40" />
@@ -43,7 +43,7 @@
 		<!-- DONE IN HANDLER -->
 		<set name="icon" val="icon.skill11842" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10302" levels="4" name="Triple Sonic Slash">
@@ -60,7 +60,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
@@ -78,7 +78,7 @@
 	<skill id="10303" levels="4" name="Superior Combat Master">
 		<table name="#rate"> 1.02 1.03 1.04 1.05 </table>
 		<set name="icon" val="icon.skill0430" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<effect name="Buff">
 			<mul stat="maxHp" val="#rate" />
@@ -91,7 +91,7 @@
 		<table name="#pAtkAdd"> 709 825 982 1190 </table>
 		<set name="icon" val="icon.skill11835" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -121,7 +121,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AURA" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectPoint" val="-1000" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -137,7 +137,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11836" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -154,7 +154,7 @@
 		<set name="icon" val="icon.skill10307new" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="8" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -171,7 +171,7 @@
 		<set name="icon" val="icon.skill11834" />
 		<set name="magicLvl" val="85" />
 		<set name="abnormalTime" val="300" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -194,7 +194,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11837" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -210,7 +210,7 @@
 	<skill id="10310" levels="1" name="Primal Rage">
 		<set name="icon" val="icon.skill10310" />
 		<set name="abnormalTime" val="600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="1500" />
@@ -230,7 +230,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill11838" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -258,7 +258,7 @@
 		<table name="#masteryLvl"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill10312" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -291,7 +291,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="DIRECTIONAL_CONTINUOUS" />
+		<set name="operateType" val="DA2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="trait" val="SHOCK" />
@@ -319,7 +319,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="79" />
 		<set name="mpConsume" val="58" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="150000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
@@ -339,7 +339,7 @@
 		<table name="#magicLvl"> 90 90 </table>
 		<set name="icon" val="icon.skill11836" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -354,7 +354,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<set name="icon" val="icon.skill0193" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -385,7 +385,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
@@ -413,7 +413,7 @@
 		<set name="hitTime" val="1500" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
@@ -431,7 +431,7 @@
 	<skill id="10319" levels="1" name="Duelist's Fury">
 		<set name="icon" val="icon.skll10319" />
 		<set name="abnormalTime" val="30" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="300" />
 		<set name="reuseDelay" val="300000" />
@@ -450,7 +450,7 @@
 		<set name="icon" val="icon.skll10319" />
 		<set name="abnormalTime" val="30" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="43" />
 		<set name="castRange" val="600" />
 		<set name="effectPoint" val="-100" />
@@ -487,7 +487,7 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
@@ -509,7 +509,7 @@
 		<set name="icon" val="icon.skll10320" />
 		<set name="magicLvl" val="85" />
 		<set name="abnormalTime" val="300" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -528,7 +528,7 @@
 	</skill>
 	<skill id="10323" levels="1" name="Self Heal (Warrior)">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="5000" />
 		<for>
@@ -542,7 +542,7 @@
 		<table name="#rate"> 1.1 1.15 1.2 </table>
 		<set name="icon" val="icon.skill10324" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -558,7 +558,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="affectLimit" val="6-12" />
 		<set name="affectRange" val="150" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -577,7 +577,7 @@
 	<skill id="10326" levels="3" name="Bloody Fury">
 		<table name="#mpConsumes"> 45 50 55 </table>
 		<set name="icon" val="icon.skill10326" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="hitTime" val="2000" />
@@ -599,7 +599,7 @@
 		<table name="#effectPoints"> -100 -200 -300 -400 -500 -600 -700 </table> <!-- Need verify -->
 		<set name="icon" val="icon.skill10327" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="castRange" val="600" />
 		<set name="effectRange" val="1100" />
@@ -624,7 +624,7 @@
 		<table name="#rate"> 1.1 1.12 1.15 </table>
 		<set name="icon" val="icon.skill10328" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -643,7 +643,7 @@
 	<skill id="10329" levels="1" name="Superior Blunt Weapon Mastery">
 		<set name="icon" val="icon.skill10329" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -676,7 +676,7 @@
 		<set name="basicProperty" val="CON" />
 		<set name="icon" val="icon.skill10330" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="ignorePhysDefPercent" val="30" />
@@ -705,7 +705,7 @@
 	<skill id="10331" levels="1" name="Last Man Standing">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases P. Atk. by $s2 for $s1 when a dualsword/dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by $s3. Consumes $s4 Soulstones. --> 
@@ -717,7 +717,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="64" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="300000" />
 		<set name="targetType" val="SELF" />
 		<set name="itemConsumeCount" val="5" />
@@ -749,7 +749,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="64" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="itemConsumeCount" val="5" />
 		<set name="itemConsumeId" val="1785" /> <!-- Soul Ore -->	
 		<set name="reuseDelay" val="300000" />
@@ -790,7 +790,7 @@
 	<skill id="10334" levels="1" name="Furious Slasher">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases P. Atk. by $s2 and P. Critical Damage by $s3 for $s1 when a fist weapon is equipped. Has $s4 chance to decrease Fist Weapon Resistance by $s5 when striking. Consumes $s6 Soulstones. --> 
@@ -803,7 +803,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="74" />
 		<set name="mpConsume" val="64" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="itemConsumeCount" val="5" />
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->	
 		<set name="reuseDelay" val="300000" />
@@ -846,14 +846,14 @@
 	<skill id="10336" levels="1" name="Infinity Rush">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- P. Atk. + $s1 and P. Critical Damage + $s2. --> 
 	<skill id="10337" levels="1" name="Infinity Rush">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Decreases target's resistance to Fist Weapons by 30%%. --> 
@@ -865,7 +865,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
@@ -884,7 +884,7 @@
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="activateRate" val="50" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
@@ -896,7 +896,7 @@
 	<skill id="10340" levels="3" name="Blade Slasher">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

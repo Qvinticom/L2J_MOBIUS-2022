@@ -6,7 +6,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="abnormalType" val="AVOID_SKILL" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -23,7 +23,7 @@
 	</skill>
 	<skill id="10607" levels="1" name="Maximum Mortality">
 		<set name="icon" val="icon.skill10607" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="60" />
 		<set name="mpConsume" val="38" />
@@ -45,7 +45,7 @@
 		<table name="#spd"> 5 6 7 10 </table>
 		<set name="icon" val="icon.skill10608" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -58,7 +58,7 @@
 		<set name="icon" val="icon.skill10878" />
 		<set name="magicLvl" val="85" />
 		<set name="abnormalTime" val="300" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -97,7 +97,7 @@
 	<skill id="10610" levels="1" name="Critical Expansions">
 		<set name="icon" val="icon.skill0819" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -109,7 +109,7 @@
 		<set name="icon" val="icon.skill11863" />
 		<set name="magicLvl" val="85" />
 		<set name="abnormalTime" val="10" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -127,7 +127,7 @@
 	<skill id="10654" levels="1" name="Maximum Mortality">
 		<set name="icon" val="icon.skill10607" />
 		<set name="abnormalTime" val="60" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="38" />
 		<set name="hitTime" val="1000" />
@@ -148,7 +148,7 @@
 		<table name="#spd"> 2 3 4 5 </table>
 		<set name="icon" val="icon.skill10655" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -161,7 +161,7 @@
 		<set name="icon" val="icon.skill10656" />
 		<set name="magicLvl" val="85" />
 		<set name="abnormalTime" val="300" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="36" />
 		<set name="hitTime" val="2000" />
 		<set name="reuseDelay" val="30000" />

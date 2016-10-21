@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., P./M. Def. + 10%. -->
 		<set name="icon" val="icon.skill1997" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -12,14 +12,14 @@
 	<skill id="19201" levels="1" name="Paladin's Protection">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 15 sec., all party members' M. Def. + 200%%, M. Evastion + 8, Speed + 20. Consumes 5 Soulstones. --> 
 	<skill id="19202" levels="1" name="Sentinel's Protection">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Decreases target's Bow/Crossbow Resistance by $s2 for $s1. Does not cancel when striking. Consumes $s3 Soulstone. --> 
@@ -32,7 +32,7 @@
 		<set name="mpConsume" val="27" />
 		<set name="abnormalTime" val="7" />
 		<set name="magicLvl" val="105" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" />
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
@@ -47,63 +47,63 @@
 	<skill id="19204" levels="1" name="Prophecy of Might">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases Bow/Crossbow Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
 	<skill id="19205" levels="1" name="Song of Archery">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases M. Def. of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
 	<skill id="19206" levels="1" name="Sage's Dance">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases P. Atk./M. Atk. by $s2 and P. Accuracy/M. Accuracy by $s3 for all party members for $s1. Consumes $s4 Spirit Ores. --> 
 	<skill id="19207" levels="1" name="Chant of Bison">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Casts a curse that prevents the target and nearby enemies from receiving Invincibility for $s1 during PvP. Consumes $s2 Spirit Ores. --> 
 	<skill id="19208" levels="1" name="Seal of Restriction">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Decreases Magic Skill MP Consumption by $s2 and has a $s3 to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal' for $s1. Consumes $s4 Spirit Ores. --> 
 	<skill id="19209" levels="1" name="Divinity of Einhasad">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for $s1 and casts a debuff canceling blessing. Consumes $s2 Spirit Ores. --> 
 	<skill id="19210" levels="1" name="Summon Tree of Sephiroth">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 1 min., puts a barrier around a party member. The barrier blocks 50000 damage. Consumes 5 Soulstones. --> 
 	<skill id="19211" levels="1" name="Barrer for Test">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Puts a barrier around a party member for $s1. Recovers $s2 CP/HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes $s3 Spirit Ores. --> 
 	<skill id="19212" levels="1" name="Shillien Protection">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 		<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). --> 
@@ -115,7 +115,7 @@
 		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -140,7 +140,7 @@
 		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -165,7 +165,7 @@
 		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -190,7 +190,7 @@
 		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="117" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -215,7 +215,7 @@
 		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="128" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -240,7 +240,7 @@
 		<set name="itemConsumeId" val="17371" /> <!-- Crystal (R-grade) -->
 		<set name="magicLvl" val="-1" />
 		<set name="mpInitialConsume" val="128" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -260,21 +260,21 @@
 	<skill id="19219" levels="1" name="Blessing of Tree">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ores. --> 
 	<skill id="19220" levels="1" name="Sharing Equipment">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- none --> 
 	<skill id="19221" levels="1" name="Power of Darkness">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- STR/DEX/CON/INT/WIT/MEN/CHA + 1. World Chat + $s8 times. --> 
@@ -282,7 +282,7 @@
 		<!-- TODO: FIX WORLD CHAT POINT -->
 		<table name="#val"> 1 2 3 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<effect name="Buff">
 			<add stat="STR" val="#val" />
@@ -304,7 +304,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="142" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PARTY_MEMBER" />
@@ -328,7 +328,7 @@
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="207" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PARTY" />
@@ -340,7 +340,7 @@
 	<skill id="19225" levels="1" name="Summon Battle Potion">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- For $s1 hr., increases gained XP/SP by $s2. Consumes $s3 Spirit Ores. --> 
@@ -359,7 +359,7 @@
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="magicLvl" val="1" />
 		<set name="mpConsume" val="142" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -374,7 +374,7 @@
 	<skill id="19227" levels="1" name="Wind Hiding">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Increases Dagger/Dual Dagger Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ores. --> 
@@ -383,7 +383,7 @@
 		<set name="icon" val="icon.skill19228" />
 		<set name="magicLvl" val="89" />
 		<set name="targetType" val="PARTY" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="itemConsumeCount" val="5" />
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->		
 		<set name="hitTime" val="8000" />
@@ -403,7 +403,7 @@
 	<!-- LUC + 3. --> 
 	<skill id="19229" levels="1" name="Fate of the Exalted">
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -415,7 +415,7 @@
 	<skill id="19230" levels="1" name="MP Recovery">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Party's M. Atk. + 30%% for 30 seconds. Consumes 5 Spirit Ores. --> 
@@ -432,7 +432,7 @@
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="magicLvl" val="101" />
 		<set name="mpConsume" val="140" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PARTY" />
@@ -456,7 +456,7 @@
 		<set name="itemConsumeId" val="3031" /> <!-- Spirit Ore -->
 		<set name="magicLvl" val="101" />
 		<set name="mpConsume" val="140" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="PARTY" />

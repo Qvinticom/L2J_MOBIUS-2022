@@ -6,7 +6,7 @@
 		<table name="#res"> 10 20 </table>
 		<set name="icon" val="icon.skill30400" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -22,7 +22,7 @@
 		<table name="#spd"> 4 7 </table>
 		<set name="icon" val="icon.skill30401" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -37,7 +37,7 @@
 		<table name="#mpConsumeRate"> 0.99 0.98 </table>
 		<set name="icon" val="icon.skill30402" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

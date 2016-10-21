@@ -4,34 +4,34 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Holy Resistance by 15. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8801" levels="1" name="Top-grade Royal Guard Ring - Goddard">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 15. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8802" levels="1" name="Top-grade Royal Guard Ring - Rune">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Wind Resistance by 15. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8803" levels="1" name="Top-grade Royal Guard Ring - Schuttgart">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Dark Resistance by 15. -->
 		<set name="icon" val="icon.accessory_ring_of_domi_protection_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8804" levels="1" name="Enhanced Tauti's Bracelet">
 		<set name="icon" val="icon.accessory_bangel_of_tauti_i01" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -46,7 +46,7 @@
 	<skill id="8805" levels="1" name="Dark Eternal Helmet">
 		<!-- Decreases PvP Damage by 3% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -58,7 +58,7 @@
 	<skill id="8806" levels="1" name="Dark Eternal Breastplate">
 		<!-- Decreases PvP Damage by 8% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -70,7 +70,7 @@
 	<skill id="8807" levels="1" name="Dark Eternal Gaiters">
 		<!-- Decreases PvP Damage by 5% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -82,7 +82,7 @@
 	<skill id="8808" levels="1" name="Dark Eternal Gauntlets">
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -94,7 +94,7 @@
 	<skill id="8809" levels="1" name="Dark Eternal Boots">
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -106,7 +106,7 @@
 	<skill id="8810" levels="1" name="Dark Eternal Leather Helmet">
 		<!-- Decreases PvP Damage by 3% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -118,7 +118,7 @@
 	<skill id="8811" levels="1" name="Dark Eternal Leather Armor">
 		<!-- Decreases PvP Damage by 8% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -130,7 +130,7 @@
 	<skill id="8812" levels="1" name="Dark Eternal Leather Leggings">
 		<!-- Decreases PvP Damage by 5% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -142,7 +142,7 @@
 	<skill id="8813" levels="1" name="Dark Eternal Leather Gloves">
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -154,7 +154,7 @@
 	<skill id="8814" levels="1" name="Dark Eternal Leather Boots">
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -166,7 +166,7 @@
 	<skill id="8815" levels="1" name="Dark Eternal Circlet">
 		<!-- Decreases PvP Damage by 3% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -178,7 +178,7 @@
 	<skill id="8816" levels="1" name="Dark Eternal Tunic">
 		<!-- Decreases PvP Damage by 8% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -190,7 +190,7 @@
 	<skill id="8817" levels="1" name="Dark Eternal Stockings">
 		<!-- Decreases PvP Damage by 5% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -202,7 +202,7 @@
 	<skill id="8818" levels="1" name="Dark Eternal Gloves">
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -214,7 +214,7 @@
 	<skill id="8819" levels="1" name="Dark Eternal Shoes">
 		<!-- Decreases PvP Damage by 2% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -226,7 +226,7 @@
 	<skill id="8820" levels="1" name="Dark Amaranthine Shaper">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -241,7 +241,7 @@
 	<skill id="8821" levels="1" name="Dark Amaranthine Cutter">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -256,7 +256,7 @@
 	<skill id="8822" levels="1" name="Dark Amaranthine Slasher">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -271,7 +271,7 @@
 	<skill id="8823" levels="1" name="Dark Amaranthine Avenger">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -286,7 +286,7 @@
 	<skill id="8824" levels="1" name="Dark Amaranthine Fighter">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -301,7 +301,7 @@
 	<skill id="8825" levels="1" name="Dark Amaranthine Stormer">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -316,7 +316,7 @@
 	<skill id="8826" levels="1" name="Dark Amaranthine Thrower">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -331,7 +331,7 @@
 	<skill id="8827" levels="1" name="Dark Amaranthine Shooter">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -346,7 +346,7 @@
 	<skill id="8828" levels="1" name="Dark Amaranthine Buster">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -361,7 +361,7 @@
 	<skill id="8829" levels="1" name="Dark Amaranthine Caster">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -376,7 +376,7 @@
 	<skill id="8830" levels="1" name="Dark Amaranthine Retributer">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -391,7 +391,7 @@
 	<skill id="8831" levels="1" name="Dark Amaranthine Dualsword">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -406,7 +406,7 @@
 	<skill id="8832" levels="1" name="Dark Amaranthine Dual Dagger">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -421,7 +421,7 @@
 	<skill id="8833" levels="1" name="Dark Amaranthine Dual Blunt Weapon">
 		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -436,7 +436,7 @@
 	<skill id="8834" levels="1" name="Bloody Eternal Helmet">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -450,7 +450,7 @@
 	<skill id="8835" levels="1" name="Bloody Eternal Breastplate">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -464,7 +464,7 @@
 	<skill id="8836" levels="1" name="Bloody Eternal Gaiters">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -478,7 +478,7 @@
 	<skill id="8837" levels="1" name="Bloody Eternal Gauntlets">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -492,7 +492,7 @@
 	<skill id="8838" levels="1" name="Bloody Eternal Boots">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -506,7 +506,7 @@
 	<skill id="8839" levels="1" name="Bloody Eternal Leather Helmet">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -520,7 +520,7 @@
 	<skill id="8840" levels="1" name="Bloody Eternal Leather Armor">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -534,7 +534,7 @@
 	<skill id="8841" levels="1" name="Bloody Eternal Leather Leggings">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -548,7 +548,7 @@
 	<skill id="8842" levels="1" name="Bloody Eternal Leather Gloves">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -562,7 +562,7 @@
 	<skill id="8843" levels="1" name="Bloody Eternal Leather Boots">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -576,7 +576,7 @@
 	<skill id="8844" levels="1" name="Bloody Eternal Circlet">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -590,7 +590,7 @@
 	<skill id="8845" levels="1" name="Bloody Eternal Tunic">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -604,7 +604,7 @@
 	<skill id="8846" levels="1" name="Bloody Eternal Stockings">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -618,7 +618,7 @@
 	<skill id="8847" levels="1" name="Bloody Eternal Gloves">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -632,7 +632,7 @@
 	<skill id="8848" levels="1" name="Bloody Eternal Shoes">
 		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -646,7 +646,7 @@
 	<skill id="8849" levels="1" name="Bloody Amaranthine Shaper">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -661,7 +661,7 @@
 	<skill id="8850" levels="1" name="Bloody Amaranthine Cutter">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -676,7 +676,7 @@
 	<skill id="8851" levels="1" name="Bloody Amaranthine Slasher">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -691,7 +691,7 @@
 	<skill id="8852" levels="1" name="Bloody Amaranthine Avenger">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -706,7 +706,7 @@
 	<skill id="8853" levels="1" name="Bloody Amaranthine Fighter">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -721,7 +721,7 @@
 	<skill id="8854" levels="1" name="Bloody Amaranthine Stormer">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -736,7 +736,7 @@
 	<skill id="8855" levels="1" name="Bloody Amaranthine Thrower">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -751,7 +751,7 @@
 	<skill id="8856" levels="1" name="Bloody Amaranthine Shooter">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -766,7 +766,7 @@
 	<skill id="8857" levels="1" name="Bloody Amaranthine Buster">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -781,7 +781,7 @@
 	<skill id="8858" levels="1" name="Bloody Amaranthine Caster">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -796,7 +796,7 @@
 	<skill id="8859" levels="1" name="Bloody Amaranthine Retributer">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -811,7 +811,7 @@
 	<skill id="8860" levels="1" name="Bloody Amaranthine Dualsword">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -826,7 +826,7 @@
 	<skill id="8861" levels="1" name="Bloody Amaranthine Dual Dagger">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -841,7 +841,7 @@
 	<skill id="8862" levels="1" name="Bloody Amaranthine Dual Blunt">
 		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
 		<set name="icon" val="icon.pk" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 			<for>
 				<effect name="Buff" >
@@ -856,7 +856,7 @@
 	<skill id="8863" levels="1" name="Tauti's Bracelet">
 		<set name="icon" val="icon.accessory_bracelet_of_tauti_i01" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TalismanSlot">
@@ -891,7 +891,7 @@
 		<table name="#receivedDamageModifier"> 1 1 1 1 1 1 0.9 </table>
 		<table name="#reuse"> 1 1 1 1 1 1 0.97 </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
 		<for>
@@ -937,13 +937,13 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Critical Damage by 15%, Skill Attack by 5%, damage inflicted during PvP by 5%, Paralysis/Yoke/Exile Resistance by 10, Damage Reflect Resistance by 5, HP Drain Resistance by 5, and decreases damage received during PvP by 5%. Increases Critical by 54 when equipped with a blunt. -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8871" levels="1" name="Glorious T-shirt">
 		<set name="icon" val="icon.skill0211" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -955,49 +955,49 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. By 5%. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8873" levels="1" name="Refined Romantic Chapeau containing the GM's Sincerity">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Atk. By 10%. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8874" levels="1" name="Refined Romantic Chapeau containing the GM's Sincerity">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 3. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8875" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. By 5%, and Critical Rate + 50. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8876" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 10%, and INT + 3. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8877" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- WIT + 3, MEN + 3. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8878" levels="1" name="Tauti's Special Ability: One-handed Axe">
 		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1015,7 +1015,7 @@
 		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1033,7 +1033,7 @@
 		<!-- Boss Weapon Skill -->
 		<set name="icon" val="icon.weapon_tauti_dual_axe_i01" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1051,63 +1051,63 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Stun Bonus by 20%, and Stun Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8882" levels="1" name="Top-grade Resistance Earring - Hold">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Hold Bonus by 20%, and Hold Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8883" levels="1" name="Top-grade Resistance Earring - Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Bleed Bonus by 20%, and Bleed Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8884" levels="1" name="Top-grade Resistance Earring - Paralyze">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Paralyze Bonus by 20%, and Paralysis Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8885" levels="1" name="Top-grade Resistance Earring - Mental Attack">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Mental Bonus by 20%, and Mental Attack Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8886" levels="1" name="Top-grade Resistance Earring - Sleep">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Sleep Bonus by 20%, and Sleep Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8887" levels="1" name="Top-grade Resistance Earring - Poison">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Poison Bonus by 20%, and Poison Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8888" levels="1" name="Top-grade Resistance Earring - Knock Back/Knock Down">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Knock Back/Knock Down Bonus by 20%, and Knock Back/Knock Down Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8889" levels="1" name="Top-grade Resistance Earring - Aerial Yoke">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Aerial Yoke Bonus by 20%, and Aerial Yoke Resistance by 20. -->
 		<set name="icon" val="icon.accessary_inferno_earing_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="8890" levels="1" name="Protection">
@@ -1121,7 +1121,7 @@
 		<set name="itemConsumeId" val="36415" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="staticReuse" val="true" />
 		<for>
 			<effect name="Buff">
@@ -1136,7 +1136,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Renders nearby enemies unconscious for 5 sec. Requires 1 Dragon Blood. Cooldown is 5 minutes. -->
 		<set name="icon" val="icon.skill10026" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -1147,7 +1147,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleeds nearby enemies. Requires 1 Dragon Blood. -->
 		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -1158,7 +1158,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="itemConsumeId" val="36415" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="targetType" val="ONE" />
@@ -1176,12 +1176,12 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Petrified to immobility. -->
 		<set name="icon" val="icon.skill1170" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="8895" levels="1" name="Antharas Tail Blow">
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="AURA" />
 		<set name="nextActionAttack" val="true" />
 		<set name="itemConsumeId" val="36415" />
@@ -1204,7 +1204,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="itemConsumeId" val="36415" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="targetType" val="ONE" />
@@ -1219,7 +1219,7 @@
 		</for>
 	</skill>
 	<skill id="8897" levels="1" name="Valakas' Meteor">
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="AURA" />
 		<set name="nextActionAttack" val="true" />
 		<set name="itemConsumeId" val="36415" />
@@ -1242,7 +1242,7 @@
 		<set name="abnormalTime" val="15" />
 		<set name="abnormalType" val="PARALYZE" />
 		<set name="abnormalVisualEffect" val="PARALYZE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="itemConsumeId" val="36415" />
 		<set name="itemConsumeCount" val="1" />
 		<set name="targetType" val="ONE" />
@@ -1257,7 +1257,7 @@
 		</for>
 	</skill>
 	<skill id="8899" levels="1" name="Lindvior's Wingbeat">
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="AURA" />
 		<set name="nextActionAttack" val="true" />
 		<set name="itemConsumeId" val="36415" />

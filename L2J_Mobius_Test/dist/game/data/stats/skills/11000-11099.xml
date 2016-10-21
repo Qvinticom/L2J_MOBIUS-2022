@@ -11,7 +11,7 @@
 		<set name="overHit" val="true" />
 		<set name="effectRange" val="600" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="19158" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SHOCK" />
@@ -34,7 +34,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill11251" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="Buff">
 				<add stat="mAtk" val="#mAtk" />
@@ -51,7 +51,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill11252" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="Buff">
 				<add stat="pDef" val="#pdef">
@@ -71,7 +71,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.skill10004" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByDamage">
 				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
@@ -92,7 +92,7 @@
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.skill11791" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="Buff">
 				<mul stat="mAtk" val="1.05">
@@ -107,7 +107,7 @@
 	<skill id="11005" levels="1" name="Superior Wizard Mastery">
 		<!-- INT + 2 and increases M. Atk., Casting Spd., and M. Critical Rate + 6%. Decreases skill MP Consumption by 6%. -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="icon" val="icon.skill11253" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -126,7 +126,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
 		<set name="icon" val="icon.skill11006" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="Buff">
 				<add stat="INT" val="2" />
@@ -140,7 +140,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="element" val="0" />
 		<set name="abnormalType" val="FEOH_STANCE" />
 		<set name="abnormalTime" val="3" />
@@ -157,7 +157,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="element" val="1" />
 		<set name="abnormalType" val="FEOH_STANCE" />
 		<set name="abnormalTime" val="3" />
@@ -174,7 +174,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="element" val="2" />
 		<set name="abnormalType" val="FEOH_STANCE" />
 		<set name="abnormalTime" val="3" />
@@ -191,7 +191,7 @@
 		<set name="reuseDelay" val="2000" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="element" val="3" />
 		<set name="abnormalType" val="FEOH_STANCE" />
 		<set name="abnormalTime" val="3" />
@@ -223,7 +223,7 @@
 		<set name="effectRange" val="1100" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -259,7 +259,7 @@
 		<set name="elementPower" val="50" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -298,7 +298,7 @@
 		<set name="elementPower" val="50" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -338,7 +338,7 @@
 		<set name="overHit" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -378,7 +378,7 @@
 		<set name="overHit" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -416,7 +416,7 @@
 		<set name="overHit" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -454,7 +454,7 @@
 		<set name="overHit" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="flyRadius" val="200" />
@@ -494,7 +494,7 @@
 		<set name="overHit" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -535,7 +535,7 @@
 		<set name="overHit" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -576,7 +576,7 @@
 		<set name="elementPower" val="80" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -616,7 +616,7 @@
 		<set name="element" val="3" />
 		<set name="elementPower" val="80" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -654,7 +654,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="effectRange" val="1100" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
@@ -694,7 +694,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -729,7 +729,7 @@
 		<set name="element" val="0" />
 		<set name="elementPower" val="100" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -760,7 +760,7 @@
 		<set name="element" val="1" />
 		<set name="elementPower" val="100" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -792,7 +792,7 @@
 		<set name="element" val="2" />
 		<set name="elementPower" val="100" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -822,7 +822,7 @@
 		<set name="element" val="3" />
 		<set name="elementPower" val="100" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -850,7 +850,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -880,7 +880,7 @@
 		<set name="power" val="#power" />
 		<set name="abnormalTime" val="1" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -927,7 +927,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -960,7 +960,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
 		<set name="effectPoint" val="-1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="flyRadius" val="200" />
 		<set name="trait" val="KNOCKBACK" />
@@ -983,7 +983,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<set name="icon" val="icon.skill11032" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -1007,7 +1007,7 @@
 		<set name="effectPoint" val="-1" />
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
 		<enchant2 name="magicLvl" val="#enchMagicLvl" />
@@ -1041,7 +1041,7 @@
 		<set name="elementPower" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1074,7 +1074,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1106,7 +1106,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="trait" val="KNOCKBACK" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1139,7 +1139,7 @@
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="trait" val="HOLD" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1170,7 +1170,7 @@
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -1199,7 +1199,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1233,7 +1233,7 @@
 		<set name="elementPower" val="80" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<set name="overHit" val="true" />
@@ -1267,7 +1267,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1299,7 +1299,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="KNOCKBACK" />
@@ -1332,7 +1332,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="HOLD" />
@@ -1361,7 +1361,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="effectRange" val="1100" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<set name="overHit" val="true" />
@@ -1392,7 +1392,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
@@ -1462,7 +1462,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="activateRate" val="50" /> <!-- Need Verify -->	
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1520,7 +1520,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="isDebuff" val="true" />
 		<set name="activateRate" val="50" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1559,7 +1559,7 @@
 		<set name="power" val="#power" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="effectRange" val="1100" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1597,7 +1597,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="staticReuse" val="true" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />	
@@ -1635,7 +1635,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="11052" levels="7" name="Mass Hell Binding" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
@@ -1659,7 +1659,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
 		<set name="effectRange" val="1000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="staticReuse" val="true" />
 		<set name="activateRate" val="50" />
@@ -1708,7 +1708,7 @@
 		<set name="effectRange" val="800" />
 		<set name="isDebuff" val="true" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="70" />
 		<set name="targetType" val="AREA" />
@@ -1724,7 +1724,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily immobilized midair. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -1750,7 +1750,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="effectRange" val="1100" />
 		<set name="isDebuff" val="true" />
@@ -1804,7 +1804,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1850,7 +1850,7 @@
 		<set name="abnormalVisualEffect" val="STUN" />
 		<set name="abnormalTime" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="flyCourse" val="0" />
 		<set name="flyRadius" val="500" />
 		<set name="power" val="#power" />
@@ -1890,7 +1890,7 @@
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<set name="targetType" val="GROUND" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="blockedInOlympiad" val="true" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -1900,7 +1900,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Pulls nearby enemies to the center. -->
 		<set name="icon" val="icon.skill1469" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -1917,7 +1917,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
@@ -1946,7 +1946,7 @@
 	<skill id="11063" levels="1" name="Floating Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill01702" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11064" levels="11" name="Ultimate Body To Mind" enchantGroup1="11">
@@ -1964,7 +1964,7 @@
 		<set name="power" val="#amount" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
 		<enchant1 name="power" val="#ench1mpAmount" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1987,7 +1987,7 @@
 		<set name="abnormalTime" val="20" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="mpInitialConsume" val="#ench1MpInitialConsume" />
@@ -2041,7 +2041,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="overHit" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2082,7 +2082,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="overHit" val="true" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="1100" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -2155,7 +2155,7 @@
 		<set name="icon" val="icon.skill11068" />
 		<set name="abnormalTime" val="30" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="500" />
@@ -2183,42 +2183,42 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target's Fire resistance is decreased. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11073" levels="1" name="Water - Elemental Spike">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target's Water resistance is decreased. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11074" levels="1" name="Wind - Elemental Spike">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target's Wind resistance is decreased. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11075" levels="1" name="Earth - Elemental Spike">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target's Earth resistance is decreased. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11076" levels="1" name="Double Casting - Elemental Spike">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target's Fire/Water/Wind/Earth resistances are decreased. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11077" levels="3" name="Decrease Fire Resistance">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases Fire resistance by 20 for 3 seconds. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2227,7 +2227,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases Water resistance by 20 for 3 seconds. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2236,7 +2236,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases Wind resistance by 20 for 3 seconds. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2245,7 +2245,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases Earth resistance by 20 for 3 seconds. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2254,7 +2254,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases Fire/Water/Wind/Earth resistances by 20 for 3 seconds. -->
 		<set name="icon" val="icon.skill11011" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2263,42 +2263,42 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target is inflicted with Fear. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11083" levels="1" name="Water - Elemental Crash">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target's Speed is reduced. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11084" levels="1" name="Wind - Elemental Crash">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target is Knocked Back. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11085" levels="1" name="Earth - Elemental Crash">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target is inflicted with Hold. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11086" levels="1" name="Double Casting - Elemental Crash">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- target is inflicted with Stun. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11087" levels="3" name="Elemental Crash (Fire)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts fear and hold on target. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2307,7 +2307,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreases target's Speed. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2316,7 +2316,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Knock Back target. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2325,7 +2325,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts hold on target. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2334,7 +2334,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts stun on target. -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 		<set name="isDebuff" val="true" />
@@ -2343,7 +2343,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
 		<set name="icon" val="icon.skill11032" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -2388,7 +2388,7 @@
 		<table name="#dispelAbnormals"> POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 POISON,10;BLEEDING,10;PARALYZE,10;ROOT_PHYSICALLY,10;ROOT_MAGICALLY,10 </table>
 		<set name="icon" val="icon.skill11093" />
 		<set name="magicLvl" val="97" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="73" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="200" />
@@ -2476,7 +2476,7 @@
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
 		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="flyCourse" val="180" />
 		<set name="flyRadius" val="500" />
 		<set name="power" val="#power" />
@@ -2522,7 +2522,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->		
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="power" val="#power" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
@@ -2541,28 +2541,28 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fire Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11097" levels="1" name="Elemental Destruction: Water">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Water Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11098" levels="1" name="Elemental Destruction: Wind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Wind Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11099" levels="1" name="Elemental Destruction: Earth">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Earth Attribute -->
 		<set name="icon" val="icon.skill11017" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

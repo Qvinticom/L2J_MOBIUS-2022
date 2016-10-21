@@ -5,7 +5,7 @@
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -33,7 +33,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="abnormalTime" val="15" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="-1" />
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
@@ -81,7 +81,7 @@
 		<set name="mpConsume" val="93" />
 		<set name="abnormalTime" val="15" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="99" />
 		<set name="targetType" val="AREA" />
 		<set name="isDebuff" val="true" />
@@ -137,13 +137,13 @@
 		<set name="magicLvl" val="99" />
 		<set name="power" val="30000" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 	</skill>
 	<skill id="10804" levels="1" name="Bullseye">
 		<set name="magicLvl" val="90" />
 		<set name="power" val="30000" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isTriggeredSkill" val="true" />
 	</skill>
 	<skill id="10805" levels="4" name="Quick Charge">
@@ -157,7 +157,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="castRange" val="#castRange" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="30000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -180,7 +180,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -208,7 +208,7 @@
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
@@ -226,7 +226,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="hitTime" val="1200" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
@@ -238,7 +238,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="abnormalTime" val="1200" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
@@ -258,7 +258,7 @@
 		<table name="#bonus">1.05 1.06 1.07 1.1</table>
 		<table name="#magicLvl">85 90 95 99</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -284,7 +284,7 @@
 		<table name="#damage">1.05 1.06 1.07 1.1</table>
 		<table name="#magicLvl">85 90 95 99</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -299,7 +299,7 @@
 		<!-- Attacks distant target with 29176 Power added to P. Atk. Inflicts Stun when attacking from behind. Requires a bow/crossbow. Over-hit. Critical. -->
 		<table name="#mpConsumes"> 93 96 99 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="1100" />
@@ -311,7 +311,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the enemy for 5 sec. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="reuseDelay" val="5000" />
@@ -328,7 +328,7 @@
 		<table name="#damage">1.05 1.06 1.07 1.1</table>
 		<table name="#reuse">0.95 0.95 0.93 0.90</table>
 		<table name="#magicLvl">85 90 95 99</table>
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -348,7 +348,7 @@
 		<table name="#speed">10 12 15 20</table>
 		<table name="#magicLvl">85 90 95 99</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -362,7 +362,7 @@
 		<table name="#castRanges"> 400 400 450 </table>
 		<table name="#mpConsumes"> 32 33 34 </table>
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="#castRanges" />

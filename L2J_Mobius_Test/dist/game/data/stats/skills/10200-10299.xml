@@ -5,7 +5,7 @@
 		<table name="#power"> 1.5 1.55 1.6 </table>
 		<set name="icon" val="icon.skill0810" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -19,14 +19,14 @@
 	<skill id="10245" levels="1" name="Wizard - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0217" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10246" levels="1" name="Wizard - Individual">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
 		<set name="icon" val="icon.skill1543" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="5000" />
@@ -35,14 +35,14 @@
 	<skill id="10247" levels="1" name="Knight - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0217" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10248" levels="1" name="Knight - Individual">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
 		<set name="icon" val="icon.skill1543" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="6000" />
@@ -52,7 +52,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful blow on target. -->
 		<set name="icon" val="icon.skill10317" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2000" />
@@ -68,7 +68,7 @@
 		<set name="effectRange" val="700" />
 		<set name="magicLvl" val="99" />
 		<set name="power" val="5000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="trait" val="SHOCK" />
 		<set name="isDebuff" val="true" />
 		<for>
@@ -80,7 +80,7 @@
 	<!-- Source: https://l2wiki.com/Superior_Weapon_Mastery_-_Feoh_Archmage -->
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10251" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -114,7 +114,7 @@
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#pAtkAdd"> 1689 1958 2270 2555 2895 3071 3258 </table>
 		<set name="icon" val="icon.skill10252" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -136,7 +136,7 @@
 	<!-- Source: https://l2wiki.com/Superior_Heavy_Armor_Mastery_-_Tyrr_Titan -->
 		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10253" />
 		<set name="targetType" val="SELF" />
@@ -158,7 +158,7 @@
 	<!-- Source: https://l2wiki.com/Superior_Light_Armor_Mastery_-_Tyrr_Duelist -->
 		<table name="#pDef"> 1506 1654 1817 1959 2196 2279 2365 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10254" />
 		<set name="targetType" val="SELF" />
@@ -196,7 +196,7 @@
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10255" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByAttack">
@@ -222,7 +222,7 @@
 		<table name="#maxHp"> 606 724 843 1002 1092 1222 1352 </table>
 		<table name="#maxCp"> 296 353 411 489 533 596 660 </table>
 		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill10256" />
 		<set name="targetType" val="SELF" />
@@ -251,7 +251,7 @@
 		</for>
 	</skill>
 	<skill id="10257" levels="1" name="Superior Spirit Mastery">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="85" />
 		<set name="icon" val="icon.skill10257" />
 		<set name="targetType" val="SELF" />
@@ -296,7 +296,7 @@
 		<set name="ignoreShld" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="2000" />
@@ -347,7 +347,7 @@
 		<set name="icon" val="icon.skill10260" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="reuseDelay" val="7000" />
 		<set name="rideState" val="NONE" />
@@ -421,7 +421,7 @@
 		<set name="icon" val="icon.skill10262" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="30000" />
@@ -570,7 +570,7 @@
 		<set name="icon" val="icon.skill10263" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
@@ -632,7 +632,7 @@
 		<set name="overHit" val="true" />
 		<set name="trait" val="SHOCK" />
 		<set name="baseCritRate" val="7" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="600" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="isDebuff" val="true" />
@@ -689,7 +689,7 @@
 		<set name="trait" val="KNOCKDOWN" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="105" />
 		<enchant1 name="activateRate" val="#ench2ActivateRates" />
@@ -748,7 +748,7 @@
 		<set name="trait" val="SHOCK" />
 		<set name="baseCritRate" val="7" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="flyType" val="CHARGE" />
 		<set name="isDebuff" val="true" />
 		<set name="nextActionAttack" val="true" />
@@ -777,7 +777,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<set name="rideState" val="NONE" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<for>
 			<effect name="ManaDamOverTime" ticks="5">
@@ -802,7 +802,7 @@
 		<set name="flyType" val="CHARGE" />
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="hitTime" val="890" />
 		<set name="coolTime" val="500" />
@@ -859,7 +859,7 @@
 		<set name="magicLvl" val="93" />
 		<set name="mpConsume" val="43" />
 		<set name="coolTime" val="300" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="120000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="99" />
@@ -898,7 +898,7 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="4000" />
 		<set name="targetType" val="AURA" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectPoint" val="-1000" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="105" />
@@ -979,7 +979,7 @@
 		<set name="reuseDelay" val="120000" />
 		<set name="mpConsume" val="92" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
 		<enchant1 name="magicLvl" val="99" />
 		<enchant1 name="activateRate" val="#ench2ActivateRates" />
@@ -1039,7 +1039,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="300000" />
@@ -1149,7 +1149,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="baseCritRate" val="7" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant1 name="magicLvl" val="105" />
@@ -1171,7 +1171,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="mpConsume" val="38" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<cond msgId="324">
 			<not>
 				<player Charges="10" />
@@ -1212,7 +1212,7 @@
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="180000" />
 		<set name="abnormalTime" val="120" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="mpConsume" val="20" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<enchant3 name="reuseDelay" val="#ench9Reuse" />
@@ -1236,7 +1236,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="affectLimit" val="10-10" />
 		<set name="affectRange" val="700" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="30000" />
@@ -1266,7 +1266,7 @@
 		<set name="abnormalVisualEffect" val="INVINCIBILITY" />
 		<set name="magicLvl" val="91" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1200" />
 		<set name="coolTime" val="300" />
 		<set name="reuseDelay" val="300000" />
@@ -1326,7 +1326,7 @@
 	<skill id="10280" levels="1" name="Momentum Charge">
 		<set name="magicLvl" val="85" />
 		<set name="mpInitialConsume" val="58" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1357,7 +1357,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AURA" />
@@ -1379,7 +1379,7 @@
 	</skill>
 	<skill id="10283" levels="1" name="Increase Momentum">
 		<set name="icon" val="icon.skill10283" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
@@ -1404,7 +1404,7 @@
 		<table name="#abnormalLvl">1 2 3</table>
 		<set name="icon" val="#icons" />
 		<set name="abnormalTime" val="#time" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="isTriggeredSkill" val="true" />
@@ -1429,7 +1429,7 @@
 		<set name="reuseDelay" val="10000" />
 		<set name="effectPoint" val="313" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="HealPercent">
@@ -1444,7 +1444,7 @@
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
@@ -1474,7 +1474,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="3" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="DamOverTime" ticks="1">
@@ -1503,7 +1503,7 @@
 		<set name="castRange" val="500" />
 		<set name="reuseDelay" val="10000" />
 		<set name="baseCritRate" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant1 name="magicLvl" val="105" />
 		<table name="#baseCritRate">  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 </table>
@@ -1536,7 +1536,7 @@
 		<table name="#magicLvl">85 90 95 99</table>
 		<table name="#enchRate"> 1 2 3 4 5 6 7 8 9 10 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalTime" val="60" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
@@ -1594,7 +1594,7 @@
 		<set name="castRange" val="500" />
 		<set name="reuseDelay" val="7000" />
 		<set name="baseCritRate" val="10" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<cond msgId="113" addName="1">
 			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
 		</cond>
@@ -1619,7 +1619,7 @@
 		<set name="icon" val="icon.skill10291" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="38" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="99" />
@@ -1659,7 +1659,7 @@
 		<set name="icon" val="icon.skill10292" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="38" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1705,7 +1705,7 @@
 		<set name="icon" val="icon.skill10293" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="38" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1747,7 +1747,7 @@
 		<set name="icon" val="icon.skill10294" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="38" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1789,7 +1789,7 @@
 		<set name="icon" val="icon.skill10295" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="38" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="magicLvl" val="#enchMagicLvl" />
@@ -1822,7 +1822,7 @@
 	<skill id="10296" levels="1" name="Spirit of the Hunter" enchantGroup1="11">
 		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000 3020 3040 3160 3280 3400 3520 3640 3760 3880 4000</table>
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalType" val="DETECT_WEAKNESS" />
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="1800" />
@@ -1848,7 +1848,7 @@
 	<skill id="10297" levels="1" name="Spirit of the Slayer" enchantGroup1="11">
 		<table name="#ench1Time">1920 2040 2160 2280 2400 2520 2640 2760 2880 3000 3020 3040 3160 3280 3400 3520 3640 3760 3880 4000</table>
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalType" val="DETECT_WEAKNESS" />
 		<set name="abnormalTime" val="1800" />
 		<set name="targetType" val="SELF" />
@@ -1875,7 +1875,7 @@
 	</skill>
 	<skill id="10298" levels="1" name="Power Revival">
 		<set name="magicLvl" val="86" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="600000" />
@@ -1890,7 +1890,7 @@
 		<!-- NOT USED? -->
 		<!-- Inflicted with stun and unable to move for 3 seconds. -->
 		<set name="icon" val="icon.skill10299" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="isDebuff" val="true" />

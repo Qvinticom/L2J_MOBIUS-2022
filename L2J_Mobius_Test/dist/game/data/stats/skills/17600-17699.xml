@@ -3,44 +3,44 @@
 	<skill id="17600" levels="1" name="Starfish Appearance Stone: Sigil">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17601" levels="1" name="Turtle Appearance Stone: Shield">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17602" levels="1" name="Blue Mackerel Appearance Stone: Dualsword">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17603" levels="1" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17604" levels="1" name="Trumpetfish Appearance Stone: Dual Dagger">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17605" levels="1" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17606" levels="1" name="Entrance Pass: Fantasy Fishing Dock (1-hour)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 1hr., and remains after death. While the buff is active, you can reenter without using another pass. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="4" />
@@ -49,7 +49,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 2hr., and remains after death. While the buff is active, you can reenter without using another pass. -->
 		<set name="icon" val="icon.fishing_zone_ticket" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="4" />
@@ -58,7 +58,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Fantastical energy of the fishing dock. Quickly attracts fish, and has an increased chance of meeting Goldeen. Restores Vitality if you stay at the dock for some time. Additional damage when reeling/ pumping. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -66,7 +66,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Use the heroic energy to activate Lethal Strike when reeling/ pumping, even when doing so without success. -->
 		<set name="icon" val="icon.weapon_fishing_rod_i04" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -76,7 +76,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -91,7 +91,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -106,7 +106,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -121,7 +121,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -136,7 +136,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -151,7 +151,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -166,7 +166,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -181,7 +181,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -196,7 +196,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -211,7 +211,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -226,7 +226,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -241,7 +241,7 @@
 		<set name="hitTime" val="3000" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />		
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />		
 		<set name="targetType" val="SELF" />
 		<for>
@@ -256,7 +256,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -269,7 +269,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -282,7 +282,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -295,7 +295,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -308,7 +308,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -321,7 +321,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -334,7 +334,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -347,7 +347,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -360,7 +360,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -373,7 +373,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -386,7 +386,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -399,7 +399,7 @@
 		<set name="hitTime" val="3000" />		
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />		
 		<cond msgId="2292">
@@ -410,7 +410,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -419,7 +419,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -428,7 +428,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -437,7 +437,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -446,7 +446,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -455,7 +455,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -464,7 +464,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -473,7 +473,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -482,7 +482,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -491,7 +491,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -500,7 +500,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -509,7 +509,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -518,7 +518,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -527,7 +527,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -536,7 +536,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -545,7 +545,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -554,7 +554,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -563,7 +563,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -572,7 +572,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -581,7 +581,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -590,7 +590,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -599,7 +599,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -608,7 +608,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -617,7 +617,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -626,7 +626,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -635,7 +635,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -644,7 +644,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -653,7 +653,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -662,7 +662,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -671,7 +671,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -680,7 +680,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -689,7 +689,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -698,7 +698,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -707,7 +707,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -716,7 +716,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -725,7 +725,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Giran. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -734,7 +734,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -743,7 +743,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -752,7 +752,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -761,7 +761,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -770,7 +770,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -779,7 +779,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -788,7 +788,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -797,7 +797,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -806,7 +806,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -815,7 +815,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -824,7 +824,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -833,7 +833,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Heine. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="reuseDelay" val="1800000" />
@@ -841,25 +841,25 @@
 	<skill id="17682" levels="1" name="Fishing Rod (Hero) - Inkill">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1011" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17683" levels="1" name="Steel Weapon Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17684" levels="1" name="Steel Armor Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17685" levels="1" name="Lara the Cat's Gift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17686" levels="4" name="Random Buff">
@@ -867,7 +867,7 @@
 		<!-- XP/SP gain + 30% when hunting, P./M. Atk. + 5%. Received damage - 5%. -->
 		<table name="#castRanges"> 900 -1 -1 -1 </table>
 		<set name="icon" val="BranchSys.icon.br_sevenlove_girlpresent_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="#castRanges" />
 		<set name="isMagic" val="4" />
@@ -875,7 +875,7 @@
 	<skill id="17687" levels="1" name="Lara the Cat's Gift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17688" levels="4" name="Lara the Cat's Buff">
@@ -883,7 +883,7 @@
 		<!-- XP/SP gain + 30% when hunting, P./M. Atk. + 5%. Received damage - 5%. -->
 		<table name="#castRanges"> 900 -1 -1 -1 </table>
 		<set name="icon" val="BranchSys.icon.br_sevenlove_girlpresent_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="#castRanges" />
 		<set name="isMagic" val="4" />
@@ -891,44 +891,44 @@
 	<skill id="17689" levels="1" name="Lara the Cat's Quality Secret Gift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17690" levels="1" name="Lara the Cat's Secret Gift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17691" levels="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17692" levels="1" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17693" levels="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17694" levels="1" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17695" levels="1" name="Summon Squash">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->
 		<set name="icon" val="icon.skill17695" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -938,7 +938,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->
 		<set name="icon" val="icon.skill17696" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />

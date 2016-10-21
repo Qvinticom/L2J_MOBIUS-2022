@@ -3,32 +3,32 @@
 	<skill id="17900" levels="1" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.giant_ench_armor_stone_r_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17901" levels="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.giant_ench_wp_stone_r_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17902" levels="1" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.giant_ench_armor_stone_r_i02" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17903" levels="1" name="Giant's Lucky Enchant Stone: Weapon (R-grade)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.giant_ench_wp_stone_r_i02" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17904" levels="1" name="Windy Healing Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -36,7 +36,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -44,7 +44,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -52,7 +52,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -60,7 +60,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly restores HP. Lasts 15 sec. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="10000" />
 	</skill>
@@ -68,7 +68,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 625 HP and restores CP with remaining power. No duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="500" />
 	</skill>
@@ -76,7 +76,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 1250 HP and restores CP with remaining power. No duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="500" />
 	</skill>
@@ -84,7 +84,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 2500 HP and restores CP with remaining power. No duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="500" />
 	</skill>
@@ -92,7 +92,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 3750 HP and restores CP with remaining power. No duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="500" />
 	</skill>
@@ -100,7 +100,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 5000 HP and restores CP with remaining power. No duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="500" />
 	</skill>
@@ -108,7 +108,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<set name="icon" val="icon.love_potion" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="600000" />
@@ -117,7 +117,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<set name="icon" val="icon.love_potion" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="600000" />
@@ -126,7 +126,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<set name="icon" val="icon.love_potion" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="600000" />
@@ -135,7 +135,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation envelopes you. For 15sec., P./M./ Atk. and Atk./Casting Spd. increase. A strange power transforms your weapon. -->
 		<set name="icon" val="icon.love_potion" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="600000" />
@@ -144,7 +144,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A strange sensation envelopes you. Double-click for a random love effect. -->
 		<set name="icon" val="icon.love_potion" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="600000" />
@@ -153,7 +153,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores HP/CP/MP. -->
 		<set name="icon" val="icon.super_elixir_potion" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="1200000" />
@@ -175,7 +175,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17921" levels="4" name="Windy Quick Healing Potion">
@@ -195,7 +195,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_potion_gold_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17922" levels="4" name="Low-grade Love Potion">
@@ -215,7 +215,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.love_potion" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17923" levels="1" name="Super Elixir">
@@ -229,7 +229,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.super_elixir_potion" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17924" levels="3" name="Supreme Windy Healing Potion">
@@ -248,7 +248,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17925" levels="2" name="Giant's Scroll: Enchant Armor (R-grade)">
@@ -265,7 +265,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17926" levels="2" name="Giant's Lucky Enchant Stone: Armor (R-grade)">
@@ -282,7 +282,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17927" levels="2" name="Windy Lucky Enchant Stone: Armor (R-grade)">
@@ -299,7 +299,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17928" levels="6" name="Lv. 1 Legendary MEN Dye (Luck)">
@@ -324,7 +324,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17929" levels="6" name="Lv. 2 Legendary MEN Dye (Luck)">
@@ -349,7 +349,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17930" levels="6" name="Lv. 3 Legendary MEN Dye (Luck)">
@@ -374,7 +374,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17931" levels="6" name="Lv. 4 Legendary MEN Dye (Luck)">
@@ -399,7 +399,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17932" levels="6" name="Lv. 1 Legendary MEN Dye (Charisma)">
@@ -424,7 +424,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17933" levels="6" name="Lv. 2 Legendary MEN Dye (Charisma)">
@@ -449,7 +449,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17934" levels="6" name="Lv. 3 Legendary MEN Dye (Charisma)">
@@ -474,7 +474,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17935" levels="6" name="Lv. 4 Legendary MEN Dye (Charisma)">
@@ -499,7 +499,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17936" levels="14" name="Lv. 5 Legendary MEN Dye (Luck)">
@@ -540,7 +540,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17937" levels="3" name="Mid-grade Life Stone (R-grade)">
@@ -559,7 +559,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17938" levels="3" name="Mid-grade Life Stone (R95-grade)">
@@ -578,7 +578,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17939" levels="3" name="Mid-grade Life Stone (R99-grade)">
@@ -597,7 +597,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17940" levels="1" name="Life Stone: Giant's Power">
@@ -611,7 +611,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="icon.etc_small_bubble_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17941" levels="4" name="Lv. 1 Windy CHA Dye (Luck)">
@@ -632,7 +632,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17942" levels="4" name="Lv. 1 Windy LUC Dye (Charisma)">
@@ -653,7 +653,7 @@
 		<set name="alchemyTransmuteIngredients" val="#alchemyTransmuteIngredients" />
 		<set name="alchemyTransmuteProduction" val="#alchemyTransmuteProduction" />
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17943" levels="2" name="Alchemy Cube">
@@ -661,14 +661,14 @@
 		<!-- Can use the Alchemy Cube. Elementary Combination Alchemy. -->
 		<table name="#icons"> icon.skill0000 icon.alchemy_mix_cube </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17944" levels="1" name="Scroll of Escape: Talking Island Village">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Talking Island Village. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -676,7 +676,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Magmeld. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -684,7 +684,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Magmeld. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -692,7 +692,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -700,7 +700,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -708,7 +708,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Oren. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -718,7 +718,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39575" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -734,7 +734,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -742,7 +742,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Forsaken Plains. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -750,7 +750,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Aden. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -758,7 +758,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Fields of Massacre. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -766,7 +766,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -774,7 +774,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Swamp of Screams. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -782,7 +782,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Rune. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -790,7 +790,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Forest of the Dead. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -798,7 +798,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to the Town of Goddard. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -806,7 +806,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports you to Wall of Argos. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -816,7 +816,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39586" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -834,7 +834,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39587" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -849,7 +849,7 @@
 	<skill id="17963" levels="1" name="Alchemy Acquisition">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="1500" />
@@ -857,7 +857,7 @@
 	<skill id="17964" levels="1" name="Master Alchemy: Failure">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="1500" />
@@ -865,7 +865,7 @@
 	<skill id="17965" levels="1" name="Master Alchemy: Success">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="1500" />
@@ -873,7 +873,7 @@
 	<skill id="17966" levels="1" name="Alchemy Cube: Random Success">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="reuseDelay" val="1500" />
@@ -881,58 +881,58 @@
 	<skill id="17967" levels="1" name="Low-grade Talisman Ingredient Box">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17968" levels="1" name="High-grade Tallisman Ingredient Box">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17969" levels="1" name="Low-grade Wind Dye Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17970" levels="1" name="Mid-grade Wind Dye Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17971" levels="1" name="High-grade Wind Dye Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17972" levels="1" name="New Talisman Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17973" levels="1" name="Talisman - Wind: P. Critical Damage">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17974" levels="1" name="Talisman - Wind: M. Critical Damage">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17975" levels="1" name="Talisman - Wind: Defense">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Maximizes P./M. Def. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1200000" />
 	</skill>
@@ -940,7 +940,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Debuff Resistance. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="1200000" />
 	</skill>
@@ -948,7 +948,7 @@
 		<!-- The Talisman pulsates with power. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
 		<set name="abnormalVisualEffect" val="TALISMAN_DECO_DARK_PURPLE" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="3" />
 	</skill>
@@ -956,7 +956,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Talisman's power fades away. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17980" levels="1" name="Unseal Talisman - Insanity">
@@ -970,7 +970,7 @@
 		<set name="itemConsumeId" val="39573" />
 		<set name="isMagic" val="1" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
@@ -987,7 +987,7 @@
 		<!-- Escape to Gludin Village. -->
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
@@ -998,7 +998,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39492" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1017,7 +1017,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39491" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1035,7 +1035,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39487" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1053,7 +1053,7 @@
 		<set name="itemConsumeCount" val="1" />
 		<set name="itemConsumeId" val="39595" />
 		<set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
@@ -1072,7 +1072,7 @@
         <set name="itemConsumeCount" val="1" />
         <set name="itemConsumeId" val="39594" />
         <set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
         <set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
         <cond msgId="113" addName="1">
@@ -1087,7 +1087,7 @@
 	<skill id="17987" levels="1" name="Scroll of Escape: Town of Dion">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
@@ -1098,7 +1098,7 @@
         <set name="itemConsumeCount" val="1" />
         <set name="itemConsumeId" val="39596" />
         <set name="magicLvl" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
         <set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
         <cond msgId="113" addName="1">
@@ -1113,77 +1113,77 @@
 	<skill id="17989" levels="1" name="Scroll of Escape: Swamp of Screams">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17990" levels="1" name="Scroll of Escape: Seed of Annihilation">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17991" levels="1" name="Scroll of Escape: Harnak's Underground Ruins">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17992" levels="1" name="Scroll of Escape: Kartia's Labyrinth">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17993" levels="1" name="Scroll of Escape: Fairy Settlement">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17994" levels="1" name="Scroll of Escape: Garden of Genesis">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17995" levels="1" name="Scroll of Escape: Prison of Darkness">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17996" levels="1" name="Scroll of Escape: Fortuna">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17997" levels="1" name="Scroll of Escape: Isle of Souls">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17998" levels="1" name="Scroll of Escape: Nornil's Cave">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>
 	<skill id="17999" levels="1" name="Scroll of Escape: Seal of Shilen">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 	</skill>

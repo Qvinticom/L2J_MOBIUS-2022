@@ -3,7 +3,7 @@
 	<skill id="17701" levels="5" name="Topaz: Spiritshot">
 		<table name="#power"> 1062 3717 6903 10089 13275 </table>
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="ONE" />
 		<set name="dmgDirectlyToHp" val="true" />
 		<set name="castRange" val="600" />
@@ -26,7 +26,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores 1500 HP. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="30000" />
 	</skill>
@@ -34,13 +34,13 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Received Heal Amount + 3%. -->
 		<set name="icon" val="icon.skill4416_dwarf" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17704" levels="5" name="Obsidian">
 		<table name="#rate"> 1.01 1.03 1.07 1.11 1.15 </table>
 		<set name="icon" val="icon.etc_bm_jewel_obsidian_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -53,7 +53,7 @@
 	<skill id="17705" levels="5" name="Opal">
 		<table name="#rate"> 10 20 40 70 120 </table>
 		<set name="icon" val="icon.etc_bm_jewel_opal_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -65,21 +65,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 33. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17707" levels="5" name="Jewel: Casting Spd. Increase">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Casting Spd. + 33. -->
 		<set name="icon" val="icon.skill17085" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17708" levels="5" name="Diamond">
 		<table name="#pDef"> 283 567 945 1418 1986 </table>
 		<table name="#defCritDmg"> 0.99 0.98 0.07 0.96 0.95 </table>
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -92,7 +92,7 @@
 		<table name="#mDef"> 163 328 548 821 1150 </table>
 		<table name="#defCritDmg"> 0.99 0.98 0.97 0.96 0.95 </table>
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -104,7 +104,7 @@
 	<skill id="17710" levels="1" name="10th Anniversary Blessing Effect (Free)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -113,7 +113,7 @@
 		<!-- You can obtain an item in 1 hr. 23 stages total. (Note:) If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<table name="#castRanges"> 900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 </table>
 		<set name="icon" val="icon.ev_10th" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="#castRanges" />
 		<set name="isMagic" val="4" />
@@ -121,7 +121,7 @@
 	<skill id="17712" levels="1" name="10th Anniversary Blessing Effect (Paid)">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -130,7 +130,7 @@
 		<!-- You can obtain an item in 1 hr. 23 stages total. Special Blessings have a higher chance of obtaining items. (Note:) If you are dead while the item is given, you cannot acquire the 10th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<table name="#castRanges"> 900 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 </table>
 		<set name="icon" val="icon.ev_10th" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="#castRanges" />
 		<set name="isMagic" val="4" />
@@ -139,7 +139,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 hr., Max HP/MP/CP + 30%, P./M. Def. + 30%, Speed + 20, P. Atk. + 10%, and M. Atk. + 20%. Skill Cooldown - 10%, and Skill MP Consumption - 15%. (Same slot as Art of Seduction buff) -->
 		<set name="icon" val="icon.skill_sing" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="4" />
@@ -148,7 +148,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts 3186 damage to a single target. -->
 		<set name="icon" val="icon.skill3260" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1000" />
@@ -158,7 +158,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts 3186 damage to a single target. -->
 		<set name="icon" val="icon.skill3260" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1000" />
@@ -168,7 +168,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts 3186 damage to a single target. -->
 		<set name="icon" val="icon.skill3260" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1000" />
@@ -178,7 +178,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -186,7 +186,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Sealed Antharas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -194,7 +194,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Sealed Antharas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -202,7 +202,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Sealed Antharas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -210,7 +210,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -218,7 +218,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Stormer (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -226,7 +226,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Fighter (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -234,7 +234,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Avenger (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -242,7 +242,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Dual Blunt Weapon (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -250,7 +250,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Antharas Dualsword (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -258,7 +258,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -266,7 +266,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -274,7 +274,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -282,7 +282,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -290,7 +290,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Buster (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -298,7 +298,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -306,7 +306,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Valakas Retributer (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -314,7 +314,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Shaper (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -322,7 +322,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Thrower (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -330,7 +330,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Slasher (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -338,7 +338,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Caster (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -346,7 +346,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Cutter (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -354,7 +354,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Shooter (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -362,7 +362,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can obtain Lindvior Dual Dagger (1-hour). (Need Dandy's Scroll: Release Seal) -->
 		<set name="icon" val="icon.ev_10th_dandi1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="60000" />
 	</skill>
@@ -370,406 +370,406 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17743" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17744" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17745" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17746" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17747" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17748" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17749" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17750" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17751" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17752" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17753" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17754" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17755" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17756" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17757" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17758" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17759" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17760" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17761" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17762" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17763" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17764" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17765" levels="1" name="Dandy's Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17766" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17767" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17768" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17769" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17770" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17771" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17772" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17773" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17774" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17775" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17776" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17777" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17778" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17779" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17780" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17781" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17782" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17783" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17784" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17785" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17786" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17787" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17788" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17789" levels="1" name="Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17790" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17791" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17792" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17793" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17794" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17795" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17796" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17797" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17798" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="17799" levels="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<set name="icon" val="icon.karma" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

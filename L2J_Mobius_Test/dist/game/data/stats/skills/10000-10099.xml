@@ -4,7 +4,7 @@
 		<table name="#extractableItems">36558,1,25.0;36563,1,25.0;36553,1,25.0;36548,1,25.0</table>
 		<set name="capsuled_items_skill" val="#extractableItems" />
 		<set name="itemConsumeCount" val="1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -21,7 +21,7 @@
 		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10001" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -56,7 +56,7 @@
 		<table name="#pDef"> 1731 1901 2088 2252 2524 2619 2718 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10002" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -99,7 +99,7 @@
 		<table name="#sDef"> 1.80 1.85 1.9 1.95 2.0 2.05 2.10 </table>
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<set name="icon" val="icon.skill10003" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -124,7 +124,7 @@
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 </table>
 		<set name="icon" val="icon.skill10004" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -147,7 +147,7 @@
 		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
 		<table name="#resistance"> 20 22 24 26 30 32 34 </table>
 		<set name="icon" val="icon.skill10005" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -169,7 +169,7 @@
 	</skill>
 	<skill id="10006" levels="1" name="Last Patience">
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -188,7 +188,7 @@
 		<table name="#abnormalLvl">2 3 4</table>
 		<table name="#val">1.25 1.30 1.35</table>
 		<set name="reuseDelay" val="8000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="9" />
 		<set name="targetType" val="SELF" />
@@ -221,7 +221,7 @@
 		<set name="effectPoint" val="-100" /> <!-- temp fix -->
 		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="power" val="#enchPower" />
@@ -274,7 +274,7 @@
 		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="400" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant1 name="magicLvl" val="105" />
@@ -325,7 +325,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="400" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="power" val="#enchPower" />
@@ -377,7 +377,7 @@
 		<set name="effectPoint" val="-100" /> <!-- temp fix -->
 		<set name="targetType" val="ONE" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
 		<set name="ignoreShld" val="true" />
@@ -429,7 +429,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="rideState" val="NONE" />
 		<set name="effectPoint" val="-100" /> <!-- temp fix -->
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="400" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="SHOCK" />
@@ -477,7 +477,7 @@
 		<set name="targetType" val="AREA" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="200" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant1 name="magicLvl" val="105" />
@@ -528,7 +528,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="overHit" val="true" />
 		<set name="isDebuff" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="power" val="#enchPower" />
 		<enchant1 name="magicLvl" val="105" />
 		<enchant2 name="magicLvl" val="105" />
@@ -561,7 +561,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="600" />
 		<set name="isDebuff" val="true" />
 		<enchant1 name="magicLvl" val="105" />
@@ -601,7 +601,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="AREA" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="effectRange" val="600" />	
 		<set name="isDebuff" val="true" />
 		<enchant1 name="magicLvl" val="105" />
@@ -634,7 +634,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="900000" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
@@ -675,7 +675,7 @@
 		<set name="reuseDelay" val="60000" />
 		<set name="abnormalTime" val="10" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY_MEMBER" />
 		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
 		<table name="#defCritDamage">  0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 1.1  </table>
@@ -718,7 +718,7 @@
 		<set name="reuseDelay" val="900000" />
 		<set name="abnormalTime" val="15" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
@@ -747,7 +747,7 @@
 		<set name="abnormalTime" val="3" />
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="50" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ManaDamOverTime">
@@ -772,7 +772,7 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
 		<table name="#pAtk"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
 		<enchant2 name="magicLvl" val="104" />	
@@ -803,7 +803,7 @@
 		<set name="mpConsume" val="38" />
 		<set name="abnormalTime" val="10" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="abnormalTime" val="#ench2abnormalTime" />
 		<table name="#pAtk"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
 		<enchant2 name="magicLvl" val="105" />	
@@ -850,7 +850,7 @@
 		<set name="affectRange" val="150" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<enchant1 name="power" val="#enchPower" />
@@ -882,7 +882,7 @@
 		<set name="mpConsume" val="96" />
 		<set name="abnormalTime" val="15" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
 			<using kind="SHIELD" />
@@ -924,7 +924,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<set name="staticReuse" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<enchant9 name="reuseDelay" val="#ench9Reuse" />
@@ -999,7 +999,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="abnormalTime" val="4" />
 		<set name="effectRange" val="1000" />
@@ -1063,7 +1063,7 @@
 		<set name="fanRange" val="0,0,80,520" />
 		<set name="affectLimit" val="5-12" />
 		<set name="affectRange" val="520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="DERANGEMENT" />
 		<enchant1 name="magicLvl" val="105" />
@@ -1099,7 +1099,7 @@
 	<skill id="10028" levels="1" name="Rage Aura">
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_DEBUFF_SELF" />
@@ -1128,7 +1128,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="3" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Debuff">
@@ -1141,7 +1141,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -1165,7 +1165,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -1184,7 +1184,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -1222,7 +1222,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -1244,7 +1244,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -1269,7 +1269,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -1290,7 +1290,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -1313,7 +1313,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -1335,7 +1335,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -1358,7 +1358,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -1390,7 +1390,7 @@
 		<set name="coolTime" val="200" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<enchant1 name="magicLvl" val="99" />
 		<cond>
 			<and>
@@ -1418,7 +1418,7 @@
 	<skill id="10041" levels="4" name="Summon Cubic of Despair">
 		<!-- NOT USED -->
 		<set name="icon" val="icon.skill0010" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="2200" />
@@ -1428,7 +1428,7 @@
 	<skill id="10042" levels="3" name="Summon Cubic of Life">
 		<!-- NOT USED -->
 		<set name="icon" val="icon.skill0010" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="2200" />
@@ -1443,7 +1443,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic">
@@ -1455,7 +1455,7 @@
 	<!-- Source: https://l2wiki.com/Superior_Elemental_Mastery_-_Sigel_Shillien_Templar -->
 		<table name="#elemRes"> 20 22 24 26 30 32 34 </table>
 		<set name="icon" val="icon.skill10044" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="reuseDelay" val="3000" />
 		<set name="targetType" val="SELF" />
 		<for>
@@ -1475,7 +1475,7 @@
 		<!-- Strikes with the shield. Attacks target with 14179 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 54 0 0 </table>
 		<set name="icon" val="icon.skill10045" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1489,7 +1489,7 @@
 		<!-- Strikes with the shield. Attacks target with 15269 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 56 0 0 </table>
 		<set name="icon" val="icon.skill10046" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1503,7 +1503,7 @@
 		<!-- Strikes with the shield. Attacks target with 16359 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 58 0 0 </table>
 		<set name="icon" val="icon.skill10047" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1517,7 +1517,7 @@
 		<!-- Strikes with the shield. Attacks target with 17449 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 59 0 0 </table>
 		<set name="icon" val="icon.skill10048" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1531,7 +1531,7 @@
 		<!-- Strikes with the shield. Attacks target with 18539 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 61 0 0 </table>
 		<set name="icon" val="icon.skill10049" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1545,7 +1545,7 @@
 		<!-- Strikes with the shield. Attacks target with 19629 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 63 0 0 </table>
 		<set name="icon" val="icon.skill10050" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1578,7 +1578,7 @@
 		<set name="power" val="#power" />
 		<set name="targetType" val="AREA" />
 		<set name="overHit" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="effectRange" val="900" />
 		<set name="isDebuff" val="true" />
 		<set name="trait" val="DERANGEMENT" />
@@ -1609,7 +1609,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="FRONT_AREA" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<enchant1 name="magicLvl" val="99" />
 		<enchant1 name="mpConsume" val="#ench1MpConsume" />
 		<enchant1 name="power" val="#ench1Power" />
@@ -1639,7 +1639,7 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="flyType" val="CHARGE" />
 		<set name="effectRange" val="800" />
 		<set name="targetType" val="AREA" />
@@ -1667,7 +1667,7 @@
 		<set name="element" val="0" />
 		<set name="elementPower" val="20" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="targetType" val="ONE" />
 		<set name="effectRange" val="1400" />
@@ -1681,7 +1681,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily decreases P. Atk. Effect 3. -->
 		<set name="icon" val="icon.skill1164" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -1695,7 +1695,7 @@
 		<table name="#HpHealPercent">0 0 0 0 0 3 6 10</table>
 		<set name="abnormalTime" val="#abnormalTime" />
 		<set name="abnormalLvl" val="#abnormalLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isMagic" val="1" />
@@ -1716,7 +1716,7 @@
 	<skill id="10057" levels="1" name="Cubic Curse">
 		<!-- NOT USED -->
 		<set name="icon" val="icon.skill1168" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -1727,7 +1727,7 @@
 		<set name="abnormalTime" val="10" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="30000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<for>
 			<effect name="Buff">
 				<add stat="mDef" val="1000" />
@@ -1745,7 +1745,7 @@
 		<!-- Strikes with the shield. Attacks target with 20719 Power added to P. Atk. Decreases P. Def. by 10% and Evasion by 2. Increases Critical damage by 10%. -->
 		<table name="#mpConsumes"> 65 0 0 </table>
 		<set name="icon" val="icon.skill10059" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="40" />
@@ -1756,7 +1756,7 @@
 	</skill>
 	<skill id="10060" levels="1" name="Aggression Attack">
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
 		<set name="abnormalTime" val="2" />
@@ -1772,7 +1772,7 @@
 		<set name="icon" val="icon.skill1100" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="180" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="8000" />
@@ -1790,7 +1790,7 @@
 		<table name="#triggerLevel">1 2 3 4</table>
 		<table name="#defence">1.02 1.03 1.04 1.06</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1814,7 +1814,7 @@
 		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isTriggeredSkill" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalTime" val="10" />
 		<set name="castRange" val="400" />
 		<set name="reuseDelay" val="30000" />
@@ -1836,7 +1836,7 @@
 		<set name="effectPoint" val="-100" />
 		<set name="hpConsume" val="#hpConsume" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="isMagic" val="1" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
@@ -1853,7 +1853,7 @@
 		<table name="#rShld"> 1.02 1.03 1.04 1.05 </table>
 		<table name="#magicLvl">85 90 95 99</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1867,7 +1867,7 @@
 		<table name="#attack">1.02 1.03 1.04 1.06</table>
 		<table name="#triggerLevel">1 2 3 4</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="TriggerSkillByDamage">
@@ -1889,7 +1889,7 @@
 		<table name="#level">2 3 4 4</table>
 		<table name="#abnormalLvl">1 2 3 4</table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="castRange" val="400" />
 		<set name="abnormalTime" val="10" />
 		<set name="reuseDelay" val="30000" />
@@ -1916,7 +1916,7 @@
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
 		<set name="isMagic" val="1" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<cond>
 			<and>
 				<player canSummonServitor="true" />
@@ -1936,7 +1936,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#skillLevel"> 1 2 3 4 </table>
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="TriggerSkillByAttack">
 				<param attackerType="L2Character" minAttackerLevel="1" maxAttackerLevel="99" />
@@ -1954,7 +1954,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="reuseDelay" val="10000" />
 		<set name="hitTime" val="1500"/>
@@ -1971,7 +1971,7 @@
 		<table name="#rate"> 1.02 1.03 1.04 1.06 </table>
 		<set name="icon" val="icon.skill10071" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1993,7 +1993,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#rate"> 1.02 1.03 1.04 1.06 </table>
 		<table name="#healEffect"> 1.01 1.02 1.03 1.04 </table>
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="2" />
@@ -2017,7 +2017,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="96" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic">
@@ -2029,7 +2029,7 @@
 		<!-- NOT USED -->
 		<!-- Summons the Mind Cubic. The Sigel Mind Cubic uses magic to restore the owner's MP. -->
 		<set name="icon" val="icon.skill10074" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="96" />
 		<set name="hitTime" val="2200" />
@@ -2040,7 +2040,7 @@
 	<skill id="10075" levels="1" name="Superior Cubic Mastery">
 		<set name="icon" val="icon.skill0143" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="CubicMastery">
@@ -2054,7 +2054,7 @@
 		<table name="#rShld"> 1.05 1.07 1.10 1.15 </table>
 		<set name="icon" val="icon.skill0288" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="8" />
 		<for>
@@ -2070,7 +2070,7 @@
 		<table name="#skillLevel"> 1 2 3 4 </table>
 		<set name="icon" val="icon.skill11832" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2090,7 +2090,7 @@
 	<skill id="10078" levels="4" name="Shilen's Presence">
 		<table name="#damage"> 1.02 1.03 1.04 1.06 </table>
 		<set name="icon" val="icon.skill11832" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="abnormalTime" val="10" />
 		<set name="isMagic" val="2" />
@@ -2114,7 +2114,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="96" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic">
@@ -2131,7 +2131,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="96" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic">
@@ -2160,7 +2160,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsumes" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE" />
@@ -2181,7 +2181,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -2198,7 +2198,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -2215,7 +2215,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -2238,7 +2238,7 @@
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -2261,7 +2261,7 @@
 		<set name="isMagic" val="1" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -2293,7 +2293,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="42000" />
 		<set name="rideState" val="NONE" />
@@ -2329,7 +2329,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="nextActionAttack" val="true" />
-		<set name="operateType" val="DIRECTIONAL_CONTINUOUS" />
+		<set name="operateType" val="DA2" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="21000" />
 		<set name="rideState" val="NONE" />
@@ -2352,7 +2352,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -2383,7 +2383,7 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
@@ -2399,7 +2399,7 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="90" />
 		<set name="mpConsume" val="35" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
@@ -2417,7 +2417,7 @@
 		<set name="reuseDelay" val="30000" />
 		<set name="mpConsume" val="96" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="SummonCubic">
@@ -2432,7 +2432,7 @@
 		<set name="icon" val="icon.skll10093" />
 		<set name="abnormalTime" val="5" />
 		<set name="abnormalLvl" val="#abnormalLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="isMagic" val="1" />
@@ -2462,7 +2462,7 @@
 		<set name="isMagic" val="1" />
 		<set name="itemConsumeCount" val="#itemConsumeCount" />
 		<set name="itemConsumeId" val="1785" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectPoint" val="-100" /> <!-- Need verify -->
 		<set name="hitTime" val="1500" />
@@ -2482,7 +2482,7 @@
 	</skill>
 	<skill id="10095" levels="1" name="Blood Panther's Death Touch">
 		<set name="icon" val="icon.skll10091" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<for>
@@ -2498,7 +2498,7 @@
 	</skill>
 	<skill id="10096" levels="1" name="Death Touch">
 		<set name="icon" val="icon.skll10091" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="ONE" />
 		<set name="abnormalTime" val="10" />
 		<set name="activateRate" val="50" />
@@ -2522,7 +2522,7 @@
 		<table name="#mpConsume"> 185 191 197 203 209 215 </table>
 		<set name="icon" val="icon.skill10097" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="hitTime" val="1500" />
@@ -2561,7 +2561,7 @@
 		<set name="icon" val="icon.skill10098" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -2602,7 +2602,7 @@
 		<set name="icon" val="icon.skill10099" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />

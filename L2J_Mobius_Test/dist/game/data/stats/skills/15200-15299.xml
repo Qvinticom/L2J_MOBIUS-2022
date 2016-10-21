@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Being hurled away from shock. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="7000" />
 		<set name="coolTime" val="500" />
@@ -14,7 +14,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Being hurled away from shock. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="6000" />
 		<set name="coolTime" val="500" />
@@ -24,7 +24,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="7000" />
 		<set name="coolTime" val="500" />
@@ -34,7 +34,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="6000" />
 		<set name="coolTime" val="500" />
@@ -44,7 +44,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
 		<set name="icon" val="icon.skill10266" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -55,7 +55,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
 		<set name="icon" val="icon.skill10266" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -65,14 +65,14 @@
 	<skill id="15206" levels="1" name="Explosion">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
 	<skill id="15207" levels="1" name="Debuff Immunity">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15208" levels="9" name="Weakened Chaos Shield">
@@ -80,7 +80,7 @@
 		<!-- Lethal Strike Resistance is weakened through the armor destruction skill. -->
 		<table name="#icons"> icon.skill0035 icon.skill0035 icon.skill0035 icon.skill0035 icon.skill0035 icon.skill0035 icon.skill0035 icon.skill0035 icon.skill1418 </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -88,7 +88,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gives a gift. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2700" />
 		<set name="coolTime" val="1000" />
@@ -98,7 +98,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gives a gift. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2700" />
 		<set name="coolTime" val="1000" />
@@ -108,7 +108,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gives a gift. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2700" />
 		<set name="coolTime" val="1000" />
@@ -118,7 +118,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gives a gift. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2700" />
 		<set name="coolTime" val="1000" />
@@ -128,7 +128,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Flying away due to the twisted space. -->
 		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
@@ -138,35 +138,35 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Tauti is the lord who rules over the Seed of Hellfire. It is one of the 9 seeds sown in Gracia by Shilen's command. It is one of Bremnon's weapons that has the appearance of an enormous axe. It uses the conflict between the classes in order to carry out Shilen's command and to grow its own power. It does not personally appear while ruling over the Seed of Hellfire. No one knows the extent of its hidden power. -->
 		<set name="icon" val="icon.skillboss" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15215" levels="1" name="Raid Boss (Lv. 97)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the 'Guillotine of Death' that kills to bring about the resurrection of Shilen. It is trapped in the illusion of the blood. It manages the criminals near the guillotine and it sends the blood that they have gathered to the spirit world of darkness. -->
 		<set name="icon" val="icon.skillraid" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15216" levels="1" name="Raid Boss (Lv. 97)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- This is an undead monster that was created through the blood of Shilen from the corpse of a criminal who went insane from the torture in the fortress. It is trapped in the illusion of the blood. It seeks to bring about the resurrection of Shilen by killing everything, thereby taking sacrifices for the darkness. -->
 		<set name="icon" val="icon.skillraid" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15217" levels="1" name="Raid Boss (Lv. 97)">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood. It is a warden who manages the monsters in the Guillotine Fortress. -->
 		<set name="icon" val="icon.skillraid" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15218" levels="1" name="Clear Target">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels the enemy's target. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="250" />
@@ -178,7 +178,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts strong damage upon the enemies near the target. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="150" />
@@ -189,7 +189,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage upon monsters around you and inflicts Bleed for 5 sec. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2000" />
@@ -199,7 +199,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks the target with an arrow of darkness. -->
 		<set name="icon" val="icon.skill0122" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="250" />
@@ -211,7 +211,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Launches a powerful attack on the target. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="100" />
@@ -221,7 +221,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Launches a powerful attack on enemies within a 120 degree radius. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="100" />
@@ -231,7 +231,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Your soul is sucked away, and your P. Def. and M. Def. is decreased. -->
 		<set name="icon" val="icon.skill11769" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="250" />
@@ -244,7 +244,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="250" />
@@ -255,7 +255,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Strikes down with the sword to inflict powerful damage on enemies within 200 grids of you. Additional damage on targets debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="250" />
@@ -266,7 +266,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Additional damage received when debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="5" />
 		<set name="reuseDelay" val="5000" />
@@ -275,7 +275,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Only damages targets debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2500" />
@@ -285,7 +285,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Uses the absorbed soul to send a powerful shock wave within a 120 degree radius. Additional damage on targets debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2500" />
@@ -295,7 +295,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Additional damage received when debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="5" />
 		<set name="reuseDelay" val="5000" />
@@ -304,7 +304,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts a powerful attack on the target. -->
 		<set name="icon" val="icon.skill11508" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="400" />
@@ -316,7 +316,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases your Atk. Spd. by 200%. -->
 		<set name="icon" val="icon.skill1086" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="isMagic" val="1" />
@@ -325,7 +325,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Swing your sword to launch a powerful attack on nearby enemies. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2000" />
@@ -335,7 +335,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shoot dark red spheres toward enemies within 120 degrees of you. Additional damage on PCs debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="200" />
@@ -346,7 +346,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Create a strong wind around you to push back enemies. -->
 		<set name="icon" val="icon.skill4107" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -357,7 +357,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful attack on the target. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="100" />
@@ -367,7 +367,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts strong damage upon the enemies near the target. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="100" />
@@ -377,7 +377,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Absorb the souls of enemies within 180 degrees of you and decrease their P. Def. and M. Def. by 30%. -->
 		<set name="icon" val="icon.skill11769" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="250" />
@@ -389,7 +389,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Additional damage received when debuffed with Soul Drain. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="5" />
 		<set name="reuseDelay" val="5000" />
@@ -398,14 +398,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- A broken Toad Cannon sparks into explosion, knocking back nearby targets. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 	</skill>
 	<skill id="15241" levels="1" name="">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 	</skill>
@@ -413,7 +413,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons an Attack Robot that attacks nearby Helper Robots. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -421,7 +421,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Zombie Robot that attacks nearby Stone Gathering Robots. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -429,14 +429,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Activate the Gathering Device to make the Dark Summon Circle disappear. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15245" levels="1" name="Presentation - Summon Robot">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon Device summons either a Repair Robot, or one of the two Destroyer Robots. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -444,7 +444,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts powerful damage on target and nearby enemies. -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="100" />
@@ -455,7 +455,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts damage on the target and knocks them down. -->
 		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="100" />
@@ -468,7 +468,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Nurka's P. Atk. and Atk. Spd. increased and P. Def. decreased. -->
 		<set name="icon" val="icon.skill1068" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2000" />
@@ -479,7 +479,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts powerful magical damage on the target. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="500" />
@@ -491,7 +491,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts Aerial Yoke on nearby enemies. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2500" />
@@ -503,7 +503,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- No attacks are working on Nurka. -->
 		<set name="icon" val="icon.skill11758" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="2000" />
@@ -514,7 +514,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Target is pulled to Nurka. -->
 		<set name="icon" val="icon.skill10015" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="350" />
@@ -527,7 +527,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Damages nearby enemies and decreases their Spd. -->
 		<set name="icon" val="icon.skill11509" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="3000" />
@@ -539,7 +539,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores your HP and allies' HP. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1500" />
@@ -550,7 +550,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Nurka's P. Def. + 50%. -->
 		<set name="icon" val="icon.skill11252" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -561,7 +561,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Nurka's P. Atk. + 50%. -->
 		<set name="icon" val="icon.skill10252" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -572,7 +572,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Decreased Spd. -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="300" />
@@ -585,7 +585,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores allies' HP. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="300" />
@@ -597,21 +597,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Congratulations! You have broken the record! -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15260" levels="1" name="Time Up">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enough for Now. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="15261" levels="1" name="Lindvior's Skill 1">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Wave Skill Presentation -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
 	</skill>
@@ -619,7 +619,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Wave Skill Range -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
 	</skill>
@@ -627,7 +627,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Wave Skill Damage -->
 		<set name="icon" val="icon.skill1296" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="isDebuff" val="true" />
@@ -636,7 +636,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Skill Presentation -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
 	</skill>
@@ -644,7 +644,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Skill Range -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="hitTime" val="4200" />
@@ -653,7 +653,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Skill Damage -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
 	</skill>
@@ -661,7 +661,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Summon Whirlwind Skill Presentation -->
 		<set name="icon" val="icon.skill10263" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isDebuff" val="true" />
@@ -670,7 +670,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Whirlwind Knockback Skill -->
 		<set name="icon" val="icon.skill10263" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isDebuff" val="true" />
@@ -679,7 +679,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Aerial Yoke for All Skill Presentation -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="15000" />
 		<set name="coolTime" val="8000" />
@@ -688,7 +688,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Aerial Yoke for All Skill Area Data -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2000" />
 		<set name="isMagic" val="1" />
@@ -698,7 +698,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's stun -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="2500" />
@@ -709,7 +709,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Landing Breath Skill -->
 		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="400" />
 		<set name="hitTime" val="2500" />
@@ -720,7 +720,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Landing Range -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="1500" />
@@ -729,7 +729,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Long-range projectile -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1800" />
 		<set name="hitTime" val="2500" />
@@ -739,7 +739,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Takeoff Presentation -->
 		<set name="icon" val="icon.skill10263" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="7000" />
 		<set name="coolTime" val="2000" />
@@ -749,7 +749,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleeding -->
 		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -760,7 +760,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Knock back -->
 		<set name="icon" val="icon.skill10549" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="2000" />
@@ -771,7 +771,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's aerial yoke -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="hitTime" val="2000" />
@@ -783,7 +783,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior Raid's PC Chain Skill -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="5000" />
 	</skill>
@@ -791,7 +791,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior Raid's Berserk -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="isMagic" val="4" />
@@ -800,7 +800,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. and Speed + 30%. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1100" />
 		<set name="isMagic" val="1" />
@@ -809,7 +809,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior Raid's Structure Repair Skill -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="17000" />
 	</skill>
@@ -817,7 +817,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons Jacquard, the Herald from the Fortress of the Dead. The Clan Hall Siege for the contestable Fortress of the Dead runs between 21:00 and 22:00 on the Thursday of the Castle Siege week. Jacquard teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
 		<set name="icon" val="icon.skill15283" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1800000" />
@@ -826,7 +826,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons Brakel, the Herald from the Fortress of Resistance. The Clan Hall Siege for the contestable Fortress of Resistance runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Brakel teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
 		<set name="icon" val="icon.skill15284" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1800000" />
@@ -835,7 +835,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons Loken, the Herald from Devastated Castle. The Clan Hall Siege for the contestable Devastated Castle runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Loken teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
 		<set name="icon" val="icon.skill15285" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="reuseDelay" val="1800000" />
@@ -844,7 +844,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Steals a large portion of the target's HP. -->
 		<set name="icon" val="icon.skill1147" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="200" />
@@ -856,7 +856,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Inflicts magical damage on PCs near the target and immobilizes them. -->
 		<set name="icon" val="icon.skill0100" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="castRange" val="200" />
@@ -868,7 +868,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lidia's HP Recovery Rate is greatly increased. -->
 		<set name="icon" val="icon.skill1044" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -878,7 +878,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Atk. Spd. is decreased. -->
 		<set name="icon" val="icon.skill11509" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="coolTime" val="300" />
@@ -889,7 +889,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. Casting Spd. is decreased. -->
 		<set name="icon" val="icon.skill11509" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="coolTime" val="300" />
@@ -900,7 +900,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Energy that formed in Lidia's room because Giselle von Hellmann and Alfred von Hellmann were not eliminated. HP continues to decrease. -->
 		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="reuseDelay" val="5000" />
@@ -911,7 +911,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased. -->
 		<set name="icon" val="icon.skill0168" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="reuseDelay" val="5000" />
@@ -921,7 +921,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's revenge left in his dying breath. Momentarily invincible. -->
 		<set name="icon" val="icon.skill11758" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="reuseDelay" val="5000" />
@@ -931,7 +931,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's revenge left in his dying breath. Lidia's Atk. Spd. is greatly increased (Presentation). -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -942,7 +942,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased. -->
 		<set name="icon" val="icon.skill0168" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="reuseDelay" val="5000" />
@@ -952,7 +952,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's mistake left in his escape. Momentarily invincible. -->
 		<set name="icon" val="icon.skill11758" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="reuseDelay" val="5000" />
@@ -962,7 +962,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's mistake left in his escape. Lidia's Atk. Spd. is great increased (Presentation). -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -973,7 +973,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Logan's token of gratitude left in his escape. Character's HP Recovery Rate is greatly increased temporarily. -->
 		<set name="icon" val="icon.skill1044" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />
@@ -984,7 +984,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Giselle von Hellmann attacks to recover her own HP. -->
 		<set name="icon" val="icon.skill1268" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="10" />
 		<set name="hitTime" val="1000" />

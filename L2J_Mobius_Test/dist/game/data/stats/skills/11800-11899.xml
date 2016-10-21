@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -13,7 +13,7 @@
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<table name="#mpConsumes"> 56 0 0 </table>
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -25,7 +25,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -34,7 +34,7 @@
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<table name="#mpConsumes"> 57 0 0 </table>
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -46,21 +46,21 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="11805" levels="1" name="Not in Use">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill1460" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11806" levels="4" name="Blessing of Tree">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers HP and removes bad abnormal statuses. -->
 		<set name="icon" val="icon.skill1258" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="7000" />
 		<set name="isMagic" val="1" />
@@ -73,7 +73,7 @@
 		<set name="effectPoint" val="#effectPoints" />
 		<set name="isMagic" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="reuseDelay" val="5000" />
@@ -93,7 +93,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Affected by Elegance of Light. HP is decreased. -->
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="500" />
@@ -104,7 +104,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Affected by Elegance of Light. Increases HP. -->
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="1" />
 		<set name="hitTime" val="500" />
@@ -114,7 +114,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can use the Mark of Resurrection for 30 seconds. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -122,7 +122,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can use the Mark of Resurrection and Mark of Total Resurrection for 30 seconds. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -130,7 +130,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestows the mark of resurrection that can completely resurrect party members from death for 10 minutes. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear. -->
 		<set name="icon" val="icon.skill1410" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="38" />
 		<set name="castRange" val="400" />
@@ -142,7 +142,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bestows the mark of resurrection that can completely resurrect all party members from death for 10 minutes. Buffs and debuffs are maintained at death. But the Noblesse Blessing and Lucky Charm will disappear. -->
 		<set name="icon" val="icon.skill1410" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="77" />
 		<set name="hitTime" val="4000" />
@@ -162,7 +162,7 @@
 		<table name="#enchElementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
 		<set name="icon" val="icon.skill11814" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -196,7 +196,7 @@
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
 		<table name="#mpConsumes"> 57 0 0 </table>
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="castRange" val="600" />
@@ -208,7 +208,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
 		<set name="icon" val="icon.skill1217" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -224,7 +224,7 @@
 		<table name="#power"> 102 104 107 110 113 116 119 122 162 166 170 </table>
 		<set name="icon" val="icon.skill11817" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
 		<set name="mpConsume" val="#mpConsume" />
@@ -261,7 +261,7 @@
 		<set name="icon" val="icon.skill1100" />
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalTime" val="180" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="OWNER_PET" />
 		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="8000" />
@@ -287,7 +287,7 @@
 		<table name="#ench1MpInitialConsume"> 18 18 18 18 18 18 18 18 18 18 </table>
 		<set name="icon" val="icon.skill11819" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="91" />
 		<set name="hitTime" val="3500" />
 		<set name="reuseDelay" val="150000" />
@@ -321,7 +321,7 @@
 	<skill id="11820" levels="1" name="Power of Saha" enchantGroup1="10">
 		<set name="icon" val="icon.skill11820" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -360,7 +360,7 @@
 	<skill id="11821" levels="1" name="Critical of Saha">
 		<set name="icon" val="icon.skill11821" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -388,7 +388,7 @@
 	<skill id="11822" levels="1" name="Force of Saha">
 		<set name="icon" val="icon.skill11822" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -417,7 +417,7 @@
 	<skill id="11823" levels="1" name="Speed of Saha" enchantGroup1="10">
 		<set name="icon" val="icon.skill11823" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -457,7 +457,7 @@
 	<skill id="11824" levels="1" name="Resistance of Saha" enchantGroup1="10">
 		<set name="icon" val="icon.skill11567" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -504,7 +504,7 @@
 	<skill id="11825" levels="1" name="Clarity of Saha">
 		<set name="icon" val="icon.skill11825" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="17" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -532,7 +532,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="70" />
 		<set name="mpInitialConsume" val="14" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="3600000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
@@ -546,7 +546,7 @@
 	<skill id="11827" levels="5" name="Fairy Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill11827" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="4000" />
 	</skill>
@@ -566,7 +566,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="mpConsume" val="458" />
 		<set name="mpInitialConsume" val="115" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA_FRIENDLY" />
@@ -592,7 +592,7 @@
 	<skill id="11830" levels="1" name="Blessing of Saha">
 		<set name="icon" val="icon.skill11522" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="35" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="699" />
@@ -622,7 +622,7 @@
 		<table name="#mpConsume"> 373 377 380 383 384 387 390 393 396 398 401 </table>
 		<set name="icon" val="icon.skill1395" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="2500" />
@@ -657,7 +657,7 @@
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="120000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
@@ -675,7 +675,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lingering Celestial Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis. -->
 		<set name="icon" val="icon.skill11758" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -684,7 +684,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lingering Celestial Party Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis. -->
 		<set name="icon" val="icon.skill11759" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -693,7 +693,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Speed. -->
 		<set name="icon" val="icon.skill11770" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="11836" levels="0" name="Summon Lumi Power Passive">
@@ -709,7 +709,7 @@
 		<table name="#mpConsumes"> </table>
 		<table name="#reuseDelays"> </table>
 		<set name="icon" val="#icons" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<set name="hpConsume" val="#hpConsumes" />
 		<set name="mpConsume" val="#mpConsumes" />
@@ -727,7 +727,7 @@
 		<table name="#magicLvl"> 85 90 95 99 </table>
 		<table name="#mp"> 50 60 70 100 </table>
 		<set name="icon" val="icon.skill11850new" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="PARTY_CLAN" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="mpInitialConsume" val="#mpInitialConsume" />
@@ -760,7 +760,7 @@
 		<set name="abnormalType" val="HEAL_EFFECT_UP" />
 		<set name="abnormalTime" val="1800" />
 		<set name="affectRange" val="1000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="icon" val="icon.skill11859" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -788,7 +788,7 @@
 		<set name="abnormalType" val="RECHARGE_UP" />
 		<set name="abnormalTime" val="1800" />
 		<set name="affectRange" val="1000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="icon" val="icon.skill11852new" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -813,7 +813,7 @@
 		<table name="#reuse"> 0.95 0.94 0.93 0.9 </table>
 		<set name="icon" val="icon.skill0228" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -832,7 +832,7 @@
 		<set name="abnormalType" val="RECHARGE_UP" />
 		<set name="abnormalTime" val="1800" />
 		<set name="affectRange" val="1000" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="icon" val="icon.skill11852new" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -857,7 +857,7 @@
 		<table name="#mAtk"> 1.1 1.12 1.15 1.2 </table>
 		<set name="icon" val="icon.skill0945" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -869,7 +869,7 @@
 	<skill id="11856" levels="1" name="Mental Recharge">
 		<set name="icon" val="icon.skill11856" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="mpConsume" val="66" />
 		<set name="effectRange" val="600" />
 		<set name="hitTime" val="5500" />
@@ -887,7 +887,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Flag of Life, which restores the HP of those that click on it. -->
 		<set name="icon" val="icon.skill11774" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="185" />
 		<set name="castRange" val="600" />
@@ -900,7 +900,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 min., puts a barrier around a party member. The barrier blocks 5 times. -->
 		<set name="icon" val="icon.skill11754" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="43" />
 		<set name="castRange" val="600" />
@@ -916,7 +916,7 @@
 		<table name="#mpConsume"> 92 96 100 103 108 112 </table>
 		<set name="icon" val="icon.skill11859" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="effectRange" val="900" />
@@ -930,7 +930,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 2490 Power added to M. Atk. If HP is full, CP is restored. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="50" />
 		<set name="castRange" val="600" />
@@ -943,7 +943,7 @@
 	<skill id="11861" levels="1" name="Elemental Resistance">
 		<set name="icon" val="icon.skill11861" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="82" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -968,7 +968,7 @@
 	<skill id="11862" levels="1" name="Limited Melee Weapon Resistance">
 		<set name="icon" val="icon.skill11862" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="82" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -988,7 +988,7 @@
 	<skill id="11863" levels="1" name="Limited Ranged Weapon Resistance">
 		<set name="icon" val="icon.skill11863" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="82" />
 		<set name="effectRange" val="900" />
 		<set name="hitTime" val="1000" />

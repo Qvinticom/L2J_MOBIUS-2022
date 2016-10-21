@@ -11,7 +11,7 @@
 		<set name="abnormalType" val="PREV_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11600" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -54,7 +54,7 @@
 		<set name="abnormalType" val="DARING_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11601" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -99,7 +99,7 @@
 		<set name="abnormalType" val="REF_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11602" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="CLAN" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -141,7 +141,7 @@
 		<set name="power" val="#power" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="AREA" />
 		<set name="abnormalTime" val="30" />
 		<set name="hitTime" val="2110" />
@@ -174,7 +174,7 @@
 		<set name="icon" val="icon.skill11604" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="120000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
@@ -185,7 +185,7 @@
 		</for>
 	</skill>
 	<skill id="11605" levels="1" name="Shield Song">
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="abnormalTime" val="1800" />
@@ -209,7 +209,7 @@
 		</for>
 	</skill>
 	<skill id="11606" levels="1" name="Dance of Might">
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="reuseDelay" val="30000" />
@@ -237,7 +237,7 @@
 		<set name="abnormalType" val="PREV_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11607" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -280,7 +280,7 @@
 		<set name="abnormalType" val="DARING_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11608" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -326,7 +326,7 @@
 		<set name="abnormalType" val="REF_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11609" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -371,7 +371,7 @@
 		<set name="abnormalType" val="PREV_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11610" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -414,7 +414,7 @@
 		<set name="abnormalType" val="DARING_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11611" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -460,7 +460,7 @@
 		<set name="abnormalType" val="REF_SONATA" />
 		<set name="abnormalTime" val="300" />
 		<set name="icon" val="icon.skill11612" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="PARTY" />
 		<set name="mpConsume" val="140" />
 		<set name="mpInitialConsume" val="28" />
@@ -500,7 +500,7 @@
 		<table name="#mpConsumes">319 427 534 640</table>
 		<table name="#amount">1000 2000 3000 5000</table>
 		<set name="icon" val="icon.skill11613" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="abnormalTime" val="30" />
 		<set name="mpConsume" val="#mpConsumes" />
@@ -523,7 +523,7 @@
 		<table name="#mpConsumes">319 427 534 640</table>
 		<table name="#stat">1.50 1.60 1.70 1.99</table>
 		<set name="icon" val="icon.skill11614" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="#mpConsumes" />
 		<set name="abnormalTime" val="30" />
@@ -552,7 +552,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="icon" val="icon.skill11615" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill-->
 		<set name="itemConsumeCount" val="10" />
 		<set name="itemConsumeId" val="3031" />
@@ -584,7 +584,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="icon" val="icon.skill11616" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill-->
 		<set name="itemConsumeCount" val="10" />
 		<set name="itemConsumeId" val="3031" />
@@ -611,7 +611,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="icon" val="icon.skill11617" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill-->
 		<set name="itemConsumeCount" val="10" />
 		<set name="itemConsumeId" val="3031" />
@@ -643,7 +643,7 @@
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="500" />
 		<set name="icon" val="icon.skill11618" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="isMagic" val="1" /> <!-- Magic Skill-->
 		<set name="itemConsumeCount" val="10" />
 		<set name="itemConsumeId" val="3031" />
@@ -663,7 +663,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Entire party's P. Atk. + 3%, P. Critical Damage + 3%, Atk. Spd. + 2%, M. Atk. + 2%, Casting Spd. + 2%, P. Def. + 2%, M. Def. + 2%, Skill Power + 2%. -->
 		<set name="icon" val="icon.skill11529" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="140" />
 		<set name="hitTime" val="700" />
@@ -674,21 +674,21 @@
 	<skill id="11620" levels="1" name="Superior Shield Mastery">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Has a chance to create a barrier that absorbs damage. --> 
 	<skill id="11621" levels="1" name="Blessing Barrier">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<!-- Protected by a barrier. It absorbs 20000 damage for 10 seconds. --> 
 	<skill id="11622" levels="1" name="Blessing Barrier">
 		<!-- AUTO GENERATED INFINITE ODYSSEY SKILL TODO: FIX IT -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

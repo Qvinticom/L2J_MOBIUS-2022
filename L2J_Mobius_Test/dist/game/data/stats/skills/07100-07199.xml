@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the target for 3 seconds. -->
 		<set name="icon" val="icon.skill5168" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="5" />
 		<set name="castRange" val="900" />
@@ -15,7 +15,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lifts and holds the target in the air for 3 seconds. -->
 		<set name="icon" val="icon.skill11276" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="5" />
 		<set name="castRange" val="900" />
@@ -26,14 +26,14 @@
 	<skill id="7102" levels="1" name="Summon Clan Pet">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="5000" />
 	</skill>
 	<skill id="7103" levels="1" name="Helping Tree CP Recovery Range">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="300" />
 		<set name="isMagic" val="1" />
@@ -42,7 +42,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Raise the temperature of the Draco Egg through Pa'agrio's Hand. It raises the temperature by 1 - 10 degrees on a Small Draco Egg and 0.1 - 1.0 degrees on a Large Draco Egg. The Fire Spirit Agathion must be summoned for it to be used. -->
 		<set name="icon" val="icon.skill11775" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="100" />
 		<set name="hitTime" val="1000" />
@@ -53,7 +53,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Incubation Possible -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -62,7 +62,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Optimal Temperature Incubation Success -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="2000" />
@@ -71,7 +71,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Incubation Success -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="2000" />
@@ -80,7 +80,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Incubation Failure -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="coolTime" val="800" />
 		<set name="reuseDelay" val="2000" />
@@ -89,7 +89,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon a Bratty Angma. -->
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -100,7 +100,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon a Bratty Angma. -->
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -111,7 +111,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon a Bratty Angma. -->
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -122,7 +122,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon a Bratty Angma. -->
 		<set name="icon" val="icon.skill0028" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -133,7 +133,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Invincibility Effect -->
 		<set name="icon" val="icon.skill0442" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="78" />
 		<set name="hitTime" val="500" />
@@ -142,7 +142,7 @@
 	<skill id="7114" levels="1" name="Spellbook: Clan Flag">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>
@@ -150,14 +150,14 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Character's hair and cloak have been changed due to participation in the Ceremony of Chaos. -->
 		<set name="icon" val="icon.skill0810" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 	</skill>
 	<skill id="7116" levels="1" name="Spellbook: Air Bike">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 	</skill>

@@ -9,7 +9,7 @@
 		<set name="elementPower" val="20" />
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -20,37 +20,37 @@
 	</skill>
 	<skill id="23301" levels="1" name="Dimensional Door A">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23302" levels="1" name="Dimensional Door B">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door A. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23303" levels="1" name="Teleport">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23304" levels="1" name="Teleport">
 		<!-- none -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23305" levels="1" name="Zinyanzi Agathion - Yunbokhwan">
 		<!-- Restores all HP/MP/CP and becomes invincible for 5 seconds. But can only be used when HP is below 30%. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23306" levels="1" name="Zinyanzi Agathion Cute Trick">
 		<!-- Able to see the summoned Zinenze perform cute tricks. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23307" levels="1" name="Yanzi Agathion Cute Trick">
 		<!-- Able to see the summoned Enze perform cute tricks. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23308" levels="1" name="Totem's Energy - Body">
@@ -59,7 +59,7 @@
 		<set name="affectRange" val="200" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -75,7 +75,7 @@
 		<set name="affectRange" val="200" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -90,7 +90,7 @@
 		<set name="affectRange" val="200" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -105,7 +105,7 @@
 		<set name="affectRange" val="200" />
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -116,37 +116,37 @@
 	</skill>
 	<skill id="23312" levels="1" name="Fall of the Dragon">
 		<!-- Nevit's gift to honor those warriors who caused the evil dragon's fall. Increases Nevit's blessing by 3 hour(s). -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23313" levels="5" name="Action Prohibit Immunity">
 		<!-- Increases resistance to action-inhibiting attacks by 100%. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23314" levels="5" name="Control Prohibit Immunity">
 		<!-- Increases resistance to control-inhibiting attacks by 100%. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23315" levels="5" name="Paralysis Immunity Enhance">
 		<!-- Increases resistance to paralysis attacks by 100%. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23316" levels="5" name="Enhance Petrification Immunity">
 		<!-- Increases resistance to petrification attacks by 100%. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23317" levels="5" name="Fear Immunity Enhance">
 		<!-- Increases resistance to fear attacks by 100%. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23318" levels="1" name="Cat the Ranger Boost">
 		<!-- "Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's resistance to debuff attacks by 80%, resistance to buff canceling attacks by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Reuse delay 10 minutes." -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23319" levels="1" name="Blood Seeker">
@@ -165,7 +165,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="5000" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
@@ -193,7 +193,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -222,7 +222,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -248,7 +248,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -276,7 +276,7 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
@@ -303,7 +303,7 @@
 		<set name="isMagic" val="1" /> <!-- Magic Skill -->
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="84" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
@@ -314,80 +314,80 @@
 		</for>
 	</skill>
 	<skill id="23325" levels="1" name="Enlarge - Luckpy">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23326" levels="1" name="Reduce - Luckpy">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23327" levels="1" name="Boss Test - Weaken">
 		<!-- A skill to test a boss mob - Weaken -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23328" levels="1" name="Boss Test - Strengthen">
 		<!-- A skill to test a boss mob - Strengthen -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23329" levels="1" name="Lantern Agathion's Gift1">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23330" levels="1" name="Lantern Agathion's Gift2">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23331" levels="1" name="Lantern Agathion's Gift3">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23332" levels="1" name="Lantern Agathion's Gift4">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23333" levels="1" name="Agathion's New Year's Wish">
 		<!-- Description: Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23334" levels="1" name="Lantern Agathion Cute Trick">
 		<!-- Description: Able to see the summoned Lantern's perform cute tricks. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23335" levels="1" name="Agathion's New Year's Wish">
 		<!-- Description: Vitality is maintained with the power of Juju Agathion. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23336" levels="1" name="Juju Agathion Cute Trick">
 		<!-- Description: Summoned Juju performs cute tricks. -->
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23337" levels="1" name="Juju Agathion's Gift 1">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23338" levels="1" name="Juju Agathion's Gift 2">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23339" levels="1" name="Juju Agathion's Gift 3">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23340" levels="1" name="Juju Agathion's Gift 4">
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="NONE" />
 	</skill>
 	<skill id="23341" levels="1" name="Norhand's Flint">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Temporarily petrified by Norhand's powerful cry. -->
 		<set name="icon" val="icon.skill4111" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="3000" />
@@ -398,7 +398,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Norhand is searching for Skooldie. A trace of its voice remains. -->
 		<set name="icon" val="BranchSys.icon.br_rotten_jack_ghost_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -409,7 +409,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by 5 and HP recovery by 5%. Poison stage increases when killed while poisoned. -->
 		<set name="icon" val="icon.skill5076_c" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 		<set name="isDebuff" val="true" />
@@ -417,7 +417,7 @@
 	<skill id="23345" levels="1" name="Region Banishment">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="200" />
 	</skill>
@@ -426,7 +426,7 @@
 		<set name="icon" val="icon.skill_agathion_cute" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="2292">
@@ -436,7 +436,7 @@
 	<skill id="23347" levels="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill_agathion_special" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="4000" />
 	</skill>
@@ -444,7 +444,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into a game Master. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="10000" />
@@ -453,7 +453,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases P. Atk. by 1% and M. Atk. by 2% with the tree's blessing. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -461,7 +461,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases P. Atk. by 2% and M. Atk. by 4% with the tree's blessing. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -469,7 +469,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases P. Atk. by 3% and M. Atk. by 6% with the tree's blessing. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -477,7 +477,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases P. Atk. by 4% and M. Atk. by 8% with the tree's blessing. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -485,7 +485,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases P. Atk. by 6% and M. Atk. by 12% with the tree's blessing. -->
 		<set name="icon" val="icon.etc_x_mas_tree_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="4" />
 	</skill>
@@ -493,7 +493,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 1. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -501,7 +501,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 2. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -509,7 +509,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 3. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -517,7 +517,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 4. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -525,7 +525,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Enjoying Lingering Tree's Blessing. Need to wait for 2 hours to receive Tree's Blessing - Stage 5. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_reward_buff_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -533,7 +533,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -541,7 +541,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -549,7 +549,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -557,7 +557,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -565,7 +565,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases Atk. Spd. by 34% and Casting Spd. by 31%. Chance of applying Vampiric Rage effect by 9%. -->
 		<set name="icon" val="icon.skill11518" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -573,7 +573,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -581,7 +581,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -589,7 +589,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -597,7 +597,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -605,7 +605,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases Max HP by 37%, Max MP by 37%, Max CP by 37%, and HP recovery bonus by 20%. -->
 		<set name="icon" val="icon.skill11519" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -613,7 +613,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -621,7 +621,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -629,7 +629,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -637,7 +637,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -645,7 +645,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases P. Critical Rate by 32%, P. Critical Power by 35%, and M. Critical Rate by 20. Decreases P. Skill MP consumption by 20%, M. Skill MP consumption by 10%, and enchant skill MP consumption for Iss Enchanters by 20%. -->
 		<set name="icon" val="icon.skill11520" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -653,7 +653,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -661,7 +661,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -669,7 +669,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 20 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -677,7 +677,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 25 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -685,7 +685,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 60 minutes, increases physical Accuracy by 5, physical and magic evasion by 5, and speed by 34. Decreases received critical damage by 30%. -->
 		<set name="icon" val="icon.skill11521" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isMagic" val="1" />
 	</skill>
@@ -693,7 +693,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transforms into a game Master. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="10000" />
@@ -701,7 +701,7 @@
 	<skill id="23380" levels="1" name="Jermann - Soul Blackmail">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="1000" />
 		<set name="reuseDelay" val="1200000" />
@@ -710,7 +710,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Magical damage on the enemy. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23381" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="castRange" val="600" />
@@ -723,7 +723,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleport 300 grids forward. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23382" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="250" />
 		<set name="castRange" val="700" />
@@ -735,7 +735,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon your mirror image and Hide. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23383" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="hitTime" val="500" />
@@ -745,7 +745,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Quickly Recover 45000 HP. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23384" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="castRange" val="600" />
@@ -757,7 +757,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases HP Recovery Bonus. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23385" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="250" />
 		<set name="hitTime" val="800" />
@@ -768,7 +768,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful strike on nearby enemies. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23386" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="hitTime" val="500" />
@@ -778,49 +778,49 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Jermann. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23388" levels="1" name="Jermann">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Jermann. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23389" levels="1" name="Jermann">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Transform into Jermann. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23390" levels="1" name="Mysterious Power of Ancient Kartia's Labyrinth">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Accept this mysterious power to make it yours. Refuse, and you will suffer the consequences. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23391" levels="1" name="Great Mysterious Power of Ancient Kartia's Labyrinth">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Accept this great power to make it yours. Refuse, and you will suffer grave consequences. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23392" levels="1" name="Stabilized Power of Ancient Kartia's Labyrinth">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stabilize the Ancient Kartia's Labyrinth to consistently increase your HP. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23380" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="23393" levels="1" name="Self-destruction">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- DD + DOT -->
 		<set name="icon" val="icon.skill23393" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="reuseDelay" val="2000" />
 		<set name="isDebuff" val="true" />
@@ -829,7 +829,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon the Grave of the Sword to the designated area. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23387" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="2000" />
 		<set name="reuseDelay" val="30000" />
@@ -839,7 +839,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Can summon the Warriors of Death if the Grave of the Sword is nearby. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23388" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="castRange" val="350" />
@@ -852,7 +852,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Freeze the ground at the designated area. Enemies on the ice will have momentarily decreased Speed and consistently decreasing HP. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23389" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="castRange" val="900" />
@@ -864,7 +864,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Drop an ice shard at the designated area. Additional damage if the enemy is inflicted with Freezing Cold. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23390" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="mpConsume" val="500" />
 		<set name="castRange" val="900" />
@@ -876,7 +876,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Consistently decreases HP. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23387" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>
@@ -884,7 +884,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily decreases Speed and consistently decreases HP. -->
 		<set name="icon" val="BranchSys3.Icon.g_skill23389" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="isDebuff" val="true" />
 	</skill>

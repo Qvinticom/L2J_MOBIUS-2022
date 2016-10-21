@@ -14,7 +14,7 @@
 		<set name="icon" val="icon.skill10100" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -59,7 +59,7 @@
 		<set name="icon" val="icon.skill10101" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="abnormalTime" val="60" />
 		<set name="hitTime" val="3000" />
 		<set name="coolTime" val="500" />
@@ -99,7 +99,7 @@
 		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
 		<set name="activateRate" val="80" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="power" val="#power" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="castRange" val="40" />
@@ -143,7 +143,7 @@
 		<set name="affectRange" val="150" />
 		<set name="icon" val="icon.skill10103" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="castRange" val="40" />
 		<set name="effectRange" val="400" />
@@ -169,7 +169,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -190,7 +190,7 @@
 		<set name="icon" val="icon.skill10105" />
 		<set name="reuseDelay" val="1000" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_DEBUFF_SELF" />
@@ -215,7 +215,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -247,7 +247,7 @@
 		<set name="magicLvl" val="85" />
 		<set name="abnormalLvl" val="2" />
 		<set name="abnormalType" val="SIGEL_AURA" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF_SELF" />
 		<set name="reuseDelay" val="1000" />
 		<set name="targetType" val="SELF" />
@@ -270,7 +270,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -292,7 +292,7 @@
 		<set name="targetType" val="AURA" />
 		<set name="isDebuff" val="true" />
 		<set name="isMagic" val="3" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="isTriggeredSkill" val="true" />
 		<for>
 			<effect name="Debuff">
@@ -311,7 +311,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />
@@ -341,7 +341,7 @@
 		<set name="abnormalLvl" val="1" />
 		<set name="abnormalType" val="SIGEL_AURA" />
 		<set name="abnormalVisualEffect" val="AURA_BUFF" />
-		<set name="operateType" val="TOGGLE" />
+		<set name="operateType" val="T" />
 		<set name="targetType" val="SELF" />
 		<set name="magicLvl" val="85" />
 		<set name="isMagic" val="3" />

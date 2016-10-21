@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals the target with 1519 power. If HP is full, CP is restored with the remaining power. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -16,7 +16,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals the target with 1557 power. If HP is full, CP is restored with the remaining power. -->
 		<set name="icon" val="icon.skill11755" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -28,7 +28,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
 		<set name="icon" val="icon.skill11774" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="5500" />
@@ -39,7 +39,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
 		<set name="icon" val="icon.skill11774" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="5500" />
@@ -50,7 +50,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
 		<set name="icon" val="icon.skill11774" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="5500" />
@@ -61,7 +61,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<set name="icon" val="icon.skill11760" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -73,7 +73,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers the target's MP with a maximum of 174 power depending on the target's Lv.. Also, for 10 seconds, recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<set name="icon" val="icon.skill11760" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -85,7 +85,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers the target's MP with a maximum of 183 power depending on the target's Lv.. Also, for 10 seconds, recovers 13 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<set name="icon" val="icon.skill11760" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -97,7 +97,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Crystallize yourself and become immune to damage and debuffs for 10 seconds. Recover HP and MP by 100%. -->
 		<set name="icon" val="icon.skill11765" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -107,7 +107,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Crystallize yourself and become immune to damage and debuffs for 10 seconds. Recover HP and MP by 100%. -->
 		<set name="icon" val="icon.skill11765" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -117,7 +117,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Crystallize yourself and become immune to damage and debuffs for 10 seconds. Recover HP and MP by 100%. -->
 		<set name="icon" val="icon.skill11765" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -126,7 +126,7 @@
 	<skill id="14911" levels="1" name="Dimensional Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -135,7 +135,7 @@
 	<skill id="14912" levels="1" name="Dimensional Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -144,7 +144,7 @@
 	<skill id="14913" levels="1" name="Dimensional Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -153,7 +153,7 @@
 	<skill id="14914" levels="1" name="Dimensional Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -162,7 +162,7 @@
 	<skill id="14915" levels="1" name="Dimensional Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -171,7 +171,7 @@
 	<skill id="14916" levels="1" name="Dimensional Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -181,7 +181,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Atk. Spd. by 15% for 20 minutes. -->
 		<set name="icon" val="icon.skill1086" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -191,7 +191,7 @@
 	<skill id="14918" levels="1" name="Twisted Dimension Magic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1000" />
@@ -202,7 +202,7 @@
 	<skill id="14919" levels="1" name="Twisted Dimension Magic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1000" />
@@ -213,7 +213,7 @@
 	<skill id="14920" levels="1" name="Twisted Dimension Magic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1000" />
@@ -224,7 +224,7 @@
 	<skill id="14921" levels="1" name="Twisted Dimension Magic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1000" />
@@ -235,7 +235,7 @@
 	<skill id="14922" levels="1" name="Twisted Dimension Magic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1000" />
@@ -246,7 +246,7 @@
 	<skill id="14923" levels="1" name="Twisted Dimension Magic">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1000" />
@@ -257,7 +257,7 @@
 	<skill id="14924" levels="1" name="Dimensional Magic Rift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -268,7 +268,7 @@
 	<skill id="14925" levels="1" name="Dimensional Magic Rift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -279,7 +279,7 @@
 	<skill id="14926" levels="1" name="Dimensional Magic Rift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -290,7 +290,7 @@
 	<skill id="14927" levels="1" name="Dimensional Magic Rift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -301,7 +301,7 @@
 	<skill id="14928" levels="1" name="Dimensional Magic Rift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -312,7 +312,7 @@
 	<skill id="14929" levels="1" name="Dimensional Magic Rift">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="300" />
 		<set name="hitTime" val="1500" />
@@ -323,7 +323,7 @@
 	<skill id="14930" levels="1" name="Dimensional Sweep">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -331,7 +331,7 @@
 	<skill id="14931" levels="1" name="Dimensional Sweep">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -339,7 +339,7 @@
 	<skill id="14932" levels="1" name="Dimensional Sweep">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -347,7 +347,7 @@
 	<skill id="14933" levels="1" name="Dimensional Sweep">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -355,7 +355,7 @@
 	<skill id="14934" levels="1" name="Dimensional Sweep">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -363,7 +363,7 @@
 	<skill id="14935" levels="1" name="Dimensional Sweep">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -372,7 +372,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the target. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -384,7 +384,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the target. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -396,7 +396,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stuns the target. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -408,7 +408,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 15 seconds, increases Speed by 40, P. Evasion by 10, and HP Recovery Bonus by 10. -->
 		<set name="icon" val="icon.skill10525" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="coolTime" val="500" />
@@ -417,7 +417,7 @@
 	<skill id="14940" levels="1" name="Rage Grand Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -425,7 +425,7 @@
 	<skill id="14941" levels="1" name="Bloody Grand Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -433,7 +433,7 @@
 	<skill id="14942" levels="1" name="Destruction Grand Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1500" />
 		<set name="coolTime" val="500" />
@@ -441,7 +441,7 @@
 	<skill id="14943" levels="1" name="Dimensional Wring">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -451,7 +451,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Receives damage and incurs bleeding. -->
 		<set name="icon" val="icon.skill0223" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1500" />
@@ -464,7 +464,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Stunned and unable to move momentarily. -->
 		<set name="icon" val="icon.skill3080" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="2500" />
@@ -476,7 +476,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- You have reached your physical limit. Increases debuff resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When the target is killed, recovers HP by 20%. When HP falls below 60%, increases P. Atk. by 10% and Critical Rate by 100. When HP falls below 30%, increases P. Atk. by 30% and Critical Rate by an additional 300. -->
 		<set name="icon" val="icon.skill10274" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="300" />
@@ -486,7 +486,7 @@
 	<skill id="14947" levels="1" name="Pelline's Thirst">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="1500" />
@@ -496,7 +496,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Afflicted with Fear and moving against own will. -->
 		<set name="icon" val="icon.skill1092" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="coolTime" val="500" />
@@ -507,7 +507,7 @@
 	<skill id="14949" levels="1" name="Succubus Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="800" />
@@ -516,7 +516,7 @@
 	<skill id="14950" levels="1" name="Succubus Cut">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="800" />
@@ -525,7 +525,7 @@
 	<skill id="14951" levels="1" name="Succubus Flash">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -534,7 +534,7 @@
 	<skill id="14952" levels="1" name="Succubus Magic Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="hitTime" val="1000" />
@@ -544,7 +544,7 @@
 	<skill id="14953" levels="1" name="Phantom Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="800" />
@@ -553,7 +553,7 @@
 	<skill id="14954" levels="1" name="Phantom Cut">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="800" />
@@ -562,7 +562,7 @@
 	<skill id="14955" levels="1" name="Phantom Flash">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -571,7 +571,7 @@
 	<skill id="14956" levels="1" name="Phantom Magic Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="hitTime" val="1000" />
@@ -582,7 +582,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreases from bleeding momentarily. -->
 		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -593,7 +593,7 @@
 	<skill id="14958" levels="1" name="Apparition Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="800" />
@@ -602,7 +602,7 @@
 	<skill id="14959" levels="1" name="Apparition Cut">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="800" />
@@ -611,7 +611,7 @@
 	<skill id="14960" levels="1" name="Apparition Flash">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="1000" />
@@ -620,7 +620,7 @@
 	<skill id="14961" levels="1" name="Apparition Magic Blow">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="hitTime" val="1000" />
@@ -631,7 +631,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP decreases from bleeding momentarily. -->
 		<set name="icon" val="icon.skill0096" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="1000" />
@@ -643,7 +643,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Gather spirit. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="4000" />
 		<set name="coolTime" val="300" />
@@ -652,7 +652,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Rushes the enemy to inflict Shock for 1 second(s). -->
 		<set name="icon" val="icon.skill11508" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="600" />
 		<set name="hitTime" val="100" />
@@ -663,7 +663,7 @@
 	<skill id="14965" levels="1" name="Judgment of Blood">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="40" />
 		<set name="hitTime" val="700" />
@@ -675,7 +675,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores all party members' HP with 66 Power. -->
 		<set name="icon" val="icon.skill1027" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="300" />
@@ -685,7 +685,7 @@
 	<skill id="14967" levels="1" name="Judgment of Death">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -693,7 +693,7 @@
 	<skill id="14968" levels="1" name="Judgment of Darkness">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -704,7 +704,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores all party members' HP with 66 Power. -->
 		<set name="icon" val="icon.skill1027" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="300" />
@@ -714,7 +714,7 @@
 	<skill id="14970" levels="1" name="Judgment of Lunacy">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0036" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -722,7 +722,7 @@
 	<skill id="14971" levels="1" name="Judgment of Silence">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -733,7 +733,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores all party members' HP with 66 Power. -->
 		<set name="icon" val="icon.skill1027" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1000" />
 		<set name="coolTime" val="300" />
@@ -743,7 +743,7 @@
 	<skill id="14973" levels="1" name="Delusion Cut">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0003" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="150" />
 		<set name="hitTime" val="1000" />
@@ -752,7 +752,7 @@
 	<skill id="14974" levels="1" name="Delusion Judgment">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="700" />
 		<set name="coolTime" val="300" />
@@ -762,7 +762,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, increases Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, and MP recovery bonus by 20%, and decreases MP Consumption for magic skill by 10% and the magic cancel rate. -->
 		<set name="icon" val="icon.skill11529" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="700" />
@@ -774,7 +774,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8%, and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<set name="icon" val="icon.skill11530" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="700" />
@@ -786,7 +786,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 minutes, increases HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<set name="icon" val="icon.skill11532" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="2000" />
 		<set name="hitTime" val="700" />
@@ -798,7 +798,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Momentarily inflicted with fear and changed to another life form that moves regardless of your own volition. -->
 		<set name="icon" val="icon.skill11537" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="isMagic" val="1" />
@@ -807,7 +807,7 @@
 	<skill id="14979" levels="1" name="Decoration Line">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="1600" />
 	</skill>
@@ -815,7 +815,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, the equipped weapon and armor are changed into a Vesper Set. -->
 		<set name="icon" val="BranchSys2.icon.br_royal_crown_of_vesper_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -824,7 +824,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 minutes, the equipped weapon is changed to bread and turns into hair. -->
 		<set name="icon" val="icon.etc_herb_of_baguette" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="reuseDelay" val="2000" />
@@ -833,7 +833,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, HP is absorbed by 10% every second. If untreated while inflicted with absorption, this will lead to death. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="12000" />
@@ -842,7 +842,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, HP is absorbed by 10% every second. If untreated while inflicted with absorption, this will lead to death. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="12000" />
@@ -851,7 +851,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 10 seconds, HP is absorbed by 10% every second. If untreated while inflicted with absorption, this will lead to death. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="12000" />
@@ -860,7 +860,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP is being absorbed. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="isDebuff" val="true" />
@@ -869,7 +869,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP is being absorbed. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="isDebuff" val="true" />
@@ -878,7 +878,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- HP is being absorbed. -->
 		<set name="icon" val="icon.skill1042" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="isDebuff" val="true" />
@@ -887,7 +887,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cannot move. -->
 		<set name="icon" val="icon.skill1201" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" />
@@ -897,7 +897,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Poisoned with a power that is unknown in this dimension. HP is continuously decreased. -->
 		<set name="icon" val="icon.skill4035" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" />
@@ -907,7 +907,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Poisoned with a power that is unknown in this dimension. HP is continuously decreased. -->
 		<set name="icon" val="icon.skill4035" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" />
@@ -917,7 +917,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Poisoned with a power that is unknown in this dimension. HP is continuously decreased. -->
 		<set name="icon" val="icon.skill4035" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" />
@@ -927,7 +927,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Free from all abnormal statuses. -->
 		<set name="icon" val="icon.skill0000" />
-		<set name="operateType" val="ACTIVE_INSTANT" />
+		<set name="operateType" val="A1" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="100" />
 		<set name="isMagic" val="1" />
@@ -937,7 +937,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate. -->
 		<set name="icon" val="icon.skill11529" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -947,7 +947,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<set name="icon" val="icon.skill11530" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -957,7 +957,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<set name="icon" val="icon.skill11532" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="900" />
 		<set name="hitTime" val="500" />
@@ -967,7 +967,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases Atk. Spd. by 15%, Casting Spd. by 30%, Max HP by 30%, MP recovery bonus by 20% and decreases MP Consumption for magic skill by 10% and the magic cancel rate. -->
 		<set name="icon" val="icon.skill11529" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
@@ -976,7 +976,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. and Casting Spd. by 8% and decreases P. Def. by 3%, M. Def. by 11% and P. Evasion by 4. Also bestows an 8% Vampiric Rage effect and a chance of reflecting 10% of the damage received. -->
 		<set name="icon" val="icon.skill11530" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
@@ -985,7 +985,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The GM is always with you. For 1 hour, increases HP Recovery Bonus by 20%, P.ﾠAccuracy by 4, P.ﾠEvasion by 3, Speed by 20, and decreases MP Consumption for skills by 20% and skill Cooldown by 10%. -->
 		<set name="icon" val="icon.skill11532" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="1000" />
@@ -994,7 +994,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- IM transformed state. -->
 		<set name="icon" val="icon.skilltransform1" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="2500" />
 		<set name="reuseDelay" val="10000" />

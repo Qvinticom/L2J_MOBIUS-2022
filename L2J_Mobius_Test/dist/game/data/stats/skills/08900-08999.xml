@@ -5,7 +5,7 @@
 		<set name="icon" val="icon.skill8900" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for> 
 			<effect name="Buff">
 				<mul stat="maxMp" val="1.30" />
@@ -27,7 +27,7 @@
 		<set name="icon" val="icon.skill8901" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for> 
 			<effect name="Buff">
 				<mul stat="maxMp" val="2.0" />
@@ -49,7 +49,7 @@
 		<set name="icon" val="icon.skill8902" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for> 
 			<effect name="Buff">
 				<mul stat="maxMp" val="1.30" />
@@ -71,7 +71,7 @@
 		<set name="icon" val="icon.skill8903" />
 		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<for>
 			<effect name="Buff">
 				<mul stat="maxMp" val="2.0" />
@@ -95,7 +95,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="mpConsume" val="40" />
 		<set name="staticReuse" val="true" />
@@ -118,7 +118,7 @@
 		<set name="abnormalTime" val="3600" />
 		<set name="abnormalType" val="TRANSFORM" />
 		<set name="blockedInOlympiad" val="true" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
 		<set name="mpConsume" val="40" />
 		<set name="staticReuse" val="true" />

@@ -4,7 +4,7 @@
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers vitality upon acquiring XP. The effect lasts for 20 minutes. -->
 		<set name="icon" val="BranchSys.icon.br_birthday_cake_i00" />
-		<set name="operateType" val="ACTIVE_CONTINUOUS" />
+		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="castRange" val="500" />
 		<set name="isMagic" val="4" />
@@ -20,7 +20,7 @@
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -50,7 +50,7 @@
 		<table name="#pAtk">1 1 1.0557 1.0557</table>
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -82,7 +82,7 @@
 		<table name="#pAtkSpd">1 1 1 1.0557</table>
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -111,7 +111,7 @@
 		<table name="#pAtkSpd">1 1 1 1.0557</table>
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -144,7 +144,7 @@
 		<table name="#mAtkSpd">1 1 1.15 1.15</table>
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -176,7 +176,7 @@
 		<table name="#mAtkSpd">1 1 1.15 1.15</table>
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -200,7 +200,7 @@
 		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -221,7 +221,7 @@
 		<!-- Decreases damage incurred during PvP. Chance of decreasing all speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t94_u_i01" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -242,7 +242,7 @@
 		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->
 		<set name="icon" val="icon.armor_t95_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -263,7 +263,7 @@
 		<!-- Decreases damage incurred during PvP. Chance of hurling the target at the opponent when attacked. -->
 		<set name="icon" val="icon.armor_t95_u_i01" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -284,7 +284,7 @@
 		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
 		<set name="icon" val="icon.armor_t96_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -305,7 +305,7 @@
 		<!-- Decreases damage incurred during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
 		<set name="icon" val="icon.armor_t96_u_i01" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -334,7 +334,7 @@
 		<table name="#pAtkSpd">1 1 1.04 1.04</table>
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -366,7 +366,7 @@
 		<table name="#pAtkSpd">1 1 1.04 1.04</table>
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -398,7 +398,7 @@
 		<table name="#mAtkSpd">1.05 1.05 1.15 1.15</table>
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -432,7 +432,7 @@
 		<table name="#resist">0 0 0 5</table>
 		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -473,7 +473,7 @@
 		<table name="#resist">0 0 0 5</table>
 		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -511,7 +511,7 @@
 		<table name="#resist">0 0 0 5</table>
 		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -549,7 +549,7 @@
 		<table name="#magicSuccRes">1 1 1.02 1.02</table>
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -587,7 +587,7 @@
 		<table name="#rCrit">0 0 17.05 17.05</table>
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -625,7 +625,7 @@
 		<table name="#regMp">1 1 1.0557 1.0557</table>
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -653,7 +653,7 @@
 		<!-- Decreases damage received during PvP. Chance of decreasing all speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t100_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -674,7 +674,7 @@
 		<!-- Decreases damage received during PvP. Chance of hurling the target at the opponent when attacked. -->
 		<set name="icon" val="icon.armor_t101_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -695,7 +695,7 @@
 		<!-- Decreases damage received during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
 		<set name="icon" val="icon.armor_t102_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -716,7 +716,7 @@
 		<!-- Decreases damage received during PvP. Chance of decreasing all speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t94_u_i03" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -737,7 +737,7 @@
 		<!-- Decreases damage received during PvP. Chance of hurling the target at the opponent when attacked. -->
 		<set name="icon" val="icon.armor_t95_u_i03" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -758,7 +758,7 @@
 		<!-- Decreases damage received during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount.-->
 		<set name="icon" val="icon.armor_t96_u_i03" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -779,7 +779,7 @@
 		<!-- Decreases damage received during PvP. Chance of decreasing all speeds of the attacker. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -800,7 +800,7 @@
 		<!-- Decreases damage received during PvP. Chance of hurling the target at the opponent when attacked. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -821,7 +821,7 @@
 		<!-- Decreases damage received during PvP. Chance of decreasing the chance of receiving Critical Damage and critical damage amount. -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="magicLvl" val="80" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -841,7 +841,7 @@
 	<skill id="13031" levels="1" name="Fire Resistance">
 		<!-- Increases Fire Resistance by 5. -->
 		<set name="icon" val="icon.skill4009" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -852,7 +852,7 @@
 	<skill id="13032" levels="1" name="Earth Resistance">
 		<!-- Increases Earth Resistance by 5. -->
 		<set name="icon" val="icon.skill4012" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -863,7 +863,7 @@
 	<skill id="13033" levels="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 5. -->
 		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -874,7 +874,7 @@
 	<skill id="13034" levels="1" name="Water Resistance">
 		<!-- Increases Water Resistance by 5. -->
 		<set name="icon" val="icon.skill4010" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -885,7 +885,7 @@
 	<skill id="13035" levels="1" name="Wind Resistance">
 		<!-- Increases Wind Resistance by 5. -->
 		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -896,7 +896,7 @@
 	<skill id="13036" levels="1" name="Divinity Resistance">
 		<!-- Increases Divinity Resistance by 5. -->
 		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -907,7 +907,7 @@
 	<skill id="13037" levels="1" name="Fire Resistance">
 		<!-- Increases Fire Resistance by 10. -->
 		<set name="icon" val="icon.skill4009" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -918,7 +918,7 @@
 	<skill id="13038" levels="1" name="Earth Resistance">
 		<!-- Increases Earth Resistance by 10. -->
 		<set name="icon" val="icon.skill4012" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -929,7 +929,7 @@
 	<skill id="13039" levels="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 10. -->
 		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -940,7 +940,7 @@
 	<skill id="13040" levels="1" name="Water Resistance">
 		<!-- Increases Water Resistance by 10. -->
 		<set name="icon" val="icon.skill4010" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -951,7 +951,7 @@
 	<skill id="13041" levels="1" name="Wind Resistance">
 		<!-- Increases Wind Resistance by 10. -->
 		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -962,7 +962,7 @@
 	<skill id="13042" levels="1" name="Divinity Resistance">
 		<!-- Increases Divinity Resistance by 10. -->
 		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -973,7 +973,7 @@
 	<skill id="13043" levels="1" name="Fire Resistance">
 		<!-- Increases Fire Resistance by 15. -->
 		<set name="icon" val="icon.skill4009" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -984,7 +984,7 @@
 	<skill id="13044" levels="1" name="Earth Resistance">
 		<!-- Increases Earth Resistance by 15. -->
 		<set name="icon" val="icon.skill4012" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -995,7 +995,7 @@
 	<skill id="13045" levels="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 15. -->
 		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1006,7 +1006,7 @@
 	<skill id="13046" levels="1" name="Water Resistance">
 		<!-- Increases Water Resistance by 15. -->
 		<set name="icon" val="icon.skill4010" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1017,7 +1017,7 @@
 	<skill id="13047" levels="1" name="Wind Resistance">
 		<!-- Increases Wind Resistance by 15. -->
 		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1028,7 +1028,7 @@
 	<skill id="13048" levels="1" name="Divinity Resistance">
 		<!-- Increases Divinity Resistance by 15. -->
 		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1039,7 +1039,7 @@
 	<skill id="13049" levels="1" name="Fire Resistance">
 		<!-- Increases Fire Resistance by 20. -->
 		<set name="icon" val="icon.skill4009" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1050,7 +1050,7 @@
 	<skill id="13050" levels="1" name="Earth Resistance">
 		<!-- Increases Earth Resistance by 20. -->
 		<set name="icon" val="icon.skill4012" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1061,7 +1061,7 @@
 	<skill id="13051" levels="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 20. -->
 		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1072,7 +1072,7 @@
 	<skill id="13052" levels="1" name="Water Resistance">
 		<!-- Increases Water Resistance by 20. -->
 		<set name="icon" val="icon.skill4010" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1083,7 +1083,7 @@
 	<skill id="13053" levels="1" name="Wind Resistance">
 		<!-- Increases Wind Resistance by 20. -->
 		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1094,7 +1094,7 @@
 	<skill id="13054" levels="1" name="Divinity Resistance">
 		<!-- Increases Divinity Resistance by 20. -->
 		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1105,7 +1105,7 @@
 	<skill id="13055" levels="1" name="Fire Resistance">
 		<!-- Increases Fire Resistance by 25. -->
 		<set name="icon" val="icon.skill4009" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1116,7 +1116,7 @@
 	<skill id="13056" levels="1" name="Earth Resistance">
 		<!-- Increases Earth Resistance by 25. -->
 		<set name="icon" val="icon.skill4012" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1127,7 +1127,7 @@
 	<skill id="13057" levels="1" name="Dark Resistance">
 		<!-- Increases Dark Resistance by 25. -->
 		<set name="icon" val="icon.skill4333" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1138,7 +1138,7 @@
 	<skill id="13058" levels="1" name="Water Resistance">
 		<!-- Increases Water Resistance by 25. -->
 		<set name="icon" val="icon.skill4010" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1149,7 +1149,7 @@
 	<skill id="13059" levels="1" name="Wind Resistance">
 		<!-- Increases Wind Resistance by 25. -->
 		<set name="icon" val="icon.skill4011" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1160,7 +1160,7 @@
 	<skill id="13060" levels="1" name="Divinity Resistance">
 		<!-- Increases Divinity Resistance by 25. -->
 		<set name="icon" val="icon.skill4337" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1172,7 +1172,7 @@
 		<!-- Increases bow/crossbow range. Inflicts additional damage during PvP. -->
 		<set name="icon" val="icon.skill0113" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1190,7 +1190,7 @@
 		<table name="#Atk">288 332 377 415 457</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1206,7 +1206,7 @@
 		<!-- Opens a cloak slot. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="EnableCloak" />
@@ -1225,7 +1225,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1259,7 +1259,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1292,7 +1292,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1327,7 +1327,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1364,7 +1364,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="magicLvl" val="95" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1401,7 +1401,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="magicLvl" val="95" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1436,7 +1436,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1473,7 +1473,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1502,7 +1502,7 @@
 		<!-- CON + 4, STR -2, HP + 536. Chance of receiving a critical attack - 3.3%. Reflect 20% of damage to attacker. Stun Resistance + 15. M. Def. + 58. -->
 		<!-- CON + 4, STR -2, Atk. Spd. + 5%. HP + 536. Chance of receiving a critical attack - 3.3%. Reflect 20% of damage to attacker. Stun Resistance + 15. M. Def. + 58. P. Def. + 7% and additional + 108. Resistance to 4 attributes + 20. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13073" levels="4" name="Set Effect - R99 Rare Heavy Armor 2 Piece (Attack Type)">
@@ -1512,7 +1512,7 @@
 		<!-- STR + 4, CON -2, Atk. Spd. + 2.98%. Critical damage + 325, Hold Resistance + 15. HP + 536. Increased success rate for stun/knock back skills. -->
 		<!-- STR + 4, CON -2, Atk. Spd. + 8%. Critical damage + 325, Hold Resistance + 15. P. Atk. + 255, P. Def. + 7%. HP + 536. Increased success rate for stun/knock back skills. Resistance to 4 attributes + 20. -->
 		<set name="icon" val="icon.armor_t94_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13074" levels="4" name="Set Effect - Immortal Light Armor 2 Piece (Assassin Type)">
@@ -1529,7 +1529,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1564,7 +1564,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1600,7 +1600,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1639,7 +1639,7 @@
 		<!--<mul stat="pAtkSpd" val="#pAtkSpd" />-->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1680,7 +1680,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="magicLvl" val="95" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1718,7 +1718,7 @@
 		<table name="#resist"> 0 0 15 15 </table>
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="magicLvl" val="95" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1761,7 +1761,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1799,7 +1799,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1832,7 +1832,7 @@
 		<!-- DEX + 4, STR -2, Atk. Spd. + 3%, Evasion + 2.3, Sleep Resistance + 15. Consumes 4% MP upon skill use. Critical damage + 325. -->
 		<!-- DEX + 4, STR -2, Atk. Spd. + 13%, P. Atk. + 7%. Evasion + 2.3, Sleep Resistance + 15. Consumes 4% MP upon skill use. Critical damage + 325, Critical rate + 3.3%. Resistance to 4 attributes + 20. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13083" levels="4" name="Set Effect - R99 Rare Light Armor 2 Piece (Enchant Type)">
@@ -1842,7 +1842,7 @@
 		<!-- STR + 4, CON -2, P. Atk. + 255. Casting time of beneficial magic + 10%. Hold Resistance + 15. Atk. Spd. + 3%. HP + 536. -->
 		<!-- STR + 4, CON -2, Atk. Spd + 10%, P. Def. + 7% and additional + 255. Casting time of beneficial magic + 10%. Hold Resistance + 15. Atk. Spd. + 3%. HP + 536. MP Consumption upon skill use - 4%. Resistance to 4 attributes + 20. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13084" levels="4" name="Set Effect - Immortal Robe 2 Piece (Magic Type)">
@@ -1859,7 +1859,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1895,7 +1895,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1930,7 +1930,7 @@
 		<table name="#resist"> 10 10 10 10 </table>
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1967,7 +1967,7 @@
 		<table name="#resist"> 0 0 0 10 </table>
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="magicLvl" val="85" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2004,7 +2004,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="magicLvl" val="95" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2042,7 +2042,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="magicLvl" val="95" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2081,7 +2081,7 @@
 		<table name="#resist"> 1 1 15 15 </table>
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2120,7 +2120,7 @@
 		<table name="#resist"> 0 0 0 15 </table>
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="magicLvl" val="99" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -2152,7 +2152,7 @@
 		<!-- INT + 4, MEN -2. Casting Spd. + 15%. MP + 239. Sleep Resistance + 15. M. Atk. + 267. Mental Attack Bonus + 20. -->
 		<!-- INT + 4, MEN -2. Casting Spd. + 25%. M. Atk. + 15% and additional + 267. MP + 239. Sleep Resistance + 15. Mental Attack Bonus + 20. M. Critical Rate + 3%. Resistance to 4 attributes + 20. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13093" levels="4" name="Set Effect - R99 Rare Robe 2 Piece (Recovery Type)">
@@ -2162,43 +2162,43 @@
 		<!-- WIT + 4, MEN -2. Casting Spd. + 15%. MP 239. Stun Resistance + 15. MP recovery 1. M. Atk. + 267. -->
 		<!-- WIT + 4, MEN -2. Casting Spd. + 25%. M. Atk. + 15% and additional + 267. MP + 239. Stun Resistance + 15. MP recovery + 1. Heal amount + 111. Resistance to 4 attributes + 20. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13094" levels="4" name="R1 2 set">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13095" levels="4" name="R1 2 set">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13096" levels="4" name="R1 2 set">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13097" levels="4" name="R2 2 set">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13098" levels="4" name="R2 2 set">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="13099" levels="4" name="R2 2 set">
 		<!-- AUTO GENERATED SKILL -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
-		<set name="operateType" val="PASSIVE" />
+		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>
