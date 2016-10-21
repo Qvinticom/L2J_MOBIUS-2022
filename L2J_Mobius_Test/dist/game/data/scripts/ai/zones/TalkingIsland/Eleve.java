@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Eleve AI.
  * @author Gladicek
  */
-final class Eleve extends AbstractNpcAI
+public final class Eleve extends AbstractNpcAI
 {
 	// NPC
 	private static final int ELEVE = 33246;

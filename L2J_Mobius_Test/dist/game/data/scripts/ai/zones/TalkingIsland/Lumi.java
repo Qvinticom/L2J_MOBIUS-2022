@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Lumi AI.
  * @author Gladicek
  */
-final class Lumi extends AbstractNpcAI
+public final class Lumi extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LUMI = 33025;

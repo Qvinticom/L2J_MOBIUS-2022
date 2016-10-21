@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
  * @author hlwrave, Mobius
  * @Add in event config.xml enableShrines="true" after event name to enable them.
  */
-final class EventShrines extends Quest
+public final class EventShrines extends Quest
 {
 	private static final Map<Integer, Integer> ZONE_TRIGGERS = new HashMap<>();
 	static

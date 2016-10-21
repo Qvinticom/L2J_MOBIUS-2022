@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Adventurers Guide AI.
  * @author St3eT, Stayway, Mobius
  */
-final class AdventurersGuide extends AbstractNpcAI
+public final class AdventurersGuide extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] ADVENTURER_GUIDES =

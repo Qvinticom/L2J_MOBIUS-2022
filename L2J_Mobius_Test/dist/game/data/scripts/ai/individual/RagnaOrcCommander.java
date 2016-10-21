@@ -24,7 +24,7 @@ import ai.AbstractNpcAI;
  * Ragna Orc Commander AI.
  * @author Zealar
  */
-final class RagnaOrcCommander extends AbstractNpcAI
+public final class RagnaOrcCommander extends AbstractNpcAI
 {
 	private static final int RAGNA_ORC_COMMANDER = 22694;
 	

@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.event.LongTimeEvent;
  * Info - http://www.lineage2.com/en/news/events/01202016-red-libra.php
  * @author Mobius
  */
-final class RedLibra extends LongTimeEvent
+public final class RedLibra extends LongTimeEvent
 {
 	// NPCs
 	private static final int RED = 34210;

@@ -39,7 +39,7 @@ import ai.AbstractNpcAI;
 /**
  * @author Micr0, Zerox
  */
-final class ScarletVanHalisha extends AbstractNpcAI
+public final class ScarletVanHalisha extends AbstractNpcAI
 {
 	private L2Character _target;
 	private Skill _skill;

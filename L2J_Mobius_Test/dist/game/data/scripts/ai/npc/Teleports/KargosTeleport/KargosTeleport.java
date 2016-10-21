@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
 /**
  * @author hlwrave
  */
-final class KargosTeleport extends AbstractNpcAI
+public final class KargosTeleport extends AbstractNpcAI
 {
 	// NPC
 	private static final int KARGOS = 33821;

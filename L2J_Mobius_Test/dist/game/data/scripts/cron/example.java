@@ -16,7 +16,7 @@
  */
 package cron;
 
-final class example
+public final class example
 {
 	public static void main(String[] args)
 	{

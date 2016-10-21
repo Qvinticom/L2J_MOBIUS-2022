@@ -27,7 +27,7 @@ import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
  * Beast Herder Tunatun AI.
  * @author Adry_85
  */
-final class Tunatun extends AbstractNpcAI
+public final class Tunatun extends AbstractNpcAI
 {
 	// NPC
 	private static final int TUNATUN = 31537;

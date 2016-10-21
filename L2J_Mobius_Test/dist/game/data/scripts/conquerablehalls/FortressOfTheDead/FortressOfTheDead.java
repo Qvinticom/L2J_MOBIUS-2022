@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
  * Fortress of the Dead clan hall siege script.
  * @author BiggBoss
  */
-final class FortressOfTheDead extends ClanHallSiegeEngine
+public final class FortressOfTheDead extends ClanHallSiegeEngine
 {
 	private static final int LIDIA = 35629;
 	private static final int ALFRED = 35630;

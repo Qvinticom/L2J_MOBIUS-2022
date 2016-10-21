@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Fortress of Resistance clan hall siege Script.
  * @author BiggBoss
  */
-final class FortressOfResistance extends ClanHallSiegeEngine
+public final class FortressOfResistance extends ClanHallSiegeEngine
 {
 	private final int MESSENGER = 35382;
 	private final int BLOODY_LORD_NURKA = 35375;

@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Gainak Underground Entrance teleport AI.
  * @author Mobius
  */
-final class UndergroundEntranceTeleports extends AbstractNpcAI
+public final class UndergroundEntranceTeleports extends AbstractNpcAI
 {
 	// Zones
 	private static final int ZONE_ID_1 = 200207;

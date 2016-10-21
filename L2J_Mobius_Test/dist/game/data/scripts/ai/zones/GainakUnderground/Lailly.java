@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Lailly AI.
  * @author Stayway
  */
-final class Lailly extends AbstractNpcAI
+public final class Lailly extends AbstractNpcAI
 {
 	// NPCs
 	private static final int LAILLY = 34181;

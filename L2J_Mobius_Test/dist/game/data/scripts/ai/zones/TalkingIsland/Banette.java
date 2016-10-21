@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Banette AI.
  * @author Gladicek
  */
-final class Banette extends AbstractNpcAI
+public final class Banette extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BANETTE = 33114;

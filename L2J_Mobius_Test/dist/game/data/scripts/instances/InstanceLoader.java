@@ -63,7 +63,7 @@ import instances.TalkingIsland.TalkingIsland;
  * Instance class-loader.
  * @author FallenAngel
  */
-final class InstanceLoader
+public final class InstanceLoader
 {
 	private static final Logger _log = Logger.getLogger(InstanceLoader.class.getName());
 	

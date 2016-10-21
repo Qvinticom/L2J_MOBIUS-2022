@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Proof Of Courage implementation.
  * @author St3eT
  */
-final class ProofOfCourage extends AbstractNpcAI
+public final class ProofOfCourage extends AbstractNpcAI
 {
 	// Misc
 	private static final Map<Integer, List<ClassId>> CLASSLIST = new HashMap<>();

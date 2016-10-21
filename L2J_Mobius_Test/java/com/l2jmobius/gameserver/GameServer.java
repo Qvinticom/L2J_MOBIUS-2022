@@ -147,7 +147,7 @@ import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.L2GamePacketHandler;
 import com.l2jmobius.gameserver.pathfinding.PathFinding;
-import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 import com.l2jmobius.status.Status;
@@ -185,7 +185,7 @@ public final class GameServer
 		
 		// load script engines
 		printSection("Scripting Engines");
-		L2ScriptEngineManager.getInstance();
+		ScriptEngineManager.getInstance();
 		
 		printSection("World");
 		// start game time control early
@@ -330,7 +330,7 @@ public final class GameServer
 		try
 		{
 			_log.info("Loading server scripts...");
-			L2ScriptEngineManager.getInstance().executeScriptList();
+			ScriptEngineManager.getInstance().executeScriptList();
 		}
 		catch (Exception e)
 		{

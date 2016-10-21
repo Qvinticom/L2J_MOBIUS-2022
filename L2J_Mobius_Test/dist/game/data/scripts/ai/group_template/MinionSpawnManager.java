@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Minion Spawn Manager.
  * @author Zealar
  */
-final class MinionSpawnManager extends AbstractNpcAI
+public final class MinionSpawnManager extends AbstractNpcAI
 {
 	private static final Set<Integer> NPC = new HashSet<>(354);
 	static

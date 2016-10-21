@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Marin Smith AI.
  * @author Gladicek
  */
-final class MarinSmith extends AbstractNpcAI
+public final class MarinSmith extends AbstractNpcAI
 {
 	// NPCs
 	private static final int MARIN_SMITH = 33285;

@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Updated to H5 by Nyaran.
  * @author Gnacik
  */
-final class CharacterBirthday extends Quest
+public final class CharacterBirthday extends Quest
 {
 	private static final int ALEGRIA = 32600;
 	private static int SPAWNS = 0;

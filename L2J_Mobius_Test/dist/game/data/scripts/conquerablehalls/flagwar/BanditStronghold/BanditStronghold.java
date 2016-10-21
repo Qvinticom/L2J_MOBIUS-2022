@@ -27,7 +27,7 @@ import conquerablehalls.flagwar.FlagWar;
 /**
  * @author BiggBoss
  */
-final class BanditStronghold extends FlagWar
+public final class BanditStronghold extends FlagWar
 {
 	static
 	{

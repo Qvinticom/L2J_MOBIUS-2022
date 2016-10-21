@@ -34,7 +34,7 @@ public abstract class ManagedScript
 	
 	public ManagedScript()
 	{
-		_scriptFile = L2ScriptEngineManager.getInstance().getCurrentLoadingScript();
+		_scriptFile = ScriptEngineManager.getInstance().getCurrentLoadingScript();
 		setLastLoadTime(System.currentTimeMillis());
 	}
 	
@@ -47,7 +47,7 @@ public abstract class ManagedScript
 	{
 		try
 		{
-			L2ScriptEngineManager.getInstance().executeScript(getScriptFile());
+			ScriptEngineManager.getInstance().executeScript(getScriptFile());
 			return true;
 		}
 		catch (Exception e)

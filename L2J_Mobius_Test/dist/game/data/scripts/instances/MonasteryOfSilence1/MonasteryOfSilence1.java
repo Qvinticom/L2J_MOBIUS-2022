@@ -72,7 +72,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 151;
 	
-	static final class MoSWorld extends InstanceWorld
+	static public final class MoSWorld extends InstanceWorld
 	{
 		L2Npc elcadia = null;
 	}

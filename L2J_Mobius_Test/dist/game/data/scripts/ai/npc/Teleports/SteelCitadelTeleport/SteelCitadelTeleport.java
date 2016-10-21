@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Steel Citadel teleport AI.
  * @author GKR
  */
-final class SteelCitadelTeleport extends AbstractNpcAI
+public final class SteelCitadelTeleport extends AbstractNpcAI
 {
 	// NPCs
 	private static final int BELETH = 29118;

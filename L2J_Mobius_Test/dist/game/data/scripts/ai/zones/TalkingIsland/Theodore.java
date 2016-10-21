@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Theodore AI.
  * @author Gladicek
  */
-final class Theodore extends AbstractNpcAI
+public final class Theodore extends AbstractNpcAI
 {
 	// NPC
 	private static final int THEODORE = 32975;

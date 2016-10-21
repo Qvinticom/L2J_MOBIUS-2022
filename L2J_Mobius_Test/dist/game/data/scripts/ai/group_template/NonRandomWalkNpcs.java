@@ -24,7 +24,7 @@ import ai.AbstractNpcAI;
  * Non Random Walk Npcs AI.
  * @author Mobius
  */
-final class NonRandomWalkNpcs extends AbstractNpcAI
+public final class NonRandomWalkNpcs extends AbstractNpcAI
 {
 	private static final int[] NPCS =
 	{

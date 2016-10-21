@@ -23,7 +23,7 @@ import ai.AbstractNpcAI;
 /**
  * @author UnAfraid
  */
-final class NonLethalableNpcs extends AbstractNpcAI
+public final class NonLethalableNpcs extends AbstractNpcAI
 {
 	private static final int[] NPCS =
 	{

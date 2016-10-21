@@ -31,7 +31,7 @@ import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
  * Pantheon AI.
  * @author Gladicek
  */
-final class Pantheon extends AbstractNpcAI
+public final class Pantheon extends AbstractNpcAI
 {
 	// NPC
 	private static final int PANTHEON = 32972;

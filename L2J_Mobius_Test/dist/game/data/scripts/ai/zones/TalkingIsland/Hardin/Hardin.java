@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Hardin AI.
  * @author Stayway
  */
-final class Hardin extends AbstractNpcAI
+public final class Hardin extends AbstractNpcAI
 {
 	// NPC
 	private static final int HARDIN = 33870;

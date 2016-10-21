@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 /**
  * @author DS
  */
-final class BoatRunePrimeval implements Runnable
+public final class BoatRunePrimeval implements Runnable
 {
 	private static final Logger _log = Logger.getLogger(BoatRunePrimeval.class.getName());
 	

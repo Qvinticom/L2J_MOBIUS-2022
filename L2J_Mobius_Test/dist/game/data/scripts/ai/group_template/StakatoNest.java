@@ -34,7 +34,7 @@ import ai.AbstractNpcAI;
  * Stakato Nest AI.
  * @author Gnacik
  */
-final class StakatoNest extends AbstractNpcAI
+public final class StakatoNest extends AbstractNpcAI
 {
 	// @formatter:off
 	// List of all mobs just for register

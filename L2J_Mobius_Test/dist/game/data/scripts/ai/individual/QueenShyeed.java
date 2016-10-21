@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Queen Shyeed AI
  * @author malyelfik
  */
-final class QueenShyeed extends AbstractNpcAI
+public final class QueenShyeed extends AbstractNpcAI
 {
 	// NPC
 	private static final int SHYEED = 25671;

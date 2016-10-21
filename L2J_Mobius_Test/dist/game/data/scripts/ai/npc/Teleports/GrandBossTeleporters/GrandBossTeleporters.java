@@ -36,7 +36,7 @@ import ai.individual.Valakas;
  * Original python script by Emperorc.
  * @author Plim
  */
-final class GrandBossTeleporters extends AbstractNpcAI
+public final class GrandBossTeleporters extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] NPCs =

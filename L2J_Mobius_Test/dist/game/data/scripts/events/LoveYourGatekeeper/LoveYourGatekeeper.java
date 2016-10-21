@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Love Your Gatekeeper event.
  * @author Gladicek
  */
-final class LoveYourGatekeeper extends LongTimeEvent
+public final class LoveYourGatekeeper extends LongTimeEvent
 {
 	// NPC
 	private static final int GATEKEEPER = 32477;

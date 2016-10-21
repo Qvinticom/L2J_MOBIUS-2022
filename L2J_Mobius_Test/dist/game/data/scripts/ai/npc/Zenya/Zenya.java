@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Zenya AI.
  * @author Stayway
  */
-final class Zenya extends AbstractNpcAI
+public final class Zenya extends AbstractNpcAI
 {
 	// NPC
 	private static final int ZENYA = 32140;

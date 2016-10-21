@@ -72,7 +72,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 		new Location(-79939, 205857, -7888),
 	};
 	
-	static final class HSWorld extends InstanceWorld
+	static public final class HSWorld extends InstanceWorld
 	{
 		int doorst = 0;
 		static final Map<Integer, List<L2Npc>> _save_point = new HashMap<>();

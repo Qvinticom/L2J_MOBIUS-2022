@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.event.LongTimeEvent;
  * Heavy Medals event AI.
  * @author Gnacik
  */
-final class HeavyMedal extends LongTimeEvent
+public final class HeavyMedal extends LongTimeEvent
 {
 	private static final int CAT_ROY = 31228;
 	private static final int CAT_WINNIE = 31229;

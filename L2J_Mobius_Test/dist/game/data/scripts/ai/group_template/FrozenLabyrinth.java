@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Frozen Labyrinth AI.
  * @author malyelfik
  */
-final class FrozenLabyrinth extends AbstractNpcAI
+public final class FrozenLabyrinth extends AbstractNpcAI
 {
 	// Monsters
 	private static final int PRONGHORN_SPIRIT = 22087;

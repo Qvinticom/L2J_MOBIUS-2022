@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Plains of Lizardmen AI.
  * @author Gnacik, malyelfik
  */
-final class PlainsOfLizardman extends AbstractNpcAI
+public final class PlainsOfLizardman extends AbstractNpcAI
 {
 	// NPCs
 	private static final int INVISIBLE_NPC = 18919;

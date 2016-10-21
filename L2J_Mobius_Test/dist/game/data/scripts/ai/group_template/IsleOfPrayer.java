@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Isle of Prayer AI.
  * @author Zoey76
  */
-final class IsleOfPrayer extends AbstractNpcAI
+public final class IsleOfPrayer extends AbstractNpcAI
 {
 	// Items
 	private static final int YELLOW_SEED_OF_EVIL_SHARD = 9593;

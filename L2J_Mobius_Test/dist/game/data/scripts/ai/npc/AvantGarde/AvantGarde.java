@@ -38,7 +38,7 @@ import ai.AbstractNpcAI;
  * Transformation skill learning and transformation scroll sell.
  * @author Zoey76
  */
-final class AvantGarde extends AbstractNpcAI
+public final class AvantGarde extends AbstractNpcAI
 {
 	// NPC
 	private static final int AVANT_GARDE = 32323;

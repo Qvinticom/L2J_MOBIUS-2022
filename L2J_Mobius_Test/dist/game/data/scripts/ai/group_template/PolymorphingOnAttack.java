@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Polymorphing on attack monsters AI.
  * @author Slyce
  */
-final class PolymorphingOnAttack extends AbstractNpcAI
+public final class PolymorphingOnAttack extends AbstractNpcAI
 {
 	private static final Map<Integer, List<Integer>> MOBSPAWNS = new HashMap<>();
 	static

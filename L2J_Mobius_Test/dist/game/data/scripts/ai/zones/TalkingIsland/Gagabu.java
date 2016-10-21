@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Gagabu AI.
  * @author Gladicek
  */
-final class Gagabu extends AbstractNpcAI
+public final class Gagabu extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GAGABU = 33284;

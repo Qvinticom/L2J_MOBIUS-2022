@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Silent Valley AI
  * @author malyelfik
  */
-final class SilentValley extends AbstractNpcAI
+public final class SilentValley extends AbstractNpcAI
 {
 	// Skills
 	private static final SkillHolder BETRAYAL = new SkillHolder(6033, 1); // Treasure Seeker's Betrayal

@@ -32,7 +32,7 @@ import quests.Q10791_TheManOfMystery.Q10791_TheManOfMystery;
  * Kain Ven Halter AI
  * @author Gigi and
  */
-final class KainVanHalter extends AbstractNpcAI
+public final class KainVanHalter extends AbstractNpcAI
 {
 	// NPC
 	private static final int KAIN_VAN_HALTER = 33993;

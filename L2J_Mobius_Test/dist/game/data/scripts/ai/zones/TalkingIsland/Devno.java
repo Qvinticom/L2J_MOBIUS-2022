@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Devno AI.
  * @author Gladicek
  */
-final class Devno extends AbstractNpcAI
+public final class Devno extends AbstractNpcAI
 {
 	// NPC
 	private static final int DEVNO = 33241;

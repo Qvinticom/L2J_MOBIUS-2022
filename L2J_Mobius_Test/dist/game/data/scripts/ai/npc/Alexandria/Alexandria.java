@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Alexandria (Armor Merchant) AI.
  * @author xban1x
  */
-final class Alexandria extends AbstractNpcAI
+public final class Alexandria extends AbstractNpcAI
 {
 	// NPC
 	private static final int ALEXANDRIA = 30098;

@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Manages minion's spawn, idle despawn and Teleportation Cube spawn.
  * @author GKR
  */
-final class Epidos extends AbstractNpcAI
+public final class Epidos extends AbstractNpcAI
 {
 	private static final int[] EPIDOSES =
 	{

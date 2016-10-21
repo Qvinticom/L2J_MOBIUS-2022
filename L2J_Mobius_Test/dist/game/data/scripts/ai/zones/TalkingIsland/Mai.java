@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Mai AI.
  * @author Gladicek
  */
-final class Mai extends AbstractNpcAI
+public final class Mai extends AbstractNpcAI
 {
 	// NPCs
 	private static final int MAI = 33238;

@@ -33,7 +33,7 @@ import ai.AbstractNpcAI;
  * Monastery of Silence AI.
  * @author Kerberos, nonom
  */
-final class MonasteryOfSilence extends AbstractNpcAI
+public final class MonasteryOfSilence extends AbstractNpcAI
 {
 	// NPCs
 	private static final int CAPTAIN = 18910; // Solina Knight Captain

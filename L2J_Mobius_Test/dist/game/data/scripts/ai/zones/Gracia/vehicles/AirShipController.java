@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public abstract class AirShipController extends Quest
 {
-	final class DecayTask implements Runnable
+	public final class DecayTask implements Runnable
 	{
 		@Override
 		public void run()
@@ -54,7 +54,7 @@ public abstract class AirShipController extends Quest
 		}
 	}
 	
-	final class DepartTask implements Runnable
+	public final class DepartTask implements Runnable
 	{
 		@Override
 		public void run()

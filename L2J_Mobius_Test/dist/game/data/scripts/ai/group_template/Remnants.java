@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Remnants AI.
  * @author DS
  */
-final class Remnants extends AbstractNpcAI
+public final class Remnants extends AbstractNpcAI
 {
 	private static final int[] NPCS =
 	{

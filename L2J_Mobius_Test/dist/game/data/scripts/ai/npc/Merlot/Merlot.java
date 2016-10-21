@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Merlot AI.
  * @author hlwrave
  */
-final class Merlot extends AbstractNpcAI
+public final class Merlot extends AbstractNpcAI
 {
 	// NPC
 	private static final int MERLOT = 34018;

@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Altar of Souls AI.
  * @author Mobius
  */
-final class AltarOfSouls extends AbstractNpcAI
+public final class AltarOfSouls extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ALTAR_OF_SOULS = 33920;

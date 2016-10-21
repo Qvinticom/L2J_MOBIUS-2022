@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Proof Of Justice implementation.
  * @author St3eT
  */
-final class ProofOfJustice extends AbstractNpcAI
+public final class ProofOfJustice extends AbstractNpcAI
 {
 	// Misc
 	private static final Map<Integer, List<ClassId>> CLASSLIST = new HashMap<>();

@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Anais AI.
  * @author nonom
  */
-final class Anais extends AbstractNpcAI
+public final class Anais extends AbstractNpcAI
 {
 	// NPCs
 	private static final int ANAIS = 25701;

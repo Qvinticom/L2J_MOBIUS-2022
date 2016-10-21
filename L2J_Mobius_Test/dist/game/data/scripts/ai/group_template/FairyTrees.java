@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Fairy Trees AI.
  * @author Charus
  */
-final class FairyTrees extends AbstractNpcAI
+public final class FairyTrees extends AbstractNpcAI
 {
 	// NPC
 	private static final int SOUL_GUARDIAN = 27189; // Soul of Tree Guardian

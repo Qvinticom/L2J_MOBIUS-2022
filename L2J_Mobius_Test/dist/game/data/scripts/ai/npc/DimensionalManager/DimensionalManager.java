@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Dimensional Manager AI.
  * @author Stayway, Mobius
  */
-final class DimensionalManager extends AbstractNpcAI
+public final class DimensionalManager extends AbstractNpcAI
 {
 	// Npc
 	private static final int DIMENSIONAL_MANAGER = 32478;

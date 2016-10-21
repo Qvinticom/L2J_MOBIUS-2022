@@ -54,7 +54,7 @@ import ai.AbstractNpcAI;
  * Beleth's AI.
  * @author Treat, Sahar
  */
-final class Beleth extends AbstractNpcAI
+public final class Beleth extends AbstractNpcAI
 {
 	// Status
 	private static final int ALIVE = 0;

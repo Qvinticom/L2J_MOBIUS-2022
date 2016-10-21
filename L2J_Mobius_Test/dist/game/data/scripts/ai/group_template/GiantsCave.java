@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Giant's Cave AI.
  * @author Gnacik, St3eT
  */
-final class GiantsCave extends AbstractNpcAI
+public final class GiantsCave extends AbstractNpcAI
 {
 	// NPC
 	private static final int[] SCOUTS =

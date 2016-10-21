@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Hills of Gold AI.
  * @author Mobius
  */
-final class HillsOfGold extends AbstractNpcAI
+public final class HillsOfGold extends AbstractNpcAI
 {
 	// Npcs
 	private static final int GOLEM_OF_REPAIRS = 19309;

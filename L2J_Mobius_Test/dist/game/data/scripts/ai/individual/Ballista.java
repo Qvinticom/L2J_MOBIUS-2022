@@ -30,7 +30,7 @@ import ai.AbstractNpcAI;
  * Ballista AI.
  * @author St3eT
  */
-final class Ballista extends AbstractNpcAI
+public final class Ballista extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] BALLISTA =

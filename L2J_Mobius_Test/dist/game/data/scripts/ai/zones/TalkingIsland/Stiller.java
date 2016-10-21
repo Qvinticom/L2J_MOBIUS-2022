@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Stiller AI.
  * @author Gladicek
  */
-final class Stiller extends AbstractNpcAI
+public final class Stiller extends AbstractNpcAI
 {
 	// NPCs
 	private static final int STILLER = 33125;

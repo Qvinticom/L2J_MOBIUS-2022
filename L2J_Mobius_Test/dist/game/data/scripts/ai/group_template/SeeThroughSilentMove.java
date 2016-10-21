@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * See Through Silent Move AI.
  * @author Gigiikun
  */
-final class SeeThroughSilentMove extends AbstractNpcAI
+public final class SeeThroughSilentMove extends AbstractNpcAI
 {
 	//@formatter:off
 	private static final int[] MONSTERS =

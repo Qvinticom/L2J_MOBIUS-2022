@@ -35,7 +35,7 @@ import ai.AbstractNpcAI;
  * Mammons AI.
  * @author St3eT
  */
-final class Mammons extends AbstractNpcAI
+public final class Mammons extends AbstractNpcAI
 {
 	// NPCs
 	private static final int MAMMONS[] =

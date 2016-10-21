@@ -63,7 +63,7 @@ import ai.AbstractNpcAI;
  * Castle Chamberlain AI.
  * @author malyelfik
  */
-final class CastleChamberlain extends AbstractNpcAI
+public final class CastleChamberlain extends AbstractNpcAI
 {
 	// NPCs
 	//@formatter:off

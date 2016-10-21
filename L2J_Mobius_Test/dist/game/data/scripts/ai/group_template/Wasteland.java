@@ -26,7 +26,7 @@ import ai.AbstractNpcAI;
  * Wasteland AI.
  * @author Stayway, Mobius
  */
-final class Wasteland extends AbstractNpcAI
+public final class Wasteland extends AbstractNpcAI
 {
 	// NPCs
 	private static final int JOEL = 33516;

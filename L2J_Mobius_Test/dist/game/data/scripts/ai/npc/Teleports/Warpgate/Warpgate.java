@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * @author _DS_
  * @Updated to Ertheia by Mobius
  */
-final class Warpgate extends AbstractNpcAI
+public final class Warpgate extends AbstractNpcAI
 {
 	// NPCs
 	private static final int EXIT_GATE = 33902;

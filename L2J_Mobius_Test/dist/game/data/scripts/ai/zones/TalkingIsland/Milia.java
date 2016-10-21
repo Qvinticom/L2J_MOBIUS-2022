@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Milia AI.
  * @author St3eT
  */
-final class Milia extends AbstractNpcAI
+public final class Milia extends AbstractNpcAI
 {
 	// NPCs
 	private static final int MILIA = 30006;

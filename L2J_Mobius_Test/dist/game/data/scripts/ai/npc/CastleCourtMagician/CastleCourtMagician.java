@@ -30,7 +30,7 @@ import handlers.effecthandlers.CallPc;
  * Castle Court Magician AI.
  * @author St3eT
  */
-final class CastleCourtMagician extends AbstractNpcAI
+public final class CastleCourtMagician extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] COURT_MAGICIAN =

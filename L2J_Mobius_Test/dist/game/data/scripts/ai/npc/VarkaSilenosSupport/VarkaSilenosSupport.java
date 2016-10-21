@@ -32,7 +32,7 @@ import ai.AbstractNpcAI;
  * Original Jython script by Emperorc and Kerberos_20.
  * @author Nyaran
  */
-final class VarkaSilenosSupport extends AbstractNpcAI
+public final class VarkaSilenosSupport extends AbstractNpcAI
 {
 	private static class BuffsData
 	{

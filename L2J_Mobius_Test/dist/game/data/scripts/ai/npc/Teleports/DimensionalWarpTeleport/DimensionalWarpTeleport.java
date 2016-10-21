@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
 /**
  * @author hlwrave
  */
-final class DimensionalWarpTeleport extends AbstractNpcAI
+public final class DimensionalWarpTeleport extends AbstractNpcAI
 {
 	// NPC
 	private static final int RESED = 33974;

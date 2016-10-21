@@ -303,7 +303,7 @@ import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTh
 /**
  * @author NosBit
  */
-final class QuestMasterHandler
+public final class QuestMasterHandler
 {
 	private static final Logger _log = Logger.getLogger(QuestMasterHandler.class.getName());
 	

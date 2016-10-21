@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Arena Manager AI.
  * @author St3eT
  */
-final class ArenaManager extends AbstractNpcAI
+public final class ArenaManager extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] ARENA_MANAGER =

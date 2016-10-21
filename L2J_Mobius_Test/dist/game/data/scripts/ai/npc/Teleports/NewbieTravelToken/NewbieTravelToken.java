@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Newbie Travel Token AI.
  * @author Plim
  */
-final class NewbieTravelToken extends AbstractNpcAI
+public final class NewbieTravelToken extends AbstractNpcAI
 {
 	// Item
 	private static final int NEWBIE_TRAVEL_TOKEN = 8542;

@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  * Summon the player to the NPC on attack.
  * @author Zoey76
  */
-final class SummonPc extends AbstractNpcAI
+public final class SummonPc extends AbstractNpcAI
 {
 	// NPCs
 	private static final int PORTA = 20213;

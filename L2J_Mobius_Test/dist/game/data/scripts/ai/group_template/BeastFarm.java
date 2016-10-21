@@ -41,7 +41,7 @@ import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
  * Updated to Freya.
  * @author Fulminus, Gigiikun
  */
-final class BeastFarm extends AbstractNpcAI
+public final class BeastFarm extends AbstractNpcAI
 {
 	private static final int GOLDEN_SPICE = 15474;
 	private static final int CRYSTAL_SPICE = 15475;

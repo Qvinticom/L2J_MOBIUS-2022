@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
 /**
  * @author hlwrave
  */
-final class HarnakUnderground extends AbstractNpcAI
+public final class HarnakUnderground extends AbstractNpcAI
 {
 	// NPC
 	private static final int HADEL = 33344;

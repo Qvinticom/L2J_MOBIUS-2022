@@ -25,7 +25,7 @@ import ai.AbstractNpcAI;
  * Pavel Archaic AI.
  * @author Gnacik, St3eT
  */
-final class PavelArchaic extends AbstractNpcAI
+public final class PavelArchaic extends AbstractNpcAI
 {
 	private static final int SAFETY_DEVICE = 18917; // Pavel Safety Device
 	private static final int PINCER_GOLEM = 22801; // Cruel Pincer Golem

@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Prison Guards AI.
  * @author St3eT
  */
-final class PrisonGuards extends AbstractNpcAI
+public final class PrisonGuards extends AbstractNpcAI
 {
 	// NPCs
 	private static final int GUARD_HEAD = 18367; // Prison Guard

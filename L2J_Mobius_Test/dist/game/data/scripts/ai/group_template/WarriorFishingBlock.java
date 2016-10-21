@@ -28,7 +28,7 @@ import ai.AbstractNpcAI;
  * Warrior Fishing Block AI.
  * @author Zoey76
  */
-final class WarriorFishingBlock extends AbstractNpcAI
+public final class WarriorFishingBlock extends AbstractNpcAI
 {
 	// Monsters
 	private static final int[] MONSTERS =

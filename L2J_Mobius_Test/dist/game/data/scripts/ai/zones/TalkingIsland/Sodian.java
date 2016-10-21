@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  * Sodian AI.
  * @author Gladicek
  */
-final class Sodian extends AbstractNpcAI
+public final class Sodian extends AbstractNpcAI
 {
 	// NPCs
 	private static final int SODIAN = 33229;

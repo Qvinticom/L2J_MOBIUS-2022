@@ -31,7 +31,7 @@ import ai.AbstractNpcAI;
  * Proclaimer AI.
  * @author St3eT
  */
-final class Proclaimer extends AbstractNpcAI
+public final class Proclaimer extends AbstractNpcAI
 {
 	// NPCs
 	private static final int[] PROCLAIMER =
