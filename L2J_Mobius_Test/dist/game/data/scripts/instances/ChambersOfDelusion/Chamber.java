@@ -117,7 +117,7 @@ abstract class Chamber extends AbstractInstance
 			}
 		}
 		
-		class ChangeRoomTask implements Runnable
+		protected class ChangeRoomTask implements Runnable
 		{
 			@Override
 			public void run()

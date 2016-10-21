@@ -16,344 +16,288 @@
  */
 package com.l2jmobius.gameserver.scripting;
 
-import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.FileReader;
 import java.io.LineNumberReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Properties;
+import java.util.ServiceLoader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.script.Compilable;
-import javax.script.CompiledScript;
-import javax.script.ScriptContext;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineFactory;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-import javax.script.SimpleScriptContext;
-
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.javaengine.JavaScriptEngineFactory;
+import com.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
 
 /**
  * Caches script engines and provides functionality for executing and managing scripts.
- * @author KenM
+ * @author KenM, HorridoJoho
  */
 public final class L2ScriptEngineManager
 {
 	private static final Logger _log = Logger.getLogger(L2ScriptEngineManager.class.getName());
+	public static final Path SCRIPT_LIST_FILE = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts.cfg");
+	public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
+	public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
+	public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
 	
-	public static final File SCRIPT_FOLDER = new File(Config.DATAPACK_ROOT.getAbsolutePath(), "scripts");
-	
-	public static L2ScriptEngineManager getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
-	private final Map<String, ScriptEngine> _extEngines = new HashMap<>();
-	private final List<ScriptManager<?>> _scriptManagers = new LinkedList<>();
-	
-	private File _currentLoadingScript;
-	
-	/**
-	 * If the script engine supports compilation the script is compiled before execution.<BR>
-	 */
-	private static final boolean ATTEMPT_COMPILATION = true;
+	private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
+	private IExecutionContext _currentExecutionContext = null;
 	
 	protected L2ScriptEngineManager()
 	{
-		final ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
-		final ScriptEngineFactory factory = new JavaScriptEngineFactory();
-		scriptEngineManager.registerEngineExtension("java", factory);
-		_extEngines.put("java", factory.getScriptEngine());
-		_log.info("Script Engine: " + factory.getEngineName() + " " + factory.getEngineVersion() + " - Language: " + factory.getLanguageName() + " - Language Version: " + factory.getLanguageVersion());
+		final Properties props = loadProperties();
+		
+		// Load external script engines
+		ServiceLoader.load(IScriptingEngine.class).forEach(engine ->
+		{
+			registerEngine(engine, props);
+		});
+		
+		// No external script engines
+		if (_extEngines.isEmpty())
+		{
+			registerEngine(new JavaScriptingEngine(), props);
+		}
 	}
 	
-	private ScriptEngine getEngineByExtension(String ext)
+	private Properties loadProperties()
+	{
+		Properties props = null;
+		try (FileInputStream fis = new FileInputStream("config/ScriptEngines.ini"))
+		{
+			props = new Properties();
+			props.load(fis);
+		}
+		catch (Exception e)
+		{
+			props = null;
+			_log.warning("Couldn't load ScriptEngines.ini: " + e.getMessage());
+		}
+		return props;
+	}
+	
+	private void registerEngine(IScriptingEngine engine, Properties props)
+	{
+		maybeSetProperties("language." + engine.getLanguageName() + ".", props, engine);
+		final IExecutionContext context = engine.createExecutionContext();
+		for (String commonExtension : engine.getCommonFileExtensions())
+		{
+			_extEngines.put(commonExtension, context);
+		}
+		
+		_log.info("ScriptEngine: " + engine.getEngineName() + " " + engine.getEngineVersion() + " (" + engine.getLanguageName() + " " + engine.getLanguageVersion() + ")");
+	}
+	
+	private void maybeSetProperties(String propPrefix, Properties props, IScriptingEngine engine)
+	{
+		if (props == null)
+		{
+			return;
+		}
+		
+		for (final Entry<Object, Object> prop : props.entrySet())
+		{
+			String key = (String) prop.getKey();
+			String value = (String) prop.getValue();
+			
+			if (key.startsWith(propPrefix))
+			{
+				key = key.substring(propPrefix.length());
+				if (value.startsWith("%") && value.endsWith("%"))
+				{
+					value = System.getProperty(value.substring(1, value.length() - 1));
+				}
+				
+				engine.setProperty(key, value);
+			}
+		}
+	}
+	
+	private IExecutionContext getEngineByExtension(String ext)
 	{
 		return _extEngines.get(ext);
 	}
 	
-	public void executeScriptList(File list) throws IOException
+	private String getFileExtension(Path p)
+	{
+		final String name = p.getFileName().toString();
+		final int lastDotIdx = name.lastIndexOf('.');
+		if (lastDotIdx == -1)
+		{
+			return null;
+		}
+		
+		final String extension = name.substring(lastDotIdx + 1);
+		if (extension.isEmpty())
+		{
+			return null;
+		}
+		
+		return extension;
+	}
+	
+	private void checkExistingFile(String messagePre, Path filePath) throws Exception
+	{
+		if (!Files.exists(filePath))
+		{
+			throw new Exception(messagePre + ": " + filePath + " does not exists!");
+		}
+		else if (!Files.isRegularFile(filePath))
+		{
+			throw new Exception(messagePre + ": " + filePath + " is not a file!");
+		}
+	}
+	
+	public void executeMasterHandler() throws Exception
+	{
+		executeScript(MASTER_HANDLER_FILE);
+	}
+	
+	public void executeEffectMasterHandler() throws Exception
+	{
+		executeScript(EFFECT_MASTER_HANDLER_FILE);
+	}
+	
+	public void executeScriptList() throws Exception
 	{
 		if (Config.ALT_DEV_NO_QUESTS)
 		{
-			if (!Config.ALT_DEV_NO_HANDLERS)
-			{
-				try
-				{
-					executeScript(new File(SCRIPT_FOLDER, "handlers/MasterHandler.java"));
-					_log.info("Handlers loaded, all other scripts skipped");
-				}
-				catch (ScriptException se)
-				{
-					_log.log(Level.WARNING, "", se);
-				}
-			}
 			return;
 		}
 		
-		if (!list.isFile())
-		{
-			throw new IllegalArgumentException("Argument must be an file containing a list of scripts to be loaded");
-		}
+		// throws exception if not exists or not file
+		checkExistingFile("ScriptList", SCRIPT_LIST_FILE);
 		
-		try (FileInputStream fis = new FileInputStream(list);
-			InputStreamReader isr = new InputStreamReader(fis);
-			LineNumberReader lnr = new LineNumberReader(isr))
+		try (final LineNumberReader lnr = new LineNumberReader(new FileReader(SCRIPT_LIST_FILE.toString())))
 		{
+			final LinkedHashMap<IExecutionContext, LinkedList<Path>> files = new LinkedHashMap<>();
+			final LinkedList<String> extWithoutEngine = new LinkedList<>();
+			
 			String line;
 			while ((line = lnr.readLine()) != null)
 			{
-				if (Config.ALT_DEV_NO_HANDLERS && line.contains("MasterHandler.java"))
+				line = line.trim();
+				if (line.isEmpty() || (line.charAt(0) == '#'))
 				{
 					continue;
 				}
 				
-				final String[] parts = line.trim().split("#");
-				
-				if ((parts.length > 0) && !parts[0].isEmpty() && (parts[0].charAt(0) != '#'))
-				{
-					line = parts[0];
-					
-					if (line.endsWith("/**"))
-					{
-						line = line.substring(0, line.length() - 3);
-					}
-					else if (line.endsWith("/*"))
-					{
-						line = line.substring(0, line.length() - 2);
-					}
-					
-					final File file = new File(SCRIPT_FOLDER, line);
-					
-					if (file.isDirectory() && parts[0].endsWith("/**"))
-					{
-						executeAllScriptsInDirectory(file, true, 32);
-					}
-					else if (file.isDirectory() && parts[0].endsWith("/*"))
-					{
-						executeAllScriptsInDirectory(file);
-					}
-					else if (file.isFile())
-					{
-						try
-						{
-							executeScript(file);
-						}
-						catch (ScriptException e)
-						{
-							reportScriptFileError(file, e);
-						}
-					}
-					else
-					{
-						_log.warning("Failed loading: (" + file.getCanonicalPath() + ") @ " + list.getName() + ":" + lnr.getLineNumber() + " - Reason: doesnt exists or is not a file.");
-					}
-				}
-			}
-		}
-	}
-	
-	public void executeAllScriptsInDirectory(File dir)
-	{
-		executeAllScriptsInDirectory(dir, false, 0);
-	}
-	
-	public void executeAllScriptsInDirectory(File dir, boolean recurseDown, int maxDepth)
-	{
-		executeAllScriptsInDirectory(dir, recurseDown, maxDepth, 0);
-	}
-	
-	private void executeAllScriptsInDirectory(File dir, boolean recurseDown, int maxDepth, int currentDepth)
-	{
-		if (!dir.isDirectory())
-		{
-			throw new IllegalArgumentException("The argument directory either doesnt exists or is not an directory.");
-		}
-		
-		final File[] files = dir.listFiles();
-		if (files == null)
-		{
-			return;
-		}
-		
-		for (File file : files)
-		{
-			if (file.isDirectory() && recurseDown && (maxDepth > currentDepth))
-			{
-				executeAllScriptsInDirectory(file, recurseDown, maxDepth, currentDepth + 1);
-			}
-			else if (file.isFile())
-			{
+				Path sourceFile = SCRIPT_FOLDER.resolve(line);
 				try
 				{
-					final String name = file.getName();
-					final int lastIndex = name.lastIndexOf('.');
-					String extension;
-					if (lastIndex != -1)
+					checkExistingFile("ScriptFile", sourceFile);
+				}
+				catch (Exception e)
+				{
+					_log.warning(e.getMessage());
+					continue;
+				}
+				
+				sourceFile = sourceFile.toAbsolutePath();
+				final String ext = getFileExtension(sourceFile);
+				if (ext == null)
+				{
+					_log.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
+					continue;
+				}
+				
+				final IExecutionContext engine = getEngineByExtension(ext);
+				if (engine == null)
+				{
+					if (!extWithoutEngine.contains(ext))
 					{
-						extension = name.substring(lastIndex + 1);
-						final ScriptEngine engine = getEngineByExtension(extension);
-						if (engine != null)
-						{
-							executeScript(engine, file);
-						}
+						extWithoutEngine.add(ext);
+						_log.warning("ScriptEngine: No engine registered for extension " + ext + "!");
+					}
+					continue;
+				}
+				
+				LinkedList<Path> ll = files.get(engine);
+				if (ll == null)
+				{
+					ll = new LinkedList<>();
+					files.put(engine, ll);
+				}
+				ll.add(sourceFile);
+			}
+			
+			for (Entry<IExecutionContext, LinkedList<Path>> entry : files.entrySet())
+			{
+				_currentExecutionContext = entry.getKey();
+				try
+				{
+					Map<Path, Throwable> invokationErrors = entry.getKey().executeScripts(entry.getValue());
+					for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet())
+					{
+						_log.log(Level.WARNING, "ScriptEngine: " + entry2.getKey() + " failed execution!", entry2.getValue());
 					}
 				}
-				catch (ScriptException e)
+				finally
 				{
-					reportScriptFileError(file, e);
+					_currentExecutionContext = null;
 				}
 			}
 		}
 	}
 	
-	public void executeScript(File file) throws ScriptException
+	public void executeScript(Path sourceFile) throws Exception
 	{
-		final String name = file.getName();
-		final int lastIndex = name.lastIndexOf('.');
-		String extension;
-		if (lastIndex == -1)
+		if (sourceFile == null)
 		{
-			throw new ScriptException("Script file (" + name + ") doesnt has an extension that identifies the ScriptEngine to be used.");
-		}
-		extension = name.substring(lastIndex + 1);
-		final ScriptEngine engine = getEngineByExtension(extension);
-		if (engine == null)
-		{
-			throw new ScriptException("No engine registered for extension (" + extension + ")");
-		}
-		executeScript(engine, file);
-	}
-	
-	public void executeScript(ScriptEngine engine, File file) throws ScriptException
-	{
-		{
-			final String name = file.getAbsolutePath() + ".error.log";
-			final File errorLog = new File(name);
-			if (errorLog.isFile())
-			{
-				errorLog.delete();
-			}
+			throw new NullPointerException();
 		}
 		
-		final String relativeName = file.getAbsolutePath().substring(SCRIPT_FOLDER.getAbsolutePath().length() + 1).replace('\\', '/');
-		try (FileInputStream fis = new FileInputStream(file);
-			InputStreamReader isr = new InputStreamReader(fis);
-			BufferedReader reader = new BufferedReader(isr))
+		if (!sourceFile.isAbsolute())
 		{
-			final ScriptContext context = new SimpleScriptContext();
-			context.setAttribute("mainClass", getClassForFile(file).replace('/', '.').replace('\\', '.'), ScriptContext.ENGINE_SCOPE);
-			context.setAttribute(ScriptEngine.FILENAME, relativeName, ScriptContext.ENGINE_SCOPE);
-			context.setAttribute("classpath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
-			context.setAttribute("sourcepath", SCRIPT_FOLDER.getAbsolutePath(), ScriptContext.ENGINE_SCOPE);
-			setCurrentLoadingScript(file);
-			try
-			{
-				engine.eval(reader, context);
-			}
-			finally
-			{
-				setCurrentLoadingScript(null);
-				engine.getContext().removeAttribute(ScriptEngine.FILENAME, ScriptContext.ENGINE_SCOPE);
-				engine.getContext().removeAttribute("mainClass", ScriptContext.ENGINE_SCOPE);
-			}
+			sourceFile = SCRIPT_FOLDER.resolve(sourceFile);
 		}
-		catch (IOException e)
+		
+		// throws exception if not exists or not file
+		checkExistingFile("ScriptFile", sourceFile);
+		
+		sourceFile = sourceFile.toAbsolutePath();
+		String ext = getFileExtension(sourceFile);
+		if (ext == null)
 		{
-			_log.log(Level.WARNING, "Error executing script!", e);
+			throw new Exception("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
 		}
-	}
-	
-	public static String getClassForFile(File script)
-	{
-		final String path = script.getAbsolutePath();
-		final String scpPath = SCRIPT_FOLDER.getAbsolutePath();
-		return path.startsWith(scpPath) ? path.substring(scpPath.length() + 1, path.lastIndexOf('.')) : null;
-	}
-	
-	public ScriptContext getScriptContext(ScriptEngine engine)
-	{
-		return engine.getContext();
-	}
-	
-	public Object eval(ScriptEngine engine, String script, ScriptContext context) throws ScriptException
-	{
-		if (!(engine instanceof Compilable) || !ATTEMPT_COMPILATION)
+		
+		IExecutionContext engine = getEngineByExtension(ext);
+		if (engine == null)
 		{
-			return context != null ? engine.eval(script, context) : engine.eval(script);
+			throw new Exception("ScriptEngine: No engine registered for extension " + ext + "!");
 		}
-		final Compilable eng = (Compilable) engine;
-		final CompiledScript cs = eng.compile(script);
-		return context != null ? cs.eval(context) : cs.eval();
-	}
-	
-	public Object eval(ScriptEngine engine, String script) throws ScriptException
-	{
-		return eval(engine, script, null);
-	}
-	
-	public void reportScriptFileError(File script, ScriptException e)
-	{
-		final String dir = script.getParent();
-		if (dir != null)
+		
+		_currentExecutionContext = engine;
+		try
 		{
-			final File file = new File(dir + "/" + script.getName() + ".error.log");
-			try (FileOutputStream fos = new FileOutputStream(file))
+			Entry<Path, Throwable> error = engine.executeScript(sourceFile);
+			if (error != null)
 			{
-				final String errorHeader = "Error on: " + file.getCanonicalPath() + Config.EOL + "Line: " + e.getLineNumber() + " - Column: " + e.getColumnNumber() + Config.EOL + Config.EOL;
-				fos.write(errorHeader.getBytes());
-				fos.write(e.getMessage().getBytes());
-				_log.warning("Failed executing script: " + script.getAbsolutePath() + ". See " + file.getName() + " for details.");
-			}
-			catch (IOException ioe)
-			{
-				_log.log(Level.WARNING, "Failed executing script: " + script.getAbsolutePath() + Config.EOL + e.getMessage() + "Additionally failed when trying to write an error report on script directory. Reason: " + ioe.getMessage(), ioe);
+				throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());
 			}
 		}
-		else
+		finally
 		{
-			_log.log(Level.WARNING, "Failed executing script: " + script.getAbsolutePath() + Config.EOL + e.getMessage() + "Additionally failed when trying to write an error report on script directory.", e);
+			_currentExecutionContext = null;
 		}
 	}
 	
-	public void registerScriptManager(ScriptManager<?> manager)
+	protected Path getCurrentLoadingScript()
 	{
-		_scriptManagers.add(manager);
+		return _currentExecutionContext.getCurrentExecutingScript();
 	}
 	
-	public void removeScriptManager(ScriptManager<?> manager)
+	public static L2ScriptEngineManager getInstance()
 	{
-		_scriptManagers.remove(manager);
-	}
-	
-	public List<ScriptManager<?>> getScriptManagers()
-	{
-		return _scriptManagers;
-	}
-	
-	/**
-	 * @param currentLoadingScript The currentLoadingScript to set.
-	 */
-	protected void setCurrentLoadingScript(File currentLoadingScript)
-	{
-		_currentLoadingScript = currentLoadingScript;
-	}
-	
-	/**
-	 * @return Returns the currentLoadingScript.
-	 */
-	public File getCurrentLoadingScript()
-	{
-		return _currentLoadingScript;
+		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder

@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -26,14 +24,13 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
-import com.l2jmobius.gameserver.scripting.ScriptManager;
 import com.l2jmobius.util.Util;
 
 /**
  * Quests and scripts manager.
  * @author Zoey76
  */
-public final class QuestManager extends ScriptManager<Quest>
+public final class QuestManager
 {
 	protected static final Logger _log = Logger.getLogger(QuestManager.class.getName());
 	
@@ -93,9 +90,9 @@ public final class QuestManager extends ScriptManager<Quest>
 		
 		try
 		{
-			L2ScriptEngineManager.getInstance().executeScriptList(new File(Config.DATAPACK_ROOT, "scripts.cfg"));
+			L2ScriptEngineManager.getInstance().executeScriptList();
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading scripts.cfg, no script going to be loaded!", e);
 		}
@@ -216,24 +213,16 @@ public final class QuestManager extends ScriptManager<Quest>
 		return _quests;
 	}
 	
-	@Override
 	public boolean unload(Quest ms)
 	{
 		ms.saveGlobalData();
 		return removeScript(ms);
 	}
 	
-	@Override
-	public String getScriptManagerName()
-	{
-		return getClass().getSimpleName();
-	}
-	
 	/**
 	 * Gets all the registered scripts.
 	 * @return all the scripts
 	 */
-	@Override
 	public Map<String, Quest> getScripts()
 	{
 		return _scripts;

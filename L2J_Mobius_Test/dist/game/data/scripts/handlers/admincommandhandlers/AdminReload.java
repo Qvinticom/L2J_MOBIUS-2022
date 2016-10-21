@@ -18,8 +18,8 @@ package handlers.admincommandhandlers;
 
 import java.io.File;
 import java.util.StringTokenizer;
-
-import javax.script.ScriptException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -55,6 +55,8 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class AdminReload implements IAdminCommandHandler
 {
+	private static final Logger LOGGER = Logger.getLogger(AdminReload.class.getName());
+	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_reload"
@@ -217,31 +219,29 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "effect":
 				{
-					final File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/EffectMasterHandler.java");
 					try
 					{
-						L2ScriptEngineManager.getInstance().executeScript(file);
-						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Effects.");
+						L2ScriptEngineManager.getInstance().executeEffectMasterHandler();
+						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded effect master handler.");
 					}
-					catch (ScriptException e)
+					catch (Exception e)
 					{
-						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
-						activeChar.sendMessage("There was an error while loading handlers.");
+						LOGGER.log(Level.WARNING, "Failed executing effect master handler!", e);
+						activeChar.sendMessage("Error reloading effect master handler!");
 					}
 					break;
 				}
 				case "handler":
 				{
-					final File file = new File(L2ScriptEngineManager.SCRIPT_FOLDER, "handlers/MasterHandler.java");
 					try
 					{
-						L2ScriptEngineManager.getInstance().executeScript(file);
-						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Handlers.");
+						L2ScriptEngineManager.getInstance().executeMasterHandler();
+						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded master handler.");
 					}
-					catch (ScriptException e)
+					catch (Exception e)
 					{
-						L2ScriptEngineManager.getInstance().reportScriptFileError(file, e);
-						activeChar.sendMessage("There was an error while loading handlers.");
+						LOGGER.log(Level.WARNING, "Failed executing master handler!", e);
+						activeChar.sendMessage("Error reloading master handler!");
 					}
 					break;
 				}

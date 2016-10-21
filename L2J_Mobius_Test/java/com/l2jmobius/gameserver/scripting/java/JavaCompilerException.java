@@ -14,34 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.scripting;
-
-import java.util.Map;
-
-import com.l2jmobius.gameserver.model.events.AbstractScript;
+package com.l2jmobius.gameserver.scripting.java;
 
 /**
- * @author KenM
- * @param <S>
+ * @author HorridoJoho
  */
-public abstract class ScriptManager<S extends AbstractScript>
+public final class JavaCompilerException extends RuntimeException
 {
-	public abstract Map<String, S> getScripts();
+	private static final long serialVersionUID = -8330513514176036095L;
 	
-	public boolean reload(S ms)
+	public JavaCompilerException(String diagnostics)
 	{
-		return ms.reload();
+		super(diagnostics);
 	}
-	
-	public boolean unload(S ms)
-	{
-		return ms.unload();
-	}
-	
-	public void setActive(S ms, boolean status)
-	{
-		ms.setActive(status);
-	}
-	
-	public abstract String getScriptManagerName();
 }
