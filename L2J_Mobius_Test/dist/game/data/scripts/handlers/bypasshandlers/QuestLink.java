@@ -175,17 +175,7 @@ public class QuestLink implements IBypassHandler
 		}
 		else
 		{
-			int questId = quest.getId();
-			if (questId > 10000)
-			{
-				questId -= 5000;
-			}
-			else if (questId == 146)
-			{
-				questId = 640;
-			}
-			
-			StringUtil.append(sb, "<fstring>", String.valueOf(questId), state, "</fstring>");
+			StringUtil.append(sb, "<fstring>", String.valueOf(quest.getNpcStringId()), state, "</fstring>");
 		}
 		sb.append("</button></font>");
 	}

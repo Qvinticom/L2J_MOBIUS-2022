@@ -24,6 +24,9 @@ import com.l2jmobius.gameserver.instancemanager.JumpManager;
 import com.l2jmobius.gameserver.instancemanager.JumpManager.JumpWay;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventDispatcher;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
+import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExFlyMove;
@@ -46,7 +49,6 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	private int _originY;
 	private int _originZ;
 	
-	@SuppressWarnings("unused")
 	private int _moveMovement;
 	
 	@Override
@@ -101,6 +103,16 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		// sort of incompatibility fix.
 		// Validate position packets sends head level.
 		_targetZ += activeChar.getTemplate().getCollisionHeight();
+		
+		if (_moveMovement == 1)
+		{
+			final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerMoveRequest(activeChar, new Location(_targetX, _targetY, _targetZ)), activeChar, TerminateReturn.class);
+			if ((terminate != null) && terminate.terminate())
+			{
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+		}
 		
 		if (activeChar.getTeleMode() > 0)
 		{

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.engines.items;
 
 import java.io.File;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -106,7 +107,7 @@ public final class DocumentItem extends DocumentBase
 		_currentItem.set.set("name", itemName);
 		_currentItem.set.set("additionalName", additionalName);
 		
-		final Node first = n.getFirstChild();
+		Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
 		{
 			if ("table".equalsIgnoreCase(n.getNodeName()))
@@ -133,9 +134,9 @@ public final class DocumentItem extends DocumentBase
 			else if ("cond".equalsIgnoreCase(n.getNodeName()))
 			{
 				makeItem();
-				final Condition condition = parseCondition(n.getFirstChild(), _currentItem.item);
-				final Node msg = n.getAttributes().getNamedItem("msg");
-				final Node msgId = n.getAttributes().getNamedItem("msgId");
+				Condition condition = parseCondition(n.getFirstChild(), _currentItem.item);
+				Node msg = n.getAttributes().getNamedItem("msg");
+				Node msgId = n.getAttributes().getNamedItem("msgId");
 				if ((condition != null) && (msg != null))
 				{
 					condition.setMessage(msg.getNodeValue());
@@ -143,7 +144,8 @@ public final class DocumentItem extends DocumentBase
 				else if ((condition != null) && (msgId != null))
 				{
 					condition.setMessageId(Integer.decode(getValue(msgId.getNodeValue(), null)));
-					if ((n.getAttributes().getNamedItem("addName") != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
+					Node addName = n.getAttributes().getNamedItem("addName");
+					if ((addName != null) && (Integer.decode(getValue(msgId.getNodeValue(), null)) > 0))
 					{
 						condition.addName();
 					}
@@ -157,13 +159,17 @@ public final class DocumentItem extends DocumentBase
 	
 	private void makeItem() throws InvocationTargetException
 	{
+		// If item exists just reload the data.
 		if (_currentItem.item != null)
 		{
-			return; // item is already created
+			_currentItem.item.set(_currentItem.set);
+			return;
 		}
+		
 		try
 		{
-			_currentItem.item = (L2Item) Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class).newInstance(_currentItem.set);
+			final Constructor<?> itemClass = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
+			_currentItem.item = (L2Item) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{

@@ -47,7 +47,11 @@ public final class QuestManager
 	public boolean reload(String questFolder)
 	{
 		final Quest q = getQuest(questFolder);
-		return (q != null) && q.reload();
+		if (q == null)
+		{
+			return false;
+		}
+		return q.reload();
 	}
 	
 	/**
@@ -58,7 +62,11 @@ public final class QuestManager
 	public boolean reload(int questId)
 	{
 		final Quest q = getQuest(questId);
-		return (q != null) && q.reload();
+		if (q == null)
+		{
+			return false;
+		}
+		return q.reload();
 	}
 	
 	/**
@@ -110,20 +118,20 @@ public final class QuestManager
 	}
 	
 	/**
-	 * Calls {@link Quest#saveGlobalData()} in all quests and scripts.
+	 * Calls {@link Quest#onSave()} in all quests and scripts.
 	 */
 	public void save()
 	{
 		// Save quests.
 		for (Quest quest : _quests.values())
 		{
-			quest.saveGlobalData();
+			quest.onSave();
 		}
 		
 		// Save scripts.
 		for (Quest script : _scripts.values())
 		{
-			script.saveGlobalData();
+			script.onSave();
 		}
 	}
 	
@@ -135,7 +143,11 @@ public final class QuestManager
 	 */
 	public Quest getQuest(String name)
 	{
-		return _quests.containsKey(name) ? _quests.get(name) : _scripts.get(name);
+		if (_quests.containsKey(name))
+		{
+			return _quests.get(name);
+		}
+		return _scripts.get(name);
 	}
 	
 	/**
@@ -180,11 +192,13 @@ public final class QuestManager
 		{
 			old.unload();
 			_log.info(getClass().getSimpleName() + ": Replaced quest " + old.getName() + " (" + old.getId() + ") with a new version!");
+			
 		}
 		
 		if (Config.ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS)
 		{
-			_log.info("Loaded quest " + Util.splitWords(quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName()) + ".");
+			final String questName = quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName();
+			_log.info("Loaded quest " + Util.splitWords(questName) + ".");
 		}
 	}
 	
@@ -215,7 +229,7 @@ public final class QuestManager
 	
 	public boolean unload(Quest ms)
 	{
-		ms.saveGlobalData();
+		ms.onSave();
 		return removeScript(ms);
 	}
 	

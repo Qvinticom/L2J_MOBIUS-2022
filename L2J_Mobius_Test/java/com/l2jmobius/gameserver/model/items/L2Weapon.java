@@ -40,19 +40,19 @@ import com.l2jmobius.util.StringUtil;
  */
 public final class L2Weapon extends L2Item
 {
-	private final WeaponType _type;
-	private final boolean _isMagicWeapon;
-	private final int _rndDam;
-	private final int _soulShotCount;
-	private final int _spiritShotCount;
-	private final int _mpConsume;
-	private final int _baseAttackRange;
-	private final int _baseAttackAngle;
+	private  WeaponType _type;
+	private  boolean _isMagicWeapon;
+	private  int _rndDam;
+	private  int _soulShotCount;
+	private  int _spiritShotCount;
+	private  int _mpConsume;
+	private  int _baseAttackRange;
+	private  int _baseAttackAngle;
 	/**
 	 * Skill that activates when item is enchanted +4 (for duals).
 	 */
 	private SkillHolder _enchant4Skill = null;
-	private final int _changeWeaponId;
+	private  int _changeWeaponId;
 	
 	// Attached skills for Special Abilities
 	private SkillHolder _skillsOnMagic;
@@ -60,15 +60,15 @@ public final class L2Weapon extends L2Item
 	private SkillHolder _skillsOnCrit;
 	private Condition _skillsOnCritCondition = null;
 	
-	private final int _reducedSoulshot;
-	private final int _reducedSoulshotChance;
+	private  int _reducedSoulshot;
+	private  int _reducedSoulshotChance;
 	
-	private final int _reducedMpConsume;
-	private final int _reducedMpConsumeChance;
+	private  int _reducedMpConsume;
+	private  int _reducedMpConsumeChance;
 	
-	private final boolean _isForceEquip;
-	private final boolean _isAttackWeapon;
-	private final boolean _useWeaponSkillsOnly;
+	private  boolean _isForceEquip;
+	private  boolean _isAttackWeapon;
+	private  boolean _useWeaponSkillsOnly;
 	
 	/**
 	 * Constructor for Weapon.
@@ -77,6 +77,12 @@ public final class L2Weapon extends L2Item
 	public L2Weapon(StatsSet set)
 	{
 		super(set);
+	}
+	
+	@Override
+	public void set(StatsSet set)
+	{
+		super.set(set);
 		_type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
 		_type1 = L2Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;
 		_type2 = L2Item.TYPE2_WEAPON;

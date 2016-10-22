@@ -21,6 +21,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -29,6 +30,7 @@ import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.ServiceLoader;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -170,7 +172,7 @@ public final class ScriptEngineManager
 		checkExistingFile("ScriptList", SCRIPT_LIST_FILE);
 		
 		final Map<IExecutionContext, List<Path>> files = new LinkedHashMap<>();
-		final List<String> extWithoutEngine = new LinkedList<>();
+		final Set<String> extWithoutEngine = new HashSet<>();
 		
 		Files.lines(SCRIPT_LIST_FILE).forEach(line ->
 		{
@@ -202,21 +204,14 @@ public final class ScriptEngineManager
 			final IExecutionContext engine = getEngineByExtension(ext);
 			if (engine == null)
 			{
-				if (!extWithoutEngine.contains(ext))
+				if (extWithoutEngine.add(ext))
 				{
-					extWithoutEngine.add(ext);
 					_log.warning("ScriptEngine: No engine registered for extension " + ext + "!");
 				}
 				return;
 			}
 			
-			List<Path> ll = files.get(engine);
-			if (ll == null)
-			{
-				ll = new LinkedList<>();
-				files.put(engine, ll);
-			}
-			ll.add(sourceFile);
+			files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
 		});
 		
 		for (Entry<IExecutionContext, List<Path>> entry : files.entrySet())

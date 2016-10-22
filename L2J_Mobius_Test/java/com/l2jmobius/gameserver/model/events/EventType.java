@@ -62,6 +62,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerKarma
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPKChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPChanged;
@@ -221,6 +222,7 @@ public enum EventType
 	ON_PLAYER_LOGIN(OnPlayerLogin.class, void.class),
 	ON_PLAYER_LOGOUT(OnPlayerLogout.class, void.class),
 	ON_PLAYER_PK_CHANGED(OnPlayerPKChanged.class, void.class),
+	ON_PLAYER_MOVE_REQUEST(OnPlayerMoveRequest.class, void.class, TerminateReturn.class),
 	ON_PLAYER_PROFESSION_CHANGE(OnPlayerProfessionChange.class, void.class),
 	ON_PLAYER_CHANGE_TO_AWAKENED_CLASS(OnPlayerChangeToAwakenedClass.class, void.class),
 	ON_PLAYER_PVP_CHANGED(OnPlayerPvPChanged.class, void.class),

@@ -106,6 +106,11 @@ public abstract class AbstractHtmlPacket extends L2GameServerPacket
 		_html = _html.replaceAll(pattern, value.replaceAll("\\$", "\\\\\\$"));
 	}
 	
+	public final void replace(String pattern, CharSequence value)
+	{
+		replace(pattern, String.valueOf(value));
+	}
+	
 	public final void replace(String pattern, boolean val)
 	{
 		replace(pattern, String.valueOf(val));

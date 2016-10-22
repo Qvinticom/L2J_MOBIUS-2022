@@ -125,7 +125,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			QuestManager.getInstance().addScript(this);
 		}
 		
-		loadGlobalData();
+		onLoad();
 	}
 	
 	/**
@@ -151,17 +151,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * Children of this class can implement this function in order to define what variables to load and what structures to save them in.<br>
 	 * By default, nothing is loaded.
 	 */
-	protected void loadGlobalData()
+	protected void onLoad()
 	{
 	}
 	
 	/**
-	 * The function saveGlobalData is, by default, called at shutdown, for all quests, by the QuestManager.<br>
+	 * The function onSave is, by default, called at shutdown, for all quests, by the QuestManager.<br>
 	 * Children of this class can implement this function in order to convert their structures<br>
 	 * into <var, value> tuples and make calls to save them to the database, if needed.<br>
 	 * By default, nothing is saved.
 	 */
-	public void saveGlobalData()
+	public void onSave()
 	{
 	}
 	
@@ -173,6 +173,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public int getId()
 	{
 		return _questId;
+	}
+	
+	/**
+	 * @return the NpcStringId of the current quest, used in Quest link bypass
+	 */
+	public int getNpcStringId()
+	{
+		return _questId > 10000 ? _questId - 5000 : _questId;
 	}
 	
 	/**
@@ -2679,7 +2687,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public boolean unload(boolean removeFromList)
 	{
-		saveGlobalData();
+		onSave();
 		// cancel all pending timers before reloading.
 		// if timers ought to be restarted, the quest can take care of it
 		// with its code (example: save global data indicating what timer must be restarted).

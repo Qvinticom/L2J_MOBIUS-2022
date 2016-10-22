@@ -27,6 +27,8 @@
 	<admin command="admin_config_server" accessLevel="100" />
 	<admin command="admin_gmon" accessLevel="100" />
 	<admin command="admin_worldchat" accessLevel="100" />
+	<admin command="admin_zones" accessLevel="100"/>
+	<admin command="admin_pointpicking" accessLevel="100"/>
 
 	<!-- ADMIN ANNOUNCEMENTS -->
 	<admin command="admin_announce" accessLevel="100" />

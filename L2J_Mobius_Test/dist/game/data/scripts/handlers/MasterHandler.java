@@ -130,6 +130,7 @@ import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminWall;
 import handlers.admincommandhandlers.AdminZone;
+import handlers.admincommandhandlers.AdminZones;
 import handlers.bypasshandlers.AlternateClassMaster;
 import handlers.bypasshandlers.ArcanCityMovie;
 import handlers.bypasshandlers.Augment;
@@ -383,6 +384,7 @@ public final class MasterHandler
 			AdminPetition.class,
 			AdminPForge.class,
 			AdminPledge.class,
+			AdminZones.class,
 			AdminPolymorph.class,
 			AdminPremium.class,
 			AdminPrimePoints.class,

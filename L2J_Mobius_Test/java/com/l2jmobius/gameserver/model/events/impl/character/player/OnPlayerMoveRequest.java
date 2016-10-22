@@ -14,27 +14,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.enums;
+package com.l2jmobius.gameserver.model.events.impl.character.player;
+
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 
 /**
  * @author UnAfraid
  */
-public enum PlayerAction
+public class OnPlayerMoveRequest implements IBaseEvent
 {
-	ADMIN_COMMAND,
-	ADMIN_POINT_PICKING,
-	ADMIN_SHOW_TERRITORY,
-	USER_ENGAGE;
+	private final L2PcInstance _activeChar;
+	private final Location _location;
 	
-	private final int _mask;
-	
-	private PlayerAction()
+	public OnPlayerMoveRequest(L2PcInstance activeChar, Location loc)
 	{
-		_mask = 1 << ordinal();
+		_activeChar = activeChar;
+		_location = loc;
 	}
 	
-	public int getMask()
+	public L2PcInstance getActiveChar()
 	{
-		return _mask;
+		return _activeChar;
+	}
+	
+	public Location getLocation()
+	{
+		return _location;
+	}
+	
+	@Override
+	public EventType getType()
+	{
+		return EventType.ON_PLAYER_MOVE_REQUEST;
 	}
 }
