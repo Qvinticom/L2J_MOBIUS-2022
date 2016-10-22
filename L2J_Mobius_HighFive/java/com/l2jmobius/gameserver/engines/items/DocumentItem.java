@@ -72,7 +72,6 @@ public final class DocumentItem extends DocumentBase
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
 					if ("item".equalsIgnoreCase(d.getNodeName()))
@@ -159,14 +158,17 @@ public final class DocumentItem extends DocumentBase
 	
 	private void makeItem() throws InvocationTargetException
 	{
+		// If item exists just reload the data.
 		if (_currentItem.item != null)
 		{
-			return; // item is already created
+			_currentItem.item.set(_currentItem.set);
+			return;
 		}
+		
 		try
 		{
-			final Constructor<?> c = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
-			_currentItem.item = (L2Item) c.newInstance(_currentItem.set);
+			final Constructor<?> itemClass = Class.forName("com.l2jmobius.gameserver.model.items.L2" + _currentItem.type).getConstructor(StatsSet.class);
+			_currentItem.item = (L2Item) itemClass.newInstance(_currentItem.set);
 		}
 		catch (Exception e)
 		{

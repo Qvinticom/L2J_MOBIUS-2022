@@ -107,40 +107,40 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
 	
-	private final int _itemId;
-	private final int _displayId;
-	private final String _name;
-	private final String _icon;
-	private final int _weight;
-	private final boolean _stackable;
-	private final MaterialType _materialType;
-	private final CrystalType _crystalType;
-	private final int _equipReuseDelay;
-	private final int _duration;
-	private final int _time;
-	private final int _autoDestroyTime;
-	private final int _bodyPart;
-	private final int _referencePrice;
-	private final int _crystalCount;
-	private final boolean _sellable;
-	private final boolean _dropable;
-	private final boolean _destroyable;
-	private final boolean _tradeable;
-	private final boolean _depositable;
-	private final int _enchantable;
-	private final boolean _elementable;
-	private final boolean _questItem;
-	private final boolean _freightable;
-	private final boolean _allow_self_resurrection;
-	private final boolean _is_oly_restricted;
-	private final boolean _for_npc;
-	private final boolean _common;
-	private final boolean _heroItem;
-	private final boolean _pvpItem;
-	private final boolean _immediate_effect;
-	private final boolean _ex_immediate_effect;
-	private final int _defaultEnchantLevel;
-	private final ActionType _defaultAction;
+	private int _itemId;
+	private int _displayId;
+	private String _name;
+	private String _icon;
+	private int _weight;
+	private boolean _stackable;
+	private MaterialType _materialType;
+	private CrystalType _crystalType;
+	private int _equipReuseDelay;
+	private int _duration;
+	private int _time;
+	private int _autoDestroyTime;
+	private int _bodyPart;
+	private int _referencePrice;
+	private int _crystalCount;
+	private boolean _sellable;
+	private boolean _dropable;
+	private boolean _destroyable;
+	private boolean _tradeable;
+	private boolean _depositable;
+	private int _enchantable;
+	private boolean _elementable;
+	private boolean _questItem;
+	private boolean _freightable;
+	private boolean _allow_self_resurrection;
+	private boolean _is_oly_restricted;
+	private boolean _for_npc;
+	private boolean _common;
+	private boolean _heroItem;
+	private boolean _pvpItem;
+	private boolean _immediate_effect;
+	private boolean _ex_immediate_effect;
+	private int _defaultEnchantLevel;
+	private ActionType _defaultAction;
 	
 	protected int _type1; // needed for item list (inventory)
 	protected int _type2; // different lists for armor, weapon, etc
@@ -150,9 +150,9 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private SkillHolder[] _skillHolder;
 	private SkillHolder _unequipSkill = null;
 	
-	private final int _useSkillDisTime;
-	private final int _reuseDelay;
-	private final int _sharedReuseGroup;
+	private int _useSkillDisTime;
+	private int _reuseDelay;
+	private int _sharedReuseGroup;
 	
 	/**
 	 * Constructor of the L2Item that fill class variables.<BR>
@@ -160,6 +160,11 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	 * @param set : StatsSet corresponding to a set of couples (key,value) for description of the item
 	 */
 	protected L2Item(StatsSet set)
+	{
+		set(set);
+	}
+	
+	public void set(StatsSet set)
 	{
 		_itemId = set.getInt("item_id");
 		_displayId = set.getInt("displayId", _itemId);

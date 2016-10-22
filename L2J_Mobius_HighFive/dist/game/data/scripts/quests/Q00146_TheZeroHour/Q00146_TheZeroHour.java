@@ -47,6 +47,12 @@ public class Q00146_TheZeroHour extends Quest
 	}
 	
 	@Override
+	public int getNpcStringId()
+	{
+		return 640;
+	}
+	
+	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);

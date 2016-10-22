@@ -26,6 +26,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 import java.util.StringJoiner;
+import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -991,5 +992,17 @@ public final class Util
 			}
 		}
 		return false;
+	}
+	
+	public static int parseNextInt(StringTokenizer st, int defaultVal)
+	{
+		try
+		{
+			return Integer.parseInt(st.nextToken().trim());
+		}
+		catch (Exception e)
+		{
+			return defaultVal;
+		}
 	}
 }
