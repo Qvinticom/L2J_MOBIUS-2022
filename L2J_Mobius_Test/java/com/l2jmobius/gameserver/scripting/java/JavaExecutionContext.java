@@ -20,6 +20,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.Map;
@@ -223,13 +224,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 	@Override
 	public Entry<Path, Throwable> executeScript(final Path sourcePath) throws Exception
 	{
-		@SuppressWarnings("serial")
-		Map<Path, Throwable> executionFailures = executeScripts(new LinkedList<Path>()
-		{
-			{
-				add(sourcePath);
-			}
-		});
+		final Map<Path, Throwable> executionFailures = executeScripts(Arrays.asList(sourcePath));
 		if (!executionFailures.isEmpty())
 		{
 			return executionFailures.entrySet().iterator().next();
