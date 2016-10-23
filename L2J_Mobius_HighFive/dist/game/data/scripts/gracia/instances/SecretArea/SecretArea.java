@@ -16,66 +16,48 @@
  */
 package gracia.instances.SecretArea;
 
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 
-import ai.npc.AbstractNpcAI;
+import instances.AbstractInstance;
 
 /**
  * Secret Area in the Keucereus Fortress instance zone.
  * @author Gladicek
  */
-public final class SecretArea extends AbstractNpcAI
+public final class SecretArea extends AbstractInstance
 {
-	protected class SAWorld extends InstanceWorld
-	{
-		
-	}
-	
-	private static final int TEMPLATE_ID = 117;
+	// NPCs
 	private static final int GINBY = 32566;
 	private static final int LELRIKIA = 32567;
-	private static final int ENTER = 0;
-	private static final int EXIT = 1;
+	// Locations
 	private static final Location[] TELEPORTS =
 	{
 		new Location(-23758, -8959, -5384),
 		new Location(-185057, 242821, 1576)
 	};
+	// Misc
+	private static final int TEMPLATE_ID = 117;
+	private static final int ENTER = 0;
+	private static final int EXIT = 1;
 	
 	public SecretArea()
 	{
-		super(SecretArea.class.getSimpleName(), "gracia/instances");
+		super(SecretArea.class.getSimpleName());
 		addStartNpc(GINBY);
 		addTalkId(GINBY);
 		addTalkId(LELRIKIA);
 	}
 	
-	protected void enterInstance(L2PcInstance player)
+	@Override
+	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-		
-		if (world != null)
+		if (firstEntrance)
 		{
-			if (world instanceof SAWorld)
-			{
-				teleportPlayer(player, TELEPORTS[ENTER], world.getInstanceId());
-				return;
-			}
-			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
-			return;
+			world.addAllowed(player.getObjectId());
 		}
-		
-		world = new SAWorld();
-		world.setInstanceId(InstanceManager.getInstance().createDynamicInstance("SecretArea.xml"));
-		world.setTemplateId(TEMPLATE_ID);
-		world.addAllowed(player.getObjectId());
-		world.setStatus(0);
-		InstanceManager.getInstance().addWorld(world);
 		teleportPlayer(player, TELEPORTS[ENTER], world.getInstanceId());
 	}
 	
@@ -85,7 +67,7 @@ public final class SecretArea extends AbstractNpcAI
 		final String htmltext = getNoQuestMsg(player);
 		if ((npc.getId() == GINBY) && event.equalsIgnoreCase("enter"))
 		{
-			enterInstance(player);
+			enterInstance(player, "SecretArea.xml", TEMPLATE_ID);
 			return "32566-01.html";
 		}
 		else if ((npc.getId() == LELRIKIA) && event.equalsIgnoreCase("exit"))

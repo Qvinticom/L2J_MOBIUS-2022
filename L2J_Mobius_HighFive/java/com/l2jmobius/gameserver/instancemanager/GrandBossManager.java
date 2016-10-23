@@ -88,13 +88,9 @@ public final class GrandBossManager implements IStorable
 				info.set("loc_z", rs.getInt("loc_z"));
 				info.set("heading", rs.getInt("heading"));
 				info.set("respawn_time", rs.getLong("respawn_time"));
-				final double HP = rs.getDouble("currentHP"); // jython doesn't recognize doubles
-				final int true_HP = (int) HP; // so use java's ability to type cast
-				info.set("currentHP", true_HP); // to convert double to int
-				final double MP = rs.getDouble("currentMP");
-				final int true_MP = (int) MP;
-				info.set("currentMP", true_MP);
-				final int status = rs.getInt("status");
+				info.set("currentHP", rs.getDouble("currentHP"));
+				info.set("currentMP", rs.getDouble("currentMP"));
+				int status = rs.getInt("status");
 				_bossStatus.put(bossId, status);
 				_storedInfo.put(bossId, info);
 				_log.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status + ".");

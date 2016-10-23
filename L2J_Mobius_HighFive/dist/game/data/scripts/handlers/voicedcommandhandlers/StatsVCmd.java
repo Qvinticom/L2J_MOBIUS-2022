@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.entity.L2Event;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author Zoey76.
@@ -65,10 +64,11 @@ public class StatsVCmd implements IVoicedCommandHandler
 			return false;
 		}
 		
-		final StringBuilder replyMSG = StringUtil.startAppend(300 + (pc.getEventStatus().getKills().size() * 50), "<html><body><center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><br>Statistics for player <font color=\"LEVEL\">", pc.getName(), "</font><br>Total kills <font color=\"FF0000\">", String.valueOf(pc.getEventStatus().getKills().size()), "</font><br><br>Detailed list: <br>");
+		final StringBuilder replyMSG = new StringBuilder(300 + (pc.getEventStatus().getKills().size() * 50));
+		replyMSG.append("<html><body><center><font color=\"LEVEL\">[ L2J EVENT ENGINE ]</font></center><br><br>Statistics for player <font color=\"LEVEL\">" + pc.getName() + "</font><br>Total kills <font color=\"FF0000\">" + pc.getEventStatus().getKills().size() + "</font><br><br>Detailed list: <br>");
 		for (L2PcInstance plr : pc.getEventStatus().getKills())
 		{
-			StringUtil.append(replyMSG, "<font color=\"FF0000\">", plr.getName(), "</font><br>");
+			replyMSG.append("<font color=\"FF0000\">" + plr.getName() + "</font><br>");
 		}
 		replyMSG.append("</body></html>");
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();

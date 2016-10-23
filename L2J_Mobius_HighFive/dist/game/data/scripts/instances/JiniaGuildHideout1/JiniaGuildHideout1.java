@@ -31,11 +31,6 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  */
 public final class JiniaGuildHideout1 extends AbstractInstance
 {
-	protected class JGH1World extends InstanceWorld
-	{
-		
-	}
-	
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
@@ -56,7 +51,7 @@ public final class JiniaGuildHideout1 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 		if ((qs != null) && qs.isCond(1))
 		{
-			enterInstance(talker, new JGH1World(), "JiniaGuildHideout1.xml", TEMPLATE_ID);
+			enterInstance(talker, "JiniaGuildHideout1.xml", TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

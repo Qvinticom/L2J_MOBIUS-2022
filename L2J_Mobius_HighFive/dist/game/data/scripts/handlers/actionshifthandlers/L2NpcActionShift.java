@@ -57,7 +57,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
 		// Check if the L2PcInstance is a GM
-		if (activeChar.getAccessLevel().isGm())
+		if (activeChar.isGM())
 		{
 			// Set the target of the L2PcInstance activeChar
 			activeChar.setTarget(target);

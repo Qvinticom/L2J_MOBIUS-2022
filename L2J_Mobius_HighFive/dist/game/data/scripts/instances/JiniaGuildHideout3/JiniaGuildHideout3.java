@@ -31,11 +31,6 @@ import quests.Q10286_ReunionWithSirra.Q10286_ReunionWithSirra;
  */
 public final class JiniaGuildHideout3 extends AbstractInstance
 {
-	protected class JGH3World extends InstanceWorld
-	{
-		
-	}
-	
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
@@ -56,7 +51,7 @@ public final class JiniaGuildHideout3 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 		if ((qs != null) && qs.isMemoState(1))
 		{
-			enterInstance(talker, new JGH3World(), "JiniaGuildHideout3.xml", TEMPLATE_ID);
+			enterInstance(talker, "JiniaGuildHideout3.xml", TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

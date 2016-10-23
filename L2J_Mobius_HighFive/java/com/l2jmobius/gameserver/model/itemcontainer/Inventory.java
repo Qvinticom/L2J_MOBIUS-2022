@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
-import com.l2jmobius.util.StringUtil;
+import com.l2jmobius.util.Util;
 
 /**
  * This class manages inventory
@@ -1325,7 +1325,7 @@ public abstract class Inventory extends ItemContainer
 				break;
 			default:
 				_log.info("Unhandled slot type: " + slot);
-				_log.info(StringUtil.getTraceString(Thread.currentThread().getStackTrace()));
+				_log.info(Util.getTraceString(Thread.currentThread().getStackTrace()));
 		}
 		if (pdollSlot >= 0)
 		{

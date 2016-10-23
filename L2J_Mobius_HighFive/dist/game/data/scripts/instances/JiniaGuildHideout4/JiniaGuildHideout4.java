@@ -31,11 +31,6 @@ import quests.Q10287_StoryOfThoseLeft.Q10287_StoryOfThoseLeft;
  */
 public final class JiniaGuildHideout4 extends AbstractInstance
 {
-	protected class JGH4World extends InstanceWorld
-	{
-		
-	}
-	
 	// NPC
 	private static final int RAFFORTY = 32020;
 	// Location
@@ -56,7 +51,7 @@ public final class JiniaGuildHideout4 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10287_StoryOfThoseLeft.class.getSimpleName());
 		if ((qs != null) && qs.isMemoState(1))
 		{
-			enterInstance(talker, new JGH4World(), "JiniaGuildHideout4.xml", TEMPLATE_ID);
+			enterInstance(talker, "JiniaGuildHideout4.xml", TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

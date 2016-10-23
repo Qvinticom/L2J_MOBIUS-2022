@@ -34,11 +34,6 @@ import instances.AbstractInstance;
  */
 public final class PailakaSongOfIceAndFire extends AbstractInstance
 {
-	protected class PSoIWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// NPCs
 	private static final int ADLER1 = 32497;
 	private static final int GARGOS = 18607;
@@ -85,7 +80,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 		{
 			case "enter":
 			{
-				enterInstance(player, new PSoIWorld(), "PailakaSongOfIceAndFire.xml", TEMPLATE_ID);
+				enterInstance(player, "PailakaSongOfIceAndFire.xml", TEMPLATE_ID);
 				break;
 			}
 			case "GARGOS_LAUGH":

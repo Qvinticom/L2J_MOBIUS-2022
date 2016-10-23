@@ -41,7 +41,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class handles following admin commands: - admin = shows menu
@@ -227,7 +226,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				
 				final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 				
-				final String replyMSG = StringUtil.concat("<html><title>[ L2J EVENT ENGINE ]</title><body><br>", "<center>The event <font color=\"LEVEL\">", L2Event._eventName, "</font> has been announced, now you can type //event_panel to see the event panel control</center><br>", "</body></html>");
+				final String replyMSG = "<html><title>[ EVENT ENGINE ]</title><body><br><center>The event <font color=\"LEVEL\">" + L2Event._eventName + "</font> has been announced, now you can type //event_panel to see the event panel control</center><br></body></html>";
 				adminReply.setHtml(replyMSG);
 				activeChar.sendPacket(adminReply);
 			}
@@ -465,7 +464,15 @@ public class AdminEventEngine implements IAdminCommandHandler
 		result.append("<table>");
 		for (String fileName : files)
 		{
-			StringUtil.append(result, "<tr><td align=center>", fileName, " </td></tr><tr><td><table cellspacing=0><tr><td><button value=\"Select Event\" action=\"bypass -h admin_event_set ", fileName, "\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"View Event\" action=\"bypass -h admin_event_see ", fileName, "\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Delete Event\" action=\"bypass -h admin_event_del ", fileName, "\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></td></tr>", "<tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>");
+			result.append("<tr><td align=center>");
+			result.append(fileName);
+			result.append(" </td></tr><tr><td><table cellspacing=0><tr><td><button value=\"Select Event\" action=\"bypass -h admin_event_set ");
+			result.append(fileName);
+			result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"View Event\" action=\"bypass -h admin_event_see ");
+			result.append(fileName);
+			result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td><button value=\"Delete Event\" action=\"bypass -h admin_event_del ");
+			result.append(fileName);
+			result.append("\" width=90 height=20 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table></td></tr><tr><td>&nbsp;</td></tr><tr><td>&nbsp;</td></tr>");
 		}
 		
 		result.append("</table>");
@@ -477,7 +484,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		
-		final String replyMSG = StringUtil.concat("<html><title>[ L2J EVENT ENGINE ]</title><body><br><center><button value=\"Create NEW event \" action=\"bypass -h admin_event_new\" width=150 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><center><br><font color=LEVEL>Stored Events:</font><br></center>", showStoredEvents(), "</body></html>");
+		final String replyMSG = "<html><title>[ L2J EVENT ENGINE ]</title><body><br><center><button value=\"Create NEW event \" action=\"bypass -h admin_event_new\" width=150 height=32 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><center><br><font color=LEVEL>Stored Events:</font><br></center>" + showStoredEvents() + "</body></html>";
 		adminReply.setHtml(replyMSG);
 		activeChar.sendPacket(adminReply);
 	}
@@ -486,7 +493,8 @@ public class AdminEventEngine implements IAdminCommandHandler
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		
-		final StringBuilder replyMSG = StringUtil.startAppend(500, "<html><title>[ L2J EVENT ENGINE ]</title><body><br><br><center><font color=LEVEL>Event name:</font><br>");
+		final StringBuilder replyMSG = new StringBuilder(512);
+		replyMSG.append("<html><title>[ L2J EVENT ENGINE ]</title><body><br><br><center><font color=LEVEL>Event name:</font><br>");
 		
 		if (tempName.isEmpty())
 		{

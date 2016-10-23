@@ -56,7 +56,6 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class ...
@@ -374,10 +373,10 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					if ((subsAvailable != null) && !subsAvailable.isEmpty())
 					{
 						html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_Add.htm");
-						final StringBuilder content1 = StringUtil.startAppend(200);
+						final StringBuilder content1 = new StringBuilder(200);
 						for (PlayerClass subClass : subsAvailable)
 						{
-							StringUtil.append(content1, "<a action=\"bypass -h npc_%objectId%_Subclass 4 ", String.valueOf(subClass.ordinal()), "\" msg=\"1268;", ClassListData.getInstance().getClass(subClass.ordinal()).getClassName(), "\">", ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode(), "</a><br>");
+							content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 " + String.valueOf(subClass.ordinal()) + "\" msg=\"1268;" + ClassListData.getInstance().getClass(subClass.ordinal()).getClassName() + "\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content1.toString());
 					}
@@ -408,10 +407,10 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					}
 					else
 					{
-						final StringBuilder content2 = StringUtil.startAppend(200);
+						final StringBuilder content2 = new StringBuilder(200);
 						if (checkVillageMaster(player.getBaseClass()))
 						{
-							StringUtil.append(content2, "<a action=\"bypass -h npc_%objectId%_Subclass 5 0\">", ClassListData.getInstance().getClass(player.getBaseClass()).getClientCode(), "</a><br>");
+							content2.append("<a action=\"bypass -h npc_%objectId%_Subclass 5 0\">" + ClassListData.getInstance().getClass(player.getBaseClass()).getClientCode() + "</a><br>");
 						}
 						
 						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
@@ -419,7 +418,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 							final SubClass subClass = subList.next();
 							if (checkVillageMaster(subClass.getClassDefinition()))
 							{
-								StringUtil.append(content2, "<a action=\"bypass -h npc_%objectId%_Subclass 5 ", String.valueOf(subClass.getClassIndex()), "\">", ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode(), "</a><br>");
+								content2.append("<a action=\"bypass -h npc_%objectId%_Subclass 5 " + String.valueOf(subClass.getClassIndex()) + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
 							}
 						}
 						
@@ -445,14 +444,14 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					if (player.getTotalSubClasses() > 3)
 					{
 						html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyCustom.htm");
-						final StringBuilder content3 = StringUtil.startAppend(200);
+						final StringBuilder content3 = new StringBuilder(200);
 						int classIndex = 1;
 						
 						for (Iterator<SubClass> subList = iterSubClasses(player); subList.hasNext();)
 						{
 							final SubClass subClass = subList.next();
 							
-							StringUtil.append(content3, "Sub-class ", String.valueOf(classIndex++), "<br>", "<a action=\"bypass -h npc_%objectId%_Subclass 6 ", String.valueOf(subClass.getClassIndex()), "\">", ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode(), "</a><br>");
+							content3.append("Sub-class " + String.valueOf(classIndex++) + "<br><a action=\"bypass -h npc_%objectId%_Subclass 6 " + String.valueOf(subClass.getClassIndex()) + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content3.toString());
 					}
@@ -611,10 +610,10 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						return;
 					}
 					
-					final StringBuilder content6 = StringUtil.startAppend(200);
+					final StringBuilder content6 = new StringBuilder(200);
 					for (PlayerClass subClass : subsAvailable)
 					{
-						StringUtil.append(content6, "<a action=\"bypass -h npc_%objectId%_Subclass 7 ", String.valueOf(paramOne), " ", String.valueOf(subClass.ordinal()), "\" msg=\"1445;", "\">", ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode(), "</a><br>");
+						content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 " + String.valueOf(paramOne) + " " + String.valueOf(subClass.ordinal()) + "\" msg=\"1445;\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
 					}
 					
 					switch (paramOne)

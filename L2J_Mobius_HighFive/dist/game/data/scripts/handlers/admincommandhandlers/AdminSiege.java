@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class handles all siege commands.
@@ -350,7 +349,7 @@ public class AdminSiege implements IAdminCommandHandler
 			if (castle != null)
 			{
 				final String name = castle.getName();
-				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_siege ", name, "\">", name, "</a></td>");
+				cList.append("<td fixwidth=90><a action=\"bypass -h admin_siege " + name + "\">" + name + "</a></td>");
 				i++;
 			}
 			if (i > 2)
@@ -366,7 +365,7 @@ public class AdminSiege implements IAdminCommandHandler
 		{
 			if (hall != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_chsiege_siegablehall ", String.valueOf(hall.getId()), "\">", hall.getName(), "</a></td>");
+				cList.append("<td fixwidth=90><a action=\"bypass -h admin_chsiege_siegablehall " + String.valueOf(hall.getId()) + "\">" + hall.getName() + "</a></td>");
 				i++;
 			}
 			if (i > 1)
@@ -382,7 +381,7 @@ public class AdminSiege implements IAdminCommandHandler
 		{
 			if (clanhall != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=134><a action=\"bypass -h admin_clanhall ", String.valueOf(clanhall.getId()), "\">", clanhall.getName(), "</a></td>");
+				cList.append("<td fixwidth=134><a action=\"bypass -h admin_clanhall " + String.valueOf(clanhall.getId()) + "\">" + clanhall.getName() + "</a></td>");
 				i++;
 			}
 			if (i > 1)
@@ -398,7 +397,7 @@ public class AdminSiege implements IAdminCommandHandler
 		{
 			if (clanhall != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=134><a action=\"bypass -h admin_clanhall ", String.valueOf(clanhall.getId()), "\">", clanhall.getName(), "</a></td>");
+				cList.append("<td fixwidth=134><a action=\"bypass -h admin_clanhall " + String.valueOf(clanhall.getId()) + "\">" + clanhall.getName() + "</a></td>");
 				i++;
 			}
 			if (i > 1)

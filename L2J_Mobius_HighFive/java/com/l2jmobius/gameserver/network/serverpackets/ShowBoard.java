@@ -18,8 +18,6 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import com.l2jmobius.util.StringUtil;
-
 public class ShowBoard extends L2GameServerPacket
 {
 	private final String _content;
@@ -32,7 +30,7 @@ public class ShowBoard extends L2GameServerPacket
 	
 	public ShowBoard(List<String> arg)
 	{
-		final StringBuilder builder = new StringBuilder(5 + StringUtil.getLength(arg) + arg.size()).append("1002\u0008");
+		StringBuilder builder = new StringBuilder(256).append("1002\u0008");
 		for (String str : arg)
 		{
 			builder.append(str).append("\u0008");

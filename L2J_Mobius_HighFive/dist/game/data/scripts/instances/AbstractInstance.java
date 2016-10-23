@@ -19,6 +19,7 @@ package instances;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
+import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
@@ -42,6 +43,8 @@ import ai.npc.AbstractNpcAI;
  */
 public abstract class AbstractInstance extends AbstractNpcAI
 {
+	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
+	
 	public AbstractInstance(String name, String desc)
 	{
 		super(name, desc);
@@ -50,6 +53,11 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	public AbstractInstance(String name)
 	{
 		super(name, "instances");
+	}
+	
+	protected void enterInstance(L2PcInstance player, String template, int templateId)
+	{
+		enterInstance(player, new InstanceWorld(), template, templateId);
 	}
 	
 	protected void enterInstance(L2PcInstance player, InstanceWorld instance, String template, int templateId)
@@ -72,7 +80,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			return;
 		}
 		
-		if (checkConditions(player, templateId))
+		if (checkConditions(player))
 		{
 			instance.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
 			instance.setTemplateId(templateId);
@@ -187,11 +195,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	}
 	
 	protected abstract void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance);
-	
-	protected boolean checkConditions(L2PcInstance player, int templateId)
-	{
-		return checkConditions(player);
-	}
 	
 	protected boolean checkConditions(L2PcInstance player)
 	{

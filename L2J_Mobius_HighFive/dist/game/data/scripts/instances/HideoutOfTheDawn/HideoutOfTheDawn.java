@@ -30,11 +30,6 @@ import instances.AbstractInstance;
  */
 public final class HideoutOfTheDawn extends AbstractInstance
 {
-	protected class HotDWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// NPCs
 	private static final int WOOD = 32593;
 	private static final int JAINA = 32617;
@@ -58,7 +53,7 @@ public final class HideoutOfTheDawn extends AbstractInstance
 		{
 			case WOOD:
 			{
-				enterInstance(talker, new HotDWorld(), "HideoutOfTheDawn.xml", TEMPLATE_ID);
+				enterInstance(talker, "HideoutOfTheDawn.xml", TEMPLATE_ID);
 				return "32593-01.htm";
 			}
 			case JAINA:

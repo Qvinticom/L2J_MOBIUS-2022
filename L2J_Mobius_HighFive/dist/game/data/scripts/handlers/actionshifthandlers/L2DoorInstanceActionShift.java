@@ -29,7 +29,7 @@ public class L2DoorInstanceActionShift implements IActionShiftHandler
 	@Override
 	public boolean action(L2PcInstance activeChar, L2Object target, boolean interact)
 	{
-		if (activeChar.getAccessLevel().isGm())
+		if (activeChar.isGM())
 		{
 			activeChar.setTarget(target);
 			final L2DoorInstance door = (L2DoorInstance) target;

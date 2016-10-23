@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.enums.ShortcutType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IRestorable;
 import com.l2jmobius.gameserver.network.serverpackets.SendMacroList;
-import com.l2jmobius.util.StringUtil;
 
 public class MacroList implements IRestorable
 {
@@ -141,10 +140,10 @@ public class MacroList implements IRestorable
 			final StringBuilder sb = new StringBuilder(300);
 			for (MacroCmd cmd : macro.getCommands())
 			{
-				StringUtil.append(sb, String.valueOf(cmd.getType().ordinal()), ",", String.valueOf(cmd.getD1()), ",", String.valueOf(cmd.getD2()));
+				sb.append(cmd.getType().ordinal() + "," + cmd.getD1() + "," + cmd.getD2());
 				if ((cmd.getCmd() != null) && (cmd.getCmd().length() > 0))
 				{
-					StringUtil.append(sb, ",", cmd.getCmd());
+					sb.append("," + cmd.getCmd());
 				}
 				sb.append(';');
 			}

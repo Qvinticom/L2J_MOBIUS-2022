@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class ...
@@ -273,7 +272,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 						}
 						if (validateClassId(currentClassId, cid) && (cid.level() == level))
 						{
-							StringUtil.append(menu, "<a action=\"bypass -h npc_%objectId%_change_class ", String.valueOf(cid.getId()), "\">", ClassListData.getInstance().getClass(cid).getClientCode(), "</a><br>");
+							menu.append("<a action=\"bypass -h npc_%objectId%_change_class " + cid.getId() + "\">" + ClassListData.getInstance().getClass(cid).getClientCode() + "</a><br>");
 						}
 					}
 					
@@ -329,7 +328,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			}
 			if (validateClassId(currentClassId, cid))
 			{
-				StringUtil.append(menu, "<a action=\"link CO", String.valueOf(cid.getId()), "\">", ClassListData.getInstance().getClass(cid).getEscapedClientCode(), "</a><br>");
+				menu.append("<a action=\"link CO" + cid.getId() + "\">" + ClassListData.getInstance().getClass(cid).getEscapedClientCode() + "</a><br>");
 			}
 		}
 		

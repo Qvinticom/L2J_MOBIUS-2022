@@ -35,10 +35,6 @@ import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
  */
 public final class ElcadiasTent extends AbstractInstance
 {
-	protected class ETWorld extends InstanceWorld
-	{
-	}
-	
 	// NPCs
 	private static final int ELCADIA = 32784;
 	private static final int GRUFF_LOOKING_MAN = 32862;
@@ -71,7 +67,7 @@ public final class ElcadiasTent extends AbstractInstance
 				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)) //
 				|| ((PowerOfSeal != null) && PowerOfSeal.isStarted()))
 			{
-				enterInstance(talker, new ETWorld(), "ElcadiasTent.xml", TEMPLATE_ID);
+				enterInstance(talker, "ElcadiasTent.xml", TEMPLATE_ID);
 			}
 			else
 			{

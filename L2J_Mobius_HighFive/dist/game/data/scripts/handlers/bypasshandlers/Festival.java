@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.StringUtil;
 
 public class Festival implements IBypassHandler
 {
@@ -208,8 +207,8 @@ public class Festival implements IBypassHandler
 					}
 					break;
 				case 4: // Current High Scores
-					final StringBuilder strBuffer = StringUtil.startAppend(500, "<html><body>Festival Guide:<br>These are the top scores of the week, for the ");
-					
+					final StringBuilder strBuffer = new StringBuilder(500);
+					strBuffer.append("<html><body>Festival Guide:<br>These are the top scores of the week, for the ");
 					final StatsSet dawnData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, npc.getFestivalType());
 					final StatsSet duskData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, npc.getFestivalType());
 					final StatsSet overallData = SevenSignsFestival.getInstance().getOverallHighestScoreData(npc.getFestivalType());
@@ -224,11 +223,11 @@ public class Festival implements IBypassHandler
 						overallScore = overallData.getInt("score");
 					}
 					
-					StringUtil.append(strBuffer, SevenSignsFestival.getFestivalName(npc.getFestivalType()), " festival.<br>");
+					strBuffer.append(SevenSignsFestival.getFestivalName(npc.getFestivalType()) + " festival.<br>");
 					
 					if (dawnScore > 0)
 					{
-						StringUtil.append(strBuffer, "Dawn: ", calculateDate(dawnData.getString("date")), ". Score ", String.valueOf(dawnScore), "<br>", dawnData.getString("members"), "<br>");
+						strBuffer.append("Dawn: " + calculateDate(dawnData.getString("date")) + ". Score " + String.valueOf(dawnScore) + "<br>" + dawnData.getString("members") + "<br>");
 					}
 					else
 					{
@@ -237,7 +236,7 @@ public class Festival implements IBypassHandler
 					
 					if (duskScore > 0)
 					{
-						StringUtil.append(strBuffer, "Dusk: ", calculateDate(duskData.getString("date")), ". Score ", String.valueOf(duskScore), "<br>", duskData.getString("members"), "<br>");
+						strBuffer.append("Dusk: " + calculateDate(duskData.getString("date")) + ". Score " + String.valueOf(duskScore) + "<br>" + duskData.getString("members") + "<br>");
 					}
 					else
 					{
@@ -256,14 +255,14 @@ public class Festival implements IBypassHandler
 							cabalStr = "Children of Dusk";
 						}
 						
-						StringUtil.append(strBuffer, "Consecutive top scores: ", calculateDate(overallData.getString("date")), ". Score ", String.valueOf(overallScore), "<br>Affilated side: ", cabalStr, "<br>", overallData.getString("members"), "<br>");
+						strBuffer.append("Consecutive top scores: " + calculateDate(overallData.getString("date")) + ". Score " + String.valueOf(overallScore) + "<br>Affilated side: " + cabalStr + "<br>" + overallData.getString("members") + "<br>");
 					}
 					else
 					{
 						strBuffer.append("Consecutive top scores: No record exists. Score 0<br>");
 					}
 					
-					StringUtil.append(strBuffer, "<a action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Chat 0\">Go back.</a></body></html>");
+					strBuffer.append("<a action=\"bypass -h npc_" + String.valueOf(npc.getObjectId()) + "_Chat 0\">Go back.</a></body></html>");
 					
 					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setHtml(strBuffer.toString());

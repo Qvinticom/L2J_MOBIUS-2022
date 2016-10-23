@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * Small typo fix by Zoey76 24/02/2011
@@ -138,22 +137,26 @@ public class AdminZone implements IAdminCommandHandler
 			{
 				if (zone.getName() != null)
 				{
-					StringUtil.append(zones, zone.getName() + "<br1>");
+					zones.append(zone.getName());
+					zones.append("<br1>");
 					if (zone.getId() < 300000)
 					{
-						StringUtil.append(zones, "(", String.valueOf(zone.getId()), ")");
+						zones.append("(");
+						zones.append(zone.getId());
+						zones.append(")");
 					}
 				}
 				else
 				{
-					StringUtil.append(zones, String.valueOf(zone.getId()));
+					zones.append(zone.getId());
 				}
-				StringUtil.append(zones, " ");
+				zones.append(" ");
 			}
 		}
 		for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 		{
-			StringUtil.append(zones, territory.getName() + "<br1>");
+			zones.append(territory.getName());
+			zones.append("<br1>");
 		}
 		adminReply.replace("%ZLIST%", zones.toString());
 		activeChar.sendPacket(adminReply);

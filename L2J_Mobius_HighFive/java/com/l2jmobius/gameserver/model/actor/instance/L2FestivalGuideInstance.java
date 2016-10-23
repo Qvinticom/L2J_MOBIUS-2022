@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * Festival of Darkness Guide (Seven Signs)
@@ -226,7 +225,7 @@ public final class L2FestivalGuideInstance extends L2Npc
 				winningCabal = "None";
 			}
 			
-			StringUtil.append(tableHtml, "<tr><td width=\"100\" align=\"center\">", festivalName, "</td><td align=\"center\" width=\"35\">", String.valueOf(duskScore), "</td><td align=\"center\" width=\"35\">", String.valueOf(dawnScore), "</td><td align=\"center\" width=\"130\">", winningCabal, "</td></tr>");
+			tableHtml.append("<tr><td width=\"100\" align=\"center\">" + festivalName + "</td><td align=\"center\" width=\"35\">" + String.valueOf(duskScore) + "</td><td align=\"center\" width=\"35\">" + String.valueOf(dawnScore) + "</td><td align=\"center\" width=\"130\">" + winningCabal + "</td></tr>");
 		}
 		
 		return tableHtml.toString();
@@ -242,7 +241,7 @@ public final class L2FestivalGuideInstance extends L2Npc
 			final int accumScore = SevenSignsFestival.getInstance().getAccumulatedBonus(i);
 			final String festivalName = SevenSignsFestival.getFestivalName(i);
 			
-			StringUtil.append(tableHtml, "<tr><td align=\"center\" width=\"150\">", festivalName, "</td><td align=\"center\" width=\"150\">", String.valueOf(accumScore), "</td></tr>");
+			tableHtml.append("<tr><td align=\"center\" width=\"150\">" + festivalName + "</td><td align=\"center\" width=\"150\">" + String.valueOf(accumScore) + "</td></tr>");
 		}
 		
 		return tableHtml.toString();
