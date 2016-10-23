@@ -16,27 +16,22 @@
  */
 package com.l2jmobius.log.formatter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author Advi
  */
-public class ItemLogFormatter extends Formatter
+public class ItemLogFormatter extends AbstractFormatter
 {
-	private final SimpleDateFormat dateFmt = new SimpleDateFormat("dd MMM H:mm:ss");
-	
 	@Override
 	public String format(LogRecord record)
 	{
 		final Object[] params = record.getParameters();
-		final StringBuilder output = StringUtil.startAppend(30 + record.getMessage().length() + (params.length * 50), "[", dateFmt.format(new Date(record.getMillis())), "] ", record.getMessage());
+		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
+		output.append(super.format(record));
 		
 		for (Object p : record.getParameters())
 		{
@@ -47,20 +42,25 @@ public class ItemLogFormatter extends Formatter
 			output.append(", ");
 			if (p instanceof L2ItemInstance)
 			{
-				final L2ItemInstance item = (L2ItemInstance) p;
-				StringUtil.append(output, "item ", String.valueOf(item.getObjectId()), ":");
+				L2ItemInstance item = (L2ItemInstance) p;
+				output.append("item ");
+				output.append(item.getObjectId());
+				output.append(":");
 				if (item.getEnchantLevel() > 0)
 				{
-					StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");
+					output.append("+");
+					output.append(item.getEnchantLevel());
+					output.append(" ");
 				}
 				
-				StringUtil.append(output, item.getItem().getName(), "(", String.valueOf(item.getCount()), ")");
+				output.append(item.getItem().getName());
+				output.append("(");
+				output.append(item.getCount());
+				output.append(")");
 			}
-			// else if (p instanceof L2PcInstance)
-			// output.append(((L2PcInstance)p).getName());
 			else
 			{
-				output.append(p.toString()/* + ":" + ((L2Object)p).getObjectId() */);
+				output.append(p);
 			}
 		}
 		output.append(Config.EOL);

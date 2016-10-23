@@ -38,10 +38,6 @@ public final class JiniaGuildHideout4 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 146;
 	
-	class JGH4World extends InstanceWorld
-	{
-	}
-	
 	public JiniaGuildHideout4()
 	{
 		super(JiniaGuildHideout4.class.getSimpleName());
@@ -55,7 +51,7 @@ public final class JiniaGuildHideout4 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10287_StoryOfThoseLeft.class.getSimpleName());
 		if ((qs != null) && qs.isMemoState(1))
 		{
-			enterInstance(talker, new JGH4World(), "JiniaGuildHideout4.xml", TEMPLATE_ID);
+			enterInstance(talker, "JiniaGuildHideout4.xml", TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

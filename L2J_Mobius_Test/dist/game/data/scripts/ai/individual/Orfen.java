@@ -127,8 +127,8 @@ public final class Orfen extends AbstractNpcAI
 			final int loc_y = info.getInt("loc_y");
 			final int loc_z = info.getInt("loc_z");
 			final int heading = info.getInt("heading");
-			final int hp = info.getInt("currentHP");
-			final int mp = info.getInt("currentMP");
+			double hp = info.getDouble("currentHP");
+			double mp = info.getDouble("currentMP");
 			final L2GrandBossInstance orfen = (L2GrandBossInstance) addSpawn(ORFEN, loc_x, loc_y, loc_z, heading, false, 0);
 			orfen.setCurrentHpMp(hp, mp);
 			spawnBoss(orfen);

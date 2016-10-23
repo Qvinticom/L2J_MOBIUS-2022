@@ -1171,31 +1171,29 @@
 	<skill id="13061" levels="1" name="Special Ability: Long Blow">
 		<!-- Increases bow/crossbow range. Inflicts additional damage during PvP. -->
 		<set name="icon" val="icon.skill0113" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pAtkRange" val="50">
-					<!--<mul stat="pvpPhysDmg" val="1.05" />
-					<mul stat="pvpPhysSkillsDmg" val="1.05" />
-					<mul stat="pvpMagicalDmg" val="1.05" />-->
-					<using kind="BOW" />
-				</add>
+				<add stat="pAtkRange" val="50" />
+				<mul stat="pvpPhysDmg" val="1.05" />
+				<mul stat="pvpPhysSkillsDmg" val="1.05" />
+				<mul stat="pvpMagicalDmg" val="1.05" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="13062" levels="5" name="Special Ability: Damage Up">
+		<!-- Increases P. Atk. Inflicts additional damage during PvP. -->
+		<table name="#pAtk"> 288 332 377 415 600 </table>
 		<table name="#magicLvl"> 85 85 95 99 99 </table>
-		<table name="#Atk">288 332 377 415 457</table>
 		<set name="icon" val="icon.skill1068" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="pAtk" val="#Atk" />
-				<add stat="mAtk" val="#Atk" />
+				<add stat="pAtk" val="#pAtk" />
 				<mul stat="pvpPhysDmg" val="1.05" />
 				<mul stat="pvpPhysSkillsDmg" val="1.05" />
 				<mul stat="pvpMagicalDmg" val="1.05" />
@@ -1205,294 +1203,251 @@
 	<skill id="13063" levels="1" name="Cloak Slot Activation (R-grade)">
 		<!-- Opens a cloak slot. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
-		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="85" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13064" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (Defense Type)">
-		<!-- CON + 1 and HP + 463. -->
-		<!-- CON + 1 and HP + 463. Chance of receiving a critical attack - 3.3%. Stun Resistance + 5. -->
-		<!-- CON + 1 and HP + 463. Chance of receiving a critical attack - 3.3%. Stun Resistance + 5. M. Def. + 38. -->
-		<!-- CON + 1 and HP + 463. Chance of receiving a critical attack - 3.3%. Stun Resistance + 5. M. Def. + 38. P. Def. + 7% and additional + 77. Resistance to 4 attributes + 10. -->
-		<table name="#defCritRate"> 1 1.033 1.033 1.033 </table>
-		<table name="#Trait"> 0 5 5 5 </table>
+	<skill id="13064" levels="4" name="Immortal Heavy Armor 2 Piece (Defense Type)">
+		<table name="#defCritRate"> 1.0 0.967 0.967 0.967 </table>
+		<table name="#stunRes"> 0 5 5 5 </table>
 		<table name="#mDef"> 0 0 38 38 </table>
+		<table name="#pDef"> 0 0 0 77 </table>
 		<table name="#pDefMul"> 1 1 1 1.07 </table>
-		<table name="#pDefAdd"> 0 0 0 77 </table>
-		<table name="#resist"> 0 0 0 10 </table>
-		<set name="icon" val="icon.armor_t501_u_i00" />
-		<set name="magicLvl" val="85" />
+		<table name="#elements"> 0 0 0 10 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="CON" val="1" />
 				<add stat="maxHp" val="463" />
-				<mul stat="defCritRate" val="#defCritRate" />
 				<add stat="mDef" val="#mDef" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<mul stat="defCritRate" val="#defCritRate" />
 				<mul stat="pDef" val="#pDefMul" />
-				<add stat="pDef" val="#pDefAdd" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="#Trait" />
+				<param SHOCK="#stunRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13065" levels="4" name="Set Effect - Immortal Heavy Armor 2 Piece (Attack Type)">
-		<!-- STR + 1 -->
-		<!-- STR + 1, Critical damage + 209, Hold Resistance + 5. -->
-		<!-- STR + 1, Critical damage + 209, Hold Resistance + 5, HP + 463. -->
-		<!-- STR + 1, Critical damage + 209, Hold Resistance + 5. P. Atk. + 155, P. Def. + 7%. HP + 463, resistance to 4 attributes + 10. -->
-		<table name="#cAtkAdd"> 0 209 209 209 </table>
-		<table name="#Trait"> 0 5 5 5 </table>
+	<skill id="13065" levels="4" name="Immortal Heavy Armor 2 Piece (Attack Type)">
 		<table name="#maxHp"> 0 0 463 463 </table>
-		<table name="#pAtk"> 0 0 0 155 </table>
-		<table name="#pDef"> 1 1 1 1.07 </table>
-		<table name="#resist"> 0 0 0 10 </table>
-		<set name="icon" val="icon.armor_t501_u_i00" />
-		<set name="magicLvl" val="85" />
+		<table name="#holdRes"> 0 5 5 5 </table>
+		<table name="#pAtk"> 0 0 0 115 </table>
+		<table name="#pDefMul"> 1 1 1 1.07 </table>
+		<table name="#critDmgAdd"> 0 209 209 209 </table>
+		<table name="#elements"> 0 0 0 10 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="1" />
-				<add stat="critDmgAdd" val="#cAtkAdd" />
 				<add stat="maxHp" val="#maxHp" />
 				<add stat="pAtk" val="#pAtk" />
-				<mul stat="pDef" val="#pDef" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<add stat="critDmgAdd" val="#critDmgAdd" />
+				<mul stat="pDef" val="#pDefMul" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="#Trait" />
+				<param HOLD="#holdRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13066" levels="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Defense Type)">
-		<!-- CON + 2, STR -1, HP + 487. -->
-		<!-- CON + 2, STR -1, HP + 487. MP + 202, Stun Resistance + 7. -->
-		<!-- CON + 2, STR -1, HP + 487. MP + 202, Stun Resistance + 7. M. Def. + 44. -->
-		<!-- CON + 2, STR -1, HP + 487. MP + 202, Stun Resistance + 7. M. Def. + 44. P. Def. + 7% and additional + 87, resistance to 4 attributes + 10. -->
+	<skill id="13066" levels="4" name="Twilight Heavy Armor 2 Piece (Defense Type)">
+		<table name="#defCritRate"> 1.0 0.967 0.967 0.967 </table>
+		<table name="#stunRes"> 0 7 7 7 </table>
 		<table name="#maxMp"> 0 202 202 202 </table>
-		<table name="#Trait"> 0 7 7 7 </table>
 		<table name="#mDef"> 0 0 44 44 </table>
+		<table name="#pDef"> 0 0 0 87 </table>
 		<table name="#pDefMul"> 1 1 1 1.07 </table>
-		<table name="#pDefAdd"> 0 0 0 87 </table>
-		<table name="#resist"> 0 0 0 10 </table>
-		<set name="icon" val="icon.armor_t601_u_i00" />
-		<set name="magicLvl" val="85" />
+		<table name="#elements"> 0 0 0 10 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="CON" val="2" />
-				<sub stat="STR" val="1" />
+				<add stat="STR" val="-1" />
 				<add stat="maxHp" val="487" />
 				<add stat="maxMp" val="#maxMp" />
 				<add stat="mDef" val="#mDef" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<mul stat="defCritRate" val="#defCritRate" />
 				<mul stat="pDef" val="#pDefMul" />
-				<add stat="pDef" val="#pDefAdd" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="#Trait" />
+				<param SHOCK="#stunRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13067" levels="4" name="Set Effect - Twilight Heavy Armor 2 Piece (Attack Type)">
-		<!-- STR + 2, CON -1 -->
-		<!-- STR + 2, CON -1, Critical damage + 242, Hold Resistance + 7. -->
-		<!-- STR + 2, CON -1, Critical damage + 242, Hold Resistance + 7. MP - 4% upon skill use. -->
-		<!-- STR + 2, CON -1, Critical damage + 242, Hold Resistance + 7. P. Atk. + 180, P. Def. + 7%, MP - 4% upon skill use. Resistance to 4 attributes + 10. -->
-		<table name="#cAtkAdd"> 0 242 242 242 </table>
-		<table name="#Trait"> 0 7 7 7 </table>
-		<table name="#mpConsumeRate"> 1 1 0.96 0.96 </table>
+	<skill id="13067" levels="4" name="Twilight Heavy Armor 2 Piece (Attack Type)">
+		<table name="#maxHp"> 0 0 463 463 </table>
+		<table name="#holdRes"> 0 7 7 7 </table>
 		<table name="#pAtk"> 0 0 0 180 </table>
-		<table name="#pDef"> 1 1 1 1.07 </table>
-		<table name="#resist"> 0 0 0 10 </table>
-		<set name="icon" val="icon.armor_t601_u_i00" />
-		<set name="magicLvl" val="85" />
+		<table name="#pDefMul"> 1 1 1 1.07 </table>
+		<table name="#critDmgAdd"> 0 242 242 242 </table>
+		<table name="#elements"> 0 0 0 10 </table>
+		<table name="#mpConsum"> 1 1 1.04 1.04 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="2" />
-				<sub stat="CON" val="1" />
-				<add stat="critDmgAdd" val="#cAtkAdd" />
-				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="danceMpConsumeRate" val="#mpConsumeRate" />
+				<add stat="CON" val="-1" />
+				<add stat="maxHp" val="#maxHp" />
 				<add stat="pAtk" val="#pAtk" />
-				<mul stat="pDef" val="#pDef" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<add stat="critDmgAdd" val="#critDmgAdd" />
+				<mul stat="pDef" val="#pDefMul" />
+				<mul stat="physicalMpConsumeRate" val="#mpConsum" />
+				<mul stat="magicalMpConsumeRate" val="#mpConsum" />
+				<mul stat="danceMpConsumeRate" val="#mpConsum" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="#Trait" />
+				<param HOLD="#holdRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13068" levels="4" name="Set Effect - Seraph Heavy Armor 2 Piece (Defense Type)">
-		<!-- CON + 3, STR -2, HP + 511. -->
-		<!-- CON + 3, STR -2, HP + 511. Chance of receiving a critical attack - 3.3%. Stun Resistance + 10. -->
-		<!-- CON + 3, STR -2, HP + 511. Chance of receiving a critical attack - 3.3%. Damage upon critical attack - 281. Stun Resistance + 10. M. Def. + 50. -->
-		<!-- CON + 3, STR -2, HP + 511. Chance of receiving a critical attack - 3.3%. Stun Resistance + 10. Damage upon critical attack - 281. M. Def. + 50. P. Def. + 7% and additional + 96. Resistance to 4 attributes + 15. -->
-		<table name="#defCritRate"> 1 1.033 1.033 1.033 </table>
-		<table name="#Trait"> 0 10 10 10 </table>
-		<table name="#defCritDamage"> 0 0 281 281 </table>
+	<skill id="13068" levels="4" name="Seraph Heavy Armor 2 Piece (Defense Type)">
+		<table name="#defCritRate"> 1.0 0.967 0.967 0.967 </table>
+		<table name="#stunRes"> 0 10 10 10 </table>
+		<table name="#defCritDamageAdd"> 0 0 281 281 </table>
 		<table name="#mDef"> 0 0 50 50 </table>
+		<table name="#pDef"> 0 0 0 96 </table>
 		<table name="#pDefMul"> 1 1 1 1.07 </table>
-		<table name="#pDefAdd"> 0 0 0 96 </table>
-		<table name="#resist"> 0 0 0 15 </table>
-		<set name="icon" val="icon.armor_t401_u_i00" />
-		<set name="magicLvl" val="95" />
+		<table name="#elements"> 0 0 0 15 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="CON" val="3" />
-				<sub stat="STR" val="2" />
+				<add stat="STR" val="-2" />
 				<add stat="maxHp" val="511" />
-				<mul stat="defCritRate" val="#defCritRate" />
-				<add stat="defCritDamage" val="#defCritDamage" />
 				<add stat="mDef" val="#mDef" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<add stat="defCritDamageAdd" val="#defCritDamageAdd" />
+				<mul stat="defCritRate" val="#defCritRate" />
 				<mul stat="pDef" val="#pDefMul" />
-				<add stat="pDef" val="#pDefAdd" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="#Trait" />
+				<param SHOCK="#stunRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13069" levels="4" name="Set Effect - Seraph Heavy Armor 2 Piece (Attack Type)">
-		<!-- STR + 3, CON -2 -->
-		<!-- STR + 3, CON -2, Critical damage + 281, Hold Resistance + 10. -->
-		<!-- STR + 3, CON -2, Critical damage + 281, Hold Resistance + 10. HP + 511. Skill Power + 6%. -->
-		<!-- STR + 3, CON -2, Critical damage + 281, Hold Resistance + 10. P. Atk. + 214, P. Def. + 7%, HP + 511. Skill Power+ 6%. Resistance to 4 attributes + 15. -->
-		<table name="#cAtkAdd"> 0 281 281 281 </table>
-		<table name="#Trait"> 0 10 10 10 </table>
-		<table name="#maxHp"> 0 10 10 10 </table>
-		<table name="#physicalSkillPower"> 0 0 1.06 1.06 </table>
+	<skill id="13069" levels="4" name="Seraph Heavy Armor 2 Piece (Attack Type)">
+		<table name="#maxHp"> 0 0 511 511 </table>
+		<table name="#holdRes"> 0 10 10 10 </table>
 		<table name="#pAtk"> 0 0 0 214 </table>
-		<table name="#pDef"> 1 1 1 1.07 </table>
-		<table name="#resist"> 0 0 0 15 </table>
-		<set name="icon" val="icon.armor_t401_u_i00" />
-		<set name="magicLvl" val="95" />
+		<table name="#pDefMul"> 1 1 1 1.07 </table>
+		<table name="#critDmgAdd"> 0 242 242 242 </table>
+		<table name="#elements"> 0 0 0 15 </table>
+		<table name="#skillPower"> 1 1 1.06 1.06 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="3" />
-				<sub stat="CON" val="2" />
-				<add stat="critDmgAdd" val="#cAtkAdd" />
+				<add stat="CON" val="-2" />
 				<add stat="maxHp" val="#maxHp" />
-				<mul stat="physicalSkillPower" val="#physicalSkillPower" />
 				<add stat="pAtk" val="#pAtk" />
-				<mul stat="pDef" val="#pDef" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<add stat="critDmgAdd" val="#critDmgAdd" />
+				<mul stat="pDef" val="#pDefMul" />
+				<mul stat="physicalSkillPower" val="#skillPower" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="#Trait" />
+				<param HOLD="#holdRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13070" levels="4" name="Set Effect - Eternal Heavy Armor 2 Piece (Defense Type)">
-		<!-- CON + 3, STR -1, HP + 521. -->
-		<!-- CON + 3, STR -1, HP + 521. Chance of receiving a critical attack - 3.3%. Stun Resistance + 10. -->
-		<!-- CON + 3, STR -1, HP + 521. Chance of receiving a critical attack - 3.3%. Received heal amount + 108. Stun Resistance + 10. M. Def. + 54. -->
-		<!-- CON + 3, STR -1, HP + 521. Chance of receiving a critical attack - 3.3%. Received heal amount + 108. Stun Resistance + 10. M. Def. + 54. P. Def. + 7% and additional + 103. Resistance to 4 attributes + 15. -->
-		<table name="#defCritRate"> 1 1.033 1.033 1.033 </table>
-		<table name="#Trait"> 0 10 10 10 </table>
+	<skill id="13070" levels="4" name="Eternal Heavy Armor 2 Piece (Defense Type)">
+		<table name="#defCritRate"> 1.0 0.967 0.967 0.967 </table>
+		<table name="#stunRes"> 0 10 10 10 </table>
+		<table name="#healEffect"> 0 0 108 108 </table>
 		<table name="#mDef"> 0 0 54 54 </table>
+		<table name="#pDef"> 0 0 0 103 </table>
 		<table name="#pDefMul"> 1 1 1 1.07 </table>
-		<table name="#pDefAdd"> 0 0 0 103 </table>
-		<table name="#resist"> 0 0 0 15 </table>
-		<set name="icon" val="icon.armor_t701_u_i00" />
-		<set name="magicLvl" val="99" />
+		<table name="#elements"> 0 0 0 15 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="CON" val="3" />
-				<sub stat="STR" val="1" />
+				<add stat="STR" val="-1" />
 				<add stat="maxHp" val="521" />
-				<mul stat="defCritRate" val="#defCritRate" />
-				<!-- TODO: add stat received heal amount -->
 				<add stat="mDef" val="#mDef" />
+				<add stat="pDef" val="#pDef" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<add stat="healEffect" val="#healEffect" />
+				<mul stat="defCritRate" val="#defCritRate" />
 				<mul stat="pDef" val="#pDefMul" />
-				<add stat="pDef" val="#pDefAdd" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param SHOCK="#Trait" />
+				<param SHOCK="#stunRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
-	<skill id="13071" levels="4" name="Set Effect - Eternal Heavy Armor 2 Piece (Attack Type)">
-		<!-- STR + 3, CON -1 -->
-		<!-- STR + 3, CON -1, Critical damage + 298, Hold Resistance + 10. -->
-		<!-- STR + 3, CON -1, Critical damage + 298, Hold Resistance + 10. HP + 521. Absorbs 2% of inflicted damage as HP. -->
-		<!-- STR + 3, CON -1, Critical damage + 298, Hold Resistance + 10. P. Atk. + 246, P. Def. + 7%, HP + 521. Absorbs 2% of inflicted damage as HP with a certain probability. Resistance to 4 attributes + 15. -->
-		<table name="#cAtkAdd"> 0 298 298 298 </table>
-		<table name="#Trait"> 0 10 10 10 </table>
+	<skill id="13071" levels="4" name="Eternal Heavy Armor 2 Piece (Attack Type)">
 		<table name="#maxHp"> 0 0 521 521 </table>
-		<table name="#absorbDam"> 1 1 1.02 1.02 </table>
+		<table name="#holdRes"> 0 10 10 10 </table>
 		<table name="#pAtk"> 0 0 0 246 </table>
-		<table name="#pDef"> 1 1 1 1.07 </table>
-		<table name="#resist"> 0 0 0 15 </table>
-		<set name="icon" val="icon.armor_t701_u_i00" />
-		<set name="magicLvl" val="99" />
+		<table name="#pDefMul"> 1 1 1 1.07 </table>
+		<table name="#critDmgAdd"> 0 298 298 298 </table>
+		<table name="#elements"> 0 0 0 15 </table>
+		<table name="#absorbDam"> 1 1 1.02 1.02 </table>
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<add stat="STR" val="3" />
-				<sub stat="CON" val="1" />
-				<add stat="critDmgAdd" val="#cAtkAdd" />
+				<add stat="CON" val="-1" />
 				<add stat="maxHp" val="#maxHp" />
-				<mul stat="absorbDam" val="#absorbDam" />
 				<add stat="pAtk" val="#pAtk" />
-				<add stat="pDef" val="#pDef" />
-				<add stat="fireRes" val="#resist" />
-				<add stat="waterRes" val="#resist" />
-				<add stat="windRes" val="#resist" />
-				<add stat="earthRes" val="#resist" />
+				<add stat="fireRes" val="#elements" />
+				<add stat="waterRes" val="#elements" />
+				<add stat="windRes" val="#elements" />
+				<add stat="earthRes" val="#elements" />
+				<add stat="critDmgAdd" val="#critDmgAdd" />
+				<mul stat="pDef" val="#pDefMul" />
+				<mul stat="absorbDam" val="#absorbDam" />
 			</effect>
 			<effect name="DefenceTrait">
-				<param HOLD="#Trait" />
+				<param HOLD="#holdRes" />
 			</effect>
-			<effect name="EnableCloak" />
 		</for>
 	</skill>
 	<skill id="13072" levels="4" name="Set Effect - R99 Rare Heavy Armor 2 Piece (Defense Type)">

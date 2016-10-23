@@ -533,7 +533,11 @@ public final class QuestState
 	 */
 	public int getCond()
 	{
-		return isStarted() ? getInt("cond") : 0;
+		if (isStarted())
+		{
+			return getInt("cond");
+		}
+		return 0;
 	}
 	
 	/**
@@ -583,7 +587,11 @@ public final class QuestState
 	 */
 	public int getMemoState()
 	{
-		return isStarted() ? getInt("memoState") : 0;
+		if (isStarted())
+		{
+			return getInt("memoState");
+		}
+		return 0;
 	}
 	
 	public boolean isMemoState(int memoState)
@@ -598,7 +606,11 @@ public final class QuestState
 	 */
 	public int getMemoStateEx(int slot)
 	{
-		return isStarted() ? getInt("memoStateEx" + slot) : 0;
+		if (isStarted())
+		{
+			return getInt("memoStateEx" + slot);
+		}
+		return 0;
 	}
 	
 	/**

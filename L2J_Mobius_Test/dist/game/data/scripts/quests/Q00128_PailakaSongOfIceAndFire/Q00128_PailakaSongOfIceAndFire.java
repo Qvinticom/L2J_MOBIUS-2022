@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Instance;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -59,17 +58,10 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	private static final int HEAL_POTION = 13033;
 	private static final int FIRE_ENHANCER = 13040;
 	private static final int WATER_ENHANCER = 13041;
-	private static final int[] REWARDS =
-	{
-		13294, // Pailaka Ring
-		13293, // Pailaka Earring
-		736, // Scroll of Escape
-	};
-	// Skills
-	private static SkillHolder VITALITY_REPLENISHING = new SkillHolder(5774, 1);
+	private static final int SCROLL_OF_ESCAPE = 736;
 	// Misc
-	private static final int MIN_LEVEL = 36;
-	private static final int MAX_LEVEL = 42;
+	private static final int MIN_LEVEL = 49;
+	private static final int MAX_LEVEL = 55;
 	private static final int EXIT_TIME = 5;
 	
 	public Q00128_PailakaSongOfIceAndFire()
@@ -78,6 +70,8 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 		addStartNpc(ADLER1);
 		addTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
 		addKillId(HILLAS, PAPION, KINSUS, GARGOS, ADIANTUM);
+		addCondMinLevel(MIN_LEVEL, "32497-05.htm");
+		addCondMaxLevel(MAX_LEVEL, "32497-06.htm");
 		registerQuestItems(SWORD, ENH_SWORD1, ENH_SWORD2, BOOK1, BOOK2, BOOK3, BOOK4, BOOK5, BOOK6, BOOK7, WATER_ESSENCE, FIRE_ESSENCE, SHIELD_POTION, HEAL_POTION, FIRE_ENHANCER, WATER_ENHANCER);
 	}
 	
@@ -152,25 +146,28 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				}
 				break;
 			}
-			case "32510-02.htm":
+			case "226": // Cursed Dagger
+			case "160": // Battle Axe
+			case "72": // StormBringer
+			case "232": // Dark Elven Dagger
+			case "192": // Crystal Staff
+			case "194": // Heavy Doom Axe
+			case "263": // Chakram
+			case "193": // Stick of Faith
+			case "173": // Skill Graver
+			case "281": // Crystallized Ice Bow
+			case "298": // Orcish Glaive
+			case "71": // Flamberge
 			{
-				qs.exitQuest(false, true);
-				
 				final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 				inst.setDuration(EXIT_TIME * 60000);
 				inst.setEmptyDestroyTime(0);
-				
-				if (inst.containsPlayer(player.getObjectId()))
-				{
-					npc.setTarget(player);
-					npc.doCast(VITALITY_REPLENISHING.getSkill());
-					addExpAndSp(player, 810000, 50000);
-					for (int id : REWARDS)
-					{
-						giveItems(player, id, 1);
-					}
-				}
-				htmltext = event;
+				qs.exitQuest(false, true);
+				giveAdena(player, 187200, true);
+				addExpAndSp(player, 1860000, 446);
+				giveItems(player, SCROLL_OF_ESCAPE, 1);
+				giveItems(player, Integer.parseInt(event), 1);
+				htmltext = "32510-2.htm";
 				break;
 			}
 		}
@@ -195,18 +192,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 				{
 					case State.CREATED:
 					{
-						if (player.getLevel() < MIN_LEVEL)
-						{
-							htmltext = "32497-05.htm";
-						}
-						else if (player.getLevel() > MAX_LEVEL)
-						{
-							htmltext = "32497-06.htm";
-						}
-						else
-						{
-							htmltext = "32497-01.htm";
-						}
+						htmltext = "32497-01.htm";
 						break;
 					}
 					case State.STARTED:

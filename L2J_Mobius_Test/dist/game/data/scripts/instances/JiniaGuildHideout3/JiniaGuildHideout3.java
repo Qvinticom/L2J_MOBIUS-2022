@@ -38,10 +38,6 @@ public final class JiniaGuildHideout3 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 145;
 	
-	class JGH3World extends InstanceWorld
-	{
-	}
-	
 	public JiniaGuildHideout3()
 	{
 		super(JiniaGuildHideout3.class.getSimpleName());
@@ -55,7 +51,7 @@ public final class JiniaGuildHideout3 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 		if ((qs != null) && qs.isMemoState(1))
 		{
-			enterInstance(talker, new JGH3World(), "JiniaGuildHideout3.xml", TEMPLATE_ID);
+			enterInstance(talker, "JiniaGuildHideout3.xml", TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

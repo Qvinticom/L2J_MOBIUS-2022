@@ -54,7 +54,6 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * Hero entity.
@@ -464,19 +463,19 @@ public class Hero
 					{
 						breakat = i;
 						final StatsSet diaryEntry = list.get(i);
-						StringUtil.append(fList, "<tr><td>");
+						fList.append("<tr><td>");
 						if (color)
 						{
-							StringUtil.append(fList, "<table width=270 bgcolor=\"131210\">");
+							fList.append("<table width=270 bgcolor=\"131210\">");
 						}
 						else
 						{
-							StringUtil.append(fList, "<table width=270>");
+							fList.append("<table width=270>");
 						}
-						StringUtil.append(fList, "<tr><td width=270><font color=\"LEVEL\">" + diaryEntry.getString("date") + ":xx</font></td></tr>");
-						StringUtil.append(fList, "<tr><td width=270>" + diaryEntry.getString("action") + "</td></tr>");
-						StringUtil.append(fList, "<tr><td>&nbsp;</td></tr></table>");
-						StringUtil.append(fList, "</td></tr>");
+						fList.append("<tr><td width=270><font color=\"LEVEL\">" + diaryEntry.getString("date") + ":xx</font></td></tr>");
+						fList.append("<tr><td width=270>" + diaryEntry.getString("action") + "</td></tr>");
+						fList.append("<tr><td>&nbsp;</td></tr></table>");
+						fList.append("</td></tr>");
 						color = !color;
 						counter++;
 						if (counter >= perpage)
@@ -552,19 +551,19 @@ public class Hero
 					{
 						breakat = i;
 						final StatsSet fight = heroFights.get(i);
-						StringUtil.append(fList, "<tr><td>");
+						fList.append("<tr><td>");
 						if (color)
 						{
-							StringUtil.append(fList, "<table width=270 bgcolor=\"131210\">");
+							fList.append("<table width=270 bgcolor=\"131210\">");
 						}
 						else
 						{
-							StringUtil.append(fList, "<table width=270>");
+							fList.append("<table width=270>");
 						}
-						StringUtil.append(fList, "<tr><td width=220><font color=\"LEVEL\">" + fight.getString("start") + "</font>&nbsp;&nbsp;" + fight.getString("result") + "</td><td width=50 align=right>" + (fight.getInt("classed") > 0 ? "<font color=\"FFFF99\">cls</font>" : "<font color=\"999999\">non-cls<font>") + "</td></tr>");
-						StringUtil.append(fList, "<tr><td width=220>vs " + fight.getString("oponent") + " (" + fight.getString("oponentclass") + ")</td><td width=50 align=right>(" + fight.getString("time") + ")</td></tr>");
-						StringUtil.append(fList, "<tr><td colspan=2>&nbsp;</td></tr></table>");
-						StringUtil.append(fList, "</td></tr>");
+						fList.append("<tr><td width=220><font color=\"LEVEL\">" + fight.getString("start") + "</font>&nbsp;&nbsp;" + fight.getString("result") + "</td><td width=50 align=right>" + (fight.getInt("classed") > 0 ? "<font color=\"FFFF99\">cls</font>" : "<font color=\"999999\">non-cls<font>") + "</td></tr>");
+						fList.append("<tr><td width=220>vs " + fight.getString("oponent") + " (" + fight.getString("oponentclass") + ")</td><td width=50 align=right>(" + fight.getString("time") + ")</td></tr>");
+						fList.append("<tr><td colspan=2>&nbsp;</td></tr></table>");
+						fList.append("</td></tr>");
 						color = !color;
 						counter++;
 						if (counter >= perpage)

@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class is dedicated to the management of armors.
@@ -86,7 +85,7 @@ public final class L2Armor extends L2Item
 		catch (Exception nfe)
 		{
 			// Incorrect syntax, don't add new skill
-			_log.info(StringUtil.concat("> Couldnt parse ", skill, " in armor enchant skills! item ", toString()));
+			_log.info("> Couldnt parse " + skill + " in armor enchant skills! item " + this);
 		}
 		if ((id > 0) && (level > 0))
 		{

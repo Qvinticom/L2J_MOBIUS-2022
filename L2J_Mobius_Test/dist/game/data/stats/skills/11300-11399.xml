@@ -1055,11 +1055,23 @@
 		<set name="isMagic" val="4" />
 	</skill>
 	<skill id="11352" levels="4" name="Arcane Ability">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd., P. Def. + 3%, and PvP Damage - 3%. -->
+		<table name="#magicLvl"> 85 90 95 99 </table> <!-- TODO: get proper values -->
+		<table name="#rateUp"> 1.03 1.05 1.07 1.1 </table>
+		<table name="#rateDown"> 0.97 0.95 0.93 0.9 </table>
 		<set name="icon" val="icon.skill11277" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#rateUp" />
+				<mul stat="pDef" val="#rateUp" />
+				<mul stat="pvpPhysDef" val="#rateDown" />
+				<mul stat="pvpMagicalDef" val="#rateDown" />
+				<mul stat="pvpPhysSkillsDef" val="#rateDown" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="11353" levels="7" name="Elemental Rage">
 	<!-- Source: https://l2wiki.com/Elemental_Rage_-_Wynn_Elemental_Master -->

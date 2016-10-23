@@ -1,36 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10244" levels="3" name="True Vanguard">
+		<!-- Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%. -->
 		<table name="#magicLvl"> 85 90 95 </table>
-		<table name="#power"> 1.5 1.55 1.6 </table>
+		<table name="#pve"> 1.5 1.55 1.6 </table>
 		<set name="icon" val="icon.skill0810" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="T" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pvePhysDmg" val="#power" />
-				<mul stat="pvpPhysSkillsDmg" val="#power" />
-				<mul stat="magicalMpConsumeRate" val="1.3" />
+				<mul stat="physicalMpConsumeRate" val="1.3" />
+				<mul stat="pvePhysDmg" val="#pve" />
+				<mul stat="pvePhysSkillsDmg" val="#pve" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="10245" levels="1" name="Wizard - Individual Passive">
-		<!-- AUTO GENERATED SKILL -->
-		<set name="icon" val="icon.skill0217" />
+		<set name="magicLvl" val="85" />
 		<set name="operateType" val="P" />
+		<set name="icon" val="icon.skill0217" />
 		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="runSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10246" levels="1" name="Wizard - Individual">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Abno Type -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="icon" val="icon.skill1543" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="5000" />
 		<set name="isMagic" val="4" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10247" levels="1" name="Knight - Individual Passive">
 		<!-- AUTO GENERATED SKILL -->
@@ -39,14 +51,21 @@
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="10248" levels="1" name="Knight - Individual">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- TODO: Abno Type -->
 		<!-- Atk. Spd. + 30% for 5 seconds. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="5" />
 		<set name="icon" val="icon.skill1543" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="SELF" />
 		<set name="hitTime" val="500" />
 		<set name="reuseDelay" val="6000" />
 		<set name="isMagic" val="4" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.3" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10249" levels="1" name="Heavy Hit">
 		<!-- AUTO GENERATED SKILL -->
@@ -600,107 +619,103 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="10265" levels="11" name="Eruption" enchantGroup1="11" enchantGroup2="11" enchantGroup3="11">
-	<!-- Source: https://l2wiki.com/Eruption_-_Tyrr_Doombringer -->
+	<skill id="10265" levels="8" name="Eruption" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10" enchantGroup5="10" enchantGroup6="10" enchantGroup7="10" enchantGroup8="10">
+		<!-- TODO: Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. -->
+		<!-- Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
+		<table name="#effectPoints"> -169 -170 -171 -172 -173 -174 -175 -176 </table> <!-- Guessed -->
+		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#mpConsumes"> 122 124 129 133 137 142 146 151 </table>
 		<table name="#enchelementPower"> 30 33 36 40 43 46 50 53 56 60 </table>
-		<table name="#enchPower"> 17545 17945 18344 18743 19142 19542 19941 20340 20739 21139 21545 27945 28344 28743 29142 29542 29941 30340 30739 31139 </table>
+		<table name="#enchPower"> 17545 17945 18344 18743 19142 19542 19941 20340 20739 21139 </table>
 		<table name="#ench1MpConsume"> 144 138 132 126 120 114 108 102 96 90 </table>
-		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 101 103 105 </table>
-		<table name="#enchMagicLvl"> 98 98 98 98 98 99 99 99 99 99 </table>
-		<table name="#power"> 11557 11956 12754 13533 14351 15155 15948 16747 17896 18622 19348 </table>
-		<table name="#powerDebuff"> 30 32 34 36 38 40 42 44 46 48 50 </table>
-		<table name="#mpConsume"> 122 124 129 133 137 142 146 151 156 161 166 </table>
-		<table name="#ench9Reuse"> 4900 4800 4700 4600 4500 4400 4300 4200 4100 4000 </table> <!-- Need verify -->
-		<table name="#abnormalLvls"> 1 2 3 4 5 6 7 8 9 10 11 </table>
-		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
-		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="power" val="#power" />
-		<set name="targetType" val="AURA" />
-		<set name="hitTime" val="1390" />
-		<set name="coolTime" val="200" />
-		<set name="castRange" val="200" />
-		<set name="reuseDelay" val="5000" />
-		<set name="abnormalLvl" val="#abnormalLvls" />
+		<table name="#magicLvl"> 85 86 88 90 92 94 96 98 </table>
+		<table name="#power"> 11557 11956 12754 13533 14351 15155 15948 16747 </table>
+		<table name="#activationRate"> 30 32 34 36 38 40 42 44 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="2" />
 		<set name="abnormalType" val="STUN" />
-		<set name="abnormalVisualEffect" val="STUN" />
-		<set name="fanRange" val="0,0,80,150" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="150" />
-		<set name="overHit" val="true" />
-		<set name="trait" val="SHOCK" />
-		<set name="baseCritRate" val="7" />
-		<set name="operateType" val="A2" />
-		<set name="effectRange" val="600" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="isDebuff" val="true" />
-		<enchant1 name="power" val="#enchPower" />
-		<enchant1 name="magicLvl" val="105" />
-		<enchant2 name="magicLvl" val="105" />
-		<enchant2 name="activateRate" val="#ench2ActivateRates" />
-		<enchant3 name="magicLvl" val="105" />	
-		<enchant3for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="#enchpDef" />
-			</effect>
-		</enchant3for>
-		<cond msgId="113" addName="1">
-			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
-		</cond>
-		<for>
-			<effect name="PhysicalAttack" />
-			<effect name="RandomizeHate">
-				<param power="#powerDebuff" />
-			</effect>
-			<effect name="TargetCancel">
-				<param power="#powerDebuff" />
-			</effect>
-			<effect name="Stun">
-				<param power="#powerDebuff" />
-			</effect>
-		</for>
-	</skill>
-	<skill id="10266" levels="11" name="Giant Punch" enchantGroup1="11" enchantGroup2="11">
-	<!-- Source: https://l2wiki.com/Giant_Punch_-_Tyrr_Titan -->
-		<table name="#ench1MpConsume"> 91 87 83 79 76 72 68 64 60 57 </table>
-		<table name="#ench2Chance"> 61 62 63 64 65 66 67 68 69 70 </table>
-		<table name="#magicLvl"> 85 87 88 91 93 95 97 99 101 103 105 </table>
-		<table name="#ench4Hex"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90 </table>
-		<table name="#ench3Attack"> 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 </table> <!-- Need verify -->
-		<table name="#mpConsume"> 76 79 81 84 87 90 92 95 98 101 104 </table>
-		<table name="#ench9Reuse"> 119000 118000 117000 116000 115000 114000 113000 112000 111000 110000 </table> <!-- Need verify -->
-		<table name="#ench2ActivateRates"> 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 </table>
-		<table name="#enchpDef"> 0.95 0.94 0.93 0.92 0.91 0.9 0.89 0.88 0.87 0.86 0.85 0.84 0.84 0.83 0.83 0.82 0.82 0.81 0.81 0.8 </table>
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="element" val="3" />
-		<set name="abnormalTime" val="5" />
-		<set name="abnormalType" val="KNOCK_DOWN" />
-		<set name="abnormalVisualEffect" val="KNOCK_DOWN" />
-		<set name="fanRange" val="0,0,80,150" />
-		<set name="affectLimit" val="5-12" />
-		<set name="affectRange" val="150" />
-		<set name="hitTime" val="1000" />
-		<set name="coolTime" val="300" />
-		<set name="reuseDelay" val="120000" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="flyRadius" val="55" />
-		<set name="trait" val="KNOCKDOWN" />
-		<set name="isDebuff" val="true" />
-		<set name="magicLvl" val="#magicLvl" />
+		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="200" />
+		<set name="activateRate" val="#activationRate" />
+		<set name="baseCritRate" val="15" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="icon" val="icon.skill10265" />
+		<set name="lvlBonusRate" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="targetType" val="AURA" />
-		<enchant1 name="magicLvl" val="105" />
-		<enchant1 name="activateRate" val="#ench2ActivateRates" />
-		<enchant2 name="magicLvl" val="105" />	
-		<enchant2for>
-			<effect name="Debuff">
-				<mul stat="pDef" val="#enchpDef" />
-			</effect>
-		</enchant2for>
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="power" val="#power" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="40" />
+		<set name="hitTime" val="1390" />
+		<set name="coolTime" val="200" />
+		<set name="reuseDelay" val="5000" />
+		<set name="isDebuff" val="true" />
+		<set name="rideState" val="NONE" />
+		<set name="trait" val="SHOCK" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant1 name="power" val="#enchPower" />
+		<enchant2 name="pvpPower" val="#enchPower" />
+		<enchant3 name="element" val="0" />
+		<enchant3 name="elementPower" val="#enchelementPower" />
+		<enchant3 name="power" val="#enchPower" />
+		<enchant4 name="element" val="1" />
+		<enchant4 name="elementPower" val="#enchelementPower" />
+		<enchant4 name="power" val="#enchPower" />
+		<enchant5 name="element" val="2" />
+		<enchant5 name="elementPower" val="#enchelementPower" />
+		<enchant5 name="power" val="#enchPower" />
+		<enchant6 name="element" val="3" />
+		<enchant6 name="elementPower" val="#enchelementPower" />
+		<enchant6 name="power" val="#enchPower" />
+		<enchant7 name="element" val="4" />
+		<enchant7 name="elementPower" val="#enchelementPower" />
+		<enchant7 name="power" val="#enchPower" />
+		<enchant8 name="element" val="5" />
+		<enchant8 name="elementPower" val="#enchelementPower" />
+		<enchant8 name="power" val="#enchPower" />
 		<cond msgId="113" addName="1">
-			<using kind="SWORD, BLUNT, DUAL, DUALFIST, POLE, DUALBLUNT" />
+			<using kind="POLE, SWORD, BLUNT, DUAL, DUALFIST, DUALBLUNT" />
+		</cond>
+		<for>
+			<effect name="PhysicalAttack" />
+			<effect name="Stun" />
+		</for>
+	</skill>
+	<skill id="10266" levels="8" name="Giant Punch" enchantGroup1="10" enchantGroup2="10" enchantGroup3="10" enchantGroup4="10">
+		<!-- Strikes down at the ground with a fist to Knock Down nearby enemies for 5 sec. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. -->
+		<table name="#abnormalLvl"> 1 2 3 4 5 6 7 8 </table>
+		<table name="#ench1MpConsume"> 91 87 83 79 76 72 68 64 60 57 </table>
+		<table name="#ench2ActivateRates"> 61 62 63 64 65 66 67 68 69 70 </table>
+		<table name="#magicLvl"> 85 87 88 91 93 95 97 99 </table>
+		<table name="#ench4Hex"> 0.99 0.98 0.97 0.96 0.95 0.94 0.93 0.92 0.91 0.90 </table>
+		<table name="#ench3Power"> 3800 3900 4000 4100 4200 4300 4400 4500 4600 4700 </table>
+		<table name="#mpConsumes"> 76 79 81 84 87 90 92 95 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
+		<set name="abnormalTime" val="2" />
+		<set name="abnormalType" val="KNOCK_DOWN" />
+		<set name="affectLimit" val="6-12" />
+		<set name="affectRange" val="200" />
+		<set name="activateRate" val="50" />
+		<set name="element" val="3" />
+		<set name="elementPower" val="30" />
+		<set name="icon" val="icon.skill10266" />
+		<set name="basicProperty" val="CON" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="AURA" />
+		<set name="mpConsume" val="#mpConsumes" />
+		<set name="hitTime" val="1000" />
+		<set name="coolTime" val="300" />
+		<set name="reuseDelay" val="60000" />
+		<set name="isDebuff" val="true" />
+		<set name="trait" val="KNOCKDOWN" />
+		<set name="rideState" val="NONE" />
+		<enchant1 name="mpConsume" val="#ench1MpConsume" />
+		<enchant2 name="activateRate" val="#ench2ActivateRates" />
+		<enchant3 name="power" val="#ench3Power" />
+		<cond msgId="113" addName="1">
+			<using kind="POLE, SWORD, BLUNT, DUAL, DUALFIST, DUALBLUNT" />
 		</cond>
 		<for>
 			<effect name="KnockDown">
@@ -708,15 +723,17 @@
 			</effect>
 		</for>
 		<enchant3for>
-			<effect name="PhysicalAttack" />
 			<effect name="KnockDown">
 				<param speed="700" distance="50" />
 			</effect>
+			<effect name="PhysicalAttack" />
 		</enchant3for>
 		<enchant4for>
 			<effect name="KnockDown">
-					<param speed="700" distance="50" />
-					<mul stat="pDef" val="#ench4Hex" />
+				<param speed="700" distance="50" />
+			</effect>
+			<effect name="Debuff">
+				<mul stat="pDef" val="#ench4Hex" />
 			</effect>
 		</enchant4for>
 	</skill>
@@ -1874,12 +1891,16 @@
 		</enchant1for>
 	</skill>
 	<skill id="10298" levels="1" name="Power Revival">
-		<set name="magicLvl" val="86" />
+		<!-- Recovers all of your HP. -->
+		<set name="effectPoint" val="562" />
+		<set name="icon" val="icon.skill10298" />
 		<set name="operateType" val="A1" />
+		<set name="magicLvl" val="86" />
 		<set name="targetType" val="SELF" />
-		<set name="hitTime" val="1500" />
-		<set name="reuseDelay" val="600000" />
 		<set name="mpConsume" val="38" />
+		<set name="hitTime" val="200" />
+		<set name="reuseDelay" val="600000" />
+		<set name="rideState" val="NONE" />
 		<for>
 			<effect name="HealPercent">
 				<param power="100" />

@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30400" levels="2" name="Divine Wind">
 		<!-- Wind/Holy Resistance + 10. -->
-		<table name="#magicLvl"> 1 85 </table>
-		<table name="#res"> 10 20 </table>
+		<table name="#res"> 10 20</table>
+		<table name="#magicLvl"> 85 85 </table>
 		<set name="icon" val="icon.skill30400" />
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -17,32 +17,33 @@
 	</skill>
 	<skill id="30401" levels="2" name="Tenacity">
 		<!-- Max. HP + 1%, Speed + 4. -->
-		<table name="#magicLvl"> 1 85 </table>
 		<table name="#maxHp"> 1.01 1.02 </table>
-		<table name="#spd"> 4 7 </table>
-		<set name="icon" val="icon.skill30401" />
+		<table name="#runSpd"> 4 7 </table>
+		<table name="#magicLvl"> 85 85 </table>
 		<set name="magicLvl" val="#magicLvl" />
+		<set name="icon" val="icon.skill30401" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
 				<mul stat="maxHp" val="#maxHp" />
-				<add stat="runSpd" val="#spd" />
+				<add stat="runSpd" val="#runSpd" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="30402" levels="2" name="Efficacy">
 		<!-- MP Consumption - 1%. -->
-		<table name="#magicLvl"> 1 85 </table>
-		<table name="#mpConsumeRate"> 0.99 0.98 </table>
+		<table name="#consumeRate"> 0.99 0.98 </table>
+		<table name="#magicLvl"> 85 85 </table>
 		<set name="icon" val="icon.skill30402" />
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<table name="#magicLvl"> 85 85 </table>
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="physicalMpConsumeRate" val="#mpConsumeRate" />
-				<mul stat="magicalMpConsumeRate" val="#mpConsumeRate" />
+				<mul stat="magicalMpConsumeRate" val="#consumeRate" />
+				<mul stat="physicalMpConsumeRate" val="#consumeRate" />
+				<mul stat="danceMpConsumeRate" val="#consumeRate" />
 			</effect>
 		</for>
 	</skill>

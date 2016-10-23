@@ -653,14 +653,16 @@
 		<!-- LeveL 1: INT + 2. -->
 		<!-- LeveL 1: INT + 4. -->
 		<!-- LeveL 1: INT + 16. -->
-		<table name="#magicLevel"> 40 76 85 </table>
-		<table name="#tableINT"> 2 4 16 </table>
+		<table name="#INT"> 2 4 16 </table>
+		<table name="#magicLvl"> 40 76 85 </table>
 		<set name="icon" val="icon.skill11253" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="INT" val="#tableINT" />
+				<add stat="INT" val="#INT" />
+				<add stat="skillCritical" val="4" /> <!-- INT -->
 			</effect>
 		</for>
 	</skill>

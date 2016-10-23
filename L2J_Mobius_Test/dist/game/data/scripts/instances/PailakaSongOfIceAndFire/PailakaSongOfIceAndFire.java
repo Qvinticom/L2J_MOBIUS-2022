@@ -51,10 +51,6 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	private static final int TEMPLATE_ID = 43;
 	private static final int ZONE = 20108;
 	
-	class PSoIWorld extends InstanceWorld
-	{
-	}
-	
 	public PailakaSongOfIceAndFire()
 	{
 		super(PailakaSongOfIceAndFire.class.getSimpleName());
@@ -84,7 +80,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 		{
 			case "enter":
 			{
-				enterInstance(player, new PSoIWorld(), "PailakaSongOfIceAndFire.xml", TEMPLATE_ID);
+				enterInstance(player, "PailakaSongOfIceAndFire.xml", TEMPLATE_ID);
 				break;
 			}
 			case "GARGOS_LAUGH":

@@ -137,8 +137,8 @@ public final class Antharas extends AbstractNpcAI
 		addKillId(ANTHARAS, TERASQUE, BEHEMOTH);
 		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(ANTHARAS);
-		final int curr_hp = info.getInt("currentHP");
-		final int curr_mp = info.getInt("currentMP");
+		final double curr_hp = info.getDouble("currentHP");
+		final double curr_mp = info.getDouble("currentMP");
 		final int loc_x = info.getInt("loc_x");
 		final int loc_y = info.getInt("loc_y");
 		final int loc_z = info.getInt("loc_z");

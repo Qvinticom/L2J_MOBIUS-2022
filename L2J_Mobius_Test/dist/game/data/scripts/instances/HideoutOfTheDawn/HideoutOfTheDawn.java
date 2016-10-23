@@ -39,10 +39,6 @@ public final class HideoutOfTheDawn extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 113;
 	
-	class HotDWorld extends InstanceWorld
-	{
-	}
-	
 	public HideoutOfTheDawn()
 	{
 		super(HideoutOfTheDawn.class.getSimpleName());
@@ -57,7 +53,7 @@ public final class HideoutOfTheDawn extends AbstractInstance
 		{
 			case WOOD:
 			{
-				enterInstance(talker, new HotDWorld(), "HideoutOfTheDawn.xml", TEMPLATE_ID);
+				enterInstance(talker, "HideoutOfTheDawn.xml", TEMPLATE_ID);
 				return "32593-01.htm";
 			}
 			case JAINA:

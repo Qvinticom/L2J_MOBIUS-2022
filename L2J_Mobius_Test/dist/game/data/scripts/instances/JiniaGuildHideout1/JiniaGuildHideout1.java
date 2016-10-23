@@ -38,10 +38,6 @@ public final class JiniaGuildHideout1 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 140;
 	
-	class JGH1World extends InstanceWorld
-	{
-	}
-	
 	public JiniaGuildHideout1()
 	{
 		super(JiniaGuildHideout1.class.getSimpleName());
@@ -55,7 +51,7 @@ public final class JiniaGuildHideout1 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 		if ((qs != null) && qs.isCond(1))
 		{
-			enterInstance(talker, new JGH1World(), "JiniaGuildHideout1.xml", TEMPLATE_ID);
+			enterInstance(talker, "JiniaGuildHideout1.xml", TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

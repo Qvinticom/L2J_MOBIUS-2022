@@ -287,6 +287,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoCubic;
+import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoFishing;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
@@ -303,6 +304,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ObservationMode;
 import com.l2jmobius.gameserver.network.serverpackets.ObservationReturn;
 import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreListBuy;
@@ -11832,7 +11834,7 @@ public final class L2PcInstance extends L2Playable
 		_fishx = _x;
 		_fishy = _y;
 		_fishz = _z;
-		// broadcastUserInfo();
+		
 		// Starts fishing
 		final int lvl = getRandomFishLvl();
 		final int grade = getRandomFishGrade();
@@ -11852,9 +11854,9 @@ public final class L2PcInstance extends L2Playable
 		{
 			_fish.setFishGroup(-1);
 		}
-		// sendMessage("Hook x,y: " + _x + "," + _y + " - Water Z, Player Z:" + _z + ", " + getZ()); // debug line, uncoment to show coordinates used in fishing.
 		broadcastPacket(new ExFishingStart(this, _fish.getFishGroup(), _x, _y, _z, _lure.isNightLure()));
-		// sendPacket(new PlaySound(1, "SF_P_01", 0, 0, 0, 0, 0));
+		sendPacket(new ExUserInfoFishing(this));
+		sendPacket(new PlaySound(1, "SF_P_01", 0, 0, 0, 0, 0));
 		startLookingForFishTask();
 	}
 	

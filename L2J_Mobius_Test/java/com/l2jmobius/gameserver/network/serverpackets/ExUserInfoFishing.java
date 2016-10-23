@@ -14,32 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.zone.type;
+package com.l2jmobius.gameserver.network.serverpackets;
 
-import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * A scripted zone... Creation of such a zone should require somekind of script reference which can handle onEnter() / onExit()
- * @author durgus
+ * @author Sdw
  */
-public class L2ScriptZone extends L2ZoneType
+public class ExUserInfoFishing extends L2GameServerPacket
 {
-	public L2ScriptZone(int id)
+	private final L2PcInstance _activeChar;
+	
+	public ExUserInfoFishing(L2PcInstance activeChar)
 	{
-		super(id);
+		_activeChar = activeChar;
 	}
 	
 	@Override
-	protected void onEnter(L2Character character)
+	protected final void writeImpl()
 	{
-		character.setInsideZone(ZoneId.SCRIPT, true);
-	}
-	
-	@Override
-	protected void onExit(L2Character character)
-	{
-		character.setInsideZone(ZoneId.SCRIPT, false);
+		writeC(0xFE);
+		writeH(0x159);
+		writeD(_activeChar.getObjectId());
+		writeC(_activeChar.isFishing() ? 1 : 0);
+		writeD(_activeChar.getFishx());
+		writeD(_activeChar.getFishy());
+		writeD(_activeChar.getFishz());
 	}
 }

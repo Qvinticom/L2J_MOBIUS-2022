@@ -52,6 +52,11 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		super(name, "instances");
 	}
 	
+	protected void enterInstance(L2PcInstance player, String template, int templateId)
+	{
+		enterInstance(player, new InstanceWorld(), template, templateId);
+	}
+	
 	protected void enterInstance(L2PcInstance player, InstanceWorld instance, String template, int templateId)
 	{
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);

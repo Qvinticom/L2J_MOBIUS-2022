@@ -1072,15 +1072,17 @@
 		</for>
 	</skill>
 	<skill id="30545" levels="3" name="Eminent Ability">
+		<!-- STR + 2. -->
+		<table name="#STR"> 2 4 14 </table>
 		<table name="#magicLvl"> 40 76 85 </table>
-		<table name="#base">2 4 14</table>
 		<set name="icon" val="icon.skill0430" />
-		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<add stat="STR" val="#base" />
+				<add stat="STR" val="#STR" />
+				<add stat="skillCritical" val="1" /> <!-- STR -->
 			</effect>
 		</for>
 	</skill>

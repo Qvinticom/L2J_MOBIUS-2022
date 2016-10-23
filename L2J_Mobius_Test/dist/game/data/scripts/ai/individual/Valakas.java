@@ -152,8 +152,8 @@ public final class Valakas extends AbstractNpcAI
 			final int loc_y = info.getInt("loc_y");
 			final int loc_z = info.getInt("loc_z");
 			final int heading = info.getInt("heading");
-			final int hp = info.getInt("currentHP");
-			final int mp = info.getInt("currentMP");
+			final double hp = info.getDouble("currentHP");
+			final double mp = info.getDouble("currentMP");
 			
 			final L2Npc valakas = addSpawn(VALAKAS, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss((L2GrandBossInstance) valakas);

@@ -48,7 +48,6 @@ import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class contains all informations concerning the item (weapon, armor, etc).<BR>
@@ -66,7 +65,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;
 	public static final int TYPE1_ITEM_QUESTITEM_ADENA = 4;
-	 
+	
 	public static final int TYPE2_WEAPON = 0;
 	public static final int TYPE2_SHIELD_ARMOR = 1;
 	public static final int TYPE2_ACCESSORY = 2;
@@ -112,43 +111,43 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	public static final int SLOT_MULTI_ALLWEAPON = SLOT_LR_HAND | SLOT_R_HAND;
 	
-	private  int _itemId;
-	private  int _displayId;
-	private  String _name;
-	private  String _additionalName;
-	private  String _icon;
-	private  int _weight;
-	private  boolean _stackable;
-	private  MaterialType _materialType;
-	private  CrystalType _crystalType;
-	private  int _equipReuseDelay;
-	private  int _duration;
-	private  int _time;
-	private  int _autoDestroyTime;
-	private  int _bodyPart;
-	private  int _referencePrice;
-	private  int _crystalCount;
-	private  boolean _sellable;
-	private  boolean _dropable;
-	private  boolean _destroyable;
-	private  boolean _tradeable;
-	private  boolean _depositable;
-	private  boolean _auctionable;
-	private  int _enchantable;
-	private  boolean _elementable;
-	private  boolean _questItem;
-	private  boolean _freightable;
-	private  boolean _allow_self_resurrection;
-	private  boolean _is_oly_restricted;
-	private  boolean _for_npc;
-	private  boolean _common;
-	private  boolean _heroItem;
-	private  boolean _pvpItem;
-	private  boolean _immediate_effect;
-	private  boolean _ex_immediate_effect;
-	private  int _defaultEnchantLevel;
-	private  ActionType _defaultAction;
-	private  boolean _isBlessedItem;
+	private int _itemId;
+	private int _displayId;
+	private String _name;
+	private String _additionalName;
+	private String _icon;
+	private int _weight;
+	private boolean _stackable;
+	private MaterialType _materialType;
+	private CrystalType _crystalType;
+	private int _equipReuseDelay;
+	private int _duration;
+	private int _time;
+	private int _autoDestroyTime;
+	private int _bodyPart;
+	private int _referencePrice;
+	private int _crystalCount;
+	private boolean _sellable;
+	private boolean _dropable;
+	private boolean _destroyable;
+	private boolean _tradeable;
+	private boolean _depositable;
+	private boolean _auctionable;
+	private int _enchantable;
+	private boolean _elementable;
+	private boolean _questItem;
+	private boolean _freightable;
+	private boolean _allow_self_resurrection;
+	private boolean _is_oly_restricted;
+	private boolean _for_npc;
+	private boolean _common;
+	private boolean _heroItem;
+	private boolean _pvpItem;
+	private boolean _immediate_effect;
+	private boolean _ex_immediate_effect;
+	private int _defaultEnchantLevel;
+	private ActionType _defaultAction;
+	private boolean _isBlessedItem;
 	
 	protected int _type1; // needed for item list (inventory)
 	protected int _type2; // different lists for armor, weapon, etc
@@ -159,13 +158,13 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private SkillHolder _unequipSkill = null;
 	private SkillHolder _equipSkill = null;
 	
-	private  int _useSkillDisTime;
-	private  int _reuseDelay;
-	private  int _sharedReuseGroup;
+	private int _useSkillDisTime;
+	private int _reuseDelay;
+	private int _sharedReuseGroup;
 	
-	private  CommissionItemType _commissionItemType;
-	private  int _compoundItem;
-	private  float _compoundChance;
+	private CommissionItemType _commissionItemType;
+	private int _compoundItem;
+	private float _compoundChance;
 	
 	/**
 	 * Constructor of the L2Item that fill class variables.<BR>
@@ -240,13 +239,13 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 					
 					if (id == 0)
 					{
-						_log.info(StringUtil.concat("Ignoring item_skill(", element, ") for item ", toString(), ". Skill id is 0!"));
+						_log.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill id is 0!");
 						continue;
 					}
 					
 					if (level == 0)
 					{
-						_log.info(StringUtil.concat("Ignoring item_skill(", element, ") for item ", toString(), ". Skill level is 0!"));
+						_log.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill level is 0!");
 						continue;
 					}
 					
@@ -255,7 +254,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				}
 				catch (Exception e)
 				{
-					_log.warning(StringUtil.concat("Failed to parse item_skill(", element, ") for item ", toString(), "! Format: SkillId0-SkillLevel0[;SkillIdN-SkillLevelN]"));
+					_log.warning("Failed to parse item_skill(" + element + ") for item " + this + "! Format: SkillId0-SkillLevel0[;SkillIdN-SkillLevelN]");
 				}
 			}
 			
@@ -284,7 +283,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("Couldnt parse ", skills, " in weapon unequip skills! item ", toString()));
+					_log.info("Couldnt parse " + skills + " in weapon unequip skills! item " + this);
 				}
 				if ((id > 0) && (level > 0))
 				{
@@ -309,7 +308,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("Couldnt parse ", skills, " in item equip skill! item ", toString()));
+					_log.info("Couldnt parse " + skills + " in item equip skill! item " + this);
 				}
 				if ((id > 0) && (level > 0))
 				{

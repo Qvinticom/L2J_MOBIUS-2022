@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.L2ExtractableProduct;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class is dedicated to the management of EtcItem.
@@ -96,7 +95,7 @@ public final class L2EtcItem extends L2Item
 				final String[] data = part.split(",");
 				if ((data.length != 4) && (data.length != 6))
 				{
-					_log.info(StringUtil.concat("> Couldnt parse ", part, " in capsuled_items! item ", toString()));
+					_log.info("> Couldnt parse " + part + " in capsuled_items! item " + this);
 					continue;
 				}
 				final int itemId = Integer.parseInt(data[0]);
@@ -104,7 +103,7 @@ public final class L2EtcItem extends L2Item
 				final int max = Integer.parseInt(data[2]);
 				if (max < min)
 				{
-					_log.info(StringUtil.concat("> Max amount < Min amount in ", part, ", item ", toString()));
+					_log.info("> Max amount < Min amount in " + part + ", item " + this);
 					continue;
 				}
 				final double chance = Double.parseDouble(data[3]);
@@ -116,7 +115,7 @@ public final class L2EtcItem extends L2Item
 					maxEnchant = Integer.parseInt(data[5]);
 					if (maxEnchant < minEnchant)
 					{
-						_log.info(StringUtil.concat("> Max enchant < Min enchant in ", part, ", item ", toString()));
+						_log.info("> Max enchant < Min enchant in " + part + ", item " + this);
 						continue;
 					}
 				}

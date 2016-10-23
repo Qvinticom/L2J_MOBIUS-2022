@@ -76,30 +76,36 @@
 		</for>
 	</skill>
 	<skill id="10303" levels="4" name="Superior Combat Master">
-		<table name="#rate"> 1.02 1.03 1.04 1.05 </table>
+		<!-- Max CP/ HP + 2%. -->
+		<table name="#max"> 1.02 1.03 1.04 1.05 </table>
+		<table name="#magicLvl"> 85 90 95 99 </table>
+		<set name="magicLvl" val="#magicLvl" />
 		<set name="icon" val="icon.skill0430" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
-		<effect name="Buff">
-			<mul stat="maxHp" val="#rate" />
-			<mul stat="maxCp" val="#rate" />
-		</effect>
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="#max" />
+				<mul stat="maxCp" val="#max" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="10304" levels="4" name="Superior Dual Sword Mastery">
+		<!-- When a dualsword or dual blunt is equipped, P. Atk. + 2% and additional + 709. -->
+		<table name="#pAtkMul"> 1.02 1.03 1.04 1.05 </table>
+		<table name="#pAtkAdd"> 709 828 982 1190 </table>
 		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#pAtk"> 1.02 1.03 1.04 1.05 </table>
-		<table name="#pAtkAdd"> 709 825 982 1190 </table>
 		<set name="icon" val="icon.skill11835" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="P" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk">
-					<using kind="DUAL" />
+				<mul stat="pAtk" val="#pAtkMul">
+					<using kind="DUAL, DUALBLUNT" />
 				</mul>
-				<add stat="pAtk" val="#pAtkAdd">
-					<using kind="DUAL" />
+				<add stat="pAtk" val="#pAtkMul">
+					<using kind="DUAL, DUALBLUNT" />
 				</add>
 			</effect>
 		</for>
@@ -334,31 +340,36 @@
 		</for>
 	</skill>
 	<skill id="10315" levels="2" name="Superior Polearm Mastery">
-		<table name="#pAtk"> 1.02 1.03 </table>
+		<!-- When a spear is equipped, P. Atk. + 2 % and additional P. Atk. + 583. -->
+		<table name="#magicLvl"> 85 90 </table>
 		<table name="#pAtkAdd"> 583 678 </table>
-		<table name="#magicLvl"> 90 90 </table>
-		<set name="icon" val="icon.skill11836" />
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#pAtkMul"> 1.02 1.03 </table>
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="icon" val="icon.skill11836" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pAtk" val="#pAtk">
+				<mul stat="pAtk" val="#pAtkMul">
 					<using kind="POLE" />
 				</mul>
+				<add stat="pAtk" val="#pAtkAdd">
+					<using kind="POLE" />
+				</add>
 			</effect>
 		</for>
 	</skill>
 	<skill id="10316" levels="4" name="Bloodthirst">
-		<table name="#pAtk"> 1.05 1.06 1.07 1.08 </table>
+		<!-- PvP P. Atk. + 5%. -->
 		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="icon" val="icon.skill0193" />
-		<set name="magicLvl" val="#magicLvl" />
+		<table name="#pvpPhysDmg"> 1.05 1.06 1.07 1.08 </table>
 		<set name="operateType" val="P" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="icon" val="icon.skill0193" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
-				<mul stat="pvpPhysDmg" val="#pAtk" />
+				<mul stat="pvpPhysDmg" val="#pvpPhysDmg" />
 			</effect>
 		</for>
 	</skill>

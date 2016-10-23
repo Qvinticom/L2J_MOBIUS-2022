@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -61,6 +62,8 @@ import ai.AbstractNpcAI;
  */
 public final class MentorGuide extends AbstractNpcAI implements IXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(MentorGuide.class.getName());
+	
 	// NPCs
 	private static final int MENTOR_GUIDE = 33587;
 	

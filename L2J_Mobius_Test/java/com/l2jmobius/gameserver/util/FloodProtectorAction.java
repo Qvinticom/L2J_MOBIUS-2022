@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.util;
 
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +28,6 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * Flood protector implementation.
@@ -189,7 +189,9 @@ public final class FloodProtectorAction
 	
 	private void log(String... lines)
 	{
-		final StringBuilder output = StringUtil.startAppend(100, _config.FLOOD_PROTECTOR_TYPE, ": ");
+		final StringBuilder output = new StringBuilder(100);
+		output.append(_config.FLOOD_PROTECTOR_TYPE);
+		output.append(": ");
 		String address = null;
 		try
 		{
@@ -208,8 +210,10 @@ public final class FloodProtectorAction
 			{
 				if (_client.getActiveChar() != null)
 				{
-					StringUtil.append(output, _client.getActiveChar().getName());
-					StringUtil.append(output, "(", String.valueOf(_client.getActiveChar().getObjectId()), ") ");
+					output.append(_client.getActiveChar().getName());
+					output.append("(");
+					output.append(_client.getActiveChar().getObjectId());
+					output.append(") ");
 				}
 				break;
 			}
@@ -217,7 +221,8 @@ public final class FloodProtectorAction
 			{
 				if (_client.getAccountName() != null)
 				{
-					StringUtil.append(output, _client.getAccountName(), " ");
+					output.append(_client.getAccountName());
+					output.append(" ");
 				}
 				break;
 			}
@@ -225,7 +230,7 @@ public final class FloodProtectorAction
 			{
 				if (address != null)
 				{
-					StringUtil.append(output, address);
+					output.append(address);
 				}
 				break;
 			}
@@ -235,7 +240,8 @@ public final class FloodProtectorAction
 			}
 		}
 		
-		StringUtil.append(output, lines);
+		Arrays.stream(lines).forEach(output::append);
+		
 		_log.warning(output.toString());
 	}
 }

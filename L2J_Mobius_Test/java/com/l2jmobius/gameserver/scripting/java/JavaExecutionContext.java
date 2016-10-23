@@ -46,7 +46,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 		super(engine);
 	}
 	
-	private boolean addOptionIfNotNull(final LinkedList<String> list, final String nullChecked, final String before)
+	private boolean addOptionIfNotNull(List<String> list, String nullChecked, String before)
 	{
 		if (nullChecked == null)
 		{
@@ -93,15 +93,14 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 	}
 	
 	@Override
-	public Map<Path, Throwable> executeScripts(final Iterable<Path> sourcePaths) throws Exception
+	public Map<Path, Throwable> executeScripts(Iterable<Path> sourcePaths) throws Exception
 	{
 		final DiagnosticCollector<JavaFileObject> fileManagerDiagnostics = new DiagnosticCollector<>();
 		final DiagnosticCollector<JavaFileObject> compilationDiagnostics = new DiagnosticCollector<>();
 		
 		try (final ScriptingFileManager fileManager = new ScriptingFileManager(getScriptingEngine().getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
 		{
-			final LinkedList<String> options = new LinkedList<>();
-			
+			final List<String> options = new LinkedList<>();
 			addOptionIfNotNull(options, getProperty("source"), "-source");
 			addOptionIfNotNull(options, getProperty("sourcepath"), "-sourcepath");
 			if (!addOptionIfNotNull(options, getProperty("cp"), "-cp") && !addOptionIfNotNull(options, getProperty("classpath"), "-classpath"))
@@ -172,11 +171,11 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 			
 			final Map<Path, Throwable> executionFailures = new LinkedHashMap<>();
 			final Iterable<ScriptingOutputFileObject> compiledClasses = fileManager.getCompiledClasses();
-			for (final Path sourcePath : sourcePaths)
+			for (Path sourcePath : sourcePaths)
 			{
 				boolean found = false;
 				
-				for (final ScriptingOutputFileObject compiledClass : compiledClasses)
+				for (ScriptingOutputFileObject compiledClass : compiledClasses)
 				{
 					Path compiledSourcePath = compiledClass.getSourcePath();
 					// sourePath can be relative, so we have to use endsWith
@@ -223,7 +222,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 	}
 	
 	@Override
-	public Entry<Path, Throwable> executeScript(final Path sourcePath) throws Exception
+	public Entry<Path, Throwable> executeScript(Path sourcePath) throws Exception
 	{
 		final Map<Path, Throwable> executionFailures = executeScripts(Arrays.asList(sourcePath));
 		if (!executionFailures.isEmpty())

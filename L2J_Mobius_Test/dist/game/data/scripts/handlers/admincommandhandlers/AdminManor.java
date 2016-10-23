@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author malyelfik
@@ -42,10 +41,10 @@ public final class AdminManor implements IAdminCommandHandler
 		final StringBuilder sb = new StringBuilder(3400);
 		for (Castle c : CastleManager.getInstance().getCastles())
 		{
-			StringUtil.append(sb, "<tr><td>Name:</td><td><font color=008000>" + c.getName() + "</font></td></tr>");
-			StringUtil.append(sb, "<tr><td>Current period cost:</td><td><font color=FF9900>", Util.formatAdena(manor.getManorCost(c.getResidenceId(), false)), " Adena</font></td></tr>");
-			StringUtil.append(sb, "<tr><td>Next period cost:</td><td><font color=FF9900>", Util.formatAdena(manor.getManorCost(c.getResidenceId(), true)), " Adena</font></td></tr>");
-			StringUtil.append(sb, "<tr><td><font color=808080>--------------------------</font></td><td><font color=808080>--------------------------</font></td></tr>");
+			sb.append("<tr><td>Name:</td><td><font color=008000>" + c.getName() + "</font></td></tr>");
+			sb.append("<tr><td>Current period cost:</td><td><font color=FF9900>" + Util.formatAdena(manor.getManorCost(c.getResidenceId(), false)) + " Adena</font></td></tr>");
+			sb.append("<tr><td>Next period cost:</td><td><font color=FF9900>" + Util.formatAdena(manor.getManorCost(c.getResidenceId(), true)) + " Adena</font></td></tr>");
+			sb.append("<tr><td><font color=808080>--------------------------</font></td><td><font color=808080>--------------------------</font></td></tr>");
 		}
 		msg.replace("%castleInfo%", sb.toString());
 		activeChar.sendPacket(msg);

@@ -65,7 +65,6 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.util.FloodProtectorConfig;
 import com.l2jmobius.gameserver.util.Util;
 import com.l2jmobius.util.PropertiesParser;
-import com.l2jmobius.util.StringUtil;
 import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
@@ -1425,7 +1424,7 @@ public final class Config
 					final String[] skillSplit = skill.split(",");
 					if (skillSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillDurationList \"", skill, "\""));
+						_log.warning("[SkillDurationList]: invalid config property -> SkillDurationList \"" + skill + "\"");
 					}
 					else
 					{
@@ -1437,7 +1436,7 @@ public final class Config
 						{
 							if (!skill.isEmpty())
 							{
-								_log.warning(StringUtil.concat("[SkillDurationList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
+								_log.warning("[SkillDurationList]: invalid config property -> SkillList \"" + skillSplit[0] + "\"" + skillSplit[1]);
 							}
 						}
 					}
@@ -1454,7 +1453,7 @@ public final class Config
 					final String[] skillSplit = skill.split(",");
 					if (skillSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillReuseList \"", skill, "\""));
+						_log.warning("[SkillReuseList]: invalid config property -> SkillReuseList \"" + skill + "\"");
 					}
 					else
 					{
@@ -1466,7 +1465,7 @@ public final class Config
 						{
 							if (!skill.isEmpty())
 							{
-								_log.warning(StringUtil.concat("[SkillReuseList]: invalid config property -> SkillList \"", skillSplit[0], "\"", skillSplit[1]));
+								_log.warning("[SkillReuseList]: invalid config property -> SkillList \"" + skillSplit[0] + "\"" + skillSplit[1]);
 							}
 						}
 					}
@@ -2064,7 +2063,7 @@ public final class Config
 				final String[] propSplit = prop.split(",");
 				if (propSplit.length != 2)
 				{
-					_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", prop, "\""));
+					_log.warning("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"" + prop + "\"");
 				}
 				
 				try
@@ -2075,7 +2074,7 @@ public final class Config
 				{
 					if (!prop.isEmpty())
 					{
-						_log.warning(StringUtil.concat("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"", propSplit[0], "\"", propSplit[1]));
+						_log.warning("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"" + propSplit[0] + "\"" + propSplit[1]);
 					}
 				}
 			}
@@ -2160,7 +2159,7 @@ public final class Config
 					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+						_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 					}
 					else
 					{
@@ -2172,7 +2171,7 @@ public final class Config
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+								_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 							}
 						}
 					}
@@ -2188,7 +2187,7 @@ public final class Config
 					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+						_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 					}
 					else
 					{
@@ -2200,7 +2199,7 @@ public final class Config
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> RateDropItemsById \"", item, "\""));
+								_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 							}
 						}
 					}
@@ -2336,7 +2335,7 @@ public final class Config
 								final String[] rewardSplit = reward.split(",");
 								if (rewardSplit.length != 2)
 								{
-									_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"", reward, "\""));
+									_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"" + reward + "\"");
 								}
 								else
 								{
@@ -2352,7 +2351,7 @@ public final class Config
 									{
 										if (!reward.isEmpty())
 										{
-											_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"", reward, "\""));
+											_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"" + reward + "\"");
 										}
 									}
 								}
@@ -2374,7 +2373,7 @@ public final class Config
 								{
 									if (!door.isEmpty())
 									{
-										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToOpen \"", door, "\""));
+										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToOpen \"" + door + "\"");
 									}
 								}
 							}
@@ -2390,7 +2389,7 @@ public final class Config
 								{
 									if (!door.isEmpty())
 									{
-										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToClose \"", door, "\""));
+										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToClose \"" + door + "\"");
 									}
 								}
 							}
@@ -2404,7 +2403,7 @@ public final class Config
 									final String[] skillSplit = skill.split(",");
 									if (skillSplit.length != 2)
 									{
-										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"", skill, "\""));
+										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"" + skill + "\"");
 									}
 									else
 									{
@@ -2416,7 +2415,7 @@ public final class Config
 										{
 											if (!skill.isEmpty())
 											{
-												_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"", skill, "\""));
+												_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"" + skill + "\"");
 											}
 										}
 									}
@@ -2432,7 +2431,7 @@ public final class Config
 									final String[] skillSplit = skill.split(",");
 									if (skillSplit.length != 2)
 									{
-										_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"", skill, "\""));
+										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"" + skill + "\"");
 									}
 									else
 									{
@@ -2444,7 +2443,7 @@ public final class Config
 										{
 											if (!skill.isEmpty())
 											{
-												_log.warning(StringUtil.concat("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"", skill, "\""));
+												_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"" + skill + "\"");
 											}
 										}
 									}
@@ -2533,7 +2532,7 @@ public final class Config
 				final String[] entrySplit = entry.split(",");
 				if (entrySplit.length != 2)
 				{
-					_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"", entry, "\""));
+					_log.warning("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"" + entry + "\"");
 				}
 				else
 				{
@@ -2545,11 +2544,11 @@ public final class Config
 					}
 					catch (UnknownHostException e)
 					{
-						_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"", entrySplit[0], "\""));
+						_log.warning("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"" + entrySplit[0] + "\"");
 					}
 					catch (NumberFormatException e)
 					{
-						_log.warning(StringUtil.concat("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"", entrySplit[1], "\""));
+						_log.warning("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"" + entrySplit[1] + "\"");
 					}
 				}
 			}
@@ -2634,7 +2633,7 @@ public final class Config
 					String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+						_log.warning("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"" + item + "\"");
 					}
 					else
 					{
@@ -2646,7 +2645,7 @@ public final class Config
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"", item, "\""));
+								_log.warning("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"" + item + "\"");
 							}
 						}
 					}
@@ -2661,7 +2660,7 @@ public final class Config
 					String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+						_log.warning("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"" + item + "\"");
 					}
 					else
 					{
@@ -2673,7 +2672,7 @@ public final class Config
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning(StringUtil.concat("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"", item, "\""));
+								_log.warning("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"" + item + "\"");
 							}
 						}
 					}
@@ -3008,7 +3007,7 @@ public final class Config
 		}
 		catch (Exception e)
 		{
-			_log.warning(StringUtil.concat("Failed to save hex id to ", fileName, " File."));
+			_log.warning("Failed to save hex id to " + fileName + " File.");
 			_log.warning("Config: " + e.getMessage());
 		}
 	}
@@ -3046,11 +3045,11 @@ public final class Config
 	 */
 	private static void loadFloodProtectorConfig(PropertiesParser properties, FloodProtectorConfig config, String configString, int defaultInterval)
 	{
-		config.FLOOD_PROTECTION_INTERVAL = properties.getInt(StringUtil.concat("FloodProtector", configString, "Interval"), defaultInterval);
-		config.LOG_FLOODING = properties.getBoolean(StringUtil.concat("FloodProtector", configString, "LogFlooding"), false);
-		config.PUNISHMENT_LIMIT = properties.getInt(StringUtil.concat("FloodProtector", configString, "PunishmentLimit"), 0);
-		config.PUNISHMENT_TYPE = properties.getString(StringUtil.concat("FloodProtector", configString, "PunishmentType"), "none");
-		config.PUNISHMENT_TIME = properties.getInt(StringUtil.concat("FloodProtector", configString, "PunishmentTime"), 0) * 60000;
+		config.FLOOD_PROTECTION_INTERVAL = properties.getInt("FloodProtector" + configString + "Interval", defaultInterval);
+		config.LOG_FLOODING = properties.getBoolean("FloodProtector" + configString + "LogFlooding", false);
+		config.PUNISHMENT_LIMIT = properties.getInt("FloodProtector" + configString + "PunishmentLimit", 0);
+		config.PUNISHMENT_TYPE = properties.getString("FloodProtector" + configString + "PunishmentType", "none");
+		config.PUNISHMENT_TIME = properties.getInt("FloodProtector" + configString + "PunishmentTime", 0) * 60000;
 	}
 	
 	public static int getServerTypeId(String[] serverTypes)
@@ -3234,7 +3233,7 @@ public final class Config
 			valueSplit = value.split(",");
 			if (valueSplit.length != 2)
 			{
-				_log.warning(StringUtil.concat("parseItemsList[Config.load()]: invalid entry -> \"", valueSplit[0], "\", should be itemId,itemNumber. Skipping to the next entry in the list."));
+				_log.warning("parseItemsList[Config.load()]: invalid entry -> \"" + valueSplit[0] + "\", should be itemId,itemNumber. Skipping to the next entry in the list.");
 				continue;
 			}
 			
@@ -3245,7 +3244,7 @@ public final class Config
 			}
 			catch (NumberFormatException e)
 			{
-				_log.warning(StringUtil.concat("parseItemsList[Config.load()]: invalid itemId -> \"", valueSplit[0], "\", value must be an integer. Skipping to the next entry in the list."));
+				_log.warning("parseItemsList[Config.load()]: invalid itemId -> \"" + valueSplit[0] + "\", value must be an integer. Skipping to the next entry in the list.");
 				continue;
 			}
 			try
@@ -3254,7 +3253,7 @@ public final class Config
 			}
 			catch (NumberFormatException e)
 			{
-				_log.warning(StringUtil.concat("parseItemsList[Config.load()]: invalid item number -> \"", valueSplit[1], "\", value must be an integer. Skipping to the next entry in the list."));
+				_log.warning("parseItemsList[Config.load()]: invalid item number -> \"" + valueSplit[1] + "\", value must be an integer. Skipping to the next entry in the list.");
 				continue;
 			}
 			result[i++] = tmp;

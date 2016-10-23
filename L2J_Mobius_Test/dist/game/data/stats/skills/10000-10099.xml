@@ -1755,14 +1755,24 @@
 		<set name="isDebuff" val="true" />
 	</skill>
 	<skill id="10060" levels="1" name="Aggression Attack">
+		<!-- Provokes. -->
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="3" />
+		<set name="abnormalType" val="TARGET_LOCK" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="200" />
+		<set name="effectPoint" val="-3928" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="700" />
 		<set name="icon" val="icon.skill0086" />
-		<set name="operateType" val="A2" />
-		<set name="targetType" val="ONE" />
 		<set name="isDebuff" val="true" />
-		<set name="abnormalTime" val="2" />
-		<set name="effectPoint" val="-500" />
+		<set name="magicLvl" val="85" />
+		<set name="reuseDelay" val="6000" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="staticReuse" val="true" />
 		<set name="isMagic" val="4" />
-		<set name="trait" val="DERANGEMENT" />
+		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="TargetMe" />
 			<effect name="GetAgro" />
@@ -2363,35 +2373,32 @@
 		</for>
 	</skill>
 	<skill id="10090" levels="4" name="Provoking Shackle">
+		<!-- Provokes nearby enemies and inflicts Hold for 9 sec. -->
 		<table name="#mpConsume"> 59 61 63 65 </table>
 		<table name="#magicLvl"> 85 90 95 99 </table>
-		<set name="abnormalLvl" val="1" />
+		<table name="#abnormalLvl"> 1 2 3 4 </table>
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="abnormalTime" val="9" />
 		<set name="abnormalType" val="ROOT_PHYSICALLY" />
-		<set name="abnormalVisualEffect" val="ROOT" />
-		<set name="activateRate" val="50" />
-		<set name="affectLimit" val="10-10" />
-		<set name="affectRange" val="100" />
-		<set name="basicProperty" val="MEN" />
-		<set name="castRange" val="600" />
-		<set name="effectPoint" val="-100" /> <!-- Need verify -->
-		<set name="effectRange" val="1100" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="CON" />
 		<set name="coolTime" val="470" />
-		<set name="hitTime" val="1000" />
-		<set name="icon" val="icon.skill10090new" />
+		<set name="effectRange" val="200" />
 		<set name="isDebuff" val="true" />
-		<set name="lvlBonusRate" val="2" />
+		<set name="hitTime" val="1000" />
+		<set name="operateType" val="A2" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="mpConsume" val="#mpConsume" />
-		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="60000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
+		<set name="icon" val="icon.skill10090new" />
 		<set name="trait" val="HOLD" />
 		<for>
-			<effect name="Root" />
 			<effect name="TargetMe" />
-			<effect name="GetAgro" />
+			<effect name="Root" />
+			<effect name="DefenceTrait">
+				<param HOLD="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="10091" levels="1" name="Templar's Will">

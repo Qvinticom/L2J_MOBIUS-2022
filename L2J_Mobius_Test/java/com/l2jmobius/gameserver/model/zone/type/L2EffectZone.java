@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.zone.TaskZoneSettings;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * another type of damage zone with skills
@@ -96,7 +95,7 @@ public class L2EffectZone extends L2ZoneType
 				final String[] skillSplit = skill.split("-");
 				if (skillSplit.length != 2)
 				{
-					_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skill, "\""));
+					_log.warning(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skill + "\"");
 				}
 				else
 				{
@@ -108,7 +107,7 @@ public class L2EffectZone extends L2ZoneType
 					{
 						if (!skill.isEmpty())
 						{
-							_log.warning(StringUtil.concat(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"", skillSplit[0], "\"", skillSplit[1]));
+							_log.warning(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skillSplit[0] + "\"" + skillSplit[1]);
 						}
 					}
 				}

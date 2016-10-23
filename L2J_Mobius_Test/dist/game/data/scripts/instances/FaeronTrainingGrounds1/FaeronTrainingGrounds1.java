@@ -43,10 +43,6 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 251;
 	
-	class FTGWorld extends InstanceWorld
-	{
-	}
-	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -58,7 +54,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 		
 		if (event.equals("enter_instance"))
 		{
-			enterInstance(player, new FTGWorld(), "FaeronTrainingGrounds1.xml", TEMPLATE_ID);
+			enterInstance(player, "FaeronTrainingGrounds1.xml", TEMPLATE_ID);
 		}
 		else if (event.equals("exit_instance"))
 		{

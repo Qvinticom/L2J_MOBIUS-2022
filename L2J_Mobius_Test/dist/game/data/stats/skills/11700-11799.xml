@@ -117,30 +117,67 @@
 			</effect>
 		</for>
 	</skill>
-	<skill id="11754" levels="5" name="Fairy of Life" enchantGroup1="10" enchantGroup2="10">
+	<skill id="11754" levels="5" name="Fairy of Life" enchantGroup1="10">
+		<!-- Summons a fairy that follows and periodically heals the selected party member for 60 seconds. Has a chance of recovering HP when attacked. -->
+		<table name="#mpConsume"> 34 37 38 42 44 </table>
+		<table name="#mpInitialConsume"> 9 9 10 10 11 </table>
 		<table name="#magicLvl"> 85 88 91 94 97 </table>
-		<table name="#mpConsume"> 43 46 48 52 55 </table>
-		<table name="#ench2Time"> 66 72 78 84 90 96 102 108 114 120 </table>
-		<set name="icon" val="icon.skill11754" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="operateType" val="A1" />
-		<set name="mpConsume" val="#mpConsume" />
-		<set name="effectRange" val="600" />
+		<table name="#effectLvl"> 1 2 3 4 5 </table>
+		<table name="#abnormalLvl"> 2 3 4 5 6 </table>
+		<table name="#ench1triggeredLevel"> 101 102 103 104 105 106 107 108 109 110 </table>
+		<table name="#ench2abnormalTime"> 66 72 78 84 90 96 104 110 116 120 </table>
+		<table name="#ench2summonTotalLifeTime"> 660 720 780 840 900 960 1040 1100 1160 1200 </table>
+		<set name="abnormalTime" val="60" />
+		<set name="abnormalLvl" val="#abnormalLvl" />
 		<set name="hitTime" val="2200" />
 		<set name="coolTime" val="300" />
+		<set name="castRange" val="600" />
 		<set name="reuseDelay" val="15000" />
-		<set name="isMagic" val="1" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="isMagic" val="2" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="A2" />
+		<set name="icon" val="icon.skill11754" />
 		<set name="targetType" val="PARTY_MEMBER" />
-		<enchant1 name="magicLvl" val="99" />
-		<enchant2 name="magicLvl" val="99" />
+		<enchant2 name="abnormalTime" val="#ench2abnormalTime" />
 		<for>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="5" />
+				<param skillId="11807" skillLevel="#effectLvl" />
+				<param targetType="SELF" />
+			</effect>
 			<effect name="SummonCubic">
-				<param cubicId="17" cubicDelay="10" cubicDuration="60" cubicMaxCount="30" />
+				<param cubicId="17" cubicDelay="5" cubicDuration="60" cubicMaxCount="20" cubicSkillChance="0" />
+				<param cubicSkill1Chance="33" />
 			</effect>
 		</for>
-		<enchant2for>
+		<enchant1for>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="5" />
+				<param skillId="11807" skillLevel="#ench1triggeredLevel" />
+				<param targetType="SELF" />
+			</effect>
 			<effect name="SummonCubic">
-				<param cubicId="17" cubicDelay="10" cubicDuration="60" cubicMaxCount="30" /> <!-- TODO: Fix duration -->
+				<param cubicId="17" cubicDelay="5" cubicDuration="60" cubicMaxCount="20" cubicSkillChance="0" />
+				<param cubicSkill1Chance="33" />
+			</effect>
+		</enchant1for>
+		<enchant2for>
+			<effect name="TriggerSkillByDamage">
+				<param attackerType="L2Playable" minAttackerLevel="1" maxAttackerLevel="100" />
+				<param minDamage="1" />
+				<param chance="5" />
+				<param skillId="11807" skillLevel="5" />
+				<param targetType="SELF" />
+			</effect>
+			<effect name="SummonCubic">
+				<param cubicId="17" cubicDelay="5" cubicDuration="60" cubicMaxCount="20" cubicSkillChance="0" /> <!-- cubicDuration="#ench2summonTotalLifeTime" -->
+				<param cubicSkill1Chance="33" />
 			</effect>
 		</enchant2for>
 	</skill>

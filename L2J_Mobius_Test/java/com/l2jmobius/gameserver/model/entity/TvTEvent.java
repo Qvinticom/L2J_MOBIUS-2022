@@ -55,7 +55,6 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * @author HorridoJoho
@@ -540,7 +539,7 @@ public class TvTEvent
 			return "-";
 		}
 		
-		return StringUtil.concat(String.valueOf(itemNum), " ", ItemTable.getInstance().getTemplate(itemId).getName());
+		return itemNum + " " + ItemTable.getInstance().getTemplate(itemId).getName();
 	}
 	
 	/**

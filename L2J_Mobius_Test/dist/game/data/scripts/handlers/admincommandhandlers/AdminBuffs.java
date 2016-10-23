@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.util.GMAudit;
-import com.l2jmobius.util.StringUtil;
 
 public class AdminBuffs implements IAdminCommandHandler
 {
@@ -252,9 +251,13 @@ public class AdminBuffs implements IAdminCommandHandler
 			max++;
 		}
 		
-		final StringBuilder html = StringUtil.startAppend(500 + (effects.size() * 200), "<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ", target.getName(), "</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
-		final int start = (page - 1) * PAGE_LIMIT;
-		final int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
+		final StringBuilder html = new StringBuilder(500 + (effects.size() * 200));
+		html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Effects of ");
+		html.append(target.getName());
+		html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_current_player\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br><table width=\"100%\"><tr><td width=200>Skill</td><td width=30>Rem. Time</td><td width=70>Action</td></tr>");
+		
+		int start = ((page - 1) * PAGE_LIMIT);
+		int end = Math.min(((page - 1) * PAGE_LIMIT) + PAGE_LIMIT, effects.size());
 		int count = 0;
 		for (BuffInfo info : effects)
 		{
@@ -263,7 +266,22 @@ public class AdminBuffs implements IAdminCommandHandler
 				final Skill skill = info.getSkill();
 				for (AbstractEffect effect : info.getEffects())
 				{
-					StringUtil.append(html, "<tr><td>", (!info.isInUse() ? FONT_RED1 : "") + skill.getName(), " Lv ", String.valueOf(skill.getLevel()), " (", effect.getClass().getSimpleName(), ")" + (!info.isInUse() ? FONT_RED2 : ""), "</td><td>", skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s", "</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ", Integer.toString(target.getObjectId()), " ", String.valueOf(skill.getId()), "\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
+					html.append("<tr><td>");
+					html.append(!info.isInUse() ? FONT_RED1 : "");
+					html.append(skill.getName());
+					html.append(" Lv ");
+					html.append(skill.getLevel());
+					html.append(" (");
+					html.append(effect.getClass().getSimpleName());
+					html.append(")");
+					html.append(!info.isInUse() ? FONT_RED2 : "");
+					html.append("</td><td>");
+					html.append(skill.isToggle() ? "T (" + info.getTickCount(effect) + ")" : skill.isPassive() ? "P" : info.getTime() + "s");
+					html.append("</td><td><button value=\"X\" action=\"bypass -h admin_stopbuff ");
+					html.append(target.getObjectId());
+					html.append(" ");
+					html.append(skill.getId());
+					html.append("\" width=30 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr>");
 				}
 			}
 			count++;
@@ -294,17 +312,29 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.append("</tr></table>");
 		
 		// Buttons
-		StringUtil.append(html, "<br><center><button value=\"Refresh\" action=\"bypass -h admin_getbuffs", passive ? "_ps " : " ", target.getName(), "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
-		StringUtil.append(html, "<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ", Integer.toString(target.getObjectId()), "\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
+		html.append("<br><center><button value=\"Refresh\" action=\"bypass -h admin_getbuffs");
+		html.append(passive ? "_ps " : " ");
+		html.append(target.getName());
+		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\">");
+		html.append("<button value=\"Remove All\" action=\"bypass -h admin_stopallbuffs ");
+		html.append(target.getObjectId());
+		html.append("\" width=80 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
 		// Legend
 		if (!passive)
 		{
-			StringUtil.append(html, FONT_RED1, "Inactive buffs: ", String.valueOf(target.getEffectList().getHiddenBuffsCount()), FONT_RED2, "<br>");
+			html.append(FONT_RED1);
+			html.append("Inactive buffs: ");
+			html.append(target.getEffectList().getHiddenBuffsCount());
+			html.append(FONT_RED2);
+			html.append("<br>");
 		}
-		StringUtil.append(html, "Total", passive ? " passive" : "", " buff count: ", String.valueOf(effects.size()));
+		html.append("Total");
+		html.append(passive ? " passive" : "");
+		html.append(" buff count: ");
+		html.append(effects.size());
 		if ((target.getEffectList().getAllBlockedBuffSlots() != null) && !target.getEffectList().getAllBlockedBuffSlots().isEmpty())
 		{
-			StringUtil.append(html, "<br>Blocked buff slots: ");
+			html.append("<br>Blocked buff slots: ");
 			String slots = "";
 			for (AbnormalType slot : target.getEffectList().getAllBlockedBuffSlots())
 			{
@@ -313,10 +343,10 @@ public class AdminBuffs implements IAdminCommandHandler
 			
 			if (!slots.isEmpty() && (slots.length() > 3))
 			{
-				StringUtil.append(html, slots.substring(0, slots.length() - 2));
+				html.append(slots.substring(0, slots.length() - 2));
 			}
 		}
-		StringUtil.append(html, "</html>");
+		html.append("</html>");
 		// Send the packet
 		activeChar.sendPacket(new NpcHtmlMessage(html.toString()));
 		

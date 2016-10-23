@@ -33,26 +33,25 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class is dedicated to the management of weapons.
  */
 public final class L2Weapon extends L2Item
 {
-	private  WeaponType _type;
-	private  boolean _isMagicWeapon;
-	private  int _rndDam;
-	private  int _soulShotCount;
-	private  int _spiritShotCount;
-	private  int _mpConsume;
-	private  int _baseAttackRange;
-	private  int _baseAttackAngle;
+	private WeaponType _type;
+	private boolean _isMagicWeapon;
+	private int _rndDam;
+	private int _soulShotCount;
+	private int _spiritShotCount;
+	private int _mpConsume;
+	private int _baseAttackRange;
+	private int _baseAttackAngle;
 	/**
 	 * Skill that activates when item is enchanted +4 (for duals).
 	 */
 	private SkillHolder _enchant4Skill = null;
-	private  int _changeWeaponId;
+	private int _changeWeaponId;
 	
 	// Attached skills for Special Abilities
 	private SkillHolder _skillsOnMagic;
@@ -60,15 +59,15 @@ public final class L2Weapon extends L2Item
 	private SkillHolder _skillsOnCrit;
 	private Condition _skillsOnCritCondition = null;
 	
-	private  int _reducedSoulshot;
-	private  int _reducedSoulshotChance;
+	private int _reducedSoulshot;
+	private int _reducedSoulshotChance;
 	
-	private  int _reducedMpConsume;
-	private  int _reducedMpConsumeChance;
+	private int _reducedMpConsume;
+	private int _reducedMpConsumeChance;
 	
-	private  boolean _isForceEquip;
-	private  boolean _isAttackWeapon;
-	private  boolean _useWeaponSkillsOnly;
+	private boolean _isForceEquip;
+	private boolean _isAttackWeapon;
+	private boolean _useWeaponSkillsOnly;
 	
 	/**
 	 * Constructor for Weapon.
@@ -120,7 +119,7 @@ public final class L2Weapon extends L2Item
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, dont add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon enchant skills! item ", toString()));
+					_log.info("> Couldnt parse " + skill + " in weapon enchant skills! item " + this);
 				}
 				if ((id > 0) && (level > 0))
 				{
@@ -146,7 +145,7 @@ public final class L2Weapon extends L2Item
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon onmagic skills! item ", toString()));
+					_log.info("> Couldnt parse " + skill + " in weapon onmagic skills! item " + this);
 				}
 				if ((id > 0) && (level > 0) && (chance > 0))
 				{
@@ -173,7 +172,7 @@ public final class L2Weapon extends L2Item
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info(StringUtil.concat("> Couldnt parse ", skill, " in weapon oncrit skills! item ", toString()));
+					_log.info("> Couldnt parse " + skill + " in weapon oncrit skills! item " + this);
 				}
 				if ((id > 0) && (level > 0) && (chance > 0))
 				{

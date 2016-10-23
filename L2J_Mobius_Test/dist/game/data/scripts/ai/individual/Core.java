@@ -88,8 +88,8 @@ public final class Core extends AbstractNpcAI
 			final int loc_y = info.getInt("loc_y");
 			final int loc_z = info.getInt("loc_z");
 			final int heading = info.getInt("heading");
-			final int hp = info.getInt("currentHP");
-			final int mp = info.getInt("currentMP");
+			final double hp = info.getDouble("currentHP");
+			final double mp = info.getDouble("currentMP");
 			final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, loc_x, loc_y, loc_z, heading, false, 0);
 			core.setCurrentHpMp(hp, mp);
 			spawnBoss(core);

@@ -16,25 +16,20 @@
  */
 package com.l2jmobius.log.formatter;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.util.StringUtil;
 
-public class AccountingFormatter extends Formatter
+public class AccountingFormatter extends AbstractFormatter
 {
-	private final SimpleDateFormat dateFmt = new SimpleDateFormat("dd MMM H:mm:ss");
-	
 	@Override
 	public String format(LogRecord record)
 	{
 		final Object[] params = record.getParameters();
-		final StringBuilder output = StringUtil.startAppend(30 + record.getMessage().length() + (params == null ? 0 : params.length * 10), "[", dateFmt.format(new Date(record.getMillis())), "] ", record.getMessage());
+		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
+		output.append(super.format(record));
 		
 		if (params != null)
 		{
@@ -45,7 +40,7 @@ public class AccountingFormatter extends Formatter
 					continue;
 				}
 				
-				StringUtil.append(output, ", ");
+				output.append(", ");
 				
 				if (p instanceof L2GameClient)
 				{
@@ -60,50 +55,46 @@ public class AccountingFormatter extends Formatter
 					}
 					catch (Exception e)
 					{
+						
 					}
 					
 					switch (client.getState())
 					{
 						case IN_GAME:
-						{
 							if (client.getActiveChar() != null)
 							{
-								StringUtil.append(output, client.getActiveChar().getName());
-								StringUtil.append(output, "(", String.valueOf(client.getActiveChar().getObjectId()), ") ");
+								output.append(client.getActiveChar().getName());
+								output.append("(");
+								output.append(client.getActiveChar().getObjectId());
+								output.append(") ");
 							}
-							break;
-						}
 						case AUTHED:
-						{
 							if (client.getAccountName() != null)
 							{
-								StringUtil.append(output, client.getAccountName(), " ");
+								output.append(client.getAccountName());
+								output.append(" ");
 							}
-							break;
-						}
 						case CONNECTED:
-						{
 							if (address != null)
 							{
-								StringUtil.append(output, address);
+								output.append(address);
 							}
 							break;
-						}
 						default:
-						{
 							throw new IllegalStateException("Missing state on switch");
-						}
 					}
 				}
 				else if (p instanceof L2PcInstance)
 				{
-					final L2PcInstance player = (L2PcInstance) p;
-					StringUtil.append(output, player.getName());
-					StringUtil.append(output, "(", String.valueOf(player.getObjectId()), ")");
+					L2PcInstance player = (L2PcInstance) p;
+					output.append(player.getName());
+					output.append("(");
+					output.append(player.getObjectId());
+					output.append(")");
 				}
 				else
 				{
-					StringUtil.append(output, p.toString());
+					output.append(p);
 				}
 			}
 		}

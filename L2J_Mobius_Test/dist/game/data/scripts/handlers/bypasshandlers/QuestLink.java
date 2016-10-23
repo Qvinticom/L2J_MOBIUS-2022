@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.util.StringUtil;
 
 public class QuestLink implements IBypassHandler
 {
@@ -82,11 +81,12 @@ public class QuestLink implements IBypassHandler
 	 */
 	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
 	{
-		final StringBuilder sb = StringUtil.startAppend(150, "<html><body>");
-		final StringBuilder qStarted = StringUtil.startAppend(150, "");
-		final StringBuilder qCanStart = StringUtil.startAppend(150, "");
-		final StringBuilder qCannotstart = StringUtil.startAppend(150, "");
-		final StringBuilder qComplete = StringUtil.startAppend(150, "");
+		final StringBuilder sb = new StringBuilder(128);
+		final StringBuilder qStarted = new StringBuilder(128);
+		final StringBuilder qCanStart = new StringBuilder(128);
+		final StringBuilder qCannotstart = new StringBuilder(128);
+		final StringBuilder qComplete = new StringBuilder(128);
+		sb.append("<html><body>");
 		String state = "";
 		String color = "";
 		
@@ -129,29 +129,29 @@ public class QuestLink implements IBypassHandler
 			{
 				case "ffdd66": // started
 				{
-					StringUtil.append(qStarted, "<font color=\"" + color + "\">");
-					StringUtil.append(qStarted, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					qStarted.append("<font color=\"" + color + "\">");
+					qStarted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + String.valueOf(npc.getObjectId()) + "_Quest " + quest.getName() + "\">");
 					appendToText(quest, qStarted, state);
 					break;
 				}
 				case "bbaa88": // can start
 				{
-					StringUtil.append(qCanStart, "<font color=\"" + color + "\">");
-					StringUtil.append(qCanStart, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					qCanStart.append("<font color=\"" + color + "\">");
+					qCanStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + String.valueOf(npc.getObjectId()) + "_Quest " + quest.getName() + "\">");
 					appendToText(quest, qCanStart, state);
 					break;
 				}
 				case "a62f31": // cannot start
 				{
-					StringUtil.append(qCannotstart, "<font color=\"" + color + "\">");
-					StringUtil.append(qCannotstart, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					qCannotstart.append("<font color=\"" + color + "\">");
+					qCannotstart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + String.valueOf(npc.getObjectId()) + "_Quest " + quest.getName() + "\">");
 					appendToText(quest, qCannotstart, state);
 					break;
 				}
 				case "787878": // complete
 				{
-					StringUtil.append(qComplete, "<font color=\"" + color + "\">");
-					StringUtil.append(qComplete, "<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_", String.valueOf(npc.getObjectId()), "_Quest ", quest.getName(), "\">");
+					qComplete.append("<font color=\"" + color + "\">");
+					qComplete.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + String.valueOf(npc.getObjectId()) + "_Quest " + quest.getName() + "\">");
 					appendToText(quest, qComplete, state);
 					break;
 				}
@@ -171,11 +171,11 @@ public class QuestLink implements IBypassHandler
 	{
 		if (quest.isCustomQuest())
 		{
-			StringUtil.append(sb, quest.getDescr(), state);
+			sb.append(quest.getDescr() + state);
 		}
 		else
 		{
-			StringUtil.append(sb, "<fstring>", String.valueOf(quest.getNpcStringId()), state, "</fstring>");
+			sb.append("<fstring>" + String.valueOf(quest.getNpcStringId()) + state + "</fstring>");
 		}
 		sb.append("</button></font>");
 	}

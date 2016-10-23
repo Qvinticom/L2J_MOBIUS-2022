@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.StringUtil;
 
 /**
  * This class handles Clan Hall commands.
@@ -195,7 +194,11 @@ public class AdminClanHall implements IAdminCommandHandler
 		{
 			if (hall != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=90><a action=\"bypass -h admin_chsiege_siegablehall ", String.valueOf(hall.getId()), "\">", hall.getName(), "</a></td>");
+				cList.append("<td fixwidth=90><a action=\"bypass -h admin_chsiege_siegablehall ");
+				cList.append(hall.getId());
+				cList.append("\">");
+				cList.append(hall.getName());
+				cList.append("</a></td>");
 				i++;
 			}
 			if (i > 1)
@@ -211,7 +214,11 @@ public class AdminClanHall implements IAdminCommandHandler
 		{
 			if (clanhall != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=134><a action=\"bypass -h admin_clanhall ", String.valueOf(clanhall.getId()), "\">", clanhall.getName(), "</a></td>");
+				cList.append("<td fixwidth=134><a action=\"bypass -h admin_clanhall ");
+				cList.append(clanhall.getId());
+				cList.append("\">");
+				cList.append(clanhall.getName());
+				cList.append("</a></td>");
 				i++;
 			}
 			if (i > 1)
@@ -227,7 +234,11 @@ public class AdminClanHall implements IAdminCommandHandler
 		{
 			if (clanhall != null)
 			{
-				StringUtil.append(cList, "<td fixwidth=134><a action=\"bypass -h admin_clanhall ", String.valueOf(clanhall.getId()), "\">", clanhall.getName(), "</a></td>");
+				cList.append("<td fixwidth=134><a action=\"bypass -h admin_clanhall ");
+				cList.append(clanhall.getId());
+				cList.append("\">");
+				cList.append(clanhall.getName());
+				cList.append("</a></td>");
 				i++;
 			}
 			if (i > 1)

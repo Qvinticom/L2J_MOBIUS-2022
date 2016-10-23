@@ -44,10 +44,6 @@ public final class ElcadiasTent extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 158;
 	
-	class ETWorld extends InstanceWorld
-	{
-	}
-	
 	public ElcadiasTent()
 	{
 		super(ElcadiasTent.class.getSimpleName());
@@ -71,7 +67,7 @@ public final class ElcadiasTent extends AbstractInstance
 				|| ((ForbiddenBook != null) && ForbiddenBook.isCompleted() && (Monastery == null)) //
 				|| ((PowerOfSeal != null) && PowerOfSeal.isStarted()))
 			{
-				enterInstance(talker, new ETWorld(), "ElcadiasTent.xml", TEMPLATE_ID);
+				enterInstance(talker, "ElcadiasTent.xml", TEMPLATE_ID);
 			}
 			else
 			{
