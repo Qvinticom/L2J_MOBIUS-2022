@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.entity;
 
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -37,7 +38,7 @@ public interface Siegable
 	
 	L2SiegeClan getAttackerClan(L2Clan clan);
 	
-	List<L2SiegeClan> getAttackerClans();
+	Collection<L2SiegeClan> getAttackerClans();
 	
 	List<L2PcInstance> getAttackersInZone();
 	

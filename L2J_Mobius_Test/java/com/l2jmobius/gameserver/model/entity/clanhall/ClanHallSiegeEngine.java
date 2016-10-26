@@ -21,6 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -70,7 +72,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	protected final Logger _log;
 	
 	private final Map<Integer, L2SiegeClan> _attackers = new ConcurrentHashMap<>();
-	private List<L2Spawn> _guards;
+	private Collection<L2Spawn> _guards;
 	
 	public SiegableHall _hall;
 	public ScheduledFuture<?> _siegeTask;
@@ -212,7 +214,12 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	@Override
 	public boolean checkIsAttacker(L2Clan clan)
 	{
-		return (clan != null) && _attackers.containsKey(clan.getId());
+		if (clan == null)
+		{
+			return false;
+		}
+		
+		return _attackers.containsKey(clan.getId());
 	}
 	
 	@Override
@@ -234,9 +241,9 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	}
 	
 	@Override
-	public List<L2SiegeClan> getAttackerClans()
+	public Collection<L2SiegeClan> getAttackerClans()
 	{
-		return new ArrayList<>(_attackers.values());
+		return Collections.unmodifiableCollection(_attackers.values());
 	}
 	
 	@Override

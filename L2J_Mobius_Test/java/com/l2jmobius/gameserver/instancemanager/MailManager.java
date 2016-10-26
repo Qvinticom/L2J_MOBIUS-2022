@@ -21,8 +21,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -139,7 +139,7 @@ public final class MailManager
 	
 	public final List<Message> getInbox(int objectId)
 	{
-		final List<Message> inbox = new ArrayList<>();
+		final List<Message> inbox = new LinkedList<>();
 		for (Message msg : getMessages())
 		{
 			if ((msg != null) && (msg.getReceiverId() == objectId) && !msg.isDeletedByReceiver())
@@ -157,7 +157,7 @@ public final class MailManager
 	
 	public final List<Message> getOutbox(int objectId)
 	{
-		final List<Message> outbox = new ArrayList<>();
+		final List<Message> outbox = new LinkedList<>();
 		for (Message msg : getMessages())
 		{
 			if ((msg != null) && (msg.getSenderId() == objectId) && !msg.isDeletedBySender())

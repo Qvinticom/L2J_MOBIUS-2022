@@ -135,7 +135,7 @@ public class PcStat extends PlayableStat
 		
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
 		final L2Summon sPet = activeChar.getPet();
-		if ((sPet != null) && Util.checkIfInShortRadius(Config.ALT_PARTY_RANGE, activeChar, sPet, false))
+		if ((sPet != null) && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, sPet, false))
 		{
 			final L2PetInstance pet = (L2PetInstance) sPet;
 			ratioTakenByPlayer = pet.getPetLevelData().getOwnerExpTaken() / 100f;
