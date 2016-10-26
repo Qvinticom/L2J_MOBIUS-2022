@@ -10744,11 +10744,6 @@ public final class L2PcInstance extends L2Playable
 		return _lastServerPosition;
 	}
 	
-	public int getLastServerDistance(int x, int y, int z)
-	{
-		return (int) Util.calculateDistance(x, y, z, _lastServerPosition.getX(), _lastServerPosition.getY(), _lastServerPosition.getZ(), true, false);
-	}
-	
 	@Override
 	public void addExpAndSp(long addToExp, int addToSp)
 	{

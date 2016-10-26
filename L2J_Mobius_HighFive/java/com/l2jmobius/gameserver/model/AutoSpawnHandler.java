@@ -20,7 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -32,6 +32,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
@@ -645,14 +646,9 @@ public class AutoSpawnHandler
 			return _npcList;
 		}
 		
-		public List<L2Spawn> getSpawns()
+		public Collection<L2Spawn> getSpawns()
 		{
-			final List<L2Spawn> npcSpawns = new ArrayList<>();
-			for (L2Npc npcInst : _npcList)
-			{
-				npcSpawns.add(npcInst.getSpawn());
-			}
-			return npcSpawns;
+			return _npcList.stream().map(L2Npc::getSpawn).collect(Collectors.toList());
 		}
 		
 		public void setSpawnCount(int spawnCount)

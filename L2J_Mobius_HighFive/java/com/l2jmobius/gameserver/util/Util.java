@@ -180,39 +180,6 @@ public final class Util
 	}
 	
 	/**
-	 * (Based on ucwords() function of PHP)<br>
-	 * DrHouse: still functional but must be rewritten to avoid += to concat strings
-	 * @param str - the string to capitalize
-	 * @return a string with the first letter of every word in {@code str} capitalized
-	 */
-	@Deprecated
-	public static String capitalizeWords(String str)
-	{
-		if ((str == null) || str.isEmpty())
-		{
-			return str;
-		}
-		
-		final char[] charArray = str.toCharArray();
-		final StringBuilder result = new StringBuilder();
-		
-		// Capitalize the first letter in the given string!
-		charArray[0] = Character.toUpperCase(charArray[0]);
-		
-		for (int i = 0; i < charArray.length; i++)
-		{
-			if (Character.isWhitespace(charArray[i]))
-			{
-				charArray[i + 1] = Character.toUpperCase(charArray[i + 1]);
-			}
-			
-			result.append(charArray[i]);
-		}
-		
-		return result.toString();
-	}
-	
-	/**
 	 * @param range
 	 * @param obj1
 	 * @param obj2
@@ -221,7 +188,11 @@ public final class Util
 	 */
 	public static boolean checkIfInRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
 	{
-		if ((obj1 == null) || (obj2 == null) || (obj1.getInstanceId() != obj2.getInstanceId()))
+		if ((obj1 == null) || (obj2 == null))
+		{
+			return false;
+		}
+		if (obj1.getInstanceId() != obj2.getInstanceId())
 		{
 			return false;
 		}
@@ -230,52 +201,39 @@ public final class Util
 			return true; // not limited
 		}
 		
-		int rad = obj1 instanceof L2Character ? 0 + ((L2Character) obj1).getTemplate().getCollisionRadius() : 0;
+		int radius = 0;
+		if (obj1 instanceof L2Character)
+		{
+			radius += ((L2Character) obj1).getTemplate().getCollisionRadius();
+		}
 		if (obj2 instanceof L2Character)
 		{
-			rad += ((L2Character) obj2).getTemplate().getCollisionRadius();
+			radius += ((L2Character) obj2).getTemplate().getCollisionRadius();
 		}
 		
-		final double dx = obj1.getX() - obj2.getX();
-		final double dy = obj1.getY() - obj2.getY();
-		double d = (dx * dx) + (dy * dy);
-		
-		if (includeZAxis)
-		{
-			final double dz = obj1.getZ() - obj2.getZ();
-			d += dz * dz;
-		}
-		return d <= ((range * range) + (2 * range * rad) + (rad * rad));
+		return calculateDistance(obj1, obj2, includeZAxis, false) <= (range + radius);
 	}
 	
 	/**
 	 * Checks if object is within short (sqrt(int.max_value)) radius, not using collisionRadius. Faster calculation than checkIfInRange if distance is short and collisionRadius isn't needed. Not for long distance checks (potential teleports, far away castles etc).
-	 * @param radius
+	 * @param range
 	 * @param obj1
 	 * @param obj2
 	 * @param includeZAxis if true, check also Z axis (3-dimensional check), otherwise only 2D
 	 * @return {@code true} if objects are within specified range between each other, {@code false} otherwise
 	 */
-	public static boolean checkIfInShortRadius(int radius, L2Object obj1, L2Object obj2, boolean includeZAxis)
+	public static boolean checkIfInShortRange(int range, L2Object obj1, L2Object obj2, boolean includeZAxis)
 	{
 		if ((obj1 == null) || (obj2 == null))
 		{
 			return false;
 		}
-		if (radius == -1)
+		if (range == -1)
 		{
 			return true; // not limited
 		}
 		
-		final int dx = obj1.getX() - obj2.getX();
-		final int dy = obj1.getY() - obj2.getY();
-		
-		if (!includeZAxis)
-		{
-			return ((dx * dx) + (dy * dy)) <= (radius * radius);
-		}
-		final int dz = obj1.getZ() - obj2.getZ();
-		return ((dx * dx) + (dy * dy) + (dz * dz)) <= (radius * radius);
+		return calculateDistance(obj1, obj2, includeZAxis, false) <= range;
 	}
 	
 	/**
