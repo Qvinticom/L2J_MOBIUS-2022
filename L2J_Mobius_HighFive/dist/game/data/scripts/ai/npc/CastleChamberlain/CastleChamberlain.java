@@ -59,7 +59,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowSeedSetting;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Castle Chamberlain AI.

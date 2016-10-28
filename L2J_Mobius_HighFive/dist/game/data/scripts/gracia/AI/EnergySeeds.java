@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00692_HowtoOpposeEvil.Q00692_HowtoOpposeEvil;
 
 /**

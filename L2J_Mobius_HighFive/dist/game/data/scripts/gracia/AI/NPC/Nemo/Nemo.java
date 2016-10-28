@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import gracia.AI.Maguen;
 
 /**

@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Tower of Insolence Vortex teleport AI.<br>

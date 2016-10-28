@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Range Guard AI.

@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Priest Of Blessing AI.

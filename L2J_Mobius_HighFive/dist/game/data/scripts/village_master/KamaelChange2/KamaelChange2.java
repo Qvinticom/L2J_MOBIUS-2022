@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00064_CertifiedBerserker.Q00064_CertifiedBerserker;
 import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
 import quests.Q00066_CertifiedArbalester.Q00066_CertifiedArbalester;

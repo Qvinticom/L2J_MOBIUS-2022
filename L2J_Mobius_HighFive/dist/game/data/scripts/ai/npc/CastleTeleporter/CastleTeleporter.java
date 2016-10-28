@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.entity.Siege;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Castle Teleporter AI.

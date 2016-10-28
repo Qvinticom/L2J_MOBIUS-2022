@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureKill;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00230_TestOfTheSummoner.Q00230_TestOfTheSummoner;
 
 /**

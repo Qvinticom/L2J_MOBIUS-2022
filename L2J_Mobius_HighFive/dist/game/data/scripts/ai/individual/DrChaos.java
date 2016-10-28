@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.util.Rnd;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Dr. Chaos is a boss @ Pavel's Ruins. Some things to know :

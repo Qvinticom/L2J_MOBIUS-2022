@@ -18,7 +18,7 @@ package ai.npc.Summons.MerchantGolem;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Golem Trader AI.

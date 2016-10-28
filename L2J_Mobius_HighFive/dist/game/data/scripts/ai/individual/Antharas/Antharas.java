@@ -45,7 +45,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Antharas AI.

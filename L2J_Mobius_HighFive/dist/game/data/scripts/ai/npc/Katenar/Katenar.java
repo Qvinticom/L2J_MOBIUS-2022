@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00065_CertifiedSoulBreaker.Q00065_CertifiedSoulBreaker;
 
 /**

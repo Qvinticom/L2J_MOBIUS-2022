@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
 

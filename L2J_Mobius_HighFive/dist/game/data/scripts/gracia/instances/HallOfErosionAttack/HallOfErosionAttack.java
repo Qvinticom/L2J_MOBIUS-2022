@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 import com.l2jmobius.util.Rnd;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00696_ConquerTheHallOfErosion.Q00696_ConquerTheHallOfErosion;
 
 public class HallOfErosionAttack extends AbstractNpcAI

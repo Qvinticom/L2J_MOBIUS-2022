@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00062_PathOfTheTrooper.Q00062_PathOfTheTrooper;
 import quests.Q00063_PathOfTheWarder.Q00063_PathOfTheWarder;
 

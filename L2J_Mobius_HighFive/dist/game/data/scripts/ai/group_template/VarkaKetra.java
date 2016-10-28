@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00605_AllianceWithKetraOrcs.Q00605_AllianceWithKetraOrcs;
 import quests.Q00606_BattleAgainstVarkaSilenos.Q00606_BattleAgainstVarkaSilenos;
 import quests.Q00607_ProveYourCourageKetra.Q00607_ProveYourCourageKetra;

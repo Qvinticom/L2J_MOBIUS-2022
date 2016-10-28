@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import custom.Validators.SubClassSkills;
 
 /**

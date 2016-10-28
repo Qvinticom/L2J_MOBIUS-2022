@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import quests.Q00694_BreakThroughTheHallOfSuffering.Q00694_BreakThroughTheHallOfSuffering;
 
 public class HallOfSufferingAttack extends AbstractNpcAI

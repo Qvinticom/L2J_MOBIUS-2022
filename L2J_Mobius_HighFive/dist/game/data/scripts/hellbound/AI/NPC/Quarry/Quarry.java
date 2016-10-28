@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import hellbound.HellboundEngine;
 
 /**

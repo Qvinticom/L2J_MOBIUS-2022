@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 import hellbound.HellboundEngine;
 import quests.Q00130_PathToHellbound.Q00130_PathToHellbound;
 import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;

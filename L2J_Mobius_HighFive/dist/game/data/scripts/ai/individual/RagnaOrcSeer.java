@@ -18,7 +18,7 @@ package ai.individual;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Ragna Orc Seer AI.

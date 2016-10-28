@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Castle Ambassador AI.

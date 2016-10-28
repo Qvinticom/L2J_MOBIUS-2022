@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.util.Rnd;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * @author HorridoJoho, janiko, FinalDestination, lion

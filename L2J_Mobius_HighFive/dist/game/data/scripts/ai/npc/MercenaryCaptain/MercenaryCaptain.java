@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowDominionRegistry;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * Mercenary Captain AI.

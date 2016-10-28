@@ -55,7 +55,7 @@ import com.l2jmobius.gameserver.util.HtmlUtil;
 import com.l2jmobius.gameserver.util.Util;
 import com.l2jmobius.util.Rnd;
 
-import ai.npc.AbstractNpcAI;
+import ai.AbstractNpcAI;
 
 /**
  * @author UnAfraid

@@ -28,8 +28,8 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
 
+import ai.AbstractNpcAI;
 import ai.individual.Valakas;
-import ai.npc.AbstractNpcAI;
 
 /**
  * Grand Bosses teleport AI.<br>
