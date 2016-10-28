@@ -80,7 +80,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 			{
 				npc.setScriptValue(1);
 			}
-			broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
+			npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.WHO_S_THERE_IF_YOU_DISTURB_THE_TEMPER_OF_THE_GREAT_LAND_DRAGON_ANTHARAS_I_WILL_NEVER_FORGIVE_YOU);
 		}
 		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
@@ -96,7 +96,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 				{
 					final L2Npc newKnight = addSpawn(DRAGON_KNIGHT2, npc, false, 0, true);
 					npc.deleteMe();
-					broadcastNpcSay(newKnight, ChatType.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
+					newKnight.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THOSE_WHO_SET_FOOT_IN_THIS_PLACE_SHALL_NOT_LEAVE_ALIVE);
 					addAttackDesire(newKnight, killer);
 				}
 				break;
@@ -107,7 +107,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 				{
 					final L2Npc eliteKnight = addSpawn(ELITE_DRAGON_KNIGHT, npc, false, 0, true);
 					npc.deleteMe();
-					broadcastNpcSay(eliteKnight, ChatType.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
+					eliteKnight.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.IF_YOU_WISH_TO_SEE_HELL_I_WILL_GRANT_YOU_YOUR_WISH);
 					addAttackDesire(eliteKnight, killer);
 				}
 				break;

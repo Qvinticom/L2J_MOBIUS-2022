@@ -50,7 +50,7 @@ public final class Lumi extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, LUMI_SHOUT[getRandom(3)], 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, LUMI_SHOUT[getRandom(3)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

@@ -96,7 +96,7 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 			}
 			else
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_I_LL_BE_SENDING_YOU_BACK_TO_THE_TOWN_OF_RUNE_WHICH_IS_THE_NEAREST_TOWN);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IF_YOUR_MEANS_OF_ARRIVAL_WAS_A_BIT_UNCONVENTIONAL_THEN_I_LL_BE_SENDING_YOU_BACK_TO_THE_TOWN_OF_RUNE_WHICH_IS_THE_NEAREST_TOWN);
 				player.teleToLocation(DION_CASTLE_TOWN);
 			}
 		}

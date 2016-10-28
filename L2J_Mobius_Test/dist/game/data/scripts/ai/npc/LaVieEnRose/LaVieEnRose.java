@@ -85,19 +85,19 @@ public final class LaVieEnRose extends AbstractNpcAI
 			}
 			case "SPAM_TEXT":
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_BEAUTY_SHOP_IS_OPEN_COME_ON_IN);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_BEAUTY_SHOP_IS_OPEN_COME_ON_IN);
 				startQuestTimer("SPAM_TEXT2", 2500, npc, null);
 				break;
 			}
 			case "SPAM_TEXT2":
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_LOOK_GOOD_TOO_BUDDY_COME_ON_COME_ON);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_LOOK_GOOD_TOO_BUDDY_COME_ON_COME_ON);
 				startQuestTimer("SPAM_TEXT3", 2500, npc, null);
 				break;
 			}
 			case "SPAM_TEXT3":
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.EVERYONE_COME_ON_LET_S_GO_GANGNAM_STYLE);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EVERYONE_COME_ON_LET_S_GO_GANGNAM_STYLE);
 				break;
 			}
 			case "cancel":

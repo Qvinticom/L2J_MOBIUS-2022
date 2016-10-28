@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
@@ -430,13 +429,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			// also, perform a rare random chat
 			if (getRandom(20) == 0)
 			{
-				final NpcStringId message = NpcStringId.getNpcStringId(getRandom(2024, 2029));
-				final NpcSay packet = new NpcSay(nextNpc, ChatType.NPC_GENERAL, message);
-				if (message.getParamCount() > 0) // player name, $s1
-				{
-					packet.addStringParameter(player.getName());
-				}
-				npc.broadcastPacket(packet);
+				NpcStringId message = NpcStringId.getNpcStringId(getRandom(2024, 2029));
+				npc.broadcastSay(ChatType.NPC_GENERAL, message, message.getParamCount() > 0 ? player.getName() : null);
 			}
 			// @formatter:off
 			/*
@@ -546,13 +540,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			// rare random talk...
 			if (getRandom(20) == 0)
 			{
-				final NpcStringId message = TEXT[growthLevel][getRandom(TEXT[growthLevel].length)];
-				final NpcSay packet = new NpcSay(npc, ChatType.NPC_GENERAL, message);
-				if (message.getParamCount() > 0) // player name, $s1
-				{
-					packet.addStringParameter(caster.getName());
-				}
-				npc.broadcastPacket(packet);
+				NpcStringId message = TEXT[growthLevel][getRandom(TEXT[growthLevel].length)];
+				npc.broadcastSay(ChatType.NPC_GENERAL, message, message.getParamCount() > 0 ? caster.getName() : null);
 			}
 			
 			if ((growthLevel > 0) && (FEED_INFO.get(objectId) != caster.getObjectId()))
@@ -574,13 +563,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			if (skillId == beast.getFoodType())
 			{
 				beast.onReceiveFood();
-				final NpcStringId message = TAMED_TEXT[getRandom(TAMED_TEXT.length)];
-				final NpcSay packet = new NpcSay(npc, ChatType.NPC_GENERAL, message);
-				if (message.getParamCount() > 0)
-				{
-					packet.addStringParameter(caster.getName());
-				}
-				beast.broadcastPacket(packet);
+				NpcStringId message = TAMED_TEXT[getRandom(TAMED_TEXT.length)];
+				npc.broadcastSay(ChatType.NPC_GENERAL, message, message.getParamCount() > 0 ? caster.getName() : null);
 			}
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);

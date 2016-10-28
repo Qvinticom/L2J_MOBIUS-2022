@@ -89,14 +89,14 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
 			}
 		}
 		else if (!player.isAffectedBySkill(TIMER) && (npc.calculateDistance(npc.getSpawn().getLocation(), false, false) < 2000))
 		{
 			npc.setTarget(player);
 			npc.doCast(STONE.getSkill());
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
 		}
 		return super.onAttack(npc, player, damage, isSummon);
 	}

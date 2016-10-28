@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Little Wing (420)
@@ -422,7 +421,7 @@ public final class Q00420_LittleWing extends Quest
 		{
 			takeItems(attacker, DELUXE_FAIRY_STONE, -1);
 			playSound(attacker, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-			npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THE_STONE_THE_ELVEN_STONE_BROKE));
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_STONE_THE_ELVEN_STONE_BROKE);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

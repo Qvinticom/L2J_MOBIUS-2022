@@ -117,7 +117,7 @@ public final class FactionManager extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, TEXTS[getRandom(TEXTS.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, TEXTS[getRandom(TEXTS.length)]);
 				}
 				break;
 			}

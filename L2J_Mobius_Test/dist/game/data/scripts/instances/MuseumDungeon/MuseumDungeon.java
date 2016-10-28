@@ -89,7 +89,7 @@ public final class MuseumDungeon extends AbstractInstance
 				if (world.toyron.calculateDistance(player.getTarget(), false, false) > 50)
 				{
 					world.toyron.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getTarget().getLocation());
-					broadcastNpcSay(world.toyron, ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
+					world.toyron.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ENOUGH_OF_THIS_COME_AT_ME);
 				}
 				else if (world.toyron.getTarget() != player.getTarget())
 				{

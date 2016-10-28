@@ -1040,7 +1040,7 @@ public final class QuestState
 	public boolean isNowAvailable()
 	{
 		final String val = get("restartTime");
-		return (val == null) || !Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis());
+		return (val != null) && (!Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis()));
 	}
 	
 	/**

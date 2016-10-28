@@ -25,7 +25,6 @@ import java.util.logging.Level;
 import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.TeleportLocationTable;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.TeleportersData;
@@ -390,7 +389,6 @@ public final class L2TeleporterInstance extends L2Npc
 		}
 		else if (command.startsWith("Chat"))
 		{
-			final Calendar cal = Calendar.getInstance();
 			int val = 0;
 			try
 			{
@@ -402,17 +400,6 @@ public final class L2TeleporterInstance extends L2Npc
 			catch (NumberFormatException nfe)
 			{
 			}
-			
-			if ((val == 1) && (player.getLevel() < 41))
-			{
-				showNewbieHtml(player);
-				return;
-			}
-			if ((val == 1) && (cal.get(Calendar.HOUR_OF_DAY) >= 20) && (cal.get(Calendar.HOUR_OF_DAY) <= 23) && ((cal.get(Calendar.DAY_OF_WEEK) == 1) || (cal.get(Calendar.DAY_OF_WEEK) == 7)))
-			{
-				showHalfPriceHtml(player);
-				return;
-			}
 			showChatWindow(player, val);
 		}
 		super.onBypassFeedback(player, command);
@@ -422,43 +409,6 @@ public final class L2TeleporterInstance extends L2Npc
 	public String getHtmlPath(int npcId, int val)
 	{
 		return "html/teleporter/" + (val == 0 ? "" + npcId : npcId + "-" + val) + ".htm";
-	}
-	
-	private void showNewbieHtml(L2PcInstance player)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		
-		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
-		String filename = "html/teleporter/free/" + getTemplate().getId() + ".htm";
-		if (!HtmCache.getInstance().isLoadable(filename))
-		{
-			filename = "html/teleporter/" + getTemplate().getId() + "-1.htm";
-		}
-		
-		html.setFile(player.getHtmlPrefix(), filename);
-		html.replace("%objectId%", String.valueOf(getObjectId()));
-		html.replace("%npcname%", getName());
-		player.sendPacket(html);
-	}
-	
-	private void showHalfPriceHtml(L2PcInstance player)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		
-		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		
-		final String filename = !HtmCache.getInstance().isLoadable("html/teleporter/half/" + getId() + ".htm") ? "html/teleporter/" + getId() + "-1.htm" : "html/teleporter/half/" + getId() + ".htm";
-		html.setFile(player.getHtmlPrefix(), filename);
-		html.replace("%objectId%", String.valueOf(getObjectId()));
-		html.replace("%npcname%", getName());
-		player.sendPacket(html);
 	}
 	
 	@Override

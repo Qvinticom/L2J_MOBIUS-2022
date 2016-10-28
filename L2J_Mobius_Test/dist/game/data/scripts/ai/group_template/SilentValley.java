@@ -108,7 +108,7 @@ public final class SilentValley extends AbstractNpcAI
 				if (!isSummon && npc.isScriptValue(0))
 				{
 					npc.setScriptValue(1);
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_BE_CURSED_FOR_SEEKING_THE_TREASURE);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WILL_BE_CURSED_FOR_SEEKING_THE_TREASURE);
 					npc.setTarget(player);
 					npc.doCast(BETRAYAL.getSkill());
 				}

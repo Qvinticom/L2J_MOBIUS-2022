@@ -49,7 +49,7 @@ public final class Sodian extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, SODIAN_SHOUT[getRandom(2)], 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, SODIAN_SHOUT[getRandom(2)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

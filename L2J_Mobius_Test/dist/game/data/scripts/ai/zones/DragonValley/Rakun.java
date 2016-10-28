@@ -44,7 +44,7 @@ public final class Rakun extends AbstractNpcAI
 	{
 		if (event.equals("BROADCAST_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THIS_PLACE_SWARMS_WITH_DRAGONS_BY_DAY_AND_UNDEAD_BY_NIGHT, 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_PLACE_SWARMS_WITH_DRAGONS_BY_DAY_AND_UNDEAD_BY_NIGHT, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

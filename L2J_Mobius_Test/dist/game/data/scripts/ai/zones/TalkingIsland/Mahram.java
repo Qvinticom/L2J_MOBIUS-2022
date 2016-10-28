@@ -43,7 +43,7 @@ public final class Mahram extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.ALCHEMY_IS_A_SCIENCE_AND_AN_ART, 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ALCHEMY_IS_A_SCIENCE_AND_AN_ART, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

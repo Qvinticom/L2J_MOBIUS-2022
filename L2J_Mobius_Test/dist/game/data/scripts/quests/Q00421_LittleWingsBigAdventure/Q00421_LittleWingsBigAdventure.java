@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -398,7 +397,7 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 						}
 						else if ((getRandom(100) < 2) && hasQuestItems(attacker, FAIRY_LEAF))
 						{
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GIVE_ME_A_FAIRY_LEAF);
 							takeItems(attacker, FAIRY_LEAF, 1);
 							qs.setMemoState(qs.getMemoState() + data.memoStateValue);
 							qs.unset("hits");
@@ -415,13 +414,13 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					switch (getRandom(3))
 					{
 						case 0:
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN);
 							break;
 						case 1:
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, data.message));
+							npc.broadcastSay(ChatType.NPC_GENERAL, data.message);
 							break;
 						case 2:
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST);
 							break;
 					}
 				}

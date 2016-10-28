@@ -88,7 +88,7 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 				else
 				{
 					final L2PcInstance target = obj.getActingPlayer();
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
+					npc.broadcastSay(ChatType.NPC_GENERAL, NPC_STRINGS_ON_SPAWN[getRandom(NPC_STRINGS_ON_SPAWN.length)], target.getName());
 					addAttackDesire(npc, target);
 					
 					startQuestTimer("DESPAWN", DESPAWN_TIME * 1000, npc, target);
@@ -109,7 +109,7 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 	{
 		if (getRandom(100) < CHANCE_TO_SHOUT_ON_ATTACK)
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NPC_STRINGS_ON_ATTACK[getRandom(NPC_STRINGS_ON_ATTACK.length)]);
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}
@@ -117,7 +117,7 @@ public final class WarriorFishingBlock extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]);
+		npc.broadcastSay(ChatType.NPC_GENERAL, NPC_STRINGS_ON_KILL[getRandom(NPC_STRINGS_ON_KILL.length)]);
 		cancelQuestTimer("DESPAWN", npc, killer);
 		return super.onKill(npc, killer, isSummon);
 	}

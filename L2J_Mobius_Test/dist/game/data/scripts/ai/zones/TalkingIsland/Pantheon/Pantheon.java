@@ -74,7 +74,7 @@ public final class Pantheon extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IS_IT_BETTER_TO_END_DESTINY_OR_START_DESTINY);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IS_IT_BETTER_TO_END_DESTINY_OR_START_DESTINY);
 				}
 				break;
 			}

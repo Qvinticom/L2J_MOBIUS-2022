@@ -100,7 +100,7 @@ public final class IceQueensCastle extends AbstractInstance
 			}
 			case "TIMER_BLIZZARD":
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_CAN_NO_LONGER_STAND_BY);
 				npc.stopMove(null);
 				npc.setTarget(player);
 				npc.doCast(ETHERNAL_BLIZZARD.getSkill());
@@ -148,7 +148,7 @@ public final class IceQueensCastle extends AbstractInstance
 					startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
 				}
 			}
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
 		}
 		return super.onSeeCreature(npc, creature, isSummon);
 	}

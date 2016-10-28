@@ -31,9 +31,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Let's Go To The Central Square (10320)
@@ -92,11 +90,14 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 			}
 			case "32975-02.html":
 			{
-				giveAdena(player, 30, true);
-				addExpAndSp(player, 30, 5);
-				qs.exitQuest(false, true);
-				htmltext = event;
-				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.WAIT_WAIT_A_MINUTE_I_STILL_HAVE_TIME));
+				if (qs.isStarted())
+				{
+					giveAdena(player, 30, true);
+					addExpAndSp(player, 30, 5);
+					qs.exitQuest(false, true);
+					htmltext = event;
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAIT_WAIT_A_MINUTE_I_STILL_HAVE_TIME);
+				}
 				break;
 			}
 		}

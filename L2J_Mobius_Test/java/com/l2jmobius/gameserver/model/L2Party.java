@@ -94,6 +94,14 @@ public class L2Party extends AbstractPlayerGroup
 	protected PartyMemberPosition _positionPacket;
 	private boolean _disbanding = false;
 	private static Map<Integer, L2Character> _tacticalSigns = null;
+	private static final int[] TACTICAL_SYS_STRINGS =
+	{
+		0,
+		2664,
+		2665,
+		2666,
+		2667
+	};
 	
 	/**
 	 * The message type send to the party members.
@@ -402,7 +410,7 @@ public class L2Party extends AbstractPlayerGroup
 		_tacticalSigns.entrySet().forEach(entry -> player.sendPacket(new ExTacticalSign(entry.getValue(), remove ? 0 : entry.getKey())));
 	}
 	
-	public void addTacticalSign(int tacticalSignId, L2Character target)
+	public void addTacticalSign(L2PcInstance activeChar, int tacticalSignId, L2Character target)
 	{
 		final L2Character tacticalTarget = getTacticalSigns().get(tacticalSignId);
 		
@@ -413,17 +421,42 @@ public class L2Party extends AbstractPlayerGroup
 			
 			// Add the new sign
 			_tacticalSigns.put(tacticalSignId, target);
+			
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
+			sm.addPcName(activeChar);
+			sm.addCharName(target);
+			sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
+			
+			getMembers().forEach(m ->
+			{
+				m.sendPacket(new ExTacticalSign(target, tacticalSignId));
+				m.sendPacket(sm);
+			});
 		}
 		else if (tacticalTarget == target)
 		{
+			// Sign already assigned
+			// If the sign is applied on the same target, remove it
 			_tacticalSigns.remove(tacticalSignId);
+			getMembers().forEach(m -> m.sendPacket(new ExTacticalSign(tacticalTarget, 0)));
 		}
 		else
 		{
 			// Otherwise, delete the old sign, and apply it to the new target
 			_tacticalSigns.replace(tacticalSignId, target);
+			
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_USED_S3_ON_C2);
+			sm.addPcName(activeChar);
+			sm.addCharName(target);
+			sm.addSystemString(TACTICAL_SYS_STRINGS[tacticalSignId]);
+			
+			getMembers().forEach(m ->
+			{
+				m.sendPacket(new ExTacticalSign(tacticalTarget, 0));
+				m.sendPacket(new ExTacticalSign(target, tacticalSignId));
+				m.sendPacket(sm);
+			});
 		}
-		getMembers().forEach(m -> m.sendPacket(new ExTacticalSign(target, tacticalSignId)));
 	}
 	
 	public void setTargetBasedOnTacticalSignId(L2PcInstance player, int tacticalSignId)

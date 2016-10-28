@@ -63,7 +63,7 @@ public final class Eleve extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("npc_move") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, ELEVE_SHOUT[getRandom(2)], 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, ELEVE_SHOUT[getRandom(2)], 1000);
 			if (getRandom(100) > 40)
 			{
 				addMoveToDesire(npc, ELEVE_LOC[getRandom(10)], 0);

@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * @author DS
@@ -129,7 +128,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 		}
 		if (_atcGludio != null)
 		{
-			_atcGludio.broadcastPacket(new NpcSay(_atcGludio.getObjectId(), ChatType.NPC_SHOUT, _atcGludio.getId(), npcString));
+			_atcGludio.broadcastSay(ChatType.NPC_SHOUT, npcString);
 		}
 	}
 	
@@ -142,7 +141,7 @@ public final class AirShipGludioGracia extends Quest implements Runnable
 		}
 		if (_atcGracia != null)
 		{
-			_atcGracia.broadcastPacket(new NpcSay(_atcGracia.getObjectId(), ChatType.NPC_SHOUT, _atcGracia.getId(), npcStringId));
+			_atcGracia.broadcastSay(ChatType.NPC_SHOUT, npcStringId);
 		}
 	}
 	

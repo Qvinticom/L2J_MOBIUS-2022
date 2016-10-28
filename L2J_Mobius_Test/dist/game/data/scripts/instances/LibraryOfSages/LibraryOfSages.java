@@ -96,7 +96,7 @@ public final class LibraryOfSages extends AbstractInstance
 				{
 					npc.setIsRunning(true);
 					npc.getAI().startFollow(player);
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
 					startQuestTimer("FOLLOW", 10000, npc, player);
 					break;
 				}

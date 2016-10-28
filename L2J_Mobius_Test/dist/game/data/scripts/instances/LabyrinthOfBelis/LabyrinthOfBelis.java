@@ -128,7 +128,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				if (world.getStatus() == 1)
 				{
 					showOnScreenMsg(player, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, ExShowScreenMessage.TOP_CENTER, 10000);
-					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, 1000);
+					world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY, 1000);
 					startQuestTimer("officer_wait_1", 5000, world.terian, player);
 				}
 				break;
@@ -191,7 +191,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				{
 					world.terian.setHeading(world.terian.getHeading() + 32500);
 					world.terian.broadcastInfo();
-					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.HEY_YOU_RE_NOT_ALL_BAD_LET_ME_KNOW_WHEN_YOU_RE_READY, 1000);
+					world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HEY_YOU_RE_NOT_ALL_BAD_LET_ME_KNOW_WHEN_YOU_RE_READY, 1000);
 					world.setStatus(4);
 				}
 				break;
@@ -215,7 +215,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					{
 						openDoor(DOOR_5, player.getInstanceId());
 						world.assistPlayer = false;
-						broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.COME_ON_ONTO_THE_NEXT_PLACE, 1000);
+						world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ON_ONTO_THE_NEXT_PLACE, 1000);
 						startQuestTimer("officer_goto_3", 5000, world.terian, player);
 						return "33215-02.html";
 					}
@@ -250,7 +250,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				{
 					world.terian.setHeading(world.terian.getHeading() + 32500);
 					world.terian.broadcastInfo();
-					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.READY_LET_ME_KNOW, 1000);
+					world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.READY_LET_ME_KNOW, 1000);
 					world.setStatus(6);
 				}
 				break;
@@ -266,13 +266,13 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				}
 				openDoor(DOOR_6, player.getInstanceId());
 				world.terian.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, TERIAN_ROOM_3_INSIDE);
-				broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
+				world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
 				startQuestTimer("room_3_spawns", 10000, world.terian, player);
 				return null;
 			}
 			case "room_3_spawns":
 			{
-				broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
+				world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE, 1000);
 				if (getRandomBoolean())
 				{
 					showOnScreenMsg(player, NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU, ExShowScreenMessage.TOP_CENTER, 10000);
@@ -312,7 +312,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					}
 					openDoor(DOOR_7, player.getInstanceId());
 					showOnScreenMsg(player, NpcStringId.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, ExShowScreenMessage.TOP_CENTER, 7000);
-					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT, 1000);
+					world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT, 1000);
 					startQuestTimer("officer_goto_4", 1000, world.terian, player);
 				}
 				break;
@@ -343,7 +343,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				{
 					world.terian.setHeading(world.terian.getHeading() + 32500);
 					world.terian.broadcastInfo();
-					broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.SOMETHING_OMINOUS_IN_THERE_I_HOPE_YOU_RE_REALLY_READY_FOR_THIS_LET_ME_KNOW, 1000);
+					world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SOMETHING_OMINOUS_IN_THERE_I_HOPE_YOU_RE_REALLY_READY_FOR_THIS_LET_ME_KNOW, 1000);
 					world.setStatus(13);
 				}
 				break;
@@ -474,7 +474,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					{
 						world.assistPlayer = false;
 						openDoor(DOOR_3, npc.getInstanceId());
-						broadcastNpcSay(world.terian, ChatType.NPC_GENERAL, NpcStringId.ALL_RIGHT_LET_S_MOVE_OUT, 1000);
+						world.terian.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ALL_RIGHT_LET_S_MOVE_OUT, 1000);
 						startQuestTimer("officer_goto_2", 100, world.terian, killer);
 					}
 				}

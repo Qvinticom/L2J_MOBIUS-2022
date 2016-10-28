@@ -23,9 +23,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 
@@ -78,11 +76,14 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 			}
 			case "32974-02.html":
 			{
-				giveAdena(player, 50, true);
-				addExpAndSp(player, 40, 5);
-				qs.exitQuest(false, true);
-				Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU));
-				htmltext = event;
+				if (qs.isStarted())
+				{
+					giveAdena(player, 50, true);
+					addExpAndSp(player, 40, 5);
+					qs.exitQuest(false, true);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU);
+					htmltext = event;
+				}
 				break;
 			}
 		}

@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -287,27 +286,30 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 						if ((lqs.getInt("flag") == 3) && arthea.isScriptValue(15))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
 						else if ((lqs.getInt("flag") == 2) && arthea.isScriptValue(14))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
 						else if ((lqs.getInt("flag") == 1) && arthea.isScriptValue(13))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
 						else if ((lqs.getInt("flag") == 0) && arthea.isScriptValue(12))
 						{
 							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
 						}
-						else if ((lqs.getInt("flag") < 4) && (getRandom(4) == 0))
+						else if (lqs.getInt("flag") < 4)
 						{
-							lqs.set("flag", lqs.getInt("flag") + 1);
-							npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.BINGO));
+							if (getRandom(4) == 0)
+							{
+								lqs.set("flag", lqs.getInt("flag") + 1);
+								npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BINGO);
+							}
 						}
 						arthea.setScriptValue(arthea.getScriptValue() + 1);
 					}

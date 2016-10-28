@@ -66,7 +66,7 @@ public final class Seyo extends AbstractNpcAI
 				if (npc.isScriptValue(1))
 				{
 					npc.setScriptValue(0);
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, TEXT[getRandom(TEXT.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, TEXT[getRandom(TEXT.length)]);
 				}
 				break;
 			}
@@ -87,11 +87,11 @@ public final class Seyo extends AbstractNpcAI
 					if (getRandom(100) == 0)
 					{
 						giveItems(player, STONE_FRAGMENT, 100);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AMAZING_S1_TOOK_100_OF_THESE_SOUL_STONE_FRAGMENTS_WHAT_A_COMPLETE_SWINDLER, player.getName());
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.AMAZING_S1_TOOK_100_OF_THESE_SOUL_STONE_FRAGMENTS_WHAT_A_COMPLETE_SWINDLER, player.getName());
 					}
 					else
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HMM_HEY_DID_YOU_GIVE_S1_SOMETHING_BUT_IT_WAS_JUST_1_HAHA, player.getName());
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HMM_HEY_DID_YOU_GIVE_S1_SOMETHING_BUT_IT_WAS_JUST_1_HAHA, player.getName());
 					}
 					startQuestTimer("TRICKERY_TIMER", 5000, npc, null);
 				}
@@ -114,18 +114,18 @@ public final class Seyo extends AbstractNpcAI
 					final int chance = getRandom(100);
 					if (chance < 20)
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AHEM_S1_HAS_NO_LUCK_AT_ALL_TRY_PRAYING, player.getName());
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.AHEM_S1_HAS_NO_LUCK_AT_ALL_TRY_PRAYING, player.getName());
 					}
 					else if (chance < 80)
 					{
 						giveItems(player, STONE_FRAGMENT, 1);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.IT_S_BETTER_THAN_LOSING_IT_ALL_RIGHT_OR_DOES_THIS_FEEL_WORSE);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IT_S_BETTER_THAN_LOSING_IT_ALL_RIGHT_OR_DOES_THIS_FEEL_WORSE);
 					}
 					else
 					{
 						final int itemCount = getRandom(10, 16);
 						giveItems(player, STONE_FRAGMENT, itemCount);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.S1_PULLED_ONE_WITH_S2_DIGITS_LUCKY_NOT_BAD, player.getName(), String.valueOf(itemCount));
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_PULLED_ONE_WITH_S2_DIGITS_LUCKY_NOT_BAD, player.getName(), String.valueOf(itemCount));
 					}
 					startQuestTimer("TRICKERY_TIMER", 5000, npc, null);
 				}
@@ -149,17 +149,17 @@ public final class Seyo extends AbstractNpcAI
 					if (chance == 0)
 					{
 						giveItems(player, STONE_FRAGMENT, 10000);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.AH_IT_S_OVER_WHAT_KIND_OF_GUY_IS_THAT_DAMN_FINE_YOU_S1_TAKE_IT_AND_GET_OUTTA_HERE, player.getName());
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.AH_IT_S_OVER_WHAT_KIND_OF_GUY_IS_THAT_DAMN_FINE_YOU_S1_TAKE_IT_AND_GET_OUTTA_HERE, player.getName());
 					}
 					else if (chance < 10)
 					{
 						giveItems(player, STONE_FRAGMENT, 1);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_DON_T_FEEL_BAD_RIGHT_ARE_YOU_SAD_BUT_DON_T_CRY);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DON_T_FEEL_BAD_RIGHT_ARE_YOU_SAD_BUT_DON_T_CRY);
 					}
 					else
 					{
 						giveItems(player, STONE_FRAGMENT, getRandom(1, 100));
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.A_BIG_PIECE_IS_MADE_UP_OF_LITTLE_PIECES_SO_HERE_S_A_LITTLE_PIECE);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.A_BIG_PIECE_IS_MADE_UP_OF_LITTLE_PIECES_SO_HERE_S_A_LITTLE_PIECE);
 					}
 					startQuestTimer("TRICKERY_TIMER", 5000, npc, null);
 				}

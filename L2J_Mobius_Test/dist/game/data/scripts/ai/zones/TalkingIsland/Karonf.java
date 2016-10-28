@@ -65,12 +65,12 @@ public final class Karonf extends AbstractNpcAI
 		{
 			if (getRandom(100) > 40)
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, KARONF_SHOUT[getRandom(2)], 1000);
+				npc.broadcastSay(ChatType.NPC_GENERAL, KARONF_SHOUT[getRandom(2)], 1000);
 				addMoveToDesire(npc, KARONF_LOC[getRandom(10)], 0);
 			}
 			else
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, KARONF_SHOUT[getRandom(2)]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, KARONF_SHOUT[getRandom(2)]);
 			}
 		}
 		return null;

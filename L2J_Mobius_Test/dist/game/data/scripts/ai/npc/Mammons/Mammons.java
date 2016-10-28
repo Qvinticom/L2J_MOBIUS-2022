@@ -119,7 +119,7 @@ public final class Mammons extends AbstractNpcAI
 				
 				if (blacksmith != null)
 				{
-					broadcastNpcSay(blacksmith, ChatType.NPC_GENERAL, NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU);
+					blacksmith.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU);
 				}
 				
 				if (Config.ANNOUNCE_MAMMON_SPAWN)

@@ -71,11 +71,14 @@ public final class Q10324_FindingMagisterGallint extends Quest
 			}
 			case "32980-02.html":
 			{
-				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
-				giveAdena(player, 110, true);
-				addExpAndSp(player, 3100, 5);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isStarted())
+				{
+					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+					giveAdena(player, 110, true);
+					addExpAndSp(player, 3100, 5);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}

@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.NpcPersonalAIData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
+import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
@@ -82,6 +83,7 @@ import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
 import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
+import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
@@ -89,6 +91,7 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfoAbnormalVisualEffect;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -1738,6 +1741,60 @@ public class L2Npc extends L2Character
 		{
 			_summonedNpcs.clear();
 		}
+	}
+	
+	/**
+	 * Broadcasts NpcSay packet to all known players.
+	 * @param chatType the chat type
+	 * @param text the text
+	 */
+	public void broadcastSay(ChatType chatType, String text)
+	{
+		Broadcast.toKnownPlayers(this, new NpcSay(this, chatType, text));
+	}
+	
+	/**
+	 * Broadcasts NpcSay packet to all known players with NPC string id.
+	 * @param chatType the chat type
+	 * @param npcStringId the NPC string id
+	 * @param parameters the NPC string id parameters
+	 */
+	public void broadcastSay(ChatType chatType, NpcStringId npcStringId, String... parameters)
+	{
+		final NpcSay npcSay = new NpcSay(this, chatType, npcStringId);
+		if (parameters != null)
+		{
+			for (String parameter : parameters)
+			{
+				if (parameter != null)
+				{
+					npcSay.addStringParameter(parameter);
+				}
+			}
+		}
+		Broadcast.toKnownPlayers(this, npcSay);
+	}
+	
+	/**
+	 * Broadcasts NpcSay packet to all known players with custom string in specific radius.
+	 * @param chatType the chat type
+	 * @param text the text
+	 * @param radius the radius
+	 */
+	public void broadcastSay(ChatType chatType, String text, int radius)
+	{
+		Broadcast.toKnownPlayersInRadius(this, new NpcSay(this, chatType, text), radius);
+	}
+	
+	/**
+	 * Broadcasts NpcSay packet to all known players with NPC string id in specific radius.
+	 * @param chatType the chat type
+	 * @param npcStringId the NPC string id
+	 * @param radius the radius
+	 */
+	public void broadcastSay(ChatType chatType, NpcStringId npcStringId, int radius)
+	{
+		Broadcast.toKnownPlayersInRadius(this, new NpcSay(this, chatType, npcStringId), radius);
 	}
 	
 	@Override

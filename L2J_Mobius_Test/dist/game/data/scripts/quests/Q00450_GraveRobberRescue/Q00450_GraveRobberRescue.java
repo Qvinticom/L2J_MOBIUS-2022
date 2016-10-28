@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * Grave Robber Rescue (450)
@@ -166,11 +165,11 @@ public class Q00450_GraveRobberRescue extends Quest
 			{
 				if (getRandom(100) < 50)
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GRUNT_OH));
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GRUNT_OH);
 				}
 				else
 				{
-					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME));
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GRUNT_WHAT_S_WRONG_WITH_ME);
 				}
 				npc.deleteMe();
 				htmltext = null;

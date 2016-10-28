@@ -686,22 +686,22 @@ public final class IceQueensCastleBattle extends AbstractInstance
 							{
 								case 0:
 								{
-									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.ARCHER_GIVE_YOUR_BREATH_FOR_THE_INTRUDER);
+									npc.broadcastSay(ChatType.SHOUT, NpcStringId.ARCHER_GIVE_YOUR_BREATH_FOR_THE_INTRUDER);
 									break;
 								}
 								case 1:
 								{
-									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.MY_KNIGHTS_SHOW_YOUR_LOYALTY);
+									npc.broadcastSay(ChatType.SHOUT, NpcStringId.MY_KNIGHTS_SHOW_YOUR_LOYALTY);
 									break;
 								}
 								case 2:
 								{
-									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.I_CAN_TAKE_IT_NO_LONGER);
+									npc.broadcastSay(ChatType.SHOUT, NpcStringId.I_CAN_TAKE_IT_NO_LONGER);
 									break;
 								}
 								case 3:
 								{
-									broadcastNpcSay(npc, ChatType.SHOUT, NpcStringId.ARCHER_HEED_MY_CALL);
+									npc.broadcastSay(ChatType.SHOUT, NpcStringId.ARCHER_HEED_MY_CALL);
 									for (int i = 0; i < 3; i++)
 									{
 										final L2Attackable breath = (L2Attackable) addSpawn(BREATH, npc.getLocation(), true, 0, false, world.getInstanceId());

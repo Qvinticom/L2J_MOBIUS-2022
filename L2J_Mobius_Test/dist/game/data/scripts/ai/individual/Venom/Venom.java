@@ -155,7 +155,7 @@ public final class Venom extends AbstractNpcAI
 				if (CastleManager.getInstance().getCastleById(CASTLE).getSiege().getControlTowerCount() <= 1)
 				{
 					changeLocation(MoveTo.THRONE);
-					broadcastNpcSay(_massymore, ChatType.NPC_SHOUT, NpcStringId.OH_NO_THE_DEFENSES_HAVE_FAILED_IT_IS_TOO_DANGEROUS_TO_REMAIN_INSIDE_THE_CASTLE_FLEE_EVERY_MAN_FOR_HIMSELF);
+					_massymore.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.OH_NO_THE_DEFENSES_HAVE_FAILED_IT_IS_TOO_DANGEROUS_TO_REMAIN_INSIDE_THE_CASTLE_FLEE_EVERY_MAN_FOR_HIMSELF);
 					cancelQuestTimer("tower_check", npc, null);
 					startQuestTimer("raid_check", 10000, npc, null, true);
 				}
@@ -284,7 +284,7 @@ public final class Venom extends AbstractNpcAI
 				_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
 				_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
 				_venom.doRevive();
-				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
+				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
 				((L2Attackable) _venom).setCanReturnToSpawnPoint(false);
 				if (checkStatus() == DEAD)
 				{
@@ -335,7 +335,7 @@ public final class Venom extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		updateStatus(DEAD);
-		broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.IT_S_NOT_OVER_YET_IT_WON_T_BE_OVER_LIKE_THIS_NEVER);
+		npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.IT_S_NOT_OVER_YET_IT_WON_T_BE_OVER_LIKE_THIS_NEVER);
 		if (!CastleManager.getInstance().getCastleById(CASTLE).getSiege().isInProgress())
 		{
 			final L2Npc cube = addSpawn(TELEPORT_CUBE, CUBE, false, 0);

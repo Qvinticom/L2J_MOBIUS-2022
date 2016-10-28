@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import instances.AbstractInstance;
@@ -675,11 +674,11 @@ public final class DarkCloudMansion extends AbstractInstance
 			FifthRoom.npcList.add(thisnpc);
 			if ((temp[idx] == 1) && (getRandom(100) < 95))
 			{
-				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), ChatType.NPC_GENERAL, thisnpc.npc.getId(), _spawnChat[getRandom(_spawnChat.length)]));
+				thisnpc.npc.broadcastSay(ChatType.NPC_GENERAL, _spawnChat[getRandom(_spawnChat.length)]);
 			}
 			else if ((temp[idx] != 1) && (getRandom(100) < 67))
 			{
-				thisnpc.npc.broadcastPacket(new NpcSay(thisnpc.npc.getObjectId(), ChatType.NPC_GENERAL, thisnpc.npc.getId(), _spawnChat[getRandom(_spawnChat.length)]));
+				thisnpc.npc.broadcastSay(ChatType.NPC_GENERAL, _spawnChat[getRandom(_spawnChat.length)]);
 			}
 			idx++;
 		}
@@ -762,14 +761,14 @@ public final class DarkCloudMansion extends AbstractInstance
 					mob.count = 1;
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), ChatType.NPC_GENERAL, mob.npc.getId(), _successChat[getRandom(_successChat.length)]));
+						mob.npc.broadcastSay(ChatType.NPC_GENERAL, _successChat[getRandom(_successChat.length)]);
 						FifthRoom.founded += 1;
 						startQuestTimer("decayMe", 1500, npc, player);
 					}
 					else
 					{
 						FifthRoom.reset = 1;
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), ChatType.NPC_GENERAL, mob.npc.getId(), _faildChat[getRandom(_faildChat.length)]));
+						mob.npc.broadcastSay(ChatType.NPC_GENERAL, _faildChat[getRandom(_faildChat.length)]);
 						startQuestTimer("decayChatBelethSamples", 4000, npc, player);
 						startQuestTimer("decayBelethSamples", 4500, npc, player);
 					}
@@ -928,7 +927,7 @@ public final class DarkCloudMansion extends AbstractInstance
 				{
 					if (mob.status == 1)
 					{
-						mob.npc.broadcastPacket(new NpcSay(mob.npc.getObjectId(), ChatType.NPC_GENERAL, mob.npc.getId(), _decayChat[getRandom(_decayChat.length)]));
+						mob.npc.broadcastSay(ChatType.NPC_GENERAL, _decayChat[getRandom(_decayChat.length)]);
 					}
 				}
 			}

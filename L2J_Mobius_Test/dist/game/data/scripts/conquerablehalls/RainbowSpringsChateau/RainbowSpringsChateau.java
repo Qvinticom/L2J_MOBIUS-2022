@@ -24,8 +24,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
@@ -53,7 +55,6 @@ import com.l2jmobius.gameserver.model.entity.clanhall.SiegeStatus;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -262,7 +263,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	static Map<Integer, Long> _warDecreesCount = new HashMap<>();
 	static List<L2Clan> _acceptedClans = new ArrayList<>(4);
-	private static Map<String, ArrayList<L2Clan>> _usedTextPassages = new HashMap<>();
+	private static Map<String, Set<L2Clan>> _usedTextPassages = new HashMap<>();
 	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<>();
 	
 	static SiegableHall _rainbow;
@@ -536,7 +537,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			
 			if (_usedTextPassages.containsKey(passage))
 			{
-				final ArrayList<L2Clan> list = _usedTextPassages.get(passage);
+				Set<L2Clan> list = _usedTextPassages.get(passage);
 				
 				if (list.contains(clan))
 				{
@@ -790,22 +791,24 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void shoutRandomText(L2Npc npc)
 	{
-		final int length = _textPassages.length;
+		int length = _textPassages.length;
 		
 		if (_usedTextPassages.size() >= length)
 		{
 			return;
 		}
 		
-		final int randomPos = getRandom(length);
-		if (_usedTextPassages.containsKey(_textPassages[randomPos]))
+		int randomPos = getRandom(length);
+		String message = _textPassages[randomPos];
+		
+		if (_usedTextPassages.containsKey(message))
 		{
 			shoutRandomText(npc);
 		}
 		else
 		{
-			_usedTextPassages.put(_textPassages[randomPos], new ArrayList<L2Clan>());
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_SHOUT, npc.getId(), _textPassages[randomPos]));
+			_usedTextPassages.put(message, new HashSet<>());
+			npc.broadcastSay(ChatType.NPC_SHOUT, message);
 		}
 	}
 	

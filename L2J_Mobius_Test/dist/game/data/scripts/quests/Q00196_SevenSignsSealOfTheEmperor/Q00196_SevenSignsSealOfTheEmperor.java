@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretRitualOfThePriests;
 
@@ -64,7 +63,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 		if ((npc.getId() == MERCHANT_OF_MAMMON) && "DESPAWN".equals(event))
 		{
 			isBusy = false;
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THE_ANCIENT_PROMISE_TO_THE_EMPEROR_HAS_BEEN_FULFILLED));
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_ANCIENT_PROMISE_TO_THE_EMPEROR_HAS_BEEN_FULFILLED);
 			npc.deleteMe();
 			return super.onAdvEvent(event, npc, player);
 		}
@@ -100,7 +99,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 						isBusy = true;
 						npc.setScriptValue(1);
 						final L2Npc merchant = addSpawn(MERCHANT_OF_MAMMON, 109743, 219975, -3512, 0, false, 0, false);
-						merchant.broadcastPacket(new NpcSay(merchant.getObjectId(), ChatType.NPC_GENERAL, merchant.getId(), NpcStringId.WHO_DARES_SUMMON_THE_MERCHANT_OF_MAMMON));
+						merchant.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHO_DARES_SUMMON_THE_MERCHANT_OF_MAMMON);
 						htmltext = "30969-06.html";
 						startQuestTimer("DESPAWN", 120000, merchant, null);
 					}

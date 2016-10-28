@@ -43,7 +43,7 @@ public final class Lailly extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.READY_TO_LISTEN_TO_A_STORY_COME_NOW, 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.READY_TO_LISTEN_TO_A_STORY_COME_NOW, 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

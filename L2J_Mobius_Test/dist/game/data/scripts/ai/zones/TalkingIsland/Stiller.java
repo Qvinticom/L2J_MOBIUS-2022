@@ -49,7 +49,7 @@ public final class Stiller extends AbstractNpcAI
 	{
 		if (event.equals("SPAM_TEXT") && (npc != null))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, STILLER_SHOUT[getRandom(2)], 1000);
+			npc.broadcastSay(ChatType.NPC_GENERAL, STILLER_SHOUT[getRandom(2)], 1000);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

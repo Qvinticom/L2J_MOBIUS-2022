@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 import quests.Q00121_PavelTheGiant.Q00121_PavelTheGiant;
 
@@ -233,7 +232,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				if ((golem == null) || ((golem != null) && golem.isDead()))
 				{
 					golem = (L2Attackable) addSpawn(GUARDIAN, 96977, -110625, -3280, 0, false, 0);
-					golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE).addStringParameter(player.getName()));
+					golem.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_S1_YOU_ATTACKED_WENDY_PREPARE_TO_DIE, player.getName());
 					addAttackDesire(golem, player);
 					qs.set("spawned", "1");
 					startQuestTimer("golem_despawn", 300000, null, player);
@@ -327,7 +326,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 			case "golem_despawn":
 			{
 				qs.unset("spawned");
-				golem.broadcastPacket(new NpcSay(golem.getObjectId(), ChatType.NPC_GENERAL, golem.getId(), NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND).addStringParameter(player.getName()));
+				golem.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_YOUR_ENEMY_WAS_DRIVEN_OUT_I_WILL_NOW_WITHDRAW_AND_AWAIT_YOUR_NEXT_COMMAND, player.getName());
 				golem.deleteMe();
 				golem = null;
 				htmltext = null;
@@ -393,7 +392,7 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 		
 		if ((qs != null) && qs.isCond(10) && (qs.getInt("spawned") == 1))
 		{
-			npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW));
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_ENEMY_IS_FAR_TOO_POWERFUL_FOR_ME_TO_FIGHT_I_MUST_WITHDRAW);
 			qs.setCond(11, true);
 			qs.unset("spawned");
 			cancelQuestTimers("golem_despawn");

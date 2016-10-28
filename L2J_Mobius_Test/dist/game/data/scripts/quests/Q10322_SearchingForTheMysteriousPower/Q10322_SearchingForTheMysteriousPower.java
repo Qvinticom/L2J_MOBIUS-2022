@@ -25,9 +25,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
@@ -250,7 +248,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 							giveItems(player, APPRENTICE_ADVENTURERS_BOW, 1);
 							giveItems(player, APPRENTICE_ADVENTURERS_LONG_SWORD, 1);
 							addExpAndSp(player, 300, 5);
-							Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getTemplate().getDisplayId(), NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP));
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THERE_S_THE_NEXT_TRAINING_STEP);
 							qs.exitQuest(false, true);
 							break;
 						}

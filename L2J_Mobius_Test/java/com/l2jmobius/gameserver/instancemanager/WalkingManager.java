@@ -40,8 +40,6 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
@@ -413,11 +411,11 @@ public final class WalkingManager implements IXmlReader
 		
 		if (node.getNpcString() != null)
 		{
-			Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getNpcString()));
+			npc.broadcastSay(ChatType.NPC_GENERAL, node.getNpcString());
 		}
 		else if (!node.getChatText().isEmpty())
 		{
-			Broadcast.toKnownPlayers(npc, new NpcSay(npc, ChatType.NPC_GENERAL, node.getChatText()));
+			npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
 		}
 		
 		if (npc.isDebug())

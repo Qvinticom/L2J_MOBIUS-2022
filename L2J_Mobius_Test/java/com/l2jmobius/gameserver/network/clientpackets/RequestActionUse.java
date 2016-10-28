@@ -465,7 +465,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			{
 				if ((activeChar.getParty() != null) && (activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
 				{
-					activeChar.getParty().addTacticalSign(_actionId - 77, (L2Character) activeChar.getTarget());
+					activeChar.getParty().addTacticalSign(activeChar, _actionId - 77, (L2Character) activeChar.getTarget());
 				}
 				else
 				{

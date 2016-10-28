@@ -23,17 +23,19 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * To the Seed of Destruction (10269)<br>
- * Original Jython script by Gnacik 2010-08-13 Based on Freya PTS.
+ * To the Seed of Destruction (10269)
  * @author nonom
  */
-public class Q10282_ToTheSeedOfAnnihilation extends Quest
+public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 {
 	// NPCs
 	private static final int KBALDIR = 32733;
 	private static final int KLEMIS = 32734;
 	// Item
 	private static final int SOA_ORDERS = 15512;
+	private static final int EAR = 17527; // Scroll: Enchant Armor (R-grade)
+	// Misc
+	private static final int MIN_LV = 85;
 	
 	public Q10282_ToTheSeedOfAnnihilation()
 	{
@@ -41,6 +43,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 		addStartNpc(KBALDIR);
 		addTalkId(KBALDIR, KLEMIS);
 		registerQuestItems(SOA_ORDERS);
+		addCondMinLevel(MIN_LV, "32733-00.htm");
 	}
 	
 	@Override
@@ -63,7 +66,9 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 			}
 			case "32734-02.htm":
 			{
-				addExpAndSp(player, 1148480, 99110);
+				giveAdena(player, 212182, true);
+				giveItems(player, EAR, 5);
+				addExpAndSp(player, 1148480, 275);
 				qs.exitQuest(false);
 				break;
 			}
@@ -98,7 +103,7 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest
 			}
 			case State.CREATED:
 			{
-				htmltext = (player.getLevel() < 84) ? "32733-00.htm" : "32733-01.htm";
+				htmltext = "32733-01.htm";
 				break;
 			}
 			case State.STARTED:

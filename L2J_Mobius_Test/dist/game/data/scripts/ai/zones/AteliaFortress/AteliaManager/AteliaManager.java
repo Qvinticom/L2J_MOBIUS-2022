@@ -613,7 +613,7 @@ public final class AteliaManager extends AbstractNpcAI
 		}
 		else if (Util.contains(FLOOR_MOBS, npc.getId()) && (chance > 90))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, ATELIA_MSG[getRandom(1)], attacker.getName());
+			npc.broadcastSay(ChatType.NPC_GENERAL, ATELIA_MSG[getRandom(1)], attacker.getName());
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

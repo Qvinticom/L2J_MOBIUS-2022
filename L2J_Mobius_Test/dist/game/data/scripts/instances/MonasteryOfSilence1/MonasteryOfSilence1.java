@@ -169,13 +169,13 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 				npc.getAI().startFollow(player);
 				if (player.isInCombat())
 				{
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
 					npc.setTarget(player);
 					npc.doCast(BUFFS[getRandom(BUFFS.length)].getSkill());
 				}
 				else
 				{
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
 				}
 				startQuestTimer("FOLLOW", 10000, npc, player);
 				break;
