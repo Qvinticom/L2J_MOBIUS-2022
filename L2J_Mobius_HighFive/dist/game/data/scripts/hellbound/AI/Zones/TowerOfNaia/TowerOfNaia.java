@@ -586,7 +586,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 					MinionList.spawnMinion(_lock, 18493);
 					MinionList.spawnMinion(_lock, 18493);
 				}
-				broadcastNpcSay(_controller, ChatType.NPC_GENERAL, NpcStringId.EMERGENCY_EMERGENCY_THE_OUTER_WALL_IS_WEAKENING_RAPIDLY);
+				_controller.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.EMERGENCY_EMERGENCY_THE_OUTER_WALL_IS_WEAKENING_RAPIDLY);
 				_counter -= 10;
 			}
 		}
@@ -690,7 +690,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 						{
 							if ((spore != null) && !spore.isDead() && (spore.getId() == npcId))
 							{
-								broadcastNpcSay(spore, ChatType.NPC_GENERAL, SPORES_NPCSTRING_ID[getRandom(4)], el);
+								spore.broadcastSay(ChatType.NPC_GENERAL, SPORES_NPCSTRING_ID[getRandom(4)], el);
 							}
 						}
 					}

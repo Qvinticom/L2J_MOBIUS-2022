@@ -16,15 +16,11 @@
  */
 package ai.npc;
 
-import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Abstract NPC AI class for datapack based AIs.
@@ -68,60 +64,6 @@ public abstract class AbstractNpcAI extends Quest
 		addSkillSeeId(mobs);
 		addAggroRangeEnterId(mobs);
 		addFactionCallId(mobs);
-	}
-	
-	/**
-	 * Broadcasts NpcSay packet to all known players with custom string.
-	 * @param npc
-	 * @param type
-	 * @param text
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, String text)
-	{
-		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), text));
-	}
-	
-	/**
-	 * Broadcasts NpcSay packet to all known players with npc string id.
-	 * @param npc
-	 * @param type
-	 * @param stringId
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId)
-	{
-		Broadcast.toKnownPlayers(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId));
-	}
-	
-	/**
-	 * Broadcasts NpcSay packet to all known players with npc string id.
-	 * @param npc
-	 * @param type
-	 * @param stringId
-	 * @param parameters
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId, String... parameters)
-	{
-		final NpcSay say = new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId);
-		if (parameters != null)
-		{
-			for (String parameter : parameters)
-			{
-				say.addStringParameter(parameter);
-			}
-		}
-		Broadcast.toKnownPlayers(npc, say);
-	}
-	
-	/**
-	 * Broadcasts NpcSay packet to all known players with npc string id in specific radius.
-	 * @param npc
-	 * @param type
-	 * @param stringId
-	 * @param radius
-	 */
-	protected void broadcastNpcSay(L2Npc npc, ChatType type, NpcStringId stringId, int radius)
-	{
-		Broadcast.toKnownPlayersInRadius(npc, new NpcSay(npc.getObjectId(), type, npc.getTemplate().getDisplayId(), stringId), radius);
 	}
 	
 	public void spawnMinions(L2Npc npc, String spawnName)

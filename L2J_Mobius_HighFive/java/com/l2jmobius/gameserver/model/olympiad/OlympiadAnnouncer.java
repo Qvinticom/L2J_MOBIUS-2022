@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 
 /**
  * @author DS
@@ -78,16 +77,12 @@ public final class OlympiadAnnouncer implements Runnable
 					}
 				}
 				
-				L2Npc manager;
-				NpcSay packet;
 				for (L2Spawn spawn : _managers)
 				{
-					manager = spawn.getLastSpawn();
+					final L2Npc manager = spawn.getLastSpawn();
 					if (manager != null)
 					{
-						packet = new NpcSay(manager.getObjectId(), ChatType.NPC_SHOUT, manager.getId(), npcString);
-						packet.addStringParameter(arenaId);
-						manager.broadcastPacket(packet);
+						manager.broadcastSay(ChatType.NPC_SHOUT, npcString, arenaId);
 					}
 				}
 				break;

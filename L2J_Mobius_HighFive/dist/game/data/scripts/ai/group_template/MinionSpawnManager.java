@@ -440,7 +440,7 @@ public final class MinionSpawnManager extends AbstractNpcAI
 					{
 						addMinion((L2MonsterInstance) npc, is.getId());
 					}
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, ON_ATTACK_MSG[getRandom(ON_ATTACK_MSG.length)]);
+					npc.broadcastSay(ChatType.NPC_GENERAL, ON_ATTACK_MSG[getRandom(ON_ATTACK_MSG.length)]);
 				}
 			}
 		}

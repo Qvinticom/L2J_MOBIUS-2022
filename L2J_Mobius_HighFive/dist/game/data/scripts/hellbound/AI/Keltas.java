@@ -159,7 +159,7 @@ public final class Keltas extends AbstractNpcAI
 			final L2Npc keltas = _spawnedKeltas;
 			if ((keltas != null) && !keltas.isDead())
 			{
-				broadcastNpcSay(keltas, ChatType.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAY_LET_S_RETREAT_EVERYONE_PULL_BACK);
+				keltas.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.THAT_IS_IT_FOR_TODAY_LET_S_RETREAT_EVERYONE_PULL_BACK);
 				keltas.deleteMe();
 				keltas.getSpawn().decreaseCount(keltas);
 				despawnMinions();
@@ -180,7 +180,7 @@ public final class Keltas extends AbstractNpcAI
 	public final String onSpawn(L2Npc npc)
 	{
 		_spawnedKeltas = (L2MonsterInstance) npc;
-		broadcastNpcSay(_spawnedKeltas, ChatType.NPC_SHOUT, NpcStringId.GUYS_SHOW_THEM_OUR_POWER);
+		_spawnedKeltas.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.GUYS_SHOW_THEM_OUR_POWER);
 		spawnMinions();
 		startQuestTimer("despawn", 1800000, null, null);
 		return super.onSpawn(npc);

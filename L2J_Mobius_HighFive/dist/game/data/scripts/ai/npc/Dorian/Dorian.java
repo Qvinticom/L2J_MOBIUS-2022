@@ -56,7 +56,7 @@ public final class Dorian extends AbstractNpcAI
 				takeItems(pl, SILVER_CROSS, -1);
 				giveItems(pl, BROKEN_SILVER_CROSS, 1);
 				qs.setCond(4, true);
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THAT_SIGN);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THAT_SIGN);
 			}
 		}
 		return super.onSeeCreature(npc, creature, isSummon);

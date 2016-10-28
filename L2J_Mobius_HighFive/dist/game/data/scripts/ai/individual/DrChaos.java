@@ -188,7 +188,7 @@ public class DrChaos extends AbstractNpcAI
 					// Make him speak.
 					if (_pissedOffTimer == 15)
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, "How dare you trespass into my territory! Have you no fear?");
+						npc.broadcastSay(ChatType.NPC_GENERAL, "How dare you trespass into my territory! Have you no fear?");
 					}
 					
 					// That was "too much" for that time.
@@ -249,7 +249,7 @@ public class DrChaos extends AbstractNpcAI
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
 		cancelQuestTimer("golem_despawn", npc, null);
-		broadcastNpcSay(npc, ChatType.NPC_GENERAL, "Urggh! You will pay dearly for this insult.");
+		npc.broadcastSay(ChatType.NPC_GENERAL, "Urggh! You will pay dearly for this insult.");
 		
 		// "lock" Dr. Chaos for regular RB time (36H fixed +- 24H random)
 		final long respawnTime = (36 + Rnd.get(-24, 24)) * 3600000;
@@ -288,7 +288,7 @@ public class DrChaos extends AbstractNpcAI
 			}
 			
 			// Make him speak.
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, message);
+			npc.broadcastSay(ChatType.NPC_GENERAL, message);
 		}
 		return null;
 	}
@@ -309,7 +309,7 @@ public class DrChaos extends AbstractNpcAI
 			
 			// Makes the NPC moves near the Strange Box speaking.
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(96323, -110914, -3328, 0));
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, "Fools! Why haven't you fled yet? Prepare to learn a lesson!");
+			npc.broadcastSay(ChatType.NPC_GENERAL, "Fools! Why haven't you fled yet? Prepare to learn a lesson!");
 			
 			// Delayed animation timers.
 			startQuestTimer("1", 2000, npc, null, false); // 2 secs, time to launch dr.C anim 2. Cam 1 on.

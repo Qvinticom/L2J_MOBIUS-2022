@@ -101,7 +101,7 @@ public final class Quarry extends AbstractNpcAI
 						return null;
 					}
 				}
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HUN_HUNGRY);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HUN_HUNGRY);
 				npc.doDie(npc);
 				break;
 			}
@@ -174,7 +174,7 @@ public final class Quarry extends AbstractNpcAI
 						startQuestTimer("DECAY", 1000, npc, null);
 						try
 						{
-							broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_THE_RESCUE_IT_S_A_SMALL_GIFT);
 						}
 						catch (Exception e)
 						{

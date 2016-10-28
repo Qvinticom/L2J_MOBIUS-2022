@@ -92,7 +92,7 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, ChatType.GENERAL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
+				npc.broadcastSay(ChatType.GENERAL, NpcStringId.IT_S_NOT_EASY_TO_OBTAIN);
 			}
 		}
 		else
@@ -101,7 +101,7 @@ public final class PrisonGuards extends AbstractNpcAI
 			{
 				npc.setTarget(player);
 				npc.doCast(STONE.getSkill());
-				broadcastNpcSay(npc, ChatType.GENERAL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
+				npc.broadcastSay(ChatType.GENERAL, NpcStringId.YOU_RE_OUT_OF_YOUR_MIND_COMING_HERE);
 			}
 		}
 		return super.onAttack(npc, player, damage, isSummon);

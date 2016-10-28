@@ -63,13 +63,13 @@ public class Lindvior extends AbstractNpcAI
 		switch (event)
 		{
 			case "tomaris_shout1":
-				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.HUH_THE_SKY_LOOKS_FUNNY_WHAT_S_THAT);
+				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.HUH_THE_SKY_LOOKS_FUNNY_WHAT_S_THAT);
 				break;
 			case "artius_shout":
-				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.A_POWERFUL_SUBORDINATE_IS_BEING_HELD_BY_THE_BARRIER_ORB_THIS_REACTION_MEANS);
+				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.A_POWERFUL_SUBORDINATE_IS_BEING_HELD_BY_THE_BARRIER_ORB_THIS_REACTION_MEANS);
 				break;
 			case "tomaris_shout2":
-				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.BE_CAREFUL_SOMETHING_S_COMING);
+				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.BE_CAREFUL_SOMETHING_S_COMING);
 				break;
 			case "lindvior_scene":
 				if (npc != null)

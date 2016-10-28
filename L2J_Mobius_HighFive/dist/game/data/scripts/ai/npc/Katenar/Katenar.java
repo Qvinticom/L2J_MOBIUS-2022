@@ -75,7 +75,7 @@ public final class Katenar extends AbstractNpcAI
 						if (!npc.getVariables().getBoolean("SPAWNED", false))
 						{
 							npc0.getVariables().set("SPAWNED", false);
-							broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.GOOD_LUCK);
+							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.GOOD_LUCK);
 						}
 					}
 					npc.deleteMe();
@@ -130,7 +130,7 @@ public final class Katenar extends AbstractNpcAI
 		final L2PcInstance player = npc.getVariables().getObject("player0", L2PcInstance.class);
 		if (player != null)
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.I_AM_LATE);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_AM_LATE);
 		}
 		return super.onSpawn(npc);
 	}

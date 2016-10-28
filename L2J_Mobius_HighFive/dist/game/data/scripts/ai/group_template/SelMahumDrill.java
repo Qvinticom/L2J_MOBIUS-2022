@@ -242,7 +242,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 					{
 						if (getRandom(4) < 1)
 						{
-							broadcastNpcSay(receiver, ChatType.NPC_GENERAL, SOLDIER_FSTRINGS[getRandom(2)]);
+							receiver.broadcastSay(ChatType.NPC_GENERAL, SOLDIER_FSTRINGS[getRandom(2)]);
 						}
 						if (receiver.canBeAttacked())
 						{
@@ -260,7 +260,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 				{
 					if (Util.contains(MAHUM_CHIEFS, receiver.getId()))
 					{
-						broadcastNpcSay(receiver, ChatType.NPC_GENERAL, CHIEF_FSTRINGS[getRandom(2)]);
+						receiver.broadcastSay(ChatType.NPC_GENERAL, CHIEF_FSTRINGS[getRandom(2)]);
 					}
 					break;
 				}

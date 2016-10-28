@@ -76,7 +76,7 @@ public final class Amaskari extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("stop_toggle"))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[2]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[2]);
 			((L2MonsterInstance) npc).clearAggroList();
 			((L2MonsterInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 			npc.setIsInvul(false);
@@ -86,11 +86,11 @@ public final class Amaskari extends AbstractNpcAI
 		{
 			if (getRandom(100) > 20)
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[2]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[2]);
 			}
 			else if (getRandom(100) > 40)
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[3]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[3]);
 			}
 			startQuestTimer("onspawn_msg", (getRandom(8) + 1) * 30000, npc, null);
 		}
@@ -102,12 +102,12 @@ public final class Amaskari extends AbstractNpcAI
 	{
 		if ((npc.getId() == AMASKARI) && (getRandom(1000) < 25))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[0]);
+			npc.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[0]);
 			for (L2MonsterInstance minion : ((L2MonsterInstance) npc).getMinionList().getSpawnedMinions())
 			{
 				if ((minion != null) && !minion.isDead() && (getRandom(10) == 0))
 				{
-					broadcastNpcSay(minion, ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[0]);
+					minion.broadcastSay(ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[0]);
 					minion.setCurrentHp(minion.getCurrentHp() - (minion.getCurrentHp() / 5));
 				}
 			}
@@ -123,7 +123,7 @@ public final class Amaskari extends AbstractNpcAI
 			final L2MonsterInstance master = ((L2MonsterInstance) npc).getLeader();
 			if ((master != null) && !master.isDead())
 			{
-				broadcastNpcSay(master, ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[1]);
+				master.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[1]);
 				final BuffInfo info = master.getEffectList().getBuffInfoBySkillId(BUFF_ID);
 				if ((info != null) && (info.getSkill().getAbnormalLvl() == 3) && master.isInvul())
 				{
@@ -143,7 +143,7 @@ public final class Amaskari extends AbstractNpcAI
 					}
 					else
 					{
-						broadcastNpcSay(master, ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[3]);
+						master.broadcastSay(ChatType.NPC_GENERAL, AMASKARI_NPCSTRING_ID[3]);
 						// master.doCast(INVINCIBILITY.getSkill())
 						master.setIsInvul(true);
 						startQuestTimer("stop_toggle", 10000, master, null);
@@ -159,7 +159,7 @@ public final class Amaskari extends AbstractNpcAI
 				{
 					if (getRandom(1000) > 300)
 					{
-						broadcastNpcSay(minion, ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[1]);
+						minion.broadcastSay(ChatType.NPC_GENERAL, MINIONS_NPCSTRING_ID[1]);
 					}
 					HellboundEngine.getInstance().updateTrust(30, true);
 					minion.deleteMe();

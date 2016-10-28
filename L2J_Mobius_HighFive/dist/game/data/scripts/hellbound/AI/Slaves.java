@@ -79,7 +79,7 @@ public final class Slaves extends AbstractNpcAI
 					slave.clearAggroList();
 					slave.abortAttack();
 					slave.abortCast();
-					broadcastNpcSay(slave, ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_SAVING_ME_FROM_THE_CLUTCHES_OF_EVIL);
+					slave.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_FOR_SAVING_ME_FROM_THE_CLUTCHES_OF_EVIL);
 					
 					if ((HellboundEngine.getInstance().getLevel() >= 1) && (HellboundEngine.getInstance().getLevel() <= 2))
 					{

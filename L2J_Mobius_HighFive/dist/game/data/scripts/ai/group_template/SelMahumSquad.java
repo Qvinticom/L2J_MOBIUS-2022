@@ -228,7 +228,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 					final L2Npc stove = addSpawn(STOVE, receiver.getX(), receiver.getY(), receiver.getZ() + 100, 0, false, 0);
 					stove.setSummoner(receiver);
 					startQuestTimer("notify_dinner", 2000, receiver, null); // @SCE_DINNER_EAT
-					broadcastNpcSay(sender, ChatType.NPC_GENERAL, CHEF_FSTRINGS[getRandom(2)], 1250);
+					sender.broadcastSay(ChatType.NPC_GENERAL, CHEF_FSTRINGS[getRandom(2)], 1250);
 				}
 				break;
 			}
@@ -273,7 +273,7 @@ public final class SelMahumSquad extends AbstractNpcAI
 					receiver.setIsNoRndWalk(true); // Moving to fire - i_ai0 = 1
 					receiver.getVariables().set("BUSY_STATE", 1); // Eating - i_ai3 = 1
 					receiver.setIsRunning(true);
-					broadcastNpcSay(receiver, ChatType.NPC_GENERAL, (getRandom(3) < 1) ? NpcStringId.LOOKS_DELICIOUS : NpcStringId.LET_S_GO_EAT);
+					receiver.broadcastSay(ChatType.NPC_GENERAL, (getRandom(3) < 1) ? NpcStringId.LOOKS_DELICIOUS : NpcStringId.LET_S_GO_EAT);
 					final Location loc = sender.getPointInRange(100, 200);
 					loc.setHeading(receiver.getHeading());
 					receiver.stopMove(null);

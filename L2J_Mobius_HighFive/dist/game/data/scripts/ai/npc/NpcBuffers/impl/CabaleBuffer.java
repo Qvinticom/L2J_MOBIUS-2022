@@ -280,11 +280,11 @@ public final class CabaleBuffer extends AbstractNpcAI
 	{
 		if (chance == -1)
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, message);
+			npc.broadcastSay(ChatType.NPC_GENERAL, message);
 		}
 		else if (getRandom(10000) < chance)
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, message, param);
+			npc.broadcastSay(ChatType.NPC_GENERAL, message, param);
 		}
 	}
 	

@@ -85,7 +85,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 			}
 			case "GARGOS_LAUGH":
 			{
-				broadcastNpcSay(npc, ChatType.NPC_SHOUT, NpcStringId.OHH_OH_OH);
+				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.OHH_OH_OH);
 				break;
 			}
 			case "TELEPORT":

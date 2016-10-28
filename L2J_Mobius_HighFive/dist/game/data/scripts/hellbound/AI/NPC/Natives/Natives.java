@@ -108,7 +108,7 @@ public final class Natives extends AbstractNpcAI
 				if (getQuestItemsCount(player, MARK_OF_BETRAYAL) >= 10)
 				{
 					takeItems(player, MARK_OF_BETRAYAL, 10);
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ALRIGHT_NOW_LEODAS_IS_YOURS);
 					HellboundEngine.getInstance().updateTrust(-50, true);
 					
 					for (int doorId : DOORS)
@@ -146,7 +146,7 @@ public final class Natives extends AbstractNpcAI
 		}
 		else if ((npc.getId() == NATIVE) && event.equalsIgnoreCase("hungry_death"))
 		{
-			broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HUN_HUNGRY);
+			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HUN_HUNGRY);
 			npc.doDie(null);
 		}
 		else if (npc.getId() == INCASTLE)

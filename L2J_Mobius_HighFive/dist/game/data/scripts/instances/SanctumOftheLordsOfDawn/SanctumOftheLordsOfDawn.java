@@ -113,17 +113,17 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 				{
 					case GUARDS_OF_THE_DAWN:
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.INTRUDER_PROTECT_THE_PRIESTS_OF_DAWN);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.INTRUDER_PROTECT_THE_PRIESTS_OF_DAWN);
 						break;
 					}
 					case GUARDS_OF_THE_DAWN_2:
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_INTRUDE_WITH_THAT_TRANSFORMATION_GET_LOST);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_INTRUDE_WITH_THAT_TRANSFORMATION_GET_LOST);
 						break;
 					}
 					case GUARDS_OF_THE_DAWN_3:
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CAN_T_APPROACH_THIS_PLACE);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHO_ARE_YOU_A_NEW_FACE_LIKE_YOU_CAN_T_APPROACH_THIS_PLACE);
 						break;
 					}
 				}

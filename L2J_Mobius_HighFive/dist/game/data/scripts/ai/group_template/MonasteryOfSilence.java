@@ -95,7 +95,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 						if ((character.getId() == CAPTAIN) && (getRandom(100) < 10) && npc.isScriptValue(0))
 						{
 							final L2Npc captain = (L2Npc) character;
-							broadcastNpcSay(captain, ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
+							captain.broadcastSay(ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
 							captain.setScriptValue(1);
 							startQuestTimer("TIMER", 10000, captain, null);
 						}
@@ -160,7 +160,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 						npc.doCast(KNIGHT_BLESS.getSkill());
 					}
 					npc.setScriptValue(1);
-					broadcastNpcSay(npc, ChatType.GENERAL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
+					npc.broadcastSay(ChatType.GENERAL, NpcStringId.FOR_THE_GLORY_OF_SOLINA);
 					addAttackDesire(addSpawn(KNIGHT, npc), player);
 				}
 				break;
@@ -252,7 +252,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 			
 			if (!npc.isInCombat())
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CANNOT_CARRY_A_WEAPON_WITHOUT_AUTHORIZATION);
 			}
 			
 			addAttackDesire(npc, player);
@@ -269,7 +269,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 			{
 				if (obj.equals(npc))
 				{
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, DIVINITY_MSG[getRandom(DIVINITY_MSG.length)], caster.getName());
+					npc.broadcastSay(ChatType.NPC_GENERAL, DIVINITY_MSG[getRandom(DIVINITY_MSG.length)], caster.getName());
 					addAttackDesire(npc, caster);
 					break;
 				}

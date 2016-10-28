@@ -77,7 +77,7 @@ public final class Ranku extends AbstractNpcAI
 			{
 				if ((minion != null) && !minion.isDead() && !MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					broadcastNpcSay(minion, ChatType.NPC_GENERAL, NpcStringId.DON_T_KILL_ME_PLEASE_SOMETHING_S_STRANGLING_ME);
+					minion.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_KILL_ME_PLEASE_SOMETHING_S_STRANGLING_ME);
 					startQuestTimer("checkup", 1000, npc, null);
 					MY_TRACKING_SET.add(minion.getObjectId());
 				}

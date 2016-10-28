@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.npc.AbstractNpcAI;
@@ -308,11 +307,6 @@ public final class TalentShow extends AbstractNpcAI
 		startQuestTimer("Start", diff, null, null); // first start
 	}
 	
-	private void autoChat(L2Npc npc, NpcStringId npcString, ChatType type)
-	{
-		npc.broadcastPacket(new NpcSay(npc.getObjectId(), type, npc.getId(), npcString));
-	}
-	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
@@ -322,7 +316,7 @@ public final class TalentShow extends AbstractNpcAI
 			{
 				case 32433:
 				{
-					autoChat(npc, MESSAGES[0], ChatType.NPC_SHOUT);
+					npc.broadcastSay(ChatType.NPC_SHOUT, MESSAGES[0]);
 					startQuestTimer("1", 30000, npc, null);
 					break;
 				}
@@ -384,7 +378,7 @@ public final class TalentShow extends AbstractNpcAI
 			// TODO switch on event
 			if (event.equalsIgnoreCase("6"))
 			{
-				autoChat(npc, MESSAGES[6], ChatType.NPC_SHOUT);
+				npc.broadcastSay(ChatType.NPC_SHOUT, MESSAGES[6]);
 				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56511, -56647, -2008, 36863));
 				npc.broadcastPacket(new PlaySound(1, "NS22_F", 0, 0, 0, 0, 0));
 				addSpawn(SINGERS[0], -56344, -56328, -2008, 32768, false, 224000);
@@ -402,7 +396,7 @@ public final class TalentShow extends AbstractNpcAI
 				{
 					case 32433:
 					{
-						autoChat(npc, MESSAGES[7], ChatType.NPC_SHOUT);
+						npc.broadcastSay(ChatType.NPC_SHOUT, MESSAGES[7]);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56698, -56430, -2008, 32768));
 						startQuestTimer("8", 12000, npc, null);
 						break;
@@ -436,7 +430,7 @@ public final class TalentShow extends AbstractNpcAI
 				{
 					case 32433:
 					{
-						autoChat(npc, MESSAGES[11], ChatType.NPC_SHOUT);
+						npc.broadcastSay(ChatType.NPC_SHOUT, MESSAGES[11]);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-56698, -56430, -2008, 32768));
 						startQuestTimer("12", 5000, npc, null);
 						break;
@@ -455,7 +449,7 @@ public final class TalentShow extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("17"))
 			{
-				autoChat(npc, MESSAGES[16], ChatType.NPC_SHOUT);
+				npc.broadcastSay(ChatType.NPC_SHOUT, MESSAGES[16]);
 				startQuestTimer("social1", 2000, addSpawn(INDIVIDUALS[1], -56700, -56340, -2008, 32768, false, 32000), null);
 				startQuestTimer("18", 9000, npc, null);
 			}
@@ -476,7 +470,7 @@ public final class TalentShow extends AbstractNpcAI
 			}
 			else if (event.equalsIgnoreCase("28"))
 			{
-				autoChat(npc, MESSAGES[23], ChatType.NPC_GENERAL);
+				npc.broadcastSay(ChatType.NPC_SHOUT, MESSAGES[23]);
 				startQuestTimer("social1", 1, npc, null);
 			}
 			else if (event.equalsIgnoreCase("29"))
@@ -499,7 +493,7 @@ public final class TalentShow extends AbstractNpcAI
 				final ShoutInfo si = TALKS.get(event);
 				if (si != null)
 				{
-					autoChat(npc, si.getNpcStringId(), ChatType.NPC_SHOUT);
+					npc.broadcastSay(ChatType.NPC_SHOUT, si.getNpcStringId());
 					startQuestTimer(si.getNextEvent(), si.getTime(), npc, null);
 				}
 			}

@@ -198,8 +198,8 @@ public final class UrbanArea extends AbstractInstance
 				{
 					if (!npc.isAffectedBySkill(STONE.getSkillId()) || world.isAmaskariDead)
 					{
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[2]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[2]);
 					}
 					else
 					{
@@ -209,8 +209,8 @@ public final class UrbanArea extends AbstractInstance
 							npc.stopSkillEffects(false, STONE.getSkillId());
 						}
 						
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
-						broadcastNpcSay(npc, ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[1]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[0]);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NATIVES_NPCSTRING_ID[1]);
 						HellboundEngine.getInstance().updateTrust(10, true);
 						npc.scheduleDespawn(3000);
 						// Try to call Amaskari
@@ -258,7 +258,7 @@ public final class UrbanArea extends AbstractInstance
 			
 			if (!npc.isBusy())
 			{
-				broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPCSTRING_ID[0]);
+				npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[0]);
 				npc.setBusy(true);
 				
 				if ((world.spawnedAmaskari != null) && !world.spawnedAmaskari.isDead() && (getRandom(1000) < 25) && Util.checkIfInRange(1000, npc, world.spawnedAmaskari, false))
@@ -302,7 +302,7 @@ public final class UrbanArea extends AbstractInstance
 				}
 				if (msgId >= 0)
 				{
-					broadcastNpcSay(npc, ChatType.NPC_GENERAL, NPCSTRING_ID[msgId], range);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NPCSTRING_ID[msgId], range);
 				}
 				npc.setBusy(true);
 				npc.setBusyMessage("atk");
