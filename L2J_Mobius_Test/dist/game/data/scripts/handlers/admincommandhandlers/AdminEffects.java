@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
@@ -360,12 +361,19 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
 				if ((val >= 1) && (val <= 4))
 				{
-					activeChar.doSimultaneousCast(SkillData.getInstance().getSkill(7029, val));
+					int time = 0;
+					if (st.hasMoreTokens())
+					{
+						time = Integer.parseInt(st.nextToken());
+					}
+					
+					final Skill gmSpeedSkill = SkillData.getInstance().getSkill(7029, val);
+					gmSpeedSkill.applyEffects(activeChar, activeChar, true, time);
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //gmspeed <value> (0=off...4=max)");
+				activeChar.sendMessage("Usage: //gmspeed <Effect level (0-4)> <Time in seconds>");
 			}
 			if (command.contains("_menu"))
 			{

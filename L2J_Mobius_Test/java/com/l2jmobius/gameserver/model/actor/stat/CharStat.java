@@ -691,7 +691,12 @@ public class CharStat
 	 */
 	public final int getMpInitialConsume(Skill skill)
 	{
-		return skill == null ? 1 : (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
+		if (skill == null)
+		{
+			return 1;
+		}
+		
+		return (int) calcStat(Stats.MP_CONSUME, skill.getMpInitialConsume(), null, skill);
 	}
 	
 	public byte getAttackElement()

@@ -126,7 +126,7 @@ import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
 import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.L2PetLevelData;
 import com.l2jmobius.gameserver.model.L2PremiumItem;
 import com.l2jmobius.gameserver.model.L2Radar;
@@ -6649,7 +6649,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (isInParty())
 		{
-			_party.removePartyMember(this, messageType.Disconnected);
+			_party.removePartyMember(this, MessageType.DISCONNECTED);
 			_party = null;
 		}
 	}
@@ -9724,7 +9724,7 @@ public final class L2PcInstance extends L2Playable
 		
 		if (getParty() != null)
 		{
-			getParty().removePartyMember(this, messageType.Expelled);
+			getParty().removePartyMember(this, MessageType.EXPELLED);
 		}
 		
 		_olympiadGameId = id;
@@ -13294,7 +13294,7 @@ public final class L2PcInstance extends L2Playable
 		final int relation1 = getRelation(activeChar);
 		final int relation2 = activeChar.getRelation(this);
 		Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());
-		if ((oldrelation != null) && (oldrelation != relation1))
+		if ((oldrelation != null) && (oldrelation != relation1) && isVisibleFor(activeChar))
 		{
 			final RelationChanged rc = new RelationChanged();
 			rc.addRelation(this, relation1, isAutoAttackable(activeChar));
@@ -13313,7 +13313,7 @@ public final class L2PcInstance extends L2Playable
 			activeChar.sendPacket(rc);
 		}
 		oldrelation = activeChar.getKnownList().getKnownRelations().get(getObjectId());
-		if ((oldrelation != null) && (oldrelation != relation2))
+		if ((oldrelation != null) && (oldrelation != relation2) && activeChar.isVisibleFor(this))
 		{
 			final RelationChanged rc = new RelationChanged();
 			rc.addRelation(activeChar, relation2, activeChar.isAutoAttackable(this));

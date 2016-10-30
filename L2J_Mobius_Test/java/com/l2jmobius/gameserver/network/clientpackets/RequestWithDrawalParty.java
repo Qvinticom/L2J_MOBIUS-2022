@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -49,27 +49,26 @@ public final class RequestWithDrawalParty extends L2GameClientPacket
 		}
 		
 		final L2Party party = player.getParty();
-		if (party == null)
+		if (party != null)
 		{
-			return;
+			party.removePartyMember(player, MessageType.LEFT);
+			
+			if (player.isInPartyMatchRoom())
+			{
+				final PartyMatchRoom room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
+				if (room != null)
+				{
+					player.sendPacket(new PartyMatchDetail(player, room));
+					player.sendPacket(new ExPartyRoomMember(player, room, 0));
+					player.sendPacket(new ExClosePartyRoom());
+					
+					room.deleteMember(player);
+				}
+				player.setPartyRoom(0);
+				// player.setPartyMatching(0);
+				player.broadcastUserInfo();
+			}
 		}
-		
-		party.removePartyMember(player, messageType.Left);
-		if (!player.isInPartyMatchRoom())
-		{
-			return;
-		}
-		
-		final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(player);
-		if (_room != null)
-		{
-			player.sendPacket(new PartyMatchDetail(player, _room));
-			player.sendPacket(new ExPartyRoomMember(player, _room, 0));
-			player.sendPacket(new ExClosePartyRoom());
-			_room.deleteMember(player);
-		}
-		player.setPartyRoom(0);
-		player.broadcastUserInfo();
 	}
 	
 	@Override

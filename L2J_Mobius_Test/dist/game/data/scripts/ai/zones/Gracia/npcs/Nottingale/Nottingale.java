@@ -41,13 +41,13 @@ public final class Nottingale extends AbstractNpcAI
 	private static final Map<Integer, RadarControl> RADARS = new HashMap<>();
 	static
 	{
-		RADARS.put(2, new RadarControl(0, -184545, 243120, 1581, 2));
-		RADARS.put(5, new RadarControl(0, -192361, 254528, 3598, 1));
-		RADARS.put(6, new RadarControl(0, -174600, 219711, 4424, 1));
-		RADARS.put(7, new RadarControl(0, -181989, 208968, 4424, 1));
-		RADARS.put(8, new RadarControl(0, -252898, 235845, 5343, 1));
-		RADARS.put(9, new RadarControl(0, -212819, 209813, 4288, 1));
-		RADARS.put(10, new RadarControl(0, -246899, 251918, 4352, 1));
+		RADARS.put(2, new RadarControl(0, 2, -184545, 243120, 1581));
+		RADARS.put(5, new RadarControl(0, 1, -192361, 254528, 3598));
+		RADARS.put(6, new RadarControl(0, 1, -174600, 219711, 4424));
+		RADARS.put(7, new RadarControl(0, 1, -181989, 208968, 4424));
+		RADARS.put(8, new RadarControl(0, 1, -252898, 235845, 5343));
+		RADARS.put(9, new RadarControl(0, 1, -212819, 209813, 4288));
+		RADARS.put(10, new RadarControl(0, 1, -246899, 251918, 4352));
 	}
 	
 	private Nottingale()

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -28,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestAnswerJoinParty extends L2GameClientPacket
 {
-	private static final String _C__43_REQUESTANSWERPARTY = "[C] 43 RequestAnswerJoinParty";
-	
 	private int _response;
 	
 	@Override
@@ -48,109 +47,94 @@ public final class RequestAnswerJoinParty extends L2GameClientPacket
 		}
 		
 		final PartyRequest request = player.getRequest(PartyRequest.class);
-		if ((request == null) || request.isProcessing())
+		if ((request == null) || request.isProcessing() || !player.removeRequest(request.getClass()))
 		{
 			return;
 		}
 		request.setProcessing(true);
+		
 		final L2PcInstance requestor = request.getActiveChar();
 		if (requestor == null)
 		{
 			return;
 		}
-		final L2Party party = requestor.getParty();
+		
+		final L2Party party = request.getParty();
+		final L2Party requestorParty = requestor.getParty();
+		if ((requestorParty != null) && (requestorParty != party))
+		{
+			return;
+		}
 		
 		requestor.sendPacket(new JoinParty(_response));
 		
-		switch (_response)
+		if (_response == 1)
 		{
-			case -1: // Party disable by player client config
+			if (party.getMemberCount() >= 7)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
-				sm.addPcName(player);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
+				player.sendPacket(sm);
 				requestor.sendPacket(sm);
-				break;
+				return;
 			}
-			case 0: // Party cancel by player
+			
+			// Assign the party to the leader upon accept of his partner
+			if (requestorParty == null)
 			{
-				// requestor.sendPacket(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY); FIXME: Done in client?
-				break;
+				requestor.setParty(party);
 			}
-			case 1: // Party accept by player
+			
+			player.joinParty(party);
+			
+			if (requestor.isInPartyMatchRoom())
 			{
-				if (requestor.isInParty())
+				final PartyMatchRoomList list = PartyMatchRoomList.getInstance();
+				if (player.isInPartyMatchRoom())
 				{
-					if (requestor.getParty().getMemberCount() >= 7)
+					if (list.getPlayerRoomId(requestor) == list.getPlayerRoomId(player))
 					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL);
-						player.sendPacket(sm);
-						requestor.sendPacket(sm);
-						return;
+						final PartyMatchRoom room = list.getPlayerRoom(requestor);
+						if (room != null)
+						{
+							final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
+							room.getPartyMembers().forEach(packet::sendTo);
+						}
 					}
 				}
 				else
 				{
-					requestor.setParty(new L2Party(requestor, requestor.getPartyDistributionType()));
-				}
-				player.joinParty(requestor.getParty());
-				if (requestor.isInPartyMatchRoom() && player.isInPartyMatchRoom())
-				{
-					final PartyMatchRoomList list = PartyMatchRoomList.getInstance();
-					if ((list != null) && (list.getPlayerRoomId(requestor) == list.getPlayerRoomId(player)))
+					final PartyMatchRoom room = list.getPlayerRoom(requestor);
+					if (room != null)
 					{
-						final PartyMatchRoom room = list.getPlayerRoom(requestor);
-						if (room != null)
-						{
-							final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
-							for (L2PcInstance member : room.getPartyMembers())
-							{
-								if (member != null)
-								{
-									member.sendPacket(packet);
-								}
-							}
-						}
+						room.addMember(player);
+						final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
+						room.getPartyMembers().forEach(packet::sendTo);
+						player.setPartyRoom(room.getId());
+						player.broadcastUserInfo();
 					}
 				}
-				else if (requestor.isInPartyMatchRoom() && !player.isInPartyMatchRoom())
-				{
-					final PartyMatchRoomList list = PartyMatchRoomList.getInstance();
-					if (list != null)
-					{
-						final PartyMatchRoom room = list.getPlayerRoom(requestor);
-						if (room != null)
-						{
-							room.addMember(player);
-							final ExManagePartyRoomMember packet = new ExManagePartyRoomMember(player, room, 1);
-							for (L2PcInstance member : room.getPartyMembers())
-							{
-								if (member != null)
-								{
-									member.sendPacket(packet);
-								}
-							}
-							player.setPartyRoom(room.getId());
-							// player.setPartyMatching(1);
-							player.broadcastUserInfo();
-						}
-					}
-				}
-				break;
+			}
+		}
+		else if (_response == -1)
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_PARTY_REQUESTS_AND_CANNOT_RECEIVE_A_PARTY_REQUEST);
+			sm.addPcName(player);
+			requestor.sendPacket(sm);
+			
+			if (party.getMemberCount() == 1)
+			{
+				party.removePartyMember(requestor, MessageType.NONE);
+			}
+		}
+		else
+		{
+			if (party.getMemberCount() == 1)
+			{
+				party.removePartyMember(requestor, MessageType.NONE);
 			}
 		}
 		
-		if (party != null)
-		{
-			party.setPendingInvitation(false); // if party is null, there is no need of decreasing
-		}
-		
+		party.setPendingInvitation(false);
 		request.setProcessing(false);
-		player.removeRequest(request.getClass());
-	}
-	
-	@Override
-	public String getType()
-	{
-		return _C__43_REQUESTANSWERPARTY;
 	}
 }
