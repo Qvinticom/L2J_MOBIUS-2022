@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -52,7 +52,7 @@ public final class RequestOustPartyMember extends L2GameClientPacket
 			}
 			else
 			{
-				activeChar.getParty().removePartyMember(_name, messageType.Expelled);
+				activeChar.getParty().removePartyMember(_name, MessageType.EXPELLED);
 			}
 		}
 	}

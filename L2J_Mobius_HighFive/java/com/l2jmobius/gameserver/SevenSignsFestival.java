@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -1423,7 +1423,7 @@ public class SevenSignsFestival implements SpawnListener
 			if ((festivalParty != null) && (festivalParty.getMemberCount() < Config.ALT_FESTIVAL_MIN_PLAYER))
 			{
 				updateParticipants(player, null); // under minimum count
-				festivalParty.removePartyMember(player, messageType.Expelled);
+				festivalParty.removePartyMember(player, MessageType.EXPELLED);
 			}
 		}
 	}

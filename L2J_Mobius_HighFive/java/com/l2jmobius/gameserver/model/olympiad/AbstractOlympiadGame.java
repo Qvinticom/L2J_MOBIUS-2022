@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -256,7 +256,7 @@ public abstract class AbstractOlympiadGame
 				final L2Party party = player.getParty();
 				if (party != null)
 				{
-					party.removePartyMember(player, messageType.Expelled);
+					party.removePartyMember(player, MessageType.EXPELLED);
 				}
 			}
 			// Remove Agathion

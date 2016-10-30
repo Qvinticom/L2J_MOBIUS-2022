@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2FestivalGuideInstance;
@@ -310,7 +310,7 @@ public class Festival implements IBypassHandler
 					{
 						if (party.getMemberCount() > Config.ALT_FESTIVAL_MIN_PLAYER)
 						{
-							party.removePartyMember(activeChar, messageType.Expelled);
+							party.removePartyMember(activeChar, MessageType.EXPELLED);
 						}
 						else
 						{

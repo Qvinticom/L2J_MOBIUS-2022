@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Party.messageType;
+import com.l2jmobius.gameserver.model.L2Party.MessageType;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -58,7 +58,7 @@ public final class RequestWithDrawalParty extends L2GameClientPacket
 			}
 			else
 			{
-				party.removePartyMember(player, messageType.Left);
+				party.removePartyMember(player, MessageType.LEFT);
 				
 				if (player.isInPartyMatchRoom())
 				{
