@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `clan_create_expiry_time` bigint(13) unsigned NOT NULL DEFAULT '0',
   `bookmarkslot` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `vitality_points` MEDIUMINT UNSIGNED NOT NULL DEFAULT 0,
-  `createDate` date NOT NULL DEFAULT '0000-00-00',
+  `createDate` date NOT NULL DEFAULT '2015-01-01',
   `language` VARCHAR(2) DEFAULT NULL,
   `faction` TINYINT UNSIGNED NOT NULL DEFAULT '0',
   `pccafe_points` int(6) NOT NULL DEFAULT '0',
