@@ -68,6 +68,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
+import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowContactList;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -389,6 +390,7 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		
 		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
+		activeChar.sendPacket(new ExRotation(activeChar.getObjectId(), activeChar.getHeading()));
 		
 		activeChar.getInventory().applyItemSkills();
 		
