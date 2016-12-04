@@ -71,6 +71,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	
 	public PailakaDevilsLegacy()
 	{
+		super(TEMPLATE_ID);
 		addTalkId(SURVIVOR);
 		addAttackId(POWDER_KEG, TREASURE_BOX, LEMATAN);
 		addKillId(LEMATAN);

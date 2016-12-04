@@ -13,9 +13,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="price" val="259800" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -33,9 +30,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="price" val="259800" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -53,9 +47,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="price" val="272800" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -74,9 +65,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="price" val="389700" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
@@ -95,9 +83,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="price" val="1039000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">193</stat>
 		</stats>
@@ -116,9 +101,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_PANTS" />
 		<set name="price" val="650000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">128</stat>
 		</stats>
@@ -136,9 +118,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="price" val="259800" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -156,9 +135,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="price" val="259800" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -176,9 +152,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="price" val="272800" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -198,9 +171,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="price" val="389700" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">83</stat>
 		</stats>
@@ -219,9 +189,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="price" val="1039000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">205</stat>
 		</stats>
@@ -1373,7 +1340,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1394,7 +1360,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1416,7 +1381,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1442,7 +1406,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="BOW" />
-		<set name="bodypart" val="lrhand" />
 		<set name="mp_consume" val="3" />
 		<stats>
 			<stat type="pAtk">397</stat>
@@ -1464,7 +1427,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1485,7 +1447,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1507,7 +1468,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1529,7 +1489,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1551,7 +1510,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1576,7 +1534,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1598,7 +1555,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">153</stat>
@@ -1620,7 +1576,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1641,7 +1596,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="CROSSBOW" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1666,7 +1620,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">175</stat>
@@ -1688,7 +1641,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">153</stat>
@@ -1710,7 +1662,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1731,7 +1682,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1752,7 +1702,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
@@ -1777,7 +1726,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="SPEAR" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1799,7 +1747,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
-		<set name="bodypart" val="lrhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1821,7 +1768,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1843,7 +1789,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1865,7 +1810,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1887,7 +1831,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">194</stat>
@@ -1909,7 +1852,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="DAGGER" />
-		<set name="bodypart" val="rhand" />
 		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">170</stat>

@@ -29,6 +29,7 @@ public final class RequestShortCutReg implements IClientIncomingPacket
 	private int _slot;
 	private int _page;
 	private int _lvl;
+	private int _subLvl;
 	private int _characterType; // 1 - player, 2 - pet
 	
 	@Override
@@ -41,7 +42,7 @@ public final class RequestShortCutReg implements IClientIncomingPacket
 		_page = slot / 12;
 		_id = packet.readD();
 		_lvl = packet.readH();
-		packet.readH(); // Sublevel
+		_subLvl = packet.readH(); // Sublevel
 		_characterType = packet.readD();
 		return true;
 	}
@@ -54,7 +55,7 @@ public final class RequestShortCutReg implements IClientIncomingPacket
 			return;
 		}
 		
-		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _lvl, _characterType);
+		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _lvl, _subLvl, _characterType);
 		client.getActiveChar().registerShortCut(sc);
 		client.sendPacket(new ShortCutRegister(sc));
 	}

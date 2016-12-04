@@ -30,9 +30,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Predicate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -430,6 +432,56 @@ public final class Instance implements IIdentifiable, INamable
 		final List<SpawnGroup> spawns = new ArrayList<>();
 		_spawns.stream().forEach(spawnTemplate -> spawns.addAll(spawnTemplate.getGroupsByName(name)));
 		return spawns;
+	}
+	
+	/**
+	 * @param name
+	 * @return {@code List} of NPCs that are part of specified group
+	 */
+	public List<L2Npc> getNpcsOfGroup(String name)
+	{
+		return getNpcsOfGroup(name, null);
+	}
+	
+	/**
+	 * @param groupName
+	 * @param filter
+	 * @return {@code List} of NPCs that are part of specified group and matches filter specified
+	 */
+	public List<L2Npc> getNpcsOfGroup(String groupName, Predicate<L2Npc> filter)
+	{
+		return getStreamOfGroup(groupName, filter).collect(Collectors.toList());
+	}
+	
+	/**
+	 * @param groupName
+	 * @param filter
+	 * @return {@code Npc} instance of an NPC that is part of a group and matches filter specified
+	 */
+	public L2Npc getNpcOfGroup(String groupName, Predicate<L2Npc> filter)
+	{
+		return getStreamOfGroup(groupName, filter).findFirst().orElse(null);
+	}
+	
+	/**
+	 * @param groupName
+	 * @param filter
+	 * @return {@code Stream<Npc>} of NPCs that is part of a group and matches filter specified
+	 */
+	public Stream<L2Npc> getStreamOfGroup(String groupName, Predicate<L2Npc> filter)
+	{
+		if (filter == null)
+		{
+			filter = Objects::nonNull;
+		}
+		
+		//@formatter:off
+		return _spawns.stream()
+			.flatMap(spawnTemplate -> spawnTemplate.getGroupsByName(groupName).stream())
+			.flatMap(group -> group.getSpawns().stream())
+			.flatMap(npcTemplate -> npcTemplate.getSpawnedNpcs().stream())
+			.filter(filter);
+		//@formatter:on
 	}
 	
 	/**

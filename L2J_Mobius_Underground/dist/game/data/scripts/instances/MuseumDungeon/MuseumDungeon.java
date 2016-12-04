@@ -61,6 +61,7 @@ public final class MuseumDungeon extends AbstractInstance
 	
 	public MuseumDungeon()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(PANTHEON);
 		addFirstTalkId(DESK);
 		addTalkId(PANTHEON, TOYRON);

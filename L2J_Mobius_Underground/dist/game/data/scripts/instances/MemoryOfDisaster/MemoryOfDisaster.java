@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -48,8 +49,10 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.network.serverpackets.awakening.ExCallToChangeClass;
+import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 import instances.AbstractInstance;
 
@@ -73,6 +76,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	private static final int SILVERA = 19194;
 	private static final int WIRPHY = 19195;
 	private static final int EARTH_WYRM_TRASKEN = 19217;
+	private static final int SWOOP_CANNON = 19190;
 	private static final int[] DWARVES =
 	{
 		19191,
@@ -97,16 +101,31 @@ public final class MemoryOfDisaster extends AbstractInstance
 		19214,
 		19215
 	};
+	private static final int CONTROL_DARKELF_AWAKE = 33550;
+	private static final int[] SACRIFICED_DARK_ELF =
+	{
+		33536,
+		33538,
+		33540,
+		33542,
+		33544,
+		33546
+	};
 	// Skills
+	private static final SkillHolder SWOOP_CANNON_SKILL = new SkillHolder(16023, 1);
 	private static final SkillHolder SIEGE_GOLEM_SKILL_1 = new SkillHolder(16022, 1);
 	private static final SkillHolder SIEGE_GOLEM_SKILL_2 = new SkillHolder(16024, 1);
 	private static final SkillHolder PULLER_SKILL = new SkillHolder(16031, 1);
+	private static final SkillHolder BOUNCER_SKILL = new SkillHolder(14649, 1);
 	private static final SkillHolder TEREDOR_TRANSPARENT_SKILL = new SkillHolder(16021, 1);
 	private static final SkillHolder TRASKEN_SKILL_1 = new SkillHolder(14505, 1);
+	private static final SkillHolder TRASKEN_SKILL_2 = new SkillHolder(14337, 1);
+	private static final SkillHolder TRASKEN_SKILL_3 = new SkillHolder(14338, 1);
+	private static final SkillHolder TRASKEN_SKILL_4 = new SkillHolder(14340, 1);
 	// Items
 	private static final int TRANSPARENT_1HS = 15280;
 	// Locations
-	private static final Location BATTLE_PORT = new Location(116063, -183167, -1460, 64960);
+	private static final Location BATTLE_PORT = new Location(116063, -183167, -1480, 64960);
 	private static final Location ROGIN_MOVE = new Location(116400, -183069, -1600);
 	private static final Location AWAKENING_GUIDE_MOVE_1 = new Location(115830, -182103, -1400);
 	private static final Location AWAKENING_GUIDE_MOVE_2 = new Location(115955, -181387, -1624);
@@ -132,6 +151,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 		new Location(116925, -180420, -1200, 46585),
 		new Location(116656, -180461, -1240, 56363),
 	};
+	private static final Location DE_VILLAGE_START = new Location(10400, 17092, -4584, Rnd.get(65520));
 	// Misc
 	private static final int FIRE_IN_DWARVEN_VILLAGE = 23120700;
 	private static final int TEMPLATE_ID = 200;
@@ -158,24 +178,38 @@ public final class MemoryOfDisaster extends AbstractInstance
 		NpcStringId.NO_WAY4,
 		NpcStringId.ANOTHER_ONE_OVER_THERE
 	};
+	private static final NpcStringId[] SACRIFICED_DARK_ELF_SUICIDE_MESSAGES =
+	{
+		NpcStringId.GAH_SHILEN_WHY_MUST_YOU_MAKE_US_SUFFER,
+		NpcStringId.SHILEN_ABANDONED_US_IT_IS_OUR_TIME_TO_DIE,
+		NpcStringId.WITH_OUR_SACRIFICE_WILL_WE_FULFILL_THE_PROPHECY,
+		NpcStringId.BLOODY_RAIN_PLAGUE_DEATH_SHE_IS_NEAR,
+		NpcStringId.ARHHHH,
+		NpcStringId.WE_OFFER_OUR_BLOOD_AS_A_SACRIFICE_SHILEN_SEE_US,
+		NpcStringId.WILL_DARK_ELVES_BE_FORGOTTEN_AFTER_WHAT_WE_HAVE_DONE,
+		NpcStringId.UNBELIEVERS_RUN_DEATH_WILL_FOLLOW_YOU,
+		NpcStringId.I_CURSE_OUR_BLOOD_I_DESPISE_WHAT_WE_ARE_SHILEN
+	};
 	
 	public MemoryOfDisaster()
 	{
+		super(TEMPLATE_ID);
 		addInstanceCreatedId(TEMPLATE_ID);
-		addSpawnId(INVISIBLE_NPC, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, SIEGE_GOLEM, WIRPHY, SILVERA, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN);
+		addSpawnId(INVISIBLE_NPC, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, SIEGE_GOLEM, WIRPHY, SILVERA, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN, SWOOP_CANNON, CONTROL_DARKELF_AWAKE);
 		addMoveFinishedId(ROGIN, SOLDIER, WIRPHY, SILVERA);
 		addMoveFinishedId(DWARVES);
-		addSpellFinishedId(SIEGE_GOLEM, INVISIBLE_NPC, TEREDOR_TRANSPARENT);
+		addSpellFinishedId(SIEGE_GOLEM, INVISIBLE_NPC, TEREDOR_TRANSPARENT, EARTH_WYRM_TRASKEN, SWOOP_CANNON);
 		setCreatureKillId(this::onCreatureKill, BRONK, SILVERA);
 		setCreatureAttackedId(this::onCreatureAttacked, BRONK, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, SIEGE_GOLEM, WIRPHY, SILVERA);
-		setCreatureSeeId(this::onCreatureSee, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, INVISIBLE_NPC);
+		setCreatureSeeId(this::onCreatureSee, TENTACLE, SOLDIER, SOLDIER2, TEREDOR, INVISIBLE_NPC, CONTROL_DARKELF_AWAKE);
+		addEventReceivedId(SACRIFICED_DARK_ELF);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isMoDInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -216,7 +250,6 @@ public final class MemoryOfDisaster extends AbstractInstance
 						}
 						case "EVENT_C":
 						{
-							// Rework me plz, I'm dying
 							final L2Npc golem = addSpawn(npc, SIEGE_GOLEM, 116881, -180742, -1248, 1843, false, 0, false, instance.getId());
 							golem.setIsInvul(true);
 							break;
@@ -231,6 +264,10 @@ public final class MemoryOfDisaster extends AbstractInstance
 							if (npc.getVariables().getString("type", "").equals("PULLER"))
 							{
 								addSkillCastDesire(npc, instance.getFirstPlayer(), PULLER_SKILL, 100000000);
+							}
+							else if (npc.getVariables().getString("type", "").equals("BOUNCER"))
+							{
+								addSkillCastDesire(npc, instance.getFirstPlayer(), BOUNCER_SKILL, 100000000);
 							}
 							break;
 						}
@@ -274,7 +311,6 @@ public final class MemoryOfDisaster extends AbstractInstance
 				case SIEGE_GOLEM:
 				{
 					npc.initSeenCreatures();
-					
 					for (Location loc : TEREDOR_SPAWN_LOC)
 					{
 						final L2Npc teredor = addSpawn(TEREDOR, loc, false, 0, false, instance.getId());
@@ -287,7 +323,6 @@ public final class MemoryOfDisaster extends AbstractInstance
 				{
 					npc.setIsRunning(true);
 					addMoveToDesire(npc, WIRPHY_MOVE, 23);
-					npc.getInstanceWorld().getAliveNpcs(TEREDOR).stream().filter(n -> n.isScriptValue(2)).forEach(n -> addAttackDesire(n, npc));
 					break;
 				}
 				case SILVERA:
@@ -298,8 +333,6 @@ public final class MemoryOfDisaster extends AbstractInstance
 				}
 				case TEREDOR_TRANSPARENT:
 				{
-					// TODO: Check why the first doesn't work :(
-					addSkillCastDesire(npc, npc, TEREDOR_TRANSPARENT_SKILL, 1000000);
 					npc.setTarget(npc);
 					npc.doCast(TEREDOR_TRANSPARENT_SKILL.getSkill());
 					break;
@@ -310,17 +343,29 @@ public final class MemoryOfDisaster extends AbstractInstance
 					getTimers().addTimer("ENTER_EVENT", 5000, npc, null);
 					break;
 				}
+				case SWOOP_CANNON:
+				{
+					npc.setTarget(npc);
+					npc.doCast(SWOOP_CANNON_SKILL.getSkill());
+					break;
+				}
+				case CONTROL_DARKELF_AWAKE:
+				{
+					npc.initSeenCreatures();
+					break;
+				}
 			}
 		}
 		return super.onSpawn(npc);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	private void onCreatureSee(OnCreatureSee event)
 	{
 		final L2Character creature = event.getSeen();
 		final L2Npc npc = (L2Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
-		if (isMoDInstance(world))
+		
+		if (isInInstance(world))
 		{
 			if (creature.isNpc())
 			{
@@ -370,7 +415,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 								siegeGolem.setScriptValue(1);
 								siegeGolem.abortAttack();
 								siegeGolem.abortCast();
-								addSkillCastDesire(siegeGolem, siegeGolem, SIEGE_GOLEM_SKILL_1, 1000000);
+								siegeGolem.doCast(SIEGE_GOLEM_SKILL_1.getSkill());
 								world.getAliveNpcs(TEREDOR).stream().filter(n -> n.isScriptValue(1)).forEach(n -> getTimers().addTimer("TEREDOR_SUICIDE", 10000, n, null));
 								getTimers().addTimer("CHASING_TRAJAN_TIME", 5000, npc, null);
 								getTimers().addTimer("EARTHWORM_TIME", 15000, npc, null);
@@ -386,6 +431,15 @@ public final class MemoryOfDisaster extends AbstractInstance
 						}
 						break;
 					}
+					case CONTROL_DARKELF_AWAKE:
+					{
+						getTimers().addTimer("OPENING_DE_SCENE", 1000, e ->
+						{
+							playMovie(creature.getActingPlayer(), Movie.SC_AWAKENING_OPENING_D);
+							getTimers().addTimer("TIMER_ID_OP_SCEN_END", 25000, npc, creature.getActingPlayer());
+						});
+						break;
+					}
 				}
 			}
 		}
@@ -396,24 +450,15 @@ public final class MemoryOfDisaster extends AbstractInstance
 	{
 		switch (event)
 		{
-			case "START_AWAKENING_OPENING_SCENE":
-			{
-				playMovie(player, Movie.SC_AWAKENING_OPENING);
-				break;
-			}
 			case "EARTHQUAKE":
 			{
 				player.sendPacket(new Earthquake(player.getLocation(), 50, 4));
-				break;
-			}
-			case "TELEPORT_PLAYER_TO_START":
-			{
-				player.teleToLocation(BATTLE_PORT);
+				getTimers().addTimer("EARTHQUAKE", 10000, null, player);
 				break;
 			}
 			case "END_OF_OPENING_SCENE":
 			{
-				player.teleToLocation(BATTLE_PORT);
+				player.teleToLocation(BATTLE_PORT, player.getInstanceWorld());
 				getTimers().addTimer("SPAWN_ROGIN", 10000, null, player);
 				break;
 			}
@@ -529,14 +574,17 @@ public final class MemoryOfDisaster extends AbstractInstance
 			case "ATTACK_TIME":
 			{
 				final List<L2Npc> tentacles = npc.getInstanceWorld().getAliveNpcs(TENTACLE).stream().filter(n -> n.getVariables().getBoolean("isLeaderKiller", false)).collect(Collectors.toList());
-				addAttackDesire(npc, tentacles.get(Rnd.get(tentacles.size())));
+				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n -> addAttackDesire(n, tentacles.get(Rnd.get(tentacles.size()))));
 				break;
 			}
 			case "RUN_TIME":
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, SHOUT_RUN[Rnd.get(SHOUT_RUN.length)]);
-				addMoveToDesire(npc, DWARVES_MOVE_1, 23);
-				npc.setIsRunning(true);
+				npc.getInstanceWorld().getNpcs(DWARVES).forEach(n ->
+				{
+					n.setIsRunning(true);
+					n.broadcastSay(ChatType.NPC_GENERAL, SHOUT_RUN[Rnd.get(SHOUT_RUN.length)]);
+					n.getAI().moveTo(DWARVES_MOVE_1);
+				});
 				break;
 			}
 			case "TEREDOR_SUICIDE":
@@ -553,10 +601,10 @@ public final class MemoryOfDisaster extends AbstractInstance
 			case "SECOND_PULL":
 			{
 				addSkillCastDesire(npc, npc.getInstanceWorld().getFirstPlayer(), PULLER_SKILL, 100000000);
-				getTimers().addTimer("DESPAWNER_PULLER", 3000, npc, null);
+				getTimers().addTimer("DESPAWN_PULLER", 3000, npc, null);
 				break;
 			}
-			case "DESPAWNER_PULLER":
+			case "DESPAWN_PULLER":
 			{
 				npc.deleteMe();
 				break;
@@ -569,12 +617,13 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "EARTHWORM_TIME":
 			{
-				addSpawn(npc, TEREDOR_TRANSPARENT, 116511, -178729, -1176, 43905, false, 0, false, npc.getInstanceId());
+				addSpawn(npc, TEREDOR_TRANSPARENT, 116511, -178729, -1176, 58208, false, 0, false, npc.getInstanceId());
 				break;
 			}
 			case "ENTER_EVENT":
 			{
-				addSkillCastDesire(npc, npc, TRASKEN_SKILL_1, 100000000);
+				npc.setTarget(npc);
+				npc.doCast(TRASKEN_SKILL_1.getSkill());
 				npc.getInstanceWorld().getFirstPlayer().sendPacket(new Earthquake(npc.getLocation(), 50, 4));
 				getTimers().addTimer("TRASKEN_UNEQUIP", 2000, npc, null);
 				break;
@@ -582,20 +631,45 @@ public final class MemoryOfDisaster extends AbstractInstance
 			case "TRASKEN_UNEQUIP":
 			{
 				npc.setLHandId(0);
-				npc.broadcastInfo();
-				getTimers().addTimer("END_VIDEO", 20000, null, npc.getInstanceWorld().getFirstPlayer());
 				break;
 			}
-			case "END_VIDEO":
+			case "PC_TEL_TIME":
+			{
+				player.sendPacket(new OnEventTrigger(FIRE_IN_DWARVEN_VILLAGE, false));
+				getTimers().cancelTimer("EARTHQUAKE", null, player);
+				player.teleToLocation(DE_VILLAGE_START, player.getInstanceWorld());
+				break;
+			}
+			case "TIMER_ID_OP_SCEN_END":
+			{
+				npc.broadcastEvent("SCE_J4D_DARK_ELF_START", 8000, null);
+				getTimers().addTimer("TIMER_ID_END", 60000, npc, player);
+				break;
+			}
+			case "TIMER_ID_END":
+			{
+				playMovie(player, Movie.SC_AWAKENING_OPENING_E);
+				getTimers().addTimer("TIMER_ID_ED_SCEN_END", 30000, npc, player);
+				break;
+			}
+			case "TIMER_ID_ED_SCEN_END":
 			{
 				playMovie(player, Movie.SC_AWAKENING_OPENING_F);
-				getTimers().addTimer("END_INSTANCE", 45000, null, player);
+				getTimers().addTimer("TIMER_ID_FINAL_ED_SCEN_END", 10000, npc, player);
 				break;
 			}
-			case "END_INSTANCE":
+			case "TIMER_ID_FINAL_ED_SCEN_END":
 			{
-				getTimers().cancelTimers("EARTHQUAKE");
+				// myself->SetOneTimeQuestFlag(myself->c_ai0, 10491, 1);
+				player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "calltochange_end.htm")));
 				finishInstance(player, 0);
+				break;
+			}
+			case "TIMER_ID_DIE":
+			{
+				npc.broadcastSay(ChatType.NPC_GENERAL, SACRIFICED_DARK_ELF_SUICIDE_MESSAGES[Rnd.get(SACRIFICED_DARK_ELF_SUICIDE_MESSAGES.length)]);
+				npc.doDie(npc);
+				DecayTaskManager.getInstance().cancel(npc);
 				break;
 			}
 		}
@@ -604,15 +678,14 @@ public final class MemoryOfDisaster extends AbstractInstance
 	@Override
 	public void onInstanceCreated(Instance instance, L2PcInstance player)
 	{
-		getTimers().addTimer("OPENING_SCENE", 500, e ->
+		getTimers().addTimer("OPENING_SCENE", 1000, e ->
 		{
 			instance.getPlayers().forEach(p ->
 			{
 				p.sendPacket(new OnEventTrigger(FIRE_IN_DWARVEN_VILLAGE, true));
-				getTimers().addRepeatingTimer("EARTHQUAKE", 10000, null, p);
-				getTimers().addTimer("END_OF_OPENING_SCENE", 30000, null, p);
-				getTimers().addTimer("START_AWAKENING_OPENING_SCENE", 1000, null, p);
-				getTimers().addTimer("TELEPORT_PLAYER_TO_START", 25000, null, p);
+				playMovie(p, Movie.SC_AWAKENING_OPENING);
+				getTimers().addTimer("EARTHQUAKE", 10000, null, p);
+				getTimers().addTimer("END_OF_OPENING_SCENE", 32000, null, p);
 			});
 		});
 	}
@@ -679,6 +752,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			case WIRPHY:
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HELP_ME3);
+				npc.getInstanceWorld().getAliveNpcs(TEREDOR).stream().filter(n -> n.isScriptValue(2)).forEach(n -> addAttackDesire(n, npc));
 				break;
 			}
 			case SILVERA:
@@ -692,7 +766,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 	private void onCreatureAttacked(OnCreatureAttacked event)
 	{
 		final Instance world = event.getTarget().getInstanceWorld();
-		if (isMoDInstance(world))
+		if (isInInstance(world))
 		{
 			if (!event.getAttacker().isPlayable())
 			{
@@ -774,6 +848,10 @@ public final class MemoryOfDisaster extends AbstractInstance
 							if ((attackCount == 80) || (attacker.getId() == SIEGE_GOLEM))
 							{
 								npc.doDie(attacker);
+								final L2Npc golem = world.getNpc(SIEGE_GOLEM);
+								golem.abortAttack();
+								golem.abortCast();
+								world.getNpc(SIEGE_GOLEM).getAI().moveTo(GOLEM_MOVE);
 							}
 							addAttackDesire(npc, attacker);
 						}
@@ -791,17 +869,14 @@ public final class MemoryOfDisaster extends AbstractInstance
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.NO_WAY2);
 						npc.doDie(null);
-						// TODO : This shit doesn't attack silvera for some reason which prevents to trigger the dwarf text
-						// Used some additional method such as World.getInstance().getVisibleObjects(attacker, Npc.class, n -> (n.getId() == SILVERA))
-						// It found the npc but didn't worked either.
-						addAttackDesire(attacker, world.getNpc(SILVERA));
+						attacker.doAttack(world.getNpc(SILVERA));
 						break;
 					}
 					case SILVERA:
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.MY_GOD);
 						npc.doDie(null);
-						addAttackDesire(world.getNpc(SIEGE_GOLEM), attacker);
+						world.getNpc(SIEGE_GOLEM).doAttack(attacker);
 						break;
 					}
 				}
@@ -824,10 +899,10 @@ public final class MemoryOfDisaster extends AbstractInstance
 				{
 					dwarf.broadcastSay(ChatType.NPC_GENERAL, SHOUT_BRONK_DEATH[Rnd.get(SHOUT_BRONK_DEATH.length)]);
 				}
-				getTimers().addTimer("ATTACK_TIME", 1000, dwarf, null);
-				getTimers().addTimer("RUN_TIME", 10000, dwarf, null);
 			}
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.UGH_IF_I_SEE_YOU_IN_THE_SPIRIT_WORLD_FIRST_ROUND_IS_ON_ME);
+			getTimers().addTimer("ATTACK_TIME", 1000, npc, null);
+			getTimers().addTimer("RUN_TIME", 10000, npc, null);
 		}
 		else if (npc.getId() == SILVERA)
 		{
@@ -838,24 +913,102 @@ public final class MemoryOfDisaster extends AbstractInstance
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		if ((npc.getId() == SIEGE_GOLEM) && (skill.getId() == SIEGE_GOLEM_SKILL_1.getSkillId()))
+		switch (npc.getId())
 		{
-			addMoveToDesire(npc, GOLEM_MOVE, 23);
-			npc.setIsRunning(true);
-		}
-		else if ((npc.getId() == INVISIBLE_NPC) && npc.getVariables().getString("type", "").equals("PULLER") && (skill.getId() == PULLER_SKILL.getSkillId()) && npc.isScriptValue(0))
-		{
-			npc.teleToLocation(PULLER_TELEPORT);
-			getTimers().addTimer("SECOND_PULL", 2000, npc, null);
-		}
-		else if ((npc.getId() == TEREDOR_TRANSPARENT) && (skill.getId() == TEREDOR_TRANSPARENT_SKILL.getSkillId()))
-		{
-			final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
-			invisibleNpc.getVariables().set("type", "BOUNCER");
-			addSpawn(npc, EARTH_WYRM_TRASKEN, npc.getLocation(), false, npc.getInstanceId());
-			npc.deleteMe();
+			case SIEGE_GOLEM:
+			{
+				if (skill.getId() == SIEGE_GOLEM_SKILL_1.getSkillId())
+				{
+					npc.setIsRunning(true);
+					npc.getAI().moveTo(GOLEM_MOVE);
+				}
+				break;
+			}
+			case INVISIBLE_NPC:
+			{
+				if (npc.getVariables().getString("type", "").equals("PULLER") && (skill.getId() == PULLER_SKILL.getSkillId()) && npc.isScriptValue(0))
+				{
+					npc.teleToLocation(PULLER_TELEPORT, npc.getInstanceWorld());
+					npc.setScriptValue(1);
+					getTimers().addTimer("SECOND_PULL", 2000, npc, null);
+				}
+				else if (npc.getVariables().getString("type", "").equals("BOUNCER") && (skill.getId() == BOUNCER_SKILL.getSkillId()))
+				{
+					npc.deleteMe();
+				}
+				break;
+			}
+			case TEREDOR_TRANSPARENT:
+			{
+				if (skill.getId() == TEREDOR_TRANSPARENT_SKILL.getSkillId())
+				{
+					final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
+					invisibleNpc.getVariables().set("type", "BOUNCER");
+					addSpawn(npc, EARTH_WYRM_TRASKEN, npc.getLocation(), false, npc.getInstanceId());
+					npc.deleteMe();
+				}
+				break;
+			}
+			case EARTH_WYRM_TRASKEN:
+			{
+				if (skill.getId() == TRASKEN_SKILL_1.getSkillId())
+				{
+					playMovie(npc.getInstanceWorld().getFirstPlayer(), Movie.SC_AWAKENING_OPENING_C);
+					npc.setTarget(npc.getInstanceWorld().getNpc(SIEGE_GOLEM));
+					npc.doCast(TRASKEN_SKILL_2.getSkill());
+					getTimers().addTimer("PC_TEL_TIME", 23000, npc, npc.getInstanceWorld().getFirstPlayer());
+				}
+				else if (skill.getId() == TRASKEN_SKILL_2.getSkillId())
+				{
+					if (npc.isScriptValue(0))
+					{
+						npc.getInstanceWorld().getNpc(SIEGE_GOLEM).doDie(npc);
+						final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
+						invisibleNpc.getVariables().set("type", "BOUNCER");
+					}
+					npc.setTarget(npc);
+					npc.doCast(TRASKEN_SKILL_4.getSkill());
+				}
+				else if (skill.getId() == TRASKEN_SKILL_4.getSkillId())
+				{
+					npc.setTarget(npc);
+					npc.doCast(TRASKEN_SKILL_3.getSkill());
+					if (npc.isScriptValue(0))
+					{
+						final L2Npc invisibleNpc = addSpawn(npc, INVISIBLE_NPC, npc.getLocation(), false, npc.getInstanceId());
+						invisibleNpc.getVariables().set("type", "BOUNCER");
+						npc.setScriptValue(1);
+					}
+				}
+				else if (skill.getId() == TRASKEN_SKILL_3.getSkillId())
+				{
+					npc.setTarget(npc);
+					npc.doCast(TRASKEN_SKILL_2.getSkill());
+				}
+				break;
+			}
+			case SWOOP_CANNON:
+			{
+				npc.setTarget(npc);
+				npc.doCast(SWOOP_CANNON_SKILL.getSkill());
+				break;
+			}
 		}
 		return super.onSpellFinished(npc, player, skill);
+	}
+	
+	@Override
+	public String onEventReceived(String event, L2Npc sender, L2Npc receiver, L2Object reference)
+	{
+		final Instance instance = receiver.getInstanceWorld();
+		if (isInInstance(instance))
+		{
+			if (event.equals("SCE_J4D_DARK_ELF_START"))
+			{
+				getTimers().addTimer("TIMER_ID_DIE", Rnd.get(60000) + 5000, receiver, null);
+			}
+		}
+		return super.onEventReceived(event, sender, receiver, reference);
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_CALL_TO_CHANGE_CLASS)
@@ -893,11 +1046,6 @@ public final class MemoryOfDisaster extends AbstractInstance
 				showOnScreenMsg(player, NpcStringId.FREE_THE_GIANT_FROM_HIS_IMPRISONMENT_AND_AWAKEN_YOUR_TRUE_POWER, ExShowScreenMessage.TOP_CENTER, 5000);
 			}
 		}
-	}
-	
-	private boolean isMoDInstance(Instance instance)
-	{
-		return (instance != null) && (instance.getTemplateId() == TEMPLATE_ID);
 	}
 	
 	public static void main(String[] args)

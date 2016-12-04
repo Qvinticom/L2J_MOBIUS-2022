@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="131" parentClassId="127">
+		<skill skillName="Disarm" skillId="485" skillLvl="8" getLevel="75" levelUpSp="1800" />
+		
 		<skill skillName="Health" skillId="329" skillLvl="1" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Wisdom" skillId="328" skillLvl="1" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Fortitude" skillId="335" skillLvl="1" getLevel="76" levelUpSp="2000" />

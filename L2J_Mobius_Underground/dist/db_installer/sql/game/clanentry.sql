@@ -13,6 +13,8 @@ CREATE TABLE IF NOT EXISTS `pledge_recruit` (
   `karma` tinyint(1) NOT NULL,
   `information` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `detailed_information` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `application_type` tinyint(1) NOT NULL,
+  `recruit_type` tinyint(1) NOT NULL,
   PRIMARY KEY (`clan_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

@@ -1075,16 +1075,27 @@
 		<set name="weight" val="150" />
 		<skills>
 			<skill id="8864" level="7" /> <!-- Talisman - Insanity -->
-			<skill id="13384" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Infinity -->
-			<skill id="13390" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Infinity -->
+			<skill id="17978" level="1" type="ON_EQUIP" /> <!-- Equip Talisman - Infinity -->
+			<skill id="17979" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Infinity -->
 		</skills>
 	</item>
 	<item id="39573" name="Sealed Talisman - Insanity" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Insanity. Cannot be exchanged, dropped, or sold in a private store once open. Lv. 85 or above. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
+		<set name="weight" val="100" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="weight" val="100" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="handler" val="ItemSkills" />
+		<createItems>
+			<item id="39572" count="1" chance="100" /> <!-- Talisman - Insanity -->
+		</createItems>
+		<skills>
+			<skill id="17980" level="1" /> <!-- Unseal Talisman - Insanity -->
+		</skills>
 	</item>
 	<item id="39574" name="Scroll of Escape: Town of Oren" type="EtcItem">
 		<!-- Teleports you to Town of Oren. -->

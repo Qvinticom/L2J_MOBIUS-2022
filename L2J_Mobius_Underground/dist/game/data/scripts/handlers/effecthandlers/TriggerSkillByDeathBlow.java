@@ -16,17 +16,23 @@
  */
 package handlers.effecthandlers;
 
+import java.util.logging.Level;
+
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.handler.TargetHandler;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.events.EventType;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
-import com.l2jmobius.gameserver.model.events.listeners.FunctionEventListener;
-import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDamageReceived;
+import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 
 /**
  * Trigger Skill By Death Blow effect implementation.
@@ -34,43 +40,76 @@ import com.l2jmobius.gameserver.model.skills.SkillCaster;
  */
 public final class TriggerSkillByDeathBlow extends AbstractEffect
 {
+	private final int _minAttackerLevel;
+	private final int _maxAttackerLevel;
 	private final int _chance;
 	private final SkillHolder _skill;
+	private final TargetType _targetType;
+	private final InstanceType _attackerType;
 	
 	public TriggerSkillByDeathBlow(StatsSet params)
 	{
+		_minAttackerLevel = params.getInt("minAttackerLevel", 1);
+		_maxAttackerLevel = params.getInt("maxAttackerLevel", 127);
 		_chance = params.getInt("chance", 100);
 		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
+		_targetType = params.getEnum("targetType", TargetType.class, TargetType.SELF);
+		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
-	public TerminateReturn onCreatureDeath(OnCreatureDeath event)
+	public void onDamageReceivedEvent(OnCreatureDamageReceived event)
 	{
-		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0)))
+		if (event.getDamage() < event.getTarget().getCurrentHp())
 		{
-			return new TerminateReturn(false, false, false);
+			return;
 		}
 		
-		if (Rnd.get(100) > _chance)
+		if ((_chance == 0) || (_skill.getSkillLevel() == 0))
 		{
-			return new TerminateReturn(false, false, false);
+			return;
+		}
+		
+		if (event.getAttacker() == event.getTarget())
+		{
+			return;
+		}
+		
+		if ((event.getAttacker().getLevel() < _minAttackerLevel) || (event.getAttacker().getLevel() > _maxAttackerLevel))
+		{
+			return;
+		}
+		
+		if (((_chance < 100) && (Rnd.get(100) > _chance)) || !event.getAttacker().getInstanceType().isType(_attackerType))
+		{
+			return;
 		}
 		
 		final Skill triggerSkill = _skill.getSkill();
+		L2Object target = null;
+		try
+		{
+			target = TargetHandler.getInstance().getHandler(_targetType).getTarget(event.getTarget(), event.getAttacker(), triggerSkill, false, false, false);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.WARNING, "Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
+		}
 		
-		SkillCaster.triggerCast(event.getTarget(), event.getTarget(), triggerSkill);
-		
-		return new TerminateReturn(true, true, true);
+		if ((target != null) && target.isCharacter())
+		{
+			SkillCaster.triggerCast(event.getTarget(), (L2Character) target, triggerSkill);
+		}
 	}
 	
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().removeListenerIf(EventType.ON_CREATURE_DEATH, listener -> listener.getOwner() == this);
+		info.getEffected().removeListenerIf(EventType.ON_CREATURE_DAMAGE_RECEIVED, listener -> listener.getOwner() == this);
 	}
 	
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		info.getEffected().addListener(new FunctionEventListener(info.getEffected(), EventType.ON_CREATURE_DEATH, (OnCreatureDeath event) -> onCreatureDeath(event), this));
+		info.getEffected().addListener(new ConsumerEventListener(info.getEffected(), EventType.ON_CREATURE_DAMAGE_RECEIVED, (OnCreatureDamageReceived event) -> onDamageReceivedEvent(event), this));
 	}
 }

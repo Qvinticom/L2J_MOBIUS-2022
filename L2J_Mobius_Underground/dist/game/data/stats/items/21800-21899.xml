@@ -160,9 +160,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">113</stat>
 			<stat type="maxMp">592</stat>
@@ -188,9 +185,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="129600" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">71</stat>
 			<stat type="maxMp">370</stat>

@@ -17,18 +17,14 @@
 package com.l2jmobius.gameserver.engines;
 
 import java.io.File;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.XMLFilter;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.engines.items.DocumentItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author mkizub
@@ -38,7 +34,6 @@ public class DocumentEngine
 	private static final Logger LOGGER = Logger.getLogger(DocumentEngine.class.getName());
 	
 	private final List<File> _itemFiles = new LinkedList<>();
-	private final List<File> _skillFiles = new LinkedList<>();
 	
 	public static DocumentEngine getInstance()
 	{
@@ -51,11 +46,6 @@ public class DocumentEngine
 		if (Config.CUSTOM_ITEMS_LOAD)
 		{
 			hashFiles("data/stats/items/custom", _itemFiles);
-		}
-		hashFiles("data/stats/skills", _skillFiles);
-		if (Config.CUSTOM_SKILLS_LOAD)
-		{
-			hashFiles("data/stats/skills/custom", _skillFiles);
 		}
 	}
 	
@@ -72,35 +62,6 @@ public class DocumentEngine
 		{
 			hash.add(f);
 		}
-	}
-	
-	public List<Skill> loadSkills(File file)
-	{
-		if (file == null)
-		{
-			LOGGER.warning("Skill file not found.");
-			return null;
-		}
-		return Collections.emptyList();
-	}
-	
-	public void loadAllSkills(Map<Integer, Skill> allSkills)
-	{
-		int count = 0;
-		for (File file : _skillFiles)
-		{
-			final List<Skill> s = loadSkills(file);
-			if (s == null)
-			{
-				continue;
-			}
-			for (Skill skill : s)
-			{
-				allSkills.put(SkillData.getSkillHashCode(skill), skill);
-				count++;
-			}
-		}
-		LOGGER.info("Loaded " + count + " Skill templates from XML files.");
 	}
 	
 	/**

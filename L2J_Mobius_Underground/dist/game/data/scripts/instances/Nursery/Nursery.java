@@ -69,6 +69,7 @@ public final class Nursery extends AbstractInstance
 	
 	public Nursery()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(TIE);
 		addFirstTalkId(TIE);
 		addTalkId(TIE);
@@ -82,7 +83,7 @@ public final class Nursery extends AbstractInstance
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isNurseryInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcVars = npc.getVariables();
 			final int gameStage = npcVars.getInt("GAME_STAGE", 0);
@@ -139,7 +140,7 @@ public final class Nursery extends AbstractInstance
 		final Instance instance = npc.getInstanceWorld();
 		String htmltext = null;
 		
-		if (isNurseryInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcVars = npc.getVariables();
 			
@@ -191,7 +192,7 @@ public final class Nursery extends AbstractInstance
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isNurseryInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcVars = npc.getVariables();
 			final int gameStage = npcVars.getInt("GAME_STAGE", 0);
@@ -272,7 +273,7 @@ public final class Nursery extends AbstractInstance
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isNurseryInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcVars = npc.getVariables();
 			final int maguenStatus = npcVars.getInt("MAGUEN_STATUS", 0);
@@ -316,7 +317,7 @@ public final class Nursery extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isNurseryInstance(instance))
+		if (isInInstance(instance))
 		{
 			if (getRandom(100) < 6)
 			{
@@ -389,7 +390,7 @@ public final class Nursery extends AbstractInstance
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isNurseryInstance(instance))
+		if (isInInstance(instance))
 		{
 			final L2Npc gameManager = instance.getNpc(TIE);
 			if (gameManager != null)
@@ -456,11 +457,6 @@ public final class Nursery extends AbstractInstance
 			enterInstance(character.getActingPlayer(), null, TEMPLATE_ID);
 		}
 		return super.onEnterZone(character, zone);
-	}
-	
-	private boolean isNurseryInstance(Instance instance)
-	{
-		return ((instance != null) && (instance.getTemplateId() == TEMPLATE_ID));
 	}
 	
 	public static void main(String[] args)

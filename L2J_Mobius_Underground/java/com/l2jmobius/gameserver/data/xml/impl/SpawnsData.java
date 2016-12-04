@@ -117,7 +117,17 @@ public class SpawnsData implements IGameXmlReader
 		return _spawns;
 	}
 	
-	public List<NpcSpawnTemplate> getSpawns(Predicate<NpcSpawnTemplate> condition)
+	public List<SpawnTemplate> getSpawns(Predicate<SpawnTemplate> condition)
+	{
+		return _spawns.stream().filter(condition).collect(Collectors.toList());
+	}
+	
+	public List<SpawnGroup> getGroupsByName(String groupName)
+	{
+		return _spawns.stream().filter(template -> (template.getName() != null) && groupName.equalsIgnoreCase(template.getName())).flatMap(template -> template.getGroups().stream()).collect(Collectors.toList());
+	}
+	
+	public List<NpcSpawnTemplate> getNpcSpawns(Predicate<NpcSpawnTemplate> condition)
 	{
 		return _spawns.stream().flatMap(template -> template.getGroups().stream()).flatMap(group -> group.getSpawns().stream()).filter(condition).collect(Collectors.toList());
 	}

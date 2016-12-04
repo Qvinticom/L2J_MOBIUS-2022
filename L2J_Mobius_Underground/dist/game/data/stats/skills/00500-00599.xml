@@ -2,8 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="500" toLevel="2" name="True Berserker">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 1.05 1.08 </table>
-		<table name="#amount2"> 2 4 </table>
 		<icon>icon.skill0500</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -190,7 +188,7 @@
 			<value level="2">28</value>
 			<value level="3">33</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -324,7 +322,7 @@
 			<value level="36">59</value>
 			<value level="37">60</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -482,7 +480,7 @@
 			<value level="27">59</value>
 			<value level="28">60</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -560,7 +558,7 @@
 			<value level="3">47</value>
 			<value level="4">51</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -783,7 +781,6 @@
 	</skill>
 	<skill id="508" toLevel="31" name="Rising Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 350 370 391 412 434 457 481 506 531 557 584 611 639 668 697 727 758 789 820 852 885 917 950 984 1017 1051 1084 1118 1151 1185 1218 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -1947,7 +1944,7 @@
 			<value level="7">74</value>
 		</magicLvl>
 		<mpConsume>30</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2066,7 +2063,7 @@
 		<icon>icon.skill0526</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>78</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2225,11 +2222,17 @@
 		</effects>
 	</skill>
 	<skill id="531" toLevel="8" name="Critical Wound">
-		<table name="#defCritDamage"> 1.3 1.32 1.33 1.34 1.35 1.35 1.35 1.35 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="8">30</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="2011" toSubLevel="2030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
-		<activateRate>80</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="8">80</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>-671</effectPoint>
@@ -2258,7 +2261,7 @@
 			<value level="7">52</value>
 			<value level="8">55</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2440,7 +2443,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>79</magicLvl>
 		<mpConsume>72</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2530,7 +2533,7 @@
 			<value level="1">71</value>
 			<value level="2">72</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2556,7 +2559,6 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-676</effectPoint>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0540</icon>
 		<magicLvl>
@@ -2567,7 +2569,7 @@
 			<value level="1">71</value>
 			<value level="2">72</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3240,7 +3242,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3291,7 +3293,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3417,7 +3419,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3611,7 +3613,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3816,7 +3818,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3949,7 +3951,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3994,7 +3996,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4225,7 +4227,7 @@
 			<value level="3">67</value>
 			<value level="4">70</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4440,7 +4442,7 @@
 		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>55</magicLvl>
 		<mpConsume>55</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4531,7 +4533,7 @@
 			<value level="1">54</value>
 			<value level="2">58</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>

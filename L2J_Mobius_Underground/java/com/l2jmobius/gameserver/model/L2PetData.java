@@ -184,7 +184,7 @@ public class L2PetData
 			{
 				continue;
 			}
-			if (temp.getSkillLvl() == 0)
+			if (temp.getSkillLevel() == 0)
 			{
 				if (petLvl < 70)
 				{
@@ -209,9 +209,9 @@ public class L2PetData
 			}
 			else if (temp.getMinLevel() <= petLvl)
 			{
-				if (temp.getSkillLvl() > lvl)
+				if (temp.getSkillLevel() > lvl)
 				{
-					lvl = temp.getSkillLvl();
+					lvl = temp.getSkillLevel();
 				}
 			}
 		}

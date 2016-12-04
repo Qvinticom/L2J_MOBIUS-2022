@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
  */
 public enum CommonSkill
 {
-	SWEEPER(42, 1),
 	RAID_CURSE(4215, 1),
 	RAID_CURSE2(4515, 1),
 	SEAL_OF_RULER(246, 1),
@@ -58,7 +57,8 @@ public enum CommonSkill
 	HAIR_ACCESSORY_SET(17192, 1),
 	ALCHEMY_CUBE(17943, 1),
 	ALCHEMY_CUBE_RANDOM_SUCCESS(17966, 1),
-	PET_SWITCH_STANCE(6054, 1);
+	PET_SWITCH_STANCE(6054, 1),
+	WEIGHT_PENALTY(4270, 1);
 	
 	private final SkillHolder _holder;
 	
@@ -74,7 +74,7 @@ public enum CommonSkill
 	
 	public int getLevel()
 	{
-		return _holder.getSkillLvl();
+		return _holder.getSkillLevel();
 	}
 	
 	public Skill getSkill()

@@ -2034,7 +2034,6 @@
 		<effectRange>900</effectRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<flyType>CHARGE</flyType>
 		<hitTime>500</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>83</mpConsume>
@@ -2054,7 +2053,6 @@
 			<effect name="PhysicalAttack">
 				<power>2319</power>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="6643" toLevel="1" name="Holy Strike">

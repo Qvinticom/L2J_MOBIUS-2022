@@ -48,9 +48,9 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	
 	public TriggerSkillBySkill(StatsSet params)
 	{
-		_castSkillId = params.getInt("castSkillId", 0);
+		_castSkillId = params.getInt("castSkillId");
 		_chance = params.getInt("chance", 100);
-		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
+		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel"));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
 	}
@@ -67,9 +67,9 @@ public final class TriggerSkillBySkill extends AbstractEffect
 		info.getEffected().removeListenerIf(EventType.ON_CREATURE_SKILL_FINISH_CAST, listener -> listener.getOwner() == this);
 	}
 	
-	public void onSkillUseEvent(OnCreatureSkillFinishCast event)
+	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
 	{
-		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || (_castSkillId == 0)))
+		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_castSkillId == 0)))
 		{
 			return;
 		}

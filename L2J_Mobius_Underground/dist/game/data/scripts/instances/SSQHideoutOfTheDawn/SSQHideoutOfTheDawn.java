@@ -35,6 +35,7 @@ public final class SSQHideoutOfTheDawn extends AbstractInstance
 	
 	public SSQHideoutOfTheDawn()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(WOOD);
 		addTalkId(WOOD, JAINA);
 	}

@@ -1123,7 +1123,6 @@
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -1138,7 +1137,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="EnemyCharge" />
 			<effect name="PhysicalAttack">
 				<power>5841</power>
 			</effect>

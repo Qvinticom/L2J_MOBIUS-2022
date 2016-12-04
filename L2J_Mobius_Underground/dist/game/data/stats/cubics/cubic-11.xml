@@ -4,12 +4,14 @@
 		<skills>
 			<skill id="5115" level="4" triggerRate="40" successRate="84" target="TARGET"> <!-- Cubic Hate -->
 				<conditions>
-					<general type="GREATER" hpPercent="30" hp="1000" />
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="4049" level="8" triggerRate="15" successRate="40" canUseOnStaticObjects="true" target="TARGET"> <!-- Cubic Strike -->
 				<conditions>
-					<general type="GREATER" hpPercent="30" hp="1000" />
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="5579" level="1" triggerRate="45" successRate="99" target="MASTER" targetDebuff="true" /> <!-- Cubic Cure -->

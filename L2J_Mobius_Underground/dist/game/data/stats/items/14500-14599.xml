@@ -845,9 +845,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<skills>
 			<skill id="13007" level="1" /> <!-- Vesper Heavy Armor Set - PvP -->
 		</skills>
@@ -902,9 +899,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<skills>
 			<skill id="13011" level="1" /> <!-- Vesper Robe Set - PvP -->
 		</skills>
@@ -933,9 +927,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<skills>
 			<skill id="13008" level="1" /> <!-- Vesper Noble Heavy Armor Set - PvP -->
 		</skills>
@@ -990,9 +981,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="is_sellable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<skills>
 			<skill id="13012" level="1" /> <!-- Vesper Noble Robe Set - PvP -->
 		</skills>

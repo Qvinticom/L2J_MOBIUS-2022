@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30000" toLevel="1" name="Hydro Attack: Debuff">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Stacks Storm Marks when using Hydro Attack. -->
 		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
-		<castRange>0</castRange>
+		<effects>
+			<effect name="TriggerSkillBySkill">
+				<castSkillId>30001</castSkillId> <!-- Hydro Attack -->
+				<skillId>30002</skillId> <!-- Storm Sign -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+				<chance>100</chance>
+				<targetType>TARGET</targetType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="30001" toLevel="28" name="Hydro Attack">
-		<!-- TODO Next action cast. -->
+		<!-- Updated to IO -->
 		<!-- Attacks target with 6 Power added to M. Atk. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
-		<table name="#power"> 6 14 19 25 32 36 41 46 50 55 60 64 69 72 75 77 79 171 179 187 195 203 211 219 227 231 235 239 </table>
 		<icon>icon.skill30001</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -76,7 +84,7 @@
 			<value level="28">8</value>
 		</mpInitialConsume>
 		<castRange>80</castRange>
-		<affectRange>160</affectRange> <!-- Unconfirmed -->
+		<effectRange>400</effectRange>
 		<effectPoint>-692</effectPoint>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -111,6 +119,8 @@
 			<value level="27">103</value>
 			<value level="28">105</value>
 		</magicLvl>
+		<nextAction>CAST</nextAction>
+		<magicCriticalRate>6</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -158,14 +168,19 @@
 	<skill id="30002" toLevel="3" name="Storm Sign">
 		<!-- Updated to Ertheia -->
 		<!-- M. Def. - 30%, Speed - 70. -->
-		<abnormalType>STORM_SIGN</abnormalType>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 		</abnormalLvl>
-		<icon>icon.skill30027</icon>
 		<abnormalTime>5</abnormalTime>
+		<abnormalType>STORM_SIGN</abnormalType>
+		<abnormalVisualEffect>
+			<value level="1"></value>
+			<value level="2"></value>
+			<value level="3">STORM_SIGN1</value>
+		</abnormalVisualEffect>
+		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -173,7 +188,6 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<!-- mul stat="stormSignBonus" val="1.10" / -->
 			<effect name="Speed">
 				<amount>-70</amount>
 				<mode>DIFF</mode>
@@ -187,9 +201,7 @@
 	<skill id="30003" toLevel="20" name="Hydro Flare">
 		<!-- Updated to IO -->
 		<!-- Eliminates Storm Sign and attacks target with 110 Power added to M. Atk. 10% more damage if target is debuffed. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
-		<table name="#power"> 110 120 130 140 150 157 162 167 172 501 515 543 571 599 627 655 683 711 725 739 </table>
 		<icon>icon.skill30003</icon>
-		<affectRange>100</affectRange> <!-- Unconfirmed -->
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -216,6 +228,7 @@
 			<value level="20">73</value>
 		</mpConsume>
 		<castRange>80</castRange>
+		<effectRange>400</effectRange>
 		<effectPoint>-696</effectPoint>
 		<hitTime>4000</hitTime>
 		<coolTime>500</coolTime>
@@ -242,6 +255,7 @@
 			<value level="19">103</value>
 			<value level="20">105</value>
 		</magicLvl>
+		<magicCriticalRate>6</magicCriticalRate>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -289,13 +303,11 @@
 	<skill id="30004" toLevel="25" name="Hydro Strike">
 		<!-- Updated to IO -->
 		<!-- Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon. -->
-		<table name="#power"> 57 66 74 83 92 101 110 118 127 136 140 145 149 154 420 442 464 486 508 530 552 574 584 594 604 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>5</abnormalTime>
-		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<abnormalVisualEffect>WIND_STUN</abnormalVisualEffect>
 		<icon>icon.skill30004</icon>
-		<affectRange>100</affectRange> <!-- Unconfirmed -->
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -327,6 +339,7 @@
 			<value level="25">73</value>
 		</mpConsume>
 		<castRange>80</castRange>
+		<effectRange>400</effectRange>
 		<effectPoint>-696</effectPoint>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
@@ -361,16 +374,12 @@
 		</magicLvl>
 		<trait>KNOCKBACK</trait>
 		<conditions>
+			<!-- TODO: Must be blended into wind. -->
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
-			</condition>
-			<condition name="OpCheckAbnormal">
-				<type>STORM_SIGN</type>
-				<level>1</level>
-				<hasAbnormal>true</hasAbnormal>
 			</condition>
 		</conditions>
 		<effects>
@@ -403,15 +412,18 @@
 					<value level="25">604</value>
 				</power>
 			</effect>
-			<effect name="KnockBack">
-				<distance>60</distance>
-				<type>THROW_UP</type>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30005" toLevel="4" name="Hydro Strike"> <!-- In client is level 4 -->
+	<skill id="30005" fromLevel="4" toLevel="4" name="Hydro Strike">
 		<!-- Updated to Ertheia -->
 		<!-- M. Def. - 50%, Speed - 100. -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STORM_SIGN</abnormalType>
+		<abnormalVisualEffect>STORM_SIGN2</abnormalVisualEffect>
 		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -420,7 +432,6 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<effects>
-			<!-- mul stat="stormSignBonus" val="1.10" / -->
 			<effect name="Speed">
 				<amount>-100</amount>
 				<mode>DIFF</mode>
@@ -434,7 +445,6 @@
 	<skill id="30006" toLevel="11" name="Storm Rage">
 		<!-- Updated to IO -->
 		<!-- Attacks target with 255 Power added to M. Atk. and blows them away. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
-		<table name="#power"> 255 269 283 297 311 325 339 353 359 365 371 </table>
 		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -514,10 +524,7 @@
 	<skill id="30007" toLevel="15" name="Hydro Drain">
 		<!-- Updated to IO -->
 		<!-- Eliminates Storm Sign and attacks target with 123 Power added to M. atk. and recovers 10% HP and 5% MP. Over-hit. Storm Sign Stage 3 only. Requires a sword or blunt weapon. -->
-		<table name="#power"> 123 127 130 134 386 396 416 436 456 476 496 516 536 546 556 </table>
 		<icon>icon.skill30007</icon>
-		<affectLimit>5-10</affectLimit> <!-- Unconfirmed -->
-		<affectRange>100</affectRange> <!-- Unconfirmed -->
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -556,6 +563,7 @@
 			<value level="15">73</value>
 		</mpConsume>
 		<castRange>80</castRange>
+		<effectRange>400</effectRange>
 		<effectPoint>-696</effectPoint>
 		<hitTime>4000</hitTime>
 		<coolTime>500</coolTime>
@@ -609,7 +617,6 @@
 	<skill id="30008" toLevel="5" name="Wind Blend">
 		<!-- Updated to IO -->
 		<!-- For 3 sec., blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
-		<table name="#triggerLvl"> 1 2 2 2 2 </table>
 		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -653,10 +660,14 @@
 				</weaponType>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="ReduceDamage">
+				<amount>50</amount>
+			</effect>
+		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<!-- Wind Hiding -->
-				<skillId>19227</skillId>
+				<skillId>19227</skillId> <!-- Wind Hiding -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -684,6 +695,7 @@
 			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
+		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>DECEPTIVE_BLINK</abnormalVisualEffect>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
@@ -717,12 +729,10 @@
 		</conditions>
 		<effects>
 			<effect name="Blink">
-				<!-- Teleport to Back, unconfirmed -->
-				<angle>0</angle>
+				<angle>0</angle> <!-- Teleport to Back -->
 				<range>400</range>
 			</effect>
-			<effect name="Hide">
-			</effect>
+			<effect name="Hide" />
 			<effect name="Speed">
 				<amount>100</amount>
 				<mode>DIFF</mode>
@@ -753,10 +763,9 @@
 		<isMagic>1</isMagic>
 		<effects>
 			<effect name="DispelByCategory">
-				<!-- Since there is no way to get max debuffs, use 99. -->
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
-				<max>99</max>
+				<max>10</max>
 			</effect>
 			<effect name="BlockActions" />
 			<effect name="HealOverTime">
@@ -775,7 +784,7 @@
 		<!-- Updated to IO -->
 		<!-- Sends a slashing wind to brand target with Storm Sign Stage 3. Requires a sword or blunt Weapon. -->
 		<icon>icon.skill30011</icon>
-		<affectRange>1400</affectRange> <!-- Unconfirmed -->
+		<effectRange>1200</effectRange>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -829,8 +838,7 @@
 		</conditions>
 		<effects>
 			<effect name="CallSkill">
-				<!-- Storm Sign -->
-				<skillId>30002</skillId>
+				<skillId>30002</skillId> <!-- Storm Sign -->
 				<skillLevel>3</skillLevel>
 			</effect>
 		</effects>
@@ -840,8 +848,8 @@
 		<!-- Knocks down target and attacks with 57 Power added to M. Atk. 10% more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30012</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<operateType>DA2</operateType>
 		<targetType>ENEMY</targetType>
@@ -878,11 +886,9 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
-		<flyRadius>900</flyRadius>
-		<flyType>CHARGE</flyType>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
-		<trait>KNOCKDOWN</trait>
+		<trait>KNOCKBACK</trait>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -895,9 +901,6 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="EnemyCharge">
-				<animationSpeed>333</animationSpeed>
-			</effect>
 			<effect name="MagicalAttack">
 				<debuffModifier>1.1</debuffModifier>
 				<power>
@@ -945,7 +948,7 @@
 		<!-- Updated to Ertheia -->
 		<!-- Trades places with target. Requires a sword or blunt weapon. PC targets only. -->
 		<icon>icon.skill30005</icon>
-		<affectRange>1400</affectRange> <!-- Unconfirmed -->
+		<effectRange>1400</effectRange>
 		<effectPoint>-709</effectPoint>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -972,6 +975,9 @@
 	<skill id="30014" toLevel="15" name="Compelling Wind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
 		<icon>icon.skill30014</icon>
 		<effectPoint>-1371</effectPoint>
 		<operateType>A2</operateType>
@@ -997,8 +1003,9 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
-		<abnormalTime>5</abnormalTime>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1011,6 +1018,9 @@
 	<skill id="30015" toLevel="1" name="Mass Compelling Wind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
+		<abnormalLevel>1</abnormalLevel>
+		<abnormalTime>5</abnormalTime>
+		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
 		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
@@ -1019,13 +1029,23 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-1371</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>SELF</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="30016" toLevel="4" name="Eye of the Storm">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., M. Critical Rate + 100%, P./M. Def. + 30%. -->
-		<table name="#MagicalMpConsumeRate"> 1 0.5 0.5 0.5 </table>
-		<table name="#traitResist"> 0 0 90 90 </table>
 		<icon>icon.skill30016</icon>
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<effectPoint>687</effectPoint>
 		<operateType>A2</operateType>
@@ -1042,43 +1062,13 @@
 		<reuseDelay>300000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effects>
-			<effect name="DefenceTrait">
-				<KNOCKDOWN>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">90</value>
-					<value level="4">90</value>
-				</KNOCKDOWN>
-				<KNOCKBACK>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">90</value>
-					<value level="4">90</value>
-				</KNOCKBACK>
-				<HATE>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">90</value>
-					<value level="4">90</value>
-				</HATE>
-				<PULL>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">90</value>
-					<value level="4">90</value>
-				</PULL>
-				<AIRBIND>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">90</value>
-					<value level="4">90</value>
-				</AIRBIND>
-				<AGGRESSION>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">90</value>
-					<value level="4">90</value>
-				</AGGRESSION>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<KNOCKDOWN>90</KNOCKDOWN>
+				<KNOCKBACK>90</KNOCKBACK>
+				<HATE>90</HATE>
+				<PULL>90</PULL>
+				<AIRBIND>90</AIRBIND>
+				<AGGRESSION>90</AGGRESSION>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>30</amount>
@@ -1092,13 +1082,8 @@
 				<amount>100</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicMpCost">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">-50</value>
-					<value level="3">-50</value>
-					<value level="4">-50</value>
-				</amount>
+			<effect name="MagicMpCost" fromLevel="2" toLevel="4">
+				<amount>-50</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>
@@ -1107,9 +1092,6 @@
 	<skill id="30017" toLevel="4" name="Squall">
 		<!-- Updated to IO -->
 		<!-- For 10 min., Received P./M. Critical Damage - 15%, and Has a chance of striking target with lightning. -->
-		<table name="#defCrit"> 0.85 0.85 0.85 0.8 </table>
-		<table name="#runSpd"> 0 7 7 7 </table>
-		<table name="#triggerLevel"> 1 2 3 4 </table>
 		<icon>icon.skill30017</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1119,7 +1101,7 @@
 		</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalVisualEffect>SQUALL</abnormalVisualEffect>
-		<effectPoint>2</effectPoint> <!-- Unconfirmed -->
+		<effectPoint>2</effectPoint>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1150,12 +1132,10 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<!-- Unconfirmed -->
-				<!-- Lightning Squall -->
-				<chance>50</chance>
+				<chance>50</chance> <!-- Unconfirmed -->
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
-				<skillId>30026</skillId>
+				<skillId>30026</skillId> <!-- Lightning Squall -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -1163,19 +1143,13 @@
 					<value level="4">4</value>
 				</skillLevel>
 			</effect>
-			<effect name="DispelByCategory"> <!-- TODO: only active on skill level 3 and 4. -->
-				<!-- Since there is no way to get max debuffs, use 99. -->
+			<effect name="DispelByCategory" fromLevel="3" toLevel="4">
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
 				<max>99</max>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">7</value>
-					<value level="3">7</value>
-					<value level="4">7</value>
-				</amount>
+			<effect name="Speed" fromLevel="2" toLevel="7">
+				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
@@ -1209,17 +1183,15 @@
 		<effects>
 			<effect name="Untargetable" />
 			<effect name="DispelByCategory">
-				<!-- Since there is no way to get max debuffs, use 99. -->
 				<slot>DEBUFF</slot>
 				<rate>100</rate>
-				<max>99</max>
+				<max>10</max>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="30019" toLevel="11" name="Sayha's Word">
 		<!-- Updated to IO -->
 		<!-- Attacks target with 533 Power added to M. Atk., and decreases their Atk./Casting Spd. by 30% and Speed by 180 for 10 sec. Instantly brands target with Storm Sign Stage 3. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
-		<table name="#power"> 533 561 589 617 645 673 701 729 743 757 771 </table>
 		<icon>icon.skill30019</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1280,6 +1252,10 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="CallSkill">
+				<skillId>30002</skillId> <!-- Storm Sign -->
+				<skillLevel>3</skillLevel>
+			</effect>
 			<effect name="MagicalAttack">
 				<power>
 					<value level="1">533</value>
@@ -1340,12 +1316,10 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="TriggerSkillByDamage">
-				<!-- Unconfirmed -->
-				<!-- Destructive Bolt -->
-				<chance>50</chance>
+				<chance>50</chance> <!-- Unconfirmed -->
 				<targetType>ENEMY</targetType>
 				<affectScope>SINGLE</affectScope>
-				<skillId>30027</skillId>
+				<skillId>30027</skillId> <!-- Destructive Bolt -->
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="Speed">
@@ -1361,8 +1335,6 @@
 	<skill id="30022" toLevel="2" name="Sayha's Blessing">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., nearby party members' Speed + 50, and Knock Back / Knock Down / Pull / Aerial Yoke / Aggression Resistance + 30. Requires a sword or blunt weapon. -->
-		<table name="#moveSpeed"> 50 70 </table>
-		<table name="#resist"> 30 40 </table>
 		<icon>icon.skill30022</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1435,11 +1407,12 @@
 	<skill id="30026" toLevel="4" name="Lightning Squall">
 		<!-- Updated to IO -->
 		<!-- Attacks target with 50 Power added to M. Atk., and decreases Speed by 20. -->
-		<table name="#power"> 50 100 150 200 </table>
 		<icon>icon.skill30026</icon>
-		<abnormalTime>30</abnormalTime> <!-- Unconfirmed -->
-		<affectRange>1600</affectRange> <!-- Unconfirmed -->
-		<effectPoint>-711</effectPoint> <!-- Unconfirmed -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<effectRange>1600</effectRange>
+		<effectPoint>-711</effectPoint>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1465,8 +1438,8 @@
 		<!-- Updated to Ertheia -->
 		<!-- Attacks target with 300 Power added to M. Atk. and has a 10% chance of branding target with Storm Sign Stage 4. -->
 		<icon>icon.skill30026</icon>
-		<affectRange>1600</affectRange> <!-- Unconfirmed -->
-		<effectPoint>-711</effectPoint> <!-- Unconfirmed -->
+		<effectRange>1400</effectRange>
+		<effectPoint>-711</effectPoint>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1478,8 +1451,7 @@
 				<power>300</power>
 			</effect>
 			<effect name="CallSkill">
-				<!-- Storm Sign Lv. 4 -->
-				<skillId>30005</skillId>
+				<skillId>30005</skillId> <!-- Storm Sign Lv. 4 -->
 				<chance>10</chance>
 			</effect>
 		</effects>
@@ -1487,9 +1459,8 @@
 	<skill id="30029" toLevel="4" name="Divine Storm">
 		<!-- Updated to IO -->
 		<!-- Attacks nearby target with 448 Power added to M. Atk. and locks them inside a storm for 5 sec. 10% more damage if target is debuffed. Requires a sword or blunt weapon. -->
-		<table name="#power"> 448 465 473 481 </table>
 		<icon>icon.iconskill30007</icon>
-		<abnormalTime>5</abnormalTime> <!-- Unconfirmed -->
+		<abnormalTime>5</abnormalTime>
 		<affectLimit>10-10</affectLimit> <!-- Unconfirmed -->
 		<affectRange>200</affectRange> <!-- Unconfirmed -->
 		<effectPoint>-707</effectPoint>
@@ -1549,40 +1520,28 @@
 	<skill id="30040" toLevel="17" name="Eminent Blunt Weapon Mastery">
 		<!-- Updated to IO -->
 		<!-- When equipped with a blunt weapon, M. Atk. +17% and + 10, Casting Spd. + 5%. -->
-		<table name="#mAtkMul"> 1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.40 1.40 1.40 1.40 1.40 1.40 1.40 1.40 1.40 1.40 </table>
-		<table name="#mAtkAdd"> 10 57 228 436 728 834 942 1963 2276 2638 2970 3365 3570 3787 4018 4262 4522 </table>
-		<table name="#mAtkSpd"> 1.05 1.05 1.10 1.10 1.10 1.15 1.20 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 1.30 </table>
-		<table name="#mCritRate"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 </table>
-		<table name="#mCritPower"> 1 1 1 1 1 1 1 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 1.10 </table>
 		<icon>icon.skill30023</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="TriggerSkillBySkillAttack"> <!-- TODO: This should start triggering on skill level 3 -->
-				<!-- Storm Sign -->
-				<!-- Hydro Attack -->
-				<skillId>30002</skillId>
+			<effect name="TriggerSkillBySkill" fromLevel="3" toLevel="17">
+				<skillId>30002</skillId> <!-- Storm Sign -->
 				<skillLevel>1</skillLevel>
 				<skillLevelScaleTo>3</skillLevelScaleTo>
 				<allowWeapons>BLUNT</allowWeapons>
-				<attackSkillId>30001</attackSkillId>
-				<attackSkillLevel>5</attackSkillLevel>
+				<castSkillId>30001</castSkillId> <!-- Hydro Attack -->
 			</effect>
-			<effect name="TriggerSkillBySkillAttack"> <!-- TODO: This should start triggering on skill level 8 -->
-				<!-- Storm Sign -->
-				<!-- Sayha's Word -->
-				<attackSkillId>30019</attackSkillId>
+			<effect name="TriggerSkillBySkill" fromLevel="8" toLevel="17">
+				<castSkillId>30019</castSkillId> <!-- Sayha's Word -->
 				<allowWeapons>BLUNT</allowWeapons>
-				<skillId>30002</skillId>
+				<skillId>30002</skillId> <!-- Storm Sign -->
 				<skillLevel>3</skillLevel>
 			</effect>
-			<effect name="TriggerSkillBySkillAttack"> <!-- TODO: This should start triggering on skill level 8 -->
-				<!-- 33% Chance to trigger Storm Sign Lv. 4 -->
-				<!-- Storm Sign Lv. 4 -->
-				<!-- Hydro Flare -->
-				<chance>33</chance>
-				<attackSkillId>30003</attackSkillId>
+			<effect name="TriggerSkillBySkill" fromLevel="4" toLevel="17">
+				<chance>33</chance> <!-- 33% Chance to trigger Storm Sign Lv. 4 -->
+				<castSkillId>30003</castSkillId> <!-- Hydro Flare -->
 				<allowWeapons>BLUNT</allowWeapons>
-				<skillId>30005</skillId>
+				<skillId>30005</skillId> <!-- Storm Sign Lv. 4 -->
+				<skillLevel>4</skillLevel>
 			</effect>
 			<effect name="MAtk">
 				<amount>
@@ -1715,33 +1674,13 @@
 		<!-- Updated to IO -->
 		<!-- TODO: Block Shield and Sigil equip. -->
 		<!-- When equipped with a robe, P. Def. +7. Shields and Sigils are not worn, as you move with the wind. -->
-		<table name="#pDefAdd"> 7 12 27 39 55 69 77 1333 1464 1608 1734 1943 2017 2093 2172 2264 2350 </table>
-		<table name="#pDefMul"> 1 1 1 1 1 1 1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 </table>
-		<table name="#mDefAdd"> 0 0 0 0 0 0 533 949 1073 1214 1340 1511 1588 1668 1753 1842 1935 </table>
-		<table name="#mDefMul"> 1 1 1 1 1 1 1.03 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 </table>
-		<table name="#magicSuccRes"> 1 1.05 1.1 1.15 1.2 1.25 1.3 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 1.35 </table>
 		<icon>icon.skill30024</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="MagicalDefence">
+			<effect name="MagicalDefence" fromLevel="7" toLevel="17">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
 					<value level="7">3</value>
-					<value level="8">10</value>
-					<value level="9">10</value>
-					<value level="10">10</value>
-					<value level="11">10</value>
-					<value level="12">10</value>
-					<value level="13">10</value>
-					<value level="14">10</value>
-					<value level="15">10</value>
-					<value level="16">10</value>
-					<value level="17">10</value>
+					<value fromLevel="8" toLevel="17">10</value>
 				</amount>
 				<mode>PER</mode>
 				<armorType>
@@ -1853,30 +1792,11 @@
 	<skill id="30042" toLevel="13" name="Eminent Quick Recovery">
 		<!-- Updated to IO -->
 		<!-- Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%. -->
-		<table name="#maxHp"> 0 0 0 4891 4891 4891 4891 4891 4891 4891 4891 4891 4891 </table>
-		<table name="#maxMp"> 33 77 223 692 758 827 883 897 925 954 983 1013 1043 </table>
-		<table name="#regMp"> 1 3 5 12 12 12 12 12 12 12 12 12 12 </table>
-		<table name="#mReuse"> 0.9 0.85 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
-		<table name="#MagicalMpConsumeRate"> 1 1 0.95 0.93 0.93 0.93 0.93 0.93 0.93 0.93 0.93 0.93 0.93 </table>
 		<icon>icon.skill10504</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">4891</value>
-					<value level="5">4891</value>
-					<value level="6">4891</value>
-					<value level="7">4891</value>
-					<value level="8">4891</value>
-					<value level="9">4891</value>
-					<value level="10">4891</value>
-					<value level="11">4891</value>
-					<value level="12">4891</value>
-					<value level="13">4891</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="4" toLevel="13">
+				<amount>4891</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MpRegen">
@@ -1884,34 +1804,14 @@
 					<value level="1">1</value>
 					<value level="2">3</value>
 					<value level="3">5</value>
-					<value level="4">12</value>
-					<value level="5">12</value>
-					<value level="6">12</value>
-					<value level="7">12</value>
-					<value level="8">12</value>
-					<value level="9">12</value>
-					<value level="10">12</value>
-					<value level="11">12</value>
-					<value level="12">12</value>
-					<value level="13">12</value>
+					<value fromLevel="4" toLevel="13">12</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicMpCost">
+			<effect name="MagicMpCost" fromLevel="3" toLevel="13">
 				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
 					<value level="3">-5</value>
-					<value level="4">-7</value>
-					<value level="5">-7</value>
-					<value level="6">-7</value>
-					<value level="7">-7</value>
-					<value level="8">-7</value>
-					<value level="9">-7</value>
-					<value level="10">-7</value>
-					<value level="11">-7</value>
-					<value level="12">-7</value>
-					<value level="13">-7</value>
+					<value fromLevel="4" toLevel="13">-7</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -1921,16 +1821,7 @@
 					<value level="1">-10</value>
 					<value level="2">-15</value>
 					<value level="3">-20</value>
-					<value level="4">-30</value>
-					<value level="5">-30</value>
-					<value level="6">-30</value>
-					<value level="7">-30</value>
-					<value level="8">-30</value>
-					<value level="9">-30</value>
-					<value level="10">-30</value>
-					<value level="11">-30</value>
-					<value level="12">-30</value>
-					<value level="13">-30</value>
+					<value fromLevel="4" toLevel="13">-30</value>
 				</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
@@ -1939,9 +1830,7 @@
 	</skill>
 	<skill id="30043" toLevel="11" name="Eminent Attribute Resistance">
 		<!-- Updated to IO -->
-		<!-- TODO Attack Attribute Bonus + 10 -->
 		<!-- Attack Attribute Bonus + 10, Fire / Water / Wind / Earth / Holy Resistance + 10. -->
-		<table name="#res"> 10 20 22 24 26 30 32 34 36 38 40 </table>
 		<icon>icon.skill11006</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -1958,6 +1847,21 @@
 			<value level="11">110</value>
 		</magicLvl>
 		<effects>
+			<effect name="AttackAttributeAdd">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">22</value>
+					<value level="4">24</value>
+					<value level="5">26</value>
+					<value level="6">30</value>
+					<value level="7">32</value>
+					<value level="8">34</value>
+					<value level="9">36</value>
+					<value level="10">38</value>
+					<value level="11">40</value>
+				</amount>
+			</effect>
 			<effect name="DefenceAttribute">
 				<amount>
 					<value level="1">10</value>
@@ -2043,8 +1947,6 @@
 	<skill id="30044" toLevel="2" name="Eminent Trait Resistance">
 		<!-- Updated to Ertheia -->
 		<!-- Hold/Mental Resistance + 30. -->
-		<table name="#pullRes"> 0 30 </table>
-		<table name="#hateRes"> 0 30 </table>
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2064,7 +1966,6 @@
 	</skill>
 	<skill id="30045" toLevel="3" name="Eminent Ability">
 		<!-- INT + 2. -->
-		<table name="#INT"> 2 4 16 </table>
 		<icon>icon.skill11253</icon>
 		<operateType>P</operateType>
 		<magicLvl>

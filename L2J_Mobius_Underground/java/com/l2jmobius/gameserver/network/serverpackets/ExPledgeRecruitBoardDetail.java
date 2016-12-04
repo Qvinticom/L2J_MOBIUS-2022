@@ -41,6 +41,8 @@ public class ExPledgeRecruitBoardDetail implements IClientOutgoingPacket
 		packet.writeD(_pledgeRecruitInfo.getKarma());
 		packet.writeS(_pledgeRecruitInfo.getInformation());
 		packet.writeS(_pledgeRecruitInfo.getDetailedInformation());
+		packet.writeD(_pledgeRecruitInfo.getApplicationType());
+		packet.writeD(_pledgeRecruitInfo.getRecruitType());
 		return true;
 	}
 }

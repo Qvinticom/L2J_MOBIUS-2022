@@ -84,6 +84,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	
 	public PailakaInjuredDragon()
 	{
+		super(TEMPLATE_ID);
 		addInstanceEnterId(TEMPLATE_ID);
 		addStartNpc(KETRA_ORC_SHAMAN);
 		addKillId(ANTELOPE1, ANTELOPE2, ANTELOPE3, GENERAL, GREAT_MAGUS, PROPHET, ELITE_GUARD, COMMANDER, OFFICER, RECRUIT, FOOTMAN, WARRIOR, PROPHET_GUARD, HEAD_GUARD, SHAMAN, CHIEF_PRIEST, GRAND_PRIEST, LATANA);

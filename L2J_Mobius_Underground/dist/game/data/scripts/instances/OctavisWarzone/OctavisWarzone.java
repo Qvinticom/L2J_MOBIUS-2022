@@ -105,6 +105,7 @@ public final class OctavisWarzone extends AbstractInstance
 	
 	public OctavisWarzone()
 	{
+		super(TEMPLATE_ID, EXTREME_TEMPLATE_ID);
 		addStartNpc(LYDIA);
 		addTalkId(LYDIA);
 		addSpawnId(DOOR_MANAGER);
@@ -140,7 +141,7 @@ public final class OctavisWarzone extends AbstractInstance
 			case "reenterInstance":
 			{
 				final Instance activeInstance = getPlayerInstance(player);
-				if (isOctavisInstance(activeInstance))
+				if (isInInstance(activeInstance))
 				{
 					enterInstance(player, npc, activeInstance.getTemplateId());
 					return "PartyMemberReenter.html";
@@ -154,7 +155,7 @@ public final class OctavisWarzone extends AbstractInstance
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isOctavisInstance(world))
+		if (isInInstance(world))
 		{
 			final StatsSet npcVars = npc.getVariables();
 			final StatsSet npcParams = npc.getParameters();
@@ -350,7 +351,7 @@ public final class OctavisWarzone extends AbstractInstance
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isOctavisInstance(world))
+		if (isInInstance(world))
 		{
 			final int hpPer = npc.getCurrentHpPercent();
 			
@@ -421,7 +422,7 @@ public final class OctavisWarzone extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isOctavisInstance(world))
+		if (isInInstance(world))
 		{
 			if (CommonUtil.contains(OCTAVIS_STAGE_1, npc.getId()))
 			{
@@ -463,7 +464,7 @@ public final class OctavisWarzone extends AbstractInstance
 	@Override
 	public void onInstanceCreated(Instance instance, L2PcInstance player)
 	{
-		if ((player != null) && isOctavisInstance(instance))
+		if ((player != null) && isInInstance(instance))
 		{
 			showHtmlFile(player, (instance.getTemplateId() == TEMPLATE_ID) ? "PartyEnterCommon.html" : "PartyEnterExtreme.html");
 		}
@@ -473,7 +474,7 @@ public final class OctavisWarzone extends AbstractInstance
 	public String onSpawn(L2Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isOctavisInstance(world))
+		if (isInInstance(world))
 		{
 			if (CommonUtil.contains(GLADIATORS, npc.getId()))
 			{
@@ -490,7 +491,7 @@ public final class OctavisWarzone extends AbstractInstance
 	public void onMoveFinished(L2Npc npc)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isOctavisInstance(world))
+		if (isInInstance(world))
 		{
 			world.openCloseDoor(npc.getParameters().getInt("My_DoorName", -1), false);
 		}
@@ -512,7 +513,7 @@ public final class OctavisWarzone extends AbstractInstance
 		final L2Npc npc = (L2Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
-		if (isOctavisInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
+		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			world.openCloseDoor(MAIN_DOOR_1, true);
 			getTimers().addTimer("SECOND_DOOR_OPEN", 3000, npc, null);
@@ -525,7 +526,7 @@ public final class OctavisWarzone extends AbstractInstance
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
 		final Instance world = character.getInstanceWorld();
-		if (character.isPlayer() && isOctavisInstance(world))
+		if (character.isPlayer() && isInInstance(world))
 		{
 			if (world.getParameters().getBoolean("TELEPORT_ACTIVE", false))
 			{
@@ -533,11 +534,6 @@ public final class OctavisWarzone extends AbstractInstance
 			}
 		}
 		return super.onEnterZone(character, zone);
-	}
-	
-	private boolean isOctavisInstance(Instance instance)
-	{
-		return ((instance != null) && ((instance.getTemplateId() == TEMPLATE_ID) || (instance.getTemplateId() == EXTREME_TEMPLATE_ID)));
 	}
 	
 	private boolean isExtremeMode(Instance instance)

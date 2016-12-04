@@ -34,18 +34,21 @@ public class Shortcut
 	private final int _id;
 	/** Shortcut level (skills). */
 	private final int _level;
+	/** Shortcut level (skills). */
+	private final int _subLevel;
 	/** Character type: 1 player, 2 summon. */
 	private final int _characterType;
 	/** Shared reuse group. */
 	private int _sharedReuseGroup = -1;
 	
-	public Shortcut(int slot, int page, ShortcutType type, int id, int level, int characterType)
+	public Shortcut(int slot, int page, ShortcutType type, int id, int level, int subLevel, int characterType)
 	{
 		_slot = slot;
 		_page = page;
 		_type = type;
 		_id = id;
 		_level = level;
+		_subLevel = subLevel;
 		_characterType = characterType;
 	}
 	
@@ -65,6 +68,15 @@ public class Shortcut
 	public int getLevel()
 	{
 		return _level;
+	}
+	
+	/**
+	 * Gets the shortcut level.
+	 * @return the level
+	 */
+	public int getSubLevel()
+	{
+		return _subLevel;
 	}
 	
 	/**

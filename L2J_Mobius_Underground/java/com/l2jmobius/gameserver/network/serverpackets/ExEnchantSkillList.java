@@ -16,46 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.SkillEnchantType;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public class ExEnchantSkillList implements IClientOutgoingPacket
 {
-	public enum EnchantSkillType
-	{
-		NORMAL,
-		SAFE,
-		UNTRAIN,
-		CHANGE_ROUTE,
-	}
+	private final SkillEnchantType _type;
+	private final List<Skill> _skills = new LinkedList<>();
 	
-	private final EnchantSkillType _type;
-	private final List<Skill> _skills;
-	
-	static class Skill
-	{
-		public int id;
-		public int nextLevel;
-		
-		Skill(int pId, int pNextLevel)
-		{
-			id = pId;
-			nextLevel = pNextLevel;
-		}
-	}
-	
-	public void addSkill(int id, int level)
-	{
-		_skills.add(new Skill(id, level));
-	}
-	
-	public ExEnchantSkillList(EnchantSkillType type)
+	public ExEnchantSkillList(SkillEnchantType type)
 	{
 		_type = type;
-		_skills = new ArrayList<>();
+	}
+	
+	public void addSkill(Skill skill)
+	{
+		_skills.add(skill);
 	}
 	
 	@Override
@@ -65,10 +46,11 @@ public class ExEnchantSkillList implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skills.size());
-		for (Skill sk : _skills)
+		for (Skill skill : _skills)
 		{
-			packet.writeD(sk.id);
-			packet.writeD(sk.nextLevel);
+			packet.writeD(skill.getId());
+			packet.writeH(skill.getLevel());
+			packet.writeH(skill.getSubLevel());
 		}
 		return true;
 	}

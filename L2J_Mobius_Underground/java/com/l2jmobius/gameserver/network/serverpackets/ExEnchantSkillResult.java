@@ -24,13 +24,8 @@ import com.l2jmobius.gameserver.network.client.OutgoingPackets;
  */
 public class ExEnchantSkillResult implements IClientOutgoingPacket
 {
-	private static final ExEnchantSkillResult STATIC_PACKET_TRUE = new ExEnchantSkillResult(true);
-	private static final ExEnchantSkillResult STATIC_PACKET_FALSE = new ExEnchantSkillResult(false);
-	
-	public static ExEnchantSkillResult valueOf(boolean result)
-	{
-		return result ? STATIC_PACKET_TRUE : STATIC_PACKET_FALSE;
-	}
+	public static final ExEnchantSkillResult STATIC_PACKET_TRUE = new ExEnchantSkillResult(true);
+	public static final ExEnchantSkillResult STATIC_PACKET_FALSE = new ExEnchantSkillResult(false);
 	
 	private final boolean _enchanted;
 	

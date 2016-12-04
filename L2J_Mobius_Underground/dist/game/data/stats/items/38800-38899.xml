@@ -1188,9 +1188,9 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="10" />
-		<stats>
-			<stat type="broochJewels">3</stat>
-		</stats>
+		<skills>
+			<skill id="13657" level="1" /> <!-- La Vie En Rose's Brooch -->
+		</skills>
 	</item>
 	<item id="38850" name="Topaz" additionalName="Lv. 1" type="Armor">
 		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 1062 power. Effect does not stack with additional jewels of the same type. -->

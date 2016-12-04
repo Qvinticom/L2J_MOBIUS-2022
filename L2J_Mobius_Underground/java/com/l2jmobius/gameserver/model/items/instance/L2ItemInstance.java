@@ -2132,6 +2132,11 @@ public final class L2ItemInstance extends L2Object
 	
 	public void applySpecialAbilities()
 	{
+		if (!isEquipped())
+		{
+			return;
+		}
+		
 		_ensoulOptions.values().forEach(this::applySpecialAbility);
 		_ensoulSpecialOptions.values().forEach(this::applySpecialAbility);
 	}

@@ -275,7 +275,7 @@ public final class BeastFarm extends AbstractNpcAI
 			final SkillData st = SkillData.getInstance();
 			for (SkillHolder sh : beast.getSkills())
 			{
-				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLvl()));
+				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLevel()));
 			}
 			
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);

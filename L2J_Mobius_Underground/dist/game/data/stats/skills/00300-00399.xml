@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="301" toLevel="5" name="Summon Big Boom">
-		<table name="#npcIds"> 14702 14703 14704 14705 14706 </table>
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0301</icon>
 		<itemConsumeCount>
@@ -92,7 +91,7 @@
 			<value level="8">194</value>
 			<value level="9">204</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -757,7 +756,7 @@
 			<value level="15">73</value>
 			<value level="16">74</value>
 		</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -765,7 +764,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="EquipWeapon">
+			<condition name="Op2hWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
@@ -917,7 +916,6 @@
 	</skill>
 	<skill id="320" toLevel="17" name="Wrath">
 		<!-- Confirmed CT2.5 and Updated to IO -->
-		<!-- Confirmed -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
@@ -1023,7 +1021,6 @@
 		</effects>
 	</skill>
 	<skill id="321" toLevel="10" name="Blinding Blow">
-		<table name="#power"> 2751 2850 2850 3050 3151 3252 3353 3453 3553 3653 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -1068,7 +1065,7 @@
 			<value level="9">71</value>
 			<value level="10">72</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A3</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1641,7 +1638,7 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>78</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1715,7 +1712,7 @@
 		<icon>icon.skill0344</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>77</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1746,9 +1743,13 @@
 	</skill>
 	<skill id="345" toLevel="15" name="Sonic Rage">
 		<!-- Confirmed CT2.5 and Updated to IO -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
-		<table name="#power"> 195 205 215 225 551 565 598 630 662 693 725 757 812 844 876 </table> <!-- Confirmed -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="15">80</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>-709</effectPoint>
@@ -1789,7 +1790,7 @@
 			<value level="14">75</value>
 			<value level="15">77</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1822,9 +1823,22 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="15">
+				<amount>
+					<value fromLevel="5" toLevel="15">-23</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -1835,15 +1849,20 @@
 	</skill>
 	<skill id="346" toLevel="15" name="Raging Force">
 		<!-- Confirmed CT2.5 and Updated to IO -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
-		<table name="#power"> 195 205 215 225 551 565 598 630 662 693 725 757 812 844 876 </table> <!-- Confirmed -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>20</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="15">80</value>
+			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
 		<hpConsume>50</hpConsume>
 		<icon>icon.skill0346</icon>
+		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">78</value>
 			<value level="2">79</value>
@@ -1878,10 +1897,9 @@
 			<value level="14">75</value>
 			<value level="15">77</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
-		<operateType>A1</operateType>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>300</coolTime>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1911,14 +1929,24 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
+					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
+			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 		<selfEffects>
 			<effect name="FocusMomentum">
-				<maxCharges>8</maxCharges>
+				<maxCharges>
+					<value fromLevel="1" toLevel="4">8</value>
+					<value fromLevel="5" toLevel="15">15</value>
+				</maxCharges>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -1969,7 +1997,7 @@
 		<icon>icon.skill0348</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>70</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2126,7 +2154,7 @@
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>77</magicLvl>
 		<mpConsume>18</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2160,7 +2188,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>77</magicLvl>
 		<mpConsume>35</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2515,7 +2543,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>77</magicLvl>
 		<mpConsume>35</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2736,7 +2764,10 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
-		<activateRate>40</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">40</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>

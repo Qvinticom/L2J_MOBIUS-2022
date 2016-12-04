@@ -1680,9 +1680,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="pDef">13</stat>
@@ -1704,9 +1701,6 @@
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="pDef">15</stat>
@@ -1729,9 +1723,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="pDef">17</stat>
@@ -1748,9 +1739,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="price" val="28671000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">2</stat>
 		</stats>

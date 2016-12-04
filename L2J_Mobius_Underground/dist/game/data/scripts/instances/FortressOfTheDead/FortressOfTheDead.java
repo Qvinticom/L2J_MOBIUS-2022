@@ -51,6 +51,7 @@ public final class FortressOfTheDead extends AbstractInstance
 	
 	public FortressOfTheDead()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(BROKEN_BOOKSHELF);
 		addFirstTalkId(KAIN_VAN_HALTER);
 		addTalkId(BROKEN_BOOKSHELF, KAIN_VAN_HALTER, MYSTERIOUS_WIZARD);
@@ -69,7 +70,7 @@ public final class FortressOfTheDead extends AbstractInstance
 		else
 		{
 			final Instance world = npc.getInstanceWorld();
-			if (isFotDInstance(world))
+			if (isInInstance(world))
 			{
 				switch (event)
 				{
@@ -138,7 +139,7 @@ public final class FortressOfTheDead extends AbstractInstance
 	{
 		final Instance world = npc.getInstanceWorld();
 		
-		if (isFotDInstance(world))
+		if (isInInstance(world))
 		{
 			if (npc.getId() == VAMPIRIC_SOLDIER)
 			{
@@ -155,11 +156,6 @@ public final class FortressOfTheDead extends AbstractInstance
 			}
 		}
 		return super.onKill(npc, player, isSummon);
-	}
-	
-	private boolean isFotDInstance(Instance instance)
-	{
-		return (instance != null) && (instance.getTemplateId() == TEMPLATE_ID);
 	}
 	
 	public static void main(String[] args)

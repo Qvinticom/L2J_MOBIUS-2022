@@ -31,6 +31,8 @@ public class TimeStamp
 	private final int _id1;
 	/** Item object ID or skill level. */
 	private final int _id2;
+	/** Skill level. */
+	private final int _id3;
 	/** Item or skill reuse time. */
 	private final long _reuse;
 	/** Time stamp. */
@@ -48,6 +50,7 @@ public class TimeStamp
 	{
 		_id1 = skill.getId();
 		_id2 = skill.getLevel();
+		_id3 = skill.getSubLevel();
 		_reuse = reuse;
 		_stamp = systime > 0 ? systime : System.currentTimeMillis() + reuse;
 		_group = -1;
@@ -63,6 +66,7 @@ public class TimeStamp
 	{
 		_id1 = item.getId();
 		_id2 = item.getObjectId();
+		_id3 = 0;
 		_reuse = reuse;
 		_stamp = systime > 0 ? systime : System.currentTimeMillis() + reuse;
 		_group = item.getSharedReuseGroup();
@@ -111,6 +115,15 @@ public class TimeStamp
 	public int getSkillLvl()
 	{
 		return _id2;
+	}
+	
+	/**
+	 * Gets the skill sub level.
+	 * @return the skill level
+	 */
+	public int getSkillSubLvl()
+	{
+		return _id3;
 	}
 	
 	/**

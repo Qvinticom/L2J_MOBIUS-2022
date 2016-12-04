@@ -831,13 +831,8 @@
 				</HOLD>
 			</effect>
 			<effect name="EnableCloak" />
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">3</value>
-				</amount>
+			<effect name="VampiricAttack" fromLevel="4" toLevel="4">
+				<amount>3</amount>
 				<chance>30</chance>
 			</effect>
 			<effect name="PAtk">
@@ -2736,13 +2731,8 @@
 					<value level="4">10</value>
 				</HOLD>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-					<value level="4">2</value>
-				</amount>
+			<effect name="VampiricAttack" fromLevel="3" toLevel="4">
+				<amount>2</amount>
 				<chance>30</chance>
 			</effect>
 			<effect name="PAtk">
@@ -2981,13 +2971,8 @@
 					<value level="4">15</value>
 				</KNOCKDOWN>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-					<value level="4">2</value>
-				</amount>
+			<effect name="VampiricAttack" fromLevel="3" toLevel="4">
+				<amount>2</amount>
 				<chance>30</chance>
 			</effect>
 			<effect name="PAtk">
@@ -3890,13 +3875,8 @@
 					<value level="4">10</value>
 				</SLEEP>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">2</value>
-					<value level="4">2</value>
-				</amount>
+			<effect name="VampiricAttack" fromLevel="3" toLevel="4">
+				<amount>2</amount>
 				<chance>30</chance>
 			</effect>
 			<effect name="PAtk">

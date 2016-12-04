@@ -23,6 +23,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -277,6 +278,7 @@ public class PcInventory extends Inventory
 		return _items.values().stream()
 			.filter(i -> i.isAvailable(getOwner(), false, false))
 			.map(tradeList::adjustAvailableItem)
+			.filter(Objects::nonNull)
 			.collect(Collectors.toCollection(LinkedList::new));
 		//@formatter:on
 	}

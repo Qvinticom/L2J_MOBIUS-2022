@@ -32,9 +32,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
 		<set name="enchant_enabled" val="1" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="pDef">73</stat>
 		</stats>
@@ -1708,9 +1705,6 @@
 		<set name="crystal_type" val="S" />
 		<set name="commissionItemType" val="SIGIL" />
 		<set name="price" val="3355000" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -1732,9 +1726,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="SIGIL" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<skills>
 			<skill id="8310" level="1" /> <!-- Arcana Sigil -->
 		</skills>

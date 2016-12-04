@@ -295,7 +295,9 @@
 			<effect name="PhysicalAttack">
 				<power>120000</power>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;600} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
+				<radius>600</radius>
+			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>

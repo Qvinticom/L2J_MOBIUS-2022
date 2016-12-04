@@ -121,7 +121,7 @@ public class BeastSoulShot implements IItemHandler
 			if (!pet.isChargedShot(ShotType.SOULSHOTS))
 			{
 				pet.setChargedShot(ShotType.SOULSHOTS, true);
-				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
+				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
 			}
 		}
 		
@@ -130,7 +130,7 @@ public class BeastSoulShot implements IItemHandler
 			if (!s.isChargedShot(ShotType.SOULSHOTS))
 			{
 				s.setChargedShot(ShotType.SOULSHOTS, true);
-				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getSkillLvl(), 0, 0), 600));
+				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
 			}
 		});
 		return true;

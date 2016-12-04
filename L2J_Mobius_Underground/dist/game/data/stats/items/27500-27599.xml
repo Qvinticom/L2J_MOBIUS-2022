@@ -3,138 +3,157 @@
 	<item id="27500" name="Attribute Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Crystal, a Super Attribute Stone, or a Super Attribute Crystal. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27572" level="1" />
+			<skill id="27572" level="1" /> <!-- Attribute Stone Pack -->
 		</skills>
 	</item>
 	<item id="27501" name="Greater Attribute Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Super Attribute Stone or a Super Crystal. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27573" level="1" />
+			<skill id="27573" level="1" /> <!-- Greater Attribute Stone Pack -->
 		</skills>
 	</item>
 	<item id="27502" name="Enchant Scroll Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain an Enchant Scroll Pack (R-grade), a Blessed Enchant Scroll, a Giant's Enchant Scroll, a Scroll: Enchant Hair Accessory, or a Destruction Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27574" level="1" />
+			<skill id="27574" level="1" /> <!-- Enchant Scroll Pack -->
 		</skills>
 	</item>
 	<item id="27503" name="Greater Enchant Scroll Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Enchant Scroll or a Destruction Enchant Scroll. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27575" level="1" />
+			<skill id="27575" level="1" /> <!-- Greater Enchant Scroll Pack -->
 		</skills>
 	</item>
 	<item id="27504" name="Lucky Enchant Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Lucky Enchant Stone (R-grade), a Giant's Lucky Enchant Stone, or a regular Lucky Enchant Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27576" level="1" />
+			<skill id="27576" level="1" /> <!-- Lucky Enchant Stone Pack -->
 		</skills>
 	</item>
 	<item id="27505" name="Greater Lucky Enchant Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Blessed Lucky Enchant Stone (R-grade), Giant's Lucky Enchant Stone, regular Lucky Enchant Stone, Blessed Greater Lucky Enchant Stone, Wind Lucky Enchant Stone, regular Greater Lucky Enchant Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27577" level="1" />
+			<skill id="27577" level="1" /> <!-- Greater Lucky Enchant Stone Pack -->
 		</skills>
 	</item>
 	<item id="27506" name="Treasure Chest" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Rare Accessory pack, Soul Crystal Coupon Pack, Talisman - Abundance Pack, Spirit Stone Pack, Hair Accessory Pack, Pendant Pack, Enchant Scroll Pack, Attribute Stone Pack, Ingredient Box, Lucky Enchant Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="material" val="FISH" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27578" level="1" />
+			<skill id="27578" level="1" /> <!-- Treasure Chest -->
 		</skills>
 	</item>
 	<item id="27507" name="Hero's Treasure Chest" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the foolowing: Rare Accessory Pack, Soul Bottle Pack, Greater Rare Accessory Pack, Talisman - Abundance Pack, Pendant Pack, Greater Enchant Scroll Pack, Greater Attribute Stone Pack, Greater Lucky Enchant Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27579" level="1" />
+			<skill id="27579" level="1" /> <!-- Hero's Treasure Chest -->
 		</skills>
 	</item>
 	<item id="27508" name="Talisman - Abundance Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the basic Talisman - Abundance. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27581" level="1" /> <!-- Talisman - Abundance Pack -->
+		</skills>
 	</item>
 	<item id="27509" name="Treasure Chest" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain one of the following: Rare Accessory Pack, Soul Crystal Coupon Pack, Talisman - Abundance Pack, Spirit Stone Pack, Hair Accessory Pack, Pendant Pack, Enchant Scroll Pack, Attribute Stone Pack, Ingredient Box, Lucky Enchant Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27578" level="1" /> <!-- Treasure Chest -->
+		</skills>
 	</item>
 	<item id="27510" name="Hero's Treasure Chest" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain one of the following: Rare Accessory Pack, Soul Bottle pack, Greater Rare Accessory Box, Talisman - Abundance Pack, Pendant Pack, Greater Enchant Scroll Pack, Greater Attribute Stone Pack, Greater Lucky Enchant Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27579" level="1" /> <!-- Hero's Treasure Chest -->
+		</skills>
 	</item>
 	<item id="27511" name="Novice Adventurer's Shirt" type="EtcItem">
 		<!-- Novice Adventurer's shirt. M. Def. + 11 when equipped. -->

@@ -515,11 +515,10 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-679</effectPoint>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill6041</icon>
 		<magicLvl>81</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -535,7 +534,6 @@
 			<effect name="PhysicalAttack">
 				<power>2372</power>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="6042" toLevel="1" name="Phoenix Cleanse">
@@ -601,7 +599,7 @@
 		<icon>icon.skill6044</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>80</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>13000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1634,7 +1632,7 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>58</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>

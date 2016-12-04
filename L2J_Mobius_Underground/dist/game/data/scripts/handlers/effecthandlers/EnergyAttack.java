@@ -43,6 +43,7 @@ public final class EnergyAttack extends AbstractEffect
 	private final int _criticalChance;
 	private final boolean _ignoreShieldDefence;
 	private final boolean _overHit;
+	private final double _pDefMod;
 	
 	public EnergyAttack(StatsSet params)
 	{
@@ -51,6 +52,7 @@ public final class EnergyAttack extends AbstractEffect
 		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
 		_overHit = params.getBoolean("overHit", false);
 		_chargeConsume = params.getInt("chargeConsume", 0);
+		_pDefMod = params.getDouble("pDefMod", 1.0);
 	}
 	
 	@Override
@@ -103,7 +105,7 @@ public final class EnergyAttack extends AbstractEffect
 			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
-		int defence = effected.getPDef();
+		double defence = effected.getPDef() * _pDefMod;
 		
 		if (!_ignoreShieldDefence)
 		{
@@ -137,7 +139,7 @@ public final class EnergyAttack extends AbstractEffect
 			// Skill specific mods.
 			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.
 			final double critMod = critical ? Formulas.calcCritDamage(attacker, effected, skill) : 1;
-			final double ssmod = (skill.useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS)) ? attacker.getStat().getValue(Stats.SHOTS_BONUS, 2) : 1; // 2.04 for dual weapon?
+			final double ssmod = (skill.useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS)) ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
 			
 			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd

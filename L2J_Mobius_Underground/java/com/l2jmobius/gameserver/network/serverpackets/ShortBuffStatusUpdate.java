@@ -21,16 +21,18 @@ import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 public class ShortBuffStatusUpdate implements IClientOutgoingPacket
 {
-	public static final ShortBuffStatusUpdate RESET_SHORT_BUFF = new ShortBuffStatusUpdate(0, 0, 0);
+	public static final ShortBuffStatusUpdate RESET_SHORT_BUFF = new ShortBuffStatusUpdate(0, 0, 0, 0);
 	
 	private final int _skillId;
 	private final int _skillLvl;
+	private final int _skillSubLvl;
 	private final int _duration;
 	
-	public ShortBuffStatusUpdate(int skillId, int skillLvl, int duration)
+	public ShortBuffStatusUpdate(int skillId, int skillLvl, int skillSubLvl, int duration)
 	{
 		_skillId = skillId;
 		_skillLvl = skillLvl;
+		_skillSubLvl = skillSubLvl;
 		_duration = duration;
 	}
 	
@@ -40,7 +42,8 @@ public class ShortBuffStatusUpdate implements IClientOutgoingPacket
 		OutgoingPackets.SHORT_BUFF_STATUS_UPDATE.writeId(packet);
 		
 		packet.writeD(_skillId);
-		packet.writeD(_skillLvl);
+		packet.writeH(_skillLvl);
+		packet.writeH(_skillSubLvl);
 		packet.writeD(_duration);
 		return true;
 	}

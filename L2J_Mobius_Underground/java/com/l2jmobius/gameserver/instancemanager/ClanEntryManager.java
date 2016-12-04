@@ -60,8 +60,8 @@ public class ClanEntryManager
 	private static final String INSERT_WAITING_LIST = "INSERT INTO pledge_waiting_list VALUES (?, ?)";
 	private static final String DELETE_WAITING_LIST = "DELETE FROM pledge_waiting_list WHERE char_id = ?";
 	
-	private static final String INSERT_CLAN_RECRUIT = "INSERT INTO pledge_recruit VALUES (?, ?, ?, ?)";
-	private static final String UPDATE_CLAN_RECRUIT = "UPDATE pledge_recruit SET karma = ?, information = ?, detailed_information = ? WHERE clan_id = ?";
+	private static final String INSERT_CLAN_RECRUIT = "INSERT INTO pledge_recruit VALUES (?, ?, ?, ?, ?, ?)";
+	private static final String UPDATE_CLAN_RECRUIT = "UPDATE pledge_recruit SET karma = ?, information = ?, detailed_information = ?, application_type = ?, recruit_type = ? WHERE clan_id = ?";
 	private static final String DELETE_CLAN_RECRUIT = "DELETE FROM pledge_recruit WHERE clan_id = ?";
 	
 	//@formatter:off
@@ -97,7 +97,7 @@ public class ClanEntryManager
 		{
 			while (rs.next())
 			{
-				_clanList.put(rs.getInt("clan_id"), new PledgeRecruitInfo(rs.getInt("clan_id"), rs.getInt("karma"), rs.getString("information"), rs.getString("detailed_information")));
+				_clanList.put(rs.getInt("clan_id"), new PledgeRecruitInfo(rs.getInt("clan_id"), rs.getInt("karma"), rs.getString("information"), rs.getString("detailed_information"), rs.getInt("application_type"), rs.getInt("recruit_type")));
 			}
 			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _clanList.size() + " clan entry");
 		}
@@ -265,6 +265,8 @@ public class ClanEntryManager
 				statement.setInt(2, info.getKarma());
 				statement.setString(3, info.getInformation());
 				statement.setString(4, info.getDetailedInformation());
+				statement.setInt(5, info.getApplicationType());
+				statement.setInt(6, info.getRecruitType());
 				statement.executeUpdate();
 			}
 			catch (Exception e)
@@ -286,7 +288,9 @@ public class ClanEntryManager
 				statement.setInt(1, info.getKarma());
 				statement.setString(2, info.getInformation());
 				statement.setString(3, info.getDetailedInformation());
-				statement.setInt(4, info.getClanId());
+				statement.setInt(4, info.getApplicationType());
+				statement.setInt(5, info.getRecruitType());
+				statement.setInt(6, info.getClanId());
 				statement.executeUpdate();
 			}
 			catch (Exception e)

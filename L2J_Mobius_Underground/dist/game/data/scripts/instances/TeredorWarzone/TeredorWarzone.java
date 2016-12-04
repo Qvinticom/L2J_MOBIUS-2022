@@ -85,6 +85,7 @@ public final class TeredorWarzone extends AbstractInstance
 	
 	public TeredorWarzone()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR);
 		addSpawnId(BEETLE, POS_CHECKER, EGG_2, FAKE_TEREDOR, TEREDOR);
@@ -99,7 +100,7 @@ public final class TeredorWarzone extends AbstractInstance
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcVars = npc.getVariables();
 			final StatsSet npcParams = npc.getParameters();
@@ -192,7 +193,7 @@ public final class TeredorWarzone extends AbstractInstance
 	public String onSpawn(L2Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcParams = npc.getParameters();
 			
@@ -239,7 +240,7 @@ public final class TeredorWarzone extends AbstractInstance
 		final L2Npc npc = (L2Npc) event.getSeer();
 		final Instance instance = npc.getInstanceWorld();
 		
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			final StatsSet npcParams = npc.getParameters();
 			
@@ -330,7 +331,7 @@ public final class TeredorWarzone extends AbstractInstance
 	public String onEventReceived(String eventName, L2Npc sender, L2Npc npc, L2Object reference)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -407,7 +408,7 @@ public final class TeredorWarzone extends AbstractInstance
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -574,7 +575,7 @@ public final class TeredorWarzone extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -602,7 +603,7 @@ public final class TeredorWarzone extends AbstractInstance
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isTeredorInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -614,11 +615,6 @@ public final class TeredorWarzone extends AbstractInstance
 			}
 		}
 		return super.onSpellFinished(npc, player, skill);
-	}
-	
-	private boolean isTeredorInstance(Instance instance)
-	{
-		return ((instance != null) && (instance.getTemplateId() == TEMPLATE_ID));
 	}
 	
 	public static void main(String[] args)

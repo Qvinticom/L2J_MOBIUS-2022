@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -60,14 +61,14 @@ public class NpcBody implements ITargetTypeHandler
 			return null;
 		}
 		
-		final L2Character target = (L2Character) selectedTarget;
+		final L2Npc npc = (L2Npc) selectedTarget;
 		
-		if (target.isDead())
+		if (npc.isDead())
 		{
 			// Check for cast range if character cannot move. TODO: char will start follow until within castrange, but if his moving is blocked by geodata, this msg will be sent.
 			if (dontMove)
 			{
-				if (activeChar.calculateDistance(target, false, false) > skill.getCastRange())
+				if (activeChar.calculateDistance(npc, false, false) > skill.getCastRange())
 				{
 					if (sendMessage)
 					{
@@ -79,7 +80,7 @@ public class NpcBody implements ITargetTypeHandler
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoData.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoData.getInstance().canSeeTarget(activeChar, npc))
 			{
 				if (sendMessage)
 				{
@@ -89,7 +90,7 @@ public class NpcBody implements ITargetTypeHandler
 				return null;
 			}
 			
-			return selectedTarget;
+			return npc;
 		}
 		
 		// If target is not dead or not player/pet it will not even bother to walk within range, unlike Enemy target type.

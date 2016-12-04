@@ -468,7 +468,6 @@ public class GeoData
 		
 		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(x, y, z), new Location(tx, ty, tz), instance))
 		{
-			System.out.println("there is a warp space in path !");
 			return new Location(x, y, getHeight(x, y, z));
 		}
 		

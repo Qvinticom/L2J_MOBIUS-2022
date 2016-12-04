@@ -2087,7 +2087,7 @@
 		<effectRange>1100</effectRange>
 		<magicLvl>78</magicLvl>
 		<hitTime>1500</hitTime>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2125,7 +2125,7 @@
 		<effectRange>1100</effectRange>
 		<magicLvl>78</magicLvl>
 		<hitTime>1500</hitTime>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -2209,7 +2209,7 @@
 		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>

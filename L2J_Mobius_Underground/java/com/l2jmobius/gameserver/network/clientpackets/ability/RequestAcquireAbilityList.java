@@ -101,10 +101,10 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 		final List<L2SkillLearn> skillsToLearn = new ArrayList<>(_skills.size());
 		for (SkillHolder holder : _skills.values())
 		{
-			final L2SkillLearn learn = SkillTreesData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLvl());
+			final L2SkillLearn learn = SkillTreesData.getInstance().getAbilitySkill(holder.getSkillId(), holder.getSkillLevel());
 			if (learn == null)
 			{
-				_log.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLvl() + ") not found!");
+				_log.warning("SkillLearn " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
@@ -112,7 +112,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			final Skill skill = holder.getSkill();
 			if (skill == null)
 			{
-				_log.warning("Skill " + holder.getSkillId() + " (" + holder.getSkillLvl() + ") not found!");
+				_log.warning("Skill " + holder.getSkillId() + " (" + holder.getSkillLevel() + ") not found!");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
@@ -153,7 +153,7 @@ public class RequestAcquireAbilityList implements IClientIncomingPacket
 			// Case 2: Learning skill without having its parent
 			for (SkillHolder required : learn.getPreReqSkills())
 			{
-				if (activeChar.getSkillLevel(required.getSkillId()) < required.getSkillLvl())
+				if (activeChar.getSkillLevel(required.getSkillId()) < required.getSkillLevel())
 				{
 					_log.warning("Player " + activeChar + " is trying to learn " + skill + " without having prerequsite skill: " + required.getSkill() + "!");
 					client.sendPacket(ActionFailed.STATIC_PACKET);

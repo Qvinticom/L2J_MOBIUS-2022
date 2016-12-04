@@ -62,7 +62,8 @@ public final class ShortCutInit implements IClientOutgoingPacket
 				case SKILL:
 				{
 					packet.writeD(sc.getId());
-					packet.writeD(sc.getLevel());
+					packet.writeH(sc.getLevel());
+					packet.writeH(sc.getSubLevel());
 					packet.writeD(sc.getSharedReuseGroup());
 					packet.writeC(0x00); // C5
 					packet.writeD(0x01); // C6

@@ -72,6 +72,8 @@ public class ExPledgeRecruitBoardSearch implements IClientOutgoingPacket
 			packet.writeD(clan.getMembersCount());
 			packet.writeD(_clanList.get(i).getKarma());
 			packet.writeS(_clanList.get(i).getInformation());
+			packet.writeD(_clanList.get(i).getApplicationType());
+			packet.writeD(_clanList.get(i).getRecruitType());
 		}
 		return true;
 	}

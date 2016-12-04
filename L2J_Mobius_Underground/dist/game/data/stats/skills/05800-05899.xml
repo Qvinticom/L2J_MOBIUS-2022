@@ -117,7 +117,7 @@
 		<effectPoint>-1332</effectPoint>
 		<hitTime>800</hitTime>
 		<magicLvl>77</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -127,6 +127,11 @@
 		<castRange>600</castRange>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>1973</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5806" toLevel="1" name="High Wave Beam">
 		<effectPoint>-659</effectPoint>
@@ -1252,7 +1257,6 @@
 	<skill id="5852" toLevel="1" name="Flip Block">
 		<!-- CT2.5 retail confirmed -->
 		<castRange>40</castRange>
-		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill_transform_s_attack</icon>
@@ -1261,16 +1265,12 @@
 		<reuseDelay>2000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
+		<targetType>OTHERS</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="FlipBlock" />
-		</effects>
 	</skill>
 	<skill id="5853" toLevel="1" name="Flip Block">
 		<!-- CT2.5 retail confirmed -->
 		<castRange>40</castRange>
-		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill_transform_s_attack</icon>
@@ -1279,11 +1279,8 @@
 		<reuseDelay>2000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
+		<targetType>OTHERS</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="FlipBlock" />
-		</effects>
 	</skill>
 	<skill id="5854" toLevel="1" name="Decrease Speed">
 		<abnormalLvl>3</abnormalLvl>
@@ -2275,7 +2272,7 @@
 			<effect name="Disarm" />
 		</effects>
 	</skill>
-	<skill id="5885" toLevel="1" name="Weakened Sweep">
+	<skill id="5885" toLevel="2" name="Weakened Sweep">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: lvl 2 has wrong Id in client -->
 		<table name="#power"> 2319 18664 </table>

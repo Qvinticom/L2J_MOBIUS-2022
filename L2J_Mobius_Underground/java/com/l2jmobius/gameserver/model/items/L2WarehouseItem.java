@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.items;
 
 import java.util.Collection;
+import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
@@ -70,6 +71,7 @@ public class L2WarehouseItem
 	
 	public L2WarehouseItem(L2ItemInstance item)
 	{
+		Objects.requireNonNull(item);
 		_item = item.getItem();
 		_object = item.getObjectId();
 		_count = item.getCount();

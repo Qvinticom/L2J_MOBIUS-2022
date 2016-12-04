@@ -156,7 +156,7 @@
 		<icon>icon.etc_potion_gold_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="17922" toLevel="5" name="Low-grade Love Potion">
+	<skill id="17922" toLevel="4" name="Low-grade Love Potion">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Converts Low-grade Love Potion. Elementary Alchemy. -->
 		<icon>icon.love_potion_party</icon>
@@ -961,26 +961,70 @@
 		<reuseDelay>1200000</reuseDelay>
 	</skill>
 	<skill id="17978" toLevel="1" name="Equip Talisman - Insanity">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia Confirmed -->
 		<!-- The Talisman pulsates with power. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A2</operateType>
+		<abnormalType>SEED_TALISMAN1</abnormalType>
+		<abnormalVisualEffect>SEED_TALISMAN1</abnormalVisualEffect>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-2</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<abnormalLvl>7</abnormalLvl>
+		<abnormalTime>-1</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<blockActionUseSkill>true</blockActionUseSkill>
 		<isMagic>3</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17979" toLevel="1" name="Unequip Talisman - Insanity">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia Confirmed -->
 		<!-- The Talisman's power fades away. -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>99</magicLvl>
+		<trait>HOLD</trait>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>SEED_TALISMAN1,-1</dispel>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17980" toLevel="1" name="Unseal Talisman - Insanity">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Ertheia Confirmed -->
 		<icon>icon.accessory_punishment_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>39573</itemConsumeId>
+		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CreateItemRandom" />
+		</effects>
 	</skill>
 	<skill id="17981" toLevel="1" name="Scroll of Escape: Gludin Village">
 		<icon>icon.skill0000</icon>

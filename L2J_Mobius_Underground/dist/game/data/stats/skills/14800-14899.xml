@@ -1584,14 +1584,12 @@
 		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<flyType>CHARGE</flyType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="14856" toLevel="1" name="Barton's Hurricane Rush">
@@ -1616,14 +1614,12 @@
 		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<flyType>CHARGE</flyType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="14857" toLevel="1" name="Barton's Hurricane Rush">
@@ -1648,14 +1644,12 @@
 		<trait>SHOCK</trait>
 		<isDebuff>true</isDebuff>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<flyType>CHARGE</flyType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="14858" toLevel="1" name="Barton's Infinity Strike">
@@ -2484,15 +2478,6 @@
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="Blink">
-				<!-- Teleport to Back -->
-				<flyType>WARP_BACK</flyType>
-				<animationSpeed>333</animationSpeed>
-				<angle>0</angle>
-				<range>300</range>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="14883" toLevel="1" name="Eliyah's Mass Exile">
 		<!-- Glory Days confirmed -->

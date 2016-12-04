@@ -1355,7 +1355,9 @@
 			<effect name="MagicalAttack">
 				<power>2000</power>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;200} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
+				<radius>200</radius>
+			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>

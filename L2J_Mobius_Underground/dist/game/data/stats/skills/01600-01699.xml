@@ -359,7 +359,7 @@
 		<trait>SHOCK</trait>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -389,7 +389,7 @@
 		<trait>SHOCK</trait>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -418,7 +418,7 @@
 		<affectRange>1000</affectRange>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -764,7 +764,7 @@
 		<effectRange>400</effectRange>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>1000</reuseDelay>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -786,7 +786,7 @@
 		<effectRange>400</effectRange>
 		<magicLvl>95</magicLvl>
 		<reuseDelay>1000</reuseDelay>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -809,7 +809,7 @@
 		<effectRange>1400</effectRange>
 		<magicLvl>95</magicLvl>
 		<reuseDelay>1000</reuseDelay>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -832,7 +832,7 @@
 		<effectRange>1400</effectRange>
 		<magicLvl>95</magicLvl>
 		<reuseDelay>1000</reuseDelay>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -857,7 +857,7 @@
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
 		<castRange>2000</castRange>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -931,7 +931,7 @@
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;1000;90</fanRange>
 		<reuseDelay>4000</reuseDelay>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1254,7 +1254,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;300} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;300} -->
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1673" toLevel="1" name="Death">

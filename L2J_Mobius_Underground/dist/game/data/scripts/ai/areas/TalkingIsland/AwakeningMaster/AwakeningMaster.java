@@ -21,10 +21,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.UserInfoType;
+import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
@@ -38,7 +40,6 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangeToAwakenedClass;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowUsm;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -66,6 +67,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 	// Items
 	private static final int SCROLL_OF_AFTERLIFE = 17600;
 	private static final int CHAOS_POMANDER = 37374;
+	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
 	private static final Map<CategoryType, Integer> AWAKE_POWER = new HashMap<>();
 	
 	static
@@ -337,11 +339,13 @@ public final class AwakeningMaster extends AbstractNpcAI
 					break;
 				}
 			}
-			
-			giveItems(player, CHAOS_POMANDER, 2);
+			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 2);
 			
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-			player.sendPacket(new AcquireSkillList(player));
+			for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+			{
+				player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+			}
 			player.sendSkillList();
 		}
 		

@@ -100,9 +100,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_WP" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9244" level="1" /> <!-- Giant's Scroll: Enchant Weapon (D-grade) -->
 		</skills>
@@ -122,9 +123,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_WP" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9246" level="1" /> <!-- Giant's Scroll: Enchant Weapon (C-grade) -->
 		</skills>
@@ -144,9 +146,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_WP" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9248" level="1" /> <!-- Giant's Scroll: Enchant Weapon (B-grade) -->
 		</skills>
@@ -166,9 +169,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_WP" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9250" level="1" /> <!-- Giant's Scroll: Enchant Weapon (A-grade) -->
 		</skills>
@@ -188,9 +192,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_WP" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9252" level="1" /> <!-- Giant's Scroll: Enchant Weapon (S-grade) -->
 		</skills>
@@ -210,9 +215,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_WP" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<skills>
 			<skill id="9254" level="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
 		</skills>
@@ -232,9 +238,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9245" level="1" /> <!-- Giant's Scroll: Enchant Armor (D-grade) -->
 		</skills>
@@ -254,9 +261,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9247" level="1" /> <!-- Giant's Scroll: Enchant Armor (C-grade) -->
 		</skills>
@@ -276,9 +284,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9249" level="1" /> <!-- Giant's Scroll: Enchant Armor (B-grade) -->
 		</skills>
@@ -298,9 +307,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9251" level="1" /> <!-- Giant's Scroll: Enchant Armor (A-grade) -->
 		</skills>
@@ -320,9 +330,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9253" level="1" /> <!-- Giant's Scroll: Enchant Armor (S-grade) -->
 		</skills>
@@ -342,9 +353,10 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="MULTI_ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9255" level="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 		</skills>
@@ -363,9 +375,10 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="EnchantScrolls" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<skills>
 			<skill id="9234" level="1" /> <!-- Scroll: Enchant Hair Accessory -->
 		</skills>

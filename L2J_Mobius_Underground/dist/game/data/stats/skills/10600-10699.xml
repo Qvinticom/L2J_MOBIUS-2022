@@ -28,6 +28,18 @@
 				<magicType>0</magicType>
 				<amount>90</amount>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10607" toLevel="1" name="Maximum Mortality">
@@ -197,6 +209,18 @@
 			<effect name="CounterPhysicalSkill">
 				<amount>90</amount>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10654" toLevel="1" name="Maximum Mortality">
@@ -235,8 +259,6 @@
 	</skill>
 	<skill id="10655" toLevel="4" name="Superior Critical Damage">
 		<!-- Critical Damage + 5%, Speed + 2. -->
-		<table name="#cAtk"> 1.05 1.06 1.07 1.10 </table>
-		<table name="#runSpd"> 2 3 4 5 </table>
 		<icon>icon.skill10655</icon>
 		<magicLvl>
 			<value level="1">85</value>

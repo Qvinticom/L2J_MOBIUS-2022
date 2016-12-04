@@ -114,7 +114,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || (_magicTypes.length == 0))
+		if ((_chance == 0) || (_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_magicTypes.length == 0))
 		{
 			return;
 		}

@@ -77,9 +77,9 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 		info.getEffected().removeListenerIf(EventType.ON_CREATURE_DAMAGE_DEALT, listener -> listener.getOwner() == this);
 	}
 	
-	public void onAttackEvent(OnCreatureDamageDealt event)
+	private void onAttackEvent(OnCreatureDamageDealt event)
 	{
-		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0)) || (_attackSkill.getSkillId() == 0))
+		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)) || (_attackSkill.getSkillId() == 0))
 		{
 			return;
 		}

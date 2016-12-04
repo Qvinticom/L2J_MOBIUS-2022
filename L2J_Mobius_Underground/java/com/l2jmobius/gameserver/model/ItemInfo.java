@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.buylist.Product;
@@ -89,10 +90,7 @@ public class ItemInfo
 	 */
 	public ItemInfo(L2ItemInstance item)
 	{
-		if (item == null)
-		{
-			return;
-		}
+		Objects.requireNonNull(item);
 		
 		// Get the Identifier of the L2ItemInstance
 		_objectId = item.getObjectId();

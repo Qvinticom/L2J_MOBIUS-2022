@@ -35,6 +35,8 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 	private int _karma;
 	private String _information;
 	private String _datailedInformation;
+	private int _applicationType;
+	private int _recruitingType;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -43,6 +45,8 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 		_karma = packet.readD();
 		_information = packet.readS();
 		_datailedInformation = packet.readS();
+		_applicationType = packet.readD(); // 0 - Allow, 1 - Public
+		_recruitingType = packet.readD(); // 0 - Main clan
 		return true;
 	}
 	
@@ -70,7 +74,7 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 			return;
 		}
 		
-		final PledgeRecruitInfo pledgeRecruitInfo = new PledgeRecruitInfo(clan.getId(), _karma, _information, _datailedInformation);
+		final PledgeRecruitInfo pledgeRecruitInfo = new PledgeRecruitInfo(clan.getId(), _karma, _information, _datailedInformation, _applicationType, _recruitingType);
 		
 		switch (_applyType)
 		{

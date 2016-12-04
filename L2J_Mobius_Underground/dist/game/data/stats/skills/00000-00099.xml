@@ -123,7 +123,7 @@
 			<value level="36">86</value>
 			<value level="37">86</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -307,7 +307,7 @@
 			<value level="8">16</value>
 			<value level="9">17</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -482,7 +482,7 @@
 			<value level="30">104</value>
 			<value level="31">105</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -724,7 +724,7 @@
 		</effects>
 	</skill>
 	<skill id="7" toLevel="44" name="Sonic Storm">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+		<!-- Glory Days confirmed and Updated to IO -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -778,8 +778,6 @@
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
 		<icon>icon.skill0007</icon>
-		<itemConsumeCount>3</itemConsumeCount>
-		<itemConsumeId>5589</itemConsumeId> <!-- Energy Stone -->
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -936,9 +934,17 @@
 					<value level="42">23352</value>
 					<value level="43">24490</value>
 					<value level="44">25628</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="44">15</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="44">1</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1120,7 +1126,7 @@
 			<value level="33">89</value>
 			<value level="34">90</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1735,7 +1741,7 @@
 			<value level="23">29</value>
 			<value level="24">30</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1901,7 +1907,7 @@
 			<value level="33">104</value>
 			<value level="34">105</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3045,7 +3051,7 @@
 			<value level="23">38</value>
 			<value level="24">39</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3189,7 +3195,7 @@
 			<value level="36">111</value>
 			<value level="37">112</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3490,8 +3496,6 @@
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
 		<icon>icon.skill0035</icon>
-		<itemConsumeCount>2</itemConsumeCount>
-		<itemConsumeId>5589</itemConsumeId> <!-- Energy Stone -->
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -3646,9 +3650,17 @@
 					<value level="42">23352</value>
 					<value level="43">24490</value>
 					<value level="44">25628</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="44">15</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="44">1</value>
+					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -3840,7 +3852,6 @@
 		<!-- Confirmed CT2.5 -->
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
-		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
 		<icon>icon.skill0042</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -4066,7 +4077,10 @@
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="49">50</value>
+			<value fromLevel="45" toLevel="49" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -4295,9 +4309,13 @@
 					<value level="47">39349</value>
 					<value level="48">40997</value>
 					<value level="49">42645</value>
+					<value fromLevel="45" toLevel="49" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
-				<criticalChance>15</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="49">15</value>
+					<value fromLevel="45" toLevel="49" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -5586,6 +5604,7 @@
 					<value level="35">2520</value>
 					<value level="36">2582</value>
 					<value level="37">2644</value>
+					<value fromLevel="33" toLevel="37" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 		</effects>
@@ -6130,7 +6149,7 @@
 			<value level="2">64</value>
 			<value level="3">74</value>
 		</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -6622,7 +6641,7 @@
 			<value level="51">37</value>
 			<value level="52">38</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -6650,7 +6669,10 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 		</abnormalLvl>
-		<abnormalTime>600</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="7">600</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>235</effectPoint>
 		<hitTime>1500</hitTime>
@@ -6703,7 +6725,7 @@
 					<value level="6">10</value>
 					<value level="7">15</value>
 				</pAtkAmount>
-				<mode>PER</mode>
+				<pAtkmode>PER</pAtkmode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
@@ -6715,7 +6737,7 @@
 					<value level="6">10</value>
 					<value level="7">15</value>
 				</pAtkAmount>
-				<mode>PER</mode>
+				<pAtkmode>PER</pAtkmode>
 			</effect>
 			<effect name="PAtk">
 				<amount>15</amount>
@@ -6735,6 +6757,12 @@
 					<item>DUAL</item>
 					<item>DUALBLUNT</item>
 				</weaponType>
+			</effect>
+			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -6925,7 +6953,7 @@
 			<value level="5">83</value>
 			<value level="6">89</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>

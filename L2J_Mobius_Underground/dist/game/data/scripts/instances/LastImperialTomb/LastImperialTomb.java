@@ -154,6 +154,7 @@ public final class LastImperialTomb extends AbstractInstance
 	
 	public LastImperialTomb()
 	{
+		super(TEMPLATE_ID);
 		addTalkId(GUIDE, CUBE);
 		addAttackId(SCARLET1);
 		addKillId(ON_KILL_MONSTERS);
@@ -831,7 +832,7 @@ public final class LastImperialTomb extends AbstractInstance
 		final SkillHolder skill = new SkillHolder(5007, random);
 		final SkillHolder skillEffect = new SkillHolder(5008, random);
 		broadCastPacket(world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, SKILL_MSG.get(random), null));
-		broadCastPacket(world, new MagicSkillUse(frintezza, frintezza, skill.getSkillId(), skill.getSkillLvl(), skill.getSkill().getHitTime(), 0));
+		broadCastPacket(world, new MagicSkillUse(frintezza, frintezza, skill.getSkillId(), skill.getSkillLevel(), skill.getSkill().getHitTime(), 0));
 		for (L2PcInstance player : world.getPlayers())
 		{
 			if ((player != null) && player.isOnline())

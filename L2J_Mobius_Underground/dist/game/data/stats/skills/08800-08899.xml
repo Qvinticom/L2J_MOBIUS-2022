@@ -33,476 +33,1344 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8804" toLevel="1" name="Enhanced Tauti's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Can equip 5 Talismans. STR + 1, INT + 1 -->
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8805" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 3% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8806" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 8% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8807" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 5% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8808" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 2% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8809" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 2% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8810" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 3% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8811" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 8% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8812" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 5% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8813" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 2% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8814" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 2% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8815" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 3% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8816" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 8% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8817" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 5% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8818" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 2% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8819" toLevel="1" name="PvP Defense">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Glory Days confirmed -->
 		<!-- Decreases PvP Damage by 2% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8820" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8821" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8822" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8823" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8824" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8825" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8826" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8827" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8828" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8829" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8830" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8831" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8832" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8833" toLevel="1" name="PvP Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- PvP Damage + 15% -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8834" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 3%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8835" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 8%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8836" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 5%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8837" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8838" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8839" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 3%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8840" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 8%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8841" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 5%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8842" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8843" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8844" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 3%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 3%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8845" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 8%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 8%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8846" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 5%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 5%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8847" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8848" toLevel="1" name="PvE Defense">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 1%, M. Atk. + 2% and NPC damage - 2%. -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC damage - 2%. -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDefenceBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8849" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8850" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8851" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8852" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8853" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8854" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8855" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8856" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8857" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8858" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8859" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8860" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8861" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8862" toLevel="1" name="PvE Damage Increase">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- NPC Damage + 15%, Max HP/MP/CP + 10% -->
+		<!-- Updated to IO -->
+		<!-- Glory Days confirmed -->
+		<!-- NPC Damage + 15% -->
 		<icon>icon.pk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8863" toLevel="1" name="Tauti's Bracelet">
 		<!-- Glory Days confirmed -->
@@ -1170,7 +2038,7 @@
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
-			</skill>
+	</skill>
 	<skill id="8891" toLevel="1" name="Worship">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Renders nearby enemies unconscious for 5 sec. Requires 1 Dragon Blood. Cooldown is 5 minutes. -->

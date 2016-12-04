@@ -943,127 +943,127 @@
 	<item id="27491" name="Rare Accessory Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Antharas' Earring, Valakas' Necklace, Baium's Ring, Zaken's Earring, Queen Ant's Ring, Frintezza's Necklace, Orfen's Earring, Freya's Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27563" level="1" />
+			<skill id="27563" level="1" /> <!-- Rare Accessory Pack -->
 		</skills>
 	</item>
 	<item id="27492" name="Greater Rare Accessory Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Baium's Soul Ring, Frintezza's Soul Necklace, Blessed Antharas's Earring, Blessed Valakas's Necklace, Blessed Freya's Necklace, Queen Ant's Soul Ring, Orfen's Soul Earring, Blessed Zaken's Earring, Lilith's Soul Necklace, Lindvior's Earring, Earth Wyrm Heart Ring, Tauti's Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27564" level="1" />
+			<skill id="27564" level="1" /> <!-- Greater Rare Accessory Pack -->
 		</skills>
 	</item>
 	<item id="27493" name="Soul Bottle Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to get one of the following: Bottle of Freya's Soul, Bottle of Antharas' Soul, Bottle of Valakas' Soul, Bottle of Queen Ant's Soul, Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Baium's Soul. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27565" level="1" />
+			<skill id="27565" level="1" /> <!-- Soul Bottle Pack -->
 		</skills>
 	</item>
 	<item id="27494" name="Soul Crystal Coupon Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Soul Crystal Coupon Stage 1-5. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27566" level="1" />
+			<skill id="27566" level="1" /> <!-- Soul Crystal Coupon Pack -->
 		</skills>
 	</item>
 	<item id="27495" name="Talisman - Abundance Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain either a Talisman - Abudance or a Recipe: Talisman - Abundance (High-grade). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27567" level="1" />
+			<skill id="27567" level="1" /> <!-- Talisman - Abundance Pack -->
 		</skills>
 	</item>
 	<item id="27496" name="Spirit Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain Spirit Stone. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27568" level="1" />
+			<skill id="27568" level="1" /> <!-- Spirit Stone Pack -->
 		</skills>
 	</item>
 	<item id="27497" name="Hair Accessory Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a hair accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27569" level="1" />
+			<skill id="27569" level="1" /> <!-- Hair Accessory Pack -->
 		</skills>
 	</item>
 	<item id="27498" name="Pendant Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a pendant. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27570" level="1" />
+			<skill id="27570" level="1" /> <!-- Pendant Pack -->
 		</skills>
 	</item>
 	<item id="27499" name="Ingredient Box" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a crafting ingredient. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
-		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="27571" level="1" />
+			<skill id="27571" level="1" /> <!-- Ingredient Box -->
 		</skills>
 	</item>
 </list>

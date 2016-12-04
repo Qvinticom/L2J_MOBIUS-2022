@@ -45,7 +45,7 @@ public enum SkillOperateType
 	A2,
 	
 	/**
-	 * Active Skill with "Instant effect + Continuous effect"
+	 * Active Skill with "Instant effect for target + Continuous effect for self"
 	 */
 	A3,
 	
@@ -95,6 +95,16 @@ public enum SkillOperateType
 	DA3,
 	
 	/**
+	 * Directional Active Skill with "Left Continuous effect".
+	 */
+	DA4,
+	
+	/**
+	 * Directional Active Skill with "Right Continuous effect".
+	 */
+	DA5,
+	
+	/**
 	 * Passive Skill.
 	 */
 	P,
@@ -132,6 +142,8 @@ public enum SkillOperateType
 			case CA5:
 			case DA1:
 			case DA2:
+			case DA4:
+			case DA5:
 				return true;
 			default:
 				return false;
@@ -151,6 +163,8 @@ public enum SkillOperateType
 			case A5:
 			case A6:
 			case DA2:
+			case DA4:
+			case DA5:
 				return true;
 			default:
 				return false;
@@ -233,5 +247,20 @@ public enum SkillOperateType
 	public boolean isSynergy()
 	{
 		return (this == A6);
+	}
+	
+	public boolean isFlyType()
+	{
+		switch (this)
+		{
+			case DA1:
+			case DA2:
+			case DA3:
+			case DA4:
+			case DA5:
+				return true;
+			default:
+				return false;
+		}
 	}
 }

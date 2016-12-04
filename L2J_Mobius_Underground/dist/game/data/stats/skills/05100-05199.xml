@@ -576,7 +576,7 @@
 		<icon>icon.skill0245</icon>
 		<magicLvl>90</magicLvl>
 		<mpConsume>84</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>17000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -989,7 +989,7 @@
 		<hitTime>1080</hitTime>
 		<magicLvl>80</magicLvl>
 		<mpConsume>214</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1079,7 +1079,7 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>80</magicLvl>
 		<mpConsume>214</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1170,7 +1170,7 @@
 		<hitTime>1080</hitTime>
 		<magicLvl>80</magicLvl>
 		<mpConsume>214</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2752,7 +2752,7 @@
 			<value level="14">95</value>
 			<value level="15">99</value>
 		</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2935,8 +2935,6 @@
 		<!-- Confirmed CT2.5 -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
-		<flyRadius>300</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<icon>icon.skill0100</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2948,7 +2946,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="ThrowUp" />
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5184" toLevel="1" name="Production: Valakas Dragon Breath">

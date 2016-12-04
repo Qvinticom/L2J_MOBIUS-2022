@@ -37,12 +37,12 @@ public class SkillCoolTime implements IClientOutgoingPacket
 	
 	public SkillCoolTime(L2PcInstance player)
 	{
-		final Map<Integer, TimeStamp> skillReuseTimeStamps = player.getSkillReuseTimeStamps();
+		final Map<Long, TimeStamp> skillReuseTimeStamps = player.getSkillReuseTimeStamps();
 		if (skillReuseTimeStamps != null)
 		{
 			for (TimeStamp ts : skillReuseTimeStamps.values())
 			{
-				final Skill skill = SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl());
+				final Skill skill = SkillData.getInstance().getSkill(ts.getSkillId(), ts.getSkillLvl(), ts.getSkillSubLvl());
 				if (ts.hasNotPassed() && !skill.isNotBroadcastable())
 				{
 					_skillReuseTimeStamps.add(ts);

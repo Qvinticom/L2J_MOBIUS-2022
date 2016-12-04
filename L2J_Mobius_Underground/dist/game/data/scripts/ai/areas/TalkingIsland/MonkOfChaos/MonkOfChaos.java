@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 
@@ -51,8 +52,8 @@ public final class MonkOfChaos extends AbstractNpcAI
 	
 	private static final String[] DUALCLASS_REVELATION_VAR_NAMES =
 	{
-		"DualclassRevelationSkill1",
-		"DualclassRevelationSkill2"
+		PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS,
+		PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS
 	};
 	
 	private MonkOfChaos()
@@ -161,13 +162,10 @@ public final class MonkOfChaos extends AbstractNpcAI
 						giveItems(player, chaosPomander, count);
 					}
 				}
-				
 				htmltext = "canceled.html";
-				
 				break;
 			}
 		}
-		
 		return htmltext;
 	}
 	

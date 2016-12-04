@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
@@ -54,6 +55,7 @@ public class TradeItem
 	
 	public TradeItem(L2ItemInstance item, long count, long price)
 	{
+		Objects.requireNonNull(item);
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();
@@ -77,6 +79,7 @@ public class TradeItem
 	
 	public TradeItem(L2Item item, long count, long price)
 	{
+		Objects.requireNonNull(item);
 		_objectId = 0;
 		_item = item;
 		_location = 0;
@@ -95,6 +98,7 @@ public class TradeItem
 	
 	public TradeItem(TradeItem item, long count, long price)
 	{
+		Objects.requireNonNull(item);
 		_objectId = item.getObjectId();
 		_item = item.getItem();
 		_location = item.getLocationSlot();

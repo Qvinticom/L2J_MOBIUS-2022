@@ -101,7 +101,7 @@ public class DBSpawnManager
 					spawn.setAmount(1);
 					spawn.setHeading(rset.getInt("heading"));
 					
-					final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getSpawns(npc -> (npc.getId() == template.getId()) && npc.hasDBSave());
+					final List<NpcSpawnTemplate> spawns = SpawnsData.getInstance().getNpcSpawns(npc -> (npc.getId() == template.getId()) && npc.hasDBSave());
 					if (spawns.isEmpty())
 					{
 						LOGGER.warning(getClass().getSimpleName() + ": Couldn't find spawn declaration for npc: " + template.getId() + " - " + template.getName());
@@ -383,28 +383,15 @@ public class DBSpawnManager
 		}
 		
 		final int npcId = spawn.getId();
-		if (!_spawns.containsKey(npcId))
-		{
-			return;
-		}
 		
-		SpawnTable.getInstance().deleteSpawn(spawn, false);
 		_spawns.remove(npcId);
+		_npcs.remove(npcId);
+		_storedInfo.remove(npcId);
 		
-		if (_npcs.containsKey(npcId))
+		final ScheduledFuture<?> task = _schedules.remove(npcId);
+		if (task != null)
 		{
-			_npcs.remove(npcId);
-		}
-		
-		if (_schedules.containsKey(npcId))
-		{
-			final ScheduledFuture<?> f = _schedules.remove(npcId);
-			f.cancel(true);
-		}
-		
-		if (_storedInfo.containsKey(npcId))
-		{
-			_storedInfo.remove(npcId);
+			task.cancel(true);
 		}
 		
 		if (updateDb)
@@ -421,6 +408,8 @@ public class DBSpawnManager
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not remove npc #" + npcId + " from DB: ", e);
 			}
 		}
+		
+		SpawnTable.getInstance().deleteSpawn(spawn, false);
 	}
 	
 	/**

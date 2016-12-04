@@ -37,7 +37,7 @@ public final class CallSkill extends AbstractEffect
 	
 	public CallSkill(StatsSet params)
 	{
-		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1));
+		_skill = new SkillHolder(params.getInt("skillId"), params.getInt("skillLevel", 1), params.getInt("skillSubLevel", 0));
 		_skillLevelScaleTo = params.getInt("skillLevelScaleTo", 0);
 	}
 	

@@ -702,12 +702,12 @@
 		</effects>
 	</skill>
 	<skill id="1416" toLevel="8" name="Pa'agrio's Fist">
-		<table name="#magicLvl"> 79 81 83 85 90 95 99 101 </table>
-		<table name="#cp"> 1.02 1.03 1.04 1.05 1.06 1.07 1.1 1.15 </table>
-		<table name="#mpConsume"> 84 90 95 102 111 122 133 143 </table>
-		<table name="#mpInitialConsume"> 21 22 24 25 28 31 33 36 </table>
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="8">30</value>
+			<value fromLevel="6" toLevel="8" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="6" toLevel="8" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>CP_UP</abnormalType>
 		<affectLimit>50-100</affectLimit>
 		<affectRange>1000</affectRange>
@@ -755,6 +755,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="6" toLevel="8" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="6" toLevel="8" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="1417" toLevel="5" name="Aura Flash">
@@ -2155,7 +2167,7 @@
 			<value level="4">14</value>
 			<value level="5">14</value>
 		</mpInitialConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2211,7 +2223,7 @@
 			<value level="4">13</value>
 			<value level="5">14</value>
 		</mpInitialConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -3045,6 +3057,7 @@
 		<abnormalTime>
 			<value level="1">1200</value>
 			<value level="2">1800</value>
+			<value fromLevel="2" toLevel="2" fromSubLevel="1001" toSubLevel="1030">{base + 90 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>MA_UP_SPECIAL</abnormalType>
 		<effectPoint>1</effectPoint>
@@ -3076,6 +3089,12 @@
 				<amount>35</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicalAttackSpeed" fromLevel="2" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="2" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3207,7 +3226,10 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
-		<activateRate>80</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="10">80</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -3235,6 +3257,18 @@
 				<power>80</power>
 			</effect>
 			<effect name="PhysicalAttackMute" />
+			<effect name="PhysicalDefence" fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="1463" toLevel="1" name="Fire Weapon">

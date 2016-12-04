@@ -1652,7 +1652,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="19152" level="10" type="L2QuestGuard" name="Combat Soldier" title="">
+	<npc id="19152" level="10" type="FriendlyNpc" name="Combat Soldier" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1678,7 +1678,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="19153" level="10" type="L2QuestGuard" name="Combat Soldier" title="">
+	<npc id="19153" level="10" type="FriendlyNpc" name="Combat Soldier" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -1703,7 +1703,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="19154" level="10" type="L2QuestGuard" name="Combat Officer" title="Combat Assistant">
+	<npc id="19154" level="10" type="FriendlyNpc" name="Combat Officer" title="Combat Assistant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -1728,7 +1728,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="19155" level="17" type="L2QuestGuard" name="Infiltration Officer" title="Combat Assistant">
+	<npc id="19155" level="17" type="FriendlyNpc" name="Infiltration Officer" title="Combat Assistant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>MALE</sex>
@@ -2196,7 +2196,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status showName="false" talkable="false" canMove="false" />
+		<status attackable="false" showName="false" talkable="false" canMove="false" />
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
@@ -2807,7 +2807,7 @@
 			<defence physical="398.415163555849" magical="215.693501667373" />
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status talkable="false" undying="false" />
+		<status attackable="false" talkable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->

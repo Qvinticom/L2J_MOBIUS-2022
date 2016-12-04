@@ -56,6 +56,7 @@ public final class IceQueensCastle extends AbstractInstance
 	
 	public IceQueensCastle()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(JINIA);
 		addTalkId(JINIA);
 		addSeeCreatureId(BATTALION_LEADER, LEGIONNAIRE, MERCENARY_ARCHER);

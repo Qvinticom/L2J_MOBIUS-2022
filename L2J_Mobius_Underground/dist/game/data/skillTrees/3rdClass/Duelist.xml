@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="88" parentClassId="2">
+		<skill skillName="Sonic Storm" skillId="7" skillLvl="29" getLevel="75" levelUpSp="1800" />
+		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="23" getLevel="75" levelUpSp="1800" />
+		
 		<skill skillName="Health" skillId="329" skillLvl="1" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Wisdom" skillId="328" skillLvl="1" getLevel="76" levelUpSp="2000" />
 

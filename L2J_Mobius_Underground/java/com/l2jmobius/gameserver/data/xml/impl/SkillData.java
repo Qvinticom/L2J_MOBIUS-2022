@@ -56,9 +56,8 @@ public class SkillData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SkillData.class.getName());
 	
-	private final Map<Integer, Skill> _skills = new HashMap<>();
+	private final Map<Long, Skill> _skills = new HashMap<>();
 	private final Map<Integer, Integer> _skillsMaxLevel = new HashMap<>();
-	private final Set<Integer> _enchantable = new HashSet<>();
 	
 	private class NamedParamInfo
 	{
@@ -68,9 +67,8 @@ public class SkillData implements IGameXmlReader
 		private final Integer _fromSubLevel;
 		private final Integer _toSubLevel;
 		private final Map<Integer, Map<Integer, StatsSet>> _info;
-		private final StatsSet _generalInfo;
 		
-		public NamedParamInfo(String name, Integer fromLevel, Integer toLevel, Integer fromSubLevel, Integer toSubLevel, Map<Integer, Map<Integer, StatsSet>> info, StatsSet generalInfo)
+		public NamedParamInfo(String name, Integer fromLevel, Integer toLevel, Integer fromSubLevel, Integer toSubLevel, Map<Integer, Map<Integer, StatsSet>> info)
 		{
 			_name = name;
 			_fromLevel = fromLevel;
@@ -78,7 +76,6 @@ public class SkillData implements IGameXmlReader
 			_fromSubLevel = fromSubLevel;
 			_toSubLevel = toSubLevel;
 			_info = info;
-			_generalInfo = generalInfo;
 		}
 		
 		public String getName()
@@ -110,11 +107,6 @@ public class SkillData implements IGameXmlReader
 		{
 			return _info;
 		}
-		
-		public StatsSet getGeneralInfo()
-		{
-			return _generalInfo;
-		}
 	}
 	
 	protected SkillData()
@@ -127,9 +119,9 @@ public class SkillData implements IGameXmlReader
 	 * @param skill The L2Skill to be hashed
 	 * @return getSkillHashCode(skill.getId(), skill.getLevel())
 	 */
-	public static int getSkillHashCode(Skill skill)
+	public static long getSkillHashCode(Skill skill)
 	{
-		return getSkillHashCode(skill.getId(), skill.getLevel());
+		return getSkillHashCode(skill.getId(), skill.getLevel(), skill.getSubLevel());
 	}
 	
 	/**
@@ -138,14 +130,31 @@ public class SkillData implements IGameXmlReader
 	 * @param skillLevel The Skill Level
 	 * @return The Skill hash number
 	 */
-	public static int getSkillHashCode(int skillId, int skillLevel)
+	public static long getSkillHashCode(int skillId, int skillLevel)
 	{
-		return (skillId * 1031) + skillLevel;
+		return getSkillHashCode(skillId, skillLevel, 0);
+	}
+	
+	/**
+	 * Centralized method for easier change of the hashing sys
+	 * @param skillId The Skill Id
+	 * @param skillLevel The Skill Level
+	 * @param subSkillLevel The skill sub level
+	 * @return The Skill hash number
+	 */
+	public static long getSkillHashCode(int skillId, int skillLevel, int subSkillLevel)
+	{
+		return subSkillLevel > 0 ? ((skillId * 4294967296L) + (subSkillLevel * 65536) + skillLevel) : (skillId * 65536) + skillLevel;
 	}
 	
 	public Skill getSkill(int skillId, int level)
 	{
-		final Skill result = _skills.get(getSkillHashCode(skillId, level));
+		return getSkill(skillId, level, 0);
+	}
+	
+	public Skill getSkill(int skillId, int level, int subLevel)
+	{
+		final Skill result = _skills.get(getSkillHashCode(skillId, level, subLevel));
 		if (result != null)
 		{
 			return result;
@@ -156,7 +165,7 @@ public class SkillData implements IGameXmlReader
 		// requested level too high
 		if ((maxLvl > 0) && (level > maxLvl))
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLvl, new Throwable());
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Call to unexisting skill level id: " + skillId + " requested level: " + level + " max level: " + maxLvl + ".", new Throwable());
 			return _skills.get(getSkillHashCode(skillId, maxLvl));
 		}
 		
@@ -168,16 +177,6 @@ public class SkillData implements IGameXmlReader
 	{
 		final Integer maxLevel = _skillsMaxLevel.get(skillId);
 		return maxLevel != null ? maxLevel : 0;
-	}
-	
-	/**
-	 * Verifies if the given skill ID correspond to an enchantable skill.
-	 * @param skillId the skill ID
-	 * @return {@code true} if the skill is enchantable, {@code false} otherwise
-	 */
-	public boolean isEnchantable(int skillId)
-	{
-		return _enchantable.contains(skillId);
 	}
 	
 	/**
@@ -217,7 +216,6 @@ public class SkillData implements IGameXmlReader
 	{
 		_skills.clear();
 		_skillsMaxLevel.clear();
-		_enchantable.clear();
 		parseDatapackDirectory("data/stats/skills/", true);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _skills.size() + " Skills.");
 	}
@@ -243,12 +241,11 @@ public class SkillData implements IGameXmlReader
 						NamedNodeMap attributes = listNode.getAttributes();
 						final Map<Integer, Set<Integer>> levels = new HashMap<>();
 						final Map<Integer, Map<Integer, StatsSet>> skillInfo = new HashMap<>();
-						final StatsSet generalSkillInfo = new StatsSet();
+						final StatsSet generalSkillInfo = skillInfo.computeIfAbsent(-1, k -> new HashMap<>()).computeIfAbsent(-1, k -> new StatsSet());
 						
 						parseAttributes(attributes, "", generalSkillInfo);
 						
 						final Map<String, Map<Integer, Map<Integer, Object>>> variableValues = new HashMap<>();
-						final Map<String, Object> variableGeneralValues = new HashMap<>();
 						final Map<EffectScope, List<NamedParamInfo>> effectParamInfo = new HashMap<>();
 						final Map<SkillConditionScope, List<NamedParamInfo>> conditionParamInfo = new HashMap<>();
 						for (Node skillNode = listNode.getFirstChild(); skillNode != null; skillNode = skillNode.getNextSibling())
@@ -260,7 +257,7 @@ public class SkillData implements IGameXmlReader
 								{
 									attributes = skillNode.getAttributes();
 									final String name = "@" + parseString(attributes, "name");
-									variableGeneralValues.put(name, parseValues(skillNode, variableValues.computeIfAbsent(name, k -> new HashMap<>())));
+									variableValues.put(name, parseValues(skillNode));
 									break;
 								}
 								case "#text":
@@ -278,7 +275,7 @@ public class SkillData implements IGameXmlReader
 											{
 												case "effect":
 												{
-													effectParamInfo.computeIfAbsent(effectScope, k -> new LinkedList<>()).add(parseNamedParamInfo(effectsNode, variableValues, variableGeneralValues));
+													effectParamInfo.computeIfAbsent(effectScope, k -> new LinkedList<>()).add(parseNamedParamInfo(effectsNode, variableValues));
 													break;
 												}
 											}
@@ -294,7 +291,7 @@ public class SkillData implements IGameXmlReader
 											{
 												case "condition":
 												{
-													conditionParamInfo.computeIfAbsent(skillConditionScope, k -> new LinkedList<>()).add(parseNamedParamInfo(conditionNode, variableValues, variableGeneralValues));
+													conditionParamInfo.computeIfAbsent(skillConditionScope, k -> new LinkedList<>()).add(parseNamedParamInfo(conditionNode, variableValues));
 													break;
 												}
 											}
@@ -302,7 +299,7 @@ public class SkillData implements IGameXmlReader
 									}
 									else
 									{
-										parseInfo(skillNode, variableValues, variableGeneralValues, skillInfo, generalSkillInfo);
+										parseInfo(skillNode, variableValues, skillInfo);
 									}
 									break;
 								}
@@ -319,8 +316,16 @@ public class SkillData implements IGameXmlReader
 						
 						skillInfo.forEach((level, subLevelMap) ->
 						{
+							if (level == -1)
+							{
+								return;
+							}
 							subLevelMap.forEach((subLevel, statsSet) ->
 							{
+								if (subLevel == -1)
+								{
+									return;
+								}
 								levels.computeIfAbsent(level, k -> new HashSet<>()).add(subLevel);
 							});
 						});
@@ -331,8 +336,16 @@ public class SkillData implements IGameXmlReader
 							{
 								namedParamInfo.getInfo().forEach((level, subLevelMap) ->
 								{
+									if (level == -1)
+									{
+										return;
+									}
 									subLevelMap.forEach((subLevel, statsSet) ->
 									{
+										if (subLevel == -1)
+										{
+											return;
+										}
 										levels.computeIfAbsent(level, k -> new HashSet<>()).add(subLevel);
 									});
 								});
@@ -362,8 +375,9 @@ public class SkillData implements IGameXmlReader
 						{
 							subLevels.forEach(subLevel ->
 							{
-								final StatsSet statsSet = Optional.ofNullable(skillInfo.getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(() -> new StatsSet());
-								generalSkillInfo.getSet().forEach((k, v) -> statsSet.getSet().putIfAbsent(k, v));
+								final StatsSet statsSet = Optional.ofNullable(skillInfo.getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
+								skillInfo.getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
+								skillInfo.getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(statsSet.getSet()::putIfAbsent);
 								statsSet.set(".level", level);
 								statsSet.set(".subLevel", subLevel);
 								final Skill skill = new Skill(statsSet);
@@ -413,9 +427,9 @@ public class SkillData implements IGameXmlReader
 								
 								_skills.put(getSkillHashCode(skill), skill);
 								_skillsMaxLevel.merge(skill.getId(), skill.getLevel(), Integer::max);
-								if ((skill.getLevel() > 99) && !_enchantable.contains(skill.getId()))
+								if ((skill.getSubLevel() % 1000) == 1)
 								{
-									_enchantable.add(skill.getId());
+									EnchantSkillGroupsData.getInstance().addRouteForSkill(skill.getId(), skill.getLevel(), skill.getSubLevel());
 								}
 							});
 						});
@@ -435,8 +449,9 @@ public class SkillData implements IGameXmlReader
 				{
 					if (((namedParamInfo.getFromSubLevel() == null) && (namedParamInfo.getToSubLevel() == null)) || ((namedParamInfo.getFromSubLevel() <= subLevel) && (namedParamInfo.getToSubLevel() >= subLevel)))
 					{
-						final StatsSet params = Optional.ofNullable(namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(() -> new StatsSet());
-						namedParamInfo.getGeneralInfo().getSet().forEach((k, v) -> params.getSet().putIfAbsent(k, v));
+						final StatsSet params = Optional.ofNullable(namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).get(subLevel)).orElseGet(StatsSet::new);
+						namedParamInfo.getInfo().getOrDefault(level, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
+						namedParamInfo.getInfo().getOrDefault(-1, Collections.emptyMap()).getOrDefault(-1, StatsSet.EMPTY_STATSET).getSet().forEach(params.getSet()::putIfAbsent);
 						params.set(".name", namedParamInfo.getName());
 						consumer.accept(scope, params);
 					}
@@ -445,57 +460,45 @@ public class SkillData implements IGameXmlReader
 		});
 	}
 	
-	private NamedParamInfo parseNamedParamInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues, Map<String, Object> variableGeneralValues)
+	private NamedParamInfo parseNamedParamInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues)
 	{
 		final NamedNodeMap attributes = node.getAttributes();
 		final String name = parseString(attributes, "name");
 		final Integer level = parseInteger(attributes, "level");
 		final Integer fromLevel = parseInteger(attributes, "fromLevel", level);
 		final Integer toLevel = parseInteger(attributes, "toLevel", level);
-		final Integer subLevel = parseInteger(attributes, "subLevel", 0);
+		final Integer subLevel = parseInteger(attributes, "subLevel");
 		final Integer fromSubLevel = parseInteger(attributes, "fromSubLevel", subLevel);
 		final Integer toSubLevel = parseInteger(attributes, "toSubLevel", subLevel);
 		final Map<Integer, Map<Integer, StatsSet>> info = new HashMap<>();
-		final StatsSet generalInfo = new StatsSet();
 		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (!node.getNodeName().equals("#text"))
 			{
-				parseInfo(node, variableValues, variableGeneralValues, info, generalInfo);
+				parseInfo(node, variableValues, info);
 			}
 		}
-		return new NamedParamInfo(name, fromLevel, toLevel, fromSubLevel, toSubLevel, info, generalInfo);
+		return new NamedParamInfo(name, fromLevel, toLevel, fromSubLevel, toSubLevel, info);
 	}
 	
-	private void parseInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues, Map<String, Object> variableGeneralValues, Map<Integer, Map<Integer, StatsSet>> info, StatsSet generalInfo)
+	private void parseInfo(Node node, Map<String, Map<Integer, Map<Integer, Object>>> variableValues, Map<Integer, Map<Integer, StatsSet>> info)
 	{
-		Map<Integer, Map<Integer, Object>> values = new HashMap<>();
-		final Object generalValue = parseValues(node, values);
+		Map<Integer, Map<Integer, Object>> values = parseValues(node);
+		final Object generalValue = values.getOrDefault(-1, Collections.emptyMap()).get(-1);
 		if (generalValue != null)
 		{
 			final String stringGeneralValue = String.valueOf(generalValue);
 			if (stringGeneralValue.startsWith("@"))
 			{
-				final Map<Integer, Map<Integer, Object>> tableValue = variableValues.get(stringGeneralValue);
-				if (tableValue != null)
+				Map<Integer, Map<Integer, Object>> variableValue = variableValues.get(stringGeneralValue);
+				if (variableValue != null)
 				{
-					if (!tableValue.isEmpty())
-					{
-						values = tableValue;
-					}
-					else
-					{
-						generalInfo.set(node.getNodeName(), variableGeneralValues.get(stringGeneralValue));
-					}
+					values = variableValue;
 				}
 				else
 				{
 					throw new IllegalArgumentException("undefined variable " + stringGeneralValue);
 				}
-			}
-			else
-			{
-				generalInfo.set(node.getNodeName(), generalValue);
 			}
 		}
 		
@@ -508,60 +511,62 @@ public class SkillData implements IGameXmlReader
 		});
 	}
 	
-	private Object parseValues(Node node, Map<Integer, Map<Integer, Object>> values)
+	private Map<Integer, Map<Integer, Object>> parseValues(Node node)
 	{
+		final Map<Integer, Map<Integer, Object>> values = new HashMap<>();
 		Object parsedValue = parseValue(node, true, false, Collections.emptyMap());
 		if (parsedValue != null)
 		{
-			return parsedValue;
+			values.computeIfAbsent(-1, k -> new HashMap<>()).put(-1, parsedValue);
 		}
-		
-		final List<Object> list = null;
-		for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
+		else
 		{
-			if (node.getNodeName().equalsIgnoreCase("value"))
+			for (node = node.getFirstChild(); node != null; node = node.getNextSibling())
 			{
-				final NamedNodeMap attributes = node.getAttributes();
-				final Integer level = parseInteger(attributes, "level");
-				if (level != null)
+				if (node.getNodeName().equalsIgnoreCase("value"))
 				{
-					parsedValue = parseValue(node, false, false, Collections.emptyMap());
-					if (parsedValue != null)
+					final NamedNodeMap attributes = node.getAttributes();
+					final Integer level = parseInteger(attributes, "level");
+					if (level != null)
 					{
-						final Integer subLevel = parseInteger(attributes, "subLevel", 0);
-						values.computeIfAbsent(level, k -> new HashMap<>()).put(subLevel, parsedValue);
-					}
-				}
-				else
-				{
-					final int fromLevel = parseInteger(attributes, "fromLevel");
-					final int toLevel = parseInteger(attributes, "toLevel");
-					final int fromSubLevel = parseInteger(attributes, "fromSubLevel", 0);
-					final int toSubLevel = parseInteger(attributes, "toSubLevel", 0);
-					for (int i = fromLevel; i <= toLevel; i++)
-					{
-						for (int j = fromSubLevel; j <= toSubLevel; j++)
+						parsedValue = parseValue(node, false, false, Collections.emptyMap());
+						if (parsedValue != null)
 						{
-							final Map<Integer, Object> subValues = values.computeIfAbsent(i, k -> new HashMap<>());
-							final Map<String, Double> variables = new HashMap<>();
-							variables.put("index", (i - fromLevel) + 1d);
-							variables.put("subIndex", (j - fromSubLevel) + 1d);
-							final Object base = values.getOrDefault(i, Collections.emptyMap()).get(0);
-							if ((base != null) && !(base instanceof StatsSet))
+							final Integer subLevel = parseInteger(attributes, "subLevel", -1);
+							values.computeIfAbsent(level, k -> new HashMap<>()).put(subLevel, parsedValue);
+						}
+					}
+					else
+					{
+						final int fromLevel = parseInteger(attributes, "fromLevel");
+						final int toLevel = parseInteger(attributes, "toLevel");
+						final int fromSubLevel = parseInteger(attributes, "fromSubLevel", -1);
+						final int toSubLevel = parseInteger(attributes, "toSubLevel", -1);
+						for (int i = fromLevel; i <= toLevel; i++)
+						{
+							for (int j = fromSubLevel; j <= toSubLevel; j++)
 							{
-								variables.put("base", Double.parseDouble(String.valueOf(base)));
-							}
-							parsedValue = parseValue(node, false, false, variables);
-							if (parsedValue != null)
-							{
-								subValues.put(j, parsedValue);
+								Map<Integer, Object> subValues = values.computeIfAbsent(i, k -> new HashMap<>());
+								Map<String, Double> variables = new HashMap<>();
+								variables.put("index", (i - fromLevel) + 1d);
+								variables.put("subIndex", (j - fromSubLevel) + 1d);
+								Object base = values.getOrDefault(i, Collections.emptyMap()).get(-1);
+								if ((base != null) && !(base instanceof StatsSet))
+								{
+									variables.put("base", Double.parseDouble(String.valueOf(base)));
+								}
+								parsedValue = parseValue(node, false, false, variables);
+								if (parsedValue != null)
+								{
+									subValues.put(j, parsedValue);
+								}
 							}
 						}
 					}
 				}
 			}
 		}
-		return list;
+		return values;
 	}
 	
 	Object parseValue(Node node, boolean blockValue, boolean parseAttributes, Map<String, Double> variables)

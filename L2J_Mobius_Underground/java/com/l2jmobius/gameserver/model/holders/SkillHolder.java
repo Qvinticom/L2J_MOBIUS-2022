@@ -26,18 +26,28 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 public class SkillHolder
 {
 	private final int _skillId;
-	private final int _skillLvl;
+	private final int _skillLevel;
+	private final int _skillSubLevel;
 	
-	public SkillHolder(int skillId, int skillLvl)
+	public SkillHolder(int skillId, int skillLevel)
 	{
 		_skillId = skillId;
-		_skillLvl = skillLvl;
+		_skillLevel = skillLevel;
+		_skillSubLevel = 0;
+	}
+	
+	public SkillHolder(int skillId, int skillLevel, int skillSubLevel)
+	{
+		_skillId = skillId;
+		_skillLevel = skillLevel;
+		_skillSubLevel = skillSubLevel;
 	}
 	
 	public SkillHolder(Skill skill)
 	{
 		_skillId = skill.getId();
-		_skillLvl = skill.getLevel();
+		_skillLevel = skill.getLevel();
+		_skillSubLevel = skill.getSubLevel();
 	}
 	
 	public final int getSkillId()
@@ -45,19 +55,52 @@ public class SkillHolder
 		return _skillId;
 	}
 	
-	public final int getSkillLvl()
+	public final int getSkillLevel()
 	{
-		return _skillLvl;
+		return _skillLevel;
+	}
+	
+	public final int getSkillSubLevel()
+	{
+		return _skillSubLevel;
 	}
 	
 	public final Skill getSkill()
 	{
-		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLvl, 1));
+		return SkillData.getInstance().getSkill(_skillId, Math.max(_skillLevel, 1), _skillSubLevel);
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+		{
+			return true;
+		}
+		
+		if (!(obj instanceof SkillHolder))
+		{
+			return false;
+		}
+		
+		final SkillHolder holder = (SkillHolder) obj;
+		return (holder.getSkillId() == _skillId) && (holder.getSkillLevel() == _skillLevel) && (holder.getSkillSubLevel() == _skillSubLevel);
+	}
+	
+	@Override
+	public int hashCode()
+	{
+		final int prime = 31;
+		int result = 1;
+		result = (prime * result) + _skillId;
+		result = (prime * result) + _skillLevel;
+		result = (prime * result) + _skillSubLevel;
+		return result;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "[SkillId: " + _skillId + " Level: " + _skillLvl + "]";
+		return "[SkillId: " + _skillId + " Level: " + _skillLevel + "]";
 	}
 }

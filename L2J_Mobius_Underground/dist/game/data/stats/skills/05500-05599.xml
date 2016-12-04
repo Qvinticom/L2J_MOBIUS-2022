@@ -1901,12 +1901,8 @@
 					<value level="3">0</value>
 				</skillLevel>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">8</value>
-				</amount>
+			<effect name="VampiricAttack" fromLevel="3" toLevel="3">
+				<amount>8</amount>
 				<chance>30</chance>
 			</effect>
 			<effect name="CriticalDamage">
@@ -1940,7 +1936,7 @@
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>81</magicLvl>
 		<mpConsume>43</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2340,7 +2336,7 @@
 		<icon>icon.skill0100</icon>
 		<magicLvl>80</magicLvl>
 		<mpConsume>76</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>13000</reuseDelay>
 		<rideState>NONE</rideState>

@@ -412,8 +412,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>180</attributeValue>
 		<fanRange>0;180;1500;400</fanRange>
-		<flyRadius>600</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<hitTime>3000</hitTime>
 		<icon>icon.skill4107</icon>
 		<isDebuff>true</isDebuff>
@@ -432,7 +430,9 @@
 			<effect name="PhysicalAttack">
 				<power>28600</power>
 			</effect>
-			<effect name="ThrowUp" />
+			<effect name="FlyAway">
+				<radius>600</radius>
+			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>

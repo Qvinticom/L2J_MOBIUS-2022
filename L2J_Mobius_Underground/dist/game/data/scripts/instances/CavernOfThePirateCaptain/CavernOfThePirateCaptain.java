@@ -124,6 +124,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	
 	public CavernOfThePirateCaptain()
 	{
+		super(TEMPLATE_ID_60, TEMPLATE_ID_83);
 		addStartNpc(PATHFINDER);
 		addTalkId(PATHFINDER);
 		addKillId(ZAKEN_60, ZAKEN_83);

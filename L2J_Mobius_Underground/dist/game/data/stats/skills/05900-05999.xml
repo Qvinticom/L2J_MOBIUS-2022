@@ -721,6 +721,11 @@
 				<distance>200</distance>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>2319</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="5926" toLevel="1" name="Breath Corruption">
 		<affectLimit>5-15</affectLimit>
@@ -1535,7 +1540,7 @@
 			<value level="1">64</value>
 			<value level="2">74</value>
 		</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A3</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE</rideState>

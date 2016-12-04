@@ -90,7 +90,7 @@ public class ShortCuts implements IRestorable
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,sub_level,class_index) values(?,?,?,?,?,?,?,?)"))
 		{
 			statement.setInt(1, _owner.getObjectId());
 			statement.setInt(2, shortcut.getSlot());
@@ -98,7 +98,8 @@ public class ShortCuts implements IRestorable
 			statement.setInt(4, shortcut.getType().ordinal());
 			statement.setInt(5, shortcut.getId());
 			statement.setInt(6, shortcut.getLevel());
-			statement.setInt(7, _owner.getClassIndex());
+			statement.setInt(7, shortcut.getSubLevel());
+			statement.setInt(8, _owner.getClassIndex());
 			statement.execute();
 		}
 		catch (Exception e)
@@ -191,8 +192,8 @@ public class ShortCuts implements IRestorable
 					final int type = rset.getInt("type");
 					final int id = rset.getInt("shortcut_id");
 					final int level = rset.getInt("level");
-					
-					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, 1));
+					final int subLevel = rset.getInt("sub_level");
+					_shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, subLevel, 1));
 				}
 			}
 		}
@@ -226,15 +227,16 @@ public class ShortCuts implements IRestorable
 	 * Updates the shortcut bars with the new skill.
 	 * @param skillId the skill Id to search and update.
 	 * @param skillLevel the skill level to update.
+	 * @param skillSubLevel the skill sub level to update.
 	 */
-	public synchronized void updateShortCuts(int skillId, int skillLevel)
+	public synchronized void updateShortCuts(int skillId, int skillLevel, int skillSubLevel)
 	{
 		// Update all the shortcuts for this skill
 		for (Shortcut sc : _shortCuts.values())
 		{
 			if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL))
 			{
-				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, 1);
+				final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, skillSubLevel, 1);
 				_owner.sendPacket(new ShortCutRegister(newsc));
 				_owner.registerShortCut(newsc);
 			}

@@ -54,6 +54,7 @@ public final class BaylorWarzone extends AbstractInstance
 	
 	public BaylorWarzone()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(ENTRANCE_PORTAL);
 		addTalkId(ENTRANCE_PORTAL);
 		addInstanceCreatedId(TEMPLATE_ID);
@@ -77,7 +78,7 @@ public final class BaylorWarzone extends AbstractInstance
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isBylorInstance(world))
+		if (isInInstance(world))
 		{
 			switch (event)
 			{
@@ -265,7 +266,7 @@ public final class BaylorWarzone extends AbstractInstance
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		final Instance world = npc.getInstanceWorld();
-		if (isBylorInstance(world))
+		if (isInInstance(world))
 		{
 			world.getAliveNpcs(INVISIBLE_NPC_1, INVISIBLE_NPC_2, INVISIBLE_NPC_3).forEach(L2Npc::deleteMe);
 			world.getAliveNpcs(PRISON_GUARD).forEach(guard -> guard.doDie(null));
@@ -289,7 +290,7 @@ public final class BaylorWarzone extends AbstractInstance
 		final L2Npc npc = (L2Npc) event.getTarget();
 		final Instance world = npc.getInstanceWorld();
 		
-		if (isBylorInstance(world))
+		if (isInInstance(world))
 		{
 			if (world.getAliveNpcs(BAYLOR).isEmpty())
 			{
@@ -308,7 +309,7 @@ public final class BaylorWarzone extends AbstractInstance
 		final L2Npc npc = (L2Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
-		if (isBylorInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
+		if (isInInstance(world) && creature.isPlayer() && npc.isScriptValue(0))
 		{
 			npc.setScriptValue(1);
 			getTimers().addTimer("START_SCENE_01", 5000, npc, null);
@@ -323,11 +324,6 @@ public final class BaylorWarzone extends AbstractInstance
 			npc.initSeenCreatures();
 		}
 		return super.onSpawn(npc);
-	}
-	
-	private boolean isBylorInstance(Instance instance)
-	{
-		return (instance != null) && (instance.getTemplateId() == TEMPLATE_ID);
 	}
 	
 	public static void main(String[] args)

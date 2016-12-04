@@ -1416,7 +1416,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="ThrowUp" /> <!-- TODO FIX ME i_fly_away;curve;push;600 -->
+			<effect name="FlyAway"> <!-- TODO FIX ME i_fly_away;curve;push;600 -->
+				<radius>600</radius>
+			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>
@@ -1800,7 +1802,6 @@
 		<!-- Monster Rush -->
 		<icon>icon.skill0493</icon>
 		<operateType>DA1</operateType>
-		<flyType>CHARGE</flyType>
 		<castRange>400</castRange>
 		<hitTime>3000</hitTime>
 		<coolTime>200</coolTime>
@@ -1829,7 +1830,6 @@
 			<effect name="PhysicalAttack">
 				<power>50937</power>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="14666" toLevel="1" name="Penetrating Blow">
@@ -1999,7 +1999,9 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="ThrowUp" /> <!-- TODO FIX ME i_fly_away;curve;push;600 -->
+			<effect name="FlyAway"> <!-- TODO FIX ME i_fly_away;curve;push;600 -->
+				<radius>600</radius>
+			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>

@@ -29,15 +29,18 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.ActionData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
+import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -65,6 +68,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
+import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
@@ -352,10 +356,9 @@ public class SkillCaster implements Runnable
 		_targets = _skill.getTargetsAffected(caster, target);
 		
 		// Finish flying by setting the target location after picking targets. Packet is sent before MagicSkillLaunched.
-		if (_skill.getFlyType() != null)
+		if (_skill.isFlyType())
 		{
-			caster.broadcastPacket(new FlyToLocation(caster, target, _skill.getFlyType()));
-			caster.setXYZ(target.getX(), target.getY(), target.getZ());
+			handleSkillFly(caster, target);
 		}
 		
 		// Display animation of launching skill upon targets.
@@ -546,7 +549,7 @@ public class SkillCaster implements Runnable
 							((L2Character) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
 						}
 					}
-					else if (obj.isMonster() || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) || (obj.getActingPlayer().getReputation() < 0))))
+					else if (((skill.getEffectPoint() > 0) && obj.isMonster()) || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) || (obj.getActingPlayer().getReputation() < 0))))
 					{
 						// Supporting players or monsters result in pvpflag.
 						player.updatePvPStatus();
@@ -645,11 +648,18 @@ public class SkillCaster implements Runnable
 		
 		// Attack target after skill use
 		// TODO: This shouldnt be here. If skill condition fail, you still go autoattack. This doesn't happen if skill is in cooldown though.
-		if ((_skill.nextActionIsAttack()) && (target != null) && (target != caster) && target.canBeAttacked())
+		if ((_skill.getNextAction() != NextActionType.NONE) && (target != null) && (target != caster) && target.canBeAttacked())
 		{
-			if ((caster.getAI().getNextIntention() == null) || (caster.getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
+			if ((caster.getAI().getIntention() == null) || (caster.getAI().getIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 			{
-				caster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				if (_skill.getNextAction() == NextActionType.ATTACK)
+				{
+					caster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				}
+				else if (_skill.getNextAction() == NextActionType.CAST)
+				{
+					caster.getAI().setIntention(CtrlIntention.AI_INTENTION_CAST, _skill, target, _item, false, false);
+				}
 			}
 		}
 	}
@@ -800,7 +810,7 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		if ((skill == null) || caster.isSkillDisabled(skill) || (((skill.getFlyRadius() > 0) || (skill.getFlyType() != null)) && caster.isMovementDisabled()))
+		if ((skill == null) || caster.isSkillDisabled(skill) || ((skill.isFlyType() && caster.isMovementDisabled())))
 		{
 			caster.sendPacket(ActionFailed.STATIC_PACKET);
 			return false;
@@ -922,5 +932,74 @@ public class SkillCaster implements Runnable
 		}
 		
 		return true;
+	}
+	
+	private void handleSkillFly(L2Character creature, L2Object target)
+	{
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		FlyType flyType = FlyType.CHARGE;
+		switch (_skill.getOperateType())
+		{
+			case DA4:
+			case DA5:
+			{
+				final double course = _skill.getOperateType() == SkillOperateType.DA4 ? Math.toRadians(270) : Math.toRadians(90);
+				final double radian = Math.toRadians(Util.convertHeadingToDegree(target.getHeading()));
+				double nRadius = creature.getCollisionRadius();
+				if (target.isCharacter())
+				{
+					nRadius += ((L2Character) target).getCollisionRadius();
+				}
+				x = target.getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
+				y = target.getY() + (int) (Math.sin(Math.PI + radian + course) * nRadius);
+				z = target.getZ();
+				break;
+			}
+			case DA3:
+			{
+				flyType = FlyType.WARP_BACK;
+				final double radian = Math.toRadians(Util.convertHeadingToDegree(creature.getHeading()));
+				x = creature.getX() + (int) (Math.cos(Math.PI + radian) * _skill.getCastRange());
+				y = creature.getY() + (int) (Math.sin(Math.PI + radian) * _skill.getCastRange());
+				z = creature.getZ();
+				break;
+			}
+			case DA2:
+			case DA1:
+			{
+				if (creature == target)
+				{
+					final double course = Math.toRadians(180);
+					final double radian = Math.toRadians(Util.convertHeadingToDegree(creature.getHeading()));
+					x = creature.getX() + (int) (Math.cos(Math.PI + radian + course) * _skill.getCastRange());
+					y = creature.getY() + (int) (Math.sin(Math.PI + radian + course) * _skill.getCastRange());
+					z = creature.getZ();
+				}
+				else
+				{
+					final int dx = target.getX() - creature.getX();
+					final int dy = target.getY() - creature.getY();
+					final double distance = Math.sqrt((dx * dx) + (dy * dy));
+					double nRadius = creature.getCollisionRadius();
+					if (target.isCharacter())
+					{
+						nRadius += ((L2Character) target).getCollisionRadius();
+					}
+					x = (int) (target.getX() - (nRadius * (dx / distance)));
+					y = (int) (target.getY() - (nRadius * (dy / distance)));
+					z = target.getZ();
+				}
+				break;
+			}
+		}
+		
+		final Location destination = GeoData.getInstance().moveCheck(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
+		
+		creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+		creature.broadcastPacket(new FlyToLocation(creature, destination, flyType, 0, 0, 333));
+		creature.setXYZ(destination);
+		creature.revalidateZone(true);
 	}
 }

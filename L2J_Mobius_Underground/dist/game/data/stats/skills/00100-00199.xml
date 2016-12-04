@@ -66,7 +66,7 @@
 			<value level="14">32</value>
 			<value level="15">33</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1335,7 +1335,7 @@
 			<value level="14">32</value>
 			<value level="15">33</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1849,11 +1849,6 @@
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#debufResist"> 50 55 60 65 70 75 80 85 90 </table> <!-- Confirmed -->
-		<table name="#hp"> 60 60 60 60 60 90 90 90 90 </table> <!-- Confirmed -->
-		<!-- Confirmed -->
-		<!-- Confirmed -->
-		<table name="#pDef"> 2 2.1 2.2 2.3 2.4 2.5 2.6 2.8 3 </table> <!-- Confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1865,7 +1860,11 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 		</abnormalLvl>
-		<abnormalTime>60</abnormalTime> <!-- Confirmed -->
+		<abnormalTime>
+			<value fromLevel="1" toLevel="9">60</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
 			<value level="1">341</value>
@@ -1947,6 +1946,40 @@
 					<value level="9">-90</value>
 				</amount>
 				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2003" toSubLevel="2003">2207</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2004" toSubLevel="2004">2342</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2005" toSubLevel="2005">2477</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2006" toSubLevel="2006">2612</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2007" toSubLevel="2007">2747</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2008" toSubLevel="2008">2882</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2009" toSubLevel="2009">3017</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2010" toSubLevel="2010">3152</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2011" toSubLevel="2011">3288</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2012" toSubLevel="2012">3423</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2013" toSubLevel="2013">3558</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2014" toSubLevel="2014">3693</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2015" toSubLevel="2015">3828</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2016" toSubLevel="2016">3964</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2017" toSubLevel="2017">4099</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -2776,7 +2809,11 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 		</abnormalLvl>
-		<abnormalTime>60</abnormalTime> <!-- Confirmed -->
+		<abnormalTime>
+			<value fromLevel="1" toLevel="9">60</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="8" toLevel="9" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>
 			<value level="1">303</value>
@@ -2947,6 +2984,40 @@
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
 			</effect>
+			<effect name="Heal" fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2001" toSubLevel="2001">1936</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2002" toSubLevel="2002">2072</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2003" toSubLevel="2003">2207</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2004" toSubLevel="2004">2342</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2005" toSubLevel="2005">2477</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2006" toSubLevel="2006">2612</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2007" toSubLevel="2007">2747</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2008" toSubLevel="2008">2882</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2009" toSubLevel="2009">3017</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2010" toSubLevel="2010">3152</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2011" toSubLevel="2011">3288</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2012" toSubLevel="2012">3423</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2013" toSubLevel="2013">3558</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2014" toSubLevel="2014">3693</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2015" toSubLevel="2015">3828</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2016" toSubLevel="2016">3964</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2017" toSubLevel="2017">4099</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2018" toSubLevel="2018">4234</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2019" toSubLevel="2019">4369</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2020" toSubLevel="2020">4504</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2021" toSubLevel="2021">4594</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2022" toSubLevel="2022">4684</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2023" toSubLevel="2023">4774</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2024" toSubLevel="2024">4864</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2025" toSubLevel="2025">4955</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2026" toSubLevel="2026">5044</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2027" toSubLevel="2027">5135</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2028" toSubLevel="2028">5224</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2029" toSubLevel="2029">5315</value>
+					<value fromLevel="8" toLevel="9" fromSubLevel="2030" toSubLevel="2030">5405</value>
+				</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="181" toLevel="1" name="Revival">
@@ -3098,7 +3169,7 @@
 			<value level="36">74</value>
 			<value level="37">75</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>

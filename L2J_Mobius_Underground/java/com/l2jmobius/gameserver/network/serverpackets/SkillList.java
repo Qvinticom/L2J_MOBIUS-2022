@@ -34,24 +34,26 @@ public final class SkillList implements IClientOutgoingPacket
 		public int id;
 		public int reuseDelayGroup;
 		public int level;
+		public int subLevel;
 		public boolean passive;
 		public boolean disabled;
 		public boolean enchanted;
 		
-		Skill(int pId, int pReuseDelayGroup, int pLevel, boolean pPassive, boolean pDisabled, boolean pEnchanted)
+		Skill(int pId, int pReuseDelayGroup, int pLevel, int pSubLevel, boolean pPassive, boolean pDisabled, boolean pEnchanted)
 		{
 			id = pId;
 			reuseDelayGroup = pReuseDelayGroup;
 			level = pLevel;
+			subLevel = pSubLevel;
 			passive = pPassive;
 			disabled = pDisabled;
 			enchanted = pEnchanted;
 		}
 	}
 	
-	public void addSkill(int id, int reuseDelayGroup, int level, boolean passive, boolean disabled, boolean enchanted)
+	public void addSkill(int id, int reuseDelayGroup, int level, int subLevel, boolean passive, boolean disabled, boolean enchanted)
 	{
-		_skills.add(new Skill(id, reuseDelayGroup, level, passive, disabled, enchanted));
+		_skills.add(new Skill(id, reuseDelayGroup, level, subLevel, passive, disabled, enchanted));
 	}
 	
 	public void setLastLearnedSkillId(int lastLearnedSkillId)
@@ -63,12 +65,13 @@ public final class SkillList implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.SKILL_LIST.writeId(packet);
-		_skills.sort(Comparator.comparing(s -> SkillData.getInstance().getSkill(s.id, s.level).isToggle() ? 1 : 0));
+		_skills.sort(Comparator.comparing(s -> SkillData.getInstance().getSkill(s.id, s.level, s.subLevel).isToggle() ? 1 : 0));
 		packet.writeD(_skills.size());
 		for (Skill temp : _skills)
 		{
 			packet.writeD(temp.passive ? 1 : 0);
-			packet.writeD(temp.level);
+			packet.writeH(temp.level);
+			packet.writeH(temp.subLevel);
 			packet.writeD(temp.id);
 			packet.writeD(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
 			packet.writeC(temp.disabled ? 1 : 0); // iSkillDisabled

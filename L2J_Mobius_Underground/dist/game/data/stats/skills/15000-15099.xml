@@ -1600,7 +1600,9 @@
 			<effect name="PhysicalAttack">
 				<power>180000</power>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;300} -->
+			<effect name="FlyAway"><!-- TODO: {i_fly_away;curve;push;300} -->
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15045" toLevel="1" name="Tauti Whirlwind">
@@ -1629,7 +1631,9 @@
 			<effect name="PhysicalAttack">
 				<power>180000</power>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;300} -->
+			<effect name="FlyAway"><!-- TODO: {i_fly_away;curve;push;300} -->
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="15046" toLevel="1" name="Tauti Shock Wave">

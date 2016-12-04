@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 public class SummonSkillsTable
 {
 	private static Logger LOGGER = Logger.getLogger(SummonSkillsTable.class.getName());
-	private final Map<Integer, Map<Integer, L2PetSkillLearn>> _skillTrees = new HashMap<>();
+	private final Map<Integer, Map<Long, L2PetSkillLearn>> _skillTrees = new HashMap<>();
 	
 	protected SummonSkillsTable()
 	{
@@ -52,7 +52,7 @@ public class SummonSkillsTable
 			while (rs.next())
 			{
 				final int npcId = rs.getInt("templateId");
-				Map<Integer, L2PetSkillLearn> skillTree = _skillTrees.get(npcId);
+				Map<Long, L2PetSkillLearn> skillTree = _skillTrees.get(npcId);
 				if (skillTree == null)
 				{
 					skillTree = new HashMap<>();
@@ -110,9 +110,12 @@ public class SummonSkillsTable
 				}
 				break;
 			}
-			if ((temp.getMinLevel() <= cha.getLevel()) && (temp.getLevel() > lvl))
+			else if (temp.getMinLevel() <= cha.getLevel())
 			{
-				lvl = temp.getLevel();
+				if (temp.getLevel() > lvl)
+				{
+					lvl = temp.getLevel();
+				}
 			}
 		}
 		return lvl;

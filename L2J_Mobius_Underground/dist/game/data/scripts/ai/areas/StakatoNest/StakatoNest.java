@@ -14,16 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group;
+package ai.areas.StakatoNest;
 
 import java.util.List;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.util.Broadcast;
@@ -81,6 +81,8 @@ public final class StakatoNest extends AbstractNpcAI
 	// Large Stakato Cocoon
 	private static final int LARGE_COCOON = 14834;
 	
+	private static final SkillHolder DEVOUR_SUBORDINATE = new SkillHolder(4484, 1);
+	
 	private StakatoNest()
 	{
 		registerMobs(STAKATO_MOBS);
@@ -104,7 +106,7 @@ public final class StakatoNest extends AbstractNpcAI
 					mob.abortAttack();
 					mob.abortCast();
 					mob.setHeading(Util.calculateHeadingFrom(mob, _follower));
-					mob.doCast(SkillData.getInstance().getSkill(4484, 1));
+					mob.doCast(DEVOUR_SUBORDINATE.getSkill());
 					mob.setCurrentHp(mob.getCurrentHp() + _hp);
 					_follower.doDie(_follower);
 					_follower.deleteMe();

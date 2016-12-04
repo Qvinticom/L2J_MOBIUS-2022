@@ -401,7 +401,7 @@ public class CharStat
 	 */
 	public final int getShldDef()
 	{
-		return (int) getValue(Stats.SHIELD_DEFENCE, 0);
+		return (int) getValue(Stats.SHIELD_DEFENCE);
 	}
 	
 	public long getSp()

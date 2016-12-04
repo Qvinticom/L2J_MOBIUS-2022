@@ -33,13 +33,15 @@ public class RequestDispel implements IClientIncomingPacket
 	private int _objectId;
 	private int _skillId;
 	private int _skillLevel;
+	private int _skillSubLevel;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_objectId = packet.readD();
 		_skillId = packet.readD();
-		_skillLevel = packet.readD();
+		_skillLevel = packet.readH();
+		_skillSubLevel = packet.readH();
 		return true;
 	}
 	
@@ -55,7 +57,7 @@ public class RequestDispel implements IClientIncomingPacket
 		{
 			return;
 		}
-		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel);
+		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLevel, _skillSubLevel);
 		if (skill == null)
 		{
 			return;
@@ -84,9 +86,10 @@ public class RequestDispel implements IClientIncomingPacket
 				pet.stopSkillEffects(true, _skillId);
 			}
 			
-			if (activeChar.hasServitor(_objectId))
+			final L2Summon servitor = activeChar.getServitor(_objectId);
+			if (servitor != null)
 			{
-				activeChar.removeServitor(_objectId);
+				servitor.stopSkillEffects(true, _skillId);
 			}
 		}
 	}

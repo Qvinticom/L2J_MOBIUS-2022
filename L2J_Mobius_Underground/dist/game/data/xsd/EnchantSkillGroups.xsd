@@ -1,299 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence maxOccurs="1" minOccurs="1">
-				<xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+			<xs:sequence>
+				<xs:element name="enchant" maxOccurs="unbounded" minOccurs="0">
 					<xs:complexType>
-						<xs:sequence maxOccurs="1" minOccurs="1">
-							<xs:element name="enchant" maxOccurs="30" minOccurs="0">
+						<xs:sequence>
+							<xs:element name="sps">
 								<xs:complexType>
-									<xs:simpleContent>
-										<xs:extension base="xs:string">
-											<xs:attribute name="adena" type="xs:positiveInteger" use="required" />
-											<xs:attribute name="chance76" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance77" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance78" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance79" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance80" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance81" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance82" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance83" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance84" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance85" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance86" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance87" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance88" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance89" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance90" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance91" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance92" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance93" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance94" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance95" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance96" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance97" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance98" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance99" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance100" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance101" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance102" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance103" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance104" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance105" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance106" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="chance107" use="optional">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="100" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="exp" type="xs:nonNegativeInteger" use="optional" />
-											<xs:attribute name="level" use="required">
-												<xs:simpleType>
-													<xs:restriction base="xs:integer">
-														<xs:minInclusive value="0" />
-														<xs:maxInclusive value="30" />
-													</xs:restriction>
-												</xs:simpleType>
-											</xs:attribute>
-											<xs:attribute name="sp" type="xs:positiveInteger" use="required" />
-										</xs:extension>
-									</xs:simpleContent>
+									<xs:sequence>
+										<xs:element name="sp" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="amount" use="required" />
+												<xs:attribute name="type" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="NORMAL" />
+															<xs:enumeration value="BLESSED" />
+															<xs:enumeration value="UNTRAIN" />
+															<xs:enumeration value="CHANGE" />
+															<xs:enumeration value="IMMORTAL" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="chances">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="chance" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:attribute type="xs:byte" name="value" use="required" />
+												<xs:attribute name="type" use="required">
+													<xs:simpleType>
+														<xs:restriction base="xs:token">
+															<xs:enumeration value="NORMAL" />
+															<xs:enumeration value="BLESSED" />
+															<xs:enumeration value="UNTRAIN" />
+															<xs:enumeration value="CHANGE" />
+															<xs:enumeration value="IMMORTAL" />
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="items">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute type="xs:int" name="id" use="required" />
+														<xs:attribute type="xs:int" name="count" use="required" />
+														<xs:attribute name="type" use="required">
+															<xs:simpleType>
+																<xs:restriction base="xs:token">
+																	<xs:enumeration value="NORMAL" />
+																	<xs:enumeration value="BLESSED" />
+																	<xs:enumeration value="UNTRAIN" />
+																	<xs:enumeration value="CHANGE" />
+																	<xs:enumeration value="IMMORTAL" />
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="id" use="required">
-							<xs:simpleType>
-								<xs:restriction base="xs:positiveInteger">
-									<xs:enumeration value="1" />
-									<xs:enumeration value="2" />
-									<xs:enumeration value="5" />
-									<xs:enumeration value="6" />
-									<xs:enumeration value="10" />
-									<xs:enumeration value="11" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
+						<xs:attribute type="xs:byte" name="level" use="required" />
+						<xs:attribute type="xs:byte" name="enchantFailLevel" use="required" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

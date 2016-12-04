@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10700" toLevel="7" name="Mug">
 		<!-- Inflicts 11903 damage onto nearby enemies and steals their item. Requires a dagger or dual dagger. -->
-		<table name="#power"> 11903 13957 15601 17244 21855 22921 23987 </table>
 		<affectLimit>9-10</affectLimit>
 		<affectRange>250</affectRange>
 		<icon>icon.skill10700</icon>
@@ -28,7 +27,7 @@
 			<value level="6">33</value>
 			<value level="7">36</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1030</hitTime>
@@ -54,14 +53,18 @@
 					<value level="5">21855</value>
 					<value level="6">22921</value>
 					<value level="7">23987</value>
+					<value fromLevel="7" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
+				<pDefMod>
+					<value fromLevel="1" toLevel="7">1</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="Plunder" />
 		</effects>
 	</skill>
 	<skill id="10701" toLevel="4" name="Superior Vitality">
 		<!-- Max HP and CP + 5%. P. Atk. + 5%. Increases damage inflicted on an NPC by 30%. -->
-		<table name="#inc"> 1.05 1.07 1.1 1.15 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -114,7 +117,6 @@
 	</skill>
 	<skill id="10702" toLevel="7" name="Plunder">
 		<!-- Inflicts 13580 damage onto target and steals their item. Requires a dagger or dual dagger. -->
-		<table name="#power"> 13580 15946 18311 20204 27142 28466 29790 </table>
 		<icon>icon.skill10548</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -137,7 +139,7 @@
 			<value level="6">22</value>
 			<value level="7">24</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>830</hitTime>
@@ -162,7 +164,12 @@
 					<value level="5">27142</value>
 					<value level="6">28466</value>
 					<value level="7">29790</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
+				<pDefMod>
+					<value fromLevel="1" toLevel="7">1</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="Plunder" />
 		</effects>
@@ -174,7 +181,10 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>
+			<value fromLevel="1" toLevel="3">80</value> <!-- Guessed -->
+			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -202,7 +212,10 @@
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>
+			<value fromLevel="1" toLevel="3">80</value> <!-- Guessed -->
+			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectRange>200</affectRange> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<itemConsumeCount>2</itemConsumeCount>
@@ -339,7 +352,7 @@
 		<icon>icon.skill10317</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectRange>200</effectRange>
@@ -370,10 +383,9 @@
 		<!-- IO Retail: 1128 p.atk vs 2265 p.def = 1883 damage -->
 		<!-- Inflicts a powerful blow on target. -->
 		<icon>icon.skill10317</icon>
-		<flyType>CHARGE</flyType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>85</magicLevel>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<castRange>600</castRange>
 		<effectRange>800</effectRange>
@@ -402,7 +414,6 @@
 	<skill id="10751" toLevel="10" name="Superior Bow/Crossbow Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 10%, Additional P. Atk. + 1663, Atk. Sp.d + 15%, P. Accuracy + 8 when using a bow or crossbow. STR + 2. Depending on your STR, the Cooldown resets or the abnormal status duration increases + 2 times. -->
-		<table name="#pAtk"> 1663 1928 2235 2515 2850 3023 3208 3403 3610 3830 </table>
 		<icon>icon.skill10751</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -478,7 +489,6 @@
 	<skill id="10752" toLevel="10" name="Superior Light Armor Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- Max HP + 4783, P. Def. + 1506, P. Evasion + 14, MP recovery bonus + 6, and chance of receiving critical attacks - 35% when equipped with Light Armor. Spd. and P. Skill Critical Rate change depending on DEX. STR + 2. -->
-		<table name="#pDef"> 1506 1645 1817 1959 2196 2279 2365 2455 2558 2655 </table>
 		<icon>icon.skill10752</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
@@ -594,7 +604,6 @@
 	<skill id="10754" toLevel="10" name="Superior Survival Ability">
 		<!-- Glory Days confirmed -->
 		<!-- Speed + 17, Weight Limit + 51%, and Terrain Damage - 30%. STR + 2. When inflicting a critical during, Survival Movement is triggered. -->
-		<table name="#runSpd"> 17 18 19 20 22 23 24 25 26 27 </table>
 		<icon>icon.skill0295</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -653,7 +662,6 @@
 	<skill id="10755" toLevel="10" name="Superior Mental Attack Resistance">
 		<!-- Glory Days confirmed -->
 		<!-- Resistance + 20% to Hold/Sleep/Paralysis/Mental Attacks/Poison/Bleed/Stun. STR + 2. In addition, has a 10% chance of reflecting P./M. abnormal states back to the attacker. -->
-		<table name="#res"> 20 22 24 26 30 32 34 36 38 40 </table>
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -774,7 +782,6 @@
 	<skill id="10756" toLevel="10" name="Superior Critical Arrow">
 		<!-- Glory Days confirmed -->
 		<!-- p. Critical Rate + 25%, and P. Critical Damage + 5%, Skill Mastery rate + 1000%. STR + 2. -->
-		<table name="#cAtk"> 1.05 1.06 1.07 1.08 1.1 1.12 1.14 1.16 1.18 1.20 </table>
 		<icon>icon.skill10756</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -823,15 +830,16 @@
 	<skill id="10757" toLevel="4" name="Dead Eye Stance">
 		<!-- Can't be Glory Days confirmed, was toggle -->
 		<!-- For 30 min., P. Atk. + 10%, and skill power + 5% when equipped with a bow or crossbow. -->
-		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
-		<table name="#physicalSkillPower"> 1.05 1.06 1.07 1.10 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<icon>icon.skill10757</icon>
 		<operateType>A2</operateType>
@@ -879,20 +887,33 @@
 					<item> TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10758" toLevel="4" name="Rapid Fire Stance">
 		<!-- Can't be Glory Days confirmed, was toggle -->
 		<!-- For 30 min., P. Atk. + 10% and P. Skill Cooldown - 5% when a bow or crossbow is equipped. -->
-		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
-		<table name="#pReuse"> 0.95 0.94 0.93 0.90 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<icon>icon.skill10758</icon>
 		<operateType>A2</operateType>
@@ -941,20 +962,33 @@
 					<item> TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10759" toLevel="4" name="Sniper Stance">
 		<!-- Can't be Glory Days confirmed, was toggle -->
 		<!-- For 30 min., P. Atk. + 10% and Atk. Spd. + 5% when a bow or crossbow is equipped. -->
-		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
-		<table name="#pAtkSpd"> 1.05 1.06 1.07 1.10 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<icon>icon.skill10759</icon>
 		<operateType>A2</operateType>
@@ -1002,12 +1036,23 @@
 					<item> TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10760" toLevel="11" name="Tornado Shot">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 20814 21546 23011 24476 25941 27406 28871 30336 33258 34786 36314 </table>
 		<icon>icon.skill10760</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1101,21 +1146,31 @@
 					<value level="9">33258</value>
 					<value level="10">34786</value>
 					<value level="11">36314</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10761" toLevel="11" name="Bow Strike">
 		<!-- Glory Days confirmed -->
 		<!-- Knocks back frontal enemies. Attacks target with 2681 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 2681 2771 2952 3133 3313 3494 3675 3855 4063 4239 4415 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>200</activateRate>
+		<activateRate>
+			<value fromLevel="7" toLevel="11">200</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<icon>icon.skill10761</icon>
 		<operateType>A2</operateType>
@@ -1146,7 +1201,7 @@
 			<value level="10">80</value>
 			<value level="11">83</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1200</hitTime>
@@ -1194,6 +1249,7 @@
 					<value level="9">4063</value>
 					<value level="10">4239</value>
 					<value level="11">4415</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -1215,7 +1271,6 @@
 	<skill id="10762" toLevel="11" name="Quick Shot">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 19477 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 22183 24401 26619 28837 31055 33273 35491 37709 39249 41163 43077 </table>
 		<icon>icon.skill10762</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1245,7 +1300,7 @@
 			<value level="10">105</value>
 			<value level="11">108</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
 		<hitTime>1800</hitTime>
@@ -1278,7 +1333,6 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<!-- Disregards 30% of the target's P. Def -->
 				<power>
 					<value level="1">22183</value>
 					<value level="2">24401</value>
@@ -1291,9 +1345,16 @@
 					<value level="9">39249</value>
 					<value level="10">41163</value>
 					<value level="11">43077</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>5</criticalChance>
-				<pDefMod>0.70</pDefMod>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">0.7</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.69 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
@@ -1301,10 +1362,9 @@
 	<skill id="10763" toLevel="11" name="Pinpoint Shot">
 		<!-- Glory Days confirmed -->
 		<!-- Aims for target's weak points to attack with 32463 Power added to P. Atk. Disregards 30% of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. -->
-		<table name="#power"> 32463 34086 37332 40578 43824 47070 50316 53562 56259 59003 61747 </table>
 		<icon>icon.skill10763</icon>
 		<operateType>A1</operateType>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1376,9 +1436,16 @@
 					<value level="9">56259</value>
 					<value level="10">59003</value>
 					<value level="11">61747</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>10</criticalChance>
-				<pDefMod>0.7</pDefMod>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">10</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">0.7</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.69 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="Lethal">
@@ -1529,14 +1596,16 @@
 	<skill id="10769" toLevel="9" name="Impact Shot">
 		<!-- Glory Days confirmed -->
 		<!-- Fires an arrow at the enemy with 19867 Power added to P. Atk. Stuns the enemy for 5 seconds. Requires a bow or crossbow to be equipped. Over-hit. -->
-		<table name="#power"> 24834 28557 32280 36003 39726 42208 43724 45734 47744 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>90</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">90</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1605,7 +1674,12 @@
 					<value level="7">43724</value>
 					<value level="8">45734</value>
 					<value level="9">47744</value>
+					<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
+				<criticalChance>
+					<value fromLevel="1" toLevel="9">5</value>
+					<value fromLevel="4" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions">
@@ -1620,9 +1694,12 @@
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<activateRate>90</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">90</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1699,9 +1776,13 @@
 					<value level="9">45432</value>
 					<value level="10">47520</value>
 					<value level="11">49608</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
 			</effect>
 			<effect name="KnockBack">
 				<speed>500</speed>
@@ -1715,7 +1796,6 @@
 	<skill id="10771" toLevel="11" name="Multiple Arrow">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks frontal enemies with 23391 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 23391 25018 26645 28272 29900 31527 33154 34781 35966 37720 39474 </table>
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
@@ -1748,7 +1828,7 @@
 			<value level="10">163</value>
 			<value level="11">167</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
 		<hitTime>2900</hitTime>
@@ -1795,16 +1875,23 @@
 					<value level="9">35966</value>
 					<value level="10">37720</value>
 					<value level="11">39474</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10772" toLevel="11" name="Heavy Arrow Rain">
 		<!-- Glory Days confirmed -->
 		<!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with 22526 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 22526 23310 24879 26448 28017 29586 31155 32724 33772 35526 37280 </table>
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
 		<affectLimit>5-12</affectLimit>
@@ -1836,7 +1923,7 @@
 			<value level="10">164</value>
 			<value level="11">169</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
 		<hitTime>2900</hitTime>
@@ -1882,9 +1969,17 @@
 					<value level="9">33772</value>
 					<value level="10">35526</value>
 					<value level="11">37280</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1921,7 +2016,6 @@
 	<skill id="10774" toLevel="4" name="Quick Evasion">
 		<!-- Glory Days confirmed -->
 		<!-- Momentarily teleports 300 backward. -->
-		<table name="#range"> 300 350 400 450 </table>
 		<icon>icon.skill10774</icon>
 		<operateType>DA3</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1942,6 +2036,7 @@
 			<value level="2">350</value>
 			<value level="3">400</value>
 			<value level="4">450</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + 10 * subIndex}</value>
 		</castRange>
 		<effectRange>
 			<value level="1">1000</value>
@@ -1968,20 +2063,6 @@
 				</range>
 			</condition>
 		</conditions>
-		<startEffects>
-			<effect name="Blink">
-				<!-- Teleport to Back -->
-				<flyType>WARP_BACK</flyType>
-				<animationSpeed>333</animationSpeed>
-				<angle>0</angle>
-				<range>
-					<value level="1">300</value>
-					<value level="2">350</value>
-					<value level="3">400</value>
-					<value level="4">450</value>
-				</range>
-			</effect>
-		</startEffects>
 	</skill>
 	<skill id="10775" toLevel="6" name="Confusion Decoy">
 		<!-- Glory Days confirmed -->
@@ -2016,15 +2097,85 @@
 				<npcId>13328</npcId>
 				<npcCount>1</npcCount>
 			</effect>
+			<effect name="Heal" fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1030">
+				<power>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1001">1936</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1002" toSubLevel="1002">2072</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1003" toSubLevel="1003">2207</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1004" toSubLevel="1004">2342</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1005" toSubLevel="1005">2477</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1006" toSubLevel="1006">2612</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1007" toSubLevel="1007">2747</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1008" toSubLevel="1008">2882</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1009" toSubLevel="1009">3017</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1010" toSubLevel="1010">3152</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1011" toSubLevel="1011">3288</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1012" toSubLevel="1012">3423</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1013" toSubLevel="1013">3558</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1014" toSubLevel="1014">3693</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1015" toSubLevel="1015">3828</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1016" toSubLevel="1016">3964</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1017" toSubLevel="1017">4099</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1018" toSubLevel="1018">4234</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1019" toSubLevel="1019">4369</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1020" toSubLevel="1020">4504</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1021" toSubLevel="1021">4594</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1022" toSubLevel="1022">4684</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1023" toSubLevel="1023">4774</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1024" toSubLevel="1024">4864</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1025" toSubLevel="1025">4955</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1026" toSubLevel="1026">5044</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1027" toSubLevel="1027">5135</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1028" toSubLevel="1028">5224</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1029" toSubLevel="1029">5315</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1030" toSubLevel="1030">5405</value>
+				</power>
+			</effect>
+			<effect name="CpHeal" fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2001">2421</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2002" toSubLevel="2002">2590</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2003" toSubLevel="2003">2759</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2004" toSubLevel="2004">2928</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2005" toSubLevel="2005">3097</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2006" toSubLevel="2006">3265</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2007" toSubLevel="2007">3434</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2008" toSubLevel="2008">3603</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2009" toSubLevel="2009">3772</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2010" toSubLevel="2010">3941</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2011" toSubLevel="2011">4110</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2012" toSubLevel="2012">4279</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2013" toSubLevel="2013">4448</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2014" toSubLevel="2014">4617</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2015" toSubLevel="2015">4786</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2016" toSubLevel="2016">4955</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2017" toSubLevel="2017">5124</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2018" toSubLevel="2018">5293</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2019" toSubLevel="2019">5462</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2020" toSubLevel="2020">5631</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2021" toSubLevel="2021">5743</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2022" toSubLevel="2022">5856</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2023" toSubLevel="2023">5968</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2024" toSubLevel="2024">6081</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2025" toSubLevel="2025">6194</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2026" toSubLevel="2026">6306</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2027" toSubLevel="2027">6419</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2028" toSubLevel="2028">6531</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2029" toSubLevel="2029">6644</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2030" toSubLevel="2030">6757</value>
+				</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10776" toLevel="4" name="Final Ultimate Escape">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 sec., P. Evasion + 60, M. Evasion + 60, M. Def. + 20%, Debuff Resistance + 95%, and P. Skill Evasion Rate + 80%. -->
-		<table name="#evas"> 60 70 80 90 </table>
-		<table name="#pSkillEvas"> 80 85 90 95 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">30</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
 		<icon>icon.skill10776</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2085,6 +2236,12 @@
 			<effect name="ResistDispelByCategory">
 				<amount>-95</amount>
 				<slot>BUFF</slot>
+			</effect>
+			<effect name="PAtk" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2164,7 +2321,11 @@
 		<!-- Glory Days confirmed -->
 		<!-- For 30 sec., Atk. Spd. + 20% when equipped with a bow/crossbow. -->
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">30</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
 		<icon>icon.skill10779</icon>
 		<operateType>A2</operateType>
@@ -2205,16 +2366,30 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10780" toLevel="9" name="Slow Shot">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 9338 Power added to P. Atk. For 10 sec., Speed - 70. Requires a bow or crossbow to be equipped. -->
-		<table name="#power"> 23860 25053 28632 32211 35790 39369 42001 43930 45960 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>40</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">40</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<icon>icon.skill10780</icon>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2242,7 +2417,7 @@
 			<value level="8">126</value>
 			<value level="9">131</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
 		<hitTime>2100</hitTime>
@@ -2284,8 +2459,12 @@
 					<value level="7">42001</value>
 					<value level="8">43930</value>
 					<value level="9">45960</value>
+					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
 			</effect>
 			<effect name="Speed">
 				<amount>-70</amount>
@@ -2337,7 +2516,16 @@
 					<value level="2">56558</value>
 					<value level="3">59316</value>
 					<value level="4">62074</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
+				<criticalChance>
+					<value fromLevel="1" toLevel="4">5</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="4">1</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -2382,11 +2570,12 @@
 	<skill id="10783" toLevel="4" name="Mind's Eye">
 		<!-- Glory Days confirmed -->
 		<!-- For 1 minute, opens the eye of infinity to increase Accuracy + 25, Critical Rate + 200, and Critical Damage + 70%. -->
-		<table name="#accCombat"> 25 30 35 40 </table>
-		<table name="#rCrit"> 200 220 240 250 </table>
-		<table name="#cAtk"> 1.7 1.9 2.1 2.3 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">60</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill10783</icon>
 		<operateType>A2</operateType>
@@ -2441,6 +2630,12 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10784" toLevel="1" name="Camouflage">
@@ -2448,7 +2643,11 @@
 		<!-- For 30 sec., blends into the environment and hides. Decreases Speed by 30%. -->
 		<icon>icon.skill10784</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">30</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -2470,15 +2669,14 @@
 			<effect name="Hide">
 			</effect>
 			<effect name="Speed">
-				<amount>-30</amount>
-				<mode>PER</mode>
+				<amount>-100</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="10785" toLevel="5" name="Flare">
 		<!-- Glory Days confirmed -->
 		<!-- Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. -->
-		<table name="#slot"> NONE NONE HIDE HIDE HIDE </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">0</value>
@@ -2526,14 +2724,8 @@
 			<effect name="DispelBySlot">
 				<dispel>HIDE,9</dispel>
 			</effect>
-			<effect name="BlockAbnormalSlot">
-				<slot>
-					<value level="1">NONE</value>
-					<value level="2">NONE</value>
-					<value level="3">HIDE</value>
-					<value level="4">HIDE</value>
-					<value level="5">HIDE</value>
-				</slot>
+			<effect name="BlockAbnormalSlot" fromLevel="3" toLevel="5">
+				<slot>HIDE</slot>
 			</effect>
 		</effects>
 	</skill>
@@ -2836,6 +3028,18 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="Untargetable" />
+			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10794" toLevel="8" name="Thunder Flight">
@@ -2854,11 +3058,10 @@
 			<value level="7">97</value>
 			<value level="8">99</value>
 		</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<castRange>400</castRange>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<coolTime>750</coolTime>
 		<effectPoint>
@@ -2880,9 +3083,6 @@
 				<distance>200</distance>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="EnemyCharge" />
-		</effects>
 	</skill>
 	<skill id="10795" toLevel="1" name="Thunder Purity">
 		<!-- Updated to IO -->
@@ -2959,7 +3159,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Hurls feathers toward the enemy. -->
-		<table name="#power"> 5555 5787 6029 6280 6541 6813 7095 7389 </table>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<icon>icon.skill6044</icon>
@@ -3022,8 +3221,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Attacks the enemy with sharp talon to inflict bleed. -->
-		<table name="#power"> 2796 2912 3034 3160 3291 3427 3569 3717 </table>
-		<table name="#dot"> 71 72 73 74 75 76 77 78 </table>
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3055,7 +3252,7 @@
 			<value level="7">86</value>
 			<value level="8">86</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
@@ -3106,7 +3303,6 @@
 	<skill id="10799" toLevel="10" name="Superior M. Def.">
 		<!-- Glory Days confirmed -->
 		<!-- M. Def. + 776, and M. Def. + 25%. STR + 2. -->
-		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 1434 1507 1583 </table>
 		<icon>icon.skill10004</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

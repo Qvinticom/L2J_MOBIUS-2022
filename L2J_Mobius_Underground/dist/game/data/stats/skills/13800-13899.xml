@@ -1,100 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13800" toLevel="1" name="Additional Ability Health">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases Max HP/MP/CP by 10% -->
 		<icon>icon.weapon_R99_dual_blunt_pve_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13801" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_helmet_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13802" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t801_u_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13803" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t801_l_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13804" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t801_g_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13805" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t801_b_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13806" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_leather_helmet_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13807" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t802_u_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13808" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t802_l_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13809" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t802_g_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13810" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t802_b_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13811" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_circlet_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13812" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t803_u_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13813" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t803_l_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13814" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t803_g_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13815" toLevel="1" name="Additional Ability Might">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Increases P. Atk. by 1%, M. Atk. by 2%. -->
 		<icon>icon.armor_t803_b_i00</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13816" toLevel="1" name="Kelbim's Dagger">
 		<!-- AUTO GENERATED SKILL -->
@@ -394,15 +590,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -418,15 +614,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -442,15 +638,15 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -466,15 +662,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -501,15 +697,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -525,15 +721,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -549,15 +745,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -573,15 +769,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -597,15 +793,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -621,15 +817,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -658,15 +854,15 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -703,15 +899,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -758,15 +954,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -796,15 +992,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -844,15 +1040,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -889,15 +1085,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -935,15 +1131,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -981,15 +1177,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1027,15 +1223,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1073,15 +1269,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1118,15 +1314,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1163,15 +1359,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1208,15 +1404,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1253,15 +1449,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="2" toLevel="15">
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1271,16 +1467,143 @@
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value fromLevel="1" toLevel="2">13</value>
+					<value fromLevel="3" toLevel="4">14</value>
+					<value fromLevel="5" toLevel="6">15</value>
+					<value fromLevel="7" toLevel="8">16</value>
+					<value fromLevel="9" toLevel="10">17</value>
+					<value fromLevel="11" toLevel="12">18</value>
+					<value fromLevel="13" toLevel="14">19</value>
+					<value level="15">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value fromLevel="2" toLevel="3">6</value>
+					<value fromLevel="4" toLevel="5">7</value>
+					<value fromLevel="6" toLevel="7">8</value>
+					<value fromLevel="8" toLevel="9">9</value>
+					<value fromLevel="10" toLevel="11">10</value>
+					<value fromLevel="12" toLevel="13">11</value>
+					<value fromLevel="14" toLevel="15">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13887" toLevel="15" name="MP Focus">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value fromLevel="1" toLevel="2">13</value>
+					<value fromLevel="3" toLevel="4">14</value>
+					<value fromLevel="5" toLevel="6">15</value>
+					<value fromLevel="7" toLevel="8">16</value>
+					<value fromLevel="9" toLevel="10">17</value>
+					<value fromLevel="11" toLevel="12">18</value>
+					<value fromLevel="13" toLevel="14">19</value>
+					<value level="15">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">26</value>
+					<value level="2">29</value>
+					<value level="3">32</value>
+					<value level="4">34</value>
+					<value level="5">37</value>
+					<value level="6">40</value>
+					<value level="7">42</value>
+					<value level="8">45</value>
+					<value level="9">48</value>
+					<value level="10">50</value>
+					<value level="11">53</value>
+					<value level="12">56</value>
+					<value level="13">59</value>
+					<value level="14">61</value>
+					<value level="15">64</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13888" toLevel="15" name="MP Death">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.ensoul_big_pm</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value fromLevel="1" toLevel="2">13</value>
+					<value fromLevel="3" toLevel="4">14</value>
+					<value fromLevel="5" toLevel="6">15</value>
+					<value fromLevel="7" toLevel="8">16</value>
+					<value fromLevel="9" toLevel="10">17</value>
+					<value fromLevel="11" toLevel="12">18</value>
+					<value fromLevel="13" toLevel="14">19</value>
+					<value level="15">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value fromLevel="2" toLevel="3">2</value>
+					<value fromLevel="4" toLevel="5">3</value>
+					<value fromLevel="6" toLevel="7">4</value>
+					<value fromLevel="8" toLevel="9">5</value>
+					<value fromLevel="10" toLevel="11">6</value>
+					<value fromLevel="12" toLevel="13">7</value>
+					<value fromLevel="14" toLevel="15">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus" fromLevel="3" toLevel="15">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13889" toLevel="15" name="MP Hunter">
 		<!-- AUTO GENERATED SKILL -->

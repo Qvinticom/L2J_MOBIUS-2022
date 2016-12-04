@@ -45,7 +45,7 @@ public class WaterTask implements Runnable
 				reduceHp = 1;
 			}
 			
-			_player.reduceCurrentHp(reduceHp, null, null, false, true, false, false);
+			_player.reduceCurrentHp(reduceHp, _player, null, false, true, false, false);
 			// reduced hp, becouse not rest
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_TAKEN_S1_DAMAGE_BECAUSE_YOU_WERE_UNABLE_TO_BREATHE);
 			sm.addInt((int) reduceHp);

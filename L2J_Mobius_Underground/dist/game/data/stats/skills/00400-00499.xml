@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" toLevel="10" name="Tribunal">
-		<table name="#power"> 924 1054 1146 1240 1337 1437 1538 1639 1741 1841 </table>
-		<table name="#rCrit"> -0.3 -0.3 -0.3 -0.3 -0.3 -0.4 -0.4 -0.4 -0.4 -0.5 </table>
-		<table name="#traits"> -12 -12 -12 -12 -12 -16 -16 -16 -16 -20 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -65,7 +62,7 @@
 			<value level="9">70</value>
 			<value level="10">72</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -226,9 +223,6 @@
 		</effects>
 	</skill>
 	<skill id="401" toLevel="10" name="Judgment">
-		<table name="#cAtk"> 0.75 0.75 0.75 0.75 0.75 0.7 0.7 0.7 0.7 0.65 </table>
-		<table name="#power"> 1056 1205 1309 1417 1528 1642 1757 1873 1989 2104 </table>
-		<table name="#traits"> -12 -12 -12 -12 -12 -16 -16 -16 -16 -20 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -290,7 +284,7 @@
 			<value level="9">70</value>
 			<value level="10">72</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -585,7 +579,10 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>40</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="17">40</value>
+			<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -663,6 +660,18 @@
 			<effect name="Root" />
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -746,10 +755,6 @@
 	</skill>
 	<skill id="406" toLevel="3" name="Angelic Archon">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtk"> 1.33 1.66 2 </table>
-		<table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
-		<table name="#rCrit"> 33 66 100 </table>
-		<table name="#runSpd"> 10 20 30 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -863,8 +868,6 @@
 	</skill>
 	<skill id="407" toLevel="10" name="Psycho Symphony">
 		<!-- Confirmed CT2.5 -->
-		<table name="#debuff"> 0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7 </table>
-		<table name="#power"> 687 784 852 923 995 1069 1144 1220 1295 1370 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -996,8 +999,6 @@
 	</skill>
 	<skill id="408" toLevel="10" name="Demonic Blade Dance">
 		<!-- Glory Days Confirmed -->
-		<table name="#debuff"> 0.9 0.9 0.9 0.85 0.85 0.8 0.8 0.75 0.75 0.7 </table>
-		<table name="#power"> 825 941 1023 1107 1194 1283 1373 1464 1554 1644 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1123,8 +1124,6 @@
 	<skill id="409" toLevel="10" name="Critical Blow">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: This skill increases "Blow Rate" and description in client says "Critical Rate" but is client typo, so please don't change this skill -->
-		<table name="#blowRate"> 1.1 1.1 1.1 1.15 1.15 1.2 1.2 1.25 1.25 1.3 </table>
-		<table name="#power"> 1832 2091 2272 2460 2653 2850 3050 3252 3453 3653 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1180,7 +1179,7 @@
 			<value level="9">70</value>
 			<value level="10">72</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A3</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1237,7 +1236,6 @@
 	</skill>
 	<skill id="410" toLevel="8" name="Mortal Strike">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#blowRate"> 1.1 1.15 1.2 1.22 1.24 1.26 1.28 1.30 </table>
 		<!-- Guessed -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1248,8 +1246,11 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		</abnormalLvl>		
+		<abnormalTime>
+			<value fromLevel="1" toLevel="8">120</value>
+			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<effectPoint>
 			<value level="1">549</value>
@@ -1311,6 +1312,40 @@
 					<value level="8">30</value>
 				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="ManaHeal" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2001">532</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2002" toSubLevel="2002">570</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2003" toSubLevel="2003">607</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2004" toSubLevel="2004">644</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2005" toSubLevel="2005">681</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2006" toSubLevel="2006">718</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2007" toSubLevel="2007">756</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2008" toSubLevel="2008">793</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2009" toSubLevel="2009">830</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2010" toSubLevel="2010">867</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2011" toSubLevel="2011">904</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2012" toSubLevel="2012">942</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2013" toSubLevel="2013">979</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2014" toSubLevel="2014">1016</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2015" toSubLevel="2015">1053</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2016" toSubLevel="2016">1090</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2017" toSubLevel="2017">1128</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2018" toSubLevel="2018">1165</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2019" toSubLevel="2019">1202</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2020" toSubLevel="2020">1240</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2021" toSubLevel="2021">1264</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2022" toSubLevel="2022">1289</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2023" toSubLevel="2023">1314</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2024" toSubLevel="2024">1339</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2025" toSubLevel="2025">1363</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2026" toSubLevel="2026">1389</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2027" toSubLevel="2027">1413</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2028" toSubLevel="2028">1438</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2029" toSubLevel="2029">1463</value>
+					<value fromLevel="7" toLevel="8" fromSubLevel="2030" toSubLevel="2030">1488</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -1387,7 +1422,6 @@
 	</skill>
 	<skill id="412" toLevel="10" name="Sand Bomb">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 6 6 6 6 6 9 9 9 9 12 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1471,7 +1505,6 @@
 		</effects>
 	</skill>
 	<skill id="413" toLevel="8" name="Rapid Fire">
-		<table name="#pAtk"> 62 67 73 78 83 89 94 100 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1564,8 +1597,6 @@
 		</effects>
 	</skill>
 	<skill id="414" toLevel="8" name="Dead Eye">
-		<table name="#accCombat"> 1 1 2 2 2 3 3 3 </table>
-		<table name="#pAtk"> 124 134 155 155 166 177 188 199 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1674,7 +1705,6 @@
 		</effects>
 	</skill>
 	<skill id="415" toLevel="3" name="Spirit of Sagittarius">
-		<table name="#PhysicalMpConsumeRate"> 0.9 0.8 0.7 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">4</value>
@@ -1719,7 +1749,6 @@
 		</effects>
 	</skill>
 	<skill id="416" toLevel="3" name="Blessing of Sagittarius">
-		<table name="#pReuse"> 0.9 0.85 0.8 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">4</value>
@@ -1807,7 +1836,6 @@
 		</effects>
 	</skill>
 	<skill id="418" toLevel="3" name="Quiver of Holding">
-		<table name="#weightLimit"> 1.3 1.4 1.5 </table>
 		<icon>icon.skill0418</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1903,10 +1931,6 @@
 		</effects>
 	</skill>
 	<skill id="420" toLevel="3" name="Zealot">
-		<table name="#cAtk"> 1.33 1.66 2 </table>
-		<table name="#pAtkSpd"> 1.1 1.2 1.3 </table>
-		<table name="#rCrit"> 33 66 100 </table>
-		<table name="#runSpd"> 10 20 30 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2027,7 +2051,6 @@
 		</effects>
 	</skill>
 	<skill id="421" toLevel="5" name="Fell Swoop">
-		<table name="#atkCountMax"> 1 2 3 4 5 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2088,7 +2111,6 @@
 		</effects>
 	</skill>
 	<skill id="422" toLevel="3" name="Polearm Accuracy">
-		<table name="#accCombat"> 2 3 4 </table>
 		<icon>icon.skill0422</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -2123,8 +2145,6 @@
 		</effects>
 	</skill>
 	<skill id="423" toLevel="3" name="Dark Form">
-		<table name="#firePower"> 10 15 20 </table>
-		<table name="#vuln"> 3 5 10 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -2173,8 +2193,6 @@
 		</effects>
 	</skill>
 	<skill id="424" toLevel="3" name="War Frenzy">
-		<table name="#trait_shock"> 5 10 15 </table>
-		<table name="#trait_sleep"> 10 20 30 </table>
 		<icon>icon.skill0424</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -2348,8 +2366,6 @@
 	</skill>
 	<skill id="430" toLevel="8" name="Master of Combat">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#cp"> 2 4 6 8 10 12 14 16 </table>
-		<table name="#hp"> 2 2 3 4 5 6 7 8 </table>
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2553,7 +2569,10 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<activateRate>60</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="10">60</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -2592,7 +2611,10 @@
 	<skill id="438" toLevel="4" name="Soul of the Phoenix">
 		<!-- TODO: Auto level parse, Requires manual update -->
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<effectPoint>673</effectPoint>
 		<hitTime>4000</hitTime>
@@ -2912,7 +2934,6 @@
 	</skill>
 	<skill id="449" toLevel="4" name="Summon Attractive Cubic">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cubicLvl"> 1 2 3 4 </table>
 		<hitTime>6000</hitTime>
 		<icon>icon.skill0449</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3035,7 +3056,6 @@
 		</effects>
 	</skill>
 	<skill id="451" toLevel="2" name="Sonic Move">
-		<table name="#runSpd"> 40 66 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -3090,7 +3110,6 @@
 	</skill>
 	<skill id="452" toLevel="5" name="Stun Stomp">
 		<!-- Confirmed CT2.5 -->
-		<table name="#chance"> 40 50 60 70 80 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3443,7 +3462,6 @@
 		</effects>
 	</skill>
 	<skill id="461" toLevel="2" name="Break Duress">
-		<table name="#dispelAbnormals"> ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3 </table>
 		<chargeConsume>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3501,7 +3519,6 @@
 	</skill>
 	<skill id="463" toLevel="3" name="Weapon Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 2 3 4 </table>
 		<icon>icon.skill0141</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3527,8 +3544,6 @@
 	</skill>
 	<skill id="464" toLevel="5" name="Armor Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pDef"> 9 11 12 13 14 </table>
-		<table name="#rEvas"> 0 0 0 3 3 </table>
 		<icon>icon.skill0142</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3567,8 +3582,6 @@
 		</effects>
 	</skill>
 	<skill id="465" toLevel="50" name="Light Armor Mastery">
-		<table name="#pDef"> 0.9 2.2 3.2 4.2 5.3 6 6.8 8.4 9.2 10.1 11.9 12.8 13.7 15.7 16.7 17.8 18.8 19.9 21.1 22.2 23.4 24.5 25.8 27 28.2 29.5 30.8 32.1 33.5 34.8 36.2 37.6 39.1 40.5 42 43.5 44.9 46.5 48 49.5 51.1 52.7 54.2 55.8 57.4 59.1 60.7 62.3 63.9 65.6 </table>
-		<table name="#rEvas"> 3 3 5 5 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 </table>
 		<icon>icon.skill0465</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -3760,8 +3773,6 @@
 	</skill>
 	<skill id="466" toLevel="55" name="Magic Immunity">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicSuccRes"> 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 1.25 1.25 1.25 1.25 1.25 1.25 </table>
-		<table name="#mDef"> 11 12 13 15 17 19 20 22 24 26 27 28 30 31 32 35 36 37 40 42 43 44 46 47 49 51 52 54 56 57 59 61 63 64 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
 		<icon>icon.skill0466</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -3947,9 +3958,6 @@
 	</skill>
 	<skill id="467" toLevel="23" name="Soul Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#activationChance"> 0 0 0 15 15 15 15 15 20 20 20 20 20 20 25 25 25 25 25 25 30 30 30 </table>
-		<table name="#expNeeded"> 73 147 220 294 385 486 614 777 960 1109 1269 1440 1622 1815 2018 2160 2306 2457 2613 2774 2940 3110 3285 </table>
-		<table name="#maxSouls"> 5 8 10 12 14 16 18 20 21 22 23 24 25 26 27 28 29 30 32 34 36 38 40 </table>
 		<icon>icon.skill0467</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -4072,7 +4080,6 @@
 	</skill>
 	<skill id="468" toLevel="9" name="Fallen Attack">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 30 32 35 46 51 55 71 78 84 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4111,7 +4118,7 @@
 			<value level="8">16</value>
 			<value level="9">17</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4172,7 +4179,6 @@
 	</skill>
 	<skill id="470" toLevel="7" name="Detect Trap">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 18 28 38 48 58 68 78 </table>
 		<affectRange>300</affectRange>
 		<hitTime>2500</hitTime>
 		<icon>icon.skill0470</icon>
@@ -4217,7 +4223,6 @@
 	</skill>
 	<skill id="471" toLevel="7" name="Defuse Trap">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 18 28 38 48 58 68 78 </table>
 		<castRange>400</castRange>
 		<effectRange>500</effectRange>
 		<hitTime>4000</hitTime>
@@ -4261,7 +4266,6 @@
 	</skill>
 	<skill id="472" toLevel="45" name="Ancient Sword Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 5.2 8.1 9.9 11.9 14.1 16.6 19.4 22.5 25.9 27.7 29.6 31.6 33.7 35.9 38.1 40.5 42.9 45.4 48.1 50.8 53.6 56.5 59.4 62.5 65.6 68.9 72.2 75.6 79 82.5 86.1 89.8 93.5 97.3 101.1 104.9 108.8 112.7 116.7 120.6 124.6 128.5 132.5 136.4 140.3 </table>
 		<icon>icon.skill0472</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -4370,7 +4374,6 @@
 	</skill>
 	<skill id="473" toLevel="45" name="Crossbow Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 12.64 18 21.28 24.88 29.04 33.6 38.72 44.32 50.56 53.92 86.72 92.16 97.84 103.76 109.92 116.32 122.96 129.84 136.96 144.4 152 159.92 168 176.32 184.96 193.76 202.8 212 221.44 231.04 240.88 250.8 260.96 271.2 281.6 292.16 302.72 313.44 324.16 334.96 345.76 356.56 367.28 378 388.72 </table>
 		<icon>icon.skill0473</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -4479,8 +4482,6 @@
 	</skill>
 	<skill id="474" toLevel="45" name="Rapier Mastery">
 		<!-- Glory Days Confirmed -->
-		<table name="#mAtkSpd"> 1 1 1 1 1 1 1 1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 </table>
-		<table name="#pAtk"> 3.2 5.28 6.48 7.84 9.36 11.12 13.04 15.2 17.52 18.8 20.08 21.44 22.88 24.4 25.92 27.6 29.28 30.96 32.8 34.64 36.56 38.56 40.64 42.72 44.88 47.12 49.44 51.76 54.16 56.56 59.04 61.52 64.08 66.72 69.36 72 74.64 77.36 80.08 82.8 85.52 88.24 90.96 93.68 96.4 </table>
 		<icon>icon.skill0474</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -4660,7 +4661,6 @@
 	</skill>
 	<skill id="476" toLevel="15" name="Dark Strike">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4717,7 +4717,7 @@
 			<value level="14">26</value>
 			<value level="15">27</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4759,7 +4759,6 @@
 	</skill>
 	<skill id="477" toLevel="37" name="Dark Smash">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 738 784 833 884 937 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4882,7 +4881,7 @@
 			<value level="36">59</value>
 			<value level="37">60</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4950,7 +4949,6 @@
 	</skill>
 	<skill id="478" toLevel="15" name="Double Thrust">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 108 117 126 147 159 171 198 213 229 263 281 301 344 367 391 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -5007,7 +5005,7 @@
 			<value level="14">26</value>
 			<value level="15">27</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -5081,7 +5079,6 @@
 	</skill>
 	<skill id="481" toLevel="2" name="Dark Armor">
 		<!-- Confirmed CT2.5 -->
-		<table name="#darkRes"> 7 10 </table>
 		<icon>icon.skill0481</icon>
 		<magicLvl>
 			<value level="1">32</value>
@@ -5103,8 +5100,6 @@
 	</skill>
 	<skill id="482" toLevel="2" name="Furious Soul">
 		<!-- Glory Days Confirmed -->
-		<table name="#cAtk"> 1.25 1.3 </table>
-		<table name="#rCrit"> 0.2 0.3 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5155,8 +5150,6 @@
 	</skill>
 	<skill id="483" toLevel="8" name="Sword Shield">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#pDef"> 2000 4000 4750 5250 6250 6250 6250 7500 </table>
-		<table name="#runSpd"> 0.6 0.6 0.6 0.6 0.7 0.8 0.9 1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5167,7 +5160,11 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 		</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="8">30</value>
+			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="7" toLevel="8" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<effectPoint>
 			<value level="1">204</value>
@@ -5235,6 +5232,12 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="PAtk" fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="7" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="484" toLevel="1" name="Elementary Rush">
@@ -5243,12 +5246,11 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-303</effectPoint>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0484</icon>
 		<magicLvl>32</magicLvl>
 		<mpConsume>20</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -5266,9 +5268,6 @@
 				<distance>200</distance>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="EnemyCharge" />
-		</effects>
 	</skill>
 	<skill id="485" toLevel="19" name="Disarm">
 		<!-- Confirmed CT2.5 and Updated to IO -->
@@ -5276,7 +5275,10 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<activateRate>70</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="19">70</value>
+			<value fromLevel="15" toLevel="19" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -5362,11 +5364,22 @@
 				<amount>-40</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="486" toLevel="2" name="Increase Range">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkRange"> 200 400 </table>
 		<icon>icon.skill0486</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -5389,7 +5402,6 @@
 	</skill>
 	<skill id="487" toLevel="15" name="Penetrating Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 179 194 210 245 264 285 330 354 381 438 469 502 573 611 651 </table>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -5522,7 +5534,6 @@
 	</skill>
 	<skill id="490" toLevel="2" name="Fast Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.08 1.12 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5586,7 +5597,6 @@
 	</skill>
 	<skill id="492" toLevel="25" name="Spread Wing">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<rideState>NONE</rideState>
@@ -5718,7 +5728,6 @@
 	</skill>
 	<skill id="493" toLevel="28" name="Storm Assault">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>
@@ -5812,7 +5821,6 @@
 			<value level="27">800</value>
 			<value level="28">800</value>
 		</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0493</icon>
 		<magicLvl>
@@ -5875,7 +5883,7 @@
 			<value level="27">74</value>
 			<value level="28">75</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<rideState>NONE</rideState>
 		<soulMaxConsumeCount>5</soulMaxConsumeCount>
@@ -6061,7 +6069,6 @@
 			<value level="36">800</value>
 			<value level="37">800</value>
 		</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0494</icon>
 		<isDebuff>true</isDebuff>
@@ -6144,7 +6151,7 @@
 			<value level="36">52</value>
 			<value level="37">53</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -6174,13 +6181,13 @@
 				<power>1</power>
 				<overHit>true</overHit>
 			</effect>
-			<effect name="BlockActions" />
-			<effect name="EnemyCharge" />
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="495" toLevel="10" name="Blade Rush">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 107 107 123 123 123 123 123 134 134 134 </table>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">6</value>
@@ -6237,7 +6244,6 @@
 			<value level="10">800</value>
 		</effectRange>
 		<fanRange>0;0;300;100</fanRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0495</icon>
 		<isDebuff>true</isDebuff>
@@ -6266,7 +6272,7 @@
 			<value level="9">88</value>
 			<value level="10">90</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -6311,7 +6317,6 @@
 	</skill>
 	<skill id="496" toLevel="31" name="Slashing Blade">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 787 832 879 927 977 1029 1082 1137 1194 1253 1313 1374 1438 1502 1568 1636 1704 1774 1845 1917 1990 2064 2138 2213 2288 2363 2439 2515 2590 2665 2740 </table>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<coolTime>300</coolTime>
@@ -6478,7 +6483,6 @@
 	</skill>
 	<skill id="497" toLevel="16" name="Crushing Pain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -6538,7 +6542,7 @@
 			<value level="15">74</value>
 			<value level="16">75</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -6586,7 +6590,6 @@
 	</skill>
 	<skill id="498" toLevel="12" name="Contagion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
@@ -6634,7 +6637,7 @@
 			<value level="11">74</value>
 			<value level="12">75</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -6680,7 +6683,6 @@
 	</skill>
 	<skill id="499" toLevel="3" name="Courage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#trait_derangement"> 40 60 100 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

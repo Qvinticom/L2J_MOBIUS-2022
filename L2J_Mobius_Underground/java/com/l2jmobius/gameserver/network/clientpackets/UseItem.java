@@ -26,21 +26,17 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -52,32 +48,6 @@ public final class UseItem implements IClientIncomingPacket
 	private int _objectId;
 	private boolean _ctrlPressed;
 	private int _itemId;
-	
-	/** Weapon Equip Task */
-	private static class WeaponEquipTask implements Runnable
-	{
-		L2ItemInstance item;
-		L2PcInstance activeChar;
-		
-		protected WeaponEquipTask(L2ItemInstance it, L2PcInstance character)
-		{
-			item = it;
-			activeChar = character;
-		}
-		
-		@Override
-		public void run()
-		{
-			// If character is still engaged in strike we should not change weapon
-			if (activeChar.isAttackingNow())
-			{
-				return;
-			}
-			
-			// Equip or unEquip
-			activeChar.useEquippableItem(item, false);
-		}
-	}
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -233,12 +203,7 @@ public final class UseItem implements IClientIncomingPacket
 						return;
 					}
 					
-					if (activeChar.isMounted())
-					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
-					if (activeChar.isDisarmed())
+					if (activeChar.isMounted() || activeChar.isDisarmed())
 					{
 						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;
@@ -247,82 +212,6 @@ public final class UseItem implements IClientIncomingPacket
 					// Don't allow weapon/shield equipment if a cursed weapon is equipped.
 					if (activeChar.isCursedWeaponEquipped())
 					{
-						return;
-					}
-					
-					// Don't allow other Race to Wear Kamael exclusive Weapons.
-					if (!item.isEquipped() && item.isWeapon() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS))
-					{
-						final L2Weapon wpn = (L2Weapon) item.getItem();
-						
-						switch (activeChar.getRace())
-						{
-							case KAMAEL:
-							{
-								switch (wpn.getItemType())
-								{
-									case NONE:
-									{
-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-									}
-								}
-								break;
-							}
-							case HUMAN:
-							case DWARF:
-							case ELF:
-							case DARK_ELF:
-							case ORC:
-							{
-								switch (wpn.getItemType())
-								{
-									case RAPIER:
-									case CROSSBOW:
-									case ANCIENTSWORD:
-									{
-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-									}
-								}
-								break;
-							}
-							case ERTHEIA:
-							{
-								switch (wpn.getItemType())
-								{
-									case SWORD:
-									case DAGGER:
-									case BOW:
-									case POLE:
-									case NONE:
-									case DUAL:
-									case RAPIER:
-									case ANCIENTSWORD:
-									case CROSSBOW:
-									case DUALDAGGER:
-									{
-										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-										return;
-									}
-								}
-								break;
-							}
-						}
-					}
-					break;
-				}
-				case L2Item.SLOT_CHEST:
-				case L2Item.SLOT_FULL_ARMOR:
-				case L2Item.SLOT_BACK:
-				case L2Item.SLOT_GLOVES:
-				case L2Item.SLOT_FEET:
-				case L2Item.SLOT_HEAD:
-				case L2Item.SLOT_LEGS:
-				{
-					if ((activeChar.getRace() == Race.ERTHEIA) && activeChar.isMageClass() && ((item.getItem().getItemType() == ArmorType.SHIELD) || (item.getItem().getItemType() == ArmorType.SIGIL)))
-					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 						return;
 					}
 					break;
@@ -356,7 +245,17 @@ public final class UseItem implements IClientIncomingPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new WeaponEquipTask(item, activeChar), activeChar.getAttackEndTime() - System.currentTimeMillis());
+				ThreadPoolManager.getInstance().scheduleGeneral(() ->
+				{
+					// If character is still engaged in strike we should not change weapon
+					if (activeChar.isAttackingNow())
+					{
+						return;
+					}
+					
+					// Equip or unEquip
+					activeChar.useEquippableItem(item, false);
+				}, activeChar.getAttackEndTime() - System.currentTimeMillis());
 			}
 			else
 			{

@@ -439,7 +439,10 @@
 	<skill id="10008" toLevel="11" name="Shield Charge">
 		<!-- Glory Days confirmed -->
 		<!-- Uses a shield to attack target with 13634 Power added to P. Atk. and also P. Def. - 10%, P. Evasion - 2, and P. Critical Damage + 10%. Can be used while a shield is equipped. -->
-		<activateRate>80</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">80</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -472,7 +475,7 @@
 			<value level="11">71</value>
 		</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>570</coolTime>
@@ -533,6 +536,7 @@
 					<value level="9">22354</value>
 					<value level="10">23444</value>
 					<value level="11">24534</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 			<effect name="PhysicalDefence">
@@ -547,6 +551,12 @@
 				<amount>-10</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10009" toLevel="11" name="Last Judgment">
@@ -555,7 +565,10 @@
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<activateRate>100</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">100</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<effectRange>400</effectRange>
 		<icon>icon.skill10009</icon>
 		<operateType>A2</operateType>
@@ -586,7 +599,7 @@
 			<value level="10">83</value>
 			<value level="11">85</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>470</coolTime>
@@ -632,6 +645,7 @@
 					<value level="9">27148</value>
 					<value level="10">28472</value>
 					<value level="11">29796</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -639,6 +653,12 @@
 			<effect name="Speed">
 				<amount>-70</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -648,9 +668,12 @@
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
-		<activateRate>200</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">200</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -682,7 +705,7 @@
 			<value level="10">106</value>
 			<value level="11">109</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1700</hitTime>
@@ -728,6 +751,7 @@
 					<value level="9">34357</value>
 					<value level="10">35175</value>
 					<value level="11">36811</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -743,6 +767,12 @@
 				<amount>-20</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10011" toLevel="8" name="Shield Impact">
@@ -752,7 +782,10 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>90</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="8">90</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;150;180</fanRange>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -816,11 +849,18 @@
 					<value level="6">18453</value>
 					<value level="7">19353</value>
 					<value level="8">20253</value>
+					<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -833,7 +873,10 @@
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>70</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="10">70</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<fanRange>0;0;150;180</fanRange>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -905,11 +948,18 @@
 					<value level="8">14897</value>
 					<value level="9">15623</value>
 					<value level="10">16349</value>
+					<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -997,9 +1047,17 @@
 					<value level="9">18045</value>
 					<value level="10">19013</value>
 					<value level="11">19981</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
@@ -1009,7 +1067,10 @@
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
-		<activateRate>80</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">80</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1080,11 +1141,18 @@
 					<value level="9">23468</value>
 					<value level="10">24612</value>
 					<value level="11">25756</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>5</criticalChance>
 			</effect>
 			<effect name="HealEffect">
 				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1095,7 +1163,10 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<activateRate>190</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">190</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicLvl>
@@ -1123,7 +1194,10 @@
 			<value level="8">78</value>
 			<value level="9">81</value>
 		</mpConsume>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="9">600</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -1166,7 +1240,10 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<affectRange>200</affectRange>
-		<activateRate>150</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">150</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1193,7 +1270,10 @@
 			<value level="8">152</value>
 			<value level="9">156</value>
 		</mpConsume>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="9">600</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>500</hitTime>
 		<coolTime>1000</coolTime>
@@ -1235,7 +1315,11 @@
 		<!-- Glory Days confirmed -->
 		<!-- For 30 sec., P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, + 80% Buff-canceling Attack Resistance. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="7">30</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1328,14 +1412,28 @@
 					<value level="7">100</value>
 				</amount>
 			</effect>
+			<effect name="PAtk" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10018" toLevel="2" name="Noble Sacrifice">
 		<!-- Glory Days confirmed -->
 		<!-- For 10 seconds, receives 60% of the damage inflicted to the party member. -->
-		<table name="#transDamToPlayer"> 60 90 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="2">10</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>SACRIFICE</abnormalType>
 		<affectRange>1000</affectRange>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1375,17 +1473,23 @@
 					<value level="2">90</value>
 				</amount>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10019" toLevel="5" name="Protection of Faith">
 		<!-- Glory Days confirmed -->
 		<!-- For 15 seconds, all party members' P. Def. + 5000, M. Def. + 5000, and Debuff Resistance + 50%. Receives 90% of the damage inflicted to each party member. -->
-		<table name="#pDef"> 5000 10000 11000 12000 13000 </table>
-		<table name="#mDef"> 5000 7000 8000 9000 10000 </table>
-		<table name="#debuffVuln"> 50 70 70 70 70 </table>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="5">15</value>
+			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1455,14 +1559,17 @@
 				</amount>
 				<slot>DEBUFF</slot>
 			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
 		<!-- Glory Days confirmed -->
 		<!-- P. Def. + 350, Shield Defense + 700, and shield defense + 35%. MP is continuously consumed. -->
-		<table name="#sDef"> 700 800 900 1000 1100 1200 1300 </table>
-		<table name="#pDef"> 350 400 450 500 550 600 650 </table>
-		<table name="#rShld"> 1.35 1.4 1.45 1.5 1.5 1.5 1.5 </table>
 		<mpConsume>50</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1525,10 +1632,11 @@
 	<skill id="10021" toLevel="7" name="Spike Shield">
 		<!-- Glory Days confirmed -->
 		<!-- For 10 seconds, reflects 10% of received damage back to the attacker. Also has a 50% chance of reflecting magic damage back to the attacker. Requires a shield. -->
-		<table name="#magicLvl"> 85 90 95 99 100 102 104 </table>
-		<table name="#reflectDam"> 10 15 20 25 27 30 32 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="7">10</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
 		<icon>icon.skill10021</icon>
 		<operateType>A2</operateType>
@@ -1575,13 +1683,28 @@
 				<amount>50</amount>
 				<type>MAGIC</type>
 			</effect>
+			<effect name="PAtk" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10022" toLevel="1" name="Ignore Death">
 		<!-- Glory Days confirmed -->
 		<!-- For 10 seconds, HP does not decrease below 1. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">10</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
 		<magicLvl>97</magicLvl>
 		<icon>icon.skill10022</icon>
@@ -1600,13 +1723,25 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="IgnoreDeath" />
+			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10023" toLevel="5" name="King of Beasts">
 		<!-- Glory Days confirmed -->
 		<!-- Summons the King of Beasts to attack nearby and frontal targets with 35222 Power added to P. Atk. Requires a shield. Over-hit. -->
 		<affectLimit>5-12</affectLimit>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">95</value>
@@ -1644,25 +1779,39 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<effect name="PhysicalAttack">
-			<power>
-				<value level="1">35222</value>
-				<value level="2">38826</value>
-				<value level="3">43471</value>
-				<value level="4">45591</value>
-				<value level="5">47711</value>
-			</power>
-			<overHit>true</overHit>
-		</effect>
 		<conditions>
 			<condition name="EquipShield" />
 		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">35222</value>
+					<value level="2">38826</value>
+					<value level="3">43471</value>
+					<value level="4">45591</value>
+					<value level="5">47711</value>
+					<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+				</power>
+				<overHit>true</overHit>
+				<criticalChance>
+					<value fromLevel="1" toLevel="5">1</value>
+					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="5">1</value>
+					<value fromLevel="1" toLevel="5" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10024" toLevel="1" name="Party Rescue">
 		<!-- Glory Days confirmed -->
 		<!-- Drags all party members to oneself, and for 15 seconds receives 90% of the damage inflicted to all party members. Additionally, all damage received is capped at 10. Requires a shield. -->
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">15</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<magicLevel>99</magicLevel>
 		<affectRange>1000</affectRange>
@@ -1695,6 +1844,12 @@
 			</effect>
 			<effect name="GetDamageLimit">
 				<amount>10</amount>
+			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1816,6 +1971,10 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">90</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectHeight>-100;200</affectHeight>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1868,6 +2027,18 @@
 				<skillId>10060</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</selfEffects>
 	</skill>
 	<skill id="10027" toLevel="8" name="Superior Aggression Aura">
@@ -1876,6 +2047,10 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="8">80</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>
 			<value level="1">300</value>
@@ -1934,6 +2109,18 @@
 			<effect name="CallSkill">
 				<skillId>10060</skillId>
 				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</selfEffects>
 	</skill>
@@ -2245,7 +2432,7 @@
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<reuseDelay>1000</reuseDelay>
-		<targetType>SELF</targetType>
+		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
@@ -3251,7 +3438,6 @@
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<flyType>CHARGE</flyType>
 		<operateType>DA2</operateType>
 		<trait>SHOCK</trait>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3762,8 +3948,6 @@
 	</skill>
 	<skill id="10064" toLevel="4" name="Holy Sacrifice">
 		<!-- Consumes your HP to restore target's HP by 1000. Requires a shield. -->
-		<table name="#magicLvl"> 85 90 95 99 </table>
-		<table name="#power"> 1000 1300 1500 2000 </table>
 		<icon>icon.skill10064</icon>
 		<operateType>A1</operateType>
 		<targetType>TARGET</targetType>
@@ -4127,21 +4311,48 @@
 		</effects>
 	</skill>
 	<skill id="10073" toLevel="7" name="Summon Buff Cubic">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<!-- Summons a Melody Cubic. The Melody Cubic uses magic to restore its owner's HP and MP. -->
 		<icon>icon.skill10073</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<mpConsume>96</mpConsume>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="4">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
 		<hitTime>2200</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<isMagic>1</isMagic>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="CanSummonCubic" />
+		</conditions>
+		<effects>
+			<effect name="SummonCubic">
+				<cubicId>18</cubicId>
+				<cubicLvl>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">6</value>
+					<value level="7">7</value>
+				</cubicLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10074" toLevel="4" name="Summon Mind Cubic">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Not in use anymore -->
 		<!-- Summons the Mind Cubic. The Sigel Mind Cubic uses magic to restore the owner's MP. -->
 		<icon>icon.skill10074</icon>
 		<operateType>A1</operateType>
@@ -4197,9 +4408,6 @@
 		</effects>
 	</skill>
 	<skill id="10077" toLevel="4" name="Shilen's Presence">
-		<!-- P. Atk./ M. Atk. + 2%. Has a 30% chance of doing the same to all party members for 10 sec. when attacked. -->
-		<table name="#atk"> 1.02 1.03 1.04 1.06 </table>
-		<table name="#triggerLevel"> 1 2 3 4 </table>
 		<icon>icon.skill11832</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -4248,7 +4456,6 @@
 	<skill id="10078" toLevel="4" name="Shilen's Presence">
 		<!-- TODO abnormalType -->
 		<!-- For 10 sec., all party members' P. Atk./ M. Atk. + 2%. -->
-		<table name="#atk"> 1.02 1.03 1.04 1.06 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4425,33 +4632,113 @@
 		</effects>
 	</skill>
 	<skill id="10082" toLevel="7" name="Strong Cubic Heal">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Update to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>408</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="4">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<effects>
+			<effect name="Heal">
+				<power>
+					<value level="1">600</value>
+					<value level="2">650</value>
+					<value level="3">700</value>
+					<value level="4">750</value>
+					<value level="5">800</value>
+					<value level="6">850</value>
+					<value level="7">900</value>
+				</power>
+			</effect>
+			<effect name="ManaHeal">
+				<power>
+					<value level="1">60</value>
+					<value level="2">65</value>
+					<value level="3">70</value>
+					<value level="4">75</value>
+					<value level="5">80</value>
+					<value level="6">85</value>
+					<value level="7">90</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10083" toLevel="7" name="Basic Cubic Heal">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>408</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="4">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<effects>
+			<effect name="Heal">
+				<power>
+					<value level="1">400</value>
+					<value level="2">450</value>
+					<value level="3">500</value>
+					<value level="4">550</value>
+					<value level="5">600</value>
+					<value level="6">650</value>
+					<value level="7">700</value>
+				</power>
+			</effect>
+			<effect name="ManaHeal">
+				<power>
+					<value level="1">40</value>
+					<value level="2">45</value>
+					<value level="3">50</value>
+					<value level="4">55</value>
+					<value level="5">60</value>
+					<value level="6">65</value>
+					<value level="7">70</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10084" toLevel="4" name="Basic Cubic Mind">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<icon>icon.skill0191</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>408</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<effects>
+			<effect name="ManaHeal">
+				<power>
+					<value level="1">40</value>
+					<value level="2">45</value>
+					<value level="3">50</value>
+					<value level="4">55</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10085" toLevel="7" name="Cubic Falter">
 		<!-- Updated to IO -->
@@ -4614,10 +4901,10 @@
 		<affectRange>600</affectRange>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<fanRange>0;0;600;60</fanRange>
-		<flyType>CHARGE</flyType>
 		<operateType>DA2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 		<trait>SHOCK</trait>
 		<mpConsume>
 			<value level="1">30</value>
@@ -4655,13 +4942,29 @@
 		</effects>
 	</skill>
 	<skill id="10089" toLevel="4" name="Strong Cubic Mind">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Updated to IO -->
 		<icon>icon.skill0191</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effectPoint>408</effectPoint>
 		<reuseDelay>5000</reuseDelay>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<effects>
+			<effect name="ManaHeal">
+				<power>
+					<value level="1">60</value>
+					<value level="2">65</value>
+					<value level="3">70</value>
+					<value level="4">75</value>
+				</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="10090" toLevel="4" name="Provoking Shackle">
 		<!-- Provokes nearby enemies and inflicts Hold for 9 sec. -->
@@ -4730,6 +5033,108 @@
 				<slot>DEBUFF</slot>
 				<rate>100</rate> <!-- Guessed -->
 				<max>10</max> <!-- Guessed -->
+			</effect>
+			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">2072</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">2207</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">2342</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">2477</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">2612</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">2747</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">2882</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">3017</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">3152</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">3288</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">3423</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">3558</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">3693</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">3828</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">3964</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">4099</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">4234</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">4369</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">4594</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">4684</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">4774</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">4864</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">4955</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">5044</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">5135</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">5224</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">5315</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">5405</value>
+				</power>
+			</effect>
+			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">532</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">570</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2003" toSubLevel="2003">607</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2004" toSubLevel="2004">644</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2005" toSubLevel="2005">681</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2006" toSubLevel="2006">718</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2007" toSubLevel="2007">756</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2008" toSubLevel="2008">793</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2009" toSubLevel="2009">830</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2010" toSubLevel="2010">867</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2011" toSubLevel="2011">904</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2012" toSubLevel="2012">942</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2013" toSubLevel="2013">979</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2014" toSubLevel="2014">1016</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2015" toSubLevel="2015">1053</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2016" toSubLevel="2016">1090</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2017" toSubLevel="2017">1128</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2018" toSubLevel="2018">1165</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2019" toSubLevel="2019">1202</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2020" toSubLevel="2020">1240</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2021" toSubLevel="2021">1264</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2022" toSubLevel="2022">1289</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2023" toSubLevel="2023">1314</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2024" toSubLevel="2024">1339</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2025" toSubLevel="2025">1363</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2026" toSubLevel="2026">1389</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2027" toSubLevel="2027">1413</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2028" toSubLevel="2028">1438</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2029" toSubLevel="2029">1463</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2030" toSubLevel="2030">1488</value>
+				</power>
+			</effect>
+			<effect name="CpHeal" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3001">2421</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3002" toSubLevel="3002">2590</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3003" toSubLevel="3003">2759</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3004" toSubLevel="3004">2928</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3005" toSubLevel="3005">3097</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3006" toSubLevel="3006">3265</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3007" toSubLevel="3007">3434</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3008" toSubLevel="3008">3603</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3009" toSubLevel="3009">3772</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3010" toSubLevel="3010">3941</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3011" toSubLevel="3011">4110</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3012" toSubLevel="3012">4279</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3013" toSubLevel="3013">4448</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3014" toSubLevel="3014">4617</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3015" toSubLevel="3015">4786</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3016" toSubLevel="3016">4955</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3017" toSubLevel="3017">5124</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3018" toSubLevel="3018">5293</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3019" toSubLevel="3019">5462</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3020" toSubLevel="3020">5631</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3021" toSubLevel="3021">5743</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3022" toSubLevel="3022">5856</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3023" toSubLevel="3023">5968</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3024" toSubLevel="3024">6081</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3025" toSubLevel="3025">6194</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3026" toSubLevel="3026">6306</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3027" toSubLevel="3027">6419</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3028" toSubLevel="3028">6531</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3029" toSubLevel="3029">6644</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3030" toSubLevel="3030">6757</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -4816,11 +5221,14 @@
 	</skill>
 	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
 		<!-- Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with 11997 Power. Paralyzes for 5 seconds. Consumes 1 Soulstone. -->
-		<table name="#power"> 11997 14177 16357 18101 18973 19845 20717 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
-		<activateRate>40</activateRate>
+		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
+		<activateRate>
+			<value fromLevel="1" toLevel="7">40</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
@@ -4845,10 +5253,9 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
-			<value level="5" />
-			<value level="6">101</value>
-			<value level="7">103</value>
-			<value level="8">105</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">140</value>
@@ -4859,13 +5266,14 @@
 			<value level="6">185</value>
 			<value level="7">195</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>400</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>-828</effectPoint>
 		<isDebuff>true</isDebuff>
+		<trait>PARALYZE</trait>
 		<conditions>
 			<condition name="EquipShield" />
 		</conditions>
@@ -4879,6 +5287,7 @@
 					<value level="5">18973</value>
 					<value level="6">19845</value>
 					<value level="7">20717</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
@@ -5001,8 +5410,16 @@
 					<value level="4">19863</value>
 					<value level="5">20831</value>
 					<value level="6">21799</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<criticalChance>15</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="6">15</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="6">1</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 				<overHit>true</overHit>
 			</effect>
 			<effect name="TargetMe" />
@@ -5011,16 +5428,13 @@
 	</skill>
 	<skill id="10098" toLevel="4" name="Paladin's Frenzy">
 		<!-- For 1 min., P./M. Def. +50%, Debuff Resistance + 10%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
-		<table name="#def"> 1.5 1.7 2 2.2 </table>
-		<table name="#debuffVuln"> 10 20 25 30 </table>
-		<table name="#runSpd"> 10 20 25 30 </table>
-		<table name="#accCombat"> 4 6 8 10 </table>
-		<table name="#pAtkSpd"> 1.1 1.2 1.25 1.3 </table>
-		<table name="#rCrit"> 30 40 50 60 </table>
-		<table name="#cAtk"> 1.3 1.4 1.5 1.6 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
-		<abnormalType>PINCH</abnormalType> <!-- TODO Confirm -->
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">60</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill10098</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -5130,13 +5544,23 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10099" toLevel="4" name="Avenger's Frenzy">
 		<!-- For 1 min., P. Atk. + 5%, P./M. Def. + 50%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
-		<abnormalType>PINCH</abnormalType> <!-- TODO Confirm -->
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">60</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
+		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill10099</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -5245,6 +5669,12 @@
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
+			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

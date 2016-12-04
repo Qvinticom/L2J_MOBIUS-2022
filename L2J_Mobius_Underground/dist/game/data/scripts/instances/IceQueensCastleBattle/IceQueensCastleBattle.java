@@ -150,6 +150,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 	
 	public IceQueensCastleBattle()
 	{
+		super(TEMPLATE_ID_EASY, TEMPLATE_ID_HARD);
 		addStartNpc(SIRRA, SUPP_KEGOR, SUPP_JINIA);
 		addFirstTalkId(SUPP_KEGOR, SUPP_JINIA);
 		addTalkId(SIRRA, JINIA, SUPP_KEGOR);

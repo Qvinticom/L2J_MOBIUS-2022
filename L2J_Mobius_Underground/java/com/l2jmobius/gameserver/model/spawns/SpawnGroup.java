@@ -106,6 +106,11 @@ public class SpawnGroup implements Cloneable, ITerritorized
 		return _spawns.stream().filter(spawn -> spawn.getId() == id).collect(Collectors.toList());
 	}
 	
+	public void spawnAll()
+	{
+		spawnAll(null);
+	}
+	
 	public void spawnAll(Instance instance)
 	{
 		_spawns.forEach(template -> template.spawn(instance));

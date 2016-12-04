@@ -59,7 +59,6 @@ import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.Die;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
@@ -335,9 +334,6 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// Send Skill list
 		activeChar.sendSkillList();
-		
-		// Send acquirable skill list
-		activeChar.sendPacket(new AcquireSkillList(activeChar));
 		
 		// Send EtcStatusUpdate
 		activeChar.sendPacket(new EtcStatusUpdate(activeChar));

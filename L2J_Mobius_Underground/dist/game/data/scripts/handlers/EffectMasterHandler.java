@@ -40,6 +40,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
 		EffectHandler.getInstance().registerHandler("AreaDamage", AreaDamage::new);
 		EffectHandler.getInstance().registerHandler("AttackAttribute", AttackAttribute::new);
+		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
 		EffectHandler.getInstance().registerHandler("AttackBehind", AttackBehind::new);
 		EffectHandler.getInstance().registerHandler("AttackTrait", AttackTrait::new);
 		EffectHandler.getInstance().registerHandler("Backstab", Backstab::new);
@@ -117,7 +118,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DispelBySlotProbability", DispelBySlotProbability::new);
 		EffectHandler.getInstance().registerHandler("DoubleCast", DoubleCast::new);
 		EffectHandler.getInstance().registerHandler("EnableCloak", EnableCloak::new);
-		EffectHandler.getInstance().registerHandler("EnemyCharge", EnemyCharge::new);
 		EffectHandler.getInstance().registerHandler("EnergyAttack", EnergyAttack::new);
 		EffectHandler.getInstance().registerHandler("EnlargeAbnormalSlot", EnlargeAbnormalSlot::new);
 		EffectHandler.getInstance().registerHandler("EnlargeSlot", EnlargeSlot::new);
@@ -131,7 +131,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Feed", Feed::new);
 		EffectHandler.getInstance().registerHandler("Flag", Flag::new);
 		EffectHandler.getInstance().registerHandler("FlipBlock", FlipBlock::new);
-		EffectHandler.getInstance().registerHandler("FlyMove", FlyMove::new);
 		EffectHandler.getInstance().registerHandler("FocusEnergy", FocusEnergy::new);
 		EffectHandler.getInstance().registerHandler("FocusMomentum", FocusMomentum::new);
 		EffectHandler.getInstance().registerHandler("FocusMaxMomentum", FocusMaxMomentum::new);
@@ -249,6 +248,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("RealDamage", RealDamage::new);
 		EffectHandler.getInstance().registerHandler("RebalanceHP", RebalanceHP::new);
 		EffectHandler.getInstance().registerHandler("Recovery", Recovery::new);
+		EffectHandler.getInstance().registerHandler("ReduceDamage", ReduceDamage::new);
 		EffectHandler.getInstance().registerHandler("ReduceCancel", ReduceCancel::new);
 		EffectHandler.getInstance().registerHandler("ReduceDropPenalty", ReduceDropPenalty::new);
 		EffectHandler.getInstance().registerHandler("ReflectMagic", ReflectMagic::new);
@@ -314,7 +314,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("TeleportToNpc", TeleportToNpc::new);
 		EffectHandler.getInstance().registerHandler("TeleportToSummon", TeleportToSummon::new);
 		EffectHandler.getInstance().registerHandler("TeleportToTarget", TeleportToTarget::new);
-		EffectHandler.getInstance().registerHandler("ThrowUp", ThrowUp::new);
+		EffectHandler.getInstance().registerHandler("FlyAway", FlyAway::new);
 		EffectHandler.getInstance().registerHandler("TransferDamageToPlayer", TransferDamageToPlayer::new);
 		EffectHandler.getInstance().registerHandler("TransferDamageToSummon", TransferDamageToSummon::new);
 		EffectHandler.getInstance().registerHandler("TransferHate", TransferHate::new);

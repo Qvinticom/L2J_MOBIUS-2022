@@ -59,6 +59,7 @@ public final class FaeronTrainingGrounds1 extends AbstractInstance
 	
 	public FaeronTrainingGrounds1()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(AYANTHE, AYANTHE_2);
 		addFirstTalkId(AYANTHE_2);
 		addTalkId(AYANTHE, AYANTHE_2);

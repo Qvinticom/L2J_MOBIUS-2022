@@ -30,10 +30,13 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 /**
  * Throw Up effect implementation.
  */
-public final class ThrowUp extends AbstractEffect
+public final class FlyAway extends AbstractEffect
 {
-	public ThrowUp(StatsSet params)
+	private final int _radius;
+	
+	public FlyAway(StatsSet params)
 	{
+		_radius = params.getInt("radius");
 	}
 	
 	@Override
@@ -45,52 +48,18 @@ public final class ThrowUp extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final int curX = effected.getX();
-		final int curY = effected.getY();
-		final int curZ = effected.getZ();
-		
-		// Calculate distance between effector and effected current position
-		final double dx = effector.getX() - curX;
-		final double dy = effector.getY() - curY;
-		final double dz = effector.getZ() - curZ;
+		final int dx = effector.getX() - effected.getX();
+		final int dy = effector.getY() - effected.getY();
 		final double distance = Math.sqrt((dx * dx) + (dy * dy));
-		if (distance > 2000)
-		{
-			_log.info("EffectThrow was going to use invalid coordinates for characters, getEffected: " + curX + "," + curY + " and getEffector: " + effector.getX() + "," + effector.getY());
-			return;
-		}
-		int offset = Math.min((int) distance + skill.getFlyRadius(), 1400);
+		final double nRadius = effector.getCollisionRadius() + effected.getCollisionRadius() + _radius;
 		
-		double cos;
-		double sin;
-		
-		// approximation for moving futher when z coordinates are different
-		// TODO: handle Z axis movement better
-		offset += Math.abs(dz);
-		if (offset < 5)
-		{
-			offset = 5;
-		}
-		
-		// If no distance
-		if (distance < 1)
-		{
-			return;
-		}
-		
-		// Calculate movement angles needed
-		sin = dy / distance;
-		cos = dx / distance;
-		
-		// Calculate the new destination with offset included
-		final int x = effector.getX() - (int) (offset * cos);
-		final int y = effector.getY() - (int) (offset * sin);
-		final int z = effected.getZ();
+		final int x = (int) (effector.getX() - (nRadius * (dx / distance)));
+		final int y = (int) (effector.getY() - (nRadius * (dy / distance)));
+		final int z = effector.getZ();
 		
 		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
-		// TODO: Review.
 		effected.setXYZ(destination);
 		effected.broadcastPacket(new ValidateLocation(effected));
 		effected.revalidateZone(true);

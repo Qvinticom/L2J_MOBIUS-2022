@@ -118,7 +118,7 @@ public final class Q10322_SearchingForTheMysteriousPower extends Quest
 						npc.setTarget(player);
 						for (SkillHolder holder : buffs)
 						{
-							npc.doCast(holder.getSkill());
+							holder.getSkill().applyEffects(npc, player);
 						}
 					}
 					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_002_Guide_01.htm", TutorialShowHtml.LARGE_WINDOW));

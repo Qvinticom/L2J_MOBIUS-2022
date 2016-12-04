@@ -53,6 +53,7 @@ public final class TautiWarzone extends AbstractInstance
 	
 	public TautiWarzone()
 	{
+		super(TEMPLATE_ID, EXTREME_TEMPLATE_ID);
 		addTalkId(FINARIA, TELEPORTER);
 		addFirstTalkId(FINARIA, TELEPORTER);
 		addAttackId(TAUTI_COMMON, TAUTI_EXTREME);

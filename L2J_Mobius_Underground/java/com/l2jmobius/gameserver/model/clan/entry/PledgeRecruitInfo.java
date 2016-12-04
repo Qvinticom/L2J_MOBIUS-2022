@@ -29,14 +29,18 @@ public class PledgeRecruitInfo
 	private String _information;
 	private String _detailedInformation;
 	private final L2Clan _clan;
+	private final int _applicationType;
+	private final int _recruitType;
 	
-	public PledgeRecruitInfo(int clanId, int karma, String information, String detailedInformation)
+	public PledgeRecruitInfo(int clanId, int karma, String information, String detailedInformation, int applicationType, int recruitType)
 	{
 		_clanId = clanId;
 		_karma = karma;
 		_information = information;
 		_detailedInformation = detailedInformation;
 		_clan = ClanTable.getInstance().getClan(clanId);
+		_applicationType = applicationType;
+		_recruitType = recruitType;
 	}
 	
 	public int getClanId()
@@ -92,6 +96,16 @@ public class PledgeRecruitInfo
 	public void setDetailedInformation(String detailedInformation)
 	{
 		_detailedInformation = detailedInformation;
+	}
+	
+	public int getApplicationType()
+	{
+		return _applicationType;
+	}
+	
+	public int getRecruitType()
+	{
+		return _recruitType;
 	}
 	
 	public L2Clan getClan()

@@ -502,7 +502,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<conditions>
-			<condition name="EquipWeapon">
+			<condition name="Op2hWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
@@ -917,7 +917,7 @@
 			<value level="42">82</value>
 			<value level="43">83</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -925,7 +925,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="EquipWeapon">
+			<condition name="Op2hWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
@@ -1128,7 +1128,7 @@
 			<value level="42">82</value>
 			<value level="43">83</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1788,7 +1788,7 @@
 			<value level="4">74</value>
 		</magicLvl>
 		<mpConsume>30</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2734,7 +2734,7 @@
 			<value level="9">86</value>
 		</magicLvl>
 		<mpConsume>8</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2786,7 +2786,7 @@
 			<value level="8">86</value>
 		</magicLvl>
 		<mpConsume>8</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3039,7 +3039,7 @@
 			<value level="8">86</value>
 		</magicLvl>
 		<mpConsume>25</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3142,7 +3142,7 @@
 			<value level="7">86</value>
 		</magicLvl>
 		<mpConsume>1</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3386,7 +3386,6 @@
 		<castRange>2500</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-1378</effectPoint>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill_transform_etc</icon>
 		<magicLvl>
@@ -3403,7 +3402,7 @@
 			<value level="11">85</value>
 		</magicLvl>
 		<mpConsume>30</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>23000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4159,7 +4158,7 @@
 			<value level="5">75</value>
 			<value level="6">75</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE</rideState>

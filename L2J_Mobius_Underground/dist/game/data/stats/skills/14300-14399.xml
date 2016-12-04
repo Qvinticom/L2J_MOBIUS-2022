@@ -1055,7 +1055,7 @@
 		<magicLvl>99</magicLvl>
 		<fanRange>0;0;2000;600</fanRange>
 		<hitTime>10000</hitTime>
-		<targetType>ENEMY</targetType>
+		<targetType>TARGET</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
@@ -1197,7 +1197,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;600} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
+				<radius>600</radius>
+			</effect>
 			<effect name="PhysicalAttack">
 				<power>1</power>
 			</effect>
@@ -2275,7 +2277,9 @@
 			<effect name="PhysicalAttack">
 				<power>40000</power>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;600} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
+				<radius>600</radius>
+			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>
@@ -2376,7 +2380,9 @@
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;600} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
+				<radius>600</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14383" toLevel="1" name="Antharas Meteor">
@@ -2803,7 +2809,9 @@
 		<effect name="PhysicalAttack">
 				<power>27849</power>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;600} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;600} -->
+				<radius>600</radius>
+			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>

@@ -95,7 +95,7 @@
 			<value level="5">75</value>
 			<value level="6">75</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1241,7 +1241,7 @@
 			<value level="36">76</value>
 			<value level="37">77</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1311,7 +1311,7 @@
 		<icon>icon.skill0921</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>77</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1535,7 +1535,7 @@
 			<value level="14">74</value>
 		</magicLvl>
 		<mpConsume>19</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1608,7 +1608,7 @@
 		<icon>icon.skill0928_1</icon>
 		<magicLvl>83</magicLvl>
 		<mpConsume>82</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2780,7 +2780,7 @@
 		<icon>icon.skill0939</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>5</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2904,7 +2904,7 @@
 		<icon>icon.skill0947</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>70</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2973,7 +2973,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>81</magicLvl>
 		<mpConsume>35</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3028,7 +3028,7 @@
 			<value level="6">74</value>
 			<value level="7">74</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3059,7 +3059,6 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-676</effectPoint>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0540</icon>
 		<magicLvl>
@@ -3080,7 +3079,7 @@
 			<value level="6">74</value>
 			<value level="7">74</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3196,7 +3195,7 @@
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>55</magicLvl>
 		<mpConsume>68</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3432,7 +3431,7 @@
 			<value level="36">99</value>
 			<value level="37">99</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3440,7 +3439,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="EquipWeapon">
+			<condition name="Op2hWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
@@ -3620,7 +3619,7 @@
 			<value level="36">99</value>
 			<value level="37">99</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -3871,7 +3870,7 @@
 		<icon>icon.skill_transform_s_attack</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>99</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4060,7 +4059,7 @@
 			<value level="7">78</value>
 			<value level="8">79</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4370,7 +4369,6 @@
 			<value level="7">-347</value>
 		</effectPoint>
 		<effectRange>800</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0494</icon>
 		<isDebuff>true</isDebuff>
@@ -4393,7 +4391,7 @@
 			<value level="6">58</value>
 			<value level="7">58</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4412,7 +4410,6 @@
 				<overHit>true</overHit>
 			</effect>
 			<effect name="BlockActions" />
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="979" toLevel="6" name="Aggression">
@@ -4720,7 +4717,7 @@
 			<value level="24">82</value>
 			<value level="25">83</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -4864,7 +4861,7 @@
 			<value level="24">82</value>
 			<value level="25">83</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -5098,7 +5095,7 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>82</magicLvl>
 		<mpConsume>82</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -5288,12 +5285,11 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-379</effectPoint>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0484</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>38</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -5317,9 +5313,6 @@
 				<distance>200</distance>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="EnemyCharge" />
-		</effects>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
 		<!-- High Five Skill -->
@@ -5335,14 +5328,13 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-681</effectPoint>
 		<effectRange>800</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0793</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>83</magicLvl>
 		<mpConsume>82</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<reuseDelay>20000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -5550,12 +5542,11 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-630</effectPoint>
 		<effectRange>600</effectRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>800</hitTime>
 		<icon>icon.skill0998</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>38</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -5579,8 +5570,5 @@
 				<distance>200</distance>
 			</condition>
 		</conditions>
-		<effects>
-			<effect name="EnemyCharge" />
-		</effects>
 	</skill>
 </list>

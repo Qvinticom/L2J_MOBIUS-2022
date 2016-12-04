@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.holders;
 
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
 /**
@@ -27,6 +28,12 @@ public class ItemHolder implements IIdentifiable
 {
 	private final int _id;
 	private final long _count;
+	
+	public ItemHolder(StatsSet set)
+	{
+		_id = set.getInt("id");
+		_count = set.getLong("count");
+	}
 	
 	public ItemHolder(int id, long count)
 	{

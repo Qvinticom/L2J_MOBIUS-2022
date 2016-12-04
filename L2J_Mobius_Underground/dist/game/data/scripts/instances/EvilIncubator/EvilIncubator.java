@@ -187,6 +187,7 @@ public final class EvilIncubator extends AbstractInstance
 	
 	public EvilIncubator()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(VANGUARD_MEMBER);
 		addTalkId(VANGUARD_MEMBER, ADOLPH, ALICE, BARTON, HAYUK, ELIYAH);
 		addFirstTalkId(ADOLPH, ALICE, BARTON, HAYUK, ELIYAH);

@@ -72,6 +72,7 @@ public final class KimerianCommon extends AbstractInstance
 	
 	public KimerianCommon()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(NOETI_KASHERON);
 		addTalkId(NOETI_KASHERON, NOETI_KASHERON_ENTRANCE);
 		addFirstTalkId(NOETI_KASHERON_ENTRANCE, NOETI_KASHERON_LEAVE);
@@ -86,7 +87,7 @@ public final class KimerianCommon extends AbstractInstance
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (event)
 			{
@@ -141,7 +142,7 @@ public final class KimerianCommon extends AbstractInstance
 	{
 		String htmltext = null;
 		final Instance instance = npc.getInstanceWorld();
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (event)
 			{
@@ -206,7 +207,7 @@ public final class KimerianCommon extends AbstractInstance
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			if (npc.getId() == KIMERIAN)
 			{
@@ -243,7 +244,7 @@ public final class KimerianCommon extends AbstractInstance
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -290,7 +291,7 @@ public final class KimerianCommon extends AbstractInstance
 	{
 		final L2Npc npc = (L2Npc) event.getTarget();
 		final Instance instance = npc.getInstanceWorld();
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			getTimers().cancelTimersOf(npc);
 		}
@@ -300,7 +301,7 @@ public final class KimerianCommon extends AbstractInstance
 	public String onSpawn(L2Npc npc)
 	{
 		final Instance instance = npc.getInstanceWorld();
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -355,7 +356,7 @@ public final class KimerianCommon extends AbstractInstance
 		final StatsSet npcVars = npc.getVariables();
 		final Instance instance = npc.getInstanceWorld();
 		
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			switch (npc.getId())
 			{
@@ -431,7 +432,7 @@ public final class KimerianCommon extends AbstractInstance
 	{
 		final Instance instance = npc.getInstanceWorld();
 		
-		if (isKimerianInstance(instance))
+		if (isInInstance(instance))
 		{
 			if (isHollow)
 			{
@@ -452,11 +453,6 @@ public final class KimerianCommon extends AbstractInstance
 			}
 			npc.setScriptValue(1);
 		}
-	}
-	
-	private boolean isKimerianInstance(Instance instance)
-	{
-		return ((instance != null) && (instance.getTemplateId() == TEMPLATE_ID));
 	}
 	
 	public static void main(String[] args)

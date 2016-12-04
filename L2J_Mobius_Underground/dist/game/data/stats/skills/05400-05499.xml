@@ -22,8 +22,6 @@
 		<abnormalType>FLY_AWAY</abnormalType>
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
-		<flyRadius>300</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<hitTime>5800</hitTime>
 		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
@@ -37,7 +35,9 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="ThrowUp" />
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
@@ -642,7 +642,7 @@
 		<hitTime>2000</hitTime>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>40</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1048,7 +1048,7 @@
 			<value level="1">66</value>
 			<value level="2">71</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>11000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2065,8 +2065,6 @@
 	<skill id="5494" toLevel="1" name="Gust">
 		<!-- Confirmed CT2.5 -->
 		<effectPoint>1</effectPoint>
-		<flyRadius>300</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>86</magicLvl>
 		<operateType>A1</operateType>
@@ -2076,7 +2074,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="ThrowUp" />
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5495" toLevel="1" name="Bleed">

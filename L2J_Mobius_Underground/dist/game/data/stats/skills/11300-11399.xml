@@ -45,7 +45,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Attack nearby enemies with 152 Power added to M. Atk. -->
-		<table name="#power"> 152 154 157 161 165 169 173 177 </table>
 		<icon>icon.skill0005</icon>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
@@ -137,6 +136,7 @@
 					<value level="9">1928</value>
 					<value level="10">1944</value>
 					<value level="11">1960</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 		</effects>
@@ -337,6 +337,7 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Dispels debuffs on all servitors. -->
+		<abnormalTime>5</abnormalTime>
 		<icon>icon.skill1301</icon>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
@@ -350,7 +351,6 @@
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
 		<affectRange>1000</affectRange>
-		<abnormalTime>3</abnormalTime>
 		<isMagic>1</isMagic>
 		<targetType>SUMMON</targetType>
 		<affectScope>SUMMON_EXCEPT_MASTER</affectScope>
@@ -362,17 +362,87 @@
 				<max>10</max>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">2072</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">2207</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">2342</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">2477</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">2612</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">2747</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">2882</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">3017</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">3152</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">3288</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">3423</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">3558</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">3693</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">3828</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">3964</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">4099</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">4234</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">4369</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">4594</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">4684</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">4774</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">4864</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">4955</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">5044</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">5135</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">5224</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">5315</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">5405</value>
+				</power>
+			</effect>
+			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">532</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">570</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2003" toSubLevel="2003">607</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2004" toSubLevel="2004">644</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2005" toSubLevel="2005">681</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2006" toSubLevel="2006">718</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2007" toSubLevel="2007">756</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2008" toSubLevel="2008">793</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2009" toSubLevel="2009">830</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2010" toSubLevel="2010">867</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2011" toSubLevel="2011">904</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2012" toSubLevel="2012">942</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2013" toSubLevel="2013">979</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2014" toSubLevel="2014">1016</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2015" toSubLevel="2015">1053</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2016" toSubLevel="2016">1090</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2017" toSubLevel="2017">1128</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2018" toSubLevel="2018">1165</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2019" toSubLevel="2019">1202</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2020" toSubLevel="2020">1240</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2021" toSubLevel="2021">1264</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2022" toSubLevel="2022">1289</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2023" toSubLevel="2023">1314</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2024" toSubLevel="2024">1339</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2025" toSubLevel="2025">1363</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2026" toSubLevel="2026">1389</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2027" toSubLevel="2027">1413</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2028" toSubLevel="2028">1438</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2029" toSubLevel="2029">1463</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2030" toSubLevel="2030">1488</value>
+				</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11310" toLevel="2" name="Mass Servitor Blessing">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Increases all servitor's P. Def. by 4680 and M. Def. by 4212 for 60 seconds. -->
-		<table name="#pDef"> 4680 9360 </table>
-		<table name="#mDef"> 4212 8424 </table>
 		<icon>icon.skill1299</icon>
 		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="2">60</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
@@ -406,17 +476,22 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="PAtk" fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="11311" toLevel="3" name="Naviarope Strike">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts 20633 damage. -->
-		<table name="#power"> 20633 21717 22799 </table>
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<hitTime>1490</hitTime>
 		<coolTime>500</coolTime>
@@ -446,11 +521,10 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts 18758 ranged damage. -->
-		<table name="#power"> 18758 19743 20727 </table>
 		<icon>icon.skill_transform_etc</icon>
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>900</castRange>
 		<hitTime>1490</hitTime>
 		<coolTime>500</coolTime>
@@ -480,7 +554,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts 18758 damage to nearby enemies. -->
-		<table name="#power"> 18758 19743 20727 </table>
 		<icon>icon.skill_transform_etc</icon>
 		<affectRange>200</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
@@ -514,7 +587,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Detonates a corpse to inflict damage on nearby enemies. -->
-		<table name="#power"> 370 372 374 </table>
 		<icon>icon.skill_transform_debuff</icon>
 		<affectRange>150</affectRange>
 		<operateType>A1</operateType>
@@ -659,7 +731,6 @@
 	<skill id="11320" toLevel="8" name="Summon Wynn Kai the Cat">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Kai the Cat. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15066 15067 15068 15069 15070 15071 15072 15073 </table>
 		<icon>icon.skill11844</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -703,7 +774,6 @@
 	<skill id="11321" toLevel="8" name="Summon Wynn Feline King">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Feline King. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15074 15075 15076 15077 15078 15079 15080 15081 </table>
 		<icon>icon.skill11845</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -747,7 +817,6 @@
 	<skill id="11322" toLevel="8" name="Summon Wynn Feline Queen">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Feline Queen. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15082 15083 15084 15085 15086 15087 15088 15089 </table>
 		<icon>icon.skill11846</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -861,7 +930,6 @@
 	<skill id="11325" toLevel="8" name="Feline Bite">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -876,7 +944,7 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<hitTime>1490</hitTime>
 		<coolTime>500</coolTime>
@@ -900,7 +968,6 @@
 	<skill id="11326" toLevel="8" name="Feline Pounce">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
-		<table name="#power"> 8406 8920 9497 10043 10588 11134 11680 12225 </table>
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -931,9 +998,8 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>100</hitTime>
 		<coolTime>500</coolTime>
 		<effectRange>800</effectRange>
@@ -967,7 +1033,6 @@
 	<skill id="11327" toLevel="8" name="Feline Touch">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1005,7 +1070,6 @@
 	<skill id="11328" toLevel="8" name="Feline Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
-		<table name="#power"> 11558 12309 13059 13809 14559 15309 16060 16810 </table>
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
@@ -1045,7 +1109,6 @@
 	<skill id="11329" toLevel="8" name="Summon Wynn Merrow">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Merrow. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15114 15115 15116 15117 15118 15119 15120 15121 </table>
 		<icon>icon.skill11847</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1089,7 +1152,6 @@
 	<skill id="11330" toLevel="8" name="Summon Wynn Magnus">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Magnus. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15122 15123 15124 15125 15126 15127 15128 15129 </table>
 		<icon>icon.skill11848</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1133,7 +1195,6 @@
 	<skill id="11331" toLevel="8" name="Summon Wynn Seraphim">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Seraphim. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15130 15131 15132 15133 15134 15135 15136 15137 </table>
 		<icon>icon.skill11849</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1247,7 +1308,6 @@
 	<skill id="11334" toLevel="8" name="Unicorn's Bite">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1262,7 +1322,7 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<hitTime>1490</hitTime>
 		<coolTime>500</coolTime>
@@ -1286,7 +1346,6 @@
 	<skill id="11335" toLevel="8" name="Unicorn's Pounce">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
-		<table name="#power"> 8406 8920 9497 10043 10588 11134 11680 12225 </table>
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1317,9 +1376,8 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>100</hitTime>
 		<coolTime>500</coolTime>
 		<effectRange>800</effectRange>
@@ -1353,7 +1411,6 @@
 	<skill id="11336" toLevel="8" name="Unicorn's Touch">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1391,7 +1448,6 @@
 	<skill id="11337" toLevel="8" name="Unicorn's Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
-		<table name="#power"> 11558 12309 13059 13809 14559 15309 16060 16810 </table>
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
@@ -1431,7 +1487,6 @@
 	<skill id="11338" toLevel="8" name="Summon Wynn Nightshade">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Nightshade. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15090 15091 15092 15093 15094 15095 15096 15097 </table>
 		<icon>icon.skill11850</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1475,7 +1530,6 @@
 	<skill id="11339" toLevel="8" name="Summon Wynn Spectral Lord">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Spectral Lord. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15098 15099 15100 15101 15102 15103 15104 15105 </table>
 		<icon>icon.skill11851</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1519,7 +1573,6 @@
 	<skill id="11340" toLevel="8" name="Summon Wynn Soulless">
 		<!-- Updated to IO -->
 		<!-- Summons Wynn Soulless. Consumes 2 summon points. -->
-		<table name="#npcIds"> 15106 15107 15108 15109 15110 15111 15112 15113 </table>
 		<icon>icon.skill11852</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1633,7 +1686,6 @@
 	<skill id="11343" toLevel="8" name="Phantom Bite">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1648,7 +1700,7 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<hitTime>1490</hitTime>
 		<coolTime>500</coolTime>
@@ -1672,7 +1724,6 @@
 	<skill id="11344" toLevel="8" name="Phantom Pounce">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 8406 Power added to P. Atk. Speed - 100. -->
-		<table name="#power"> 8406 8920 9497 10043 10588 11134 11680 12225 </table>
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1703,9 +1754,8 @@
 			<value level="7">60</value>
 			<value level="8">62</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>100</hitTime>
 		<coolTime>500</coolTime>
 		<effectRange>800</effectRange>
@@ -1739,7 +1789,6 @@
 	<skill id="11345" toLevel="8" name="Phantom Touch">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on a target with 10508 Power added to P. Atk. -->
-		<table name="#power"> 10508 11190 11872 12554 13236 13918 14600 15282 </table>
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1777,7 +1826,6 @@
 	<skill id="11346" toLevel="8" name="Phantom Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage on nearby enemies with 11558 Power added to P. Atk. -->
-		<table name="#power"> 11558 12309 13059 13809 14559 15309 16060 16810 </table>
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
@@ -1817,7 +1865,6 @@
 	<skill id="11347" toLevel="4" name="Greater Servitor Haste">
 		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' Atk. Spd. + 10%. -->
-		<table name="#pAtkSpd"> 1.10 1.12 1.15 1.20 </table>
 		<icon>icon.skill11347</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1853,12 +1900,29 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11348" toLevel="4" name="Servitor Death Whisper">
 		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' Critical Damage + 10%. -->
-		<table name="#cAtk"> 1.10 1.12 1.15 1.20 </table>
 		<icon>icon.skill11348</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1894,12 +1958,29 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11349" toLevel="4" name="Greater Servitor Might">
 		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' P. Atk. + 10%. -->
-		<table name="#pAtk"> 1.10 1.12 1.15 1.20 </table>
 		<icon>icon.skill11349</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1935,12 +2016,29 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11350" toLevel="7" name="Arcane Rage">
 		<!-- Updated to IO -->
 		<!-- Use Arcana Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-		<table name="#power"> 188 202 215 227 242 248 254 </table>
 		<icon>icon.skill11350</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -1968,6 +2066,10 @@
 			<value level="7">-715</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<magicCriticalRate>
+			<value fromLevel="1" toLevel="7">6</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -1978,6 +2080,30 @@
 					<value level="5">242</value>
 					<value level="6">248</value>
 					<value level="7">254</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1005">{base + base / 100 * (1 + 0.4 * (subIndex - 1))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1006" toSubLevel="1006">{base + base / 100 * (2 + 0.8 * (subIndex - 5))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1007" toSubLevel="1007">{base + base / 100 * (3 + 0.3 * (subIndex - 6))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1008" toSubLevel="1008">{base + base / 100 * (3 + 0.3 * (subIndex - 7))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1009" toSubLevel="1011">{base + base / 100 * (4 + 0.4 * (subIndex - 8))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1012" toSubLevel="1012">{base + base / 100 * (5 + 0.1 * (subIndex - 11))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1013" toSubLevel="1013">{base + base / 100 * (5 + 0.5 * (subIndex - 12))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1014" toSubLevel="1014">{base + base / 100 * (5 + 0.9 * (subIndex - 13))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1015" toSubLevel="1015">{base + base / 100 * (6 + 0.2 * (subIndex - 14))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1016" toSubLevel="1016">{base + base / 100 * (6 + 0.6 * (subIndex - 15))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1017" toSubLevel="1017">{base + base / 100 * (7 * (subIndex - 16))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 		</effects>
@@ -1985,9 +2111,6 @@
 	<skill id="11351" toLevel="5" name="Arcane Link">
 		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
-		<table name="#pAtk"> 1.01 1.03 1.05 1.10 1.15 </table>
-		<table name="#rCrit"> 0.1 0.15 0.2 0.25 0.3 </table>
-		<table name="#cAtk"> 1.01 1.03 1.05 1.10 1.15 </table>
 		<icon>icon.skill11351</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2042,7 +2165,6 @@
 	<skill id="11352" toLevel="4" name="Arcane Ability">
 		<!-- Atk. Spd., P. Def. + 3%, and PvP Damage - 3%. -->
 		<!-- TODO: get proper values -->
-		<table name="#stat"> 1.03 1.05 1.07 1.10 </table>
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2102,7 +2224,6 @@
 	<skill id="11353" toLevel="7" name="Elemental Rage">
 		<!-- Updated to IO -->
 		<!-- Use Elemental Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-		<table name="#power"> 188 202 215 227 242 248 254 </table>
 		<icon>icon.skill11353</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2130,6 +2251,10 @@
 			<value level="7">-715</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<magicCriticalRate>
+			<value fromLevel="1" toLevel="7">6</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -2140,6 +2265,30 @@
 					<value level="5">242</value>
 					<value level="6">248</value>
 					<value level="7">254</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1005">{base + base / 100 * (1 + 0.4 * (subIndex - 1))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1006" toSubLevel="1006">{base + base / 100 * (2 + 0.8 * (subIndex - 5))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1007" toSubLevel="1007">{base + base / 100 * (3 + 0.3 * (subIndex - 6))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1008" toSubLevel="1008">{base + base / 100 * (3 + 0.3 * (subIndex - 7))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1009" toSubLevel="1011">{base + base / 100 * (4 + 0.4 * (subIndex - 8))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1012" toSubLevel="1012">{base + base / 100 * (5 + 0.1 * (subIndex - 11))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1013" toSubLevel="1013">{base + base / 100 * (5 + 0.5 * (subIndex - 12))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1014" toSubLevel="1014">{base + base / 100 * (5 + 0.9 * (subIndex - 13))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1015" toSubLevel="1015">{base + base / 100 * (6 + 0.2 * (subIndex - 14))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1016" toSubLevel="1016">{base + base / 100 * (6 + 0.6 * (subIndex - 15))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1017" toSubLevel="1017">{base + base / 100 * (7 * (subIndex - 16))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 		</effects>
@@ -2147,9 +2296,6 @@
 	<skill id="11354" toLevel="5" name="Elemental Link">
 		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
-		<table name="#pAtk"> 1.01 1.03 1.05 1.10 1.15 </table>
-		<table name="#rCrit"> 0.1 0.15 0.2 0.25 0.3 </table>
-		<table name="#cAtk"> 1.01 1.03 1.05 1.10 1.15 </table>
 		<icon>icon.skill11354</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2221,7 +2367,6 @@
 	<skill id="11356" toLevel="7" name="Spectral Rage">
 		<!-- Updated to IO -->
 		<!-- Use Spectral Wrath to inflict severe damage on a target with 188 Power added to M. Atk. -->
-		<table name="#power"> 188 202 215 227 242 248 254 </table>
 		<icon>icon.skill11356</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2249,6 +2394,10 @@
 			<value level="7">-715</value>
 		</effectPoint>
 		<isMagic>1</isMagic>
+		<magicCriticalRate>
+			<value fromLevel="1" toLevel="7">6</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttack">
 				<power>
@@ -2259,6 +2408,30 @@
 					<value level="5">242</value>
 					<value level="6">248</value>
 					<value level="7">254</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1005">{base + base / 100 * (1 + 0.4 * (subIndex - 1))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1006" toSubLevel="1006">{base + base / 100 * (2 + 0.8 * (subIndex - 5))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1007" toSubLevel="1007">{base + base / 100 * (3 + 0.3 * (subIndex - 6))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1008" toSubLevel="1008">{base + base / 100 * (3 + 0.3 * (subIndex - 7))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1009" toSubLevel="1011">{base + base / 100 * (4 + 0.4 * (subIndex - 8))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1012" toSubLevel="1012">{base + base / 100 * (5 + 0.1 * (subIndex - 11))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1013" toSubLevel="1013">{base + base / 100 * (5 + 0.5 * (subIndex - 12))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1014" toSubLevel="1014">{base + base / 100 * (5 + 0.9 * (subIndex - 13))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1015" toSubLevel="1015">{base + base / 100 * (6 + 0.2 * (subIndex - 14))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1016" toSubLevel="1016">{base + base / 100 * (6 + 0.6 * (subIndex - 15))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1017" toSubLevel="1017">{base + base / 100 * (7 * (subIndex - 16))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1018" toSubLevel="1018">{base + base / 100 * (7 + 0.4 * (subIndex - 17))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1019" toSubLevel="1019">{base + base / 100 * (7 + 0.7 * (subIndex - 18))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1020" toSubLevel="1020">{base + base / 100 * (8 + 0.1 * (subIndex - 19))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1021" toSubLevel="1021">{base + base / 100 * (8 + 0.5 * (subIndex - 20))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1022" toSubLevel="1022">{base + base / 100 * (8 + 0.8 * (subIndex - 21))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1023" toSubLevel="1023">{base + base / 100 * (9 + 0.2 * (subIndex - 22))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1024" toSubLevel="1024">{base + base / 100 * (9 + 0.6 * (subIndex - 23))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1025" toSubLevel="1025">{base + base / 100 * (10 * (subIndex - 24))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1026" toSubLevel="1026">{base + base / 100 * (10 + 0.3 * (subIndex - 25))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1027" toSubLevel="1027">{base + base / 100 * (10 + 0.7 * (subIndex - 26))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1028" toSubLevel="1028">{base + base / 100 * (11 + 0.1 * (subIndex - 27))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1029" toSubLevel="1029">{base + base / 100 * (11 + 0.4 * (subIndex - 28))}</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1030" toSubLevel="1030">{base + base / 100 * (11 + 0.8 * (subIndex - 29))}</value>
 				</power>
 			</effect>
 		</effects>
@@ -2266,9 +2439,6 @@
 	<skill id="11357" toLevel="5" name="Spectral Link">
 		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
-		<table name="#pAtk"> 1.01 1.03 1.05 1.10 1.15 </table>
-		<table name="#rCrit"> 0.1 0.15 0.2 0.25 0.3 </table>
-		<table name="#cAtk"> 1.01 1.03 1.05 1.10 1.15 </table>
 		<icon>icon.skill11357</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2323,7 +2493,6 @@
 	<skill id="11358" toLevel="4" name="Spectral Ability">
 		<!-- Updated to IO -->
 		<!-- P. Atk. + 3%, and PvP Damage - 3%. -->
-		<table name="#stat"> 1.03 1.05 1.07 1.10 </table>
 		<icon>icon.skill11277</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2570,7 +2739,6 @@
 	<skill id="11365" toLevel="4" name="Summon Demonic Crucifix">
 		<!-- Updated to IO -->
 		<!-- Attacks target with 518 Power added to M. Atk. and casts a curse that decreases target's Atk./Casting Spd. by 30% and Speed by 180. Consumes 3 Spirit Ores. -->
-		<table name="#power"> 518 526 542 558 </table>
 		<icon>icon.skill11365</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2595,6 +2763,12 @@
 			<value level="3">394</value>
 			<value level="4">394</value>
 		</mpConsume>
+		<magicLvl>
+			<value level="1">99</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
 		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
 		<coolTime>500</coolTime>
@@ -2640,10 +2814,6 @@
 	<skill id="11367" toLevel="3" name="Arcane Protection">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., Received P./M. Critical Rate - 7%, Pull Resistance and Knock Back / Knock Down Resistance - 10. Debuff Resistance + 10%, HP/MP Recovery Bonus + 10%. -->
-		<table name="#defCritRate"> 1.07 1.10 1.12 </table>
-		<table name="#regHpMp"> 1.10 1.12 1.15 </table>
-		<table name="#debuffVuln"> 10 12 15 </table>
-		<table name="#trait"> 10 12 15 </table>
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -2724,10 +2894,6 @@
 	<skill id="11368" toLevel="3" name="Arcane Protection">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., Debuff Resistance + 15%, Pull Resistance + 15%, Knock Back / Knock Down Resistance + 15%, HP/MP Recovery Bonus + 15%. Received P./M. Critical Rate - 10%. -->
-		<table name="#defCritRate"> 1.10 1.15 1.15 </table>
-		<table name="#regHpMp"> 1.15 1.20 1.20 </table>
-		<table name="#debuffVuln"> 15 20 20 </table>
-		<table name="#trait"> 15 20 20 </table>
 		<icon>icon.skill11360</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3087,7 +3253,6 @@
 	<skill id="11375" toLevel="3" name="Commando Jumping Attack">
 		<!-- Updated to IO -->
 		<!-- Jumps and hulrs attack to target and nearby enemies with 18224 Power added to P. Atk., and decreases Speed by 100 for 5 seconds. -->
-		<table name="#power"> 18224 19158 20092 </table>
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3107,11 +3272,10 @@
 			<value level="2">86</value>
 			<value level="3">87</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
-		<flyType>CHARGE</flyType>
 		<hitTime>100</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
@@ -3139,7 +3303,6 @@
 	<skill id="11376" toLevel="3" name="Commando Double Smash">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage with 32410 Power added to P. Atk. And knocks down for 3 seconds. -->
-		<table name="#power"> 32410 34072 35734 </table>
 		<icon>icon.skill10546</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3180,7 +3343,6 @@
 	<skill id="11377" toLevel="3" name="Witch Cat Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 31903 Power added to P. Atk. -->
-		<table name="#power"> 31903 33539 35175 </table>
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
@@ -3214,7 +3376,6 @@
 	<skill id="11378" toLevel="3" name="Elemental Slam">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 30623 Power added to P. Atk. and pushes them back. -->
-		<table name="#power"> 30623 32193 33763 </table>
 		<icon>icon.skill1171</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -3261,7 +3422,6 @@
 	<skill id="11379" toLevel="3" name="Lancer Rush">
 		<!-- Updated to IO -->
 		<!-- Rushes forward to target inflicting damage with 16198 Power added to P. Atk. And stuns them for 5 seconds. -->
-		<table name="#power"> 16198 17028 17858 </table>
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3276,7 +3436,6 @@
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
-		<flyType>CHARGE</flyType>
 		<operateType>DA2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -3287,7 +3446,7 @@
 			<value level="2">86</value>
 			<value level="3">87</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -3317,7 +3476,6 @@
 	<skill id="11380" toLevel="3" name="Power Stump">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 22677 Power added to P. Atk. and blows them away. -->
-		<table name="#power"> 22677 23839 25001 </table>
 		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -3363,7 +3521,6 @@
 	<skill id="11381" toLevel="3" name="Cherub Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 31903 Power added to P. Atk. -->
-		<table name="#power"> 31903 33539 35175 </table>
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
@@ -3397,7 +3554,6 @@
 	<skill id="11382" toLevel="3" name="Multiple Icicles">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to target and nearby enemies with 34449 Power added to P. Atk., and decreases Speed by 100 for 5 seconds. -->
-		<table name="#power"> 34449 36215 37981 </table>
 		<icon>icon.skill10103</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3445,7 +3601,6 @@
 	<skill id="11383" toLevel="3" name="Phantom Sword Attack">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage with 40502 Power added to P. Atk. -->
-		<table name="#power"> 40502 42578 44654 </table>
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3455,7 +3610,7 @@
 			<value level="2">86</value>
 			<value level="3">87</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>50</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -3474,7 +3629,6 @@
 	<skill id="11384" toLevel="3" name="Phantom Blow">
 		<!-- Updated to IO -->
 		<!-- Attacks the target's vital points with 45696 Power added to P. Atk. -->
-		<table name="#power"> 45696 47772 49848 </table>
 		<icon>icon.skill10511</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3485,7 +3639,7 @@
 			<value level="2">86</value>
 			<value level="3">87</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>50</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -3510,7 +3664,6 @@
 	<skill id="11385" toLevel="3" name="Phantom Spike">
 		<!-- Updated to IO -->
 		<!-- Attacks the target's vital points with 51411 Power added to P. Atk. -->
-		<table name="#power"> 51411 53747 56083 </table>
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -3545,7 +3698,6 @@
 	<skill id="11386" toLevel="3" name="Phantom Crash">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage with 45568 Power added to P. Atk. -->
-		<table name="#power"> 45568 47904 50240 </table>
 		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>

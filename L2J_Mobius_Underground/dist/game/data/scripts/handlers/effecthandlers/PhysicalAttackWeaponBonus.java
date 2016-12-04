@@ -44,6 +44,7 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 	private final double _criticalChance;
 	private final boolean _ignoreShieldDefence;
 	private final boolean _overHit;
+	private final double _pDefMod;
 	
 	private final Map<WeaponType, Double> _weaponBonus = new HashMap<>();
 	
@@ -53,6 +54,7 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 		_criticalChance = params.getDouble("criticalChance", 0);
 		_ignoreShieldDefence = params.getBoolean("ignoreShieldDefence", false);
 		_overHit = params.getBoolean("overHit", false);
+		_pDefMod = params.getDouble("pDefMod", 1.0);
 		
 		for (WeaponType weapon : WeaponType.values())
 		{
@@ -106,7 +108,7 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 		}
 		
 		final double attack = effector.getPAtk();
-		double defence = effected.getPDef();
+		double defence = effected.getPDef() * _pDefMod;
 		
 		if (!_ignoreShieldDefence)
 		{

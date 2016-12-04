@@ -34,7 +34,6 @@
 	<skill id="11501" toLevel="10" name="Superior Dual Weapon Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 30%, Additional P. Atk. + 1027, Atk. Spd. + 30%, P. Critical Damage + 15% when a dualsword/dualblunt is equipped. Normal hit damage to monsters + 20%. Chance to activate Physical Pose during a normal attack. Depending on your STR can reset cooldown or double skill effect duration. -->
-		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 2103 2231 2367 </table>
 		<icon>icon.skill10252</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -115,7 +114,6 @@
 	<skill id="11502" toLevel="10" name="Superior Robe Mastery">
 		<!-- Glory Days confirmed -->
 		<!--Max HP + 4636, P. Def. + 969 when equipped with a Robe. -->
-		<table name="#pDef"> 969 1064 1169 1261 1413 1467 1522 1580 1646 1709 </table>
 		<icon>icon.skill11252</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -166,7 +164,6 @@
 	<skill id="11503" toLevel="10" name="Superior Light Armor Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- Max HP + 4636, P. Def. + 1355 when equipped with Light Armor. -->
-		<table name="#pDef"> 1355 1488 1635 1763 1976 2051 2128 2209 2302 2389 </table>
 		<icon>icon.skill10254</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -217,7 +214,6 @@
 	<skill id="11504" toLevel="10" name="Superior Heavy Armor Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- Max HP + 4636, P. Def. + 1558 when equipped with Heavy Armor. -->
-		<table name="#pDef"> 1558 1711 1880 2027 2271 2357 2446 2539 2646 2746 </table>
 		<icon>icon.skill10002</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -268,7 +264,6 @@
 	<skill id="11505" toLevel="10" name="Superior Anti Magic">
 		<!-- Glory Days confirmed -->
 		<!-- M. Def. + 776 and Attack M. Def. Rate + 35%. -->
-		<table name="#mDef"> 776 878 993 1097 1237 1299 1365 1434 1507 1583 </table>
 		<icon>icon.skill10004</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -309,7 +304,6 @@
 	<skill id="11506" toLevel="10" name="Superior HP Boost">
 		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Max HP + 366. -->
-		<table name="#maxHp"> 513 574 635 717 766 835 904 973 1042 1111 </table>
 		<icon>icon.skill0211</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -350,7 +344,6 @@
 	<skill id="11507" toLevel="10" name="Superior MP Boost">
 		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Max MP + 313. -->
-		<table name="#maxMp"> 313 374 435 517 566 635 704 773 842 911 </table>
 		<icon>icon.skill0213</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -396,10 +389,12 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>150</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">150</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>NONE</basicProperty>
-		<flyType>CHARGE</flyType>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<lvlBonusRate>1</lvlBonusRate>
 		<mpConsume>
@@ -413,7 +408,10 @@
 			<value level="8">51</value>
 			<value level="9">53</value>
 		</mpConsume>
-		<castRange>600</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="9">600</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>10000</reuseDelay>
@@ -456,11 +454,13 @@
 				</weaponType>
 			</condition>
 			<condition name="OpCheckCastRange">
-				<distance>200</distance>
+				<distance>
+					<value fromLevel="1" toLevel="9">200</value>
+					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{base - (3 * subIndex)}</value>
+				</distance>
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="EnemyCharge" />
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
@@ -472,7 +472,10 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
-		<activateRate>99</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
@@ -505,7 +508,7 @@
 			<value level="11">63</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
 		<effectPoint>
@@ -555,9 +558,14 @@
 					<value level="9">26008</value>
 					<value level="10">27138</value>
 					<value level="11">28268</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-40</amount>
@@ -576,11 +584,13 @@
 	<skill id="11510" toLevel="11" name="Shadow Blade">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 14608 Power added to P. Atk. For 20 seconds, P. Atk. and M. Atk. - 40%. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 14608 15776 16944 18112 19280 20448 21616 22784 28162 29386 30610 </table>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
-		<activateRate>99</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
@@ -613,7 +623,7 @@
 			<value level="11">68</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
 		<effectPoint>
@@ -658,9 +668,14 @@
 					<value level="9">28162</value>
 					<value level="10">29386</value>
 					<value level="11">30610</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="PAtk">
 				<amount>-40</amount>
@@ -707,7 +722,7 @@
 			<value level="11">99</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
 		<effectPoint>
@@ -750,20 +765,31 @@
 					<value level="9">40673</value>
 					<value level="10">42657</value>
 					<value level="11">44641</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11513" toLevel="11" name="Mass Crippling Attack">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target and nearby enemies with 10263 Power added to P. Atk. For 20 seconds, decreases target's P. Def. and M. Def. by 40% and P. Evasion by 15. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 10263 10616 11322 12027 12733 13438 14144 14849 19113 20045 20977 </table>
 		<icon>icon.skill11513</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -796,7 +822,7 @@
 			<value level="10">168</value>
 			<value level="11">172</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -816,7 +842,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<activateRate>99</activateRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -845,9 +870,14 @@
 					<value level="9">19113</value>
 					<value level="10">20045</value>
 					<value level="11">20977</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>-40</amount>
@@ -866,10 +896,13 @@
 	<skill id="11514" toLevel="11" name="Mass Shadow Blade">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target and nearby enemies with 11722 Power added to P. Atk. For 20 seconds, decreases P. Atk. and M. Atk. by 40%. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 11722 12525 13327 14130 14933 15736 16539 17342 21340 22380 23420 </table>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">99</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -902,7 +935,7 @@
 			<value level="10">194</value>
 			<value level="11">200</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -922,7 +955,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
-		<activateRate>99</activateRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -951,9 +983,14 @@
 					<value level="9">21340</value>
 					<value level="10">22380</value>
 					<value level="11">23420</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="11">1</value>
+					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 			</effect>
 			<effect name="PAtk">
 				<amount>-40</amount>
@@ -968,7 +1005,6 @@
 	<skill id="11515" toLevel="5" name="Confusion Bomber">
 		<!-- Glory Days confirmed -->
 		<!-- Curses target with darkness. For 5 seconds, decreases Speed and Atk. Spd. by 5%. After 5 seconds, detonates target to inflict damage nearby. Requires a sword, dualsword or dual blunt to be equipped. -->
-		<table name="#skillLevel"> 1 2 3 4 5 </table>
 		<icon>icon.skill11515</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1038,7 +1074,6 @@
 	</skill>
 	<skill id="11516" toLevel="15" name="Curse Explosion">
 		<!-- Glory Days confirmed -->
-		<table name="#power"> 8805 9717 10630 11542 12454 13366 13670 13974 14278 14582 14886 15190 15494 15799 16103 </table>
 		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 		<effectPoint>
@@ -1114,7 +1149,10 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill11517</icon>
@@ -1210,7 +1248,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -1346,7 +1387,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1446,7 +1490,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1546,7 +1593,10 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill11521</icon>
@@ -1651,7 +1701,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectRange>1000</affectRange>
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1731,7 +1784,10 @@
 		<!-- Glory Days confirmed -->
 		<!-- For 30 minutes, the selected party member's P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30% and Shield Defense + 50%. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
@@ -1793,7 +1849,10 @@
 		<!-- Glory Days confirmed -->
 		<!-- For 30 minutes, the selected party member's P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8% and Speed + 8. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -1859,7 +1918,10 @@
 		<!-- Glory Days confirmed -->
 		<!-- For 30 minutes, the selected party member's M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Speed + 8, M. Def. + 14%, MP Recovery Bonus + 20%, MP Consumption for magic skills - 15% and physical skills -5%, and Cooldown - 20%. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -1953,7 +2015,6 @@
 	<skill id="11526" toLevel="10" name="Superior Sword/Blunt Weapon Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 30%, Additional P. Atk. + 1027, Atk. Spd. + 30%, P. Critical Damage + 15% when a sword or blunt weapon is equipped. -->
-		<table name="#pAtk"> 1027 1191 1381 1554 1761 1869 1982 2103 2231 2367 </table>
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2017,7 +2078,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -2076,7 +2140,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -2146,7 +2213,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -2242,6 +2312,24 @@
 				<amount>80</amount>
 				<chance>30</chance>
 			</effect>
+			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.4 + 0.6 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11534" toLevel="6" name="Angel's Touch">
@@ -2302,13 +2390,30 @@
 		</conditions>
 		<effects>
 			<effect name="DebuffBlock" />
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="6" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="4" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="4" toLevel="6" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="4" toLevel="6" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="4" toLevel="6" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="4" toLevel="6" fromSubLevel="3001" toSubLevel="3030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11536" toLevel="9" name="Divine Cancel">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Has a chance of canceling up to 2 of the buff effects on target. -->
-		<table name="#rate"> 35 40 45 50 55 60 60 60 60 </table> <!-- TODO: check rate above lvl 98 -->
 		<icon>icon.skill11536</icon>
 		<effectPoint>-709</effectPoint>
 		<operateType>A1</operateType>
@@ -2358,6 +2463,7 @@
 					<value level="7">60</value>
 					<value level="8">60</value>
 					<value level="9">60</value>
+					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</rate>
 				<max>2</max>
 			</effect>
@@ -2366,9 +2472,16 @@
 	<skill id="11537" toLevel="10" name="Transform">
 		<!-- Glory Days confirmed -->
 		<!-- Transforms target into a harmless creature and decrease its Speed by 20% for 15 seconds. The effect is canceled if the transformed target is attacked. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
+		<activateRate>
+			<value fromLevel="1" toLevel="10">60</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
-		<abnormalTime>15</abnormalTime>
 		<trait>CHANGEBODY</trait>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2394,7 +2507,10 @@
 			<value level="9">184</value>
 			<value level="10">193</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="10">900</value>
+			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>60000</reuseDelay>
@@ -2412,14 +2528,10 @@
 			<value level="9">-711</value>
 			<value level="10">-711</value>
 		</effectPoint>
-		<abnormalType>CHANGEBODY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<activateRate>60</activateRate>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2471,7 +2583,10 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>65</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="7">65</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -2514,6 +2629,18 @@
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="11539" toLevel="11" name="Petrify">
@@ -2525,7 +2652,10 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
-		<activateRate>60</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="11">60</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-687</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2556,7 +2686,10 @@
 			<value level="10">100</value>
 			<value level="11">104</value>
 		</mpConsume>
-		<castRange>900</castRange>
+		<castRange>
+			<value fromLevel="1" toLevel="11">900</value>
+			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</castRange>
 		<hitTime>1700</hitTime>
 		<coolTime>300</coolTime>
 		<reuseDelay>120000</reuseDelay>
@@ -2666,6 +2799,24 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7030">
+ 				<amount>
+ 					<value fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="8001" toSubLevel="8030">
+				<amount>
+					<value fromLevel="7" toLevel="7" fromSubLevel="8001" toSubLevel="8030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11541" toLevel="1" name="Polymorph">
@@ -2701,7 +2852,10 @@
 			</effect>
 			<effect name="DeleteHate" />
 			<effect name="Speed">
-				<amount>-50</amount>
+				<amount>
+					<value fromLevel="1" toLevel="1">-50</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="6001" toSubLevel="6030">{base + subIndex * 1.5}</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
@@ -2712,13 +2866,51 @@
 				<amount>4500</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4001">1936</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4002" toSubLevel="4002">2072</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4003" toSubLevel="4003">2207</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4004" toSubLevel="4004">2342</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4005" toSubLevel="4005">2477</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4006" toSubLevel="4006">2612</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4007" toSubLevel="4007">2747</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4008" toSubLevel="4008">2882</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4009" toSubLevel="4009">3017</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4010" toSubLevel="4010">3152</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4011" toSubLevel="4011">3288</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4012" toSubLevel="4012">3423</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4013" toSubLevel="4013">3558</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4014" toSubLevel="4014">3693</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4015" toSubLevel="4015">3828</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4016" toSubLevel="4016">3964</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4017" toSubLevel="4017">4099</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4018" toSubLevel="4018">4234</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4019" toSubLevel="4019">4369</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4020" toSubLevel="4020">4504</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4021" toSubLevel="4021">4594</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4022" toSubLevel="4022">4684</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4023" toSubLevel="4023">4774</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4024" toSubLevel="4024">4864</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4025" toSubLevel="4025">4955</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4026" toSubLevel="4026">5044</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4027" toSubLevel="4027">5135</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4028" toSubLevel="4028">5224</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4029" toSubLevel="4029">5315</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="4030" toSubLevel="4030">5405</value>
+				</power>
+			</effect>
+			<effect name="ManaHealOverTime" fromLevel="1" toLevel="1" fromSubLevel="5001" toSubLevel="5030">
+				<power>
+					<value fromLevel="1" toLevel="1" fromSubLevel="5001" toSubLevel="5030">{16 + subIndex}</value>
+				</power>
+				<ticks>1</ticks>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11543" toLevel="6" name="Disperse">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 sec., transforms yourself and nearby party members to increase P. Def. and M. Def. + 2000 and Speed + 44. Decreases P. Atk. and M. Atk. + 80%. -->
-		<table name="#def"> 2000 3000 4000 4500 5000 5500 </table>
-		<table name="#runSpd"> 44 44 44 48 52 56 </table>
 		<icon>icon.skill11543</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2821,6 +3013,18 @@
 				<amount>-80</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6030">
+ 				<amount>
+ 					<value fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7030">
+ 				<amount>
+ 					<value fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="11544" toLevel="1" name="Battle Rhapsody">
@@ -2840,7 +3044,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
 		<abnormalLvl>5</abnormalLvl>
-		<isMagic>2</isMagic>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -2862,6 +3065,24 @@
 				<amount>100</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+ 				</amount>
+ 				<mode>DIFF</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="11545" toLevel="1" name="Crazy Nocturne">
@@ -2895,18 +3116,38 @@
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+ 				</amount>
+ 				<mode>DIFF</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="11546" toLevel="4" name="Chaos Symphony">
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts 38826 damage on target and nearby enemies. Decreases nearby enemies' P. Atk., P. Def., M. Atk., M. Def. and Speed by 50% for 10 seconds. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
-		<table name="#magicLvl"> 99 101 103 105 </table>
-		<table name="#power"> 38826 44708 46888 49068 </table>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
+		<activateRate>100
+			<value fromLevel="1" toLevel="4">100</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<icon>icon.skill11533</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1767</mpConsume>
@@ -2918,7 +3159,6 @@
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<activateRate>100</activateRate>
 		<magicLvl>99</magicLvl>
 		<trait>DERANGEMENT</trait>
 		<isMagic>2</isMagic>
@@ -2943,9 +3183,13 @@
 					<value level="2">44708</value>
 					<value level="3">46888</value>
 					<value level="4">49068</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>5</criticalChance>
+				<criticalChance>
+					<value fromLevel="1" toLevel="4">5</value>
+					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
 			</effect>
 			<effect name="PAtk">
 				<amount>-50</amount>
@@ -3093,7 +3337,6 @@
 	<skill id="11552" toLevel="4" name="Superior Divine Lore">
 		<!-- Glory Days confirmed -->
 		<!-- MP Consumption for skills is decreased by 6%. -->
-		<table name="#mpConsumes"> 0.94 0.91 0.88 0.85 </table>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
 		<icon>icon.skill11506</icon>
@@ -3348,6 +3591,108 @@
 				<type>BLOCK_MP</type>
 			</effect>
 			<effect name="DebuffBlock" />
+			<effect name="Heal" fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1030">
+				<power>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1001">1936</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1002" toSubLevel="1002">2072</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1003" toSubLevel="1003">2207</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1004" toSubLevel="1004">2342</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1005" toSubLevel="1005">2477</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1006" toSubLevel="1006">2612</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1007" toSubLevel="1007">2747</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1008" toSubLevel="1008">2882</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1009" toSubLevel="1009">3017</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1010" toSubLevel="1010">3152</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1011">3288</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1012" toSubLevel="1012">3423</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1013" toSubLevel="1013">3558</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1014" toSubLevel="1014">3693</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1015" toSubLevel="1015">3828</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1016" toSubLevel="1016">3964</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1017" toSubLevel="1017">4099</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1018" toSubLevel="1018">4234</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1019" toSubLevel="1019">4369</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1020" toSubLevel="1020">4504</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1021" toSubLevel="1021">4594</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1022" toSubLevel="1022">4684</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1023" toSubLevel="1023">4774</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1024" toSubLevel="1024">4864</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1025" toSubLevel="1025">4955</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1026" toSubLevel="1026">5044</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1027" toSubLevel="1027">5135</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1028" toSubLevel="1028">5224</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1029" toSubLevel="1029">5315</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="1030" toSubLevel="1030">5405</value>
+				</power>
+			</effect>
+			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<power>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2001" toSubLevel="2001">532</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2002" toSubLevel="2002">570</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2003" toSubLevel="2003">607</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2004" toSubLevel="2004">644</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2005" toSubLevel="2005">681</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2006" toSubLevel="2006">718</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2007" toSubLevel="2007">756</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2008" toSubLevel="2008">793</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2009" toSubLevel="2009">830</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2010" toSubLevel="2010">867</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2011" toSubLevel="2011">904</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2012" toSubLevel="2012">942</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2013" toSubLevel="2013">979</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2014" toSubLevel="2014">1016</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2015" toSubLevel="2015">1053</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2016" toSubLevel="2016">1090</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2017" toSubLevel="2017">1128</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2018" toSubLevel="2018">1165</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2019" toSubLevel="2019">1202</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2020" toSubLevel="2020">1240</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2021" toSubLevel="2021">1264</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2022" toSubLevel="2022">1289</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2023" toSubLevel="2023">1314</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2024" toSubLevel="2024">1339</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2025" toSubLevel="2025">1363</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2026" toSubLevel="2026">1389</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2027" toSubLevel="2027">1413</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2028" toSubLevel="2028">1438</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2029" toSubLevel="2029">1463</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="2030" toSubLevel="2030">1488</value>
+				</power>
+			</effect>
+			<effect name="CpHeal" fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3030">
+				<power>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3001" toSubLevel="3001">2421</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3002" toSubLevel="3002">2590</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3003" toSubLevel="3003">2759</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3004" toSubLevel="3004">2928</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3005" toSubLevel="3005">3097</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3006" toSubLevel="3006">3265</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3007" toSubLevel="3007">3434</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3008" toSubLevel="3008">3603</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3009" toSubLevel="3009">3772</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3010" toSubLevel="3010">3941</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3011" toSubLevel="3011">4110</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3012" toSubLevel="3012">4279</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3013" toSubLevel="3013">4448</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3014" toSubLevel="3014">4617</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3015" toSubLevel="3015">4786</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3016" toSubLevel="3016">4955</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3017" toSubLevel="3017">5124</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3018" toSubLevel="3018">5293</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3019" toSubLevel="3019">5462</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3020" toSubLevel="3020">5631</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3021" toSubLevel="3021">5743</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3022" toSubLevel="3022">5856</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3023" toSubLevel="3023">5968</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3024" toSubLevel="3024">6081</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3025" toSubLevel="3025">6194</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3026" toSubLevel="3026">6306</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3027" toSubLevel="3027">6419</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3028" toSubLevel="3028">6531</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3029" toSubLevel="3029">6644</value>
+					<value fromLevel="1" toLevel="2" fromSubLevel="3030" toSubLevel="3030">6757</value>
+				</power>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11561" toLevel="7" name="Giant Root">
@@ -3359,7 +3704,10 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<activateRate>65</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="7">65</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -3406,6 +3754,18 @@
 			<effect name="DefenceTrait">
 				<HOLD>100</HOLD>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11562" toLevel="1" name="Devil's Movement">
@@ -3414,7 +3774,10 @@
 		<!-- Prevents all party members from being attacked preemptively by monsters for 2 minutes. But if any party member initiates an attack, the effect will be canceled. -->
 		<icon>icon.skill11562</icon>
 		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">120</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<abnormalType>DANCE_OF_SHADOW</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
@@ -3468,6 +3831,12 @@
 				<isCritical>false</isCritical>
 				<allowWeapons>SWORD,BLUNT</allowWeapons>
 			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="11563" toLevel="1" name="Quick Return">
@@ -3499,7 +3868,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- Resurrects a dead target and restores 40% of the XP lost. -->
-		<table name="#power"> 40 50 60 70 </table>
 		<icon>icon.skill1016</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -3542,7 +3910,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -3596,7 +3967,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>ARMOR_HOLY</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -3646,7 +4020,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -3788,12 +4165,19 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
+		<activateRate>
+			<value fromLevel="1" toLevel="7">60</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<trait>CHANGEBODY</trait>
-		<affectRange>200</affectRange>
+		<affectRange>
+			<value fromLevel="1" toLevel="7">200</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -3813,8 +4197,14 @@
 			<value level="7">205</value>
 		</mpConsume>
 		<removedOnDamage>true</removedOnDamage>
-		<castRange>900</castRange>
-		<effectRange>1400</effectRange>
+		<castRange>
+			<value fromLevel="1" toLevel="7">900</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</castRange>
+		<effectRange>
+			<value fromLevel="1" toLevel="7">1400</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
+		</effectRange>
 		<hitTime>1410</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>120000</reuseDelay>
@@ -3929,7 +4319,6 @@
 	<skill id="11582" toLevel="4" name="Mass Song of Silence">
 		<!-- Updated to IO -->
 		<!-- Plays the Song of Silence. For 10 sec., enemies' P. Skills and M. Skills are locked. -->
-		<table name="#abnormalLvl"> 4 5 6 7 </table>
 		<icon>icon.skill11839</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -4176,7 +4565,10 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
@@ -4269,7 +4661,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<operateType>A2</operateType>
@@ -4394,7 +4789,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<operateType>A2</operateType>
@@ -4481,7 +4879,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectLimit>50-100</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<operateType>A2</operateType>
@@ -4559,7 +4960,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<operateType>A2</operateType>
@@ -4651,7 +5055,10 @@
 			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<affectLimit>50-50</affectLimit> <!-- Custom -->
 		<affectRange>1000</affectRange> <!-- Custom -->
 		<operateType>A2</operateType>
@@ -4718,7 +5125,10 @@
 		<!-- For 30 minutes, increases clan members' P. Atk. + 12%, P. Critical Damage + 35%, P. Critical Rate + 100%, P. Def. + 45%, Shield Defense Rate + 30%, and Shield Defense + 50%. -->
 		<icon>icon.skill11596</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -4774,7 +5184,10 @@
 		<!-- For 30 minutes, increases clan members' P. Atk. + 35%, P. Critical Damage + 35%, P. Critical Rate + 100%, Atk. Spd. + 8%, M. Atk. + 16%, Casting Spd. + 8%, and Spd. + 8. -->
 		<icon>icon.skill11595</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -4835,7 +5248,10 @@
 		<!-- For 30 minutes, increases clan members' M. Atk. + 40%, M. Critical Rate + 100%, Casting Spd. + 8%, P. Atk. + 8%, Atk. Spd. + 8%, Spd. + 8, M. Def. + 14%, and MP Recovery Bonus + 20%. Decreases magic skill MP Consumption - 15%, physical skill MP Consumption - 5%, and Skill Cooldown - 20%. -->
 		<icon>icon.skill11597</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -4922,7 +5338,6 @@
 	<skill id="11598" toLevel="4" name="Greater Freezing Flame">
 		<!-- Updated to IO -->
 		<!-- A powerful cold flame. For 10 sec., decreases enemy's HP by 326. -->
-		<table name="#dot"> 326 343 359 375 </table>
 		<icon>icon.skill11598</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -4963,8 +5378,6 @@
 	<skill id="11599" toLevel="4" name="Combat Cry">
 		<!-- Updated to IO -->
 		<!-- P. Atk./P. Def., M. Atk./M. Def. + 5%, and Skill Power + 5%. MP drains consistently depending on level. -->
-		<table name="#attackDefense"> 1.05 1.07 1.10 1.15 </table>
-		<table name="#mdot"> 4 4 4 4 </table> <!-- Custom -->
 		<icon>icon.skill1001</icon>
 		<operateType>T</operateType>
 		<targetType>SELF</targetType>

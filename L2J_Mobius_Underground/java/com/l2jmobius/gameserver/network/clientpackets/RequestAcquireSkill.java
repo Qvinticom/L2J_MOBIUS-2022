@@ -47,7 +47,6 @@ import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillDone;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import com.l2jmobius.gameserver.network.serverpackets.ExAlchemySkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
@@ -72,8 +71,8 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 	
 	private static final String[] DUALCLASS_REVELATION_VAR_NAMES =
 	{
-		"DualclassRevelationSkill1",
-		"DualclassRevelationSkill2"
+		PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS,
+		PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS
 	};
 	
 	private int _id;
@@ -594,7 +593,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					for (SkillHolder skill : skillLearn.getPreReqSkills())
 					{
-						if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLvl())
+						if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLevel())
 						{
 							if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
 							{
@@ -697,7 +696,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));
 		player.sendSkillList(skill.getId());
 		
-		player.updateShortCuts(_id, _level);
+		player.updateShortCuts(_id, _level, 0);
 		showSkillList(trainer, player);
 		
 		// If skill is expand type then sends packet:
@@ -724,12 +723,6 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 	 */
 	private void showSkillList(L2Npc trainer, L2PcInstance player)
 	{
-		if ((_skillType == AcquireSkillType.TRANSFORM) || (_skillType == AcquireSkillType.TRANSFER))
-		{
-			// Managed in Datapack.
-			return;
-		}
-		
 		if (_skillType == AcquireSkillType.SUBCLASS)
 		{
 			showSubSkillList(player);
@@ -741,10 +734,6 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		else if (trainer instanceof L2FishermanInstance)
 		{
 			L2FishermanInstance.showFishSkillList(player);
-		}
-		else
-		{
-			player.sendPacket(new AcquireSkillList(player));
 		}
 	}
 	

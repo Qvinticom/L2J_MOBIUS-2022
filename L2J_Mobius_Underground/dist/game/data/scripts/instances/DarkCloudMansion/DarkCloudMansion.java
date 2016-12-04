@@ -110,6 +110,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	public DarkCloudMansion()
 	{
+		super(TEMPLATE_ID);
 		addStartNpc(YIYEN);
 		addFirstTalkId(MONOLITH, TRUTH, FAITH, ADVERSITY, ADVENTURE);
 		addTalkId(YIYEN, TRUTH);
@@ -372,8 +373,10 @@ public final class DarkCloudMansion extends AbstractInstance
 					break;
 				}
 				case 9:
+				{
 					handleRoomE(world, npc);
 					break;
+				}
 			}
 		}
 		return null;

@@ -96,6 +96,7 @@ public final class PailakaRuneCastle extends AbstractInstance
 	
 	public PailakaRuneCastle()
 	{
+		super(MANAGERS.values().stream().mapToInt(Integer::valueOf).toArray());
 		addFirstTalkId(VICTIMS);
 		addTalkId(VICTIMS);
 		addTalkId(MANAGERS.keySet());

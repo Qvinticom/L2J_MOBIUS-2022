@@ -46,7 +46,8 @@ public enum ZoneId
 	NO_ITEM_DROP,
 	NO_RESTART,
 	SAYUNE,
-	FISHING;
+	FISHING,
+	UNDYING;
 	
 	public static int getZoneCount()
 	{

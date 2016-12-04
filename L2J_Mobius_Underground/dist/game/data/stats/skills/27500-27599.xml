@@ -1066,140 +1066,153 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27563" toLevel="1" name="Rare Accessory Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27491</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
+				<weightPercent>10</weightPercent>
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="5">
-						<item id="6656" count="1" /> <!-- Antharas' Earring -->
-					</item>
-					<item chance="5">
+					<item chance="2.0">
 						<item id="6657" count="1" /> <!-- Valakas' Necklace -->
 					</item>
-					<item chance="15">
+					<item chance="17.0">
 						<item id="6658" count="1" /> <!-- Baium's Ring -->
 					</item>
-					<item chance="15">
+					<item chance="37.0">
 						<item id="6659" count="1" /> <!-- Zaken's Earring -->
 					</item>
-					<item chance="15">
+					<item chance="17.0">
 						<item id="6660" count="1" /> <!-- Queen Ant's Ring -->
 					</item>
-					<item chance="25">
+					<item chance="15.0">
 						<item id="6661" count="1" /> <!-- Orfen's Earring -->
 					</item>
-					<item chance="15">
+					<item chance="10.0">
 						<item id="8191" count="1" /> <!-- Frintezza's Necklace -->
 					</item>
-					<item chance="5">
-						<item id="27500" count="1" /> <!-- Freya's Necklace -->
+					<item chance="2.0">
+						<item id="16025" count="1" /> <!-- Freya's Necklace -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27564" toLevel="1" name="Greater Rare Accessory Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27492</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
+				<weightPercent>10</weightPercent>
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="10">
-						<item id="37521" count="1" /> <!-- Baium's Soul Ring -->
-					</item>
-					<item chance="10">
-						<item id="37522" count="1" /> <!-- Frintezza's Soul Necklace -->
-					</item>
-					<item chance="5">
-						<item id="19463" count="1" /> <!-- Blessed Antharas' Earring -->
-					</item>
-					<item chance="5">
-						<item id="19464" count="1" /> <!-- Blessed Valakas' Necklace -->
-					</item>
-					<item chance="5">
+					<item chance="46.0">
 						<item id="16026" count="1" /> <!-- Blessed Freya's Necklace -->
 					</item>
-					<item chance="20">
-						<item id="36254" count="1" /> <!-- Queen Ant's Soul Ring -->
-					</item>
-					<item chance="15">
-						<item id="36255" count="1" /> <!-- Orfen's Soul Earring -->
-					</item>
-					<item chance="15">
-						<item id="21712" count="1" /> <!-- Blessed Zaken's Earring -->
-					</item>
-					<item chance="5">
-						<item id="36257" count="1" /> <!-- Lilith's Soul Necklace -->
-					</item>
-					<item chance="2">
-						<item id="36946" count="1" /> <!-- Lindvior's Earring -->
-					</item>
-					<item chance="5">
+					<item chance="0.2">
 						<item id="17623" count="1" /> <!-- Earth Wyrm Heart Ring -->
 					</item>
-					<item chance="3">
+					<item chance="0.7">
+						<item id="19463" count="1" /> <!-- Blessed Antharas' Earring -->
+					</item>
+					<item chance="0.7">
+						<item id="19464" count="1" /> <!-- Blessed Valakas' Necklace -->
+					</item>
+					<item chance="46.0">
+						<item id="21712" count="1" /> <!-- Blessed Zaken's Earring -->
+					</item>
+					<item chance="0.2">
 						<item id="35570" count="1" /> <!-- Tauti's Ring -->
+					</item>
+					<item chance="1.0">
+						<item id="36254" count="1" /> <!-- Queen Ant's Soul Ring -->
+					</item>
+					<item chance="1.0">
+						<item id="36255" count="1" /> <!-- Orfen's Soul Earring -->
+					</item>
+					<item chance="2.0">
+						<item id="36257" count="1" /> <!-- Lilith's Soul Necklace -->
+					</item>
+					<item chance="0.2">
+						<item id="36946" count="1" /> <!-- Lindvior's Earring -->
+					</item>
+					<item chance="1.0">
+						<item id="37521" count="1" /> <!-- Baium's Soul Ring -->
+					</item>
+					<item chance="1.0">
+						<item id="37522" count="1" /> <!-- Frintezza's Soul Necklace -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="27565" toLevel="1" name="Soul Bottle Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27493</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
+				<weightPercent>10</weightPercent>
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="10">
+					<item chance="95.0">
 						<item id="16027" count="1" /> <!-- Bottle of Freya's Soul -->
 					</item>
-					<item chance="5">
+					<item chance="0.2">
 						<item id="19465" count="1" /> <!-- Bottle of Antharas' Soul -->
 					</item>
-					<item chance="5">
+					<item chance="0.2">
 						<item id="19466" count="1" /> <!-- Bottle of Valakas' Soul -->
 					</item>
-					<item chance="25">
+					<item chance="0.5">
 						<item id="36252" count="1" /> <!-- Bottle of Queen Ant's Soul -->
 					</item>
-					<item chance="25">
+					<item chance="1.8">
 						<item id="36253" count="1" /> <!-- Bottle of Orfen's Soul -->
 					</item>
-					<item chance="15">
+					<item chance="1.8">
 						<item id="37519" count="1" /> <!-- Bottle of Frintezza's Soul -->
 					</item>
-					<item chance="15">
+					<item chance="0.5">
 						<item id="37520" count="1" /> <!-- Bottle of Baium's Soul -->
 					</item>
 				</items>
@@ -1207,153 +1220,835 @@
 		</effects>
 	</skill>
 	<skill id="27566" toLevel="1" name="Soul Crystal Coupon Pack">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Underground skill -->
+		<itemConsumeId>27494</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-	</skill>
-	<skill id="27567" toLevel="1" name="Talisman - Abundance Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27568" toLevel="1" name="Spirit Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27569" toLevel="1" name="Hair Accessory Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27570" toLevel="1" name="Pendant Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27571" toLevel="1" name="Ingredient Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27572" toLevel="1" name="Attribute Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27573" toLevel="1" name="Greater Attribute Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27574" toLevel="1" name="Enchant Scroll Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27575" toLevel="1" name="Greater Enchant Scroll Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27576" toLevel="1" name="Lucky Enchant Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27577" toLevel="1" name="Greater Lucky Enchant Stone Pack">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="27578" toLevel="1" name="Treasure Chest">
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
+				<weightPercent>10</weightPercent>
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="5">
-						<item id="27491" count="1" /> <!-- Rare Accessory Pack -->
+					<item chance="60.0">
+						<item id="46565" count="1" /> <!-- Soul Crystal Coupon - Stage 1 -->
 					</item>
-					<item chance="5">
-						<item id="27494" count="1" /> <!-- Soul Crystal Coupon Pack -->
+					<item chance="20.0">
+						<item id="46566" count="1" /> <!-- Soul Crystal Coupon - Stage 2 -->
 					</item>
-					<item chance="5">
-						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack -->
+					<item chance="10.0">
+						<item id="46567" count="1" /> <!-- Soul Crystal Coupon - Stage 3 -->
 					</item>
-					<item chance="10">
-						<item id="27496" count="1" /> <!-- Spirit Stone Pack -->
+					<item chance="8.0">
+						<item id="46568" count="1" /> <!-- Soul Crystal Coupon - Stage 4 -->
 					</item>
-					<item chance="15">
-						<item id="27497" count="1" /> <!-- Hair Accessory Pack -->
-					</item>
-					<item chance="10">
-						<item id="27498" count="1" /> <!-- Pendant Pack -->
-					</item>
-					<item chance="20">
-						<item id="27499" count="1" /> <!-- Ingredient Box -->
-					</item>
-					<item chance="10">
-						<item id="27500" count="1" /> <!-- Attribute Stone Pack, -->
-					</item>
-					<item chance="10">
-						<item id="27502" count="1" /> <!-- Enchant Scroll Pack -->
-					</item>
-					<item chance="10">
-						<item id="27504" count="1" /> <!-- Lucky Enchant Stone Pack -->
+					<item chance="2.0">
+						<item id="46569" count="1" /> <!-- Soul Crystal Coupon - Stage 5 -->
 					</item>
 				</items>
 			</effect>
-		</effects>		
+		</effects>
 	</skill>
-	<skill id="27579" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="27567" toLevel="1" name="Talisman - Abundance Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27495</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
+				<weightPercent>10</weightPercent>
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="3">
-						<item id="27492" count="1" /> <!-- Greater Rare Accessory Pack -->
+					<item chance="15.0">
+						<item id="23833" count="1" /> <!-- Talisman - Abundance (War) -->
 					</item>
-					<item chance="7">
-						<item id="27491" count="1" /> <!-- Rare Accessory Pack -->
+					<item chance="15.0">
+						<item id="23834" count="1" /> <!-- Talisman - Abundance (Tactics) -->
+					</item>
+					<item chance="15.0">
+						<item id="23835" count="1" /> <!-- Talisman - Abundance (Morale) -->
+					</item>
+					<item chance="15.0"> 
+						<item id="23836" count="1" /> <!-- Talisman - Abundance (Physique) -->
+					</item>
+					<item chance="6.8">
+						<item id="23833" count="1" /> <!-- Talisman - Hunter (Abundance) -->
+					</item>
+					<item chance="6.8">
+						<item id="23834" count="1" /> <!-- Talisman - Slaughterer (Abundance) -->
+					</item>
+					<item chance="6.8">
+						<item id="23835" count="1" /> <!-- Talisman - Conquerer (Abundance) -->
+					</item>
+					<item chance="6.8">
+						<item id="23836" count="1" /> <!-- Talisman - Outlaw (Abundance) -->
+					</item>
+					<item chance="4.0">
+						<item id="26418" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 1 (High-grade) -->
+					</item>
+					<item chance="3.0">
+						<item id="26419" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 2 (High-grade) -->
+					</item>
+					<item chance="2.0">
+						<item id="26420" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 3 (High-grade) -->
+					</item>
+					<item chance="1.0">
+						<item id="26421" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 4 (High-grade) -->
+					</item>
+					<item chance="1.0">
+						<item id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
+					</item>
+					<item chance="0.8">
+						<item id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
+					</item>
+					<item chance="0.6">
+						<item id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
+					</item>
+					<item chance="0.4">
+						<item id="26341" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27568" toLevel="1" name="Spirit Stone Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27496</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="30.0">
+						<item id="45929" count="1" /> <!-- Spirit Stone -->
+					</item>
+					<item chance="10.0">
+						<item id="45930" count="1" /> <!-- Mid-grade Spirit Stone -->
+					</item>
+					<item chance="3.0">
+						<item id="45931" count="1" /> <!-- High-grade Spirit Stone -->
+					</item>
+					<item chance="2.0">
+						<item id="45932" count="1" /> <!-- Top-grade Spirit Stone -->
+					</item>
+					<item chance="30.0">
+						<item id="45933" count="1" /> <!-- Spirit Stone: Accessory -->
+					</item>
+					<item chance="10.0">
+						<item id="45934" count="1" /> <!-- Mid-grade Spirit Stone: Accessory -->
+					</item>
+					<item chance="3.0">
+						<item id="45935" count="1" /> <!-- High-grade Spirit Stone: Accessory -->
+					</item>
+					<item chance="2.0">
+						<item id="45936" count="1" /> <!-- Top-grade Spirit Stone: Accessory -->
+					</item>
+					<item chance="10.0">
+						<item id="45937" count="1" /> <!-- Spirit Stone: Hair Accessory -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27569" toLevel="1" name="Hair Accessory Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27497</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5.0">
+						<item id="7683" count="1" /> <!-- Rabbit Ears -->
+					</item>
+					<item chance="5.0">
+						<item id="7680" count="1" /> <!-- Raccoon Ears -->
+					</item>
+					<item chance="5.0">
+						<item id="6843" count="1" /> <!-- Cat Ears -->
+					</item>
+					<item chance="5.0">
+						<item id="8565" count="1" /> <!-- Romantic Chapeau -->
+					</item>
+					<item chance="3.0">
+						<item id="8920" count="1" /> <!-- Angel Halo -->
+					</item>
+					<item chance="4.0">
+						<item id="8921" count="1" /> <!-- Demon Circlet -->
+					</item>
+					<item chance="4.0">
+						<item id="6845" count="1" /> <!-- Pirate's Eyepatch -->
+					</item>
+					<item chance="16.0">
+						<item id="7681" count="1" /> <!-- Outlaw's Eyepatch -->
+					</item>
+					<item chance="16.0">
+						<item id="8916" count="1" /> <!-- Eyepatch -->
+					</item>
+					<item chance="16.0">
+						<item id="8184" count="1" /> <!-- Party Hat -->
+					</item>
+					<item chance="9.0">
+						<item id="13494" count="1" /> <!-- Refined Angel Ring -->
+					</item>
+					<item chance="12.0">
+						<item id="13495" count="1" /> <!-- Refined Devil Horn -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27570" toLevel="1" name="Pendant Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27498</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.0">
+						<item id="35901" count="1" />
+					</item>
+					<item chance="2.0">
+						<item id="35902" count="1" />
+					</item>
+					<item chance="2.0">
+						<item id="35903" count="1" />
+					</item>
+					<item chance="2.0">
+						<item id="35904" count="1" />
+					</item>
+					<item chance="2.0">
+						<item id="35905" count="1" />
+					</item>
+					<item chance="2.0">
+						<item id="35906" count="1" />
+					</item>
+					<item chance="0.4">
+						<item id="35907" count="1" />
+					</item>
+					<item chance="0.4">
+						<item id="35908" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="35909" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="35910" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="35911" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="35912" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="35913" count="1" />
+					</item>
+					<item chance="1.2">
+						<item id="35914" count="1" />
+					</item>
+					<item chance="8.0">
+						<item id="35901" count="1" />
+					</item>
+					<item chance="8.0">
+						<item id="35902" count="1" />
+					</item>
+					<item chance="8.0">
+						<item id="35903" count="1" />
+					</item>
+					<item chance="8.0">
+						<item id="35904" count="1" />
+					</item>
+					<item chance="8.0">
+						<item id="35905" count="1" />
+					</item>
+					<item chance="8.0">
+						<item id="35906" count="1" />
+					</item>
+					<item chance="1.6">
+						<item id="35907" count="1" />
+					</item>
+					<item chance="1.6">
+						<item id="35908" count="1" />
+					</item>
+					<item chance="4.8">
+						<item id="35909" count="1" />
+					</item>
+					<item chance="4.8">
+						<item id="35910" count="1" />
+					</item>
+					<item chance="4.8">
+						<item id="35911" count="1" />
+					</item>
+					<item chance="4.8">
+						<item id="35912" count="1" />
+					</item>
+					<item chance="4.8">
+						<item id="35913" count="1" />
+					</item>
+					<item chance="4.8">
+						<item id="35914" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27571" toLevel="1" name="Ingredient Box">
+		<!-- Underground skill -->
+		<itemConsumeId>27499</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="12.0">
+						<item id="36523" count="1" /> <!-- Adamantite (Lv. 3) -->
+					</item>
+					<item chance="6.0">
+						<item id="36524" count="1" /> <!-- Orichalcum (Lv. 4) -->
+					</item>
+					<item chance="2.0">
+						<item id="36525" count="1" /> <!-- Durandil (Lv. 5) -->
+					</item>
+					<item chance="12.0">
+						<item id="36543" count="1" /> <!-- Adamantite Wire (Lv. 3) -->
+					</item>
+					<item chance="6.0">
+						<item id="36544" count="1" /> <!-- Orichalcum Wire (Lv. 4) -->
+					</item>
+					<item chance="2.0">
+						<item id="36545" count="1" /> <!-- Durandil Wire (Lv. 5) -->
+					</item>
+					<item chance="10.0">
+						<item id="36562" count="1" /> <!-- Greater Cokes (Lv. 2) -->
+					</item>
+					<item chance="7.0">
+						<item id="36563" count="1" /> <!-- Synthetic Cokes (Lv. 3) -->
+					</item>
+					<item chance="2.0">
+						<item id="36564" count="1" /> <!-- Greater Synthetic Cokes (Lv. 4) -->
+					</item>
+					<item chance="1.0">
+						<item id="36565" count="1" /> <!-- Exquisite Synthetic Cokes (Lv. 5) -->
+					</item>
+					<item chance="10.0">
+						<item id="36552" count="1" /> <!-- Armor Fragment -->
+					</item>
+					<item chance="7.0">
+						<item id="36553" count="1" /> <!-- Armor Fragment (Mid-grade) -->
+					</item>
+					<item chance="2.0">
+						<item id="36554" count="1" /> <!-- Armor Fragment (High-grade) -->
+					</item>
+					<item chance="1.0">
+						<item id="36555" count="1" /> <!-- Armor Fragment (Top-grade) -->
+					</item>
+					<item chance="10.0">
+						<item id="36547" count="1" /> <!-- Weapon Fragment -->
+					</item>
+					<item chance="7.0">
+						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+					</item>
+					<item chance="2.0">
+						<item id="36549" count="1" /> <!-- Weapon Fragment (High-grade) -->
+					</item>
+					<item chance="1.0">
+						<item id="36550" count="1" /> <!-- Weapon Fragment (Top-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27572" toLevel="1" name="Attribute Stone Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27500</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="10.0">
+						<item id="9552" count="1" /> <!-- Fire Crystal -->
+					</item>
+					<item chance="10.0">
+						<item id="9553" count="1" /> <!-- Water Crystal -->
+					</item>
+					<item chance="10.0">
+						<item id="9554" count="1" /> <!-- Earth Crystal -->
+					</item>
+					<item chance="10.0">
+						<item id="9555" count="1" /> <!-- Wind Crystal -->
+					</item>
+					<item chance="10.0">
+						<item id="9556" count="1" /> <!-- Dark Crystal -->
+					</item>
+					<item chance="10.0">
+						<item id="9557" count="1" /> <!-- Holy Crystal -->
+					</item>
+					<item chance="5.0">
+						<item id="34667" count="1" /> <!-- Fire Stone (+ 150) -->
+					</item>
+					<item chance="5.0">
+						<item id="34668" count="1" /> <!-- Water Stone (+ 150) -->
+					</item>
+					<item chance="5.0">
+						<item id="34669" count="1" /> <!-- Earth Stone (+ 150) -->
+					</item>
+					<item chance="5.0">
+						<item id="34670" count="1" /> <!-- Wind Stone (+ 150) -->
+					</item>
+					<item chance="5.0">
+						<item id="34671" count="1" /> <!-- Dark Stone (+ 150) -->
+					</item>
+					<item chance="5.0">
+						<item id="34672" count="1" /> <!-- Holy Stone (+ 150) -->
+					</item>
+					<item chance="1.6">
+						<item id="36972" count="1" /> <!-- Fire Crystal - Super -->
+					</item>
+					<item chance="1.6">
+						<item id="36973" count="1" /> <!-- Water Crystal - Super -->
+					</item>
+					<item chance="1.6">
+						<item id="36974" count="1" /> <!-- Earth Crystal - Super -->
+					</item>
+					<item chance="1.6">
+						<item id="36975" count="1" /> <!-- Wind Crystal - Super -->
+					</item>
+					<item chance="1.6">
+						<item id="36976" count="1" /> <!-- Dark Crystal - Super -->
+					</item>
+					<item chance="1.6">
+						<item id="36977" count="1" /> <!-- Holy Crystal - Super -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27573" toLevel="1" name="Greater Attribute Stone Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27501</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="11.6">
+						<item id="34667" count="1" /> <!-- Fire Stone (+ 150) -->
+					</item>
+					<item chance="11.6">
+						<item id="34668" count="1" /> <!-- Water Stone (+ 150) -->
+					</item>
+					<item chance="11.6">
+						<item id="34669" count="1" /> <!-- Earth Stone (+ 150) -->
+					</item>
+					<item chance="11.6">
+						<item id="34670" count="1" /> <!-- Wind Stone (+ 150) -->
+					</item>
+					<item chance="11.6">
+						<item id="34671" count="1" /> <!-- Dark Stone (+ 150) -->
+					</item>
+					<item chance="11.6">
+						<item id="34672" count="1" /> <!-- Holy Stone (+ 150) -->
+					</item>
+					<item chance="5.1">
+						<item id="36972" count="1" /> <!-- Fire Crystal - Super -->
 					</item>
 					<item chance="5">
-						<item id="27493" count="1" /> <!-- Soul Bottle Pack -->
+						<item id="36973" count="1" /> <!-- Water Crystal - Super -->
 					</item>
-					<item chance="10">
+					<item chance="5.1">
+						<item id="36974" count="1" /> <!-- Earth Crystal - Super -->
+					</item>
+					<item chance="5.1">
+						<item id="36975" count="1" /> <!-- Wind Crystal - Super -->
+					</item>
+					<item chance="5.1">
+						<item id="36976" count="1" /> <!-- Dark Crystal - Super -->
+					</item>
+					<item chance="5">
+						<item id="36977" count="1" /> <!-- Holy Crystal - Super -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27574" toLevel="1" name="Enchant Scroll Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27502</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="15.0">
+						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="40.0">
+						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+					</item>
+					<item chance="5.0">
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="10.0">
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					</item>
+					<item chance="8.0">
+						<item id="36386" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="12.0">
+						<item id="36389" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+					</item>
+					<item chance="2.0">
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="8.0">
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27575" toLevel="1" name="Greater Enchant Scroll Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27503</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="45.0">
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					</item>
+					<item chance="10.0">
+						<item id="33478" count="1" /> <!-- Destruction Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="20.0">
+						<item id="33479" count="1" /> <!-- Destruction Scroll: Enchant Armor (R-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27576" toLevel="1" name="Lucky Enchant Stone Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27504</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="15.0">
+						<item id="46077" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="35.0">
+						<item id="46078" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="10.0">
+						<item id="37566" count="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="20.0">
+						<item id="37567" count="1" /> <!-- Blessed Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="12.0">
+						<item id="39462" count="1" /> <!-- Giant's Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="8.0">
+						<item id="39463" count="1" /> <!-- Giant's Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27577" toLevel="1" name="Greater Lucky Enchant Stone Pack">
+		<!-- Underground skill -->
+		<itemConsumeId>27505</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="8.0">
+						<item id="23646" count="1" /> <!-- High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="12.0">
+						<item id="23647" count="1" /> <!-- High-grade Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="10.0">
+						<item id="46077" count="1" /> <!-- Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="20.0">
+						<item id="46078" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="2.0">
+						<item id="37566" count="1" /> <!-- Blessed Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="8.0">
+						<item id="37567" count="1" /> <!-- Blessed Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="2.0">
+						<item id="38757" count="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="3.0">
+						<item id="38758" count="1" /> <!-- Blessed High-grade Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="12.0">
+						<item id="39462" count="1" /> <!-- Giant's Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="8.0">
+						<item id="39463" count="1" /> <!-- Giant's Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+					<item chance="10.0">
+						<item id="39464" count="1" /> <!-- Windy Lucky Enchant Stone: Armor (R-grade) -->
+					</item>
+					<item chance="5.0">
+						<item id="39465" count="1" /> <!-- Windy Lucky Enchant Stone: Weapon (R-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27578" toLevel="1" name="Treasure Chest">
+		<!-- Underground skill -->
+		<itemConsumeId>27506</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.0">
+						<item id="27491" count="1" /> <!-- Rare Accessory Pack -->
+					</item>
+					<item chance="8.0">
+						<item id="27494" count="1" /> <!-- Soul Crystal Coupon Pack -->
+					</item>
+					<item chance="1.0"> 
 						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack -->
 					</item>
-					<item chance="25">
+					<item chance="10.0">
+						<item id="27496" count="1" /> <!-- Spirit Stone Pack -->
+					</item>
+					<item chance="4.0">
+						<item id="27497" count="1" /> <!-- Hair Accessory Pack -->
+					</item>
+					<item chance="4.0">
 						<item id="27498" count="1" /> <!-- Pendant Pack -->
 					</item>
-					<item chance="30">
+					<item chance="18.0">
+						<item id="27499" count="1" /> <!-- Ingredient Box -->
+					</item>
+					<item chance="38.0">
+						<item id="27500" count="1" /> <!-- Attribute Stone Pack -->
+					</item>
+					<item chance="8.0">
+						<item id="27501" count="1" /> <!-- Enchant Scroll Pack -->
+					</item>
+					<item chance="8.0">
+						<item id="27501" count="1" /> <!-- Lucky Enchant Stone Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27579" toLevel="1" name="Hero's Treasure Chest">
+		<!-- Underground skill -->
+		<itemConsumeId>27507</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.0">
+						<item id="27491" count="1" /> <!-- Rare Accessory Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="27492" count="1" /> <!-- Greater Rare Accessory Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="27493" count="1" /> <!-- Soul Bottle Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack -->
+					</item>
+					<item chance="6.0">
+						<item id="27498" count="1" /> <!-- Pendant Pack -->
+					</item>
+					<item chance="40.0">
 						<item id="27501" count="1" /> <!-- Greater Attribute Stone Pack -->
 					</item>
-					<item chance="10">
+					<item chance="40.0">
 						<item id="27503" count="1" /> <!-- Greater Enchant Scroll Pack -->
 					</item>
-					<item chance="10">
+					<item chance="10.0">
 						<item id="27505" count="1" /> <!-- Greater Lucky Enchant Stone Pack -->
 					</item>
 				</items>
@@ -1385,19 +2080,145 @@
 		</effects>
 	</skill>
 	<skill id="27581" toLevel="1" name="Talisman - Abundance Pack">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Underground skill -->
+		<itemConsumeId>27508</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25.0">
+						<item id="23833" count="1" /> <!-- Talisman - Abundance (War) -->
+					</item>
+					<item chance="25.0">
+						<item id="23834" count="1" /> <!-- Talisman - Abundance (Tactics) -->
+					</item>
+					<item chance="25.0">
+						<item id="23835" count="1" /> <!-- Talisman - Abundance (Morale) -->
+					</item>
+					<item chance="25.0">
+						<item id="23836" count="1" /> <!-- Talisman - Abundance (Physique) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27582" toLevel="1" name="Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Underground skill -->
+		<itemConsumeId>27509</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.0">
+						<item id="27491" count="1" /> <!-- Rare Accessory Pack -->
+					</item>
+					<item chance="8.0">
+						<item id="27494" count="1" /> <!-- Soul Crystal Coupon Pack -->
+					</item>
+					<item chance="1.0"> 
+						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack -->
+					</item>
+					<item chance="10.0">
+						<item id="27496" count="1" /> <!-- Spirit Stone Pack -->
+					</item>
+					<item chance="4.0">
+						<item id="27497" count="1" /> <!-- Hair Accessory Pack -->
+					</item>
+					<item chance="4.0">
+						<item id="27498" count="1" /> <!-- Pendant Pack -->
+					</item>
+					<item chance="18.0">
+						<item id="27499" count="1" /> <!-- Ingredient Box -->
+					</item>
+					<item chance="38.0">
+						<item id="27500" count="1" /> <!-- Attribute Stone Pack -->
+					</item>
+					<item chance="8.0">
+						<item id="27501" count="1" /> <!-- Enchant Scroll Pack -->
+					</item>
+					<item chance="8.0">
+						<item id="27501" count="1" /> <!-- Lucky Enchant Stone Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27583" toLevel="1" name="Hero's Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
+		<!-- Underground skill -->
+		<itemConsumeId>27510</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="1.0">
+						<item id="27491" count="1" /> <!-- Rare Accessory Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="27492" count="1" /> <!-- Greater Rare Accessory Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="27493" count="1" /> <!-- Soul Bottle Pack -->
+					</item>
+					<item chance="1.0">
+						<item id="27495" count="1" /> <!-- Talisman - Abundance Pack -->
+					</item>
+					<item chance="6.0">
+						<item id="27498" count="1" /> <!-- Pendant Pack -->
+					</item>
+					<item chance="40.0">
+						<item id="27501" count="1" /> <!-- Greater Attribute Stone Pack -->
+					</item>
+					<item chance="40.0">
+						<item id="27503" count="1" /> <!-- Greater Enchant Scroll Pack -->
+					</item>
+					<item chance="10.0">
+						<item id="27505" count="1" /> <!-- Greater Lucky Enchant Stone Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27584" toLevel="1" name="Novice Adventurer's Shirt Effect">
 		<!-- AUTO GENERATED SKILL -->

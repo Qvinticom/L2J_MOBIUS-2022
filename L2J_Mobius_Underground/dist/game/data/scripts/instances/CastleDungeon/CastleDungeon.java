@@ -89,6 +89,7 @@ public final class CastleDungeon extends AbstractInstance
 	
 	public CastleDungeon()
 	{
+		super(NPCS.values().stream().mapToInt(Integer::valueOf).toArray());
 		// NPCs
 		addStartNpc(NPCS.keySet());
 		addTalkId(NPCS.keySet());

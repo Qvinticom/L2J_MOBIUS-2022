@@ -6,7 +6,10 @@
 		<icon>icon.skill11600</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -60,7 +63,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
@@ -121,7 +127,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>
@@ -290,7 +299,10 @@
 		<!-- Updated to IO -->
 		<!-- For 30 min., P. Def. + 5%, Attribute Def. + 20, Resistance to bows/crossbows + 10%, and Debuff Resistance + 10%. -->
 		<icon>icon.skill11606new</icon>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -326,7 +338,10 @@
 		<!-- Updated to IO -->
 		<!-- For 30 min., P. Atk. + 5%, Atk. Spd. + 5%, P. Critical Rate + 10, and Speed + 10. -->
 		<icon>icon.skill11605new</icon>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -359,7 +374,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11607</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -412,7 +430,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11608</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -477,7 +498,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11609</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -541,7 +565,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11610</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -594,7 +621,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11611</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -659,7 +689,10 @@
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
+		</abnormalTime>
 		<icon>icon.skill11612</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -721,10 +754,13 @@
 	<skill id="11613" toLevel="4" name="Song of Protection">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., increases your P. Def. + 5000 and M. Def. + 5000. Restores 1000 HP. -->
-		<table name="#power"> 1000 2000 3000 5000 </table>
 		<icon>icon.skill11613</icon>
 		<abnormalLvl>1</abnormalLvl> <!-- Guessed -->
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">30</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -764,7 +800,11 @@
 		<!-- For 30 sec., increases your P. Atk./M. Atk./Atk. Spd./Casting Spd. + 50%. -->
 		<table name="#stats"> 1.50 1.60 1.70 2.00 </table>
 		<icon>icon.skill11614</icon>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">30</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -821,7 +861,10 @@
 		<!-- Updated to IO -->
 		<!-- For 30 min., selected party member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11615</icon>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -871,7 +914,10 @@
 		<!-- Updated to IO -->
 		<!-- For 30 min., selected party member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11616</icon>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -917,7 +963,10 @@
 		<!-- Updated to IO -->
 		<!-- For 30 min., selected clan member's PvP Damage + 10%, Attribute Attack + 10, MP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11617</icon>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -965,7 +1014,10 @@
 		<!-- Updated to IO -->
 		<!-- For 30 min., selected clan member's Received PvP Damage - 10%, Speed + 4, HP Recovery Bonus + 10%. Consumes 10 Spirit Ores. -->
 		<icon>icon.skill11618</icon>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">1800</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
+		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -1154,6 +1206,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
+		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
 		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
 		<magicLvl>99</magicLvl>

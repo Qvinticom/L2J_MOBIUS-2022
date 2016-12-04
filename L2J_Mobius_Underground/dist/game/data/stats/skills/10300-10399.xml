@@ -3,7 +3,6 @@
 	<skill id="10300" toLevel="6" name="Last Attack">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks target with 52746 Power added to P. Atk. Cuts regular monsters' HP down to 1. Usable when target's HP is 10% or below. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
-		<table name="#power"> 52746 59601 65085 69414 73352 77290 </table>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">90</value>
@@ -23,7 +22,7 @@
 			<value level="5">351</value>
 			<value level="6">369</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1690</hitTime>
@@ -48,7 +47,18 @@
 		</conditions>
 		<targetConditions>
 			<condition name="RemainHpPer">
-				<amount>10</amount>
+				<amount>
+					<value fromLevel="1" toLevel="6">10</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1009">{base + (subIndex -1)}</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1010" toSubLevel="1012">19</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1013" toSubLevel="1014">20</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1015" toSubLevel="1016">21</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1017" toSubLevel="1018">22</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1019" toSubLevel="1021">23</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1022" toSubLevel="1025">24</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1026" toSubLevel="1029">25</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1030" toSubLevel="1030">26</value>
+				</amount>
 				<percentType>LESS</percentType>
 				<affectType>TARGET</affectType>
 			</condition>
@@ -237,9 +247,6 @@
 	</skill>
 	<skill id="10306" toLevel="4" name="Superior Polearm Mastery">
 		<!-- When a spear is equipped, P. Atk. + 2% and additional P. Atk. 583. Increases the number of possible targets by 1. -->
-		<table name="#atkCountMax"> 1 1 2 2 </table>
-		<table name="#pAtkAdd"> 583 678 807 978 </table>
-		<table name="#pAtkMul"> 1.02 1.03 1.04 1.05 </table>
 		<icon>icon.skill11836</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -293,7 +300,10 @@
 	<skill id="10308" toLevel="1" name="Wild Roar">
 		<!-- Shouts loudly to invoke the power of the Bison. For 5 minutes, P. Atk. and Critical Damage + 45%, Critical Rate + 45, and Atk. Spd. - 15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill11834</icon>
 		<operateType>A2</operateType>
@@ -364,6 +374,12 @@
 					<item> POLE</item>
 					<item> DUALBLUNT</item>
 				</weaponType>
+			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -466,7 +482,7 @@
 					<value level="3">4</value>
 					<value level="4">5</value>
 				</pAtkAmount>
-				<mode>PER</mode>
+				<pAtkmode>PER</pAtkmode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>
@@ -475,7 +491,7 @@
 					<value level="3">4</value>
 					<value level="4">5</value>
 				</pAtkAmount>
-				<mode>PER</mode>
+				<pAtkmode>PER</pAtkmode>
 			</effect>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>
@@ -514,7 +530,6 @@
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<effectRange>800</effectRange>
 		<fanRange>0;0;600;60</fanRange>
-		<flyType>CHARGE</flyType>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -522,7 +537,7 @@
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<icon>icon.skill10313</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -723,7 +738,6 @@
 	</skill>
 	<skill id="10318" toLevel="7" name="Sonic Flash">
 		<!-- Launches a wave of sword energy to inflict 17348 damage added to P. Atk., increasing the damage as Momentum is consumed. Can consume up to 3. Requires a dual sword, sword, or blunt. Over-hit. Critical. -->
-		<table name="#power"> 17438 20033 22717 25700 27419 28665 29911 </table>
 		<icon>icon.skill10318new</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -746,7 +760,7 @@
 			<value level="6">133</value>
 			<value level="7">140</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -779,9 +793,17 @@
 					<value level="5">27419</value>
 					<value level="6">28665</value>
 					<value level="7">29911</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
+				<criticalChance>15
+					<value fromLevel="1" toLevel="7">15</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
+				<pDefMod>
+					<value fromLevel="1" toLevel="7">1</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
+				</pDefMod>
 				<chargeConsume>3</chargeConsume>
 			</effect>
 		</effects>
@@ -875,12 +897,14 @@
 	</skill>
 	<skill id="10321" toLevel="7" name="Thunder Spear">
 		<!-- Attacks near the enemy by throwing a spear with 22536 Power added to P. Atk. Stuns for 9 seconds. Requires a spear. Over-hit. Critical hit. Ignores Shield Defense. Target cancel. -->
-		<table name="#power"> 22536 26428 29542 32656 35788 37424 39060 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>50</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="7">50</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
@@ -931,6 +955,7 @@
 					<value level="5">35788</value>
 					<value level="6">37424</value>
 					<value level="7">39060</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -938,12 +963,21 @@
 			</effect>
 			<effect name="BlockActions" />
 			<effect name="TargetCancel" />
+			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10322" toLevel="1" name="Wolf's Cry">
 		<!-- Shouts loudly to invoke the power of the Wolf. For 5 minutes, P. Def. and M. Def. + 50%, Max HP + 25%, and Spd. + 20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">300</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
+		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skll10320</icon>
 		<operateType>A2</operateType>
@@ -980,6 +1014,12 @@
 			</effect>
 			<effect name="MaxHp">
 				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1034,7 +1074,10 @@
 			<effect name="DispelByCategory">
 				<!-- TODO rate -->
 				<slot>BUFF</slot>
-				<rate>25</rate>
+				<rate>25
+					<value fromLevel="1" toLevel="6">80</value>
+					<value fromLevel="2" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+				</rate>
 				<max>2</max>
 			</effect>
 		</effects>
@@ -1073,8 +1116,9 @@
 			<value level="2">105</value>
 			<value level="3">112</value>
 			<value level="4">119</value>
-			<value level="5">133</value>
-			<value level="6">140</value>
+			<value level="5">126</value>
+			<value level="6">133</value>
+			<value level="7">140</value>
 		</mpConsume>
 		<castRange>600</castRange>
 		<effectRange>150</effectRange>
@@ -1132,7 +1176,6 @@
 	</skill>
 	<skill id="10328" toLevel="3" name="Soul Berserker">
 		<!-- When equipped with a sword or blunt weapon, P. Atk. +10%, P. Critical Damage + 10%, and P. Skill MP Consumption + 10%. -->
-		<table name="#add"> 1.1 1.12 1.5 </table>
 		<icon>icon.skill10328</icon>
 		<magicLvl>
 			<value level="1">97</value>
@@ -1210,12 +1253,15 @@
 	</skill>
 	<skill id="10330" toLevel="7" name="Power Hammer Crush">
 		<!-- Attacks target with 18005 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
-		<table name="#power"> 18005 22505 27005 30605 32405 34205 36005 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>60</activateRate> <!-- Guessed -->
+		<activateRate>
+			<value fromLevel="1" toLevel="7">60</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<trait>SHOCK</trait>
@@ -1256,9 +1302,22 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">18005</value>
+					<value level="2">22505</value>
+					<value level="3">27005</value>
+					<value level="4">30605</value>
+					<value level="5">32405</value>
+					<value level="6">34205</value>
+					<value level="7">36005</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+				</power>
+				<overHit>true</overHit>				
+				<criticalChance>
+					<value fromLevel="1" toLevel="7">15</value>
+					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
+				</criticalChance>
 				<pDefMod>0.7</pDefMod>
-				<overHit>true</overHit>
-				<criticalChance>15</criticalChance>
 			</effect>
 		</effects>
 	</skill>
@@ -1275,22 +1334,59 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="10332" toLevel="1" name="Duelist Wrath">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. by 20% for 60 seconds when a dualsword/dual blunt is equipped. Critical Rate of skills that consume Momentum greatly increases, and their Power increases by 20%. Consumes 5 Soulstones. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
+		<abnormalVisualEffect>LONG_BLOW</abnormalVisualEffect>
 		<icon>icon.skill10332</icon>
+		<itemConsumeCount>5</itemConsumeCount>
+		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
 		<mpConsume>64</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>673</effectPoint>
-		<abnormalTime>60</abnormalTime>
 		<reuseDelay>300000</reuseDelay>
+		<effects>
+			<effect name="PAtk">	
+				<amount>20</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>DUALBLUNT</item>
+					<item>DUAL</item>
+				</weaponType>
+			</effect>
+			<effect name="CriticalRate">	
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+		</effects>
 	</skill>
 	<skill id="10333" toLevel="1" name="Winged Spear">
 		<!-- Increases P. Atk. by 30% for 60 seconds when a spear is equipped. Range of regular skills increases by 80 and has a 10% chance to Stun when striking. Consumes 5 Soulstones. -->
 		<!-- TODO abnormalType -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalVisualEffect>LONG_BLOW</abnormalVisualEffect>
 		<icon>icon.skill10333</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -1343,13 +1439,29 @@
 				<amount>80</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="10334" toLevel="1" name="Furious Slasher">
 		<!-- Increases P. Atk. by 30% for 60 seconds when a two-handed sword/two-handed blunt weapon is equipped. Attack 5 enemies at the same time with a regular attack. Consumes 5 Soulstones. -->
 		<!-- TODO abnormalType -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalVisualEffect>WIDE_SWORD</abnormalVisualEffect>
 		<icon>icon.skill10334</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -1365,23 +1477,39 @@
 		<effects>
 			<effect name="TwoHandedSwordBonus">
 				<pAtkAmount>30</pAtkAmount>
-				<mode>PER</mode>
+				<pAtkmode>PER</pAtkmode>
 			</effect>
 			<effect name="TwoHandedBluntBonus">
 				<pAtkAmount>30</pAtkAmount>
-				<mode>PER</mode>
+				<pAtkmode>PER</pAtkmode>
 			</effect>
 			<effect name="HitNumber">
 				<amount>5</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="10335" toLevel="1" name="Furious Fist">
 		<!-- Increases P. Atk. by 30% and P. Critical Damage by 10% for 60 seconds when a fist weapon is equipped. Has 10% chance to decrease Fist Weapon Resistance by 30% when striking. Consumes 5 Soulstones. -->
 		<!-- TODO abnormalType -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="1">60</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalVisualEffect>BIG_FIST</abnormalVisualEffect>
 		<icon>icon.skill10335</icon>
 		<itemConsumeCount>5</itemConsumeCount>
@@ -1437,6 +1565,18 @@
 					<item>DUALFIST</item>
 				</weaponType>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="10336" toLevel="1" name="Infinity Rush">

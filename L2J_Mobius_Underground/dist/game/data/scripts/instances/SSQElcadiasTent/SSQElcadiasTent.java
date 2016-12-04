@@ -40,6 +40,7 @@ public final class SSQElcadiasTent extends AbstractInstance
 	
 	public SSQElcadiasTent()
 	{
+		super(TEMPLATE_ID);
 		addFirstTalkId(GRUFF_LOOKING_MAN, ELCADIA);
 		addStartNpc(GRUFF_LOOKING_MAN, ELCADIA);
 		addTalkId(GRUFF_LOOKING_MAN, ELCADIA);

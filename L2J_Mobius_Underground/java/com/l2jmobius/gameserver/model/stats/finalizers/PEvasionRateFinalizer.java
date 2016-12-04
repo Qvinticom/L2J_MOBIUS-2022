@@ -20,9 +20,7 @@ import java.util.Optional;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -37,14 +35,6 @@ public class PEvasionRateFinalizer implements IStatsFunction
 		throwIfPresent(base);
 		
 		double baseValue = calcWeaponPlusBaseValue(creature, stat);
-		final Inventory inv = creature.getInventory();
-		if (inv != null)
-		{
-			for (L2ItemInstance item : inv.getPaperdollItems(L2ItemInstance::isEquipped))
-			{
-				baseValue += item.getItem().getStats(stat, 0);
-			}
-		}
 		
 		final int level = creature.getLevel();
 		if (creature.isPlayer())

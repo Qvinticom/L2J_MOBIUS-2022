@@ -3,7 +3,6 @@
 	<skill id="10800" toLevel="10" name="Superior Elemental Resistance">
 		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Fire/Water/Wind/Earth Resistance + 20. -->
-		<table name="#res"> 20 22 24 26 30 32 34 36 38 40 </table>
 		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -90,13 +89,14 @@
 		<!-- Glory Days confirmed -->
 		<!-- Decreases target's Bow/Crossbow Resistance by 40% and M. Def. by 5%. -->
 		<!-- TODO : Should cancel upon strike, guess there is a trigger on damage to add -->
-		<table name="#mDef"> 0.95 0.90 0.85 0.80 0.75 0.75 0.75 0.75 </table>
-		<table name="#trait"> -40 -45 -50 -55 -60 -60 -60 -60 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
-		<activateRate>100</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="8">100</value>
+			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<icon>icon.skill10801</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -194,18 +194,32 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10802" toLevel="4" name="Mass Bullseye">
 		<!-- Glory Days confirmed -->
 		<!-- Decreases target's and nearby enemies' Bow/Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. -->
 		<!-- TODO : Should cancel upon strike, guess there is a trigger on damage to add -->
-		<table name="#triggerLvl"> 1 2 3 4 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
-		<activateRate>100</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="4">100</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<icon>icon.skill10782</icon>
@@ -240,11 +254,22 @@
 				<amount>-25</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{-2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
-				<!-- Bullseye -->
-				<skillId>10804</skillId>
+				<skillId>10804</skillId> <!-- Bullseye -->
 				<skillLevel>
 					<value level="1">1</value>
 					<value level="2">2</value>
@@ -257,7 +282,6 @@
 	<skill id="10803" toLevel="4" name="Time Bomb">
 		<!-- Glory Days confirmed -->
 		<!-- Boom! -->
-		<table name="#power"> 30000 33546 35088 36630 </table>
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -282,7 +306,6 @@
 	<skill id="10804" toLevel="4" name="Bullseye">
 		<!-- Glory Days confirmed -->
 		<!-- Boom! -->
-		<table name="#power"> 30000 33546 35088 36630</table>
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -326,6 +349,7 @@
 			<value level="2">600</value>
 			<value level="3">700</value>
 			<value level="4">800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{base + 10 * subIndex}</value>
 		</castRange>
 		<effectRange>
 			<value level="1">1000</value>
@@ -354,20 +378,6 @@
 				</range>
 			</condition>
 		</conditions>
-		<selfEffects>
-			<effect name="Blink">
-				<!-- Teleport to Front -->
-				<flyType>CHARGE</flyType>
-				<animationSpeed>333</animationSpeed>
-				<angle>180</angle>
-				<range>
-					<value level="1">500</value>
-					<value level="2">600</value>
-					<value level="3">700</value>
-					<value level="4">800</value>
-				</range>
-			</effect>
-		</selfEffects>
 	</skill>
 	<skill id="10806" toLevel="4" name="Frost Trap">
 		<!-- Glory Days confirmed -->
@@ -501,14 +511,16 @@
 	</skill>
 	<skill id="10810" toLevel="4" name="Sniping">
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Atk. Spd. + 5%, and P. Def./M. Def. + 5%. -->
-		<table name="#bonus"> 1.05 1.06 1.07 1.1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<effectPoint>687</effectPoint>
 		<icon>icon.skill11870</icon>
@@ -577,11 +589,22 @@
 					<item> TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10811" toLevel="4" name="Superior Hawk Mastery">
 		<!-- P. Atk. + 5% when equipped with a bow or crossbow. -->
-		<table name="#pAtk"> 1.05 1.06 1.07 1.1 </table>
 		<icon>icon.skill10811</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -608,7 +631,6 @@
 		</effects>
 	</skill>
 	<skill id="10812" toLevel="3" name="Sneak Shot">
-		<table name="#power"> 29176 30726 32277 </table>
 		<!-- AUTO GENERATED SKILL -->
 		<!-- NOT USED ANYMORE ? -->
 		<!-- Attacks distant target with 29176 Power added to P. Atk. Inflicts Stun when attacking from behind. Requires a bow/crossbow. Over-hit. Critical. -->
@@ -648,7 +670,10 @@
 			<value level="3">3</value>
 			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="4">1800</value>
+			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
+		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<icon>icon.skill11871</icon>
 		<magicLvl>
@@ -713,6 +738,18 @@
 					<item> CROSSBOW</item>
 					<item> TWOHANDCROSSBOW</item>
 				</weaponType>
+			</effect>
+			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
+				<amount>
+					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

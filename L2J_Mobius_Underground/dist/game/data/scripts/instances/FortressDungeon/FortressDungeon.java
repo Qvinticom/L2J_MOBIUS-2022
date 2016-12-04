@@ -46,7 +46,6 @@ public final class FortressDungeon extends AbstractInstance
 {
 	// NPCs
 	private static final Map<Integer, Integer> NPCS = new HashMap<>();
-	
 	static
 	{
 		NPCS.put(35666, 22); // Shanty
@@ -103,6 +102,7 @@ public final class FortressDungeon extends AbstractInstance
 	
 	public FortressDungeon()
 	{
+		super(NPCS.values().stream().mapToInt(Integer::valueOf).toArray());
 		// NPCs
 		addStartNpc(NPCS.keySet());
 		addTalkId(NPCS.keySet());

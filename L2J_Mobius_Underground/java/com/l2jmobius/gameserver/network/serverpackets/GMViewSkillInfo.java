@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.client.OutgoingPackets;
@@ -53,7 +52,7 @@ public class GMViewSkillInfo implements IClientOutgoingPacket
 			packet.writeD(skill.getDisplayId());
 			packet.writeD(0x00);
 			packet.writeC(isDisabled && skill.isClanSkill() ? 1 : 0);
-			packet.writeC(SkillData.getInstance().isEnchantable(skill.getDisplayId()) ? 1 : 0);
+			packet.writeC(skill.isEnchantable() ? 1 : 0);
 		}
 		return true;
 	}

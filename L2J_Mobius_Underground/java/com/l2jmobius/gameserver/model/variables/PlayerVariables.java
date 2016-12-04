@@ -54,6 +54,8 @@ public class PlayerVariables extends AbstractVariables
 	public static final String ABILITY_POINTS_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS";
 	public static final String ABILITY_POINTS_USED_MAIN_CLASS = "ABILITY_POINTS_USED";
 	public static final String ABILITY_POINTS_USED_DUAL_CLASS = "ABILITY_POINTS_DUAL_CLASS_USED";
+	public static final String REVELATION_SKILL_1_DUAL_CLASS = "DualclassRevelationSkill1";
+	public static final String REVELATION_SKILL_2_DUAL_CLASS = "DualclassRevelationSkill2";
 	public static final String EXTEND_DROP = "EXTEND_DROP";
 	
 	private final int _objectId;

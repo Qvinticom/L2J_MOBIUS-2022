@@ -77,9 +77,9 @@ public class Fan implements IAffectScopeHandler
 		};
 		
 		// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-		if (target.isCharacter() && filter.test((L2Character) target))
+		if (filter.test(activeChar))
 		{
-			action.accept(target);
+			action.accept(activeChar);
 		}
 		
 		// Check and add targets.

@@ -878,7 +878,9 @@
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;200} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
+				<radius>200</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14024" toLevel="1" name="Ancient Hero's Roar">
@@ -916,7 +918,9 @@
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;300} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;300} -->
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14025" toLevel="1" name="Hero's Arrow Shaft">
@@ -999,7 +1003,9 @@
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904</allowedSkills>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;450} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;450} -->
+				<radius>450</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14028" toLevel="1" name="Hero's Influence">
@@ -1871,7 +1877,6 @@
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<flyType>CHARGE</flyType>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -2260,10 +2265,6 @@
 		<reuseDelay>1000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<flyType>CHARGE</flyType>
-		<effects>
-			<effect name="EnemyCharge" />
-		</effects>
 	</skill>
 	<skill id="14064" toLevel="1" name="Wisp Heal">
 		<!-- Glory Days confirmed -->

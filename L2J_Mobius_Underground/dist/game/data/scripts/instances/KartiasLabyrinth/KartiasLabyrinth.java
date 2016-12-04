@@ -157,6 +157,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 	
 	public KartiasLabyrinth()
 	{
+		super(TEMPLATE_ID_SOLO_85, TEMPLATE_ID_SOLO_90, TEMPLATE_ID_SOLO_95, TEMPLATE_ID_GROUP_85, TEMPLATE_ID_GROUP_90, TEMPLATE_ID_GROUP_95);
 		addStartNpc(KARTIA_RESEARCHER);
 		addFirstTalkId(KARTIA_RESEARCHER);
 		addFirstTalkId(ADOLPH);

@@ -294,7 +294,7 @@
 			<value level="18">105</value>
 			<value level="19">105</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1986,11 +1986,10 @@
 		<effectRange>1100</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<flyType>CHARGE</flyType>
 		<hitTime>500</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpInitialConsume>20</mpInitialConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2005,7 +2004,6 @@
 			<effect name="PhysicalAttack">
 				<power>4563</power>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="6293" toLevel="1" name="Power Strike">
@@ -2086,11 +2084,10 @@
 		<effectRange>1100</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<flyType>CHARGE</flyType>
 		<hitTime>500</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpInitialConsume>20</mpInitialConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2105,7 +2102,6 @@
 			<effect name="PhysicalAttack">
 				<power>4563</power>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="6297" toLevel="1" name="Cylinder Throw">

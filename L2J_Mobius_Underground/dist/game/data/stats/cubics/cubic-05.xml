@@ -2,7 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/cubics.xsd">
 	<cubic id="5" level="1" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="282.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="1" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -12,7 +13,8 @@
 	</cubic>
 	<cubic id="5" level="2" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="434.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="2" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -22,7 +24,8 @@
 	</cubic>
 	<cubic id="5" level="3" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="644.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="3" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -32,7 +35,8 @@
 	</cubic>
 	<cubic id="5" level="4" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="919.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="4" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -42,7 +46,8 @@
 	</cubic>
 	<cubic id="5" level="5" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="1141.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="5" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -52,7 +57,8 @@
 	</cubic>
 	<cubic id="5" level="6" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="1394.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="6" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -62,7 +68,8 @@
 	</cubic>
 	<cubic id="5" level="7" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="1673.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="7" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -72,7 +79,8 @@
 	</cubic>
 	<cubic id="5" level="8" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="1975.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="8" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -82,7 +90,8 @@
 	</cubic>
 	<cubic id="5" level="101" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2081.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="9" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -92,7 +101,8 @@
 	</cubic>
 	<cubic id="5" level="102" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2133.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="10" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -102,7 +112,8 @@
 	</cubic>
 	<cubic id="5" level="103" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2184.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="11" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -112,7 +123,8 @@
 	</cubic>
 	<cubic id="5" level="104" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2234.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="12" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -122,7 +134,8 @@
 	</cubic>
 	<cubic id="5" level="105" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2283.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="13" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -132,7 +145,8 @@
 	</cubic>
 	<cubic id="5" level="106" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2331.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="14" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -142,7 +156,8 @@
 	</cubic>
 	<cubic id="5" level="107" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2378.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="15" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->
@@ -152,7 +167,8 @@
 	</cubic>
 	<cubic id="5" level="108" slot="5" duration="900" delay="8" maxCount="30" useUp="0" power="2423.0" targetType="TARGET">
 		<conditions>
-			<general type="GREATER" hpPercent="33" hp="1000" />
+			<hp type="GREATER" percent="33" />
+			<range value="1000" />
 		</conditions>
 		<skills>
 			<skill id="4053" level="16" triggerRate="33" successRate="30" /> <!-- Cubic Weakness -->

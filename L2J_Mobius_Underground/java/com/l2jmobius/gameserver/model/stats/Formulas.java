@@ -112,7 +112,7 @@ public final class Formulas
 		final double pvpPveMod = calculatePvpPveBonus(attacker, target, skill, true);
 		
 		// Initial damage
-		final double ssmod = ss ? attacker.getStat().getValue(Stats.SHOTS_BONUS, 2) : 1; // 2.04 for dual weapon?
+		final double ssmod = ss ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
 		final double cdMult = criticalMod * (((criticalPositionMod - 1) / 2) + 1) * (((criticalVulnMod - 1) / 2) + 1);
 		final double cdPatk = criticalAddMod + criticalAddVuln;
 		final Position position = Position.getPosition(attacker, target);
@@ -156,7 +156,7 @@ public final class Formulas
 		}
 		
 		// Bonus Spirit shot
-		final double shotsBonus = (sps || bss) ? attacker.getStat().getValue(Stats.SHOTS_BONUS, bss ? 4 : 2) : 1;
+		final double shotsBonus = bss ? (4 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : sps ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1;
 		final double critMod = mcrit ? (2 * calcCritDamage(attacker, target, skill)) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 		
 		// Trait, elements

@@ -4,12 +4,14 @@
 		<skills>
 			<skill id="4049" level="8" triggerRate="25" successRate="40" canUseOnStaticObjects="true" target="TARGET"> <!-- Cubic Strike -->
 				<conditions>
-					<general type="GREATER" hpPercent="30" hp="1000" />
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="4166" level="9" triggerRate="25" successRate="40" target="TARGET"> <!-- Stun -->
 				<conditions>
-					<general type="GREATER" hpPercent="30" hp="1000" />
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="5579" level="1" triggerRate="50" successRate="99" target="MASTER" targetDebuff="true" /> <!-- Cubic Cure -->

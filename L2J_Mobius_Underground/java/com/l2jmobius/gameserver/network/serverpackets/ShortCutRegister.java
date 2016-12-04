@@ -57,7 +57,7 @@ public final class ShortCutRegister implements IClientOutgoingPacket
 			{
 				packet.writeD(_shortcut.getId());
 				packet.writeH(_shortcut.getLevel());
-				packet.writeH(0x00); // Sub level
+				packet.writeH(_shortcut.getSubLevel());
 				packet.writeD(_shortcut.getSharedReuseGroup());
 				packet.writeC(0x00); // C5
 				packet.writeD(_shortcut.getCharacterType());

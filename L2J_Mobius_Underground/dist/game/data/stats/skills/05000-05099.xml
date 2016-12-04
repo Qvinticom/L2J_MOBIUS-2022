@@ -100,8 +100,6 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>DARK</attributeType>
 		<attributeValue>180</attributeValue>
-		<flyRadius>300</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<hitTime>5800</hitTime>
 		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
@@ -118,7 +116,9 @@
 			<effect name="PhysicalAttack">
 				<power>5964</power>
 			</effect>
-			<effect name="ThrowUp" />
+			<effect name="FlyAway">
+				<radius>300</radius>
+			</effect>
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
@@ -517,7 +517,6 @@
 	<skill id="5015" toLevel="6" name="Frintezza's Daemon Charge">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
-		<table name="#power"> 48761 52970 68074 48761 52970 68074 </table>
 		<affectRange>
 			<value level="1">400</value>
 			<value level="2">500</value>
@@ -547,15 +546,6 @@
 			<value level="5">0;0;500;170</value>
 			<value level="6">0;0;700;200</value>
 		</fanRange>
-		<flyRadius>
-			<value level="1">400</value>
-			<value level="2">500</value>
-			<value level="3">700</value>
-			<value level="4">400</value>
-			<value level="5">500</value>
-			<value level="6">700</value>
-		</flyRadius>
-		<flyType>CHARGE</flyType>
 		<hitTime>1500</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1389,7 +1379,7 @@
 			<value level="11">42</value>
 			<value level="12">43</value>
 		</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2946,7 +2936,7 @@
 		<hitTime>1080</hitTime>
 		<magicLvl>85</magicLvl>
 		<mpConsume>83</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A3</operateType>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>

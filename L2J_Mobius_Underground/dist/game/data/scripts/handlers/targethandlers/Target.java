@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 
 /**
  * Any friendly selected target or enemy if force use. Works on dead targets or doors as well.
@@ -76,7 +75,7 @@ public class Target implements ITargetTypeHandler
 			}
 		}
 		
-		if ((skill.getFlyType() == FlyType.CHARGE) && !GeoData.getInstance().canMove(activeChar, target))
+		if ((skill.isFlyType()) && !GeoData.getInstance().canMove(activeChar, target))
 		{
 			if (sendMessage)
 			{

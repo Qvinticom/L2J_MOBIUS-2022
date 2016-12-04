@@ -158,6 +158,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 				{
 					htmltext = "MonumentOfHeroes-weaponNo.html";
 				}
+				break;
 			}
 			case "heroCirclet":
 			{

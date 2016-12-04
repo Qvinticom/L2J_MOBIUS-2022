@@ -814,8 +814,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<flyRadius>200</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -824,7 +822,9 @@
 				</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;200} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
+				<radius>200</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5228" toLevel="2" name="Jump Attack">
@@ -847,8 +847,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<flyRadius>200</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -857,7 +855,9 @@
 				</power>
 				<criticalChance>20</criticalChance>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;200} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
+				<radius>200</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5229" toLevel="2" name="Strong Punch">
@@ -872,8 +872,6 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<flyRadius>300</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<hitTime>3000</hitTime>
 		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
@@ -890,8 +888,6 @@
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-		<flyRadius>300</flyRadius>
-		<flyType>THROW_UP</flyType>
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
@@ -903,7 +899,9 @@
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="ThrowUp" /><!-- TODO: {i_fly_away;curve;push;300} -->
+			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;300} -->
+				<radius>300</radius>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="5230" toLevel="1" name="Stun">

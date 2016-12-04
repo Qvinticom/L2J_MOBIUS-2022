@@ -340,11 +340,13 @@
 	<skill id="1509" toLevel="9" name="Seal of Limit">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
-		<table name="#power"> 0.8 0.7 0.6 0.5 0.4 0.3 0.4 0.4 0.3 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
-		<activateRate>60</activateRate>
+		<activateRate>
+			<value fromLevel="1" toLevel="9">60</value>
+			<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
@@ -439,6 +441,18 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{-0.6 - 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
+			<effect name="MagicalDefence" fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">
+ 				<amount>
+ 					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="1510" toLevel="1" name="Soul Cleanse">
@@ -651,11 +665,12 @@
 	<skill id="1514" toLevel="7" name="Soul Barrier">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
-		<table name="#magicLvl"> 58 63 74 85 90 95 99 </table>
-		<table name="#mDef"> 2 2 2.1 2.2 2.3 2.4 2.5 </table>
-		<table name="#res"> 10 15 20 30 35 40 45 </table>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="7">30</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="6" toLevel="7" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
+		</abnormalTime>
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>150</effectPoint>
 		<hitTime>1000</hitTime>
@@ -729,6 +744,12 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="PAtk" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">
+ 				<amount>
+ 					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
+ 				</amount>
+ 				<mode>PER</mode>
+ 			</effect>
 		</effects>
 	</skill>
 	<skill id="1515" toLevel="1" name="Lightning Barrier">
@@ -3658,7 +3679,7 @@
 		<icon>icon.skill1560</icon>
 		<magicLvl>83</magicLvl>
 		<mpConsume>82</mpConsume>
-		<nextActionAttack>true</nextActionAttack>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>

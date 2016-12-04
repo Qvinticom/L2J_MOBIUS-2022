@@ -1218,9 +1218,6 @@
 		<set name="commissionItemType" val="POTION" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="is_freightable" val="false" />
-		<cond msgId="1518">
-			<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-		</cond>
 		<skills>
 			<skill id="2297" level="1" /> <!-- Dye Potion -->
 		</skills>

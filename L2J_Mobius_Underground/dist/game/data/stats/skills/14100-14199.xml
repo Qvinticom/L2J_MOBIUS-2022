@@ -2399,7 +2399,6 @@
 		<!-- Glory Days confirmed -->
 		<icon>icon.skill0484</icon>
 		<operateType>DA1</operateType>
-		<flyType>CHARGE</flyType>
 		<mpConsume>20</mpConsume>
 		<castRange>350</castRange>
 		<hitTime>1500</hitTime>
@@ -2416,7 +2415,6 @@
 			<effect name="PhysicalAttack">
 				<power>5</power>
 			</effect>
-			<effect name="EnemyCharge" />
 		</effects>
 	</skill>
 	<skill id="14174" toLevel="1" name="Black Powder Eruption">

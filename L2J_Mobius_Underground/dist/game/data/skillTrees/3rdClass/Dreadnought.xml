@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="89" parentClassId="3">
+		<skill skillName="Thunder Storm" skillId="48" skillLvl="38" getLevel="75" levelUpSp="1800" />
+		<skill skillName="Provoke" skillId="286" skillLvl="4" getLevel="75" levelUpSp="1800" />
+		
 		<skill skillName="Health" skillId="329" skillLvl="1" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Wisdom" skillId="328" skillLvl="1" getLevel="76" levelUpSp="2000" />
 		<skill skillName="Cursed Pierce" skillId="921" skillLvl="1" getLevel="76" levelUpSp="2000" />

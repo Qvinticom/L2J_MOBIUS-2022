@@ -4,12 +4,14 @@
 		<skills>
 			<skill id="4165" level="9" triggerRate="20" successRate="30" target="TARGET"> <!-- Icy Air -->
 				<conditions>
-					<general type="GREATER" hpPercent="30" hp="1000" />
+					<hp type="GREATER" percent="30" />
+					<range value="1000" />
 				</conditions>
 			</skill>
 			<skill id="4051" level="1" triggerRate="30" successRate="30" target="HEAL"> <!-- Cubic Heal -->
 				<conditions>
-					<general type="GREATER" hpPercent="80" hp="3000" />
+					<hp type="GREATER" percent="80" />
+					<range value="3000" />
 				</conditions>
 			</skill>
 			<skill id="5579" level="1" triggerRate="50" successRate="99" target="MASTER" targetDebuff="true" /> <!-- Cubic Cure -->

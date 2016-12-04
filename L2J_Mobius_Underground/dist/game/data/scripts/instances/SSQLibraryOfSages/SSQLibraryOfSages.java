@@ -56,6 +56,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	
 	public SSQLibraryOfSages()
 	{
+		super(TEMPLATE_ID);
 		addFirstTalkId(SOPHIA2, ELCADIA_INSTANCE, PILE_OF_BOOKS1, PILE_OF_BOOKS2, PILE_OF_BOOKS3, PILE_OF_BOOKS4, PILE_OF_BOOKS5);
 		addStartNpc(SOPHIA1, SOPHIA2, SOPHIA3);
 		addTalkId(SOPHIA1, SOPHIA2, SOPHIA3);

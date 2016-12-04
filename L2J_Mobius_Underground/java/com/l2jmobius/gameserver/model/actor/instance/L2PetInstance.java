@@ -78,8 +78,8 @@ public class L2PetInstance extends L2Summon
 {
 	protected static final Logger _logPet = Logger.getLogger(L2PetInstance.class.getName());
 	
-	private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,remaining_time,buff_index) VALUES (?,?,?,?,?)";
-	private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
+	private static final String ADD_SKILL_SAVE = "INSERT INTO character_pet_skills_save (petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index) VALUES (?,?,?,?,?,?)";
+	private static final String RESTORE_SKILL_SAVE = "SELECT petObjItemId,skill_id,skill_level,skill_sub_level,remaining_time,buff_index FROM character_pet_skills_save WHERE petObjItemId=? ORDER BY buff_index ASC";
 	private static final String DELETE_SKILL_SAVE = "DELETE FROM character_pet_skills_save WHERE petObjItemId=?";
 	
 	private int _curFed;
@@ -998,7 +998,7 @@ public class L2PetInstance extends L2Summon
 			
 			int buff_index = 0;
 			
-			final Set<Integer> storedSkills = new HashSet<>();
+			final Set<Long> storedSkills = new HashSet<>();
 			
 			// Store all effect data along with calculated remaining
 			if (storeEffects)
@@ -1044,8 +1044,9 @@ public class L2PetInstance extends L2Summon
 					ps2.setInt(1, getControlObjectId());
 					ps2.setInt(2, skill.getId());
 					ps2.setInt(3, skill.getLevel());
-					ps2.setInt(4, info.getTime());
-					ps2.setInt(5, ++buff_index);
+					ps2.setInt(4, skill.getSubLevel());
+					ps2.setInt(5, info.getTime());
+					ps2.setInt(6, ++buff_index);
 					ps2.execute();
 					
 					SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> new CopyOnWriteArrayList<>()).add(new SummonEffect(skill, info.getTime()));
