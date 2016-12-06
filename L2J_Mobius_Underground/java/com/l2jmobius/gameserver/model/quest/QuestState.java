@@ -459,7 +459,21 @@ public final class QuestState
 	{
 		if (isStarted())
 		{
-			return getInt("cond");
+			int val = getInt("cond");
+			if ((val & 0x80000000) != 0)
+			{
+				val &= 0x7fffffff;
+				for (int i = 1; i < 32; i++)
+				{
+					val = (val >> 1);
+					if (val == 0)
+					{
+						val = i;
+						break;
+					}
+				}
+			}
+			return val;
 		}
 		return 0;
 	}
