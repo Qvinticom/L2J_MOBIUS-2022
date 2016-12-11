@@ -86,12 +86,6 @@ public final class RequestJoinParty implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!target.isVisibleFor(requestor))
-		{
-			requestor.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
-			return;
-		}
-		
 		if (requestor.isOnEvent(CeremonyOfChaosEvent.class))
 		{
 			client.sendPacket(SystemMessageId.YOU_CANNOT_INVITE_A_FRIEND_OR_PARTY_WHILE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
