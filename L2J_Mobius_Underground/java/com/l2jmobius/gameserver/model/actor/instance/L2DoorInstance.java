@@ -239,6 +239,10 @@ public final class L2DoorInstance extends L2Character
 	
 	public int getDamage()
 	{
+		if (getCastle() == null)
+		{
+			return 0;
+		}
 		final int dmg = 6 - (int) Math.ceil((getCurrentHp() / getMaxHp()) * 6);
 		if (dmg > 6)
 		{

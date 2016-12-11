@@ -36,6 +36,7 @@ public class StaticObject implements IClientOutgoingPacket
 	private final int _maxHp;
 	private final int _currentHp;
 	private final boolean _showHp;
+	private final int _damageGrade;
 	
 	public StaticObject(L2StaticObjectInstance staticObject)
 	{
@@ -49,6 +50,7 @@ public class StaticObject implements IClientOutgoingPacket
 		_maxHp = 0;
 		_currentHp = 0;
 		_showHp = false;
+		_damageGrade = 0;
 	}
 	
 	public StaticObject(L2DoorInstance door, boolean targetable)
@@ -63,6 +65,7 @@ public class StaticObject implements IClientOutgoingPacket
 		_maxHp = door.getMaxHp();
 		_currentHp = (int) door.getCurrentHp();
 		_showHp = door.getIsShowHp();
+		_damageGrade = door.getDamage();
 	}
 	
 	@Override
@@ -80,7 +83,7 @@ public class StaticObject implements IClientOutgoingPacket
 		packet.writeD(_currentHp);
 		packet.writeD(_maxHp);
 		packet.writeD(_showHp ? 1 : 0);
-		packet.writeD(0x00);
+		packet.writeD(_damageGrade);
 		return true;
 	}
 }
