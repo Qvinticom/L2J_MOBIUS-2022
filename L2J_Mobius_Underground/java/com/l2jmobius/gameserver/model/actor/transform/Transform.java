@@ -37,7 +37,6 @@ import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
-import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 
@@ -339,7 +338,6 @@ public final class Transform implements IIdentifiable
 					player.sendPacket(new SkillCoolTime(player));
 				}
 				
-				player.sendPacket(new ExUserInfoAbnormalVisualEffect(player));
 				player.broadcastUserInfo();
 				
 				// Notify to scripts
