@@ -501,12 +501,6 @@ public abstract class Inventory extends ItemContainer
 				update = true;
 			}
 			
-			// Very and apply visual set
-			if (verifyAndApply(player, item, L2ItemInstance::getVisualId))
-			{
-				update = true;
-			}
-			
 			if (update)
 			{
 				player.sendSkillList();
@@ -617,12 +611,6 @@ public abstract class Inventory extends ItemContainer
 			
 			// verify and remove normal set bonus
 			if (verifyAndRemove(player, item, L2ItemInstance::getId))
-			{
-				remove = true;
-			}
-			
-			// verify and remove visual set bonus
-			if (verifyAndRemove(player, item, L2ItemInstance::getVisualId))
 			{
 				remove = true;
 			}
