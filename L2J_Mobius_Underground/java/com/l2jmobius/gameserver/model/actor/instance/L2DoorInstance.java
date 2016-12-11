@@ -239,7 +239,7 @@ public final class L2DoorInstance extends L2Character
 	
 	public int getDamage()
 	{
-		if (getCastle() == null)
+		if ((getCastle() == null) && (getFort() == null))
 		{
 			return 0;
 		}
