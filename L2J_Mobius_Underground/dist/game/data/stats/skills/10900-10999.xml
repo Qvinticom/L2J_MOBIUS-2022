@@ -44,7 +44,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PhysicalSkillPower">
@@ -57,7 +58,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="DefenceCriticalRate">
@@ -70,7 +72,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
@@ -193,7 +196,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
@@ -206,7 +210,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
@@ -219,7 +224,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
@@ -232,7 +237,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
@@ -245,7 +251,8 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
-					<item> CROSSBOW</item>
+					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
@@ -283,6 +290,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
@@ -295,6 +303,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpMagicalSkillDamageBonus">
@@ -307,6 +316,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 			<effect name="PvpPhysicalSkillDamageBonus">
@@ -319,6 +329,7 @@
 				<mode>PER</mode>
 				<weaponType>
 					<item>CROSSBOW</item>
+					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
 		</effects>
