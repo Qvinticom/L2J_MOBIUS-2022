@@ -80,7 +80,8 @@ public class CubicInstance
 		double commulativeChance = 0;
 		for (CubicSkill cubicSkill : _template.getSkills())
 		{
-			if ((commulativeChance += cubicSkill.getTriggerRate()) > random)
+			commulativeChance += cubicSkill.getTriggerRate();
+			if (commulativeChance > random)
 			{
 				final Skill skill = cubicSkill.getSkill();
 				if ((skill != null) && (Rnd.get(100) < cubicSkill.getSuccessRate()))

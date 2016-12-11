@@ -101,7 +101,7 @@ public final class ResidenceFunctionsData implements IGameXmlReader
 		return _functions.get(id);
 	}
 	
-	public static final ResidenceFunctionsData getInstance()
+	public static ResidenceFunctionsData getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

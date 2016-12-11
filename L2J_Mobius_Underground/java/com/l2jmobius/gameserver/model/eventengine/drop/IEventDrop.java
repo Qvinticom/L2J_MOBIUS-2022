@@ -25,5 +25,5 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
  */
 public interface IEventDrop
 {
-	public Collection<ItemHolder> calculateDrops();
+	Collection<ItemHolder> calculateDrops();
 }

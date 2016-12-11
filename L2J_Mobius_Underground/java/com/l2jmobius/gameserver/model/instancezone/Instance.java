@@ -402,12 +402,9 @@ public final class Instance implements IIdentifiable, INamable
 					door.openMe();
 				}
 			}
-			else
+			else if (door.isOpen())
 			{
-				if (door.isOpen())
-				{
-					door.closeMe();
-				}
+				door.closeMe();
 			}
 		}
 	}

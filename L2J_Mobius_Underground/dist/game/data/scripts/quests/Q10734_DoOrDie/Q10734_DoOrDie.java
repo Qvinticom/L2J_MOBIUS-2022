@@ -41,7 +41,7 @@ public final class Q10734_DoOrDie extends Quest
 	private static final int ADVENTURER_S_GUIDE_APPRENTICE = 33950;
 	private static final int TRAINING_DUMMY = 19546;
 	// Skills
-	private final static SkillHolder[] COMMON_BUFFS =
+	private static final SkillHolder[] COMMON_BUFFS =
 	{
 		new SkillHolder(5182, 1), // Blessing of Protection
 		new SkillHolder(15642, 1), // Horn Melody

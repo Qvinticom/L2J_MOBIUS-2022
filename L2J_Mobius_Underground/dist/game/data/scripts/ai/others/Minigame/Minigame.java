@@ -290,23 +290,20 @@ public final class Minigame extends AbstractNpcAI
 							startQuestTimer("end", 4000, room.getManager(), null);
 						}
 					}
-					else
+					else if (room.getAttemptNumber() == MAX_ATTEMPTS)
 					{
-						if (room.getAttemptNumber() == MAX_ATTEMPTS)
-						{
-							room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_VE_FAILED_ANY_FURTHER_ATTEMPTS_WOULD_BE_WASTEFUL);
-							room.burnThemAll();
-							startQuestTimer("off", 2000, room.getManager(), null);
-							room.getParticipant().removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == room);
-							startQuestTimer("end", 4000, room.getManager(), null);
-						}
-						else if (room.getAttemptNumber() < MAX_ATTEMPTS)
-						{
-							room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_BAD_I_WILL_NOT_GIVE_UP_ON_THIS_THOUGH);
-							room.burnThemAll();
-							startQuestTimer("off", 2000, room.getManager(), null);
-							room.setAttemptNumber(room.getAttemptNumber() + 1);
-						}
+						room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_VE_FAILED_ANY_FURTHER_ATTEMPTS_WOULD_BE_WASTEFUL);
+						room.burnThemAll();
+						startQuestTimer("off", 2000, room.getManager(), null);
+						room.getParticipant().removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == room);
+						startQuestTimer("end", 4000, room.getManager(), null);
+					}
+					else if (room.getAttemptNumber() < MAX_ATTEMPTS)
+					{
+						room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_BAD_I_WILL_NOT_GIVE_UP_ON_THIS_THOUGH);
+						room.burnThemAll();
+						startQuestTimer("off", 2000, room.getManager(), null);
+						room.setAttemptNumber(room.getAttemptNumber() + 1);
 					}
 				}
 			}

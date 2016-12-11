@@ -381,12 +381,9 @@ public class AdminEventEngine implements IAdminCommandHandler
 						}
 					}
 				}
-				else
+				else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
 				{
-					if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
-					{
-						L2Event.removeAndResetPlayer((L2PcInstance) activeChar.getTarget());
-					}
+					L2Event.removeAndResetPlayer((L2PcInstance) activeChar.getTarget());
 				}
 				showEventControl(activeChar);
 			}
@@ -464,7 +461,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		
 		result.append("</table>");
 		
-		return note + result.toString();
+		return note + result;
 	}
 	
 	public void showMainPage(L2PcInstance activeChar)

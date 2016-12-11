@@ -21,7 +21,7 @@ package com.l2jmobius.gameserver.model.eventengine;
  */
 public interface IConditionalEventScheduler
 {
-	public boolean test();
+	boolean test();
 	
-	public void run();
+	void run();
 }

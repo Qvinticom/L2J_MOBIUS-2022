@@ -46,7 +46,7 @@ public final class Q10329_BackupSeekers extends Quest
 	// Locations
 	private static final Location BART_SPAWN_1 = new Location(-117955, 255832, -1320);
 	private static final Location BART_SPAWN_2 = new Location(-114121, 252445, -1560);
-	private final static Location[] BART_LOC_1 =
+	private static final Location[] BART_LOC_1 =
 	{
 		new Location(-117063, 255528, -1296),
 		new Location(-115766, 254791, -1504),
@@ -54,7 +54,7 @@ public final class Q10329_BackupSeekers extends Quest
 		new Location(-114606, 253534, -1528),
 		new Location(-114375, 252807, -1536),
 	};
-	private final static Location[] BART_LOC_2 =
+	private static final Location[] BART_LOC_2 =
 	{
 		new Location(-114410, 252220, -1591),
 		new Location(-114416, 250812, -1760),

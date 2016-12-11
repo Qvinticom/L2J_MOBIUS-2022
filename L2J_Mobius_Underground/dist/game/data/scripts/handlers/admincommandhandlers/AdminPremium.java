@@ -119,14 +119,14 @@ public class AdminPremium implements IAdminCommandHandler
 		
 		// TODO: Add check if account exists XD
 		PremiumManager.getInstance().updatePremiumData(months, accountName);
-		admin.sendMessage("Account " + accountName + " will now have premium status until " + String.valueOf(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName))) + ".");
+		admin.sendMessage("Account " + accountName + " will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName)) + ".");
 	}
 	
 	private void viewPremiumInfo(L2PcInstance admin, String accountName)
 	{
 		if (PremiumManager.getInstance().getPremiumEndDate(accountName) > 0)
 		{
-			admin.sendMessage("Account " + accountName + " has premium status until " + String.valueOf(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName))) + ".");
+			admin.sendMessage("Account " + accountName + " has premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName)) + ".");
 		}
 		else
 		{

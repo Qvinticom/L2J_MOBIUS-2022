@@ -223,18 +223,15 @@ public class Q00463_IMustBeaGenius extends Quest
 				{
 					htmltext = "32069-04.html";
 				}
+				else if (st.getInt("var") == 1)
+				{
+					htmltext = "32069-06a.html";
+				}
 				else
 				{
-					if (st.getInt("var") == 1)
-					{
-						htmltext = "32069-06a.html";
-					}
-					else
-					{
-						takeItems(player, COLLECTION, -1);
-						st.set("var", "1");
-						htmltext = "32069-06.html";
-					}
+					takeItems(player, COLLECTION, -1);
+					st.set("var", "1");
+					htmltext = "32069-06.html";
 				}
 				break;
 		}

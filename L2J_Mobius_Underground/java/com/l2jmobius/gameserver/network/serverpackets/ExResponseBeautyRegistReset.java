@@ -29,11 +29,11 @@ public class ExResponseBeautyRegistReset implements IClientOutgoingPacket
 	private final int _type;
 	private final int _result;
 	
-	public final static int FAILURE = 0;
-	public final static int SUCCESS = 1;
+	public static final int FAILURE = 0;
+	public static final int SUCCESS = 1;
 	
-	public final static int CHANGE = 0;
-	public final static int RESTORE = 1;
+	public static final int CHANGE = 0;
+	public static final int RESTORE = 1;
 	
 	public ExResponseBeautyRegistReset(L2PcInstance activeChar, int type, int result)
 	{

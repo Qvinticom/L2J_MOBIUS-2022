@@ -252,7 +252,7 @@ public class Debug implements ITelnetCommand
 					final StackTraceElement[] stes = entry.getValue();
 					final Thread t = entry.getKey();
 					sb.append("--------------\r\n");
-					sb.append(t.toString() + " (" + t.getId() + ")\r\n");
+					sb.append(t + " (" + t.getId() + ")\r\n");
 					sb.append("State: " + t.getState() + "\r\n");
 					sb.append("isAlive: " + t.isAlive() + " | isDaemon: " + t.isDaemon() + " | isInterrupted: " + t.isInterrupted() + "\r\n");
 					sb.append("\r\n");

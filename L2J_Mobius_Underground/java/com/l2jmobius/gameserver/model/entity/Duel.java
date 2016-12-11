@@ -920,20 +920,17 @@ public class Duel
 				
 			}
 		}
-		else
+		else if (player == _playerA)
 		{
-			if (player == _playerA)
-			{
-				_surrenderRequest = 1;
-				_playerA.setDuelState(DUELSTATE_DEAD);
-				_playerB.setDuelState(DUELSTATE_WINNER);
-			}
-			else if (player == _playerB)
-			{
-				_surrenderRequest = 2;
-				_playerB.setDuelState(DUELSTATE_DEAD);
-				_playerA.setDuelState(DUELSTATE_WINNER);
-			}
+			_surrenderRequest = 1;
+			_playerA.setDuelState(DUELSTATE_DEAD);
+			_playerB.setDuelState(DUELSTATE_WINNER);
+		}
+		else if (player == _playerB)
+		{
+			_surrenderRequest = 2;
+			_playerB.setDuelState(DUELSTATE_DEAD);
+			_playerA.setDuelState(DUELSTATE_WINNER);
 		}
 	}
 	

@@ -3287,20 +3287,17 @@ public final class L2PcInstance extends L2Playable
 						sendPacket(sm);
 					}
 				}
+				else if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+					sm.addItemName(itemId);
+					sendPacket(sm);
+				}
 				else
 				{
-					if (process.equalsIgnoreCase("Sweeper") || process.equalsIgnoreCase("Quest"))
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-						sm.addItemName(itemId);
-						sendPacket(sm);
-					}
-					else
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
-						sm.addItemName(itemId);
-						sendPacket(sm);
-					}
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+					sm.addItemName(itemId);
+					sendPacket(sm);
 				}
 			}
 			
@@ -3967,18 +3964,15 @@ public final class L2PcInstance extends L2Playable
 			{
 				client.cleanMe(true);
 			}
-			else
+			else if (client.getChannel().isActive())
 			{
-				if (client.getChannel().isActive())
+				if (closeClient)
 				{
-					if (closeClient)
-					{
-						client.close(LeaveWorld.STATIC_PACKET);
-					}
-					else
-					{
-						client.close(ServerClose.STATIC_PACKET);
-					}
+					client.close(LeaveWorld.STATIC_PACKET);
+				}
+				else
+				{
+					client.close(ServerClose.STATIC_PACKET);
 				}
 			}
 		}
@@ -4372,13 +4366,9 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 		}
-		else
+		else if (target != null) // _interactTarget=null should never happen but one never knows ^^;
 		{
-			// _interactTarget=null should never happen but one never knows ^^;
-			if (target != null)
-			{
-				target.onAction(this);
-			}
+			target.onAction(this);
 		}
 	}
 	
@@ -5257,19 +5247,16 @@ public final class L2PcInstance extends L2Playable
 			
 			player.setPvpKills(player.getPvpKills() + 1);
 		}
+		else if ((getReputation() > 0) && (getPkKills() == 0))
+		{
+			player.setReputation(0);
+			player.setPkKills(player.getPkKills() + 1);
+		}
 		else
 		{
-			if ((getReputation() > 0) && (getPkKills() == 0))
-			{
-				player.setReputation(0);
-				player.setPkKills(player.getPkKills() + 1);
-			}
-			else
-			{
-				// Calculate new karma and increase pk count
-				player.setReputation(player.getReputation() - Formulas.calculateKarmaGain(player.getPkKills(), killedPlayable.isSummon()));
-				player.setPkKills(player.getPkKills() + 1);
-			}
+			// Calculate new karma and increase pk count
+			player.setReputation(player.getReputation() - Formulas.calculateKarmaGain(player.getPkKills(), killedPlayable.isSummon()));
+			player.setPkKills(player.getPkKills() + 1);
 		}
 		
 		final UserInfo ui = new UserInfo(this, false);
@@ -9288,7 +9275,7 @@ public final class L2PcInstance extends L2Playable
 	public void sendSkillList(int lastLearnedSkillId)
 	{
 		boolean isDisabled = false;
-		SkillList sl = new SkillList();
+		final SkillList sl = new SkillList();
 		
 		for (Skill s : getSkillList())
 		{
@@ -9969,16 +9956,13 @@ public final class L2PcInstance extends L2Playable
 			{
 				reviver.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED); // Resurrection is already been proposed.
 			}
+			else if (Pet)
+			{
+				reviver.sendPacket(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
+			}
 			else
 			{
-				if (Pet)
-				{
-					reviver.sendPacket(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING); // A pet cannot be resurrected while it's owner is in the process of resurrecting.
-				}
-				else
-				{
-					reviver.sendPacket(SystemMessageId.WHILE_A_PET_IS_BEING_RESURRECTED_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
-				}
+				reviver.sendPacket(SystemMessageId.WHILE_A_PET_IS_BEING_RESURRECTED_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER); // While a pet is attempting to resurrect, it cannot help in resurrecting its master.
 			}
 			return;
 		}
@@ -10190,13 +10174,10 @@ public final class L2PcInstance extends L2Playable
 				}
 			}
 		}
-		else
+		else if (_teleportWatchdog != null)
 		{
-			if (_teleportWatchdog != null)
-			{
-				_teleportWatchdog.cancel(false);
-				_teleportWatchdog = null;
-			}
+			_teleportWatchdog.cancel(false);
+			_teleportWatchdog = null;
 		}
 	}
 	

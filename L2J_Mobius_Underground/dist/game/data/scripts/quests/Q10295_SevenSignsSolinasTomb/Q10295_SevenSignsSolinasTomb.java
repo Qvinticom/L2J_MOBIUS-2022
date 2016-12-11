@@ -53,7 +53,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 			return null;
 		}
 		
-		String htmltext = null;
+		final String htmltext = null;
 		switch (event)
 		{
 			
@@ -65,7 +65,7 @@ public final class Q10295_SevenSignsSolinasTomb extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		// QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
+		final String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			

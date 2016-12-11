@@ -331,7 +331,7 @@ public class MinionList
 	 * @param minionId The L2NpcTemplate Identifier of the Minion to spawn
 	 * @return
 	 */
-	public static final L2MonsterInstance spawnMinion(L2MonsterInstance master, int minionId)
+	public static L2MonsterInstance spawnMinion(L2MonsterInstance master, int minionId)
 	{
 		// Get the template of the Minion to spawn
 		final L2NpcTemplate minionTemplate = NpcData.getInstance().getTemplate(minionId);
@@ -343,7 +343,7 @@ public class MinionList
 		return initializeNpcInstance(master, new L2MonsterInstance(minionTemplate));
 	}
 	
-	protected static final L2MonsterInstance initializeNpcInstance(L2MonsterInstance master, L2MonsterInstance minion)
+	protected static L2MonsterInstance initializeNpcInstance(L2MonsterInstance master, L2MonsterInstance minion)
 	{
 		minion.stopAllEffects();
 		minion.setIsDead(false);

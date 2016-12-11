@@ -406,7 +406,7 @@ public final class LastImperialTomb extends AbstractInstance
 			case "FRINTEZZA_INTRO_19":
 			{
 				final Instance world = player.getInstanceWorld();
-				Map<L2Npc, Integer> portraits = new HashMap<>();
+				final Map<L2Npc, Integer> portraits = new HashMap<>();
 				for (int i = 0; i < PORTRAIT_SPAWNS.length; i++)
 				{
 					final L2Npc portrait = addSpawn(PORTRAIT_SPAWNS[i][0], PORTRAIT_SPAWNS[i][1], PORTRAIT_SPAWNS[i][2], PORTRAIT_SPAWNS[i][3], PORTRAIT_SPAWNS[i][4], false, 0, false, world.getId());

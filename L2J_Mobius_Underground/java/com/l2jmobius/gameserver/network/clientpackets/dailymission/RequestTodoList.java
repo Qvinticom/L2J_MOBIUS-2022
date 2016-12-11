@@ -52,13 +52,13 @@ public class RequestTodoList implements IClientIncomingPacket
 		{
 			// case 1:
 			// {
-			// 	player.sendPacket(new ExTodoListInzone());
-			// 	break;
+			// player.sendPacket(new ExTodoListInzone());
+			// break;
 			// }
 			// case 2:
 			// {
-			// 	player.sendPacket(new ExTodoListInzone());
-			// 	break;
+			// player.sendPacket(new ExTodoListInzone());
+			// break;
 			// }
 			case 9:
 			{

@@ -439,7 +439,7 @@ public final class Formulas
 	 * @param skill
 	 * @return the hit time of the skill.
 	 */
-	public static final int calcHitTime(L2Character creature, Skill skill)
+	public static int calcHitTime(L2Character creature, Skill skill)
 	{
 		int skillTime = skill.getHitTime() - SKILL_LAUNCH_TIME;
 		
@@ -457,7 +457,7 @@ public final class Formulas
 		return Math.max(skillTime, 0);
 	}
 	
-	public static final int calcSkillCancelTime(L2Character creature, Skill skill)
+	public static int calcSkillCancelTime(L2Character creature, Skill skill)
 	{
 		// Fishing skills.
 		if ((skill.getId() == 1312) || (skill.getId() == 1314) || (skill.getId() == 1315))
@@ -474,7 +474,7 @@ public final class Formulas
 	 * @param skill
 	 * @return
 	 */
-	public static final double calcSkillTimeFactor(L2Character creature, Skill skill)
+	public static double calcSkillTimeFactor(L2Character creature, Skill skill)
 	{
 		double factor = 0;
 		if (skill.isPhysical() || skill.isDance()) // is_magic = 0 or 3
@@ -980,18 +980,15 @@ public final class Formulas
 				attack_attribute = 0;
 				defence_attribute = target.getDefenseElementValue(AttributeType.NONE_ARMOR);
 			}
+			else if (attacker.getAttackElement() == skill.getAttributeType())
+			{
+				attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement()) + skill.getAttributeValue();
+				defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
+			}
 			else
 			{
-				if (attacker.getAttackElement() == skill.getAttributeType())
-				{
-					attack_attribute = attacker.getAttackElementValue(attacker.getAttackElement()) + skill.getAttributeValue();
-					defence_attribute = target.getDefenseElementValue(attacker.getAttackElement());
-				}
-				else
-				{
-					attack_attribute = skill.getAttributeValue();
-					defence_attribute = target.getDefenseElementValue(skill.getAttributeType());
-				}
+				attack_attribute = skill.getAttributeValue();
+				defence_attribute = target.getDefenseElementValue(skill.getAttributeType());
 			}
 		}
 		else

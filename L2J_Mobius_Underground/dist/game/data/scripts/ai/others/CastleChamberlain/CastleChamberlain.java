@@ -1100,8 +1100,8 @@ public final class CastleChamberlain extends AbstractNpcAI
 					else
 					{
 						final NpcHtmlMessage html = getHtmlPacket(player, npc, "chamberlain-25.html");
-						html.replace("%owner_name%", String.valueOf(player.getName()));
-						html.replace("%feud_name%", String.valueOf(String.valueOf(1001000 + castle.getResidenceId())));
+						html.replace("%owner_name%", player.getName());
+						html.replace("%feud_name%", String.valueOf(1001000 + castle.getResidenceId()));
 						player.sendPacket(html);
 						giveItems(player, CROWN, 1);
 					}

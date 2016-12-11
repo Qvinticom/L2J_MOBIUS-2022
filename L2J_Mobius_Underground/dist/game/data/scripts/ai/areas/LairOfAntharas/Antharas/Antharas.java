@@ -246,20 +246,17 @@ public final class Antharas extends AbstractNpcAI
 						}
 					}
 				}
+				else if (!hasQuestItems(player, STONE))
+				{
+					htmltext = "13001-03.html";
+				}
 				else
 				{
-					if (!hasQuestItems(player, STONE))
+					player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
+					if (getStatus() != WAITING)
 					{
-						htmltext = "13001-03.html";
-					}
-					else
-					{
-						player.teleToLocation(179700 + getRandom(700), 113800 + getRandom(2100), -7709);
-						if (getStatus() != WAITING)
-						{
-							setStatus(WAITING);
-							startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
-						}
+						setStatus(WAITING);
+						startQuestTimer("SPAWN_ANTHARAS", Config.ANTHARAS_WAIT_TIME * 60000, null, null);
 					}
 				}
 				return htmltext;

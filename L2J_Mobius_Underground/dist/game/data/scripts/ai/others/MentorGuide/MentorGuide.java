@@ -73,12 +73,12 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 	private static final int MENTEE_HEADPHONE = 34759;
 	private static final int DIPLOMA = 33805;
 	// Skills
-	private final static SkillHolder[] MENTEE_BUFFS =
+	private static final SkillHolder[] MENTEE_BUFFS =
 	{
 		new SkillHolder(9233, 1), // Mentor's Guidance
 	};
 	// Skills
-	private final static SkillHolder[] MENTEE_BUFFS_WITHOUT_MENTOR_ONLINE =
+	private static final SkillHolder[] MENTEE_BUFFS_WITHOUT_MENTOR_ONLINE =
 	{
 		new SkillHolder(9227, 1), // Mentor's Poem of Horn
 		new SkillHolder(9228, 1), // Mentor's Poem of Drum

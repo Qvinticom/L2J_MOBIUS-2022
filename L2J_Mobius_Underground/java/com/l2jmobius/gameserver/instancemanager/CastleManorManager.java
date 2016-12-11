@@ -113,7 +113,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 			// Send debug message
 			if (Config.DEBUG)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Current mode " + _mode.toString());
+				LOGGER.info(getClass().getSimpleName() + ": Current mode " + _mode);
 			}
 		}
 		else
@@ -432,7 +432,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		scheduleModeChange();
 		if (Config.DEBUG)
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Manor mode changed to " + _mode.toString() + "!");
+			LOGGER.info(getClass().getSimpleName() + ": Manor mode changed to " + _mode + "!");
 		}
 	}
 	

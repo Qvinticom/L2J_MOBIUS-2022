@@ -84,7 +84,7 @@ public class ActionData implements IGameXmlReader
 	 * Gets the single instance of ActionData.
 	 * @return single instance of ActionData
 	 */
-	public static final ActionData getInstance()
+	public static ActionData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

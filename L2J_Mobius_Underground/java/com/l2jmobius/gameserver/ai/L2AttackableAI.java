@@ -222,17 +222,14 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}
-				else
+				else if (npc.getSpawn() != null)
 				{
-					if (npc.getSpawn() != null)
+					final Location loc = npc.getSpawn().getLocation();
+					final int range = Config.MAX_DRIFT_RANGE;
+					
+					if (!npc.isInsideRadius(loc, range + range, true, false))
 					{
-						final Location loc = npc.getSpawn().getLocation();
-						final int range = Config.MAX_DRIFT_RANGE;
-						
-						if (!npc.isInsideRadius(loc, range + range, true, false))
-						{
-							intention = AI_INTENTION_ACTIVE;
-						}
+						intention = AI_INTENTION_ACTIVE;
 					}
 				}
 			}

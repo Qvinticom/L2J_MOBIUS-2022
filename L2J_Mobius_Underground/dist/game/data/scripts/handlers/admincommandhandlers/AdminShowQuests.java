@@ -90,7 +90,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 				{
 					val[0] = "full";
 				}
-				if (cmdParams[2].indexOf("_") != -1)
+				if (cmdParams[2].contains("_"))
 				{
 					val[0] = "name";
 					val[1] = cmdParams[2];

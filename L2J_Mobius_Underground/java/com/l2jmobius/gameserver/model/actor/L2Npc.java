@@ -651,12 +651,9 @@ public class L2Npc extends L2Character
 				return temp;
 			}
 		}
-		else
+		else if (HtmCache.getInstance().isLoadable(temp))
 		{
-			if (HtmCache.getInstance().isLoadable(temp))
-			{
-				return temp;
-			}
+			return temp;
 		}
 		
 		// If the file is not found, the standard message "I have nothing to say to you" is returned

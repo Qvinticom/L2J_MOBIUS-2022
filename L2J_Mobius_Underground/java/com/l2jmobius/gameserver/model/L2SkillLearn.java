@@ -312,6 +312,6 @@ public final class L2SkillLearn
 	public String toString()
 	{
 		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
-		return "[" + skill.toString() + " treeId: " + _treeId + " row: " + _row + " column: " + _column + " pointsRequired:" + _pointsRequired + "]";
+		return "[" + skill + " treeId: " + _treeId + " row: " + _row + " column: " + _column + " pointsRequired:" + _pointsRequired + "]";
 	}
 }

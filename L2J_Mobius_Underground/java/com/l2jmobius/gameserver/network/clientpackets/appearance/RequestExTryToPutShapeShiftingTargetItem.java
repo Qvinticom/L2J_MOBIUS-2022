@@ -91,7 +91,8 @@ public class RequestExTryToPutShapeShiftingTargetItem implements IClientIncoming
 			return;
 		}
 		
-		if ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null)
+		stone = inventory.getItemByObjectId(stone.getObjectId());
+		if (stone == null)
 		{
 			client.sendPacket(ExPutShapeShiftingTargetItemResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);

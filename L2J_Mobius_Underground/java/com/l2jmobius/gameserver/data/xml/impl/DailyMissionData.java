@@ -128,7 +128,7 @@ public class DailyMissionData implements IGameXmlReader
 	 * Gets the single instance of DailyMissionData.
 	 * @return single instance of DailyMissionData
 	 */
-	public static final DailyMissionData getInstance()
+	public static DailyMissionData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

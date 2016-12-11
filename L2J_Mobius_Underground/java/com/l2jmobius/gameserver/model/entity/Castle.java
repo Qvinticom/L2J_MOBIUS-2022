@@ -353,16 +353,13 @@ public final class Castle extends AbstractResidence
 			}
 			_treasury -= amount;
 		}
+		else if ((_treasury + amount) > Inventory.MAX_ADENA)
+		{
+			_treasury = Inventory.MAX_ADENA;
+		}
 		else
 		{
-			if ((_treasury + amount) > Inventory.MAX_ADENA)
-			{
-				_treasury = Inventory.MAX_ADENA;
-			}
-			else
-			{
-				_treasury += amount;
-			}
+			_treasury += amount;
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -750,26 +747,23 @@ public final class Castle extends AbstractResidence
 		{
 			_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, 0, false));
 		}
+		else if ((lvl == 0) && (lease == 0))
+		{
+			removeFunction(type);
+		}
 		else
 		{
-			if ((lvl == 0) && (lease == 0))
+			final int diffLease = lease - _function.get(type).getLease();
+			if (diffLease > 0)
 			{
-				removeFunction(type);
+				_function.remove(type);
+				_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
 			}
 			else
 			{
-				final int diffLease = lease - _function.get(type).getLease();
-				if (diffLease > 0)
-				{
-					_function.remove(type);
-					_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
-				}
-				else
-				{
-					_function.get(type).setLease(lease);
-					_function.get(type).setLvl(lvl);
-					_function.get(type).dbSave();
-				}
+				_function.get(type).setLease(lease);
+				_function.get(type).setLvl(lvl);
+				_function.get(type).dbSave();
 			}
 		}
 		return true;

@@ -331,17 +331,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				addSkill(skill);
 			}
 		}
-		else
+		else if (isSummon())
 		{
-			if (isSummon())
+			// Copy the skills of the L2Summon from its template to the L2Character Instance
+			// The skills list can be affected by spell effects so it's necessary to make a copy
+			// to avoid that a spell affecting a L2Summon, affects others L2Summon of the same type too.
+			for (Skill skill : template.getSkills().values())
 			{
-				// Copy the skills of the L2Summon from its template to the L2Character Instance
-				// The skills list can be affected by spell effects so it's necessary to make a copy
-				// to avoid that a spell affecting a L2Summon, affects others L2Summon of the same type too.
-				for (Skill skill : template.getSkills().values())
-				{
-					addSkill(skill);
-				}
+				addSkill(skill);
 			}
 		}
 		
@@ -1125,12 +1122,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						return;
 					}
 				}
-				else
+				else if (_disableRangedAttackEndTime > GameTimeController.getInstance().getGameTicks())
 				{
-					if (_disableRangedAttackEndTime > GameTimeController.getInstance().getGameTicks())
-					{
-						return;
-					}
+					return;
 				}
 			}
 			
@@ -1635,7 +1629,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param itemObjId the item object ID
 	 * @return if the item has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized final long getItemRemainingReuseTime(int itemObjId)
+	public final synchronized long getItemRemainingReuseTime(int itemObjId)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsItems != null) ? _reuseTimeStampsItems.get(itemObjId) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -1706,7 +1700,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * Removes a skill reuse time stamp.
 	 * @param skill the skill to remove
 	 */
-	public synchronized final void removeTimeStamp(Skill skill)
+	public final synchronized void removeTimeStamp(Skill skill)
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -1717,7 +1711,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/**
 	 * Removes all skill reuse time stamps.
 	 */
-	public synchronized final void resetTimeStamps()
+	public final synchronized void resetTimeStamps()
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -1730,7 +1724,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized final long getSkillRemainingReuseTime(long hashCode)
+	public final synchronized long getSkillRemainingReuseTime(long hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -1741,7 +1735,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return {@code true} if the skill is under reuse time, {@code false} otherwise
 	 */
-	public synchronized final boolean hasSkillReuse(long hashCode)
+	public final synchronized boolean hasSkillReuse(long hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return (reuseStamp != null) && reuseStamp.hasNotPassed();
@@ -1752,7 +1746,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the skill reuse time stamp, otherwise {@code null}
 	 */
-	public synchronized final TimeStamp getSkillReuseTimeStamp(long hashCode)
+	public final synchronized TimeStamp getSkillReuseTimeStamp(long hashCode)
 	{
 		return _reuseTimeStampsSkills != null ? _reuseTimeStampsSkills.get(hashCode) : null;
 	}
@@ -1809,7 +1803,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/**
 	 * Removes all the disabled skills.
 	 */
-	public synchronized final void resetDisabledSkills()
+	public final synchronized void resetDisabledSkills()
 	{
 		if (_disabledSkills != null)
 		{
@@ -3018,12 +3012,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					player.broadcastCharInfo();
 				}
-				else
+				else if (su.hasUpdates())
 				{
-					if (su.hasUpdates())
-					{
-						broadcastPacket(su);
-					}
+					broadcastPacket(su);
 				}
 				if (hasServitors() && isAffected(EffectFlag.SERVITOR_SHARE))
 				{

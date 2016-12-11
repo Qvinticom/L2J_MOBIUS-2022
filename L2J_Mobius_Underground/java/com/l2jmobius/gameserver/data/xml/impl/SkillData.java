@@ -490,7 +490,7 @@ public class SkillData implements IGameXmlReader
 			final String stringGeneralValue = String.valueOf(generalValue);
 			if (stringGeneralValue.startsWith("@"))
 			{
-				Map<Integer, Map<Integer, Object>> variableValue = variableValues.get(stringGeneralValue);
+				final Map<Integer, Map<Integer, Object>> variableValue = variableValues.get(stringGeneralValue);
 				if (variableValue != null)
 				{
 					values = variableValue;
@@ -546,11 +546,11 @@ public class SkillData implements IGameXmlReader
 						{
 							for (int j = fromSubLevel; j <= toSubLevel; j++)
 							{
-								Map<Integer, Object> subValues = values.computeIfAbsent(i, k -> new HashMap<>());
-								Map<String, Double> variables = new HashMap<>();
+								final Map<Integer, Object> subValues = values.computeIfAbsent(i, k -> new HashMap<>());
+								final Map<String, Double> variables = new HashMap<>();
 								variables.put("index", (i - fromLevel) + 1d);
 								variables.put("subIndex", (j - fromSubLevel) + 1d);
-								Object base = values.getOrDefault(i, Collections.emptyMap()).get(-1);
+								final Object base = values.getOrDefault(i, Collections.emptyMap()).get(-1);
 								if ((base != null) && !(base instanceof StatsSet))
 								{
 									variables.put("base", Double.parseDouble(String.valueOf(base)));

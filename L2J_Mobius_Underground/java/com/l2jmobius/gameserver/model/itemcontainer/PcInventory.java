@@ -580,7 +580,7 @@ public class PcInventory extends Inventory
 	@Override
 	public L2ItemInstance destroyItem(String process, L2ItemInstance item, L2PcInstance actor, Object reference)
 	{
-		return this.destroyItem(process, item, item.getCount(), actor, reference);
+		return destroyItem(process, item, item.getCount(), actor, reference);
 	}
 	
 	/**
@@ -631,7 +631,7 @@ public class PcInventory extends Inventory
 		{
 			return null;
 		}
-		return this.destroyItem(process, item, count, actor, reference);
+		return destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**
@@ -651,7 +651,7 @@ public class PcInventory extends Inventory
 		{
 			return null;
 		}
-		return this.destroyItem(process, item, count, actor, reference);
+		return destroyItem(process, item, count, actor, reference);
 	}
 	
 	/**

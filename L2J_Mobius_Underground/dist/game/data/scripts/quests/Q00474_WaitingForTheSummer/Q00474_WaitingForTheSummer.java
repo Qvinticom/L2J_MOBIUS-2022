@@ -109,25 +109,22 @@ public final class Q00474_WaitingForTheSummer extends Quest
 					break;
 			}
 		}
-		else
+		else if (qs.isStarted() && qs.isCond(2))
 		{
-			if (qs.isStarted() && qs.isCond(2))
+			if (!isSimulated)
 			{
-				if (!isSimulated)
+				giveAdena(player, 194000, true);
+				if (player.getLevel() >= MIN_LEVEL)
 				{
-					giveAdena(player, 194000, true);
-					if (player.getLevel() >= MIN_LEVEL)
-					{
-						addExpAndSp(player, 1879400, 451);
-					}
-					qs.exitQuest(QuestType.DAILY, true);
+					addExpAndSp(player, 1879400, 451);
 				}
-				htmltext = "31981-01.html";
+				qs.exitQuest(QuestType.DAILY, true);
 			}
-			else if (qs.isCompleted() && !qs.isNowAvailable())
-			{
-				htmltext = "31981-02.html";
-			}
+			htmltext = "31981-01.html";
+		}
+		else if (qs.isCompleted() && !qs.isNowAvailable())
+		{
+			htmltext = "31981-02.html";
 		}
 		return htmltext;
 	}

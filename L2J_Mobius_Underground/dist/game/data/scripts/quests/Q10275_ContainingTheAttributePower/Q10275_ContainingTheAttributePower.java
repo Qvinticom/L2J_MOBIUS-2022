@@ -119,7 +119,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		
 		if (Util.isDigit(event))
 		{
-			htmltext = Integer.toString(npc.getId()) + "-1" + event + ".html";
+			htmltext = npc.getId() + "-1" + event + ".html";
 			giveItems(player, 10520 + CommonUtil.constrain(Integer.parseInt(event), 0, 6), 2);
 			addExpAndSp(player, 202160, 20375);
 			st.exitQuest(false, true);

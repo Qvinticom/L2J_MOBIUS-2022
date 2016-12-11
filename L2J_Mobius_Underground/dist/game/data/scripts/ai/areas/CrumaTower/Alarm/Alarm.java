@@ -247,7 +247,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param memoState the memo state, if memo state is less than zero, only quest state is checked
 	 * @return {@code true} if the player has the memo state, {@code false} otherwise
 	 */
-	private static final boolean verifyMemoState(L2PcInstance player, int questId, int memoState)
+	private static boolean verifyMemoState(L2PcInstance player, int questId, int memoState)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -272,7 +272,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param questId the quest ID
 	 * @param memoState the memo state
 	 */
-	private static final void setMemoState(L2PcInstance player, int questId, int memoState)
+	private static void setMemoState(L2PcInstance player, int questId, int memoState)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -301,7 +301,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param slot the slot
 	 * @return the memo state ex
 	 */
-	private static final int getMemoStateEx(L2PcInstance player, int questId, int slot)
+	private static int getMemoStateEx(L2PcInstance player, int questId, int slot)
 	{
 		QuestState qs = null;
 		switch (questId)
@@ -327,7 +327,7 @@ public final class Alarm extends AbstractNpcAI
 	 * @param slot the slot
 	 * @param memoStateEx the memo state ex
 	 */
-	private static final void setMemoStateEx(L2PcInstance player, int questId, int slot, int memoStateEx)
+	private static void setMemoStateEx(L2PcInstance player, int questId, int slot, int memoStateEx)
 	{
 		QuestState qs = null;
 		switch (questId)

@@ -136,7 +136,7 @@ public class ThreadPoolDebug implements ITelnetCommand
 		return sb.toString();
 	}
 	
-	private static final <T> T getObject(Class<?> sourceClass, Object sourceInstance, String fieldName, Class<T> targetClass)
+	private static <T> T getObject(Class<?> sourceClass, Object sourceInstance, String fieldName, Class<T> targetClass)
 	{
 		try
 		{

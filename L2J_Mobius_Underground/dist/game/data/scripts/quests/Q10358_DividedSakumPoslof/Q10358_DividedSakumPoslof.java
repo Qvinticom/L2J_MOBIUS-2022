@@ -179,14 +179,11 @@ public final class Q10358_DividedSakumPoslof extends Quest
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
-				else
+				else if (killedVeelans < 23)
 				{
-					if (killedVeelans < 23)
-					{
-						killedVeelans++;
-						st.set("killed_" + VEELEAN, killedVeelans);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
+					killedVeelans++;
+					st.set("killed_" + VEELEAN, killedVeelans);
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				if ((killedZombies == 20) && (killedVeelans == 23))

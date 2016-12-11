@@ -69,7 +69,8 @@ public class CreateItemRandom extends AbstractEffect
 		double comulativeChance = 0;
 		for (ItemChanceHolder holder : item.getItem().getCreateItems())
 		{
-			if ((comulativeChance += holder.getChance()) >= random)
+			comulativeChance += holder.getChance();
+			if (comulativeChance >= random)
 			{
 				selectedItem = holder;
 				break;

@@ -96,26 +96,22 @@ public final class Q10742_AFurryFriend extends Quest
 						showOnScreenMsg(player, NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, ExShowScreenMessage.TOP_CENTER, 8000);
 						htmltext = "33995-02.html";
 					}
-					else
+					else if (!L2World.getInstance().getVisibleObjects(player, L2Npc.class, 500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
 					{
-						// Check if player has Ricky spawned
-						if (!L2World.getInstance().getVisibleObjects(player, L2Npc.class, 500).stream().anyMatch(n -> (n.getId() == RICKY) && (n.getSummoner() == player)))
-						{
-							showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 5000);
-							player.sendPacket(new ExSendUIEvent(player, false, false, 120, 0, NpcStringId.REMAINING_TIME));
-							
-							// Spawn Ricky
-							final L2Npc ricky = addSpawn(RICKY, player, true, 120000);
-							ricky.setSummoner(player);
-							ricky.setTitle(player.getAppearance().getVisibleName());
-							ricky.setIsRunning(true);
-							ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-							startQuestTimer("CHECK_RICKY_DISTANCE", 2500, ricky, player);
-						}
-						else // Already have Ricky
-						{
-							htmltext = "33995-03.html";
-						}
+						showOnScreenMsg(player, NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, ExShowScreenMessage.MIDDLE_CENTER, 5000);
+						player.sendPacket(new ExSendUIEvent(player, false, false, 120, 0, NpcStringId.REMAINING_TIME));
+						
+						// Spawn Ricky
+						final L2Npc ricky = addSpawn(RICKY, player, true, 120000);
+						ricky.setSummoner(player);
+						ricky.setTitle(player.getAppearance().getVisibleName());
+						ricky.setIsRunning(true);
+						ricky.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
+						startQuestTimer("CHECK_RICKY_DISTANCE", 2500, ricky, player);
+					}
+					else // Already have Ricky
+					{
+						htmltext = "33995-03.html";
 					}
 				}
 				break;

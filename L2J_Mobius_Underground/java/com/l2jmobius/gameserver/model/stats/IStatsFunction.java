@@ -569,5 +569,5 @@ public interface IStatsFunction
 		return Math.max(minValue, value);
 	}
 	
-	public double calc(L2Character creature, Optional<Double> base, Stats stat);
+	double calc(L2Character creature, Optional<Double> base, Stats stat);
 }

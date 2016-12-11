@@ -620,17 +620,13 @@ public class AdminEditChar implements IAdminCommandHandler
 					ps.setString(1, playerName);
 					ps.execute();
 				}
+				else if (changeCreateExpiryTime) // removing penalty
+				{
+					player.setClanCreateExpiryTime(0);
+				}
 				else
 				{
-					// removing penalty
-					if (changeCreateExpiryTime)
-					{
-						player.setClanCreateExpiryTime(0);
-					}
-					else
-					{
-						player.setClanJoinExpiryTime(0);
-					}
+					player.setClanJoinExpiryTime(0);
 				}
 				
 				activeChar.sendMessage("Clan penalty successfully removed to character: " + playerName);
@@ -1161,8 +1157,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%account%", player.getAccountName());
 		adminReply.replace("%ip%", ip);
 		adminReply.replace("%hwid%", (player.getClient() != null) && (player.getClient().getHardwareInfo() != null) ? player.getClient().getHardwareInfo().getMacAddress() : "Unknown");
-		adminReply.replace("%ai%", String.valueOf(player.getAI().getIntention().name()));
-		adminReply.replace("%inst%", player.isInInstance() ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + String.valueOf(player.getInstanceId()) + "\">" + String.valueOf(player.getInstanceId()) + "</a></td></tr>" : "");
+		adminReply.replace("%ai%", player.getAI().getIntention().name());
+		adminReply.replace("%inst%", player.isInInstance() ? "<tr><td>InstanceId:</td><td><a action=\"bypass -h admin_instance_spawns " + player.getInstanceId() + "\">" + player.getInstanceId() + "</a></td></tr>" : "");
 		adminReply.replace("%noblesse%", player.isNoble() ? "Yes" : "No");
 		activeChar.sendPacket(adminReply);
 	}
@@ -1292,12 +1288,9 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			findDisconnected = true;
 		}
-		else
+		else if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
 		{
-			if (!IpAdress.matches("^(?:(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))\\.){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2(?:[0-4][0-9]|5[0-5]))$"))
-			{
-				throw new IllegalArgumentException("Malformed IPv4 number");
-			}
+			throw new IllegalArgumentException("Malformed IPv4 number");
 		}
 		
 		int CharactersFound = 0;
@@ -1365,7 +1358,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else if (CharactersFound > 20)
 		{
-			adminReply.replace("%number%", " more than " + String.valueOf(CharactersFound));
+			adminReply.replace("%number%", " more than " + CharactersFound);
 			replyMSG2 = "s.<br>In order to avoid you a client crash I won't <br1>display results beyond the 20th character.";
 		}
 		else if (CharactersFound == 1)
@@ -1605,7 +1598,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		final String owner = target.getActingPlayer().getName();
 		html.replace("%owner%", " <a action=\"bypass -h admin_character_info " + owner + "\">" + owner + "</a>");
 		html.replace("%class%", target.getClass().getSimpleName());
-		html.replace("%ai%", target.hasAI() ? String.valueOf(target.getAI().getIntention().name()) : "NULL");
+		html.replace("%ai%", target.hasAI() ? target.getAI().getIntention().name() : "NULL");
 		html.replace("%hp%", (int) target.getStatus().getCurrentHp() + "/" + target.getStat().getMaxHp());
 		html.replace("%mp%", (int) target.getStatus().getCurrentMp() + "/" + target.getStat().getMaxMp());
 		html.replace("%karma%", Integer.toString(target.getReputation()));
@@ -1649,7 +1642,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				text.append("<tr><td><table width=270 border=0 cellpadding=2><tr><td width=30 align=right>");
 			}
 			text.append(member.getLevel() + "</td><td width=130><a action=\"bypass -h admin_character_info " + member.getName() + "\">" + member.getName() + "</a>");
-			text.append("</td><td width=110 align=right>" + member.getClassId().toString() + "</td></tr></table></td></tr>");
+			text.append("</td><td width=110 align=right>" + member.getClassId() + "</td></tr></table></td></tr>");
 			color = !color;
 		}
 		html.replace("%player%", target.getName());

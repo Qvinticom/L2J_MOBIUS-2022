@@ -30,16 +30,16 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 public class Q00620_FourGoblets extends Quest
 {
 	// NPCs
-	private final static int NAMELESS_SPIRIT = 31453;
-	private final static int GHOST_OF_WIGOTH_1 = 31452;
-	private final static int GHOST_OF_WIGOTH_2 = 31454;
-	private final static int CONQ_SM = 31921;
-	private final static int EMPER_SM = 31922;
-	private final static int SAGES_SM = 31923;
-	private final static int JUDGE_SM = 31924;
-	private final static int GHOST_CHAMBERLAIN_1 = 31919;
-	private final static int GHOST_CHAMBERLAIN_2 = 31920;
-	private final static int[] NPCS =
+	private static final int NAMELESS_SPIRIT = 31453;
+	private static final int GHOST_OF_WIGOTH_1 = 31452;
+	private static final int GHOST_OF_WIGOTH_2 = 31454;
+	private static final int CONQ_SM = 31921;
+	private static final int EMPER_SM = 31922;
+	private static final int SAGES_SM = 31923;
+	private static final int JUDGE_SM = 31924;
+	private static final int GHOST_CHAMBERLAIN_1 = 31919;
+	private static final int GHOST_CHAMBERLAIN_2 = 31920;
+	private static final int[] NPCS =
 	{
 		NAMELESS_SPIRIT,
 		GHOST_OF_WIGOTH_1,
@@ -53,25 +53,25 @@ public class Q00620_FourGoblets extends Quest
 	};
 	
 	// Reward
-	private final static int ANTIQUE_BROOCH = 7262;
+	private static final int ANTIQUE_BROOCH = 7262;
 	// Items
-	private final static int ENTRANCE_PASS = 7075;
-	private final static int GRAVE_PASS = 7261;
-	private final static int[] GOBLETS =
+	private static final int ENTRANCE_PASS = 7075;
+	private static final int GRAVE_PASS = 7261;
+	private static final int[] GOBLETS =
 	{
 		7256,
 		7257,
 		7258,
 		7259
 	};
-	private final static int BOSS_1 = 25339;
-	private final static int BOSS_2 = 25342;
-	private final static int BOSS_3 = 25346;
-	private final static int BOSS_4 = 25349;
+	private static final int BOSS_1 = 25339;
+	private static final int BOSS_2 = 25342;
+	private static final int BOSS_3 = 25346;
+	private static final int BOSS_4 = 25349;
 	
-	private final static int RELIC = 7254;
-	private final static int SEALED_BOX = 7255;
-	private final static int[] QI =
+	private static final int RELIC = 7254;
+	private static final int SEALED_BOX = 7255;
+	private static final int[] QI =
 	{
 		ANTIQUE_BROOCH,
 		SEALED_BOX,
@@ -112,7 +112,7 @@ public class Q00620_FourGoblets extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = event;
-		QuestState st = player.getQuestState(getName());
+		final QuestState st = player.getQuestState(getName());
 		if (st == null)
 		{
 			return htmltext;
@@ -141,7 +141,7 @@ public class Q00620_FourGoblets extends Quest
 					htmltext = "31454-13.htm";
 					takeItems(player, SEALED_BOX, 1);
 					int reward = 0;
-					int rnd = Rnd.get(5);
+					final int rnd = Rnd.get(5);
 					if (rnd == 0)
 					{
 						giveItems(player, 57, 10000);
@@ -152,7 +152,7 @@ public class Q00620_FourGoblets extends Quest
 						if (Rnd.get(1000) < 848)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 43)
 							{
 								giveItems(player, 1884, 42);
@@ -197,7 +197,7 @@ public class Q00620_FourGoblets extends Quest
 						else if (Rnd.get(1000) < 323)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 335)
 							{
 								giveItems(player, 1888, 1);
@@ -233,7 +233,7 @@ public class Q00620_FourGoblets extends Quest
 						if (Rnd.get(1000) < 847)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 148)
 							{
 								giveItems(player, 1878, 8);
@@ -278,7 +278,7 @@ public class Q00620_FourGoblets extends Quest
 						else if (Rnd.get(1000) < 251)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 350)
 							{
 								giveItems(player, 1887, 1);
@@ -314,7 +314,7 @@ public class Q00620_FourGoblets extends Quest
 						if (Rnd.get(1000) < 31)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 223)
 							{
 								giveItems(player, 730, 1);
@@ -331,7 +331,7 @@ public class Q00620_FourGoblets extends Quest
 						else if (Rnd.get(1000) < 50)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 202)
 							{
 								giveItems(player, 729, 1);
@@ -351,7 +351,7 @@ public class Q00620_FourGoblets extends Quest
 						if (Rnd.get(1000) < 329)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 88)
 							{
 								giveItems(player, 6698, 1);
@@ -424,7 +424,7 @@ public class Q00620_FourGoblets extends Quest
 						else if (Rnd.get(1000) < 54)
 						{
 							reward = 1;
-							int i = Rnd.get(1000);
+							final int i = Rnd.get(1000);
 							if (i < 100)
 							{
 								giveItems(player, 6688, 1);
@@ -524,18 +524,15 @@ public class Q00620_FourGoblets extends Quest
 					st.getPlayer().teleToLocation(178298, -84574, -7216);
 					htmltext = null;
 				}
+				else if (getQuestItemsCount(player, GRAVE_PASS) >= 1)
+				{
+					takeItems(player, GRAVE_PASS, 1);
+					st.getPlayer().teleToLocation(178298, -84574, -7216);
+					htmltext = null;
+				}
 				else
 				{
-					if (getQuestItemsCount(player, GRAVE_PASS) >= 1)
-					{
-						takeItems(player, GRAVE_PASS, 1);
-						st.getPlayer().teleToLocation(178298, -84574, -7216);
-						htmltext = null;
-					}
-					else
-					{
-						htmltext = "31919-0.htm";
-					}
+					htmltext = "31919-0.htm";
 				}
 				break;
 			}
@@ -546,18 +543,15 @@ public class Q00620_FourGoblets extends Quest
 					st.getPlayer().teleToLocation(186942, -75602, -2834);
 					htmltext = null;
 				}
+				else if (getQuestItemsCount(player, GRAVE_PASS) >= 1)
+				{
+					takeItems(player, GRAVE_PASS, 1);
+					st.getPlayer().teleToLocation(186942, -75602, -2834);
+					htmltext = null;
+				}
 				else
 				{
-					if (getQuestItemsCount(player, GRAVE_PASS) >= 1)
-					{
-						takeItems(player, GRAVE_PASS, 1);
-						st.getPlayer().teleToLocation(186942, -75602, -2834);
-						htmltext = null;
-					}
-					else
-					{
-						htmltext = "31920-0.htm";
-					}
+					htmltext = "31920-0.htm";
 				}
 				break;
 			}
@@ -596,7 +590,7 @@ public class Q00620_FourGoblets extends Quest
 				htmltext = "31919-3.htm";
 				takeItems(player, SEALED_BOX, 1);
 				int reward = 0;
-				int rnd = Rnd.get(5);
+				final int rnd = Rnd.get(5);
 				if (rnd == 0)
 				{
 					giveItems(player, 57, 10000);
@@ -607,7 +601,7 @@ public class Q00620_FourGoblets extends Quest
 					if (Rnd.get(1000) < 848)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 43)
 						{
 							giveItems(player, 1884, 42);
@@ -652,7 +646,7 @@ public class Q00620_FourGoblets extends Quest
 					else if (Rnd.get(1000) < 323)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 335)
 						{
 							giveItems(player, 1888, 1);
@@ -688,7 +682,7 @@ public class Q00620_FourGoblets extends Quest
 					if (Rnd.get(1000) < 847)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 148)
 						{
 							giveItems(player, 1878, 8);
@@ -733,7 +727,7 @@ public class Q00620_FourGoblets extends Quest
 					else if (Rnd.get(1000) < 251)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 350)
 						{
 							giveItems(player, 1887, 1);
@@ -769,7 +763,7 @@ public class Q00620_FourGoblets extends Quest
 					if (Rnd.get(1000) < 31)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 223)
 						{
 							giveItems(player, 730, 1);
@@ -787,7 +781,7 @@ public class Q00620_FourGoblets extends Quest
 					{
 						reward = 1;
 					}
-					int i = Rnd.get(1000);
+					final int i = Rnd.get(1000);
 					if (i < 202)
 					{
 						giveItems(player, 729, 1);
@@ -806,7 +800,7 @@ public class Q00620_FourGoblets extends Quest
 					if (Rnd.get(1000) < 329)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 88)
 						{
 							giveItems(player, 6698, 1);
@@ -879,7 +873,7 @@ public class Q00620_FourGoblets extends Quest
 					else if (Rnd.get(1000) < 54)
 					{
 						reward = 1;
-						int i = Rnd.get(1000);
+						final int i = Rnd.get(1000);
 						if (i < 100)
 						{
 							giveItems(player, 6688, 1);
@@ -1076,75 +1070,54 @@ public class Q00620_FourGoblets extends Quest
 						{
 							htmltext = "31454-4.htm";
 						}
+						else if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
+						{
+							htmltext = "31454-8.htm";
+						}
 						else
 						{
-							if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
-							{
-								htmltext = "31454-8.htm";
-							}
-							else
-							{
-								htmltext = "31454-12.htm";
-							}
+							htmltext = "31454-12.htm";
 						}
+					}
+					else if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && ((getQuestItemsCount(talker, GOBLETS[3])) >= 1))
+					{
+						htmltext = "31454-3.htm";
+					}
+					else if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
+					{
+						htmltext = "31454-7.htm";
 					}
 					else
 					{
-						if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && ((getQuestItemsCount(talker, GOBLETS[3])) >= 1))
-						{
-							htmltext = "31454-3.htm";
-						}
-						else
-						{
-							if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
-							{
-								htmltext = "31454-7.htm";
-							}
-							else
-							{
-								htmltext = "31454-11.htm";
-							}
-						}
+						htmltext = "31454-11.htm";
 					}
+				}
+				else if (getQuestItemsCount(talker, SEALED_BOX) >= 1)
+				{
+					if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && (getQuestItemsCount(talker, GOBLETS[3]) >= 1))
+					{
+						htmltext = "31454-2.htm";
+					}
+					else if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
+					{
+						htmltext = "31454-6.htm";
+					}
+					else
+					{
+						htmltext = "31454-10.htm";
+					}
+				}
+				else if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && (getQuestItemsCount(talker, GOBLETS[3]) >= 1))
+				{
+					htmltext = "31454-1.htm";
+				}
+				else if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
+				{
+					htmltext = "31454-5.htm";
 				}
 				else
 				{
-					if (getQuestItemsCount(talker, SEALED_BOX) >= 1)
-					{
-						if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && (getQuestItemsCount(talker, GOBLETS[3]) >= 1))
-						{
-							htmltext = "31454-2.htm";
-						}
-						else
-						{
-							if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
-							{
-								htmltext = "31454-6.htm";
-							}
-							else
-							{
-								htmltext = "31454-10.htm";
-							}
-						}
-					}
-					else
-					{
-						if ((getQuestItemsCount(talker, GOBLETS[0]) >= 1) && (getQuestItemsCount(talker, GOBLETS[1]) >= 1) && (getQuestItemsCount(talker, GOBLETS[2]) >= 1) && (getQuestItemsCount(talker, GOBLETS[3]) >= 1))
-						{
-							htmltext = "31454-1.htm";
-						}
-						else
-						{
-							if ((getQuestItemsCount(talker, GOBLETS[0]) + getQuestItemsCount(talker, GOBLETS[1]) + getQuestItemsCount(talker, GOBLETS[2]) + getQuestItemsCount(talker, GOBLETS[3])) > 1)
-							{
-								htmltext = "31454-5.htm";
-							}
-							else
-							{
-								htmltext = "31454-9.htm";
-							}
-						}
-					}
+					htmltext = "31454-9.htm";
 				}
 				break;
 			}
@@ -1182,7 +1155,7 @@ public class Q00620_FourGoblets extends Quest
 	{
 		final QuestState st = killer.getQuestState(getName());
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 3);
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		if ((st != null) && (st.getCond() > 0) && (npcId >= 18120) && (npcId <= 18256))
 		{
 			if (Rnd.get(100) < 15)

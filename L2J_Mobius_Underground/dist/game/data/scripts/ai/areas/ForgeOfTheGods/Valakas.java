@@ -360,18 +360,15 @@ public final class Valakas extends AbstractNpcAI
 				callSkillAI(npc);
 			}
 		}
-		else
+		else if (event.equalsIgnoreCase("valakas_unlock"))
 		{
-			if (event.equalsIgnoreCase("valakas_unlock"))
-			{
-				final L2Npc valakas = addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
-				GrandBossManager.getInstance().addBoss((L2GrandBossInstance) valakas);
-				GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
-			}
-			else if (event.equalsIgnoreCase("remove_players"))
-			{
-				ZONE.oustAllPlayers();
-			}
+			final L2Npc valakas = addSpawn(VALAKAS, -105200, -253104, -15264, 32768, false, 0);
+			GrandBossManager.getInstance().addBoss((L2GrandBossInstance) valakas);
+			GrandBossManager.getInstance().setBossStatus(VALAKAS, DORMANT);
+		}
+		else if (event.equalsIgnoreCase("remove_players"))
+		{
+			ZONE.oustAllPlayers();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

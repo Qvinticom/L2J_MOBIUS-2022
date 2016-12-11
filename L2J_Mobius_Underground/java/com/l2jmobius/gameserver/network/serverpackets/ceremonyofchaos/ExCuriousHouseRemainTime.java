@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExCuriousHouseRemainTime implements IClientOutgoingPacket
 {
-	final private int _time;
+	private final int _time;
 	
 	public ExCuriousHouseRemainTime(int time)
 	{

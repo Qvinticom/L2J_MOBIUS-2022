@@ -57,18 +57,15 @@ public final class MysteriousWizard extends AbstractNpcAI
 		{
 			htmltext = "33980.html";
 		}
-		else
+		else if (qs != null)
 		{
-			if (qs != null)
+			if (qs.isCond(6))
 			{
-				if (qs.isCond(6))
-				{
-					htmltext = "33980-05.html";
-				}
-				else if (qs.isCond(7))
-				{
-					htmltext = "33980-04.html";
-				}
+				htmltext = "33980-05.html";
+			}
+			else if (qs.isCond(7))
+			{
+				htmltext = "33980-04.html";
 			}
 		}
 		return htmltext;

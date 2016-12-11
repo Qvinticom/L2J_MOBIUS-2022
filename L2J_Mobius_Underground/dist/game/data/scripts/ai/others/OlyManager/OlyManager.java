@@ -156,16 +156,13 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				}
+				else if (event.equals("register1v1"))
+				{
+					OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
+				}
 				else
 				{
-					if (event.equals("register1v1"))
-					{
-						OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
-					}
-					else
-					{
-						OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
-					}
+					OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
 				}
 				break;
 			}
@@ -340,42 +337,39 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				
 				activeChar.sendPacket(new ExOlympiadMatchList());
 			}
+			else if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!activeChar.inObserverMode() && !activeChar.isInsideRadius(olymanager, 300, false, false)))
+			{
+				return false;
+			}
+			else if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
+			{
+				activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
+				return false;
+			}
+			else if (!Olympiad.getInstance().inCompPeriod())
+			{
+				activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+				return false;
+			}
+			else if (activeChar.isOnEvent())
+			{
+				activeChar.sendMessage("You can not observe games while registered on an event");
+				return false;
+			}
 			else
 			{
-				if ((olymanager == null) || (olymanager.getId() != MANAGER) || (!activeChar.inObserverMode() && !activeChar.isInsideRadius(olymanager, 300, false, false)))
+				final int arenaId = Integer.parseInt(command.substring(12).trim());
+				final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(arenaId);
+				if (nextArena != null)
 				{
-					return false;
-				}
-				else if (OlympiadManager.getInstance().isRegisteredInComp(activeChar))
-				{
-					activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
-					return false;
-				}
-				else if (!Olympiad.getInstance().inCompPeriod())
-				{
-					activeChar.sendPacket(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
-					return false;
-				}
-				else if (activeChar.isOnEvent())
-				{
-					activeChar.sendMessage("You can not observe games while registered on an event");
-					return false;
-				}
-				else
-				{
-					final int arenaId = Integer.parseInt(command.substring(12).trim());
-					final OlympiadGameTask nextArena = OlympiadGameManager.getInstance().getOlympiadTask(arenaId);
-					if (nextArena != null)
+					final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
+					if (spectatorSpawns.isEmpty())
 					{
-						final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
-						if (spectatorSpawns.isEmpty())
-						{
-							_LOG.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
-							return false;
-						}
-						final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
-						activeChar.enterOlympiadObserverMode(loc, arenaId);
+						_LOG.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
+						return false;
 					}
+					final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
+					activeChar.enterOlympiadObserverMode(loc, arenaId);
 				}
 			}
 			return true;

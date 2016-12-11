@@ -103,7 +103,7 @@ public class SayuneData implements IGameXmlReader
 	 * Gets the single instance of SayuneData.
 	 * @return single instance of SayuneData
 	 */
-	public static final SayuneData getInstance()
+	public static SayuneData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

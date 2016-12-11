@@ -235,56 +235,53 @@ public final class Q00177_SplitDestiny extends Quest
 			{
 				htmltext = "33344-12.htm";
 			}
+			else if (!player.isSubClassActive() || !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) || (player.getLevel() < 80))
+			{
+				htmltext = "33344-02.htm";
+			}
+			else if (!CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClass()))
+			{
+				htmltext = "33344-03.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.SIGEL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.SIGEL_CANDIDATE))
+			{
+				htmltext = "33344-sigel.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.TYRR_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.TYRR_CANDIDATE))
+			{
+				htmltext = "33344-tyrr.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.OTHELL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.OTHELL_CANDIDATE))
+			{
+				htmltext = "33344-othell.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.YUL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.YUL_CANDIDATE))
+			{
+				htmltext = "33344-yul.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.FEOH_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.FEOH_CANDIDATE))
+			{
+				htmltext = "33344-feoh.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.ISS_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.ISS_CANDIDATE))
+			{
+				htmltext = "33344-iss.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.WYNN_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.WYNN_CANDIDATE))
+			{
+				htmltext = "33344-wynn.htm";
+			}
+			else if (CategoryData.getInstance().isInCategory(CategoryType.AEORE_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.AEORE_CANDIDATE))
+			{
+				htmltext = "33344-aeore.htm";
+			}
+			else if (player.hasDualClass())
+			{
+				htmltext = "33344-12.htm";
+			}
 			else
 			{
-				if (!player.isSubClassActive() || !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) || (player.getLevel() < 80))
-				{
-					htmltext = "33344-02.htm";
-				}
-				else if (!CategoryData.getInstance().isInCategory(CategoryType.AWAKEN_GROUP, player.getBaseClass()))
-				{
-					htmltext = "33344-03.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.SIGEL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.SIGEL_CANDIDATE))
-				{
-					htmltext = "33344-sigel.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.TYRR_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.TYRR_CANDIDATE))
-				{
-					htmltext = "33344-tyrr.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.OTHELL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.OTHELL_CANDIDATE))
-				{
-					htmltext = "33344-othell.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.YUL_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.YUL_CANDIDATE))
-				{
-					htmltext = "33344-yul.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.FEOH_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.FEOH_CANDIDATE))
-				{
-					htmltext = "33344-feoh.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.ISS_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.ISS_CANDIDATE))
-				{
-					htmltext = "33344-iss.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.WYNN_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.WYNN_CANDIDATE))
-				{
-					htmltext = "33344-wynn.htm";
-				}
-				else if (CategoryData.getInstance().isInCategory(CategoryType.AEORE_GROUP, player.getBaseClass()) && player.isInCategory(CategoryType.AEORE_CANDIDATE))
-				{
-					htmltext = "33344-aeore.htm";
-				}
-				else if (player.hasDualClass())
-				{
-					htmltext = "33344-12.htm";
-				}
-				else
-				{
-					htmltext = "33344-01.htm";
-				}
+				htmltext = "33344-01.htm";
 			}
 		}
 		else if ((npc.getId() == ISHUMA) && qs.isStarted())

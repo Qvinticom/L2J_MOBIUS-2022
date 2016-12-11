@@ -195,7 +195,7 @@ public final class Q10794_InvestigateTheForest extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(1))
 		{
-			int count = qs.getInt(KILL_COUNT_VAR) + 1;
+			final int count = qs.getInt(KILL_COUNT_VAR) + 1;
 			qs.set(KILL_COUNT_VAR, count);
 			if (count >= 50)
 			{

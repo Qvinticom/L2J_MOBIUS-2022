@@ -442,7 +442,7 @@ public final class SellBuffsManager implements IGameXmlReader
 	 * Gets the single instance of {@code SellBuffsManager}.
 	 * @return single instance of {@code SellBuffsManager}
 	 */
-	public static final SellBuffsManager getInstance()
+	public static SellBuffsManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

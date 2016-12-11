@@ -232,12 +232,9 @@ public class Q00784_TheQuietKiller extends Quest
 				}
 			}
 		}
-		else
+		else if (qs.isCompleted() && !qs.isNowAvailable())
 		{
-			if (qs.isCompleted() && !qs.isNowAvailable())
-			{
-				htmltext = "31554-10.html";
-			}
+			htmltext = "31554-10.html";
 		}
 		return htmltext;
 	}

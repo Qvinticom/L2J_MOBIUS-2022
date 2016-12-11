@@ -656,7 +656,7 @@ public interface IXmlReader
 	 * @param node
 	 * @return {@code true} if the node is an element type, {@code false} otherwise
 	 */
-	public static boolean isNode(Node node)
+	static boolean isNode(Node node)
 	{
 		return node.getNodeType() == Node.ELEMENT_NODE;
 	}
@@ -665,7 +665,7 @@ public interface IXmlReader
 	 * @param node
 	 * @return {@code true} if the node is an element type, {@code false} otherwise
 	 */
-	public static boolean isText(Node node)
+	static boolean isText(Node node)
 	{
 		return node.getNodeType() == Node.TEXT_NODE;
 	}

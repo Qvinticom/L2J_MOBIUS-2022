@@ -33,8 +33,8 @@ public class ExResponseBeautyList implements IClientOutgoingPacket
 	private final int _type;
 	private final Map<Integer, BeautyItem> _beautyItem;
 	
-	public final static int SHOW_FACESHAPE = 1;
-	public final static int SHOW_HAIRSTYLE = 0;
+	public static final int SHOW_FACESHAPE = 1;
+	public static final int SHOW_HAIRSTYLE = 0;
 	
 	public ExResponseBeautyList(L2PcInstance activeChar, int type)
 	{

@@ -120,26 +120,23 @@ public final class Q10764_FreeSpirit extends Quest
 					break;
 			}
 		}
+		else if (qs.isStarted() && qs.isCond(1))
+		{
+			final int npcId = (npc.getId() == WIND_SPIRIT) ? LIBERATED_WIND_SPIRIT : LIBERATED_TREE_SPIRIT;
+			
+			giveItems(player, LOOSENED_CHAIN, 1);
+			addSpawn(npcId, npc, false, 2500);
+			npc.deleteMe();
+			
+			if (getQuestItemsCount(player, LOOSENED_CHAIN) >= 10)
+			{
+				qs.setCond(2, true);
+			}
+			htmltext = null;
+		}
 		else
 		{
-			if (qs.isStarted() && qs.isCond(1))
-			{
-				final int npcId = (npc.getId() == WIND_SPIRIT) ? LIBERATED_WIND_SPIRIT : LIBERATED_TREE_SPIRIT;
-				
-				giveItems(player, LOOSENED_CHAIN, 1);
-				addSpawn(npcId, npc, false, 2500);
-				npc.deleteMe();
-				
-				if (getQuestItemsCount(player, LOOSENED_CHAIN) >= 10)
-				{
-					qs.setCond(2, true);
-				}
-				htmltext = null;
-			}
-			else
-			{
-				htmltext = npc.getId() + "-01.html";
-			}
+			htmltext = npc.getId() + "-01.html";
 		}
 		return htmltext;
 	}

@@ -1430,7 +1430,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public void updateDatabase()
 	{
-		this.updateDatabase(false);
+		updateDatabase(false);
 	}
 	
 	/**

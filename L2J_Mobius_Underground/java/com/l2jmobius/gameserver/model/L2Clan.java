@@ -1391,15 +1391,12 @@ public class L2Clan implements IIdentifiable, INamable
 							temp.getPlayerInstance().sendSkillList();
 						}
 					}
-					else
+					else if (temp.getPledgeType() == subType)
 					{
-						if (temp.getPledgeType() == subType)
-						{
-							temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
-							temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
-							temp.getPlayerInstance().sendPacket(sm);
-							temp.getPlayerInstance().sendSkillList();
-						}
+						temp.getPlayerInstance().addSkill(newSkill, false); // Skill is not saved to player DB
+						temp.getPlayerInstance().sendPacket(new ExSubPledgeSkillAdd(subType, newSkill.getId(), newSkill.getLevel()));
+						temp.getPlayerInstance().sendPacket(sm);
+						temp.getPlayerInstance().sendSkillList();
 					}
 				}
 			}

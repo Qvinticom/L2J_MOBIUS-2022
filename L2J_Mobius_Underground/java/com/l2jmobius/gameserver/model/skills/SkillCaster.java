@@ -782,7 +782,7 @@ public class SkillCaster implements Runnable
 	@Override
 	public String toString()
 	{
-		return super.toString() + " [caster: " + String.valueOf(_caster.get()) + " skill: " + String.valueOf(_skill) + " target: " + String.valueOf(_target.get()) + " type: " + String.valueOf(_castingType) + "]";
+		return super.toString() + " [caster: " + _caster.get() + " skill: " + _skill + " target: " + _target.get() + " type: " + _castingType + "]";
 	}
 	
 	/**

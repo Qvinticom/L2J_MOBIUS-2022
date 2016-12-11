@@ -157,12 +157,9 @@ public class Q00772_PurifyingSouls extends Quest
 				}
 			}
 		}
-		else
+		else if (qs.isCompleted() && !qs.isNowAvailable())
 		{
-			if (qs.isCompleted() && !qs.isNowAvailable())
-			{
-				htmltext = "33838-10.htm";
-			}
+			htmltext = "33838-10.htm";
 		}
 		return htmltext;
 	}

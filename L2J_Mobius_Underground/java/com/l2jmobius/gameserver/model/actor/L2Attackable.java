@@ -558,23 +558,18 @@ public class L2Attackable extends L2Npc
 								}
 								rewards.remove(partyPlayer); // Remove the L2PcInstance from the L2Attackable rewards
 							}
-							else
+							else if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true))
 							{
-								// Add L2PcInstance of the party (that have attacked or not) to members that can be rewarded
-								// and in range of the monster.
-								if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, partyPlayer, true))
+								rewardedMembers.add(partyPlayer);
+								if (partyPlayer.getLevel() > partyLvl)
 								{
-									rewardedMembers.add(partyPlayer);
-									if (partyPlayer.getLevel() > partyLvl)
+									if (attackerParty.isInCommandChannel())
 									{
-										if (attackerParty.isInCommandChannel())
-										{
-											partyLvl = attackerParty.getCommandChannel().getLevel();
-										}
-										else
-										{
-											partyLvl = partyPlayer.getLevel();
-										}
+										partyLvl = attackerParty.getCommandChannel().getLevel();
+									}
+									else
+									{
+										partyLvl = partyPlayer.getLevel();
 									}
 								}
 							}

@@ -90,12 +90,9 @@ public final class RequestConfirmSiegeWaitingList implements IClientIncomingPack
 					return;
 				}
 			}
-			else
+			else if ((castle.getSiege().checkIsDefenderWaiting(clan)) || (castle.getSiege().checkIsDefender(clan)))
 			{
-				if ((castle.getSiege().checkIsDefenderWaiting(clan)) || (castle.getSiege().checkIsDefender(clan)))
-				{
-					castle.getSiege().removeSiegeClan(_clanId);
-				}
+				castle.getSiege().removeSiegeClan(_clanId);
 			}
 		}
 		

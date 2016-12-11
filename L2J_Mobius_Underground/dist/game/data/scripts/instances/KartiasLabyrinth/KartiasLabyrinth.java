@@ -584,20 +584,17 @@ public final class KartiasLabyrinth extends AbstractInstance
 					npc.deleteMe();
 				}
 			}
-			else // Mini bosses
+			else if (npc.isScriptValue(1))
 			{
-				if (npc.isScriptValue(1))
-				{
-					npc.setScriptValue(2);
-					addMoveToDesire(npc, instance.getTemplateParameters().getLocation("bossEscapeLoc2"), 23);
-				}
-				else if (npc.isScriptValue(2))
-				{
-					instance.setParameter("MINIBOSS_SURVIVED", true);
-					instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
-					instance.setStatus(3); // Used for notify helper's AI
-					npc.deleteMe();
-				}
+				npc.setScriptValue(2);
+				addMoveToDesire(npc, instance.getTemplateParameters().getLocation("bossEscapeLoc2"), 23);
+			}
+			else if (npc.isScriptValue(2))
+			{
+				instance.setParameter("MINIBOSS_SURVIVED", true);
+				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
+				instance.setStatus(3); // Used for notify helper's AI
+				npc.deleteMe();
 			}
 		}
 		super.onMoveFinished(npc);

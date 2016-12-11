@@ -46,7 +46,7 @@ public final class Q10365_SeekerEscort extends Quest
 	// Locations
 	private static final Location BLOODHOUND_SPAWN_1 = new Location(-110624, 238369, -2920);
 	private static final Location BLOODHOUND_SPAWN_2 = new Location(-112660, 233942, -3072);
-	private final static Location[] BLOODHOUND_LOC_1 =
+	private static final Location[] BLOODHOUND_LOC_1 =
 	{
 		new Location(-110574, 238972, -2920),
 		new Location(-110723, 239275, -2920),
@@ -68,7 +68,7 @@ public final class Q10365_SeekerEscort extends Quest
 		new Location(-112199, 240141, -2920),
 		new Location(-112291, 240201, -2920),
 	};
-	private final static Location[] BLOODHOUND_LOC_2 =
+	private static final Location[] BLOODHOUND_LOC_2 =
 	{
 		new Location(-112403, 233676, -3096),
 		new Location(-112174, 233487, -3120),

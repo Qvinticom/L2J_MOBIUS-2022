@@ -191,7 +191,7 @@ public class EnsoulData implements IGameXmlReader
 	 * Gets the single instance of EnsoulData.
 	 * @return single instance of EnsoulData
 	 */
-	public static final EnsoulData getInstance()
+	public static EnsoulData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

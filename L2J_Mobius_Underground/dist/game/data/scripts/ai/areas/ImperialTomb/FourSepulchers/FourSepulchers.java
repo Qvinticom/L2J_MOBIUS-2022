@@ -198,9 +198,9 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		STORED_PROGRESS.put(3, 1);
 		STORED_PROGRESS.put(4, 1);
 	}
-	private final static int PARTY_MEMBER_COUNT = 4;
-	private final static int ENTRY_DELAY = 3; // minutes
-	private final static int TIME_ATTACK = 60; // minutes
+	private static final int PARTY_MEMBER_COUNT = 4;
+	private static final int ENTRY_DELAY = 3; // minutes
+	private static final int TIME_ATTACK = 60; // minutes
 	
 	private FourSepulchers()
 	{

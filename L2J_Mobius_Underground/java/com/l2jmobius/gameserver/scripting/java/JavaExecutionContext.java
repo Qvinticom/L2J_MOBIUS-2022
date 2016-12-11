@@ -151,7 +151,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 				out.println("----------------");
 				for (Diagnostic<? extends JavaFileObject> diagnostic : fileManagerDiagnostics.getDiagnostics())
 				{
-					out.println("\t" + diagnostic.getKind().toString() + ": " + diagnostic.getSource().getName() + ", Line " + diagnostic.getLineNumber() + ", Column " + diagnostic.getColumnNumber());
+					out.println("\t" + diagnostic.getKind() + ": " + diagnostic.getSource().getName() + ", Line " + diagnostic.getLineNumber() + ", Column " + diagnostic.getColumnNumber());
 					out.println("\t\tcode: " + diagnostic.getCode());
 					out.println("\t\tmessage: " + diagnostic.getMessage(null));
 				}
@@ -162,7 +162,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 				out.println("-----------------------");
 				for (Diagnostic<? extends JavaFileObject> diagnostic : compilationDiagnostics.getDiagnostics())
 				{
-					out.println("\t" + diagnostic.getKind().toString() + ": " + diagnostic.getSource().getName() + ", Line " + diagnostic.getLineNumber() + ", Column " + diagnostic.getColumnNumber());
+					out.println("\t" + diagnostic.getKind() + ": " + diagnostic.getSource().getName() + ", Line " + diagnostic.getLineNumber() + ", Column " + diagnostic.getColumnNumber());
 					out.println("\t\tcode: " + diagnostic.getCode());
 					out.println("\t\tmessage: " + diagnostic.getMessage(null));
 				}

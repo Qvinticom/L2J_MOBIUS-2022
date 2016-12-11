@@ -2438,21 +2438,18 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			player.sendPacket(smsg);
 		}
 		// Otherwise, send message of object reward to client
+		else if (count > 1)
+		{
+			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
+			smsg.addItemName(item);
+			smsg.addLong(count);
+			player.sendPacket(smsg);
+		}
 		else
 		{
-			if (count > 1)
-			{
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S);
-				smsg.addItemName(item);
-				smsg.addLong(count);
-				player.sendPacket(smsg);
-			}
-			else
-			{
-				final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
-				smsg.addItemName(item);
-				player.sendPacket(smsg);
-			}
+			final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
+			smsg.addItemName(item);
+			player.sendPacket(smsg);
 		}
 		// send packets
 		player.sendPacket(new ExUserInfoInvenWeight(player));

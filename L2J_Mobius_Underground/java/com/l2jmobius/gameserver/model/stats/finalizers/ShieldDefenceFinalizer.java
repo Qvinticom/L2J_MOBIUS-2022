@@ -32,7 +32,7 @@ public class ShieldDefenceFinalizer implements IStatsFunction
 	{
 		throwIfPresent(base);
 		
-		double baseValue = calcWeaponPlusBaseValue(creature, stat);
+		final double baseValue = calcWeaponPlusBaseValue(creature, stat);
 		return Stats.defaultValue(creature, stat, baseValue);
 	}
 }

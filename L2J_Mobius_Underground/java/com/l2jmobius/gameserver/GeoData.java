@@ -621,6 +621,6 @@ public class GeoData
 	
 	private static class SingletonHolder
 	{
-		protected final static GeoData _instance = new GeoData();
+		protected static final GeoData _instance = new GeoData();
 	}
 }

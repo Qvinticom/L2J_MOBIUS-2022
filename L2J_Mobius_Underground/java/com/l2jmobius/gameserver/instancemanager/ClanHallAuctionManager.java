@@ -89,7 +89,7 @@ public class ClanHallAuctionManager extends AbstractEventManager<AbstractEvent<?
 		//@formatter:on
 	}
 	
-	public static final ClanHallAuctionManager getInstance()
+	public static ClanHallAuctionManager getInstance()
 	{
 		return SingletonHolder.INSTANCE;
 	}

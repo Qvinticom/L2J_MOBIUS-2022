@@ -140,16 +140,13 @@ public final class IstinaCavern extends AbstractInstance
 				}
 			}
 		}
-		else
+		else if (event.equals("enterInstanceCommon"))
 		{
-			if (event.equals("enterInstanceCommon"))
-			{
-				enterInstance(player, npc, TEMPLATE_ID_COMMON);
-			}
-			else if (event.equals("enterInstanceExtreme"))
-			{
-				enterInstance(player, npc, TEMPLATE_ID_EXTREME);
-			}
+			enterInstance(player, npc, TEMPLATE_ID_COMMON);
+		}
+		else if (event.equals("enterInstanceExtreme"))
+		{
+			enterInstance(player, npc, TEMPLATE_ID_EXTREME);
 		}
 		return htmltext;
 	}

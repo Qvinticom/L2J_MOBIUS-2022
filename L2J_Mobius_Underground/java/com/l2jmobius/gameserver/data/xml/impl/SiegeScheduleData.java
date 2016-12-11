@@ -115,7 +115,7 @@ public class SiegeScheduleData implements IGameXmlReader
 		return _scheduleData;
 	}
 	
-	public static final SiegeScheduleData getInstance()
+	public static SiegeScheduleData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

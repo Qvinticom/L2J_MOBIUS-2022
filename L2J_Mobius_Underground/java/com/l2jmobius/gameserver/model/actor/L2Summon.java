@@ -850,16 +850,13 @@ public abstract class L2Summon extends L2Playable
 				activeChar.sendPacket(new PetItemList(getInventory().getItems()));
 			}
 		}
+		else if (isPet())
+		{
+			activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
+		}
 		else
 		{
-			if (isPet())
-			{
-				activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
-			}
-			else
-			{
-				activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
-			}
+			activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
 		}
 	}
 	

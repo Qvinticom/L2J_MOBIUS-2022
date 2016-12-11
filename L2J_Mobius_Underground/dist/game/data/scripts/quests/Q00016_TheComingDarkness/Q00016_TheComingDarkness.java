@@ -219,12 +219,9 @@ public final class Q00016_TheComingDarkness extends Quest
 						{
 							htmltext = "31512-01.html";
 						}
-						else
+						else if (qs.isMemoState(1))
 						{
-							if (qs.isMemoState(1))
-							{
-								htmltext = "31512-04.html";
-							}
+							htmltext = "31512-04.html";
 						}
 						break;
 					}
@@ -234,12 +231,9 @@ public final class Q00016_TheComingDarkness extends Quest
 						{
 							htmltext = "31513-01.html";
 						}
-						else
+						else if (qs.isMemoState(2))
 						{
-							if (qs.isMemoState(2))
-							{
-								htmltext = "31513-04.html";
-							}
+							htmltext = "31513-04.html";
 						}
 						break;
 					}
@@ -249,12 +243,9 @@ public final class Q00016_TheComingDarkness extends Quest
 						{
 							htmltext = "31514-01.html";
 						}
-						else
+						else if (qs.isMemoState(3))
 						{
-							if (qs.isMemoState(3))
-							{
-								htmltext = "31514-04.html";
-							}
+							htmltext = "31514-04.html";
 						}
 						break;
 					}
@@ -264,12 +255,9 @@ public final class Q00016_TheComingDarkness extends Quest
 						{
 							htmltext = "31515-01.html";
 						}
-						else
+						else if (qs.isMemoState(4))
 						{
-							if (qs.isMemoState(4))
-							{
-								htmltext = "31515-04.html";
-							}
+							htmltext = "31515-04.html";
 						}
 						break;
 					}
@@ -279,12 +267,9 @@ public final class Q00016_TheComingDarkness extends Quest
 						{
 							htmltext = "31516-01.html";
 						}
-						else
+						else if (qs.isMemoState(5))
 						{
-							if (qs.isMemoState(5))
-							{
-								htmltext = "31516-04.html";
-							}
+							htmltext = "31516-04.html";
 						}
 						break;
 					}

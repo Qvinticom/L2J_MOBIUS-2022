@@ -784,13 +784,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 									npc.doCast(ICE_BALL.getSkill());
 								}
 							}
-							else
+							else if (canReachMostHated && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
 							{
-								if (canReachMostHated && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
-								{
-									npc.setTarget(mostHated);
-									npc.doCast(ICE_BALL.getSkill());
-								}
+								npc.setTarget(mostHated);
+								npc.doCast(ICE_BALL.getSkill());
 							}
 						}
 						else if (getRandom(10000) < 800)
@@ -803,13 +800,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 									npc.doCast(SUMMON_ELEMENTAL.getSkill());
 								}
 							}
-							else
+							else if (canReachMostHated && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
 							{
-								if (canReachMostHated && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
-								{
-									npc.setTarget(mostHated);
-									npc.doCast(SUMMON_ELEMENTAL.getSkill());
-								}
+								npc.setTarget(mostHated);
+								npc.doCast(SUMMON_ELEMENTAL.getSkill());
 							}
 						}
 						else if (getRandom(10000) < 1500)
@@ -871,13 +865,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 								npc.doCast(ICE_BALL.getSkill());
 							}
 						}
-						else
+						else if (canReachMostHated && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
 						{
-							if (canReachMostHated && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
-							{
-								npc.setTarget(mostHated);
-								npc.doCast(ICE_BALL.getSkill());
-							}
+							npc.setTarget(mostHated);
+							npc.doCast(ICE_BALL.getSkill());
 						}
 					}
 					else if (getRandom(10000) < 1333)
@@ -890,13 +881,10 @@ public final class IceQueensCastleBattle extends AbstractInstance
 								npc.doCast(SUMMON_ELEMENTAL.getSkill());
 							}
 						}
-						else
+						else if (canReachMostHated && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
 						{
-							if (canReachMostHated && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
-							{
-								npc.setTarget(mostHated);
-								npc.doCast(SUMMON_ELEMENTAL.getSkill());
-							}
+							npc.setTarget(mostHated);
+							npc.doCast(SUMMON_ELEMENTAL.getSkill());
 						}
 					}
 					else if (getRandom(10000) < 1500)

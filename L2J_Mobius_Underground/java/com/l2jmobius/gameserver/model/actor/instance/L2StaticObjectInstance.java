@@ -162,7 +162,7 @@ public final class L2StaticObjectInstance extends L2Character
 	public void setMeshIndex(int meshIndex)
 	{
 		_meshIndex = meshIndex;
-		this.broadcastPacket(new StaticObject(this));
+		broadcastPacket(new StaticObject(this));
 	}
 	
 	/**

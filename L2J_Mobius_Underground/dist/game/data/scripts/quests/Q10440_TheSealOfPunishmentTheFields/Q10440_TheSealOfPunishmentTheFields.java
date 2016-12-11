@@ -107,7 +107,7 @@ public class Q10440_TheSealOfPunishmentTheFields extends Quest
 				final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
 				giveItems(player, stoneId, 15);
 				giveStoryQuestReward(player, 60);
-				int count = qs.getInt(KILL_COUNT_VAR);
+				final int count = qs.getInt(KILL_COUNT_VAR);
 				if ((count >= 50) && (count < 100))
 				{
 					addExpAndSp(player, 28240800, 6777);
@@ -226,7 +226,7 @@ public class Q10440_TheSealOfPunishmentTheFields extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && (qs.getCond() > 0))
 		{
-			int count = qs.getInt(KILL_COUNT_VAR) + 1;
+			final int count = qs.getInt(KILL_COUNT_VAR) + 1;
 			qs.set(KILL_COUNT_VAR, count);
 			if ((count >= 50) && (qs.isMemoState(1)))
 			{

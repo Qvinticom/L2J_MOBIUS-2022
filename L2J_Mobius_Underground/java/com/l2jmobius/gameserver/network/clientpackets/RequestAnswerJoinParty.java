@@ -106,12 +106,9 @@ public final class RequestAnswerJoinParty implements IClientIncomingPacket
 				party.removePartyMember(requestor, MessageType.NONE);
 			}
 		}
-		else
+		else if (party.getMemberCount() == 1)
 		{
-			if (party.getMemberCount() == 1)
-			{
-				party.removePartyMember(requestor, MessageType.NONE);
-			}
+			party.removePartyMember(requestor, MessageType.NONE);
 		}
 		
 		party.setPendingInvitation(false);

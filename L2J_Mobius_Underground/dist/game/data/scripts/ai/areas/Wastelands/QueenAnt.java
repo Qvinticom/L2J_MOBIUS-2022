@@ -317,12 +317,9 @@ public final class QueenAnt extends AbstractNpcAI
 					curse = CommonSkill.RAID_CURSE.getSkill();
 				}
 			}
-			else
+			else if (!character.hasAbnormalType(CommonSkill.RAID_CURSE2.getSkill().getAbnormalType()) && (getRandom(4) == 0))
 			{
-				if (!character.hasAbnormalType(CommonSkill.RAID_CURSE2.getSkill().getAbnormalType()) && (getRandom(4) == 0))
-				{
-					curse = CommonSkill.RAID_CURSE2.getSkill();
-				}
+				curse = CommonSkill.RAID_CURSE2.getSkill();
 			}
 			
 			if (curse != null)

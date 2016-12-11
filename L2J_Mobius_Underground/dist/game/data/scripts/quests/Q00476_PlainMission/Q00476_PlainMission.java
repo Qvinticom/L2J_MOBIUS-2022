@@ -210,14 +210,11 @@ public final class Q00476_PlainMission extends Quest
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
-			else
+			else if (killedGrendel < 45)
 			{
-				if (killedGrendel < 45)
-				{
-					killedGrendel++;
-					st.set("killed_" + GRENDEL[0], killedGrendel);
-					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				}
+				killedGrendel++;
+				st.set("killed_" + GRENDEL[0], killedGrendel);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			
 			if ((killedAntelope == 45) && (killedBandersnatch == 45) && (killedBuffalo == 45) && (killedGrendel == 45))

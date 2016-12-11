@@ -72,7 +72,7 @@ public class ServerRestartManager
 			{
 				nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
 				ThreadPoolManager.getInstance().scheduleGeneral(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
-				_log.info("Scheduled server restart at " + lastRestart.getTime().toString() + ".");
+				_log.info("Scheduled server restart at " + lastRestart.getTime() + ".");
 			}
 		}
 		catch (Exception e)

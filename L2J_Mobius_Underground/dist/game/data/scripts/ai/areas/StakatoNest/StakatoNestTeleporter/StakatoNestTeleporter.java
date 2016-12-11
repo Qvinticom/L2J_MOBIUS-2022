@@ -31,7 +31,7 @@ import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 public final class StakatoNestTeleporter extends AbstractNpcAI
 {
 	// Locations
-	private final static Location[] LOCS =
+	private static final Location[] LOCS =
 	{
 		new Location(80456, -52322, -5640),
 		new Location(88718, -46214, -4640),
@@ -40,7 +40,7 @@ public final class StakatoNestTeleporter extends AbstractNpcAI
 		new Location(87682, -43291, -4128)
 	};
 	// NPC
-	private final static int KINTAIJIN = 32640;
+	private static final int KINTAIJIN = 32640;
 	
 	private StakatoNestTeleporter()
 	{

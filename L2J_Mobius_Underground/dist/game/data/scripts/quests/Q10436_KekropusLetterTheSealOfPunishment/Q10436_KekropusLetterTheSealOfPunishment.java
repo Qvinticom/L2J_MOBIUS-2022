@@ -16,8 +16,6 @@
  */
 package quests.Q10436_KekropusLetterTheSealOfPunishment;
 
-import quests.LetterQuest;
-
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -26,6 +24,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+
+import quests.LetterQuest;
 
 /**
  * Kekropus' Letter: The Seal of Punishment (10436)

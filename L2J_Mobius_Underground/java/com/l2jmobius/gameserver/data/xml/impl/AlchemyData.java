@@ -128,7 +128,7 @@ public class AlchemyData implements IGameXmlReader
 	 * Gets the single instance of AlchemyData.
 	 * @return single instance of AlchemyData
 	 */
-	public static final AlchemyData getInstance()
+	public static AlchemyData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

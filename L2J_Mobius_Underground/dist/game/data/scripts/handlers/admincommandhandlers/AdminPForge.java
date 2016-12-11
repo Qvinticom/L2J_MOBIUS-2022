@@ -454,7 +454,7 @@ public final class AdminPForge implements IAdminCommandHandler
 								target = activeChar.getTarget();
 								if ((target != null) && (target instanceof L2Character))
 								{
-									value = String.valueOf(((L2Character) target).getTitle());
+									value = ((L2Character) target).getTitle();
 								}
 								else
 								{
@@ -465,7 +465,7 @@ public final class AdminPForge implements IAdminCommandHandler
 								target = activeChar.getTarget();
 								if (target != null)
 								{
-									value = String.valueOf(target.getName());
+									value = target.getName();
 								}
 								else
 								{

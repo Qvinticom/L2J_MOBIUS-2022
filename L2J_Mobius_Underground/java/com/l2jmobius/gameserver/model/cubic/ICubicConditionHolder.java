@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.cubic.conditions.ICubicCondition;
  */
 public interface ICubicConditionHolder
 {
-	public boolean validateConditions(CubicInstance cubic, L2Character owner, L2Character target);
+	boolean validateConditions(CubicInstance cubic, L2Character owner, L2Character target);
 	
-	public void addCondition(ICubicCondition condition);
+	void addCondition(ICubicCondition condition);
 }

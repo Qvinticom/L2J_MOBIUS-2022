@@ -92,12 +92,9 @@ public class DoppelgangerInstance extends L2Npc
 				getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getSummoner());
 			}
 		}
-		else
+		else if (getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW)
 		{
-			if (getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW)
-			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			}
+			getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		}
 	}
 	

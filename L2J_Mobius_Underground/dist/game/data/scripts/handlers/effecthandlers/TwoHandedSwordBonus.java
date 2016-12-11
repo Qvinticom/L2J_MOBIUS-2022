@@ -33,8 +33,8 @@ import com.l2jmobius.gameserver.model.stats.Stats;
  */
 public class TwoHandedSwordBonus extends AbstractEffect
 {
-	private final static Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
-	private final static Condition _slotCondition = new ConditionUsingSlotType(L2Item.SLOT_LR_HAND);
+	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.SWORD.mask());
+	private static final Condition _slotCondition = new ConditionUsingSlotType(L2Item.SLOT_LR_HAND);
 	
 	protected final double _pAtkAmount;
 	protected final StatModifierType _pAtkmode;

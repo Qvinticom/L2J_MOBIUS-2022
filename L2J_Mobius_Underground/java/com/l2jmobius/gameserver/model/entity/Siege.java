@@ -1454,12 +1454,9 @@ public class Siege implements Siegable
 					return;
 				}
 			}
-			else
+			else if (getAttackerClans().size() >= SiegeManager.getInstance().getAttackerMaxClans())
 			{
-				if (getAttackerClans().size() >= SiegeManager.getInstance().getAttackerMaxClans())
-				{
-					return;
-				}
+				return;
 			}
 			
 			if (!isUpdateRegistration)
@@ -1668,10 +1665,6 @@ public class Siege implements Siegable
 	
 	public final Castle getCastle()
 	{
-		if (_castle == null)
-		{
-			return null;
-		}
 		return _castle;
 	}
 	

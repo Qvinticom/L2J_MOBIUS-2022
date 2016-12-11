@@ -93,7 +93,8 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem implements IClient
 			return;
 		}
 		
-		if ((stone = inventory.getItemByObjectId(stone.getObjectId())) == null)
+		stone = inventory.getItemByObjectId(stone.getObjectId());
+		if (stone == null)
 		{
 			client.sendPacket(ExShapeShiftingResult.FAILED);
 			player.removeRequest(ShapeShiftingItemRequest.class);

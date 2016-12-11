@@ -493,7 +493,7 @@ public final class Util
 			
 			if (Config.HTML_ACTION_CACHE_DEBUG)
 			{
-				LOGGER.info("Cached html bypass(" + scope.toString() + "): '" + bypass + "'");
+				LOGGER.info("Cached html bypass(" + scope + "): '" + bypass + "'");
 			}
 			player.addHtmlAction(scope, bypass);
 			bypassStart = htmlLower.indexOf("=\"bypass ", bypassEnd);
@@ -530,7 +530,7 @@ public final class Util
 			
 			if (Config.HTML_ACTION_CACHE_DEBUG)
 			{
-				LOGGER.info("Cached html link(" + scope.toString() + "): '" + htmlLink + "'");
+				LOGGER.info("Cached html link(" + scope + "): '" + htmlLink + "'");
 			}
 			// let's keep an action cache with "link " lowercase literal kept
 			player.addHtmlAction(scope, "link " + htmlLink);
@@ -556,7 +556,7 @@ public final class Util
 		
 		if (Config.HTML_ACTION_CACHE_DEBUG)
 		{
-			LOGGER.info("Set html action npc(" + scope.toString() + "): " + npcObjId);
+			LOGGER.info("Set html action npc(" + scope + "): " + npcObjId);
 		}
 		player.setHtmlActionOriginObjectId(scope, npcObjId);
 		buildHtmlBypassCache(player, scope, html);
@@ -645,32 +645,29 @@ public final class Util
 			activeChar.sendPacket(new ShowBoard(html, "1001"));
 			fillMultiEditContent(activeChar, fillMultiEdit);
 		}
+		else if (html.length() < 16250)
+		{
+			activeChar.sendPacket(new ShowBoard(html, "101"));
+			activeChar.sendPacket(new ShowBoard(null, "102"));
+			activeChar.sendPacket(new ShowBoard(null, "103"));
+		}
+		else if (html.length() < (16250 * 2))
+		{
+			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+			activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
+			activeChar.sendPacket(new ShowBoard(null, "103"));
+		}
+		else if (html.length() < (16250 * 3))
+		{
+			activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
+			activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
+			activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
+		}
 		else
 		{
-			if (html.length() < 16250)
-			{
-				activeChar.sendPacket(new ShowBoard(html, "101"));
-				activeChar.sendPacket(new ShowBoard(null, "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
-			}
-			else if (html.length() < (16250 * 2))
-			{
-				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-				activeChar.sendPacket(new ShowBoard(html.substring(16250), "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
-			}
-			else if (html.length() < (16250 * 3))
-			{
-				activeChar.sendPacket(new ShowBoard(html.substring(0, 16250), "101"));
-				activeChar.sendPacket(new ShowBoard(html.substring(16250, 16250 * 2), "102"));
-				activeChar.sendPacket(new ShowBoard(html.substring(16250 * 2), "103"));
-			}
-			else
-			{
-				activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
-				activeChar.sendPacket(new ShowBoard(null, "102"));
-				activeChar.sendPacket(new ShowBoard(null, "103"));
-			}
+			activeChar.sendPacket(new ShowBoard("<html><body><br><center>Error: HTML was too long!</center></body></html>", "101"));
+			activeChar.sendPacket(new ShowBoard(null, "102"));
+			activeChar.sendPacket(new ShowBoard(null, "103"));
 		}
 	}
 	

@@ -169,7 +169,7 @@ public class FortSiege implements Siegable
 				}
 				else
 				{
-					_log.warning(getClass().getSimpleName() + ": Exception: ScheduleStartSiegeTask(): unknown siege time: " + String.valueOf(_time));
+					_log.warning(getClass().getSimpleName() + ": Exception: ScheduleStartSiegeTask(): unknown siege time: " + _time);
 				}
 			}
 			catch (Exception e)

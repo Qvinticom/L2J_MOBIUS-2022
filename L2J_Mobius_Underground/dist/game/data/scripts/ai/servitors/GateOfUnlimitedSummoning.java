@@ -46,8 +46,8 @@ public final class GateOfUnlimitedSummoning extends AbstractNpcAI
 	}
 	
 	// Skills
-	final static private int GATE_ROOT = 11289;
-	final static private int GATE_VORTEX = 11291;
+	private static final int GATE_ROOT = 11289;
+	private static final int GATE_VORTEX = 11291;
 	
 	private GateOfUnlimitedSummoning()
 	{

@@ -160,7 +160,7 @@ public class CubicData implements IGameXmlReader
 	 * Gets the single instance of CubicData.
 	 * @return single instance of CubicData
 	 */
-	public static final CubicData getInstance()
+	public static CubicData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

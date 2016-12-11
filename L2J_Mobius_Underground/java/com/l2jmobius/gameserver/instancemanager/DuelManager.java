@@ -92,14 +92,11 @@ public final class DuelManager
 				return;
 			}
 		}
-		else
+		else if ((playerA.getPvpFlag() != 0) || (playerB.getPvpFlag() != 0))
 		{
-			if ((playerA.getPvpFlag() != 0) || (playerB.getPvpFlag() != 0))
-			{
-				playerA.sendMessage(engagedInPvP);
-				playerB.sendMessage(engagedInPvP);
-				return;
-			}
+			playerA.sendMessage(engagedInPvP);
+			playerB.sendMessage(engagedInPvP);
+			return;
 		}
 		final int duelId = _currentDuelId.incrementAndGet();
 		_duels.put(duelId, new Duel(playerA, playerB, partyDuel, duelId));

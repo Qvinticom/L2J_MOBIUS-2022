@@ -51,7 +51,7 @@ public class EnchantFormatter extends Formatter
 				if (p instanceof L2PcInstance)
 				{
 					final L2PcInstance player = (L2PcInstance) p;
-					StringUtil.append(output, "Character:", player.getName(), " [" + String.valueOf(player.getObjectId()) + "] Account:", player.getAccountName());
+					StringUtil.append(output, "Character:", player.getName(), " [" + player.getObjectId() + "] Account:", player.getAccountName());
 					if ((player.getClient() != null) && !player.getClient().isDetached())
 					{
 						StringUtil.append(output, " IP:", player.getClient().getConnectionAddress().getHostAddress());

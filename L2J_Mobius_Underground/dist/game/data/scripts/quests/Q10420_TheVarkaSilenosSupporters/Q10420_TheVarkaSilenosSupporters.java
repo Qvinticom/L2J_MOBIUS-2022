@@ -166,13 +166,10 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
-				else
+				else if (wizardCount < 50)
 				{
-					if (wizardCount < 50)
-					{
-						st.set("KillCount_" + EMBRYO_WIZARD, ++wizardCount);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-					}
+					st.set("KillCount_" + EMBRYO_WIZARD, ++wizardCount);
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
 				if ((shooterCount >= 50) && (wizardCount >= 50))
@@ -180,26 +177,20 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 					st.setCond(2, true);
 				}
 			}
-			else
+			else if (CommonUtil.contains(WIZARD_MONSTERS, npc.getId()))
 			{
-				if (CommonUtil.contains(WIZARD_MONSTERS, npc.getId()))
+				if (st.getInt("KillCount_" + EMBRYO_WIZARD) < 50)
 				{
-					if (st.getInt("KillCount_" + EMBRYO_WIZARD) < 50)
-					{
-						final L2Npc embryo = addSpawn(EMBRYO_WIZARD, npc, false, 60000);
-						addAttackPlayerDesire(embryo, killer);
-						embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DARE_INTERFERE_WITH_EMBRYO_SURELY_YOU_WISH_FOR_DEATH);
-					}
+					final L2Npc embryo = addSpawn(EMBRYO_WIZARD, npc, false, 60000);
+					addAttackPlayerDesire(embryo, killer);
+					embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DARE_INTERFERE_WITH_EMBRYO_SURELY_YOU_WISH_FOR_DEATH);
 				}
-				else
-				{
-					if (st.getInt("KillCount_" + EMBRYO_SHOOTER) < 50)
-					{
-						final L2Npc embryo = addSpawn(EMBRYO_SHOOTER, npc, false, 60000);
-						addAttackPlayerDesire(embryo, killer);
-						embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DARE_INTERFERE_WITH_EMBRYO_SURELY_YOU_WISH_FOR_DEATH);
-					}
-				}
+			}
+			else if (st.getInt("KillCount_" + EMBRYO_SHOOTER) < 50)
+			{
+				final L2Npc embryo = addSpawn(EMBRYO_SHOOTER, npc, false, 60000);
+				addAttackPlayerDesire(embryo, killer);
+				embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DARE_INTERFERE_WITH_EMBRYO_SURELY_YOU_WISH_FOR_DEATH);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

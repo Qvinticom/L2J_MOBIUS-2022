@@ -125,16 +125,13 @@ public final class Attack implements IClientIncomingPacket
 		{
 			target.onAction(activeChar);
 		}
+		else if ((target.getObjectId() != activeChar.getObjectId()) && (activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null))
+		{
+			target.onForcedAttack(activeChar);
+		}
 		else
 		{
-			if ((target.getObjectId() != activeChar.getObjectId()) && (activeChar.getPrivateStoreType() == PrivateStoreType.NONE) && (activeChar.getActiveRequester() == null))
-			{
-				target.onForcedAttack(activeChar);
-			}
-			else
-			{
-				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			}
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
 }

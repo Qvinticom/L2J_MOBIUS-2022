@@ -204,12 +204,9 @@ public final class Q00017_LightAndDarkness extends Quest
 						{
 							htmltext = "31508-01.html";
 						}
-						else
+						else if (qs.isMemoState(1))
 						{
-							if (qs.isMemoState(1))
-							{
-								htmltext = "31508-04.html";
-							}
+							htmltext = "31508-04.html";
 						}
 						break;
 					}
@@ -219,12 +216,9 @@ public final class Q00017_LightAndDarkness extends Quest
 						{
 							htmltext = "31509-01.html";
 						}
-						else
+						else if (qs.isMemoState(2))
 						{
-							if (qs.isMemoState(2))
-							{
-								htmltext = "31509-04.html";
-							}
+							htmltext = "31509-04.html";
 						}
 						break;
 					}
@@ -234,12 +228,9 @@ public final class Q00017_LightAndDarkness extends Quest
 						{
 							htmltext = "31510-01.html";
 						}
-						else
+						else if (qs.isMemoState(3))
 						{
-							if (qs.isMemoState(3))
-							{
-								htmltext = "31510-04.html";
-							}
+							htmltext = "31510-04.html";
 						}
 						break;
 					}
@@ -249,12 +240,9 @@ public final class Q00017_LightAndDarkness extends Quest
 						{
 							htmltext = "31511-01.html";
 						}
-						else
+						else if (qs.isMemoState(4))
 						{
-							if (qs.isMemoState(4))
-							{
-								htmltext = "31511-04.html";
-							}
+							htmltext = "31511-04.html";
 						}
 						break;
 					}

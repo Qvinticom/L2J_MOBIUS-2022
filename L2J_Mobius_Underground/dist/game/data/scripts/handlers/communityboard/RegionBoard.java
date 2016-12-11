@@ -64,7 +64,7 @@ public class RegionBoard implements IWriteBoardHandler
 				link = link.replace("%region_name%", String.valueOf(REGIONS[i]));
 				link = link.replace("%region_owning_clan%", (clan != null ? clan.getName() : "NPC"));
 				link = link.replace("%region_owning_clan_alliance%", ((clan != null) && (clan.getAllyName() != null) ? clan.getAllyName() : ""));
-				link = link.replace("%region_tax_rate%", String.valueOf(castle.getTaxRate() * 100) + "%");
+				link = link.replace("%region_tax_rate%", (castle.getTaxRate() * 100) + "%");
 				sb.append(link);
 			}
 			

@@ -305,7 +305,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				sb.append("StackTrace:<br1>");
 				for (StackTraceElement ste : e.getStackTrace())
 				{
-					sb.append(ste.toString() + "<br1>");
+					sb.append(ste + "<br1>");
 				}
 				sb.append("</body></html>");
 				// item html

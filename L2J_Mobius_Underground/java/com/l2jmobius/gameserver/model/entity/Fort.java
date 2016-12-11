@@ -268,11 +268,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public FortFunction getFortFunction(int type)
 	{
-		if (_function.get(type) != null)
-		{
-			return _function.get(type);
-		}
-		return null;
+		return _function.get(type);
 	}
 	
 	public void endOfSiege(L2Clan clan)
@@ -690,26 +686,23 @@ public final class Fort extends AbstractResidence
 		{
 			_function.put(type, new FortFunction(type, lvl, lease, 0, rate, 0, false));
 		}
+		else if ((lvl == 0) && (lease == 0))
+		{
+			removeFunction(type);
+		}
 		else
 		{
-			if ((lvl == 0) && (lease == 0))
+			final int diffLease = lease - _function.get(type).getLease();
+			if (diffLease > 0)
 			{
-				removeFunction(type);
+				_function.remove(type);
+				_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
 			}
 			else
 			{
-				final int diffLease = lease - _function.get(type).getLease();
-				if (diffLease > 0)
-				{
-					_function.remove(type);
-					_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
-				}
-				else
-				{
-					_function.get(type).setLease(lease);
-					_function.get(type).setLvl(lvl);
-					_function.get(type).dbSave();
-				}
+				_function.get(type).setLease(lease);
+				_function.get(type).setLvl(lvl);
+				_function.get(type).dbSave();
 			}
 		}
 		return true;

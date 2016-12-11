@@ -169,16 +169,13 @@ public final class CastleTeleporter extends AbstractNpcAI
 			final Siege siege = npc.getCastle().getSiege();
 			htmltext = (npc.isScriptValue(0)) ? (siege.isInProgress() && (siege.getControlTowerCount() == 0)) ? "CastleTeleporter-05.html" : "CastleTeleporter-04.html" : "CastleTeleporter-06.html";
 		}
+		else if ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0) && (player.getSiegeState() == 2)) // Deffender
+		{
+			htmltext = getHtmlName(npc) + ".html";
+		}
 		else
 		{
-			if ((npc.getCastle().getOwnerId() == player.getClanId()) && (player.getClanId() != 0) && (player.getSiegeState() == 2)) // Deffender
-			{
-				htmltext = getHtmlName(npc) + ".html";
-			}
-			else
-			{
-				htmltext = getHtmlName(npc) + "-no.html";
-			}
+			htmltext = getHtmlName(npc) + "-no.html";
 		}
 		return htmltext;
 	}

@@ -154,7 +154,7 @@ public class Observation implements IBypassHandler
 		return false;
 	}
 	
-	private static final void doObserve(L2PcInstance player, L2Npc npc, Location pos, long cost)
+	private static void doObserve(L2PcInstance player, L2Npc npc, Location pos, long cost)
 	{
 		if (player.reduceAdena("Broadcast", cost, npc, true))
 		{

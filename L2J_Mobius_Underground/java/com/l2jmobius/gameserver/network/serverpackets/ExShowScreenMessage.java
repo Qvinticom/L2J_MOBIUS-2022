@@ -224,14 +224,11 @@ public class ExShowScreenMessage implements IClientOutgoingPacket
 		{
 			packet.writeS(_text);
 		}
-		else
+		else if (_parameters != null)
 		{
-			if (_parameters != null)
+			for (String s : _parameters)
 			{
-				for (String s : _parameters)
-				{
-					packet.writeS(s);
-				}
+				packet.writeS(s);
 			}
 		}
 		return true;
