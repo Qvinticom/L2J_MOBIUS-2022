@@ -215,7 +215,10 @@ public class Duel
 						setFinished(true);
 						playKneelAnimation();
 						ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
-						getDueldInstance().destroy();
+						if (getDueldInstance() != null)
+						{
+							getDueldInstance().destroy();
+						}
 						break;
 					}
 				}
