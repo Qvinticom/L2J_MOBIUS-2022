@@ -11507,17 +11507,13 @@ public final class L2PcInstance extends L2Playable
 			final Map<Integer, Skill> transformSkills = _transformSkills;
 			if (transformSkills != null)
 			{
-				if (checkTransformed(Transform::allowAllSkills))
-				{
-					// Include all skills and transformation skills.
-					currentSkills.addAll(transformSkills.values());
-				}
-				else
+				if (!checkTransformed(Transform::allowAllSkills))
 				{
 					// Include transformation skills and those skills that are allowed during transformation.
 					currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
-					currentSkills = transformSkills.values();
 				}
+				// Include transformation skills.
+				currentSkills.addAll(transformSkills.values());
 			}
 		}
 		
