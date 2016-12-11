@@ -244,8 +244,6 @@ public final class Config
 	public static int MAX_PETITIONS_PENDING;
 	public static boolean ALT_GAME_FREE_TELEPORT;
 	public static int DELETE_DAYS;
-	public static float ALT_GAME_EXPONENT_XP;
-	public static float ALT_GAME_EXPONENT_SP;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
 	public static int PARTY_XP_CUTOFF_LEVEL;
@@ -1517,9 +1515,7 @@ public final class Config
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
 			ALT_GAME_FREE_TELEPORT = Character.getBoolean("AltFreeTeleporting", false);
 			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
-			ALT_GAME_EXPONENT_XP = Character.getFloat("AltGameExponentXp", 0);
-			ALT_GAME_EXPONENT_SP = Character.getFloat("AltGameExponentSp", 0);
-			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive");
+			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "level").toLowerCase();
 			PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);
 			PARTY_XP_CUTOFF_LEVEL = Character.getInt("PartyXpCutoffLevel", 20);
 			final String[] gaps = Character.getString("PartyXpCutoffGaps", "0,9;10,14;15,99").split(";");

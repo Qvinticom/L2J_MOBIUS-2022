@@ -944,72 +944,72 @@ public class L2Party extends AbstractPlayerGroup
 	private List<L2PcInstance> getValidMembers(List<L2PcInstance> members, int topLvl)
 	{
 		final List<L2PcInstance> validMembers = new ArrayList<>();
-		
-		// Fixed LevelDiff cutoff point
-		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("level"))
+		switch (Config.PARTY_XP_CUTOFF_METHOD)
 		{
-			for (L2PcInstance member : members)
+			case "level":
 			{
-				if ((topLvl - member.getLevel()) <= Config.PARTY_XP_CUTOFF_LEVEL)
+				for (L2PcInstance member : members)
 				{
-					validMembers.add(member);
+					if ((topLvl - member.getLevel()) <= Config.PARTY_XP_CUTOFF_LEVEL)
+					{
+						validMembers.add(member);
+					}
 				}
+				break;
 			}
-		}
-		// Fixed MinPercentage cutoff point
-		else if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("percentage"))
-		{
-			int sqLevelSum = 0;
-			for (L2PcInstance member : members)
+			case "percentage":
 			{
-				sqLevelSum += (member.getLevel() * member.getLevel());
-			}
-			
-			for (L2PcInstance member : members)
-			{
-				final int sqLevel = member.getLevel() * member.getLevel();
-				if ((sqLevel * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT))
+				int sqLevelSum = 0;
+				for (L2PcInstance member : members)
 				{
-					validMembers.add(member);
+					sqLevelSum += (member.getLevel() * member.getLevel());
 				}
-			}
-		}
-		// Automatic cutoff method
-		else if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("auto"))
-		{
-			int sqLevelSum = 0;
-			for (L2PcInstance member : members)
-			{
-				sqLevelSum += (member.getLevel() * member.getLevel());
-			}
-			
-			int i = members.size() - 1;
-			if (i < 1)
-			{
-				return members;
-			}
-			if (i >= BONUS_EXP_SP.length)
-			{
-				i = BONUS_EXP_SP.length - 1;
-			}
-			
-			for (L2PcInstance member : members)
-			{
-				final int sqLevel = member.getLevel() * member.getLevel();
-				if (sqLevel >= (sqLevelSum / (members.size() * members.size())))
+				for (L2PcInstance member : members)
 				{
-					validMembers.add(member);
+					final int sqLevel = member.getLevel() * member.getLevel();
+					if ((sqLevel * 100) >= (sqLevelSum * Config.PARTY_XP_CUTOFF_PERCENT))
+					{
+						validMembers.add(member);
+					}
 				}
+				break;
 			}
-		}
-		// High Five cutoff method
-		else if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))
-		{
-			validMembers.addAll(members);
-		}
-		else if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("none"))
-		{
-			validMembers.addAll(members);
+			case "auto":
+			{
+				int sqLevelSum = 0;
+				for (L2PcInstance member : members)
+				{
+					sqLevelSum += (member.getLevel() * member.getLevel());
+				}
+				int i = members.size() - 1;
+				if (i < 1)
+				{
+					return members;
+				}
+				if (i >= BONUS_EXP_SP.length)
+				{
+					i = BONUS_EXP_SP.length - 1;
+				}
+				for (L2PcInstance member : members)
+				{
+					final int sqLevel = member.getLevel() * member.getLevel();
+					if (sqLevel >= (sqLevelSum / (members.size() * members.size())))
+					{
+						validMembers.add(member);
+					}
+				}
+				break;
+			}
+			case "highfive":
+			{
+				validMembers.addAll(members);
+				break;
+			}
+			case "none":
+			{
+				validMembers.addAll(members);
+				break;
+			}
 		}
 		return validMembers;
 	}
