@@ -260,6 +260,7 @@ import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
 import quests.Q10368_RebellionOfMonsters.Q10368_RebellionOfMonsters;
 import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
 import quests.Q10377_TheInvadedExecutionGrounds.Q10377_TheInvadedExecutionGrounds;
+import quests.Q10379_AnUninvitedGuest.Q10379_AnUninvitedGuest;
 import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 import quests.Q10382_DayOfLiberation.Q10382_DayOfLiberation;
 import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
@@ -658,6 +659,7 @@ public class QuestMasterHandler
 		Q10368_RebellionOfMonsters.class,
 		Q10369_NoblesseSoulTesting.class,
 		Q10377_TheInvadedExecutionGrounds.class,
+		Q10379_AnUninvitedGuest.class,
 		Q10381_ToTheSeedOfHellfire.class,
 		Q10382_DayOfLiberation.class,
 		Q10383_FergasonsOffer.class,
