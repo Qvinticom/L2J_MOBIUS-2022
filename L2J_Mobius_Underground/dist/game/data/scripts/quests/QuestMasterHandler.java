@@ -184,6 +184,7 @@ import quests.Q00764_WeakeningTheVarkaSilenosForces.Q00764_WeakeningTheVarkaSile
 import quests.Q00765_WeakeningTheKetraOrcForces.Q00765_WeakeningTheKetraOrcForces;
 import quests.Q00772_PurifyingSouls.Q00772_PurifyingSouls;
 import quests.Q00784_TheQuietKiller.Q00784_TheQuietKiller;
+import quests.Q00785_ASuspiciousIngredient.Q00785_ASuspiciousIngredient;
 import quests.Q00786_AwaitingTheVoiceOfTheGods.Q00786_AwaitingTheVoiceOfTheGods;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
@@ -580,6 +581,7 @@ public class QuestMasterHandler
 		Q00765_WeakeningTheKetraOrcForces.class,
 		Q00772_PurifyingSouls.class,
 		Q00784_TheQuietKiller.class,
+		Q00785_ASuspiciousIngredient.class,
 		Q00786_AwaitingTheVoiceOfTheGods.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
