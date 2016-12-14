@@ -351,6 +351,7 @@ import quests.Q10745_TheSecretIngredients.Q10745_TheSecretIngredients;
 import quests.Q10746_SeeTheWorld.Q10746_SeeTheWorld;
 import quests.Q10751_WindsOfFateEncounters.Q10751_WindsOfFateEncounters;
 import quests.Q10752_WindsOfFateAPromise.Q10752_WindsOfFateAPromise;
+import quests.Q10753_WindsOfFateChoices.Q10753_WindsOfFateChoices;
 import quests.Q10755_LettersFromTheQueenWindyHill.Q10755_LettersFromTheQueenWindyHill;
 import quests.Q10756_AnInterdimensionalDraft.Q10756_AnInterdimensionalDraft;
 import quests.Q10757_QuietingTheStorm.Q10757_QuietingTheStorm;
@@ -746,6 +747,7 @@ public class QuestMasterHandler
 		Q10746_SeeTheWorld.class,
 		Q10751_WindsOfFateEncounters.class,
 		Q10752_WindsOfFateAPromise.class,
+		Q10753_WindsOfFateChoices.class,
 		Q10755_LettersFromTheQueenWindyHill.class,
 		Q10756_AnInterdimensionalDraft.class,
 		Q10757_QuietingTheStorm.class,

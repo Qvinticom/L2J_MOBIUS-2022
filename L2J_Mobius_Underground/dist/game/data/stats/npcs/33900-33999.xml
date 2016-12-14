@@ -2243,26 +2243,43 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="33999" level="85" type="L2Npc" name="Kain van Halter" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="33999" level="85" type="FriendlyNpc" name="Kain van Halter" title="">		
+		<parameters>
+			<param name="MoveAroundSocial" value="100" />
+			<param name="MoveAroundSocial1" value="100" />
+			<param name="MoveAroundSocial2" value="100" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<skill name="Skill01_ID" id="16387" level="1" />
+		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17427" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4234" hpRegen="9.5" mp="1846" mpRegen="3.3" />
+			<vitals hp="278980" hpRegen="9.5" mp="18468" mpRegen="3.3" />
 			<speed>
 				<walk ground="64" />
 				<run ground="190" />
 			</speed>
-			<attack physical="1189.0459514498" magical="811.85773400546" critical="4" attackSpeed="253" range="40" />
-			<defence physical="36100" magical="26400.364174348" />
+			<attack physical="12289.0459514498" magical="811.85773400546" critical="4" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5362.06896551724" magical="264.78509919958" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" canBeSown="true" />
 		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="16387" level="1" /> <!-- Chain Smash -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-			<skill id="16388" level="1" /> <!-- Kain's Wrath -->
+			<skill id="16388" level="1" /> <!-- Kain's Wrath -->			
 		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<s_npc_prop_hp_rate>4</s_npc_prop_hp_rate>
+		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />

@@ -672,9 +672,10 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
+		<set name="is_private_storeable" val="false" /> 
 		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
+		<set name="default_action" val="SHOW_HTML" />
+		<set name="handler" val="Book" />
 	</item>
 	<item id="39541" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies, its contents have been restored by Lich King Icarus, a necromancer in Hardin's Academy. Double-click to look closer. -->
