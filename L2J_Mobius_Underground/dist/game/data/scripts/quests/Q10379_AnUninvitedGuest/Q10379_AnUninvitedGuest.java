@@ -94,12 +94,15 @@ public final class Q10379_AnUninvitedGuest extends Quest
 			}
 			case "warden_endrigo_q10379_09.html":
 			{
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, ENDRIGO, NpcStringId.YOU_OBTAINED_A_REALLY_IMPORTANT_RESULT_I_WILL_DEFINITELY_TELL_THE_RULERS_OF_DION));
-				giveItems(player, ADENA, 3441680);
-				giveItems(player, SOE_GUILLOTINE_FORTRESS, 2);
-				addExpAndSp(player, 934013430, 224163);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(3))
+				{
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, ENDRIGO, NpcStringId.YOU_OBTAINED_A_REALLY_IMPORTANT_RESULT_I_WILL_DEFINITELY_TELL_THE_RULERS_OF_DION));
+					giveItems(player, ADENA, 3441680);
+					giveItems(player, SOE_GUILLOTINE_FORTRESS, 2);
+					addExpAndSp(player, 934013430, 224163);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
