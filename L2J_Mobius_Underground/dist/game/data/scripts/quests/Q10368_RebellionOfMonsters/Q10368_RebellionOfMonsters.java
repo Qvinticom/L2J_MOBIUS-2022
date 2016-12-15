@@ -55,8 +55,8 @@ public final class Q10368_RebellionOfMonsters extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -71,17 +71,19 @@ public final class Q10368_RebellionOfMonsters extends Quest
 			}
 			case "33179-03.htm":
 			{
-				st.startQuest();
+				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				htmltext = event;
 				break;
 			}
 			case "33179-06.html":
 			{
-				if (st.isCond(2))
+				if (qs.isCond(2))
 				{
 					giveAdena(player, 990, true);
 					addExpAndSp(player, 750000, 180);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 				}
 				break;
 			}
@@ -93,9 +95,9 @@ public final class Q10368_RebellionOfMonsters extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -104,11 +106,11 @@ public final class Q10368_RebellionOfMonsters extends Quest
 			}
 			case State.STARTED:
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "33179-04.html";
 				}
-				else if (st.isCond(2))
+				else if (qs.isCond(2))
 				{
 					htmltext = "33179-05.html";
 				}
@@ -126,14 +128,14 @@ public final class Q10368_RebellionOfMonsters extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
-			int killedJaguar = st.getInt("killed_" + WEARY_JAGUAR);
-			int killedJaguarScout = st.getInt("killed_" + WEARY_JAGUAR_SCOUT);
-			int killedSoldier = st.getInt("killed_" + ANT_SOLDIER);
-			int killedCaptain = st.getInt("killed_" + ANT_WARRIOR_CAPTAIN);
+			int killedJaguar = qs.getInt("killed_" + WEARY_JAGUAR);
+			int killedJaguarScout = qs.getInt("killed_" + WEARY_JAGUAR_SCOUT);
+			int killedSoldier = qs.getInt("killed_" + ANT_SOLDIER);
+			int killedCaptain = qs.getInt("killed_" + ANT_WARRIOR_CAPTAIN);
 			
 			switch (npc.getId())
 			{
@@ -142,7 +144,7 @@ public final class Q10368_RebellionOfMonsters extends Quest
 					if (killedJaguar < 10)
 					{
 						killedJaguar++;
-						st.set("killed_" + WEARY_JAGUAR, killedJaguar);
+						qs.set("killed_" + WEARY_JAGUAR, killedJaguar);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -152,7 +154,7 @@ public final class Q10368_RebellionOfMonsters extends Quest
 					if (killedJaguarScout < 15)
 					{
 						killedJaguarScout++;
-						st.set("killed_" + WEARY_JAGUAR_SCOUT, killedJaguarScout);
+						qs.set("killed_" + WEARY_JAGUAR_SCOUT, killedJaguarScout);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -162,7 +164,7 @@ public final class Q10368_RebellionOfMonsters extends Quest
 					if (killedSoldier < 15)
 					{
 						killedSoldier++;
-						st.set("killed_" + ANT_SOLDIER, killedSoldier);
+						qs.set("killed_" + ANT_SOLDIER, killedSoldier);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -172,7 +174,7 @@ public final class Q10368_RebellionOfMonsters extends Quest
 					if (killedCaptain < 20)
 					{
 						killedCaptain++;
-						st.set("killed_" + ANT_WARRIOR_CAPTAIN, killedCaptain);
+						qs.set("killed_" + ANT_WARRIOR_CAPTAIN, killedCaptain);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -181,7 +183,7 @@ public final class Q10368_RebellionOfMonsters extends Quest
 			
 			if ((killedJaguar == 10) && (killedJaguarScout == 15) && (killedSoldier == 15) && (killedCaptain == 20))
 			{
-				st.setCond(2, true);
+				qs.setCond(2, true);
 			}
 			sendNpcLogList(killer);
 		}
@@ -191,14 +193,14 @@ public final class Q10368_RebellionOfMonsters extends Quest
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(1))
+		final QuestState qs = getQuestState(activeChar, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(4);
-			npcLogList.add(new NpcLogListHolder(WEARY_JAGUAR, false, st.getInt("killed_" + WEARY_JAGUAR)));
-			npcLogList.add(new NpcLogListHolder(WEARY_JAGUAR_SCOUT, false, st.getInt("killed_" + WEARY_JAGUAR_SCOUT)));
-			npcLogList.add(new NpcLogListHolder(ANT_SOLDIER, false, st.getInt("killed_" + ANT_SOLDIER)));
-			npcLogList.add(new NpcLogListHolder(ANT_WARRIOR_CAPTAIN, false, st.getInt("killed_" + ANT_WARRIOR_CAPTAIN)));
+			npcLogList.add(new NpcLogListHolder(WEARY_JAGUAR, false, qs.getInt("killed_" + WEARY_JAGUAR)));
+			npcLogList.add(new NpcLogListHolder(WEARY_JAGUAR_SCOUT, false, qs.getInt("killed_" + WEARY_JAGUAR_SCOUT)));
+			npcLogList.add(new NpcLogListHolder(ANT_SOLDIER, false, qs.getInt("killed_" + ANT_SOLDIER)));
+			npcLogList.add(new NpcLogListHolder(ANT_WARRIOR_CAPTAIN, false, qs.getInt("killed_" + ANT_WARRIOR_CAPTAIN)));
 			return npcLogList;
 		}
 		return super.getNpcLogList(activeChar);

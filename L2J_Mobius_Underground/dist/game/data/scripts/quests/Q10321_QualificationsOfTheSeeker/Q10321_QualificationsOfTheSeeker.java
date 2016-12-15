@@ -63,6 +63,8 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 			case "32975-03.html":
 			{
 				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_027_Quest_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				htmltext = event;
 				break;

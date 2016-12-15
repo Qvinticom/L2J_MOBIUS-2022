@@ -67,8 +67,8 @@ public final class Q10333_DisappearedSakum extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -87,26 +87,28 @@ public final class Q10333_DisappearedSakum extends Quest
 			}
 			case "30332-05.html":
 			{
-				st.startQuest();
+				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				htmltext = event;
 				break;
 			}
 			case "33176-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = event;
-					st.setCond(2, true);
+					qs.setCond(2, true);
 				}
 				break;
 			}
 			case "33508-03.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveAdena(player, 800, true);
 					addExpAndSp(player, 180000, 43);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -119,9 +121,9 @@ public final class Q10333_DisappearedSakum extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -137,20 +139,20 @@ public final class Q10333_DisappearedSakum extends Quest
 				{
 					case BATHIS:
 					{
-						htmltext = st.isCond(0) ? "30332-06.html" : "30332-07.html";
+						htmltext = qs.isCond(0) ? "30332-06.html" : "30332-07.html";
 						break;
 					}
 					case VENT:
 					{
-						if (st.isCond(1))
+						if (qs.isCond(1))
 						{
 							htmltext = "33176-01.html";
 						}
-						else if (st.isCond(2))
+						else if (qs.isCond(2))
 						{
 							htmltext = "33176-04.html";
 						}
-						else if (st.isCond(3))
+						else if (qs.isCond(3))
 						{
 							htmltext = "33176-05.html";
 						}
@@ -158,7 +160,7 @@ public final class Q10333_DisappearedSakum extends Quest
 					}
 					case SCHUNAIN:
 					{
-						if (st.isCond(3))
+						if (qs.isCond(3))
 						{
 							htmltext = "33508-01.html";
 						}
@@ -196,12 +198,12 @@ public final class Q10333_DisappearedSakum extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
-			int killedLizardmen = st.getInt("killed_" + LIZARDMEN);
-			int killedVakuOrc = st.getInt("killed_" + VAKU_ORC);
+			int killedLizardmen = qs.getInt("killed_" + LIZARDMEN);
+			int killedVakuOrc = qs.getInt("killed_" + VAKU_ORC);
 			
 			switch (npc.getId())
 			{
@@ -210,7 +212,7 @@ public final class Q10333_DisappearedSakum extends Quest
 					if (killedLizardmen < 7)
 					{
 						killedLizardmen++;
-						st.set("killed_" + LIZARDMEN, killedLizardmen);
+						qs.set("killed_" + LIZARDMEN, killedLizardmen);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -220,7 +222,7 @@ public final class Q10333_DisappearedSakum extends Quest
 					if (killedVakuOrc < 5)
 					{
 						killedVakuOrc++;
-						st.set("killed_" + VAKU_ORC, killedVakuOrc);
+						qs.set("killed_" + VAKU_ORC, killedVakuOrc);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -238,7 +240,7 @@ public final class Q10333_DisappearedSakum extends Quest
 			
 			if ((getQuestItemsCount(killer, BADGE) == 5) && (killedLizardmen == 7) && (killedVakuOrc == 5))
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 			sendNpcLogList(killer);
 		}
@@ -248,12 +250,12 @@ public final class Q10333_DisappearedSakum extends Quest
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		final QuestState qs = getQuestState(activeChar, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
-			npcLogList.add(new NpcLogListHolder(LIZARDMEN, false, st.getInt("killed_" + LIZARDMEN)));
-			npcLogList.add(new NpcLogListHolder(VAKU_ORC, false, st.getInt("killed_" + VAKU_ORC)));
+			npcLogList.add(new NpcLogListHolder(LIZARDMEN, false, qs.getInt("killed_" + LIZARDMEN)));
+			npcLogList.add(new NpcLogListHolder(VAKU_ORC, false, qs.getInt("killed_" + VAKU_ORC)));
 			return npcLogList;
 		}
 		return super.getNpcLogList(activeChar);

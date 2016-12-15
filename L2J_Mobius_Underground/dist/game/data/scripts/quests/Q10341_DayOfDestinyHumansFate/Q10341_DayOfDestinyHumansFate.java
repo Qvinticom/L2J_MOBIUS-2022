@@ -50,8 +50,8 @@ public final class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -69,8 +69,10 @@ public final class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 			}
 			case "30857-05.htm":
 			{
-				st.startQuest();
-				st.set("STARTED_CLASS", player.getClassId().getId());
+				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
+				qs.set("STARTED_CLASS", player.getClassId().getId());
 				htmltext = event;
 				break;
 			}
@@ -86,21 +88,21 @@ public final class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
 		if (npc.getId() == ORVEN)
 		{
-			if (st.getState() == State.CREATED)
+			if (qs.getState() == State.CREATED)
 			{
 				htmltext = "30857-01.htm";
 			}
-			else if (st.getState() == State.STARTED)
+			else if (qs.getState() == State.STARTED)
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					htmltext = "30857-06.html";
 				}
-				else if (st.isCond(13))
+				else if (qs.isCond(13))
 				{
 					htmltext = "30857-07.html";
 				}

@@ -51,8 +51,8 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -68,17 +68,19 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 			}
 			case "33508-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				htmltext = event;
 				break;
 			}
 			case "30332-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
 					giveAdena(player, 850, true);
 					addExpAndSp(player, 200000, 48);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -91,9 +93,9 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{

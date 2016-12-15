@@ -59,8 +59,8 @@ public final class Q10337_SakumsImpact extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState st = getQuestState(player, false);
-		if (st == null)
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
 		{
 			return null;
 		}
@@ -76,26 +76,28 @@ public final class Q10337_SakumsImpact extends Quest
 			}
 			case "31795-03.html":
 			{
-				st.startQuest();
+				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				htmltext = event;
 				break;
 			}
 			case "33178-03.html":
 			{
-				if (st.isCond(1))
+				if (qs.isCond(1))
 				{
-					st.setCond(2);
+					qs.setCond(2);
 					htmltext = event;
 				}
 				break;
 			}
 			case "33510-04.html":
 			{
-				if (st.isCond(3))
+				if (qs.isCond(3))
 				{
 					giveAdena(player, 1030, true);
 					addExpAndSp(player, 650000, 156);
-					st.exitQuest(false, true);
+					qs.exitQuest(false, true);
 					htmltext = event;
 				}
 				break;
@@ -108,9 +110,9 @@ public final class Q10337_SakumsImpact extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState st = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, true);
 		
-		switch (st.getState())
+		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
@@ -122,21 +124,27 @@ public final class Q10337_SakumsImpact extends Quest
 			}
 			case State.STARTED:
 			{
-				switch (st.getCond())
+				switch (qs.getCond())
 				{
 					case 1:
 					{
 						switch (npc.getId())
 						{
 							case ADVENTURE_GUILDSMAN:
+							{
 								htmltext = "31795-04.html";
 								break;
+							}
 							case SILVAN:
+							{
 								htmltext = "33178-01.html";
 								break;
+							}
 							case LEF:
+							{
 								htmltext = "33510-01.html";
 								break;
+							}
 						}
 						break;
 					}
@@ -145,14 +153,20 @@ public final class Q10337_SakumsImpact extends Quest
 						switch (npc.getId())
 						{
 							case ADVENTURE_GUILDSMAN:
+							{
 								htmltext = "31795-04.html";
 								break;
+							}
 							case SILVAN:
+							{
 								htmltext = "33178-04.html";
 								break;
+							}
 							case LEF:
+							{
 								htmltext = "33510-02.html";
 								break;
+							}
 						}
 						break;
 					}
@@ -161,14 +175,20 @@ public final class Q10337_SakumsImpact extends Quest
 						switch (npc.getId())
 						{
 							case ADVENTURE_GUILDSMAN:
+							{
 								htmltext = "31795-04.html";
 								break;
+							}
 							case SILVAN:
+							{
 								htmltext = "33178-05.html";
 								break;
+							}
 							case LEF:
+							{
 								htmltext = "33510-03.html";
 								break;
+							}
 						}
 						break;
 					}
@@ -180,14 +200,20 @@ public final class Q10337_SakumsImpact extends Quest
 				switch (npc.getId())
 				{
 					case ADVENTURE_GUILDSMAN:
+					{
 						htmltext = "31795-05.html";
 						break;
+					}
 					case SILVAN:
+					{
 						htmltext = "33178-06.html";
 						break;
+					}
 					case LEF:
+					{
 						htmltext = "33510-05.html";
 						break;
+					}
 				}
 				break;
 			}
@@ -198,13 +224,13 @@ public final class Q10337_SakumsImpact extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState st = getQuestState(killer, false);
+		final QuestState qs = getQuestState(killer, false);
 		
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
-			int killedWarriors = st.getInt("killed_" + SKELETON_WARRIOR);
-			int killedImps = st.getInt("killed_" + RUIN_IMP);
-			int killedBats = st.getInt("killed_" + BAT);
+			int killedWarriors = qs.getInt("killed_" + SKELETON_WARRIOR);
+			int killedImps = qs.getInt("killed_" + RUIN_IMP);
+			int killedBats = qs.getInt("killed_" + BAT);
 			
 			switch (npc.getId())
 			{
@@ -213,7 +239,7 @@ public final class Q10337_SakumsImpact extends Quest
 					if (killedWarriors < 15)
 					{
 						killedWarriors++;
-						st.set("killed_" + SKELETON_WARRIOR, killedWarriors);
+						qs.set("killed_" + SKELETON_WARRIOR, killedWarriors);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -223,7 +249,7 @@ public final class Q10337_SakumsImpact extends Quest
 					if (killedImps < 20)
 					{
 						killedImps++;
-						st.set("killed_" + RUIN_IMP, killedImps);
+						qs.set("killed_" + RUIN_IMP, killedImps);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -234,7 +260,7 @@ public final class Q10337_SakumsImpact extends Quest
 					if (killedBats < 25)
 					{
 						killedBats++;
-						st.set("killed_" + BAT, killedBats);
+						qs.set("killed_" + BAT, killedBats);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 					break;
@@ -243,7 +269,7 @@ public final class Q10337_SakumsImpact extends Quest
 			
 			if ((killedWarriors == 15) && (killedImps == 20) && (killedBats == 25))
 			{
-				st.setCond(3, true);
+				qs.setCond(3, true);
 			}
 			sendNpcLogList(killer);
 		}
@@ -253,13 +279,13 @@ public final class Q10337_SakumsImpact extends Quest
 	@Override
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
-		final QuestState st = getQuestState(activeChar, false);
-		if ((st != null) && st.isStarted() && st.isCond(2))
+		final QuestState qs = getQuestState(activeChar, false);
+		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(3);
-			npcLogList.add(new NpcLogListHolder(SKELETON_WARRIOR, false, st.getInt("killed_" + SKELETON_WARRIOR)));
-			npcLogList.add(new NpcLogListHolder(RUIN_IMP, false, st.getInt("killed_" + RUIN_IMP)));
-			npcLogList.add(new NpcLogListHolder(27458, false, st.getInt("killed_" + BAT))); // NOTE: Somehow quest log react on bad ID, maybe client bug
+			npcLogList.add(new NpcLogListHolder(SKELETON_WARRIOR, false, qs.getInt("killed_" + SKELETON_WARRIOR)));
+			npcLogList.add(new NpcLogListHolder(RUIN_IMP, false, qs.getInt("killed_" + RUIN_IMP)));
+			npcLogList.add(new NpcLogListHolder(27458, false, qs.getInt("killed_" + BAT))); // NOTE: Somehow quest log react on bad ID, maybe client bug
 			return npcLogList;
 		}
 		return super.getNpcLogList(activeChar);
