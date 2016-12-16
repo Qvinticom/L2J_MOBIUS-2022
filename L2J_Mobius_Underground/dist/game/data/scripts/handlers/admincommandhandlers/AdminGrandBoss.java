@@ -31,8 +31,8 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.areas.LairOfAntharas.Antharas.Antharas;
-import ai.areas.TowerOfInsolence.Baium.Baium;
+import ai.bosses.Antharas.Antharas;
+import ai.bosses.Baium.Baium;
 
 /**
  * @author St3eT

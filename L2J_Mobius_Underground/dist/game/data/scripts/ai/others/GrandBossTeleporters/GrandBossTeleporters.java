@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
-import ai.areas.ForgeOfTheGods.Valakas;
+import ai.bosses.Valakas.Valakas;
 
 /**
  * Grand Bosses teleport AI.<br>
