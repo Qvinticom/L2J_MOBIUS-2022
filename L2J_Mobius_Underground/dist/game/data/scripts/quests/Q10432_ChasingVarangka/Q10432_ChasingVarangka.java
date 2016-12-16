@@ -63,6 +63,7 @@ public class Q10432_ChasingVarangka extends Quest
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
@@ -94,8 +95,8 @@ public class Q10432_ChasingVarangka extends Quest
 					giveStoryQuestReward(player, 30);
 					addExpAndSp(player, 14120400, 3388);
 					qs.exitQuest(false, true);
+					htmltext = "33868-03.html";
 				}
-				htmltext = "33868-03.html";
 				break;
 			}
 		}
@@ -111,6 +112,7 @@ public class Q10432_ChasingVarangka extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

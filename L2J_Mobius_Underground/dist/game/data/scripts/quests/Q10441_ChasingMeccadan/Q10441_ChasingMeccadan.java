@@ -116,7 +116,6 @@ public class Q10441_ChasingMeccadan extends Quest
 						addExpAndSp(player, 14120400, 3388);
 						qs.exitQuest(false, true);
 						htmltext = "32641-08.html";
-						break;
 					}
 					else if (npc.getId() == ATHENIA)
 					{
@@ -127,9 +126,9 @@ public class Q10441_ChasingMeccadan extends Quest
 						addExpAndSp(player, 14120400, 3388);
 						qs.exitQuest(false, true);
 						htmltext = "32643-08.html";
-						break;
 					}
 				}
+				break;
 			}
 		}
 		return htmltext;
@@ -144,6 +143,7 @@ public class Q10441_ChasingMeccadan extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (npc.getId())
 		{
 			case HELVETICA:

@@ -95,7 +95,6 @@ public final class Q10377_TheInvadedExecutionGrounds extends Quest
 			}
 			case "warden_roderik_q10377_03.html":
 			{
-				qs.setCond(0);
 				qs.setCond(3, true);
 				takeItems(player, HARLANS_ORDERS, -1);
 				giveItems(player, ENDRIGOS_REPORT, 1);
@@ -164,6 +163,7 @@ public final class Q10377_TheInvadedExecutionGrounds extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

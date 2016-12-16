@@ -59,12 +59,13 @@ public final class Q10310_TwistedCreationTree extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
+		
+		String htmltext = null;
 		switch (event)
 		{
 			case "33032-02.htm":
@@ -90,7 +91,7 @@ public final class Q10310_TwistedCreationTree extends Quest
 			}
 			default:
 			{
-				if (event.startsWith("giveReward_"))
+				if (qs.isCond(3) && event.startsWith("giveReward_"))
 				{
 					final int itemId = Integer.parseInt(event.replace("giveReward_", ""));
 					qs.exitQuest(false, true);
@@ -99,6 +100,7 @@ public final class Q10310_TwistedCreationTree extends Quest
 					addExpAndSp(player, 50178765, 12042);
 					htmltext = "33031-07.html";
 				}
+				break;
 			}
 		}
 		return htmltext;
@@ -108,7 +110,7 @@ public final class Q10310_TwistedCreationTree extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{
@@ -243,7 +245,6 @@ public final class Q10310_TwistedCreationTree extends Quest
 			qs.getPlayer().sendPacket(log);
 			if ((qs.getInt(Integer.toString(GARDEN_SENTRY)) >= 10) && (qs.getInt(Integer.toString(GARDEN_SCOUT)) >= 10) && (qs.getInt(Integer.toString(GARDEN_COMMANDER)) >= 10) && (qs.getInt(Integer.toString(GARDEN_DESTROYER)) >= 10) && (qs.getInt(Integer.toString(GARDEN_DESTROYER)) >= 10))
 			{
-				qs.setCond(1);
 				qs.setCond(3, true);
 			}
 		}

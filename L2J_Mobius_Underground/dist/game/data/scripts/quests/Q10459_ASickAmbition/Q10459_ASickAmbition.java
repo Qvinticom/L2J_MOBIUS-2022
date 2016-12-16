@@ -55,12 +55,13 @@ public class Q10459_ASickAmbition extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return null;
 		}
+		
+		String htmltext = null;
 		switch (event)
 		{
 			case "31595-02.htm":
@@ -77,10 +78,13 @@ public class Q10459_ASickAmbition extends Quest
 			}
 			case "33899-02.html":
 			{
-				giveItems(player, SP_RUNE_PACK, 1);
-				addExpAndSp(player, 555716700, 2133952);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(2))
+				{
+					giveItems(player, SP_RUNE_PACK, 1);
+					addExpAndSp(player, 555716700, 2133952);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -96,6 +100,7 @@ public class Q10459_ASickAmbition extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

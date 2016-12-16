@@ -92,8 +92,8 @@ public class Q10435_ChasingKeltron extends Quest
 					giveStoryQuestReward(player, 30);
 					addExpAndSp(player, 14120400, 3388);
 					qs.exitQuest(false, true);
+					htmltext = "33841-07.html";
 				}
-				htmltext = "33841-07.html";
 				break;
 			}
 		}
@@ -109,6 +109,7 @@ public class Q10435_ChasingKeltron extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (qs.getState())
 		{
 			

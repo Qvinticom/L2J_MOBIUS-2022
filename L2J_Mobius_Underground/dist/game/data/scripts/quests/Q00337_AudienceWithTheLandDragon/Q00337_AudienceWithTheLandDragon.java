@@ -120,7 +120,8 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 		{
 			return getNoQuestMsg(player);
 		}
-		String htmltext = event;
+		
+		String htmltext = null;
 		switch (event)
 		{
 			case "30753-02.htm":
@@ -175,6 +176,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (npc.getId())
 		{
 			case GABRIELLE:
@@ -636,6 +638,6 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				break;
 			}
 		}
-		return null;
+		return super.onKill(npc, player, isSummon);
 	}
 }

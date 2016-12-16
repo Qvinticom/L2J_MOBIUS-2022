@@ -52,12 +52,13 @@ public class Q10455_ElikiasLetter extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return null;
 		}
+		
+		String htmltext = null;
 		switch (event)
 		{
 			case "31620-02.htm":
@@ -83,11 +84,14 @@ public class Q10455_ElikiasLetter extends Quest
 			}
 			case "31595-03.html":
 			{
-				giveAdena(player, 32962, true);
-				addExpAndSp(player, 3859143, 14816);
-				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, LEONA_BLACKBIRD_FIRE_DRAGON_BRIDE, NpcStringId.HAVE_YOU_MADE_PREPARATIONS_FOR_THE_MISSION_THERE_ISN_T_MUCH_TIME));
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(2))
+				{
+					giveAdena(player, 32962, true);
+					addExpAndSp(player, 3859143, 14816);
+					npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, LEONA_BLACKBIRD_FIRE_DRAGON_BRIDE, NpcStringId.HAVE_YOU_MADE_PREPARATIONS_FOR_THE_MISSION_THERE_ISN_T_MUCH_TIME));
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -103,6 +107,7 @@ public class Q10455_ElikiasLetter extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (npc.getId())
 		{
 			case ELRIKIA_VERDURE_ELDER:

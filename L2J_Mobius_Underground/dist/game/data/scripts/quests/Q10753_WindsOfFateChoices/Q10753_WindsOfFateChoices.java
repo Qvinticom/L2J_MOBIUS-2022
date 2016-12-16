@@ -143,8 +143,8 @@ public final class Q10753_WindsOfFateChoices extends Quest
 		{
 			return null;
 		}
-		String htmltext = event;
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "33943-02.htm":

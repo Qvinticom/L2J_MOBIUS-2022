@@ -49,7 +49,8 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 		{
 			return null;
 		}
-		String htmltext = event;
+		
+		String htmltext = null;
 		switch (event)
 		{
 			case "31279-02.html":
@@ -78,8 +79,6 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 				}
 				break;
 			}
-			default:
-				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -88,7 +87,7 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{
 			return htmltext;

@@ -70,6 +70,7 @@ public class Q10766_ANewCraft extends Quest
 		{
 			return null;
 		}
+		
 		String htmltext = null;
 		switch (event)
 		{
@@ -111,13 +112,16 @@ public class Q10766_ANewCraft extends Quest
 			}
 			case "33978-07.html":
 			{
-				takeItems(player, AIR_STONE, 1);
-				takeItems(player, WINDY_HEALING_POTION_1, 1);
-				giveItems(player, WINDY_HEALING_POTION);
-				giveItems(player, WINDY_QUICK_HEALING_POTION);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(4))
+				{
+					takeItems(player, AIR_STONE, 1);
+					takeItems(player, WINDY_HEALING_POTION_1, 1);
+					giveItems(player, WINDY_HEALING_POTION);
+					giveItems(player, WINDY_QUICK_HEALING_POTION);
+					addExpAndSp(player, EXP_REWARD, SP_REWARD);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -174,22 +178,33 @@ public class Q10766_ANewCraft extends Quest
 			}
 			case ZEPHYRA:
 			{
-				if (qs.isCond(1))
+				switch (qs.getCond())
 				{
-					htmltext = "33978-01.html";
+					case 1:
+					{
+						htmltext = "33978-01.html";
+						break;
+					}
+					case 2:
+					{
+						htmltext = "33978-04.html";
+						break;
+					}
+					case 3:
+					{
+						if ((getQuestItemsCount(player, AIR_STONE) == 0) || (getQuestItemsCount(player, WINDY_HEALING_POTION_1) == 1))
+						{
+							htmltext = "33978-08.html";
+						}
+						break;
+					}
+					case 4:
+					{
+						htmltext = "33978-06.html";
+						break;
+					}
 				}
-				if (qs.isCond(2))
-				{
-					htmltext = "33978-04.html";
-				}
-				if (qs.isCond(3) && ((getQuestItemsCount(player, AIR_STONE) == 0) || (getQuestItemsCount(player, WINDY_HEALING_POTION_1) == 1)))
-				{
-					htmltext = "33978-08.html";
-				}
-				if (qs.isCond(4))
-				{
-					htmltext = "33978-06.html";
-				}
+				break;
 			}
 		}
 		return htmltext;

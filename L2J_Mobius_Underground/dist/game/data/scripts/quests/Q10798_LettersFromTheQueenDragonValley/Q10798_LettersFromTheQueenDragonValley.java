@@ -49,7 +49,6 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 	{
 		super(10798);
 		addTalkId(MAXIMILIAN, NAMO);
-		
 		setIsErtheiaQuest(true);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_TOWN_OF_GIRAN, TELEPORT_LOC);
@@ -65,7 +64,8 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 		{
 			return null;
 		}
-		String htmltext = event;
+		
+		String htmltext = null;
 		switch (event)
 		{
 			case "30120-02.html":
@@ -94,8 +94,6 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 				}
 				break;
 			}
-			default:
-				htmltext = null;
 		}
 		return htmltext;
 	}
@@ -104,7 +102,7 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		if (qs == null)
 		{
 			return htmltext;

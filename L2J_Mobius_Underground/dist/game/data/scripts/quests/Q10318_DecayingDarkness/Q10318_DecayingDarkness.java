@@ -70,13 +70,13 @@ public final class Q10318_DecayingDarkness extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "32892-02.htm":
@@ -94,10 +94,13 @@ public final class Q10318_DecayingDarkness extends Quest
 			}
 			case "32892-07.html":
 			{
-				giveAdena(player, 5427900, false);
-				addExpAndSp(player, 79260650, 19022);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(2))
+				{
+					giveAdena(player, 5427900, false);
+					addExpAndSp(player, 79260650, 19022);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
@@ -113,6 +116,7 @@ public final class Q10318_DecayingDarkness extends Quest
 		{
 			return htmltext;
 		}
+		
 		final int npcId = npc.getId();
 		switch (qs.getState())
 		{

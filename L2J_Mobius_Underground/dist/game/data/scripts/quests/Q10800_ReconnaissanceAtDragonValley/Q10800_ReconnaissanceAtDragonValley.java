@@ -74,13 +74,13 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "33973-02.htm":
@@ -96,7 +96,7 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 			}
 			default:
 			{
-				if (event.startsWith("giveReward_") && qs.isCond(2) && (player.getLevel() >= MIN_LEVEL))
+				if (qs.isCond(2) && event.startsWith("giveReward_") && (player.getLevel() >= MIN_LEVEL))
 				{
 					final int itemId = Integer.parseInt(event.replace("giveReward_", ""));
 					qs.exitQuest(false, true);
@@ -106,6 +106,7 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 					addExpAndSp(player, 84722400, 20333);
 					htmltext = "33973-08.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

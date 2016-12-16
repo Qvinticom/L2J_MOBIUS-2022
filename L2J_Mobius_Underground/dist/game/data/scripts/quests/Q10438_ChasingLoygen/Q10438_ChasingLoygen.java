@@ -93,8 +93,8 @@ public class Q10438_ChasingLoygen extends Quest
 					giveStoryQuestReward(player, 30);
 					addExpAndSp(player, 14120400, 3388);
 					qs.exitQuest(false, true);
+					htmltext = "32742-08.html";
 				}
-				htmltext = "32742-08.html";
 				break;
 			}
 		}
@@ -110,6 +110,7 @@ public class Q10438_ChasingLoygen extends Quest
 		{
 			return htmltext;
 		}
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

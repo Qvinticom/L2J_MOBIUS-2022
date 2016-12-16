@@ -53,13 +53,13 @@ public final class Q10351_OwnerOfHall extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return htmltext;
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "32892-02.htm":
@@ -77,11 +77,14 @@ public final class Q10351_OwnerOfHall extends Quest
 			}
 			case "32892-08.html":
 			{
-				giveAdena(player, 23655000, false);
-				addExpAndSp(player, 897850000, 215484);
-				giveItems(player, OCTAVIS_BRACELET, 1);
-				qs.exitQuest(false, true);
-				htmltext = getHtm(player.getHtmlPrefix(), "32892-08.html").replace("%name%", player.getName());
+				if (qs.isCond(2))
+				{
+					giveAdena(player, 23655000, false);
+					addExpAndSp(player, 897850000, 215484);
+					giveItems(player, OCTAVIS_BRACELET, 1);
+					qs.exitQuest(false, true);
+					htmltext = getHtm(player.getHtmlPrefix(), "32892-08.html").replace("%name%", player.getName());
+				}
 				break;
 			}
 		}
@@ -97,6 +100,7 @@ public final class Q10351_OwnerOfHall extends Quest
 		{
 			return htmltext;
 		}
+		
 		final int npcId = npc.getId();
 		switch (qs.getState())
 		{

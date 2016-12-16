@@ -70,13 +70,13 @@ public final class Q10379_AnUninvitedGuest extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return getNoQuestMsg(player);
+			return null;
 		}
 		
+		String htmltext = null;
 		switch (event)
 		{
 			case "warden_endrigo_q10379_04.htm":
@@ -179,7 +179,6 @@ public final class Q10379_AnUninvitedGuest extends Quest
 						final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 						log.addNpc(SCALDISECT_THE_FURIOUS, qs.getInt("SCALDISECT_THE_FURIOUS"));
 						player.sendPacket(log);
-						
 					}
 					if (qs.getInt(Integer.toString(SCALDISECT_THE_FURIOUS)) == 1)
 					{
