@@ -104,11 +104,14 @@ public final class Q10377_TheInvadedExecutionGrounds extends Quest
 			}
 			case "warden_endrigo_q10377_02.html":
 			{
-				giveItems(player, ADENA, 2970560);
-				giveItems(player, SOE_GUILLOTINE_FORTRESS, 2);
-				addExpAndSp(player, 756106110, 181465);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(6))
+				{
+					giveItems(player, ADENA, 2970560);
+					giveItems(player, SOE_GUILLOTINE_FORTRESS, 2);
+					addExpAndSp(player, 756106110, 181465);
+					qs.exitQuest(false, true);
+					htmltext = event;
+				}
 				break;
 			}
 		}
