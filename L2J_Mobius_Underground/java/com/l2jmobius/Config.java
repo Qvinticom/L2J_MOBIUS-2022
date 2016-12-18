@@ -457,7 +457,7 @@ public final class Config
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
 	public static boolean ALLOW_RENTPET;
-	public static boolean ALLOWFISHING;
+	public static boolean ALLOW_FISHING;
 	public static boolean ALLOW_BOAT;
 	public static int BOAT_BROADCAST_RADIUS;
 	public static boolean ALLOW_CURSED_WEAPONS;
@@ -1674,7 +1674,7 @@ public final class Config
 			ALLOW_RACE = General.getBoolean("AllowRace", true);
 			ALLOW_WATER = General.getBoolean("AllowWater", true);
 			ALLOW_RENTPET = General.getBoolean("AllowRentPet", false);
-			ALLOWFISHING = General.getBoolean("AllowFishing", true);
+			ALLOW_FISHING = General.getBoolean("AllowFishing", true);
 			ALLOW_MANOR = General.getBoolean("AllowManor", true);
 			ALLOW_BOAT = General.getBoolean("AllowBoat", true);
 			BOAT_BROADCAST_RADIUS = General.getInt("BoatBroadcastRadius", 20000);

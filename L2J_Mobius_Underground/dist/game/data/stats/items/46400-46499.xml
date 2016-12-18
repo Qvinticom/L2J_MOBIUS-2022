@@ -267,6 +267,7 @@
 	<item id="46420" name="Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch the same items as when fishing with regular bait, and get more XP. Under Lv. 85 only. Deleted after event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -280,6 +281,7 @@
 	<item id="46421" name="R Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Can be used by characters Lv. 85 - 94. Deleted after event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -293,6 +295,7 @@
 	<item id="46422" name="R95 Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Can be used by characters Lv. 95 - 98. Deleted after event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -306,6 +309,7 @@
 	<item id="46423" name="R99 Sheep Bait" type="EtcItem">
 		<!-- Bait for fishing. Catch same items as when fishing with regular bait, and get more XP. Lv. 99 or above. Deleted after event. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -492,6 +496,7 @@
 	<item id="46435" name="Heine Special Bait (85-89)" type="EtcItem">
 		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Zodiac Agathion Box. Can be used by characters Lv. 85 - 89. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -505,6 +510,7 @@
 	<item id="46436" name="Heine Special Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Zodiac Agathion Box. Can be used by characters Lv. 90 - 94. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -518,6 +524,7 @@
 	<item id="46437" name="Heine Special Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Zodiac Agathion Box. Can be used by characters Lv. 95 - 98. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -531,6 +538,7 @@
 	<item id="46438" name="Heine Special Bait (99~)" type="EtcItem">
 		<!-- Bait for fishing. Catch fresh fish and whales. Has a very low chance of obtaining Wind Vitality Tonic, Heine Treasure Chest, or a Zodiac Agathion Box. Lv. 99 or above. -->
 		<set name="icon" val="icon.etc_bm_lure_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />

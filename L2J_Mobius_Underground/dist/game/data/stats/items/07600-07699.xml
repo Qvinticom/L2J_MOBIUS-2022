@@ -165,6 +165,7 @@
 	<item id="7610" name="Wind Bait" type="EtcItem">
 		<!-- Lure that was given out by Lanosco. It contains the hidden power of wind. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
@@ -178,6 +179,7 @@
 	<item id="7611" name="Icy Air Bait" type="EtcItem">
 		<!-- Lure that was given out by O'Fulle. It contains the hidden power of icy air. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
@@ -191,6 +193,7 @@
 	<item id="7612" name="Earth Bait" type="EtcItem">
 		<!-- Lure that was given out by Willie. It contains the hidden power of earth. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
@@ -204,6 +207,7 @@
 	<item id="7613" name="Flaming Bait" type="EtcItem">
 		<!-- Lure that was given out by Linnaeus. It contains the hidden power of flames. It is not easy to use this bait. Only those who are highly skilled in fishing should use it. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />

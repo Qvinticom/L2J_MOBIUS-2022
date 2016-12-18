@@ -75,6 +75,10 @@ public class Fishing
 	public boolean isAtValidLocation()
 	{
 		// TODO: implement checking direction
+		// if (calculateBaitLocation() == null)
+		// {
+		// return false;
+		// }
 		return _player.isInsideZone(ZoneId.FISHING);
 	}
 	
@@ -116,7 +120,7 @@ public class Fishing
 	
 	private void castLine()
 	{
-		if (!Config.ALLOWFISHING && !_player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
+		if (!Config.ALLOW_FISHING && !_player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS))
 		{
 			_player.sendMessage("Fishing is disabled.");
 			_player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -196,11 +200,11 @@ public class Fishing
 		}
 		
 		_baitLocation = calculateBaitLocation();
-		if (!isAtValidLocation() || (_baitLocation == null))
+		if (!_player.isInsideZone(ZoneId.FISHING) || (_baitLocation == null))
 		{
 			if (isFishing())
 			{
-				_player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
+				// _player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
 			}
 			else
@@ -362,22 +366,23 @@ public class Fishing
 		int baitX = (int) (_player.getX() + (cos * distance));
 		int baitY = (int) (_player.getY() + (sin * distance));
 		
-		// search for fishing and water zone
+		// search for fishing zone
 		L2FishingZone fishingZone = null;
-		L2WaterZone waterZone = null;
-		for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+		for (L2ZoneType zone : ZoneManager.getInstance().getZones(_player))
 		{
 			if (zone instanceof L2FishingZone)
 			{
 				fishingZone = (L2FishingZone) zone;
+				break;
 			}
-			else if (zone instanceof L2WaterZone)
+		}
+		// search for water zone
+		L2WaterZone waterZone = null;
+		for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
+		{
+			if (zone instanceof L2WaterZone)
 			{
 				waterZone = (L2WaterZone) zone;
-			}
-			
-			if ((fishingZone != null) && (waterZone != null))
-			{
 				break;
 			}
 		}
@@ -385,50 +390,8 @@ public class Fishing
 		int baitZ = computeBaitZ(_player, baitX, baitY, fishingZone, waterZone);
 		if (baitZ == Integer.MIN_VALUE)
 		{
-			for (distance = distMax; distance >= distMin; --distance)
-			{
-				baitX = (int) (_player.getX() + (cos * distance));
-				baitY = (int) (_player.getY() + (sin * distance));
-				
-				// search for fishing and water zone again
-				fishingZone = null;
-				waterZone = null;
-				for (L2ZoneType zone : ZoneManager.getInstance().getZones(baitX, baitY))
-				{
-					if (zone instanceof L2FishingZone)
-					{
-						fishingZone = (L2FishingZone) zone;
-					}
-					else if (zone instanceof L2WaterZone)
-					{
-						waterZone = (L2WaterZone) zone;
-					}
-					
-					if ((fishingZone != null) && (waterZone != null))
-					{
-						break;
-					}
-				}
-				
-				baitZ = computeBaitZ(_player, baitX, baitY, fishingZone, waterZone);
-				if (baitZ != Integer.MIN_VALUE)
-				{
-					break;
-				}
-			}
-			
-			if (baitZ == Integer.MIN_VALUE)
-			{
-				if (_player.isGM())
-				{
-					baitZ = _player.getZ();
-				}
-				else
-				{
-					_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
-					return null;
-				}
-			}
+			_player.sendPacket(SystemMessageId.YOU_CAN_T_FISH_HERE);
+			return null;
 		}
 		
 		return new Location(baitX, baitY, baitZ);
@@ -458,10 +421,10 @@ public class Fishing
 		// always use water zone, fishing zone high z is high in the air...
 		final int baitZ = waterZone.getWaterZ();
 		
-		if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
-		{
-			return Integer.MIN_VALUE;
-		}
+		// if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
+		//
+		// return Integer.MIN_VALUE;
+		// }
 		
 		if (GeoData.getInstance().hasGeo(baitX, baitY))
 		{

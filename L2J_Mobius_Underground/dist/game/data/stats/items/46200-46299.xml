@@ -1092,6 +1092,7 @@
 	<item id="46284" name="Exclusive Christmas Bait" type="EtcItem">
 		<!-- Exclusive Christmas bait. Use it to catch Fish Gift Boxes. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_bait_i00" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

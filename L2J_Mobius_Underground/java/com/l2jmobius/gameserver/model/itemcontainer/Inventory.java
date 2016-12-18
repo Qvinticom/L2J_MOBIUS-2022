@@ -214,7 +214,6 @@ public abstract class Inventory extends ItemContainer
 			else if (item.getItemType() == WeaponType.FISHINGROD)
 			{
 				final L2ItemInstance lure = inventory.getPaperdollItem(PAPERDOLL_LHAND);
-				
 				if (lure != null)
 				{
 					inventory.setPaperdollItem(PAPERDOLL_LHAND, null);

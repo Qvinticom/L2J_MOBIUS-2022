@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
-	<!-- Fishing Zones -->
-	<!-- Giran wizard guide bridge 1 -->
-	<zone name="fishing_giran1" type="FishingZone" shape="NPoly" minZ="-3350" maxZ="-3600">
+	<zone name="fishing_giran_1" type="FishingZone" shape="NPoly" minZ="-3600" maxZ="-3350">
 		<node X="85091" Y="150247" />
 		<node X="85630" Y="150238" />
 		<node X="85639" Y="152251" />
@@ -16,161 +14,184 @@
 		<node X="86489" Y="150163" />
 		<node X="85087" Y="150138" />
 	</zone>
-	<!-- Giran bridge 2 -->
-	<zone name="fishing_giran2" type="FishingZone" shape="NPoly" minZ="-3500" maxZ="-3550">
+	<zone name="fishing_giran_2" type="FishingZone" shape="NPoly" minZ="-3550" maxZ="-3500">
 		<node X="88666" Y="147527" />
 		<node X="90406" Y="147527" />
 		<node X="90406" Y="147185" />
 		<node X="88680" Y="147185" />
 	</zone>
-	<!-- Giran bridge 3 -->
-	<zone name="fishing_giran3" type="FishingZone" shape="NPoly" minZ="-3500" maxZ="-3550">
+	<zone name="fishing_giran_3" type="FishingZone" shape="NPoly" minZ="-3550" maxZ="-3500">
 		<node X="84068" Y="143243" />
 		<node X="84069" Y="141532" />
 		<node X="83707" Y="141527" />
 		<node X="83703" Y="143244" />
 	</zone>
-
-	<!-- Gludio -->
-	<zone name="fishing_gludio1" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3800">
-		<node X="-1518" Y="129784" />
-		<node X="-2948" Y="128842" />
-		<node X="-7076" Y="127523" />
-		<node X="-8648" Y="126475" />
-		<node X="-9276" Y="125657" />
-		<node X="-9813" Y="124706" />
-		<node X="-9177" Y="124840" />
-		<node X="-8715" Y="125891" />
-		<node X="-8313" Y="126338" />
-		<node X="-7256" Y="127037" />
-		<node X="-6571" Y="127298" />
-		<node X="-5141" Y="127443" />
-		<node X="-2849" Y="128298" />
-		<node X="-1292" Y="129509" />
+	<zone name="fishing_giran_harbor" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3300">
+		<node X="50727" Y="184858" />
+		<node X="48874" Y="186940" />
+		<node X="46463" Y="188239" />
+		<node X="45663" Y="186532" />
+		<node X="43848" Y="187494" />
+		<node X="44631" Y="188770" />
+		<node X="42568" Y="189871" />
+		<node X="44155" Y="193268" />
+		<node X="50252" Y="190691" />
+		<node X="53136" Y="186640" />
 	</zone>
-	<zone name="fishing_gludio2" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3800">
-		<node X="-343" Y="128692" />
-		<node X="-1896" Y="127021" />
-		<node X="-3789" Y="126884" />
-		<node X="-4095" Y="126639" />
-		<node X="-2200" Y="120084" />
-		<node X="-947" Y="118820" />
-		<node X="-349" Y="117887" />
-		<node X="-642" Y="117202" />
-		<node X="-1643" Y="118849" />
-		<node X="-2758" Y="119877" />
-		<node X="-3836" Y="121742" />
-		<node X="-5792" Y="126659" />
-		<node X="-4375" Y="127619" />
-		<node X="-1912" Y="127801" />
-		<node X="-550" Y="129462" />
+	<zone name="fishing_gludio" type="FishingZone" shape="NPoly" minZ="-3750" maxZ="-3300">
+		<node X="-23044" Y="89592" />
+		<node X="-21616" Y="90157" />
+		<node X="-21738" Y="92192" />
+		<node X="-20695" Y="97234" />
+		<node X="-19659" Y="101052" />
+		<node X="-20780" Y="103199" />
+		<node X="-22402" Y="102506" />
+		<node X="-23707" Y="95414" />
+		<node X="-24862" Y="92989" />
+		<node X="-24736" Y="90789" />
 	</zone>
-	<zone name="fishing_gludio3" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3800">
-		<node X="-253" Y="117460" />
-		<node X="234" Y="116947" />
-		<node X="538" Y="116314" />
-		<node X="798" Y="115665" />
-		<node X="963" Y="115200" />
-		<node X="1368" Y="114433" />
-		<node X="1585" Y="114063" />
-		<node X="1907" Y="113777" />
-		<node X="2092" Y="113390" />
-		<node X="2668" Y="112595" />
-		<node X="2799" Y="111560" />
-		<node X="2870" Y="109781" />
-		<node X="2888" Y="108711" />
-		<node X="2928" Y="107636" />
-		<node X="3020" Y="106769" />
-		<node X="3324" Y="104453" />
-		<node X="3625" Y="102967" />
-		<node X="3665" Y="101395" />
-		<node X="3661" Y="99786" />
-		<node X="3711" Y="98073" />
-		<node X="3496" Y="97517" />
-		<node X="3434" Y="97037" />
-		<node X="3350" Y="96641" />
-		<node X="3244" Y="96415" />
-		<node X="2986" Y="96413" />
-		<node X="2990" Y="97977" />
-		<node X="3089" Y="99246" />
-		<node X="2999" Y="101355" />
-		<node X="3058" Y="103263" />
-		<node X="2393" Y="107304" />
-		<node X="2203" Y="109419" />
-		<node X="2172" Y="111385" />
-		<node X="2019" Y="112524" />
-		<node X="503" Y="114489" />
-		<node X="-896" Y="117202" />
+	<zone name="fishing_neutral_zone" type="FishingZone" shape="NPoly" minZ="-3750" maxZ="-3300">
+		<node X="-16088" Y="71610" />
+		<node X="-15221" Y="70732" />
+		<node X="-11762" Y="67946" />
+		<node X="-10059" Y="68442" />
+		<node X="-2025" Y="72000" />
+		<node X="-699" Y="76367" />
+		<node X="-2856" Y="77678" />
+		<node X="-3380" Y="76798" />
+		<node X="-6905" Y="73148" />
+		<node X="-11297" Y="71870" />
+		<node X="-13486" Y="72168" />
+		<node X="-14542" Y="73088" />
 	</zone>
-	<zone name="fishing_gludio4" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3800">
-		<node X="-3791" Y="119524" />
-		<node X="-2531" Y="117642" />
-		<node X="-202" Y="113955" />
-		<node X="720" Y="112818" />
-		<node X="787" Y="112391" />
-		<node X="1129" Y="112200" />
-		<node X="1251" Y="111487" />
-		<node X="1337" Y="110193" />
-		<node X="1442" Y="107930" />
-		<node X="1532" Y="106191" />
-		<node X="1659" Y="105938" />
-		<node X="1724" Y="105202" />
-		<node X="1777" Y="104992" />
-		<node X="1705" Y="103492" />
-		<node X="1969" Y="102521" />
-		<node X="2109" Y="101732" />
-		<node X="1814" Y="100411" />
-		<node X="1987" Y="99617" />
-		<node X="1803" Y="98090" />
-		<node X="1243" Y="96612" />
-		<node X="909" Y="94828" />
-		<node X="856" Y="91340" />
-		<node X="1509" Y="89093" />
-		<node X="1691" Y="87765" />
-		<node X="848" Y="85198" />
-		<node X="891" Y="83391" />
-		<node X="908" Y="82872" />
-		<node X="568" Y="80256" />
-		<node X="622" Y="79788" />
-		<node X="302" Y="79295" />
-		<node X="-364" Y="79389" />
-		<node X="-1407" Y="78162" />
-		<node X="-1705" Y="77772" />
-		<node X="-2385" Y="77532" />
-		<node X="-1118" Y="76157" />
-		<node X="-1077" Y="76427" />
-		<node X="-692" Y="76936" />
-		<node X="-121" Y="77695" />
-		<node X="1040" Y="78888" />
-		<node X="1359" Y="79166" />
-		<node X="1818" Y="79391" />
-		<node X="2199" Y="79906" />
-		<node X="2360" Y="81570" />
-		<node X="2394" Y="82455" />
-		<node X="2653" Y="84169" />
-		<node X="3100" Y="86224" />
-		<node X="3418" Y="87678" />
-		<node X="3343" Y="88728" />
-		<node X="3051" Y="89876" />
-		<node X="2894" Y="90654" />
-		<node X="2748" Y="91571" />
-		<node X="2788" Y="92221" />
-		<node X="2756" Y="92462" />
-		<node X="2731" Y="92822" />
-		<node X="2073" Y="93660" />
-		<node X="1712" Y="95174" />
-		<node X="2025" Y="96361" />
-		<node X="1899" Y="97130" />
-		<node X="2345" Y="98560" />
-		<node X="2548" Y="100263" />
-		<node X="2424" Y="101747" />
-		<node X="2502" Y="102799" />
-		<node X="2155" Y="105041" />
-		<node X="1951" Y="107100" />
-		<node X="1850" Y="110443" />
-		<node X="1698" Y="113246" />
-		<node X="387" Y="114614" />
-		<node X="-817" Y="115678" />
-		<node X="-3188" Y="119289" />
+	<zone name="fishing_fellmere_lake" type="FishingZone" shape="NPoly" minZ="-3650" maxZ="-2200">
+		<node X="-55351" Y="128912" />
+		<node X="-55974" Y="131960" />
+		<node X="-61124" Y="133034" />
+		<node X="-63346" Y="132706" />
+		<node X="-63622" Y="137127" />
+		<node X="-63943" Y="139991" />
+		<node X="-66278" Y="138637" />
+		<node X="-70269" Y="133704" />
+		<node X="-68687" Y="129352" />
+		<node X="-61255" Y="125857" />
+		<node X="-61634" Y="122648" />
+		<node X="-64758" Y="120838" />
+		<node X="-65553" Y="115366" />
+		<node X="-63965" Y="112894" />
+		<node X="-62075" Y="113109" />
+		<node X="-60208" Y="114967" />
+		<node X="-58091" Y="120419" />
+		<node X="-58399" Y="122746" />
+		<node X="-55645" Y="122787" />
+		<node X="-52452" Y="124898" />
+		<node X="-52589" Y="127015" />
+	</zone>
+	<zone name="fishing_narsell_lake" type="FishingZone" shape="NPoly" minZ="-3750" maxZ="-3200">
+		<node X="143476" Y="46677" />
+		<node X="143378" Y="47597" />
+		<node X="141912" Y="48300" />
+		<node X="140149" Y="46938" />
+		<node X="137895" Y="47855" />
+		<node X="137190" Y="50320" />
+		<node X="137840" Y="51469" />
+		<node X="139300" Y="52548" />
+		<node X="137961" Y="54671" />
+		<node X="136828" Y="57481" />
+		<node X="138792" Y="59808" />
+		<node X="143935" Y="59893" />
+		<node X="148324" Y="59026" />
+		<node X="149082" Y="58032" />
+		<node X="151890" Y="58634" />
+		<node X="153262" Y="57498" />
+		<node X="152659" Y="55271" />
+		<node X="153196" Y="54110" />
+		<node X="154187" Y="53247" />
+		<node X="155423" Y="53209" />
+		<node X="157125" Y="54176" />
+		<node X="158716" Y="53215" />
+		<node X="158622" Y="52273" />
+		<node X="160864" Y="51337" />
+		<node X="161582" Y="50347" />
+		<node X="161667" Y="48356" />
+		<node X="159959" Y="45092" />
+		<node X="157666" Y="45539" />
+		<node X="157071" Y="47916" />
+		<node X="155858" Y="47763" />
+		<node X="155654" Y="46743" />
+		<node X="155780" Y="42906" />
+		<node X="157608" Y="42222" />
+		<node X="158460" Y="40748" />
+		<node X="158487" Y="39104" />
+		<node X="156930" Y="37678" />
+		<node X="152085" Y="36185" />
+		<node X="146922" Y="37298" />
+		<node X="144899" Y="36565" />
+		<node X="141637" Y="37684" />
+		<node X="138935" Y="39332" />
+		<node X="137809" Y="40536" />
+		<node X="138040" Y="41586" />
+		<node X="139209" Y="42805" />
+		<node X="141751" Y="43654" />
+		<node X="142611" Y="44584" />
+		<node X="143468" Y="46767" />
+		<node X="146394" Y="46766" />
+		<node X="146387" Y="48012" />
+		<node X="147497" Y="49447" />
+		<node X="151510" Y="49446" />
+		<node X="152585" Y="48008" />
+		<node X="152590" Y="45439" />
+		<node X="151506" Y="43999" />
+		<node X="147503" Y="43998" />
+		<node X="146384" Y="45443" />
+		<node X="146389" Y="46695" />
+	</zone>
+	<zone name="fishing_iris_lake" type="FishingZone" shape="NPoly" minZ="-3800" maxZ="-3250">
+		<node X="37154" Y="68179" />
+		<node X="38801" Y="68085" />
+		<node X="40777" Y="71129" />
+		<node X="46441" Y="70716" />
+		<node X="51580" Y="71869" />
+		<node X="52781" Y="73455" />
+		<node X="52551" Y="75206" />
+		<node X="54933" Y="76938" />
+		<node X="54396" Y="79397" />
+		<node X="55784" Y="80902" />
+		<node X="55439" Y="83143" />
+		<node X="53122" Y="83309" />
+		<node X="54339" Y="85836" />
+		<node X="53134" Y="88170" />
+		<node X="49728" Y="88941" />
+		<node X="46450" Y="86985" />
+		<node X="43025" Y="88687" />
+		<node X="41242" Y="87297" />
+		<node X="42002" Y="83559" />
+		<node X="38737" Y="83170" />
+		<node X="37219" Y="81068" />
+		<node X="37592" Y="79682" />
+		<node X="39704" Y="75696" />
+		<node X="36919" Y="70835" />
+	</zone>
+	<zone name="fishing_timak_outpost" type="FishingZone" shape="NPoly" minZ="-3800" maxZ="-3400">
+		<node X="67682" Y="74746" />
+		<node X="65873" Y="75643" />
+		<node X="65608" Y="85213" />
+		<node X="66036" Y="90979" />
+		<node X="68309" Y="93296" />
+		<node X="71879" Y="93933" />
+		<node X="73345" Y="92695" />
+		<node X="68396" Y="89707" />
+		<node X="67808" Y="84939" />
+		<node X="68325" Y="76543" />
+	</zone>
+	<zone name="fishing_heine_1" type="FishingZone" shape="NPoly" minZ="-3650" maxZ="-3550">
+		<node X="112721" Y="224319" />
+		<node X="112726" Y="225389" />
+		<node X="110020" Y="225385" />
+		<node X="110046" Y="224315" />
+		<node X="109772" Y="224294" />
+		<node X="109653" Y="226065" />
+		<node X="113278" Y="226285" />
+		<node X="113062" Y="224240" />
 	</zone>
 </list>
