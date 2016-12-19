@@ -365,7 +365,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
 				instance.setStatus(3); // Used for notify helper's AI
 			}
-			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && (instance.getAliveNpcs(MONSTERS).size() <= 1))
+			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && instance.getAliveNpcs(MONSTERS).isEmpty())
 			{
 				param.set("CONTINUE_AFTER_KILL", false);
 				getTimers().addTimer("CALL_PROGRESS", 5000, n -> manageProgressInInstance(instance));

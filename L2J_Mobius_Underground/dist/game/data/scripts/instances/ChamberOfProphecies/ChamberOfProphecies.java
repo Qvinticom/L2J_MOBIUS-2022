@@ -160,7 +160,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 						npc.setIsRunning(true);
 						((L2Attackable) npc).setCanReturnToSpawnPoint(false);
 						((L2Attackable) npc).setCanStopAttackByTime(false);
-						if (npc.isScriptValue(0) && ((world.getAliveNpcs(ATTACABLE_MONSTERS).size() < 2) || world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty()))
+						if (npc.isScriptValue(0) && world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
 						{
 							npc.setTarget(player);
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);

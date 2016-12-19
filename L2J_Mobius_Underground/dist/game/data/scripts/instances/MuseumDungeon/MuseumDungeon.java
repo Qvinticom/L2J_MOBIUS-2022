@@ -235,7 +235,7 @@ public final class MuseumDungeon extends AbstractInstance
 		{
 			final L2PcInstance player = world.getFirstPlayer();
 			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
-			if ((qs != null) && qs.isCond(2) && (world.getAliveNpcs(THIEF).size() <= 1))
+			if ((qs != null) && qs.isCond(2) && world.getAliveNpcs(THIEF).isEmpty())
 			{
 				qs.setCond(3, true);
 				showOnScreenMsg(player, NpcStringId.TALK_TO_TOYRON_TO_RETURN_TO_THE_MUSEUM_LOBBY, ExShowScreenMessage.TOP_CENTER, 4500);

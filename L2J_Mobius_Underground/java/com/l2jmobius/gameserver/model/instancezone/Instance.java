@@ -549,7 +549,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public Set<L2Npc> getAliveNpcs()
 	{
-		return _npcs.stream().filter(n -> !n.isDead()).collect(Collectors.toSet());
+		return _npcs.stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toSet());
 	}
 	
 	/**
@@ -585,7 +585,7 @@ public final class Instance implements IIdentifiable, INamable
 	@SafeVarargs
 	public final <T extends L2Character> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
-		return _npcs.stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && !n.isDead()).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		return _npcs.stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
 	
 	/**
@@ -595,7 +595,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public List<L2Npc> getAliveNpcs(int... id)
 	{
-		return _npcs.stream().filter(n -> !n.isDead() && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		return _npcs.stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
 	
 	/**
