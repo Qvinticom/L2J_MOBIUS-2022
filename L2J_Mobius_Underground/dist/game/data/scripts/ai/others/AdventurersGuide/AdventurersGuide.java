@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 import ai.AbstractNpcAI;
 
@@ -121,13 +122,13 @@ public final class AdventurersGuide extends AbstractNpcAI
 		
 		for (SkillHolder holder : GROUP_BUFFS)
 		{
-			holder.getSkill().applyEffects(npc, player);
+			SkillCaster.triggerCast(npc, player, holder.getSkill());
 		}
-		skill.applyEffects(npc, player);
+		SkillCaster.triggerCast(npc, player, skill);
 		
 		if ((player.getLevel() < 40) && (player.getClassId().level() <= 1))
 		{
-			BLESS_PROTECTION.getSkill().applyEffects(npc, player);
+			SkillCaster.triggerCast(npc, player, BLESS_PROTECTION.getSkill());
 		}
 		return null;
 	}

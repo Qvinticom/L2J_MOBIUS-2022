@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
@@ -90,7 +91,7 @@ public final class Proclaimer extends AbstractNpcAI
 		{
 			if (!player.isOnDarkSide())
 			{
-				XP_BUFF.getSkill().applyEffects(npc, player);
+				SkillCaster.triggerCast(npc, player, XP_BUFF.getSkill());
 			}
 			else
 			{

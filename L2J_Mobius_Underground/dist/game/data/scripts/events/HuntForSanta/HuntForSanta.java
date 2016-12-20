@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -97,8 +97,7 @@ public final class HuntForSanta extends LongTimeEvent
 	private String applyBuff(L2Npc npc, L2PcInstance player, Skill skill)
 	{
 		removeBuffs(player);
-		npc.broadcastPacket(new MagicSkillUse(npc, player, skill.getId(), 1, 0, 0));
-		skill.applyEffects(npc, player);
+		SkillCaster.triggerCast(npc, player, skill);
 		return "34008-2.htm";
 	}
 	
@@ -111,10 +110,9 @@ public final class HuntForSanta extends LongTimeEvent
 				if (Util.calculateDistance(npc, member, false, false) < 500)
 				{
 					removeBuffs(member);
-					npc.broadcastPacket(new MagicSkillUse(npc, member, BUFF_STOCKING.getSkillId(), 1, 0, 0));
-					BUFF_STOCKING.getSkill().applyEffects(npc, member);
-					BUFF_TREE.getSkill().applyEffects(npc, member);
-					BUFF_SNOWMAN.getSkill().applyEffects(npc, member);
+					SkillCaster.triggerCast(npc, member, BUFF_STOCKING.getSkill());
+					SkillCaster.triggerCast(npc, member, BUFF_TREE.getSkill());
+					SkillCaster.triggerCast(npc, member, BUFF_SNOWMAN.getSkill());
 				}
 			}
 			return "34008-2.htm";

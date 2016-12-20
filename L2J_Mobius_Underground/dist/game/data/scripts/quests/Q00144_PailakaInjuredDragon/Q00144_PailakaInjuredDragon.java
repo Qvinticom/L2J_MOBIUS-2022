@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 /**
  * @author Mathael
@@ -215,7 +216,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (BUFF_COUNT < 5)
 				{
 					final int key = Integer.parseInt(event.substring(request.length() + 1)) - 1;
-					BUFFS[key].getSkill().applyEffects(npc, player);
+					SkillCaster.triggerCast(npc, player, BUFFS[key].getSkill());
 					BUFF_COUNT++;
 					if (BUFF_COUNT < 5)
 					{
