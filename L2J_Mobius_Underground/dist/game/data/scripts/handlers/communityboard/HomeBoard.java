@@ -31,6 +31,8 @@ import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
@@ -148,17 +150,36 @@ public final class HomeBoard implements IParseBoardHandler
 			else
 			{
 				activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, activeChar);
-				SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar, activeChar);
-				if (activeChar.getServitors().size() > 0)
+				final Skill skill = SkillData.getInstance().getSkill(buffId, buffLevel);
+				if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)
 				{
-					for (L2Summon summon : activeChar.getServitors().values())
+					SkillCaster.triggerCast(activeChar, activeChar, skill);
+					if (activeChar.getServitors().size() > 0)
 					{
-						SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(summon, summon);
+						for (L2Summon summon : activeChar.getServitors().values())
+						{
+							SkillCaster.triggerCast(summon, summon, skill);
+						}
+					}
+					if (activeChar.hasPet())
+					{
+						SkillCaster.triggerCast(activeChar.getPet(), activeChar.getPet(), skill);
 					}
 				}
-				if (activeChar.hasPet())
+				else
 				{
-					SkillData.getInstance().getSkill(buffId, buffLevel).applyEffects(activeChar.getPet(), activeChar.getPet());
+					skill.applyEffects(activeChar, activeChar);
+					if (activeChar.getServitors().size() > 0)
+					{
+						for (L2Summon summon : activeChar.getServitors().values())
+						{
+							skill.applyEffects(summon, summon);
+						}
+					}
+					if (activeChar.hasPet())
+					{
+						skill.applyEffects(activeChar.getPet(), activeChar.getPet());
+					}
 				}
 			}
 			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);

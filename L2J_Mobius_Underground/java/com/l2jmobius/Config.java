@@ -661,6 +661,7 @@ public final class Config
 	public static int COMMUNITYBOARD_BUFF_PRICE;
 	public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
 	public static boolean COMMUNITYBOARD_KARMA_DISABLED;
+	public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
 	public static int FACTION_MANAGER_NPCID;
@@ -2106,6 +2107,7 @@ public final class Config
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
 			COMMUNITYBOARD_COMBAT_DISABLED = CustomSettings.getBoolean("CommunityCombatDisabled", true);
 			COMMUNITYBOARD_KARMA_DISABLED = CustomSettings.getBoolean("CommunityKarmaDisabled", true);
+			COMMUNITYBOARD_CAST_ANIMATIONS = CustomSettings.getBoolean("CommunityCastAnimations", false);
 			
 			String[] tempString;
 			FACTION_SYSTEM_ENABLED = Boolean.valueOf(CustomSettings.getBoolean("EnableFactionSystem", false));
