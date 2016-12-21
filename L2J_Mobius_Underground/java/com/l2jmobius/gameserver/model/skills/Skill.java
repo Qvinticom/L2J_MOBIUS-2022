@@ -1229,6 +1229,13 @@ public final class Skill implements IIdentifiable
 					{
 						info.addEffect(effect);
 					}
+					
+					// tempfix for hp/mp regeneration
+					// TODO: Find where regen stops and make a proper fix
+					if (info.getEffected().isPlayer() && !info.getSkill().isBad())
+					{
+						info.getEffected().getActingPlayer().getStatus().startHpMpRegeneration();
+					}
 				}
 			}
 		}
