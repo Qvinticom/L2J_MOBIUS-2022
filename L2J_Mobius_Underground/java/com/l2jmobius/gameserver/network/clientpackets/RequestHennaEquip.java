@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.items.L2Henna;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
+import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -79,6 +80,7 @@ public final class RequestHennaEquip implements IClientIncomingPacket
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(activeChar.getInventory().getAdenaInstance());
 			activeChar.sendInventoryUpdate(iu);
+			activeChar.sendPacket(new HennaEquipList(activeChar));
 			activeChar.sendPacket(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED);
 		}
 		else
