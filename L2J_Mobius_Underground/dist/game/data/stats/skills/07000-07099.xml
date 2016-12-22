@@ -336,21 +336,21 @@
 		<table name="#pAtkSpd"> 2 3 4 5 </table> <!-- Retail value: 2 3 3 2 -->
 		<table name="#reuse"> 0.01 0.01 0.01 0.01 </table> <!-- Retail value: 0.01 0.01 0.01 1 -->
 		<table name="#runSpd"> 2 3 4 5 </table> <!-- Retail value: 2 3 3 1 -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
 		<icon>icon.skill7029</icon>
 		<magicLvl>1</magicLvl>
-		<operateType>A2</operateType>
+		<operateType>T</operateType>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<targetType>NONE</targetType>
 		<effects>
+			<effect name="MpConsumePerLevel">
+				<power>0.0001</power>
+				<ticks>5</ticks>
+			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">0</value>
