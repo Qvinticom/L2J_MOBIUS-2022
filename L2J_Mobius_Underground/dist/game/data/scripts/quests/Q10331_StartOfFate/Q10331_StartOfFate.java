@@ -148,6 +148,8 @@ public final class Q10331_StartOfFate extends Quest
 			case "32146-03.htm":
 			{
 				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				showOnScreenMsg(player, NpcStringId.GO_TO_THE_ENTRANCE_OF_THE_RUINS_OF_YE_SAGIRA_THROUGH_GATEKEEPER_MILIA_IN_TALKING_ISLAND_VILLAGE, ExShowScreenMessage.TOP_CENTER, 4500);
 				htmltext = event;
 				break;

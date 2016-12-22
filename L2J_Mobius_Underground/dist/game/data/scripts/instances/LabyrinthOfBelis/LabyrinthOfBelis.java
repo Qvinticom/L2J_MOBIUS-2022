@@ -63,6 +63,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	// Locations
 	private static final Location INFILTRATION_OFFICER_ROOM_2 = new Location(-117040, 212502, -8592);
 	private static final Location INFILTRATION_OFFICER_ROOM_3 = new Location(-117843, 214230, -8592);
+	private static final Location INFILTRATION_OFFICER_ROOM_3_INSIDE = new Location(-118248, 214676, -8590);
 	private static final Location INFILTRATION_OFFICER_ROOM_4 = new Location(-119217, 213743, -8600);
 	private static final Location SPAWN_ATTACKERS = new Location(-116809, 213275, -8606);
 	private static final Location GENERATOR_SPAWN = new Location(-118333, 214791, -8557);
@@ -143,18 +144,21 @@ public final class LabyrinthOfBelis extends AbstractInstance
 							world.openCloseDoor(DOOR_ID_ROOM_3_2, true);
 							
 							final L2Npc generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN, false, 0, true, world.getId());
+							generator.reduceCurrentHp(1, npc, null);
+							generator.setDisplayEffect(1);
+							generator.disableCoreAI(true);
 							
 							npc.setScriptValue(1);
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE);
 							npc.setTarget(generator);
-							((L2Attackable) npc).addDamageHate(generator, 0, 9999);
-							npc.reduceCurrentHp(1, generator, null); // TODO: Find better way for attack
 							
-							generator.reduceCurrentHp(1, npc, null);
-							generator.setDisplayEffect(1);
+							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, INFILTRATION_OFFICER_ROOM_3_INSIDE);
 							
 							getTimers().addRepeatingTimer("MESSAGE", 7000, npc, null);
 							getTimers().addRepeatingTimer("ATTACKERS", 12500, npc, player);
+							
+							((L2Attackable) npc).addDamageHate(generator, 0, 9999);
+							npc.reduceCurrentHp(1, generator, null); // TODO: Find better way for attack
 						}
 						break;
 					}
