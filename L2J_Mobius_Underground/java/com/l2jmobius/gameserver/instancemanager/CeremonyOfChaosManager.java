@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.CategoryType;
@@ -395,6 +396,11 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	private void OnPlayerLogin(OnPlayerLogin event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		if (getState() == CeremonyOfChaosState.REGISTRATION)
 		{
 			final L2PcInstance player = event.getActiveChar();

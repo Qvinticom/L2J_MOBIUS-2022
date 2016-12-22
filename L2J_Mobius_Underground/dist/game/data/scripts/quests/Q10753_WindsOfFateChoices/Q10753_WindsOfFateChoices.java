@@ -19,6 +19,7 @@ package quests.Q10753_WindsOfFateChoices;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
@@ -757,6 +758,11 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
@@ -781,6 +787,11 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		

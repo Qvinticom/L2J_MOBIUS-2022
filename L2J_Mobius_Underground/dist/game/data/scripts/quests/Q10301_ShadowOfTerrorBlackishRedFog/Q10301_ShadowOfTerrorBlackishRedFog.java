@@ -16,6 +16,7 @@
  */
 package quests.Q10301_ShadowOfTerrorBlackishRedFog;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -241,6 +242,11 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		
@@ -255,6 +261,11 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		

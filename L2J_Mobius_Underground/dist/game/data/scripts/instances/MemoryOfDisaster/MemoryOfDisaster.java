@@ -19,6 +19,7 @@ package instances.MemoryOfDisaster;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -1022,6 +1023,11 @@ public final class MemoryOfDisaster extends AbstractInstance
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR))
 		{
@@ -1037,6 +1043,11 @@ public final class MemoryOfDisaster extends AbstractInstance
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
+		if (Config.DISABLE_TUTORIAL)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = event.getActiveChar();
 		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR))
 		{
