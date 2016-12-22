@@ -303,7 +303,9 @@ public final class Q10331_StartOfFate extends Quest
 					}
 					player.setBaseClass(newClassId);
 					player.setClassId(newClassId.getId());
+					player.store(false);
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					giveAdena(player, 80000, true);
 					giveItems(player, PROOF_OF_COURAGE, 40);
 					addExpAndSp(player, 200000, 48);

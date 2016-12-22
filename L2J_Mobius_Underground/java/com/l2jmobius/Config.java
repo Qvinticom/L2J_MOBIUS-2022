@@ -144,7 +144,6 @@ public final class Config
 	public static boolean LIFE_CRYSTAL_NEEDED;
 	public static boolean ES_SP_BOOK_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
-	public static boolean ALT_GAME_SKILL_LEARN;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
 	public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
 	public static int FEE_DELETE_TRANSFER_SKILLS;
@@ -1330,7 +1329,6 @@ public final class Config
 			LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
 			ES_SP_BOOK_NEEDED = Character.getBoolean("EnchantSkillSpBookNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
-			ALT_GAME_SKILL_LEARN = Character.getBoolean("AltGameSkillLearn", false);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
 			RESTORE_SERVITOR_ON_RECONNECT = Character.getBoolean("RestoreServitorOnReconnect", true);
 			RESTORE_PET_ON_RECONNECT = Character.getBoolean("RestorePetOnReconnect", true);

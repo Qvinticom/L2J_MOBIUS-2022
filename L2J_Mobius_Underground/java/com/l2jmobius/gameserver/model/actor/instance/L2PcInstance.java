@@ -2385,27 +2385,6 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	/**
-	 * Used for AltGameSkillLearn to set a custom skill learning class Id.
-	 */
-	private ClassId _learningClass = getClassId();
-	
-	/**
-	 * @return the custom skill learning class Id.
-	 */
-	public ClassId getLearningClass()
-	{
-		return _learningClass;
-	}
-	
-	/**
-	 * @param learningClass the custom skill learning class Id to set.
-	 */
-	public void setLearningClass(ClassId learningClass)
-	{
-		_learningClass = learningClass;
-	}
-	
-	/**
 	 * @return the Experience of the L2PcInstance.
 	 */
 	public long getExp()
@@ -9635,8 +9614,6 @@ public final class L2PcInstance extends L2Playable
 				}
 			}
 			_classIndex = classIndex;
-			
-			setLearningClass(getClassId());
 			
 			if (isInParty())
 			{

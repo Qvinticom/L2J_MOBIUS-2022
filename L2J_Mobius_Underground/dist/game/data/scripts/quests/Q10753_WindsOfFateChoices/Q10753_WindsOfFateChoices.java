@@ -321,6 +321,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					player.setBaseClass(newClass);
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveStoryQuestReward(player, 400);
@@ -339,6 +340,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					player.setBaseClass(newClass);
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
 					showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveStoryQuestReward(player, 400);

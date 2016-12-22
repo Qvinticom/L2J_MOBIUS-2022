@@ -209,6 +209,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					player.setBaseClass(newClass);
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 23));
 					giveAdena(player, 11000, false);
 					giveItems(player, NAVARI_SUPPORT_BOX_MAGE, 1);
@@ -225,6 +226,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					player.setBaseClass(newClass);
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 23));
 					giveAdena(player, 11000, false);
 					giveItems(player, NAVARI_SUPPORT_BOX_FIGHTER, 1);

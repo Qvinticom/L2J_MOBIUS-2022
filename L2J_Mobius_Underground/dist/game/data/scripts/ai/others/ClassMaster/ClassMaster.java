@@ -32,9 +32,12 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
@@ -49,7 +52,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPress
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
@@ -409,10 +411,18 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
-					player.broadcastUserInfo();
-					player.sendPacket(new AcquireSkillList(player));
+					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
+					{
+						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+						{
+							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+						}
+					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
+					player.broadcastUserInfo();
+					player.sendSkillList();
+					player.sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
 					return "test_server_helper021.html";
 				}
 				break;
@@ -779,7 +789,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			player.sendPacket(new AcquireSkillList(player));
+			player.sendSkillList();
 			return true;
 		}
 	}

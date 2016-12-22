@@ -215,6 +215,7 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 					player.setBaseClass(newClass);
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
 					giveAdena(player, 5_000_000, false);
 					giveItems(player, SOUL_SHOT_PACK, 1);
@@ -233,6 +234,7 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 					player.setBaseClass(newClass);
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
 					giveAdena(player, 5_000_000, false);
 					giveItems(player, SOUL_SHOT_PACK, 1);

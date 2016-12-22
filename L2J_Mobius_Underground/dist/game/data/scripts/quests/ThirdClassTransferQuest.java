@@ -238,6 +238,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 					player.setBaseClass(newClassId);
 					player.setClassId(newClassId.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					giveItems(player, SOUL_SHOT_PACK, 1);
 					giveItems(player, SPIRIT_SHOT_PACK, 1);
 					giveItems(player, STEEL_DOOR_COIN, 87);

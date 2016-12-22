@@ -32,12 +32,14 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
@@ -50,7 +52,6 @@ import com.l2jmobius.gameserver.model.html.PageResult;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.client.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import com.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
@@ -411,16 +412,20 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
-					player.storeMe();
-					player.sendMessage("A GM changed your class to " + newclass + ".");
-					player.broadcastUserInfo();
 					if (player.isInCategory(CategoryType.AWAKEN_GROUP))
 					{
 						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+						for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+						{
+							player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+						}
 					}
+					player.store(false);
+					player.broadcastUserInfo();
+					player.sendSkillList();
 					player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 					player.sendPacket(new ExUserInfoInvenWeight(player));
-					player.sendPacket(new AcquireSkillList(player));
+					player.sendMessage("A GM changed your class to " + newclass + ".");
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
 				}
 				else

@@ -118,8 +118,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 			}
 			case CLASS:
 			{
-				final int customSp = s.getCalculatedLevelUpSp(activeChar.getClassId(), activeChar.getLearningClass());
-				client.sendPacket(new ExAcquireSkillInfo(activeChar, s, customSp));
+				client.sendPacket(new ExAcquireSkillInfo(activeChar, s));
 				break;
 			}
 			case PLEDGE:

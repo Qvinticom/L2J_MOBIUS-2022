@@ -21,10 +21,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.base.SocialClass;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -274,38 +272,6 @@ public final class L2SkillLearn
 	public int getPointsRequired()
 	{
 		return _pointsRequired;
-	}
-	
-	/**
-	 * Used for AltGameSkillLearn mod.<br>
-	 * If the alternative skill learn system is enabled and the player is learning a skill from a different class apply a fee.<br>
-	 * If the player is learning a skill from other class type (mage learning warrior skills or vice versa) the fee is higher.
-	 * @param playerClass the player class Id.
-	 * @param learningClass the skill learning player class Id.
-	 * @return the amount of SP required to acquire this skill, by calculating the cost for the alternative skill learn system.
-	 */
-	public int getCalculatedLevelUpSp(ClassId playerClass, ClassId learningClass)
-	{
-		if ((playerClass == null) || (learningClass == null))
-		{
-			return _levelUpSp;
-		}
-		
-		int levelUpSp = _levelUpSp;
-		// If the alternative skill learn system is enabled and the player is learning a skill from a different class apply a fee.
-		if (Config.ALT_GAME_SKILL_LEARN && (playerClass != learningClass))
-		{
-			// If the player is learning a skill from other class type (mage learning warrior skills or vice versa) the fee is higher.
-			if (playerClass.isMage() != learningClass.isMage())
-			{
-				levelUpSp *= 3;
-			}
-			else
-			{
-				levelUpSp *= 2;
-			}
-		}
-		return levelUpSp;
 	}
 	
 	@Override

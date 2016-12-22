@@ -212,6 +212,7 @@ public final class Q10360_CertificationOfFate extends Quest
 					player.setBaseClass(newClassId);
 					player.setClassId(newClassId.getId());
 					player.broadcastUserInfo();
+					player.sendSkillList();
 					giveAdena(player, 110000, true);
 					giveItems(player, PROOF_OF_JUSTICE, 40);
 					addExpAndSp(player, 2700000, 648);

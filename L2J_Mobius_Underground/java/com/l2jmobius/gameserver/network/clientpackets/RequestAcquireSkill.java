@@ -575,7 +575,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				// First it checks that the skill require SP and the player has enough SP to learn it.
-				final int levelUpSp = skillLearn.getCalculatedLevelUpSp(player.getClassId(), player.getLearningClass());
+				final int levelUpSp = skillLearn.getLevelUpSp();
 				if ((levelUpSp > 0) && (levelUpSp > player.getSp()))
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
