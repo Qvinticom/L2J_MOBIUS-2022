@@ -70,8 +70,6 @@ public final class Q10343_DayOfDestinyDarkElfsFate extends ThirdClassTransferQue
 			case "30862-05.htm":
 			{
 				qs.startQuest();
-				qs.setCond(2); // arrow hack
-				qs.setCond(1);
 				qs.set("STARTED_CLASS", player.getClassId().getId());
 				htmltext = event;
 				break;

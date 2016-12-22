@@ -70,8 +70,6 @@ public final class Q10346_DayOfDestinyKamaelsFate extends ThirdClassTransferQues
 			case "32221-05.htm":
 			{
 				qs.startQuest();
-				qs.setCond(2); // arrow hack
-				qs.setCond(1);
 				qs.set("STARTED_CLASS", player.getClassId().getId());
 				htmltext = event;
 				break;
