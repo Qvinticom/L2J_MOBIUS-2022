@@ -85,7 +85,7 @@ public class AdminInvul implements IAdminCommandHandler
 		if (activeChar.isInvul())
 		{
 			activeChar.setIsInvul(false);
-			text = activeChar.getName() + " is now mortal";
+			text = activeChar.getName() + " is now mortal.";
 			if (Config.DEBUG)
 			{
 				_log.finer("GM: Gm removed invul mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
@@ -94,7 +94,7 @@ public class AdminInvul implements IAdminCommandHandler
 		else
 		{
 			activeChar.setIsInvul(true);
-			text = activeChar.getName() + " is now invulnerable";
+			text = activeChar.getName() + " is now invulnerable.";
 			if (Config.DEBUG)
 			{
 				_log.finer("GM: Gm activated invul mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
@@ -109,7 +109,7 @@ public class AdminInvul implements IAdminCommandHandler
 		if (activeChar.isUndying())
 		{
 			activeChar.setUndying(false);
-			text = activeChar.getName() + " is now mortal";
+			text = activeChar.getName() + " is now mortal.";
 			if (Config.DEBUG)
 			{
 				_log.finer("GM: Gm removed undying mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
@@ -118,7 +118,7 @@ public class AdminInvul implements IAdminCommandHandler
 		else
 		{
 			activeChar.setUndying(true);
-			text = activeChar.getName() + " is now undying";
+			text = activeChar.getName() + " is now undying.";
 			if (Config.DEBUG)
 			{
 				_log.finer("GM: Gm activated undying mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
