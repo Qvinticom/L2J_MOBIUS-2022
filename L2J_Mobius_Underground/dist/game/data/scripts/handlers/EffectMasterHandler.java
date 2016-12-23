@@ -264,6 +264,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("Resurrection", Resurrection::new);
 		EffectHandler.getInstance().registerHandler("ResurrectionSpecial", ResurrectionSpecial::new);
 		EffectHandler.getInstance().registerHandler("Reuse", Reuse::new);
+		EffectHandler.getInstance().registerHandler("RewardItemOnExit",RewardItemOnExit::new);
 		EffectHandler.getInstance().registerHandler("Root", Root::new);
 		EffectHandler.getInstance().registerHandler("SafeFallHeight", SafeFallHeight::new);
 		EffectHandler.getInstance().registerHandler("SendSystemMessageToClan", SendSystemMessageToClan::new);

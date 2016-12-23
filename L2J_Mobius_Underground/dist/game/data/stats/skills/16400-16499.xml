@@ -176,10 +176,13 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16419" toLevel="2" name="Stocking Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., STR + 3, INT + 3, Speed + 7. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_present_i00</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<abnormalVisualEffect>XMAS_SOCKS</abnormalVisualEffect>
 		<castRange>900</castRange>
 		<hitTime>
 			<value level="1">1000</value>
@@ -187,12 +190,33 @@
 		</hitTime>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
+		<effects>
+		    <effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="RewardItemOnExit">
+				<itemId>40313</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16420" toLevel="2" name="Tree Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., CON + 3, MEN + 3, P. Critical Rate + 30, M. Critical Rate + 30. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<abnormalVisualEffect>XMAS_TREE</abnormalVisualEffect>
 		<castRange>900</castRange>
 		<hitTime>
 			<value level="1">1000</value>
@@ -200,12 +224,37 @@
 		</hitTime>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
+		<effects>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>30</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="RewardItemOnExit">
+				<itemId>40313</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16421" toLevel="2" name="Snowman Fairy's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 2 hr., DEX + 3, WIT + 3, Max HP/MP + 2013. Can obtain item after 2 hr. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7200</abnormalTime>
+		<abnormalType>BR_EVENT_BUF2</abnormalType>
+		<abnormalVisualEffect>XMAS_SNOWMAN</abnormalVisualEffect>
 		<castRange>900</castRange>
 		<hitTime>
 			<value level="1">1000</value>
@@ -213,6 +262,28 @@
 		</hitTime>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
+		<effects>
+		    <effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="MaxHp">
+				<amount>2013</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>2013</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="RewardItemOnExit">
+				<itemId>40313</itemId>
+				<itemCount>1</itemCount>
+			</effect>
+		</effects>	
 	</skill>
 	<skill id="16422" toLevel="1" name="Winter Holiday Reward">
 		<!-- AUTO GENERATED SKILL -->

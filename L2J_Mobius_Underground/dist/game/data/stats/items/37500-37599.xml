@@ -469,17 +469,30 @@
 		<set name="icon" val="icon.armor_ev_santas_clothes" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="alldress" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />		
 	</item>
 	<item id="37535" name="Santa Hat" type="Armor">
 		<!-- Santa Hat. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="is_freightable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="hairall" /> 
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37536" name="Santa's Blessing" type="EtcItem">
 		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death. Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->

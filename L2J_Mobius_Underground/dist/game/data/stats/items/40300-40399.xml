@@ -138,9 +138,17 @@
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. Only for hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_HAIRACC_FIXED" />
+		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 	</item>
 	<item id="40311" name="Noelle's Gift" type="EtcItem">
 		<!-- Double-click to recover Vitality while in peaceful zones. A set amount of Vitality is also restored when the buff is about to expire. 6-hour. -->
@@ -157,6 +165,8 @@
 		<!-- Light and cozy cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -310,10 +320,15 @@
 	<item id="40330" name="Appearance Stone: Santa Suit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Santa Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_sellable" val="false" />		
 	</item>
 	<item id="40331" name="Magic Staff Set of Fortune" additionalName="90-day" type="EtcItem">
 		<!-- Use to receive 5 magic staff weapons (S - C-grade). Disappears after 90 days if unused. -->

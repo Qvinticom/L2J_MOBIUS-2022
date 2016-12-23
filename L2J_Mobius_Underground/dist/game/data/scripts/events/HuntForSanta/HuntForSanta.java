@@ -38,6 +38,8 @@ public final class HuntForSanta extends LongTimeEvent
 	private static final SkillHolder BUFF_STOCKING = new SkillHolder(16419, 1);
 	private static final SkillHolder BUFF_TREE = new SkillHolder(16420, 1);
 	private static final SkillHolder BUFF_SNOWMAN = new SkillHolder(16421, 1);
+	// Item
+	// private static final int SANTAS_MARK = 40313;
 	
 	private HuntForSanta()
 	{
