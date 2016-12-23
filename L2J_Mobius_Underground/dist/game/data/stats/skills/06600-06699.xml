@@ -1328,7 +1328,6 @@
 	</skill>
 	<skill id="6618" toLevel="7" name="Maguen Strike">
 		<!-- Moving Spd. Is decreased by 50% for 10 seconds. -->
-		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1385,7 +1384,6 @@
 	</skill>
 	<skill id="6619" toLevel="7" name="Maguen Power Strike">
 		<!-- Moving Spd. Is decreased by 90% for 10 seconds. -->
-		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1441,8 +1439,6 @@
 		</effects>
 	</skill>
 	<skill id="6620" toLevel="7" name="Maguen Plasma">
-		<table name="#mAtk"> 5 10 15 20 25 30 35 </table>
-		<table name="#pAtk"> 100 150 200 250 300 350 400 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1490,8 +1486,6 @@
 		</effects>
 	</skill>
 	<skill id="6621" toLevel="7" name="Maguen Plasma">
-		<table name="#mAtk"> 15 20 25 30 35 40 45 </table>
-		<table name="#pAtk"> 200 250 300 350 400 450 500 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>

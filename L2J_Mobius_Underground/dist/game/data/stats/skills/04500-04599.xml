@@ -750,9 +750,6 @@
 		</effects>
 	</skill>
 	<skill id="4544" toLevel="3" name="Weakness">
-		<table name="#pAtk"> 0.7 0.6 0.5 </table>
-		<table name="#pAtkSpd"> 0.9 0.8 0.6 </table>
-		<table name="#pDef"> 0.8 0.6 0.7 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -890,8 +887,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4551" toLevel="10" name="Hot Springs Rheumatism">
-		<table name="#pDef"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
-		<table name="#rCrit"> 30 50 80 100 50 0 0 0 0 0 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -957,8 +952,6 @@
 		</effects>
 	</skill>
 	<skill id="4552" toLevel="10" name="Hot Springs Cholera">
-		<table name="#accCombat"> 3 6 8 10 6 0 0 0 0 0 </table>
-		<table name="#rEvas"> 0 3 3 3 5 5 5 8 8 10 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1024,8 +1017,6 @@
 		</effects>
 	</skill>
 	<skill id="4553" toLevel="10" name="Hot Springs Flu">
-		<table name="#pAtk"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.85 </table>
-		<table name="#pAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1091,8 +1082,6 @@
 		</effects>
 	</skill>
 	<skill id="4554" toLevel="10" name="Hot Spring Malaria">
-		<table name="#mAtkSpd"> 1.04 1.08 1.12 1.16 1.08 1 1 1 1 1 </table>
-		<table name="#MpConsumeRate"> 1 0.96 0.96 0.96 0.92 0.92 0.92 0.88 0.88 0.84 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1256,7 +1245,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="4560" toLevel="12" name="Fire Burn">
-		<table name="#power"> 13 15 18 20 23 26 29 32 35 38 42 44 </table>
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -1319,7 +1307,6 @@
 		</effects>
 	</skill>
 	<skill id="4561" toLevel="12" name="Fire Burn">
-		<table name="#power"> 13 15 18 20 23 26 29 32 35 38 42 44 </table>
 		<castRange>150</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>650</effectRange>
@@ -1381,7 +1368,6 @@
 		</effects>
 	</skill>
 	<skill id="4562" toLevel="12" name="Solar Flare">
-		<table name="#power"> 22 33 47 65 85 107 127 137 145 152 157 161 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1457,7 +1443,6 @@
 		</effects>
 	</skill>
 	<skill id="4563" toLevel="12" name="Solar Flare">
-		<table name="#power"> 22 33 47 65 85 107 127 137 145 152 157 161 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1533,7 +1518,6 @@
 		</effects>
 	</skill>
 	<skill id="4564" toLevel="12" name="Solar Flare">
-		<table name="#power"> 11 17 24 33 43 54 64 69 73 76 79 81 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -1609,7 +1593,6 @@
 		</effects>
 	</skill>
 	<skill id="4565" toLevel="12" name="Rain of Fire">
-		<table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
 		<affectRange>100</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1673,7 +1656,6 @@
 		</effects>
 	</skill>
 	<skill id="4566" toLevel="12" name="Rain of Fire">
-		<table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
 		<affectRange>100</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1737,7 +1719,6 @@
 		</effects>
 	</skill>
 	<skill id="4567" toLevel="12" name="Rain of Fire">
-		<table name="#power"> 37 39 41 43 45 46 48 50 51 53 54 56 </table>
 		<affectRange>100</affectRange>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1801,7 +1782,6 @@
 		</effects>
 	</skill>
 	<skill id="4568" toLevel="12" name="Solar Flare">
-		<table name="#power"> 11 17 24 33 43 54 64 69 73 76 79 81 </table>
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1879,7 +1859,6 @@
 		</effects>
 	</skill>
 	<skill id="4569" toLevel="12" name="Solar Flare">
-		<table name="#power"> 11 17 24 33 43 54 64 69 73 76 79 81 </table>
 		<affectRange>200</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1957,7 +1936,6 @@
 		</effects>
 	</skill>
 	<skill id="4570" toLevel="12" name="Solar Flare">
-		<table name="#power"> 6 9 12 17 22 27 32 35 37 38 40 41 </table>
 		<affectRange>200</affectRange>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2035,7 +2013,6 @@
 		</effects>
 	</skill>
 	<skill id="4571" toLevel="12" name="Blazing Circle">
-		<table name="#power"> 42 44 46 48 50 52 55 57 58 60 62 64 </table>
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -2097,7 +2074,6 @@
 		</effects>
 	</skill>
 	<skill id="4572" toLevel="12" name="Triple Sonic Slash">
-		<table name="#power"> 92 210 438 833 1443 2272 3252 3752 4224 4640 4974 5233 </table>
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
@@ -2158,7 +2134,6 @@
 		</effects>
 	</skill>
 	<skill id="4573" toLevel="12" name="Sonic Blaster">
-		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2218,7 +2193,6 @@
 		</effects>
 	</skill>
 	<skill id="4574" toLevel="12" name="Sonic Storm">
-		<table name="#power"> 31 70 146 278 481 758 1084 1251 1408 1547 1658 1745 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2280,7 +2254,6 @@
 		</effects>
 	</skill>
 	<skill id="4575" toLevel="2" name="Haste">
-		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2323,7 +2296,6 @@
 		</effects>
 	</skill>
 	<skill id="4576" toLevel="3" name="Reflect Damage">
-		<table name="#reflectDam"> 10 15 20 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2371,8 +2343,6 @@
 		</effects>
 	</skill>
 	<skill id="4577" toLevel="12" name="Decrease Accuracy">
-		<table name="#accCombat"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2498,8 +2468,6 @@
 		</effects>
 	</skill>
 	<skill id="4579" toLevel="12" name="Bleed">
-		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
-		<table name="#power"> 137 314 656 1249 2164 3408 4878 5627 6335 6960 7461 7850 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2599,8 +2567,6 @@
 		</effects>
 	</skill>
 	<skill id="4580" toLevel="12" name="Decrease P. Atk.">
-		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2734,7 +2700,6 @@
 		</effects>
 	</skill>
 	<skill id="4582" toLevel="12" name="Poison">
-		<table name="#dmg"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2817,7 +2782,6 @@
 		</effects>
 	</skill>
 	<skill id="4583" toLevel="12" name="Decrease Speed">
-		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2898,7 +2862,6 @@
 		</effects>
 	</skill>
 	<skill id="4584" toLevel="12" name="Reducing P. Def Stun">
-		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -2997,13 +2960,6 @@
 		</effects>
 	</skill>
 	<skill id="4585" toLevel="3" name="Berserker Spirit">
-		<table name="#mAtk"> 1.1 1.1 1.16 </table>
-		<table name="#mAtkSpd"> 1.05 1.05 1.08 </table>
-		<table name="#mDef"> 0.9 0.9 0.84 </table>
-		<table name="#pAtk"> 1.13 1.18 1.24 </table>
-		<table name="#pAtkSpd"> 1.05 1.05 1.08 </table>
-		<table name="#pDef"> 0.95 0.95 0.92 </table>
-		<table name="#runSpd"> 5 5 8 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3102,7 +3058,6 @@
 		</effects>
 	</skill>
 	<skill id="4586" toLevel="12" name="Decrease Evasion">
-		<table name="#rEvas"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3184,8 +3139,6 @@
 		</effects>
 	</skill>
 	<skill id="4587" toLevel="12" name="Decrease P. Atk.">
-		<table name="#pAtk"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3269,13 +3222,6 @@
 		</effects>
 	</skill>
 	<skill id="4588" toLevel="2" name="Berserker Haste">
-		<table name="#mAtk"> 1.1 1.16 </table>
-		<table name="#mAtkSpd"> 1.05 1.08 </table>
-		<table name="#mDef"> 0.9 0.84 </table>
-		<table name="#pAtk"> 1.05 1.08 </table>
-		<table name="#pAtkSpd"> 1.2 1.44 </table>
-		<table name="#pDef"> 0.95 0.92 </table>
-		<table name="#runSpd"> 5 8 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3359,7 +3305,6 @@
 		</effects>
 	</skill>
 	<skill id="4589" toLevel="12" name="Decrease Speed">
-		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3445,7 +3390,6 @@
 		</effects>
 	</skill>
 	<skill id="4590" toLevel="12" name="Decrease Speed">
-		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3531,7 +3475,6 @@
 		</effects>
 	</skill>
 	<skill id="4591" toLevel="12" name="Decrease Speed">
-		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3617,8 +3560,6 @@
 		</effects>
 	</skill>
 	<skill id="4592" toLevel="12" name="Decrease P. Def.">
-		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3702,8 +3643,6 @@
 		</effects>
 	</skill>
 	<skill id="4593" toLevel="12" name="Decrease P. Def.">
-		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3787,8 +3726,6 @@
 		</effects>
 	</skill>
 	<skill id="4594" toLevel="12" name="Decrease P. Def.">
-		<table name="#pDef"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#time"> 5 10 10 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3872,8 +3809,6 @@
 		</effects>
 	</skill>
 	<skill id="4595" toLevel="3" name="Acumen Shield">
-		<table name="#mAtkSpd"> 1.15 1.23 1.3 </table>
-		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3928,7 +3863,6 @@
 		</effects>
 	</skill>
 	<skill id="4596" toLevel="12" name="Bleed">
-		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4012,7 +3946,6 @@
 		</effects>
 	</skill>
 	<skill id="4597" toLevel="12" name="Bleed">
-		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4096,7 +4029,6 @@
 		</effects>
 	</skill>
 	<skill id="4598" toLevel="12" name="Bleed">
-		<table name="#damage"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4180,7 +4112,6 @@
 		</effects>
 	</skill>
 	<skill id="4599" toLevel="12" name="Decrease Speed">
-		<table name="#runSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

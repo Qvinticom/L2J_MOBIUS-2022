@@ -1215,7 +1215,6 @@
 	</skill>
 	<skill id="22039" toLevel="2" name="XP Rune III (Lv. 1-99) 30%">
 		<!-- Confirmed CT2.5 -->
-		<table name="#bonusExp"> 30 50 </table>
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_3</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_exp_buff_5</value>
@@ -1235,7 +1234,6 @@
 	</skill>
 	<skill id="22040" toLevel="2" name="SP Rune 30%">
 		<!-- Confirmed CT2.5 -->
-		<table name="#bonusSp"> 30 50 </table>
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_3</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_sp_buff_5</value>
@@ -1636,9 +1634,6 @@
 	</skill>
 	<skill id="22053" toLevel="19" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
-		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 </table>
-		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 </table>
-		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 </table>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

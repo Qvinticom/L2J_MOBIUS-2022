@@ -2732,7 +2732,6 @@
 	<skill id="10786" toLevel="6" name="Time Bomb">
 		<!-- Glory Days confirmed -->
 		<!-- Plants a bomb on target that detonates after 10 seconds to inflict damage with 30000 power. While the bomb is being installed, target's P. Accuracy decreases by 10. -->
-		<table name="#triggerLvl"> 1 1 1 2 3 4 </table>
 		<icon>icon.skill10786</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2799,7 +2798,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Summons a Thunder Hawk. -->
-		<table name="#npcIds"> 14932 14940 14941 14942 14986 14987 14988 14989 </table>
 		<icon>icon.skill10787</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

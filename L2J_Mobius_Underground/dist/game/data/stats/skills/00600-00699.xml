@@ -157,8 +157,6 @@
 	</skill>
 	<skill id="611" toLevel="3" name="Fire Squad">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 0 0 100 </table>
-		<table name="#rCrit"> 0 15 15 </table>
 		<icon>icon.skill1463</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -188,8 +186,6 @@
 	</skill>
 	<skill id="612" toLevel="3" name="Water Squad">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mDef"> 0 17.6 17.6 </table>
-		<table name="#sDef"> 1 1 1.06 </table>
 		<icon>icon.skill1464</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -219,8 +215,6 @@
 	</skill>
 	<skill id="613" toLevel="3" name="Wind Squad">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rEvas"> 0 2 2 </table>
-		<table name="#runSpd"> 0 0 3 </table>
 		<icon>icon.skill1465</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -250,7 +244,6 @@
 	</skill>
 	<skill id="614" toLevel="3" name="Earth Squad">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mDef"> 17 31.1 44 </table>
 		<icon>icon.skill1466</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -268,8 +261,6 @@
 	</skill>
 	<skill id="615" toLevel="3" name="Holy Squad">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxMp"> 1 1.3 1.3 </table>
-		<table name="#MpConsumeRate"> 1 1 0.95 </table>
 		<icon>icon.skill1043</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -318,8 +309,6 @@
 	</skill>
 	<skill id="616" toLevel="3" name="Dark Squad">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 7.17 19.32 19.32 </table>
-		<table name="#mCritRate"> 1 1 1.01 </table>
 		<icon>icon.skill1443</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -491,9 +480,6 @@
 	</skill>
 	<skill id="622" toLevel="2" name="Ultimate Escape">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pSkillEvas"> 0 25 </table>
-		<table name="#rEvas"> 20 35 </table>
-		<table name="#runSpd"> 33 66 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>AVOID_UP_SPECIAL</abnormalType>
@@ -605,8 +591,6 @@
 	</skill>
 	<skill id="626" toLevel="4" name="Critical Sense">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtk"> 111 177 253 317 </table>
-		<table name="#rCrit"> 0.1 0.15 0.2 0.25 </table>
 		<icon>icon.skill0312</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -639,7 +623,6 @@
 	</skill>
 	<skill id="627" toLevel="40" name="Soul Shock">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -918,14 +901,6 @@
 	</skill>
 	<skill id="631" toLevel="6" name="Emergent Ability: Attack">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#pAtkAncient"> 9.1 17.4 24.8 31.4 37.2 41.4 </table>
-		<table name="#pAtkBow"> 21.7 41.4 59.2 75 88.8 98.7 </table>
-		<table name="#pAtkCBow"> 13.3 25.4 36.3 46 54.4 60.5 </table>
-		<table name="#pAtkDagger"> 7.4 14 20.1 25.4 30.1 33.4 </table>
-		<table name="#pAtkDSwordBlunt"> 1.8 3.5 5 6.3 7.4 8.3 </table>
-		<table name="#pAtkDual"> 10.2 19.5 27.9 35.3 41.8 46.5 </table>
-		<table name="#pAtkRapier"> 7.8 15 21.4 27.1 32.1 35.6 </table>
-		<table name="#pAtkSBP"> 8.4 16 22.9 29 34.4 38.2 </table>
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0141</icon>
 		<magicLvl>
@@ -1067,9 +1042,6 @@
 	</skill>
 	<skill id="632" toLevel="6" name="Emergent Ability: Defense">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pDefHeavy"> 17.9 35.7 53.6 71.4 89.3 107.1 </table>
-		<table name="#pDefLight"> 13.4 26.8 40.2 53.6 67 80.3 </table>
-		<table name="#pDefRobe"> 9 17.9 26.8 35.7 44.7 53.6 </table>
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0142</icon>
 		<magicLvl>
@@ -1129,7 +1101,6 @@
 	</skill>
 	<skill id="633" toLevel="6" name="Emergent Ability: Empower">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#matk"> 10.5 20.1 28.7 36.3 43 47.8 </table>
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0249</icon>
 		<magicLvl>
@@ -1158,7 +1129,6 @@
 	</skill>
 	<skill id="634" toLevel="6" name="Emergent Ability: M. Def.">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#mdef"> 15.1 30.2 45.4 60.5 75.6 90.7 </table>
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0146</icon>
 		<magicLvl>

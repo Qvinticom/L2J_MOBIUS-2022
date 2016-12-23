@@ -789,8 +789,6 @@
 		<!-- Lvl 1: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 30% and P. Def. and evasion are decreased 10%. -->
 		<!-- Lvl 2: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 60% and P. Def. and evasion are decreased 20%. -->
 		<!-- Lvl 3: Covered in hot and sticky tar. Movement is impaired. Due to the burning tar, for 5 minbutes, moving speed is decreased 90% and P. Def. and evasion are decreased 30%. -->
-		<table name="#pDef"> 0.9 0.8 0.7 </table>
-		<table name="#speed"> 0.7 0.4 0.1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1023,7 +1021,6 @@
 		<!-- Lvl 2 Only if 2 red eyes are present inside the zone -->
 		<!-- Lvl 3 Only if 3 red eyes are present inside the zone -->
 		<!-- Lvl 4 Only if 4 red eyes are present inside the zone -->
-		<table name="#pAtkSpd"> 1.02 1.04 1.06 1.08 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1087,7 +1084,6 @@
 		<!-- Lvl 2 Only if 2 green eyes are present inside the zone -->
 		<!-- Lvl 3 Only if 3 green eyes are present inside the zone -->
 		<!-- Lvl 4 Only if 4 green eyes are present inside the zone -->
-		<table name="#pAtk"> 1.02 1.04 1.06 1.08 </table>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
@@ -1151,7 +1147,6 @@
 		<!-- Lvl 2 Only if 2 blue eyes are present inside the zone -->
 		<!-- Lvl 3 Only if 3 blue eyes are present inside the zone -->
 		<!-- Lvl 4 Only if 4 blue eyes are present inside the zone -->
-		<table name="#rCrit"> 150 200 520 750 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>MAX_HP_DOWN</abnormalType>
@@ -1818,7 +1813,6 @@
 		</conditions>
 	</skill>
 	<skill id="6199" toLevel="7" name="Tail Strike">
-		<table name="#power"> 1832 2272 2751 3252 3752 4224 4640 </table>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-1044</value>

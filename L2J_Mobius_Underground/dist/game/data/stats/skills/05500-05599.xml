@@ -750,7 +750,6 @@
 	</skill>
 	<skill id="5529" toLevel="12" name="Surrender to Dark">
 		<!-- Confirmed CT2.5 -->
-		<table name="#vuln"> 15 15 15 25 25 25 30 30 30 50 50 50 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1256,7 +1255,6 @@
 		</effects>
 	</skill>
 	<skill id="5550" toLevel="12" name="Trigger Stun">
-		<table name="#triggeredLvl"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1346,7 +1344,6 @@
 		</effects>
 	</skill>
 	<skill id="5552" toLevel="12" name="Heal Up">
-		<table name="#power"> 10 20 30 40 50 60 70 80 90 100 110 120 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1385,7 +1382,6 @@
 		</effects>
 	</skill>
 	<skill id="5553" toLevel="12" name="Recovery">
-		<table name="#power"> 1.2 1.3 1.4 1.5 1.75 2 3 4 5 6 8.5 11 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1424,7 +1420,6 @@
 		</effects>
 	</skill>
 	<skill id="5554" toLevel="12" name="Enhanced Silence Resistance">
-		<table name="#trait_derangement"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1462,7 +1457,6 @@
 		</effects>
 	</skill>
 	<skill id="5555" toLevel="12" name="Weakened Silence Resistance">
-		<table name="#trait_derangement"> -5 -10 -15 -20 -25 -30 -35 -40 -45 -50 -75 -100 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1633,10 +1627,6 @@
 	</skill>
 	<skill id="5561" toLevel="3" name="Seed of Revenge">
 		<!-- Confirmed CT2.5 -->
-		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#cAtk"> 1 1 1.25 </table>
-		<table name="#rCrit"> 0 0.3 0.3 </table>
-		<table name="#triggeredLevel"> 2 3 0 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1704,10 +1694,6 @@
 	</skill>
 	<skill id="5562" toLevel="3" name="Spirit of the Phoenix">
 		<!-- Confirmed CT2.5 -->
-		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#elementRes"> 0 30 30 </table>
-		<table name="#healEffect"> 1 1 1.3 </table>
-		<table name="#triggeredLevel"> 2 3 0 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1783,10 +1769,6 @@
 	</skill>
 	<skill id="5563" toLevel="3" name="Eva's Will">
 		<!-- Confirmed CT2.5 -->
-		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#rCrit"> 0 0 0.2 </table>
-		<table name="#triggeredLevel"> 2 3 0 </table>
-		<table name="#waterPower"> 0 20 20 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1854,10 +1836,6 @@
 	</skill>
 	<skill id="5564" toLevel="3" name="Pain of Shilen">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbDam"> 0 0 8 </table>
-		<table name="#activationChance"> 10 10 0 </table>
-		<table name="#triggeredLevel"> 2 3 0 </table>
-		<table name="#windPower"> 0 20 20 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2478,7 +2456,6 @@
 		</effects>
 	</skill>
 	<skill id="5586" toLevel="3" name="Pet Might">
-		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2530,7 +2507,6 @@
 		</effects>
 	</skill>
 	<skill id="5587" toLevel="3" name="Pet Shield">
-		<table name="#rate"> 1.08 1.12 1.15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2582,7 +2558,6 @@
 		</effects>
 	</skill>
 	<skill id="5588" toLevel="3" name="Pet Focus">
-		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2634,7 +2609,6 @@
 		</effects>
 	</skill>
 	<skill id="5589" toLevel="3" name="Pet Death Whisper">
-		<table name="#cAtk"> 1.25 1.3 1.35 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2686,7 +2660,6 @@
 		</effects>
 	</skill>
 	<skill id="5590" toLevel="12" name="Pet Battle Heal">
-		<table name="#amount"> 91 166 269 398 544 690 817 867 909 954 985 1005 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">66</value>
@@ -2776,7 +2749,6 @@
 	<skill id="5591" toLevel="8" name="Light Flow">
 		<!-- Confirmed CT2.5 -->
 		<!-- Curse of Life Flow effect -->
-		<table name="#amount"> 189 196 203 210 217 223 229 234 </table>
 		<icon>icon.skill1511</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2985,7 +2957,6 @@
 	</skill>
 	<skill id="5598" toLevel="12" name="Petrification Resistance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#trait_turn_stone"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -3024,7 +2995,6 @@
 	</skill>
 	<skill id="5599" toLevel="12" name="Stun Resistance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#trait_shock"> 5 10 15 20 25 30 35 40 45 50 75 100 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>

@@ -443,7 +443,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5826" toLevel="3" name="Fire Breath">
-		<table name="#power"> 60 61 61 </table>
 		<affectLimit>5-15</affectLimit>
 		<affectRange>600</affectRange>
 		<castRange>600</castRange>
@@ -487,7 +486,6 @@
 		</effects>
 	</skill>
 	<skill id="5827" toLevel="6" name="Fireball">
-		<table name="#power"> 55 56 58 59 60 61 </table>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
@@ -542,7 +540,6 @@
 		</effects>
 	</skill>
 	<skill id="5828" toLevel="6" name="Unholy Flare">
-		<table name="#power"> 55 56 58 59 60 61 </table>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -601,7 +598,6 @@
 		</effects>
 	</skill>
 	<skill id="5829" toLevel="6" name="Fire Flare">
-		<table name="#power"> 55 56 58 59 60 61 </table>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -1053,7 +1049,6 @@
 		</effects>
 	</skill>
 	<skill id="5845" toLevel="12" name="Trigger Bleed">
-		<table name="#skillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1101,7 +1096,6 @@
 		</effects>
 	</skill>
 	<skill id="5846" toLevel="12" name="Bleed">
-		<table name="#dot"> 18 25 34 44 54 62 67 67 70 70 71 71 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2234,7 +2228,6 @@
 	</skill>
 	<skill id="5884" toLevel="2" name="Weakened Sweep">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 2319 18664 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -2275,7 +2268,6 @@
 	<skill id="5885" toLevel="2" name="Weakened Sweep">
 		<!-- Confirmed CT2.5 -->
 		<!-- NOTE: lvl 2 has wrong Id in client -->
-		<table name="#power"> 2319 18664 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>

@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="800" toLevel="3" name="Master Ability: M. Def.">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mDef"> 50.4 100.8 151.2 </table>
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0142</icon>
 		<magicLvl>75</magicLvl>
@@ -353,7 +352,6 @@
 	</skill>
 	<skill id="814" toLevel="43" name="Full Swing">
 		<!-- Vanguard Stance Skill -->
-		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<coolTime>733</coolTime>
@@ -564,7 +562,6 @@
 	</skill>
 	<skill id="815" toLevel="43" name="Blade Hurricane">
 		<!-- Vanguard Stance Skill -->
-		<table name="#power"> 893 945 998 1054 1112 1172 1234 1298 1365 1433 1503 1575 1649 1725 1803 1882 1963 2045 2129 2214 2301 2388 2476 2565 2655 2745 2836 2927 3018 3108 3198 3288 3376 3464 3551 3636 3720 3801 3881 3959 4034 4107 4176 </table>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<coolTime>733</coolTime>
@@ -775,7 +772,6 @@
 	</skill>
 	<skill id="816" toLevel="43" name="Cleave">
 		<!-- Vanguard Stance Skill -->
-		<table name="#power"> 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
 		<effectPoint>
@@ -987,7 +983,6 @@
 	</skill>
 	<skill id="817" toLevel="43" name="Double Attack">
 		<!-- Vanguard Stance Skill -->
-		<table name="#power"> 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -1267,7 +1262,6 @@
 	</skill>
 	<skill id="822" toLevel="3" name="Repair Golem">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 8 12 15 </table>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -1311,8 +1305,6 @@
 	</skill>
 	<skill id="823" toLevel="3" name="Strengthen Golem">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 1.08 1.12 1.15 </table>
-		<table name="#pAtkSpd"> 1.03 1.06 1.09 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -1369,8 +1361,6 @@
 	</skill>
 	<skill id="824" toLevel="3" name="Golem Reinforcement">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxHp"> 5 8 10 </table>
-		<table name="#pDef"> 1.08 1.12 1.15 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -1677,8 +1667,6 @@
 	</skill>
 	<skill id="832" toLevel="2" name="Fast Recovery">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#regHpCp"> 4 6 </table>
-		<table name="#regMp"> 2 4 </table>
 		<icon>icon.skill0832</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -1758,8 +1746,6 @@
 		</effects>
 	</skill>
 	<skill id="835" toLevel="4" name="Imbue Seed of Destruction">
-		<table name="#calledSkillLevel"> 1 2 3 4 </table>
-		<table name="#mdot"> 16 17 17 17 </table>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DARK_SEED</abnormalType>
@@ -1821,7 +1807,6 @@
 	</skill>
 	<skill id="836" toLevel="3" name="Oblivion Trap">
 		<!-- Confirmed CT2.5 -->
-		<table name="#npcId"> 13125 13126 13127 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>3000</hitTime>
 		<icon>icon.skill0836</icon>
@@ -2715,7 +2700,6 @@
 	</skill>
 	<skill id="869" toLevel="9" name="Mercenary Power Strike">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 2272 3252 4224 4312 4399 4482 4563 4640 4715 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -2759,7 +2743,6 @@
 	</skill>
 	<skill id="870" toLevel="8" name="Royal Guard Captain Power Strike">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 3252 4224 4312 4399 4482 4563 4640 4715 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -2838,7 +2821,6 @@
 	</skill>
 	<skill id="872" toLevel="8" name="Archer Captain Power Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 4336 5632 5750 5865 5976 6084 6187 6286 </table>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -2916,7 +2898,6 @@
 	</skill>
 	<skill id="874" toLevel="8" name="Wizard Captain Flame Strike">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 68 78 78 79 80 81 81 82 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -3009,7 +2990,6 @@
 	</skill>
 	<skill id="876" toLevel="8" name="Centurion Enuma Elish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 4878 6335 6468 6598 6723 6844 6960 7072 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<castRange>40</castRange>
@@ -3117,7 +3097,6 @@
 	</skill>
 	<skill id="878" toLevel="7" name="Knight Captain Power Strike">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 5068 5175 5278 5379 5475 5568 5658 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3239,7 +3218,6 @@
 	</skill>
 	<skill id="881" toLevel="7" name="Commander Twister">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 116 117 119 120 121 122 123 </table>
 		<castRange>750</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1250</effectRange>
@@ -3290,7 +3268,6 @@
 	</skill>
 	<skill id="882" toLevel="7" name="Commander Blaze">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 116 117 119 120 121 122 123 </table>
 		<castRange>750</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1250</effectRange>
@@ -3461,7 +3438,6 @@
 	</skill>
 	<skill id="886" toLevel="11" name="Air Shock Bomb">
 		<!-- Aurabird Falcon -->
-		<table name="#power"> 2251 2310 2367 2424 2480 2534 2588 2639 2690 2738 2784 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3541,7 +3517,6 @@
 	</skill>
 	<skill id="887" toLevel="11" name="Sky Clutch">
 		<!-- Aurabird Owl -->
-		<table name="#power"> 110 111 112 114 115 116 117 119 120 121 122 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -3622,7 +3597,6 @@
 	</skill>
 	<skill id="888" toLevel="11" name="Energy Storm">
 		<!-- Aurabird Falcon -->
-		<table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<castRange>200</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -3692,7 +3666,6 @@
 	</skill>
 	<skill id="889" toLevel="11" name="Energy Storm">
 		<!-- Aurabird Owl -->
-		<table name="#power"> 3752 3849 3945 4040 4133 4224 4312 4399 4482 4563 4640 </table>
 		<castRange>200</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -3762,7 +3735,6 @@
 	</skill>
 	<skill id="890" toLevel="11" name="Prodigious Flare">
 		<!-- Aurabird Falcon -->
-		<table name="#power"> 5627 5773 5918 6060 6199 6335 6468 6598 6723 6844 6960 </table>
 		<castRange>200</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -3832,7 +3804,6 @@
 	</skill>
 	<skill id="891" toLevel="11" name="Energy Shot">
 		<!-- Aurabird Falcon -->
-		<table name="#power"> 88 89 90 91 92 93 94 95 96 97 98 </table>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -3903,7 +3874,6 @@
 	</skill>
 	<skill id="892" toLevel="11" name="Energy Shot">
 		<!-- Aurabird Owl -->
-		<table name="#power"> 131 133 135 136 138 139 141 142 144 145 146 </table>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -3974,7 +3944,6 @@
 	</skill>
 	<skill id="893" toLevel="11" name="Concentrated Energy Shot">
 		<!-- Aurabird Owl -->
-		<table name="#power"> 197 199 202 204 206 209 211 213 215 217 219 </table>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-659</value>
@@ -4128,8 +4097,6 @@
 		</effects>
 	</skill>
 	<skill id="896" toLevel="6" name="Rolling Step">
-		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
-		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -4191,8 +4158,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="897" toLevel="6" name="Double Blast">
-		<table name="#pvePower"> 9503 9702 9896 10084 10266 10440 </table>
-		<table name="#pvpPower"> 3168 3234 3299 3362 3422 3480 </table>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-676</value>
@@ -4253,8 +4218,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="898" toLevel="6" name="Tornado Slash">
-		<table name="#pvePower"> 5068 5175 5278 5379 5475 5568 </table>
-		<table name="#pvpPower"> 1690 1725 1760 1793 1825 1856 </table>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -4316,8 +4279,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="899" toLevel="6" name="Cat Roar">
-		<table name="#pvePower"> 3168 3234 3299 3362 3422 3480 </table>
-		<table name="#pvpPower"> 1056 1078 1100 1121 1141 1160 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>

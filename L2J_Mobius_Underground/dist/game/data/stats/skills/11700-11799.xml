@@ -324,7 +324,6 @@
 	<skill id="11753" toLevel="3" name="Sustain">
 		<!-- Glory Days confirmed -->
 		<!-- For 10 seconds, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
 		<abnormalTime>15</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -552,7 +551,6 @@
 	<skill id="11756" toLevel="11" name="Panic Heal">
 		<!-- Glory Days confirmed -->
 		<!-- Heals target with 1488 Power added to M. Atk. If HP is full, CP is restored. -->
-		<table name="#power"> 1488 1495 1507 1519 1532 1544 1557 1570 1749 1763 1777 </table>
 		<icon>icon.skill11756</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -1015,8 +1013,6 @@
 	<skill id="11761" toLevel="8" name="Brilliant Recharge">
 		<!-- Glory Days confirmed -->
 		<!-- Instantly recovers party members' MP with a maximum of 700 Power depending on their level. Also, for 10 seconds, recovers 50 MP per second. -->
-		<table name="#amount"> 700 715 725 740 750 768 786 804 </table>
-		<table name="#amoutOverTime"> 10 10 10 10 11 11 11 11 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>MP_RECOVER</abnormalType>
 		<abnormalTime>10</abnormalTime>
@@ -1965,7 +1961,6 @@
 	<skill id="11773" toLevel="2" name="Lakcis Disc">
 		<!-- Glory Days confirmed -->
 		<!-- Directly manipulates the power of light to Heal nearby allies and damage nearby enemies. Continuously consumes MP. -->
-		<table name="#skillLevel"> 1 2 </table>
 		<icon>icon.skill11773</icon>
 		<operateType>AU</operateType>
 		<effectPoint>
@@ -2007,7 +2002,6 @@
 	<skill id="11774" toLevel="4" name="Summon Tree of Life">
 		<!-- Glory Days confirmed -->
 		<!-- Summons a Tree of Life. The summoned tree heals nearby party members for 30 seconds. Can also cast a debuff canceling blessing. -->
-		<table name="#npcIds"> 14933 14943 15010 15011 </table>
 		<icon>icon.skill11774</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -2084,7 +2078,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Summons a Spirit of Light. -->
-		<table name="#npcIds"> 14925 14944 14945 14946 </table>
 		<icon>icon.skill11776</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -2130,8 +2123,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by 10%, and consumes 113 HP every second for 60 seconds. -->
-		<table name="#dot"> 113 118 123 128 134 134 134 134 </table>
-		<table name="#defences"> 0.9 0.85 0.8 0.75 0.7 0.7 0.7 0.7 </table>
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>MARK_OF_LUMI</abnormalType>
@@ -2320,7 +2311,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases Speed, Atk. Spd. and Casting Spd. by 50%. -->
-		<table name="#speeds"> 0.5 0.4 0.3 0.2 0.1 0.1 0.1 0.1 </table>
 		<icon>icon.skill1394</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -2393,7 +2383,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Decreases target's Recovery by 50%. -->
-		<table name="#healEffect"> 0.5 0.48 0.44 0.4 0.35 0.3 0.3 0.3 0.3 </table>
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -2522,7 +2511,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Casting Spd. + 30% when equipped with a Robe/ Light Armor. MP is continuously consumed. -->
-		<table name="#mAtkSpd"> 1.30 1.50 </table>
 		<icon>icon.skill11782</icon>
 		<magicLvl>
 			<value level="1">93</value>
@@ -2575,8 +2563,6 @@
 	<skill id="11784" toLevel="4" name="Blessed Resurrection">
 		<!-- Glory Days confirmed -->
 		<!-- Resurrects a dead target and restores 85% of the XP lost. -->
-		<table name="#mpInitialConsume"> 7 7 8 9 </table>
-		<table name="#power"> 85 90 95 100 </table>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<hitTime>2000</hitTime>
@@ -3181,7 +3167,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -3210,9 +3195,6 @@
 	<skill id="11795" toLevel="3" name="Sustain">
 		<!-- Updated to Ertheia -->
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<table name="#power"> 1.10 1.20 1.30 </table> <!-- Custom -->
-		<!-- Custom -->
-		<table name="#hotValue"> 172 174 176 </table> <!-- Custom -->
 		<icon>icon.skill1217</icon>
 		<abnormalTime>15</abnormalTime>
 		<castRange>600</castRange>
@@ -3273,8 +3255,6 @@
 	<skill id="11796" toLevel="3" name="Sustain">
 		<!-- Updated to Ertheia -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
-		<table name="#abnormalLevel"> 1 2 3 </table>
 		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -3303,9 +3283,7 @@
 	<skill id="11797" toLevel="3" name="Sustain">
 		<!-- Updated to Ertheia -->
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<table name="#power"> 1.10 1.20 1.30 </table> <!-- Custom -->
 		<!-- Custom -->
-		<table name="#hotValue"> 172 174 176 </table> <!-- Custom -->
 		<icon>icon.skill1217</icon>
 		<abnormalTime>15</abnormalTime>
 		<castRange>600</castRange>
@@ -3366,8 +3344,6 @@
 	<skill id="11798" toLevel="3" name="Sustain">
 		<!-- Updated to Ertheia -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
-		<table name="#abnormalLevel"> 1 2 3 </table>
 		<abnormalTime>10</abnormalTime>
 		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
@@ -3396,9 +3372,7 @@
 	<skill id="11799" toLevel="3" name="Sustain">
 		<!-- Updated to Ertheia -->
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<table name="#power"> 1.10 1.20 1.30 </table> <!-- Custom -->
 		<!-- Custom -->
-		<table name="#hotValue"> 172 174 176 </table> <!-- Custom -->
 		<icon>icon.skill1217</icon>
 		<abnormalTime>15</abnormalTime>
 		<castRange>600</castRange>

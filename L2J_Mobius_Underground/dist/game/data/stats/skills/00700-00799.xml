@@ -816,7 +816,6 @@
 	</skill>
 	<skill id="717" toLevel="4" name="Zaken Concentrated Attack">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 2751 3252 3752 4224 </table>
 		<castRange>50</castRange>
 		<coolTime>900</coolTime>
 		<effectPoint>
@@ -860,7 +859,6 @@
 	</skill>
 	<skill id="718" toLevel="4" name="Zaken Dancing Sword">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1651 1951 2251 2534 </table>
 		<affectRange>100</affectRange>
 		<coolTime>1500</coolTime>
 		<effectPoint>
@@ -932,7 +930,6 @@
 	</skill>
 	<skill id="720" toLevel="2" name="Anakim Holy Light Burst">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 3189 3590 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -971,7 +968,6 @@
 	</skill>
 	<skill id="721" toLevel="2" name="Anakim Energy Attack">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 186 197 </table>
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1010,7 +1006,6 @@
 	</skill>
 	<skill id="722" toLevel="2" name="Anakim Divine Beam">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 186 197 </table>
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>
@@ -1096,7 +1091,6 @@
 	</skill>
 	<skill id="725" toLevel="2" name="Venom Power Smash">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 2626 2957 </table>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-342</effectPoint>
@@ -1126,7 +1120,6 @@
 	</skill>
 	<skill id="726" toLevel="2" name="Venom Sonic Storm">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1576 1774 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-342</effectPoint>
@@ -1473,7 +1466,6 @@
 	</skill>
 	<skill id="738" toLevel="3" name="Heretic Heal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 892 926 956 </table>
 		<castRange>600</castRange>
 		<effectPoint>575</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1505,7 +1497,6 @@
 	</skill>
 	<skill id="739" toLevel="3" name="Heretic Battle Heal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 743 772 796 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">595</value>
@@ -1549,7 +1540,6 @@
 	</skill>
 	<skill id="740" toLevel="3" name="Heretic Resurrection">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 50 55 60 </table>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">595</value>
@@ -1647,7 +1637,6 @@
 	</skill>
 	<skill id="742" toLevel="3" name="Veil Master Bursting Flame">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 112 117 122 </table>
 		<castRange>600</castRange>
 		<effectPoint>-92</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1690,7 +1679,6 @@
 	</skill>
 	<skill id="743" toLevel="3" name="Veil Master Dark Explosion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 56 59 61 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1739,7 +1727,6 @@
 	</skill>
 	<skill id="744" toLevel="3" name="Veil Master Dark Flare">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 112 117 122 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-275</effectPoint>
@@ -1824,7 +1811,6 @@
 	</skill>
 	<skill id="746" toLevel="3" name="Saber Tooth Tiger Bite">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1789 1955 2117 </table>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>
@@ -1861,7 +1847,6 @@
 	</skill>
 	<skill id="747" toLevel="3" name="Saber Tooth Tiger Fear">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dmg"> 895 978 1059 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1938,7 +1923,6 @@
 	</skill>
 	<skill id="749" toLevel="3" name="Oel Mahum Stun Attack">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dmg"> 895 978 1059 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2022,7 +2006,6 @@
 	</skill>
 	<skill id="751" toLevel="3" name="Oel Mahum Arm Flourish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dmg"> 1073 1173 1271 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
@@ -2067,7 +2050,6 @@
 	</skill>
 	<skill id="752" toLevel="3" name="Doll Blader Sting">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1193 1303 1412 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -2121,7 +2103,6 @@
 	</skill>
 	<skill id="753" toLevel="3" name="Doll Blader Throwing Knife">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 4769 5211 5645 </table>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -3934,9 +3915,6 @@
 	</skill>
 	<skill id="799" toLevel="3" name="Master Ability: Defense">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pDefHeavy"> 59.5 119 178.5 </table>
-		<table name="#pDefLight"> 44.625 89.25 133.875 </table>
-		<table name="#pDefMagic"> 29.75 59.5 89.25 </table>
 		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0142</icon>
 		<magicLvl>75</magicLvl>

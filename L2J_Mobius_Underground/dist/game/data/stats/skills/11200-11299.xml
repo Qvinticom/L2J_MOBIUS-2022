@@ -1642,8 +1642,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Retrieves any Mark of Weakness, Mark of Plague, or Mark of Trick from target. Inflicts damage according to the number of retrieved marks. -->
-		<table name="#power">85 89 93 97 101 105 109 113 117 121 125 </table>
-		<table name="#power"> 204 214 223 233 242 252 262 271 281 290 300 </table> <!-- TODO Taken from Mark of Weakness x2.4 (because level 2 power calculated in retail seems to be 214) -->
 		<icon>icon.skill11271</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2288,7 +2286,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Provokes the enemy and inflicts damage. -->
-		<table name="#power"> 6277 6494 6930 7365 7800 8236 8671 9106 9324 </table>
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2374,7 +2371,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Rolls over at the same spot to give a shock to the ground and temporarily stops nearby targets from moving. -->
-		<table name="#power"> 5337 5521 5889 6258 6627 6995 7364 7732 7917 </table>
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2461,7 +2457,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Bites target to inflict damage. -->
-		<table name="#power"> 6300 6518 6954 7391 7827 8264 8700 9137 9355 </table>
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2527,7 +2522,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Jumps to inflict damage on targets within a certain range. Speed - 100. Can be used when below 200 grids. -->
-		<table name="#power"> 2683 2780 2975 3170 3365 3560 3755 3950 4048 </table>
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2598,7 +2592,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts damage on the enemy and absorbs 20% of damage as HP. -->
-		<table name="#power"> 125 127 131 134 138 141 145 149 150 </table>
 		<icon>icon.skill1234</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2665,7 +2658,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Creates a death space near the enemy to inflict damage. -->
-		<table name="#power"> 100 102 104 107 110 113 116 119 120 </table>
 		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange>
 		<operateType>A1</operateType>
@@ -2733,7 +2725,6 @@
 	<skill id="11284" toLevel="4" name="Naviarope Smash">
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful attack on target. -->
-		<table name="#power"> 8690 9051 9392 9392 </table>
 		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -2778,7 +2769,6 @@
 	<skill id="11285" toLevel="4" name="Naviarope Power">
 		<!-- Glory Days confirmed -->
 		<!-- Uses the authority of Naviarope to inflict powerful damage on nearby targets. -->
-		<table name="#power"> 7183 7481 7757 7757 </table>
 		<icon>icon.skill0121</icon>
 		<affectRange>200</affectRange>
 		<operateType>A1</operateType>
@@ -2842,7 +2832,6 @@
 	<skill id="11287" toLevel="10" name="Superior Resistance">
 		<!-- Glory Days confirmed -->
 		<!-- Fire/Water/Wind/Earth Resistance + 20. INT + 2. -->
-		<table name="#res"> 20 22 24 26 30 32 34 36 38 40 </table>
 		<icon>icon.skill10005</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2928,9 +2917,6 @@
 	<skill id="11288" toLevel="4" name="Ultimate Servitor Share">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., shares the following with your servitor (s): 60% of P. Atk., 50% of P. Def., 30% of M. Def., 15% of Max HP/MP, 10% of Atk. Spd., 30% of P. Critical Rate, 15% of P. Critical Damage. -->
-		<table name="#pAtk"> 0.60 0.65 0.70 0.70 </table>
-		<table name="#pDef"> 0.50 0.53 0.53 0.60 </table>
-		<table name="#mDef"> 0.30 0.35 0.35 0.50 </table>
 		<icon>icon.skill11288</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2966,9 +2952,9 @@
 		<effects>
 			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="#pAtk" />
-				<share stat="pDef" val="#pDef" />
-				<share stat="mDef" val="#mDef" />
+				<share stat="pAtk" val="0.60" />
+				<share stat="pDef" val="0.50" />
+				<share stat="mDef" val="0.30" />
 				<share stat="maxHp" val="0.15" />
 				<share stat="maxMp" val="0.15" />
 				<share stat="pAtkSpd" val="0.10" />
@@ -3038,7 +3024,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts magic damage on nearby enemies. -->
-		<table name="#power"> 58 60 61 63 </table> <!-- First level is retail, others are guessed -->
 		<icon>icon.skill0028</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>

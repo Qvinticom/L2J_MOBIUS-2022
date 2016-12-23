@@ -383,7 +383,6 @@
 	</skill>
 	<skill id="3825" toLevel="3" name="Sword of Might">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#pAtk"> 17.42 22.1 42.12 </table>
 		<icon>icon.skill1068</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -405,7 +404,6 @@
 	</skill>
 	<skill id="3826" toLevel="2" name="Sword of Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxHp"> 319 492 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">61</value>
@@ -473,7 +471,6 @@
 	</skill>
 	<skill id="3830" toLevel="3" name="Rapier of Might">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#pAtk"> 16.25 20.62 39.3 </table>
 		<icon>icon.skill1068</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -495,7 +492,6 @@
 	</skill>
 	<skill id="3831" toLevel="2" name="Rapier of Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxHp"> 319 444 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">61</value>
@@ -563,7 +559,6 @@
 	</skill>
 	<skill id="3835" toLevel="3" name="Dual-blade Weapon of Might">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#pAtk"> 21.2 26.9 51.26 </table>
 		<icon>icon.skill1068</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -585,7 +580,6 @@
 	</skill>
 	<skill id="3836" toLevel="2" name="Dual-blade Weapon of Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxHp"> 319 444 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">61</value>
@@ -821,7 +815,6 @@
 	</skill>
 	<skill id="3852" toLevel="3" name="Sword of Mana Boost">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxMp"> 187 289 334 </table>
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1155,7 +1148,6 @@
 	</skill>
 	<skill id="3873" toLevel="2" name="Polearm of Critical Damage">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#cAtkAdd"> 156 377 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1223,7 +1215,6 @@
 	</skill>
 	<skill id="3877" toLevel="2" name="Polearm of Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxHp"> 319 492 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">61</value>
@@ -1256,7 +1247,6 @@
 	</skill>
 	<skill id="3879" toLevel="3" name="Fist Weapon of Might">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#pAtk"> 21.2 26.9 51.26 </table>
 		<icon>icon.skill1068</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1342,7 +1332,6 @@
 	</skill>
 	<skill id="3884" toLevel="3" name="Blunt Weapon of Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxHp"> 294 345 511 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1364,8 +1353,6 @@
 	</skill>
 	<skill id="3885" toLevel="2" name="Blunt Weapon of Stun">
 		<!-- Confirmed CT2.5 -->
-		<table name="#activationChance"> 5 8 </table>
-		<table name="#triggeredId"> 5671 5672 </table>
 		<icon>icon.skill0100</icon>
 		<magicLvl>61</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1433,7 +1420,6 @@
 	</skill>
 	<skill id="3889" toLevel="3" name="Blunt Weapon of Empower">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#mAtk"> 21.77 27.63 45.81 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">58</value>
@@ -1468,7 +1454,6 @@
 	</skill>
 	<skill id="3891" toLevel="2" name="Blunt Weapon of Boost HP">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxHp"> 319 492 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">61</value>
@@ -1587,7 +1572,6 @@
 	</skill>
 	<skill id="3899" toLevel="3" name="Staff of Empower">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#mAtk"> 21.77 27.63 45.81 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">58</value>

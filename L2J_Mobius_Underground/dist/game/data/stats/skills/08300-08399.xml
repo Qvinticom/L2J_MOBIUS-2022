@@ -466,7 +466,6 @@
 		</effects>
 	</skill>
 	<skill id="8312" toLevel="2" name="Special Ability: Cheap Shot">
-		<table name="#MpConsumeRate"> 0.96 0.92 </table>
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">80</value>
@@ -1079,8 +1078,6 @@
 	</skill>
 	<skill id="8338" toLevel="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#hp"> 0.4 1 1.4 2 </table>
-		<table name="#hpsit"> 0.3 0.75 1.05 1.5 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1109,8 +1106,6 @@
 	</skill>
 	<skill id="8339" toLevel="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#hp"> 0.78 1.95 2.73 3.9 </table>
-		<table name="#hpsit"> 0.6 1.5 2.1 3 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1139,8 +1134,6 @@
 	</skill>
 	<skill id="8340" toLevel="4" name="Low-grade Magic Rune Clip Iron Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mp"> 0.14 0.35 0.49 0.7 </table>
-		<table name="#mpsit"> 0.16 0.4 0.56 0.8 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1169,7 +1162,6 @@
 	</skill>
 	<skill id="8341" toLevel="4" name="Low-grade Magic Rune Clip Mithril Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 0.3 0.75 1.05 1.5 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1198,7 +1190,6 @@
 	</skill>
 	<skill id="8342" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1217,7 +1208,6 @@
 	</skill>
 	<skill id="8343" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1245,7 +1235,6 @@
 	</skill>
 	<skill id="8344" toLevel="4" name="Low-grade Magic Ornament Iron Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvp"> 1.006 1.015 1.021 1.03 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1282,7 +1271,6 @@
 	</skill>
 	<skill id="8345" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1301,7 +1289,6 @@
 	</skill>
 	<skill id="8346" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvp"> 1.01 1.025 1.035 1.05 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1329,7 +1316,6 @@
 	</skill>
 	<skill id="8347" toLevel="4" name="Low-grade Magic Ornament Mithril Belt">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvp"> 1.012 1.03 1.042 1.06 </table>
 		<icon>icon.skill0332</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1365,7 +1351,6 @@
 		</effects>
 	</skill>
 	<skill id="8348" toLevel="2" name="Resistance Earring - Gludio">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1390,7 +1375,6 @@
 		</effects>
 	</skill>
 	<skill id="8349" toLevel="2" name="Resistance Earring - Dion">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1415,7 +1399,6 @@
 		</effects>
 	</skill>
 	<skill id="8350" toLevel="2" name="Resistance Earring - Giran">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1440,7 +1423,6 @@
 		</effects>
 	</skill>
 	<skill id="8351" toLevel="2" name="Resistance Earring - Oren">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1465,7 +1447,6 @@
 		</effects>
 	</skill>
 	<skill id="8352" toLevel="2" name="Resistance Earring - Aden">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1490,7 +1471,6 @@
 		</effects>
 	</skill>
 	<skill id="8353" toLevel="2" name="Resistance Earring - Innadril">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1515,7 +1495,6 @@
 		</effects>
 	</skill>
 	<skill id="8354" toLevel="2" name="Resistance Earring - Goddard">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1540,7 +1519,6 @@
 		</effects>
 	</skill>
 	<skill id="8355" toLevel="2" name="Resistance Earring - Rune">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1565,7 +1543,6 @@
 		</effects>
 	</skill>
 	<skill id="8356" toLevel="2" name="Resistance Earring - Schuttgart">
-		<table name="#maxCp"> 1 1.05 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1971,7 +1948,6 @@
 		<affectObject>FRIEND</affectObject>
 	</skill>
 	<skill id="8379" toLevel="2" name="Protection Ring - Gludio">
-		<table name="#earthRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -1990,7 +1966,6 @@
 		</effects>
 	</skill>
 	<skill id="8380" toLevel="2" name="Protection Ring - Dion">
-		<table name="#waterRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2009,7 +1984,6 @@
 		</effects>
 	</skill>
 	<skill id="8381" toLevel="2" name="Protection Ring - Giran">
-		<table name="#fireRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2028,7 +2002,6 @@
 		</effects>
 	</skill>
 	<skill id="8382" toLevel="2" name="Protection Ring - Oren">
-		<table name="#earthRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2047,7 +2020,6 @@
 		</effects>
 	</skill>
 	<skill id="8383" toLevel="2" name="Protection Ring - Aden">
-		<table name="#holyRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2066,7 +2038,6 @@
 		</effects>
 	</skill>
 	<skill id="8384" toLevel="2" name="Protection Ring - Innadril">
-		<table name="#holyRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2085,7 +2056,6 @@
 		</effects>
 	</skill>
 	<skill id="8385" toLevel="2" name="Protection Ring - Goddard">
-		<table name="#darkRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2104,7 +2074,6 @@
 		</effects>
 	</skill>
 	<skill id="8386" toLevel="2" name="Protection Ring - Rune">
-		<table name="#windRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2123,7 +2092,6 @@
 		</effects>
 	</skill>
 	<skill id="8387" toLevel="2" name="Protection Ring - Schuttgart">
-		<table name="#darkRes"> 12 15 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_ring_i00</value>
 			<value level="2">icon.accessory_ring_of_domi_protection_i00</value>
@@ -2142,7 +2110,6 @@
 		</effects>
 	</skill>
 	<skill id="8388" toLevel="2" name="Protection Necklace - Gludio">
-		<table name="#waterRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2161,7 +2128,6 @@
 		</effects>
 	</skill>
 	<skill id="8389" toLevel="2" name="Protection Necklace - Dion">
-		<table name="#holyRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2180,7 +2146,6 @@
 		</effects>
 	</skill>
 	<skill id="8390" toLevel="2" name="Protection Necklace - Giran">
-		<table name="#windRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2199,7 +2164,6 @@
 		</effects>
 	</skill>
 	<skill id="8391" toLevel="2" name="Protection Necklace - Oren">
-		<table name="#darkRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2218,7 +2182,6 @@
 		</effects>
 	</skill>
 	<skill id="8392" toLevel="2" name="Protection Necklace - Aden">
-		<table name="#earthRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2237,7 +2200,6 @@
 		</effects>
 	</skill>
 	<skill id="8393" toLevel="2" name="Protection Necklace - Innadril">
-		<table name="#waterRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2256,7 +2218,6 @@
 		</effects>
 	</skill>
 	<skill id="8394" toLevel="2" name="Protection Necklace - Goddard">
-		<table name="#fireRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2275,7 +2236,6 @@
 		</effects>
 	</skill>
 	<skill id="8395" toLevel="2" name="Protection Necklace - Rune">
-		<table name="#fireRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>
@@ -2294,7 +2254,6 @@
 		</effects>
 	</skill>
 	<skill id="8396" toLevel="2" name="Protection Necklace - Schuttgart">
-		<table name="#windRes"> 26 30 </table>
 		<icon>
 			<value level="1">icon.accessary_inferno_necklace_i00</value>
 			<value level="2">icon.accessory_nectklace_of_domi_protection_i00</value>

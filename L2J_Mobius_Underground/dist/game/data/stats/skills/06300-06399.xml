@@ -32,7 +32,6 @@
 	<skill id="6301" toLevel="2" name="Cold Mana's Fragment">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
-		<table name="#mdot"> 60 30 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1202,8 +1201,6 @@
 	</skill>
 	<skill id="6343" toLevel="2" name="Maguen Plasma - Power">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 1.08 1.15 </table>
-		<table name="#pAtk"> 1.02 1.03 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1247,8 +1244,6 @@
 	</skill>
 	<skill id="6365" toLevel="2" name="Maguen Plasma - Speed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pmAtkSpd"> 1.04 1.08 </table>
-		<table name="#runSpd"> 5 10 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1299,9 +1294,6 @@
 	</skill>
 	<skill id="6366" toLevel="2" name="Maguen Plasma - Critical">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtk"> 1.05 1.1 </table>
-		<table name="#mCritPower"> 1.02 1.04 </table>
-		<table name="#rCrit"> 0.04 0.08 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1796,7 +1788,6 @@
 		</effects>
 	</skill>
 	<skill id="6384" toLevel="2" name="Bistakon Deadly Blow">
-		<table name="#power"> 9125 13688 </table>
 		<castRange>60</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>

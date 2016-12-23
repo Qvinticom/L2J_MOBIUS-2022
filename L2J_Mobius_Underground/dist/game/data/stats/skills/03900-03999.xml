@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3900" toLevel="2" name="Staff of Divine Power">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#healEffect"> 33 43 </table>
 		<icon>icon.skill1459</icon>
 		<magicLvl>
 			<value level="1">61</value>
@@ -22,7 +21,6 @@
 	</skill>
 	<skill id="3901" toLevel="2" name="Staff of Mana Boost">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#maxMp"> 239 289 </table>
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">67</value>

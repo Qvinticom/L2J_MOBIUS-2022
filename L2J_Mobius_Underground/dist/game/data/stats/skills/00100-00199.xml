@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Stun Attack">
-		<table name="#power"> 36 39 42 49 53 57 66 71 77 88 94 101 115 123 131 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -107,7 +106,6 @@
 	</skill>
 	<skill id="101" toLevel="40" name="Stun Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 344 367 391 443 471 500 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -314,7 +312,6 @@
 		</effects>
 	</skill>
 	<skill id="102" toLevel="16" name="Entangle">
-		<table name="#runSpd"> 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -447,7 +444,6 @@
 		</effects>
 	</skill>
 	<skill id="103" toLevel="4" name="Corpse Plague">
-		<table name="#dot"> 41 50 58 63 </table>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -533,7 +529,6 @@
 		</effects>
 	</skill>
 	<skill id="105" toLevel="24" name="Freezing Strike">
-		<table name="#power"> 26 28 30 31 33 34 36 37 39 40 42 43 45 46 48 49 51 53 56 58 59 61 63 65 </table>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -858,8 +853,6 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
-		<table name="#mDef"> 1620 3240 </table>
-		<table name="#pDef"> 1800 3600 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -911,8 +904,6 @@
 		</effects>
 	</skill>
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
-		<table name="#pSkillEvas"> 25 40 </table>
-		<table name="#rEvas"> 20 25 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -962,8 +953,6 @@
 		</effects>
 	</skill>
 	<skill id="112" toLevel="4" name="Deflect Arrow">
-		<table name="#trait_bow"> 16 24 32 40 </table>
-		<table name="#trait_crossbow"> 8 12 16 20 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1017,7 +1006,6 @@
 		</effects>
 	</skill>
 	<skill id="113" toLevel="2" name="Long Shot">
-		<table name="#dist"> 200 400 </table>
 		<icon>icon.skill0113</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1039,7 +1027,6 @@
 		</effects>
 	</skill>
 	<skill id="115" toLevel="17" name="Power Break">
-		<table name="#pAtk"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1270,7 +1257,6 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
-		<table name="#power"> 42 46 49 57 62 67 77 83 89 103 110 117 134 143 152 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1375,7 +1361,6 @@
 		</effects>
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
-		<table name="#amount"> 10 15 20 25 30 35 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1512,7 +1497,6 @@
 		</effects>
 	</skill>
 	<skill id="123" toLevel="3" name="Spirit Barrier">
-		<table name="#mDef"> 1.15 1.23 1.3 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1651,7 +1635,6 @@
 		</effects>
 	</skill>
 	<skill id="129" toLevel="5" name="Poison">
-		<table name="#dot"> 24 41 50 58 63 </table>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">5</value>
@@ -1721,7 +1704,6 @@
 	</skill>
 	<skill id="130" toLevel="2" name="Thrill Fight">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.05 1.1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1764,7 +1746,6 @@
 		</effects>
 	</skill>
 	<skill id="131" toLevel="3" name="Hawk Eye">
-		<table name="#accCombat"> 6 8 10 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1825,7 +1806,6 @@
 		</effects>
 	</skill>
 	<skill id="137" toLevel="4" name="Critical Chance">
-		<table name="#rate"> 0.2 0.3 0.4 0.5 </table>
 		<icon>icon.skill0137</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -1985,7 +1965,6 @@
 	</skill>
 	<skill id="141" toLevel="3" name="Weapon Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 2 3 4 </table>
 		<icon>icon.skill0141</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2011,8 +1990,6 @@
 	</skill>
 	<skill id="142" toLevel="5" name="Armor Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pDef"> 9 11 12 13 14 </table>
-		<table name="#rEvas"> 0 0 0 3 3 </table>
 		<icon>icon.skill0142</icon>
 		<magicLvl>
 			<value level="1">5</value>
@@ -2055,7 +2032,6 @@
 	</skill>
 	<skill id="143" toLevel="2" name="Cubic Mastery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cubicCount"> 2 3 </table>
 		<icon>icon.skill0143</icon>
 		<magicLvl>
 			<value level="1">43</value>
@@ -2073,7 +2049,6 @@
 		</effects>
 	</skill>
 	<skill id="144" toLevel="37" name="Dual Weapon Mastery">
-		<table name="#pAtk"> 23.7 25.4 27.1 29 30.9 32.9 35 37.1 39.4 41.7 44.1 46.6 49.2 51.9 54.6 57.5 60.4 63.3 66.4 69.5 72.7 76 79.3 82.7 86.1 89.6 93.1 96.6 100.2 103.8 107.5 111.1 114.8 118.4 122.1 125.7 129.3 </table>
 		<icon>icon.skill0144</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -2165,8 +2140,6 @@
 		</effects>
 	</skill>
 	<skill id="146" toLevel="45" name="Anti Magic">
-		<table name="#magicSuccRes"> 1 1 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.2 1.25 1.25 1.25 1.25 1.25 1.25 1.3 1.3 1.3 1.3 1.3 1.3 </table>
-		<table name="#mDef"> 10 12 14 16 18 20 23 25 28 30 34 36 40 42 43 46 47 49 52 54 56 59 61 63 66 68 70 72 74 76 78 80 82 84 86 88 91 93 95 97 99 102 104 106 108 </table>
 		<icon>icon.skill0146</icon>
 		<magicLvl>
 			<value level="1">4</value>
@@ -2321,8 +2294,6 @@
 		</effects>
 	</skill>
 	<skill id="147" toLevel="51" name="M. Def.">
-		<table name="#magicSuccRes"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.05 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.1 1.15 1.15 1.15 1.15 1.15 1.15 1.2 1.2 1.2 1.2 1.2 1.2 </table>
-		<table name="#mDef"> 22 24 26 28 29 31 32 33 36 37 39 42 43 45 48 50 51 53 55 57 59 61 62 64 67 69 71 73 75 77 79 82 84 86 89 91 94 96 98 101 103 106 109 111 114 116 119 122 124 127 130 </table>
 		<icon>icon.skill0147</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2495,8 +2466,6 @@
 		</effects>
 	</skill>
 	<skill id="148" toLevel="8" name="Vital Force">
-		<table name="#hp"> 1.9 2.7 2.9 3.6 4.5 4.7 5.6 6.7 </table>
-		<table name="#mp"> 1.9 2.1 2.2 2.5 2.7 2.8 3.1 3.5 </table>
 		<icon>icon.skill0148</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -2542,7 +2511,6 @@
 		</effects>
 	</skill>
 	<skill id="150" toLevel="3" name="Weight Limit">
-		<table name="#rate"> 2 3 4 </table>
 		<icon>icon.skill0150</icon>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2563,9 +2531,6 @@
 		</effects>
 	</skill>
 	<skill id="153" toLevel="4" name="Shield Mastery">
-		<table name="#Pdef"> 1 1 1.1 1.1 </table>
-		<table name="#rShld"> 1.5 1.7 1.85 2 </table>
-		<table name="#sDef"> 1.3 1.4 1.5 1.6 </table>
 		<icon>icon.skill0153</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2627,7 +2592,6 @@
 		</effects>
 	</skill>
 	<skill id="164" toLevel="3" name="Quick Recovery">
-		<table name="#reuse"> 0.9 0.85 0.8 </table>
 		<icon>icon.skill0164</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2663,7 +2627,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="168" toLevel="3" name="Boost Atk. Spd.">
-		<table name="#rate"> 1.05 1.07 1.1 </table>
 		<icon>icon.skill0168</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2684,7 +2647,6 @@
 		</effects>
 	</skill>
 	<skill id="169" toLevel="2" name="Quick Step">
-		<table name="#spd"> 7 11 </table>
 		<icon>icon.skill0169</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -2704,8 +2666,6 @@
 	</skill>
 	<skill id="171" toLevel="8" name="Esprit">
 		<!-- Confirmed CT2.5 -->
-		<table name="#hp"> 2.5 3 3.5 4 4.5 5 5.5 6 </table>
-		<table name="#mp"> 1.8 1.9 2 2.1 2.2 2.3 2.4 2.5 </table>
 		<icon>icon.skill0171</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -2778,7 +2738,6 @@
 	</skill>
 	<skill id="173" toLevel="2" name="Acrobatics">
 		<!-- Confirmed CT2.5 -->
-		<table name="#fall"> 60 100 </table>
 		<icon>icon.skill0173</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3046,7 +3005,6 @@
 		</effects>
 	</skill>
 	<skill id="190" toLevel="37" name="Fatal Strike">
-		<table name="#power"> 738 784 833 884 937 992 1049 1109 1171 1236 1302 1371 1443 1516 1592 1670 1750 1832 1917 2003 2091 2181 2272 2366 2460 2556 2653 2751 2850 2950 3050 3151 3252 3353 3453 3553 3653 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3232,7 +3190,6 @@
 		</effects>
 	</skill>
 	<skill id="191" toLevel="6" name="Focus Mind">
-		<table name="#regMp"> 3.1 3.5 3.9 4.3 4.7 5.1 </table>
 		<icon>icon.skill0191</icon>
 		<magicLvl>
 			<value level="1">36</value>
@@ -3259,7 +3216,6 @@
 		</effects>
 	</skill>
 	<skill id="193" toLevel="7" name="Critical Damage">
-		<table name="#crit"> 32 56 93 177 295 384 406 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">24</value>
@@ -3298,7 +3254,6 @@
 		</effects>
 	</skill>
 	<skill id="195" toLevel="2" name="Boost Breath">
-		<table name="#breath"> 180 300 </table>
 		<icon>icon.skill0195</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -3333,7 +3288,6 @@
 		</effects>
 	</skill>
 	<skill id="197" toLevel="2" name="Holy Armor">
-		<table name="#darkRes"> 7 10 </table>
 		<icon>icon.skill0197</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -3358,7 +3312,6 @@
 		</effects>
 	</skill>
 	<skill id="198" toLevel="3" name="Boost Evasion">
-		<table name="#rEvas"> 2 3 4 </table>
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">24</value>

@@ -487,7 +487,6 @@
 	</skill>
 	<skill id="1511" toLevel="8" name="Curse of Life Flow">
 		<!-- Confirmed CT2.5 -->
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1025,7 +1024,6 @@
 	<skill id="1523" toLevel="42" name="Divine Punishment">
 		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#power"> 52 58 64 71 74 77 80 83 86 89 92 95 97 100 102 105 107 109 78 80 81 83 85 86 88 89 90 92 93 95 96 97 99 100 101 102 103 105 106 107 108 109 </table>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -1563,7 +1561,6 @@
 	<skill id="1525" toLevel="42" name="Divine Curse">
 		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#dot"> 9 9 9 9 9 9 11 11 11 11 11 11 11 11 11 11 13 13 13 13 13 13 13 13 13 13 14 14 14 14 14 14 14 14 14 14 15 15 15 15 15 15 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -1816,8 +1813,6 @@
 	</skill>
 	<skill id="1526" toLevel="3" name="Steal Mana">
 		<!-- Confirmed CT2.5 -->
-		<table name="#minDamage"> 41 51 49 </table>
-		<table name="#triggeredId"> 5676 5677 5678 </table>
 		<icon>icon.skill1526</icon>
 		<magicLvl>
 			<value level="1">44</value>
@@ -1852,7 +1847,6 @@
 	</skill>
 	<skill id="1527" toLevel="3" name="Expert Casting">
 		<!-- Glory Days confirmed -->
-		<table name="#mReuse"> 0.9 0.85 0.8 </table>
 		<icon>icon.skill1527</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -1883,7 +1877,6 @@
 	<skill id="1528" toLevel="42" name="Divine Flash">
 		<!-- Confirmed CT2.5 -->
 		<!-- Inquisitor Stance Skill -->
-		<table name="#power"> 29 33 36 39 41 43 45 46 48 50 51 53 54 56 57 58 60 61 44 45 45 46 47 48 49 50 50 51 52 53 54 54 55 56 56 57 58 58 59 60 60 61 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -2270,7 +2263,6 @@
 		</effects>
 	</skill>
 	<skill id="1530" toLevel="13" name="Death Spike">
-		<table name="#power"> 35 39 43 47 49 51 53 56 58 59 61 63 65 </table>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -2367,7 +2359,6 @@
 	</skill>
 	<skill id="1531" toLevel="7" name="Blessed Blood">
 		<!-- Confirmed CT2.5 -->
-		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLESS_THE_BLOOD</abnormalType>
@@ -2704,7 +2695,6 @@
 		</effects>
 	</skill>
 	<skill id="1539" toLevel="4" name="Stigma of Shilen">
-		<table name="#traits"> -16 -24 -32 -40 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2952,7 +2942,6 @@
 	<skill id="1544" toLevel="7" name="Death Beam">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kamael Final Form Skill -->
-		<table name="#power"> 138 139 141 142 144 145 146 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<castRange>40</castRange>
@@ -3060,11 +3049,6 @@
 		</effects>
 	</skill>
 	<skill id="1547" toLevel="3" name="Spirit Sharing">
-		<table name="#amount"> 1.03 1.04 1.05 </table>
-		<table name="#mAtkSpd"> 1.01 1.03 1.05 </table>
-		<table name="#pAtkSpd"> 1.02 1.05 1.07 </table>
-		<table name="#physicalSkillPower"> 1.05 1.07 1.1 </table>
-		<table name="#rCrit"> 0.05 0.07 0.1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3155,7 +3139,6 @@
 	</skill>
 	<skill id="1548" toLevel="3" name="Earth Resistance">
 		<!-- High Five Skill -->
-		<table name="#earthRes"> 10 15 20 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3492,8 +3475,6 @@
 	</skill>
 	<skill id="1558" toLevel="24" name="Dimension Spiral">
 		<!-- Glory Days confirmed -->
-		<table name="#pvePower"> 57 58 60 61 63 66 68 71 74 77 79 82 89 94 100 104 110 115 139 152 166 179 193 207 </table>
-		<table name="#pvpPower"> 57 58 60 61 63 66 68 71 74 77 79 82 84 87 89 90 91 92 93 94 95 96 97 98 </table>
 		<castRange>900</castRange>
 		<effectPoint>-590</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3624,8 +3605,6 @@
 	</skill>
 	<skill id="1559" toLevel="3" name="Potential Ability">
 		<!-- Glory Days confirmed -->
-		<table name="#cAtkAdd"> 177 295 384 </table>
-		<table name="#rCrit"> 0.2 0.3 0.4 </table>
 		<icon>icon.skill1559</icon>
 		<magicLvl>
 			<value level="1">28</value>
@@ -3710,7 +3689,6 @@
 	</skill>
 	<skill id="1561" toLevel="5" name="Battle Cry">
 		<!-- Glory Days confirmed -->
-		<table name="#amount"> 15 20 25 30 35 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3760,14 +3738,6 @@
 	</skill>
 	<skill id="1562" toLevel="2" name="Chant of Berserker">
 		<!-- High Five Skill -->
-		<table name="#mAtk"> 1.1 1.16 </table>
-		<table name="#mAtkSpd"> 1.05 1.08 </table>
-		<table name="#mDef"> 0.9 0.84 </table>
-		<table name="#pAtk"> 1.05 1.08 </table>
-		<table name="#pAtkSpd"> 1.05 1.08 </table>
-		<table name="#pDef"> 0.95 0.92 </table>
-		<table name="#rEvas"> 2 4 </table>
-		<table name="#runSpd"> 5 8 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3863,7 +3833,6 @@
 	</skill>
 	<skill id="1563" toLevel="2" name="Fury of Pa'agrio">
 		<!-- Glory Days confirmed -->
-		<table name="#pAtkSpd"> 1.15 1.33 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3931,7 +3900,6 @@
 	</skill>
 	<skill id="1565" toLevel="6" name="Mana Pump">
 		<!-- Glory Days confirmed -->
-		<table name="#maxMp"> 70 100 140 150 180 200 </table>
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -4159,8 +4127,6 @@
 	</skill>
 	<skill id="1573" toLevel="6" name="Sub - P. Atk./M. Atk. Increase">
 		<!-- Increases P. Atk. by 10 and M. Atk. by 20. -->
-		<table name="#mAtk"> 20 30 40 50 60 70 </table>
-		<table name="#pAtk"> 10 15 20 25 30 35 </table>
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4192,7 +4158,6 @@
 	</skill>
 	<skill id="1574" toLevel="6" name="Sub - P. Def./M. Def. Increase">
 		<!-- Increases P. Def. by 15 and M. Def. by 15. -->
-		<table name="#def"> 15 30 45 60 75 90 </table>
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4224,7 +4189,6 @@
 	</skill>
 	<skill id="1575" toLevel="3" name="Sub - Atk. Spd./Casting Spd. Increase">
 		<!-- Increases Atk. Spd. and Casting Spd. by 10. -->
-		<table name="#atkSpd"> 10 20 30 </table>
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4250,7 +4214,6 @@
 	</skill>
 	<skill id="1576" toLevel="3" name="Sub - Critical Rate Increase">
 		<!-- Increases P./M. Critical Rate by 10. -->
-		<table name="#critRate"> 10 20 30 </table>
 		<icon>icon.skill0814</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4276,8 +4239,6 @@
 	</skill>
 	<skill id="1577" toLevel="3" name="Sub - Critical Damage Increase">
 		<!-- P. Critical Damage + 18. M. Critical Damage + 14. -->
-		<table name="#cAtkAdd"> 18 36 54 </table>
-		<table name="#mCAtkAdd"> 14 28 42 </table>
 		<icon>icon.skill0815</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4337,9 +4298,6 @@
 	</skill>
 	<skill id="1580" toLevel="3" name="Sub - Physical Ability Increase">
 		<!-- Max CP + 41, Max HP + 51, and Max MP + 36. -->
-		<table name="#maxHp"> 51 77 102 </table>
-		<table name="#maxMp"> 36 54 72 </table>
-		<table name="#maxCp"> 41 62 82 </table>
 		<icon>icon.skill1397</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4373,7 +4331,6 @@
 	</skill>
 	<skill id="1581" toLevel="3" name="Sub - MP Consumption/Cooldown Decrease">
 		<!-- Upon skill use, decreases MP Consumption and Cooldown by 1%. -->
-		<table name="#power"> 0.99 0.98 0.97 </table>
 		<icon>icon.skill6274</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

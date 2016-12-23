@@ -195,7 +195,6 @@
 	<skill id="11603" toLevel="4" name="Mass Restriction">
 		<!-- Updated to IO -->
 		<!-- During PvP, limits the CP, HP, and MP recovery of target and nearby enemies to maximum 60% for 30 seconds. -->
-		<table name="#limit"> 0.60 0.50 0.40 0.30 </table>
 		<icon>icon.skill11603</icon>
 		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
@@ -798,7 +797,6 @@
 	<skill id="11614" toLevel="4" name="Battle Rhapsody Dance">
 		<!-- Updated to IO -->
 		<!-- For 30 sec., increases your P. Atk./M. Atk./Atk. Spd./Casting Spd. + 50%. -->
-		<table name="#stats"> 1.50 1.60 1.70 2.00 </table>
 		<icon>icon.skill11614</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
@@ -1060,8 +1058,6 @@
 	<skill id="11619" toLevel="3" name="Soul Ditty">
 		<!-- Updated to IO -->
 		<!-- Entire party's P. Atk. + 3%, P. Critical Damage + 3%, Atk. Spd. + 2%, M. Atk. + 2%, Casting Spd. + 2%, P. Def. + 2%, M. Def. + 2%, Skill Power + 2%. -->
-		<table name="#pAtkcAtk"> 1.03 1.05 1.07 </table>
-		<table name="#atkSpdDefPower"> 1.02 1.03 1.05 </table>
 		<icon>icon.skill11529</icon>
 		<abnormalTime>1800</abnormalTime> <!-- Custom -->
 		<affectRange>1000</affectRange>

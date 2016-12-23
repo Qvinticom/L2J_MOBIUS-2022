@@ -464,8 +464,6 @@
 	</skill>
 	<skill id="10311" toLevel="4" name="Superior Two-handed Weapon Mastery">
 		<!-- When a two-handed sword or two handed blunt is equipped, P. Atk. + 2 % and additional + 709. -->
-		<table name="#pAtkAdd"> 709 825 982 1190 </table>
-		<table name="#pAtkMul"> 1.02 1.03 1.04 1.05 </table>
 		<icon>icon.skill11838</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -811,8 +809,6 @@
 	<skill id="10319" toLevel="3" name="Duelist's Fury">
 		<!-- TODO: AbnormalType -->
 		<!-- PvP Damage + 20%, Speed + 66, Debuff Resistance + 90%. -->
-		<table name="#abnormalLvl"> 1 2 3 </table>
-		<table name="#pvpBonus"> 1.2 1.25 1.3 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
@@ -1641,7 +1637,6 @@
 		</effects>
 	</skill>
 	<skill id="10340" toLevel="3" name="Blade Slasher">
-		<table name="#power"> 48641 51282 53878 </table>
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks enemies in front with 16214 Power added to P. Atk. If the target is stunned, attacks with 48641 power. Can be used while a sword or blunt weapon is equipped. Consumes 1 Soulstone. -->
 		<icon>

@@ -124,7 +124,6 @@
 	</skill>
 	<skill id="502" toLevel="5" name="Life to Soul">
 		<!-- Confirmed CT2.5 -->
-		<table name="#souls"> 1 2 3 4 5 </table>
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>
@@ -199,7 +198,6 @@
 	</skill>
 	<skill id="504" toLevel="37" name="Triple Thrust">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 620 659 700 742 787 833 882 932 984 1038 1094 1152 1212 1274 1337 1403 1470 1539 1610 1682 1757 1832 1909 1987 2067 2147 2229 2311 2394 2478 2562 2647 2732 2816 2901 2985 3069 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -384,7 +382,6 @@
 	</skill>
 	<skill id="505" toLevel="28" name="Shining Edge">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1853 1953 2057 2164 2274 2388 2505 2625 2748 2875 3004 3136 3271 3408 3548 3690 3834 3980 4127 4275 4425 4575 4726 4878 5029 5180 5330 5479 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -534,7 +531,6 @@
 	</skill>
 	<skill id="506" toLevel="4" name="Checkmate">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 2388 3408 4275 5180 </table>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -595,7 +591,6 @@
 	</skill>
 	<skill id="507" toLevel="37" name="Twin Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 984 1046 1110 1178 1249 1322 1399 1479 1562 1647 1736 1828 1923 2021 2123 2227 2333 2443 2555 2670 2788 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -944,8 +939,6 @@
 	</skill>
 	<skill id="509" toLevel="34" name="Bleeding Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 44 44 44 44 44 44 44 44 44 54 54 54 54 54 54 54 54 54 54 62 62 62 62 62 62 62 62 62 62 67 67 67 67 67 </table>
-		<table name="#power"> 530 562 595 630 666 703 742 782 823 866 910 955 1002 1050 1100 1150 1202 1255 1309 1364 1420 1476 1534 1592 1651 1710 1770 1830 1891 1951 2012 2072 2132 2192 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1169,7 +1162,6 @@
 	</skill>
 	<skill id="510" toLevel="5" name="Deadly Roulette">
 		<!-- Confirmed CT2.5 -->
-		<table name="#lethalStrikeRate"> 30 35 40 45 50 </table>
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1310,7 +1302,6 @@
 	</skill>
 	<skill id="514" toLevel="9" name="Fire Trap">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#npcId"> 13037 13038 13039 13040 13041 13042 13043 13044 13045 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0514</icon>
@@ -1387,7 +1378,6 @@
 	</skill>
 	<skill id="515" toLevel="6" name="Poison Trap">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#npcId"> 13046 13047 13048 13049 13050 13051 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0515</icon>
@@ -1449,7 +1439,6 @@
 	</skill>
 	<skill id="516" toLevel="6" name="Slow Trap">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#npcId"> 13065 13066 13067 13068 13069 13070 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0516</icon>
@@ -1511,7 +1500,6 @@
 	</skill>
 	<skill id="517" toLevel="5" name="Flash Trap">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#npcId"> 13052 13053 13054 13055 13056 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0517</icon>
@@ -1568,7 +1556,6 @@
 	</skill>
 	<skill id="518" toLevel="8" name="Binding Trap">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#npcId"> 13057 13058 13059 13060 13061 13062 13063 13064 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0518</icon>
@@ -1714,9 +1701,6 @@
 	</skill>
 	<skill id="521" toLevel="8" name="Sharpshooting">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 3 3 4 4 5 5 6 6 </table>
-		<table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
-		<table name="#range"> 50 50 100 100 150 150 200 200 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1837,8 +1821,6 @@
 	</skill>
 	<skill id="522" toLevel="4" name="Real Target">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#trait_bow"> -12 -16 -20 -24 </table>
-		<table name="#trait_crossbow"> -16 -24 -32 -40 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1907,9 +1889,6 @@
 	</skill>
 	<skill id="523" toLevel="7" name="Imbue Dark Seed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 </table>
-		<table name="#dot"> 76 76 76 76 83 83 83 </table>
-		<table name="#effectLevel"> 1 2 3 4 5 6 7 </table>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DARK_SEED</abnormalType>
@@ -2002,7 +1981,6 @@
 	</skill>
 	<skill id="525" toLevel="6" name="Decoy">
 		<!-- Confirmed CT2.5 -->
-		<table name="#npcId"> 13071 13072 13073 13074 13075 13076 </table>
 		<hitTime>2000</hitTime>
 		<icon>icon.skill0525</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2518,7 +2496,6 @@
 	<skill id="539" toLevel="2" name="Nail Attack">
 		<!-- Confirmed CT2.5 and updated to IO -->
 		<!-- Kamael Final Form Skill -->
-		<table name="#power"> 2583 8772 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -2552,7 +2529,6 @@
 	<skill id="540" toLevel="2" name="Wing Assault">
 		<!-- Confirmed CT2.5 and updated to IO -->
 		<!-- Kamael Final Form Skill -->
-		<table name="#power"> 2067 2112 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>600</castRange>
@@ -3205,7 +3181,6 @@
 	</skill>
 	<skill id="559" toLevel="4" name="Spear">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 900 1013 1129 1248 </table>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">6</value>
@@ -3268,7 +3243,6 @@
 	</skill>
 	<skill id="560" toLevel="4" name="Power Slash">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1250 1406 1588 1733 </table>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -3395,7 +3369,6 @@
 	</skill>
 	<skill id="563" toLevel="4" name="Horn of Doom">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1250 1406 1568 1733 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3440,8 +3413,6 @@
 	</skill>
 	<skill id="564" toLevel="4" name="Gravity Control">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 0.9 0.85 0.8 0.75 </table>
-		<table name="#runSpd"> 0.8 0.7 0.65 0.6 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -3501,7 +3472,6 @@
 	</skill>
 	<skill id="565" toLevel="4" name="Horn Assault">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 938 1055 1176 1300 </table>
 		<castRange>900</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -3545,7 +3515,6 @@
 	</skill>
 	<skill id="567" toLevel="4" name="Light Heal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 690 731 770 806 </table>
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3589,7 +3558,6 @@
 	</skill>
 	<skill id="568" toLevel="4" name="Attack Buster">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1250 1406 1568 1733 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3640,7 +3608,6 @@
 	</skill>
 	<skill id="569" toLevel="4" name="Attack Storm">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 625 703 784 867 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -3692,7 +3659,6 @@
 	</skill>
 	<skill id="570" toLevel="4" name="Attack Rage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxCharges"> 1 2 3 4 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-288</value>
@@ -3795,7 +3761,6 @@
 	</skill>
 	<skill id="572" toLevel="4" name="Double Slasher">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 938 1055 1176 1300 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-288</value>
@@ -3839,7 +3804,6 @@
 	</skill>
 	<skill id="573" toLevel="4" name="Earthquake">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 625 703 784 867 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3896,7 +3860,6 @@
 	</skill>
 	<skill id="574" toLevel="4" name="Bomb Installation">
 		<!-- Confirmed CT2.5 -->
-		<table name="#npcId"> 13040 13041 13042 13043 </table>
 		<effectPoint>-1</effectPoint>
 		<hitTime>3000</hitTime>
 		<icon>icon.skill_transform_etc</icon>
@@ -3927,7 +3890,6 @@
 	</skill>
 	<skill id="575" toLevel="4" name="Steel Cutter">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1250 1406 1568 1733 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3972,7 +3934,6 @@
 	</skill>
 	<skill id="576" toLevel="4" name="Paw Strike">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1250 1406 1568 1733 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -4017,7 +3978,6 @@
 	</skill>
 	<skill id="577" toLevel="4" name="Fire Breath">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 875 984 1098 1213 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
 		<castRange>100</castRange>
@@ -4067,8 +4027,6 @@
 	</skill>
 	<skill id="578" toLevel="4" name="Blaze Quake">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 27 27 31 31 </table>
-		<table name="#power"> 625 703 784 867 </table>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">6</value>
@@ -4136,8 +4094,6 @@
 	</skill>
 	<skill id="579" toLevel="4" name="Fire Armor">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mDef"> 800 900 1000 1100 </table>
-		<table name="#pDef"> 1000 1100 1200 1300 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4203,7 +4159,6 @@
 	</skill>
 	<skill id="580" toLevel="4" name="Death Blow">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 3749 4217 4703 5199 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -4252,7 +4207,6 @@
 	</skill>
 	<skill id="581" toLevel="4" name="Sand Cloud">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 6 7 8 9 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
@@ -4299,7 +4253,6 @@
 	</skill>
 	<skill id="582" toLevel="4" name="Scope Bleed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 875 984 1098 1213 </table>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">6</value>
@@ -4482,7 +4435,6 @@
 	</skill>
 	<skill id="586" toLevel="2" name="Rolling Attack">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 840 984 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
@@ -4516,7 +4468,6 @@
 	</skill>
 	<skill id="587" toLevel="2" name="Earth Storm">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1200 1406 </table>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-530</value>
@@ -4552,7 +4503,6 @@
 	</skill>
 	<skill id="588" toLevel="2" name="Curse of Darkness">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 88 101 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4591,7 +4541,6 @@
 	</skill>
 	<skill id="589" toLevel="2" name="Darkness Energy Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#drainHp"> 540 580 </table>
 		<castRange>20</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>

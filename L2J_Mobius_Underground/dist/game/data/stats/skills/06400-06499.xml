@@ -51,7 +51,6 @@
 		</effects>
 	</skill>
 	<skill id="6402" toLevel="5" name="Torumba Poison Strike">
-		<table name="#dot"> 100 220 440 880 1600 </table>
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -928,9 +927,6 @@
 	<skill id="6435" toLevel="3" name="Curse of the Plains">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
-		<table name="#cAtk"> 1.2 1.3 1.4 </table>
-		<table name="#dot"> 0.005 0.01 0.02 </table>
-		<table name="#rCrit"> 0.2 0.5 0.75 </table>
 		<abnormalLvl>
 			<value level="1">7</value>
 			<value level="2">8</value>
@@ -1040,7 +1036,6 @@
 		</effects>
 	</skill>
 	<skill id="6437" toLevel="7" name="Freezing Core Area">
-		<table name="#dot"> 30 60 90 150 250 350 500 </table>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>POISON</abnormalType>

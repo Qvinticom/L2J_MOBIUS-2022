@@ -89,7 +89,6 @@
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Heals the servitor with 1637 Power. -->
-		<table name="#power"> 1637 1645 1658 1671 1685 1698 1713 1727 1928 1944 1960 </table>
 		<icon>icon.skill1127</icon>
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
@@ -2649,7 +2648,6 @@
 	<skill id="11361" toLevel="3" name="Summon Moving Portal">
 		<!-- Updated to IO -->
 		<!-- Summons an instant Moving Portal for 30 sec. Consumes 5 Spirit Ores. -->
-		<table name="#despawnDelay"> 30000 45000 30000 </table>
 		<icon>icon.skill11361</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -2713,7 +2711,6 @@
 	<skill id="11364" toLevel="3" name="Elemental Dash">
 		<!-- Updated to IO -->
 		<!-- Party's Speed + 15. -->
-		<table name="#runSpd"> 15 20 30 </table>
 		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Guessed -->

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1300" toLevel="3" name="Servitor Cure">
-		<table name="#dispelAbnormals"> POISON,3;BLEEDING,3 POISON,7;BLEEDING,7 POISON,9;BLEEDING,9 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">379</value>
@@ -66,7 +65,6 @@
 		</effects>
 	</skill>
 	<skill id="1303" toLevel="2" name="Wild Magic">
-		<table name="#mCritRate"> 1 2 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -112,7 +110,6 @@
 		</effects>
 	</skill>
 	<skill id="1304" toLevel="3" name="Advanced Block">
-		<table name="#sDef"> 1.3 1.4 1.5 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -276,7 +273,6 @@
 		</effects>
 	</skill>
 	<skill id="1307" toLevel="3" name="Prayer">
-		<table name="#healEffect"> 1.08 1.1 1.12 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -328,7 +324,6 @@
 		</effects>
 	</skill>
 	<skill id="1308" toLevel="3" name="Chant of Predator">
-		<table name="#rCrit"> 0.2 0.25 0.3 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -380,7 +375,6 @@
 		</effects>
 	</skill>
 	<skill id="1309" toLevel="3" name="Chant of Eagle">
-		<table name="#accCombat"> 2 3 4 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -432,7 +426,6 @@
 		</effects>
 	</skill>
 	<skill id="1310" toLevel="4" name="Chant of Vampire">
-		<table name="#absorbDam"> 6 7 8 9 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -490,7 +483,6 @@
 		</effects>
 	</skill>
 	<skill id="1311" toLevel="6" name="Body of Avatar">
-		<table name="#amount"> 10 15 20 25 30 35 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -625,7 +617,6 @@
 		</conditions>
 	</skill>
 	<skill id="1315" toLevel="27" name="Unused Fishing Expertise">
-		<table name="#power"> 0.66 0.9375 1.26 1.55 1.7 1.85 2 2.15 2.3 2.45 2.6 2.75 2.9 3.05 3.2 3.35 3.5 3.65 3.8 3.95 4.1 4.25 4.4 4.55 4.7 4.85 5 </table>
 		<icon>icon.skill1315</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -735,7 +726,6 @@
 	</skill>
 	<skill id="1324" toLevel="2" name="Summon CP Potion">
 		<!-- Confirmed CT2.5 and updated to IO -->
-		<table name="#reuseDelay"> 600000 3600000 </table>
 		<hitTime>20000</hitTime>
 		<icon>icon.skill1324</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -926,7 +916,6 @@
 	</skill>
 	<skill id="1328" toLevel="8" name="Mass Summon Storm Cubic">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cubicLvl"> 1 2 3 4 5 6 7 8 </table>
 		<affectRange>1000</affectRange>
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1328</icon>
@@ -1000,7 +989,6 @@
 	</skill>
 	<skill id="1329" toLevel="9" name="Mass Summon Aqua Cubic">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cubicLvl"> 1 2 3 4 5 6 7 8 9 </table>
 		<affectRange>1000</affectRange>
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1329</icon>
@@ -1079,7 +1067,6 @@
 	</skill>
 	<skill id="1330" toLevel="8" name="Mass Summon Phantom Cubic">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cubicLvl"> 1 2 3 4 5 6 7 8 </table>
 		<affectRange>1000</affectRange>
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1330</icon>
@@ -1153,8 +1140,6 @@
 		</effects>
 	</skill>
 	<skill id="1331" toLevel="10" name="Summon Feline Queen">
-		<table name="#itemConsumeCountOT"> 2 2 2 2 2 4 4 4 6 6 </table>
-		<table name="#npcIds"> 14251 14252 14253 14254 14255 14256 14257 14258 14259 14260 14261 14262 14263 14264 </table>
 		<icon>icon.skill1331</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -1253,8 +1238,6 @@
 		</effects>
 	</skill>
 	<skill id="1332" toLevel="10" name="Summon Seraphim the Unicorn">
-		<table name="#itemConsumeCountOT"> 2 2 2 2 2 4 4 4 6 6 </table>
-		<table name="#npcIds"> 14435 14436 14437 14438 14439 14440 14441 14442 14443 14444 14445 14446 14447 14448 </table>
 		<icon>icon.skill1332</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -1353,8 +1336,6 @@
 		</effects>
 	</skill>
 	<skill id="1333" toLevel="10" name="Summon Nightshade">
-		<table name="#itemConsumeCountOT"> 2 2 2 2 2 4 4 4 6 6 </table>
-		<table name="#npcIds"> 14619 14620 14621 14622 14623 14624 14625 14626 14627 14628 14629 14630 14631 14632 </table>
 		<icon>icon.skill1333</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -1453,8 +1434,6 @@
 		</effects>
 	</skill>
 	<skill id="1334" toLevel="16" name="Summon Cursed Man">
-		<table name="#itemConsumeCountOT"> 1 1 1 2 2 2 2 0 0 0 0 0 0 0 0 0 </table>
-		<table name="#npcIds"> 14074 14075 14076 14077 14078 14079 14080 15142 15143 15144 15145 15146 15147 15194 15195 15196 </table>
 		<icon>icon.skill1334</icon>
 		<coolTime>500</coolTime>
 		<itemConsumeCount>
@@ -3562,8 +3541,6 @@
 		</effects>
 	</skill>
 	<skill id="1382" toLevel="5" name="Mass Curse Gloom">
-		<table name="#power"> 33 36 39 41 44 </table>
-		<table name="#vuln"> 5 10 15 20 25 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
@@ -4013,7 +3990,6 @@
 		</effects>
 	</skill>
 	<skill id="1388" toLevel="3" name="Greater Might">
-		<table name="#pAtk"> 1.04 1.07 1.1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4066,7 +4042,6 @@
 		</effects>
 	</skill>
 	<skill id="1389" toLevel="3" name="Greater Shield">
-		<table name="#pDef"> 1.05 1.1 1.15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4119,7 +4094,6 @@
 		</effects>
 	</skill>
 	<skill id="1390" toLevel="3" name="War Chant">
-		<table name="#pAtk"> 1.04 1.07 1.1 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4172,7 +4146,6 @@
 		</effects>
 	</skill>
 	<skill id="1391" toLevel="3" name="Chant of Earth">
-		<table name="#pDef"> 1.05 1.1 1.15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4225,7 +4198,6 @@
 		</effects>
 	</skill>
 	<skill id="1392" toLevel="3" name="Holy Attack Resistance">
-		<table name="#holyRes"> 15 23 30 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4272,7 +4244,6 @@
 		</effects>
 	</skill>
 	<skill id="1393" toLevel="3" name="Dark Attack Resistance">
-		<table name="#darkRes"> 15 23 30 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>

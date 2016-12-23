@@ -1247,7 +1247,6 @@
 	</skill>
 	<skill id="26046" toLevel="7" name="XP Rune III (Lv. 1-99) 10%">
 		<!-- Confirmed CT2.5 -->
-		<table name="#bonusExp"> 10 20 30 40 50 100 200 </table>
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_exp_buff_1</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_exp_buff_2</value>
@@ -1277,7 +1276,6 @@
 	</skill>
 	<skill id="26047" toLevel="7" name="SP Rune 10%">
 		<!-- Confirmed CT2.5 -->
-		<table name="#bonusSp"> 10 20 30 40 50 100 200 </table>
 		<icon>
 			<value level="1">br_cashtex.skill.br_cash_rune_of_sp_buff_1</value>
 			<value level="2">br_cashtex.skill.br_cash_rune_of_sp_buff_2</value>
@@ -1561,7 +1559,6 @@
 	</skill>
 	<skill id="26067" toLevel="5" name="Bone Quiver">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemId"> 22067 22068 22069 22070 22071 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1591,8 +1588,6 @@
 	</skill>
 	<skill id="26068" toLevel="10" name="Blessed Spiritshot Pack (D-grade)">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
-		<table name="#itemId"> 22072 22073 22074 22075 22076 22072 22073 22074 22075 22076 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1638,8 +1633,6 @@
 	</skill>
 	<skill id="26069" toLevel="10" name="Spiritshot Pack (D-grade)">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
-		<table name="#itemId"> 22077 22078 22079 22080 22081 22077 22078 22079 22080 22081 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1685,8 +1678,6 @@
 	</skill>
 	<skill id="26070" toLevel="10" name="Soulshot Pack (D-grade)">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemCount"> 5000 5000 5000 5000 5000 10000 10000 10000 10000 10000 </table>
-		<table name="#itemId"> 22082 22083 22084 22085 22086 22082 22083 22084 22085 22086 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1732,7 +1723,6 @@
 	</skill>
 	<skill id="26071" toLevel="17" name="Wrapped Daisy Hairpin">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemId"> 22156 22157 22158 22159 22160 22161 22162 22163 22164 22165 22166 22167 22168 22169 22170 22171 22172 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1774,7 +1764,6 @@
 	</skill>
 	<skill id="26072" toLevel="3" name="Wrapped Pet Coupon - Buffalo">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemId"> 7583 7584 7585 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1802,7 +1791,6 @@
 	</skill>
 	<skill id="26073" toLevel="5" name="Bone Bolt Container">
 		<!-- Confirmed CT2.5 -->
-		<table name="#itemId"> 22144 22145 22146 22147 22148 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>

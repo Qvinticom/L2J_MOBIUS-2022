@@ -53,7 +53,6 @@
 	</skill>
 	<skill id="3007" toLevel="6" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 </table>
 		<icon>icon.skill1240</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -81,7 +80,6 @@
 	</skill>
 	<skill id="3008" toLevel="6" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 5.42 5.12 4.82 4.53 4.24 3.95 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -109,7 +107,6 @@
 	</skill>
 	<skill id="3009" toLevel="8" name="Special Ability: Evasion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rEvas"> 2.95 2.82 2.68 2.55 2.41 2.28 7.5 5.31 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -141,7 +138,6 @@
 	</skill>
 	<skill id="3010" toLevel="6" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 86.7 82.2 77.8 73.3 68.9 64.5 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -169,7 +165,6 @@
 	</skill>
 	<skill id="3011" toLevel="6" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 90.5 85.9 81.2 76.6 71.9 67.3 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -197,7 +192,6 @@
 	</skill>
 	<skill id="3012" toLevel="6" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 </table>
 		<icon>icon.skill1062</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -229,8 +223,6 @@
 	</skill>
 	<skill id="3013" toLevel="5" name="Special Ability: Health">
 		<!-- Confirmed CT2.5 -->
-		<table name="#atkCountMax"> 0 4 0 4 0 </table>
-		<table name="#pvpBonus"> 1 1 1.05 1.05 1.05 </table>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">1</value>
@@ -290,7 +282,6 @@
 	</skill>
 	<skill id="3014" toLevel="3" name="Special Ability: Mana Up">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<icon>icon.skill0213</icon>
 		<magicLvl>
 			<value level="1">1</value>
@@ -371,7 +362,6 @@
 	</skill>
 	<skill id="3018" toLevel="6" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 0.71 0.67 0.63 0.6 0.56 0.53 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -400,7 +390,6 @@
 	</skill>
 	<skill id="3019" toLevel="6" name="Special Ability: Back Blow">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 0.5 0.47 0.45 0.42 0.4 0.37 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -429,7 +418,6 @@
 	</skill>
 	<skill id="3020" toLevel="6" name="Special Ability: Critical Bleed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 128 128 190 190 190 256 </table>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -484,7 +472,6 @@
 	</skill>
 	<skill id="3021" toLevel="6" name="Special Ability: Critical Bleed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 43 43 64 64 65 88 </table>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -532,8 +519,6 @@
 	</skill>
 	<skill id="3022" toLevel="6" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbPart"> 21 23 25 28 31 35 </table>
-		<table name="#power"> 9.26 9.33 9.31 9.19 8.97 8.65 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-209</value>
@@ -584,7 +569,6 @@
 	</skill>
 	<skill id="3023" toLevel="6" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 174.78 194.1 213.12 231.29 247.98 262.57 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -612,7 +596,6 @@
 	</skill>
 	<skill id="3024" toLevel="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 191 191 291 291 291 403 </table>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -704,7 +687,6 @@
 	</skill>
 	<skill id="3026" toLevel="6" name="Special Ability: Critical Anger">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 248.56 298.04 352.73 411.98 474.82 539.9 </table>
 		<icon>icon.skill1062</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -732,8 +714,6 @@
 	</skill>
 	<skill id="3027" toLevel="7" name="Special Ability: Rsk. Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 </table>
-		<table name="#rCrit"> 138.7 130.9 123.1 115.4 107.7 99.9 164 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -800,7 +780,6 @@
 	</skill>
 	<skill id="3028" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -829,7 +808,6 @@
 	</skill>
 	<skill id="3029" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rEvas"> 4.44 4.24 4.04 3.84 3.63 3.41 </table>
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -858,7 +836,6 @@
 	</skill>
 	<skill id="3030" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -887,7 +864,6 @@
 	</skill>
 	<skill id="3031" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rEvas"> 7.63 7.29 6.95 6.6 6.24 5.87 </table>
 		<icon>icon.skill0198</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -916,7 +892,6 @@
 	</skill>
 	<skill id="3032" toLevel="6" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -944,7 +919,6 @@
 	</skill>
 	<skill id="3033" toLevel="6" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -972,8 +946,6 @@
 	</skill>
 	<skill id="3034" toLevel="7" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.13 1.12 1.12 1.11 1.1 1.09 1.09 </table>
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1039,7 +1011,6 @@
 	</skill>
 	<skill id="3035" toLevel="6" name="Special Ability: Mighty Mortal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#blowRate"> 1.5 1.48 1.46 1.44 1.42 1.4 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1067,7 +1038,6 @@
 	</skill>
 	<skill id="3036" toLevel="6" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1095,7 +1065,6 @@
 	</skill>
 	<skill id="3037" toLevel="6" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1123,7 +1092,6 @@
 	</skill>
 	<skill id="3038" toLevel="6" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1151,8 +1119,6 @@
 	</skill>
 	<skill id="3039" toLevel="7" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbPart"> 33 31 30 28 26 24 24 </table>
-		<table name="#power"> 6.85 7.96 9.26 10.8 12.62 14.82 14.82 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-239</value>
@@ -1205,8 +1171,6 @@
 	</skill>
 	<skill id="3040" toLevel="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 168 168 249 249 249 336 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1272,8 +1236,6 @@
 	</skill>
 	<skill id="3041" toLevel="6" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 317 317 498 498 498 671 </table>
-		<table name="#magicLvl"> 46 49 52 55 58 61 </table>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -1469,7 +1431,6 @@
 	</skill>
 	<skill id="3043" toLevel="6" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 106.45 118.22 129.81 140.87 151.04 159.93 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -1497,8 +1458,6 @@
 	</skill>
 	<skill id="3044" toLevel="20" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
-		<table name="#rCrit"> 53.6 38.5 50.4 43.2 36.5 30.4 24.8 40.4 76.6 65 54 43.7 52.6 47.2 98.7 92.4 86.2 96 103.5 109.2 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">48</value>
@@ -1629,8 +1588,6 @@
 	</skill>
 	<skill id="3045" toLevel="20" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.05 1.04 1.05 1.04 1.03 1.03 1.02 1.04 1.07 1.06 1.05 1.04 1.05 1.04 1.09 1.08 1.08 1.09 1.09 1.1 </table>
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">48</value>
@@ -1698,8 +1655,6 @@
 	</skill>
 	<skill id="3046" toLevel="20" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 3.9 2.8 3.7 3.1 2.6 2.2 1.8 2.9 5.7 4.8 3.9 3.2 3.8 3.4 6.5 6.5 6.5 6.5 6.5 6.5 </table>
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">48</value>
@@ -1830,7 +1785,6 @@
 	</skill>
 	<skill id="3047" toLevel="3" name="Special Ability: Acumen">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<icon>icon.skill1085</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -1872,7 +1826,6 @@
 	</skill>
 	<skill id="3048" toLevel="3" name="Special Ability: Conversion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2124,7 +2077,6 @@
 	</skill>
 	<skill id="3056" toLevel="3" name="Special Ability: Rsk. Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2166,7 +2118,6 @@
 	</skill>
 	<skill id="3057" toLevel="4" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 31.3 32.05 32.05 78.33 </table>
 		<icon>icon.skill1062</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2206,7 +2157,6 @@
 	</skill>
 	<skill id="3058" toLevel="2" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 38.09 39 </table>
 		<icon>icon.skill1062</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2242,7 +2192,6 @@
 	</skill>
 	<skill id="3059" toLevel="2" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 18 19 </table>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2268,7 +2217,6 @@
 	</skill>
 	<skill id="3060" toLevel="2" name="Special Ability: Critical Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 10 11 </table>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2294,8 +2242,6 @@
 	</skill>
 	<skill id="3061" toLevel="3" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 403 403 439 </table>
-		<table name="#magicLvl"> 64 67 70 </table>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -2333,7 +2279,6 @@
 	</skill>
 	<skill id="3062" toLevel="2" name="Special Ability: Critical Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#magicLvl"> 64 67 </table>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -2445,7 +2390,6 @@
 	</skill>
 	<skill id="3066" toLevel="4" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 180.94 200.79 200.79 559 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2481,7 +2425,6 @@
 	</skill>
 	<skill id="3067" toLevel="2" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 297.68 326.28 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2513,8 +2456,6 @@
 	</skill>
 	<skill id="3068" toLevel="3" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.06 1.06 1.06 </table>
-		<table name="#pvpBonus"> 1 1.05 1.05 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2644,7 +2585,6 @@
 	</skill>
 	<skill id="3072" toLevel="2" name="Special Ability: Empower">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 30.76 31.38 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2676,7 +2616,6 @@
 	</skill>
 	<skill id="3073" toLevel="2" name="Special Ability: Magic Power">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 153.28 167.02 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2789,7 +2728,6 @@
 	</skill>
 	<skill id="3076" toLevel="6" name="Special Ability: Empower">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 20.36 22.51 24.59 26.53 28.27 29.7 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -2817,7 +2755,6 @@
 	</skill>
 	<skill id="3077" toLevel="6" name="Special Ability: Magic Power">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 75.86 87.22 99.39 112.26 125.66 139.41 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -2992,7 +2929,6 @@
 	</skill>
 	<skill id="3081" toLevel="15" name="Item Skill: Charm">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> -219 -234 -248 -262 -275 -287 -299 -309 -318 -330 -342 -354 -366 -378 -390 </table>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
 		<icon>icon.skill3080</icon>
@@ -3709,7 +3645,6 @@
 	</skill>
 	<skill id="3095" toLevel="10" name="Item Skill: Mana Burn">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 49 53 57 61 66 70 74 78 82 88 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>

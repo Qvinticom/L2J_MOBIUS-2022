@@ -299,7 +299,6 @@
 		<!-- Receive an additional 11% XP/SP when hunting. Receive an 11th Anniversary Coin once the buff ends. (Note:) Cannot receive item if you are dead or don't have space in your inventory. -->
 		<!-- When level 1 ends, you get 11 coins and lvl 2 is casted. It cannot be canceled. Lv2 gives no coins. NPC which gives this buff doesnt give again, until it disappears. -->
 		<icon>icon.ev_buff_11th</icon>
-		<table name="#bonusExp"> 1.11 1.30 </table>
 		<abnormalTime>
 			<value level="1">3600</value>
 			<value level="2">7200</value>

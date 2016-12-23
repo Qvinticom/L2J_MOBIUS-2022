@@ -33,8 +33,6 @@
 		<!-- Glory Days confirmed -->
 		<!-- Updated to Ertheia -->
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<table name="#healEffect"> 1.1 1.2 1.3 </table>
-		<table name="#hotValue"> 106 142 178 </table>
 		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -92,7 +90,6 @@
 		<!-- Glory Days confirmed -->
 		<!-- Updated to Ertheia -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -122,8 +119,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<table name="#power"> 1.1 1.2 1.3 </table>
-		<table name="#hotValue"> 107 143 179 </table>
 		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -181,7 +176,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -218,7 +212,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- Recovers HP and removes bad abnormal statuses. -->
-		<table name="#heal"> 3274 3296 3319 3338 </table>
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
@@ -255,7 +248,6 @@
 	<skill id="11807" toLevel="5" name="Miracle of Fairy">
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
-		<table name="#heal"> 5 6 7 8 9 </table>
 		<icon>icon.skill11807</icon>
 		<magicLvl>
 			<value level="1">87</value>
@@ -290,7 +282,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- Affected by Elegance of Light. HP is decreased. -->
-		<table name="#dot"> 200 400 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>ALL_REGEN_DOWN</abnormalType>
@@ -326,7 +317,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- Affected by Elegance of Light. Increases HP. -->
-		<table name="#dot"> 200 400 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_EARTH</abnormalType>
@@ -579,8 +569,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- For 15 seconds, Heals allies over time. Also increases your Healing power. If triggered again, the effect will increase. -->
-		<table name="#power"> 1.1 1.2 1.3 </table>
-		<table name="#hotValue"> 107 143 179 </table>
 		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -639,7 +627,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- For 10 second, increases Healing power by 50. If triggered again, the effect will increase. -->
-		<table name="#healPower"> 50 100 200 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
@@ -1151,7 +1138,6 @@
 		<!-- Updated to Ertheia -->
 		<!-- TODO: Level 4 was 1077 before update, supposed to be confirmed -->
 		<!-- Glory Days confirmed -->
-		<table name="#power"> 521 532 540 546 554 </table>
 		<icon>icon.skill11827</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1707,7 +1693,6 @@
 	</skill>
 	<skill id="11852" toLevel="4" name="Mass Mana Gain">
 		<!-- For 30 min., party members' MP heal amount + 33. -->
-		<table name="#power"> 33 35 37 40 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>

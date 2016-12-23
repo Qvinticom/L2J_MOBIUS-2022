@@ -2,8 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3600" toLevel="10" name="Special Ability: Anger">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtk"> 20.44 22.64 24.77 26.78 28.59 30.12 31.30 39 45 78.33 </table>
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<icon>icon.skill1062</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -92,8 +90,6 @@
 	</skill>
 	<skill id="3601" toLevel="10" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#pAtkSpd"> 1.08 1.07 1.07 1.07 1.06 1.06 1.06 1.06 1.07 1.11 </table>
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -163,8 +159,6 @@
 	</skill>
 	<skill id="3602" toLevel="10" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 6.88 6.07 5.72 5.37 5.02 4.68 4.34 3.95 5.27 7.5 </table>
-		<table name="#pvpBonus"> 1 1 1 1 1 1 1.05 1.05 1.05 1.05 </table>
 		<icon>icon.skill1240</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -248,21 +242,6 @@
 		</effects>
 	</skill>
 	<skill id="3603" toLevel="10" name="Demonic Sword Zariche">
-		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
-		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
-		<table name="#debuffVuln"> 85 86 87 88 89 90 91 92 93 94 </table>
-		<table name="#mAtk"> 3.1 3.2 3.31 3.43 3.55 3.68 3.81 3.95 4.1 4.25 </table>
-		<table name="#mAtkAdd"> 600 720 864 1036 1244 1492 1791 2149 2579 3095 </table>
-		<table name="#maxCp"> 11.5 12.02 12.57 13.15 13.76 14.4 15.07 15.77 16.51 17.28 </table>
-		<table name="#maxCpAdd"> 1300 1690 2197 2856 3712 4826 6274 8157 10604 13785 </table>
-		<table name="#mDef"> 3.06 3.12 3.18 3.25 3.31 3.38 3.45 3.53 3.6 3.68 </table>
-		<table name="#mDefAdd"> 515 530 546 562 579 597 614 633 652 671 </table>
-		<table name="#pAtk"> 3.2 3.42 3.66 3.92 4.22 4.54 4.89 5.28 5.71 6.18 </table>
-		<table name="#pAtkAdd"> 600 720 864 1036 1244 1492 1791 2149 2579 3095 </table>
-		<table name="#pDef"> 3.04 3.08 3.12 3.16 3.2 3.25 3.29 3.34 3.39 3.43 </table>
-		<table name="#pDefAdd"> 510 520 530 541 552 563 574 585 597 609 </table>
-		<table name="#regCp"> 12 13.1 14.31 15.64 17.1 18.71 20.48 22.43 24.57 26.93 </table>
-		<table name="#runSpd"> 2 4 6 8 10 12 14 16 18 20 </table>
 		<icon>icon.weapon_unique_zariche_i00</icon>
 		<magicLvl>78</magicLvl>
 		<minPledgeClass>2</minPledgeClass>
@@ -591,9 +570,6 @@
 	</skill>
 	<skill id="3608" toLevel="3" name="Apella Heavy Armor Set">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxCP"> 1035 1116 1116 </table>
-		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
-		<table name="#triggeredLevel"> 1 2 2 </table>
 		<icon>icon.armor_t1004_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -666,9 +642,6 @@
 	</skill>
 	<skill id="3609" toLevel="3" name="Apella Light Armor Set">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxCP"> 1035 1116 1116 </table>
-		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
-		<table name="#triggeredLevel"> 1 2 2 </table>
 		<icon>icon.armor_t1005_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -741,9 +714,6 @@
 	</skill>
 	<skill id="3610" toLevel="3" name="Apella Robe Set">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxCP"> 1035 1116 1116 </table>
-		<table name="#mpConsumeRate"> 1 0.95 0.95 </table>
-		<table name="#triggeredLevel"> 1 2 2 </table>
 		<icon>icon.armor_t1006_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1250,21 +1220,6 @@
 		</conditions>
 	</skill>
 	<skill id="3629" toLevel="10" name="Blood Sword Akamanah">
-		<table name="#absorbDam"> 22 24 26 29 32 35 38 42 47 50 </table>
-		<table name="#accCombat"> 1 4 9 16 25 36 49 64 81 100 </table>
-		<table name="#debuffVuln"> 85 86 87 88 89 90 91 92 93 94 </table>
-		<table name="#mAtk"> 3.1 3.2 3.31 3.43 3.55 3.68 3.81 3.95 4.1 4.25 </table>
-		<table name="#mAtkAdd"> 600 720 864 1036 1244 1492 1791 2149 2579 3095 </table>
-		<table name="#maxCp"> 11.5 12.02 12.57 13.15 13.76 14.4 15.07 15.77 16.51 17.28 </table>
-		<table name="#maxCpAdd"> 1300 1690 2197 2856 3712 4826 6274 8157 10604 13785 </table>
-		<table name="#mDef"> 3.06 3.12 3.18 3.25 3.31 3.38 3.45 3.53 3.6 3.68 </table>
-		<table name="#mDefAdd"> 515 530 546 562 579 597 614 633 652 671 </table>
-		<table name="#pAtk"> 3.2 3.42 3.66 3.92 4.22 4.54 4.89 5.28 5.71 6.18 </table>
-		<table name="#pAtkAdd"> 600 720 864 1036 1244 1492 1791 2149 2579 3095 </table>
-		<table name="#pDef"> 3.04 3.08 3.12 3.16 3.2 3.25 3.29 3.34 3.39 3.43 </table>
-		<table name="#pDefAdd"> 510 520 530 541 552 563 574 585 597 609 </table>
-		<table name="#regCp"> 12 13.1 14.31 15.64 17.1 18.71 20.48 22.43 24.57 26.93 </table>
-		<table name="#runSpd"> 2 4 6 8 10 12 14 16 18 20 </table>
 		<icon>icon.weapon_dual_sword_i00</icon>
 		<magicLvl>78</magicLvl>
 		<minPledgeClass>2</minPledgeClass>
@@ -1571,7 +1526,6 @@
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#trait_shock"> 80 100 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>

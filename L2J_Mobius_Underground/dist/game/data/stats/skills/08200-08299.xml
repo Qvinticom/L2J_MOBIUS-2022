@@ -1860,8 +1860,6 @@
 	</skill>
 	<skill id="8240" toLevel="3" name="Obliteration Storm">
 		<!-- Confirmed CT2.5 -->
-		<table name="#abnormalLvl"> 4 6 8 </table>
-		<table name="#power"> 9132 12784 16436 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2132,7 +2130,6 @@
 		</effects>
 	</skill>
 	<skill id="8250" toLevel="2" name="Summon Tigress">
-		<table name="#npcIds"> 14916 14917 </table>
 		<hitTime>15000</hitTime>
 		<icon>icon.skill0283</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2931,7 +2928,6 @@
 	</skill>
 	<skill id="8289" toLevel="3" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 128.7 137.1 137.1 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">84</value>
@@ -2989,7 +2985,6 @@
 		</effects>
 	</skill>
 	<skill id="8291" toLevel="12" name="Add Belt Weight Gauge">
-		<table name="#weightPenalty"> 1000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 </table>
 		<icon>icon.skill0150</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

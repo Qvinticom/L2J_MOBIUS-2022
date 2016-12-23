@@ -93,7 +93,6 @@
 	</skill>
 	<skill id="1401" toLevel="11" name="Major Heal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 690 722 753 783 812 840 867 892 915 936 946 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">403</value>
@@ -179,7 +178,6 @@
 	</skill>
 	<skill id="1402" toLevel="5" name="Major Group Heal">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 902 979 1050 1115 1170 </table>
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">421</value>
@@ -291,7 +289,6 @@
 	</skill>
 	<skill id="1405" toLevel="6" name="Divine Inspiration">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#slots"> 1 2 3 4 5 6 </table>
 		<icon>icon.skill1405</icon>
 		<magicLvl>
 			<value level="1">52</value>
@@ -770,8 +767,6 @@
 		</effects>
 	</skill>
 	<skill id="1417" toLevel="5" name="Aura Flash">
-		<table name="#chance"> 20 25 30 35 40 </table>
-		<table name="#power"> 49 53 58 61 65 </table>
 		<affectRange>200</affectRange>
 		<effectPoint>
 			<value level="1">-440</value>
@@ -1247,7 +1242,6 @@
 	</skill>
 	<skill id="1430" toLevel="5" name="Invocation">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mhot"> 27 30 34 37 42 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
@@ -1307,7 +1301,6 @@
 	</skill>
 	<skill id="1431" toLevel="6" name="Fallen Arrow">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 13 14 16 18 20 22 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-92</value>
@@ -1376,7 +1369,6 @@
 	</skill>
 	<skill id="1432" toLevel="2" name="Increase Power">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rate"> 1.08 1.12 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1421,7 +1413,6 @@
 	</skill>
 	<skill id="1433" toLevel="10" name="Abyssal Blaze">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 24 26 28 31 33 35 38 40 43 46 </table>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-189</value>
@@ -1503,7 +1494,6 @@
 	</skill>
 	<skill id="1434" toLevel="4" name="Dark Explosion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 16 18 20 23 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1558,8 +1548,6 @@
 	</skill>
 	<skill id="1435" toLevel="10" name="Death Mark">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
-		<table name="#dmg"> 24 32 41 41 50 50 58 58 63 63 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1688,7 +1676,6 @@
 	</skill>
 	<skill id="1436" toLevel="30" name="Soul of Pain">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#power"> 50 52 55 57 60 61 65 66 70 72 75 77 80 82 84 85 87 89 90 92 94 96 97 99 100 102 104 105 107 108 </table>
 		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-369</value>
@@ -1873,7 +1860,6 @@
 	</skill>
 	<skill id="1437" toLevel="26" name="Dark Flame">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#power"> 42 43 45 47 49 50 53 54 56 57 59 60 61 62 63 65 66 67 68 69 70 72 73 74 75 76 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2052,7 +2038,6 @@
 	</skill>
 	<skill id="1438" toLevel="9" name="Annihilation Circle">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#power"> 82 85 89 92 96 99 102 105 108 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -2132,7 +2117,6 @@
 	</skill>
 	<skill id="1439" toLevel="5" name="Curse of Divinity">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 96 99 102 105 108 </table>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -2188,7 +2172,6 @@
 	</skill>
 	<skill id="1440" toLevel="5" name="Steal Divinity">
 		<!-- Confirmed CT2.5 -->
-		<table name="#maxNegated"> 3 4 5 6 7 </table>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -2246,7 +2229,6 @@
 	</skill>
 	<skill id="1441" toLevel="3" name="Soul to Empower">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
-		<table name="#mAtk"> 1.55 1.65 1.75 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2297,7 +2279,6 @@
 	</skill>
 	<skill id="1442" toLevel="3" name="Darkness Protection">
 		<!-- Confirmed CT2.5 -->
-		<table name="#vuln"> 15 23 30 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2424,8 +2405,6 @@
 	</skill>
 	<skill id="1445" toLevel="18" name="Surrender to Dark">
 		<!-- Confirmed CT2.5 -->
-		<table name="#darkRes"> 25 25 25 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 </table>
-		<table name="#holyRes"> 12 12 12 15 15 15 15 15 15 15 15 15 15 15 15 15 15 15 </table>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -3521,7 +3500,6 @@
 	<skill id="1471" toLevel="2" name="Death Beam">
 		<!-- Confirmed CT2.5 and updated to IO -->
 		<!-- Kamael Final Form Skill -->
-		<table name="#power"> 128 139 </table>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<castRange>40</castRange>
@@ -3623,7 +3601,6 @@
 	</skill>
 	<skill id="1475" toLevel="3" name="Erase Mark">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dispelAbnormals"> DEATH_MARK,3 DEATH_MARK,7 DEATH_MARK,10 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">235</value>
@@ -3667,8 +3644,6 @@
 	</skill>
 	<skill id="1476" toLevel="3" name="Appetite for Destruction">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 1.3 1.4 1.5 </table>
-		<table name="#rCrit"> 0.3 0.4 0.5 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3734,7 +3709,6 @@
 	</skill>
 	<skill id="1477" toLevel="3" name="Vampiric Impulse">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbDam"> 60 70 80 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3784,8 +3758,6 @@
 	</skill>
 	<skill id="1478" toLevel="2" name="Protection Instinct">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mDef"> 900 1350 </table>
-		<table name="#pDef"> 1200 1800 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3837,8 +3809,6 @@
 	</skill>
 	<skill id="1479" toLevel="3" name="Magic Impulse">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 1.75 1.85 1.95 </table>
-		<table name="#mCritRate"> 2 3 4 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -4201,7 +4171,6 @@
 	</skill>
 	<skill id="1485" toLevel="3" name="Spite">
 		<!-- Confirmed CT2.5 -->
-		<table name="#lvl"> 1 2 3 </table>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPITE</abnormalType>
@@ -4257,8 +4226,6 @@
 	</skill>
 	<skill id="1486" toLevel="4" name="Mental Impoverish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#lvl"> 1 2 3 4 </table>
-		<table name="#mpInitialConsume"> 13 13 14 14 </table>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MENTAL_IMPOVERISH</abnormalType>
@@ -4313,7 +4280,6 @@
 	</skill>
 	<skill id="1487" toLevel="8" name="Restoration">
 		<!-- Confirmed CT2.5 -->
-		<table name="#hot"> 15 18 22 25 27 29 30 32 </table>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_KAMAEL</abnormalType>
@@ -4388,7 +4354,6 @@
 	</skill>
 	<skill id="1488" toLevel="3" name="Restoration Impact">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 10 15 20 </table>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">701</value>

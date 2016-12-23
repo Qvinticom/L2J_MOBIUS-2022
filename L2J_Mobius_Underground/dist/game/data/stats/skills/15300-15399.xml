@@ -1754,8 +1754,6 @@
 	<skill id="15374" toLevel="2" name="Clan Hall - Horn Melody">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., P. Atk. + 17%, P. Def. + 15%, M. Atk. + 79%, and M. Def. + 30%. -->
-		<table name="#pAtk"> 1.17 1.19 </table>
-		<table name="#mAtk"> 1.79 1.83 </table>
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -1817,7 +1815,6 @@
 	<skill id="15375" toLevel="2" name="Clan Hall - Drum Melody">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 20, Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%, damage received from a critical attack - 30%, Speed - 15%, and Critical Damage during a standard attack is increased after receiving a certain amount of damage. -->
-		<table name="#moveSpeed"> 0.85 0.9 </table>
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -1925,8 +1922,6 @@
 	<skill id="15376" toLevel="2" name="Clan Hall - Pipe Organ Melody">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., Max HP/ MP/ CP + 37%, and HP Recovery Bonus + 20%. -->
-		<table name="#maxHp"> 37 39 </table>
-		<table name="#max"> 1.37 1.39 </table>
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -1991,7 +1986,6 @@
 	<skill id="15377" toLevel="2" name="Clan Hall - Guitar Melody">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., P. Critical Rate + 32%, P. Critical Damage + 35%, and M. Critical Rate + 20. Also, P. Skill MP Consumption - 20%, M. Skill MP Consumption -10%, and the Iss Enchanter's Enchant Skill MP Consumption - 20%. -->
-		<table name="#rCrit"> 0.32 0.34 </table>
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -2053,8 +2047,6 @@
 	<skill id="15378" toLevel="2" name="Clan Hall - Harp Melody">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., P. Accuracy + 5, P. Evasion/ M. Evasion + 5, and Spd. + 34. Also, Received Critical Damage - 30%. -->
-		<table name="#bonus"> 5 6 </table>
-		<table name="#moveSpeed"> 34 35 </table>
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>
@@ -2123,8 +2115,6 @@
 	<skill id="15379" toLevel="2" name="Clan Hall - Lute Melody">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 min., Atk. Spd. + 34%, Casting Spd. + 31%, and has a chance of applying 9% Vampiric Rage effect. -->
-		<table name="#pAtkSpd"> 1.34 1.35 </table>
-		<table name="#mAtkSpd"> 1.31 1.32 </table>
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
 		<hitTime>700</hitTime>

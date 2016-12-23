@@ -3575,7 +3575,6 @@
 		</effects>
 	</skill>
 	<skill id="2792" toLevel="2" name="Stone of Stamina">
-		<table name="#amount"> 700 20000 </table> <!-- FIXME: wrong values! -->
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3596,7 +3595,6 @@
 		</effects>
 	</skill>
 	<skill id="2793" toLevel="2" name="Stone of Mana">
-		<table name="#amount"> 500 20000 </table> <!-- FIXME: wrong values! -->
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -3618,8 +3616,6 @@
 	</skill>
 	<skill id="2794" toLevel="2" name="Stone of Recovery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#hpHeal"> 15 25 </table>
-		<table name="#mpHeal"> 11 18 </table>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

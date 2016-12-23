@@ -217,8 +217,6 @@
 	</skill>
 	<skill id="6205" toLevel="19" name="Strider Bite">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 65 75 75 82 82 82 82 82 85 85 85 85 85 85 85 85 85 85 87 </table>
-		<table name="#power"> 1649 2045 2476 2927 3108 3288 3464 3636 3801 3881 3959 4034 4107 4176 4243 4307 4367 4424 4477 </table>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -506,8 +504,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6209" toLevel="4" name="Weapon Grade Penalty">
-		<table name="#cAtk"> 0.9 0.8 0.7 0.6 </table>
-		<table name="#rCrit"> -0.1 -0.2 -0.3 -0.4 </table>
 		<icon>
 			<value level="1">icon.skill6209_1</value>
 			<value level="2">icon.skill6209_2</value>
@@ -552,8 +548,6 @@
 		</effects>
 	</skill>
 	<skill id="6213" toLevel="4" name="Armor Grade Penalty">
-		<table name="#amount"> 0.8333 0.6944 0.5787 0.4823 </table>
-		<table name="#rEvas"> 2.5 5 7.5 10 </table>
 		<icon>
 			<value level="1">icon.skill6213_1</value>
 			<value level="2">icon.skill6213_2</value>

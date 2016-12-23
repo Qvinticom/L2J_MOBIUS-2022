@@ -3,7 +3,6 @@
 	<skill id="10244" toLevel="3" name="True Vanguard">
 		<!-- Glory Days confirmed -->
 		<!-- Damage inflicted on monsters + 50%, and M. Skill MP Consumption + 30%. -->
-		<table name="#pve"> 1.5 1.55 1.6 </table>
 		<icon>icon.skill0810</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -847,7 +846,6 @@
 	<skill id="10262" toLevel="9" name="Power Bomber">
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts a powerful strike on target with 20483 Power added to P. Atk., knocking them down for 3 sec., and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. Critical. Ignores Shield Defense. -->
-		<table name="#power"> 20483 22595 24708 26821 28934 30343 32981 34497 36013 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -1068,7 +1066,6 @@
 	<skill id="10265" toLevel="11" name="Eruption">
 		<!-- Glory Days confirmed -->
 		<!-- Attacks nearby enemies with 11557 Power added to P. Atk., Stuns them for 2 seconds and remove their target. Power is decreased by 10% when equipped with a sword/blunt/fist weapon and increased by 50% when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dualsword weapon to be equipped. Over-hit. Critical. -->
-		<table name="#power"> 11557 11956 12754 13553 14351 15150 15948 16747 17896 18622 19348 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1372,7 +1369,6 @@
 	<skill id="10268" toLevel="6" name="Rolling Thunder">
 		<!-- Glory Days confirmed -->
 		<!-- Becomes enveloped with the energy of a whirlwind. Continuously decreases nearby enemies' HP. Continuously decreases your MP. -->
-		<table name="#skillLvl"> 1 2 3 4 5 6 </table>
 		<abnormalVisualEffect>HURRICANE_SELF</abnormalVisualEffect>
 		<icon>icon.skill10268</icon>
 		<operateType>AU</operateType>
@@ -1575,7 +1571,6 @@
 	<skill id="10271" toLevel="2" name="Power Provoke">
 		<!-- Glory Days confirmed and updated to IO -->
 		<!-- Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for 10 seconds but lower their P. Def. -->
-		<table name="#pDef"> 0.8 0.75 </table>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1627,7 +1622,6 @@
 	<skill id="10273" toLevel="4" name="Lightning Disarm">
 		<!-- Glory Days confirmed -->
 		<!-- Disarms nearby enemies for 5 seconds. Lowers P. Atk. and M. Atk. by 10%. -->
-		<table name="#atk"> 0.9 0.85 0.8 0.75 </table>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>

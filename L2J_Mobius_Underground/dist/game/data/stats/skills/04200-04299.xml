@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
 		<!-- Freya retail confirmed -->
-		<table name="#pAtkSpd"> 0.83 0.8 0.8 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 0.77 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -213,7 +212,6 @@
 	</skill>
 	<skill id="4203" toLevel="12" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
-		<table name="#runSpd"> 0.9 0.8 0.8 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 0.7 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -293,7 +291,6 @@
 	</skill>
 	<skill id="4204" toLevel="12" name="Bleed">
 		<!-- Freya retail confirmed -->
-		<table name="#damage"> 19 28 38 49 60 69 75 75 78 78 79 79 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -440,7 +437,6 @@
 	</skill>
 	<skill id="4206" toLevel="12" name="Aura Sink">
 		<!-- Freya retail confirmed -->
-		<table name="#mdot"> 2 2 2 2 2 4 5 7 8 10 12 12 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -521,7 +517,6 @@
 	</skill>
 	<skill id="4207" toLevel="12" name="Power Shot">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -580,7 +575,6 @@
 	</skill>
 	<skill id="4208" toLevel="12" name="Stun">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 176 475 1304 3414 8592 16607 25504 29589 33944 38501 43180 47895 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -662,7 +656,6 @@
 	</skill>
 	<skill id="4209" toLevel="12" name="Heal">
 		<!-- Freya retail confirmed -->
-		<table name="#amount"> 2516 3150 4708 7611 11465 14839 17138 18081 19008 19977 13303 13157 </table>
 		<castRange>700</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -722,7 +715,6 @@
 	</skill>
 	<skill id="4210" toLevel="12" name="Chant of Life">
 		<!-- Freya retail confirmed -->
-		<table name="#hot"> 180 228 337 544 819 1060 1225 1292 1358 1427 951 940 </table>
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -1218,7 +1210,6 @@
 	</skill>
 	<skill id="4225" toLevel="5" name="Stun Resistance">
 		<!-- Freya retail confirmed -->
-		<table name="#trait_shock"> 10 20 30 40 50 </table>
 		<icon>icon.skill4225</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1270,7 +1261,6 @@
 	</skill>
 	<skill id="4228" toLevel="12" name="Double Dagger Attack">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -1330,7 +1320,6 @@
 	</skill>
 	<skill id="4229" toLevel="12" name="Double Wind Fist">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<castRange>700</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
@@ -1413,7 +1402,6 @@
 	</skill>
 	<skill id="4231" toLevel="12" name="Spit Attack">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1479,7 +1467,6 @@
 	</skill>
 	<skill id="4232" toLevel="12" name="Spinning Slasher">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<affectRange>20</affectRange>
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
@@ -1541,7 +1528,6 @@
 	</skill>
 	<skill id="4234" toLevel="12" name="Spear Attack">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 352 949 2607 6828 17184 33213 51007 59177 67888 77001 86359 95790 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1827,7 +1813,6 @@
 	</skill>
 	<skill id="4244" toLevel="12" name="Wild Sweep">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 46 105 219 417 722 1136 1626 1876 2112 2320 2487 2617 </table>
 		<affectRange>80</affectRange>
 		<castRange>40</castRange>
 		<coolTime>800</coolTime>
@@ -1937,7 +1922,6 @@
 	</skill>
 	<skill id="4247" toLevel="12" name="Wind Strike">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2000,7 +1984,6 @@
 	</skill>
 	<skill id="4248" toLevel="12" name="Energy Drain">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2064,7 +2047,6 @@
 	</skill>
 	<skill id="4249" toLevel="12" name="Decrease Speed">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 4 5 8 11 15 19 24 24 24 24 24 24 </table>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2140,7 +2122,6 @@
 	</skill>
 	<skill id="4250" toLevel="12" name="Twister">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2203,7 +2184,6 @@
 	</skill>
 	<skill id="4251" toLevel="12" name="Beam Cannon">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2264,7 +2244,6 @@
 	</skill>
 	<skill id="4252" toLevel="12" name="Flame Strike">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
 		<affectRange>200</affectRange>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2329,7 +2308,6 @@
 	</skill>
 	<skill id="4253" toLevel="12" name="Blaze">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 3 5 7 9 13 16 20 20 20 20 20 20 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2392,7 +2370,6 @@
 	</skill>
 	<skill id="4254" toLevel="12" name="Prominence">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2455,7 +2432,6 @@
 	</skill>
 	<skill id="4255" toLevel="12" name="Beam Cannon">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 5 8 12 17 24 31 39 39 39 39 39 39 </table>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
@@ -2527,7 +2503,6 @@
 	</skill>
 	<skill id="4257" toLevel="12" name="Hydro Blast">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 9 13 19 26 34 43 51 55 58 61 63 65 </table>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2621,7 +2596,6 @@
 	</skill>
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
 		<!-- Freya retail confirmed -->
-		<table name="#dot"> 16 24 32 41 50 58 63 63 66 66 68 68 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2723,7 +2697,6 @@
 	</skill>
 	<skill id="4260" toLevel="12" name="Steal Blood">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<castRange>
 			<value level="1">600</value>
 			<value level="2">750</value>
@@ -2813,7 +2786,6 @@
 	</skill>
 	<skill id="4261" toLevel="12" name="Mega Storm Strike">
 		<!-- Freya retail confirmed -->
-		<table name="#power"> 18 26 38 52 68 85 102 110 116 122 126 129 </table>
 		<castRange>
 			<value level="1">600</value>
 			<value level="2">750</value>
@@ -3054,8 +3026,6 @@
 	<skill id="4270" toLevel="4" name="Weight Penalty">
 		<!-- Freya retail confirmed -->
 		<!-- This Skill SHOULD BE Only For Description In The Client - probably hardcoded on retail -->
-		<table name="#rate"> 0.5 0.5 0.5 0.5 </table>
-		<table name="#rateSpd"> 1 0.5 0.5 0 </table>
 		<icon>
 			<value level="1">icon.skill4270_1</value>
 			<value level="2">icon.skill4270_2</value>
@@ -3169,7 +3139,6 @@
 	</skill>
 	<skill id="4273" toLevel="5" name="Dagger/Rapier Resistance">
 		<!-- Freya retail confirmed -->
-		<table name="#traits"> 10 20 30 40 50 </table>
 		<icon>icon.skill4273_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3202,7 +3171,6 @@
 	</skill>
 	<skill id="4274" toLevel="5" name="Blunt Weapon Vulnerability">
 		<!-- Freya retail confirmed -->
-		<table name="#trait_blunt"> -11 -25 -43 -67 -100 </table>
 		<icon>icon.skill4274_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3228,7 +3196,6 @@
 	</skill>
 	<skill id="4276" toLevel="5" name="Bow/Crossbow Vulnerability">
 		<!-- Freya retail confirmed -->
-		<table name="#traits"> -11 -25 -43 -67 -100 </table>
 		<icon>icon.skill4276_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3254,7 +3221,6 @@
 	</skill>
 	<skill id="4277" toLevel="5" name="Poison Resistance">
 		<!-- Freya retail confirmed -->
-		<table name="#trait_poison"> 10 20 30 40 50 </table>
 		<icon>icon.skill4277</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3326,7 +3292,6 @@
 	</skill>
 	<skill id="4284" toLevel="5" name="Bleed Resistance">
 		<!-- Freya retail confirmed -->
-		<table name="#trait_bleed"> 10 20 30 40 50 </table>
 		<icon>icon.skill4284</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3345,7 +3310,6 @@
 	</skill>
 	<skill id="4285" toLevel="5" name="Sleep Resistance">
 		<!-- Freya retail confirmed -->
-		<table name="#trait_sleep"> 10 20 30 40 50 </table>
 		<icon>icon.skill4285</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3376,7 +3340,6 @@
 	</skill>
 	<skill id="4287" toLevel="5" name="Hold Resistance">
 		<!-- Freya retail confirmed -->
-		<table name="#trait_hold"> 10 20 30 40 50 </table>
 		<icon>icon.skill4287</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

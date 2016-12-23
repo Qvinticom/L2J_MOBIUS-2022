@@ -341,7 +341,6 @@
 	</skill>
 	<skill id="6813" toLevel="8" name="Sonic Focus">
 		<!-- High Five Skill -->
-		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
@@ -399,7 +398,6 @@
 	</skill>
 	<skill id="6814" toLevel="8" name="Focus Force">
 		<!-- High Five Skill -->
-		<table name="#maxCharges"> 1 2 3 4 5 6 7 8 </table>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
 			<value level="1">24</value>
@@ -1020,8 +1018,6 @@
 	<skill id="6842" toLevel="2" name="Enhance">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<table name="#pAtk"> 1.12 1 </table>
-		<table name="#pAtkSpd"> 1.15 1.4 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1766,7 +1762,6 @@
 	<skill id="6873" toLevel="2" name="Hex">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<table name="#pDef"> 0.77 0.67 </table>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1827,7 +1822,6 @@
 	<skill id="6875" toLevel="2" name="Poison">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
-		<table name="#dmg"> 120 140 </table>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -2086,12 +2080,6 @@
 	<skill id="6885" toLevel="3" name="Morale Boost">
 		<!-- "The persistence of the brave who fight together in Dragon Valley receive resistance to Paralysis/Bleed/Poison/Stun +90, Critical Rate +50%, Critical Damage +15%, P. Atk. +15%, M. Atk. +15%, Atk. Spd. +15%, Casting Spd. +15%, and EXP bonus +20%." -->
 		<!-- High Five Skill -->
-		<table name="#bonusExp"> 1 1 1.2 </table>
-		<table name="#cAtk"> 1.1 1.15 1.15 </table>
-		<table name="#pmAtk"> 1 1.15 1.15 </table>
-		<table name="#pmAtkSpd"> 1 1 1.15 </table>
-		<table name="#rCrit"> 0.1 0.3 0.5 </table>
-		<table name="#traits"> 50 80 90 </table>
 		<abnormalTime>60</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>100</effectPoint>

@@ -130,7 +130,6 @@
 		</effects>
 	</skill>
 	<skill id="5904" toLevel="3" name="Mist of Souleater">
-		<table name="#power"> 112 117 120 </table>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -460,7 +459,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5918" toLevel="10" name="Physical Root Vulnerability">
-		<table name="#trait_root_physically"> -10 -20 -30 -40 -50 -60 -70 -80 -90 -99 </table>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1659,7 +1657,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5975" toLevel="3" name="Dark Attack">
-		<table name="#power"> 1515 2365 6059 </table>
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-484</value>
@@ -1695,7 +1692,6 @@
 		</effects>
 	</skill>
 	<skill id="5976" toLevel="3" name="Dark Storm">
-		<table name="#power"> 757 1182 4039 </table>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
 		<effectPoint>
@@ -1779,7 +1775,6 @@
 	</skill>
 	<skill id="5980" toLevel="3" name="Seal Isolation">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 2273 3547 6059 </table>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<effectPoint>

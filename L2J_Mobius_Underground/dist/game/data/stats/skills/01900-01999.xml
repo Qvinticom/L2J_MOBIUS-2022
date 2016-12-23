@@ -131,7 +131,6 @@
 	<skill id="1907" toLevel="2" name="Prevision">
 		<!-- Glory Days confirmed -->
 		<!-- For 15 sec., P. Evasion/ M. Evasion + 90, and Speed + 50. -->
-		<table name="#bonus"> 0 90 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>RACE_ELF1</abnormalType>
@@ -296,7 +295,6 @@
 	<skill id="1914" toLevel="2" name="Savage">
 		<!-- Glory Days confirmed -->
 		<!-- For 60 sec., P. Atk. + 10%, M. Atk. + 20%, Atk. Spd., + 10%, and Casting Spd. + 10%. P. Def. / M. Def. - 10%. -->
-		<table name="#def"> 0.9 1 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
@@ -515,7 +513,6 @@
 	<skill id="1922" toLevel="2" name="Earth Tremor">
 		<!-- Glory Days confirmed -->
 		<!-- Knocks Down nearby enemies for 3 sec., and decreases their P. Def./ M. Def. by 50%. -->
-		<table name="#abnormalTime"> 3 5 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -607,8 +604,6 @@
 	<skill id="1925" toLevel="2" name="Soul Protection">
 		<!-- Glory Days confirmed -->
 		<!-- For 60 seconds, blocks debuff attacks 2 times. -->
-		<table name="#res"> 0 15 </table>
-		<table name="#debuffBlock"> 2 3 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
@@ -1323,10 +1318,6 @@
 	<skill id="1955" toLevel="3" name="Party Solidarity">
 		<!-- Glory Days confirmed -->
 		<!-- Increases party members' P. Atk. by 1%, M. Atk. by 1%, P. Critical Rate by 1%, Atk. Spd. by 1%, and Casting Spd. by 1%. Decreases physical and magic skill Cooldown by 1%. Always includes Sigel and Aeore Force. When 4 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
-		<table name="#pAtk"> 1.01 1.05 1.13 </table>
-		<table name="#mAtk"> 1.01 1.05 1.16 </table>
-		<table name="#bonus"> 0.01 0.02 0.04 </table>
-		<table name="#reuse"> 0.99 0.98 0.95 </table>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_PARTY_BUF</abnormalType>
@@ -1417,8 +1408,6 @@
 	<skill id="1956" toLevel="4" name="Sub - P. Atk./M. Atk. Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 1%, M. Atk. + 1%. -->
-		<table name="#pAtk"> 1.01 1.02 1.03 1.04 </table>
-		<table name="#mAtk"> 1.01 1.03 1.04 1.06 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0816</icon>
 		<magicLvl>1</magicLvl>
@@ -1448,7 +1437,6 @@
 	<skill id="1957" toLevel="4" name="Sub - P. Def./M. Def. Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Def. + 1%, M. Def. + 1%. -->
-		<table name="#def"> 1.01 1.02 1.03 1.04 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0439</icon>
 		<magicLvl>1</magicLvl>
@@ -1478,7 +1466,6 @@
 	<skill id="1958" toLevel="4" name="Sub - Atk. Spd./Casting Spd. Increase">
 		<!-- Glory Days confirmed -->
 		<!-- Atk. Spd. + 1%, Casting Spd. + 1%. -->
-		<table name="#atkSpd"> 1.01 1.02 1.03 1.04 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0817</icon>
 		<magicLvl>1</magicLvl>
@@ -1508,7 +1495,6 @@
 	<skill id="1959" toLevel="4" name="Sub - Critical Rate Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Critical Rate/ M. Critical Rate + 10. -->
-		<table name="#critRate"> 10 20 30 40 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0814</icon>
 		<magicLvl>1</magicLvl>
@@ -1538,7 +1524,6 @@
 	<skill id="1960" toLevel="4" name="Sub - P. Accuracy/ M. Accuracy Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Accuracy + 2, M. Accuracy + 2. -->
-		<table name="#acc"> 2 4 6 8 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill1240</icon>
 		<magicLvl>1</magicLvl>
@@ -1568,7 +1553,6 @@
 	<skill id="1961" toLevel="4" name="Sub - P. Evasion/ M. Evasion Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Evasion + 2, M. Evasion + 2. -->
-		<table name="#evas"> 2 4 6 8 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0198</icon>
 		<magicLvl>1</magicLvl>
@@ -1598,8 +1582,6 @@
 	<skill id="1962" toLevel="4" name="Dual - P. Atk./M. Atk. Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Atk. + 3%, M. Atk. + 4%. -->
-		<table name="#pAtk"> 1.03 1.06 1.09 1.12 </table>
-		<table name="#mAtk"> 1.04 1.09 1.13 1.18 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0816</icon>
 		<magicLvl>1</magicLvl>
@@ -1629,7 +1611,6 @@
 	<skill id="1963" toLevel="4" name="Dual - P. Def./M. Def. Increase">
 		<!-- Glory Days confirmed -->
 		<!-- P. Def. + 3%, M. Def. + 3%. -->
-		<table name="#def"> 1.03 1.06 1.09 1.12 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0439</icon>
 		<magicLvl>1</magicLvl>
@@ -1659,7 +1640,6 @@
 	<skill id="1964" toLevel="4" name="Dual - Atk. Spd./Casting Spd. Increase">
 		<!-- Glory Days confirmed -->
 		<!-- Atk. Spd. + 3%, Casting Spd. + 3%. -->
-		<table name="#atkSpd"> 1.03 1.06 1.09 1.12 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0817</icon>
 		<magicLvl>1</magicLvl>
@@ -1689,7 +1669,6 @@
 	<skill id="1965" toLevel="4" name="Dual - Max HP Increase">
 		<!-- Glory Days confirmed -->
 		<!-- Max HP + 6%. -->
-		<table name="#maxHp"> 6 12 18 24 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0211</icon>
 		<magicLvl>
@@ -1715,7 +1694,6 @@
 	<skill id="1966" toLevel="4" name="Dual - Max MP Increase">
 		<!-- Glory Days confirmed -->
 		<!-- Max MP + 6%. -->
-		<table name="#maxMp"> 1.06 1.12 1.18 1.24 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill0213</icon>
 		<magicLvl>
@@ -1741,7 +1719,6 @@
 	<skill id="1967" toLevel="4" name="Dual - Max CP Increase">
 		<!-- Glory Days confirmed -->
 		<!-- Max CP + 6%. -->
-		<table name="#maxCp"> 1.06 1.12 1.18 1.24 </table>
 		<operateType>P</operateType>
 		<icon>icon.skill1397</icon>
 		<magicLvl>
@@ -2243,7 +2220,6 @@
 	<skill id="1986" toLevel="4" name="Dual Maximum HP">
 		<!-- Glory Days confirmed -->
 		<!-- Max HP + 463. Can be used when the main/ dual class is Level 85 or above. -->
-		<table name="#maxHp"> 463 972 1458 1926 </table>
 		<icon>icon.skill0917</icon>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>

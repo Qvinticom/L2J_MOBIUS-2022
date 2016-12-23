@@ -279,8 +279,6 @@
 	</skill>
 	<skill id="5422" toLevel="12" name="Flame">
 		<!-- Body is on fire. HP continually decreases. -->
-		<table name="#dot"> 6.45 11.1 20.39 30.49 30.49 60.43 77 85.7 94.66 103.89 113.38 123.15 </table>
-		<table name="#mAtk"> 9.16 15.36 27.82 41.49 61.66 84.61 111.26 126.31 142.73 160.7 180.46 201.65 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
@@ -358,7 +356,6 @@
 	</skill>
 	<skill id="5423" toLevel="12" name="Poison">
 		<!-- Condition causing target to be poisoned. -->
-		<table name="#dot"> 8 21 57 91 133 179 223 251 289 318 324 354 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -419,7 +416,6 @@
 	</skill>
 	<skill id="5424" toLevel="12" name="Bleed">
 		<!-- Condition causing target to instantly decrease HP by bleeding. Effect 2-10. -->
-		<table name="#dot"> 15 21 43 55 89 103 140 168 174 232 265 295 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -757,8 +753,6 @@
 	</skill>
 	<skill id="5437" toLevel="2" name="Dissonance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#avoid"> 50 0 </table>
-		<table name="#def"> 0.4 1 </table>
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -800,7 +794,6 @@
 		</effects>
 	</skill>
 	<skill id="5438" toLevel="9" name="Heal">
-		<table name="#amount"> 1419 1458 1503 1548 1584 1611 1630 1651 1678 </table>
 		<affectRange>900</affectRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>2000</hitTime>
@@ -862,7 +855,6 @@
 		</effects>
 	</skill>
 	<skill id="5439" toLevel="9" name="Heal">
-		<table name="#amount"> 1971 2025 2088 2150 2200 2237 2263 2294 2331 </table>
 		<affectRange>900</affectRange>
 		<effectPoint>100</effectPoint>
 		<hitTime>2000</hitTime>
@@ -944,7 +936,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5442" toLevel="4" name="Bite Attack">
-		<table name="#power"> 916 1136 1376 1626 </table>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -1024,8 +1015,6 @@
 		</effects>
 	</skill>
 	<skill id="5444" toLevel="2" name="Maul">
-		<table name="#dot"> 62 67 </table>
-		<table name="#power"> 917 1084 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
@@ -1244,7 +1233,6 @@
 	</skill>
 	<skill id="5450" toLevel="7" name="Thin Skin">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dot"> 218 266 266 307 307 335 335 </table>
 		<abnormalLvl>
 			<value level="1">4</value>
 			<value level="2">5</value>
@@ -1332,7 +1320,6 @@
 	</skill>
 	<skill id="5452" toLevel="3" name="Spite">
 		<!-- Confirmed CT2.5 -->
-		<table name="#defCritDamage"> 1.4 1.5 1.6 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_DMG_UP</abnormalType>
@@ -1367,7 +1354,6 @@
 	</skill>
 	<skill id="5453" toLevel="4" name="Mental Impoverish">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 148 153 157 162 </table>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>
 			<value level="1">68</value>
@@ -1527,7 +1513,6 @@
 	</skill>
 	<skill id="5461" toLevel="12" name="Power Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -1623,7 +1608,6 @@
 	</skill>
 	<skill id="5468" toLevel="12" name="Fire Shot">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 1110 1479 1923 2443 3030 3668 4336 5002 5632 6187 6632 6978 </table>
 		<affectRange>80</affectRange>
 		<castRange>300</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1976,7 +1960,6 @@
 	</skill>
 	<skill id="5492" toLevel="12" name="Power Shot">
 		<!-- NPC Skill -->
-		<table name="#power"> 122 279 584 1110 1923 3030 4336 5002 5632 6187 6632 6978 </table>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>

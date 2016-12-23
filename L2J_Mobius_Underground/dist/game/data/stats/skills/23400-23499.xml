@@ -556,7 +556,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23420" toLevel="3" name="Borna Heal">
-		<table name="#power"> 1191 1210 1230 </table>
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Heals self and surrounding party members with 1191 power. If HP is full, CP is restored with the remaining power. -->
 		<icon>icon.skill11757</icon>
@@ -1360,7 +1359,6 @@
 	</skill>
 	<skill id="23449" toLevel="3" name="(Gust Blade)">
 		<!-- Glory Days confirmed -->
-		<table name="#power"> 10314 12450 13874 </table>
 		<icon>icon.skill10013</icon>
 		<operateType>A1</operateType>
 		<mpConsume>121</mpConsume>
@@ -1398,7 +1396,6 @@
 	<skill id="23450" toLevel="3" name="(Chain Galaxy)">
 		<!-- Glory Days confirmed -->
 		<!-- Inflicts 14300 physical damage to surrounding enemies and decreases their HP heal amount by 90%. -->
-		<table name="#power"> 14300 16748 19686 </table>
 		<icon>icon.skill10014</icon>
 		<operateType>A2</operateType>
 		<mpConsume>159</mpConsume>
@@ -1444,8 +1441,6 @@
 	<skill id="23451" toLevel="3" name="(Final Ultimate Defense)">
 		<!-- Glory Days confirmed -->
 		<!-- For 30 sec., P. Def. + 4000, M. Def. + 4000, receive only up to 300 damage, and reflect 40% of received damage back to enemy. Buff Cancel Resistance + 80%. -->
-		<table name="#def"> 4000 6000 8000 </table>
-		<table name="#reflectDam"> 40 60 80 </table>
 		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
 		<mpConsume>58</mpConsume>
@@ -1603,7 +1598,6 @@
 	<skill id="23456" toLevel="3" name="(Fairy of Life)">
 		<!-- Glory Days confirmed -->
 		<!-- Summons a fairy that follows target around for 1 min. and restores HP. Also has a chance of restoring HP when attacked. -->
-		<table name="#level"> 1 3 5 </table>
 		<icon>icon.skill11754</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
@@ -1748,7 +1742,6 @@
 	<skill id="23461" toLevel="3" name="(Armor Destruction)">
 		<!-- Glory Days Confirmed -->
 		<!-- Inflicts 11159 physical damage on target, decreases their P. Def., and absorbs their Momentum. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. Over-hit. Critical. -->
-		<table name="#power"> 11159 11936 12714 </table>
 		<icon>icon.skill10258</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>

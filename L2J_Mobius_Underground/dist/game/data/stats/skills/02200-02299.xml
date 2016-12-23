@@ -422,9 +422,6 @@
 	</skill>
 	<skill id="2213" toLevel="22" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
-		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 149800 107946 -118092 </table>
-		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 -79999 -52280 46955 </table>
-		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 -5568 -2408 342 </table>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -545,9 +542,6 @@
 	<skill id="2214" toLevel="10" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
 		<!-- Levels 7, 8 and 9 doesn't exist in client. -->
-		<table name="#coordX"> -84200 46915 9723 -45208 115158 -118092 0 0 0 83378 </table>
-		<table name="#coordY"> 244566 51441 15576 -112502 -178170 46955 0 0 0 147999 </table>
-		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 342 0 0 0 -3400 </table>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -4079,7 +4073,6 @@
 		</effects>
 	</skill>
 	<skill id="2274" toLevel="8" name="Fisherman's Potion">
-		<table name="#active_skill_id_lvl"> 1315,4 1315,7 1315,10 1315,13 1315,16 1315,19 1315,22 1315,25 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>FISHING_MASTERY_DOWN</abnormalType>
@@ -4303,7 +4296,6 @@
 	</skill>
 	<skill id="2278" toLevel="3" name="Herb of Life">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 15 25 100 </table>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -4327,7 +4319,6 @@
 	</skill>
 	<skill id="2279" toLevel="3" name="Herb of Mana">
 		<!-- Confirmed CT2.5 -->
-		<table name="#amount"> 11 18 100 </table>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -4501,7 +4492,6 @@
 	</skill>
 	<skill id="2286" toLevel="6" name="Scroll: Recovery">
 		<!-- Confirmed CT2.5 -->
-		<table name="#levelRange"> 1;19 20;39 40;51 52;60 61;75 76;85 </table>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<itemConsumeCount>1</itemConsumeCount>

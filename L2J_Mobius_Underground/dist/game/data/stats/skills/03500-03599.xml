@@ -668,7 +668,6 @@
 	</skill>
 	<skill id="3542" toLevel="6" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 203.97 226.51 248.71 269.91 289.4 306.42 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -813,8 +812,6 @@
 	</skill>
 	<skill id="3552" toLevel="4" name="Special Ability: PvP Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#atkCountMax"> 0 4 0 4 </table>
-		<table name="#bonus"> 1.05 1.05 1.1 1.1 </table>
 		<icon>icon.skill0297</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -1040,10 +1037,6 @@
 	<skill id="3559" toLevel="2" name="Zaken's Earring">
 		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<!-- Boss Jewel Skill -->
-		<table name="#darkRes"> 0 15 </table>
-		<table name="#healEffect"> 1.1 1.15 </table>
-		<table name="#magicLvl"> 75 80 </table>
-		<table name="#traits"> 20 30 </table>
 		<icon>icon.accessory_earring_of_zaken_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -1193,7 +1186,6 @@
 	</skill>
 	<skill id="3564" toLevel="8" name="Special Ability: Haste">
 		<!-- Confirmed CT2.5 -->
-		<table name="#pAtkSpd"> 1.07 1.1 1.11 1.11 1.11 1.11 1.11 1.11 </table>
 		<icon>icon.skill1086</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1237,7 +1229,6 @@
 	</skill>
 	<skill id="3565" toLevel="10" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 80.6 107 123.5 129 129 129 129 129 129 129 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1285,7 +1276,6 @@
 	</skill>
 	<skill id="3566" toLevel="10" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 84.3 111.5 133.3 134.4 134.4 134.4 134.4 134.4 134.4 134.4 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1333,7 +1323,6 @@
 	</skill>
 	<skill id="3567" toLevel="10" name="Special Ability: Focus">
 		<!-- Confirmed CT2.5 -->
-		<table name="#rCrit"> 88.1 116 133.9 139.9 139.9 139.9 139.9 139.9 139.9 139.9 </table>
 		<icon>icon.skill1077</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1381,7 +1370,6 @@
 	</skill>
 	<skill id="3568" toLevel="2" name="Special Ability: HP Drain">
 		<!-- Confirmed CT2.5 -->
-		<table name="#absorbDam"> 3 4 </table>
 		<icon>icon.ensoul_big_old</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1413,7 +1401,6 @@
 	</skill>
 	<skill id="3569" toLevel="9" name="Special Ability: HP Regeneration">
 		<!-- Confirmed CT2.5 -->
-		<table name="#regHp"> 2.04 4.92 5.15 5.18 5.18 5.18 5.18 5.18 5.18 </table>
 		<icon>icon.skill1044</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1526,7 +1513,6 @@
 	</skill>
 	<skill id="3572" toLevel="9" name="Special Ability: Critical Damage">
 		<!-- Confirmed CT2.5 -->
-		<table name="#cAtkAdd"> 265 906 999 1059 1059 1059 1059 1059 1059 </table>
 		<icon>icon.skill0193</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1572,7 +1558,6 @@
 	</skill>
 	<skill id="3573" toLevel="8" name="Special Ability: Guidance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#accCombat"> 5.27 5.32 7.5 7.5 7.5 7.5 7.5 7.5 </table>
 		<icon>icon.skill1240</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1652,7 +1637,6 @@
 	</skill>
 	<skill id="3575" toLevel="9" name="Special Ability: Empower">
 		<!-- Confirmed CT2.5 -->
-		<table name="#mAtk"> 60.09 151.09 166.54 176.53 176.53 176.53 176.53 176.53 176.53 </table>
 		<icon>icon.skill1059</icon>
 		<magicLvl>
 			<value level="1">75</value>
@@ -1698,7 +1682,6 @@
 	</skill>
 	<skill id="3576" toLevel="9" name="Special Ability: MP Regeneration">
 		<!-- Confirmed CT2.5 -->
-		<table name="#regMp"> 0.54 1.95 2.04 2.05 2.05 2.05 2.05 2.05 2.05 </table>
 		<icon>icon.skill1047</icon>
 		<magicLvl>
 			<value level="1">75</value>

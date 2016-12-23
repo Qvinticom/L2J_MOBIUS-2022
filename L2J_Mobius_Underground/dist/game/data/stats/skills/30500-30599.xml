@@ -910,7 +910,6 @@
 		<!-- Updated to IO -->
 		<!-- For 60 sec., distorts space to attack from behind. Requires a fist weapon. -->
 		<icon>icon.skill30512</icon>
-		<table name="#attack"> 1.05 1.10 1.15 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -963,10 +962,6 @@
 	<skill id="30514" toLevel="3" name="Fluid Weave">
 		<!-- Updated to IO -->
 		<!-- For 3 sec., P. Skill Evasion + 50%, P. Evasion + 50, M. Evasion + 50. Requires a fist weapon. -->
-		<table name="#pSkillEvas"> 50 70 70 </table>
-		<table name="#rEvas"> 50 70 70 </table>
-		<table name="#mEvas"> 50 70 70 </table>
-		<table name="#blockDebuff"> 0 1 3 </table>
 		<icon>icon.skill30514</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1142,7 +1137,6 @@
 	<skill id="30518" toLevel="11" name="Reverse Weight">
 		<!-- Updated to IO -->
 		<!-- Attacks nearby enemies with 19693 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
-		<table name="#power"> 19693 20582 22701 25350 28648 32757 37894 44352 49769 51343 52917 </table>
 		<icon>icon.skill30518</icon>
 		<abnormalTime>1</abnormalTime> <!-- Unconfirmed -->
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -1361,9 +1355,6 @@
 	<skill id="30523" toLevel="3" name="Battle Dash">
 		<!-- Updated to IO -->
 		<!-- Speed + 10. -->
-		<table name="#triggeredLevel"> 2 3 0 </table>
-		<table name="#runSpd"> 10 20 40 </table>
-		<table name="#pDefMDef"> 1.10 1.15 1.20 </table>
 		<icon>icon.skill30523</icon>
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<operateType>A2</operateType>

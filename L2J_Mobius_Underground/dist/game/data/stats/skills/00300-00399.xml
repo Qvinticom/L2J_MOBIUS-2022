@@ -105,7 +105,6 @@
 		</effects>
 	</skill>
 	<skill id="303" toLevel="4" name="Soul of Sagittarius">
-		<table name="#maxMp"> 1.1 1.15 1.2 1.25 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -394,7 +393,6 @@
 	</skill>
 	<skill id="312" toLevel="20" name="Vicious Stance">
 		<!-- Confirmed CT2.5 -->
-		<table name="#crit"> 35 48 64 84 109 139 166 196 229 266 306 349 379 410 443 475 509 542 576 609 </table>
 		<icon>icon.skill0312</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -477,9 +475,6 @@
 		</effects>
 	</skill>
 	<skill id="313" toLevel="8" name="Snipe">
-		<table name="#accCombat"> 3 3 4 4 5 5 6 6 </table>
-		<table name="#pAtk"> 124 134 145 155 166 177 188 199 </table>
-		<table name="#pAtkRange"> 50 50 100 100 150 150 200 200 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -598,7 +593,6 @@
 		</effects>
 	</skill>
 	<skill id="314" toLevel="16" name="Fatal Counter">
-		<table name="#power"> 2908 3030 3154 3280 3408 3537 3668 3800 3933 4067 4201 4336 4470 4604 4738 4870 </table>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -696,7 +690,6 @@
 		</effects>
 	</skill>
 	<skill id="315" toLevel="16" name="Crush of Doom">
-		<table name="#power"> 4558 4750 4944 5142 5342 5545 5751 5958 6166 6376 6586 6797 7008 7218 7427 7635 </table>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
 		<effectPoint>
@@ -807,8 +800,6 @@
 		</effects>
 	</skill>
 	<skill id="317" toLevel="5" name="Focus Attack">
-		<table name="#accCombat"> 2 3 4 5 6 </table>
-		<table name="#cAtk"> 1.1 1.15 1.2 1.25 1.3 </table>
 		<icon>icon.skill0317</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -882,8 +873,6 @@
 		</effects>
 	</skill>
 	<skill id="319" toLevel="2" name="Agile Movement">
-		<table name="#accCombat"> 2 3 </table>
-		<table name="#runSpd"> 5 10 </table>
 		<icon>icon.skill0319</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1114,7 +1103,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="322" toLevel="6" name="Shield Fortress">
-		<table name="#sDef"> 446 469 491 514 537 560 </table>
 		<icon>icon.skill0322</icon>
 		<magicLvl>
 			<value level="1">64</value>
@@ -2926,7 +2914,6 @@
 	</skill>
 	<skill id="370" toLevel="5" name="Clan Body">
 		<!-- Updated to Ertheia -->
-		<table name="#maxHp"> 3 4 5 6 7 </table> <!-- Confirmed -->
 		<icon>icon.skill0370</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2946,7 +2933,6 @@
 	</skill>
 	<skill id="371" toLevel="5" name="Clan Spirituality">
 		<!-- Updated to Ertheia -->
-		<table name="#maxCp"> 1.06 1.08 1.10 1.12 1.14 </table>  <!-- Confirmed -->
 		<icon>icon.skill0371</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2966,7 +2952,6 @@
 	</skill>
 	<skill id="372" toLevel="5" name="Clan Soul">
 		<!-- Updated to Ertheia -->
-		<table name="#maxMp"> 1.03 1.04 1.05 1.06 1.07 </table> <!-- Confirmed -->
 		<icon>icon.skill0372</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2986,7 +2971,6 @@
 	</skill>
 	<skill id="373" toLevel="5" name="Clan Regeneration">
 		<!-- Updated to Ertheia -->
-		<table name="#regHp"> 1.03 1.04 1.05 1.06 1.07 </table> <!-- Confirmed -->
 		<icon>icon.skill0373</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3006,7 +2990,6 @@
 	</skill>
 	<skill id="374" toLevel="5" name="Clan Morale">
 		<!-- Updated to Ertheia -->
-		<table name="#regCp"> 1.06 1.08 1.10 1.12 1.14 </table>  <!-- Confirmed -->
 		<icon>icon.skill0374</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3026,7 +3009,6 @@
 	</skill>
 	<skill id="375" toLevel="5" name="Clan Clarity">
 		<!-- Updated to Ertheia -->
-		<table name="#regMp"> 1.03 1.04 1.05 1.06 1.07 </table> <!-- Confirmed -->
 		<icon>icon.skill0375</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3046,7 +3028,6 @@
 	</skill>
 	<skill id="376" toLevel="5" name="Clan Might">
 		<!-- Updated to Ertheia -->
-		<table name="#pAtk"> 1.03 1.04 1.05 1.06 1.07 </table> <!-- Confirmed -->
 		<icon>icon.skill0376</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3066,7 +3047,6 @@
 	</skill>
 	<skill id="377" toLevel="5" name="Clan Shield">
 		<!-- Updated to Ertheia -->
-		<table name="#pDef"> 1.03 1.04 1.05 1.06 1.07 </table> <!-- Confirmed -->
 		<icon>icon.skill0377</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3086,7 +3066,6 @@
 	</skill>
 	<skill id="378" toLevel="5" name="Clan Empower">
 		<!-- Updated to Ertheia -->
-		<table name="#mAtk"> 1.06 1.08 1.10 1.12 1.14 </table> <!-- Confirmed -->
 		<icon>icon.skill0378</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3106,7 +3085,6 @@
 	</skill>
 	<skill id="379" toLevel="5" name="Clan M. Def.">
 		<!-- Updated to Ertheia -->
-		<table name="#mDef"> 1.06 1.08 1.10 1.12 1.14 </table> <!-- Confirmed -->
 		<icon>icon.skill0379</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3126,7 +3104,6 @@
 	</skill>
 	<skill id="380" toLevel="5" name="Clan Guidance">
 		<!-- Updated to Ertheia -->
-		<table name="#accCombat"> 1 2 3 4 5 </table> <!-- Confirmed -->
 		<icon>icon.skill0380</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3146,7 +3123,6 @@
 	</skill>
 	<skill id="381" toLevel="5" name="Clan Agility">
 		<!-- Updated to Ertheia -->
-		<table name="#rEvas"> 1 2 3 4 5 </table> <!-- Confirmed -->
 		<icon>icon.skill0381</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3166,7 +3142,6 @@
 	</skill>
 	<skill id="382" toLevel="5" name="Clan Shield Defense">
 		<!-- Updated to Ertheia -->
-		<table name="#rShld"> 1.12 1.16 1.20 1.24 1.28 </table> <!-- Confirmed -->
 		<icon>icon.skill0382</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3186,7 +3161,6 @@
 	</skill>
 	<skill id="383" toLevel="5" name="Clan Shield Block">
 		<!-- Updated to Ertheia -->
-		<table name="#sDef"> 1.24 1.32 1.40 1.48 1.56 </table> <!-- Confirmed -->
 		<icon>icon.skill0383</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3206,7 +3180,6 @@
 	</skill>
 	<skill id="384" toLevel="5" name="Clan Cyclonic Resistance">
 		<!-- Updated to Ertheia -->
-		<table name="#res"> 3 5 6 7 8 </table> <!-- Confirmed -->
 		<icon>icon.skill0384</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3236,7 +3209,6 @@
 	</skill>
 	<skill id="385" toLevel="5" name="Clan Magmatic Resistance">
 		<!-- Updated to Ertheia -->
-		<table name="#res"> 3 5 6 7 8 </table> <!-- Confirmed -->
 		<icon>icon.skill0385</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3266,7 +3238,6 @@
 	</skill>
 	<skill id="386" toLevel="5" name="Clan Stun Resistance">
 		<!-- Updated to Ertheia -->
-		<table name="#trait_shock"> 12 13 14 15 16 </table> <!-- Confirmed -->
 		<icon>icon.skill0386</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3285,7 +3256,6 @@
 	</skill>
 	<skill id="387" toLevel="5" name="Clan Hold Resistance">
 		<!-- Updated to Ertheia -->
-		<table name="#trait_hold"> 12 13 14 15 16 </table> <!-- Confirmed -->
 		<icon>icon.skill0387</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3304,7 +3274,6 @@
 	</skill>
 	<skill id="388" toLevel="5" name="Clan Sleep Resistance">
 		<!-- Updated to Ertheia -->
-		<table name="#trait_sleep"> 12 13 14 15 16 </table> <!-- Confirmed -->
 		<icon>icon.skill0388</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3323,7 +3292,6 @@
 	</skill>
 	<skill id="389" toLevel="5" name="Clan Wind Walk">
 		<!-- Updated to Ertheia -->
-		<table name="#runSpd"> 3 5 6 6 6 </table> <!-- Confirmed -->
 		<icon>icon.skill0389</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

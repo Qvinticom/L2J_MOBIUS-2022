@@ -2074,8 +2074,6 @@
 	</skill>
 	<skill id="8461" toLevel="3" name="Enchant Heavy Armor (S-grade)">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#pDef"> 70 80 90 </table> <!-- Guessed -->
-		<table name="#regMp"> 32 35 37 </table> <!-- Guessed -->
 		<icon>icon.skill0231</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2114,8 +2112,6 @@
 	</skill>
 	<skill id="8462" toLevel="3" name="Enchant Light Armor (S-grade)">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#mDef"> 39 49 59 </table> <!-- Guessed -->
-		<table name="#rEvas"> 2 4 6 </table> <!-- Guessed -->
 		<icon>icon.skill0233</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2147,7 +2143,6 @@
 	</skill>
 	<skill id="8463" toLevel="3" name="Enchant Robe (S-grade)">
 		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<table name="#weightLimit"> 1.10 1.20 1.30 </table> <!-- Guessed -->
 		<icon>icon.skill0234</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

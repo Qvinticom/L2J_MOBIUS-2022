@@ -157,7 +157,6 @@
 		<!-- Lvl 1: Blue Crystal of Fantasy -->
 		<!-- Lvl 2: Green Crystal of Fantasy -->
 		<!-- Lvl 3: Red Crystal of Fantasy -->
-		<table name="#amount"> 50000 100000 200000 </table>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -186,9 +185,6 @@
 	</skill>
 	<skill id="2609" toLevel="20" name="Scroll of Escape: Talking Island Village">
 		<!-- Confirmed CT2.5 -->
-		<table name="#coordX"> -84200 46915 9723 -45208 115158 -80831 -12728 15633 17860 83378 105760 111388 82916 85289 117052 146818 147922 43840 87326 -118092 </table>
-		<table name="#coordY"> 244566 51441 15576 -112502 -178170 149808 122726 142962 170191 147999 113064 219331 53210 16225 76884 25807 -55316 -47779 -143370 46955 </table>
-		<table name="#coordZ"> -3728 -2976 -4568 -240 -880 -3040 -3112 -2696 -3496 -3400 -3176 -3544 -1488 -3672 -2688 -2008 -2728 -792 -1319 342 </table>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>
@@ -1302,9 +1298,6 @@
 	</skill>
 	<skill id="2649" toLevel="9" name="Scroll of Escape: Gludin Village">
 		<!-- Confirmed CT2.5 -->
-		<table name="#coordX"> -80831 15633 83378 111388 82916 146818 147922 43840 87326 </table>
-		<table name="#coordY"> 149808 142962 147999 219331 53210 25807 -55316 -47779 -143370 </table>
-		<table name="#coordZ"> -3040 -2696 -3400 -3544 -1488 -2008 -2728 -792 -1319 </table>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>

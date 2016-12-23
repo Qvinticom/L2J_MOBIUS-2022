@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" toLevel="8" name="Pet Recharge">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#amount"> 120 124 128 138 144 149 153 155 </table>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">604</value>
@@ -71,7 +70,6 @@
 	</skill>
 	<skill id="5201" toLevel="6" name="Pet Concentration">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#cancel"> 18 25 36 42 48 53 </table>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -798,7 +796,6 @@
 	<skill id="5227" toLevel="2" name="Ground Strike">
 		<!-- Glory Days confirmed -->
 		<!-- Baylor Skills -->
-		<table name="#power"> 100756 213631 </table>
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
@@ -1145,7 +1142,6 @@
 	</skill>
 	<skill id="5239" toLevel="5" name="Event Timer">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#Time"> 300 600 900 1200 1800 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">300</value>
@@ -1331,7 +1327,6 @@
 	</skill>
 	<skill id="5246" toLevel="12" name="Dark Explosion">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1395,8 +1390,6 @@
 	</skill>
 	<skill id="5247" toLevel="12" name="Seed of Darkness">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#dot"> 60 91 131 177 225 270 305 305 334 334 360 360 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1503,7 +1496,6 @@
 	</skill>
 	<skill id="5248" toLevel="12" name="Seed Explosion">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 81 121 171 231 298 367 431 458 481 500 513 526 </table>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
@@ -1553,7 +1545,6 @@
 	</skill>
 	<skill id="5249" toLevel="12" name="Dark Circle">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>DARK</attributeType>
@@ -1660,8 +1651,6 @@
 	</skill>
 	<skill id="5251" toLevel="12" name="Poison">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#dot"> 32 47 63 82 100 115 126 126 132 132 132 135 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1804,8 +1793,6 @@
 	</skill>
 	<skill id="5253" toLevel="12" name="Bleed">
 		<!-- Confirmed CT2.5 -->
-		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#dot"> 35 50 68 87 107 123 134 134 139 139 142 142 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1910,8 +1897,6 @@
 	</skill>
 	<skill id="5254" toLevel="12" name="Invasion of Spirit">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#calledSkillLevel"> 1 2 3 4 5 6 7 8 9 10 11 12 </table>
-		<table name="#dot"> 4 6 8 11 14 17 20 21 22 23 23 23 </table>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -2089,7 +2074,6 @@
 	</skill>
 	<skill id="5257" toLevel="2" name="Death">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#lethalStrikeRate"> 99 5 </table>
 		<effectPoint>1</effectPoint>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -2110,7 +2094,6 @@
 	</skill>
 	<skill id="5258" toLevel="12" name="Mana Burn">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 26 39 56 78 102 128 153 164 174 182 189 194 </table>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2338,7 +2321,6 @@
 	</skill>
 	<skill id="5262" toLevel="12" name="Rising Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 31 70 146 278 481 758 1084 1251 1408 1521 1658 1728 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -2402,7 +2384,6 @@
 	</skill>
 	<skill id="5263" toLevel="12" name="Chain Lightning">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2543,7 +2524,6 @@
 	</skill>
 	<skill id="5265" toLevel="12" name="Soul Emission">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 21 31 43 58 75 92 108 115 121 125 129 132 </table>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2622,7 +2602,6 @@
 	</skill>
 	<skill id="5266" toLevel="12" name="Magical Backfire">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#val"> 1 1.5 1.5 7 7 7 7 7 7 7 7 7 </table>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
@@ -2743,7 +2722,6 @@
 	</skill>
 	<skill id="5267" toLevel="21" name="Trap Explosion">
 		<!-- Confirmed CT2.5 -->
-		<table name="#power"> 35 46 57 66 77 85 92 99 105 107 111 112 114 115 116 117 119 120 121 122 123 </table>
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -2809,7 +2787,6 @@
 	</skill>
 	<skill id="5268" toLevel="17" name="Poison">
 		<!-- Confirmed CT2.5 -->
-		<table name="#dmg"> 18 22 26 26 26 28 55 55 55 55 57 57 57 57 57 57 57 </table>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -3102,7 +3079,6 @@
 	</skill>
 	<skill id="5273" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3153,7 +3129,6 @@
 	</skill>
 	<skill id="5274" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3203,7 +3178,6 @@
 	</skill>
 	<skill id="5275" toLevel="9" name="Spinning Slasher">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3254,7 +3228,6 @@
 	</skill>
 	<skill id="5276" toLevel="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3307,7 +3280,6 @@
 	</skill>
 	<skill id="5277" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -3360,7 +3332,6 @@
 	</skill>
 	<skill id="5278" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3454,7 +3425,6 @@
 	</skill>
 	<skill id="5280" toLevel="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3509,7 +3479,6 @@
 	</skill>
 	<skill id="5281" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3563,7 +3532,6 @@
 	</skill>
 	<skill id="5282" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3657,7 +3625,6 @@
 	</skill>
 	<skill id="5284" toLevel="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3712,7 +3679,6 @@
 	</skill>
 	<skill id="5285" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3766,7 +3732,6 @@
 	</skill>
 	<skill id="5286" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -3860,7 +3825,6 @@
 	</skill>
 	<skill id="5288" toLevel="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -3915,7 +3879,6 @@
 	</skill>
 	<skill id="5289" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -3969,7 +3932,6 @@
 	</skill>
 	<skill id="5290" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4063,7 +4025,6 @@
 	</skill>
 	<skill id="5292" toLevel="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -4118,7 +4079,6 @@
 	</skill>
 	<skill id="5293" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<affectRange>150</affectRange>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -4172,7 +4132,6 @@
 	</skill>
 	<skill id="5294" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
@@ -4266,7 +4225,6 @@
 	</skill>
 	<skill id="5296" toLevel="9" name="Burst Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 8711 12027 12324 12415 12497 12563 12606 12606 12606 </table>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -4321,7 +4279,6 @@
 	</skill>
 	<skill id="5297" toLevel="9" name="Power Strike">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 13066 18040 18486 18623 18745 18844 18909 18909 18909 </table>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
 		<effectPoint>-100</effectPoint>
@@ -4374,7 +4331,6 @@
 	</skill>
 	<skill id="5298" toLevel="9" name="Power Shot">
 		<!-- CT2.5 retail confirmed -->
-		<table name="#power"> 34842 48105 49294 49660 49987 50251 50423 50423 50423 </table>
 		<castRange>900</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
