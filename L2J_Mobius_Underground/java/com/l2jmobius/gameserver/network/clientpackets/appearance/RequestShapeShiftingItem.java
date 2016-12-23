@@ -136,11 +136,14 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 			// return;
 		}
 		
-		if (!appearanceStone.getCrystalTypes().isEmpty() && !appearanceStone.getCrystalTypes().contains(targetItem.getItem().getCrystalType()))
+		if (!appearanceStone.getTargetTypes().contains(AppearanceTargetType.ACCESSORY)) // accessory tempfix
 		{
-			client.sendPacket(ExShapeShiftingResult.FAILED);
-			player.removeRequest(ShapeShiftingItemRequest.class);
-			return;
+			if (!appearanceStone.getCrystalTypes().isEmpty() && !appearanceStone.getCrystalTypes().contains(targetItem.getItem().getCrystalType()))
+			{
+				client.sendPacket(ExShapeShiftingResult.FAILED);
+				player.removeRequest(ShapeShiftingItemRequest.class);
+				return;
+			}
 		}
 		
 		if (appearanceStone.getTargetTypes().isEmpty())
