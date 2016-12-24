@@ -2154,11 +2154,6 @@ public final class L2PcInstance extends L2Playable
 		final int oldInvLimit = getInventoryLimit();
 		SystemMessage sm = null;
 		
-		if ((item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH))
-		{
-			updateActiveBroochJewel();
-		}
-		
 		if (isEquiped)
 		{
 			if (item.getEnchantLevel() > 0)
