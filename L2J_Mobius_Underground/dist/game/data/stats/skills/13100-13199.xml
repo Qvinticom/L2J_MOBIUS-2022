@@ -346,84 +346,246 @@
 		</conditions>
 	</skill>
 	<skill id="13136" toLevel="1" name="Hero's Cloak">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 10% and Max CP by 15%, and increases STR/INT/CON/MEN/DEX/WIT + 2, and Fire/Water/Wind/Earth/Holy/Dark Resistance + 10 when equipped. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>10</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13137" toLevel="1" name="Glorious Cloak">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max HP by 10% and Max CP by 15%, and increases STR/INT/CON/MEN/DEX/WIT + 1, and Fire/Water/Wind/Earth/Holy/Dark Resistance + 5 when equipped. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>5</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13138" toLevel="1" name="Haste Talisman">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. Spd. by 2% when equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13139" toLevel="1" name="P. Atk. Talisman">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk. by 2% when equipped. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhysicalAttack">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13140" toLevel="1" name="P. Def. Talisman">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Def. by 3% when equipped. -->
 		<icon>icon.r85_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13141" toLevel="1" name="Casting Spd. Talisman">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Casting Spd. by 2 with the power of Talisman. -->
 		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MagicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13142" toLevel="1" name="M. Def. Talisman">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Def. by 3% when equipped. -->
 		<icon>icon.r85_talisman_md_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13143" toLevel="1" name="M. Atk. Talisman">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases M. Atk. by 2% when equipped. -->
 		<icon>icon.r85_talisman_ma_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MagicalAttack">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13144" toLevel="1" name="Chic Silver Chapeau">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR+ 1, INT+ 1 -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13145" toLevel="1" name="Demon's Circlet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- CON+ 1, MEN+ 1 -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13146" toLevel="1" name="Special Ability: Infinity Shaper">
 		<!-- AUTO GENERATED SKILL -->
