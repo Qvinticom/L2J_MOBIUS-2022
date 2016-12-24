@@ -2236,11 +2236,6 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(new ExStorageMaxCount(this));
 		}
 		
-		if ((item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH))
-		{
-			
-		}
-		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerEquipItem(this, item), this);
 	}
