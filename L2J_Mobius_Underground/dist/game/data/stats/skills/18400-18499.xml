@@ -226,28 +226,284 @@
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="18444" toLevel="6" name="Physical Reflect Shirt Enchant Effect">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 5%. -->
 		<icon>icon.reflect_attack_shirt</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">16</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>
+					<value level="3">7</value>
+					<value level="4">9</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<type>PHYSICAL</type>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">8</value>
+					<value level="4">10</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18445" toLevel="6" name="Magical Reflect Shirt Enchant Effect">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 5%. -->
 		<icon>icon.reflect_magic_shirt</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">16</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReflectSkill">
+				<amount>
+					<value level="3">7</value>
+					<value level="4">9</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<type>MAGIC</type>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">8</value>
+					<value level="4">10</value>
+					<value level="5">12</value>
+					<value level="6">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18446" toLevel="1" name="Reflect Shirt Basic Effect">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 8. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">8</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18447" toLevel="10" name="Reflect Shirt Basic Effect">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 9. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">9</value>
+					<value level="2">10</value>
+					<value level="3">11</value>
+					<value level="4">12</value>
+					<value level="5">13</value>
+					<value level="6">14</value>
+					<value level="7">15</value>
+					<value level="8">16</value>
+					<value level="9">17</value>
+					<value level="10">18</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">29</value>
+					<value level="2">30</value>
+					<value level="3">31</value>
+					<value level="4">34</value>
+					<value level="5">37</value>
+					<value level="6">40</value>
+					<value level="7">43</value>
+					<value level="8">46</value>
+					<value level="9">49</value>
+					<value level="10">52</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value fromLevel="4" toLevel="10">7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="4">510</value>
+					<value level="5">520</value>
+					<value level="6">531</value>
+					<value level="7">536</value>
+					<value level="8">541</value>
+					<value level="9">547</value>
+					<value level="10">552</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="4">510</value>
+					<value level="5">520</value>
+					<value level="6">531</value>
+					<value level="7">536</value>
+					<value level="8">541</value>
+					<value level="9">547</value>
+					<value level="10">552</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">42</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">42</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">42</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">42</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">42</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">42</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value fromLevel="6" toLevel="7">3</value>
+					<value fromLevel="8" toLevel="10">4</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value fromLevel="6" toLevel="7">3</value>
+					<value fromLevel="8" toLevel="10">4</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value fromLevel="6" toLevel="7">3</value>
+					<value fromLevel="8" toLevel="10">4</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value fromLevel="6" toLevel="7">3</value>
+					<value fromLevel="8" toLevel="10">4</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+					<value fromLevel="5" toLevel="6">2</value>
+					<value fromLevel="7" toLevel="8">3</value>
+					<value fromLevel="9" toLevel="10">4</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+					<value fromLevel="5" toLevel="6">2</value>
+					<value fromLevel="7" toLevel="8">3</value>
+					<value fromLevel="9" toLevel="10">4</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18448" toLevel="1" name="Summon Piero">
 		<!-- AUTO GENERATED SKILL -->

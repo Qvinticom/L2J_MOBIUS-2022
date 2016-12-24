@@ -117,105 +117,133 @@
 	<option id="32838" name="infinite_odyssey">
 		<!-- Active: Not targeted by enemies for 6 seconds. -->
 	</option>
-	<option id="32839" name="physical_reflect_shirt">
+	<option id="32839" name="o_physic_tshirt_stat_0">
 		<!-- M. Def. + 8 -->
 		<passive_skill id="18446" level="1" />
 	</option>
-	<option id="32840" name="physical_reflect_shirt">
+	<option id="32840" name="o_physic_tshirt_stat_1">
 		<!-- M. Def. + 9 -->
 		<passive_skill id="18444" level="1" />
 	</option>
-	<option id="32841" name="physical_reflect_shirt">
+	<option id="32841" name="o_physic_tshirt_stat_2">
 		<!-- M. Def. + 10 -->
-		<passive_skill id="18444" level="2" />
+		<passive_skill id="18444" level="5" />
 	</option>
-	<option id="32842" name="physical_reflect_shirt">
+	<option id="32842" name="o_physic_tshirt_stat_3">
 		<!-- M. Def. + 11 -->
 		<passive_skill id="18444" level="3" />
 	</option>
-	<option id="32843" name="physical_reflect_shirt">
-		<!-- M. Def. + 12, Speed + 7, Max HP/MP + 510. Attribute Resistance + 6. STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. -->
+	<option id="32843" name="o_physic_tshirt_stat_4">
+		<!-- M. Def. + 12 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 510. Attribute Resistance + 6. STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1 -->
+		<passive_skill id="18447" level="4" />
+	</option>
+	<option id="32844" name="o_physic_tshirt_stat_5">
+		<!-- M. Def. + 13 -->
+		<!-- Speed + 7 -->
+		<!-- M. Def. + 13, Speed + 7, Max HP/MP + 520. Attribute Resistance + 12. STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, P. Def. + 5% -->
+		<passive_skill id="18444" level="1" />
+		<passive_skill id="18447" level="5" />
+	</option>
+	<option id="32845" name="o_physic_tshirt_stat_6">
+		<!-- M. Def. + 14 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 531. M. Attribute Resistance + 18. STR +3, DEX +3, CON +2, INT +3, WIT +3, MEN +2, P. Def. + 6%. Received Physical Critical Damage -8% -->
+		<passive_skill id="18444" level="2" />
+		<passive_skill id="18447" level="6" />
+	</option>
+	<option id="32846" name="o_physic_tshirt_stat_7">
+		<!-- M. Def. + 15 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 536. Attribute Resistance + 24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3, P. Def. + 8%. Received Physical Critical Damage -12%, 7% chance of reflecting physical abnormal states -->
+		<passive_skill id="18444" level="3" />
+		<passive_skill id="18447" level="7" />
+	</option>
+	<option id="32847" name="o_physic_tshirt_stat_8">
+		<!-- M. Def. + 16 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 541. Attribute Resistance + 30. STR +4, DEX +4, CON +3, INT +4, WIT +4, MEN +3, P. Def. + 10%. Received Physical Critical Damage -16%, 9% chance of reflecting physical abnormal state -->
 		<passive_skill id="18444" level="4" />
+		<passive_skill id="18447" level="8" />
 	</option>
-	<option id="32844" name="physical_reflect_shirt">
-		<!-- M. Def. + 13, Speed + 7, Max HP/MP + 520. Attribute Resistance + 12. STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2. -->
-		<!-- P. Def. + 5% -->
+	<option id="32848" name="o_physic_tshirt_stat_9">
+		<!-- M. Def. + 17 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 547. Attribute Resistance + 36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, P. Def. + 12%. Received Physical Critical Damage -20%, 12% chance of reflecting physical abnormal states -->
 		<passive_skill id="18444" level="5" />
+		<passive_skill id="18447" level="9" />
 	</option>
-	<option id="32845" name="physical_reflect_shirt">
-		<!-- M. Def. + 14, Speed + 7, Max HP/MP + 531. M. Attribute Resistance + 18. STR +3, DEX +3, CON +2, INT +3, WIT +3, MEN +2. -->
-		<!-- P. Def. + 6%. Received Physical Critical Damage - 8% -->
+	<option id="32849" name="o_physic_tshirt_stat_10">
+		<!-- M. Def. + 18 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 552. Attribute Resistance + 42. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, P. Def. + 15%. Received Physical Critical Damage -25%, 15% chance of reflecting physical abnormal states -->
 		<passive_skill id="18444" level="6" />
+		<passive_skill id="18447" level="9" />
 	</option>
-	<option id="32846" name="physical_reflect_shirt">
-		<!-- M. Def. + 15, Speed + 7, Max HP/MP + 536. Attribute Resistance + 24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. -->
-		<!-- P. Def. + 8%. Received Physical Critical Damage - 12%, 7% chance of reflecting physical abnormal states -->
-		<passive_skill id="18444" level="7" />
-	</option>
-	<option id="32847" name="physical_reflect_shirt">
-		<!-- M. Def. + 16, Speed + 7, Max HP/MP + 541. Attribute Resistance + 30. STR +4, DEX +4, CON +3, INT +4, WIT +4, MEN +3. -->
-		<!-- P. Def. + 10%. Received Physical Critical Damage - 16%, 9% chance of reflecting physical abnormal states -->
-		<passive_skill id="18444" level="8" />
-	</option>
-	<option id="32848" name="physical_reflect_shirt">
-		<!-- M. Def. + 17, Speed + 7, Max HP/MP + 547. Attribute Resistance + 36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. -->
-		<!-- P. Def. + 12%. Received Physical Critical Damage - 20%, 12% chance of reflecting physical abnormal states -->
-		<passive_skill id="18444" level="9" />
-	</option>
-	<option id="32849" name="physical_reflect_shirt">
-		<!-- M. Def. + 18, Speed + 7, Max HP/MP + 552. Attribute Resistance + 36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. -->
-		<!-- P. Def. + 15%. Received Physical Critical Damage - 25%, 15% chance of reflecting physical abnormal states -->
-		<passive_skill id="18444" level="10" />
-	</option>
-	<option id="32850" name="magic_reflect_shirt">
+	<option id="32850" name="o_magic_tshirt_stat_0">
 		<!-- M. Def. + 8 -->
+		<passive_skill id="18446" level="1" />
+	</option>
+	<option id="32851" name="o_magic_tshirt_stat_1">
+		<!-- M. Def. + 9 -->
 		<passive_skill id="18447" level="1" />
 	</option>
-	<option id="32851" name="magic_reflect_shirt">
-		<!-- M. Def. + 9 -->
-		<passive_skill id="18445" level="1" />
-	</option>
-	<option id="32852" name="magic_reflect_shirt">
+	<option id="32852" name="o_magic_tshirt_stat_2">
 		<!-- M. Def. + 10 -->
-		<passive_skill id="18445" level="2" />
+		<passive_skill id="18447" level="2" />
 	</option>
-	<option id="32853" name="magic_reflect_shirt">
+	<option id="32853" name="o_magic_tshirt_stat_3">
 		<!-- M. Def. + 11 -->
+		<passive_skill id="18447" level="3" />
+	</option>
+	<option id="32854" name="o_magic_tshirt_stat_4">
+		<!-- M. Def. + 12 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 510. Attribute Resistance + 6. STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1 -->
+		<passive_skill id="18447" level="4" />
+	</option>
+	<option id="32855" name="o_magic_tshirt_stat_5">
+		<!-- M. Def. + 13 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 520. Attribute Resistance + 12. STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2, M. Def. + 5% -->
+		<passive_skill id="18445" level="1" />
+		<passive_skill id="18447" level="5" />
+	</option>
+	<option id="32856" name="o_magic_tshirt_stat_6">
+		<!-- M. Def. + 14 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 531. M. Attribute Resistance + 18. STR +3, DEX +3, CON +2, INT +3, WIT +3, MEN +2, M. Def. + 6%. Received Physical Critical Damage -8% -->
+		<passive_skill id="18445" level="2" />
+		<passive_skill id="18447" level="6" />
+	</option>
+	<option id="32857" name="o_magic_tshirt_stat_7">
+		<!-- M. Def. + 15 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 536. Attribute Resistance + 24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3, M. Def. + 8%. Received Physical Critical Damage -12%, 7% chance of reflecting physical abnormal states -->
 		<passive_skill id="18445" level="3" />
+		<passive_skill id="18447" level="7" />
 	</option>
-	<option id="32854" name="magic_reflect_shirt">
-		<!-- M. Def. + 12, Speed + 7, Max HP/MP + 510. Attribute Resistance + 6. STR +1, DEX +1, CON +1, INT +1, WIT +1, MEN +1. -->
+	<option id="32858" name="o_magic_tshirt_stat_8">
+		<!-- M. Def. + 16 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 541. Attribute Resistance + 30. STR +4, DEX +4, CON +3, INT +4, WIT +4, MEN +3, M. Def. + 10%. Received Physical Critical Damage -16%, 9% chance of reflecting physical abnormal state -->
 		<passive_skill id="18445" level="4" />
+		<passive_skill id="18447" level="8" />
 	</option>
-	<option id="32855" name="magic_reflect_shirt">
-		<!-- M. Def. + 13, Speed + 7, Max HP/MP + 520. Attribute Resistance + 12. STR +2, DEX +2, CON +2, INT +2, WIT +2, MEN +2. -->
-		<!-- M. Def. + 5% -->
+	<option id="32859" name="o_magic_tshirt_stat_9">
+		<!-- M. Def. + 17 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 547. Attribute Resistance + 36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, M. Def. + 12%. Received Physical Critical Damage -20%, 12% chance of reflecting physical abnormal states -->
 		<passive_skill id="18445" level="5" />
+		<passive_skill id="18447" level="9" />
 	</option>
-	<option id="32856" name="magic_reflect_shirt">
-		<!-- M. Def. + 14, Speed + 7, Max HP/MP + 531. Attribute Resistance + 18. STR +3, DEX +3, CON +2, INT +3, WIT +3, MEN +2. -->
-		<!-- M. Def. + 6%. Received Magic Critical Damage - 8% -->
+	<option id="32860" name="o_magic_tshirt_stat_10">
+		<!-- M. Def. + 18 -->
+		<!-- Speed + 7 -->
+		<!-- Max HP/MP + 552. Attribute Resistance + 42. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4, M. Def. + 15%. Received Physical Critical Damage -25%, 15% chance of reflecting physical abnormal states -->
 		<passive_skill id="18445" level="6" />
-	</option>
-	<option id="32857" name="magic_reflect_shirt">
-		<!-- M. Def. + 15, Speed + 7, Max HP/MP + 536. Attribute Resistance + 24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. -->
-		<!-- M. Def. + 8%. Received Magic Critical Damage - 12%, 7% chance of reflecting magical abnormal states -->
-		<passive_skill id="18445" level="7" />
-	</option>
-	<option id="32858" name="magic_reflect_shirt">
-		<!-- M. Def. + 16, Speed + 7, Max HP/MP + 541. Attribute Resistance + 30. STR +4, DEX +4, CON +3, INT +4, WIT +4, MEN +3. -->
-		<!-- M. Def. + 10%. Received Magic Critical Damage - 16%, 9% chance of reflecting magical abnormal states -->
-		<passive_skill id="18445" level="8" />
-	</option>
-	<option id="32859" name="magic_reflect_shirt">
-		<!-- M. Def. + 17, Speed + 7, Max HP/MP + 547. Attribute Resistance + 36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. -->
-		<!-- M. Def. + 12%. Received Magic Critical Damage - 20%, 12% chance of reflecting magical abnormal states -->
-		<passive_skill id="18445" level="9" />	
-	</option>
-	<option id="32860" name="magic_reflect_shirt">
-		<!-- M. Def. + 18, Speed + 7, Max HP/MP + 552. Attribute Resistance + 36. STR +4, DEX +4, CON +4, INT +4, WIT +4, MEN +4. -->
-		<!-- M. Def. + 15%. Received Magic Critical Damage - 25%, 15% chance of reflecting magical skills -->
-		<passive_skill id="18445" level="10" />
+		<passive_skill id="18447" level="10" />
 	</option>
 	<option id="32861" name="shadow_cutter_ench0">
 		<!-- Atk. Spd. + 5% -->

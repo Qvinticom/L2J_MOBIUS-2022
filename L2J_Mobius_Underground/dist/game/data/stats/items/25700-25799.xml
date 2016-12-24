@@ -794,6 +794,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="9396" level="1" /> <!-- Scroll: Enchant Elemental Shirt -->
+		</skills>
 	</item>
 	<item id="25793" name="Blessed Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- Enchant Scroll exclusive to Pa'agrio, Sayha, Maphr and Eva Shirts. When enchanted, increases P. Def. and M. Def. by 1. From +3, Elemental defense increases by 3, and from +4, P. Def. Increases by 3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
@@ -802,6 +807,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="BLESS_ENCHT_AM" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="9397" level="1" /> <!-- Blessed Scroll: Enchant Elemental Shirt -->
+		</skills>
 	</item>
 	<item id="25794" name="Transformation Scroll: Priestess Tsubaki" type="EtcItem">
 		<!-- For 30 min., Priestess Tsubaki's spirit stays with you, increasing your Speed. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. -->
