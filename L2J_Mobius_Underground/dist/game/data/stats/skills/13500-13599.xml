@@ -452,22 +452,361 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13561" toLevel="1" name="Basic Effect: Shiny Elemental Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 8. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>8</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13562" toLevel="10" name="Enchant Effect: Shiny Elemental Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 9. -->
 		<icon>BranchSys2.icon.etc_scroll_of_enchant_shirt_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">9</value>
+					<value level="2">10</value>
+					<value level="3">11</value>
+					<value level="4">12</value>
+					<value level="5">13</value>
+					<value level="6">14</value>
+					<value level="7">15</value>
+					<value level="8">16</value>
+					<value level="9">17</value>
+					<value level="10">18</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">29</value>
+					<value level="2">30</value>
+					<value level="3">31</value>
+					<value level="4">34</value>
+					<value level="5">37</value>
+					<value level="6">40</value>
+					<value level="7">43</value>
+					<value level="8">46</value>
+					<value level="9">49</value>
+					<value level="10">52</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">7</value>
+					<value level="7">7</value>
+					<value level="8">7</value>
+					<value level="9">7</value>
+					<value level="10">7</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">510</value>
+					<value level="5">520</value>
+					<value level="6">531</value>
+					<value level="7">536</value>
+					<value level="8">541</value>
+					<value level="9">547</value>
+					<value level="10">552</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">510</value>
+					<value level="5">520</value>
+					<value level="6">531</value>
+					<value level="7">536</value>
+					<value level="8">541</value>
+					<value level="9">547</value>
+					<value level="10">552</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">510</value>
+					<value level="5">520</value>
+					<value level="6">531</value>
+					<value level="7">536</value>
+					<value level="8">541</value>
+					<value level="9">547</value>
+					<value level="10">552</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">36</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">36</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">36</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">36</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">36</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">6</value>
+					<value level="5">12</value>
+					<value level="6">18</value>
+					<value level="7">24</value>
+					<value level="8">30</value>
+					<value level="9">36</value>
+					<value level="10">36</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">5</value>
+					<value level="8">5</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+				</amount>
+				<chance>30</chance>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">-3</value>
+					<value level="6">-3</value>
+					<value level="7">-3</value>
+					<value level="8">-3</value>
+					<value level="9">-3</value>
+					<value level="10">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">3</value>
+					<value level="10">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">-3</value>
+					<value level="9">-3</value>
+					<value level="10">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">1</value>
+					<value level="5">2</value>
+					<value level="6">2</value>
+					<value level="7">3</value>
+					<value level="8">3</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13563" toLevel="5" name="Einhasad's Wrath">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases P. Atk + 10%, M. Atk. + 20%, Atk. Spd. + 10%, Casting Spd. + 10%. Decreases P. Def. and M. Def. by 10%. Cooldown is 30 minutes. -->
 		<icon>icon.ainhasard_shirt</icon>
 		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
 		<abnormalTime>60</abnormalTime>
 		<reuseDelay>
 			<value level="1">1800000</value>
@@ -476,48 +815,119 @@
 			<value level="4">1620000</value>
 			<value level="5">1500000</value>
 		</reuseDelay>
+		<effects>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13564" toLevel="4" name="Einhasad's Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Invincible for 5 sec. Cooldown is 30 min. -->
 		<icon>icon.ainhasard_shirt_2</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>5</abnormalTime>
+		<targetType>SELF</targetType>
+		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
+		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<reuseDelay>
 			<value level="1">1800000</value>
 			<value level="2">1680000</value>
 			<value level="3">1560000</value>
 			<value level="4">1500000</value>
 		</reuseDelay>
+		<effects>
+			<effect name="DamageBlock">
+				<type>BLOCK_HP</type>
+			</effect>
+			<effect name="DamageBlock">
+				<type>BLOCK_MP</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13565" toLevel="3" name="Einhasad's Silence">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- For 5 seconds, cancels all your debuffs and cannot be targeted by the enemy. Cooldown is 30 minutes. -->
 		<icon>icon.ainhasard_shirt_3</icon>
 		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
 		<abnormalTime>5</abnormalTime>
 		<reuseDelay>
 			<value level="1">1800000</value>
 			<value level="2">1620000</value>
 			<value level="3">1500000</value>
 		</reuseDelay>
+		<effects>
+			<effect name="Untargetable" />
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+			<effect name="ResistDispelByCategory">
+				<amount>-100</amount>
+				<slot>ALL</slot>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13566" toLevel="2" name="Einhasad's Salvation">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Resurrects when dead and retains all buffs and debuffs. The Noblesse Blessing and Lucky Charm, however, will disappear. Cooldown is 30 minutes. -->
 		<icon>icon.ainhasard_shirt_4</icon>
 		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<reuseDelay>
 			<value level="1">1800000</value>
 			<value level="2">1500000</value>
 		</reuseDelay>
+		<effects>
+			<effect name="ResurrectionSpecial">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13567" toLevel="1" name="Einhasad's Blessing">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Recovers all your HP, MP, and CP. Has a chance of removing debuffs. Cooldown is 30 minutes. -->
 		<icon>icon.ainhasard_shirt_5</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
 		<reuseDelay>1800000</reuseDelay>
+		<effects>
+			<effect name="ManaHealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="HealPercent">
+				<power>100</power>
+			</effect>
+			<effect name="Cp">
+				<amount>20000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>40</rate>
+				<max>10</max>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13568" toLevel="1" name="Talisman Energy">
 		<!-- AUTO GENERATED SKILL -->
