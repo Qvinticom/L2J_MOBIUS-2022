@@ -788,6 +788,10 @@ public class PcInventory extends Inventory
 					paperdoll[slot][1] = invdata.getInt("item_id");
 					paperdoll[slot][2] = invdata.getInt("enchant_level");
 					paperdoll[slot][3] = vars.getInt(ItemVariables.VISUAL_ID, 0);
+					if (paperdoll[slot][3] > 0) // fix for hair appearance conflicting with original model
+					{
+						paperdoll[slot][1] = paperdoll[slot][3];
+					}
 				}
 			}
 		}
