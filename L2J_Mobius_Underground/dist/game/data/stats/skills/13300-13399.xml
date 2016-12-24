@@ -1088,20 +1088,44 @@
 		</conditions>
 	</skill>
 	<skill id="13378" toLevel="1" name="Enhanced Istina's Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 5 talismans. CON + 1, MEN + 1. -->
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13379" toLevel="1" name="Enhanced Octavis' Bracelet">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Can equip 5 talismans. DEX + 1, WIT + 1. -->
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13380" toLevel="1" name="Seal Agathion - XP Bottle">
 		<!-- AUTO GENERATED SKILL -->
