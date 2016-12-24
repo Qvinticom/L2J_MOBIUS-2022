@@ -101,7 +101,17 @@ public class SpiritShot implements IItemHandler
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED);
 		}
-		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+		
+		// Visual effect change if player has equipped Sapphire lvl 3 or higher
+		if (activeChar.getActiveShappireJewel() != null)
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, activeChar.getActiveShappireJewel().getEffectId(), 1, 0, 0), 600);
+		}
+		else
+		{
+			skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+			
+		}
 		return true;
 	}
 }

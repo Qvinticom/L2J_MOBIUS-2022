@@ -76,6 +76,7 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AdminTeleportType;
+import com.l2jmobius.gameserver.enums.BroochJewel;
 import com.l2jmobius.gameserver.enums.CastleSide;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -711,6 +712,9 @@ public final class L2PcInstance extends L2Playable
 	private final Map<Integer, CubicInstance> _cubics = new ConcurrentSkipListMap<>();
 	/** Active shots. */
 	protected Set<Integer> _activeSoulShots = ConcurrentHashMap.newKeySet();
+	/** Active Brooch Jewels **/
+	private BroochJewel _activeRubyJewel = null;
+	private BroochJewel _activeShappireJewel = null;
 	
 	public final ReentrantLock soulShotLock = new ReentrantLock();
 	
@@ -8650,6 +8654,26 @@ public final class L2PcInstance extends L2Playable
 		_activeSoulShots.clear();
 	}
 	
+	public BroochJewel getActiveRubyJewel()
+	{
+		return _activeRubyJewel;
+	}
+	
+	public void setActiveRubyJewel(BroochJewel jewel)
+	{
+		_activeRubyJewel = jewel;
+	}
+	
+	public BroochJewel getActiveShappireJewel()
+	{
+		return _activeShappireJewel;
+	}
+	
+	public void setActiveShappireJewel(BroochJewel jewel)
+	{
+		_activeShappireJewel = jewel;
+	}
+	
 	private ScheduledFuture<?> _taskWarnUserTakeBreak;
 	
 	public EnumIntBitmask<ClanPrivilege> getClanPrivileges()
@@ -13870,5 +13894,4 @@ public final class L2PcInstance extends L2Playable
 		addStatusUpdateValue(StatusUpdateType.MAX_CP);
 		addStatusUpdateValue(StatusUpdateType.CUR_CP);
 	}
-	
 }

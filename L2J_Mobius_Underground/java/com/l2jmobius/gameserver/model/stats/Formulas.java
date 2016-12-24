@@ -862,7 +862,12 @@ public final class Formulas
 		
 		// Bonus Spiritshot
 		final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
-		mAtk *= bss ? 4 * shotsBonus : sps ? 2 * shotsBonus : 1;
+		double sapphireBonus = 0;
+		if (attacker.isPlayer() && (attacker.getActingPlayer().getActiveShappireJewel() != null))
+		{
+			sapphireBonus = attacker.getActingPlayer().getActiveShappireJewel().getBonus();
+		}
+		mAtk *= bss ? 4 * (shotsBonus + sapphireBonus) : sps ? 2 * (shotsBonus + sapphireBonus) : 1;
 		
 		double damage = (Math.sqrt(mAtk) * power * (mp / 97)) / mDef;
 		damage *= calcGeneralTraitBonus(attacker, target, skill.getTraitType(), false);

@@ -123,7 +123,15 @@ public class BeastSpiritShot implements IItemHandler
 			if (!pet.isChargedShot(shotType))
 			{
 				pet.setChargedShot(shotType, true);
-				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+				// Visual effect change if player has equipped Sapphire lvl 3 or higher
+				if (activeOwner.getActiveShappireJewel() != null)
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
+				}
+				else
+				{
+					skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(pet, pet, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+				}
 			}
 		}
 		
@@ -132,7 +140,15 @@ public class BeastSpiritShot implements IItemHandler
 			if (!s.isChargedShot(shotType))
 			{
 				s.setChargedShot(shotType, true);
-				skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+				// Visual effect change if player has equipped Sapphire lvl 3 or higher
+				if (activeOwner.getActiveShappireJewel() != null)
+				{
+					Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, activeOwner.getActiveShappireJewel().getEffectId(), 2, 0, 0), 600);
+				}
+				else
+				{
+					skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeOwner, new MagicSkillUse(s, s, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+				}
 			}
 		});
 		return true;

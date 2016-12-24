@@ -36,6 +36,7 @@ public class ShotsBonusFinalizer implements IStatsFunction
 		throwIfPresent(base);
 		
 		double baseValue = 1;
+		double rubyBonus = 0;
 		final L2PcInstance player = creature.getActingPlayer();
 		if (player != null)
 		{
@@ -44,7 +45,11 @@ public class ShotsBonusFinalizer implements IStatsFunction
 			{
 				baseValue += (weapon.getEnchantLevel() * 0.7) / 100;
 			}
+			if (player.getActiveRubyJewel() != null)
+			{
+				rubyBonus = player.getActiveRubyJewel().getBonus();
+			}
 		}
-		return CommonUtil.constrain(baseValue, 1.0, 1.21);
+		return Stats.defaultValue(creature, stat, CommonUtil.constrain(baseValue, 1.0, 1.21) + rubyBonus);
 	}
 }

@@ -113,7 +113,16 @@ public class SoulShots implements IItemHandler
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED);
 		}
-		skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+		
+		// Visual effect change if player has equipped Ruby lvl 3 or higher
+		if (activeChar.getActiveRubyJewel() != null)
+		{
+			Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, activeChar.getActiveRubyJewel().getEffectId(), 1, 0, 0), 600);
+		}
+		else
+		{
+			skills.forEach(holder -> Broadcast.toSelfAndKnownPlayersInRadius(activeChar, new MagicSkillUse(activeChar, activeChar, holder.getSkillId(), holder.getSkillLevel(), 0, 0), 600));
+		}
 		return true;
 	}
 }

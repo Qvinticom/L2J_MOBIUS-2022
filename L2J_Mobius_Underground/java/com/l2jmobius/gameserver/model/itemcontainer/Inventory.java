@@ -39,6 +39,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.BroochJewel;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
@@ -388,6 +389,11 @@ public abstract class Inventory extends ItemContainer
 			{
 				player.sendPacket(new SkillCoolTime(player));
 			}
+			
+			if ((item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH))
+			{
+				updateActiveBroochJewel(player);
+			}
 		}
 		
 		@Override
@@ -470,6 +476,49 @@ public abstract class Inventory extends ItemContainer
 			if (item.isWeapon())
 			{
 				player.handleAutoShots(Config.ENABLE_AUTO_SHOTS);
+			}
+			
+			if ((item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH))
+			{
+				updateActiveBroochJewel(player);
+			}
+		}
+		
+		private void updateActiveBroochJewel(L2PcInstance player)
+		{
+			// Update active Ruby jewel.
+			if ((player.getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (player.getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
+			{
+				player.setActiveRubyJewel(BroochJewel.RUBY_LV5);
+			}
+			else if ((player.getInventory().getItemByItemId(BroochJewel.RUBY_LV4.getItemId()) != null) && (player.getInventory().getItemByItemId(BroochJewel.RUBY_LV4.getItemId()).isEquipped()))
+			{
+				player.setActiveRubyJewel(BroochJewel.RUBY_LV4);
+			}
+			else if ((player.getInventory().getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (player.getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
+			{
+				player.setActiveRubyJewel(BroochJewel.RUBY_LV3);
+			}
+			else
+			{
+				player.setActiveRubyJewel(null);
+			}
+			// Update active Sapphire jewel.
+			if ((player.getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (player.getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped()))
+			{
+				player.setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV5);
+			}
+			else if ((player.getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()) != null) && (player.getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()).isEquipped()))
+			{
+				player.setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV4);
+			}
+			else if ((player.getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()) != null) && (player.getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()).isEquipped()))
+			{
+				player.setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV3);
+			}
+			else
+			{
+				player.setActiveShappireJewel(null);
 			}
 		}
 	}
