@@ -2154,6 +2154,11 @@ public final class L2PcInstance extends L2Playable
 		final int oldInvLimit = getInventoryLimit();
 		SystemMessage sm = null;
 		
+		if ((item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH))
+		{
+			updateActiveBroochJewel();
+		}
+		
 		if (isEquiped)
 		{
 			if (item.getEnchantLevel() > 0)
@@ -2212,6 +2217,7 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 		}
+		
 		refreshExpertisePenalty();
 		
 		broadcastUserInfo();
@@ -2228,6 +2234,11 @@ public final class L2PcInstance extends L2Playable
 		if (getInventoryLimit() != oldInvLimit)
 		{
 			sendPacket(new ExStorageMaxCount(this));
+		}
+		
+		if ((item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL) || (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH))
+		{
+			
 		}
 		
 		// Notify to scripts
@@ -8672,6 +8683,44 @@ public final class L2PcInstance extends L2Playable
 	public void setActiveShappireJewel(BroochJewel jewel)
 	{
 		_activeShappireJewel = jewel;
+	}
+	
+	public void updateActiveBroochJewel()
+	{
+		// Update active Ruby jewel.
+		if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
+		{
+			setActiveRubyJewel(BroochJewel.RUBY_LV5);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV4.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV4.getItemId()).isEquipped()))
+		{
+			setActiveRubyJewel(BroochJewel.RUBY_LV4);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
+		{
+			setActiveRubyJewel(BroochJewel.RUBY_LV3);
+		}
+		else
+		{
+			setActiveRubyJewel(null);
+		}
+		// Update active Sapphire jewel.
+		if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV5.getItemId()).isEquipped()))
+		{
+			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV5);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV4.getItemId()).isEquipped()))
+		{
+			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV4);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()).isEquipped()))
+		{
+			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV3);
+		}
+		else
+		{
+			setActiveShappireJewel(null);
+		}
 	}
 	
 	private ScheduledFuture<?> _taskWarnUserTakeBreak;
