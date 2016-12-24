@@ -887,30 +887,48 @@
 	<item id="23953" name="2014 World Olympiad Hero's Accessory" type="Armor">
 		<!-- Hair Accessory worn by the hero of the 2014 World Olympiad. Equip for a boost of + 5 on all stats. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_freightable" val="false" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="EQUIP" />
+		<skills>
+			<skill id="26110" level="1" /> <!-- All Stats + 5. -->
+		</skills>
 	</item>
 	<item id="23954" name="2014 World Olympiad Semifinalist's Accessory" type="Armor">
 		<!-- Hair Accessory worn by the semifinalist of the 2014 World Olympiad. Equip for a boost of + 2 on all stats. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weight" val="10" />
+		<set name="is_freightable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hairall" />
+		<set name="enchant_enabled" val="7" />
+		<set name="isAppearanceable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="HAIR_ACCESSORY" />
+		<skills>
+			<skill id="26111" level="1" /> <!-- All Stats + 2. -->
+		</skills>
 	</item>
 	<item id="23955" name="Kamaloka Secret Chest" type="EtcItem">
 		<!-- Identical to the Kamaloka Secret Chest found in Infernal and Lunatic Kamaloka. Has a chance of obtaining either a Dark/Bloody Amaranthine Enhancement Stone, Dark/Bloody Eternal Enhancement Stone, Life Stone Instilled with Giant's Power, Scroll of Blessing: Weapon/Armor (R99-grade), Top-grade Life Stone (R/R95/R99-grade), Giant's Scroll: Enchant Weapon/Armor (R-grade), an Attribute Stone (+ 60), or Gemstone (R-grade). -->
