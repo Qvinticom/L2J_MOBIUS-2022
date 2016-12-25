@@ -23,10 +23,13 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import instances.AbstractInstance;
+import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
 
 /**
  * Monastery of Silence instance zone.
@@ -47,6 +50,10 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	private static final int TELEPORT_CONTROL_DEVICE2 = 32818;
 	private static final int TELEPORT_CONTROL_DEVICE3 = 32819;
 	private static final int TELEPORT_CONTROL_DEVICE4 = 32820;
+	private static final int GUARDIAN_STAFF = 18952;
+	private static final int GUARDIAN_SWORD = 18953;
+	private static final int GUARDIAN_SHIELD = 18954;
+	private static final int GUARDIAN_SCROLL = 18955;
 	// Skills
 	private static final SkillHolder[] BUFFS =
 	{
@@ -68,6 +75,10 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 		NpcStringId.WE_MUST_SEARCH_HIGH_AND_LOW_IN_EVERY_ROOM_FOR_THE_READING_DESK_THAT_CONTAINS_THE_BOOK_WE_SEEK,
 		NpcStringId.REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND_YOU_CAN_T_TAKE_THEM_OUT_WITH_YOU
 	};
+	private static final NpcStringId[] ELCADIA_DIALOGS2 =
+	{
+		NpcStringId.TO_REMOVE_THE_BARRIER_YOU_MUST_FIND_THE_RELICS_THAT_FIT_THE_BARRIER_AND_ACTIVATE_THE_DEVICE,
+	};
 	// Misc
 	private static final int TEMPLATE_ID = 151;
 	
@@ -84,8 +95,34 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	{
 		super.onEnter(player, instance, firstEnter);
 		
-		final L2Npc elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getId());
-		startQuestTimer("FOLLOW", 3000, elcadia, player);
+		if (firstEnter)
+		{
+			final L2Npc elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId());
+			startQuestTimer("FOLLOW", 3000, elcadia, player);
+			
+			final L2Npc guardianStaff = player.getInstanceWorld().getNpc(GUARDIAN_STAFF);
+			guardianStaff.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianStaff.setIsInvul(true);
+			final L2Npc guardianSword = player.getInstanceWorld().getNpc(GUARDIAN_SWORD);
+			guardianSword.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianSword.setIsInvul(true);
+			final L2Npc guardianShield = player.getInstanceWorld().getNpc(GUARDIAN_SHIELD);
+			guardianShield.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianShield.setIsInvul(true);
+			final L2Npc guardianScroll = player.getInstanceWorld().getNpc(GUARDIAN_SCROLL);
+			guardianScroll.startAbnormalVisualEffect(AbnormalVisualEffect.INVINCIBILITY);
+			guardianScroll.setIsInvul(true);
+		}
+		else
+		{
+			final L2Npc elcadia = player.getInstanceWorld().getNpc(ELCADIA_INSTANCE);
+			if (elcadia != null)
+			{
+				elcadia.teleToLocation(player);
+				cancelQuestTimers("FOLLOW");
+				startQuestTimer("FOLLOW", 3000, elcadia, player);
+			}
+		}
 	}
 	
 	@Override
@@ -157,12 +194,20 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					npc.getAI().startFollow(player);
 					if (player.isInCombat())
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
+						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_GUARDIAN_OF_THE_SEAL_DOESN_T_SEEM_TO_GET_INJURED_AT_ALL_UNTIL_THE_BARRIER_IS_DESTROYED);
 						SkillCaster.triggerCast(npc, player, BUFFS[getRandom(BUFFS.length)].getSkill());
 					}
 					else
 					{
-						npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
+						final QuestState qs = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
+						if ((qs != null) && (qs.getCond() < 2))
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS2[getRandom(ELCADIA_DIALOGS2.length)]);
+						}
+						else if (qs == null)
+						{
+							npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS[getRandom(ELCADIA_DIALOGS.length)]);
+						}
 					}
 					startQuestTimer("FOLLOW", 10000, npc, player);
 					break;

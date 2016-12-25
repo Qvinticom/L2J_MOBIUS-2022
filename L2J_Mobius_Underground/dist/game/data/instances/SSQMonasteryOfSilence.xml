@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Monastery Of Silence -->
 <instance id="151" maxWorlds="50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/instance.xsd">
-	<time duration="60" empty="0" />
+	<time duration="120" empty="5" />
 	<removeBuffs type="ALL" />
 	<locations>
 		<enter type="FIXED">
@@ -12,9 +12,7 @@
 		</exit>
 	</locations>
 	<doorlist>
-		<door id="21100001">
-			<openStatus default="open" />
-		</door>
+		<door id="21100001" /> <!-- wall -->
 		<door id="21100002">
 			<openStatus default="open" />
 		</door>
@@ -27,9 +25,7 @@
 		<door id="21100005">
 			<openStatus default="open" />
 		</door>
-		<door id="21100006">
-			<openStatus default="open" />
-		</door>
+		<door id="21100006" /> <!-- wall -->
 		<door id="21100007">
 			<openStatus default="open" />
 		</door>
@@ -39,9 +35,7 @@
 		<door id="21100009">
 			<openStatus default="open" />
 		</door>
-		<door id="21100010">
-			<openStatus default="open" />
-		</door>
+		<door id="21100010" /> <!-- wall -->
 		<door id="21100011">
 			<openStatus default="open" />
 		</door>
@@ -51,20 +45,18 @@
 		<door id="21100013">
 			<openStatus default="open" />
 		</door>
-		<door id="21100014">
-			<openStatus default="open" />
-		</door>
+		<door id="21100014" /> <!-- wall -->
 		<door id="21100015">
 			<openStatus default="open" />
 		</door>
 		<door id="21100016">
 			<openStatus default="open" />
 		</door>
-		<door id="21100018" />
-		<door id="21100101" />
-		<door id="21100102" />
-		<door id="21100103" />
-		<door id="21100104" />
+		<door id="21100018" /> <!-- teleporter wall -->
+		<door id="21100101" /> <!-- trap -->
+		<door id="21100102" /> <!-- trap -->
+		<door id="21100103" /> <!-- trap -->
+		<door id="21100104" /> <!-- trap -->
 	</doorlist>
 	<spawnlist>
 		<group>
@@ -101,10 +93,6 @@
 			<npc id="32836" x="84705" y="-246730" z="-8320" heading="0" />
 			<!-- Spawn: Seven Signs, Solina's Tomb -->	
 			<npc id="18949" x="76625" y="-240824" z="-10832" heading="0" />
-			<npc id="18956" x="55498" y="-252781" z="-6760" heading="0" />
-			<npc id="18957" x="55520" y="-252160" z="-6760" heading="0" />
-			<npc id="18958" x="56635" y="-252776" z="-6760" heading="0" />
-			<npc id="18959" x="56672" y="-252156" z="-6760" heading="0" />
 			<npc id="27407" x="44269" y="-251082" z="-6760" heading="0" />
 			<npc id="27407" x="43811" y="-248086" z="-6760" heading="0" />
 			<npc id="27407" x="44314" y="-250726" z="-6760" heading="0" />
@@ -184,6 +172,20 @@
 			<npc id="32858" x="46672" y="-248368" z="-6720" heading="0" />				
 			<npc id="32859" x="44114" y="-250912" z="-6720" heading="0" />				
 			<npc id="32860" x="46672" y="-250915" z="-6720" heading="0" />
+			<npc id="18952" x="41930" y="-249640" z="-6762" heading="0" />
+			<npc id="18953" x="45391" y="-246185" z="-6765" heading="0" />
+			<npc id="18954" x="48853" y="-249633" z="-6762" heading="0" />
+			<npc id="18955" x="45399" y="-253095" z="-6762" heading="0" />
+		</group>
+		<group name="solina_trap" spawnByDefault="false">
+			<npc id="27403" x="56668" y="-252781" z="-6765" heading="0" count="4" />
+			<npc id="27403" x="55504" y="-252782" z="-6765" heading="0" count="4" />
+			<npc id="27403" x="55503" y="-252166" z="-6765" heading="0" count="4" />
+			<npc id="27403" x="56661" y="-252163" z="-6765" heading="0" count="4" />
+			<npc id="27404" x="56668" y="-252781" z="-6765" heading="0" count="3" />
+			<npc id="27404" x="55504" y="-252782" z="-6765" heading="0" count="3" />
+			<npc id="27404" x="55503" y="-252166" z="-6765" heading="0" count="3" />
+			<npc id="27404" x="56661" y="-252163" z="-6765" heading="0" count="3" />
 		</group>
 	</spawnlist>
 </instance>
