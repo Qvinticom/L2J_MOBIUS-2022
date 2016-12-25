@@ -166,6 +166,7 @@ import com.l2jmobius.gameserver.model.actor.tasks.player.DismountTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.FameTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.GameGuardCheckTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
+import com.l2jmobius.gameserver.model.actor.tasks.player.MovieTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PvPFlagTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.RecoGiveTask;
@@ -280,7 +281,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSetCompassZoneCode;
-import com.l2jmobius.gameserver.network.serverpackets.ExStartScenePlayer;
 import com.l2jmobius.gameserver.network.serverpackets.ExStopScenePlayer;
 import com.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
@@ -12089,7 +12089,7 @@ public final class L2PcInstance extends L2Playable
 		// abortCast(); Confirmed in retail, playing a movie does not abort cast.
 		stopMove(null);
 		setMovieHolder(holder);
-		sendPacket(new ExStartScenePlayer(holder.getMovie()));
+		ThreadPoolManager.getInstance().scheduleGeneral(new MovieTask(this, holder.getMovie()), 100);
 	}
 	
 	public void stopMovie()
