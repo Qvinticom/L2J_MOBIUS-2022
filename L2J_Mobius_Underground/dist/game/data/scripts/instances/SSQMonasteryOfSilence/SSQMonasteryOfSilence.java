@@ -190,6 +190,10 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				}
 				case "FOLLOW":
 				{
+					if (npc == null)
+					{
+						return null;
+					}
 					npc.setIsRunning(true);
 					npc.getAI().startFollow(player);
 					if (player.isInCombat())
@@ -200,7 +204,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					else
 					{
 						final QuestState qs = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
-						if ((qs != null) && (qs.getCond() < 2))
+						if ((qs != null) && (qs.getCond() < 2) && !qs.isCompleted())
 						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, ELCADIA_DIALOGS2[getRandom(ELCADIA_DIALOGS2.length)]);
 						}
