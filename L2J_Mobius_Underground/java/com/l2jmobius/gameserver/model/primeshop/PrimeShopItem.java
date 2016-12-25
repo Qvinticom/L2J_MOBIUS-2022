@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 /**
  * @author UnAfraid
  */
-
 public class PrimeShopItem extends ItemHolder
 {
 	private final int _weight;

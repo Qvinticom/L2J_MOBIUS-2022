@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 /**
  * @author Migi, DS
  */
-
 public class ExReplyPostItemList extends AbstractItemPacket
 {
 	private final L2PcInstance _activeChar;

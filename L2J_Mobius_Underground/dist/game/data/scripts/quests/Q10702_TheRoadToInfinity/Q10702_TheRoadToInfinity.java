@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.quest.State;
  * The Road to Infinity (10702)
  * @author Gladicek
  */
-
 public final class Q10702_TheRoadToInfinity extends Quest
 {
 	// NPCs

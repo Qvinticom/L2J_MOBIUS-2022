@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.quest.State;
  * The Road to Destruction (10701)
  * @author Gladicek
  */
-
 public final class Q10701_TheRoadToDestruction extends Quest
 {
 	// NPCs

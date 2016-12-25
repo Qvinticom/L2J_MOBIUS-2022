@@ -36,7 +36,6 @@ import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimi
  * Befitting of the Status (10814)
  * @author Gladicek, St3eT
  */
-
 public final class Q10814_BefittingOfTheStatus extends Quest
 {
 	// Npc

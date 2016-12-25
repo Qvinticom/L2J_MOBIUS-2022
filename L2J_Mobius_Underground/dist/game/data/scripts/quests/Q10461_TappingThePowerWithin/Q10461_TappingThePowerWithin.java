@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ability.ExShowAPListWnd;
  * Tapping The Power Within (10461)
  * @author Gladicek
  */
-
 public final class Q10461_TappingThePowerWithin extends Quest
 {
 	// NPCs
