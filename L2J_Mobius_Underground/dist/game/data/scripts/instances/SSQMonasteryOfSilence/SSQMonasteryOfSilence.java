@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import instances.AbstractInstance;
@@ -157,8 +158,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					if (player.isInCombat())
 					{
 						npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
-						npc.setTarget(player);
-						npc.doCast(BUFFS[getRandom(BUFFS.length)].getSkill());
+						SkillCaster.triggerCast(npc, player, BUFFS[getRandom(BUFFS.length)].getSkill());
 					}
 					else
 					{
