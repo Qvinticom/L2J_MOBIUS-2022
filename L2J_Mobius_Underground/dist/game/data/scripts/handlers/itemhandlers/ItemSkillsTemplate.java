@@ -150,7 +150,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 		}
 		
-		if ((successfulUse && checkConsume(item, hasConsumeSkill)) || hasConsumeSkill)
+		if (successfulUse && checkConsume(item, hasConsumeSkill))
 		{
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
 			{
@@ -181,7 +181,7 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 			}
 		}
-		return false;
+		return hasConsumeSkill;
 	}
 	
 	/**
