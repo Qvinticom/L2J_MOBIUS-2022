@@ -21,23 +21,18 @@ Instance: [ 1 ] - Template: [ demo.xml ]<br>
 <td>Template XML</td>
 </tr>
 <tr>
-<td><button value="Create" action="bypass -h admin_createinstance $instanceid_create $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Create" action="bypass -h admin_instancecreate $instanceid_create $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><edit var="instanceid_create" width=50></td>
 <td><edit var="templateid" width=80></td>
 </tr>
 <tr><td><br></td></tr>
 <tr>
-<td><button value="Destroy" action="bypass -h admin_destroyinstance $instanceid_destroy $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+<td><button value="Destroy" action="bypass -h admin_instancedestroy $instanceid_destroy $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
 <td><edit var="instanceid_destroy" width=50></td>
-</tr>
-<tr><td><br></td></tr>
-<tr>
-<td><button value="Set" action="bypass -h admin_setinstance $instanceid_set $templateid" width=80 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
-<td><edit var="instanceid_set" width=50></td>
 </tr>
 </table>
 <br><br>
-<button value="List Instances" action="bypass -h admin_listinstances" width=110 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br><br>
+<button value="List Instances" action="bypass -h admin_instancelist" width=110 height=21 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br><br>
 <font color="LEVEL">IDs => 300000: reserved for dynamic instances!</font>
 </center>
 </body></html>
