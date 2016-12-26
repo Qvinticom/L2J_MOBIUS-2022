@@ -249,8 +249,9 @@ public class PcStat extends PlayableStat
 			final L2PetInstance pet = (L2PetInstance) sPet;
 			if (pet.getPetData().isSynchLevel() && (pet.getLevel() != getLevel()))
 			{
-				pet.getStat().setLevel(getLevel());
-				pet.getStat().getExpForLevel(getActiveChar().getLevel());
+				final byte availableLevel = (byte) Math.min(pet.getPetData().getMaxLevel(), getLevel());
+				pet.getStat().setLevel(availableLevel);
+				pet.getStat().getExpForLevel(availableLevel);
 				pet.setCurrentHp(pet.getMaxHp());
 				pet.setCurrentMp(pet.getMaxMp());
 				pet.broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));

@@ -38,6 +38,7 @@ public class L2PetData
 	private int _load = 20000;
 	private int _hungryLimit = 1;
 	private int _minlvl = Byte.MAX_VALUE;
+	private int _maxlvl = 0;
 	private boolean _syncLevel = false;
 	private final List<Integer> _food = new ArrayList<>();
 	
@@ -72,6 +73,10 @@ public class L2PetData
 		if (_minlvl > level)
 		{
 			_minlvl = level;
+		}
+		if (_maxlvl < (level - 1))
+		{
+			_maxlvl = level - 1;
 		}
 		_levelStats.put(level, data);
 	}
@@ -115,6 +120,14 @@ public class L2PetData
 	public int getMinLevel()
 	{
 		return _minlvl;
+	}
+	
+	/**
+	 * @return the pet's maximum level.
+	 */
+	public int getMaxLevel()
+	{
+		return _maxlvl;
 	}
 	
 	/**
