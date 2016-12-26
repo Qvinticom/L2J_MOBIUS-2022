@@ -95,6 +95,11 @@
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
 		<skills>
 			<skill id="7102" level="1" /> <!-- Summon Clan Pet -->
 		</skills>
@@ -108,6 +113,11 @@
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
 		<skills>
 			<skill id="7102" level="1" /> <!-- Summon Clan Pet -->
 		</skills>
@@ -121,6 +131,11 @@
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
 		<skills>
 			<skill id="7102" level="1" /> <!-- Summon Clan Pet -->
 		</skills>
@@ -139,6 +154,11 @@
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
 		<set name="weight" val="10" />
+		<set name="handler" val="SummonItems" />
+		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
 		<skills>
 			<skill id="7102" level="1" /> <!-- Summon Clan Pet -->
 		</skills>
