@@ -99,6 +99,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		if (checkTargetLostOrDead(attackTarget))
 		{
 			setTarget(null);
+			((L2Summon) _actor).setFollowStatus(true);
 			return;
 		}
 		if (maybeMoveToPawn(attackTarget, _actor.getPhysicalAttackRange()))
@@ -121,6 +122,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		if (checkTargetLost(target))
 		{
 			setTarget(null);
+			summon.setFollowStatus(true);
 			return;
 		}
 		final boolean val = _startFollow;
