@@ -173,12 +173,16 @@ public class ItemSkillsTemplate implements IItemHandler
 		{
 			case CAPSULE:
 			case SKILL_REDUCE:
-			case SKILL_REDUCE_ON_SKILL_SUCCESS:
 			{
 				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
 				{
 					return true;
 				}
+				break;
+			}
+			case SKILL_REDUCE_ON_SKILL_SUCCESS:
+			{
+				return false;
 			}
 		}
 		return hasConsumeSkill;

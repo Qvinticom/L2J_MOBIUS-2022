@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -83,6 +84,9 @@ public class CreateItemRandom extends AbstractEffect
 			return;
 		}
 		
-		player.addItem("CreateItems", selectedItem.getId(), selectedItem.getCount(), player, true);
+		if ((item.getItem().getDefaultAction() != ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) || player.destroyItem("Consume", item.getObjectId(), 1, player, true))
+		{
+			player.addItem("CreateItems", selectedItem.getId(), selectedItem.getCount(), player, true);
+		}
 	}
 }
