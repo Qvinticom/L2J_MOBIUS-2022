@@ -768,6 +768,7 @@ public final class Config
 	public static boolean ANTIFEED_DUALBOX;
 	public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
 	public static int ANTIFEED_INTERVAL;
+	public static boolean ANNOUNCE_GAINAK_SIEGE;
 	
 	// --------------------------------------------------
 	// Rate Settings
@@ -2268,6 +2269,7 @@ public final class Config
 			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
 			MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
 			REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
+			ANNOUNCE_GAINAK_SIEGE = PVPSettings.getBoolean("AnnounceGainakSiege", false);
 			
 			// Load Olympiad L2Properties file (if exists)
 			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
