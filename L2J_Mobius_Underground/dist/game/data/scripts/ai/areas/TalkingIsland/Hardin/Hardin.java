@@ -42,7 +42,7 @@ public final class Hardin extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "33870-01.html"; // Anybody except Ertheia race TODO: Find HTML
+		String htmltext = "33870-01.html"; // Anybody except Ertheia race.
 		if (player.getRace().equals(Race.ERTHEIA))
 		{
 			final QuestState st = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
