@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -1029,7 +1030,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 		}
 		
 		final L2PcInstance player = event.getActiveChar();
-		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR))
+		if ((player.getLevel() > 84) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && !player.isSubClassActive() && (player.getClassId() != ClassId.JUDICATOR) && (player.getRace() != Race.ERTHEIA))
 		{
 			for (ClassId newClass : player.getClassId().getNextClassIds())
 			{
