@@ -106,10 +106,10 @@ public final class ConvertItem extends AbstractEffect
 			}
 			
 			final SystemMessage sm;
-			if (item.getEnchantLevel() > 0)
+			if (unequippedItem.getEnchantLevel() > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
-				sm.addInt(item.getEnchantLevel());
+				sm.addInt(unequippedItem.getEnchantLevel());
 				sm.addItemName(unequippedItem);
 			}
 			else
