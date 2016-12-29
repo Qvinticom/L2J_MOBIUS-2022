@@ -139,24 +139,21 @@ public final class HomeBoard implements IParseBoardHandler
 			activeChar.getInventory().destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, activeChar);
 			activeChar.teleToLocation(x, y, z, 0);
 		}
-		else if (command.startsWith("_bbspremium"))
+		else if (Config.CUSTOM_CB_ENABLED && Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED && command.startsWith("_bbspremium"))
 		{
-			if (Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED)
+			final String fullBypass = command.replace("_bbspremium;", "");
+			final String[] buypassOptions = fullBypass.split(",");
+			final int premiumDays = Integer.parseInt(buypassOptions[0]);
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY))
 			{
-				final String fullBypass = command.replace("_bbspremium;", "");
-				final String[] buypassOptions = fullBypass.split(",");
-				final int premiumDays = Integer.parseInt(buypassOptions[0]);
-				if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY))
-				{
-					activeChar.sendMessage("Not enough currency!");
-				}
-				else
-				{
-					activeChar.getInventory().destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY, activeChar, activeChar);
-					PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
-					activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
-					CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
-				}
+				activeChar.sendMessage("Not enough currency!");
+			}
+			else
+			{
+				activeChar.getInventory().destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY, activeChar, activeChar);
+				PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
+				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
 			}
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
