@@ -36,17 +36,17 @@
 		<!-- Invincible status. -->
 		<icon>icon.skill0442</icon>
 		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
-		<effectPoint>673</effectPoint>
+		<effectPoint>100</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
+		<specialLevel>1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>-1</abnormalTime>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<hitTime>500</hitTime>
+		<hitCancelTime>1</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

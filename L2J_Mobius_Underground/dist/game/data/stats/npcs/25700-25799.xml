@@ -4440,10 +4440,10 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<equipment rhand="150" /> <!-- Elemental Sword -->
+		<acquire exp="198916032" sp="47747" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1726809" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="4111533" hpRegen="8.5" mp="45646" mpRegen="30" />
 			<attack physical="37184.6066131423" magical="6590.82182407988" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="3333.00100834426" magical="1885.60138963509" />
 			<attribute>
@@ -4472,8 +4472,8 @@
 			<skill id="14723" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="5" /> <!-- Undead -->
-			<skill id="14087" level="1" /> <!-- Apherus' Binding -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14462" level="1" /> <!-- Apherus Curse -->
+			<skill id="14465" level="1" /> <!-- Apherus' Binding -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="800" />
 		<status undying="false" />
