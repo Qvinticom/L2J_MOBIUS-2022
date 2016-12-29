@@ -2542,12 +2542,15 @@ public final class Config
 			final Properties hexSetting = new Properties();
 			final File file = new File(fileName);
 			// Create a new empty file only if it doesn't exist
-			file.createNewFile();
-			try (OutputStream out = new FileOutputStream(file))
+			if (!file.exists())
 			{
-				hexSetting.setProperty("ServerID", String.valueOf(serverId));
-				hexSetting.setProperty("HexID", hexId);
-				hexSetting.store(out, "The HexId to Auth into LoginServer");
+				try (OutputStream out = new FileOutputStream(file))
+				{
+					hexSetting.setProperty("ServerID", String.valueOf(serverId));
+					hexSetting.setProperty("HexID", hexId);
+					hexSetting.store(out, "The HexId to Auth into LoginServer");
+					LOGGER.log(Level.INFO, "Gameserver: Generated new HexID file for server id " + serverId + ".");
+				}
 			}
 		}
 		catch (Exception e)
