@@ -118,7 +118,7 @@ public class AdminPremium implements IAdminCommandHandler
 		}
 		
 		// TODO: Add check if account exists XD
-		PremiumManager.getInstance().updatePremiumData(months, accountName);
+		PremiumManager.getInstance().addPremiumMonths(months, accountName);
 		admin.sendMessage("Account " + accountName + " will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName)) + ".");
 	}
 	

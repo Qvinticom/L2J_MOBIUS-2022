@@ -19,6 +19,7 @@ package handlers.communityboard;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -29,6 +30,7 @@ import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
+import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -54,6 +56,7 @@ public final class HomeBoard implements IParseBoardHandler
 		"_bbsmultisell",
 		"_bbssell",
 		"_bbsteleport",
+		"_bbspremium",
 		"_bbsbuff"
 	};
 	
@@ -135,6 +138,26 @@ public final class HomeBoard implements IParseBoardHandler
 			activeChar.sendPacket(new ShowBoard());
 			activeChar.getInventory().destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, activeChar);
 			activeChar.teleToLocation(x, y, z, 0);
+		}
+		else if (command.startsWith("_bbspremium"))
+		{
+			if (Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED)
+			{
+				final String fullBypass = command.replace("_bbspremium;", "");
+				final String[] buypassOptions = fullBypass.split(",");
+				final int premiumDays = Integer.parseInt(buypassOptions[0]);
+				if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY))
+				{
+					activeChar.sendMessage("Not enough currency!");
+				}
+				else
+				{
+					activeChar.getInventory().destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY, activeChar, activeChar);
+					PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
+					activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
+					CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
+				}
+			}
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
 		{

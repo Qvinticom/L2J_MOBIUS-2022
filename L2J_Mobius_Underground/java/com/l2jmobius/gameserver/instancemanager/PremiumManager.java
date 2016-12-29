@@ -62,7 +62,42 @@ public class PremiumManager
 		return endDate;
 	}
 	
-	public void updatePremiumData(int months, String accountName)
+	public void addPremiumDays(int days, String accountName)
+	{
+		long remainingTime = getPremiumEndDate(accountName);
+		if (remainingTime > 0)
+		{
+			remainingTime -= System.currentTimeMillis();
+		}
+		
+		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		{
+			final Calendar endDate = Calendar.getInstance();
+			endDate.setTimeInMillis(System.currentTimeMillis() + remainingTime);
+			endDate.set(Calendar.SECOND, 0);
+			endDate.add(Calendar.HOUR, 24 * days);
+			
+			final PreparedStatement statement = con.prepareStatement("UPDATE account_premium SET premium_service=?,enddate=? WHERE account_name=?");
+			statement.setInt(1, 1);
+			statement.setLong(2, endDate.getTimeInMillis());
+			statement.setString(3, accountName);
+			statement.execute();
+			statement.close();
+		}
+		catch (SQLException e)
+		{
+		}
+		
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		{
+			if (player.getAccountNamePlayer().equalsIgnoreCase(accountName))
+			{
+				player.setPremiumStatus(getPremiumEndDate(accountName) > 0);
+			}
+		}
+	}
+	
+	public void addPremiumMonths(int months, String accountName)
 	{
 		long remainingTime = getPremiumEndDate(accountName);
 		if (remainingTime > 0)
