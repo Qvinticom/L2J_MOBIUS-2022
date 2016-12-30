@@ -133,11 +133,13 @@ public final class HomeBoard implements IParseBoardHandler
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_TELEPORT_PRICE)
 			{
 				activeChar.sendMessage("Not enough currency!");
-				return false;
 			}
-			activeChar.sendPacket(new ShowBoard());
-			activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
-			activeChar.teleToLocation(x, y, z, 0);
+			else
+			{
+				activeChar.sendPacket(new ShowBoard());
+				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
+				activeChar.teleToLocation(x, y, z, 0);
+			}
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED && command.startsWith("_bbspremium"))
 		{
