@@ -136,7 +136,7 @@ public final class HomeBoard implements IParseBoardHandler
 				return false;
 			}
 			activeChar.sendPacket(new ShowBoard());
-			activeChar.getInventory().destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, activeChar);
+			activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
 			activeChar.teleToLocation(x, y, z, 0);
 		}
 		else if (Config.CUSTOM_CB_ENABLED && Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED && command.startsWith("_bbspremium"))
@@ -144,13 +144,13 @@ public final class HomeBoard implements IParseBoardHandler
 			final String fullBypass = command.replace("_bbspremium;", "");
 			final String[] buypassOptions = fullBypass.split(",");
 			final int premiumDays = Integer.parseInt(buypassOptions[0]);
-			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY))
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays))
 			{
 				activeChar.sendMessage("Not enough currency!");
 			}
 			else
 			{
-				activeChar.getInventory().destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, premiumDays * Config.COMMUNITY_PREMIUM_PRICE_PER_DAY, activeChar, activeChar);
+				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
 				PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
 				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
 				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
@@ -168,7 +168,7 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			else
 			{
-				activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, activeChar);
+				activeChar.destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, true);
 				for (int i = 0; i < buffCount; i++)
 				{
 					final Skill skill = SkillData.getInstance().getSkill(Integer.parseInt(buypassOptions[i].split(",")[0]), Integer.parseInt(buypassOptions[i].split(",")[1]));
