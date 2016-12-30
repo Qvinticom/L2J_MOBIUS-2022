@@ -32,10 +32,10 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class PremiumManager
 {
-	private long endDate = 0;
-	
 	public long getPremiumEndDate(String accountName)
 	{
+		long endDate = 0;
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT premium_service,enddate FROM account_premium WHERE account_name=?");
