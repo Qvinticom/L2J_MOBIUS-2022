@@ -159,46 +159,48 @@ public final class HomeBoard implements IParseBoardHandler
 		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
 		{
 			final String fullBypass = command.replace("_bbsbuff;", "");
-			final String[] buypassOptions = fullBypass.split(",");
-			final int buffId = Integer.parseInt(buypassOptions[0]);
-			final int buffLevel = Integer.parseInt(buypassOptions[1]);
-			final String page = buypassOptions[2];
-			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_BUFF_PRICE)
+			final String[] buypassOptions = fullBypass.split(";");
+			final int buffCount = buypassOptions.length - 1;
+			final String page = buypassOptions[buffCount];
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_BUFF_PRICE * buffCount))
 			{
 				activeChar.sendMessage("Not enough currency!");
 			}
 			else
 			{
-				activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, activeChar);
-				final Skill skill = SkillData.getInstance().getSkill(buffId, buffLevel);
-				if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)
+				activeChar.getInventory().destroyItemByItemId("CB_Buff", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE * buffCount, activeChar, activeChar);
+				for (int i = 0; i < buffCount; i++)
 				{
-					SkillCaster.triggerCast(activeChar, activeChar, skill);
-					if (activeChar.getServitors().size() > 0)
+					final Skill skill = SkillData.getInstance().getSkill(Integer.parseInt(buypassOptions[i].split(",")[0]), Integer.parseInt(buypassOptions[i].split(",")[1]));
+					if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)
 					{
-						for (L2Summon summon : activeChar.getServitors().values())
+						SkillCaster.triggerCast(activeChar, activeChar, skill);
+						if (activeChar.getServitors().size() > 0)
 						{
-							SkillCaster.triggerCast(summon, summon, skill);
+							for (L2Summon summon : activeChar.getServitors().values())
+							{
+								SkillCaster.triggerCast(summon, summon, skill);
+							}
+						}
+						if (activeChar.hasPet())
+						{
+							SkillCaster.triggerCast(activeChar.getPet(), activeChar.getPet(), skill);
 						}
 					}
-					if (activeChar.hasPet())
+					else
 					{
-						SkillCaster.triggerCast(activeChar.getPet(), activeChar.getPet(), skill);
-					}
-				}
-				else
-				{
-					skill.applyEffects(activeChar, activeChar);
-					if (activeChar.getServitors().size() > 0)
-					{
-						for (L2Summon summon : activeChar.getServitors().values())
+						skill.applyEffects(activeChar, activeChar);
+						if (activeChar.getServitors().size() > 0)
 						{
-							skill.applyEffects(summon, summon);
+							for (L2Summon summon : activeChar.getServitors().values())
+							{
+								skill.applyEffects(summon, summon);
+							}
 						}
-					}
-					if (activeChar.hasPet())
-					{
-						skill.applyEffects(activeChar.getPet(), activeChar.getPet());
+						if (activeChar.hasPet())
+						{
+							skill.applyEffects(activeChar.getPet(), activeChar.getPet());
+						}
 					}
 				}
 			}
