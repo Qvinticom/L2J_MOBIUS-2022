@@ -235,8 +235,8 @@ public final class HomeBoard implements IParseBoardHandler
 					summon.setCurrentCp(summon.getMaxCp());
 				}
 				activeChar.sendMessage("You used heal!");
-				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
 			}
+			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
 		}
 		return false;
 	}
