@@ -244,7 +244,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
 				PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
 				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
-				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/thankyou.html"), activeChar);
 			}
 		}
 		return false;
