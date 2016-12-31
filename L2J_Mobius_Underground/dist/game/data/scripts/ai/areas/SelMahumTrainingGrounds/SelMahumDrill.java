@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -156,10 +157,17 @@ public final class SelMahumDrill extends AbstractNpcAI
 								npc.broadcastSocialAction(CHIEF_SOCIAL_ACTIONS[idx]);
 								npc.getVariables().set("SOCIAL_ACTION_NEXT_INDEX", idx); // Pass social action index to soldiers via script value
 								npc.broadcastEvent("do_social_action", TRAINING_RANGE, null);
+								
+								L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 1000, soldier ->
+								{
+									if (CommonUtil.contains(MAHUM_SOLDIERS, soldier.getId()))
+									{
+										soldier.broadcastSocialAction(CHIEF_SOCIAL_ACTIONS[idx]);
+									}
+								});
 							}
 						}
-						
-						startQuestTimer("do_social_action", 15000, npc, null);
+						startQuestTimer("do_social_action", 10000, npc, null);
 					}
 					else if (CommonUtil.contains(MAHUM_SOLDIERS, npc.getId()))
 					{
@@ -269,7 +277,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 	{
 		if (CommonUtil.contains(MAHUM_CHIEFS, npc.getId()))
 		{
-			startQuestTimer("do_social_action", 15000, npc, null);
+			startQuestTimer("do_social_action", 10000, npc, null);
 		}
 		
 		else if ((getRandom(18) < 1) && CommonUtil.contains(MAHUM_SOLDIERS, npc.getId()))
