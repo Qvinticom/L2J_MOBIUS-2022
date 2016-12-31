@@ -51,58 +51,54 @@ public final class Wormhole extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = null;
-		switch (event)
+		if (event.equals("teleport"))
 		{
-			case "teleport":
+			final int status = GrandBossManager.getInstance().getBossStatus(BELETH);
+			if (status == 1)
 			{
-				if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0)
+				return "33901-4.html";
+			}
+			if (status == 2)
+			{
+				return "33901-5.html";
+			}
+			
+			if (!player.isInParty())
+			{
+				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+				packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
+				packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
+				player.sendPacket(packet);
+				return null;
+			}
+			
+			final L2Party party = player.getParty();
+			final boolean isInCC = party.isInCommandChannel();
+			final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+			final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
+			if (!isPartyLeader)
+			{
+				return "33901-3.html";
+			}
+			else if ((members.size() < Config.BELETH_MIN_PLAYERS) || (members.size() > Config.BELETH_MAX_PLAYERS))
+			{
+				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+				packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
+				packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
+				player.sendPacket(packet);
+			}
+			else
+			{
+				for (L2PcInstance member : members)
 				{
-					htmltext = "33901-4.html";
-					break;
-				}
-				
-				if (!player.isInParty())
-				{
-					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
-					packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
-					player.sendPacket(packet);
-					break;
-				}
-				
-				final L2Party party = player.getParty();
-				final boolean isInCC = party.isInCommandChannel();
-				final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-				final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
-				if (!isPartyLeader)
-				{
-					htmltext = "33901-3.html";
-					break;
-					
-				}
-				else if ((members.size() < Config.BELETH_MIN_PLAYERS) || (members.size() > Config.BELETH_MAX_PLAYERS))
-				{
-					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
-					packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
-					player.sendPacket(packet);
-					break;
-				}
-				else
-				{
-					for (L2PcInstance member : members)
+					if (member.isInsideRadius(npc, 1000, true, false))
 					{
-						if (member.isInsideRadius(npc, 1000, true, false))
-						{
-							member.teleToLocation(BELETH_LOCATION, true);
-						}
+						member.teleToLocation(BELETH_LOCATION, true);
 					}
 				}
-				break;
 			}
 		}
-		return htmltext;
+		return null;
 	}
 	
 	@Override
