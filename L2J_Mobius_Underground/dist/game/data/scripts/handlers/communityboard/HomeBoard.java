@@ -70,20 +70,6 @@ public final class HomeBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance activeChar)
 	{
-		if (Config.CUSTOM_CB_ENABLED)
-		{
-			if (Config.COMMUNITYBOARD_COMBAT_DISABLED && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP)))
-			{
-				activeChar.sendMessage("You can't use the Community Board right now.");
-				return false;
-			}
-			if (Config.COMMUNITYBOARD_KARMA_DISABLED && (activeChar.getReputation() < 0))
-			{
-				activeChar.sendMessage("Players with Karma cannot use the Community Board.");
-				return false;
-			}
-		}
-		
 		if (command.equals("_bbshome") || command.equals("_bbstop"))
 		{
 			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
@@ -104,7 +90,30 @@ public final class HomeBoard implements IParseBoardHandler
 				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + path), activeChar);
 			}
 		}
-		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbsmultisell"))
+		
+		// ------------------------
+		// Custom Community Board
+		// ------------------------
+		
+		if (Config.CUSTOM_CB_ENABLED)
+		{
+			if (Config.COMMUNITYBOARD_COMBAT_DISABLED && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP)))
+			{
+				activeChar.sendMessage("You can't use the Community Board right now.");
+				return false;
+			}
+			if (Config.COMMUNITYBOARD_KARMA_DISABLED && (activeChar.getReputation() < 0))
+			{
+				activeChar.sendMessage("Players with Karma cannot use the Community Board.");
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+		
+		if (Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbsmultisell"))
 		{
 			final String fullBypass = command.replace("_bbsmultisell;", "");
 			final String[] buypassOptions = fullBypass.split(",");
@@ -115,7 +124,7 @@ public final class HomeBoard implements IParseBoardHandler
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 			return true;
 		}
-		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbssell"))
+		else if (Config.COMMUNITYBOARD_ENABLE_MULTISELLS && command.startsWith("_bbssell"))
 		{
 			final String page = command.replace("_bbssell;", "");
 			final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
@@ -124,7 +133,7 @@ public final class HomeBoard implements IParseBoardHandler
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 			return true;
 		}
-		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_TELEPORTS && command.startsWith("_bbsteleport"))
+		else if (Config.COMMUNITYBOARD_ENABLE_TELEPORTS && command.startsWith("_bbsteleport"))
 		{
 			final String fullBypass = command.replace("_bbsteleport;", "");
 			final String[] buypassOptions = fullBypass.split(",");
@@ -142,24 +151,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.teleToLocation(x, y, z, 0);
 			}
 		}
-		else if (Config.CUSTOM_CB_ENABLED && Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED && command.startsWith("_bbspremium"))
-		{
-			final String fullBypass = command.replace("_bbspremium;", "");
-			final String[] buypassOptions = fullBypass.split(",");
-			final int premiumDays = Integer.parseInt(buypassOptions[0]);
-			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays))
-			{
-				activeChar.sendMessage("Not enough currency!");
-			}
-			else
-			{
-				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
-				PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
-				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
-				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
-			}
-		}
-		else if (Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
+		else if (Config.COMMUNITYBOARD_ENABLE_BUFFS && command.startsWith("_bbsbuff"))
 		{
 			final String fullBypass = command.replace("_bbsbuff;", "");
 			final String[] buypassOptions = fullBypass.split(";");
@@ -209,7 +201,7 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
 		}
-		else if ((Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_HEAL && command.startsWith("_bbsheal")))
+		else if (Config.COMMUNITYBOARD_ENABLE_HEAL && command.startsWith("_bbsheal"))
 		{
 			final String page = command.replace("_bbsheal;", "");
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_HEAL_PRICE))
@@ -237,6 +229,23 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.sendMessage("You used heal!");
 			}
 			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
+		}
+		else if (Config.PREMIUM_SYSTEM_ENABLED && Config.COMMUNITY_PREMIUM_SYSTEM_ENABLED && command.startsWith("_bbspremium"))
+		{
+			final String fullBypass = command.replace("_bbspremium;", "");
+			final String[] buypassOptions = fullBypass.split(",");
+			final int premiumDays = Integer.parseInt(buypassOptions[0]);
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITY_PREMIUM_COIN_ID, -1) < (Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays))
+			{
+				activeChar.sendMessage("Not enough currency!");
+			}
+			else
+			{
+				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
+				PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
+				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/main.html"), activeChar); // TODO: Thank you html.
+			}
 		}
 		return false;
 	}
