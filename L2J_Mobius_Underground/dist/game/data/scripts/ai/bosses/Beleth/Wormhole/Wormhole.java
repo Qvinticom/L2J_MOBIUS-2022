@@ -14,11 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.areas.HellboundIsland.Wormhole;
+package ai.bosses.Beleth.Wormhole;
 
 import java.util.List;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -33,9 +36,11 @@ public final class Wormhole extends AbstractNpcAI
 {
 	// NPCs
 	private static final int WORMHOLE = 33901;
-	// Minimum and maximum command channel members
-	private static final int MIN_MEMBERS = 49;
-	private static final int MAX_MEMBERS = 350;
+	private static final int BELETH = 29118;
+	// Location
+	private static final Location BELETH_LOCATION = new Location(16327, 209228, -9357);
+	// TODO: New location
+	// private static final Location BELETH_LOCATION = new Location(-17551, 245949, -832);
 	
 	public Wormhole()
 	{
@@ -51,43 +56,46 @@ public final class Wormhole extends AbstractNpcAI
 		{
 			case "teleport":
 			{
+				if (GrandBossManager.getInstance().getBossStatus(BELETH) > 0)
+				{
+					htmltext = "33901-4.html";
+					break;
+				}
+				
 				if (!player.isInParty())
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
-					packet.replace("%min%", Integer.toString(MIN_MEMBERS));
+					packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
 					player.sendPacket(packet);
 					break;
 				}
-				else if (player.isInParty())
+				
+				final L2Party party = player.getParty();
+				final boolean isInCC = party.isInCommandChannel();
+				final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
+				final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
+				if (!isPartyLeader)
 				{
-					final L2Party party = player.getParty();
-					final boolean isInCC = party.isInCommandChannel();
-					final List<L2PcInstance> members = (isInCC) ? party.getCommandChannel().getMembers() : party.getMembers();
-					final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
-					if (!isPartyLeader)
+					htmltext = "33901-3.html";
+					break;
+					
+				}
+				else if ((members.size() < Config.BELETH_MIN_PLAYERS) || (members.size() > Config.BELETH_MAX_PLAYERS))
+				{
+					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+					packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
+					packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
+					player.sendPacket(packet);
+					break;
+				}
+				else
+				{
+					for (L2PcInstance member : members)
 					{
-						htmltext = "33901-3.html";
-						break;
-						
-					}
-					else if ((members.size() < MIN_MEMBERS) || (members.size() > MAX_MEMBERS))
-					{
-						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
-						packet.replace("%min%", Integer.toString(MIN_MEMBERS));
-						player.sendPacket(packet);
-						break;
-					}
-					else
-					{
-						for (L2PcInstance member : members)
+						if (member.isInsideRadius(npc, 1000, true, false))
 						{
-							if (member.isInsideRadius(npc, 1000, true, false))
-							{
-								// TODO: need teleport in instance?
-								member.teleToLocation(-17556 + getRandom(700), 245951 + getRandom(700), -832);
-							}
+							member.teleToLocation(BELETH_LOCATION, true);
 						}
 					}
 				}
@@ -102,8 +110,8 @@ public final class Wormhole extends AbstractNpcAI
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 		packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-1.html"));
-		packet.replace("%min%", Integer.toString(MIN_MEMBERS));
-		packet.replace("%max%", Integer.toString(MAX_MEMBERS));
+		packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
+		packet.replace("%max%", Integer.toString(Config.BELETH_MAX_PLAYERS));
 		player.sendPacket(packet);
 		return null;
 	}

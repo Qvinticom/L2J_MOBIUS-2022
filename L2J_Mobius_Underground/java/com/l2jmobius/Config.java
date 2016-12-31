@@ -982,7 +982,10 @@ public final class Config
 	public static int QUEEN_ANT_SPAWN_RANDOM;
 	
 	// Beleth
+	public static int BELETH_WAIT_TIME;
+	public static int BELETH_FIGHT_DURATION;
 	public static int BELETH_MIN_PLAYERS;
+	public static int BELETH_MAX_PLAYERS;
 	public static int BELETH_SPAWN_INTERVAL;
 	public static int BELETH_SPAWN_RANDOM;
 	
@@ -2370,9 +2373,12 @@ public final class Config
 			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
 			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
 			
+			BELETH_WAIT_TIME = GrandBossSettings.getInt("BelethWaitTime", 5);
 			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
 			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
-			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 36);
+			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 49);
+			BELETH_MAX_PLAYERS = GrandBossSettings.getInt("BelethMaxPlayers", 350);
+			BELETH_FIGHT_DURATION = GrandBossSettings.getInt("BelethFightDuration", 90);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);

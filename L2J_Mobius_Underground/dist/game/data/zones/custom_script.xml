@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
-	<!-- Custom Script Zones -->
 	<zone name="Emerald Square 1st Secret Room" id="20105" type="ScriptZone" shape="Cuboid" minZ="-11900" maxZ="-11800">
 		<node X="144175" Y="142396" />
 		<node X="144251" Y="142588" />
@@ -752,6 +751,12 @@
 		<node X="16080" Y="-116096" />
 		<node X="15130" Y="-115345" />
 		<node X="14972" Y="-114864" />
+	</zone>
+	<zone name="Beleth's Chamber" id="60022" type="ScriptZone" shape="NPoly" minZ="-10412" maxZ="-5112">
+		<node X="11214" Y="205578" />
+		<node X="20607" Y="205578" />
+		<node X="20648" Y="220271" />
+		<node X="11172" Y="220271" />
 	</zone>
 	<zone name="Apherus Zone" id="60060" type="ScriptZone" shape="NPoly" minZ="-877" maxZ="-857">
 		<node X="214323" Y="115889" />
