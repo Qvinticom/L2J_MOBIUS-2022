@@ -656,6 +656,7 @@ public final class Config
 	public static boolean COMMUNITYBOARD_ENABLE_MULTISELLS;
 	public static boolean COMMUNITYBOARD_ENABLE_TELEPORTS;
 	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
+	public static boolean COMMUNITYBOARD_ENABLE_HEAL;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
 	public static int COMMUNITYBOARD_HEAL_PRICE;
@@ -2109,6 +2110,7 @@ public final class Config
 			COMMUNITYBOARD_ENABLE_MULTISELLS = CustomSettings.getBoolean("CommunityEnableMultisells", true);
 			COMMUNITYBOARD_ENABLE_TELEPORTS = CustomSettings.getBoolean("CommunityEnableTeleports", true);
 			COMMUNITYBOARD_ENABLE_BUFFS = CustomSettings.getBoolean("CommunityEnableBuffs", true);
+			COMMUNITYBOARD_ENABLE_HEAL = CustomSettings.getBoolean("CommunityEnableHeal", true);
 			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
 			COMMUNITYBOARD_HEAL_PRICE = CustomSettings.getInt("CommunityHealPrice", 0);

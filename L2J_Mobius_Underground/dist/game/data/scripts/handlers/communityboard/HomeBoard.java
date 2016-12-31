@@ -209,7 +209,7 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
 		}
-		else if ((Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsheal")))
+		else if ((Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_HEAL && command.startsWith("_bbsheal")))
 		{
 			final String page = command.replace("_bbsheal;", "");
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_BUFF_PRICE))
