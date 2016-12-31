@@ -57,7 +57,8 @@ public final class HomeBoard implements IParseBoardHandler
 		"_bbssell",
 		"_bbsteleport",
 		"_bbspremium",
-		"_bbsbuff"
+		"_bbsbuff",
+		"_bbsheal"
 	};
 	
 	@Override
@@ -207,6 +208,35 @@ public final class HomeBoard implements IParseBoardHandler
 				}
 			}
 			CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
+		}
+		else if ((Config.CUSTOM_CB_ENABLED && command.startsWith("_bbsheal")))
+		{
+			final String page = command.replace("_bbsheal;", "");
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_BUFF_PRICE))
+			{
+				activeChar.sendMessage("Not enough currency!");
+			}
+			else
+			{
+				activeChar.destroyItemByItemId("CB_Heal", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, true);
+				activeChar.setCurrentHp(activeChar.getMaxHp());
+				activeChar.setCurrentMp(activeChar.getMaxMp());
+				activeChar.setCurrentCp(activeChar.getMaxCp());
+				if (activeChar.hasPet())
+				{
+					activeChar.getPet().setCurrentHp(activeChar.getPet().getMaxHp());
+					activeChar.getPet().setCurrentMp(activeChar.getPet().getMaxMp());
+					activeChar.getPet().setCurrentCp(activeChar.getPet().getMaxCp());
+				}
+				for (L2Summon summon : activeChar.getServitors().values())
+				{
+					summon.setCurrentHp(summon.getMaxHp());
+					summon.setCurrentMp(summon.getMaxMp());
+					summon.setCurrentCp(summon.getMaxCp());
+				}
+				activeChar.sendMessage("You used heal!");
+				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html"), activeChar);
+			}
 		}
 		return false;
 	}

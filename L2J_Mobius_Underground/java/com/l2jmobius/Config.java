@@ -658,6 +658,7 @@ public final class Config
 	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
+	public static int COMMUNITYBOARD_HEAL_PRICE;
 	public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
 	public static boolean COMMUNITYBOARD_KARMA_DISABLED;
 	public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
@@ -2110,6 +2111,7 @@ public final class Config
 			COMMUNITYBOARD_ENABLE_BUFFS = CustomSettings.getBoolean("CommunityEnableBuffs", true);
 			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
+			COMMUNITYBOARD_HEAL_PRICE = CustomSettings.getInt("CommunityHealPrice", 0);
 			COMMUNITYBOARD_COMBAT_DISABLED = CustomSettings.getBoolean("CommunityCombatDisabled", true);
 			COMMUNITYBOARD_KARMA_DISABLED = CustomSettings.getBoolean("CommunityKarmaDisabled", true);
 			COMMUNITYBOARD_CAST_ANIMATIONS = CustomSettings.getBoolean("CommunityCastAnimations", false);
