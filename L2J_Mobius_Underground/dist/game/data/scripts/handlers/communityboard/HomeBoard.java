@@ -212,13 +212,13 @@ public final class HomeBoard implements IParseBoardHandler
 		else if ((Config.CUSTOM_CB_ENABLED && Config.COMMUNITYBOARD_ENABLE_HEAL && command.startsWith("_bbsheal")))
 		{
 			final String page = command.replace("_bbsheal;", "");
-			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_BUFF_PRICE))
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < (Config.COMMUNITYBOARD_HEAL_PRICE))
 			{
 				activeChar.sendMessage("Not enough currency!");
 			}
 			else
 			{
-				activeChar.destroyItemByItemId("CB_Heal", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_BUFF_PRICE, activeChar, true);
+				activeChar.destroyItemByItemId("CB_Heal", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_HEAL_PRICE, activeChar, true);
 				activeChar.setCurrentHp(activeChar.getMaxHp());
 				activeChar.setCurrentMp(activeChar.getMaxMp());
 				activeChar.setCurrentCp(activeChar.getMaxCp());
