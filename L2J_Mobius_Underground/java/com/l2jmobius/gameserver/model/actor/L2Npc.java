@@ -1214,7 +1214,7 @@ public class L2Npc extends L2Character
 		}
 	}
 	
-	public L2Npc scheduleDespawn(long delay)
+	public void scheduleDespawn(long delay)
 	{
 		ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
@@ -1223,7 +1223,6 @@ public class L2Npc extends L2Character
 				deleteMe();
 			}
 		}, delay);
-		return this;
 	}
 	
 	@Override
