@@ -290,16 +290,16 @@
 		<node X="55696" Y="28496" />
 		<node X="43976" Y="24664" />
 	</zone>
-    <zone name="Labyrinth of Belis" id="12014" type="ScriptZone" shape="NPoly" minZ="-8000" maxZ="-8700">
-        <node X="-117832" Y="214584 "/>
-        <node X="-117832" Y="215000 "/>
-        <node X="-118120" Y="215304 "/>
-        <node X="-118536" Y="215304 "/>
-        <node X="-118840" Y="215000 "/>
-        <node X="-118840" Y="214584 "/>
-        <node X="-118552" Y="214280 "/>
-        <node X="-118120" Y="214280 "/>
-    </zone>
+	<zone name="Labyrinth of Belis" id="12014" type="ScriptZone" shape="NPoly" minZ="-8000" maxZ="-8700">
+		<node X="-117832" Y="214584 "/>
+		<node X="-117832" Y="215000 "/>
+		<node X="-118120" Y="215304 "/>
+		<node X="-118536" Y="215304 "/>
+		<node X="-118840" Y="215000 "/>
+		<node X="-118840" Y="214584 "/>
+		<node X="-118552" Y="214280 "/>
+		<node X="-118120" Y="214280 "/>
+	</zone>
 	<zone name="anghel_waterfall_magmeld_teleport" id="12015" type="ScriptZone" shape="NPoly" minZ="-2371" maxZ="-2171">
 		<node X="175319" Y="90413" />
 		<node X="174983" Y="90333" />
@@ -458,23 +458,23 @@
 	</zone>
 	<zone name="ti_zone" id="12035" type="ScriptZone" shape="NPoly" minZ="-3618" maxZ="-3818">
    		<node X="208606" Y="11865" />
-    	<node X="207531" Y="12839" />
+		<node X="207531" Y="12839" />
    		<node X="207269" Y="13168" />
-    	<node X="207236" Y="13428" />
-    	<node X="207357" Y="13647" />
-    	<node X="207953" Y="14262" />
+		<node X="207236" Y="13428" />
+		<node X="207357" Y="13647" />
+		<node X="207953" Y="14262" />
    		<node X="208534" Y="15021" />
    	 	<node X="208839" Y="15349" />
    		<node X="210342" Y="16895" />
-    	<node X="210650" Y="16919" />
-    	<node X="212233" Y="15604" />
-    	<node X="212595" Y="15306" />
-    	<node X="213915" Y="14132" />
-    	<node X="213932" Y="13845" />
-    	<node X="212659" Y="12208" />
-    	<node X="212369" Y="11843" />
-    	<node X="210952" Y="10366" />
-    	<node X="210619" Y="10241" />
+		<node X="210650" Y="16919" />
+		<node X="212233" Y="15604" />
+		<node X="212595" Y="15306" />
+		<node X="213915" Y="14132" />
+		<node X="213932" Y="13845" />
+		<node X="212659" Y="12208" />
+		<node X="212369" Y="11843" />
+		<node X="210952" Y="10366" />
+		<node X="210619" Y="10241" />
    	</zone>
 	<zone name="orbis_e_f1" id="12036" type="ScriptZone" shape="NPoly" minZ="-554" maxZ="-154">
 		<node X="198034" Y="90685" />
@@ -757,6 +757,19 @@
 		<node X="20607" Y="205578" />
 		<node X="20648" Y="220271" />
 		<node X="11172" Y="220271" />
+	</zone>
+	<zone name="Kelbim Zone" id="60023" type="ScriptZone" shape="NPoly" minZ="-300" maxZ="500">
+		<node X="-56813" Y="61745" />
+		<node X="-53966" Y="61657" />
+		<node X="-53336" Y="60303" />
+		<node X="-53291" Y="59933" />
+		<node X="-54151" Y="57985" />
+		<node X="-56364" Y="57986" />
+		<node X="-57612" Y="58114" />
+		<node X="-58114" Y="58770" />
+		<node X="-58113" Y="59355" />
+		<node X="-58058" Y="59760" />
+		<node X="-57430" Y="62356" />
 	</zone>
 	<zone name="Apherus Zone" id="60060" type="ScriptZone" shape="NPoly" minZ="-877" maxZ="-857">
 		<node X="214323" Y="115889" />

@@ -991,6 +991,13 @@ public final class Config
 	public static int BELETH_SPAWN_INTERVAL;
 	public static int BELETH_SPAWN_RANDOM;
 	
+	// Kelbim
+	public static int KELBIM_WAIT_TIME;
+	public static int KELBIM_MIN_PLAYERS;
+	public static int KELBIM_MAX_PLAYERS;
+	public static int KELBIM_SPAWN_INTERVAL;
+	public static int KELBIM_SPAWN_RANDOM;
+	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
 	public static long SOD_STAGE_2_LENGTH;
@@ -2383,6 +2390,12 @@ public final class Config
 			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 49);
 			BELETH_MAX_PLAYERS = GrandBossSettings.getInt("BelethMaxPlayers", 350);
 			BELETH_FIGHT_DURATION = GrandBossSettings.getInt("BelethFightDuration", 90);
+			
+			KELBIM_WAIT_TIME = GrandBossSettings.getInt("KelbimWaitTime", 5);
+			KELBIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfKelbimSpawn", 192);
+			KELBIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfKelbimSpawn", 148);
+			KELBIM_MIN_PLAYERS = GrandBossSettings.getInt("KelbimMinPlayers", 49);
+			KELBIM_MAX_PLAYERS = GrandBossSettings.getInt("KelbimMaxPlayers", 350);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
