@@ -560,23 +560,11 @@ public final class Beleth extends AbstractNpcAI
 						}
 					}
 					cancelQuestTimer("CHECK_ATTACK", null, null);
-					cancelQuestTimer("OUST_PLAYERS", null, null);
 				}
 				else
 				{
 					startQuestTimer("CHECK_ATTACK", 60000, null, null);
 				}
-				break;
-			}
-			case "OUST_PLAYERS":
-			{
-				cancelQuestTimer("CHECK_ATTACK", null, null);
-				ZONE.oustAllPlayers();
-				for (L2Character cha : ZONE.getCharactersInside())
-				{
-					cha.deleteMe();
-				}
-				GrandBossManager.getInstance().setBossStatus(REAL_BELETH, ALIVE);
 				break;
 			}
 		}
@@ -598,9 +586,7 @@ public final class Beleth extends AbstractNpcAI
 			}
 			
 			GrandBossManager.getInstance().setBossStatus(REAL_BELETH, FIGHT);
-			cancelQuestTimer("OUST_PLAYERS", null, null);
 			startQuestTimer("SPAWN1", Config.BELETH_WAIT_TIME * 60 * 1000, null, null);
-			startQuestTimer("OUST_PLAYERS", Config.BELETH_FIGHT_DURATION * 60 * 1000, null, null);
 		}
 		
 		return super.onEnterZone(character, zone);

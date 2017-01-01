@@ -985,7 +985,6 @@ public final class Config
 	
 	// Beleth
 	public static int BELETH_WAIT_TIME;
-	public static int BELETH_FIGHT_DURATION;
 	public static int BELETH_MIN_PLAYERS;
 	public static int BELETH_MAX_PLAYERS;
 	public static int BELETH_SPAWN_INTERVAL;
@@ -2389,7 +2388,6 @@ public final class Config
 			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
 			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 49);
 			BELETH_MAX_PLAYERS = GrandBossSettings.getInt("BelethMaxPlayers", 350);
-			BELETH_FIGHT_DURATION = GrandBossSettings.getInt("BelethFightDuration", 90);
 			
 			KELBIM_WAIT_TIME = GrandBossSettings.getInt("KelbimWaitTime", 5);
 			KELBIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfKelbimSpawn", 192);
