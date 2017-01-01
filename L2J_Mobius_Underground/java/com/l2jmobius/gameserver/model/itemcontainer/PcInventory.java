@@ -845,7 +845,7 @@ public class PcInventory extends Inventory
 	public boolean validateCapacity(L2ItemInstance item)
 	{
 		int slots = 0;
-		if (!item.isStackable() || (getInventoryItemCount(item.getId(), -1) <= 0) || !item.getItem().hasExImmediateEffect())
+		if (!item.isStackable() || ((getInventoryItemCount(item.getId(), -1) <= 0) && !item.getItem().hasExImmediateEffect()))
 		{
 			slots++;
 		}
@@ -876,7 +876,7 @@ public class PcInventory extends Inventory
 	
 	public boolean validateCapacity(long slots, boolean questItem)
 	{
-		return (getSize(item -> !item.isQuestItem() || questItem) + slots) <= _owner.getQuestInventoryLimit();
+		return (slots == 0) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= _owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= _owner.getInventoryLimit();
 	}
 	
 	@Override
