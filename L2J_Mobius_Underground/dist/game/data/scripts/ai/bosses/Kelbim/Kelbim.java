@@ -113,7 +113,7 @@ public class Kelbim extends AbstractNpcAI
 		addStartNpc(ENTER_DEVICE, TELEPORT_DEVICE);
 		addFirstTalkId(ENTER_DEVICE, TELEPORT_DEVICE);
 		addAttackId(ALL_MONSTERS);
-		addKillId(ALL_MONSTERS);
+		addKillId(KELBIM);
 		
 		// Unlock
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(KELBIM);
@@ -407,26 +407,24 @@ public class Kelbim extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
-		if (npc.getId() == KELBIM)
-		{
-			_bossStage = 7;
-			
-			addSpawn(TELEPORT_DEVICE, -54331, 58331, -264, 16292, false, 1800000);
-			
-			notifyEvent("cancel_timers", null, null);
-			
-			closeDoor(DOOR1, 0);
-			closeDoor(DOOR2, 0);
-			
-			GrandBossManager.getInstance().setBossStatus(KELBIM, DEAD);
-			final long respawnTime = (Config.KELBIM_SPAWN_INTERVAL + getRandom(-Config.KELBIM_SPAWN_RANDOM, Config.KELBIM_SPAWN_RANDOM)) * 3600000;
-			final StatsSet info = GrandBossManager.getInstance().getStatsSet(KELBIM);
-			info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-			GrandBossManager.getInstance().setStatsSet(KELBIM, info);
-			
-			startQuestTimer("unlock_kelbim", respawnTime, null, null);
-			startQuestTimer("end_kelbim", 1800000, null, null);
-		}
+		_bossStage = 7;
+		
+		addSpawn(TELEPORT_DEVICE, -54331, 58331, -264, 16292, false, 1800000);
+		
+		notifyEvent("cancel_timers", null, null);
+		
+		closeDoor(DOOR1, 0);
+		closeDoor(DOOR2, 0);
+		
+		GrandBossManager.getInstance().setBossStatus(KELBIM, DEAD);
+		final long respawnTime = (Config.KELBIM_SPAWN_INTERVAL + getRandom(-Config.KELBIM_SPAWN_RANDOM, Config.KELBIM_SPAWN_RANDOM)) * 3600000;
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(KELBIM);
+		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
+		GrandBossManager.getInstance().setStatsSet(KELBIM, info);
+		
+		startQuestTimer("unlock_kelbim", respawnTime, null, null);
+		startQuestTimer("end_kelbim", 1800000, null, null);
+		
 		return super.onKill(npc, killer, isPet);
 	}
 	
