@@ -37,7 +37,7 @@ public class Premium implements IVoicedCommandHandler
 		if (command.startsWith("premium") && Config.PREMIUM_SYSTEM_ENABLED)
 		{
 			final SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-			final long endDate = PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName());
+			final long endDate = PremiumManager.getInstance().getPremiumExpiration(activeChar.getAccountName());
 			final NpcHtmlMessage msg = new NpcHtmlMessage(5);
 			final StringBuilder html = new StringBuilder();
 			if (endDate == 0)

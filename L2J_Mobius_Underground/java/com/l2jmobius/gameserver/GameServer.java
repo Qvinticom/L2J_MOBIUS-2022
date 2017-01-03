@@ -264,11 +264,12 @@ public class GameServer
 		{
 			FactionManager.getInstance();
 		}
+		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{
-			LOGGER.info("PremiumManager: Premium system is enabled.");
 			PremiumManager.getInstance();
 		}
+		
 		printSection("Clans");
 		ClanTable.getInstance();
 		ResidenceFunctionsData.getInstance();

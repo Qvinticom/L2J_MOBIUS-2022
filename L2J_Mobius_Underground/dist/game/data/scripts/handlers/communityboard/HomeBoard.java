@@ -20,6 +20,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -242,8 +243,8 @@ public final class HomeBoard implements IParseBoardHandler
 			else
 			{
 				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
-				PremiumManager.getInstance().addPremiumDays(premiumDays, activeChar.getAccountName());
-				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(activeChar.getAccountName())) + ".");
+				PremiumManager.getInstance().addPremiumTime(activeChar.getAccountName(), premiumDays, TimeUnit.DAYS);
+				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(activeChar.getAccountName())) + ".");
 				CommunityBoardHandler.separateAndSend(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/thankyou.html"), activeChar);
 			}
 		}

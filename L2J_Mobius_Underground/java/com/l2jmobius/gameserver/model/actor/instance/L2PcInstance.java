@@ -113,7 +113,6 @@ import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
-import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -368,9 +367,6 @@ public final class L2PcInstance extends L2Playable
 	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,reputation=?,fame=?,raidbossPoints=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,online=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,bookmarkslot=?,vitality_points=?,language=?,faction=?,pccafe_points=? WHERE charId=?";
 	private static final String UPDATE_CHARACTER_ACCESS = "UPDATE characters SET accesslevel = ? WHERE charId = ?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
-	
-	// Character Premium System String Definitions:
-	private static final String RESTORE_PREMIUMSERVICE = "SELECT premium_service,enddate FROM account_premium WHERE account_name=?";
 	
 	// Character Teleport Bookmark:
 	private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
@@ -6490,7 +6486,6 @@ public final class L2PcInstance extends L2Playable
 					
 					player = new L2PcInstance(objectId, template, rset.getString("account_name"), app);
 					player.setName(rset.getString("char_name"));
-					restorePremiumSystemData(player, rset.getString("account_name"));
 					player.setLastAccess(rset.getLong("lastAccess"));
 					
 					player.getStat().setExp(rset.getLong("exp"));
@@ -12874,48 +12869,6 @@ public final class L2PcInstance extends L2Playable
 	public boolean hasPremiumStatus()
 	{
 		return Config.PREMIUM_SYSTEM_ENABLED && _premiumStatus;
-	}
-	
-	private static void restorePremiumSystemData(L2PcInstance player, String account)
-	{
-		boolean success = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
-		{
-			final PreparedStatement ps = con.prepareStatement(RESTORE_PREMIUMSERVICE);
-			ps.setString(1, account);
-			final ResultSet rs = ps.executeQuery();
-			while (rs.next())
-			{
-				success = true;
-				if (Config.PREMIUM_SYSTEM_ENABLED)
-				{
-					if (rs.getLong("enddate") <= System.currentTimeMillis())
-					{
-						PremiumManager.getInstance().removePremiumStatus(account);
-						player.setPremiumStatus(false);
-					}
-					else
-					{
-						player.setPremiumStatus(rs.getBoolean("premium_service"));
-					}
-				}
-				else
-				{
-					player.setPremiumStatus(false);
-				}
-			}
-			ps.close();
-		}
-		catch (Exception e)
-		{
-			_log.warning("Premium System: Could not restore premium system data for " + account + "." + e);
-			e.printStackTrace();
-		}
-		if (!success)
-		{
-			PremiumManager.getInstance().removePremiumStatus(player.getAccountName());
-			player.setPremiumStatus(false);
-		}
 	}
 	
 	public void setLastPetitionGmName(String gmName)

@@ -20,142 +20,204 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Consumer;
+import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.Containers;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenersContainer;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
+import com.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
 
 /**
  * @author Mobius
  */
 public class PremiumManager
 {
-	public long getPremiumEndDate(String accountName)
+	private final static Logger LOGGER = Logger.getLogger(PremiumManager.class.getName());
+	
+	// SQL Statement
+	private final static String LOAD_SQL = "SELECT account_name,enddate FROM account_premium";
+	private final static String UPDATE_SQL = "UPDATE account_premium SET enddate = ? WHERE account_name = ?";
+	private final static String ADD_SQL = "INSERT INTO account_premium (endate,account_name) VALUE (?,?)";
+	
+	class PremiumExpireTask implements Runnable
 	{
-		long endDate = 0;
+		final L2PcInstance player;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		PremiumExpireTask(L2PcInstance player)
 		{
-			final PreparedStatement statement = con.prepareStatement("SELECT premium_service,enddate FROM account_premium WHERE account_name=?");
-			statement.setString(1, accountName);
-			final ResultSet rset = statement.executeQuery();
+			this.player = player;
+		}
+		
+		@Override
+		public void run()
+		{
+			player.setPremiumStatus(false);
+			player.sendPacket(new ExBrPremiumState(player));
+		}
+	}
+	
+	// Data Cache
+	private final Map<String, Long> premiumData = new HashMap<>();
+	
+	// expireTasks
+	private final Map<String, ScheduledFuture<?>> expiretasks = new HashMap<>();
+	
+	// Listeners
+	private final ListenersContainer listenerContainer = Containers.Players();
+	
+	private final Consumer<OnPlayerLogin> playerLoginEvent = (event) ->
+	{
+		final L2PcInstance player = event.getActiveChar();
+		final String accountName = player.getAccountName();
+		final long now = System.currentTimeMillis();
+		final long premiumExpiration = getPremiumExpiration(accountName);
+		player.setPremiumStatus(premiumExpiration > now);
+		player.sendPacket(new ExBrPremiumState(player));
+		
+		if (player.hasPremiumStatus())
+		{
+			startExpireTask(player, premiumExpiration - now);
+		}
+	};
+	
+	private final Consumer<OnPlayerLogout> playerLogoutEvent = (event) ->
+	{
+		L2PcInstance player = event.getActiveChar();
+		stopExpireTask(player);
+	};
+	
+	protected PremiumManager()
+	{
+		loadPremiumData();
+		listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGIN, playerLoginEvent, this));
+		listenerContainer.addListener(new ConsumerEventListener(listenerContainer, EventType.ON_PLAYER_LOGOUT, playerLogoutEvent, this));
+	}
+	
+	/**
+	 * @param player
+	 * @param delay
+	 */
+	private void startExpireTask(L2PcInstance player, long delay)
+	{
+		ScheduledFuture<?> task = ThreadPoolManager.getInstance().scheduleEvent(new PremiumExpireTask(player), delay);
+		expiretasks.put(player.getAccountName(), task);
+	}
+	
+	/**
+	 * @param player
+	 */
+	private void stopExpireTask(L2PcInstance player)
+	{
+		ScheduledFuture<?> task = expiretasks.remove(player.getAccountName());
+		if (task != null)
+		{
+			task.cancel(false);
+			task = null;
+		}
+	}
+	
+	private void loadPremiumData()
+	{
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement statement = con.prepareStatement(LOAD_SQL);
+			ResultSet rset = statement.executeQuery())
+		{
 			while (rset.next())
 			{
-				if (Config.PREMIUM_SYSTEM_ENABLED)
-				{
-					endDate = rset.getLong("enddate");
-					if (endDate <= System.currentTimeMillis())
-					{
-						endDate = 0;
-						removePremiumStatus(accountName);
-					}
-				}
+				premiumData.put(rset.getString(1), rset.getLong(2));
 			}
-			statement.close();
-		}
-		catch (Exception e)
-		{
-		}
-		
-		return endDate;
-	}
-	
-	public void addPremiumDays(int days, String accountName)
-	{
-		long remainingTime = getPremiumEndDate(accountName);
-		if (remainingTime > 0)
-		{
-			remainingTime -= System.currentTimeMillis();
-		}
-		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
-		{
-			final Calendar endDate = Calendar.getInstance();
-			endDate.setTimeInMillis(System.currentTimeMillis() + remainingTime);
-			endDate.set(Calendar.SECOND, 0);
-			endDate.add(Calendar.HOUR, 24 * days);
-			
-			final PreparedStatement statement = con.prepareStatement("UPDATE account_premium SET premium_service=?,enddate=? WHERE account_name=?");
-			statement.setInt(1, 1);
-			statement.setLong(2, endDate.getTimeInMillis());
-			statement.setString(3, accountName);
-			statement.execute();
-			statement.close();
 		}
 		catch (SQLException e)
 		{
+			e.printStackTrace();
 		}
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
-		{
-			if (player.getAccountNamePlayer().equalsIgnoreCase(accountName))
-			{
-				player.setPremiumStatus(getPremiumEndDate(accountName) > 0);
-			}
-		}
+		long expiredData = premiumData.values().stream().filter(d -> d < System.currentTimeMillis()).count();
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + premiumData.size() + " premium data (" + expiredData + " have expired)");
 	}
 	
-	public void addPremiumMonths(int months, String accountName)
+	public long getPremiumExpiration(String accountName)
 	{
-		long remainingTime = getPremiumEndDate(accountName);
-		if (remainingTime > 0)
-		{
-			remainingTime -= System.currentTimeMillis();
-		}
+		return premiumData.getOrDefault(accountName, 0L);
+	}
+	
+	public void addPremiumTime(String accountName, int timeValue, TimeUnit timeUnit)
+	{
+		long addTime = timeUnit.toMillis(timeValue);
+		long now = System.currentTimeMillis();
+		// new premium task at least from now
+		long oldPremiumExpiration = Math.max(now, getPremiumExpiration(accountName));
+		long newPremiumExpiration = oldPremiumExpiration + addTime;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		String sqlCmd = premiumData.containsKey(accountName) ? UPDATE_SQL : ADD_SQL;
+		
+		// UPDATE DATABASE
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement stmt = con.prepareStatement(sqlCmd))
 		{
-			final Calendar endDate = Calendar.getInstance();
-			endDate.setTimeInMillis(System.currentTimeMillis() + remainingTime);
-			endDate.set(Calendar.SECOND, 0);
-			endDate.add(Calendar.MONTH, months);
-			
-			final PreparedStatement statement = con.prepareStatement("UPDATE account_premium SET premium_service=?,enddate=? WHERE account_name=?");
-			statement.setInt(1, 1);
-			statement.setLong(2, endDate.getTimeInMillis());
-			statement.setString(3, accountName);
-			statement.execute();
-			statement.close();
+			stmt.setLong(1, newPremiumExpiration);
+			stmt.setString(2, accountName);
+			stmt.execute();
 		}
 		catch (SQLException e)
 		{
+			e.printStackTrace();
 		}
 		
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		// UPDATE CACHE
+		premiumData.put(accountName, newPremiumExpiration);
+		
+		// UPDATE PlAYER PREMIUMSTATUS
+		L2PcInstance playerOnline = L2World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
+		if (playerOnline != null)
 		{
-			if (player.getAccountNamePlayer().equalsIgnoreCase(accountName))
+			stopExpireTask(playerOnline);
+			startExpireTask(playerOnline, newPremiumExpiration - now);
+			
+			if (!playerOnline.hasPremiumStatus())
 			{
-				player.setPremiumStatus(getPremiumEndDate(accountName) > 0);
+				playerOnline.setPremiumStatus(true);
+				playerOnline.sendPacket(new ExBrPremiumState(playerOnline));
 			}
 		}
 	}
 	
 	public void removePremiumStatus(String accountName)
 	{
-		// TODO: Add check if account exists. XD
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		L2PcInstance playerOnline = L2World.getInstance().getPlayers().stream().filter(p -> accountName.equals(p.getAccountName())).findFirst().orElse(null);
+		if ((playerOnline != null) && playerOnline.hasPremiumStatus())
 		{
-			final PreparedStatement statement = con.prepareStatement("INSERT INTO account_premium (account_name,premium_service,enddate) values(?,?,?) ON DUPLICATE KEY UPDATE premium_service = ?, enddate = ?");
-			statement.setString(1, accountName);
-			statement.setInt(2, 0);
-			statement.setLong(3, 0);
-			statement.setInt(4, 0);
-			statement.setLong(5, 0);
-			statement.execute();
-			statement.close();
+			playerOnline.setPremiumStatus(false);
+			playerOnline.sendPacket(new ExBrPremiumState(playerOnline));
+			stopExpireTask(playerOnline);
+		}
+		
+		// UPDATE CACHE
+		premiumData.remove(accountName);
+		
+		// UPDATE DATABASE
+		try (Connection con = DatabaseFactory.getInstance().getConnection();
+			PreparedStatement stmt = con.prepareStatement(UPDATE_SQL))
+		{
+			stmt.setLong(1, 0L);
+			stmt.setString(2, accountName);
+			stmt.execute();
 		}
 		catch (SQLException e)
 		{
-		}
-		
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
-		{
-			if (player.getAccountNamePlayer().equalsIgnoreCase(accountName))
-			{
-				player.setPremiumStatus(false);
-			}
+			e.printStackTrace();
 		}
 	}
 	
