@@ -2806,7 +2806,7 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		if (!_waitTypeSitting && !isAttackingDisabled() && !isControlBlocked() && !isImmobilized())
+		if (!_waitTypeSitting && !isAttackingDisabled() && !isControlBlocked() && !isImmobilized() && !isFishing())
 		{
 			breakAttack();
 			setIsSitting(true);

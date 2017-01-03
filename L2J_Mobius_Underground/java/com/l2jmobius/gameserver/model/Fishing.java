@@ -84,7 +84,7 @@ public class Fishing
 	
 	public boolean canFish()
 	{
-		return !_player.isDead() && !_player.isAlikeDead() && !_player.hasBlockActions();
+		return !_player.isDead() && !_player.isAlikeDead() && !_player.hasBlockActions() && !_player.isSitting();
 	}
 	
 	private FishingBaitData getCurrentBaitData()
