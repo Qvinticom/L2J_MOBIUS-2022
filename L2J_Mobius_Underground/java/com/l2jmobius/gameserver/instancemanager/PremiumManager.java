@@ -49,7 +49,7 @@ public class PremiumManager
 	// SQL Statement
 	private final static String LOAD_SQL = "SELECT account_name,enddate FROM account_premium";
 	private final static String UPDATE_SQL = "UPDATE account_premium SET enddate = ? WHERE account_name = ?";
-	private final static String ADD_SQL = "INSERT INTO account_premium (endate,account_name) VALUE (?,?)";
+	private final static String ADD_SQL = "INSERT INTO account_premium (enddate,account_name) VALUE (?,?)";
 	
 	class PremiumExpireTask implements Runnable
 	{
