@@ -59,7 +59,7 @@ public final class TreeOfLife extends AbstractNpcAI
 			final L2Summon summon = player.getFirstServitor();
 			if (event.equals("HEAL") && (summon != null) && CommonUtil.contains(TREE_OF_LIFE, summon.getId()))
 			{
-				summon.doCast(summon.getTemplate().getParameters().getSkillHolder("s_tree_heal").getSkill());
+				summon.doCast(summon.getTemplate().getParameters().getSkillHolder("s_tree_heal").getSkill(), null, false, false);
 				getTimers().addTimer("HEAL", 8000, null, player);
 			}
 		}
