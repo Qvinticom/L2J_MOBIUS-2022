@@ -17,7 +17,7 @@
 								<td height=25></td>
 							</tr>
 							<tr>
-								<td height=25 align="center"><font name="hs12" color="CDB67F">Premium Manager</font></td>
+								<td height=25 align="center"><font name="hs12" color="CDB67F">Drop Search</font></td>
 							</tr>
 							<tr>
 								<td>
@@ -27,13 +27,21 @@
 							<tr>
 								<td height=20></td>
 							</tr>
-							<tr><td align="left"> <font color="CDB67F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Premium benefits CAN NOT BE TRANSFERED.<br1></font></td></tr>
-				            <tr><td align="left"> <font color="CDB67F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Premium does not effect party members.<br1></font></td></tr>
-				            <tr><td align="left"> <font color="CDB67F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Premium benefits effect ALL characters in same account.</font></td></tr>
-							<tr>
-								<td height=20></td>
+							<tr><td align="left"> <font color="CDB67F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Input item name or partial name to search for items.<br1></font></td></tr>
+				            <tr><td align="left"> <font color="CDB67F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Choose item icon to search for drops.<br1></font></td></tr>
+							<tr><td align="left"> <font color="CDB67F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Select an NPC, you can see it's location on the world map.</font></td></tr>							<tr>
+								<td height=10></td>
 							</tr>
-							<tr><td height=15 align="center"></td></tr>
+							<tr>
+							<td height=15 align="center">
+								<table>
+									<tr>
+										<td width=70>ItemName:</td><td><edit width=200 var="itemname"></td>
+										<td><button value="Search" action="bypass _bbs_search_item $itemname" width=60 height=27 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"></td>
+									</tr>
+								</table>
+							</td>
+							</tr>
 							<tr><td height=15 align="center"></td></tr>
 							<tr>
 								<td height=10></td>
@@ -44,42 +52,19 @@
 								</td>
 							</tr>
 							<tr>
-								<td height=25></td>
+								<td height=20></td>
 							</tr>
 							<tr>
-								<td align="center">
-									<table align=center border="0" height=85 >
-										<tr>
-											<td align=center width=500><font name="hs12" color="CDB67F">Thank you!</font></td>
-										</tr>
+								<td align="center">	
+									<table align=center border="0" height=250>
+										%searchResult%
 									</table>
 									<table align=center border="0">
-										<tr>
-											<td>
-												<center><img src="L2UI.SquareGray" width=500 height=1></center>
-											</td>
-										</tr>
-										<tr>
-											<td height=10></td>
-										</tr>
+										%pages%
 									</table>
 								</td>
 							</tr>
-							<tr>
-								<td>
-									<center><img src="L2UI_CH3.herotower_deco" width=256 height=32></center>
-								</td>
-							</tr>
-							<tr>
-								<td height=150 align="center">
-									<br>
-									<font name="hs12" color="CDB67F">Your premium status can be checked
-									<br1>
-									by typing following command in chat</font>
-									<br1>
-									<font name="hs12" color="00A5FF">.premium</font>
-								</td>
-							</tr>
+							
 						</table>
 						<table border=0 cellpadding=0 cellspacing=0 width=555>
 							<tr>

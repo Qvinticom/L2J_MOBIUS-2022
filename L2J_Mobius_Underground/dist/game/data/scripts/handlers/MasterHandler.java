@@ -168,6 +168,7 @@ import handlers.chathandlers.ChatTrade;
 import handlers.chathandlers.ChatWhisper;
 import handlers.chathandlers.ChatWorld;
 import handlers.communityboard.ClanBoard;
+import handlers.communityboard.DropSearchBoard;
 import handlers.communityboard.FavoriteBoard;
 import handlers.communityboard.FriendsBoard;
 import handlers.communityboard.HomeBoard;
@@ -485,6 +486,7 @@ public class MasterHandler
 			MailBoard.class,
 			MemoBoard.class,
 			RegionBoard.class,
+			DropSearchBoard.class,
 		},
 		{
 			// Item Handlers
