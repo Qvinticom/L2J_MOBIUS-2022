@@ -1409,7 +1409,10 @@ public class L2Attackable extends L2Npc
 				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
 				{
 					_champion = true;
-					setTeam(Team.RED);
+					if (Config.L2JMOD_SHOW_CHAMPION_AURA)
+					{
+						setTeam(Team.RED);
+					}
 				}
 			}
 		}
