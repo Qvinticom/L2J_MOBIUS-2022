@@ -417,6 +417,7 @@ import quests.Q10836_DisappearedClanMember.Q10836_DisappearedClanMember;
 import quests.Q10837_LookingForTheBlackbirdClanMember.Q10837_LookingForTheBlackbirdClanMember;
 import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBeingAbleToGetOut;
 import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
+import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 
 /**
  * @author NosBit
@@ -824,7 +825,8 @@ public class QuestMasterHandler
 		Q10836_DisappearedClanMember.class,
 		Q10837_LookingForTheBlackbirdClanMember.class,
 		Q10838_TheReasonForNotBeingAbleToGetOut.class,
-		Q10839_BlackbirdsNameValue.class
+		Q10839_BlackbirdsNameValue.class,
+		Q10840_TimeToRecover.class
 	};
 	
 	public static void main(String[] args)
