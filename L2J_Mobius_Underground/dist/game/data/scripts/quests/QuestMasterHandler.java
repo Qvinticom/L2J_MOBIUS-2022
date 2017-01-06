@@ -418,6 +418,7 @@ import quests.Q10837_LookingForTheBlackbirdClanMember.Q10837_LookingForTheBlackb
 import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBeingAbleToGetOut;
 import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
+import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
 
 /**
  * @author NosBit
@@ -826,7 +827,8 @@ public class QuestMasterHandler
 		Q10837_LookingForTheBlackbirdClanMember.class,
 		Q10838_TheReasonForNotBeingAbleToGetOut.class,
 		Q10839_BlackbirdsNameValue.class,
-		Q10840_TimeToRecover.class
+		Q10840_TimeToRecover.class,
+		Q10841_DeepInsideAteliaFortress.class
 	};
 	
 	public static void main(String[] args)
