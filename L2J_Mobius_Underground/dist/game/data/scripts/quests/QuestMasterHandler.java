@@ -415,6 +415,7 @@ import quests.Q10832_EnergyOfSadnessAndAnger.Q10832_EnergyOfSadnessAndAnger;
 import quests.Q10833_PutTheQueenOfSpiritsToSleep.Q10833_PutTheQueenOfSpiritsToSleep;
 import quests.Q10836_DisappearedClanMember.Q10836_DisappearedClanMember;
 import quests.Q10837_LookingForTheBlackbirdClanMember.Q10837_LookingForTheBlackbirdClanMember;
+import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBeingAbleToGetOut;
 
 /**
  * @author NosBit
@@ -820,7 +821,8 @@ public class QuestMasterHandler
 		Q10832_EnergyOfSadnessAndAnger.class,
 		Q10833_PutTheQueenOfSpiritsToSleep.class,
 		Q10836_DisappearedClanMember.class,
-		Q10837_LookingForTheBlackbirdClanMember.class
+		Q10837_LookingForTheBlackbirdClanMember.class,
+		Q10838_TheReasonForNotBeingAbleToGetOut.class
 	};
 	
 	public static void main(String[] args)
