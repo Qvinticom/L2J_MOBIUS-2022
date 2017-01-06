@@ -414,6 +414,7 @@ import quests.Q10831_UnbelievableSight.Q10831_UnbelievableSight;
 import quests.Q10832_EnergyOfSadnessAndAnger.Q10832_EnergyOfSadnessAndAnger;
 import quests.Q10833_PutTheQueenOfSpiritsToSleep.Q10833_PutTheQueenOfSpiritsToSleep;
 import quests.Q10836_DisappearedClanMember.Q10836_DisappearedClanMember;
+import quests.Q10837_LookingForTheBlackbirdClanMember.Q10837_LookingForTheBlackbirdClanMember;
 
 /**
  * @author NosBit
@@ -818,7 +819,8 @@ public class QuestMasterHandler
 		Q10831_UnbelievableSight.class,
 		Q10832_EnergyOfSadnessAndAnger.class,
 		Q10833_PutTheQueenOfSpiritsToSleep.class,
-		Q10836_DisappearedClanMember.class
+		Q10836_DisappearedClanMember.class,
+		Q10837_LookingForTheBlackbirdClanMember.class
 	};
 	
 	public static void main(String[] args)
