@@ -413,6 +413,7 @@ import quests.Q10830_TheLostGardenOfSpirits.Q10830_TheLostGardenOfSpirits;
 import quests.Q10831_UnbelievableSight.Q10831_UnbelievableSight;
 import quests.Q10832_EnergyOfSadnessAndAnger.Q10832_EnergyOfSadnessAndAnger;
 import quests.Q10833_PutTheQueenOfSpiritsToSleep.Q10833_PutTheQueenOfSpiritsToSleep;
+import quests.Q10836_DisappearedClanMember.Q10836_DisappearedClanMember;
 
 /**
  * @author NosBit
@@ -816,7 +817,8 @@ public class QuestMasterHandler
 		Q10830_TheLostGardenOfSpirits.class,
 		Q10831_UnbelievableSight.class,
 		Q10832_EnergyOfSadnessAndAnger.class,
-		Q10833_PutTheQueenOfSpiritsToSleep.class
+		Q10833_PutTheQueenOfSpiritsToSleep.class,
+		Q10836_DisappearedClanMember.class
 	};
 	
 	public static void main(String[] args)
