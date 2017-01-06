@@ -416,6 +416,7 @@ import quests.Q10833_PutTheQueenOfSpiritsToSleep.Q10833_PutTheQueenOfSpiritsToSl
 import quests.Q10836_DisappearedClanMember.Q10836_DisappearedClanMember;
 import quests.Q10837_LookingForTheBlackbirdClanMember.Q10837_LookingForTheBlackbirdClanMember;
 import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBeingAbleToGetOut;
+import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 
 /**
  * @author NosBit
@@ -822,7 +823,8 @@ public class QuestMasterHandler
 		Q10833_PutTheQueenOfSpiritsToSleep.class,
 		Q10836_DisappearedClanMember.class,
 		Q10837_LookingForTheBlackbirdClanMember.class,
-		Q10838_TheReasonForNotBeingAbleToGetOut.class
+		Q10838_TheReasonForNotBeingAbleToGetOut.class,
+		Q10839_BlackbirdsNameValue.class
 	};
 	
 	public static void main(String[] args)
