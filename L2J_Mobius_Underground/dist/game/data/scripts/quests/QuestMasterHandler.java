@@ -409,6 +409,7 @@ import quests.Q10825_ForVictory.Q10825_ForVictory;
 import quests.Q10826_LuckBefittingOfTheStatus.Q10826_LuckBefittingOfTheStatus;
 import quests.Q10827_StepUpToLead.Q10827_StepUpToLead;
 import quests.Q10829_InSearchOfTheCause.Q10829_InSearchOfTheCause;
+import quests.Q10830_TheLostGardenOfSpirits.Q10830_TheLostGardenOfSpirits;
 
 /**
  * @author NosBit
@@ -808,7 +809,8 @@ public class QuestMasterHandler
 		Q10825_ForVictory.class,
 		Q10826_LuckBefittingOfTheStatus.class,
 		Q10827_StepUpToLead.class,
-		Q10829_InSearchOfTheCause.class
+		Q10829_InSearchOfTheCause.class,
+		Q10830_TheLostGardenOfSpirits.class
 	};
 	
 	public static void main(String[] args)
