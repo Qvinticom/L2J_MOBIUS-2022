@@ -30,7 +30,6 @@ import java.util.function.Predicate;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
@@ -76,11 +75,20 @@ public final class HomeBoard implements IParseBoardHandler
 		Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null
 	};
 	
-	//@formatter:off
 	public static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) ->
-		CommonUtil.contains(CUSTOM_COMMANDS, command) && 
-			(activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
-	//@formatter:on
+	{
+		boolean commandCheck = false;
+		for (String c : CUSTOM_COMMANDS)
+		{
+			if ((c != null) && command.startsWith(c))
+			{
+				commandCheck = true;
+				break;
+			}
+		}
+		
+		return commandCheck && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
+	};
 	
 	public static final Predicate<L2PcInstance> KARMAR_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
 	
