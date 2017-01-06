@@ -408,6 +408,7 @@ import quests.Q10824_ConfrontingTheGreatestDanger.Q10824_ConfrontingTheGreatestD
 import quests.Q10825_ForVictory.Q10825_ForVictory;
 import quests.Q10826_LuckBefittingOfTheStatus.Q10826_LuckBefittingOfTheStatus;
 import quests.Q10827_StepUpToLead.Q10827_StepUpToLead;
+import quests.Q10829_InSearchOfTheCause.Q10829_InSearchOfTheCause;
 
 /**
  * @author NosBit
@@ -806,7 +807,8 @@ public class QuestMasterHandler
 		Q10824_ConfrontingTheGreatestDanger.class,
 		Q10825_ForVictory.class,
 		Q10826_LuckBefittingOfTheStatus.class,
-		Q10827_StepUpToLead.class
+		Q10827_StepUpToLead.class,
+		Q10829_InSearchOfTheCause.class
 	};
 	
 	public static void main(String[] args)
