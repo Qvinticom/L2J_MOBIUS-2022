@@ -411,6 +411,7 @@ import quests.Q10827_StepUpToLead.Q10827_StepUpToLead;
 import quests.Q10829_InSearchOfTheCause.Q10829_InSearchOfTheCause;
 import quests.Q10830_TheLostGardenOfSpirits.Q10830_TheLostGardenOfSpirits;
 import quests.Q10831_UnbelievableSight.Q10831_UnbelievableSight;
+import quests.Q10832_EnergyOfSadnessAndAnger.Q10832_EnergyOfSadnessAndAnger;
 
 /**
  * @author NosBit
@@ -812,7 +813,8 @@ public class QuestMasterHandler
 		Q10827_StepUpToLead.class,
 		Q10829_InSearchOfTheCause.class,
 		Q10830_TheLostGardenOfSpirits.class,
-		Q10831_UnbelievableSight.class
+		Q10831_UnbelievableSight.class,
+		Q10832_EnergyOfSadnessAndAnger.class
 	};
 	
 	public static void main(String[] args)
