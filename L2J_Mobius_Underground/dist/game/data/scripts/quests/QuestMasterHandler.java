@@ -419,6 +419,7 @@ import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBein
 import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
 import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
 import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
+import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 
 /**
  * @author NosBit
@@ -828,7 +829,8 @@ public class QuestMasterHandler
 		Q10838_TheReasonForNotBeingAbleToGetOut.class,
 		Q10839_BlackbirdsNameValue.class,
 		Q10840_TimeToRecover.class,
-		Q10841_DeepInsideAteliaFortress.class
+		Q10841_DeepInsideAteliaFortress.class,
+		Q10843_AnomalyInTheEnchantedValley.class
 	};
 	
 	public static void main(String[] args)
