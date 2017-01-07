@@ -104,6 +104,7 @@ public enum AbnormalType
 	EXP_BOTTLE(-1),
 	EXP_SPECIAL(-1),
 	FINAL_SECRET(-1),
+	FISH_STEW(-1),
 	FLAG_BUF(-1),
 	FLAG_DEBUF(-1),
 	FORCE_HP_UP(-1),

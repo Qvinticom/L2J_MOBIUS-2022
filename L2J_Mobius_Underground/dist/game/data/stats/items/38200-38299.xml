@@ -361,56 +361,104 @@
 	<item id="38222" name="Fish Stew" additionalName="WIT" type="EtcItem">
 		<!-- For 30 min., WIT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17387" level="1" /> <!-- Fish Stew: WIT -->
+		</skills>
 	</item>
 	<item id="38223" name="Fish Stew" additionalName="INT" type="EtcItem">
 		<!-- For 30 min., INT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17388" level="1" /> <!-- Fish Stew: INT -->
+		</skills>
 	</item>
 	<item id="38224" name="Fish Stew" additionalName="MEN" type="EtcItem">
 		<!-- For 30 min., MEN + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17389" level="1" /> <!-- Fish Stew: MEN -->
+		</skills>
 	</item>
 	<item id="38225" name="Fish Stew" additionalName="DEX" type="EtcItem">
 		<!-- For 30 min., DEX + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17390" level="1" /> <!-- Fish Stew: DEX -->
+		</skills>
 	</item>
 	<item id="38226" name="Fish Stew" additionalName="STR" type="EtcItem">
 		<!-- For 30 min., STR + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17391" level="1" /> <!-- Fish Stew: STR -->
+		</skills>
 	</item>
 	<item id="38227" name="Fish Stew" additionalName="CON" type="EtcItem">
 		<!-- For 30 min., CON + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_coc_restricted" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17392" level="1" /> <!-- Fish Stew: CON -->
+		</skills>
 	</item>
 	<item id="38228" name="Lady's Hairpin" additionalName="STR" type="Armor">
 		<!-- STR + 3. Female only. -->
