@@ -221,6 +221,7 @@ public final class TautiWarzone extends AbstractInstance
 			final Instance world = npc.getInstanceWorld();
 			playMovie(world.getPlayers(), Movie.SC_TAUTI_ENDING);
 			npc.deleteMe();
+			world.finishInstance(5 * 60 * 1000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
