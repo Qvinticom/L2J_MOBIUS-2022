@@ -3825,12 +3825,12 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="25283" level="89" type="L2RaidBoss" name="Lilith" title="Apostle">
+	<npc id="25283" level="89" type="L2GrandBoss" name="Lilith" title="Apostle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25284" count="3" respawnTime="360" weightPoint="1" />
-				<npc id="25285" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25284" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="25285" count="2" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
 			<param name="SSQLoserTeleport" value="1" />
@@ -3840,9 +3840,9 @@
 		<sex>FEMALE</sex>
 		<acquire exp="55516197856" sp="13323887" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="204125156" hpRegen="211.789458580091" mp="39760" mpRegen="3" />
-			<attack physical="3893.46388223624" magical="630.998398930805" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1024.125" magical="499.6" evasion="-18" />
+			<vitals hp="486021997" hpRegen="211.789458580091" mp="79600" mpRegen="3" />
+			<attack physical="72659" magical="64745" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3864" magical="3774" evasion="-18" />
 			<speed>
 				<walk ground="45" />
 				<run ground="200" />
@@ -3887,16 +3887,12 @@
 					<item id="17329" min="1" max="1" chance="7.7340976173162" /> <!-- Apocalypse Stormer -->
 					<item id="17334" min="1" max="1" chance="7.729819908457" /> <!-- Apocalypse Retributer -->
 					<item id="17327" min="1" max="1" chance="7.7246866578261" /> <!-- Apocalypse Avenger -->
-				</group>
-				<group chance="100">
 					<item id="17346" min="2" max="2" chance="19.128487449846" /> <!-- Twilight Leather Leggings Light Armor -->
 					<item id="17345" min="2" max="2" chance="18.7832415788" /> <!-- Twilight Leather Armor Light Armor -->
 					<item id="17351" min="2" max="2" chance="15.871979098628" /> <!-- Twilight Stockings Robe -->
 					<item id="17340" min="2" max="2" chance="15.638704861435" /> <!-- Twilight Gaiters Heavy Armor -->
 					<item id="17350" min="2" max="2" chance="15.564057105533" /> <!-- Twilight Tunic Robe -->
 					<item id="17339" min="2" max="2" chance="15.013529905757" /> <!-- Twilight Breastplate Heavy Armor -->
-				</group>
-				<group chance="100">
 					<item id="37714" min="1" max="1" chance="18.660771852261" /> <!-- Talisman - Lilith -->
 					<item id="17347" min="2" max="2" chance="9.5744680851064" /> <!-- Twilight Leather Gloves Light Armor -->
 					<item id="17348" min="2" max="2" chance="8.9619600257898" /> <!-- Twilight Leather Boots Light Armor -->
@@ -3908,11 +3904,6 @@
 					<item id="17353" min="2" max="2" chance="7.5941788707746" /> <!-- Twilight Shoes Robe -->
 					<item id="17342" min="2" max="2" chance="7.5849682232661" /> <!-- Twilight Boots Heavy Armor -->
 					<item id="17349" min="2" max="2" chance="7.2948328267477" /> <!-- Twilight Circlet Robe -->
-				</group>
-				<group chance="15.23">
-					<item id="36257" min="1" max="1" chance="100" /> <!-- Lilith's Soul Necklace -->
-				</group>
-				<group chance="100">
 					<item id="19447" min="10" max="10" chance="17.391244121538" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 					<item id="19448" min="5" max="5" chance="17.141907288254" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 					<item id="37779" min="1" max="1" chance="11.902370777723" /> <!-- Scroll of Blessing: Armor (R-grade) -->
@@ -3927,6 +3918,9 @@
 					<item id="19503" min="1" max="1" chance="3.4550466467659" /> <!-- Teal Soul Crystal (R-grade) -->
 					<item id="19502" min="1" max="1" chance="3.4498521294058" /> <!-- Yellow Soul Crystal (R-grade) -->
 					<item id="19504" min="1" max="1" chance="3.4283814576508" /> <!-- Purple Soul Crystal (R-grade) -->
+				</group>
+				<group chance="15.23">
+					<item id="36257" min="1" max="1" chance="100" /> <!-- Lilith's Soul Necklace -->
 				</group>
 			</death>
 			<lucky_corpse>

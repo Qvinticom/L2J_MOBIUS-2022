@@ -995,6 +995,7 @@ public final class Config
 	public static int KELBIM_MAX_PLAYERS;
 	public static int KELBIM_SPAWN_INTERVAL;
 	public static int KELBIM_SPAWN_RANDOM;
+	
 	// Anakim
 	public static int ANAKIM_MIN_PLAYERS;
 	public static int ANAKIM_MAX_PLAYERS;
@@ -1002,6 +1003,14 @@ public final class Config
 	public static int ANAKIM_SPAWN_RANDOM;
 	public static int ANAKIM_MIN_PLAYER_LVL;
 	public static int ANAKIM_MAX_PLAYER_LVL;
+	
+	// Lilith
+	public static int LILITH_MIN_PLAYERS;
+	public static int LILITH_MAX_PLAYERS;
+	public static int LILITH_SPAWN_INTERVAL;
+	public static int LILITH_SPAWN_RANDOM;
+	public static int LILITH_MIN_PLAYER_LVL;
+	public static int LILITH_MAX_PLAYER_LVL;
 	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
@@ -2406,6 +2415,13 @@ public final class Config
 			ANAKIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAnakimSpawn", 148);
 			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
 			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
+			
+			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("lilithMinPlayers", 98);
+			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("lilithMaxPlayers", 120);
+			LILITH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOflilithSpawn", 192);
+			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOflilithSpawn", 148);
+			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("lilithMinPlayerLvl", 85);
+			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("lilithMaxPlayerLvl", 89);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
