@@ -537,7 +537,6 @@ public final class Config
 	public static boolean JAIL_DISABLE_TRANSACTION;
 	public static boolean CUSTOM_NPC_DATA;
 	public static boolean CUSTOM_TELEPORT_TABLE;
-	public static boolean CUSTOM_NPCBUFFER_TABLES;
 	public static boolean CUSTOM_SKILLS_LOAD;
 	public static boolean CUSTOM_ITEMS_LOAD;
 	public static boolean CUSTOM_MULTISELL_LOAD;
@@ -1744,7 +1743,6 @@ public final class Config
 			JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
 			CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
 			CUSTOM_TELEPORT_TABLE = General.getBoolean("CustomTeleportTable", false);
-			CUSTOM_NPCBUFFER_TABLES = General.getBoolean("CustomNpcBufferTables", false);
 			CUSTOM_SKILLS_LOAD = General.getBoolean("CustomSkillsLoad", false);
 			CUSTOM_ITEMS_LOAD = General.getBoolean("CustomItemsLoad", false);
 			CUSTOM_MULTISELL_LOAD = General.getBoolean("CustomMultisellLoad", false);
