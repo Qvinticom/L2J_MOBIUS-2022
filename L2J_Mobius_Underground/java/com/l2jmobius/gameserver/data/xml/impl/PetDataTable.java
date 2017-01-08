@@ -180,6 +180,10 @@ public final class PetDataTable implements IGameXmlReader
 		final L2PetData pd = getPetData(petId);
 		if (pd != null)
 		{
+			if (petLevel > pd.getMaxLevel())
+			{
+				return pd.getPetLevelData(pd.getMaxLevel());
+			}
 			return pd.getPetLevelData(petLevel);
 		}
 		return null;

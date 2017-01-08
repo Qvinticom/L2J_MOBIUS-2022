@@ -109,25 +109,25 @@
 	<action id="1058" handler="ServitorSkillUse" option="5652" /> <!-- Nightshade - Death Whisper -->
 	<action id="1059" handler="ServitorSkillUse" option="5653" /> <!-- Nightshade - Focus -->
 	<action id="1060" handler="ServitorSkillUse" option="5654" /> <!-- Nightshade - Guidance -->
-	<action id="1061" handler="ServitorSkillUse" option="5745" /> <!-- Wild Beast Fighter, White Weasel - Death blow -->
-	<action id="1062" handler="ServitorSkillUse" option="5746" /> <!-- Wild Beast Fighter - Double attack -->
-	<action id="1063" handler="ServitorSkillUse" option="5747" /> <!-- Wild Beast Fighter - Spin attack -->
-	<action id="1064" handler="ServitorSkillUse" option="5748" /> <!-- Wild Beast Fighter - Meteor Shower -->
-	<action id="1065" handler="ServitorSkillUse" option="5753" /> <!-- Fox Shaman, Wild Beast Fighter, White Weasel, Fairy Princess - Awakening -->
-	<action id="1066" handler="ServitorSkillUse" option="5749" /> <!-- Fox Shaman, Spirit Shaman - Thunder Bolt -->
-	<action id="1067" handler="ServitorSkillUse" option="5750" /> <!-- Fox Shaman, Spirit Shaman - Flash -->
-	<action id="1068" handler="ServitorSkillUse" option="5751" /> <!-- Fox Shaman, Spirit Shaman - Lightning Wave -->
-	<action id="1069" handler="ServitorSkillUse" option="5752" /> <!-- Fox Shaman, Fairy Princess - Flare -->
-	<action id="1070" handler="ServitorSkillUse" option="5771" /> <!-- White Weasel, Fairy Princess, Improved Baby Buffalo, Improved Baby Kookaburra, Improved Baby Cougar, Spirit Shaman, Toy Knight, Turtle Ascetic - Buff control -->
-	<action id="1071" handler="ServitorSkillUse" option="5761" /> <!-- Tigress - Power Strike -->
-	<action id="1072" handler="ServitorSkillUse" option="6046" /> <!-- Toy Knight - Piercing attack -->
-	<action id="1073" handler="ServitorSkillUse" option="6047" /> <!-- Toy Knight - Whirlwind -->
-	<action id="1074" handler="ServitorSkillUse" option="6048" /> <!-- Toy Knight - Lance Smash -->
-	<action id="1075" handler="ServitorSkillUse" option="6049" /> <!-- Toy Knight - Battle Cry -->
-	<action id="1076" handler="ServitorSkillUse" option="6050" /> <!-- Turtle Ascetic - Power Smash -->
-	<action id="1077" handler="ServitorSkillUse" option="6051" /> <!-- Turtle Ascetic - Energy Burst -->
-	<action id="1078" handler="ServitorSkillUse" option="6052" /> <!-- Turtle Ascetic - Shockwave -->
-	<action id="1079" handler="ServitorSkillUse" option="6053" /> <!-- Turtle Ascetic - Howl -->
+	<action id="1061" handler="PetSkillUse" option="5745" /> <!-- Wild Beast Fighter, White Weasel - Death blow -->
+	<action id="1062" handler="PetSkillUse" option="5746" /> <!-- Wild Beast Fighter - Double attack -->
+	<action id="1063" handler="PetSkillUse" option="5747" /> <!-- Wild Beast Fighter - Spin attack -->
+	<action id="1064" handler="PetSkillUse" option="5748" /> <!-- Wild Beast Fighter - Meteor Shower -->
+	<action id="1065" handler="PetSkillUse" option="5753" /> <!-- Fox Shaman, Wild Beast Fighter, White Weasel, Fairy Princess - Awakening -->
+	<action id="1066" handler="PetSkillUse" option="5749" /> <!-- Fox Shaman, Spirit Shaman - Thunder Bolt -->
+	<action id="1067" handler="PetSkillUse" option="5750" /> <!-- Fox Shaman, Spirit Shaman - Flash -->
+	<action id="1068" handler="PetSkillUse" option="5751" /> <!-- Fox Shaman, Spirit Shaman - Lightning Wave -->
+	<action id="1069" handler="PetSkillUse" option="5752" /> <!-- Fox Shaman, Fairy Princess - Flare -->
+	<action id="1070" handler="PetSkillUse" option="5771" /> <!-- White Weasel, Fairy Princess, Improved Baby Buffalo, Improved Baby Kookaburra, Improved Baby Cougar, Spirit Shaman, Toy Knight, Turtle Ascetic - Buff control -->
+	<action id="1071" handler="PetSkillUse" option="5761" /> <!-- Tigress - Power Strike -->
+	<action id="1072" handler="PetSkillUse" option="6046" /> <!-- Toy Knight - Piercing attack -->
+	<action id="1073" handler="PetSkillUse" option="6047" /> <!-- Toy Knight - Whirlwind -->
+	<action id="1074" handler="PetSkillUse" option="6048" /> <!-- Toy Knight - Lance Smash -->
+	<action id="1075" handler="PetSkillUse" option="6049" /> <!-- Toy Knight - Battle Cry -->
+	<action id="1076" handler="PetSkillUse" option="6050" /> <!-- Turtle Ascetic - Power Smash -->
+	<action id="1077" handler="PetSkillUse" option="6051" /> <!-- Turtle Ascetic - Energy Burst -->
+	<action id="1078" handler="PetSkillUse" option="6052" /> <!-- Turtle Ascetic - Shockwave -->
+	<action id="1079" handler="PetSkillUse" option="6053" /> <!-- Turtle Ascetic - Howl -->
 	<action id="1080" handler="ServitorSkillUse" option="6041" /> <!-- Phoenix Rush -->
 	<action id="1081" handler="ServitorSkillUse" option="6042" /> <!-- Phoenix Cleanse -->
 	<action id="1082" handler="ServitorSkillUse" option="6043" /> <!-- Phoenix Flame Feather -->
@@ -136,16 +136,16 @@
 	<action id="1086" handler="ServitorSkillUse" option="6094" /> <!-- Panther Cancel -->
 	<action id="1087" handler="ServitorSkillUse" option="6095" /> <!-- Panther Dark Claw -->
 	<action id="1088" handler="ServitorSkillUse" option="6096" /> <!-- Panther Fatal Claw -->
-	<action id="1089" handler="ServitorSkillUse" option="6199" /> <!-- Deinonychus - Tail Strike -->
-	<action id="1090" handler="ServitorSkillUse" option="6205" /> <!-- Guardian's Strider - Strider Bite -->
-	<action id="1091" handler="ServitorSkillUse" option="6206" /> <!-- Guardian's Strider - Strider Fear -->
-	<action id="1092" handler="ServitorSkillUse" option="6207" /> <!-- Guardian's Strider - Strider Dash -->
-	<action id="1093" handler="ServitorSkillUse" option="6618" /> <!-- Maguen - Maguen Strike -->
-	<action id="1094" handler="ServitorSkillUse" option="6681" /> <!-- Maguen - Maguen Wind Walk -->
-	<action id="1095" handler="ServitorSkillUse" option="6619" /> <!-- Elite Maguen - Maguen Power Strike -->
-	<action id="1096" handler="ServitorSkillUse" option="6682" /> <!-- Elite Maguen - Elite Maguen Wind Walk -->
-	<action id="1097" handler="ServitorSkillUse" option="6683" /> <!-- Maguen - Maguen Return -->
-	<action id="1098" handler="ServitorSkillUse" option="6684" /> <!-- Elite Maguen - Maguen Party Return -->
+	<action id="1089" handler="PetSkillUse" option="6199" /> <!-- Deinonychus - Tail Strike -->
+	<action id="1090" handler="PetSkillUse" option="6205" /> <!-- Guardian's Strider - Strider Bite -->
+	<action id="1091" handler="PetSkillUse" option="6206" /> <!-- Guardian's Strider - Strider Fear -->
+	<action id="1092" handler="PetSkillUse" option="6207" /> <!-- Guardian's Strider - Strider Dash -->
+	<action id="1093" handler="PetSkillUse" option="6618" /> <!-- Maguen - Maguen Strike -->
+	<action id="1094" handler="PetSkillUse" option="6681" /> <!-- Maguen - Maguen Wind Walk -->
+	<action id="1095" handler="PetSkillUse" option="6619" /> <!-- Elite Maguen - Maguen Power Strike -->
+	<action id="1096" handler="PetSkillUse" option="6682" /> <!-- Elite Maguen - Elite Maguen Wind Walk -->
+	<action id="1097" handler="PetSkillUse" option="6683" /> <!-- Maguen - Maguen Return -->
+	<action id="1098" handler="PetSkillUse" option="6684" /> <!-- Elite Maguen - Maguen Party Return -->
 	<action id="1099" handler="ServitorAttack" /> <!-- All Attack -->
 	<action id="1100" handler="ServitorMove" /> <!-- All Move to target -->
 	<action id="1101" handler="ServitorStop" /> <!-- All Stop -->

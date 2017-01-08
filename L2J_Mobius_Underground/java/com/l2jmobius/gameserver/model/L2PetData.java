@@ -191,12 +191,14 @@ public class L2PetData
 	public int getAvailableLevel(int skillId, int petLvl)
 	{
 		int lvl = 0;
+		boolean found = false;
 		for (L2PetSkillLearn temp : _skills)
 		{
 			if (temp.getSkillId() != skillId)
 			{
 				continue;
 			}
+			found = true;
 			if (temp.getSkillLevel() == 0)
 			{
 				if (petLvl < 70)
@@ -227,6 +229,10 @@ public class L2PetData
 					lvl = temp.getSkillLevel();
 				}
 			}
+		}
+		if (found && (lvl == 0))
+		{
+			return 1;
 		}
 		return lvl;
 	}

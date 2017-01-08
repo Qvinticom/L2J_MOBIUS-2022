@@ -50,6 +50,5 @@ public final class PetAttack implements IPlayerActionHandler
 		{
 			pet.doAttack(activeChar.getTarget());
 		}
-		
 	}
 }
