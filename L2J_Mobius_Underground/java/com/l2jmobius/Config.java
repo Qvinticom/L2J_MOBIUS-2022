@@ -995,6 +995,13 @@ public final class Config
 	public static int KELBIM_MAX_PLAYERS;
 	public static int KELBIM_SPAWN_INTERVAL;
 	public static int KELBIM_SPAWN_RANDOM;
+	// Anakim
+	public static int ANAKIM_MIN_PLAYERS;
+	public static int ANAKIM_MAX_PLAYERS;
+	public static int ANAKIM_SPAWN_INTERVAL;
+	public static int ANAKIM_SPAWN_RANDOM;
+	public static int ANAKIM_MIN_PLAYER_LVL;
+	public static int ANAKIM_MAX_PLAYER_LVL;
 	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
@@ -2392,6 +2399,13 @@ public final class Config
 			KELBIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfKelbimSpawn", 148);
 			KELBIM_MIN_PLAYERS = GrandBossSettings.getInt("KelbimMinPlayers", 49);
 			KELBIM_MAX_PLAYERS = GrandBossSettings.getInt("KelbimMaxPlayers", 350);
+			
+			ANAKIM_MIN_PLAYERS = GrandBossSettings.getInt("AnakimMinPlayers", 98);
+			ANAKIM_MAX_PLAYERS = GrandBossSettings.getInt("AnakimMaxPlayers", 120);
+			ANAKIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAnakimSpawn", 192);
+			ANAKIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAnakimSpawn", 148);
+			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
+			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);

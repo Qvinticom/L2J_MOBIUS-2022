@@ -4026,25 +4026,26 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25286" level="94" type="L2RaidBoss" name="Anakim" title="Fallen Angel">
-		<!-- Confirmed CT2.5 -->
+	<npc id="25286" level="94" type="L2GrandBoss" name="Anakim" title="Fallen Angel"> 
+		<!-- Ertheia -->
 		<parameters>
 			<minions name="Privates">
-				<npc id="25287" count="2" respawnTime="360" weightPoint="1" />
-				<npc id="25288" count="1" respawnTime="360" weightPoint="1" />
-				<npc id="25289" count="1" respawnTime="360" weightPoint="1" />
+				<npc id="25287" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="25288" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="25289" count="4" respawnTime="360" weightPoint="1" />
 			</minions>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
 			<param name="SSQLoserTeleport" value="1" />
 			<skill name="RangeDDMagic_a" id="4314" level="9" />
+			<skill name="PhysicalSpecial_a" id="15608" level="7" />
 		</parameters>
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="61929191296" sp="14863005" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="233660596" hpRegen="211.789458580091" mp="43380" mpRegen="3" />
-			<attack physical="3893.46388223624" magical="630.998398930805" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1024.125" magical="499.6" evasion="-18" />
+			<vitals hp="556345880" hpRegen="211.789458580091" mp="86847" mpRegen="3" />
+			<attack physical="228568" magical="129156" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6100" magical="6909" evasion="-18" />
 			<speed>
 				<walk ground="45" />
 				<run ground="200" />
@@ -4067,8 +4068,11 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4898" level="1" /> <!-- Raid Boss - Level 80 -->
+			<skill id="4898" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="15608" level="7" /> <!-- Power Strike -->			
+			<skill id="15610" level="7" /> <!-- Spinning Slasher -->
+			<skill id="15611" level="7" /> <!-- Tornado Slasher -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
@@ -4087,16 +4091,12 @@
 					<item id="17383" min="1" max="1" chance="7.7757669842958" /> <!-- Specter Cutter -->
 					<item id="17384" min="1" max="1" chance="7.7671901400599" /> <!-- Specter Slasher -->
 					<item id="17382" min="1" max="1" chance="7.7586132958239" /> <!-- Specter Shaper -->
-				</group>
-				<group chance="100">
 					<item id="17403" min="2" max="2" chance="19.47639083684" /> <!-- Seraph Leather Armor Light Armor -->
 					<item id="17404" min="2" max="2" chance="18.447872837775" /> <!-- Seraph Leather Leggings Light Armor -->
 					<item id="17408" min="2" max="2" chance="15.970079476391" /> <!-- Seraph Tunic Robe -->
 					<item id="17409" min="2" max="2" chance="15.511921458626" /> <!-- Seraph Stockings Robe -->
 					<item id="17398" min="2" max="2" chance="15.465170640486" /> <!-- Seraph Gaiters Heavy Armor -->
 					<item id="17397" min="2" max="2" chance="15.128564749883" /> <!-- Seraph Breastplate Heavy Armor -->
-				</group>
-				<group chance="100">
 					<item id="37715" min="1" max="1" chance="17.651654411765" /> <!-- Talisman - Anakim -->
 					<item id="17405" min="2" max="2" chance="9.5266544117647" /> <!-- Seraph Leather Gloves Light Armor -->
 					<item id="17406" min="2" max="2" chance="9.3152573529412" /> <!-- Seraph Leather Boots Light Armor -->
@@ -4108,8 +4108,6 @@
 					<item id="17412" min="2" max="2" chance="7.6976102941176" /> <!-- Seraph Sigil Robe -->
 					<item id="17407" min="2" max="2" chance="7.5321691176471" /> <!-- Seraph Circlet Robe -->
 					<item id="17400" min="2" max="2" chance="7.3805147058824" /> <!-- Seraph Boots Heavy Armor -->
-				</group>
-				<group chance="100">
 					<item id="19448" min="5" max="5" chance="16.379471412135" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 					<item id="19447" min="10" max="10" chance="16.179521891195" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 					<item id="37780" min="1" max="1" chance="12.010082700433" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
