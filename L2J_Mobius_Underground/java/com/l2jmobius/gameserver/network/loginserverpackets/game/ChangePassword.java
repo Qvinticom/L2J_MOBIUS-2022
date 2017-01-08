@@ -14,44 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import com.l2jmobius.commons.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
- * @author -Wooden-
+ * @author UnAfraid
  */
-public class PlayerAuthResponse extends BaseRecievePacket
+public class ChangePassword extends BaseSendablePacket
 {
-	
-	private final String _account;
-	private final boolean _authed;
-	
-	/**
-	 * @param decrypt
-	 */
-	public PlayerAuthResponse(byte[] decrypt)
+	public ChangePassword(String accountName, String characterName, String oldPass, String newPass)
 	{
-		super(decrypt);
-		
-		_account = readS();
-		_authed = (readC() != 0);
+		writeC(0x0B);
+		writeS(accountName);
+		writeS(characterName);
+		writeS(oldPass);
+		writeS(newPass);
 	}
 	
-	/**
-	 * @return Returns the account.
-	 */
-	public String getAccount()
+	@Override
+	public byte[] getContent()
 	{
-		return _account;
+		return getBytes();
 	}
-	
-	/**
-	 * @return Returns the authed state.
-	 */
-	public boolean isAuthed()
-	{
-		return _authed;
-	}
-	
 }

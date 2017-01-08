@@ -14,19 +14,42 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
+
+import java.security.interfaces.RSAPublicKey;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.crypto.Cipher;
 
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
  * @author -Wooden-
  */
-public class PlayerLogout extends BaseSendablePacket
+public class BlowFishKey extends BaseSendablePacket
 {
-	public PlayerLogout(String player)
+	private static Logger _log = Logger.getLogger(BlowFishKey.class.getName());
+	
+	/**
+	 * @param blowfishKey
+	 * @param publicKey
+	 */
+	public BlowFishKey(byte[] blowfishKey, RSAPublicKey publicKey)
 	{
-		writeC(0x03);
-		writeS(player);
+		writeC(0x00);
+		try
+		{
+			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
+			rsaCipher.init(Cipher.ENCRYPT_MODE, publicKey);
+			final byte[] encrypted = rsaCipher.doFinal(blowfishKey);
+			writeD(encrypted.length);
+			writeB(encrypted);
+		}
+		catch (Exception e)
+		{
+			_log.log(Level.SEVERE, "Error While encrypting blowfish key for transmision (Crypt error): " + e.getMessage(), e);
+		}
 	}
 	
 	@Override

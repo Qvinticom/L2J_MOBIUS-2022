@@ -22,7 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.loginserver.gameserverpackets.ServerStatus;
+import com.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**

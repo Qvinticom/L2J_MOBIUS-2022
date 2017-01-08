@@ -14,34 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import com.l2jmobius.commons.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
-public class InitLS extends BaseRecievePacket
+/**
+ * @author -Wooden-
+ */
+public class ChangeAccessLevel extends BaseSendablePacket
 {
-	private final int _rev;
-	private final byte[] _key;
-	
-	public int getRevision()
+	public ChangeAccessLevel(String player, int access)
 	{
-		return _rev;
+		writeC(0x04);
+		writeD(access);
+		writeS(player);
 	}
 	
-	public byte[] getRSAKey()
+	@Override
+	public byte[] getContent()
 	{
-		return _key;
+		return getBytes();
 	}
-	
-	/**
-	 * @param decrypt
-	 */
-	public InitLS(byte[] decrypt)
-	{
-		super(decrypt);
-		_rev = readD();
-		final int size = readD();
-		_key = readB(size);
-	}
-	
 }

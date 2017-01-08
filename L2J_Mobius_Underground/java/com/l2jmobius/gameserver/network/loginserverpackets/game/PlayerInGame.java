@@ -14,41 +14,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import java.security.interfaces.RSAPublicKey;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.crypto.Cipher;
+import java.util.List;
 
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
  * @author -Wooden-
  */
-public class BlowFishKey extends BaseSendablePacket
+public class PlayerInGame extends BaseSendablePacket
 {
-	private static Logger _log = Logger.getLogger(BlowFishKey.class.getName());
-	
-	/**
-	 * @param blowfishKey
-	 * @param publicKey
-	 */
-	public BlowFishKey(byte[] blowfishKey, RSAPublicKey publicKey)
+	public PlayerInGame(String player)
 	{
-		writeC(0x00);
-		try
+		writeC(0x02);
+		writeH(1);
+		writeS(player);
+	}
+	
+	public PlayerInGame(List<String> players)
+	{
+		writeC(0x02);
+		writeH(players.size());
+		for (String pc : players)
 		{
-			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
-			rsaCipher.init(Cipher.ENCRYPT_MODE, publicKey);
-			final byte[] encrypted = rsaCipher.doFinal(blowfishKey);
-			writeD(encrypted.length);
-			writeB(encrypted);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.SEVERE, "Error While encrypting blowfish key for transmision (Crypt error): " + e.getMessage(), e);
+			writeS(pc);
 		}
 	}
 	

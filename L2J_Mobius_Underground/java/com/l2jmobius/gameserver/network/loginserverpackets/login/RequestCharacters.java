@@ -14,43 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
 import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
-public class LoginServerFail extends BaseRecievePacket
+/**
+ * @author mrTJO Thanks to mochitto
+ */
+public class RequestCharacters extends BaseRecievePacket
 {
+	private final String _account;
 	
-	private static final String[] REASONS =
-	{
-		"None",
-		"Reason: ip banned",
-		"Reason: ip reserved",
-		"Reason: wrong hexid",
-		"Reason: id reserved",
-		"Reason: no free ID",
-		"Not authed",
-		"Reason: already logged in"
-	};
-	private final int _reason;
-	
-	/**
-	 * @param decrypt
-	 */
-	public LoginServerFail(byte[] decrypt)
+	public RequestCharacters(byte[] decrypt)
 	{
 		super(decrypt);
-		_reason = readC();
+		_account = readS();
 	}
 	
-	public String getReasonString()
+	/**
+	 * @return Return account name
+	 */
+	public String getAccount()
 	{
-		return REASONS[_reason];
+		return _account;
 	}
-	
-	public int getReason()
-	{
-		return _reason;
-	}
-	
 }

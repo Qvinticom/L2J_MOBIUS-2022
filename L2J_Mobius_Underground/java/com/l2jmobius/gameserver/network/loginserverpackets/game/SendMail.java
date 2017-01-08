@@ -14,20 +14,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
- * @author -Wooden-
+ * @author mrTJO
  */
-public class ChangeAccessLevel extends BaseSendablePacket
+public class SendMail extends BaseSendablePacket
 {
-	public ChangeAccessLevel(String player, int access)
+	public SendMail(String accountName, String mailId, String... args)
 	{
-		writeC(0x04);
-		writeD(access);
-		writeS(player);
+		writeC(0x09);
+		writeS(accountName);
+		writeS(mailId);
+		writeC(args.length);
+		for (String arg : args)
+		{
+			writeS(arg);
+		}
 	}
 	
 	@Override

@@ -14,31 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import java.util.List;
 
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
- * @author -Wooden-
+ * @author mrTJO Thanks to mochitto
  */
-public class PlayerInGame extends BaseSendablePacket
+public class ReplyCharacters extends BaseSendablePacket
 {
-	public PlayerInGame(String player)
-	{
-		writeC(0x02);
-		writeH(1);
-		writeS(player);
-	}
 	
-	public PlayerInGame(List<String> players)
+	public ReplyCharacters(String account, int chars, List<Long> timeToDel)
 	{
-		writeC(0x02);
-		writeH(players.size());
-		for (String pc : players)
+		writeC(0x08);
+		writeS(account);
+		writeC(chars);
+		writeC(timeToDel.size());
+		for (long time : timeToDel)
 		{
-			writeS(pc);
+			writeQ(time);
 		}
 	}
 	
@@ -47,4 +43,5 @@ public class PlayerInGame extends BaseSendablePacket
 	{
 		return getBytes();
 	}
+	
 }

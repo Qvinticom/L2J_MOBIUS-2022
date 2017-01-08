@@ -14,35 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
  * @author mrTJO
  */
-public class TempBan extends BaseSendablePacket
+public class PlayerTracert extends BaseSendablePacket
 {
-	public TempBan(String accountName, String ip, long time, String reason)
+	public PlayerTracert(String account, String pcIp, String hop1, String hop2, String hop3, String hop4)
 	{
-		writeC(0x0A);
-		writeS(accountName);
-		writeS(ip);
-		writeQ(System.currentTimeMillis() + (time * 60000));
-		if (reason != null)
-		{
-			writeC(0x01);
-			writeS(reason);
-		}
-		else
-		{
-			writeC(0x00);
-		}
-	}
-	
-	public TempBan(String accountName, String ip, long time)
-	{
-		this(accountName, ip, time, null);
+		writeC(0x07);
+		writeS(account);
+		writeS(pcIp);
+		writeS(hop1);
+		writeS(hop2);
+		writeS(hop3);
+		writeS(hop4);
 	}
 	
 	@Override
