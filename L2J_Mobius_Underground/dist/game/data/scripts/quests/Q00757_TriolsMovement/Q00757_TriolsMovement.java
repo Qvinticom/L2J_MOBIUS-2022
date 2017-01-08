@@ -83,7 +83,7 @@ public class Q00757_TriolsMovement extends Quest
 		{
 			case "start1.htm":
 			case "start2.htm":
-			case "СЃontinue.html":
+			case "continue.html":
 			case "endquest1.html":
 			{
 				htmltext = event;
