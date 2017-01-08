@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author KenM

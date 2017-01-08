@@ -33,8 +33,8 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSelec
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.network.client.ConnectionState;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelected;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ServerClose;

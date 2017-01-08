@@ -27,8 +27,8 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.network.client.ConnectionState;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Flood protector implementation.

@@ -22,7 +22,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Migi, DS

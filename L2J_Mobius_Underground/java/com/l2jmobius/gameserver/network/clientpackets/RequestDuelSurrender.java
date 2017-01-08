@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Format:(ch) just a trigger

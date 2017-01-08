@@ -22,7 +22,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-, KenM, godson

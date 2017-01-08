@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.skills.SkillCastingType;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * MagicSkillUse server packet implementation.

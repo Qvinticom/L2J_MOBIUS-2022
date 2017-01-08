@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Format: (ch) dSdS

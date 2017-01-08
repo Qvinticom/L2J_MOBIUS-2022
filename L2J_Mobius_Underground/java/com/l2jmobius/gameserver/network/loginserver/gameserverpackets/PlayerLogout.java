@@ -14,22 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
 
 import com.l2jmobius.commons.util.network.BaseSendablePacket;
 
 /**
- * @author UnAfraid
+ * @author -Wooden-
  */
-public class ChangePassword extends BaseSendablePacket
+public class PlayerLogout extends BaseSendablePacket
 {
-	public ChangePassword(String accountName, String characterName, String oldPass, String newPass)
+	public PlayerLogout(String player)
 	{
-		writeC(0x0B);
-		writeS(accountName);
-		writeS(characterName);
-		writeS(oldPass);
-		writeS(newPass);
+		writeC(0x03);
+		writeS(player);
 	}
 	
 	@Override

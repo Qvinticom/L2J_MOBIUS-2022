@@ -23,7 +23,7 @@ import java.util.Map.Entry;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class StatusUpdate implements IClientOutgoingPacket
 {

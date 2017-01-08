@@ -14,40 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserver.loginserverpackets;
 
-import com.l2jmobius.commons.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 /**
- * @author mrTJO
+ * @author mrTJO Thanks to mochitto
  */
-public class TempBan extends BaseSendablePacket
+public class RequestCharacters extends BaseRecievePacket
 {
-	public TempBan(String accountName, String ip, long time, String reason)
+	private final String _account;
+	
+	public RequestCharacters(byte[] decrypt)
 	{
-		writeC(0x0A);
-		writeS(accountName);
-		writeS(ip);
-		writeQ(System.currentTimeMillis() + (time * 60000));
-		if (reason != null)
-		{
-			writeC(0x01);
-			writeS(reason);
-		}
-		else
-		{
-			writeC(0x00);
-		}
+		super(decrypt);
+		_account = readS();
 	}
 	
-	public TempBan(String accountName, String ip, long time)
+	/**
+	 * @return Return account name
+	 */
+	public String getAccount()
 	{
-		this(accountName, ip, time, null);
-	}
-	
-	@Override
-	public byte[] getContent()
-	{
-		return getBytes();
+		return _account;
 	}
 }

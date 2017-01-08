@@ -20,7 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * This class ...

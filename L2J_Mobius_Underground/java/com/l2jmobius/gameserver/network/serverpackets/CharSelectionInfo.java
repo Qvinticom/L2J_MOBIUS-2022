@@ -33,8 +33,8 @@ import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharSelectionInfo implements IClientOutgoingPacket
 {

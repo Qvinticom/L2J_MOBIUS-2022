@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 
 /**

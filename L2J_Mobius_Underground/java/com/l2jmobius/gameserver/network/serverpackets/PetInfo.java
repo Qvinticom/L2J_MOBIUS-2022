@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public class PetInfo implements IClientOutgoingPacket

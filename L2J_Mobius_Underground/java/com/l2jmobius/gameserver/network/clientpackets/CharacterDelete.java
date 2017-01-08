@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDelete;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharDeleteSuccess;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;

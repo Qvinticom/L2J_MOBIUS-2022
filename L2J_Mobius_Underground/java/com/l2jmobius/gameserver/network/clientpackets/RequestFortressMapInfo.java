@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowFortressMapInfo;
 

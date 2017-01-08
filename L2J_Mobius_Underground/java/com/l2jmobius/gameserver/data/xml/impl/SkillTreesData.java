@@ -1171,7 +1171,7 @@ public final class SkillTreesData implements IGameXmlReader
 		switch (skillType)
 		{
 			case CLASS:
-				sl = getClassSkill(id, lvl, player.getClassId()); 
+				sl = getClassSkill(id, lvl, player.getClassId());
 				break;
 			case TRANSFORM:
 				sl = getTransformSkill(id, lvl);

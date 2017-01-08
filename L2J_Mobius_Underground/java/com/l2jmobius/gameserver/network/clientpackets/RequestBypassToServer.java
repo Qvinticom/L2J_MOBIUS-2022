@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMenuSelect;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.util.Util;

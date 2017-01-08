@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Note: <b>There is known issue with this packet, it cannot be removed unless game client is restarted!</b>

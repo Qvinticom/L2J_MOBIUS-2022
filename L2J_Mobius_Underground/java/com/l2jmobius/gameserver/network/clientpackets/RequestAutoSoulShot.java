@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.ActionType;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 

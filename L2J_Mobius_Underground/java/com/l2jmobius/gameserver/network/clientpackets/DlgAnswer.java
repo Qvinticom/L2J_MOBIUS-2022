@@ -28,8 +28,8 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAn
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import com.l2jmobius.gameserver.model.holders.SummonRequestHolder;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 /**

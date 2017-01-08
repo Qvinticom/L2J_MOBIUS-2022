@@ -25,8 +25,8 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public final class RequestPetGetItem implements IClientIncomingPacket

@@ -20,7 +20,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeItemMakeInfo implements IClientOutgoingPacket
 {

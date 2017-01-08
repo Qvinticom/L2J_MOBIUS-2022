@@ -21,7 +21,7 @@ import java.util.Objects;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author chris_00

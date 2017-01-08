@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.commission.CommissionItemType;
 import com.l2jmobius.gameserver.model.commission.CommissionTreeType;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.commission.ExCloseCommission;
 

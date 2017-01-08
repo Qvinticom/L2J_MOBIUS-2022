@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.items.PcItemTemplate;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * This packet is received from client when a party leader requests to change the leadership to another player in his party.

@@ -22,7 +22,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
 import com.l2jmobius.gameserver.model.shuttle.L2ShuttleStop;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**

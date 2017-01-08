@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.instancemanager.ItemAuctionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuction;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExItemAuctionInfoPacket;
 
 /**

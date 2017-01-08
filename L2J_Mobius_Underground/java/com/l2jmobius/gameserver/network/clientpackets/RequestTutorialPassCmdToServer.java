@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 public class RequestTutorialPassCmdToServer implements IClientIncomingPacket
 {

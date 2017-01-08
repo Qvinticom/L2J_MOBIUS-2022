@@ -38,8 +38,8 @@ import com.l2jmobius.gameserver.model.multisell.Ingredient;
 import com.l2jmobius.gameserver.model.multisell.ItemInfo;
 import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
 import com.l2jmobius.gameserver.model.variables.ItemVariables;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**

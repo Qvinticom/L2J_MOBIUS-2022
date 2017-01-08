@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyData;
 import com.l2jmobius.gameserver.model.beautyshop.BeautyItem;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExResponseBeautyRegistReset;
 

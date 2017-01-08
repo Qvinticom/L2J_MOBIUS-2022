@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets.friend;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**

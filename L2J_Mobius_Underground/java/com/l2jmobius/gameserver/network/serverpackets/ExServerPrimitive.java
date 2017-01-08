@@ -22,7 +22,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * A packet used to draw points and lines on client.<br/>

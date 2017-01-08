@@ -23,7 +23,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.buylist.Product;
 import com.l2jmobius.gameserver.model.items.L2Item;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ShopPreviewList implements IClientOutgoingPacket
 {

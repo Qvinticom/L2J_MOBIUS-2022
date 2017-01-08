@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.CropProcure;
 import com.l2jmobius.gameserver.model.L2Seed;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author l3x

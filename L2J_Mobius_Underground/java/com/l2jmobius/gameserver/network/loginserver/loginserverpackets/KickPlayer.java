@@ -14,34 +14,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserver.loginserverpackets;
 
-import java.util.List;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
-import com.l2jmobius.commons.util.network.BaseSendablePacket;
-
-/**
- * @author mrTJO Thanks to mochitto
- */
-public class ReplyCharacters extends BaseSendablePacket
+public class KickPlayer extends BaseRecievePacket
 {
 	
-	public ReplyCharacters(String account, int chars, List<Long> timeToDel)
+	private final String _account;
+	
+	/**
+	 * @param decrypt
+	 */
+	public KickPlayer(byte[] decrypt)
 	{
-		writeC(0x08);
-		writeS(account);
-		writeC(chars);
-		writeC(timeToDel.size());
-		for (long time : timeToDel)
-		{
-			writeQ(time);
-		}
+		super(decrypt);
+		_account = readS();
 	}
 	
-	@Override
-	public byte[] getContent()
+	/**
+	 * @return Returns the account.
+	 */
+	public String getAccount()
 	{
-		return getBytes();
+		return _account;
 	}
 	
 }

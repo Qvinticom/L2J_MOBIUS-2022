@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * This class ...

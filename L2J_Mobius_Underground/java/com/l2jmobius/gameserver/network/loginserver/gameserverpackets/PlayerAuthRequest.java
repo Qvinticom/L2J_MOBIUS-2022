@@ -14,29 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.client;
+package com.l2jmobius.gameserver.network.loginserver.gameserverpackets;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.network.NetworkManager;
-import com.l2jmobius.gameserver.network.EventLoopGroupManager;
+import com.l2jmobius.commons.util.network.BaseSendablePacket;
+import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
 
 /**
- * @author Nos
+ * @author -Wooden-
  */
-public class ClientNetworkManager extends NetworkManager
+public class PlayerAuthRequest extends BaseSendablePacket
 {
-	protected ClientNetworkManager()
+	public PlayerAuthRequest(String account, SessionKey key)
 	{
-		super(EventLoopGroupManager.getInstance().getBossGroup(), EventLoopGroupManager.getInstance().getWorkerGroup(), new ClientInitializer(), Config.GAMESERVER_HOSTNAME, Config.PORT_GAME);
+		writeC(0x05);
+		writeS(account);
+		writeD(key.playOkID1);
+		writeD(key.playOkID2);
+		writeD(key.loginOkID1);
+		writeD(key.loginOkID2);
 	}
 	
-	public static ClientNetworkManager getInstance()
+	@Override
+	public byte[] getContent()
 	{
-		return SingletonHolder._instance;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final ClientNetworkManager _instance = new ClientNetworkManager();
+		return getBytes();
 	}
 }

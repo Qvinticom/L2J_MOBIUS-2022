@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-

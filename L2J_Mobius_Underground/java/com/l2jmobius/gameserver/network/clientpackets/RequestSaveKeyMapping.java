@@ -25,8 +25,8 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.UIData;
 import com.l2jmobius.gameserver.model.ActionKey;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.ConnectionState;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Request Save Key Mapping client packet.

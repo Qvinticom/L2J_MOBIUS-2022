@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.model.olympiad.OlympiadGameClassed;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameNonClassed;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author mrTJO

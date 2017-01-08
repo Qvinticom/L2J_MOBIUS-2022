@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets.appearance;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.ShapeShiftingItemRequest;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.appearance.ExShapeShiftingResult;
 

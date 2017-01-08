@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExIsCharNameCreatable;
 import com.l2jmobius.gameserver.util.Util;
 

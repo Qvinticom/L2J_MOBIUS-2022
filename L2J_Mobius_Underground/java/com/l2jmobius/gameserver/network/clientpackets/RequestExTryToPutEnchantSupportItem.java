@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.model.actor.request.EnchantItemRequest;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
 
 /**

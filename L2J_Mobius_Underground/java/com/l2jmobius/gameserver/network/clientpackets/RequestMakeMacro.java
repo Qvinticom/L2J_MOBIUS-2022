@@ -24,8 +24,8 @@ import com.l2jmobius.gameserver.enums.MacroType;
 import com.l2jmobius.gameserver.model.Macro;
 import com.l2jmobius.gameserver.model.MacroCmd;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 
 public final class RequestMakeMacro implements IClientIncomingPacket
 {

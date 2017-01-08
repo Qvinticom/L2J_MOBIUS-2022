@@ -20,7 +20,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuction;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuctionBid;
 import com.l2jmobius.gameserver.model.itemauction.ItemAuctionState;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Forsaiken

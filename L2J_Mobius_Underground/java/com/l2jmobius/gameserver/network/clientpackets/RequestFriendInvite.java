@@ -21,8 +21,8 @@ import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.FriendAddRequest;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 

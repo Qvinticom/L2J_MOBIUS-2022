@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
 
 /**
  * ConfirmDlg server packet implementation.

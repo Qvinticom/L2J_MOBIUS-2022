@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Steuf, UnAfraid

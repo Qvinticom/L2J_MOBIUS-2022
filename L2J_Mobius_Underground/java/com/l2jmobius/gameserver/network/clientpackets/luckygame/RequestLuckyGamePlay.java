@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets.luckygame;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.luckygame.ExBettingLuckyGameResult;
 

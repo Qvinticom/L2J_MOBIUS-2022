@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.actor.request.PrimeShopRequest;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopGroup;
 import com.l2jmobius.gameserver.model.primeshop.PrimeShopItem;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct;
 import com.l2jmobius.gameserver.network.serverpackets.primeshop.ExBRBuyProduct.ExBrProductReplyType;

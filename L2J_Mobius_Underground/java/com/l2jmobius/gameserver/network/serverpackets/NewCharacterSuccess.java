@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.templates.L2PcTemplate;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class NewCharacterSuccess implements IClientOutgoingPacket
 {

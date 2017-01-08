@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import com.l2jmobius.gameserver.security.SecondaryPasswordAuth;
 

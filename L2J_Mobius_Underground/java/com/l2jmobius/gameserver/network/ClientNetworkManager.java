@@ -14,30 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserverpackets;
+package com.l2jmobius.gameserver.network;
 
-import com.l2jmobius.commons.util.network.BaseRecievePacket;
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.NetworkManager;
 
-public class KickPlayer extends BaseRecievePacket
+/**
+ * @author Nos
+ */
+public class ClientNetworkManager extends NetworkManager
 {
-	
-	private final String _account;
-	
-	/**
-	 * @param decrypt
-	 */
-	public KickPlayer(byte[] decrypt)
+	protected ClientNetworkManager()
 	{
-		super(decrypt);
-		_account = readS();
+		super(EventLoopGroupManager.getInstance().getBossGroup(), EventLoopGroupManager.getInstance().getWorkerGroup(), new ClientInitializer(), Config.GAMESERVER_HOSTNAME, Config.PORT_GAME);
 	}
 	
-	/**
-	 * @return Returns the account.
-	 */
-	public String getAccount()
+	public static ClientNetworkManager getInstance()
 	{
-		return _account;
+		return SingletonHolder._instance;
 	}
 	
+	private static class SingletonHolder
+	{
+		protected static final ClientNetworkManager _instance = new ClientNetworkManager();
+	}
 }

@@ -24,8 +24,8 @@ import java.util.logging.LogRecord;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.ConnectionState;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 public class AccountingFormatter extends Formatter
 {

@@ -141,7 +141,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
-import com.l2jmobius.gameserver.network.client.ClientNetworkManager;
+import com.l2jmobius.gameserver.network.ClientNetworkManager;
 import com.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.pathfinding.PathFinding;

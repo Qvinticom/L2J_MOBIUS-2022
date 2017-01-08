@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Populates the Siege Attacker List in the SiegeInfo Window<BR>

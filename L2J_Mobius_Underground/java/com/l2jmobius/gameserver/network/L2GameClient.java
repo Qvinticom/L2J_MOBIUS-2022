@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.client;
+package com.l2jmobius.gameserver.network;
 
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
@@ -56,7 +56,6 @@ import com.l2jmobius.gameserver.model.entity.L2Event;
 import com.l2jmobius.gameserver.model.holders.ClientHardwareInfoHolder;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ServerClose;

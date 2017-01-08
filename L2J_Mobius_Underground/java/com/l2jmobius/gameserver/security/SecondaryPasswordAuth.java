@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordVerify;

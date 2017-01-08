@@ -14,29 +14,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserver.loginserverpackets;
 
-import com.l2jmobius.commons.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.util.network.BaseRecievePacket;
 
 /**
- * @author mrTJO
+ * @author -Wooden-
  */
-public class PlayerTracert extends BaseSendablePacket
+public class PlayerAuthResponse extends BaseRecievePacket
 {
-	public PlayerTracert(String account, String pcIp, String hop1, String hop2, String hop3, String hop4)
+	
+	private final String _account;
+	private final boolean _authed;
+	
+	/**
+	 * @param decrypt
+	 */
+	public PlayerAuthResponse(byte[] decrypt)
 	{
-		writeC(0x07);
-		writeS(account);
-		writeS(pcIp);
-		writeS(hop1);
-		writeS(hop2);
-		writeS(hop3);
-		writeS(hop4);
+		super(decrypt);
+		
+		_account = readS();
+		_authed = (readC() != 0);
 	}
 	
-	@Override
-	public byte[] getContent()
+	/**
+	 * @return Returns the account.
+	 */
+	public String getAccount()
 	{
-		return getBytes();
+		return _account;
 	}
+	
+	/**
+	 * @return Returns the authed state.
+	 */
+	public boolean isAuthed()
+	{
+		return _authed;
+	}
+	
 }

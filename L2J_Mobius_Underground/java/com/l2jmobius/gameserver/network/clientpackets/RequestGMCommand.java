@@ -21,7 +21,7 @@ import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.GMHennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewCharacterInfo;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;

@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.MentorManager;
 import com.l2jmobius.gameserver.model.L2Mentee;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**

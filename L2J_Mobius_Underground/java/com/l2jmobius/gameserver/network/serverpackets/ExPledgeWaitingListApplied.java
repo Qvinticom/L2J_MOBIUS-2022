@@ -20,7 +20,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Sdw

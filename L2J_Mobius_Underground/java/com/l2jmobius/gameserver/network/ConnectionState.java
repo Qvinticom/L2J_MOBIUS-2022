@@ -14,28 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserverpackets;
+package com.l2jmobius.gameserver.network;
 
-import com.l2jmobius.commons.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.network.IConnectionState;
 
 /**
- * @author mrTJO Thanks to mochitto
+ * @author Nos
  */
-public class RequestCharacters extends BaseRecievePacket
+public enum ConnectionState implements IConnectionState
 {
-	private final String _account;
-	
-	public RequestCharacters(byte[] decrypt)
-	{
-		super(decrypt);
-		_account = readS();
-	}
-	
-	/**
-	 * @return Return account name
-	 */
-	public String getAccount()
-	{
-		return _account;
-	}
+	CONNECTED,
+	DISCONNECTED,
+	CLOSING,
+	AUTHENTICATED,
+	IN_GAME
 }

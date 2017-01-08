@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharInfo implements IClientOutgoingPacket
 {

@@ -20,7 +20,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.CeremonyOfChaosResult;
 import com.l2jmobius.gameserver.instancemanager.CeremonyOfChaosManager;
 import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**

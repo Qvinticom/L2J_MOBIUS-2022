@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.network.IIncomingPacket;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Packets received by the game server from clients

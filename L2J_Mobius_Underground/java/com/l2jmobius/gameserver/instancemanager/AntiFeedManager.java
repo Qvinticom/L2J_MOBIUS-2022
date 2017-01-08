@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 public final class AntiFeedManager
 {

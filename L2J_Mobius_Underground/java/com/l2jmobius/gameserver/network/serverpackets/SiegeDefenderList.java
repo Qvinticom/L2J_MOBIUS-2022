@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.enums.SiegeClanType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.entity.Castle;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Populates the Siege Defender List in the SiegeInfo Window<BR>

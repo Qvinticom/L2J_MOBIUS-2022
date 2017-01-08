@@ -20,8 +20,8 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeWaitingInfo;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.client.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**

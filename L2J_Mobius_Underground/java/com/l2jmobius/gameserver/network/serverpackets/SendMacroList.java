@@ -20,7 +20,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.MacroUpdateType;
 import com.l2jmobius.gameserver.model.Macro;
 import com.l2jmobius.gameserver.model.MacroCmd;
-import com.l2jmobius.gameserver.network.client.OutgoingPackets;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class SendMacroList implements IClientOutgoingPacket
 {
