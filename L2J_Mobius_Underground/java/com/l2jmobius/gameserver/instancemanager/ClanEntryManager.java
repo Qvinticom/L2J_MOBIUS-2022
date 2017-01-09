@@ -227,8 +227,8 @@ public class ClanEntryManager
 			{
 				LOGGER.log(Level.WARNING, e.getMessage(), e);
 			}
-			
-			return _waitingList.put(playerId, info) != null;
+			_waitingList.put(playerId, info);
+			return true;
 		}
 		return false;
 	}
@@ -273,7 +273,8 @@ public class ClanEntryManager
 			{
 				LOGGER.log(Level.WARNING, e.getMessage(), e);
 			}
-			return _clanList.put(clanId, info) != null;
+			_clanList.put(clanId, info);
+			return true;
 		}
 		return false;
 	}
