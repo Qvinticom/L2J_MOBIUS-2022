@@ -2416,12 +2416,12 @@ public final class Config
 			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
 			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
 			
-			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("lilithMinPlayers", 98);
-			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("lilithMaxPlayers", 120);
-			LILITH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOflilithSpawn", 192);
-			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOflilithSpawn", 148);
-			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("lilithMinPlayerLvl", 85);
-			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("lilithMaxPlayerLvl", 89);
+			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("LilithMinPlayers", 98);
+			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("LilithMaxPlayers", 120);
+			LILITH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLilithSpawn", 192);
+			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLilithSpawn", 148);
+			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
+			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
