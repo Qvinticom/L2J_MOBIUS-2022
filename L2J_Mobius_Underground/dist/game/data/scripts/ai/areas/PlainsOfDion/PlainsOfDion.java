@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.group;
+package ai.areas.PlainsOfDion;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.GeoData;
