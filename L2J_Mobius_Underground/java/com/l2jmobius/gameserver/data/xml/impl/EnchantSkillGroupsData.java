@@ -60,7 +60,7 @@ public class EnchantSkillGroupsData implements IGameXmlReader
 	public void load()
 	{
 		_enchantSkillHolders.clear();
-		parseDatapackFile("data/enchantSkillGroups.xml");
+		parseDatapackFile("data/EnchantSkillGroups.xml");
 		MAX_ENCHANT_LEVEL = _enchantSkillHolders.size();
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _enchantSkillHolders.size() + " enchant routes, max enchant set to " + MAX_ENCHANT_LEVEL + ".");
 	}
