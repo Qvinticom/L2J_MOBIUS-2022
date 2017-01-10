@@ -396,6 +396,15 @@ public enum ClassId implements IIdentifiable
 		return _parent;
 	}
 	
+	public final ClassId getRootClassId()
+	{
+		if (_parent != null)
+		{
+			return _parent.getRootClassId();
+		}
+		return this;
+	}
+	
 	/**
 	 * @return list of possible class transfer for this class
 	 */
