@@ -394,7 +394,7 @@ public final class BuffInfo
 				smId = SystemMessageId.S1_HAS_WORN_OFF;
 			}
 			
-			if (smId != null)
+			if ((smId != null) && (_effected.getActingPlayer() != null) && _effected.getActingPlayer().isOnline())
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(smId);
 				sm.addSkillName(_skill);
