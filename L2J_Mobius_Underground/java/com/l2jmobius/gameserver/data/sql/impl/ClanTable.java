@@ -359,7 +359,7 @@ public class ClanTable
 	public void storeclanswars(ClanWar war)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state) VALUES(?,?,?,?,?,?,?)"))
+			PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state) VALUES(?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, war.getAttackerClanId());
 			ps.setInt(2, war.getAttackedClanId());
