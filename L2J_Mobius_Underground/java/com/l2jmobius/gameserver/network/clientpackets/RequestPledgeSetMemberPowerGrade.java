@@ -22,6 +22,9 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Format: (ch) Sd
@@ -79,7 +82,8 @@ public final class RequestPledgeSetMemberPowerGrade implements IClientIncomingPa
 		}
 		
 		member.setPowerGrade(_powerGrade);
-		clan.broadcastClanStatus();
+		clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(member));
+		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_S_PRIVILEGE_LEVEL_HAS_BEEN_CHANGED_TO_S2).addString(member.getName()).addInt(_powerGrade));
 	}
 	
 }
