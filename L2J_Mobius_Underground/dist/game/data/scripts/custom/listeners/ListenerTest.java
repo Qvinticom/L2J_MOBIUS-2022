@@ -150,7 +150,7 @@ public class ListenerTest extends AbstractNpcAI
 	 */
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void onPlayerLogin(OnPlayerLogin event)
+	public void OnPlayerLogin(OnPlayerLogin event)
 	{
 		_log.info(getClass().getSimpleName() + ": Player: " + event.getActiveChar() + " has logged in!");
 	}

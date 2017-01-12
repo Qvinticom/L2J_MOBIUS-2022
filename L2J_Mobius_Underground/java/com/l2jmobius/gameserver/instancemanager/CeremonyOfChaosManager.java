@@ -371,7 +371,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	
 	@RegisterEvent(EventType.ON_PLAYER_BYPASS)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private TerminateReturn OnPlayerBypass(OnPlayerBypass event)
+	public TerminateReturn OnPlayerBypass(OnPlayerBypass event)
 	{
 		final L2PcInstance player = event.getActiveChar();
 		if (player == null)
@@ -394,7 +394,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void OnPlayerLogin(OnPlayerLogin event)
+	public void OnPlayerLogin(OnPlayerLogin event)
 	{
 		if (Config.DISABLE_TUTORIAL)
 		{
@@ -411,9 +411,10 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 	}
 	
+	@Override
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void OnPlayerLogout(OnPlayerLogout event)
+	public void OnPlayerLogout(OnPlayerLogout event)
 	{
 		if (getState() == CeremonyOfChaosState.REGISTRATION)
 		{

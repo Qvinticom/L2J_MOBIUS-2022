@@ -196,7 +196,7 @@ public abstract class AbstractEventManager<T extends AbstractEvent<?>>extends Ab
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	private void onPlayerLogout(OnPlayerLogout event)
+	public void OnPlayerLogout(OnPlayerLogout event)
 	{
 		final L2PcInstance player = event.getActiveChar();
 		if (_registeredPlayers.remove(player))
