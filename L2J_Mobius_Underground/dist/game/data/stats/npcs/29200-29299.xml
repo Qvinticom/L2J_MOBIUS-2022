@@ -945,14 +945,8 @@
 	</npc>
 	<npc id="29218" level="99" type="L2RaidBoss" name="Balok" title="Hell's Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<skill name="boss_skill_01" id="14246" level="1" />
-			<skill name="boss_skill_02" id="14247" level="1" />
-			<skill name="boss_skill_03" id="14248" level="1" />
-			<skill name="boss_skill_04" id="14249" level="1" />
-			<skill name="boss_skill_05" id="5226" level="1" />
-			<skill name="boss_skill_06" id="14366" level="1" />
-			<skill name="boss_skill_07" id="14367" level="1" />
+		<parameters>			
+			<skill name="boss_skill_01" id="14366" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
 		<race>DEMONIC</race>
@@ -976,9 +970,13 @@
 		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="14727" level="1" /> <!-- Balok -->
+			<skill id="14246" level="1" /> <!-- Black Vortex -->
+			<skill id="14727" level="1" /> <!-- Earth Demolition -->
+			<skill id="14366" level="1" /> <!-- Black Vortex Swamp -->
+			<!-- <skill id="14367" level="1" />  Darkness Drain -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5226" level="1" /> <!-- Imprison -->
+			<!-- <skill id="14576" level="1" />  Rear Destroy -->
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
