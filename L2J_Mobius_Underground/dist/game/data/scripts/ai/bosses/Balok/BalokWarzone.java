@@ -319,7 +319,7 @@ public final class BalokWarzone extends AbstractInstance
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (!npc.isDead() && npc.getEffectList().isAffectedBySkill(INVINCIBILITY_ACTIVATION.getSkillId()) /* && caster.isBehindTarget() */) // TODO: does not work
+		if (!npc.isDead() && npc.getEffectList().isAffectedBySkill(INVINCIBILITY_ACTIVATION.getSkillId()) && caster.isBehindTarget()) // TODO: does not work
 		{
 			npc.setTarget(caster);
 			npc.doCast(REAR_DESTROY.getSkill());
