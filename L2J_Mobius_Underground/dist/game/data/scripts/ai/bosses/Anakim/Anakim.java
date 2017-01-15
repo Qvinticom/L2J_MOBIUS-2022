@@ -471,7 +471,7 @@ public class Anakim extends AbstractNpcAI
 	{
 		if ((npc.getId() == ENTER_CUBIC) || (npc.getId() == ANAKIM_CUBIC))
 		{
-			int _anakimStatus = GrandBossManager.getInstance().getBossStatus(ANAKIM);
+			final int _anakimStatus = GrandBossManager.getInstance().getBossStatus(ANAKIM);
 			if ((npc.getId() == ENTER_CUBIC) && (_anakimStatus > ALIVE))
 			{
 				return "31101-01.html";
@@ -492,35 +492,41 @@ public class Anakim extends AbstractNpcAI
 			{
 				return "31101-03.html";
 			}
-			else if ((((L2Character) members).getParty().getLevel() < Config.ANAKIM_MIN_PLAYER_LVL) || (((L2Character) members).getParty().getLevel() > Config.ANAKIM_MAX_PLAYER_LVL))
-			{
-				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "31101-04.html"));
-				packet.replace("%minlvl%", Integer.toString(Config.ANAKIM_MIN_PLAYER_LVL));
-				packet.replace("%maxlvl%", Integer.toString(Config.ANAKIM_MAX_PLAYER_LVL));
-				player.sendPacket(packet);
-			}
-			else if ((members.size() < Config.ANAKIM_MIN_PLAYERS) || (members.size() > Config.ANAKIM_MAX_PLAYERS))
+			
+			if ((members.size() < Config.ANAKIM_MIN_PLAYERS) || (members.size() > Config.ANAKIM_MAX_PLAYERS))
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 				packet.setHtml(getHtm(player.getHtmlPrefix(), "31101-02.html"));
 				packet.replace("%min%", Integer.toString(Config.ANAKIM_MIN_PLAYERS));
 				player.sendPacket(packet);
+				return null;
 			}
-			else
+			
+			for (L2PcInstance member : members)
 			{
-				for (L2PcInstance member : members)
+				if ((member.getLevel() < Config.ANAKIM_MIN_PLAYER_LVL) || (member.getLevel() > Config.ANAKIM_MAX_PLAYER_LVL))
 				{
-					if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ENTER_CUBIC))
-					{
-						member.teleToLocation(ENTER_LOC, true);
-					}
-					else if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ANAKIM_CUBIC))
-					{
-						member.teleToLocation(ENTER_ANAKIM_LOC, true);
-					}
+					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+					packet.setHtml(getHtm(player.getHtmlPrefix(), "31101-04.html"));
+					packet.replace("%minlvl%", Integer.toString(Config.ANAKIM_MIN_PLAYER_LVL));
+					packet.replace("%maxlvl%", Integer.toString(Config.ANAKIM_MAX_PLAYER_LVL));
+					player.sendPacket(packet);
+					return null;
 				}
 			}
+			
+			for (L2PcInstance member : members)
+			{
+				if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ENTER_CUBIC))
+				{
+					member.teleToLocation(ENTER_LOC, true);
+				}
+				else if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ANAKIM_CUBIC))
+				{
+					member.teleToLocation(ENTER_ANAKIM_LOC, true);
+				}
+			}
+			
 			if ((_anakimStatus == ALIVE) && (npc.getId() == ENTER_CUBIC))
 			{
 				GrandBossManager.getInstance().setBossStatus(ANAKIM, WAITING);

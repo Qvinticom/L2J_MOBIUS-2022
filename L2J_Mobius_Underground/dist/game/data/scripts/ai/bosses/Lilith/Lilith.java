@@ -497,7 +497,7 @@ public class Lilith extends AbstractNpcAI
 	{
 		if ((npc.getId() == ENTER_CUBIC) || (npc.getId() == LILITH_CUBIC))
 		{
-			int _lilithStatus = GrandBossManager.getInstance().getBossStatus(LILITH);
+			final int _lilithStatus = GrandBossManager.getInstance().getBossStatus(LILITH);
 			if ((npc.getId() == ENTER_CUBIC) && (_lilithStatus > ALIVE))
 			{
 				return "31118-01.html";
@@ -518,16 +518,8 @@ public class Lilith extends AbstractNpcAI
 			{
 				return "31118-03.html";
 			}
-			else if ((((L2Character) members).getParty().getLevel() < Config.LILITH_MIN_PLAYER_LVL) || (((L2Character) members).getParty().getLevel() > Config.LILITH_MAX_PLAYER_LVL))
-			{
-				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "31118-04.html"));
-				packet.replace("%minlvl%", Integer.toString(Config.LILITH_MIN_PLAYER_LVL));
-				packet.replace("%maxlvl%", Integer.toString(Config.LILITH_MAX_PLAYER_LVL));
-				player.sendPacket(packet);
-				return null;
-			}
-			else if ((members.size() < Config.LILITH_MIN_PLAYERS) || (members.size() > Config.LILITH_MAX_PLAYERS))
+			
+			if ((members.size() < Config.LILITH_MIN_PLAYERS) || (members.size() > Config.LILITH_MAX_PLAYERS))
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 				packet.setHtml(getHtm(player.getHtmlPrefix(), "31118-02.html"));
@@ -535,20 +527,32 @@ public class Lilith extends AbstractNpcAI
 				player.sendPacket(packet);
 				return null;
 			}
-			else
+			
+			for (L2PcInstance member : members)
 			{
-				for (L2PcInstance member : members)
+				if ((member.getLevel() < Config.LILITH_MIN_PLAYER_LVL) || (member.getLevel() > Config.LILITH_MAX_PLAYER_LVL))
 				{
-					if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ENTER_CUBIC))
-					{
-						member.teleToLocation(ENTER_LOC, true);
-					}
-					else if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == LILITH_CUBIC))
-					{
-						member.teleToLocation(ENTER_LILITH_LOC, true);
-					}
+					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
+					packet.setHtml(getHtm(player.getHtmlPrefix(), "31118-04.html"));
+					packet.replace("%minlvl%", Integer.toString(Config.LILITH_MIN_PLAYER_LVL));
+					packet.replace("%maxlvl%", Integer.toString(Config.LILITH_MAX_PLAYER_LVL));
+					player.sendPacket(packet);
+					return null;
 				}
 			}
+			
+			for (L2PcInstance member : members)
+			{
+				if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ENTER_CUBIC))
+				{
+					member.teleToLocation(ENTER_LOC, true);
+				}
+				else if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == LILITH_CUBIC))
+				{
+					member.teleToLocation(ENTER_LILITH_LOC, true);
+				}
+			}
+			
 			if ((_lilithStatus == ALIVE) && (npc.getId() == ENTER_CUBIC))
 			{
 				GrandBossManager.getInstance().setBossStatus(LILITH, WAITING);
