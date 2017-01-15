@@ -53,7 +53,7 @@ public final class BalokWarzone extends AbstractInstance
 	private static final int HELL_DISCIPLE = 29219;
 	private static final int ENTRANCE_PORTAL = 33523;
 	private static final int INVISIBLE_NPC_1 = 29106;
-	private static final int BLUE_GRAVE = 19562; // TODO need find retail npc ID
+	private static final int HELLS_GATE = 19040;
 	// Item
 	private static final int PRISON_KEY = 10015;
 	// Skills
@@ -182,9 +182,16 @@ public final class BalokWarzone extends AbstractInstance
 				{
 					for (int i = 0; i < 4; i++)
 					{
-						L2Npc disciple = addSpawn(HELL_DISCIPLE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 600000, false);
+						L2Npc disciple = addSpawn(HELL_DISCIPLE, npc.getX(), npc.getY(), npc.getZ(), 0, true, 600000, false, world.getId());
 						addAttackPlayerDesire(disciple, player);
 					}
+					break;
+				}
+				case "imprission_minions":
+				{
+					int[] randomJail = PRISONS_SPAWN[Rnd.get(PRISONS_SPAWN.length)]; // Random jail
+					player.teleToLocation(randomJail[0], randomJail[1], randomJail[2]);
+					world.broadcastPacket(new ExShowScreenMessage("$s1, locked away in the prison.".replace("$s1", player.getName()), 5000));
 					break;
 				}
 			}
@@ -209,7 +216,7 @@ public final class BalokWarzone extends AbstractInstance
 						world.setStatus(2);
 					}
 				}
-				else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.50)) && (world.getStatus() == 2))
+				if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.50)) && (world.getStatus() == 2))
 				{
 					if (npc.isScriptValue(0))
 					{
@@ -224,18 +231,16 @@ public final class BalokWarzone extends AbstractInstance
 						}
 						npc.setTarget(instPlayer);
 						npc.doCast(IMPRISION.getSkill());
-						int[] randomJail = PRISONS_SPAWN[Rnd.get(PRISONS_SPAWN.length)]; // Random jail
-						instPlayer.teleToLocation(randomJail[0], randomJail[1], randomJail[2]);
-						world.broadcastPacket(new ExShowScreenMessage("$s1, locked away in the prison.".replace("$s1", instPlayer.getName()), 5000));
+						getTimers().addTimer("imprission_minions", 4000, npc, instPlayer);
 					});
 					getTimers().addTimer("stage_last_send_minions", 2000, npc, null);
 				}
-				else if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.30)))
+				if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.25)) && npc.isScriptValue(1))
 				{
+					npc.setScriptValue(2);
 					npc.setTarget(attacker);
 					npc.doCast(EARTH_DEMOLITION.getSkill());
-					// TODO: does not spawn
-					addSpawn(BLUE_GRAVE, npc.getX() + 100, npc.getY() + 50, npc.getZ(), npc.getHeading(), false, 0, false, world.getId());
+					addSpawn(HELLS_GATE, npc.getX() + 100, npc.getY() + 50, npc.getZ(), npc.getHeading(), false, 0, false, world.getId());
 					getTimers().addTimer("stage_spawn_apostols", 2000, npc, attacker);
 				}
 			}
@@ -319,14 +324,14 @@ public final class BalokWarzone extends AbstractInstance
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (!npc.isDead() && npc.getEffectList().isAffectedBySkill(INVINCIBILITY_ACTIVATION.getSkillId()) && caster.isBehindTarget()) // TODO: does not work
+		if (!npc.isDead() && npc.getEffectList().isAffectedBySkill(INVINCIBILITY_ACTIVATION.getSkillId()) && caster.isBehindTarget(true))
 		{
-			npc.setTarget(caster);
-			npc.doCast(REAR_DESTROY.getSkill());
-			if (getRandom(100) < 30)
+			if (getRandom(100) < 20)
 			{
 				npc.stopSkillEffects(INVINCIBILITY_ACTIVATION.getSkill());
 			}
+			npc.setTarget(caster);
+			npc.doCast(REAR_DESTROY.getSkill());
 		}
 		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
