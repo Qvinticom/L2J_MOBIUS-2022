@@ -33,6 +33,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
@@ -41,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import instances.AbstractInstance;
 
 /**
- * Baylor Warzone instance zone.
+ * Balok Warzone instance zone.
  * @author LasTravel, Gigi
  * @Video https://www.youtube.com/watch?v=w_-SNNPoulo&t=204s
  */
@@ -59,9 +60,9 @@ public final class BalokWarzone extends AbstractInstance
 	// Skills
 	private static final SkillHolder DARKNESS_DRAIN = new SkillHolder(14367, 1);
 	private static final SkillHolder REAR_DESTROY = new SkillHolder(14576, 1);
-	private static final SkillHolder INVINCIBILITY_ACTIVATION = new SkillHolder(14190, 1);
 	private static final SkillHolder EARTH_DEMOLITION = new SkillHolder(14246, 1);
 	private static final SkillHolder IMPRISION = new SkillHolder(5226, 1);
+	private static final SkillHolder INVINCIBILITY_ACTIVATION = new SkillHolder(14190, 1);
 	// Misc
 	private static final int TEMPLATE_ID = 167;
 	//@formatter:off
@@ -111,11 +112,11 @@ public final class BalokWarzone extends AbstractInstance
 	{
 		if (event.equals("enterInstance"))
 		{
+			enterInstance(player, npc, TEMPLATE_ID);
 			if (hasQuestItems(player, PRISON_KEY))
 			{
 				takeItems(player, PRISON_KEY, -1);
 			}
-			enterInstance(player, npc, TEMPLATE_ID);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -164,7 +165,7 @@ public final class BalokWarzone extends AbstractInstance
 				{
 					if (npc.getId() == MINION)
 					{
-						if (npc.calculateDistance(balok.getXdestination(), balok.getYdestination(), 0, false, true) < (800 * 800))
+						if (npc.calculateDistance(balok, false, true) > 113125)
 						{
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(balok.getX() + 100, balok.getY() + 50, balok.getZ(), balok.getHeading()));
 							getTimers().addTimer("stage_last_minion_walk", 2000, npc, player);
@@ -238,7 +239,6 @@ public final class BalokWarzone extends AbstractInstance
 				if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.25)) && npc.isScriptValue(1))
 				{
 					npc.setScriptValue(2);
-					npc.setTarget(attacker);
 					npc.doCast(EARTH_DEMOLITION.getSkill());
 					addSpawn(HELLS_GATE, npc.getX() + 100, npc.getY() + 50, npc.getZ(), npc.getHeading(), false, 0, false, world.getId());
 					getTimers().addTimer("stage_spawn_apostols", 2000, npc, attacker);
@@ -277,7 +277,7 @@ public final class BalokWarzone extends AbstractInstance
 		{
 			if (world.getAliveNpcs(BALOK).isEmpty())
 			{
-				world.getAliveNpcs(MINION).forEach(guard -> guard.doDie(null));
+				world.getAliveNpcs(MINION, HELL_DISCIPLE, HELLS_GATE).forEach(guard -> guard.doDie(null));
 				world.removeNpcs();
 				world.finishInstance();
 				world.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt((int) 5.0D));
@@ -324,9 +324,10 @@ public final class BalokWarzone extends AbstractInstance
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (!npc.isDead() && npc.getEffectList().isAffectedBySkill(INVINCIBILITY_ACTIVATION.getSkillId()) && caster.isBehindTarget(true))
+		if (!npc.isDead() && caster.isBehindTarget())
 		{
-			if (getRandom(100) < 20)
+			final BuffInfo info = npc.getEffectList().getBuffInfoBySkillId(INVINCIBILITY_ACTIVATION.getSkillId());
+			if ((info != null) && (getRandom(100) < 40))
 			{
 				npc.stopSkillEffects(INVINCIBILITY_ACTIVATION.getSkill());
 			}

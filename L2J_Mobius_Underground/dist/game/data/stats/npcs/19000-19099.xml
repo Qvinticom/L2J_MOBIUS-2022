@@ -1237,7 +1237,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ai aggroRange="300" isAggressive="false" clanHelpRange="300" />
 		<collision>
 			<radius normal="15" />
 			<height normal="2" />
