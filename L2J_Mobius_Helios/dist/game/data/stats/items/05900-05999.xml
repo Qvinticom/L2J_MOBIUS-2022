@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5900" name="Coin Collecting Album" type="EtcItem">
 		<!-- High-quality coin collecting album made of leather. -->
@@ -863,7 +863,7 @@
 		</skills>
 	</item>
 	<item id="5970" name="Ancient Chain Letter" type="EtcItem">
-		<!-- Mysterious letter found in the Tower of Insolence. Its text reads "if you send this letter to 10 other people, you will have good luck!" -->
+		<!-- Mysterious letter found in the Tower of Insolence. Its text reads if you send this letter to 10 other people, you will have good luck! -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />

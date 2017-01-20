@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38700" name="Steel Soldat Estoc" type="Weapon">
 		<!-- <Special Option>. Critical + 86. When enchanted to + 4 or above, has a chance during a Critical to increase entire party's P./M. Atk. and received Heal, and decrease Skill MP Consumption. Cannot augment or bestow a Soul Crystal option. -->
@@ -267,7 +267,7 @@
 		</stats>
 	</item>
 	<item id="38710" name="Steel Dark Elven Longbow" type="Weapon">
-		<!-- <Special Option>. In a normal Critical Attack, 41% chance of inflicting Bleed. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. In a normal Critical Attack,  41% chance of inflicting Bleed. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -454,7 +454,7 @@
 		</stats>
 	</item>
 	<item id="38717" name="Steel Spiritual Eye" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>.  Casting Spd. + 15%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -481,7 +481,7 @@
 		</stats>
 	</item>
 	<item id="38718" name="Steel Keshanberk*Keshanberk" type="Weapon">
-		<!-- Cannot augment. As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to + 4 or above, Atk. Spd. + 8%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- Cannot augment. As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to + 4 or above,  Atk. Spd. + 8%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -587,7 +587,7 @@
 		</stats>
 	</item>
 	<item id="38722" name="Steel Carnage Bow" type="Weapon">
-		<!-- <Special Option>. In a normal Critical Attack, 35% chance of inflicting Bleed. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. In a normal Critical Attack,  35% chance of inflicting Bleed. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -641,7 +641,7 @@
 		</stats>
 	</item>
 	<item id="38724" name="Steel Doomchanter" type="Weapon">
-		<!-- <Special Option>. In a normal Critical Attack, 35% chance of inflicting Bleed. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- <Special Option>. In a normal Critical Attack,  35% chance of inflicting Bleed. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1448,7 +1448,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38761" name="Energy of Destruction 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain Energy of Destruction x 3. -->
+		<!-- Double-click to obtain Energy of Destruction x  3. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1456,7 +1456,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38762" name="Energy of Destruction 20-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain Energy of Destruction x 20. -->
+		<!-- Double-click to obtain Energy of Destruction x  20. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1464,7 +1464,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38763" name="Energy of Destruction 100-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain Energy of Destruction x 100. -->
+		<!-- Double-click to obtain Energy of Destruction x  100. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1472,7 +1472,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38764" name="My Teleport Pack" type="EtcItem">
-		<!-- Double-click to obtain a My Teleport Book and My Teleport Scroll x 10. -->
+		<!-- Double-click to obtain a My Teleport Book and  My Teleport Scroll x 10. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />

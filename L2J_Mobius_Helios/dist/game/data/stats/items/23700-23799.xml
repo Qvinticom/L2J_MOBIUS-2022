@@ -433,7 +433,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23728" name="Erupting Vitality XP Potion" type="EtcItem">
-		<!-- For 1 hr., XP Bonus + 100% with current Vitality. -->
+		<!-- For 1 hr., XP Bonus + 100% with current Vitality. Note that Vitality Bonus does not apply to boss monsters. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

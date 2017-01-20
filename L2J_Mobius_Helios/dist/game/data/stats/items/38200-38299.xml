@@ -375,7 +375,7 @@
 			<skill id="17387" level="1" /> <!-- Fish Stew: WIT -->
 		</skills>
 	</item>
-	<item id="38223" name="Fish Stew" additionalName="INT" type="EtcItem">
+	<item id="38223" name="Fish Stew" additionalName="Int" type="EtcItem">
 		<!-- For 30 min., INT + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -426,7 +426,7 @@
 			<skill id="17390" level="1" /> <!-- Fish Stew: DEX -->
 		</skills>
 	</item>
-	<item id="38226" name="Fish Stew" additionalName="STR" type="EtcItem">
+	<item id="38226" name="Fish Stew" additionalName="Str" type="EtcItem">
 		<!-- For 30 min., STR + 3. Using different fish stews applies the effect of one. Cooldown is 5min. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -460,7 +460,7 @@
 			<skill id="17392" level="1" /> <!-- Fish Stew: CON -->
 		</skills>
 	</item>
-	<item id="38228" name="Lady's Hairpin" additionalName="STR" type="Armor">
+	<item id="38228" name="Lady's Hairpin" additionalName="Str" type="Armor">
 		<!-- STR + 3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -492,7 +492,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38232" name="Lady's Hairpin" additionalName="INT" type="Armor">
+	<item id="38232" name="Lady's Hairpin" additionalName="Int" type="Armor">
 		<!-- INT + 3. Female only. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -572,7 +572,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38242" name="Party Mask" additionalName="STR" type="Armor">
+	<item id="38242" name="Party Mask" additionalName="Str" type="Armor">
 		<!-- STR + 3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -606,7 +606,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="38246" name="Party Mask" additionalName="INT" type="Armor">
+	<item id="38246" name="Party Mask" additionalName="Int" type="Armor">
 		<!-- INT + 3. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -694,7 +694,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="38256" name="Monocle" additionalName="STR" type="Armor">
+	<item id="38256" name="Monocle" additionalName="Str" type="Armor">
 		<!-- STR + 3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -727,7 +727,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="38260" name="Monocle" additionalName="INT" type="Armor">
+	<item id="38260" name="Monocle" additionalName="Int" type="Armor">
 		<!-- INT + 3. -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -808,7 +808,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38270" name="Maiden's Hairpin" additionalName="STR" type="Armor">
+	<item id="38270" name="Maiden's Hairpin" additionalName="Str" type="Armor">
 		<!-- STR + 3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -840,7 +840,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38274" name="Maiden's Hairpin" additionalName="INT" type="Armor">
+	<item id="38274" name="Maiden's Hairpin" additionalName="Int" type="Armor">
 		<!-- INT + 3. Female only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -920,7 +920,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38284" name="Forget-me-not Hairpin" additionalName="STR" type="Armor">
+	<item id="38284" name="Forget-me-not Hairpin" additionalName="Str" type="Armor">
 		<!-- STR + 3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -952,7 +952,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38288" name="Forget-me-not Hairpin" additionalName="INT" type="Armor">
+	<item id="38288" name="Forget-me-not Hairpin" additionalName="Int" type="Armor">
 		<!-- INT + 3. Female only. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1033,7 +1033,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="price" val="50000" />
 	</item>
-	<item id="38298" name="Daisy Hairpin" additionalName="STR" type="Armor">
+	<item id="38298" name="Daisy Hairpin" additionalName="Str" type="Armor">
 		<!-- STR + 3. Female only. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />

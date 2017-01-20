@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46600" name="Red Zubei" type="Armor">
 		<set name="icon" val="icon.armor_t56_u_i00" />
@@ -22,7 +22,7 @@
 		</stats>
 	</item>
 	<item id="46602" name="Blue Dynasty Cloak" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Cloak. -->
+		<!-- Blue Dynasty Cloak. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -34,7 +34,7 @@
 		</stats>
 	</item>
 	<item id="46603" name="Blue Dynasty Armor Appearance Stone" type="EtcItem">
-		<!-- L2 Assist App item. Changes the appearance of your entire armor into that of Blue Dynasty. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
+		<!-- Changes the appearance of your entire armor into that of Blue Dynasty. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -42,7 +42,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46604" name="Zubei Armor Appearance Stone" type="EtcItem">
-		<!-- L2 Assist App item. Changes the appearance of your entire armor into that of Red Zubei. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
+		<!-- Changes the appearance of your entire armor into that of Red Zubei. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -60,112 +60,112 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="46606" name="Blue Dynasty Circlet" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="46607" name="Blue Dynasty Circlet" additionalName="STR" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. STR + 3 when equipped. -->
+	<item id="46607" name="Blue Dynasty Circlet" additionalName="Str" type="Armor">
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. STR + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46608" name="Blue Dynasty Circlet" additionalName="DEX" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. DEX + 3 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. DEX + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46609" name="Blue Dynasty Circlet" additionalName="CON" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CON + 3 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CON + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46610" name="Blue Dynasty Circlet" additionalName="MEN" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. MEN + 3 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. MEN + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="46611" name="Blue Dynasty Circlet" additionalName="INT" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. INT + 3 when equipped. -->
+	<item id="46611" name="Blue Dynasty Circlet" additionalName="Int" type="Armor">
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. INT + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46612" name="Blue Dynasty Circlet" additionalName="WIT" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. WIT + 3 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. WIT + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46613" name="Blue Dynasty Circlet" additionalName="Critical Rate" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Critical Rate + 50 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Critical Rate + 50 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46614" name="Blue Dynasty Circlet" additionalName="Critical Damage" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Critical Damage + 90 and M. Critical Damage + 68 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46615" name="Blue Dynasty Circlet" additionalName="P. Def." type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Def. + 5% when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46616" name="Blue Dynasty Circlet" additionalName="M. Def." type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Def. + 5% when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Def. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46617" name="Blue Dynasty Circlet" additionalName="Evasion" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Evasion + 5 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Evasion + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46618" name="Blue Dynasty Circlet" additionalName="P. Atk." type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Atk. + 5% when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. P. Atk. + 5% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46619" name="Blue Dynasty Circlet" additionalName="M. Atk." type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Atk. + 10% when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. M. Atk. + 10% when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46620" name="Blue Dynasty Circlet" additionalName="Accuracy" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Accuracy + 5 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. Accuracy + 5 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46621" name="Shadow Blue Seal Bracelet" type="Armor">
-		<!-- L2 Assist App item. Can summon Shadow Blue. -->
+		<!-- Can summon Shadow Blue. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -240,14 +240,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46627" name="Blue Dynasty Circlet" additionalName="LUC" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. LUC + 3 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. LUC + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="46628" name="Blue Dynasty Circlet" additionalName="CHA" type="Armor">
-		<!-- L2 Assist App item. Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CHA + 3 when equipped. -->
+		<!-- Blue Dynasty Circlet. Uses 2 Hair Accessory slots. CHA + 3 when equipped. -->
 		<set name="icon" val="icon.Accessary_angel_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -1252,5 +1252,188 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="46693" name="Emperor Shunaiman's Shaper" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_dagger" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">737</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="46694" name="Emperor Shunaiman's Dicing Death" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_onehand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">827</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="46695" name="Emperor Shunaiman's Slasher" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_twohand_sword" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1007</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="46696" name="Emperor Shunaiman's Avenger" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_onehand_blunt" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="rhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">827</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="46697" name="Emperor Shunaiman's Fighter" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_fist" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1007</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="46698" name="Emperor Shunaiman's Stormer" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_spear" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">827</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="46699" name="Emperor Shunaiman's Thrower" additionalName="30-day" type="Weapon">
+		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/Spiritshot/Blessed Spiritshot. -->
+		<set name="icon" val="icon.npoint_weapon_bow" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+		<stats>
+			<stat type="pAtk">1631</stat>
+			<stat type="mAtk">409</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
 	</item>
 </list>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="8600" name="Herb of Life" type="EtcItem">
 		<set name="immediate_effect" val="true" />
@@ -759,7 +759,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8641" name="Recipe: Elixir of Life (D-Grade)" type="EtcItem">
+	<item id="8641" name="Recipe: Elixir of Life (D-grade)" type="EtcItem">
 		<!-- Usable by all races. Recipe for the Elixir of Life (D-grade). Requires Create Common Item Skill Lv. 2. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1086,7 +1086,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="8663" name="Mysterious Potion (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. Results are temporary at best." -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. Results are temporary at best. -->
 		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1104,7 +1104,7 @@
 		</skills>
 	</item>
 	<item id="8664" name="Facelifting Potion - A (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1121,7 +1121,7 @@
 		</skills>
 	</item>
 	<item id="8665" name="Facelifting Potion - B (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1138,7 +1138,7 @@
 		</skills>
 	</item>
 	<item id="8666" name="Facelifting Potion - C (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1155,7 +1155,7 @@
 		</skills>
 	</item>
 	<item id="8667" name="Dye Potion - A (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1172,7 +1172,7 @@
 		</skills>
 	</item>
 	<item id="8668" name="Dye Potion - B (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1189,7 +1189,7 @@
 		</skills>
 	</item>
 	<item id="8669" name="Dye Potion - C (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1206,7 +1206,7 @@
 		</skills>
 	</item>
 	<item id="8670" name="Dye Potion - D (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1223,7 +1223,7 @@
 		</skills>
 	</item>
 	<item id="8671" name="Hair Style Change Potion - A (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1240,7 +1240,7 @@
 		</skills>
 	</item>
 	<item id="8672" name="Hair Style Change Potion - B (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1257,7 +1257,7 @@
 		</skills>
 	</item>
 	<item id="8673" name="Hair Style Change Potion - C (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1274,7 +1274,7 @@
 		</skills>
 	</item>
 	<item id="8674" name="Hair Style Change Potion - D (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1291,7 +1291,7 @@
 		</skills>
 	</item>
 	<item id="8675" name="Hair Style Change Potion - E (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1308,7 +1308,7 @@
 		</skills>
 	</item>
 	<item id="8676" name="Hair Style Change Potion - F (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1325,7 +1325,7 @@
 		</skills>
 	</item>
 	<item id="8677" name="Hair Style Change Potion - G (Event)" type="EtcItem">
-		<!-- Altered Realities Event Item. The label reads "Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk!" -->
+		<!-- Altered Realities Event Item. The label reads Effects of this oil may be unpredictable. BEWARE! Changes caused will be permanent. Drink at your own risk! -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

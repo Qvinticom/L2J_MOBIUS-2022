@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="21900" name="Totem of Spirit" type="EtcItem">
-		<!-- Summons a totem that increases MP Recovery Rate by 15%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
+		<!-- Summons a totem that increases MP Recovery Rate by 15%. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -22,7 +22,7 @@
 		</skills>
 	</item>
 	<item id="21901" name="Totem of Courage" type="EtcItem">
-		<!-- Summons a totem that P. Def. + 15% and cancels fear at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
+		<!-- Summons a totem that P. Def. + 15% and cancels fear at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -43,7 +43,7 @@
 		</skills>
 	</item>
 	<item id="21902" name="Totem of Fortitude" type="EtcItem">
-		<!-- Summons a totem that M. Def. + 25% and cancels petrification at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in "Balthus Knights - Antharas Expedition." cooldown is 10 min. -->
+		<!-- Summons a totem that M. Def. + 25% and cancels petrification at a certain cycle. Total duration is 30 min. Can only be used inside the lairs of Valakas and Antharas. But cannot be used in Balthus Knights - Antharas Expedition. cooldown is 10 min. -->
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -380,8 +380,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21920" name="Hellblade" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
+	<item id="21920" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -413,8 +413,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21921" name="Hellblade" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+	<item id="21921" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -446,8 +446,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21922" name="Hellblade" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
+	<item id="21922" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -671,8 +671,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21928" name="Hellblade - Lightning" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases the Critical Rate. <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. -->
+	<item id="21928" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -705,8 +705,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21929" name="Hellblade - Lightning" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases the Critical Rate. <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+	<item id="21929" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -739,8 +739,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21930" name="Hellblade - Lightning" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases the Critical Rate. <Soul Crystal Enhancement>. Sword used by Darion. Bestows a special power upon the wielder. Increases Critical by 131. Increases damage inflicted during PvP. -->
+	<item id="21930" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_Caladbulg_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1149,8 +1149,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21940" name="Claw of Destruction" additionalName="HP Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Blunt used by Tiat. Bestows a special power upon the wielder. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. -->
+	<item id="21940" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1183,8 +1183,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21941" name="Claw of Destruction" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+	<item id="21941" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1217,8 +1217,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21942" name="Claw of Destruction" additionalName="HP Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Blunt used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
+	<item id="21942" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1448,8 +1448,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21948" name="Claw of Destruction - Landslide" additionalName="HP Drain" type="Weapon">
-		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. -->
+	<item id="21948" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1483,8 +1483,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21949" name="Claw of Destruction - Landslide" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+	<item id="21949" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1518,8 +1518,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21950" name="Claw of Destruction - Landslide" additionalName="HP Regeneration" type="Weapon">
-		<!-- Masterwork Item that has the Stun effect at a fixed rate when striking. <Special Option>. Blunt weapon used by Tiat. Bestows a special power upon the wielder. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
+	<item id="21950" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tiatenon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1902,8 +1902,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21960" name="Blood Brother" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
+	<item id="21960" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1935,8 +1935,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21961" name="Blood Brother" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+	<item id="21961" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1968,8 +1968,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21962" name="Blood Brother" additionalName="Light Armor" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+	<item id="21962" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2155,8 +2155,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21967" name="Blood Brother - Great Gale" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Critical by 111. Increases damage inflicted during PvP. -->
+	<item id="21967" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2189,8 +2189,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21968" name="Blood Brother - Great Gale" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+	<item id="21968" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2223,8 +2223,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21969" name="Blood Brother - Great Gale" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Two-handed sword used by Yehan Klanikus. Bestows a special power upon the wielder. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+	<item id="21969" name="Not used" additionalName="Not used" type="Weapon">
+		<!-- Not used -->
 		<set name="icon" val="BranchSys2.icon.br_wp_tirbing_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

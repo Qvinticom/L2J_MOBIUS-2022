@@ -1081,7 +1081,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21247" name="Vitality Replenishing Potion" type="EtcItem">
-		<!-- Partially replenishes your Vitality upon use. Cooldown is 60 min. Can be used more than 5 times a week. Will not be deleted upon death. -->
+		<!-- Partially replenishes your Vitality upon use. Cooldown is 60 min.  Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1102,7 +1102,7 @@
 		</skills>
 	</item>
 	<item id="21248" name="Vitality Replenishing Potion" additionalName="Event" type="EtcItem">
-		<!-- Replenishes some Vitality upon use. Cooldown is 60 min. Can be used more than 5 times a week. Will not be deleted upon death. -->
+		<!-- Replenishes some Vitality upon use. Cooldown is 60 min.  Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1161,7 +1161,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21251" name="Vitality Maintaining Potion (30-minute)" type="EtcItem">
-		<!-- Maintains Vitality for 30 min. Can be used more than 5 times a week. Will not be deleted upon death. -->
+		<!-- Maintains Vitality for 30 min.  Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1182,7 +1182,7 @@
 		</skills>
 	</item>
 	<item id="21252" name="Vitality Maintaining Potion (30-minute)" additionalName="Event" type="EtcItem">
-		<!-- Maintains Vitality for 30 min. Can be used more than 5 times a week. Will not be deleted upon death. -->
+		<!-- Maintains Vitality for 30 min.  Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1244,7 +1244,7 @@
 		<!-- P. Atk. + 10% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1265,7 +1265,7 @@
 		<!-- Increases P. Atk. + 10% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1324,7 +1324,7 @@
 		<!-- P. Def. + 15% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1345,7 +1345,7 @@
 		<!-- Increases P. Def. + 15% for 60 min. The effect disappears if a higher skill is acquired. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1404,7 +1404,7 @@
 		<!-- For 60 minutes, a powerful spirit acts to increases Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 2, Critical power during a standard attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and P. Def. upon evading a Critical Attack. Decreases Speed by 15%, and for party members equipped with melee and long-range weapons who receive more than ordinary damage attacks, Critical power increases during an ordinary attack. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1425,7 +1425,7 @@
 		<!-- For 60 minutes, a powerful spirit acts to increases Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1484,7 +1484,7 @@
 		<!-- For 60 minutes, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1505,7 +1505,7 @@
 		<!-- For 60 minutes, Max MP + 20%, HP Recovery Bonus + 20%, M. Critical Rate + 2, P. Critical Damage during a standard attack + 20%, P. Atk. + 10%, P. Def. + 20%, Atk. Spd. + 20%, M. Atk. + 20%, M. Def. + 20%, Casting Spd. + 20%, Debuff Resistance + 10%. Increases P. Def. upon evading a Critical Attack. Decreases Speed by 15%. Party members equipped with melee and ranged weapons have increased Critical Damage after receiving an amount of damage. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1564,7 +1564,7 @@
 		<!-- Greatly increases MP recharge power received for 60 min. The amount of recovered MP may vary according to the level. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1585,7 +1585,7 @@
 		<!-- Greatly increases received cooldown power for 60 min. The amount of recovered MP may vary according to the level. Will not be deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cookie_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1644,7 +1644,7 @@
 		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1662,7 +1662,7 @@
 		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1718,7 +1718,7 @@
 		<!-- Coupon that can be exchanged for a whistle at the Dimensional Merchant that allows you to summon a Superior Minion for 5 hours. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1736,7 +1736,7 @@
 		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />

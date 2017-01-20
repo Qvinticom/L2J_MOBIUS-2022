@@ -367,12 +367,12 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="38154" name="Fishing Shot" type="EtcItem">
-		<!-- Soulshot for fishing rods. Doubles the fishing success rate. -->
+		<!-- Soulshot consumed by a fishing rod like general soulshots. Increases the success rate for fishing. -->
 		<set name="icon" val="icon.etc_spirit_bullet_fish_i05" />
 		<set name="default_action" val="FISHINGSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="3" />
+		<set name="weight" val="1" />
 		<set name="price" val="500" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />

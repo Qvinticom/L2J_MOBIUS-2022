@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30800" name="Bound War Axe" additionalName="Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
@@ -2005,7 +2005,7 @@
 		</stats>
 	</item>
 	<item id="30863" name="Bound Épée" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Revolution, Bound Épée. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Kamael-exclusive Weapon: Sword of Revolution, Bound Épée. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

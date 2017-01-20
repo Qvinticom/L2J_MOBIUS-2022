@@ -321,7 +321,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="37521" name="Baium's Soul Ring" type="Armor">
-		<!-- MP + 31, Shock/Hold/Mental Resistance + 25%, Shock/Hold/Mental Attack Rate + 25%, P./M. Critical Damage + 15%, Atk./Casting Spd. + 5%, and P./M. Accuracy + 4. Wearing two of these rings will give you the effect of wearing one. -->
+		<!-- MP +31, P./M. Accuracy +4, P./M. Critical Damage +15%, Atk. Spd./Casting Spd. +5%, Stun/Hold/Mental Atk./Def. Success Rate +25%. Effect does not stack with identical ones. Can be crafted. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -338,7 +338,7 @@
 		</stats>
 	</item>
 	<item id="37522" name="Frintezza's Soul Necklace" type="Armor">
-		<!-- MP + 62, Poison/Bleed/Shock/Hold/Paralysis Resistance + 20%, Poison/Bleed/Shock/Hold/Paralysis Attack Rate + 20%, Skill Cooldown - 10%, Damage Reflection + 5%, and Speed + 5. -->
+		<!-- MP +62, Movement Speed +5, Poison/Bleed/Stun/Hold/Paralysis Atk./Def. Success Rate +20%, Skill Cooldown -10%, Damage Reflection +5%. Can be crafted. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -726,7 +726,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37560" name="Emperor's Vitality Tonic" type="EtcItem">
-		<!-- Vitality extract containing the emperor's strength. 1 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
+		<!-- Vitality extract containing the emperor's strength. 1 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -735,7 +735,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37561" name="Emperor's Vitality Tonic (Medium)" type="EtcItem">
-		<!-- Medium vitality extract containing the emperor's strength. 2 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
+		<!-- Medium vitality extract containing the emperor's strength. 2 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -744,7 +744,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37562" name="Emperor's Vitality Tonic (Large)" type="EtcItem">
-		<!-- Special vitality extract containing the emperor's strength. 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
+		<!-- Special vitality extract containing the emperor's strength. 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion1" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -793,7 +793,7 @@
 		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9.  For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i05" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />

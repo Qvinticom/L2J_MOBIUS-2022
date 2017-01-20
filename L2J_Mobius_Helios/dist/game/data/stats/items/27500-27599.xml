@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27500" name="Attribute Stone Pack" additionalName="Underground" type="EtcItem">
 		<!-- Double-click to obtain a Crystal, a Super Attribute Stone, or a Super Attribute Crystal. -->
@@ -155,7 +155,7 @@
 			<skill id="27579" level="1" /> <!-- Hero's Treasure Chest -->
 		</skills>
 	</item>
-	<item id="27511" name="Novice Adventurer's Shirt" type="EtcItem">
+	<item id="27511" name="Novice Adventurer's Shirt" type="Armor">
 		<!-- Novice Adventurer's shirt. M. Def. + 11 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_none_i00" />
 		<set name="weight" val="130" />
@@ -172,7 +172,7 @@
 			<stat type="mDef">11</stat>
 		</stats>
 	</item>
-	<item id="27512" name="Novice Adventurer's Circlet" type="EtcItem">
+	<item id="27512" name="Novice Adventurer's Circlet" type="Armor">
 		<!-- Novice Adventurer's brass-hued hair accessory. Requires 2 hair accessory slots. Critical Rate + 10 when equipped. -->
 		<set name="icon" val="icon.accessory_au_karm_i00" />
 		<set name="weight" val="10" />
@@ -186,7 +186,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27513" name="Novice Adventurer's Bracelet" type="EtcItem">
+	<item id="27513" name="Novice Adventurer's Bracelet" type="Armor">
 		<!-- Novice Adventurer's bracelet. MP + 60 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="is_clan_depositable" val="false" />
@@ -214,7 +214,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27515" name="Experienced Adventurer's Shirt" type="EtcItem">
+	<item id="27515" name="Experienced Adventurer's Shirt" type="Armor">
 		<!-- Experienced Adventurer's shirt. M. Def. + 12 and CON + 2 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_c_i02" />
 		<set name="weight" val="130" />
@@ -231,7 +231,7 @@
 			<stat type="mDef">12</stat>
 		</stats>
 	</item>
-	<item id="27516" name="Experienced Adventurer's Circlet" type="EtcItem">
+	<item id="27516" name="Experienced Adventurer's Circlet" type="Armor">
 		<!-- Experienced Adventurer's silver-hued hair accessory. Requires 2 hair accessory slots. Critical Rate + 20 when equipped. -->
 		<set name="icon" val="icon.accessory_ar_karm_i00" />
 		<set name="weight" val="10" />
@@ -245,7 +245,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27517" name="Experienced Adventurer's Bracelet" type="EtcItem">
+	<item id="27517" name="Experienced Adventurer's Bracelet" type="Armor">
 		<!-- Experienced Adventurer's bracelet. MP + 90 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
 		<set name="is_clan_depositable" val="false" />
@@ -273,7 +273,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27519" name="Adventurer's Shirt" type="EtcItem">
+	<item id="27519" name="Adventurer's Shirt" type="Armor">
 		<!-- Adventurer's shirt. INT + 2, STR + 2, Speed + 7 when equipped. -->
 		<set name="icon" val="BranchIcon.icon.shirt_of_explorer_i00" />
 		<set name="weight" val="130" />
@@ -290,7 +290,7 @@
 			<stat type="mDef">13</stat>
 		</stats>
 	</item>
-	<item id="27520" name="Adventurer's Circlet" type="EtcItem">
+	<item id="27520" name="Adventurer's Circlet" type="Armor">
 		<!-- Adventurer's circlet. Requires 2 hair accessory slots. P. Atk. + 3%, M. Atk. + 5% when equipped. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="weight" val="10" />
@@ -299,7 +299,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27521" name="Adventurer's Bracelet" type="EtcItem">
+	<item id="27521" name="Adventurer's Bracelet" type="Armor">
 		<!-- Adventurer's Bracelet. STR/DEX/CON/INT/WIT/MEN + 1 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="is_freightable" val="false" />
@@ -610,7 +610,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27551" name="Rare Accessory Pack" type="EtcItem">
+	<item id="27551" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Ruler's Authority, and Lindvior's Earring for 30 days. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_freightable" val="false" />
@@ -748,7 +748,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27564" name="Ultimate Pack" type="EtcItem">
-		<!-- Double-click to get the following: Ultimate Support Cube x1, Requiem Weapon Coupon x1, Immortal Armor Set Coupon x1, Lv. 4 Legendary Dye Exchange Coupon x10, Venir's Talisman Stage 8 x1, XP Rune IV (Lv. 1-99) 100% (7-day) x4, Adventurer's Support Box x1, Talisman - Abundance Pack x1, Giant's Energy 100-unit Pack x1, Energy of Destruction 100-unit Pack x1, Blessed Zodiac Agathion Pack (30-day) x1, Beauty Shop Ticket x20, Leona's Scroll: Buffs x40, Dandy's Scroll: Passion x40, Mysterious Abnormal State Resistance Dye x1, Rare Accessory Pack x1, Riding Manual: Riding Wolf x1. -->
+		<!-- Double-click to get the following: Ultimate Support Cube x1, Requiem Weapon Coupon x1, Immortal Armor Set Coupon x1, Lv. 4 Legendary Dye Exchange Coupon x10, Venir's Talisman Stage 8 x1, XP Rune IV (Lv. 1-99) 100% (7-day) x4, Adventurer's Support Box x1, Talisman - Abundance Pack x1, Giant's Energy 100-unit Pack x1, Energy of Destruction 100-unit Pack x1, Blessed Zodiac Agathion Pack (30-day) x1, Beauty Shop Ticket x20, Leona's Scroll: Buffs x40, Dandy's Scroll: Passion x40, Mysterious Abnormal State Resistance Dye x1, Rare Accessory Pack (30-day) x1, Riding Manual: Riding Wolf x1. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="100" />
 		<set name="is_freightable" val="false" />
@@ -1099,8 +1099,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="60" />
 	</item>
-	<item id="27584" name="Top-grade Spirt Stone" type="EtcItem">
-		<!-- Top-grade Spirt Stone. It's an ingredient to augment weapons, and can be used by characters Lv. 99 and above. -->
+	<item id="27584" name="Top-grade Spirit Stone" type="EtcItem">
+		<!-- Top-grade Spirit Stone. It's an ingredient to augment weapons, and can be used by characters Lv. 99 and above. Augment Fees are significantly less than normal. -->
 		<set name="icon" val="icon.renewal_mineral_r99" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -1313,7 +1313,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27599" name="Scroll of Blessing: Armor (R-grade)" type="EtcItem">
-		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Immortal or Hell equipment for Blessed equipment. -->
+		<!-- There is a big chance that the Blacksmith of Mammon will exchange for you standard Immortal or Twilight equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />

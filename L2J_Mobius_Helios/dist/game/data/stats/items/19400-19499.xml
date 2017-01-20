@@ -656,7 +656,7 @@
 	<item id="19447" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- P. Atk. + 6 for R-grade one-handed sword, one-handed blunt, dagger, spear, and other weapons when enchanted. P. Atk. + 7 for two-handed sword, two-handed blunt, dualsword, two-handed fist weapon, and crossbow. P. Atk. + 12 for bow weapons. M. Atk. + 5 for all weapons. P. Atk./M. Atk. greatly increases starting at + 4. All amounts are increased for Blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="price" val="150000000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
@@ -673,7 +673,7 @@
 	<item id="19448" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- When enchanted, P. Def. + 2 for R-grade armor and accessories, especially starting at + 4. Can be enchanted safely to + 3. When enchanted + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="price" val="18000000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
@@ -949,7 +949,7 @@
 		</stats>
 	</item>
 	<item id="19463" name="Blessed Antharas' Earring" type="Armor">
-		<!-- MP + 59, Bleed Resistance + 50%, Bleed Atk. Rate + 50%. Increases Heal Amount, Vampiric Rage Effect, Stun/Mental Attack Resistance + 40%, Stun/Mental Atk. Rate + 40%. Decreases physical/magic skill MP consumption. Increases Earth/Holy defense. CON + 3, MEN + 3. Increases P. Def. and M. Def. Can use Stun canceling skills. Momentarily increases Stun Resistance + 100%. Only one effect is applied when two of the same earrings are equipped. -->
+		<!-- MP +59, P./M. Def. +15%, CON/MEN +3, Earth/Holy Attribute Def. +30, Bleed Atk./Def. Success Rate +50%, Stun/Mental Atk./Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Skills Used: Immediately neutralizes Stun effect when used, and gives Stun Resistance for 5 seconds. Effect does not stack with identical ones. Can be crafted. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -971,7 +971,7 @@
 		</stats>
 	</item>
 	<item id="19464" name="Blessed Valakas' Necklace" type="Armor">
-		<!-- HP + 625, MP + 79, Sleep Resistance + 50%, Sleep Rate + 50%, decreased P./M. Skill cooldown, Wild Magic Effect, Damage Shield effect, Fire Resistance + 30, Dark Resistance + 20, STR + 3, INT + 3, P. Skill Power + 5%, P. Atk. + 10%, M. Atk. + 20%, can use hold canceling skills, and momentarily increases Hold Resistance by 100%. -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/INT+3, Fire Attack Def. +30, Dark Attack Def. +20, Sleep Atk./Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Skills Used: Immediately disables Hold effect when used, and gives Hold Resistance for 5 seconds. Can be crafted. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

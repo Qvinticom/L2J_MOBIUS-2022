@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="26500" name="Cat's Eye" additionalName="Lv. 4" type="Armor">
 		<!-- Decreases damage received from Reflect Damage by 40%. Effect does not stack with additional jewels of the same type. -->
@@ -147,7 +147,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="26510" name="Attendance Vitality Tonic" additionalName="Event" type="EtcItem">
-		<!-- Attendance Vitality Tonic. 1 out of 4 bars on the vitality gauge are replenished. Cooldown 60 minutes. Cannot be used in the Olympiad. Can be used more than 5 times a week. -->
+		<!-- Attendance Vitality Tonic. 1 out of 4 bars on the vitality gauge are replenished. Cooldown 60 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_recall_potion3" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

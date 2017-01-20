@@ -1053,7 +1053,7 @@
 		</capsuled_items>
 	</item>
 	<item id="45494" name="Sturdy Fishing Rod" type="Weapon">
-		<!-- A sturdy fishing rod. Consumes 1 Fishing Shot. -->
+		<!-- A stiff fishing rod. Used to make fishing rods for master fishermen. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.weapon_fishing_rod_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -1078,7 +1078,7 @@
 		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="price" val="3000" />
+		<set name="price" val="6000" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />

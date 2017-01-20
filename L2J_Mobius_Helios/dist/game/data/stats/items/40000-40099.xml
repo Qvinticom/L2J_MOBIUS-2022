@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="40000" name="Dimensional Bracelet" additionalName="Stage 6 - CHA" type="Armor">
 		<!-- Activates 6 Talisman Slots. CHA stat can be added or enhanced. -->
@@ -860,7 +860,7 @@
 			<skill id="18097" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
 	</item>
-	<item id="40041" name="Dimensional Bracelet Enhancement Stone" additionalName="STR" type="EtcItem">
+	<item id="40041" name="Dimensional Bracelet Enhancement Stone" additionalName="Str" type="EtcItem">
 		<!-- Can be combined with Dimensional Bracelet. Successful combination results in STR + 1, and failure results in disappearance of the bestowed STR. Stats can be bestowed to + 5. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="weight" val="10" />
@@ -884,7 +884,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="40044" name="Dimensional Bracelet Enhancement Stone" additionalName="INT" type="EtcItem">
+	<item id="40044" name="Dimensional Bracelet Enhancement Stone" additionalName="Int" type="EtcItem">
 		<!-- Can be combined with Dimensional Bracelet. Successful combination results in INT + 1, and failure results in disappearance of the bestowed INT. Stats can be bestowed to + 5. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="weight" val="10" />

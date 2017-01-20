@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27700" name="Eva's Earring" additionalName="Stage 5" type="Armor">
 		<!-- MP + 98, Water Resistance + 70, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 12%, M. Def. + 17%, Received Heal Amount + 7%, Recovery Skill Power + 188. Resistance to the following abnormal conditions: Paralysis + 19%, Bluff + 19%, Aerial Yoke + 19%, Mutation + 19%, Mental + 14%, Slip + 14%. -->
@@ -140,26 +140,26 @@
 			<stat type="mDef">239.0</stat>
 		</stats>
 	</item>
-	<item id="27714" name="Recipe: Gran Kain's Necklace - Stage 1" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27714" name="Bottle of Luminous God's Soul" type="EtcItem">
+		<!-- Luminous bottle containing the soul of a god. Can be used to craft Grankain's Necklace or Einhasad's Necklace. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27715" name="Recipe: Gran Kain's Necklace - Stage 2" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27715" name="Bottle of Splendid God's Soul" type="EtcItem">
+		<!-- Fancy bottle containing the soul of a god. Can be used to craft Pa'agrio's Earring or Eva's Earring. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27716" name="Recipe: Gran Kain's Necklace - Stage 3" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27716" name="Bottle of Honorable God's Soul" type="EtcItem">
+		<!-- Honorable bottle containing the soul of a god. Can be used to craft Sayha's Ring or Maphr's Ring. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27717" name="Recipe: Gran Kain's Necklace - Stage 1 (25%)" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27717" name="Recipe: Gran Kain's Sealed Necklace - Stage 1 (50%)" type="EtcItem">
+		<!-- Recipe for making Gran Kain's Sealed Necklace Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -170,8 +170,8 @@
 		<set name="recipe_id" val="5016" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27718" name="Recipe: Gran Kain's Necklace - Stage 2 (25%)" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27718" name="Recipe: Gran Kain's Sealed Necklace - Stage 2 (50%)" type="EtcItem">
+		<!-- Recipe for making Gran Kain's Sealed Necklace Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -182,8 +182,8 @@
 		<set name="recipe_id" val="5017" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27719" name="Recipe: Gran Kain's Necklace - Stage 3 (25%)" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27719" name="Recipe: Gran Kain's Sealed Necklace - Stage 3 (50%)" type="EtcItem">
+		<!-- Recipe for making Gran Kain's Sealed Necklace Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -194,8 +194,8 @@
 		<set name="recipe_id" val="5018" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27720" name="Recipe: Gran Kain's Necklace - Stage 4 (25%)" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27720" name="Recipe: Gran Kain's Sealed Necklace - Stage 4 (50%)" type="EtcItem">
+		<!-- Recipe for making Gran Kain's Sealed Necklace Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -206,8 +206,8 @@
 		<set name="recipe_id" val="5019" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27721" name="Recipe: Gran Kain's Necklace - Stage 5 (25%)" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27721" name="Recipe: Gran Kain's Sealed Necklace - Stage 5 (50%)" type="EtcItem">
+		<!-- Recipe for making Gran Kain's Sealed Necklace Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -218,8 +218,8 @@
 		<set name="recipe_id" val="5020" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27722" name="Recipe: Gran Kain's Necklace - Stage 6 (25%)" type="EtcItem">
-		<!-- Recipe for making Gran Kain's Necklace Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27722" name="Recipe: Gran Kain's Sealed Necklace - Stage 6 (50%)" type="EtcItem">
+		<!-- Recipe for making Gran Kain's Sealed Necklace Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -230,8 +230,8 @@
 		<set name="recipe_id" val="5021" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27723" name="Recipe: Einhasad's Necklace - Stage 1 (25%)" type="EtcItem">
-		<!-- Recipe for making Einhasad's Necklace Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27723" name="Recipe: Einhasad's Sealed Necklace - Stage 1 (50%)" type="EtcItem">
+		<!-- Recipe for making Einhasad's Sealed Necklace Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -242,8 +242,8 @@
 		<set name="recipe_id" val="5022" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27724" name="Recipe: Einhasad's Necklace - Stage 2 (25%)" type="EtcItem">
-		<!-- Recipe for making Einhasad's Necklace Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27724" name="Recipe: Einhasad's Sealed Necklace - Stage 2 (50%)" type="EtcItem">
+		<!-- Recipe for making Einhasad's Sealed Necklace Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -254,8 +254,8 @@
 		<set name="recipe_id" val="5023" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27725" name="Recipe: Einhasad's Necklace - Stage 3 (25%)" type="EtcItem">
-		<!-- Recipe for making Einhasad's Necklace Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27725" name="Recipe: Einhasad's Sealed Necklace - Stage 3 (50%)" type="EtcItem">
+		<!-- Recipe for making Einhasad's Sealed Necklace Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -266,8 +266,8 @@
 		<set name="recipe_id" val="5024" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27726" name="Recipe: Einhasad's Necklace - Stage 4 (25%)" type="EtcItem">
-		<!-- Recipe for making Einhasad's Necklace Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27726" name="Recipe: Einhasad's Sealed Necklace - Stage 4 (50%)" type="EtcItem">
+		<!-- Recipe for making Einhasad's Sealed Necklace Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -278,8 +278,8 @@
 		<set name="recipe_id" val="5025" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27727" name="Recipe: Einhasad's Necklace - Stage 5 (25%)" type="EtcItem">
-		<!-- Recipe for making Einhasad's Necklace Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27727" name="Recipe: Einhasad's Sealed Necklace - Stage 5 (50%)" type="EtcItem">
+		<!-- Recipe for making Einhasad's Sealed Necklace Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -290,8 +290,8 @@
 		<set name="recipe_id" val="5026" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27728" name="Recipe: Einhasad's Necklace - Stage 6 (25%)" type="EtcItem">
-		<!-- Recipe for making Einhasad's Necklace Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27728" name="Recipe: Einhasad's Sealed Necklace - Stage 6 (50%)" type="EtcItem">
+		<!-- Recipe for making Einhasad's Sealed Necklace Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -302,8 +302,8 @@
 		<set name="recipe_id" val="5027" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27729" name="Recipe: Pa'agrio's Earring - Stage 1 (25%)" type="EtcItem">
-		<!-- Recipe for making Pa'agrio's Earring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27729" name="Recipe: Pa'agrio's Sealed Earring - Stage 1 (50%)" type="EtcItem">
+		<!-- Recipe for making Pa'agrio's Sealed Earring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -314,8 +314,8 @@
 		<set name="recipe_id" val="5028" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27730" name="Recipe: Pa'agrio's Earring - Stage 2 (25%)" type="EtcItem">
-		<!-- Recipe for making Pa'agrio's Earring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27730" name="Recipe: Pa'agrio's Sealed Earring - Stage 2 (50%)" type="EtcItem">
+		<!-- Recipe for making Pa'agrio's Sealed Earring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -326,8 +326,8 @@
 		<set name="recipe_id" val="5029" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27731" name="Recipe: Pa'agrio's Earring - Stage 3 (25%)" type="EtcItem">
-		<!-- Recipe for making Pa'agrio's Earring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27731" name="Recipe: Pa'agrio's Sealed Earring - Stage 3 (50%)" type="EtcItem">
+		<!-- Recipe for making Pa'agrio's Sealed Earring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -338,8 +338,8 @@
 		<set name="recipe_id" val="5030" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27732" name="Recipe: Pa'agrio's Earring - Stage 4 (25%)" type="EtcItem">
-		<!-- Recipe for making Pa'agrio's Earring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27732" name="Recipe: Pa'agrio's Sealed Earring - Stage 4 (50%)" type="EtcItem">
+		<!-- Recipe for making Pa'agrio's Sealed Earring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -350,8 +350,8 @@
 		<set name="recipe_id" val="5031" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27733" name="Recipe: Pa'agrio's Earring - Stage 5 (25%)" type="EtcItem">
-		<!-- Recipe for making Pa'agrio's Earring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27733" name="Recipe: Pa'agrio's Sealed Earring - Stage 5 (50%)" type="EtcItem">
+		<!-- Recipe for making Pa'agrio's Sealed Earring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -362,8 +362,8 @@
 		<set name="recipe_id" val="5032" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27734" name="Recipe: Pa'agrio's Earring - Stage 6 (25%)" type="EtcItem">
-		<!-- Recipe for making Pa'agrio's Earring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27734" name="Recipe: Pa'agrio's Sealed Earring - Stage 6 (50%)" type="EtcItem">
+		<!-- Recipe for making Pa'agrio's Sealed Earring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -374,8 +374,8 @@
 		<set name="recipe_id" val="5033" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27735" name="Recipe: Eva's Earring - Stage 1 (25%)" type="EtcItem">
-		<!-- Recipe for making Eva's Earring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27735" name="Recipe: Eva's Sealed Earring - Stage 1 (50%)" type="EtcItem">
+		<!-- Recipe for making Eva's Sealed Earring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -386,8 +386,8 @@
 		<set name="recipe_id" val="5034" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27736" name="Recipe: Eva's Earring - Stage 2 (25%)" type="EtcItem">
-		<!-- Recipe for making Eva's Earring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27736" name="Recipe: Eva's Sealed Earring - Stage 2 (50%)" type="EtcItem">
+		<!-- Recipe for making Eva's Sealed Earring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -398,8 +398,8 @@
 		<set name="recipe_id" val="5035" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27737" name="Recipe: Eva's Earring - Stage 3 (25%)" type="EtcItem">
-		<!-- Recipe for making Eva's Earring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27737" name="Recipe: Eva's Sealed Earring - Stage 3 (50%)" type="EtcItem">
+		<!-- Recipe for making Eva's Sealed Earring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -410,8 +410,8 @@
 		<set name="recipe_id" val="5036" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27738" name="Recipe: Eva's Earring - Stage 4 (25%)" type="EtcItem">
-		<!-- Recipe for making Eva's Earring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27738" name="Recipe: Eva's Sealed Earring - Stage 4 (50%)" type="EtcItem">
+		<!-- Recipe for making Eva's Sealed Earring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -422,8 +422,8 @@
 		<set name="recipe_id" val="5037" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27739" name="Recipe: Eva's Earring - Stage 5 (25%)" type="EtcItem">
-		<!-- Recipe for making Eva's Earring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27739" name="Recipe: Eva's Sealed Earring - Stage 5 (50%)" type="EtcItem">
+		<!-- Recipe for making Eva's Sealed Earring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -434,8 +434,8 @@
 		<set name="recipe_id" val="5038" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27740" name="Recipe: Eva's Earring - Stage 6 (25%)" type="EtcItem">
-		<!-- Recipe for making Eva's Earring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27740" name="Recipe: Eva's Sealed Earring - Stage 6 (50%)" type="EtcItem">
+		<!-- Recipe for making Eva's Sealed Earring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -446,8 +446,8 @@
 		<set name="recipe_id" val="5039" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27741" name="Recipe: Sayha's Ring - Stage 1 (25%)" type="EtcItem">
-		<!-- Recipe for making Sayha's Ring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27741" name="Recipe: Sayha's Sealed Ring - Stage 1 (50%)" type="EtcItem">
+		<!-- Recipe for making Sayha's Sealed Ring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -458,8 +458,8 @@
 		<set name="recipe_id" val="5040" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27742" name="Recipe: Sayha's Ring - Stage 2 (25%)" type="EtcItem">
-		<!-- Recipe for making Sayha's Ring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27742" name="Recipe: Sayha's Sealed Ring - Stage 2 (50%)" type="EtcItem">
+		<!-- Recipe for making Sayha's Sealed Ring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -470,8 +470,8 @@
 		<set name="recipe_id" val="5041" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27743" name="Recipe: Sayha's Ring - Stage 3 (25%)" type="EtcItem">
-		<!-- Recipe for making Sayha's Ring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27743" name="Recipe: Sayha's Sealed Ring - Stage 3 (50%)" type="EtcItem">
+		<!-- Recipe for making Sayha's Sealed Ring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -482,8 +482,8 @@
 		<set name="recipe_id" val="5042" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27744" name="Recipe: Sayha's Ring - Stage 4 (25%)" type="EtcItem">
-		<!-- Recipe for making Sayha's Ring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27744" name="Recipe: Sayha's Sealed Ring - Stage 4 (50%)" type="EtcItem">
+		<!-- Recipe for making Sayha's Sealed Ring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -494,8 +494,8 @@
 		<set name="recipe_id" val="5043" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27745" name="Recipe: Sayha's Ring - Stage 5 (25%)" type="EtcItem">
-		<!-- Recipe for making Sayha's Ring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27745" name="Recipe: Sayha's Sealed Ring - Stage 5 (50%)" type="EtcItem">
+		<!-- Recipe for making Sayha's Sealed Ring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -506,8 +506,8 @@
 		<set name="recipe_id" val="5044" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27746" name="Recipe: Sayha's Ring - Stage 6 (25%)" type="EtcItem">
-		<!-- Recipe for making Sayha's Ring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27746" name="Recipe: Sayha's Sealed Ring - Stage 6 (50%)" type="EtcItem">
+		<!-- Recipe for making Sayha's Sealed Ring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -518,8 +518,8 @@
 		<set name="recipe_id" val="5045" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27747" name="Recipe: Maphr's Ring - Stage 1 (25%)" type="EtcItem">
-		<!-- Recipe for making Maphr's Rin Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27747" name="Recipe: Maphr's Sealed Ring - Stage 1 (50%)" type="EtcItem">
+		<!-- Recipe for making Maphr's Sealed Ring Stage 1. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="BranchIcon.Icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -530,8 +530,8 @@
 		<set name="recipe_id" val="5046" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27748" name="Recipe: Maphr's Ring - Stage 2 (25%)" type="EtcItem">
-		<!-- Recipe for making Maphr's Rin Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27748" name="Recipe: Maphr's Sealed Ring - Stage 2 (50%)" type="EtcItem">
+		<!-- Recipe for making Maphr's Sealed Ring Stage 2. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -542,8 +542,8 @@
 		<set name="recipe_id" val="5047" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27749" name="Recipe: Maphr's Ring - Stage 3 (25%)" type="EtcItem">
-		<!-- Recipe for making Maphr's Rin Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27749" name="Recipe: Maphr's Sealed Ring - Stage 3 (50%)" type="EtcItem">
+		<!-- Recipe for making Maphr's Sealed Ring Stage 3. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -554,8 +554,8 @@
 		<set name="recipe_id" val="5048" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27750" name="Recipe: Maphr's Ring - Stage 4 (25%)" type="EtcItem">
-		<!-- Recipe for making Maphr's Rin Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27750" name="Recipe: Maphr's Sealed Ring - Stage 4 (50%)" type="EtcItem">
+		<!-- Recipe for making Maphr's Sealed Ring Stage 4. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -566,8 +566,8 @@
 		<set name="recipe_id" val="5049" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27751" name="Recipe: Maphr's Ring - Stage 5 (25%)" type="EtcItem">
-		<!-- Recipe for making Maphr's Rin Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27751" name="Recipe: Maphr's Sealed Ring - Stage 5 (50%)" type="EtcItem">
+		<!-- Recipe for making Maphr's Sealed Ring Stage 5. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -578,8 +578,8 @@
 		<set name="recipe_id" val="5050" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="27752" name="Recipe: Maphr's Ring - Stage 6 (25%)" type="EtcItem">
-		<!-- Recipe for making Maphr's Rin Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 25%. Use offerings to increase the success rate to 100%. -->
+	<item id="27752" name="Recipe: Maphr's Sealed Ring - Stage 6 (50%)" type="EtcItem">
+		<!-- Recipe for making Maphr's Sealed Ring Stage 6. For 4th class only. Requires Create Common Item - Skill Lv. 10. The success rate is 50%. Use offerings to increase the success rate to 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -649,5 +649,578 @@
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="27763" name="Shadai's Shiny Jewelry Box" type="EtcItem">
+		<!-- Double-click to get one of the following: La Vie En Rose's Vital Stone Chest, Garnet Chest, Tanzanite Chest, Cat's Eye Chest. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="27764" name="Ultimate Eternal Helmet" additionalName="Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27765" name="Ultimate Eternal Breatplate" additionalName="Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows an attack or defense type set option. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="27766" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="27767" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27768" name="Ultimate Eternal Boots" additionalName="Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an attack or defense type set option. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27769" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27770" name="Ultimate Eternal Leather Armor" additionalName="Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows an assassin or enchant type set option. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">361</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="27771" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">226</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="27772" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27773" name="Ultimate Eternal Leather Boots" additionalName="Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows an assassin or enchant type set option. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27774" name="Ultimate Eternal Circlet" additionalName="Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27775" name="Ultimate Eternal Tunic" additionalName="Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. Bestows a magic or recovery type set option.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">248</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="27776" name="Ultimate Eternal Stockings" additionalName="Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">155</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="27777" name="Ultimate Eternal Gloves" additionalName="Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27778" name="Ultimate Eternal Shoes" additionalName="Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Bestows a magic or recovery type set option. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27779" name="Ultimate Eternal Helmet" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27780" name="Ultimate Eternal Breatplate" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def. Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="27781" name="Ultimate Eternal Gaiters" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="27782" name="Ultimate Eternal Gauntlets" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27783" name="Ultimate Eternal Boots" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%.  Tyrr Warriors, Sigel Knights and Iss Enchanters only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27784" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Othell Rogues and Yul Archers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27785" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. Othell Rogues and Yul Archers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="4140" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">361</stat>
+			<stat type="rEvas">5</stat>
+		</stats>
+	</item>
+	<item id="27786" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Othell Rogues and Yul Archers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="1320" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">226</stat>
+			<stat type="rEvas">3</stat>
+		</stats>
+	</item>
+	<item id="27787" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues and Yul Archers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27788" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Othell Rogues and Yul Archers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27789" name="Ultimate Eternal Circlet" additionalName="Magic Type / Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27790" name="Ultimate Eternal Tunic" additionalName="Magic Type / Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%.When enchanted to + 4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="1750" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">56</stat>
+			<stat type="pDef">248</stat>
+			<stat type="maxMp">649</stat>
+		</stats>
+	</item>
+	<item id="27791" name="Ultimate Eternal Stockings" additionalName="Magic Type / Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="850" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">37</stat>
+			<stat type="pDef">155</stat>
+			<stat type="maxMp">427</stat>
+		</stats>
+	</item>
+	<item id="27792" name="Ultimate Eternal Gloves" additionalName="Magic Type / Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27793" name="Ultimate Eternal Shoes" additionalName="Magic Type / Robe / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Aeore Healers, Feoh Wizards, Wynn Summoners, Iss Enchanters, and Sayha's Seers only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27794" name="Ultimate Eternal Helmet" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Sigel Knights only. -->
+		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
+	</item>
+	<item id="27795" name="Ultimate Eternal Breatplate" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 8%. When enchanted to + 4, decreases P. Critical Damage and additionally increases P. Def.Sigel Knights only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="7520" />
+		<set name="price" val="422292000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">451</stat>
+		</stats>
+	</item>
+	<item id="27796" name="Ultimate Eternal Gaiters" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 5%. Sigel Knights only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="SCALE_OF_DRAGON" />
+		<set name="weight" val="3170" />
+		<set name="price" val="263933000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">282</stat>
+		</stats>
+	</item>
+	<item id="27797" name="Ultimate Eternal Gauntlets" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Sigel Knights only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="510" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27798" name="Ultimate Eternal Boots" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 2%. Sigel Knights only. -->
+		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="1070" />
+		<set name="price" val="105573000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">113</stat>
+		</stats>
+	</item>
+	<item id="27799" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type / Light Armor / Lv1" type="Armor">
+		<!-- Ultimate enchant item. Decreases Damage Received by 3%. Othell Rogues, Yul Archers, Iss Enchanters, Aeore Healers, Wynn Summoners, Tyrr Warriors, and Eviscerators only. -->
+		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R99" />
+		<set name="material" val="BONE" />
+		<set name="weight" val="530" />
+		<set name="price" val="158359000" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">169</stat>
+		</stats>
 	</item>
 </list>

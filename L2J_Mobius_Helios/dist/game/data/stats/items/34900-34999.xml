@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="34900" name="Mysterious Mark" type="EtcItem">
 		<!-- The power of darkness can be faintly felt. Bring it to the Mysterious Butler in each town. -->
@@ -1314,7 +1314,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34965" name="Daylily" type="EtcItem">
-		<!-- Yellow flower called a "Daylily." It symbolizes the alleviation of sorrow and grief. -->
+		<!-- Yellow flower called a Daylily. It symbolizes the alleviation of sorrow and grief. -->
 		<set name="icon" val="icon.etc_flower_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1329,7 +1329,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34966" name="Peony" type="EtcItem">
-		<!-- Red flower called a "Peony." It once represented wealth and honor. -->
+		<!-- Red flower called a Peony. It once represented wealth and honor. -->
 		<set name="icon" val="icon.etc_flower_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1344,7 +1344,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34967" name="Petunia" type="EtcItem">
-		<!-- Pink flower called a "Petunia." It symbolizes a calm heart. -->
+		<!-- Pink flower called a Petunia. It symbolizes a calm heart. -->
 		<set name="icon" val="icon.etc_flower_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1359,7 +1359,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34968" name="Pansy" type="EtcItem">
-		<!-- Purple flower called a "Pansy." It means, "Think of me." -->
+		<!-- Purple flower called a Pansy. It means, Think of me. -->
 		<set name="icon" val="icon.etc_flower_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1374,7 +1374,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34969" name="Iris" type="EtcItem">
-		<!-- Blue flower called an "Iris". It symbolizes the bringing of good news. -->
+		<!-- Blue flower called an Iris. It symbolizes the bringing of good news. -->
 		<set name="icon" val="icon.etc_flower_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1389,7 +1389,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34970" name="Kuon" type="EtcItem">
-		<!-- Black flower called a "Kuon." It is sometimes misunderstood as the flower of death because of its color. It actually symbolizes paying tribute to the dead. -->
+		<!-- Black flower called a Kuon. It is sometimes misunderstood as the flower of death because of its color. It actually symbolizes paying tribute to the dead. -->
 		<set name="icon" val="icon.etc_flower_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1516,7 +1516,7 @@
 	<item id="34978" name="Scroll of Escape: Hot Springs" type="EtcItem">
 		<!-- Scroll of Escape to the Hot Springs area. Can only be used in the Soul Testing quest. Can move to the special hot springs area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1541,7 +1541,7 @@
 	<item id="34979" name="Scroll of Escape: Forge of the Gods" type="EtcItem">
 		<!-- Scroll of Escape to the Forge of the Gods. Can only be used in the Soul Testing quest. Can move to the special Forge of the Gods area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1566,7 +1566,7 @@
 	<item id="34980" name="Scroll of Escape: Isle of Prayer" type="EtcItem">
 		<!-- Scroll of Escape to the Isle of Prayer. Can only be used in the Soul Testing quest. Can move to the special Isle of Prayer area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1591,7 +1591,7 @@
 	<item id="34981" name="Scroll of Escape: Aden Castle (Siege)" type="EtcItem">
 		<!-- Scroll of Escape to the Aden Castle siege area. Can only be used in the Soul Testing quest. Can move to the special Aden Castle siege area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -1616,7 +1616,7 @@
 	<item id="34982" name="Scroll of Escape: Rune Castle (Siege)" type="EtcItem">
 		<!-- Scroll of Escape to the Rune Castle siege area. Can only be used in the Soul Testing quest. Can move to the special Rune Castle siege area for the quest mission. Cannot be received again. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

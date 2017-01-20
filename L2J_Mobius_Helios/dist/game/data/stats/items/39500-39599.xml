@@ -552,7 +552,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39533" name="Secret Ingredient" type="EtcItem">
-		<!-- Leaf from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
+		<!-- Leaf  from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
 		<set name="icon" val="icon.etc_rune_fish_scale_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -568,7 +568,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39534" name="Dolkin's Report" type="EtcItem">
-		<!-- A report from Maestro Dolkin, who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
+		<!-- A report from Maestro Dolkin,  who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -882,8 +882,8 @@
 		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
 	</item>
-	<item id="39554" name="Minstrel's Scroll of Escape: Magmeld" type="EtcItem">
-		<!-- A scroll given as a gift. Takes you to Magmeld. -->
+	<item id="39554" name="Bard's Scroll of Escape - Hunter's Village" type="EtcItem">
+		<!-- A scroll of escape received from Miso the Minstrel. Use to teleport to the Hunter's Village, where Magmeld Delegation Leader Lada is. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1385,7 +1385,7 @@
 		</skills>
 	</item>
 	<item id="39587" name="Scroll of Escape: Dragon Valley" type="EtcItem">
-		<!-- Teleports you to Dragon Valley. -->
+		<!-- Use to teleport to Dragon Valley. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

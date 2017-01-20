@@ -809,28 +809,13 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="136" name="(Not in Use)" type="EtcItem">
+	<item id="136" name="Zodiac Agathion Pack" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Angry Devil (30-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="icon" val="icon.etc_treasure_box_i02" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14075" min="1" max="1" chance="100" /> <!-- Agathion - Angry Devil (Event) - 30-day -->
-		</capsuled_items>
 	</item>
 	<item id="137" name="(Not in Use)" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Shiny (30-day). -->
@@ -2204,7 +2189,7 @@
 		<set name="icon" val="icon.weapon_atuba_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="342" />
@@ -2321,7 +2306,7 @@
 		<set name="icon" val="icon.weapon_heavy_doom_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="lrhand" />
+		<set name="bodypart" val="rhand" />
 		<set name="damage_range" val="0;0;46;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_count" val="94" />

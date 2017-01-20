@@ -487,7 +487,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37628" name="Cupid's Arrow" type="Weapon">
-		<!-- Throws a love-filled heart. Can use the active skill "Heart Shot.". Warning: When using on a monster, you can receive another player's attack. -->
+		<!-- Throws a love-filled heart. Can use the active skill Heart Shot.. Warning: When using on a monster, you can receive another player's attack. -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1393,7 +1393,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
+	<item id="37666" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_clan_depositable" val="false" />
@@ -1406,7 +1406,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37667" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
-		<!-- MP +59, Bleed Resistance 50% increase, Bleed Attack Rate 50% increase, Heal Amount increase, Vampiric Rage Effect, Stun/Mental resistance 40%, Stun/Mental attack rate 40% increase, physical/magic skill MP consumption decrease, earth resistance increase, Holy Resistance increase, CON +3, MEN +3. P. Def./M. Def. are increased. Can use the Stun canceling skill. Momentarily increases Stun resistance by 100%. Only one effect is applied even when the same two earrings are worn. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. MP +59, Bleed Resistance +50%, Bleed Atk. Rate +50%, Heal Amount increased, Vampiric Rage Effect, Stun/Mental Attack Resistance +40%, Stun/Mental Attack Rate +40%, P./M. Skill MP Consumption decreased, Earth/Holy Attribute Def. increased., CON +3, MEN +3, P./M. Def increased. Can use Stun Cancellation. Momentarily increases Stun Resistance + 100%. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1426,7 +1426,7 @@
 		</stats>
 	</item>
 	<item id="37668" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
-		<!-- HP +625, MP +79, Sleep Resistance 50% increase, Sleep Attack Rate 50% increase, physical/magic skill cooldown decrease, Wild Magic Effect, damage shield effect, fire resistance 30 increase, Dark Resistance 20 increase, STR +3, INT +3. P. Skill Atk. 5% increase, P. Atk. 10% increase, M. Atk. 20% increase, hold resistance skill use. Hold resistance 100% increase momentarily. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. HP +625, MP +79, Sleep Resistance +50%, Sleep Atk. Rate +50%, P./M. Skill Cooldown decreased, Wild Magic effect, Damage Shield effect, Fire Attack Def. +30, Dark Attack Def. +20, STR +3, INT +3, P. Skill Power +5%, P. Atk. +10%, M. Atk. +20%. Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1446,7 +1446,7 @@
 		</stats>
 	</item>
 	<item id="37669" name="Tauti's Ring" additionalName="30-day" type="Armor">
-		<!-- Tauti's Ring. Fire/Dark Resistance 25 increase, MP 38 increase, Critical Damage 15% increase, skill attack 5% increase, damage inflicted during PvP 5% increase, paralysis/yoke/exile resistance 10 increase, damage reflect resistance 5 increase, HP drain resistance 5 increase, damage received during PvP 5% decrease. Critical 54 increase when equipped with a blunt. Only one effect is applied even when the same two rings are worn (excluding attributes/M. Def.) Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. Tauti's Ring. Fire/Dark Attribute Resistance +25, MP +38, Critical Damage +15%, Skill Power +5%, PvP Damage +5%, Paralysis/Yoke/Banishment Resistance +10, Damage Reflection Resistance +5, Blood Siphon Resistance +5, Received PvP damage -5%, Critical Damage +54 when a blunt weapon is equipped. Effect does not stack with identical ones(excluding Attributes/M. Def.). -->
 		<set name="icon" val="icon.bm_tauti_ring" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1466,7 +1466,7 @@
 		</stats>
 	</item>
 	<item id="37670" name="Earth Wyrm Heart Ring" additionalName="30-day" type="Armor">
-		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling, Danger Zone Resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. MP +38, Increases Physical Attack Resistance, Mental Attack Resistance, MP Recovery Rate, Critical Damage and Accuracy. Poison Attack Resistance +50%, Poison Atk. Rate +50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance +20, Atk. Spd./Casting Spd. increased, Wind/Water Attack Def. increased. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.bm_ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

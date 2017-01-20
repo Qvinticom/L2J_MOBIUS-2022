@@ -189,7 +189,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="40314" name="Santa Hat" additionalName="STR" type="Armor">
+	<item id="40314" name="Santa Hat" additionalName="Str" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -221,7 +221,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40318" name="Santa Hat" additionalName="INT" type="Armor">
+	<item id="40318" name="Santa Hat" additionalName="Int" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1002,7 +1002,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
-		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Passive Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1127,7 +1127,7 @@
 		<!-- Can summon Pisces when equipped.\n\n(Active Skill)\n1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.)\n\n(Passive Skill)\n1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1.\n2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weight" val="150" />
+		<set name="weight" val="10" />
 		<set name="time" val="43200" />
 	</item>
 </list>

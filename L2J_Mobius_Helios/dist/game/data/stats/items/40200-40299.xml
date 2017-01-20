@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="40200" name="Sayha's Cloak" additionalName="Eviscerator" type="Armor">
 		<!-- Cloak for those that carry the power of Sayha. M. Def. + 40. -->
@@ -151,7 +151,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="40214" name="Blessed Antharas' Earring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40214" name="Blessed Antharas' Earring  Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="is_stackable" val="true" />
@@ -319,7 +319,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40227" name="Freya's Frozen Scroll" type="EtcItem">
-		<!-- Vitality consumption + 100% and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption +100%, XP/SP acquisition +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. Cannot be used together with Freya's Scroll of Storm. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1021,7 +1021,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40275" name="Buff Helmet" additionalName="STR" type="Armor">
+	<item id="40275" name="Buff Helmet" additionalName="Str" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. STR + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1053,7 +1053,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="40279" name="Buff Helmet" additionalName="INT" type="Armor">
+	<item id="40279" name="Buff Helmet" additionalName="Int" type="Armor">
 		<!-- Uses 2 Hair Accessory slots. INT + 3. -->
 		<set name="icon" val="icon.buff_helmet" />
 		<set name="default_action" val="EQUIP" />
@@ -1160,7 +1160,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40291" name="Steel Demon's Staff" additionalName="Magic Chaos" type="Weapon">
+	<item id="40291" name="Steel Demon's Staff - Magic Chaos" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of inflicting Curse Chaos on target when using a magical skill on them. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1187,7 +1187,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40292" name="Steel Spirit's Staff" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="40292" name="Steel Spirit's Staff - Magic Mental Shield" type="Weapon">
 		<!-- <Special Option>. Has a 50% chance of inflicting Mental Shield on target when using a magical skill on them. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1214,7 +1214,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40293" name="Steel Dasparion's Staff" additionalName="Acumen" type="Weapon">
+	<item id="40293" name="Steel Dasparion's Staff - Acumen" type="Weapon">
 		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1241,7 +1241,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40294" name="Steel Imperial Staff" additionalName="Empower" type="Weapon">
+	<item id="40294" name="Steel Imperial Staff - Empower" type="Weapon">
 		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1268,7 +1268,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40295" name="Steel Dynasty Staff" additionalName="Acumen" type="Weapon">
+	<item id="40295" name="Steel Dynasty Staff - Acumen" type="Weapon">
 		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />

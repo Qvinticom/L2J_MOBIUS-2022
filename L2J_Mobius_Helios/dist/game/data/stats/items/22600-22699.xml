@@ -442,7 +442,7 @@
 	<item id="22623" name="Blessed Scroll of Resurrection" additionalName="1-day" type="EtcItem">
 		<!-- Premium user exclusive item. Magic scroll that resurrects a dead player and completely restores XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -545,7 +545,7 @@
 	<item id="22627" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- Premium user exclusive item. When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -567,7 +567,7 @@
 	<item id="22628" name="Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- Premium user exclusive item. When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. -->
 		<set name="icon" val="icon.scroll_of_enchant_armor_i06" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -931,7 +931,7 @@
 	<item id="22647" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
 		<!-- Premium user exclusive item. When enchanted, P. Atk. + 6 for R-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 7 for two-handed swords, two-handed blunts, dualswords, two-handed fist weapons, and crossbows. P. Atk. + 12 for bows. M. Atk. + 5 for all weapons. P. Atk./M. Atk. are greatly increased starting at + 4. All amounts are increased for blessed weapons. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -952,7 +952,7 @@
 	<item id="22648" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
 		<!-- Premium user exclusive item. When enchanted, P. Def. + 2 for R-grade armor and accessories. It is greatly increased starting at + 4. Can be safely enchanted to + 3. When enchanted to + 4 or more, HP also increases according to the enchant value. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
-		<set name="weight" val="120" />
+		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

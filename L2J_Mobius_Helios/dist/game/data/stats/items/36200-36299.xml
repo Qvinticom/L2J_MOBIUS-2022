@@ -755,7 +755,7 @@
 		</skills>
 	</item>
 	<item id="36223" name="Entrance Pass: Emperor's Labyrinth Lv. 85 Solo" type="EtcItem">
-		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. Cannot be used in the Olympiad. -->
+		<!-- Extra Pass for Kartia's Labyrinth Solo Dungeon. Double click to disable the Lv. 85 entry restriction for the Kartia's Labyrinth Party Dungeon. Cannot use if locked out from Instanced Zone. Can be used once a day only, outside the Instanced Zone. Cannot use in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -769,7 +769,7 @@
 		</skills>
 	</item>
 	<item id="36224" name="Entrance Pass: Emperor's Labyrinth Lv. 90 Solo" type="EtcItem">
-		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. Cannot be used in the Olympiad. -->
+		<!-- Extra Pass for Kartia's Labyrinth Solo Dungeon. Double click to disable the Lv. 90 entry restriction for the Kartia's Labyrinth Party Dungeon. Cannot use if locked out from Instanced Zone. Can be used once a day only, outside the Instanced Zone. Cannot use in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -783,7 +783,7 @@
 		</skills>
 	</item>
 	<item id="36225" name="Entrance Pass: Emperor's Labyrinth Lv. 95 Solo" type="EtcItem">
-		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth solo dungeon. Usable once a day outside instances while on a cooldown. Cannot be used in the Olympiad. -->
+		<!-- Extra Pass for Kartia's Labyrinth Solo Dungeon. Double click to disable the Lv. 95 entry restriction for the Kartia's Labyrinth Party Dungeon. Cannot use if locked out from Instanced Zone. Can be used once a day only, outside the Instanced Zone. Cannot use in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -797,7 +797,7 @@
 		</skills>
 	</item>
 	<item id="36226" name="Entrance Pass: Emperor's Labyrinth Lv. 85 Party" type="EtcItem">
-		<!-- Double-click to reset cooldown to Lv. 85 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. Cannot be used in the Olympiad. -->
+		<!-- Extra Pass for Kartia's Labyrinth Party Dungeon. Double click to disable the Lv. 85 entry restriction for the Kartia's Labyrinth Party Dungeon. Cannot use if locked out from Instanced Zone. Can be used once a day only, outside the Instanced Zone. Cannot use in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1185,7 +1185,7 @@
 		</stats>
 	</item>
 	<item id="36245" name="Charlotte's Vitality Replenishing Potion" type="EtcItem">
-		<!-- Replenishes a certain amount of vitality. The limit on usage of 5 times per week does not apply. -->
+		<!-- Replenishes a certain amount of vitality. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1345,7 +1345,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="36254" name="Queen Ant's Soul Ring" type="Armor">
-		<!-- Ring containing Queen Ant's soul. MP + 31, Stun/Poison/Bleed Resistance + 25%, Stun/Poison/Bleed Attack Rate + 20%, P./M. Critical Damage + 15%, P./M. Critical Rate + 20, and P./M. Accuracy + 4. Wearing two of these rings will give you the effect of wearing one. -->
+		<!-- MP +31, P./M. Accuracy +4, P./M. Critical Rate +20, P./M. Critical Damage +15%, Stun/Poison/Bleed Atk./Def. Success Rate +25%. Effect does not stack with identical ones. Can be crafted. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1365,7 +1365,7 @@
 		</stats>
 	</item>
 	<item id="36255" name="Orfen's Soul Earring" type="Armor">
-		<!-- Earring containing Orfen's soul. MP + 46, Sleep/Paralysis/Mental Attack Resistance + 25%, Sleep/Paralysis/Mental attack rate + 25%, received Heal Amount + 10%, MP Consumption - 5% and 4% Vampiric Rage Effect. Wearing two of these earrings will give you the effect of wearing one. -->
+		<!-- MP +46, Sleep/Paralysis/Mental Atk./Def. Success Rate +25%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Effect does not stack with identical ones. Can be crafted. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1525,7 +1525,7 @@
 		<set name="icon" val="icon.etc_broken_crystal_blue_i00" />
 	</item>
 	<item id="36268" name="Entrance Pass: Emperor's Labyrinth Lv. 90 Party" type="EtcItem">
-		<!-- Double-click to reset cooldown to Lv. 90 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. Cannot be used in the Olympiad. -->
+		<!-- Extra Pass for Kartia's Labyrinth Party Dungeon. Double click to disable the Lv. 90 entry restriction for the Kartia's Labyrinth Party Dungeon. Cannot use if locked out from Instanced Zone. Can be used once a day only, outside the Instanced Zone. Cannot use in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1539,7 +1539,7 @@
 		</skills>
 	</item>
 	<item id="36269" name="Entrance Pass: Emperor's Labyrinth Lv. 95 Party" type="EtcItem">
-		<!-- Double-click to reset cooldown to Lv. 95 Kartia's Labyrinth party dungeon. Usable once a day outside instances while on a cooldown. Cannot be used in the Olympiad. -->
+		<!-- Extra Pass for Kartia's Labyrinth Party Dungeon. Double click to disable the Lv. 95 entry restriction for the Kartia's Labyrinth Party Dungeon. Cannot use if locked out from Instanced Zone. Can be used once a day only, outside the Instanced Zone. Cannot use in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />

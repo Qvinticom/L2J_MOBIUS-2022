@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46500" name="Pantheon's Soul Crystal - Stage 12" type="EtcItem">
 		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
@@ -133,49 +133,49 @@
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="46519" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46519" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a soul, and use a Soul Crystal Stage 1-4 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46520" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46520" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a soul, and use a Soul Crystal Stage 1-5 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46521" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46521" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a soul, and use a Soul Crystal Stage 1-6 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46522" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46522" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a soul, and use a Soul Crystal Stage 1-7 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46523" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46523" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a soul, and use a Soul Crystal Stage 1-8 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46524" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46524" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a soul, and use a Soul Crystal Stage 1-9 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46525" name="Practice Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46525" name="Practice Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within, received from a blacksmith to get some practice with Soul Crystals. Double-click to summon a Soul and use the Practice Soul Crystal Stage 1 to absorb the Soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -397,7 +397,7 @@
 			<stat type="pDef">100.0</stat>
 		</stats>
 	</item>
-	<item id="46542" name="Kelbim Leather Helmet" additionalName="Not In Use" type="Armor">
+	<item id="46542" name="Kelbim Leather Helmet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -448,7 +448,7 @@
 			<stat type="pDef">100.0</stat>
 		</stats>
 	</item>
-	<item id="46547" name="Freya Circlet" additionalName="Not In Use" type="Armor">
+	<item id="46547" name="Freya Circlet" additionalName="Not in Use" type="Armor">
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -610,7 +610,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46561" name="Blue Dynasty" type="EtcItem">
-		<!-- L2 Assist App item. Blue Dynasty armor. -->
+		<!-- Blue Dynasty armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -619,7 +619,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46562" name="Red Zubei" type="EtcItem">
-		<!-- L2 Assist App item. Red Zubei armor. -->
+		<!-- Red Zubei armor. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -627,7 +627,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46563" name="Epic Tale Pouch" additionalName="Not In Use" type="EtcItem">
+	<item id="46563" name="Epic Tale Pouch" additionalName="Not in Use" type="EtcItem">
 		<!-- Pouch received as reward for listening to Freya's story and enjoying your time at the epic tales pub. Double-click to use. -->
 		<set name="icon" val="icon.etc_pouch_gold_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -725,7 +725,7 @@
 			<stat type="rCrit">6.0</stat>
 		</stats>
 	</item>
-	<item id="46572" name="Tauti's Helmet Appearance Stone" additionalName="Not In Use" type="EtcItem">
+	<item id="46572" name="Tauti's Helmet Appearance Stone" additionalName="Not in Use" type="EtcItem">
 		<!-- Can change the appearance of helmets into Tauti's Helmet. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -770,7 +770,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="46577" name="Kelbim's Leather Helmet Appearance Stone" additionalName="Not In Use" type="EtcItem">
+	<item id="46577" name="Kelbim's Leather Helmet Appearance Stone" additionalName="Not in Use" type="EtcItem">
 		<!-- Can change the appearance of leather helmets into Kelbim's Leather Helmet. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -815,7 +815,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="46582" name="Freya's Circlet Appearance Stone" additionalName="Not In Use" type="EtcItem">
+	<item id="46582" name="Freya's Circlet Appearance Stone" additionalName="Not in Use" type="EtcItem">
 		<!-- Can change the appearance of circlets into Freya's Circlet. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_freightable" val="false" />
@@ -866,42 +866,42 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46588" name="For UI Test_Special Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46588" name="For UI Test_Special Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- Will be deleted on 3/13. -->
 		<set name="icon" val="icon.ensoul_big_pm" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="46589" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46589" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-10 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46590" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46590" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-11 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46591" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46591" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-12 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46592" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46592" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-13 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46593" name="Sealed Soul Crystal" additionalName="Not In Use" type="EtcItem">
+	<item id="46593" name="Sealed Soul Crystal" additionalName="Not in Use" type="EtcItem">
 		<!-- A crystal with the soul of a monster sealed within. Double-click to summon a Soul, and use a Soul Crystal Stage 1-14 to absorb the soul. -->
 		<set name="icon" val="icon.etc_small_bubble_i00" />
 		<set name="is_freightable" val="false" />

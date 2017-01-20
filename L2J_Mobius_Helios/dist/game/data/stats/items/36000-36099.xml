@@ -1636,7 +1636,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
-		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
+		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1).  Temporary event item. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1652,7 +1652,7 @@
 		</skills>
 	</item>
 	<item id="36080" name="Nom Nom Candy" type="EtcItem">
-		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
+		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases additionally obtained XP/SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1).  Temporary event item. -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1974,7 +1974,7 @@
 		</skills>
 	</item>
 	<item id="36094" name="Vitality Replenishing Star Candy" type="EtcItem">
-		<!-- Replenishes a certain amount of vitality. The limit on usage of 5 times per week does not apply. -->
+		<!-- Replenishes a certain amount of vitality. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1992,7 +1992,7 @@
 		</skills>
 	</item>
 	<item id="36095" name="Vitality Recovering Star Candy" type="EtcItem">
-		<!-- When used, vitality is recovered for 10 minutes. When vitality is recovered through hunting and XP is acquired, some of it is replenished. The limit on usage of 5 times per week does not apply. -->
+		<!-- When used, vitality is recovered for 10 minutes. When vitality is recovered through hunting and XP is acquired, some of it is replenished. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -2012,7 +2012,7 @@
 		</skills>
 	</item>
 	<item id="36096" name="Vitality Maintaining Star Candy" type="EtcItem">
-		<!-- Maintains vitality for 10 min. The limit on usage of 5 times per week does not apply. -->
+		<!-- Maintains vitality for 10 min. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
 		<set name="weight" val="36" />
 		<set name="is_clan_depositable" val="false" />

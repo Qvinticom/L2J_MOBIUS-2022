@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="45800" name="Dynasty Hammer of Fortune" additionalName="30-day" type="Weapon">
 		<!-- Max HP + 25%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
@@ -2052,7 +2052,7 @@
 		</stats>
 	</item>
 	<item id="45896" name="Filled Earring (Antharas Energy)" additionalName="30-day" type="Armor">
-		<!-- MP + 46, Sleep Resistance + 40%, Bleed Atk. Rate + 40%, Heal Amount increases, Vampiric Rage Effect, Stun/Mental Attak Resistance + 30%, Stun/Mental Atk. Rate + 30%, MP Consumption decreases, and Earth Resistance increases. Only one effect is applied even when wearing two earrings with the same effect. -->
+		<!-- MP + 46, Sleep Resistance + 40%, Bleed Atk. Rate + 40%, Heal Amount increases, Vampiric Rage Effect, Stun/Mental Attak Resistance + 30%, Stun/Mental Atk. Rate + 30%,  MP Consumption decreases, and Earth Resistance increases.  Only one effect is applied even when wearing two earrings with the same effect. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />

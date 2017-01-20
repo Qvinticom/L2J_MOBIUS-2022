@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14500" name="Vesper Retributer {PvP}" additionalName="Health" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
@@ -989,7 +989,7 @@
 			<stat type="maxMp">637</stat>
 		</stats>
 	</item>
-	<item id="14526" name="Dynasty Dual Dagger - Great Gale" type="Weapon">
+	<item id="14526" name="Dynasty Dual Dagger" additionalName="Great Gale" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1030,7 +1030,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14527" name="Icarus Dual Daggers - Confusion" type="Weapon">
+	<item id="14527" name="Icarus Dual Daggers" additionalName="Confusion" type="Weapon">
 		<!-- Masterwork Item that increases Evasion. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1071,7 +1071,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14528" name="Dynasty Dual Dagger - Great Gale {PvP}" type="Weapon">
+	<item id="14528" name="Dynasty Dual Dagger" additionalName="Great Gale {PvP}" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1118,7 +1118,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14529" name="Icarus Dual Daggers - Confusion {PvP}" type="Weapon">
+	<item id="14529" name="Icarus Dual Daggers" additionalName="Confusion {PvP}" type="Weapon">
 		<!-- Masterwork Item that increases Evasion. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1803,7 +1803,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14559" name="Player Commendation Points" type="EtcItem">
+	<item id="14559" name="PC Cafe Points" type="EtcItem">
 		<!-- When double-clicked, 700 Player Commendation Points can be acquired. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

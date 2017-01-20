@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="46100" name="Treasure Map - High Priest Raymond" type="EtcItem">
-		<!-- A map showing the location of some treasure. It says "For the High Priest", so it's probably a gift for the temple. -->
+		<!-- A map showing the location of some treasure. It says For the High Priest, so it's probably a gift for the temple. -->
 		<set name="icon" val="icon.etc_map_yellow_i04" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -15,7 +15,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46101" name="Treasure Map - Turek Orc's Legacy" type="EtcItem">
-		<!-- A map showing the location of some treasure. It says, "Glory to the Turek Orcs". It looks like it is related to the Turek Orcs. -->
+		<!-- A map showing the location of some treasure. It says, Glory to the Turek Orcs. It looks like it is related to the Turek Orcs. -->
 		<set name="icon" val="icon.etc_map_yellow_i05" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -412,7 +412,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 	</item>
-	<item id="46142" name="Stronghold Flag Repair Cloth" type="EtcItem">
+	<item id="46142" name="Stronghold Flag Repair Supplies" type="EtcItem">
 		<!-- A piece of cloth to fix the flag that represents the stronghold. Take it to the Aden Vanguard. -->
 		<set name="icon" val="icon.etc_piece_of_cloth_white_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -915,7 +915,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46184" name="Happy Birthday Potion" type="EtcItem">
-		<!-- 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. The limit on usage of 5 times per week does not apply. -->
+		<!-- 3 out of 4 bars on the vitality gauge are replenished. Cooldown is 60 minutes. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
 		<set name="is_clan_depositable" val="false" />
@@ -930,7 +930,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
-		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
@@ -939,7 +939,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
-		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. and Def. each increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakims. <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/Water/Earth/Wind/Dark/Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP + 3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="45600" name="Special Resistance Earring - Paralyze" type="Armor">
 		<!-- Earring purchased with a Mark of Battle. MP + 49, CP + 10%, Paralysis Attack/Resistance + 40%, and Vampiric Rage Effect by + 3%. Only one effect is applied even when wearing two earrings with the same effect. -->
@@ -135,7 +135,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="45609" name="Special Magic Ornament Eternal Belt" additionalName="PVP Defense" type="Armor">
+	<item id="45609" name="Special Magic Ornament Eternal Belt" additionalName="PvP Defense" type="Armor">
 		<!-- Belt purchased with a Mark of Battle. Weight + 12800, Inventory Slots + 18, PVP Damage - 7%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
@@ -411,7 +411,7 @@
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 	</item>
 	<item id="45627" name="Lionel Hunter's Mission List - Part 1" type="EtcItem">
-		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Verdure Elder Elikia from Heine, the Mysterious Butler, Weapon Merchant Galladucci from Giran, and Sir Eric Rodemai from Aden." -->
+		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. Finish the missions from these people and bring back a certificate - Verdure Elder Elikia from Heine, the Mysterious Butler, Weapon Merchant Galladucci from Giran, and Sir Eric Rodemai from Aden. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -486,7 +486,7 @@
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 	</item>
 	<item id="45632" name="Lionel Hunter's Mission List - Part 2" type="EtcItem">
-		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Head Priest of the Earth Daichir from Schuttgart, the Olympiad Manager, Maestro Ishuma from the Wharf of Gludio Airships, and Sir Kristof Rodemai from Giran." -->
+		<!-- First list of missions from Lionel Hunter to achieve the Exalted status.  Finish the missions from these people and bring back a certificate - Head Priest of the Earth Daichir from Schuttgart, the Olympiad Manager, Maestro Ishuma from the Wharf of Gludio Airships, and Sir Kristof Rodemai from Giran. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -561,7 +561,7 @@
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 	</item>
 	<item id="45637" name="Lionel Hunter's Mission List - Part 3" type="EtcItem">
-		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. "Finish the missions from these people and bring back a certificate - Captain Kurtiz from Aden, Merlot from Hunters' Village, Blacksmith of Mammon, and Sir Gustav Athebaldt from Oren." -->
+		<!-- First list of missions from Lionel Hunter to achieve the Exalted status. Finish the missions from these people and bring back a certificate - Captain Kurtiz from Aden, Merlot from Hunters' Village, Blacksmith of Mammon, and Sir Gustav Athebaldt from Oren. -->
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

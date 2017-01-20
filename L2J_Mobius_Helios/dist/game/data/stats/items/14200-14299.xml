@@ -1809,7 +1809,7 @@
 			<item id="14074" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
 		</capsuled_items>
 	</item>
-	<item id="14292" name="Samurai Long Sword" type="EtcItem">
+	<item id="14292" name="Samurai Long Sword" type="Weapon">
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1836,7 +1836,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="14293" name="Deadman's Staff" type="EtcItem">
+	<item id="14293" name="Deadman's Staff" type="Weapon">
 		<set name="icon" val="icon.weapon_deadmans_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1865,7 +1865,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="14294" name="Corroded Ghoul's Staff" type="EtcItem">
+	<item id="14294" name="Corroded Ghoul's Staff" type="Weapon">
 		<set name="icon" val="icon.weapon_ghouls_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1894,7 +1894,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="14295" name="Demon's Staff" type="EtcItem">
+	<item id="14295" name="Demon's Staff" type="Weapon">
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1923,7 +1923,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="14296" name="Crystal Dagger" type="EtcItem">
+	<item id="14296" name="Crystal Dagger" type="Weapon">
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1951,7 +1951,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="14297" name="Great Pata" type="EtcItem">
+	<item id="14297" name="Great Pata" type="Weapon">
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1979,7 +1979,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="14298" name="Eminence Bow" type="EtcItem">
+	<item id="14298" name="Eminence Bow" type="Weapon">
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -2009,7 +2009,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="14299" name="Orcish Poleaxe" type="EtcItem">
+	<item id="14299" name="Orcish Poleaxe" type="Weapon">
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />

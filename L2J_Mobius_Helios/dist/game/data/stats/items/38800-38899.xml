@@ -1193,7 +1193,7 @@
 		</skills>
 	</item>
 	<item id="38850" name="Topaz" additionalName="Lv. 1" type="Armor">
-		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 1062 power. Effect does not stack with additional jewels of the same type. -->
+		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 1062 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1211,7 +1211,7 @@
 		</skills>
 	</item>
 	<item id="38851" name="Topaz" additionalName="Lv. 2" type="Armor">
-		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 3717 power. Effect does not stack with additional jewels of the same type. -->
+		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 3717 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1228,7 +1228,7 @@
 		</skills>
 	</item>
 	<item id="38852" name="Topaz" additionalName="Lv. 3" type="Armor">
-		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 6903 power. Effect does not stack with additional jewels of the same type. -->
+		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 6903 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1246,7 +1246,7 @@
 		</skills>
 	</item>
 	<item id="38853" name="Topaz" additionalName="Lv. 4" type="Armor">
-		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 10089 power. Effect does not stack with additional jewels of the same type. -->
+		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 10089 power. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1264,7 +1264,7 @@
 		</skills>
 	</item>
 	<item id="38854" name="Topaz" additionalName="Lv. 5" type="Armor">
-		<!-- Disrupts the target's casting when used. When used on a PC, inflicts damage with 13275 power. Effect does not stack with additional jewels of the same type. -->
+		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 13275 power and ignores the target's CP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1716,7 +1716,7 @@
 		</skills>
 	</item>
 	<item id="38885" name="Aquamarine" additionalName="Lv. 1" type="Armor">
-		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 1%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When using a skill after equipping, there is a 1% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1738,7 +1738,7 @@
 		</skills>
 	</item>
 	<item id="38886" name="Aquamarine" additionalName="Lv. 2" type="Armor">
-		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 2%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When using a skill after equipping, there is a 2% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1760,7 +1760,7 @@
 		</skills>
 	</item>
 	<item id="38887" name="Aquamarine" additionalName="Lv. 3" type="Armor">
-		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 4%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When using a skill after equipping, there is a 4% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1782,7 +1782,7 @@
 		</skills>
 	</item>
 	<item id="38888" name="Aquamarine" additionalName="Lv. 4" type="Armor">
-		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 9%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When using a skill after equipping, there is a 9% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1804,7 +1804,7 @@
 		</skills>
 	</item>
 	<item id="38889" name="Aquamarine" additionalName="Lv. 5" type="Armor">
-		<!-- When using the skill after equipping, there is a chance of MP Recovery. Activation rate 15%. Effect does not stack with additional jewels of the same type. -->
+		<!-- When using a skill after equipping, there is a 15% chance of recovering 136 MP. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_aquamarine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />

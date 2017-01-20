@@ -873,7 +873,7 @@
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 	</item>
 	<item id="37766" name="Chaos Fragment" type="EtcItem">
-		<!-- Item obtained by defeating the evil creatures of Hellbound. -->
+		<!-- An item obtained by defeating monsters in the Beleth's Magic Circle area in Hellbound. -->
 		<set name="icon" val="icon.etc_stone_black_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1016,7 +1016,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
 	<item id="37779" name="Scroll of Blessing: Armor (R-grade)" type="EtcItem">
-		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Immortal or Hell equipment for Blessed equipment. -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Immortal or Twilight equipment for Blessed equipment. -->
 		<set name="icon" val="icon.bless_scroll_r2" />
 		<set name="weight" val="100" />
 		<set name="price" val="1371850" />

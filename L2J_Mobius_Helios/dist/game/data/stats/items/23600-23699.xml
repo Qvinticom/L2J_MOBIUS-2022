@@ -389,7 +389,7 @@
 		</skills>
 	</item>
 	<item id="23622" name="Name Change Ticket" type="EtcItem">
-		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your Account. 2. Submit a ticket to Support with "Rename Character" in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
+		<!-- To change your character's name, follow these steps:. 1. Create a new character with the desired name on your Account. 2. Submit a ticket to Support with Rename Character in the title and indicate the new nickname. 3. The character with the item in the inventory will be renamed. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i01" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23623" name="Gender Change Ticket" type="EtcItem">
-		<!-- To change the gender of your character, follow these steps:. 1. Submit a ticket to our Support from this account. 2. Put "Change gender" in the ticket title. The gender of the character with this item in the inventory will be changed. Note: You cannot change the gender of a Kamael. -->
+		<!-- To change the gender of your character, follow these steps:. 1. Submit a ticket to our Support from this account. 2. Put Change gender in the ticket title. The gender of the character with this item in the inventory will be changed. Note: You cannot change the gender of a Kamael. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -770,7 +770,7 @@
 		</skills>
 	</item>
 	<item id="23642" name="Vitality Replenishing Star Candy" type="EtcItem">
-		<!-- Replenishes an amount of Vitality. Can be used more than 5 times a week. -->
+		<!-- Replenishes an amount of Vitality. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -785,7 +785,7 @@
 		</skills>
 	</item>
 	<item id="23643" name="Vitality Recovering Star Candy" type="EtcItem">
-		<!-- Replenishes Vitality for 10 min. Can be used more than 5 times a week. -->
+		<!-- Replenishes Vitality for 10 min. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_purple_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -802,7 +802,7 @@
 		</skills>
 	</item>
 	<item id="23644" name="Vitality Maintaining Star Candy" type="EtcItem">
-		<!-- Replenishes Vitality for 10 min. Can be used more than 5 times a week. -->
+		<!-- Replenishes Vitality for 10 min. -->
 		<set name="icon" val="BranchSys.br_rudolf_food_blue_i00" />
 		<set name="weight" val="36" />
 		<set name="is_clan_depositable" val="false" />
