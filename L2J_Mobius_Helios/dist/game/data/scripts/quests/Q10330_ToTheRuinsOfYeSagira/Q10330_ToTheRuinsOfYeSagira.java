@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q10329_BackupSeekers.Q10329_BackupSeekers;
-
 /**
  * To the Ruins of Ye Sagira (10330)
  * @author Gladicek
@@ -48,7 +46,6 @@ public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 		addStartNpc(ATRAN);
 		addTalkId(ATRAN, LAKCIS);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33448-05.html");
-		addCondCompletedQuest(Q10329_BackupSeekers.class.getSimpleName(), "33448-05.html");
 	}
 	
 	@Override

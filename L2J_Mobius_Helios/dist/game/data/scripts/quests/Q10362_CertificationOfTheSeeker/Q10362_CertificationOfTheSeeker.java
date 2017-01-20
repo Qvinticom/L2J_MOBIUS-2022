@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q10361_RolesOfTheSeeker.Q10361_RolesOfTheSeeker;
-
 /**
  * Certification of The Seeker (10362)
  * @author Gladicek
@@ -56,7 +54,6 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 		addTalkId(CHESHA, NAGEL);
 		addKillId(STALKER, CRAWLER);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-07.html");
-		addCondCompletedQuest(Q10361_RolesOfTheSeeker.class.getSimpleName(), "33449-07.html");
 	}
 	
 	@Override
