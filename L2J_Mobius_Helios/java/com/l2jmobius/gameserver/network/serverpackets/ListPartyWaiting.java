@@ -75,6 +75,8 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 				packet.writeS(member.getName());
 			}
 		}
+		packet.writeD(0);
+		packet.writeD(0);
 		return true;
 	}
 }

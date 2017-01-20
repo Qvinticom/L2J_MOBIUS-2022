@@ -45,6 +45,7 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ONE_DAY_RECEIVE_REWARD_LIST.writeId(packet);
 		
+		packet.writeC(0x23);
 		packet.writeD(_player.getClassId().getId());
 		packet.writeD(LocalDate.now().getDayOfWeek().ordinal()); // Day of week
 		packet.writeD(_rewards.size());

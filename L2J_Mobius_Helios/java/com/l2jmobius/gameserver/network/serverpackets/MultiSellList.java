@@ -54,6 +54,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 	{
 		OutgoingPackets.MULTI_SELL_LIST.writeId(packet);
 		
+		packet.writeC(0x00);
 		packet.writeD(_list.getListId()); // list id
 		packet.writeC(0x00); // GOD Unknown
 		packet.writeD(1 + (_index / PAGE_SIZE)); // page started from 1
@@ -61,6 +62,7 @@ public final class MultiSellList implements IClientOutgoingPacket
 		packet.writeD(PAGE_SIZE); // size of pages
 		packet.writeD(_size); // list length
 		packet.writeC(_list.isNewMultisell() ? 0x01 : 0x00); // new multisell window
+		packet.writeD(0x20); // Always 32 oO
 		
 		Entry ent;
 		while (_size-- > 0)

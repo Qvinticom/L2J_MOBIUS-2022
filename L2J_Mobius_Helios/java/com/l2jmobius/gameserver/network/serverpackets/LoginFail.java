@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class LoginFail implements IClientOutgoingPacket
 {
-	// TODO: Enum
 	public static final int NO_TEXT = 0;
 	public static final int SYSTEM_ERROR_LOGIN_LATER = 1;
 	public static final int PASSWORD_DOES_NOT_MATCH_THIS_ACCOUNT = 2;
@@ -34,13 +33,20 @@ public class LoginFail implements IClientOutgoingPacket
 	public static final int ACCESS_FAILED_TRY_LATER4 = 9;
 	public static final int ACCESS_FAILED_TRY_LATER5 = 10;
 	
-	private final int _reason;
+	public static final LoginFail LOGIN_SUCCESS = new LoginFail(-1, NO_TEXT);
 	
-	/**
-	 * @param reason
-	 */
+	private final int _reason;
+	private final int _success;
+	
 	public LoginFail(int reason)
 	{
+		_success = 0;
+		_reason = reason;
+	}
+	
+	public LoginFail(int success, int reason)
+	{
+		_success = success;
 		_reason = reason;
 	}
 	
@@ -49,6 +55,7 @@ public class LoginFail implements IClientOutgoingPacket
 	{
 		OutgoingPackets.LOGIN_FAIL.writeId(packet);
 		
+		packet.writeD(_success);
 		packet.writeD(_reason);
 		return true;
 	}

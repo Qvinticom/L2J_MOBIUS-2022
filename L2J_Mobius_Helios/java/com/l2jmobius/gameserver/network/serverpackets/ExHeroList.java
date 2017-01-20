@@ -52,6 +52,7 @@ public class ExHeroList implements IClientOutgoingPacket
 			packet.writeS(hero.getString(Hero.ALLY_NAME, ""));
 			packet.writeD(hero.getInt(Hero.ALLY_CREST, 0));
 			packet.writeD(hero.getInt(Hero.COUNT));
+			packet.writeD(0x00);
 		}
 		return true;
 	}

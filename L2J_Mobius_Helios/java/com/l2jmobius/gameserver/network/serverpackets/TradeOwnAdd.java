@@ -37,7 +37,7 @@ public final class TradeOwnAdd extends AbstractItemPacket
 	{
 		OutgoingPackets.TRADE_OWN_ADD.writeId(packet);
 		packet.writeH(1); // items added count
-		writeTradeItem(packet, _item);
+		writeItem(packet, _item);
 		return true;
 	}
 }

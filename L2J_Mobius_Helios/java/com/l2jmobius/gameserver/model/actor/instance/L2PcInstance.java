@@ -270,6 +270,7 @@ import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
+import com.l2jmobius.gameserver.network.serverpackets.ExBrPremiumState;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetOnAirShip;
@@ -12864,6 +12865,7 @@ public final class L2PcInstance extends L2Playable
 	public void setPremiumStatus(boolean premiumStatus)
 	{
 		_premiumStatus = premiumStatus;
+		sendPacket(new ExBrPremiumState(this));
 	}
 	
 	public boolean hasPremiumStatus()
