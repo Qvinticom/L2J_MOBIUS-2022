@@ -21,6 +21,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
+import quests.Q10316_UndecayingMemoryOfThePast.Q10316_UndecayingMemoryOfThePast;
+
 /**
  * Orbis' Witch (10317)
  * @URL https://l2wiki.com/Orbis%27_Witch
@@ -41,7 +43,7 @@ public final class Q10317_OrbisWitch extends Quest
 		addTalkId(OPERA, LYDIA);
 		
 		addCondMinLevel(MIN_LEVEL, "32946-09.html");
-		// addCondCompletedQuest(Q10316_UndecayingMemoryOfThePast.class.getSimpleName(), "32946-09.html");
+		addCondCompletedQuest(Q10316_UndecayingMemoryOfThePast.class.getSimpleName(), "32946-09.html");
 	}
 	
 	@Override
@@ -114,6 +116,7 @@ public final class Q10317_OrbisWitch extends Quest
 				if (qs.isCond(1))
 				{
 					htmltext = "32892-01.html";
+					break;
 				}
 			}
 		}

@@ -40,6 +40,8 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jmobius.gameserver.util.Util;
 
+import quests.Q10331_StartOfFate.Q10331_StartOfFate;
+
 /**
  * Certification of Fate (10360)
  * @author St3eT
@@ -80,6 +82,7 @@ public final class Q10360_CertificationOfFate extends Quest
 		registerQuestItems(SHINE_STONE);
 		addCondNotRace(Race.ERTHEIA, "");
 		addCondMinLevel(MIN_LEVEL, "");
+		addCondCompletedQuest(Q10331_StartOfFate.class.getSimpleName(), "restriction.html");
 	}
 	
 	@Override
@@ -398,6 +401,7 @@ public final class Q10360_CertificationOfFate extends Quest
 					if (st.isCond(2))
 					{
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+						st.setCond(0);
 						st.setCond(3);
 					}
 					break;
@@ -496,11 +500,6 @@ public final class Q10360_CertificationOfFate extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final L2PcInstance player = event.getActiveChar();
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
@@ -516,11 +515,6 @@ public final class Q10360_CertificationOfFate extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final L2PcInstance player = event.getActiveChar();
 		
 		if ((player.getLevel() >= MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))

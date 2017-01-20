@@ -28,6 +28,7 @@ import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 
 /**
  * Obligations of the Seeker (10364)
+ * @URL https://l2wiki.com/Obligations_of_the_Seeker
  * @author Gladicek
  */
 public final class Q10364_ObligationsOfTheSeeker extends Quest
@@ -41,9 +42,8 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 	// Items
 	private static final int DIRTY_PAPER_PIECES = 17578;
 	private static final int LEATHER_SHOES = 37;
-	private static final int HEALING_POTION = 1060;
 	// Misc
-	private static final int MIN_LEVEL = 14;
+	private static final int MIN_LEVEL = 13;
 	private static final int MAX_LEVEL = 25;
 	
 	public Q10364_ObligationsOfTheSeeker()
@@ -53,8 +53,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 		addTalkId(CELIN, WALTER, DEP);
 		addKillId(KRAPHER, AVIAN);
 		registerQuestItems(DIRTY_PAPER_PIECES);
-		addCondMinLevel(MIN_LEVEL, "33451-04.html");
-		addCondMaxLevel(MAX_LEVEL, "33451-04.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33451-04.html");
 		addCondCompletedQuest(Q10363_RequestOfTheSeeker.class.getSimpleName(), "33451-04.html");
 	}
 	
@@ -82,6 +81,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 			case "33451-03.html":
 			{
 				qs.startQuest();
+				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
@@ -100,9 +100,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 				if (qs.isCond(3))
 				{
 					giveItems(player, LEATHER_SHOES, 1);
-					giveAdena(player, 550, true);
-					giveItems(player, HEALING_POTION, 50);
-					addExpAndSp(player, 95000, 22);
+					addExpAndSp(player, 114000, 14);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -122,6 +120,7 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 		{
 			if (giveItemRandomly(killer, npc, DIRTY_PAPER_PIECES, 1, 5, 0.5, true))
 			{
+				qs.setCond(0);
 				qs.setCond(3);
 				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 4500);
 			}

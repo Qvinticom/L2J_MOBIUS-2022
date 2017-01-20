@@ -16,13 +16,14 @@
  */
 package quests.Q10330_ToTheRuinsOfYeSagira;
 
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+
+import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
 
 /**
  * To the Ruins of Ye Sagira (10330)
@@ -31,21 +32,29 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 {
 	// NPCs
-	private static final int ATRAN = 33448;
+	private static final int FRANCO = 32153; // Human
+	private static final int RIVIAN = 32147; // Elf
+	private static final int TOOK = 32150; // Orc
+	private static final int DEVON = 32160; // Dark Elf
+	private static final int MOKA = 32157; // Dwarf
+	private static final int VALFAR = 32146; // Kamael
+	private static final int MILA = 30006;
 	private static final int LAKCIS = 32977;
 	// Items
-	private static final int LEATHER_SHIRT = 22;
-	private static final int LEATHER_PANTS = 29;
+	private static final int RING_OF_KNOWLEDGE = 875;
+	private static final int HEALING_POTION = 1060;
 	// Misc
-	private static final int MIN_LEVEL = 8;
+	private static final int MIN_LEVEL = 7;
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10330_ToTheRuinsOfYeSagira()
 	{
 		super(10330);
-		addStartNpc(ATRAN);
-		addTalkId(ATRAN, LAKCIS);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33448-05.html");
+		addStartNpc(FRANCO, RIVIAN, TOOK, DEVON, MOKA, VALFAR);
+		addTalkId(FRANCO, RIVIAN, TOOK, DEVON, MOKA, VALFAR, MILA, LAKCIS);
+		addCondNotRace(Race.ERTHEIA, "noRace.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "noLevel.html");
+		addCondCompletedQuest(Q10544_SeekerSupplies.class.getSimpleName(), "noLevel.html");
 	}
 	
 	@Override
@@ -60,27 +69,47 @@ public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33448-02.htm":
-			case "32977-02.html":
+			case "32169-02.html":
+			case "32153-02.htm":
+			case "32153-03.htm":
+			case "32147-02.htm":
+			case "32147-03.htm":
+			case "32150-02.htm":
+			case "32150-03.htm":
+			case "32160-02.htm":
+			case "32160-03.htm":
+			case "32157-02.htm":
+			case "32157-03.htm":
+			case "32146-02.htm":
+			case "32146-03.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33448-03.html":
+			case "32153-04.htm":
+			case "32147-04.htm":
+			case "32150-04.htm":
+			case "32160-04.htm":
+			case "32157-04.htm":
+			case "32146-04.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32977-03.html":
+			case "32169-03.html":
+			{
+				qs.setCond(2, true);
+				htmltext = event;
+				break;
+			}
+			case "32977-02.html":
 			{
 				if (qs.isStarted())
 				{
-					showOnScreenMsg(player, NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 4500);
-					giveAdena(player, 620, true);
-					giveItems(player, LEATHER_SHIRT, 1);
-					giveItems(player, LEATHER_PANTS, 1);
-					addExpAndSp(player, 23000, 5);
+					giveItems(player, RING_OF_KNOWLEDGE, 2);
+					giveItems(player, HEALING_POTION, 100);
+					addExpAndSp(player, 20100, 11);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}
@@ -100,17 +129,80 @@ public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-01.htm" : "32977-04.html";
+				switch (npc.getId())
+				{
+					case FRANCO:
+					{
+						htmltext = (player.getRace() == Race.HUMAN) ? "32153-01.htm" : "32153-00.html";
+						break;
+					}
+					case RIVIAN:
+					{
+						htmltext = (player.getRace() == Race.ELF) ? "32147-01.htm" : "32147-00.html";
+						break;
+					}
+					case TOOK:
+					{
+						htmltext = (player.getRace() == Race.ORC) ? "32150-01.htm" : "32150-00.html";
+						break;
+					}
+					case DEVON:
+					{
+						htmltext = (player.getRace() == Race.DARK_ELF) ? "32160-01.htm" : "32160-00.html";
+						break;
+					}
+					case MOKA:
+					{
+						htmltext = (player.getRace() == Race.DWARF) ? "32157-01.htm" : "32157-00.html";
+						break;
+					}
+					case VALFAR:
+					{
+						htmltext = (player.getRace() == Race.KAMAEL) ? "32146-01.htm" : "32146-00.html";
+						break;
+					}
+				}
 				break;
 			}
 			case State.STARTED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-04.html" : "32977-01.html";
+				switch (npc.getId())
+				{
+					case FRANCO:
+					case RIVIAN:
+					case TOOK:
+					case DEVON:
+					case MOKA:
+					case VALFAR:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "return.html";
+						}
+						break;
+					}
+					case MILA:
+					{
+						if (qs.isCond(1) || qs.isCond(2))
+						{
+							htmltext = "32169-01.html";
+						}
+						break;
+					}
+					case LAKCIS:
+					{
+						if (qs.isCond(2))
+						{
+							htmltext = "32977-01.html";
+						}
+						break;
+					}
+				}
 				break;
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == ATRAN ? "33448-06.html" : "32977-05.html";
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

@@ -100,6 +100,7 @@ public final class Q10387_SoullessOne extends Quest
 					{
 						addExpAndSp(player, 817_330_500, 196_159);
 					}
+					st.exitQuest(false, true);
 					htmltext = "33796-10.html";
 				}
 				break;
@@ -114,6 +115,7 @@ public final class Q10387_SoullessOne extends Quest
 					{
 						addExpAndSp(player, 817_330_500, 196_159);
 					}
+					st.exitQuest(false, true);
 					htmltext = "33796-10.html";
 				}
 				break;
@@ -128,6 +130,7 @@ public final class Q10387_SoullessOne extends Quest
 					{
 						addExpAndSp(player, 817_330_500, 196_159);
 					}
+					st.exitQuest(false, true);
 					htmltext = "33796-10.html";
 				}
 				break;
@@ -200,6 +203,7 @@ public final class Q10387_SoullessOne extends Quest
 		final QuestState st = getQuestState(player, false);
 		if ((st != null) && st.isCond(2))
 		{
+			st.setCond(0);
 			st.setCond(3, true);
 		}
 	}

@@ -12093,6 +12093,9 @@ public final class NpcStringId
 	@ClientString(id = 536604, message = "Ruins Status Update (Lv. 16-25)")
 	public static NpcStringId RUINS_STATUS_UPDATE_LV_16_252;
 	
+	@ClientString(id = 536606, message = "Defeat the Husks")
+	public static NpcStringId DEFEAT_THE_HUSKS;
+	
 	@ClientString(id = 536631, message = "Use the escape scroll in your inventory to go to the Administrative Office in Talking Island.")
 	public static NpcStringId USE_THE_ESCAPE_SCROLL_IN_YOUR_INVENTORY_TO_GO_TO_THE_ADMINISTRATIVE_OFFICE_IN_TALKING_ISLAND;
 	
@@ -13661,6 +13664,9 @@ public final class NpcStringId
 	
 	@ClientString(id = 550611, message = "Talk to Diana")
 	public static NpcStringId TALK_TO_DIANA;
+	
+	@ClientString(id = 554107, message = "Defeating the Scarecrow")
+	public static NpcStringId DEFEATING_THE_SCARECROW;
 	
 	@ClientString(id = 570101, message = "The Road to Destruction (Above Lv. 93)")
 	public static NpcStringId THE_ROAD_TO_DESTRUCTION_ABOVE_LV_93;
@@ -31892,6 +31898,8 @@ public final class NpcStringId
 	
 	@ClientString(id = 1803275, message = "If the story is still in progress, I can tell it again.")
 	public static NpcStringId IF_THE_STORY_IS_STILL_IN_PROGRESS_I_CAN_TELL_IT_AGAIN;
+	@ClientString(id = 1803329, message = "Speak with the ‘Adventurers' Guide for Training'.")
+	public static NpcStringId SPEAK_WITH_THE_ADVENTURERS_GUIDE_FOR_TRAINING;
 	
 	@ClientString(id = 1810363, message = "You are too far from the corpse.")
 	public static NpcStringId YOU_ARE_TOO_FAR_FROM_THE_CORPSE;

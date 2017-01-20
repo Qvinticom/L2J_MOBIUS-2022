@@ -51,19 +51,25 @@ public class Q10382_DayOfLiberation extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return getNoQuestMsg(player);
 		}
-		
 		switch (event)
 		{
+			case "sofa_sizraku_q10382_02.htm":
+			case "sofa_sizraku_q10382_09.html":
+			{
+				htmltext = event;
+				break;
+			}
 			case "sofa_sizraku_q10382_03.html":
 			{
 				qs.startQuest();
 				qs.set(Integer.toString(TAUTI), 0);
+				htmltext = event;
 				break;
 			}
 			case "sofa_sizraku_q10382_10.html":
@@ -72,6 +78,7 @@ public class Q10382_DayOfLiberation extends Quest
 				giveAdena(player, 3256740, true);
 				giveItems(player, TAUTIS_BRACELET, 1);
 				qs.exitQuest(QuestType.ONE_TIME, true);
+				htmltext = event;
 				break;
 			}
 		}
@@ -113,7 +120,7 @@ public class Q10382_DayOfLiberation extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isStarted() && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
-			qs.setCond(2);
+			qs.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

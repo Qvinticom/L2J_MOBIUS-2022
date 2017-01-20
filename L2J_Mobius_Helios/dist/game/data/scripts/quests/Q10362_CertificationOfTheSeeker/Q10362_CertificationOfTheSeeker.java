@@ -26,34 +26,36 @@ import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+
+import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
 
 /**
  * Certification of The Seeker (10362)
- * @author Gladicek
+ * @URL https://l2wiki.com/Certification_of_the_Seeker
+ * @author Gladicek, Gigi
  */
 public final class Q10362_CertificationOfTheSeeker extends Quest
 {
 	// NPCs
+	private static final int LAKCIS = 32977;
 	private static final int CHESHA = 33449;
 	private static final int NAGEL = 33450;
 	private static final int STALKER = 22992;
 	private static final int CRAWLER = 22991;
 	// Items
 	private static final int GLOVES = 49;
-	private static final int HEALING_POTION = 1060;
 	// Misc
-	private static final int MIN_LEVEL = 10;
+	private static final int MIN_LEVEL = 9;
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10362_CertificationOfTheSeeker()
 	{
 		super(10362);
-		addStartNpc(CHESHA);
-		addTalkId(CHESHA, NAGEL);
+		addStartNpc(LAKCIS);
+		addTalkId(LAKCIS, CHESHA, NAGEL);
 		addKillId(STALKER, CRAWLER);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33449-07.html");
+		addCondCompletedQuest(Q10330_ToTheRuinsOfYeSagira.class.getSimpleName(), "33449-07.html");
 	}
 	
 	@Override
@@ -68,13 +70,14 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33449-02.htm":
-			case "33450-02.html":
+			case "32977-02.htm":
+			case "32977-03.htm":
+			case "33449-02.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33449-03.html":
+			case "32977-04.htm":
 			{
 				qs.startQuest();
 				qs.setMemoStateEx(STALKER, 0);
@@ -82,17 +85,20 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 				htmltext = event;
 				break;
 			}
-			case "33450-03.html":
+			case "33449-03.html":
+			{
+				qs.setCond(2, true);
+				htmltext = event;
+				break;
+			}
+			case "33450-02.html":
 			{
 				if (qs.isCond(3))
 				{
 					giveItems(player, GLOVES, 1);
-					giveAdena(player, 430, true);
-					giveItems(player, HEALING_POTION, 50);
-					addExpAndSp(player, 50000, 12);
+					addExpAndSp(player, 40000, 12);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					break;
 				}
 				break;
 			}
@@ -105,7 +111,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(2))
 		{
 			int killedStalker = qs.getMemoStateEx(STALKER);
 			int killedCrawler = qs.getMemoStateEx(CRAWLER);
@@ -123,7 +129,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 			else if (npc.getId() == CRAWLER)
 			{
 				killedCrawler++;
-				if (killedCrawler <= 5)
+				if (killedCrawler <= 10)
 				{
 					qs.setMemoStateEx(CRAWLER, killedCrawler);
 					sendNpcLogList(killer);
@@ -131,9 +137,10 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 				}
 			}
 			
-			if ((killedStalker == 10) && (killedCrawler == 5))
+			if ((killedStalker == 10) && (killedCrawler == 10))
 			{
-				qs.setCond(2, true);
+				qs.setCond(0);
+				qs.setCond(3, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -149,45 +156,42 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == CHESHA)
+				if (npc.getId() == LAKCIS)
 				{
-					htmltext = "33449-01.htm";
+					htmltext = "32977-01.htm";
 				}
 				break;
 			}
 			case State.STARTED:
 			{
-				if (npc.getId() == CHESHA)
+				switch (npc.getId())
 				{
-					switch (qs.getCond())
+					case LAKCIS:
 					{
-						case 1:
+						if (qs.isCond(1))
+						{
+							htmltext = "32977-05.html";
+						}
+						break;
+					}
+					case CHESHA:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "33449-01.html";
+						}
+						else if (qs.isCond(2))
 						{
 							htmltext = "33449-04.html";
-							break;
 						}
-						case 2:
-						{
-							if (!isSimulated)
-							{
-								showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 4500);
-								qs.setCond(3, true);
-							}
-							htmltext = "33449-05.html";
-							break;
-						}
-						case 3:
-						{
-							htmltext = "33449-06.html";
-							break;
-						}
+						break;
 					}
-				}
-				else if (npc.getId() == NAGEL)
-				{
-					if (qs.isCond(3))
+					case NAGEL:
 					{
-						htmltext = "33450-01.html";
+						if (qs.isCond(3))
+						{
+							htmltext = "33450-01.html";
+						}
 						break;
 					}
 				}
@@ -195,7 +199,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 			}
 			case State.COMPLETED:
 			{
-				htmltext = npc.getId() == CHESHA ? "33449-08.html" : "33450-04.html";
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}
@@ -207,7 +211,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 	{
 		final QuestState qs = getQuestState(activeChar, false);
 		
-		if ((qs != null) && qs.isCond(1))
+		if ((qs != null) && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
 			npcLogList.add(new NpcLogListHolder(STALKER, false, qs.getMemoStateEx(STALKER)));

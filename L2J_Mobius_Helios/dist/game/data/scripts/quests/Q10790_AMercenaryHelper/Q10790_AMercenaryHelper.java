@@ -16,99 +16,94 @@
  */
 package quests.Q10790_AMercenaryHelper;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * A Mercenary Helper (10790)
- * @author Stayway
+ * @URL https://l2wiki.com/A_Mercenary_Helper
+ * @author Gigi
  */
+
 public class Q10790_AMercenaryHelper extends Quest
 {
-	// NPC
+	// NPCs
 	private static final int DOKARA = 33847;
 	// Monsters
-	private static final int SPLINTER_STAKATO = 21508;
-	private static final int SPLINTER_STAKATO_WORKER = 21509;
-	private static final int SPLINTER_STAKATO_SOLDIER = 21510;
-	private static final int SPLINTER_STAKATO_DRONE = 21511;
-	private static final int NEEDLE_STAKATO = 21513;
-	private static final int NEEDLE_STAKATO_WORKER = 21514;
-	private static final int NEEDLE_STAKATO_SOLDIER = 21515;
-	private static final int NEEDLE_STAKATO_DRONE = 21516;
-	private static final Map<Integer, Integer> MOBS_REQUIRED = new HashMap<>();
+	private static final int[] MONSTERS =
 	{
-		MOBS_REQUIRED.put(SPLINTER_STAKATO, 50);
-	}
-	// Item
-	private static final ItemHolder GUILD_COIN = new ItemHolder(37045, 3);
-	private static final ItemHolder ENCHANT_ARMOR_A = new ItemHolder(26351, 3);
-	// Rewards
-	private static final int EXP_REWARD = 942690;
-	private static final int SP_REWARD = 226;
-	// Other
+		21508, // Splinter Stakato
+		21509, // Splinter Stakato Worker
+		21510, // Splinter Stakato Soldier
+		21511, // Splinter Stakato Drone
+		21512, // Splinter Stakato Drone
+		21513, // Needle Stakato
+		21514, // Needle Stakato Worker
+		21515, // Needle Stakato Soldier
+		21516, // Needle Stakato Drone
+		21517, // Needle Stakato Drone
+		21518, // Frenzied Stakato Soldier
+		21519 // Frenzied Stakato Drone
+	};
+	// Items
+	private static final int EAA = 730;
+	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
+	private static final String KILL_COUNT_VAR = "KillCounts";
 	
 	public Q10790_AMercenaryHelper()
 	{
 		super(10790);
 		addStartNpc(DOKARA);
 		addTalkId(DOKARA);
-		addKillId(SPLINTER_STAKATO, SPLINTER_STAKATO_WORKER, SPLINTER_STAKATO_SOLDIER, SPLINTER_STAKATO_DRONE, NEEDLE_STAKATO, NEEDLE_STAKATO_WORKER, NEEDLE_STAKATO_SOLDIER, NEEDLE_STAKATO_DRONE);
-		addCondMinLevel(MIN_LEVEL, "no_level.htm");
-		addCondRace(Race.ERTHEIA, "no Ertheia.html");
-		addCondClassId(ClassId.MARAUDER, "no_class.html");
+		addKillId(MONSTERS);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
+		addCondRace(Race.ERTHEIA, "noErtheia.html");
+		addCondClassId(ClassId.MARAUDER, "no_quest.html");
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
+		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
-			return null;
+			return getNoQuestMsg(player);
 		}
 		
-		String htmltext = null;
 		switch (event)
 		{
 			case "33847-02.htm":
 			case "33847-03.htm":
-			{
-				htmltext = event;
 				break;
-			}
-			case "33847-04.htm": // start the quest
+			case "33847-04.htm":
 			{
 				qs.startQuest();
-				qs.set(Integer.toString(SPLINTER_STAKATO), 0);
-				htmltext = event;
 				break;
 			}
-			case "33847-07.html":
+			default:
 			{
-				if (qs.isCond(2))
+				if (qs.isCond(2) && (player.getLevel() >= MIN_LEVEL))
 				{
-					giveItems(player, GUILD_COIN);
-					giveItems(player, ENCHANT_ARMOR_A);
-					addExpAndSp(player, EXP_REWARD, SP_REWARD);
 					qs.exitQuest(false, true);
-					htmltext = event;
+					giveStoryQuestReward(player, 3);
+					giveItems(player, EAA, 3);
+					addExpAndSp(player, 942650, 226);
+					htmltext = "33847-07.html";
 				}
-				break;
 			}
 		}
 		return htmltext;
@@ -118,38 +113,19 @@ public class Q10790_AMercenaryHelper extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
-			{
-				if ((player.getLevel() < MIN_LEVEL) || (player.getLevel() > MAX_LEVEL))
-				{
-					htmltext = "no_level.html";
-				}
-				else
-				{
-					htmltext = "33847-01.htm";
-				}
+				htmltext = "33847-01.htm";
 				break;
-			}
 			case State.STARTED:
-			{
-				if (qs.isCond(1))
-				{
-					htmltext = "33847-05.html"; // Need find proper html
-				}
-				else if (qs.isCond(2))
-				{
-					htmltext = "33847-06.html";
-				}
+				htmltext = (qs.isCond(1)) ? "33847-05.html" : "33847-06.html";
 				break;
-			}
 			case State.COMPLETED:
-			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
-			}
 		}
 		return htmltext;
 	}
@@ -157,38 +133,38 @@ public class Q10790_AMercenaryHelper extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isStarted() && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		final QuestState qs = getQuestState(killer, false);
+		if ((qs != null) && qs.isCond(1))
 		{
-			int kills = 0;
-			switch (npc.getId())
+			int count = qs.getInt(KILL_COUNT_VAR);
+			qs.set(KILL_COUNT_VAR, ++count);
+			if (count >= 50)
 			{
-				case SPLINTER_STAKATO:
-				case SPLINTER_STAKATO_WORKER:
-				case SPLINTER_STAKATO_SOLDIER:
-				case SPLINTER_STAKATO_DRONE:
-				case NEEDLE_STAKATO:
-				case NEEDLE_STAKATO_WORKER:
-				case NEEDLE_STAKATO_SOLDIER:
-				case NEEDLE_STAKATO_DRONE:
-				{
-					kills = qs.getInt(Integer.toString(SPLINTER_STAKATO));
-					kills++;
-					qs.set(Integer.toString(SPLINTER_STAKATO), kills);
-					break;
-				}
+				qs.setCond(2, true);
 			}
-			
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(SPLINTER_STAKATO, qs.getInt(Integer.toString(SPLINTER_STAKATO)));
-			log.addNpcString(NpcStringId.KILL_STAKATOS, qs.getInt(Integer.toString(SPLINTER_STAKATO)));
-			killer.sendPacket(log);
-			
-			if ((qs.getInt(Integer.toString(SPLINTER_STAKATO)) >= MOBS_REQUIRED.get(SPLINTER_STAKATO)) && (qs.getInt(Integer.toString(SPLINTER_STAKATO)) >= MOBS_REQUIRED.get(SPLINTER_STAKATO)))
+			else
 			{
-				qs.setCond(2);
+				sendNpcLogList(killer);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1))
+		{
+			final int killCounts = qs.getInt(KILL_COUNT_VAR);
+			if (killCounts > 0)
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>();
+				holder.add(new NpcLogListHolder(NpcStringId.KILL_STAKATOS, killCounts));
+				return holder;
+			}
+		}
+		return super.getNpcLogList(player);
 	}
 }

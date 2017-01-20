@@ -63,7 +63,7 @@ public class Q10383_FergasonsOffer extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
+		String htmltext = null;
 		final QuestState qs = getQuestState(player, false);
 		
 		if (qs == null)
@@ -73,14 +73,23 @@ public class Q10383_FergasonsOffer extends Quest
 		
 		switch (event)
 		{
+			case "sofa_sizraku_q10383_02.htm":
+			case "maestro_ferguson_q10383_02.html":
+			case "maestro_ferguson_q10383_03.html":
+			{
+				htmltext = event;
+				break;
+			}
 			case "sofa_sizraku_q10383_03.html":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "maestro_ferguson_q10383_04.html":
 			{
-				qs.setCond(2);
+				qs.setCond(2, true);
+				htmltext = event;
 				break;
 			}
 			case "sofa_aku_q10383_03.html":
@@ -89,6 +98,7 @@ public class Q10383_FergasonsOffer extends Quest
 				addExpAndSp(player, 951127800, 435041400);
 				giveAdena(player, 3256740, true);
 				qs.exitQuest(QuestType.ONE_TIME, true);
+				htmltext = event;
 				break;
 			}
 		}
@@ -155,7 +165,8 @@ public class Q10383_FergasonsOffer extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(2) && qs.isStarted() && giveItemRandomly(killer, npc, UNSTABLE_PETRA, 1, 20, 0.75, true))
 		{
-			qs.setCond(3);
+			qs.setCond(0);
+			qs.setCond(3, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

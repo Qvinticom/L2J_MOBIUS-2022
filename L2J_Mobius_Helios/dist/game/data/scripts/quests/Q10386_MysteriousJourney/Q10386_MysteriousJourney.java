@@ -91,6 +91,7 @@ public final class Q10386_MysteriousJourney extends Quest
 			{
 				if (st.isCond(2))
 				{
+					st.setCond(0);
 					st.setCond(3, true);
 					takeItems(player, VACCINE_BOX, 1);
 					htmltext = event;

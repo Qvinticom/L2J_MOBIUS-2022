@@ -55,7 +55,7 @@ public class Q10384_AnAudienceWithTauti extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = event;
+		String htmltext = event;
 		final QuestState qs = getQuestState(player, false);
 		
 		if (qs == null)
@@ -65,22 +65,35 @@ public class Q10384_AnAudienceWithTauti extends Quest
 		
 		switch (event)
 		{
+			case "maestro_ferguson_q10384_02.htm":
+			case "maestro_ferguson_q10384_03.htm":
+			case "maestro_ferguson_q10384_10.html":
+			{
+				htmltext = event;
+				break;
+			}
 			case "maestro_ferguson_q10384_04.html":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "sofa_aku_q10384_02.html":
 			{
-				qs.setCond(2);
+				qs.setCond(2, true);
+				htmltext = event;
 				break;
 			}
 			case "maestro_ferguson_q10384_11.html":
 			{
-				addExpAndSp(player, 951127800, 435041400);
-				giveAdena(player, 3256740, true);
+				if (qs.getMemoState() < 1)
+				{
+					addExpAndSp(player, 951127800, 435041400);
+					giveAdena(player, 3256740, true);
+				}
 				giveItems(player, BOTTLE_OF_TAUTIS_SOUL, 1);
 				qs.exitQuest(QuestType.ONE_TIME, true);
+				htmltext = event;
 				break;
 			}
 		}
@@ -137,7 +150,8 @@ public class Q10384_AnAudienceWithTauti extends Quest
 		final QuestState qs = getQuestState(killer, false);
 		if ((qs != null) && qs.isCond(2))
 		{
-			qs.setCond(3);
+			qs.setCond(0);
+			qs.setCond(3, true);
 			giveItems(killer, TAUTIS_FRAGMENT, 1);
 		}
 		return super.onKill(npc, killer, isSummon);

@@ -19,9 +19,9 @@ package quests.Q10751_WindsOfFateEncounters;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -52,6 +52,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
  * Winds of Fate: Encounters (10751)
+ * @URL https://l2wiki.com/Winds_of_Fate:_Encounters
  * @author malyelfik
  */
 public final class Q10751_WindsOfFateEncounters extends Quest
@@ -71,7 +72,11 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 	};
 	// Items
 	private static final int WIND_SPIRIT_REALMS_RELIC = 39535;
+	// private static final int PAULINAS_EQUIPMENT_SET_D_GRADE = 00000; //TODO
 	private static final int NAVARI_SUPPORT_BOX_FIGHTER = 40266;
+	private static final int BLESSED_SPIRITHSHOT_C = 3949;
+	private static final int SOULSHOT_C = 1464;
+	private static final int MAJOR_HEALING_POTION = 1061;
 	private static final int NAVARI_SUPPORT_BOX_MAGE = 40267;
 	// Location
 	private static final Location TELEPORT_LOC = new Location(-80565, 251763, -3080);
@@ -127,6 +132,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 				qs.startQuest();
 				if (player.isMageClass())
 				{
+					qs.setCond(0);
 					qs.setCond(3, true);
 				}
 				else
@@ -211,7 +217,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 23));
-					giveAdena(player, 11000, false);
+					giveAdena(player, 461880, false);
+					giveItems(player, BLESSED_SPIRITHSHOT_C, 3000);
+					giveItems(player, SOULSHOT_C, 3000);
+					giveItems(player, MAJOR_HEALING_POTION, 50);
 					giveItems(player, NAVARI_SUPPORT_BOX_MAGE, 1);
 					addExpAndSp(player, 2700000, 648);
 					qs.exitQuest(false, true);
@@ -228,7 +237,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 23));
-					giveAdena(player, 11000, false);
+					giveAdena(player, 461880, false);
+					giveItems(player, BLESSED_SPIRITHSHOT_C, 3000);
+					giveItems(player, SOULSHOT_C, 3000);
+					giveItems(player, MAJOR_HEALING_POTION, 50);
 					giveItems(player, NAVARI_SUPPORT_BOX_FIGHTER, 1);
 					addExpAndSp(player, 2700000, 648);
 					qs.exitQuest(false, true);
@@ -250,6 +262,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 		if (npc.getId() == TELESHA)
 		{
 			htmltext = "33981-01.html";
+		}
+		if (npc.getId() == MYSTERIOUS_WIZARD)
+		{
+			htmltext = "33980-01.html";
 		}
 		return htmltext;
 	}
@@ -408,6 +424,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 			if (killCount <= 5)
 			{
 				qs.set(KILL_COUNT_VAR, ++killCount);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				sendNpcLogList(killer);
 			}
 			
@@ -513,11 +530,6 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState st = getQuestState(player, false);
 		final int oldLevel = event.getOldLevel();
@@ -534,11 +546,6 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		if (Config.DISABLE_TUTORIAL)
-		{
-			return;
-		}
-		
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState st = getQuestState(player, false);
 		

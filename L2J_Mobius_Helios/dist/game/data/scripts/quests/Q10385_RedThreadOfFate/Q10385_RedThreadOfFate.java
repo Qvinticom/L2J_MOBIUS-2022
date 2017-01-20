@@ -173,6 +173,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 			{
 				if (qs.isCond(2))
 				{
+					qs.setCond(0);
 					qs.setCond(3, true);
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HEY_I_DIDN_T_GET_TO_PUT_IN_ONE_WORD_SHEESH);
 					htmltext = event;

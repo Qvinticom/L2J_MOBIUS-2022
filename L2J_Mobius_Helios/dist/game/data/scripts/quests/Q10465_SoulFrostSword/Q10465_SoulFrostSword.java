@@ -16,9 +16,9 @@
  */
 package quests.Q10465_SoulFrostSword;
 
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -35,22 +35,20 @@ public class Q10465_SoulFrostSword extends Quest
 	// NPC
 	private static final int RUPIO = 30471;
 	// Items
-	private static final ItemHolder ADENA = new ItemHolder(57, 700000);
 	private static final int PRACTICE_STORMBRINGER = 46629;
 	private static final int PRACTICE_SOUL_CRYSTAL = 46526;
 	// Misc
 	private static final int MIN_LEVEL = 40;
-	// Reward
-	private static final int EXP_REWARD = 336000;
-	private static final int SP_REWARD = 403;
+	private static final int MAX_LEVEL = 58;
 	
 	public Q10465_SoulFrostSword()
 	{
 		super(10465);
 		addStartNpc(RUPIO);
 		addTalkId(RUPIO);
+		addCondNotRace(Race.ERTHEIA, "30471-00.html");
 		registerQuestItems(PRACTICE_STORMBRINGER, PRACTICE_SOUL_CRYSTAL);
-		addCondMinLevel(MIN_LEVEL, "noLevel.html");
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "noLevel.html");
 	}
 	
 	@Override
@@ -87,9 +85,8 @@ public class Q10465_SoulFrostSword extends Quest
 			}
 			case "30471-08.html":
 			{
-				takeItems(player, PRACTICE_STORMBRINGER, -1);
-				giveItems(player, ADENA);
-				addExpAndSp(player, EXP_REWARD, SP_REWARD);
+				giveAdena(player, 700000, true);
+				addExpAndSp(player, 336000, 403);
 				qs.exitQuest(false, true);
 				htmltext = event;
 				break;
@@ -104,18 +101,21 @@ public class Q10465_SoulFrostSword extends Quest
 		final QuestState qs = getQuestState(player, true);
 		final L2ItemInstance wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 		String htmltext = getNoQuestMsg(player);
-		
+		if ((qs == null) || (player.getActiveWeaponInstance() == null))
+		{
+			return htmltext;
+		}
 		if (qs.isCreated())
 		{
 			htmltext = "30471-01.htm";
 		}
-		else if ((qs.getPlayer().getActiveWeaponItem() == null) || (wpn.getId() != PRACTICE_STORMBRINGER))
+		else if ((qs.isCond(1)) && (wpn.getId() != PRACTICE_STORMBRINGER))
 		{
 			htmltext = "Weapon.html";
 		}
 		else if (qs.isCond(1))
 		{
-			if ((getQuestItemsCount(player, PRACTICE_SOUL_CRYSTAL) < 1) && (wpn.getId() == PRACTICE_STORMBRINGER))
+			if (!hasQuestItems(player, PRACTICE_SOUL_CRYSTAL) && (wpn.getId() == PRACTICE_STORMBRINGER))
 			{
 				htmltext = "30471-07.html";
 			}
@@ -124,22 +124,10 @@ public class Q10465_SoulFrostSword extends Quest
 				htmltext = "30471-05.html";
 			}
 		}
-		else if (qs.isNowAvailable())
-		{
-			if (getQuestItemsCount(player, PRACTICE_STORMBRINGER) > 0)
-			{
-				takeItems(player, PRACTICE_STORMBRINGER, -1);
-			}
-			else if (getQuestItemsCount(player, PRACTICE_SOUL_CRYSTAL) > 0)
-			{
-				takeItems(player, PRACTICE_SOUL_CRYSTAL, -1);
-			}
-		}
-		else if (qs.isCompleted())
+		if (qs.isCompleted())
 		{
 			htmltext = getAlreadyCompletedMsg(player);
 		}
-		
 		return htmltext;
 	}
 }

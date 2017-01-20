@@ -41,7 +41,7 @@ public final class Q10365_SeekerEscort extends Quest
 	private static final int BLOODHOUND = 32988;
 	private static final int SEBION = 32978;
 	// Misc
-	private static final int MIN_LEVEL = 16;
+	private static final int MIN_LEVEL = 15;
 	private static final int MAX_LEVEL = 25;
 	// Locations
 	private static final Location BLOODHOUND_SPAWN_1 = new Location(-110624, 238369, -2920);
@@ -111,6 +111,7 @@ public final class Q10365_SeekerEscort extends Quest
 		switch (event)
 		{
 			case "33453-02.htm":
+			case "33453-02a.htm":
 			{
 				htmltext = event;
 				break;
@@ -130,8 +131,7 @@ public final class Q10365_SeekerEscort extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveAdena(player, 65000, true);
-					addExpAndSp(player, 120000, 28);
+					addExpAndSp(player, 172000, 15);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

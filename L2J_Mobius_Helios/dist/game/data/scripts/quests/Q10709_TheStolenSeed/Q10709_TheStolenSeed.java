@@ -65,7 +65,7 @@ public final class Q10709_TheStolenSeed extends Quest
 		
 		if (event.equals("action"))
 		{
-			if ((st != null) && st.isCond(1))
+			if ((st != null) && (st.isCond(1)) && (getQuestItemsCount(player, MEMORY_FRAGMENT) >= 1))
 			{
 				// Take items
 				takeItems(player, MEMORY_FRAGMENT, -1);
@@ -108,14 +108,16 @@ public final class Q10709_TheStolenSeed extends Quest
 			case "33866-04.htm":
 			{
 				st.startQuest();
+				giveItems(player, MEMORY_FRAGMENT, 1);
 				htmltext = event;
 				break;
 			}
 			case "33866-07.html":
 			{
-				if (st.isCond(3))
+				if (st.isCond(3) && (getQuestItemsCount(player, FRAGMENT) >= 1))
 				{
 					st.exitQuest(false, true);
+					takeItems(player, FRAGMENT, -1);
 					giveItems(player, EAB, 5);
 					giveStoryQuestReward(player, 30);
 					if (player.getLevel() >= MIN_LEVEL)
@@ -207,6 +209,7 @@ public final class Q10709_TheStolenSeed extends Quest
 		
 		if ((st != null) && st.isStarted() && st.isCond(2))
 		{
+			st.setCond(0);
 			st.setCond(3, true);
 			giveItems(killer, FRAGMENT, 1);
 		}

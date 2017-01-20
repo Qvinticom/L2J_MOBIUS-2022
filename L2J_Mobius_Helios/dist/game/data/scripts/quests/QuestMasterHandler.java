@@ -59,7 +59,11 @@ import quests.Q00142_FallenAngelRequestOfDawn.Q00142_FallenAngelRequestOfDawn;
 import quests.Q00143_FallenAngelRequestOfDusk.Q00143_FallenAngelRequestOfDusk;
 import quests.Q00144_PailakaInjuredDragon.Q00144_PailakaInjuredDragon;
 import quests.Q00146_TheZeroHour.Q00146_TheZeroHour;
+import quests.Q00149_PrimalMotherIstina.Q00149_PrimalMotherIstina;
+import quests.Q00150_ExtremeChallengePrimalMotherResurrected.Q00150_ExtremeChallengePrimalMotherResurrected;
 import quests.Q00177_SplitDestiny.Q00177_SplitDestiny;
+import quests.Q00180_InfernalFlamesBurningInCrystalPrison.Q00180_InfernalFlamesBurningInCrystalPrison;
+import quests.Q00181_DevilsStrikeBackAdventOfBalok.Q00181_DevilsStrikeBackAdventOfBalok;
 import quests.Q00183_RelicExploration.Q00183_RelicExploration;
 import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
@@ -100,16 +104,26 @@ import quests.Q00455_WingsOfSand.Q00455_WingsOfSand;
 import quests.Q00456_DontKnowDontCare.Q00456_DontKnowDontCare;
 import quests.Q00457_LostAndFound.Q00457_LostAndFound;
 import quests.Q00458_PerfectForm.Q00458_PerfectForm;
+import quests.Q00459_TheVillainOfTheUndergroundMineTeredor.Q00459_TheVillainOfTheUndergroundMineTeredor;
+import quests.Q00460_PreciousResearchMaterial.Q00460_PreciousResearchMaterial;
+import quests.Q00462_StuffedAncientHeroes.Q00462_StuffedAncientHeroes;
 import quests.Q00464_Oath.Q00464_Oath;
+import quests.Q00465_WeAreFriends.Q00465_WeAreFriends;
 import quests.Q00466_PlacingMySmallPower.Q00466_PlacingMySmallPower;
 import quests.Q00468_BeLostInTheMysteriousScent.Q00468_BeLostInTheMysteriousScent;
+import quests.Q00469_SuspiciousGardener.Q00469_SuspiciousGardener;
 import quests.Q00470_DivinityProtector.Q00470_DivinityProtector;
+import quests.Q00471_BreakingThroughTheEmeraldSquare.Q00471_BreakingThroughTheEmeraldSquare;
+import quests.Q00472_ChallengeSteamCorridor.Q00472_ChallengeSteamCorridor;
+import quests.Q00473_InTheCoralGarden.Q00473_InTheCoralGarden;
 import quests.Q00474_WaitingForTheSummer.Q00474_WaitingForTheSummer;
 import quests.Q00476_PlainMission.Q00476_PlainMission;
+import quests.Q00483_IntendedTactic.Q00483_IntendedTactic;
 import quests.Q00485_HotSpringWater.Q00485_HotSpringWater;
 import quests.Q00488_WondersOfCaring.Q00488_WondersOfCaring;
 import quests.Q00489_InThisQuietPlace.Q00489_InThisQuietPlace;
 import quests.Q00490_DutyOfTheSurvivor.Q00490_DutyOfTheSurvivor;
+import quests.Q00491_InNominePatris.Q00491_InNominePatris;
 import quests.Q00492_TombRaiders.Q00492_TombRaiders;
 import quests.Q00493_KickingOutUnwelcomeGuests.Q00493_KickingOutUnwelcomeGuests;
 import quests.Q00494_IncarnationOfGreedZellakaGroup.Q00494_IncarnationOfGreedZellakaGroup;
@@ -146,10 +160,14 @@ import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
+import quests.Q00751_LiberatingTheSpirits.Q00751_LiberatingTheSpirits;
+import quests.Q00752_UncoverTheSecret.Q00752_UncoverTheSecret;
+import quests.Q00753_ReactingToACrisis.Q00753_ReactingToACrisis;
 import quests.Q00754_AssistingTheRebelForces.Q00754_AssistingTheRebelForces;
 import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
 import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
+import quests.Q00758_TheFallenKingsMen.Q00758_TheFallenKingsMen;
 import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
 import quests.Q00761_AssistingTheGoldenRamArmy.Q00761_AssistingTheGoldenRamArmy;
 import quests.Q00762_AnOminousRequest.Q00762_AnOminousRequest;
@@ -157,6 +175,15 @@ import quests.Q00763_ADauntingTask.Q00763_ADauntingTask;
 import quests.Q00764_WeakeningTheVarkaSilenosForces.Q00764_WeakeningTheVarkaSilenosForces;
 import quests.Q00765_WeakeningTheKetraOrcForces.Q00765_WeakeningTheKetraOrcForces;
 import quests.Q00772_PurifyingSouls.Q00772_PurifyingSouls;
+import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragment;
+import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
+import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
+import quests.Q00778_OperationRoaringFlame.Q00778_OperationRoaringFlame;
+import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
+import quests.Q00787_TheRoleOfAWatcher.Q00787_TheRoleOfAWatcher;
+import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
+import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
+import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -185,13 +212,21 @@ import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOne
 import quests.Q10297_GrandOpeningComeToOurPub.Q10297_GrandOpeningComeToOurPub;
 import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishRedFog;
 import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
+import quests.Q10303_CrossroadsBetweenLightAndDarkness.Q10303_CrossroadsBetweenLightAndDarkness;
+import quests.Q10304_ForForgottenHeroes.Q10304_ForForgottenHeroes;
 import quests.Q10305_UnstoppableFutileEfforts.Q10305_UnstoppableFutileEfforts;
 import quests.Q10306_TheCorruptedLeader.Q10306_TheCorruptedLeader;
+import quests.Q10307_TheCorruptedLeaderHisTruth.Q10307_TheCorruptedLeaderHisTruth;
 import quests.Q10310_TwistedCreationTree.Q10310_TwistedCreationTree;
+import quests.Q10311_PeacefulDaysAreOver.Q10311_PeacefulDaysAreOver;
+import quests.Q10312_AbandonedGodsCreature.Q10312_AbandonedGodsCreature;
+import quests.Q10315_ToThePrisonOfDarkness.Q10315_ToThePrisonOfDarkness;
+import quests.Q10316_UndecayingMemoryOfThePast.Q10316_UndecayingMemoryOfThePast;
 import quests.Q10317_OrbisWitch.Q10317_OrbisWitch;
 import quests.Q10318_DecayingDarkness.Q10318_DecayingDarkness;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
+import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheBookOfGiants;
 import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
 import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 import quests.Q10332_ToughRoad.Q10332_ToughRoad;
@@ -209,6 +244,7 @@ import quests.Q10344_DayOfDestinyOrcsFate.Q10344_DayOfDestinyOrcsFate;
 import quests.Q10345_DayOfDestinyDwarfsFate.Q10345_DayOfDestinyDwarfsFate;
 import quests.Q10346_DayOfDestinyKamaelsFate.Q10346_DayOfDestinyKamaelsFate;
 import quests.Q10351_OwnerOfHall.Q10351_OwnerOfHall;
+import quests.Q10353_CertificationOfValue.Q10353_CertificationOfValue;
 import quests.Q10354_ResurrectedOwnerOfHall.Q10354_ResurrectedOwnerOfHall;
 import quests.Q10358_DividedSakumPoslof.Q10358_DividedSakumPoslof;
 import quests.Q10359_TracesOfEvil.Q10359_TracesOfEvil;
@@ -217,10 +253,18 @@ import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
 import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
-import quests.Q10366_RuinsStatusUpdate.Q10366_RuinsStatusUpdate;
+import quests.Q10366_ReportOnTheSituationAtTheRuins.Q10366_ReportOnTheSituationAtTheRuins;
 import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
+import quests.Q10370_MenacingTimes.Q10370_MenacingTimes;
+import quests.Q10371_GraspThyPower.Q10371_GraspThyPower;
+import quests.Q10372_PurgatoryVolvere.Q10372_PurgatoryVolvere;
+import quests.Q10374_ThatPlaceSuccubus.Q10374_ThatPlaceSuccubus;
+import quests.Q10375_SuccubusDisciples.Q10375_SuccubusDisciples;
+import quests.Q10376_BloodyGoodTime.Q10376_BloodyGoodTime;
 import quests.Q10377_TheInvadedExecutionGrounds.Q10377_TheInvadedExecutionGrounds;
+import quests.Q10378_WeedingWork.Q10378_WeedingWork;
 import quests.Q10379_AnUninvitedGuest.Q10379_AnUninvitedGuest;
+import quests.Q10380_TheExecutionersExecution.Q10380_TheExecutionersExecution;
 import quests.Q10381_ToTheSeedOfHellfire.Q10381_ToTheSeedOfHellfire;
 import quests.Q10382_DayOfLiberation.Q10382_DayOfLiberation;
 import quests.Q10383_FergasonsOffer.Q10383_FergasonsOffer;
@@ -228,6 +272,8 @@ import quests.Q10384_AnAudienceWithTauti.Q10384_AnAudienceWithTauti;
 import quests.Q10385_RedThreadOfFate.Q10385_RedThreadOfFate;
 import quests.Q10386_MysteriousJourney.Q10386_MysteriousJourney;
 import quests.Q10387_SoullessOne.Q10387_SoullessOne;
+import quests.Q10388_ConspiracyBehindDoor.Q10388_ConspiracyBehindDoor;
+import quests.Q10389_TheVoiceOfAuthority.Q10389_TheVoiceOfAuthority;
 import quests.Q10390_KekropusLetter.Q10390_KekropusLetter;
 import quests.Q10391_ASuspiciousHelper.Q10391_ASuspiciousHelper;
 import quests.Q10392_FailureAndItsConsequences.Q10392_FailureAndItsConsequences;
@@ -265,12 +311,16 @@ import quests.Q10442_TheAnnihilatedPlains1.Q10442_TheAnnihilatedPlains1;
 import quests.Q10443_TheAnnihilatedPlains2.Q10443_TheAnnihilatedPlains2;
 import quests.Q10444_TheOriginOfMonsters.Q10444_TheOriginOfMonsters;
 import quests.Q10445_AnImpendingThreat.Q10445_AnImpendingThreat;
+import quests.Q10446_HitAndRun.Q10446_HitAndRun;
+import quests.Q10447_TimingIsEverything.Q10447_TimingIsEverything;
 import quests.Q10450_ADarkAmbition.Q10450_ADarkAmbition;
+import quests.Q10452_IsItEdible.Q10452_IsItEdible;
 import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunter;
 import quests.Q10461_TappingThePowerWithin.Q10461_TappingThePowerWithin;
+import quests.Q10462_TemperARustingBlade.Q10462_TemperARustingBlade;
 import quests.Q10465_SoulFrostSword.Q10465_SoulFrostSword;
 import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
@@ -278,12 +328,21 @@ import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
 import quests.Q10504_JewelOfAntharas.Q10504_JewelOfAntharas;
 import quests.Q10505_JewelOfValakas.Q10505_JewelOfValakas;
+import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
+import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
+import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
+import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
+import quests.Q10703_BottleOfIstinasSoul.Q10703_BottleOfIstinasSoul;
+import quests.Q10704_BottleOfOctavisSoul.Q10704_BottleOfOctavisSoul;
+import quests.Q10705_BottleOfTautisSoul.Q10705_BottleOfTautisSoul;
 import quests.Q10707_FlamesOfSorrow.Q10707_FlamesOfSorrow;
 import quests.Q10708_StrengthenTheBarrier.Q10708_StrengthenTheBarrier;
 import quests.Q10709_TheStolenSeed.Q10709_TheStolenSeed;
 import quests.Q10710_LifeEnergyRepository.Q10710_LifeEnergyRepository;
+import quests.Q10712_TheMinstrelsSongPart1.Q10712_TheMinstrelsSongPart1;
+import quests.Q10731_TheMinstrelsSongPart6.Q10731_TheMinstrelsSongPart6;
 import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 import quests.Q10734_DoOrDie.Q10734_DoOrDie;
@@ -337,6 +396,8 @@ import quests.Q10792_LettersFromTheQueenForestOfTheDead.Q10792_LettersFromTheQue
 import quests.Q10793_SaveTheSouls.Q10793_SaveTheSouls;
 import quests.Q10794_InvestigateTheForest.Q10794_InvestigateTheForest;
 import quests.Q10795_LettersFromTheQueenWallOfAgros.Q10795_LettersFromTheQueenWallOfAgros;
+import quests.Q10796_TheEyeThatDefiedTheGods.Q10796_TheEyeThatDefiedTheGods;
+import quests.Q10797_CrossingFate.Q10797_CrossingFate;
 import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTheValley;
 import quests.Q10800_ReconnaissanceAtDragonValley.Q10800_ReconnaissanceAtDragonValley;
@@ -417,7 +478,11 @@ public class QuestMasterHandler
 		Q00143_FallenAngelRequestOfDusk.class,
 		Q00144_PailakaInjuredDragon.class,
 		Q00146_TheZeroHour.class,
+		Q00149_PrimalMotherIstina.class,
+		Q00150_ExtremeChallengePrimalMotherResurrected.class,
 		Q00177_SplitDestiny.class,
+		Q00180_InfernalFlamesBurningInCrystalPrison.class,
+		Q00181_DevilsStrikeBackAdventOfBalok.class,
 		Q00183_RelicExploration.class,
 		Q00184_ArtOfPersuasion.class,
 		Q00185_NikolasCooperation.class,
@@ -458,16 +523,26 @@ public class QuestMasterHandler
 		Q00456_DontKnowDontCare.class,
 		Q00457_LostAndFound.class,
 		Q00458_PerfectForm.class,
+		Q00459_TheVillainOfTheUndergroundMineTeredor.class,
+		Q00460_PreciousResearchMaterial.class,
+		Q00462_StuffedAncientHeroes.class,
 		Q00464_Oath.class,
+		Q00465_WeAreFriends.class,
 		Q00466_PlacingMySmallPower.class,
 		Q00468_BeLostInTheMysteriousScent.class,
+		Q00469_SuspiciousGardener.class,
 		Q00470_DivinityProtector.class,
+		Q00471_BreakingThroughTheEmeraldSquare.class,
+		Q00472_ChallengeSteamCorridor.class,
+		Q00473_InTheCoralGarden.class,
 		Q00474_WaitingForTheSummer.class,
 		Q00476_PlainMission.class,
+		Q00483_IntendedTactic.class,
 		Q00485_HotSpringWater.class,
 		Q00488_WondersOfCaring.class,
 		Q00489_InThisQuietPlace.class,
 		Q00490_DutyOfTheSurvivor.class,
+		Q00491_InNominePatris.class,
 		Q00492_TombRaiders.class,
 		Q00493_KickingOutUnwelcomeGuests.class,
 		Q00494_IncarnationOfGreedZellakaGroup.class,
@@ -504,10 +579,14 @@ public class QuestMasterHandler
 		Q00688_DefeatTheElrokianRaiders.class,
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
+		Q00751_LiberatingTheSpirits.class,
+		Q00752_UncoverTheSecret.class,
+		Q00753_ReactingToACrisis.class,
 		Q00754_AssistingTheRebelForces.class,
 		Q00755_InNeedOfPetras.class,
 		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
+		Q00758_TheFallenKingsMen.class,
 		Q00760_BlockTheExit.class,
 		Q00761_AssistingTheGoldenRamArmy.class,
 		Q00762_AnOminousRequest.class,
@@ -515,6 +594,15 @@ public class QuestMasterHandler
 		Q00764_WeakeningTheVarkaSilenosForces.class,
 		Q00765_WeakeningTheKetraOrcForces.class,
 		Q00772_PurifyingSouls.class,
+		Q00775_RetrievingTheChaosFragment.class,
+		Q00776_SlayDarkLordEkimus.class,
+		Q00777_SlayDarkLordTiat.class,
+		Q00778_OperationRoaringFlame.class,
+		Q00783_VestigeOfTheMagicPower.class,
+		Q00787_TheRoleOfAWatcher.class,
+		Q00790_ObtainingFerinsTrust.class,
+		Q00817_BlackAteliaResearch.class,
+		Q00823_DisappearedRaceNewFairy.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
@@ -543,13 +631,21 @@ public class QuestMasterHandler
 		Q10297_GrandOpeningComeToOurPub.class,
 		Q10301_ShadowOfTerrorBlackishRedFog.class,
 		Q10302_UnsettlingShadowAndRumors.class,
+		Q10303_CrossroadsBetweenLightAndDarkness.class,
+		Q10304_ForForgottenHeroes.class,
 		Q10305_UnstoppableFutileEfforts.class,
 		Q10306_TheCorruptedLeader.class,
+		Q10307_TheCorruptedLeaderHisTruth.class,
 		Q10310_TwistedCreationTree.class,
+		Q10311_PeacefulDaysAreOver.class,
+		Q10312_AbandonedGodsCreature.class,
+		Q10315_ToThePrisonOfDarkness.class,
+		Q10316_UndecayingMemoryOfThePast.class,
 		Q10317_OrbisWitch.class,
 		Q10318_DecayingDarkness.class,
 		Q10320_LetsGoToTheCentralSquare.class,
 		Q10321_QualificationsOfTheSeeker.class,
+		Q10327_IntruderWhoWantsTheBookOfGiants.class,
 		Q10330_ToTheRuinsOfYeSagira.class,
 		Q10331_StartOfFate.class,
 		Q10332_ToughRoad.class,
@@ -567,6 +663,7 @@ public class QuestMasterHandler
 		Q10345_DayOfDestinyDwarfsFate.class,
 		Q10346_DayOfDestinyKamaelsFate.class,
 		Q10351_OwnerOfHall.class,
+		Q10353_CertificationOfValue.class,
 		Q10354_ResurrectedOwnerOfHall.class,
 		Q10358_DividedSakumPoslof.class,
 		Q10359_TracesOfEvil.class,
@@ -575,10 +672,18 @@ public class QuestMasterHandler
 		Q10363_RequestOfTheSeeker.class,
 		Q10364_ObligationsOfTheSeeker.class,
 		Q10365_SeekerEscort.class,
-		Q10366_RuinsStatusUpdate.class,
+		Q10366_ReportOnTheSituationAtTheRuins.class,
 		Q10369_NoblesseSoulTesting.class,
+		Q10370_MenacingTimes.class,
+		Q10371_GraspThyPower.class,
+		Q10372_PurgatoryVolvere.class,
+		Q10374_ThatPlaceSuccubus.class,
+		Q10375_SuccubusDisciples.class,
+		Q10376_BloodyGoodTime.class,
 		Q10377_TheInvadedExecutionGrounds.class,
+		Q10378_WeedingWork.class,
 		Q10379_AnUninvitedGuest.class,
+		Q10380_TheExecutionersExecution.class,
 		Q10381_ToTheSeedOfHellfire.class,
 		Q10382_DayOfLiberation.class,
 		Q10383_FergasonsOffer.class,
@@ -586,6 +691,8 @@ public class QuestMasterHandler
 		Q10385_RedThreadOfFate.class,
 		Q10386_MysteriousJourney.class,
 		Q10387_SoullessOne.class,
+		Q10388_ConspiracyBehindDoor.class,
+		Q10389_TheVoiceOfAuthority.class,
 		Q10390_KekropusLetter.class,
 		Q10391_ASuspiciousHelper.class,
 		Q10392_FailureAndItsConsequences.class,
@@ -623,12 +730,16 @@ public class QuestMasterHandler
 		Q10443_TheAnnihilatedPlains2.class,
 		Q10444_TheOriginOfMonsters.class,
 		Q10445_AnImpendingThreat.class,
+		Q10446_HitAndRun.class,
+		Q10447_TimingIsEverything.class,
 		Q10450_ADarkAmbition.class,
+		Q10452_IsItEdible.class,
 		Q10453_StoppingTheWindDragon.class,
 		Q10455_ElikiasLetter.class,
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
 		Q10461_TappingThePowerWithin.class,
+		Q10462_TemperARustingBlade.class,
 		Q10465_SoulFrostSword.class,
 		Q10472_WindsOfFateEncroachingShadows.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
@@ -636,12 +747,21 @@ public class QuestMasterHandler
 		Q10503_FrintezzaEmbroideredSoulCloak.class,
 		Q10504_JewelOfAntharas.class,
 		Q10505_JewelOfValakas.class,
+		Q10541_TrainLikeTheRealThing.class,
+		Q10542_SearchingForNewPower.class,
+		Q10543_SheddingWeight.class,
+		Q10544_SeekerSupplies.class,
 		Q10701_TheRoadToDestruction.class,
 		Q10702_TheRoadToInfinity.class,
+		Q10703_BottleOfIstinasSoul.class,
+		Q10704_BottleOfOctavisSoul.class,
+		Q10705_BottleOfTautisSoul.class,
 		Q10707_FlamesOfSorrow.class,
 		Q10708_StrengthenTheBarrier.class,
 		Q10709_TheStolenSeed.class,
 		Q10710_LifeEnergyRepository.class,
+		Q10712_TheMinstrelsSongPart1.class,
+		Q10731_TheMinstrelsSongPart6.class,
 		Q10732_AForeignLand.class,
 		Q10733_TheTestForSurvival.class,
 		Q10734_DoOrDie.class,
@@ -695,6 +815,8 @@ public class QuestMasterHandler
 		Q10793_SaveTheSouls.class,
 		Q10794_InvestigateTheForest.class,
 		Q10795_LettersFromTheQueenWallOfAgros.class,
+		Q10796_TheEyeThatDefiedTheGods.class,
+		Q10797_CrossingFate.class,
 		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10799_StrangeThingsAfootInTheValley.class,
 		Q10800_ReconnaissanceAtDragonValley.class,
