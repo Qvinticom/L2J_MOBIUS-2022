@@ -3,7 +3,7 @@
 	<item id="47400" name="Veteran Duo Bracelet" additionalName="Event" type="Armor">
 		<!-- MP +216, CON +2, MEN +2 -->
 		<set name="icon" val="icon.dimension_bracelet_i05" />
-		<set name="default_action" val="-1" />
+		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
@@ -333,7 +333,6 @@
 	<item id="47434" name="Freya's Vital Rune" additionalName="30-min" type="EtcItem">
 		<!-- Bonus XP gained in Vitality state is boosted by 50% when having it in your inventory (Does not apply to Boss Monsters) -->
 		<set name="icon" val="icon.bm_freya_vital_rune" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />

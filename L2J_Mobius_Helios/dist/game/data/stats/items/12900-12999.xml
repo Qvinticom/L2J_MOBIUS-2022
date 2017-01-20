@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="12900" name="Demon Splinter" additionalName="Thunder {PvP} - Critical Stun" type="Weapon">
+	<item id="12900" name="Demon Splinter - Thunder {PvP} - Critical Stun" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Inflicts Stun with about 27% chance during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -41,7 +41,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12901" name="Draconic Bow" additionalName="Earth {PvP} - Cheap Shot" type="Weapon">
+	<item id="12901" name="Draconic Bow - Earth {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Has a 26% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -83,7 +83,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12902" name="Draconic Bow" additionalName="Earth {PvP} - Focus" type="Weapon">
+	<item id="12902" name="Draconic Bow - Earth {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Critical by 88. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -125,7 +125,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12903" name="Draconic Bow" additionalName="Earth {PvP} - Critical Slow" type="Weapon">
+	<item id="12903" name="Draconic Bow - Earth {PvP} - Critical Slow" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Inflicts Slow occasionally during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -167,7 +167,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12904" name="Dragon Hunter Axe" additionalName="Thunder {PvP} - HP Regeneration" type="Weapon">
+	<item id="12904" name="Dragon Hunter Axe - Thunder {PvP} - HP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -207,7 +207,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12905" name="Dragon Hunter Axe" additionalName="Thunder {PvP} - Health" type="Weapon">
+	<item id="12905" name="Dragon Hunter Axe - Thunder {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -247,7 +247,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12906" name="Dragon Hunter Axe" additionalName="Thunder {PvP} - HP Drain" type="Weapon">
+	<item id="12906" name="Dragon Hunter Axe - Thunder {PvP} - HP Drain" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Absorbs 3% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -287,7 +287,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12907" name="Laevateinn" additionalName="Lightning {PvP} - Haste" type="Weapon">
+	<item id="12907" name="Laevateinn - Lightning {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Forgotten Blade Conversion. <Special Option>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -331,7 +331,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12908" name="Laevateinn" additionalName="Lightning {PvP} - Health" type="Weapon">
+	<item id="12908" name="Laevateinn - Lightning {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Forgotten Blade Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -375,7 +375,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12909" name="Laevateinn" additionalName="Lightning {PvP} - Focus" type="Weapon">
+	<item id="12909" name="Laevateinn - Lightning {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Forgotten Blade Conversion. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_leavatein_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -419,7 +419,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12910" name="Basalt Battlehammer" additionalName="Concentration {PvP} - HP Drain" type="Weapon">
+	<item id="12910" name="Basalt Battlehammer - Concentration {PvP} - HP Drain" type="Weapon">
 		<!-- Masterwork Item that increases the effect of increased Accuracy. <Special Option>. Absorbs 3% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -459,7 +459,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12911" name="Basalt Battlehammer" additionalName="Concentration {PvP} - Health" type="Weapon">
+	<item id="12911" name="Basalt Battlehammer - Concentration {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases the effect of increased Accuracy. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -499,7 +499,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12912" name="Basalt Battlehammer" additionalName="Concentration {PvP} - HP Regeneration" type="Weapon">
+	<item id="12912" name="Basalt Battlehammer - Concentration {PvP} - HP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases the effect of increased Accuracy. <Special Option>. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -539,7 +539,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12913" name="Sarunga" additionalName="Earth {PvP} - Cheap Shot" type="Weapon">
+	<item id="12913" name="Sarunga - Earth {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Draconic Bow Conversion. <Special Option>when using the. Skill MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -583,7 +583,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12914" name="Sarunga" additionalName="Earth {PvP} - Focus" type="Weapon">
+	<item id="12914" name="Sarunga - Earth {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Draconic Bow Conversion. <Special Option>. Increases Critical by 88. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -627,7 +627,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12915" name="Sarunga" additionalName="Earth {PvP} - Critical Slow" type="Weapon">
+	<item id="12915" name="Sarunga - Earth {PvP} - Critical Slow" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Draconic Bow Conversion. <Special Option>. Has a chance of casting Slow during a Critical Attack increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sarnga_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -671,7 +671,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12916" name="Saint Spear" additionalName="Destruction {PvP} - Health" type="Weapon">
+	<item id="12916" name="Saint Spear - Destruction {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -711,7 +711,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12917" name="Saint Spear" additionalName="Destruction {PvP} - Guidance" type="Weapon">
+	<item id="12917" name="Saint Spear - Destruction {PvP} - Guidance" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Increases Accuracy by about 5. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -751,7 +751,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12918" name="Saint Spear" additionalName="Destruction {PvP} - Haste" type="Weapon">
+	<item id="12918" name="Saint Spear - Destruction {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_saint_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -791,7 +791,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12919" name="Arcana Mace" additionalName="Nature {PvP} - Acumen" type="Weapon">
+	<item id="12919" name="Arcana Mace - Nature {PvP} - Acumen" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -832,7 +832,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12920" name="Arcana Mace" additionalName="Nature {PvP} - MP Regeneration" type="Weapon">
+	<item id="12920" name="Arcana Mace - Nature {PvP} - MP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. MP Recovery Rate is increased. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -873,7 +873,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12921" name="Arcana Mace" additionalName="Nature {PvP} - Mana Up" type="Weapon">
+	<item id="12921" name="Arcana Mace - Nature {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -914,7 +914,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12922" name="Angel Slayer" additionalName="Concentration {PvP} - Critical Damage" type="Weapon">
+	<item id="12922" name="Angel Slayer - Concentration {PvP} - Critical Damage" type="Weapon">
 		<!-- Masterwork Item that increases Accuracy. <Special Option>. P. Atk. + 265 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -955,7 +955,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12923" name="Angel Slayer" additionalName="Concentration {PvP} - HP Drain" type="Weapon">
+	<item id="12923" name="Angel Slayer - Concentration {PvP} - HP Drain" type="Weapon">
 		<!-- Masterwork Item that increases Accuracy. <Special Option>. Absorbs 3% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of enemy's enchants or decreasing their Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -996,7 +996,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12924" name="Angel Slayer" additionalName="Concentration {PvP} - Haste" type="Weapon">
+	<item id="12924" name="Angel Slayer - Concentration {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases Accuracy. <Special Option>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1037,7 +1037,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12925" name="Imperial Staff" additionalName="Nature {PvP} - Empower" type="Weapon">
+	<item id="12925" name="Imperial Staff - Nature {PvP} - Empower" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. M. Atk. + 60. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1078,7 +1078,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12926" name="Imperial Staff" additionalName="Nature {PvP} - MP Regeneration" type="Weapon">
+	<item id="12926" name="Imperial Staff - Nature {PvP} - MP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. MP Recovery Rate is increased. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1119,7 +1119,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12927" name="Imperial Staff" additionalName="Nature {PvP} - Magic Hold" type="Weapon">
+	<item id="12927" name="Imperial Staff - Nature {PvP} - Magic Hold" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1160,7 +1160,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12928" name="Tallum Blade*Dark Legion's Edge" additionalName="Lightning {PvP}" type="Weapon">
+	<item id="12928" name="Tallum Blade*Dark Legion's Edge - Lightning {PvP}" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, Max HP increases by 15%. Increases Max MP by 20% and Max CP increases by 30%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1199,7 +1199,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12929" name="Forgotten Blade" additionalName="Lightning {PvP} - Haste" type="Weapon">
+	<item id="12929" name="Forgotten Blade - Lightning {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1238,7 +1238,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12930" name="Forgotten Blade" additionalName="Lightning {PvP} - Health" type="Weapon">
+	<item id="12930" name="Forgotten Blade - Lightning {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1277,7 +1277,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12931" name="Forgotten Blade" additionalName="Lightning {PvP} - Focus" type="Weapon">
+	<item id="12931" name="Forgotten Blade - Lightning {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1316,7 +1316,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12932" name="Heaven's Divider" additionalName="Thunder {PvP} - Haste" type="Weapon">
+	<item id="12932" name="Heaven's Divider - Thunder {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1355,7 +1355,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12933" name="Heaven's Divider" additionalName="Thunder {PvP} - Health" type="Weapon">
+	<item id="12933" name="Heaven's Divider - Thunder {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1394,7 +1394,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12934" name="Heaven's Divider" additionalName="Thunder {PvP} - Focus" type="Weapon">
+	<item id="12934" name="Heaven's Divider - Thunder {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1433,7 +1433,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12935" name="Dynasty Ancient Sword" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="12935" name="Dynasty Ancient Sword - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1476,7 +1476,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12936" name="Dynasty Ancient Sword" additionalName="Great Gale {PvP} - Health" type="Weapon">
+	<item id="12936" name="Dynasty Ancient Sword - Great Gale {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1519,7 +1519,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12937" name="Dynasty Ancient Sword" additionalName="Great Gale {PvP} - Light Armor" type="Weapon">
+	<item id="12937" name="Dynasty Ancient Sword - Great Gale {PvP} - Light Armor" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1562,7 +1562,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12938" name="Dynasty Knife" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="12938" name="Dynasty Knife - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1603,7 +1603,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12939" name="Dynasty Knife" additionalName="Great Gale {PvP} - Evasion" type="Weapon">
+	<item id="12939" name="Dynasty Knife - Great Gale {PvP} - Evasion" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1644,7 +1644,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12940" name="Dynasty Knife" additionalName="Great Gale {PvP} - Critical Damage" type="Weapon">
+	<item id="12940" name="Dynasty Knife - Great Gale {PvP} - Critical Damage" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1685,7 +1685,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12941" name="Dynasty Dualsword" additionalName="Earth {PvP}" type="Weapon">
+	<item id="12941" name="Dynasty Dualsword - Earth {PvP}" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases damage inflicted during PvP, and decreases the range of bows/crossbows occasionally during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1724,7 +1724,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12942" name="Dynasty Rapier" additionalName="Earth {PvP} - Focus" type="Weapon">
+	<item id="12942" name="Dynasty Rapier - Earth {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1768,7 +1768,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12943" name="Dynasty Rapier" additionalName="Earth {PvP} - Health" type="Weapon">
+	<item id="12943" name="Dynasty Rapier - Earth {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1812,7 +1812,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12944" name="Dynasty Rapier" additionalName="Earth {PvP} - Light Armor" type="Weapon">
+	<item id="12944" name="Dynasty Rapier - Earth {PvP} - Light Armor" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1856,7 +1856,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12945" name="Dynasty Mace" additionalName="Earth {PvP} - Mana Up" type="Weapon">
+	<item id="12945" name="Dynasty Mace - Earth {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1897,7 +1897,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12946" name="Dynasty Mace" additionalName="Earth {PvP} - Conversion" type="Weapon">
+	<item id="12946" name="Dynasty Mace - Earth {PvP} - Conversion" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1938,7 +1938,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12947" name="Dynasty Mace" additionalName="Earth {PvP} - Acumen" type="Weapon">
+	<item id="12947" name="Dynasty Mace - Earth {PvP} - Acumen" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1979,7 +1979,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12948" name="Dynasty Bagh-Nakh" additionalName="Great Gale {PvP} - Rsk. Evasion" type="Weapon">
+	<item id="12948" name="Dynasty Bagh-Nakh - Great Gale {PvP} - Rsk. Evasion" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2020,7 +2020,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12949" name="Dynasty Bagh-Nakh" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="12949" name="Dynasty Bagh-Nakh - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 106. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2061,7 +2061,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12950" name="Dynasty Bagh-Nakh" additionalName="Great Gale {PvP} - Haste" type="Weapon">
+	<item id="12950" name="Dynasty Bagh-Nakh - Great Gale {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Atk. Spd. by about 10%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2102,7 +2102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12951" name="Dynasty Bow" additionalName="Great Gale {PvP} - Cheap Shot" type="Weapon">
+	<item id="12951" name="Dynasty Bow - Great Gale {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2144,7 +2144,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12952" name="Dynasty Bow" additionalName="Great Gale {PvP} - Guidance" type="Weapon">
+	<item id="12952" name="Dynasty Bow - Great Gale {PvP} - Guidance" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2186,7 +2186,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12953" name="Dynasty Bow" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="12953" name="Dynasty Bow - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2228,7 +2228,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12954" name="Dynasty Blade" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="12954" name="Dynasty Blade - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2267,7 +2267,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12955" name="Dynasty Blade" additionalName="Great Gale {PvP} - Health" type="Weapon">
+	<item id="12955" name="Dynasty Blade - Great Gale {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2306,7 +2306,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12956" name="Dynasty Blade" additionalName="Great Gale {PvP} - Light Armor" type="Weapon">
+	<item id="12956" name="Dynasty Blade - Great Gale {PvP} - Light Armor" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2345,7 +2345,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12957" name="Dynasty Sword" additionalName="Earth {PvP} - Focus" type="Weapon">
+	<item id="12957" name="Dynasty Sword - Earth {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2384,7 +2384,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12958" name="Dynasty Sword" additionalName="Earth {PvP} - Health" type="Weapon">
+	<item id="12958" name="Dynasty Sword - Earth {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2423,7 +2423,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12959" name="Dynasty Sword" additionalName="Earth {PvP} - Light Armor" type="Weapon">
+	<item id="12959" name="Dynasty Sword - Earth {PvP} - Light Armor" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2462,7 +2462,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12960" name="Dynasty Staff" additionalName="Holy Spirit {PvP} - Mana Up" type="Weapon">
+	<item id="12960" name="Dynasty Staff - Holy Spirit {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases Heal Amount. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2503,7 +2503,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12961" name="Dynasty Staff" additionalName="Holy Spirit {PvP} - Conversion" type="Weapon">
+	<item id="12961" name="Dynasty Staff - Holy Spirit {PvP} - Conversion" type="Weapon">
 		<!-- Masterwork Item that increases the Heal Amount. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2544,7 +2544,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12962" name="Dynasty Staff" additionalName="Holy Spirit {PvP} - Acumen" type="Weapon">
+	<item id="12962" name="Dynasty Staff - Holy Spirit {PvP} - Acumen" type="Weapon">
 		<!-- Masterwork Item that increases the Heal Amount. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2585,7 +2585,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12963" name="Dynasty Cudgel" additionalName="Landslide {PvP} - Anger" type="Weapon">
+	<item id="12963" name="Dynasty Cudgel - Landslide {PvP} - Anger" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. One's own HP decreases by 15%. P. Atk. + 78. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2625,7 +2625,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12964" name="Dynasty Cudgel" additionalName="Landslide {PvP} - Health" type="Weapon">
+	<item id="12964" name="Dynasty Cudgel - Landslide {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that has the Stun effect occasionally when hitting. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2665,7 +2665,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12965" name="Dynasty Cudgel" additionalName="Landslide {PvP} - Rsk. Focus" type="Weapon">
+	<item id="12965" name="Dynasty Cudgel - Landslide {PvP} - Rsk. Focus" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2705,7 +2705,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12966" name="Dynasty Crusher" additionalName="Great Gale {PvP} - Anger" type="Weapon">
+	<item id="12966" name="Dynasty Crusher - Great Gale {PvP} - Anger" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. One's own HP decreases by 15%. P. Atk. + 78. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2745,7 +2745,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12967" name="Dynasty Crusher" additionalName="Great Gale {PvP} - Health" type="Weapon">
+	<item id="12967" name="Dynasty Crusher - Great Gale {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2785,7 +2785,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12968" name="Dynasty Crusher" additionalName="Great Gale {PvP} - Rsk. Focus" type="Weapon">
+	<item id="12968" name="Dynasty Crusher - Great Gale {PvP} - Rsk. Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2825,7 +2825,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12969" name="Dynasty Crossbow" additionalName="Great Gale {PvP} - Cheap Shot" type="Weapon">
+	<item id="12969" name="Dynasty Crossbow - Great Gale {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>when using the. Skill MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2869,7 +2869,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12970" name="Dynasty Crossbow" additionalName="Great Gale {PvP} - Guidance" type="Weapon">
+	<item id="12970" name="Dynasty Crossbow - Great Gale {PvP} - Guidance" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2913,7 +2913,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12971" name="Dynasty Crossbow" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="12971" name="Dynasty Crossbow - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2957,7 +2957,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12972" name="Dynasty Phantom" additionalName="Nature {PvP} - Acumen" type="Weapon">
+	<item id="12972" name="Dynasty Phantom - Nature {PvP} - Acumen" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2997,7 +2997,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12973" name="Dynasty Phantom" additionalName="Nature {PvP} - Mana Up" type="Weapon">
+	<item id="12973" name="Dynasty Phantom - Nature {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3037,7 +3037,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12974" name="Dynasty Phantom" additionalName="Nature {PvP} - Conversion" type="Weapon">
+	<item id="12974" name="Dynasty Phantom - Nature {PvP} - Conversion" type="Weapon">
 		<!-- Masterwork Item that increases Max MP. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3077,7 +3077,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12975" name="Dynasty Halberd" additionalName="Earth {PvP} - Anger" type="Weapon">
+	<item id="12975" name="Dynasty Halberd - Earth {PvP} - Anger" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Your own HP decreases by 15%. P. Atk. + 78 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3117,7 +3117,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12976" name="Dynasty Halberd" additionalName="Earth {PvP} - Critical Stun" type="Weapon">
+	<item id="12976" name="Dynasty Halberd - Earth {PvP} - Critical Stun" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Has a 48% of Stun effect during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3157,7 +3157,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12977" name="Dynasty Halberd" additionalName="Earth {PvP} - Light Armor" type="Weapon">
+	<item id="12977" name="Dynasty Halberd - Earth {PvP} - Light Armor" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />

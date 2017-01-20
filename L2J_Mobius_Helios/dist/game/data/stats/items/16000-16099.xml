@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="16000" name="Jade Claw {PvP}" additionalName="Health" type="Weapon">
+	<item id="16000" name="Jade Claw {PvP} - Health" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_jademice_claw_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -40,7 +40,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16001" name="Demitelum {PvP}" additionalName="Haste" type="Weapon">
+	<item id="16001" name="Demitelum {PvP} - Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. There is a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -79,7 +79,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16002" name="Demitelum {PvP}" additionalName="Health" type="Weapon">
+	<item id="16002" name="Demitelum {PvP} - Health" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -118,7 +118,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16003" name="Demitelum {PvP}" additionalName="Guidance" type="Weapon">
+	<item id="16003" name="Demitelum {PvP} - Guidance" type="Weapon">
 		<!-- <Special Option>. Increases Accuracy by 8. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -157,7 +157,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16004" name="Sacredium {PvP}" additionalName="Mana Up" type="Weapon">
+	<item id="16004" name="Sacredium {PvP} - Mana Up" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -197,7 +197,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16005" name="Sacredium {PvP}" additionalName="Acumen" type="Weapon">
+	<item id="16005" name="Sacredium {PvP} - Acumen" type="Weapon">
 		<!-- <Special Option>. Casting Spd. + 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -237,7 +237,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16006" name="Sacredium {PvP}" additionalName="MP Regeneration" type="Weapon">
+	<item id="16006" name="Sacredium {PvP} - MP Regeneration" type="Weapon">
 		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sacredumors_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -277,7 +277,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16007" name="Cyclic Cane {PvP}" additionalName="Magic Hold" type="Weapon">
+	<item id="16007" name="Cyclic Cane {PvP} - Magic Hold" type="Weapon">
 		<!-- <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -317,7 +317,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16008" name="Cyclic Cane {PvP}" additionalName="Empower" type="Weapon">
+	<item id="16008" name="Cyclic Cane {PvP} - Empower" type="Weapon">
 		<!-- <Special Option>. M. Atk. + 177. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -357,7 +357,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16009" name="Cyclic Cane {PvP}" additionalName="MP Regeneration" type="Weapon">
+	<item id="16009" name="Cyclic Cane {PvP} - MP Regeneration" type="Weapon">
 		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -397,7 +397,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16010" name="Archangel Sword {PvP}" additionalName="Magic Hold" type="Weapon">
+	<item id="16010" name="Archangel Sword {PvP} - Magic Hold" type="Weapon">
 		<!-- <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
@@ -436,7 +436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16011" name="Archangel Sword {PvP}" additionalName="Mana Up" type="Weapon">
+	<item id="16011" name="Archangel Sword {PvP} - Mana Up" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
@@ -475,7 +475,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16012" name="Archangel Sword {PvP}" additionalName="Acumen" type="Weapon">
+	<item id="16012" name="Archangel Sword {PvP} - Acumen" type="Weapon">
 		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i001" />
 		<set name="default_action" val="EQUIP" />
@@ -514,7 +514,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16013" name="Recurve Thorne Bow {PvP}" additionalName="Critical Slow" type="Weapon">
+	<item id="16013" name="Recurve Thorne Bow {PvP} - Critical Slow" type="Weapon">
 		<!-- <Special Option>. Has a 44% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of a bow/crossbow during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16014" name="Recurve Thorne Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
+	<item id="16014" name="Recurve Thorne Bow {PvP} - Cheap Shot" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of decreasing MP consumption to 1 during a standard attack. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -596,7 +596,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16015" name="Recurve Thorne Bow {PvP}" additionalName="Focus" type="Weapon">
+	<item id="16015" name="Recurve Thorne Bow {PvP} - Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 139. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -637,7 +637,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16016" name="Heavenstare Rapier {PvP}" additionalName="Focus" type="Weapon">
+	<item id="16016" name="Heavenstare Rapier {PvP} - Focus" type="Weapon">
 		<!-- Kamael-exclusive weapon Incessantcore Sword Conversion. <Special Option>. Increases Critical by 134. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, party members including yourself will get increased P. Atk., M. Atk., and healing capacity by a fixed rate, and MP consumption during skill use is decreased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -680,7 +680,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16017" name="Heavenstare Rapier {PvP}" additionalName="Haste" type="Weapon">
+	<item id="16017" name="Heavenstare Rapier {PvP} - Haste" type="Weapon">
 		<!-- Kamael-exclusive weapon Incessantcore Sword Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, party members including yourself will get increased P. Atk., M. Atk., and healing capacity by a fixed rate, and MP consumption during skill use is decreased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -723,7 +723,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16018" name="Heavenstare Rapier {PvP}" additionalName="Health" type="Weapon">
+	<item id="16018" name="Heavenstare Rapier {PvP} - Health" type="Weapon">
 		<!-- Kamael-exclusive weapon Incessantcore Sword Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, party members including yourself will get increased P. Atk., M. Atk., and healing capacity by a fixed rate, and MP consumption during skill use is decreased. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -766,7 +766,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16019" name="Pyseal Blade {PvP}" additionalName="Focus" type="Weapon">
+	<item id="16019" name="Pyseal Blade {PvP} - Focus" type="Weapon">
 		<!-- Kamael-exclusive weapon Lavamond Saw Conversion. <Special Option>. Increases Critical by 134. Increases damage inflicted during PvP. Inflicts additional damage with a fixed rate during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -808,7 +808,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16020" name="Pyseal Blade {PvP}" additionalName="Haste" type="Weapon">
+	<item id="16020" name="Pyseal Blade {PvP} - Haste" type="Weapon">
 		<!-- Kamael-exclusive weapon Lavamond Saw Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Inflicts additional damage with a fixed rate during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -850,7 +850,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16021" name="Pyseal Blade {PvP}" additionalName="Health" type="Weapon">
+	<item id="16021" name="Pyseal Blade {PvP} - Health" type="Weapon">
 		<!-- Kamael-exclusive weapon Lavamond Saw Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Inflicts additional damage with a fixed rate during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -892,7 +892,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16022" name="Thorne Crossbow {PvP}" additionalName="Critical Slow" type="Weapon">
+	<item id="16022" name="Thorne Crossbow {PvP} - Critical Slow" type="Weapon">
 		<!-- Kamael-exclusive weapon Recurvethorne Bow Conversion. <Special Option>. Inflicts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/crossbows with a fixed rate during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -935,7 +935,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16023" name="Thorne Crossbow {PvP}" additionalName="Cheap Shot" type="Weapon">
+	<item id="16023" name="Thorne Crossbow {PvP} - Cheap Shot" type="Weapon">
 		<!-- Kamael-exclusive weapon Recurvethorne Bow Conversion. <Special Option>. Has a 12% chance of decreasing MP consumption to 1 during a standard attack. Increases Atk. Spd. of bows/crossbows with a fixed rate during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -978,7 +978,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16024" name="Thorne Crossbow {PvP}" additionalName="Focus" type="Weapon">
+	<item id="16024" name="Thorne Crossbow {PvP} - Focus" type="Weapon">
 		<!-- Kamael-exclusive weapon Recurvethorne Bow Conversion. <Special Option>. Increases Critical by 139. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/crossbows with a fixed rate during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1413,7 +1413,7 @@
 			<stat type="randomDamage">15</stat>
 		</stats>
 	</item>
-	<item id="16042" name="Vesper Cutter" additionalName="Thunder" type="Weapon">
+	<item id="16042" name="Vesper Cutter - Thunder" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_cutter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1446,7 +1446,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16043" name="Vesper Slasher" additionalName="Great Gale" type="Weapon">
+	<item id="16043" name="Vesper Slasher - Great Gale" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,7 +1479,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16044" name="Vesper Buster" additionalName="Cleverness" type="Weapon">
+	<item id="16044" name="Vesper Buster - Cleverness" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_burster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1512,7 +1512,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16045" name="Vesper Shaper" additionalName="Great Gale" type="Weapon">
+	<item id="16045" name="Vesper Shaper - Great Gale" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_shaper_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1545,7 +1545,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16046" name="Vesper Fighter" additionalName="Great Gale" type="Weapon">
+	<item id="16046" name="Vesper Fighter - Great Gale" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1578,7 +1578,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16047" name="Vesper Stormer" additionalName="Thunder" type="Weapon">
+	<item id="16047" name="Vesper Stormer - Thunder" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1612,7 +1612,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="16048" name="Vesper Avenger" additionalName="Landslide" type="Weapon">
+	<item id="16048" name="Vesper Avenger - Landslide" type="Weapon">
 		<!-- Masterwork Item that has a chance of casting Stun on the target during an attack. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1645,7 +1645,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16049" name="Vesper Retributer" additionalName="Great Gale" type="Weapon">
+	<item id="16049" name="Vesper Retributer - Great Gale" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1678,7 +1678,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16050" name="Vesper Caster" additionalName="Cleverness" type="Weapon">
+	<item id="16050" name="Vesper Caster - Cleverness" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1712,7 +1712,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16051" name="Vesper Singer" additionalName="Hail" type="Weapon">
+	<item id="16051" name="Vesper Singer - Hail" type="Weapon">
 		<!-- Masterwork Item that increases M. Atk. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1746,7 +1746,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16052" name="Vesper Thrower" additionalName="Clairvoyance" type="Weapon">
+	<item id="16052" name="Vesper Thrower - Clairvoyance" type="Weapon">
 		<!-- Masterwork Item that increases range. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1782,7 +1782,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16053" name="Vesper Pincer" additionalName="Thunder" type="Weapon">
+	<item id="16053" name="Vesper Pincer - Thunder" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1820,7 +1820,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16054" name="Vesper Shooter" additionalName="Clairvoyance" type="Weapon">
+	<item id="16054" name="Vesper Shooter - Clairvoyance" type="Weapon">
 		<!-- Masterwork Item that increases range. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1858,7 +1858,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16055" name="Vesper Nagan" additionalName="Great Gale" type="Weapon">
+	<item id="16055" name="Vesper Nagan - Great Gale" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i00" />
 		<set name="default_action" val="EQUIP" />

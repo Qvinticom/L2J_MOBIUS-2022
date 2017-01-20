@@ -960,7 +960,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 	</item>
-	<item id="33547" name="Bound Dynasty Sword" additionalName="Focus (Event)" type="Weapon">
+	<item id="33547" name="Bound Dynasty Sword - Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -995,7 +995,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33548" name="Bound Dynasty Sword" additionalName="Health (Event)" type="Weapon">
+	<item id="33548" name="Bound Dynasty Sword - Health" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1030,7 +1030,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33549" name="Bound Dynasty Sword" additionalName="Light Armor (Event)" type="Weapon">
+	<item id="33549" name="Bound Dynasty Sword - Light Armor" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1066,7 +1066,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33550" name="Bound Dynasty Blade" additionalName="Focus (Event)" type="Weapon">
+	<item id="33550" name="Bound Dynasty Blade - Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1101,7 +1101,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33551" name="Bound Dynasty Blade" additionalName="Health (Event)" type="Weapon">
+	<item id="33551" name="Bound Dynasty Blade - Health" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1136,7 +1136,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33552" name="Bound Dynasty Blade" additionalName="Light Armor (Event)" type="Weapon">
+	<item id="33552" name="Bound Dynasty Blade - Light Armor" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1172,7 +1172,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33553" name="Bound Dynasty Phantom" additionalName="Acumen (Event)" type="Weapon">
+	<item id="33553" name="Bound Dynasty Phantom - Acumen" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1207,7 +1207,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33554" name="Bound Dynasty Phantom" additionalName="Mana Up (Event)" type="Weapon">
+	<item id="33554" name="Bound Dynasty Phantom - Mana Up" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33555" name="Bound Dynasty Phantom" additionalName="Conversion (Event)" type="Weapon">
+	<item id="33555" name="Bound Dynasty Phantom - Conversion" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1277,7 +1277,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33556" name="Bound Dynasty Bow" additionalName="Cheap Shot (Event)" type="Weapon">
+	<item id="33556" name="Bound Dynasty Bow - Cheap Shot" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1315,7 +1315,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33557" name="Bound Dynasty Bow" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33557" name="Bound Dynasty Bow - Guidance" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1352,7 +1352,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33558" name="Bound Dynasty Bow" additionalName="Focus (Event)" type="Weapon">
+	<item id="33558" name="Bound Dynasty Bow - Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1389,7 +1389,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="33559" name="Bound Dynasty Knife" additionalName="Focus (Event)" type="Weapon">
+	<item id="33559" name="Bound Dynasty Knife - Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1425,7 +1425,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33560" name="Bound Dynasty Knife" additionalName="Evasion (Event)" type="Weapon">
+	<item id="33560" name="Bound Dynasty Knife - Evasion" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1462,7 +1462,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33561" name="Bound Dynasty Knife" additionalName="Critical Damage (Event)" type="Weapon">
+	<item id="33561" name="Bound Dynasty Knife - Critical Damage" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1498,7 +1498,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33562" name="Bound Dynasty Halberd" additionalName="Anger (Event)" type="Weapon">
+	<item id="33562" name="Bound Dynasty Halberd - Anger" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1534,7 +1534,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="33563" name="Bound Dynasty Halberd" additionalName="Critical Stun (Event)" type="Weapon">
+	<item id="33563" name="Bound Dynasty Halberd - Critical Stun" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1571,7 +1571,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="33564" name="Bound Dynasty Halberd" additionalName="Light Armor (Event)" type="Weapon">
+	<item id="33564" name="Bound Dynasty Halberd - Light Armor" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1608,7 +1608,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="33565" name="Bound Dynasty Cudgel" additionalName="Anger (Event)" type="Weapon">
+	<item id="33565" name="Bound Dynasty Cudgel - Anger" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1644,7 +1644,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33566" name="Bound Dynasty Cudgel" additionalName="Health (Event)" type="Weapon">
+	<item id="33566" name="Bound Dynasty Cudgel - Health" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1680,7 +1680,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33567" name="Bound Dynasty Cudgel" additionalName="Rsk. Focus (Event)" type="Weapon">
+	<item id="33567" name="Bound Dynasty Cudgel - Rsk. Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1716,7 +1716,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33568" name="Bound Dynasty Mace" additionalName="Mana Up (Event)" type="Weapon">
+	<item id="33568" name="Bound Dynasty Mace - Mana Up" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1752,7 +1752,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33569" name="Bound Dynasty Mace" additionalName="Conversion (Event)" type="Weapon">
+	<item id="33569" name="Bound Dynasty Mace - Conversion" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1788,7 +1788,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33570" name="Bound Dynasty Mace" additionalName="Acumen (Event)" type="Weapon">
+	<item id="33570" name="Bound Dynasty Mace - Acumen" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1824,7 +1824,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33571" name="Bound Dynasty Bagh-Nakh" additionalName="Rsk. Evasion (Event)" type="Weapon">
+	<item id="33571" name="Bound Dynasty Bagh-Nakh - Rsk. Evasion" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1861,7 +1861,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33572" name="Bound Dynasty Bagh-Nakh" additionalName="Focus (Event)" type="Weapon">
+	<item id="33572" name="Bound Dynasty Bagh-Nakh - Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 106. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1897,7 +1897,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33573" name="Bound Dynasty Bagh-Nakh" additionalName="Haste (Event)" type="Weapon">
+	<item id="33573" name="Bound Dynasty Bagh-Nakh - Haste" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1933,7 +1933,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33574" name="Bound Dynasty Staff" additionalName="Mana Up (Event)" type="Weapon">
+	<item id="33574" name="Bound Dynasty Staff - Mana Up" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1969,7 +1969,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33575" name="Bound Dynasty Staff" additionalName="Conversion (Event)" type="Weapon">
+	<item id="33575" name="Bound Dynasty Staff - Conversion" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2005,7 +2005,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33576" name="Bound Dynasty Staff" additionalName="Acumen (Event)" type="Weapon">
+	<item id="33576" name="Bound Dynasty Staff - Acumen" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2041,7 +2041,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33577" name="Bound Dynasty Crusher" additionalName="Anger (Event)" type="Weapon">
+	<item id="33577" name="Bound Dynasty Crusher - Anger" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2077,7 +2077,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33578" name="Bound Dynasty Crusher" additionalName="Health (Event)" type="Weapon">
+	<item id="33578" name="Bound Dynasty Crusher - Health" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2113,7 +2113,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33579" name="Bound Dynasty Crusher" additionalName="Rsk. Focus (Event)" type="Weapon">
+	<item id="33579" name="Bound Dynasty Crusher - Rsk. Focus" additionalName="Event" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2222,7 +2222,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33582" name="Bound Dynasty Rapier" additionalName="Focus (Event)" type="Weapon">
+	<item id="33582" name="Bound Dynasty Rapier - Focus" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2259,7 +2259,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33583" name="Bound Dynasty Rapier" additionalName="Health (Event)" type="Weapon">
+	<item id="33583" name="Bound Dynasty Rapier - Health" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2296,7 +2296,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33584" name="Bound Dynasty Rapier" additionalName="Light Armor (Event)" type="Weapon">
+	<item id="33584" name="Bound Dynasty Rapier - Light Armor" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2334,7 +2334,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33585" name="Bound Dynasty Ancient Sword" additionalName="Focus (Event)" type="Weapon">
+	<item id="33585" name="Bound Dynasty Ancient Sword - Focus" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2370,7 +2370,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33586" name="Bound Dynasty Ancient Sword" additionalName="Health (Event)" type="Weapon">
+	<item id="33586" name="Bound Dynasty Ancient Sword - Health" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2406,7 +2406,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33587" name="Bound Dynasty Ancient Sword" additionalName="Light Armor (Event)" type="Weapon">
+	<item id="33587" name="Bound Dynasty Ancient Sword - Light Armor" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2443,7 +2443,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33588" name="Bound Dynasty Crossbow" additionalName="Cheap Shot (Event)" type="Weapon">
+	<item id="33588" name="Bound Dynasty Crossbow - Cheap Shot" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2481,7 +2481,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="33589" name="Bound Dynasty Crossbow" additionalName="Guidance (Event)" type="Weapon">
+	<item id="33589" name="Bound Dynasty Crossbow - Guidance" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2518,7 +2518,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="33590" name="Bound Dynasty Crossbow" additionalName="Focus (Event)" type="Weapon">
+	<item id="33590" name="Bound Dynasty Crossbow - Focus" additionalName="Event" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />

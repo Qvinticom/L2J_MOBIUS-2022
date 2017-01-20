@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="16200" name="Vesper Retributer" additionalName="Great Gale {PvP} - HP Regeneration" type="Weapon">
+	<item id="16200" name="Vesper Retributer - Great Gale {PvP} - HP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. HP's Recovery Rate increases. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -40,7 +40,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16201" name="Vesper Retributer" additionalName="Great Gale {PvP} - Health" type="Weapon">
+	<item id="16201" name="Vesper Retributer - Great Gale {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -80,7 +80,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16202" name="Vesper Retributer" additionalName="Great Gale {PvP} - HP Drain" type="Weapon">
+	<item id="16202" name="Vesper Retributer - Great Gale {PvP} - HP Drain" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -120,7 +120,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16203" name="Vesper Caster" additionalName="Cleverness {PvP} - Acumen" type="Weapon">
+	<item id="16203" name="Vesper Caster - Cleverness {PvP} - Acumen" type="Weapon">
 		<!-- Masterwork Item that increases MP Regen. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -161,7 +161,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16204" name="Vesper Caster" additionalName="Cleverness {PvP} - MP Regeneration" type="Weapon">
+	<item id="16204" name="Vesper Caster - Cleverness {PvP} - MP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases MP Regen. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -202,7 +202,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16205" name="Vesper Caster" additionalName="Cleverness {PvP} - Mana Up" type="Weapon">
+	<item id="16205" name="Vesper Caster - Cleverness {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases MP Regen. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -243,7 +243,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16206" name="Vesper Singer" additionalName="Hail {PvP} - Empower" type="Weapon">
+	<item id="16206" name="Vesper Singer - Hail {PvP} - Empower" type="Weapon">
 		<!-- Masterwork Item that increases M. Atk. <Special Option>. M. Atk. + 151. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -284,7 +284,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16207" name="Vesper Singer" additionalName="Hail {PvP} - MP Regeneration" type="Weapon">
+	<item id="16207" name="Vesper Singer - Hail {PvP} - MP Regeneration" type="Weapon">
 		<!-- Masterwork Item that increases M. Atk. <Special Option>. MP's Recovery Rate increases. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -325,7 +325,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16208" name="Vesper Singer" additionalName="Hail {PvP} - Magic Hold" type="Weapon">
+	<item id="16208" name="Vesper Singer - Hail {PvP} - Magic Hold" type="Weapon">
 		<!-- Masterwork Item that increases M. Atk. <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -366,7 +366,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16209" name="Vesper Thrower" additionalName="Clairvoyance {PvP} - Cheap Shot" type="Weapon">
+	<item id="16209" name="Vesper Thrower - Clairvoyance {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases range. <Special Option>. MP consumption decreases by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -408,7 +408,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16210" name="Vesper Thrower" additionalName="Clairvoyance {PvP} - Focus" type="Weapon">
+	<item id="16210" name="Vesper Thrower - Clairvoyance {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases range. <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -450,7 +450,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16211" name="Vesper Thrower" additionalName="Clairvoyance {PvP} - Critical Slow" type="Weapon">
+	<item id="16211" name="Vesper Thrower - Clairvoyance {PvP} - Critical Slow" type="Weapon">
 		<!-- Masterwork Item that increases range. <Special Option>. Inflicts Slow with 33% chance during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -492,7 +492,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="16212" name="Vesper Pincer" additionalName="Thunder {PvP} - Haste" type="Weapon">
+	<item id="16212" name="Vesper Pincer - Thunder {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -536,7 +536,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16213" name="Vesper Pincer" additionalName="Thunder {PvP} - Health" type="Weapon">
+	<item id="16213" name="Vesper Pincer - Thunder {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -580,7 +580,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16214" name="Vesper Pincer" additionalName="Thunder {PvP} - Focus" type="Weapon">
+	<item id="16214" name="Vesper Pincer - Thunder {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -624,7 +624,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16215" name="Vesper Shooter" additionalName="Clairvoyance {PvP} - Cheap Shot" type="Weapon">
+	<item id="16215" name="Vesper Shooter - Clairvoyance {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. MP consumption decreases by 12% during skill use. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -668,7 +668,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16216" name="Vesper Shooter" additionalName="Clairvoyance {PvP} - Focus" type="Weapon">
+	<item id="16216" name="Vesper Shooter - Clairvoyance {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -712,7 +712,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16217" name="Vesper Shooter" additionalName="Clairvoyance {PvP} - Critical Slow" type="Weapon">
+	<item id="16217" name="Vesper Shooter - Clairvoyance {PvP} - Critical Slow" type="Weapon">
 		<!-- Masterwork Item that increases range. Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -756,7 +756,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="16218" name="Vesper Nagan" additionalName="Great Gale {PvP} - Haste" type="Weapon">
+	<item id="16218" name="Vesper Nagan - Great Gale {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16219" name="Vesper Nagan" additionalName="Great Gale {PvP} - Health" type="Weapon">
+	<item id="16219" name="Vesper Nagan - Great Gale {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -842,7 +842,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="16220" name="Vesper Nagan" additionalName="Great Gale {PvP} - Focus" type="Weapon">
+	<item id="16220" name="Vesper Nagan - Great Gale {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Atk. Spd. Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="31200" name="Bound Bloody Orchid" additionalName="Back Blow" type="Weapon">
+	<item id="31200" name="Bound Bloody Orchid - Back Blow" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -36,7 +36,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31201" name="Bound Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
+	<item id="31201" name="Bound Bloody Orchid - Critical Bleed" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -106,7 +106,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31203" name="Bound Blood Tornado" additionalName="Haste" type="Weapon">
+	<item id="31203" name="Bound Blood Tornado - Haste" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -142,7 +142,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31204" name="Bound Blood Tornado" additionalName="Focus" type="Weapon">
+	<item id="31204" name="Bound Blood Tornado - Focus" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -178,7 +178,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31205" name="Bound Blood Tornado" additionalName="Anger" type="Weapon">
+	<item id="31205" name="Bound Blood Tornado - Anger" type="Weapon">
 		<!-- Bound Item. <Special Option>. Decreases Max HP by 15%. P. Atk. + 38. Inflicts additional damage during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -623,7 +623,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31222" name="Bound Bellion Cestus" additionalName="Critical Drain" type="Weapon">
+	<item id="31222" name="Bound Bellion Cestus - Critical Drain" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a chance to absorb 14 HP from the target during a critical attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -659,7 +659,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31223" name="Bound Bellion Cestus" additionalName="Critical Poison" type="Weapon">
+	<item id="31223" name="Bound Bellion Cestus - Critical Poison" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 12% chance of casting Poison on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -695,7 +695,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31224" name="Bound Bellion Cestus" additionalName="Rsk. Haste" type="Weapon">
+	<item id="31224" name="Bound Bellion Cestus - Rsk. Haste" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by 9% when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31226" name="Player Commendation - Apocalypse Thrower (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
+	<item id="31226" name="Player Commendation - Apocalypse Thrower (Water) - Focus (PC-exclusive)" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 73. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -799,7 +799,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31227" name="Player Commendation - Apocalypse Thrower (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
+	<item id="31227" name="Player Commendation - Apocalypse Thrower (Wind) - Focus (PC-exclusive)" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 270 during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -834,7 +834,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31228" name="Player Commendation - Apocalypse Thrower (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
+	<item id="31228" name="Player Commendation - Apocalypse Thrower (Fire) - Focus (PC-exclusive)" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -903,7 +903,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31230" name="Bound Battle Axe" additionalName="Anger" type="Weapon">
+	<item id="31230" name="Bound Battle Axe - Anger" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 20 and decreases Max HP by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -939,7 +939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31231" name="Bound Battle Axe" additionalName="Rsk. Focus" type="Weapon">
+	<item id="31231" name="Bound Battle Axe - Rsk. Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 138 when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -975,7 +975,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31232" name="Bound Battle Axe" additionalName="Haste" type="Weapon">
+	<item id="31232" name="Bound Battle Axe - Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 8%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1048,7 +1048,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31234" name="Bound Bec de Corbin" additionalName="Critical Stun" type="Weapon">
+	<item id="31234" name="Bound Bec de Corbin - Critical Stun" type="Weapon">
 		<!-- <Special Option>. Has about a 32% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1085,7 +1085,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31235" name="Bound Bec de Corbin" additionalName="Long Blow" type="Weapon">
+	<item id="31235" name="Bound Bec de Corbin - Long Blow" type="Weapon">
 		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1121,7 +1121,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31236" name="Bound Bec de Corbin" additionalName="Light Armor" type="Weapon">
+	<item id="31236" name="Bound Bec de Corbin - Light Armor" type="Weapon">
 		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1228,7 +1228,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31239" name="Bound Ballista" additionalName="Guidance" type="Weapon">
+	<item id="31239" name="Bound Ballista - Guidance" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Elemental Bow. <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1265,7 +1265,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31240" name="Bound Ballista" additionalName="Miser" type="Weapon">
+	<item id="31240" name="Bound Ballista - Miser" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Elemental Bow. <Special Option>. Has a 40% chance of reducing the number of Soulshots consumed to 4 during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1300,7 +1300,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31241" name="Bound Ballista" additionalName="Quick Recovery" type="Weapon">
+	<item id="31241" name="Bound Ballista - Quick Recovery" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Elemental Bow. <Special Option>. Decreases cooldown by about 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1334,7 +1334,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31242" name="Bound Ballista" additionalName="Evasion" type="Weapon">
+	<item id="31242" name="Bound Ballista - Evasion" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Noble Elven Longbow Conversion. <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1371,7 +1371,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31243" name="Bound Ballista" additionalName="Miser" type="Weapon">
+	<item id="31243" name="Bound Ballista - Miser" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Noble Elven Bow. <Special Option>. Has a 40% chance of reducing the number of Soulshots consumed to 4 during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1406,7 +1406,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="31244" name="Bound Ballista" additionalName="Cheap Shot" type="Weapon">
+	<item id="31244" name="Bound Ballista - Cheap Shot" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Noble Elven Bow. <Special Option>. Decreases MP consumption by 12% when using skills. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1774,7 +1774,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31255" name="Bound Basalt Battlehammer" additionalName="HP Drain" type="Weapon">
+	<item id="31255" name="Bound Basalt Battlehammer - HP Drain" type="Weapon">
 		<!-- Bound Item. <Special Option>. Absorbs 3% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Cannot be exchanged or dropped. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1811,7 +1811,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31256" name="Bound Basalt Battlehammer" additionalName="Health" type="Weapon">
+	<item id="31256" name="Bound Basalt Battlehammer - Health" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1848,7 +1848,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31257" name="Bound Basalt Battlehammer" additionalName="HP Regeneration" type="Weapon">
+	<item id="31257" name="Bound Basalt Battlehammer - HP Regeneration" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1922,7 +1922,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31259" name="Bound Body Slasher" additionalName="Critical Stun" type="Weapon">
+	<item id="31259" name="Bound Body Slasher - Critical Stun" type="Weapon">
 		<!-- <Special Option>. Has about a 34% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1959,7 +1959,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31260" name="Bound Body Slasher" additionalName="Long Blow" type="Weapon">
+	<item id="31260" name="Bound Body Slasher - Long Blow" type="Weapon">
 		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1995,7 +1995,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31261" name="Bound Body Slasher" additionalName="Wide Blow" type="Weapon">
+	<item id="31261" name="Bound Body Slasher - Wide Blow" type="Weapon">
 		<!-- <Special Option>. Broadens the angle of attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2098,7 +2098,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31264" name="Bound Sword of Delusion" additionalName="Focus" type="Weapon">
+	<item id="31264" name="Bound Sword of Delusion - Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2133,7 +2133,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31265" name="Bound Sword of Delusion" additionalName="Health" type="Weapon">
+	<item id="31265" name="Bound Sword of Delusion - Health" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2168,7 +2168,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31266" name="Bound Sword of Delusion" additionalName="Rsk. Haste" type="Weapon">
+	<item id="31266" name="Bound Sword of Delusion - Rsk. Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by 12% when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2236,7 +2236,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31268" name="Bound Meteor Shower" additionalName="Focus" type="Weapon">
+	<item id="31268" name="Bound Meteor Shower - Focus" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2272,7 +2272,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31269" name="Bound Meteor Shower" additionalName="Critical Bleed" type="Weapon">
+	<item id="31269" name="Bound Meteor Shower - Critical Bleed" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2309,7 +2309,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31270" name="Bound Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
+	<item id="31270" name="Bound Meteor Shower - Rsk. Haste" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2446,7 +2446,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31274" name="Bound Mysterious Sword" additionalName="Acumen" type="Weapon">
+	<item id="31274" name="Bound Mysterious Sword - Acumen" type="Weapon">
 		<!-- <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2481,7 +2481,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31275" name="Bound Mysterious Sword" additionalName="M. Atk." type="Weapon">
+	<item id="31275" name="Bound Mysterious Sword - M. Atk." type="Weapon">
 		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 75 during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2516,7 +2516,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31276" name="Bound Mysterious Sword" additionalName="Magic Weakness" type="Weapon">
+	<item id="31276" name="Bound Mysterious Sword - Magic Weakness" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
