@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="26100" toLevel="1" name="Tears Dualsword Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26101" toLevel="1" name="Tears Dual Dagger Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26102" toLevel="1" name="Tears Dual Blunt Weapon Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26103" toLevel="1" name="Tears Shield Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26104" toLevel="1" name="Tears Sigil Appearance Stone">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26105" toLevel="1" name="Extra Pass: Infernal Kamaloka">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26106" toLevel="1" name="Extra Pass: Lunatic Kamaloka">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26107" toLevel="1" name="Angel Cat's Blessing">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60min., P. Atk. + 5%, M. Atk. + 20%, Atk. Spd. + 5%, Casting Spd. + 5%, and SP/XP gain through hunt + 30%. -->
+		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>1800000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="26108" toLevel="1" name="Returning Hero's Wondrous Cubic">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>-1000</reuseDelay>
+	</skill>
+	<skill id="26109" toLevel="1" name="Extra Pass: Epic Kamaloka">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26110" toLevel="1" name="2014 World Olympiad Hero's Accessory">
+		<!-- All Stats + 5. -->
+		<icon>icon.accessory_archer_hat2_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="26111" toLevel="1" name="2014 World Olympiad Semifinalist's Accessory">
+		<!-- All Stats + 2. -->
+		<icon>icon.accessory_archer_hat2_i00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>2</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="26112" toLevel="1" name="Kamaloka Secret Chest">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26113" toLevel="1" name="Kamaloka Chest">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26114" toLevel="1" name="Daily PC Support">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 1 hr., STR/DEX/CON/INT/WIT/MEN + 3, Attack Attribute Bonus + 30, and Attribute Resistance + 30. -->
+		<icon>icon.skill_sing</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="26115" toLevel="1" name="Extra Pass">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26116" toLevel="6" name="Zodiac Agathion Stat Boost">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- MEN + 1. -->
+		<icon>icon.skill_agathion_special</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="26117" toLevel="6" name="Zodiac Agathion Attribute Enchant">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Attribute Resistance + 5. -->
+		<icon>icon.skill_agathion_special</icon>
+		<operateType>P</operateType>
+	</skill>
+	<skill id="26118" toLevel="12" name="Healing Light">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Restores entire party's HP/MP/CP with a chance to cancel debuffs. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>200</coolTime>
+		<effectPoint>1811</effectPoint>
+		<reuseDelay>
+			<value level="1">2250000</value>
+			<value level="2">2100000</value>
+			<value level="3">1950000</value>
+			<value level="4">1800000</value>
+			<value level="5">1650000</value>
+			<value level="6">1500000</value>
+			<value level="7">1350000</value>
+			<value level="8">1200000</value>
+			<value level="9">1050000</value>
+			<value level="10">900000</value>
+			<value level="11">750000</value>
+			<value level="12">600000</value>
+		</reuseDelay>
+	</skill>
+	<skill id="26119" toLevel="12" name="Skipping Kid">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Teleports 600 grids forward. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A1</operateType>
+		<hitTime>100</hitTime>
+		<coolTime>400</coolTime>
+		<effectPoint>2</effectPoint>
+		<reuseDelay>
+			<value level="1">118000</value>
+			<value level="2">110000</value>
+			<value level="3">102000</value>
+			<value level="4">94000</value>
+			<value level="5">86000</value>
+			<value level="6">78000</value>
+			<value level="7">70000</value>
+			<value level="8">62000</value>
+			<value level="9">54000</value>
+			<value level="10">46000</value>
+			<value level="11">38000</value>
+			<value level="12">30000</value>
+		</reuseDelay>
+	</skill>
+	<skill id="26120" toLevel="12" name="Scale of Life">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Equalizes entire party's HP and restores 333 HP/second for 15 sec. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>
+			<value level="1">118000</value>
+			<value level="2">110000</value>
+			<value level="3">102000</value>
+			<value level="4">94000</value>
+			<value level="5">86000</value>
+			<value level="6">78000</value>
+			<value level="7">70000</value>
+			<value level="8">62000</value>
+			<value level="9">54000</value>
+			<value level="10">46000</value>
+			<value level="11">38000</value>
+			<value level="12">30000</value>
+		</reuseDelay>
+		<effectPoint>1844</effectPoint>
+		<abnormalTime>15</abnormalTime>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="26121" toLevel="12" name="Rocky Camouflage">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 15 sec., transforms into a rock to eliminate enemy's enmity and avoid being targeted. Speed is greatly decreased while transformed. Cannot use when Disparition is active. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>
+			<value level="1">225000</value>
+			<value level="2">210000</value>
+			<value level="3">195000</value>
+			<value level="4">180000</value>
+			<value level="5">165000</value>
+			<value level="6">150000</value>
+			<value level="7">135000</value>
+			<value level="8">120000</value>
+			<value level="9">105000</value>
+			<value level="10">90000</value>
+			<value level="11">75000</value>
+			<value level="12">60000</value>
+		</reuseDelay>
+		<effectPoint>100</effectPoint>
+		<abnormalTime>15</abnormalTime>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="26122" toLevel="12" name="Mad Cow">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 30 sec., P./M. Atk., and Atk./Casting Spd. x 2. -->
+		<icon>BranchIcon.Icon.accessary_sign_agathion_april_skill_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<abnormalTime>30</abnormalTime>
+		<reuseDelay>
+			<value level="1">2250000</value>
+			<value level="2">2100000</value>
+			<value level="3">1950000</value>
+			<value level="4">1800000</value>
+			<value level="5">1650000</value>
+			<value level="6">1500000</value>
+			<value level="7">1350000</value>
+			<value level="8">1200000</value>
+			<value level="9">1050000</value>
+			<value level="10">900000</value>
+			<value level="11">750000</value>
+			<value level="12">600000</value>
+		</reuseDelay>
+	</skill>
+	<skill id="26123" toLevel="12" name="Maiden's Prayer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Invincible for 10 sec. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+		<reuseDelay>
+			<value level="1">2250000</value>
+			<value level="2">2100000</value>
+			<value level="3">1950000</value>
+			<value level="4">1800000</value>
+			<value level="5">1650000</value>
+			<value level="6">1500000</value>
+			<value level="7">1350000</value>
+			<value level="8">1200000</value>
+			<value level="9">1050000</value>
+			<value level="10">900000</value>
+			<value level="11">750000</value>
+			<value level="12">600000</value>
+		</reuseDelay>
+		<effectPoint>867</effectPoint>
+		<abnormalTime>10</abnormalTime>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="26124" toLevel="12" name="Bountiful Resurrection">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Resurrect from death with full health restored. Buff/Debuffs remain after death. Noblesse Blessing and Lucky Charm are an exception. -->
+		<icon>BranchIcon.Icon.accessary_sign_agathion_may_skill_i00</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>
+			<value level="1">13500000</value>
+			<value level="2">12600000</value>
+			<value level="3">11700000</value>
+			<value level="4">10800000</value>
+			<value level="5">9900000</value>
+			<value level="6">9000000</value>
+			<value level="7">8100000</value>
+			<value level="8">7200000</value>
+			<value level="9">6300000</value>
+			<value level="10">5400000</value>
+			<value level="11">4500000</value>
+			<value level="12">3600000</value>
+		</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="26125" toLevel="12" name="Scorpion's Mass Exile">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and normal attacks, and lose 282 HP/second. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A2</operateType>
+		<trait>DEPORT</trait>
+		<castRange>600</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>
+			<value level="1">118000</value>
+			<value level="2">110000</value>
+			<value level="3">102000</value>
+			<value level="4">94000</value>
+			<value level="5">86000</value>
+			<value level="6">78000</value>
+			<value level="7">70000</value>
+			<value level="8">62000</value>
+			<value level="9">54000</value>
+			<value level="10">46000</value>
+			<value level="11">38000</value>
+			<value level="12">30000</value>
+		</reuseDelay>
+		<isMagic>1</isMagic>
+		<effectPoint>-687</effectPoint>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="26126" toLevel="12" name="Mass Binding Flood">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Thrusts target and nearby enemies into the air and immobilizes them for 10 sec., inflicting 100 damage/second. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A1</operateType>
+		<castRange>1100</castRange>
+		<hitTime>10000</hitTime>
+		<reuseDelay>
+			<value level="1">118000</value>
+			<value level="2">110000</value>
+			<value level="3">102000</value>
+			<value level="4">94000</value>
+			<value level="5">86000</value>
+			<value level="6">78000</value>
+			<value level="7">70000</value>
+			<value level="8">62000</value>
+			<value level="9">54000</value>
+			<value level="10">46000</value>
+			<value level="11">38000</value>
+			<value level="12">30000</value>
+		</reuseDelay>
+		<effectPoint>-707</effectPoint>
+		<abnormalTime>9</abnormalTime>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="26127" toLevel="12" name="Slippery Scale">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- For 60 sec., defends against debuffs 5 times. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A2</operateType>
+		<hitTime>200</hitTime>
+		<effectPoint>2</effectPoint>
+		<abnormalTime>60</abnormalTime>
+		<reuseDelay>
+			<value level="1">2250000</value>
+			<value level="2">2100000</value>
+			<value level="3">1950000</value>
+			<value level="4">1800000</value>
+			<value level="5">1650000</value>
+			<value level="6">1500000</value>
+			<value level="7">1350000</value>
+			<value level="8">1200000</value>
+			<value level="9">1050000</value>
+			<value level="10">900000</value>
+			<value level="11">750000</value>
+			<value level="12">600000</value>
+		</reuseDelay>
+	</skill>
+	<skill id="26128" toLevel="12" name="Archer's Call">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Summons all party members to you. -->
+		<icon>icon.etc_star_scroll_baekisung</icon>
+		<operateType>A1</operateType>
+		<hitTime>15000</hitTime>
+		<reuseDelay>
+			<value level="1">6750000</value>
+			<value level="2">6300000</value>
+			<value level="3">5850000</value>
+			<value level="4">5400000</value>
+			<value level="5">4950000</value>
+			<value level="6">4500000</value>
+			<value level="7">4050000</value>
+			<value level="8">3600000</value>
+			<value level="9">3150000</value>
+			<value level="10">2700000</value>
+			<value level="11">2250000</value>
+			<value level="12">1800000</value>
+		</reuseDelay>
+		<effectPoint>467</effectPoint>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="26129" toLevel="12" name="Exoskeletal Shield">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Reflects 20% of received damage. -->
+		<icon>BranchIcon.Icon.accessary_sign_agathion_june_skill_i00</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<effectPoint>379</effectPoint>
+		<reuseDelay>
+			<value level="1">4500000</value>
+			<value level="2">4200000</value>
+			<value level="3">3900000</value>
+			<value level="4">3600000</value>
+			<value level="5">3300000</value>
+			<value level="6">3000000</value>
+			<value level="7">2700000</value>
+			<value level="8">2400000</value>
+			<value level="9">2100000</value>
+			<value level="10">1800000</value>
+			<value level="11">1500000</value>
+			<value level="12">1200000</value>
+		</reuseDelay>
+	</skill>
+	<skill id="26130" toLevel="1" name="Dark Assassin's Move">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Goes into Hide state for 10 seconds. -->
+		<icon>BranchIcon.Icon.dark_assassin</icon>
+		<operateType>A2</operateType>
+		<hitTime>1000</hitTime>
+		<coolTime>400</coolTime>
+		<effectPoint>687</effectPoint>
+		<reuseDelay>180000</reuseDelay>
+	</skill>
+	<skill id="26131" toLevel="1" name="Appearance Stone: Dark Assassin Suit">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26132" toLevel="1" name="Lucky Day Box">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26133" toLevel="1" name="Blessed Amaranthine Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26134" toLevel="1" name="Blessed Eternal Pack">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26135" toLevel="1" name="Luck Box 1">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26136" toLevel="1" name="Luck Box 2">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26137" toLevel="1" name="Luck Box 3">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26138" toLevel="1" name="Agathion - Virgo Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26139" toLevel="1" name="Agathion - Virgo Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26140" toLevel="1" name="Agathion - Virgo Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26141" toLevel="1" name="Agathion - Capricorn Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26142" toLevel="1" name="Agathion - Capricorn Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26143" toLevel="1" name="Agathion - Capricorn Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26144" toLevel="1" name="Agathion - Libra Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26145" toLevel="1" name="Agathion - Libra Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26146" toLevel="1" name="Agathion - Libra Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26147" toLevel="1" name="Agathion - Aries Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26148" toLevel="1" name="Agathion - Aries Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26149" toLevel="1" name="Agathion - Aries Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26150" toLevel="1" name="Agathion - Taurus Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26151" toLevel="1" name="Agathion - Taurus Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26152" toLevel="1" name="Agathion - Taurus Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26153" toLevel="1" name="Agathion - Leo Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26154" toLevel="1" name="Agathion - Leo Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26155" toLevel="1" name="Agathion - Leo Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26156" toLevel="1" name="Agathion - Gemini Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26157" toLevel="1" name="Agathion - Gemini Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26158" toLevel="1" name="Agathion - Gemini Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26159" toLevel="1" name="Agathion - Scorpio Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26160" toLevel="1" name="Agathion - Scorpio Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26161" toLevel="1" name="Agathion - Scorpio Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26162" toLevel="1" name="Agathion - Aquarius Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26163" toLevel="1" name="Agathion - Aquarius Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26164" toLevel="1" name="Agathion - Aquarius Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26165" toLevel="1" name="Agathion - Pisces Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26166" toLevel="1" name="Agathion - Pisces Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26167" toLevel="1" name="Agathion - Pisces Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26168" toLevel="1" name="Agathion - Sagittarius Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26169" toLevel="1" name="Agathion - Sagittarius Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26170" toLevel="1" name="Agathion - Sagittarius Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26171" toLevel="1" name="Agathion - Cancer Pack (Low-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26172" toLevel="1" name="Agathion - Cancer Pack (Mid-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26173" toLevel="1" name="Agathion - Cancer Pack (High-grade)">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26174" toLevel="1" name="Easter Egg">
+		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="26175" toLevel="1" name="Agathion - Virgo">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26176" toLevel="1" name="Agathion - Capricorn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26177" toLevel="1" name="Agathion - Libra">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26178" toLevel="1" name="Agathion - Aries">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26179" toLevel="1" name="Agathion - Taurus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26180" toLevel="1" name="Agathion - Leo">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26181" toLevel="1" name="Agathion - Gemini">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26182" toLevel="1" name="Agathion - Scorpio">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26183" toLevel="1" name="Agathion - Aquarius">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26184" toLevel="1" name="Agathion - Pisces">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26185" toLevel="1" name="Agathion - Sagittarius">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26186" toLevel="1" name="Agathion - Cancer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26187" toLevel="1" name="Agathion - Virgo">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26188" toLevel="1" name="Agathion - Capricorn">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26189" toLevel="1" name="Agathion - Libra">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26190" toLevel="1" name="Agathion - Aries">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26191" toLevel="1" name="Agathion - Taurus">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26192" toLevel="1" name="Agathion - Leo">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26193" toLevel="1" name="Agathion - Gemini">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26194" toLevel="1" name="Agathion - Scorpio">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26195" toLevel="1" name="Agathion - Aquarius">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26196" toLevel="1" name="Agathion - Pisces">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26197" toLevel="1" name="Agathion - Sagittarius">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26198" toLevel="1" name="Agathion - Cancer">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+	<skill id="26199" toLevel="1" name="Agathion - Virgo">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Release Agathion's Seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+		<hitTime>3000</hitTime>
+	</skill>
+</list>

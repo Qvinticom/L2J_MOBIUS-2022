@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="dist/libs/c3p0-0.9.5.2.jar"/>
+	<classpathentry kind="lib" path="dist/libs/cron4j-2.2.5.jar"/>
+	<classpathentry kind="lib" path="dist/libs/ecj-4.4.2.jar"/>
+	<classpathentry kind="lib" path="dist/libs/exp4j-0.4.7.jar"/>
+	<classpathentry kind="lib" path="dist/libs/googleauth-1.1.0.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mail-1.5.2.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mchange-commons-java-0.2.11.jar"/>
+	<classpathentry kind="lib" path="dist/libs/mysql-connector-java-5.1.38-bin.jar"/>
+	<classpathentry kind="lib" path="dist/libs/netty-all-5.0.0.Alpha2.jar"/>
+	<classpathentry including="**/*.java" kind="src" path="dist/game/data/scripts"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
