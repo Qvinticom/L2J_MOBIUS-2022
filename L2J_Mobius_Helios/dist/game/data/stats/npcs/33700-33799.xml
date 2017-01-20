@@ -1777,66 +1777,6 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="33752" level="85" type="L2Monster" name="Physical Punch Machine">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1000000000" hpRegen="1" mp="1" mpRegen="1" />
-			<speed>
-				<walk ground="23" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="5000" magical="1000" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="13" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="33753" level="85" type="L2Monster" name="Magical Punch Machine">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1000000000" hpRegen="1" mp="1" mpRegen="1" />
-			<speed>
-				<walk ground="23" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="50000" magical="100" />
-			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skill_list>
-		<collision>
-			<radius normal="13" />
-			<height normal="30" />
-		</collision>
-	</npc>
 	<npc id="33754" level="85" type="L2Npc" name="Bardona" title="Retired Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>

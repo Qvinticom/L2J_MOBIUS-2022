@@ -4154,57 +4154,6 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20069" level="26" type="L2Monster" name="Selu Lizardman Scout">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="58" />
-			<param name="MoveAroundSocial1" value="58" />
-			<param name="MoveAroundSocial2" value="58" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="16" /> <!-- Great Spear -->
-		<acquire exp="1584" sp="53" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="487.5704" hpRegen="3.5" mp="273.0" mpRegen="1.5" />
-			<attack physical="69.75926" magical="47.63653" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="105.02818" magical="76.85506" />
-			<speed>
-				<walk ground="43" />
-				<run ground="130" />
-			</speed>
-			<hit_time>480</hit_time>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
-				<clan>LIZARDMAN</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="10" />
-			<height normal="23" />
-		</collision>
-	</npc>
 	<npc id="20070" level="35" type="L2Monster" name="Lesser Basilisk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -4291,57 +4240,6 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20071" level="27" type="L2Monster" name="Selu Lizardman Warrior">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="80" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="16" /> <!-- Great Spear -->
-		<acquire exp="1703" sp="58" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="515.17856" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
-			<attack physical="74.99121" magical="51.20928" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="108.28767" magical="79.24022" />
-			<speed>
-				<walk ground="52" />
-				<run ground="130" />
-			</speed>
-			<hit_time>590</hit_time>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clan_list>
-				<clan>LIZARDMAN</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="12" />
-			<height normal="30" />
-		</collision>
-	</npc>
 	<npc id="20072" level="35" type="L2Monster" name="Basilisk">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -4422,57 +4320,6 @@
 		</drop_lists>
 		<collision>
 			<radius normal="34" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="20073" level="28" type="L2Monster" name="Ol Mahum Legionnaire">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="130" />
-			<param name="MoveAroundSocial1" value="130" />
-			<param name="MoveAroundSocial2" value="130" />
-			<param name="SoulShot" value="100" />
-			<param name="SoulShotRate" value="10" />
-			<param name="SpiritShot" value="100" />
-			<param name="SpiritShotRate" value="5" />
-			<param name="LongRangeGuardRate" value="5" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="2" /> <!-- Long Sword -->
-		<acquire exp="1766" sp="62" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="543.79576" hpRegen="3.5" mp="300.96" mpRegen="1.5" />
-			<attack physical="80.54056" magical="54.99876" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="111.61368" magical="81.67405" />
-			<speed>
-				<walk ground="50" />
-				<run ground="110" />
-			</speed>
-			<hit_time>460</hit_time>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skill_list>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skill_list>
-		<shots shotChance="30" spiritChance="30" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clan_list>
-				<clan>OL_MAHUM</clan>
-			</clan_list>
-		</ai>
-		<collision>
-			<radius normal="13.5" />
 			<height normal="25" />
 		</collision>
 	</npc>

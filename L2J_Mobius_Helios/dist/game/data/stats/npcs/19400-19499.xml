@@ -2129,56 +2129,6 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="19468" level="99" type="L2Npc" name="Antharas" title="Land Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1222866" hpRegen="10.5" mp="47100" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="128" />
-			</speed>
-			<attack physical="17349.336782171" magical="21373.49261838" critical="4" attackSpeed="253" range="40" />
-			<defence physical="936.70212765957" magical="621.44512323573" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
-		<collision>
-			<radius normal="300" />
-			<height normal="300" />
-		</collision>
-	</npc>
-	<npc id="19469" level="99" type="L2Npc" name="Valakas" title="Fire Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1222866" hpRegen="10.5" mp="47100" mpRegen="3.6" />
-			<speed>
-				<walk ground="120" />
-				<run ground="128" />
-			</speed>
-			<attack physical="17349.336782171" magical="21373.49261838" critical="4" attackSpeed="253" range="40" />
-			<defence physical="936.70212765957" magical="621.44512323573" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skill_list>
-		<collision>
-			<radius normal="190" />
-			<height normal="335" />
-		</collision>
-	</npc>
 	<npc id="19470" level="65" type="L2Monster" name="Kartia's Flower" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
@@ -2679,25 +2629,6 @@
 		<collision>
 			<radius normal="40" />
 			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="19492" level="99" type="L2Npc" name="Masa" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="19493" level="99" type="L2Npc" name="Freed Knight" title="">

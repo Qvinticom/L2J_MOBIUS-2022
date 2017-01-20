@@ -1978,56 +1978,6 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="23447" level="81" type="L2Npc" name="Gust Spiral" title="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<acquire exp="231269" sp="55" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10385" hpRegen="9.5" mp="1708" mpRegen="3.3" />
-			<speed>
-				<walk ground="39" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1012.4294733695" magical="691.47164483324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="345.88235294118" magical="253.15472723743" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
-				<attack type="WIND" value="100" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="17" max="40" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="7.2815533980583" /> <!-- Fire Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9552" min="1" max="1" chance="2.1844660194175" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
-		<collision>
-			<radius normal="7" />
-			<height normal="30" />
-		</collision>
-	</npc>
 	<npc id="23448" level="2" type="L2Monster" name="Floato" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ANIMAL</race>
