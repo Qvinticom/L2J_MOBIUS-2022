@@ -347,5 +347,39 @@
 			<radius normal="110" />
 			<height normal="70" />
 		</collision>
-	</npc>	
+	</npc>
+	<npc id="34230" level="85" type="L2Npc" name="Sporcha" title="Commando Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="110" />
+			<height normal="70" />
+		</collision>
+	</npc>
+	<npc id="34257" level="85" type="L2Npc" name="Masa" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="14612" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="110" />
+			<height normal="70" />
+		</collision>
+	</npc>
 </list>
