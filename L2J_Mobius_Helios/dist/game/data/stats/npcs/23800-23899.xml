@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="23800" level="102" type="L2Monster" name="Delta Kshana">
+		<!-- NEED TO CHECK IF ITS THE SAME STATS AS NPC ID: 23776 -->
+		<race>GIANT</race>
+		<acquire exp="547017485" sp="1312842" />
+		<stats>
+			<vitals hp="1325641" hpRegen="11.5" mp="23928" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/Crossbow Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
+				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
+				<item id="57" min="30979" max="72169" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="14.65" /> <!-- Adamantite Wire -->
+				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Power Crystal -->
+				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
+				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
+				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
+				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
+			</death>
+			<corpse>
+				<item id="36564" min="1" max="1" chance="1.059" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
+			</corpse>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23801" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Lillim Royal Knight ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23802" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Lillim Slayer ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23803" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Gigantic Healer ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23804" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Lillim Great Magus ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23805" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Nephilim Royal Guard ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23806" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Wandering Dead of the Dimension ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23807" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Wandering Dimensional Spirit ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23808" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Lost Soul of the Dimension ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23809" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Lost Dimensional Evil Thoughts ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23810" level="99" type="L2Monster" name="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- Roaming Vengeance of the Dimension ?? -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats>
+			<vitals hp="0" hpRegen="10.5" mp="0" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="23811" level="99" type="L2Monster" name="Cantera Tanya">
+		<race>DEMONIC</race>
+		<acquire exp="11672991" sp="28015" />
+		<stats>
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
+				<item id="37776" min="1" max="1" chance="0.075" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
+				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
+				<item id="37773" min="1" max="1" chance="0.0075" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>	
+	<npc id="23812" level="99" type="L2Monster" name="Cantera Deathmoz">
+		<race>DEMONIC</race>
+		<acquire exp="11672991" sp="28015" />
+		<stats>
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
+				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
+				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23813" level="99" type="L2Monster" name="Cantera Floxis">
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="11672991" sp="28015" />
+		<stats>
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
+				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
+				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
+				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23814" level="99" type="L2Monster" name="Cantera Belika">
+		<race>ELEMENTAL</race>
+		<acquire exp="11672991" sp="28015" />
+		<stats>
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
+				<item id="37778" min="1" max="1" chance="0.003" /> <!-- Scroll of Blessing Scraps: Weapon (R99-grade) -->
+				<item id="37775" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Weapon (R99-grade) -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>
+	<npc id="23815" level="99" type="L2Monster" name="Cantera Bridget">
+		<race>HUMANOID</race>
+		<acquire exp="11672991" sp="28015" />
+		<stats>
+			<vitals hp="39070" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="8428" max="19635" chance="10" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.03" /> <!-- Sealed Demonic Tome -->
+				<item id="37787" min="1" max="1" chance="0.0075" /> <!-- Scroll of Blessing Scraps: Armor (R99-grade) -->
+				<item id="36919" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Downgrade -->
+				<item id="37784" min="1" max="1" chance="0.0009" /> <!-- Recipe: Scroll of Blessing: Armor (R99-grade) -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="1" max="1" chance="0.01" /> <!-- Fortune Bag - Stage 1 --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>
+</list>
