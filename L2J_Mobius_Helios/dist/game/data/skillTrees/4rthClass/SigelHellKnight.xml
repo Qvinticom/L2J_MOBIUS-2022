@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Sigel Hell Knight -->
 	<skillTree type="classSkillTree" classId="149" parentClassId="91">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Sigel Aura" skillId="1927" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Challenge Aura" skillId="10030" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="982" /> <!-- Combat Aura -->
@@ -81,7 +87,6 @@
 			<removeSkill id="278" /> <!-- Summon Viper Cubic -->
 			<removeSkill id="22" /> <!-- Summon Vampiric Cubic -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="110" /> <!-- Ultimate Defense -->

@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Othell Fortune Seeker -->
 	<skillTree type="classSkillTree" classId="161" parentClassId="117">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Othell Aura" skillId="1931" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Angel of Death" skillId="10531" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Silent Step" skillId="10543" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -51,7 +57,6 @@
 			<removeSkill id="36" /> <!-- Spinning Slasher -->
 			<removeSkill id="70" /> <!-- Drain Energy -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Blood Stab" skillId="10508" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="30" /> <!-- Backstab -->
 			<removeSkill id="409" /> <!-- Critical Blow -->

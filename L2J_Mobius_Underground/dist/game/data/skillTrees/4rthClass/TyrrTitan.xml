@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Tyrr Titan -->
 	<skillTree type="classSkillTree" classId="154" parentClassId="113">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Tyrr Aura" skillId="1929" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Frenzy" skillId="176" skillLvl="6" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Hurricane Rush" skillId="10267" skillLvl="1" getLevel="85" levelUpSp="10000" />
@@ -92,7 +98,6 @@
 			<removeSkill id="425" /> <!-- Hawk Spirit Totem -->
 		</skill>
 		<skill skillName="Brave Spear" skillId="10289" skillLvl="1" getLevel="85" levelUpSp="10000" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mega Strike" skillId="10260" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="492" /> <!-- Spread Wing -->

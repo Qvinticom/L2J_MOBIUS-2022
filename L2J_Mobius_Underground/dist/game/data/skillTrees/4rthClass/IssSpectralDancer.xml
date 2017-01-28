@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Iss Spectral Dancer -->
 	<skillTree type="classSkillTree" classId="173" parentClassId="107">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Crippling Attack" skillId="11509" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1245" /> <!-- Steal Essence -->
 			<removeSkill id="1209" /> <!-- Seal of Poison -->
@@ -131,7 +137,6 @@
 			<removeSkill id="2" /> <!-- Confusion -->
 			<removeSkill id="15" /> <!-- Charm -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Giant Root" skillId="11538" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1208" /> <!-- Seal of Binding -->

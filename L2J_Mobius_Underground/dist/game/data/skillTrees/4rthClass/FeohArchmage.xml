@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Feoh Archmage -->
 	<skillTree type="classSkillTree" classId="166" parentClassId="94">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Feoh Aura" skillId="1935" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Double Casting - Elemental Crash" skillId="11086" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Double Casting - Elemental Spike" skillId="11076" skillLvl="1" getLevel="85" autoGet="true" />
@@ -118,7 +124,6 @@
 		<skill skillName="Earth Stance" skillId="11010" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Wind Stance" skillId="11009" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Fire Stance" skillId="11007" skillLvl="1" getLevel="85" autoGet="true" />
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Death Lord" skillId="11030" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1419" /> <!-- Volcano -->

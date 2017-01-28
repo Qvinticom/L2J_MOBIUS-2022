@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Yul Moonlight Sentinel -->
 	<skillTree type="classSkillTree" classId="163" parentClassId="102">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Yul Aura" skillId="1933" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Superior Critical Arrow" skillId="10756" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="334" /> <!-- Focus Skill Mastery -->
@@ -61,7 +67,6 @@
 			<removeSkill id="101" /> <!-- Stun Shot -->
 			<removeSkill id="509" /> <!-- Bleeding Shot -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Frost Trap" skillId="10791" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="516" /> <!-- Slow Trap -->
 		</skill>

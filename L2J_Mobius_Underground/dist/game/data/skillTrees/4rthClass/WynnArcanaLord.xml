@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Wynn Arcana Lord -->
 	<skillTree type="classSkillTree" classId="176" parentClassId="96">
+		<skill skillName="Crystallize" skillId="248" skillLvl="1" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="2" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="3" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="4" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="5" getLevel="85" autoGet="true" />
+		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" autoGet="true" />
 		<skill skillName="Wynn Aura" skillId="1937" skillLvl="1" getLevel="85" autoGet="true" />
 		<skill skillName="Blessing of the Giants" skillId="11297" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1349" /> <!-- Final Servitor -->
@@ -52,7 +58,6 @@
 			<removeSkill id="1384" /> <!-- Mass Surrender to Water -->
 			<removeSkill id="1385" /> <!-- Mass Surrender to Wind -->
 		</skill>
-		<skill skillName="Crystallize" skillId="248" skillLvl="6" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Weight Limit" skillId="150" skillLvl="3" getLevel="85" autoGet="true" />
 		<skill skillName="Mass Servitor Ultimate Defense" skillId="11310" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1299" /> <!-- Servitor Empowerment -->
