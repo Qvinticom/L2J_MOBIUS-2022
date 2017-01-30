@@ -1393,6 +1393,11 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
+			<clan_list>
+				<clan>LEOPARD_DRAGON</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<death>
 				<group chance="70">
