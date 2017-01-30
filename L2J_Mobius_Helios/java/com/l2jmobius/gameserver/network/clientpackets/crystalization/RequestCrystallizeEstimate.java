@@ -61,11 +61,11 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
-		{
-			activeChar.sendMessage("You are crystallizing too fast.");
-			return;
-		}
+		// if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
+		// {
+		// activeChar.sendMessage("You are crystallizing too fast.");
+		// return;
+		// }
 		
 		if (_count <= 0)
 		{

@@ -41,11 +41,11 @@ public class RequestCrystallizeItemCancel implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
-		{
-			activeChar.sendMessage("You are crystallizing too fast.");
-			return;
-		}
+		// if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
+		// {
+		// activeChar.sendMessage("You are crystallizing too fast.");
+		// return;
+		// }
 		
 		if (activeChar.isInCrystallize())
 		{
