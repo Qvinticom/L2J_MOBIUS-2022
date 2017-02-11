@@ -46,7 +46,7 @@ public class ClanHallAuction
 	
 	private final int _clanHallId;
 	private static final String LOAD_CLANHALL_BIDDERS = "SELECT * FROM clanhall_auctions_bidders WHERE clanHallId=?";
-	private static final String DELETE_CLANHALL_BIDDERS = "DELETE TABLE clanhall_auctions_bidders WHERE clanHallId=?";
+	private static final String DELETE_CLANHALL_BIDDERS = "DELETE FROM clanhall_auctions_bidders WHERE clanHallId=?";
 	private static final String INSERT_CLANHALL_BIDDER = "REPLACE INTO clanhall_auctions_bidders (clanHallId, clanId, bid, bidTime) VALUES (?,?,?,?)";
 	private static final String DELETE_CLANHALL_BIDDER = "DELETE FROM clanhall_auctions_bidders WHERE clanId=?";
 	
