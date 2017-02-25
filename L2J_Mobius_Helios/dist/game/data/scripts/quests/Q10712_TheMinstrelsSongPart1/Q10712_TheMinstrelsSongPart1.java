@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.LetterQuest;
 
@@ -47,6 +48,7 @@ public final class Q10712_TheMinstrelsSongPart1 extends LetterQuest
 		setLevel(MIN_LEVEL, MAX_LEVEL);
 		setStartLocation(SOE_TALKING_ISLAND, TELEPORT_LOC);
 		registerQuestItems(SOE_TALKING_ISLAND);
+		setStartMessage(NpcStringId.THIS_IS_THIS_IS_A_GREAT_ACHIEVEMENT_THAT_IS_WORTHY_OF_THE_TRUE_HEROES_OF_LEGEND);
 	}
 	
 	@Override

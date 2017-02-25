@@ -119,6 +119,11 @@ public abstract class LetterQuest extends Quest
 		}
 	}
 	
+	public final void setStartMessage(NpcStringId msg)
+	{
+		_startMessage = msg;
+	}
+	
 	/**
 	 * Gets teleport command associated with current quest.
 	 * @return command in form Q<i>questId</i>_teleport (<i>questId</i> is replaced with original quest id)
