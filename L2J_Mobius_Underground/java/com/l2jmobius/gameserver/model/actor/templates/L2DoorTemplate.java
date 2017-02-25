@@ -55,6 +55,7 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 	private final boolean _checkCollision;
 	private final boolean _isAttackableDoor;
 	private final boolean _stealth;
+	private final boolean _isInverted;
 	
 	public L2DoorTemplate(StatsSet set)
 	{
@@ -105,6 +106,7 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 		}
 		_isAttackableDoor = set.getBoolean("attackable", false);
 		_stealth = set.getBoolean("stealth", false);
+		_isInverted = set.getBoolean("isInverted", false);
 	}
 	
 	/**
@@ -240,5 +242,10 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 	public boolean isStealth()
 	{
 		return _stealth;
+	}
+	
+	public boolean isInverted()
+	{
+		return _isInverted;
 	}
 }

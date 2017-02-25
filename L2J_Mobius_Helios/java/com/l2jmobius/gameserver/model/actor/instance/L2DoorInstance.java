@@ -53,6 +53,7 @@ public final class L2DoorInstance extends L2Character
 {
 	private boolean _open = false;
 	private boolean _isAttackableDoor = false;
+	private boolean _isInverted = false;
 	private int _meshindex = 1;
 	private Future<?> _autoCloseTask;
 	
@@ -64,6 +65,7 @@ public final class L2DoorInstance extends L2Character
 		setLethalable(false);
 		_open = template.isOpenByDefault();
 		_isAttackableDoor = template.isAttackable();
+		_isInverted = template.isInverted();
 		super.setTargetable(template.isTargetable());
 		
 		if (isOpenableByTime())
@@ -227,6 +229,11 @@ public final class L2DoorInstance extends L2Character
 		return _isAttackableDoor;
 	}
 	
+	public boolean isInverted()
+	{
+		return _isInverted;
+	}
+	
 	public boolean getIsShowHp()
 	{
 		return getTemplate().isShowHp();
@@ -367,7 +374,14 @@ public final class L2DoorInstance extends L2Character
 		OnEventTrigger oe = null;
 		if (getEmitter() > 0)
 		{
-			oe = new OnEventTrigger(getEmitter(), isOpen());
+			if (isInverted())
+			{
+				oe = new OnEventTrigger(getEmitter(), !isOpen());
+			}
+			else
+			{
+				oe = new OnEventTrigger(getEmitter(), isOpen());
+			}
 		}
 		
 		for (L2PcInstance player : knownPlayers)
@@ -583,7 +597,14 @@ public final class L2DoorInstance extends L2Character
 		{
 			if (getEmitter() > 0)
 			{
-				activeChar.sendPacket(new OnEventTrigger(getEmitter(), isOpen()));
+				if (isInverted())
+				{
+					activeChar.sendPacket(new OnEventTrigger(getEmitter(), !isOpen()));
+				}
+				else
+				{
+					activeChar.sendPacket(new OnEventTrigger(getEmitter(), isOpen()));
+				}
 			}
 			activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
 		}

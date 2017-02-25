@@ -2100,7 +2100,7 @@
 		<status showHp="false" />
 		<openStatus openMethod="BY_ITEM" default="close" />
 	</door>
-	<door id="16200012" level="1" name="nornildg_l" emmiterId="16200112">
+	<door id="16200012" level="1" name="nornildg_l" emmiterId="16200112" isInverted="true">
 		<nodes nodeZ="-13008">
 			<node x="-111444" y="87371" />
 			<node x="-111444" y="86980" />
@@ -2124,7 +2124,7 @@
 		<status targetable="false" showHp="false" isStealth="true" />
 		<openStatus default="close" />
 	</door>
-	<door id="16200014" level="1" name="past_door" emmiterId="16200114">
+	<door id="16200014" level="1" name="past_door" emmiterId="16200114" isInverted="true">
 		<nodes nodeZ="-12904">
 			<node x="-113194" y="87322" />
 			<node x="-113193" y="87037" />
@@ -2136,7 +2136,7 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
-	<door id="16200015" level="1" name="present_door" emmiterId="16200115">
+	<door id="16200015" level="1" name="present_door" emmiterId="16200115" isInverted="true">
 		<nodes nodeZ="-12816">
 			<node x="-115085" y="87321" />
 			<node x="-115084" y="87036" />
@@ -2148,7 +2148,7 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
-	<door id="16200016" level="1" name="future_door" emmiterId="16200116">
+	<door id="16200016" level="1" name="future_door" emmiterId="16200116" isInverted="true">
 		<nodes nodeZ="-12711">
 			<node x="-116982" y="87319" />
 			<node x="-116981" y="87034" />
@@ -17139,7 +17139,7 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
-	<door id="16200201" name="nornil_cave_S.nornil_mover">
+	<door id="16200201" name="nornil_cave_S.nornil_mover" isInverted="true">
 		<!-- AUTO GENERATED DOOR -->
 		<nodes nodeZ="-12616">
 			<node x="-118879" y="87320" />
