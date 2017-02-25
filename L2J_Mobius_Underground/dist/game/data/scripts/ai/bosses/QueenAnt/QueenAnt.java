@@ -254,6 +254,10 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 			case QUEEN:
 			{
+				if (mob.getMinionList().getSpawnedMinions().isEmpty())
+				{
+					((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
+				}
 				_task = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
 				break;
 			}
