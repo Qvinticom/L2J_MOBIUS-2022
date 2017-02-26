@@ -72,7 +72,7 @@ public final class Q00760_BlockTheExit extends Quest
 			}
 			case "30870-06.html":
 			{
-				if (st.isCond(1))
+				if (st.isCond(2))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{

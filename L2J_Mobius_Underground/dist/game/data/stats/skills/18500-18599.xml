@@ -308,9 +308,65 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18555" toLevel="1" name="Curtiz's Reward Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46560</itemConsumeId>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5">
+						<item id="36554" count="1" /> <!-- Armor Fragment (High-grade) -->
+					</item>
+					<item chance="10">
+						<item id="36553" count="1" /> <!-- Armor Fragment (Mid-grade) -->
+					</item>
+					<item chance="5">
+						<item id="36549" count="1" /> <!-- Weapon Fragment (High-grade) -->
+					</item>
+					<item chance="10">
+						<item id="36548" count="1" /> <!-- Weapon Fragment (Mid-grade) -->
+					</item>
+					<item chance="10">
+						<item id="9555" count="1" /> <!-- Wind Crystal -->
+					</item>
+					<item chance="10">
+						<item id="9556" count="1" /> <!-- Dark Crystal -->
+					</item>
+					<item chance="10">
+						<item id="9553" count="1" /> <!-- Water Crystal -->
+					</item>
+					<item chance="10">
+						<item id="9557" count="1" /> <!-- Holy Crystal -->
+					</item>
+					<item chance="10">
+						<item id="9552" count="1" /> <!-- Fire Crystal -->
+					</item>
+					<item chance="10">
+						<item id="9554" count="1" /> <!-- Earth Crystal -->
+					</item>	
+					<item chance="4">
+						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
+					</item>
+					<item chance="3">
+						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+					</item>
+					<item chance="2">
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+					</item>
+					<item chance="1">
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18556" toLevel="1" name="Blue Dynasty Armor Appearance Stone">
 		<!-- AUTO GENERATED SKILL -->

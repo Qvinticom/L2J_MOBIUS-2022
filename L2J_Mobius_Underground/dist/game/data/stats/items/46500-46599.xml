@@ -608,6 +608,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18555" level="1" /> <!-- Curtiz's Reward Box -->
+		</skills>
 	</item>
 	<item id="46561" name="Blue Dynasty" type="EtcItem">
 		<!-- L2 Assist App item. Blue Dynasty armor. -->
