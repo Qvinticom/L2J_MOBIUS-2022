@@ -159,6 +159,9 @@
 		<!-- Novice Adventurer's shirt. M. Def. + 11 when equipped. -->
 		<set name="icon" val="icon.etc_shirts_none_i00" />
 		<set name="weight" val="130" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -166,7 +169,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_stackable" val="true" />
+		<set name="isAppearanceable" val="true" />
 		<stats>
 			<stat type="pDef">28</stat>
 			<stat type="mDef">11</stat>
@@ -186,9 +189,12 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27513" name="Novice Adventurer's Bracelet" type="Armor">
+	<item id="27513" name="Novice Adventurer's Bracelet" type="EtcItem">
 		<!-- Novice Adventurer's bracelet. MP + 60 and uses 3 talisman slots when equipped. -->
 		<set name="icon" val="icon.accessory_shiny_bracelet" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
@@ -198,6 +204,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="3324" level="1" /> <!-- Steel Bracelet -->
+		</skills>
 	</item>
 	<item id="27514" name="Novice Adventurer's Support Box" type="EtcItem">
 		<!-- Support box containing a Novice Adventurer's Shirt, Circlet, and Bracelet. -->

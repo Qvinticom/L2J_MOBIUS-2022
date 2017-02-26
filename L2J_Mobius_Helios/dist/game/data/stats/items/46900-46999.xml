@@ -351,6 +351,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<cond msgId="1902">
+			<player levelRange="85;105" />
+		</cond>
 	</item>
 	<item id="46920" name="Paulina's Brigandine Shield" type="Armor">
 		<!-- Brigandine Shield imbued with the energy of Paulina. -->

@@ -344,6 +344,10 @@
 			<effect name="TalismanSlot">
 				<slots>3</slots>
 			</effect>
+			<effect name="MaxMp">
+				<amount>60</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="3325" toLevel="1" name="Mithril Bracelet">

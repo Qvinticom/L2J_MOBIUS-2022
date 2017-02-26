@@ -906,6 +906,14 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="1464" min="10000" max="10000" chance="100" /> <!-- Soulshot (C-grade) -->
+			<item id="1465" min="10000" max="10000" chance="100" /> <!-- Soulshot (B-grade) -->
+			<item id="1466" min="10000" max="10000" chance="100" /> <!-- Soulshot (A-grade) -->
+			<item id="1467" min="10000" max="10000" chance="100" /> <!-- Soulshot (S-grade) -->
+			<item id="17754" min="10000" max="10000" chance="100" /> <!-- Soulshot (R-grade) -->
+		</capsuled_items>
 	</item>
 	<item id="28399" name="Today's To-do Blessed Spiritshot Box" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Grade C-R Blessed Spiritshots. -->
@@ -916,5 +924,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="3949" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (C-grade) -->
+			<item id="3950" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (B-grade) -->
+			<item id="3951" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (A-grade) -->
+			<item id="3952" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (S-grade) -->
+			<item id="19442" min="10000" max="10000" chance="100" /> <!-- Blessed Spiritshot (R-grade) -->
+		</capsuled_items>
 	</item>
 </list>

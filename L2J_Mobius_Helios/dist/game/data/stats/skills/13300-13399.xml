@@ -579,12 +579,16 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13343" toLevel="1" name="Belt of Destiny">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Weight Gauge when wearing the belt. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="WeightPenalty">
+				<amount>5000</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13344" toLevel="1" name="Bracelet of Insolence">
 		<!-- AUTO GENERATED SKILL -->
