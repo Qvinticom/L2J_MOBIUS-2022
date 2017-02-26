@@ -37,6 +37,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.MpRewardAffectType;
 import com.l2jmobius.gameserver.enums.MpRewardType;
@@ -659,7 +660,11 @@ public class NpcData implements IGameXmlReader
 			case "item":
 			{
 				final IDropItem dropItem = dropListScope.newDropItem(parseInteger(attrs, "id"), parseLong(attrs, "min"), parseLong(attrs, "max"), parseDouble(attrs, "chance"));
-				if (dropItem != null)
+				if (ItemTable.getInstance().getTemplate(parseInteger(attrs, "id")) == null)
+				{
+					LOGGER.warning("DropListItem: Could not find item with id " + parseInteger(attrs, "id") + ".");
+				}
+				else if (dropItem != null)
 				{
 					drops.add(dropItem);
 				}
