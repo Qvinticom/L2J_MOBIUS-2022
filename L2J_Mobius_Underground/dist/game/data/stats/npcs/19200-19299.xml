@@ -3583,7 +3583,7 @@
 			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" canMove="false" />
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="600">
 			<clan_list>
 				<clan>NORNIL_METUCELLAR</clan>
