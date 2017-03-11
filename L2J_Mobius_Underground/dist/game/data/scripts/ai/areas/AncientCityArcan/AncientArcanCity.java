@@ -146,11 +146,11 @@ public final class AncientArcanCity extends AbstractNpcAI
 		_templates.add(template);
 	}
 	
-	@Override
-	public void onSpawnDeactivate(SpawnTemplate template)
-	{
-		_templates.remove(template);
-	}
+	// @Override
+	// public void onSpawnDeactivate(SpawnTemplate template)
+	// {
+	// _templates.remove(template);
+	// }
 	
 	@Override
 	public void onSpawnNpc(SpawnTemplate template, SpawnGroup group, L2Npc npc)
