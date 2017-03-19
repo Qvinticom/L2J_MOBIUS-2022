@@ -26,6 +26,17 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExSendUIEvent implements IClientOutgoingPacket
 {
+	// UI Types
+	public static int TYPE_COUNT_DOWN = 0;
+	public static int TYPE_REMOVE = 1;
+	public static int TYPE_ISTINA = 2;
+	public static int TYPE_COUNTER = 3;
+	public static int TYPE_GP_TIMER = 4;
+	public static int TYPE_NORNIL = 5;
+	public static int TYPE_DRACO_INCUBATION_1 = 6;
+	public static int TYPE_DRACO_INCUBATION_2 = 7;
+	public static int TYPE_CLAN_PROGRESS_BAR = 8;
+	
 	private final int _objectId;
 	private final int _type;
 	private final int _countUp;
@@ -35,6 +46,28 @@ public class ExSendUIEvent implements IClientOutgoingPacket
 	private final int _endTime2;
 	private final int _npcstringId;
 	private List<String> _params = null;
+	
+	/**
+	 * Remove UI
+	 * @param player
+	 */
+	public ExSendUIEvent(L2PcInstance player)
+	{
+		this(player, TYPE_REMOVE, 0, 0, 0, 0, 0, -1);
+	}
+	
+	/**
+	 * @param player
+	 * @param uiType
+	 * @param currentPoints
+	 * @param maxPoints
+	 * @param npcString
+	 * @param params
+	 */
+	public ExSendUIEvent(L2PcInstance player, int uiType, int currentPoints, int maxPoints, NpcStringId npcString, String... params)
+	{
+		this(player, uiType, -1, currentPoints, maxPoints, -1, -1, npcString.getId(), params);
+	}
 	
 	/**
 	 * @param player
