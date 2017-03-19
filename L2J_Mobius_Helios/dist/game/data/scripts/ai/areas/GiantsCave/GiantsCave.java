@@ -16,93 +16,113 @@
  */
 package ai.areas.GiantsCave;
 
-import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
 
 /**
- * Giant's Cave AI.
- * @author Gnacik, St3eT
+ * Giants Cave Npcs AI
+ * @author Gigi
+ * @date 2017-03-04 - [17:33:25]
  */
-public final class GiantsCave extends AbstractNpcAI
+public class GiantsCave extends AbstractNpcAI
 {
 	// NPC
-	private static final int[] SCOUTS =
-	{
-		22668, // Gamlin (Scout)
-		22669, // Leogul (Scout)
-	};
+	private static final int SUMADRIBA = 34217;
+	private static final int KRENAHT = 34237;
+	private static final int STHOR = 34219;
+	private static final int GIANT_TELEPORT = 34223;
 	
 	private GiantsCave()
 	{
-		addAttackId(SCOUTS);
-		addAggroRangeEnterId(SCOUTS);
+		addTalkId(SUMADRIBA, KRENAHT, GIANT_TELEPORT, STHOR);
+		addFirstTalkId(SUMADRIBA, KRENAHT, GIANT_TELEPORT, STHOR);
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("ATTACK") && (player != null) && (npc != null) && !npc.isDead())
+		String htmltext = null;
+		switch (event)
 		{
-			if (npc.getId() == SCOUTS[0]) // Gamlin
+			case "34237.html":
+			case "34237-1.html":
+			case "34237-2.html":
+			case "34237-3.html":
+			case "34237-4.html":
+			case "34237-5.html":
+			case "34237-6.html":
 			{
-				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.INTRUDER_DETECTED);
+				htmltext = event;
+				break;
 			}
-			else
+			case "first_area":
 			{
-				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED);
+				htmltext = "34223-1.html";
+				break;
 			}
-			
-			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 450, characters ->
+			case "second_area":
 			{
-				if ((getRandomBoolean()))
+				htmltext = "34223-1.html";
+				break;
+			}
+			case "thrid_area":
+			{
+				htmltext = "34223-1.html";
+				break;
+			}
+			case "stronghold":
+			{
+				htmltext = "34223-2.html";
+				break;
+			}
+			case "relics_rooom":
+			{
+				htmltext = "34223-3.html";
+				break;
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		switch (npc.getId())
+		{
+			case SUMADRIBA:
+			{
+				player.sendPacket(new PlaySound(3, "Npcdialog1.schmadriba_faction_1", 0, 0, 0, 0, 0));
+				break;
+			}
+			case KRENAHT:
+			{
+				if (getRandom(10) < 5)
 				{
-					addAttackPlayerDesire(characters, player);
+					player.sendPacket(new PlaySound(3, "Npcdialog1.krenat_faction_2", 0, 0, 0, 0, 0));
 				}
-			});
-		}
-		else if (event.equals("CLEAR") && (npc != null) && !npc.isDead())
-		{
-			npc.setScriptValue(0);
-		}
-		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
-	{
-		if (npc.isScriptValue(0))
-		{
-			npc.setScriptValue(1);
-			startQuestTimer("ATTACK", 6000, npc, attacker);
-			startQuestTimer("CLEAR", 120000, npc, null);
-		}
-		return super.onAttack(npc, attacker, damage, isSummon);
-	}
-	
-	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
-	{
-		if (npc.isScriptValue(0))
-		{
-			npc.setScriptValue(1);
-			if (getRandomBoolean())
-			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_GUYS_ARE_DETECTED);
+				else
+				{
+					player.sendPacket(new PlaySound(3, "Npcdialog1.krenat_faction_1", 0, 0, 0, 0, 0));
+				}
+				break;
 			}
-			else
+			case STHOR:
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHAT_KIND_OF_CREATURES_ARE_YOU);
+				if (getRandom(10) < 4)
+				{
+					player.sendPacket(new PlaySound(3, "Npcdialog1.stor_faction_2", 0, 0, 0, 0, 0));
+				}
+				else
+				{
+					player.sendPacket(new PlaySound(3, "Npcdialog1.stor_faction_1", 0, 0, 0, 0, 0));
+				}
+				break;
 			}
-			startQuestTimer("ATTACK", 6000, npc, player);
-			startQuestTimer("CLEAR", 120000, npc, null);
 		}
-		return super.onAggroRangeEnter(npc, player, isSummon);
+		return npc.getId() + ".html";
 	}
 	
 	public static void main(String[] args)
