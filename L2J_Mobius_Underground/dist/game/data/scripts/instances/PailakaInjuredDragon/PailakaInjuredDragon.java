@@ -221,7 +221,7 @@ public class PailakaInjuredDragon extends AbstractInstance
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (!character.isPlayer())
+		if (!character.isPlayer() || (character.getInstanceId() == 0))
 		{
 			return super.onEnterZone(character, zone);
 		}
