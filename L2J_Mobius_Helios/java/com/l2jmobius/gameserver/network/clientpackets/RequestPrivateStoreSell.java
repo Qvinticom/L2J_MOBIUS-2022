@@ -31,14 +31,8 @@ import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-/**
- * This class ...
- * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
- */
 public final class RequestPrivateStoreSell implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 32; // length of the one item
-	
 	private int _storePlayerId;
 	private ItemRequest[] _items = null;
 	
@@ -47,7 +41,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 	{
 		_storePlayerId = packet.readD();
 		final int count = packet.readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
 		}
@@ -57,12 +51,29 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 		{
 			final int objectId = packet.readD();
 			final int itemId = packet.readD();
-			packet.readH(); // TODO analyse this
-			packet.readH(); // TODO analyse this
+			@SuppressWarnings("unused")
+			final int enchantLevel = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int nameExists = packet.readH(); // TODO: use this
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
-			
-			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
+			@SuppressWarnings("unused")
+			final int augmentationEffect1 = packet.readD(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int augmentationEffect2 = packet.readD(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int visualId = packet.readD(); // TODO: use this
+			final int primarySpecialAbilities = packet.readC();
+			for (int a = 0; a < primarySpecialAbilities; a++)
+			{
+				packet.readD(); // sa effect
+			}
+			final int secondarySpecialAbilities = packet.readC();
+			for (int a = 0; a < secondarySpecialAbilities; a++)
+			{
+				packet.readD(); // sa effect
+			}
+			if (/* (objectId < 1) || */ (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return false;

@@ -32,21 +32,15 @@ import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jmobius.gameserver.util.Util;
 
-/**
- * This class ...
- * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $ CPU Disasm Packets: ddhhQQ cddb
- */
 public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 44; // length of the one item
-	
 	private Item[] _items = null;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		final int count = packet.readD();
-		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
+		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
 		}
@@ -56,8 +50,10 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 		{
 			final int itemId = packet.readD();
 			
-			packet.readH(); // TODO analyse this
-			packet.readH(); // TODO analyse this
+			@SuppressWarnings("unused")
+			final int enchantLevel = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int nameExists = packet.readH(); // TODO: use this
 			
 			final long cnt = packet.readQ();
 			final long price = packet.readQ();
@@ -67,10 +63,29 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 				_items = null;
 				return false;
 			}
-			packet.readD(); // Unk
-			packet.readD(); // Unk
-			packet.readD(); // Unk
-			packet.readD(); // Unk
+			
+			@SuppressWarnings("unused")
+			final int augmentationEffect1 = packet.readD(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int augmentationEffect2 = packet.readD(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int attackElement = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int attackElementPower = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int fireDefense = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int waterDefense = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int windDefense = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int earthDefense = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int holyDefense = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int darkDefense = packet.readH(); // TODO: use this
+			@SuppressWarnings("unused")
+			final int visualId = packet.readD(); // TODO: use this
 			
 			_items[i] = new Item(itemId, cnt, price);
 		}
