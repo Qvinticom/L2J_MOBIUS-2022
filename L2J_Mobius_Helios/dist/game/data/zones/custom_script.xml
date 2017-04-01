@@ -873,4 +873,16 @@
 	<zone name="Harnak Underground Ruins Room 24" id="60165" type="ScriptZone" shape="Cylinder" minZ="-7736" maxZ="-7576" rad="1000">
 		<node X="-114700" Y="143834" />
 	</zone>
+	<zone name="Superion Fortress Port Out" id="60166" type="ScriptZone" shape="Cylinder" minZ="450" maxZ="500" rad="300">
+		<node X="82728" Y="156209" />
+	</zone>
+	<zone name="Superion Fortress Port In" id="60167" type="ScriptZone" shape="Cylinder" minZ="-10200" maxZ="-10100" rad="500">
+		<node X="80884" Y="194332" />
+	</zone>
+	<zone name="Superion Fortress Starboard Out" id="60168" type="ScriptZone" shape="Cylinder" minZ="500" maxZ="550" rad="300">
+		<node X="83578" Y="154754" />
+	</zone>
+	<zone name="Superion Fortress Starboard In" id="60169" type="ScriptZone" shape="Cylinder" minZ="-10220" maxZ="-10100" rad="500">
+		<node X="75078" Y="194300" />
+	</zone>
 </list>
