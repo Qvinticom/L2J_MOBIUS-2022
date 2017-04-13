@@ -446,6 +446,13 @@ public class SkillCaster implements Runnable
 		
 		// On each repeat recharge shots before cast.
 		caster.rechargeShots(_skill.useSoulShot(), _skill.useSpiritShot(), false);
+		
+		// Consume skill reduced item.
+		if ((_item != null) && ((_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE) || (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS)))
+		{
+			caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true);
+		}
+		
 		return true;
 	}
 	
