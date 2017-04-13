@@ -68,24 +68,27 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		{
 			return null;
 		}
-		final List<Integer> list = new ArrayList<>(set.size());
 		int playerOneObjectId = 0;
+		int playerTwoObjectId = 0;
 		L2PcInstance playerOne = null;
 		L2PcInstance playerTwo = null;
 		
-		while (list.size() > 1)
+		while (set.size() > 1)
 		{
-			playerOneObjectId = list.remove(Rnd.nextInt(list.size()));
+			playerOneObjectId = getRandomPlayerId(set);
+			set.remove(playerOneObjectId);
 			playerOne = L2World.getInstance().getPlayer(playerOneObjectId);
 			if ((playerOne == null) || !playerOne.isOnline())
 			{
 				continue;
 			}
 			
-			playerTwo = L2World.getInstance().getPlayer(list.remove(Rnd.nextInt(list.size())));
+			playerTwoObjectId = getRandomPlayerId(set);
+			set.remove(playerTwoObjectId);
+			playerTwo = L2World.getInstance().getPlayer(playerTwoObjectId);
 			if ((playerTwo == null) || !playerTwo.isOnline())
 			{
-				list.add(playerOneObjectId);
+				set.add(playerOneObjectId);
 				continue;
 			}
 			
@@ -96,6 +99,21 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			return result;
 		}
 		return null;
+	}
+	
+	private static int getRandomPlayerId(Set<Integer> set)
+	{
+		final int rnd = Rnd.nextInt(set.size());
+		int counter = 0;
+		for (int id : set)
+		{
+			if (counter == rnd)
+			{
+				return id;
+			}
+			counter++;
+		}
+		return 0;
 	}
 	
 	@Override
