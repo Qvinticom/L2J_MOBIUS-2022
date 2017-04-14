@@ -4508,6 +4508,12 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>23150001</item>
+					<item>23150002</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">

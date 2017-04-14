@@ -214,6 +214,47 @@
 		<affectScope>RANGE</affectScope>
 		<conditions>
 			<condition name="CanUseSwoopCannon" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>19210001</item>
+					<item>19210002</item>
+					<item>19210003</item>
+					<item>19210004</item>
+					<item>20160001</item>
+					<item>20160002</item>
+					<item>20160007</item>
+					<item>20160008</item>
+					<item>20160009</item>
+					<item>20220001</item>
+					<item>20220002</item>
+					<item>20220003</item>
+					<item>20220004</item>
+					<item>22130001</item>
+					<item>22130002</item>
+					<item>22130004</item>
+					<item>22130005</item>
+					<item>22190001</item>
+					<item>22190002</item>
+					<item>22190003</item>
+					<item>22190004</item>
+					<item>23220001</item>
+					<item>23220002</item>
+					<item>23220003</item>
+					<item>23220004</item>
+					<item>23250001</item>
+					<item>23250002</item>
+					<item>23250003</item>
+					<item>23250004</item>
+					<item>24160009</item>
+					<item>24160010</item>
+					<item>24160021</item>
+					<item>24160022</item>
+					<item>24180001</item>
+					<item>24180002</item>
+					<item>24180006</item>
+					<item>24180011</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
@@ -240,6 +281,47 @@
 		<affectScope>RANGE</affectScope>
 		<conditions>
 			<condition name="CanUseSwoopCannon" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>19210001</item>
+					<item>19210002</item>
+					<item>19210003</item>
+					<item>19210004</item>
+					<item>20160001</item>
+					<item>20160002</item>
+					<item>20160007</item>
+					<item>20160008</item>
+					<item>20160009</item>
+					<item>20220001</item>
+					<item>20220002</item>
+					<item>20220003</item>
+					<item>20220004</item>
+					<item>22130001</item>
+					<item>22130002</item>
+					<item>22130004</item>
+					<item>22130005</item>
+					<item>22190001</item>
+					<item>22190002</item>
+					<item>22190003</item>
+					<item>22190004</item>
+					<item>23220001</item>
+					<item>23220002</item>
+					<item>23220003</item>
+					<item>23220004</item>
+					<item>23250001</item>
+					<item>23250002</item>
+					<item>23250003</item>
+					<item>23250004</item>
+					<item>24160009</item>
+					<item>24160010</item>
+					<item>24160021</item>
+					<item>24160022</item>
+					<item>24180001</item>
+					<item>24180002</item>
+					<item>24180006</item>
+					<item>24180011</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">

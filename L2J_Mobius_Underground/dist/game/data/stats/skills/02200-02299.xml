@@ -2037,6 +2037,18 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>19160002</item>
+					<item>19160003</item>
+					<item>19160004</item>
+					<item>19160005</item>
+					<item>19160006</item>
+					<item>19160007</item>
+					<item>19160008</item>
+					<item>19160009</item>
+				</doorIds>
+			</condition>
 		</conditions>
 	</skill>
 	<skill id="2236" toLevel="1" name="Chapel Key">
@@ -2057,6 +2069,20 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>19160002</item>
+					<item>19160003</item>
+					<item>19160004</item>
+					<item>19160005</item>
+					<item>19160006</item>
+					<item>19160007</item>
+					<item>19160008</item>
+					<item>19160009</item>
+					<item>19160010</item>
+					<item>19160011</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -2083,6 +2109,16 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>19160012</item>
+					<item>19160013</item>
+					<item>19160014</item>
+					<item>19160015</item>
+					<item>19160016</item>
+					<item>19160017</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -2109,6 +2145,12 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>23150003</item>
+					<item>23150004</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">

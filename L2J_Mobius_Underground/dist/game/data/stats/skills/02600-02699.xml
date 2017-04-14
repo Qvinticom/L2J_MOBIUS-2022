@@ -145,6 +145,16 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>22110100</item>
+					<item>22110101</item>
+					<item>22110102</item>
+					<item>22110103</item>
+					<item>22110104</item>
+					<item>22110105</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -720,6 +730,13 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>17240101</item>
+					<item>17240105</item>
+					<item>17240109</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -744,6 +761,12 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>17240103</item>
+					<item>17240107</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">

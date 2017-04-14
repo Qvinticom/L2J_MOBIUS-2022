@@ -1470,6 +1470,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200002</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1496,6 +1501,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200005</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1522,6 +1532,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200009</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1548,6 +1563,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200003</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1574,6 +1594,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200007</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1600,6 +1625,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200008</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1626,6 +1656,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200010</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1652,6 +1687,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200006</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1678,6 +1718,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200011</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1704,6 +1749,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>16200012</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1752,6 +1802,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>20260001</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1778,6 +1833,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>20260006</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1804,6 +1864,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>20260002</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -1918,6 +1983,18 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>24220009</item>
+					<item>24220011</item>
+					<item>24220012</item>
+					<item>24220014</item>
+					<item>24220015</item>
+					<item>24220016</item>
+					<item>24220017</item>
+					<item>24220019</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<cond msgId="113" addName="1">
 			<player instanceId="167" />
@@ -1947,6 +2024,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>24220040</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -2017,6 +2099,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>24220020</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">
@@ -2043,6 +2130,11 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpUnlock" />
+			<condition name="OpTargetDoor">
+				<doorIds>
+					<item>24220022</item>
+				</doorIds>
+			</condition>
 		</conditions>
 		<effects>
 			<effect name="OpenDoor">

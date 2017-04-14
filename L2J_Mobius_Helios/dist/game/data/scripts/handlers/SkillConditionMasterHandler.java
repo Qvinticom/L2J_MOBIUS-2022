@@ -70,6 +70,7 @@ public class SkillConditionMasterHandler
 		SkillConditionHandler.getInstance().registerHandler("CanUntransform", CanUntransformSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("BuildAdvanceBase", BuildAdvanceBaseSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("CanTransformInDominion", CanTransformInDominionSkillCondition::new);
+		SkillConditionHandler.getInstance().registerHandler("OpTargetDoor", OpTargetDoorSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpTargetNpc", OpTargetNpcSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpHaveSummon", OpHaveSummonSkillCondition::new);
 		SkillConditionHandler.getInstance().registerHandler("OpNotInstantzone", OpNotInstantzoneSkillCondition::new);
