@@ -188,9 +188,16 @@
 		<!-- This key card is necessary to access the room containing the MP Controller, where Queen Ramona is. -->
 		<set name="icon" val="icon.sp_control_room_key_card" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="25" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18604" level="1" /> <!-- Key Card to the Controller Room -->
+		</skills>
 	</item>
 	<item id="47127" name="Giants Deterioration Protection Potion" type="EtcItem">
 		<!-- When used in the Giant Emperor Helios Warzone, the damage received from the Enuma Elish - Red Lightning Spear' skill used by Helios is reduced for 5 seconds. -->
