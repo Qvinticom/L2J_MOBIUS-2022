@@ -70,6 +70,7 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 			packet.writeD(info.getDamage());
 			packet.writeD(info.getCurrentPoints());
 			packet.writeD(info.getDiffPoints());
+			packet.writeD(0x00); // Helios
 		}
 		
 		packet.writeD(_loseTeam);
@@ -83,6 +84,7 @@ public class ExOlympiadMatchResult implements IClientOutgoingPacket
 			packet.writeD(info.getDamage());
 			packet.writeD(info.getCurrentPoints());
 			packet.writeD(info.getDiffPoints());
+			packet.writeD(0x00); // Helios
 		}
 		return true;
 	}
