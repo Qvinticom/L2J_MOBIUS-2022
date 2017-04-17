@@ -157,6 +157,13 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
+		// You should not heal/buff monsters without pressing the ctrl button.
+		if (caster.isPlayer() && target.isMonster() && (skill.getEffectPoint() > 0) && !ctrlPressed)
+		{
+			caster.sendPacket(SystemMessageId.INVALID_TARGET);
+			return null;
+		}
+		
 		castTime = castTime > -1 ? castTime : Formulas.calcHitTime(caster, skill);
 		
 		// Schedule a thread that will execute 500ms before casting time is over (for animation issues and retail handling).
