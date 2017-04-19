@@ -1022,7 +1022,10 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>35985</itemConsumeId>
+		<itemConsumeId>
+			<value level="1">22960</value>
+			<value level="2">22961</value>
+		</itemConsumeId>
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>1</minLevel>
@@ -1046,7 +1049,7 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
-		</skill>
+	</skill>
 	<skill id="9241" toLevel="1" name="Giant's Box">
 		<!-- AUTO GENERATED SKILL -->
 		<itemConsumeId>34062</itemConsumeId>
