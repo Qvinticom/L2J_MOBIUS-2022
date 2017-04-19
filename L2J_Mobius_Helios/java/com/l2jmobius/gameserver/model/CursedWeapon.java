@@ -479,7 +479,7 @@ public class CursedWeapon implements INamable
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement del = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
-			PreparedStatement ps = con.prepareStatement("INSERT INTO cursed_weapons (itemId, charId, reputation, playerPkKills, nbKills, endTime) VALUES (?, ?, ?, ?, ?, ?)"))
+			PreparedStatement ps = con.prepareStatement("INSERT INTO cursed_weapons (itemId, charId, playerReputation, playerPkKills, nbKills, endTime) VALUES (?, ?, ?, ?, ?, ?)"))
 		{
 			// Delete previous datas
 			del.setInt(1, _itemId);
