@@ -27,11 +27,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class TradeUpdate extends AbstractItemPacket
 {
 	private final TradeItem _item;
+	private final long _newCount;
 	
 	public TradeUpdate(L2PcInstance player, TradeItem item)
 	{
 		_item = item;
-		_item.setCount(player.getInventory().getItemByObjectId(item.getObjectId()).getCount() - item.getCount());
+		_newCount = player.getInventory().getItemByObjectId(item.getObjectId()).getCount() - item.getCount();
 	}
 	
 	@Override
@@ -40,7 +41,7 @@ public class TradeUpdate extends AbstractItemPacket
 		OutgoingPackets.TRADE_UPDATE.writeId(packet);
 		
 		packet.writeH(1);
-		packet.writeH((_item.getCount() > 0) && _item.getItem().isStackable() ? 3 : 2);
+		packet.writeH((_newCount > 0) && _item.getItem().isStackable() ? 3 : 2);
 		writeItem(packet, _item);
 		return true;
 	}
