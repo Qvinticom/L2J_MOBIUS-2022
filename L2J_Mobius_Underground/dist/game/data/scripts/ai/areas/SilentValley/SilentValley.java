@@ -153,7 +153,7 @@ public final class SilentValley extends AbstractNpcAI
 		if (creature.isPlayable())
 		{
 			final L2PcInstance player = (isSummon) ? ((L2Summon) creature).getOwner() : creature.getActingPlayer();
-			if ((npc.getId() == GUARD1) || (npc.getId() == GUARD2))
+			if ((npc != null) && ((npc.getId() == GUARD1) || (npc.getId() == GUARD2)))
 			{
 				npc.setTarget(player);
 				npc.doCast(BLAZE.getSkill());
