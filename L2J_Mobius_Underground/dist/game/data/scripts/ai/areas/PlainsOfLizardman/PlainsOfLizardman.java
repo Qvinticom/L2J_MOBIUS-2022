@@ -64,11 +64,11 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 	private static final SkillHolder[] BUFFS =
 	{
 		new SkillHolder(6625, 1), // Energy of Life
-		new SkillHolder(6626, 2), // Energy of Life's Power
-		new SkillHolder(6627, 3), // Energy of Life's Highest Power
+		new SkillHolder(6626, 1), // Energy of Life's Power
+		new SkillHolder(6627, 1), // Energy of Life's Highest Power
 		new SkillHolder(6628, 1), // Energy of Mana
-		new SkillHolder(6629, 2), // Energy of Mana's Power
-		new SkillHolder(6630, 3), // Energy of Mana's Highest Power
+		new SkillHolder(6629, 1), // Energy of Mana's Power
+		new SkillHolder(6630, 1), // Energy of Mana's Highest Power
 		new SkillHolder(6631, 1), // Energy of Power
 		new SkillHolder(6633, 1), // Energy of Attack Speed
 		new SkillHolder(6635, 1), // Energy of Crt Rate
