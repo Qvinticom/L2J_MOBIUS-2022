@@ -34,6 +34,8 @@ public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 	private int _sort;
 	private boolean _descending;
 	private int _page;
+	@SuppressWarnings("unused")
+	private int _applicationType;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -45,6 +47,7 @@ public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 		_sort = packet.readD();
 		_descending = packet.readD() == 2;
 		_page = packet.readD();
+		_applicationType = packet.readD(); // Helios
 		return true;
 	}
 	
@@ -73,6 +76,8 @@ public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 		{
 			activeChar.sendPacket(new ExPledgeRecruitBoardSearch(ClanEntryManager.getInstance().getSortedClanListByName(_query.toLowerCase(), _type), _page));
 		}
+		
+		// tempfix for clan entry hiding clan crest
+		activeChar.sendInfo(activeChar);
 	}
-	
 }
