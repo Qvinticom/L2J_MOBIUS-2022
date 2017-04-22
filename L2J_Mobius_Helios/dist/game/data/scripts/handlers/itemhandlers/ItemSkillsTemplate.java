@@ -150,7 +150,7 @@ public class ItemSkillsTemplate implements IItemHandler
 			}
 		}
 		
-		if (item.isPotion() || item.isElixir() || (successfulUse && checkConsume(item, hasConsumeSkill)))
+		if (successfulUse && checkConsume(item, hasConsumeSkill))
 		{
 			if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
 			{
@@ -172,6 +172,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		switch (item.getItem().getDefaultAction())
 		{
 			case CAPSULE:
+			case SKILL_REDUCE:
 			{
 				if (!hasConsumeSkill && item.getItem().hasImmediateEffect())
 				{
@@ -179,7 +180,6 @@ public class ItemSkillsTemplate implements IItemHandler
 				}
 				break;
 			}
-			case SKILL_REDUCE:
 			case SKILL_REDUCE_ON_SKILL_SUCCESS:
 			{
 				return false;
