@@ -64,6 +64,7 @@ import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrys
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
 import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
+import com.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import com.l2jmobius.gameserver.network.clientpackets.mentoring.ConfirmMenteeAdd;
 import com.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMenteeAdd;
@@ -359,7 +360,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_CHANGE_CLASS_ARENA(0x115, null, ConnectionState.IN_GAME),
 	EX_CONFIRM_CLASS_ARENA(0x116, null, ConnectionState.IN_GAME),
 	// TODO: Check Helios updates
-	REQUEST_USER_FACTION_INFO(0x119, null, ConnectionState.IN_GAME),
+	REQUEST_USER_FACTION_INFO(0x119, RequestUserFactionInfo::new, ConnectionState.IN_GAME),
 	EX_EXIT_ARENA(0x11A, null, ConnectionState.IN_GAME),
 	REQUEST_EVENT_BALTHUS_TOKEN(0x11B, null, ConnectionState.IN_GAME),
 	REQUEST_PARTY_MATCHING_HISTORY(0x11C, null, ConnectionState.IN_GAME),
