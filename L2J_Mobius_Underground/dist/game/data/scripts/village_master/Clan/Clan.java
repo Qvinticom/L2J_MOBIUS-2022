@@ -20,17 +20,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-
-import ai.AbstractNpcAI;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
-import com.l2jmobius.gameserver.model.events.impl.character.player.*;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanJoin;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanLeft;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+
+import ai.AbstractNpcAI;
 
 /**
  * @author UnAfraid
@@ -38,7 +41,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 public final class Clan extends AbstractNpcAI
 {
 	private final SkillHolder CLAN_ADVENT = new SkillHolder(19009, 1);
-
+	
 	// @formatter:off
 	private static final int[] NPCS =
 	{
@@ -96,73 +99,80 @@ public final class Clan extends AbstractNpcAI
 	{
 		return "9000-01.htm";
 	}
-
+	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void onPlayerLogin(OnPlayerLogin event) {
-        if(event.getActiveChar().isClanLeader()) {
+	public void onPlayerLogin(OnPlayerLogin event)
+	{
+		final L2PcInstance activeChar = event.getActiveChar();
+		if (activeChar.isClanLeader())
+		{
 			final L2Clan clan = event.getActiveChar().getClan();
-			clan.getMembers().forEach(member -> {
-				// Starting Clan Advent when leader log on
-                CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
+			clan.getMembers().forEach(member ->
+			{
+				if (member.isOnline())
+				{
+					CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
+				}
 			});
 		}
+		else if ((activeChar.getClan() != null) && activeChar.getClan().getLeader().isOnline())
+		{
+			CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+		}
 	}
-
+	
 	@RegisterEvent(EventType.ON_PLAYER_LOGOUT)
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-	public void onPlayerLogout(OnPlayerLogout event) {
-        if(event.getActiveChar().isClanLeader()) {
-			final L2Clan clan = event.getActiveChar().getClan();
-			clan.getMembers().forEach(member -> {
-				// Remove Clan Advent effect when leader log off
-                member.getPlayerInstance().getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+	public void onPlayerLogout(OnPlayerLogout event)
+	{
+		final L2PcInstance activeChar = event.getActiveChar();
+		if (activeChar.isClanLeader())
+		{
+			final L2Clan clan = activeChar.getClan();
+			clan.getMembers().forEach(member ->
+			{
+				if (member.isOnline())
+				{
+					member.getPlayerInstance().getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+				}
 			});
 		}
+		else if (activeChar.getClan() != null)
+		{
+			activeChar.getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+		}
 	}
-
-    @RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
-    @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-    public void onProfessionChange(OnPlayerProfessionChange event)
-    {
-        final L2PcInstance activeChar = event.getActiveChar();
-        if(activeChar.isClanLeader() || (activeChar.getClan() != null && activeChar.getClan().getLeader().isOnline())) {
-            final L2Clan clan = event.getActiveChar().getClan();
-            clan.getMembers().forEach(member -> {
-                // Starting Clan Advent when leader log on
-                CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
-            });
-        }
-    }
-
-    @RegisterEvent(EventType.ON_PLAYER_CLAN_JOIN)
-    @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-    public void onPlayerClanJoin(OnPlayerClanJoin event)
-    {
-        final L2ClanMember activeChar = event.getActiveChar();
-        if(activeChar.getClan() != null && activeChar.getClan().getLeader().isOnline()) {
-            final L2Clan clan = event.getActiveChar().getClan();
-            clan.getMembers().forEach(member -> {
-                // Starting Clan Advent when leader log on
-                CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
-            });
-        }
-    }
-
-    @RegisterEvent(EventType.ON_PLAYER_CLAN_LEFT)
-    @RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
-    public void onPlayerClanLeft(OnPlayerClanLeft event)
-    {
-        final L2ClanMember activeChar = event.getActiveChar();
-        if(activeChar.getClan() != null && activeChar.getClan().getLeader().isOnline()) {
-            final L2Clan clan = event.getActiveChar().getClan();
-            clan.getMembers().forEach(member -> {
-                // Starting Clan Advent when leader log on
-                CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
-            });
-        }
-    }
-
+	
+	@RegisterEvent(EventType.ON_PLAYER_PROFESSION_CHANGE)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onProfessionChange(OnPlayerProfessionChange event)
+	{
+		final L2PcInstance activeChar = event.getActiveChar();
+		if (activeChar.isClanLeader() || ((activeChar.getClan() != null) && activeChar.getClan().getLeader().isOnline()))
+		{
+			CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_CLAN_JOIN)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerClanJoin(OnPlayerClanJoin event)
+	{
+		final L2PcInstance activeChar = event.getActiveChar().getPlayerInstance();
+		if (activeChar.getClan().getLeader().isOnline())
+		{
+			CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_PLAYER_CLAN_LEFT)
+	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
+	public void onPlayerClanLeft(OnPlayerClanLeft event)
+	{
+		event.getActiveChar().getPlayerInstance().getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+	}
+	
 	public static void main(String[] args)
 	{
 		new Clan();
