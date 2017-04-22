@@ -138,7 +138,7 @@ public final class Clan extends AbstractNpcAI
 				}
 			});
 		}
-		else if (activeChar.getClan() != null)
+		if (activeChar.getClan() != null)
 		{
 			activeChar.getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
 		}
