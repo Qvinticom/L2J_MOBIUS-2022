@@ -12768,6 +12768,9 @@ public final class NpcStringId
 	@ClientString(id = 540655, message = "Hah! You believe that is enough to stand in the path of darkness?")
 	public static NpcStringId HAH_YOU_BELIEVE_THAT_IS_ENOUGH_TO_STAND_IN_THE_PATH_OF_DARKNESS;
 	
+	@ClientString(id = 540712, message = "Fishing practice")
+	public static NpcStringId FISHING_PRACTICE;
+	
 	@ClientString(id = 540801, message = "Kekropus' Letter: The Swamp of Screams (Lv. 65-69)")
 	public static NpcStringId KEKROPUS_LETTER_THE_SWAMP_OF_SCREAMS_LV_65_69;
 	

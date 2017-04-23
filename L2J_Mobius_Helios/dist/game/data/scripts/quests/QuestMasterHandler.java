@@ -289,6 +289,7 @@ import quests.Q10403_TheGuardianGiant.Q10403_TheGuardianGiant;
 import quests.Q10404_KekropusLetterAHiddenMeaning.Q10404_KekropusLetterAHiddenMeaning;
 import quests.Q10405_KartiasSeed.Q10405_KartiasSeed;
 import quests.Q10406_BeforeDarknessBearsFruit.Q10406_BeforeDarknessBearsFruit;
+import quests.Q10407_LetsGoFishing.Q10407_LetsGoFishing;
 import quests.Q10408_KekropusLetterTheSwampOfScreams.Q10408_KekropusLetterTheSwampOfScreams;
 import quests.Q10409_ASuspiciousVagabondInTheSwamp.Q10409_ASuspiciousVagabondInTheSwamp;
 import quests.Q10410_EmbryoInTheSwampOfScreams.Q10410_EmbryoInTheSwampOfScreams;
@@ -708,6 +709,7 @@ public class QuestMasterHandler
 		Q10404_KekropusLetterAHiddenMeaning.class,
 		Q10405_KartiasSeed.class,
 		Q10406_BeforeDarknessBearsFruit.class,
+		Q10407_LetsGoFishing.class,
 		Q10408_KekropusLetterTheSwampOfScreams.class,
 		Q10409_ASuspiciousVagabondInTheSwamp.class,
 		Q10410_EmbryoInTheSwampOfScreams.class,

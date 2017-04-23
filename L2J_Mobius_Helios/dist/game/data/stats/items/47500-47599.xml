@@ -494,23 +494,31 @@
 		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Standard Fishing Bait. Fish using this bait to catch a Blueish Box with low probability. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
 		<set name="price" val="3000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="47548" name="Bait" additionalName="R99" type="EtcItem">
 		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Fishing bait that can be used by characters of Level 99 or higher. Fish using this bait to catch a Reddish Box with low probability. -->
 		<set name="icon" val="icon.etc_huge_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
 		<set name="price" val="20000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="47549" name="PC Cafe Bait" type="EtcItem">
 		<!-- Fishing time: 105 seconds. Standby time: 15 seconds. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PC Cafes. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -538,13 +546,19 @@
 	<item id="47553" name="Blueish Box" type="EtcItem">
 		<!-- Double click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="45494" min="1" max="1" chance="100" /> <!-- Sturdy Fishing Rod -->
+			<item id="38154" min="50" max="50" chance="100" /> <!-- Fishing Shot -->
+		</capsuled_items>
 	</item>
 	<item id="47554" name="Reddish Box" type="EtcItem">
 		<!-- Double click to obtain the item. -->
@@ -867,6 +881,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

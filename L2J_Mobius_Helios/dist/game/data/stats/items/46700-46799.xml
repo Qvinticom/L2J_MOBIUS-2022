@@ -534,11 +534,15 @@
 		<!-- Bait used to catch practice fish. Ineffective in catching other types of fish. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
+		<set name="bodypart" val="lhand" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="false" />
 	</item>
 	<item id="46738" name="Practice Fishing Rod" type="Weapon">
 		<!-- A shoddy fishing rod that has been given to you for practice. It's fine for practice, though. -->
@@ -567,11 +571,15 @@
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item id="46740" min="1" max="1" chance="100" /> <!-- Reward Fishing Rod -->
+		</capsuled_items>
 	</item>
 	<item id="46740" name="Reward Fishing Rod" additionalName="7-day" type="Weapon">
 		<!-- A fishing rod obtained by training in fishing. -->
