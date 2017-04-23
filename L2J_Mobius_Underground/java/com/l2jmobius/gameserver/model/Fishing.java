@@ -140,15 +140,15 @@ public class Fishing
 			return;
 		}
 		
-		final int minPlayerLevel = FishingData.getInstance().getMinPlayerLevel();
+		final FishingBaitData baitData = getCurrentBaitData();
+		final int minPlayerLevel = baitData == null ? 85 : baitData.getMinPlayerLevel();
 		if (_player.getLevel() < minPlayerLevel)
 		{
 			if (minPlayerLevel == 85)
 			{
 				_player.sendPacket(SystemMessageId.FISHING_IS_AVAILABLE_TO_CHARACTERS_LV_85_OR_ABOVE);
 			}
-			else
-			// In case of custom fishing level requirement set in config.
+			else // In case of custom fishing level.
 			{
 				_player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_FISHING_LEVEL_REQUIREMENTS);
 			}
@@ -166,7 +166,6 @@ public class Fishing
 			return;
 		}
 		
-		final FishingBaitData baitData = getCurrentBaitData();
 		if (baitData == null)
 		{
 			_player.sendPacket(SystemMessageId.YOU_MUST_PUT_BAIT_ON_YOUR_HOOK_BEFORE_YOU_CAN_FISH);
@@ -224,8 +223,8 @@ public class Fishing
 		_reelInTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
 		{
 			_player.getFishing().reelInWithReward();
-			_startFishingTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> _player.getFishing().castLine(), Rnd.get(FishingData.getInstance().getFishingTimeWaitMin(), FishingData.getInstance().getFishingTimeWaitMax()));
-		}, Rnd.get(FishingData.getInstance().getFishingTimeMin(), FishingData.getInstance().getFishingTimeMax()));
+			_startFishingTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
+		}, Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()));
 		_player.stopMove(null);
 		_player.broadcastPacket(new ExFishingStart(_player, -1, baitData.getLevel(), _baitLocation));
 		_player.sendPacket(new ExUserInfoFishing(_player, true, _baitLocation));

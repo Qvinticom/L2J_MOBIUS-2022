@@ -36,13 +36,8 @@ public final class FishingData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(FishingData.class.getName());
 	private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
-	private int _minPlayerLevel;
 	private int _baitDistanceMin;
 	private int _baitDistanceMax;
-	private int _fishingTimeMin;
-	private int _fishingTimeMax;
-	private int _fishingTimeWaitMin;
-	private int _fishingTimeWaitMax;
 	private int _expRateMin;
 	private int _expRateMax;
 	private int _spRateMin;
@@ -75,27 +70,10 @@ public final class FishingData implements IGameXmlReader
 				{
 					switch (listItem.getNodeName())
 					{
-						case "playerLevel":
-						{
-							_minPlayerLevel = parseInteger(listItem.getAttributes(), "min");
-							break;
-						}
 						case "baitDistance":
 						{
 							_baitDistanceMin = parseInteger(listItem.getAttributes(), "min");
 							_baitDistanceMax = parseInteger(listItem.getAttributes(), "max");
-							break;
-						}
-						case "fishingTime":
-						{
-							_fishingTimeMin = parseInteger(listItem.getAttributes(), "min");
-							_fishingTimeMax = parseInteger(listItem.getAttributes(), "max");
-							break;
-						}
-						case "fishingTimeWait":
-						{
-							_fishingTimeWaitMin = parseInteger(listItem.getAttributes(), "min");
-							_fishingTimeWaitMax = parseInteger(listItem.getAttributes(), "max");
 							break;
 						}
 						case "experienceRate":
@@ -119,8 +97,13 @@ public final class FishingData implements IGameXmlReader
 									final NamedNodeMap attrs = bait.getAttributes();
 									final int itemId = parseInteger(attrs, "itemId");
 									final int level = parseInteger(attrs, "level");
+									final int minPlayerLevel = parseInteger(attrs, "minPlayerLevel");
 									final double chance = parseDouble(attrs, "chance");
-									final FishingBaitData baitData = new FishingBaitData(itemId, level, chance);
+									final int timeMin = parseInteger(attrs, "timeMin");
+									final int timeMax = parseInteger(attrs, "timeMax");
+									final int waitMin = parseInteger(attrs, "waitMin");
+									final int waitMax = parseInteger(attrs, "waitMax");
+									final FishingBaitData baitData = new FishingBaitData(itemId, level, minPlayerLevel, chance, timeMin, timeMax, waitMin, waitMax);
 									
 									for (Node c = bait.getFirstChild(); c != null; c = c.getNextSibling())
 									{
@@ -150,11 +133,6 @@ public final class FishingData implements IGameXmlReader
 		return _baitData.get(baitItemId);
 	}
 	
-	public int getMinPlayerLevel()
-	{
-		return _minPlayerLevel;
-	}
-	
 	public int getBaitDistanceMin()
 	{
 		return _baitDistanceMin;
@@ -163,26 +141,6 @@ public final class FishingData implements IGameXmlReader
 	public int getBaitDistanceMax()
 	{
 		return _baitDistanceMax;
-	}
-	
-	public int getFishingTimeMin()
-	{
-		return _fishingTimeMin;
-	}
-	
-	public int getFishingTimeMax()
-	{
-		return _fishingTimeMax;
-	}
-	
-	public int getFishingTimeWaitMin()
-	{
-		return _fishingTimeWaitMin;
-	}
-	
-	public int getFishingTimeWaitMax()
-	{
-		return _fishingTimeWaitMax;
 	}
 	
 	public int getExpRateMin()

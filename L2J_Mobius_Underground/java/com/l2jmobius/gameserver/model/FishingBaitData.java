@@ -26,14 +26,24 @@ public class FishingBaitData
 {
 	private final int _itemId;
 	private final int _level;
+	private final int _minPlayerLevel;
 	private final double _chance;
+	private final int _timeMin;
+	private final int _timeMax;
+	private final int _waitMin;
+	private final int _waitMax;
 	private final List<Integer> _rewards = new ArrayList<>();
 	
-	public FishingBaitData(int itemId, int level, double chance)
+	public FishingBaitData(int itemId, int level, int minPlayerLevel, double chance, int timeMin, int timeMax, int waitMin, int waitMax)
 	{
 		_itemId = itemId;
 		_level = level;
+		_minPlayerLevel = minPlayerLevel;
 		_chance = chance;
+		_timeMin = timeMin;
+		_timeMax = timeMax;
+		_waitMin = waitMin;
+		_waitMax = waitMax;
 	}
 	
 	public int getItemId()
@@ -46,9 +56,34 @@ public class FishingBaitData
 		return _level;
 	}
 	
+	public int getMinPlayerLevel()
+	{
+		return _minPlayerLevel;
+	}
+	
 	public double getChance()
 	{
 		return _chance;
+	}
+	
+	public int getTimeMin()
+	{
+		return _timeMin;
+	}
+	
+	public int getTimeMax()
+	{
+		return _timeMax;
+	}
+	
+	public int getWaitMin()
+	{
+		return _waitMin;
+	}
+	
+	public int getWaitMax()
+	{
+		return _waitMax;
 	}
 	
 	public List<Integer> getRewards()
