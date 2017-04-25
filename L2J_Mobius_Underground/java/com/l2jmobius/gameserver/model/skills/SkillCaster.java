@@ -230,7 +230,7 @@ public class SkillCaster implements Runnable
 			return false;
 		}
 		
-		_coolTime = Formulas.calcAtkSpd(caster, _skill, _skill.getCoolTime()); // TODO Get proper fomula of this.
+		_coolTime = Formulas.calcAtkSpd(caster, _skill, _skill.getCoolTime()); // TODO Get proper formula of this.
 		final int displayedCastTime = _castTime + Formulas.SKILL_LAUNCH_TIME; // For client purposes, it must be displayed to player the skill casting time + launch time.
 		final boolean instantCast = (_castingType == SkillCastingType.SIMULTANEOUS) || _skill.isAbnormalInstant() || _skill.isWithoutAction();
 		
@@ -932,6 +932,15 @@ public class SkillCaster implements Runnable
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 				sm.addSkillName(skill);
 				player.sendPacket(sm);
+				return false;
+			}
+			
+			// Check for skill reuse (fixes macro right click press exploit).
+			if (caster.hasSkillReuse(skill.getReuseHashCode()))
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_AVAILABLE_AT_THIS_TIME_BEING_PREPARED_FOR_REUSE);
+				sm.addSkillName(skill);
+				caster.sendPacket(sm);
 				return false;
 			}
 		}
