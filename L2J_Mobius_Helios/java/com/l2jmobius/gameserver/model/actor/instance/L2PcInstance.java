@@ -5076,8 +5076,8 @@ public final class L2PcInstance extends L2Playable
 		// FIXME: Karma reduction tempfix.
 		if (getReputation() < 0)
 		{
-			final int newRep = getReputation() + (getReputation() / 4);
-			setReputation(newRep > 0 ? 0 : newRep);
+			final int newRep = getReputation() - (getReputation() / 4);
+			setReputation(newRep < -20 ? newRep : 0);
 		}
 		
 		return true;
