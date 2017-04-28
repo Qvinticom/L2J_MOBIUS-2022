@@ -2495,7 +2495,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		if (isChampion())
 		{
-			return Config.L2JMOD_CHAMP_TITLE;
+			return Config.CHAMP_TITLE;
 		}
 		if (Config.SHOW_NPC_LVL && isMonster())
 		{
@@ -4830,9 +4830,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && (Config.L2JMOD_CHAMPION_HP != 0))
+		if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0))
 		{
-			getStatus().reduceHp(value / Config.L2JMOD_CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
+			getStatus().reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
 		}
 		else
 		{

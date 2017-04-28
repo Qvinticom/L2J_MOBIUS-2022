@@ -55,9 +55,9 @@ public class RegenHPFinalizer implements IStatsFunction
 		double baseValue = creature.isPlayer() ? creature.getActingPlayer().getTemplate().getBaseHpRegen(creature.getLevel()) : creature.getTemplate().getBaseHpReg();
 		baseValue *= creature.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && creature.isChampion())
+		if (Config.CHAMPION_ENABLE && creature.isChampion())
 		{
-			baseValue *= Config.L2JMOD_CHAMPION_HP_REGEN;
+			baseValue *= Config.CHAMPION_HP_REGEN;
 		}
 		
 		if (creature.isPlayer())

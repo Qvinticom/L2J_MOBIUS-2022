@@ -72,7 +72,7 @@ public class Time implements IUserCommandHandler
 			sm.addString(m);
 		}
 		activeChar.sendPacket(sm);
-		if (Config.L2JMOD_DISPLAY_SERVER_TIME)
+		if (Config.DISPLAY_SERVER_TIME)
 		{
 			activeChar.sendMessage("Server time is " + fmt.format(new Date(System.currentTimeMillis())));
 		}

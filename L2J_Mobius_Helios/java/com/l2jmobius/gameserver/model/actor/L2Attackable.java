@@ -474,10 +474,10 @@ public class L2Attackable extends L2Npc
 							long exp = expSp[0];
 							int sp = expSp[1];
 							
-							if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+							if (Config.CHAMPION_ENABLE && isChampion())
 							{
-								exp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
-								sp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
+								exp *= Config.CHAMPION_REWARDS_EXP_SP;
+								sp *= Config.CHAMPION_REWARDS_EXP_SP;
 							}
 							
 							exp *= penalty;
@@ -586,10 +586,10 @@ public class L2Attackable extends L2Npc
 						long exp = expSp[0];
 						int sp = expSp[1];
 						
-						if (Config.L2JMOD_CHAMPION_ENABLE && isChampion())
+						if (Config.CHAMPION_ENABLE && isChampion())
 						{
-							exp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
-							sp *= Config.L2JMOD_CHAMPION_REWARDS_EXP_SP;
+							exp *= Config.CHAMPION_REWARDS_EXP_SP;
+							sp *= Config.CHAMPION_REWARDS_EXP_SP;
 						}
 						
 						exp *= partyMul;
@@ -1005,12 +1005,12 @@ public class L2Attackable extends L2Npc
 		}
 		
 		// Apply Special Item drop with random(rnd) quantity(qty) for champions.
-		if (Config.L2JMOD_CHAMPION_ENABLE && isChampion() && ((Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE > 0) || (Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE > 0)))
+		if (Config.CHAMPION_ENABLE && isChampion() && ((Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE > 0) || (Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE > 0)))
 		{
-			int champqty = Rnd.get(Config.L2JMOD_CHAMPION_REWARD_QTY);
-			final ItemHolder item = new ItemHolder(Config.L2JMOD_CHAMPION_REWARD_ID, ++champqty);
+			int champqty = Rnd.get(Config.CHAMPION_REWARD_QTY);
+			final ItemHolder item = new ItemHolder(Config.CHAMPION_REWARD_ID, ++champqty);
 			
-			if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
+			if ((player.getLevel() <= getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE))
 			{
 				if (Config.AUTO_LOOT || isFlying())
 				{
@@ -1021,7 +1021,7 @@ public class L2Attackable extends L2Npc
 					dropItem(player, item);
 				}
 			}
-			else if ((player.getLevel() > getLevel()) && (Rnd.get(100) < Config.L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
+			else if ((player.getLevel() > getLevel()) && (Rnd.get(100) < Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE))
 			{
 				if (Config.AUTO_LOOT || isFlying())
 				{
@@ -1401,15 +1401,15 @@ public class L2Attackable extends L2Npc
 		// Reset champion state
 		_champion = false;
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE)
+		if (Config.CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn
-			if (isMonster() && !getTemplate().isUndying() && !isRaid() && !isRaidMinion() && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			if (isMonster() && !getTemplate().isUndying() && !isRaid() && !isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (getLevel() >= Config.CHAMP_MIN_LVL) && (getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
-				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
+				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
 				{
 					_champion = true;
-					if (Config.L2JMOD_SHOW_CHAMPION_AURA)
+					if (Config.SHOW_CHAMPION_AURA)
 					{
 						setTeam(Team.RED);
 					}
@@ -1613,7 +1613,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean useVitalityRate()
 	{
-		return !isChampion() || Config.L2JMOD_CHAMPION_ENABLE_VITALITY;
+		return !isChampion() || Config.CHAMPION_ENABLE_VITALITY;
 	}
 	
 	/** Return True if the L2Character is RaidBoss or his minion. */

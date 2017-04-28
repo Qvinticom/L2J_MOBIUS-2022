@@ -12521,7 +12521,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public String getHtmlPrefix()
 	{
-		if (!Config.L2JMOD_MULTILANG_ENABLE)
+		if (!Config.MULTILANG_ENABLE)
 		{
 			return null;
 		}
@@ -12537,16 +12537,16 @@ public final class L2PcInstance extends L2Playable
 	public boolean setLang(String lang)
 	{
 		boolean result = false;
-		if (Config.L2JMOD_MULTILANG_ENABLE)
+		if (Config.MULTILANG_ENABLE)
 		{
-			if (Config.L2JMOD_MULTILANG_ALLOWED.contains(lang))
+			if (Config.MULTILANG_ALLOWED.contains(lang))
 			{
 				_lang = lang;
 				result = true;
 			}
 			else
 			{
-				_lang = Config.L2JMOD_MULTILANG_DEFAULT;
+				_lang = Config.MULTILANG_DEFAULT;
 			}
 			
 			_htmlPrefix = "data/lang/" + _lang + "/";

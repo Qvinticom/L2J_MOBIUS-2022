@@ -33,7 +33,7 @@ public class Lang implements IVoicedCommandHandler
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String params)
 	{
-		if (!Config.L2JMOD_MULTILANG_ENABLE || !Config.L2JMOD_MULTILANG_VOICED_ALLOW)
+		if (!Config.MULTILANG_ENABLE || !Config.MULTILANG_VOICED_ALLOW)
 		{
 			return false;
 		}
@@ -42,7 +42,7 @@ public class Lang implements IVoicedCommandHandler
 		if (params == null)
 		{
 			final StringBuilder html = new StringBuilder(100);
-			for (String lang : Config.L2JMOD_MULTILANG_ALLOWED)
+			for (String lang : Config.MULTILANG_ALLOWED)
 			{
 				html.append("<button value=\"" + lang.toUpperCase() + "\" action=\"bypass -h voice .lang " + lang + "\" width=60 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br>");
 			}

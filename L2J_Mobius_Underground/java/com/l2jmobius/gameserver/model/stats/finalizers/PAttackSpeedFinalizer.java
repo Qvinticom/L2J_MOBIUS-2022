@@ -34,9 +34,9 @@ public class PAttackSpeedFinalizer implements IStatsFunction
 	{
 		throwIfPresent(base);
 		double baseValue = calcWeaponBaseValue(creature, stat);
-		if (Config.L2JMOD_CHAMPION_ENABLE && creature.isChampion())
+		if (Config.CHAMPION_ENABLE && creature.isChampion())
 		{
-			baseValue *= Config.L2JMOD_CHAMPION_SPD_ATK;
+			baseValue *= Config.CHAMPION_SPD_ATK;
 		}
 		final double chaBonus = creature.isPlayer() ? BaseStats.CHA.calcBonus(creature) : 1.;
 		final double dexBonus = creature.getDEX() > 0 ? BaseStats.DEX.calcBonus(creature) : 1.;

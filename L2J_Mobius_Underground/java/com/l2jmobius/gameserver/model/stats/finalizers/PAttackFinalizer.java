@@ -44,9 +44,9 @@ public class PAttackFinalizer implements IStatsFunction
 			baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_CHEST, L2Item.SLOT_FULL_ARMOR);
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE && creature.isChampion())
+		if (Config.CHAMPION_ENABLE && creature.isChampion())
 		{
-			baseValue *= Config.L2JMOD_CHAMPION_ATK;
+			baseValue *= Config.CHAMPION_ATK;
 		}
 		if (creature.isRaid())
 		{

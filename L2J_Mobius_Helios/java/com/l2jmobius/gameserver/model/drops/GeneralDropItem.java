@@ -119,7 +119,7 @@ public class GeneralDropItem implements IDropItem
 		// global champions amount multiplier
 		if (victim.isChampion())
 		{
-			multiplier *= getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS_AMOUNT : Config.L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT;
+			multiplier *= getItemId() != Inventory.ADENA_ID ? Config.CHAMPION_REWARDS_AMOUNT : Config.CHAMPION_ADENAS_REWARDS_AMOUNT;
 		}
 		
 		return (long) (val * multiplier);
@@ -241,7 +241,7 @@ public class GeneralDropItem implements IDropItem
 		
 		if (victim.isChampion())
 		{
-			multiplier *= getItemId() != Inventory.ADENA_ID ? Config.L2JMOD_CHAMPION_REWARDS_CHANCE : Config.L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE;
+			multiplier *= getItemId() != Inventory.ADENA_ID ? Config.CHAMPION_REWARDS_CHANCE : Config.CHAMPION_ADENAS_REWARDS_CHANCE;
 		}
 		
 		return (getChance() * multiplier);
@@ -277,7 +277,7 @@ public class GeneralDropItem implements IDropItem
 		{
 			final Collection<ItemHolder> items = new ArrayList<>(1);
 			final long baseDropCount = Rnd.get(getMin(victim, killer), getMax(victim, killer));
-			final long finaldropCount = (long) (Config.L2JMOD_OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + (chance > 100 ? (chance % 100) > (Rnd.nextDouble() * 100) ? baseDropCount : 0 : 0) : baseDropCount);
+			final long finaldropCount = (long) (Config.OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + (chance > 100 ? (chance % 100) > (Rnd.nextDouble() * 100) ? baseDropCount : 0 : 0) : baseDropCount);
 			items.add(new ItemHolder(getItemId(), finaldropCount));
 			return items;
 		}

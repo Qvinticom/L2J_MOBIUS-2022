@@ -135,7 +135,7 @@ public class GroupedGeneralDropItem implements IDropItem
 				{
 					final Collection<ItemHolder> items = new ArrayList<>(1);
 					final long baseDropCount = Rnd.get(item.getMin(victim, killer), item.getMax(victim, killer));
-					final long finaldropCount = (long) (Config.L2JMOD_OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + ((chance > 100) && ((chance % 100) > (Rnd.nextDouble() * 100)) ? baseDropCount : 0) : baseDropCount);
+					final long finaldropCount = (long) (Config.OLD_DROP_BEHAVIOR ? (baseDropCount * Math.max(1, chance / 100)) + ((chance > 100) && ((chance % 100) > (Rnd.nextDouble() * 100)) ? baseDropCount : 0) : baseDropCount);
 					items.add(new ItemHolder(item.getItemId(), finaldropCount));
 					return items;
 				}
