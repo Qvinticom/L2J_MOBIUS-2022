@@ -122,6 +122,7 @@ public final class Config
 	public static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
 	public static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
 	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
+	public static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
 	public static final String CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE = "./config/Custom/SayuneForAll.ini";
 	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
 	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
@@ -997,6 +998,16 @@ public final class Config
 	public static boolean ANNOUNCE_PK_PVP_NORMAL_MESSAGE;
 	public static String ANNOUNCE_PK_MSG;
 	public static String ANNOUNCE_PVP_MSG;
+	public static boolean REWARD_PVP_ITEM;
+	public static int REWARD_PVP_ITEM_ID;
+	public static int REWARD_PVP_ITEM_AMOUNT;
+	public static boolean REWARD_PVP_ITEM_MESSAGE;
+	public static boolean REWARD_PK_ITEM;
+	public static int REWARD_PK_ITEM_ID;
+	public static int REWARD_PK_ITEM_AMOUNT;
+	public static boolean REWARD_PK_ITEM_MESSAGE;
+	public static boolean DISABLE_REWARDS_IN_INSTANCES;
+	public static boolean DISABLE_REWARDS_IN_PVP_ZONES;
 	public static boolean CHAT_ADMIN;
 	public static boolean MULTILANG_ENABLE;
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
@@ -2538,6 +2549,20 @@ public final class Config
 			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = PvpAnnounce.getBoolean("AnnouncePkPvPNormalMessage", true);
 			ANNOUNCE_PK_MSG = PvpAnnounce.getString("AnnouncePkMsg", "$killer has slaughtered $target");
 			ANNOUNCE_PVP_MSG = PvpAnnounce.getString("AnnouncePvpMsg", "$killer has defeated $target");
+			
+			// Load PvpRewardItem config file (if exists)
+			final PropertiesParser PvpRewardItem = new PropertiesParser(CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE);
+			
+			REWARD_PVP_ITEM = PvpRewardItem.getBoolean("RewardPvpItem", false);
+			REWARD_PVP_ITEM_ID = PvpRewardItem.getInt("RewardPvpItemId", 57);
+			REWARD_PVP_ITEM_AMOUNT = PvpRewardItem.getInt("RewardPvpItemAmount", 1000);
+			REWARD_PVP_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPvpItemMessage", false);
+			REWARD_PK_ITEM = PvpRewardItem.getBoolean("RewardPkItem", false);
+			REWARD_PK_ITEM_ID = PvpRewardItem.getInt("RewardPkItemId", 57);
+			REWARD_PK_ITEM_AMOUNT = PvpRewardItem.getInt("RewardPkItemAmount", 500);
+			REWARD_PK_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPkItemMessage", false);
+			DISABLE_REWARDS_IN_INSTANCES = PvpRewardItem.getBoolean("DisableRewardsInInstances", true);
+			DISABLE_REWARDS_IN_PVP_ZONES = PvpRewardItem.getBoolean("DisableRewardsInPvpZones", true);
 			
 			// Load SayuneForAll config file (if exists)
 			final PropertiesParser SayuneForAll = new PropertiesParser(CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE);

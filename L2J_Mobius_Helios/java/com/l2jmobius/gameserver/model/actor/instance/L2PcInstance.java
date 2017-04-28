@@ -4962,6 +4962,21 @@ public final class L2PcInstance extends L2Playable
 					}
 				}
 				
+				// pvp/pk item rewards
+				if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
+					!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+				{
+					// pvp
+					if (Config.REWARD_PVP_ITEM && (getPvpFlag() != 0))
+					{
+						pk.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
+					}
+					// pk
+					if (Config.REWARD_PK_ITEM && (getPvpFlag() == 0))
+					{
+						pk.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
+					}
+				}
 			}
 			
 			broadcastStatusUpdate();
