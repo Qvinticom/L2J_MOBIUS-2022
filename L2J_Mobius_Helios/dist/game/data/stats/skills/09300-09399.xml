@@ -1624,7 +1624,6 @@
 		</conditions>
 	</skill>
 	<skill id="9379" toLevel="1" name="Mentee's Mentor Summon">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Summons a Mentor. -->
 		<icon>icon.skill1403</icon>
 		<operateType>A1</operateType>
@@ -1644,6 +1643,9 @@
 		<conditions>
 			<condition name="OpCallPc" />
 		</conditions>
+		<effects>
+			<effect name="CallPc" />
+		</effects>
 	</skill>
 	<skill id="9380" toLevel="1" name="Soulshot Pack">
 		<!-- AUTO GENERATED SKILL -->
