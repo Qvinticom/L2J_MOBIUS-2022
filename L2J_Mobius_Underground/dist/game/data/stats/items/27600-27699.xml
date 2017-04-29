@@ -237,6 +237,9 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="weight" val="1000" />
+		<skills>
+			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -250,7 +253,18 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -271,7 +285,18 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -292,7 +317,18 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="weight" val="1000" />
 		<set name="bodypart" val="lrhand" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="time" val="40320" />
+		<skills>
+			<skill id="21484" level="1" /> <!-- Fancy Fishing Rod -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1.0</stat>
 			<stat type="mAtk">1.0</stat>
@@ -315,6 +351,9 @@
 	<item id="27640" name="Heine Fishing Coin" type="EtcItem">
 		<!-- Coin obtained from fishing with Heine Special Bait. Take it to Peeves to exchange for a Fancy Fishing Rod. -->
 		<set name="icon" val="icon.etc_coins_blue_i00" />
+		<set name="material" val="STEEL" />
+		<set name="is_sellable" val="false" />
+		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27641" name="Heine Exclusive Bait (85-89)" type="EtcItem">

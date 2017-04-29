@@ -538,9 +538,10 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="21484" toLevel="1" name="Fancy Fishing Rod">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Increases XP/SP from fishing by $s1. -->
+		<!-- Increases XP/SP from fishing by 50%. -->
 		<icon>icon.weapon_fishing_rod_i04</icon>
+		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
+		<magicLvl>85</magicLvl>
 	</skill>
 </list>
