@@ -9,13 +9,13 @@
 						<xs:attribute type="xs:positiveInteger" name="max" use="required" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="expRate">
+				<xs:element name="experienceRate">
 					<xs:complexType>
 						<xs:attribute type="xs:positiveInteger" name="min" use="required" />
 						<xs:attribute type="xs:positiveInteger" name="max" use="required" />
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="spRate">
+				<xs:element name="skillPointsRate">
 					<xs:complexType>
 						<xs:attribute type="xs:positiveInteger" name="min" use="required" />
 						<xs:attribute type="xs:positiveInteger" name="max" use="required" />
