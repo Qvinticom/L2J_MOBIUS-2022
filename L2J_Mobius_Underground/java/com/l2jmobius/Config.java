@@ -123,6 +123,7 @@ public final class Config
 	public static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
 	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
 	public static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
+	public static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
 	public static final String CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE = "./config/Custom/SayuneForAll.ini";
 	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
 	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
@@ -1008,6 +1009,22 @@ public final class Config
 	public static boolean REWARD_PK_ITEM_MESSAGE;
 	public static boolean DISABLE_REWARDS_IN_INSTANCES;
 	public static boolean DISABLE_REWARDS_IN_PVP_ZONES;
+	public static boolean PVP_COLOR_SYSTEM_ENABLED;
+	public static int PVP_AMOUNT1;
+	public static int PVP_AMOUNT2;
+	public static int PVP_AMOUNT3;
+	public static int PVP_AMOUNT4;
+	public static int PVP_AMOUNT5;
+	public static int NAME_COLOR_FOR_PVP_AMOUNT1;
+	public static int NAME_COLOR_FOR_PVP_AMOUNT2;
+	public static int NAME_COLOR_FOR_PVP_AMOUNT3;
+	public static int NAME_COLOR_FOR_PVP_AMOUNT4;
+	public static int NAME_COLOR_FOR_PVP_AMOUNT5;
+	public static String TITLE_FOR_PVP_AMOUNT1;
+	public static String TITLE_FOR_PVP_AMOUNT2;
+	public static String TITLE_FOR_PVP_AMOUNT3;
+	public static String TITLE_FOR_PVP_AMOUNT4;
+	public static String TITLE_FOR_PVP_AMOUNT5;
 	public static boolean CHAT_ADMIN;
 	public static boolean MULTILANG_ENABLE;
 	public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
@@ -2556,13 +2573,33 @@ public final class Config
 			REWARD_PVP_ITEM = PvpRewardItem.getBoolean("RewardPvpItem", false);
 			REWARD_PVP_ITEM_ID = PvpRewardItem.getInt("RewardPvpItemId", 57);
 			REWARD_PVP_ITEM_AMOUNT = PvpRewardItem.getInt("RewardPvpItemAmount", 1000);
-			REWARD_PVP_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPvpItemMessage", false);
+			REWARD_PVP_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPvpItemMessage", true);
 			REWARD_PK_ITEM = PvpRewardItem.getBoolean("RewardPkItem", false);
 			REWARD_PK_ITEM_ID = PvpRewardItem.getInt("RewardPkItemId", 57);
 			REWARD_PK_ITEM_AMOUNT = PvpRewardItem.getInt("RewardPkItemAmount", 500);
-			REWARD_PK_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPkItemMessage", false);
+			REWARD_PK_ITEM_MESSAGE = PvpRewardItem.getBoolean("RewardPkItemMessage", true);
 			DISABLE_REWARDS_IN_INSTANCES = PvpRewardItem.getBoolean("DisableRewardsInInstances", true);
 			DISABLE_REWARDS_IN_PVP_ZONES = PvpRewardItem.getBoolean("DisableRewardsInPvpZones", true);
+			
+			// Load PvpRewardItem config file (if exists)
+			final PropertiesParser PvpTitleColor = new PropertiesParser(CUSTOM_PVP_TITLE_CONFIG_FILE);
+			
+			PVP_COLOR_SYSTEM_ENABLED = PvpTitleColor.getBoolean("EnablePvPColorSystem", false);
+			PVP_AMOUNT1 = PvpTitleColor.getInt("PvpAmount1", 500);
+			PVP_AMOUNT2 = PvpTitleColor.getInt("PvpAmount2", 1000);
+			PVP_AMOUNT3 = PvpTitleColor.getInt("PvpAmount3", 1500);
+			PVP_AMOUNT4 = PvpTitleColor.getInt("PvpAmount4", 2500);
+			PVP_AMOUNT5 = PvpTitleColor.getInt("PvpAmount5", 5000);
+			NAME_COLOR_FOR_PVP_AMOUNT1 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount1", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT2 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount2", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT3 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount3", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT4 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount4", "00FF00"));
+			NAME_COLOR_FOR_PVP_AMOUNT5 = Integer.decode("0x" + PvpTitleColor.getString("ColorForAmount5", "00FF00"));
+			TITLE_FOR_PVP_AMOUNT1 = PvpTitleColor.getString("PvPTitleForAmount1", "Title");
+			TITLE_FOR_PVP_AMOUNT2 = PvpTitleColor.getString("PvPTitleForAmount2", "Title");
+			TITLE_FOR_PVP_AMOUNT3 = PvpTitleColor.getString("PvPTitleForAmount3", "Title");
+			TITLE_FOR_PVP_AMOUNT4 = PvpTitleColor.getString("PvPTitleForAmount4", "Title");
+			TITLE_FOR_PVP_AMOUNT5 = PvpTitleColor.getString("PvPTitleForAmount5", "Title");
 			
 			// Load SayuneForAll config file (if exists)
 			final PropertiesParser SayuneForAll = new PropertiesParser(CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE);
