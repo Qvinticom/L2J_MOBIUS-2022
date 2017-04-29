@@ -291,7 +291,7 @@ public class Fishing
 					// TODO: verify, totally guessed
 					final FishingData fishingData = FishingData.getInstance();
 					final int lvlModifier = _player.getLevel() * _player.getLevel();
-					_player.addExpAndSp(Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier, Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier);
+					_player.addExpAndSp(Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier, Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier, true);
 					final int fishId = baitData.getRewards().get(Rnd.get(0, numRewards - 1));
 					_player.getInventory().addItem("Fishing Reward", fishId, 1, _player, null);
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);

@@ -28,6 +28,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
+import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -55,6 +58,8 @@ public class PcStat extends PlayableStat
 	
 	public static final int MAX_VITALITY_POINTS = 140000;
 	public static final int MIN_VITALITY_POINTS = 0;
+	
+	private final static int FANCY_FISHING_ROD_SKILL = 21484;
 	
 	public PcStat(L2PcInstance activeChar)
 	{
@@ -110,8 +115,27 @@ public class PcStat extends PlayableStat
 		
 		if (useBonuses)
 		{
-			bonusExp = getExpBonusMultiplier();
-			bonusSp = getSpBonusMultiplier();
+			if (activeChar.isFishing())
+			{
+				// rod fishing skills
+				final L2ItemInstance rod = activeChar.getActiveWeaponInstance();
+				if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getItem().getAllSkills() != null))
+				{
+					for (ItemSkillHolder s : rod.getItem().getAllSkills())
+					{
+						if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL)
+						{
+							bonusExp *= 1.5;
+							bonusSp *= 1.5;
+						}
+					}
+				}
+			}
+			else
+			{
+				bonusExp = getExpBonusMultiplier();
+				bonusSp = getSpBonusMultiplier();
+			}
 		}
 		
 		addToExp *= bonusExp;
