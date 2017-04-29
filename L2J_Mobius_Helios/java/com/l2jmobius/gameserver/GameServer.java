@@ -352,6 +352,7 @@ public class GameServer
 		
 		printSection("Event Engine");
 		EventEngineData.getInstance();
+		VoteSystem.initialize();
 		
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
@@ -377,7 +378,6 @@ public class GameServer
 		}
 		
 		MonsterRace.getInstance();
-		VoteSystem.initialize();
 		TaskManager.getInstance();
 		
 		AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);

@@ -21,6 +21,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
@@ -35,6 +36,8 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public abstract class VoteSystem implements Runnable
 {
+	protected static final Logger LOGGER = Logger.getLogger(VoteSystem.class.getName());
+	
 	private static List<VoteSystem> voteSystems = new ArrayList<>();
 	
 	protected int votesDiff;
@@ -47,18 +50,40 @@ public abstract class VoteSystem implements Runnable
 	
 	public static void initialize()
 	{
-		System.out.println("Vote reward system initialized.");
-		if (Config.ALLOW_NETWORK_VOTE_REWARD)
+		if (Config.ALLOW_NETWORK_VOTE_REWARD || Config.ALLOW_TOPZONE_VOTE_REWARD || Config.ALLOW_HOPZONE_VOTE_REWARD)
 		{
-			voteSystems.add(new Network(Config.NETWORK_VOTES_DIFFERENCE, Config.ALLOW_NETWORK_GAME_SERVER_REPORT, Config.NETWORK_DUALBOXES_ALLOWED, Config.NETWORK_REWARD, Config.NETWORK_REWARD_CHECK_TIME));
+			LOGGER.info("VoteSystem: Initialized.");
+			if (Config.ALLOW_NETWORK_VOTE_REWARD)
+			{
+				voteSystems.add(new Network(Config.NETWORK_VOTES_DIFFERENCE, Config.ALLOW_NETWORK_GAME_SERVER_REPORT, Config.NETWORK_DUALBOXES_ALLOWED, Config.NETWORK_REWARD, Config.NETWORK_REWARD_CHECK_TIME));
+				LOGGER.info("VoteSystem: Network votes enabled.");
+			}
+			else
+			{
+				LOGGER.info("VoteSystem: Network votes disabled.");
+			}
+			if (Config.ALLOW_TOPZONE_VOTE_REWARD)
+			{
+				voteSystems.add(new Topzone(Config.TOPZONE_VOTES_DIFFERENCE, Config.ALLOW_TOPZONE_GAME_SERVER_REPORT, Config.TOPZONE_DUALBOXES_ALLOWED, Config.TOPZONE_REWARD, Config.TOPZONE_REWARD_CHECK_TIME));
+				LOGGER.info("VoteSystem: Topzone votes enabled.");
+			}
+			else
+			{
+				LOGGER.info("VoteSystem: Topzone votes disabled.");
+			}
+			if (Config.ALLOW_HOPZONE_VOTE_REWARD)
+			{
+				voteSystems.add(new Hopzone(Config.HOPZONE_VOTES_DIFFERENCE, Config.ALLOW_HOPZONE_GAME_SERVER_REPORT, Config.HOPZONE_DUALBOXES_ALLOWED, Config.HOPZONE_REWARD, Config.HOPZONE_REWARD_CHECK_TIME));
+				LOGGER.info("VoteSystem: Hopzone votes enabled.");
+			}
+			else
+			{
+				LOGGER.info("VoteSystem: Hopzone votes disabled.");
+			}
 		}
-		if (Config.ALLOW_TOPZONE_VOTE_REWARD)
+		else
 		{
-			voteSystems.add(new Topzone(Config.TOPZONE_VOTES_DIFFERENCE, Config.ALLOW_TOPZONE_GAME_SERVER_REPORT, Config.TOPZONE_DUALBOXES_ALLOWED, Config.TOPZONE_REWARD, Config.TOPZONE_REWARD_CHECK_TIME));
-		}
-		if (Config.ALLOW_HOPZONE_VOTE_REWARD)
-		{
-			voteSystems.add(new Hopzone(Config.HOPZONE_VOTES_DIFFERENCE, Config.ALLOW_HOPZONE_GAME_SERVER_REPORT, Config.HOPZONE_DUALBOXES_ALLOWED, Config.HOPZONE_REWARD, Config.HOPZONE_REWARD_CHECK_TIME));
+			LOGGER.info("VoteSystem: Disabled.");
 		}
 	}
 	
@@ -92,7 +117,7 @@ public abstract class VoteSystem implements Runnable
 		
 		if (currentVotes == -1)
 		{
-			System.out.println("There was a problem on getting server votes.");
+			LOGGER.info("VoteSystem: There was a problem on getting server votes.");
 			return;
 		}
 		
@@ -103,8 +128,8 @@ public abstract class VoteSystem implements Runnable
 			announce(getSiteName() + ": We need " + ((lastVotes + votesDiff) - currentVotes) + " vote(s) for reward.");
 			if (allowReport)
 			{
-				System.out.println("Server votes on " + getSiteName() + ": " + currentVotes);
-				System.out.println("Votes needed for reward: " + ((lastVotes + votesDiff) - currentVotes));
+				LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
+				LOGGER.info("VoteSystem: Votes needed for reward: " + ((lastVotes + votesDiff) - currentVotes));
 			}
 			return;
 		}
@@ -114,8 +139,8 @@ public abstract class VoteSystem implements Runnable
 			Collection<L2PcInstance> pls = L2World.getInstance().getPlayers();
 			if (allowReport)
 			{
-				System.out.println("Server votes on " + getSiteName() + ": " + currentVotes);
-				System.out.println("Votes needed for next reward: " + ((currentVotes + votesDiff) - currentVotes));
+				LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
+				LOGGER.info("VoteSystem: Votes needed for next reward: " + ((currentVotes + votesDiff) - currentVotes));
 			}
 			announce(getSiteName() + ": Everyone has been rewarded.");
 			announce(getSiteName() + ": Current vote count is " + currentVotes + ".");
@@ -164,8 +189,8 @@ public abstract class VoteSystem implements Runnable
 		{
 			if (allowReport)
 			{
-				System.out.println("Server votes on " + getSiteName() + ": " + currentVotes);
-				System.out.println("Votes needed for next reward: " + ((lastVotes + votesDiff) - currentVotes));
+				LOGGER.info("VoteSystem: Server votes on " + getSiteName() + ": " + currentVotes);
+				LOGGER.info("VoteSystem: Votes needed for next reward: " + ((lastVotes + votesDiff) - currentVotes));
 			}
 			announce(getSiteName() + ": Current vote count is " + currentVotes + ".");
 			announce(getSiteName() + ": We need " + ((lastVotes + votesDiff) - currentVotes) + " vote(s) for reward.");

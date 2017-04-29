@@ -66,7 +66,7 @@ public class Topzone extends VoteSystem
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			System.out.println("Error while getting server vote count from " + getSiteName() + ".");
+			LOGGER.warning("VoteSystem: Error while getting server vote count from " + getSiteName() + ".");
 		}
 		
 		return -1;
