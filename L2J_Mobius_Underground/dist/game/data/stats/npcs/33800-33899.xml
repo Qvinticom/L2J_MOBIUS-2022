@@ -382,7 +382,7 @@
 			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" />
 		<skill_list>
 			<skill id="4416" level="18" /> <!-- Dwarves -->
 			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
@@ -2174,7 +2174,7 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" />
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />

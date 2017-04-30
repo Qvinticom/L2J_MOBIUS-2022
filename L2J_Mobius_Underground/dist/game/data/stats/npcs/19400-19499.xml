@@ -2395,7 +2395,7 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" talkable="false" />
 		<collision>
 			<radius normal="7" />
 			<height normal="21.2" />
