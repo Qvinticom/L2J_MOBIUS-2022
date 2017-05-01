@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/clanHall.xsd">
+	<clanHall id="40" name="Gold Manor" grade="GRADE_S" type="AUCTIONABLE">
+	 	<auction minBid="200000000" lease="50000000" deposit="55000000" />
+	 	<npcs>
+	 	   	<npc id="35448" /> <!-- Rudy-->
+   			<npc id="35447" /> <!-- Korgen -->
+	 	</npcs>
+	 	<doorlist>
+	 		<door id="24180032" />
+	 		<door id="24180033" />
+	 	</doorlist>
+	 	<teleportList>
+			<teleport npcStringId="1010024" x="147450" y="28081" z="-2294" minFunctionLevel="1" cost="0" /> <!-- Village Square -->
+			<teleport npcStringId="1010026" x="151950" y="25094" z="-2172" minFunctionLevel="1" cost="0" /> <!-- East Gate Entrance -->
+			<teleport npcStringId="1010027" x="142593" y="26344" z="-2425" minFunctionLevel="1" cost="0" /> <!-- West Gate Entrance -->
+			<teleport npcStringId="1010028" x="147503" y="32299" z="-2501" minFunctionLevel="1" cost="0" /> <!-- South Gate Entrance -->
+			<teleport npcStringId="1010025" x="147465" y="20737" z="-2130" minFunctionLevel="1" cost="0" /> <!-- North Gate Entrance -->
+			<teleport npcStringId="1010127" x="106517" y="-2871" z="-3454" minFunctionLevel="2" cost="2000" /> <!-- Ancient Battleground -->
+			<teleport npcStringId="1010618" x="124904" y="61992" z="-3973" minFunctionLevel="2" cost="2000" /> <!-- Enchanted Valley, Southern Region (Lv. 45) -->
+			<teleport npcStringId="1010619" x="104426" y="33746" z="-3825" minFunctionLevel="2" cost="2000" /> <!-- Enchanted Valley, Northern Region (Lv. 45) -->
+			<teleport npcStringId="1010060" x="155310" y="-16339" z="-3320" minFunctionLevel="2" cost="2000" /> <!-- Blazing Swamp (Lv. 97) -->
+			<teleport npcStringId="1010585" x="142065" y="81300" z="-3000" minFunctionLevel="2" cost="2000" /> <!-- Forest of Mirrors (Lv. 40) -->
+			<teleport npcStringId="1010607" x="166182" y="91560" z="-3168" minFunctionLevel="2" cost="2000" /> <!-- Anghel Waterfall -->
+			<teleport npcStringId="1010137" x="181726" y="-7524" z="-3464" minFunctionLevel="2" cost="2000" /> <!-- South Entrance of Devastated Castle -->
+			<teleport npcStringId="1010192" x="168779" y="-18790" z="-3184" minFunctionLevel="2" cost="2000" /> <!-- West Area of the Devastated Castle -->
+			<teleport npcStringId="1010604" x="184742" y="19745" z="-3168" minFunctionLevel="2" cost="2000" /> <!-- Seal of Shilen (Lv. 95) -->
+			<teleport npcStringId="1010143" x="168217" y="37990" z="-4072" minFunctionLevel="2" cost="2000" /> <!-- Forsaken Plains (Lv. 58) -->
+			<teleport npcStringId="1010144" x="114649" y="11115" z="-5120" minFunctionLevel="2" cost="2000" /> <!-- Tower of Insolence (Lv. 70) -->
+			<teleport npcStringId="1010702" x="183985" y="61424" z="-3992" minFunctionLevel="2" cost="2000" /> <!-- Giant's Cave Upper Layer -->
+			<teleport npcStringId="1010703" x="191754" y="56760" z="-7624" minFunctionLevel="2" cost="2000" /> <!-- Giant's Cave Lower Layer -->
+			<teleport npcStringId="1010164" x="-15901" y="30661" z="-3616" minFunctionLevel="2" cost="2000" /> <!-- Bloody Swampland (Lv. 85) -->
+			<teleport npcStringId="1010652" x="-74506" y="53435" z="-3680" minFunctionLevel="2" cost="2000" /> <!-- Isle of Souls Harbor(Lv. 93) -->
+			<teleport npcStringId="1010723" x="-115854" y="236285" z="-3088" minFunctionLevel="2" cost="2000" /> <!-- Ruins of Ye Sagira (Lv. 85) -->
+			<teleport npcStringId="1010114" x="44725" y="146026" z="-3512" minFunctionLevel="2" cost="2000" /> <!-- Guilloutine Fortress (Lv. 95) -->
+			<teleport npcStringId="1010718" x="149363" y="173599" z="-920" minFunctionLevel="2" cost="2000" /> <!-- Parnassus -->
+			<teleport npcStringId="1010604" x="185006" y="20913" z="-3168" minFunctionLevel="2" cost="2000" /> <!-- Seal of Shilen (Lv. 95) -->
+			<teleport npcStringId="1010200" x="43889" y="-49101" z="-792" minFunctionLevel="2" cost="10000" /> <!-- Town of Rune -->
+			<teleport npcStringId="1010007" x="81749" y="149171" z="-3464" minFunctionLevel="2" cost="10000" /> <!-- The Town of Giran -->
+			<teleport npcStringId="1010001" x="-114353" y="255211" z="-1520" minFunctionLevel="2" cost="10000" /> <!-- Talking Island Village -->
+			<teleport npcStringId="1010003" x="11247" y="16049" z="-4584" minFunctionLevel="2" cost="10000" /> <!-- The Dark Elf Village -->
+			<teleport npcStringId="1010648" x="-116966" y="46613" z="360" minFunctionLevel="2" cost="10000" /> <!-- Kamael Village -->
+			<teleport npcStringId="1010006" x="19025" y="145245" z="-3107" minFunctionLevel="2" cost="10000" /> <!-- The Town of Dion -->
+			<teleport npcStringId="1010731" x="-185933" y="246359" z="1304" minFunctionLevel="2" cost="10000" /> <!-- Keucereus Alliance Base -->
+		</teleportList>
+	 	<ownerRestartPoint x="143992" y="27092" z="-2290" />
+		<banishPoint x="144432" y="26896" z="-2256" />
+	</clanHall>
+</list>

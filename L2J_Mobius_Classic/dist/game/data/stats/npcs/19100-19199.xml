@@ -1,0 +1,2901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="19100" level="97" type="L2Npc" name="Antharas Transparent 5" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="173968" />
+			<param name="suicide2_x" value="173856" />
+			<param name="suicide3_x" value="173808" />
+			<param name="suicide4_x" value="173792" />
+			<param name="suicide5_x" value="173824" />
+			<param name="suicide6_x" value="173920" />
+			<param name="suicide1_y" value="114096" />
+			<param name="suicide2_y" value="114320" />
+			<param name="suicide3_y" value="114592" />
+			<param name="suicide4_y" value="114912" />
+			<param name="suicide5_y" value="115152" />
+			<param name="suicide6_y" value="115408" />
+			<param name="zerging_spawn_x" value="176066" />
+			<param name="zerging_spawn_y" value="114802" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19101" level="97" type="L2Npc" name="Antharas Transparent 6" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="173920" />
+			<param name="suicide2_x" value="174064" />
+			<param name="suicide3_x" value="174272" />
+			<param name="suicide4_x" value="174480" />
+			<param name="suicide5_x" value="174592" />
+			<param name="suicide6_x" value="174704" />
+			<param name="suicide1_y" value="115408" />
+			<param name="suicide2_y" value="115568" />
+			<param name="suicide3_y" value="115664" />
+			<param name="suicide4_y" value="115920" />
+			<param name="suicide5_y" value="116176" />
+			<param name="suicide6_y" value="116448" />
+			<param name="zerging_spawn_x" value="176095" />
+			<param name="zerging_spawn_y" value="115313" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19102" level="97" type="L2Npc" name="Antharas Transparent 7" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="174704" />
+			<param name="suicide2_x" value="174800" />
+			<param name="suicide3_x" value="174960" />
+			<param name="suicide4_x" value="175136" />
+			<param name="suicide5_x" value="175248" />
+			<param name="suicide6_x" value="175424" />
+			<param name="suicide1_y" value="116448" />
+			<param name="suicide2_y" value="116672" />
+			<param name="suicide3_y" value="116864" />
+			<param name="suicide4_y" value="117184" />
+			<param name="suicide5_y" value="117504" />
+			<param name="suicide6_y" value="117792" />
+			<param name="zerging_spawn_x" value="176425" />
+			<param name="zerging_spawn_y" value="115829" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19103" level="97" type="L2Npc" name="Antharas Transparent 8" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="175424" />
+			<param name="suicide2_x" value="175632" />
+			<param name="suicide3_x" value="175856" />
+			<param name="suicide4_x" value="176256" />
+			<param name="suicide5_x" value="176544" />
+			<param name="suicide6_x" value="176880" />
+			<param name="suicide1_y" value="117792" />
+			<param name="suicide2_y" value="118016" />
+			<param name="suicide3_y" value="118176" />
+			<param name="suicide4_y" value="118256" />
+			<param name="suicide5_y" value="118240" />
+			<param name="suicide6_y" value="118192" />
+			<param name="zerging_spawn_x" value="176949" />
+			<param name="zerging_spawn_y" value="116378" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19104" level="97" type="L2Npc" name="Antharas Transparent 9" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="176880" />
+			<param name="suicide2_x" value="177200" />
+			<param name="suicide3_x" value="177488" />
+			<param name="suicide4_x" value="177824" />
+			<param name="suicide5_x" value="178048" />
+			<param name="suicide6_x" value="178368" />
+			<param name="suicide1_y" value="118192" />
+			<param name="suicide2_y" value="118128" />
+			<param name="suicide3_y" value="118096" />
+			<param name="suicide4_y" value="118080" />
+			<param name="suicide5_y" value="118096" />
+			<param name="suicide6_y" value="118128" />
+			<param name="zerging_spawn_x" value="177655" />
+			<param name="zerging_spawn_y" value="116402" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19105" level="97" type="L2Npc" name="Antharas Transparent 10" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="178368" />
+			<param name="suicide2_x" value="178592" />
+			<param name="suicide3_x" value="178848" />
+			<param name="suicide4_x" value="179200" />
+			<param name="suicide5_x" value="179472" />
+			<param name="suicide6_x" value="179696" />
+			<param name="suicide1_y" value="118128" />
+			<param name="suicide2_y" value="118192" />
+			<param name="suicide3_y" value="118240" />
+			<param name="suicide4_y" value="118272" />
+			<param name="suicide5_y" value="118272" />
+			<param name="suicide6_y" value="118192" />
+			<param name="zerging_spawn_x" value="178248" />
+			<param name="zerging_spawn_y" value="116395" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19106" level="97" type="L2Npc" name="Antharas Transparent 11" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="179696" />
+			<param name="suicide2_x" value="179920" />
+			<param name="suicide3_x" value="180096" />
+			<param name="suicide4_x" value="180272" />
+			<param name="suicide5_x" value="180544" />
+			<param name="suicide6_x" value="180592" />
+			<param name="suicide1_y" value="118192" />
+			<param name="suicide2_y" value="118016" />
+			<param name="suicide3_y" value="117824" />
+			<param name="suicide4_y" value="117520" />
+			<param name="suicide5_y" value="117264" />
+			<param name="suicide6_y" value="116928" />
+			<param name="zerging_spawn_x" value="178706" />
+			<param name="zerging_spawn_y" value="115998" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19107" level="97" type="L2Npc" name="Antharas Transparent 12" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="180592" />
+			<param name="suicide2_x" value="180752" />
+			<param name="suicide3_x" value="181104" />
+			<param name="suicide4_x" value="181184" />
+			<param name="suicide5_x" value="180992" />
+			<param name="suicide6_x" value="180896" />
+			<param name="suicide1_y" value="116928" />
+			<param name="suicide2_y" value="116576" />
+			<param name="suicide3_y" value="116544" />
+			<param name="suicide4_y" value="116240" />
+			<param name="suicide5_y" value="116064" />
+			<param name="suicide6_y" value="115888" />
+			<param name="zerging_spawn_x" value="179208" />
+			<param name="zerging_spawn_y" value="115452" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19108" level="97" type="L2Npc" name="Antharas Transparent 13" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="180896" />
+			<param name="suicide2_x" value="180784" />
+			<param name="suicide3_x" value="180656" />
+			<param name="suicide4_x" value="180528" />
+			<param name="suicide5_x" value="180496" />
+			<param name="suicide6_x" value="180496" />
+			<param name="suicide1_y" value="115888" />
+			<param name="suicide2_y" value="115712" />
+			<param name="suicide3_y" value="115504" />
+			<param name="suicide4_y" value="115232" />
+			<param name="suicide5_y" value="115008" />
+			<param name="suicide6_y" value="114816" />
+			<param name="zerging_spawn_x" value="179191" />
+			<param name="zerging_spawn_y" value="115079" />
+			<param name="dice" value="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19109" level="97" type="L2Npc" name="Antharas Transparent 14" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="180496" />
+			<param name="suicide2_x" value="180512" />
+			<param name="suicide3_x" value="180544" />
+			<param name="suicide4_x" value="180688" />
+			<param name="suicide5_x" value="180804" />
+			<param name="suicide6_x" value="180896" />
+			<param name="suicide1_y" value="114816" />
+			<param name="suicide2_y" value="114624" />
+			<param name="suicide3_y" value="114400" />
+			<param name="suicide4_y" value="114112" />
+			<param name="suicide5_y" value="113920" />
+			<param name="suicide6_y" value="113776" />
+			<param name="zerging_spawn_x" value="179221" />
+			<param name="zerging_spawn_y" value="114546" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19113" level="97" type="L2Npc" name="Inactive Player Supplies" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="suicide1_x" value="178848" />
+			<param name="suicide2_x" value="178560" />
+			<param name="suicide3_x" value="178320" />
+			<param name="suicide4_x" value="178000" />
+			<param name="suicide5_x" value="177728" />
+			<param name="suicide6_x" value="177456" />
+			<param name="suicide1_y" value="111424" />
+			<param name="suicide2_y" value="111456" />
+			<param name="suicide3_y" value="111488" />
+			<param name="suicide4_y" value="111536" />
+			<param name="suicide5_y" value="111536" />
+			<param name="suicide6_y" value="111504" />
+			<param name="zerging_spawn_x" value="177855" />
+			<param name="zerging_spawn_y" value="113282" />
+			<param name="dice" value="0" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19114" level="98" type="L2Npc" name="Jewel Transparent 3" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="boss_skill_01" id="14252" level="1" />
+			<skill name="boss_skill_02" id="14253" level="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8023" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1880.25676306848" magical="1283.97162612944" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="403.31952" magical="295.13172" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14252" level="1" /> <!-- Hands of Hell -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19115" level="98" type="L2Npc" name="Corrupted Poison Cloud" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="selfBlasting" id="14264" level="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8023" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1880.25676306848" magical="1283.97162612944" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="403.31952" magical="295.13172" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14264" level="1" /> <!-- Poison Cloud -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19116" level="95" type="L2Npc" name="Jewel" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19117" level="90" type="L2Monster" name="Rotting Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="14258" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5382" hpRegen="8.5" mp="2023" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1423.72742984904" magical="972.221273543337" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="379.98257" magical="278.05475" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
+				<attack type="DARK" value="180" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" undying="false" />
+		<skill_list>
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14258" level="1" /> <!-- Scalp -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="19118" level="90" type="L2Monster" name="Rotting Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="Skill01_ID" id="14262" level="1" />
+			<skill name="Skill02_ID" id="14262" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5382" hpRegen="8.5" mp="2023" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1423.72742984904" magical="972.221273543337" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="379.98257" magical="278.05475" />
+			<attribute>
+				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
+				<attack type="DARK" value="180" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" undying="false" />
+		<skill_list>
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14262" level="1" /> <!-- Flame Hurl -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
+	</npc>
+	<npc id="19119" level="94" type="L2Npc" name="Harnak Transparent 1" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6555" hpRegen="8.5" mp="2169" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1631.85304881442" magical="1114.34409390681" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="392.62196" magical="287.30371" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="450" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19120" level="94" type="L2Npc" name="Harnak Transparent 2" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6555" hpRegen="8.5" mp="2169" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1631.85304881442" magical="1114.34409390681" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="392.62196" magical="287.30371" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19121" level="95" type="L2Monster" name="Altar of Sacrifice" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="180" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19122" level="95" type="L2Monster" name="Altar of Sacrifice" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="180" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19123" level="95" type="L2Monster" name="Altar of Shilen" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14574" level="1" /> <!-- Energy Bomb -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="180" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19124" level="98" type="L2Npc" name="Explosive Energy" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8023" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="200" />
+			</speed>
+			<attack physical="20880.2567630684" magical="1283.97162612944" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="403.31952" magical="295.13172" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="400" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" />
+		<skill_list>
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="600" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19125" level="96" type="L2Npc" name="Isadora" title="Great Magus of Greed">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7247" hpRegen="8.5" mp="2242" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1750.29159476204" magical="1195.22226765359" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.22616" magical="291.40462" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19126" level="30" type="L2Monster" name="Commando" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- Sword of Revolution / Round Shield -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="1" magical="63.26266" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="118.46427" magical="86.68702" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19127" level="30" type="L2Monster" name="Commando Captain" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- Sword of Revolution / Round Shield -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="1" magical="63.26266" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="118.46427" magical="86.68702" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19128" level="97" type="L2Npc" name="Fellow" title="Balthus Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="130" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="19129" level="97" type="L2Npc" name="Ateld" title="Balthus Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="32" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="19130" level="97" type="L2Npc" name="Paulia" title="Balthus Knight">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="19131" level="97" type="L2Npc" name="Rash" title="Support Troop Lieutenant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="80" lhand="641" /> <!-- Tallum Blade / Dark Crystal Shield -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.75" />
+		</collision>
+	</npc>
+	<npc id="19132" level="97" type="L2Npc" name="Kale" title="Balthus Envoy">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19133" level="97" type="L2Npc" name="Expedition Member" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="8683" /> <!-- Tiphon's Spear -->
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="80" type="POLE" distance="80" width="120" random="10" accuracy="0" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="11" /> <!-- Spears -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="19134" level="97" type="L2Npc" name="Antharas Decoration 1" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="50" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19135" level="97" type="L2Npc" name="Antharas Decoration 2" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1813.75716494098" magical="1238.56102932397" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="400.83818" magical="293.31598" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="125" />
+			<height normal="43" />
+		</collision>
+	</npc>
+	<npc id="19136" level="85" type="L2Npc" name="Expedition Member" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>DARK_ELF</race>
+		<sex>FEMALE</sex>
+		<equipment rhand="288" /> <!-- Carnage Bow -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1188.87259499001" magical="811.84586495282" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
+			<defence physical="361.78814" magical="264.74086" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="16" /> <!-- Dark Elves -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="19137" level="85" type="L2Npc" name="Expedition Member" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="28" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="361.78814" magical="264.74086" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="19138" level="85" type="L2Npc" name="Antharas Decoration 3" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="361.78814" magical="264.74086" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19139" level="85" type="L2Npc" name="Antharas Decoration 4" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="30" />
+				<run ground="160" />
+			</speed>
+			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="361.78814" magical="264.74086" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="15" /> <!-- Elves -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23.5" />
+		</collision>
+	</npc>
+	<npc id="19140" level="85" type="L2Npc" name="Antharas Decoration 5" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="361.78814" magical="264.74086" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19141" level="1" type="L2Npc" name="Combat Officer" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- Sword of Revolution / Round Shield -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="0.001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="361.78814" magical="264.74086" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19142" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19143" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19144" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19145" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19146" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19147" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19148" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19149" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19150" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19151" level="95" type="L2Npc" name="Sacrificial Offering" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>ETC</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6891" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1689.70550736846" magical="1153.84983032579" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="395.4864" magical="289.39978" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19152" level="10" type="FriendlyNpc" name="Combat Soldier" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- Sword of Revolution / Round Shield -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="163" hpRegen="2" mp="108" mpRegen="0.9" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="1" magical="13.20506" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="61.82527" magical="45.24105" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="600" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19153" level="10" type="FriendlyNpc" name="Combat Soldier" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="163" hpRegen="2" mp="108" mpRegen="0.9" />
+			<speed>
+				<walk ground="35" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1" magical="13.20506" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="61.82527" magical="45.24105" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="600" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="19154" level="10" type="FriendlyNpc" name="Combat Officer" title="Combat Assistant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ANIMAL</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="282" hpRegen="2.5" mp="166" mpRegen="1.2" />
+			<speed>
+				<walk ground="40" />
+				<run ground="120" />
+			</speed>
+			<attack physical="20.440251572327" magical="869.05522393935" critical="4" attackSpeed="253" range="40" />
+			<defence physical="321.69811320755" magical="191.28066229017" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="17" />
+			<height normal="43.5" />
+		</collision>
+	</npc>
+	<npc id="19155" level="17" type="FriendlyNpc" name="Infiltration Officer" title="Combat Assistant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1000" hpRegen="2" mp="108" mpRegen="0.9" />
+			<speed>
+				<walk ground="35" />
+				<run ground="120" />
+			</speed>
+			<attack physical="19.33758" magical="13.20506" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="61.82527" magical="45.24105" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="19156" level="86" type="L2Monster" name="Servitor" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="14453" level="1" />
+			<skill name="Skill02_ID" id="14453" level="1" />
+			<param name="Attack_BoostValue" value="127" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13256" hpRegen="8.5" mp="1881" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="80" />
+			</speed>
+			<attack physical="3631.33830052703" magical="652.921765425807" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="406.383466826966" magical="221.085839209057" />
+			<attribute>
+				<defence fire="50" water="100" wind="100" earth="100" holy="100" dark="100" />
+				<attack type="WATER" value="180" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
+			<skill id="14453" level="1" /> <!-- Magic Shot -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8.5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="19157" level="10" type="L2Monster" name="Resurrected Vengeful Spirit" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="163.28607" hpRegen="2" mp="108.4" mpRegen="0.9" />
+			<speed>
+				<walk ground="8" />
+				<run ground="120" />
+			</speed>
+			<attack physical="19.33758" magical="13.20506" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="61.82527" magical="45.24105" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="6.5" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="19158" level="8" type="L2Monster" name="Resurrected Vengeful Spirit" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="124" hpRegen="2" mp="92" mpRegen="0.9" />
+			<speed>
+				<walk ground="10" />
+				<run ground="120" />
+			</speed>
+			<attack physical="16.20165" magical="11.06363" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="57.56203" magical="42.1214" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="9.4" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="19159" level="99" type="L2Monster" name="Earth Wyrm Trasken" title="Hell's Gate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="99999999" hpRegen="1" mp="10000000" mpRegen="3000" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="400" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" />
+		<skill_list>
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="16019" level="1" /> <!-- Presentation -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="500" />
+			<height normal="1450" />
+		</collision>
+	</npc>
+	<npc id="19160" level="99" type="L2Monster" name="Teredor" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5632617" hpRegen="1" mp="22800" mpRegen="3000" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="23610.1029394933" magical="5767.28134561036" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="3679.90243035914" magical="2133.38489847112" />
+			<attribute>
+				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
+				<attack type="EARTH" value="400" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="14615" level="1" /> <!-- Teredor Biting -->
+			<skill id="4411" level="21" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+		</skill_list>
+		<ai isAggressive="true" aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="90" />
+			<height normal="190" />
+		</collision>
+	</npc>
+	<npc id="19161" level="99" type="L2Npc" name="Fire Region" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<skill name="boss_skill_01" id="14025" level="1" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<attribute>
+				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
+				<attack type="FIRE" value="330" />
+			</attribute>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="14025" level="1" /> <!-- Hero's Arrow Shaft -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="10" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19162" level="99" type="L2Npc" name="Magical Power Ballista" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="140" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="19163" level="1" type="L2QuestGuard" name="Wastelands Decoration 1" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>MALE</sex>
+		<equipment rhand="129" lhand="102" /> <!-- Sword of Revolution / Round Shield -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="0" hpRegen="4.5" mp="447" mpRegen="1.8" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="0.01" magical="106.67987" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="148.44287" magical="108.62405" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" talkable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="14" /> <!-- Humans -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="19164" level="99" type="L2Monster" name="Tentacle" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="19165" level="99" type="L2Monster" name="Tentacle" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="19166" level="99" type="L2Monster" name="Clan Orc" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="28" />
+			<height normal="54.5" />
+		</collision>
+	</npc>
+	<npc id="19167" level="99" type="L2Monster" name="Clan Orc" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="26" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="19168" level="99" type="L2Monster" name="Clan Orc Subordinate" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="28" />
+			<height normal="33.5" />
+		</collision>
+	</npc>
+	<npc id="19169" level="99" type="L2Monster" name="Clan Orc Subordinate" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="24" />
+			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="19170" level="1" type="L2Npc" name="Queen of Darkness" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="195" hpRegen="2" mp="40" mpRegen="0.9" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="18.4576334171028" magical="3.0108740338162" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="40.4040404040404" magical="20.2003202408165" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="0.1" />
+			<height normal="0.1" />
+		</collision>
+	</npc>
+	<npc id="19171" level="85" type="FriendlyNpc" name="Tentacle" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" talkable="false" canMove="false" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="120" />
+		</collision>
+	</npc>
+	<npc id="19172" level="85" type="FriendlyNpc" name="Teredor" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="45" />
+				<run ground="180" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" talkable="false" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="90" />
+			<height normal="190" />
+		</collision>
+	</npc>
+	<npc id="19173" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="19174" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19175" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="18.4" />
+		</collision>
+	</npc>
+	<npc id="19176" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19177" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19178" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="19.7" />
+		</collision>
+	</npc>
+	<npc id="19179" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="18.5" />
+		</collision>
+	</npc>
+	<npc id="19180" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19181" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.3" />
+		</collision>
+	</npc>
+	<npc id="19182" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="10" />
+				<run ground="10" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="93" />
+			<height normal="90" />
+		</collision>
+	</npc>
+	<npc id="19183" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="60" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="19184" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="19185" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="19186" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19187" level="85" type="L2Npc" name="Corpse" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" targetable="false" showName="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="19" />
+		</collision>
+	</npc>
+	<npc id="19188" level="85" type="L2Npc" name="Toma" title="Master">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="18.4" />
+		</collision>
+	</npc>
+	<npc id="19189" level="85" type="FriendlyNpc" name="Siege Golem" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="40" />
+				<run ground="40" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="true" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="140" />
+			<height normal="140" />
+		</collision>
+	</npc>
+	<npc id="19190" level="85" type="L2Npc" name="Swoop Cannon" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>SIEGE_WEAPON</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="60" />
+				<run ground="60" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="true" />
+		<skill_list>
+			<skill id="4416" level="21" /> <!-- Siege Weapons -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="45" />
+			<height normal="47.5" />
+		</collision>
+	</npc>
+	<npc id="19191" level="85" type="FriendlyNpc" name="Croto" title="Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>ORC</race>
+		<sex>MALE</sex>
+		<equipment rhand="171" /> <!-- Deadman's Glory -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="35" />
+				<run ground="120" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="17" /> <!-- Orcs -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="19192" level="85" type="FriendlyNpc" name="Bronk" title="Head Blacksmith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="1511" /> <!-- Silversmith Hammer -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="16.5" />
+		</collision>
+	</npc>
+	<npc id="19193" level="85" type="FriendlyNpc" name="Rogin" title="Deliveryman">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="91" /> <!-- Heavy War Axe -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="19194" level="85" type="L2Npc" name="Silvera" title="Blacksmith">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="20" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17.5" />
+		</collision>
+	</npc>
+	<npc id="19195" level="85" type="L2Npc" name="Wirphy" title="Gatekeeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>FEMALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="21.3" />
+		</collision>
+	</npc>
+	<npc id="19196" level="85" type="FriendlyNpc" name="Soldier" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="7897" /> <!-- Dwarven Hammer -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" talkable="false" targetable="false" undying="true" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="19" />
+		</collision>
+	</npc>
+	<npc id="19197" level="85" type="FriendlyNpc" name="Soldier" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="7896" /> <!-- Lesser Giant's Hammer -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" showName="false" talkable="false" targetable="false" undying="true" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="19" />
+		</collision>
+	</npc>
+	<npc id="19198" level="85" type="FriendlyNpc" name="Torocco" title="Carrier">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="2502" /> <!-- Dwarven War Hammer -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+	<npc id="19199" level="85" type="FriendlyNpc" name="Murdoc" title="Warehouse Keeper">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="Attack_BoostValue" value="126" />
+		</parameters>
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<equipment rhand="293" /> <!-- War Hammer -->
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13188" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
+			<defence physical="398.415163555849" magical="215.693501667373" />
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" talkable="false" targetable="false" undying="false" />
+		<skill_list>
+			<skill id="4416" level="18" /> <!-- Dwarves -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+		</skill_list>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="17" />
+		</collision>
+	</npc>
+</list>
