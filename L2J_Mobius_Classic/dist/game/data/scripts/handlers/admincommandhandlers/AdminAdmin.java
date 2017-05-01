@@ -367,7 +367,10 @@ public class AdminAdmin implements IAdminCommandHandler
 					
 					activeChar.sendMessage(targetPlayer.getName() + ": points changed from " + targetPlayer.getWorldChatPoints() + " to " + valueToken);
 					targetPlayer.setWorldChatPoints(Integer.parseInt(valueToken));
-					targetPlayer.sendPacket(new ExWorldChatCnt(targetPlayer));
+					if (Config.ENABLE_WORLD_CHAT)
+					{
+						targetPlayer.sendPacket(new ExWorldChatCnt(targetPlayer));
+					}
 					break;
 				}
 				default:

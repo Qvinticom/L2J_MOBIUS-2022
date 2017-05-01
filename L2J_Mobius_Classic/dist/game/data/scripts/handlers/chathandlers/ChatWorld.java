@@ -47,6 +47,11 @@ public final class ChatWorld implements IChatHandler
 	@Override
 	public void handleChat(ChatType type, L2PcInstance activeChar, String target, String text)
 	{
+		if (!Config.ENABLE_WORLD_CHAT)
+		{
+			return;
+		}
+		
 		final Instant now = Instant.now();
 		if (!REUSE.isEmpty())
 		{

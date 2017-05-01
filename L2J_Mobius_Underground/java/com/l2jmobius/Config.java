@@ -471,6 +471,7 @@ public final class Config
 	public static int PEACE_ZONE_MODE;
 	public static String DEFAULT_GLOBAL_CHAT;
 	public static String DEFAULT_TRADE_CHAT;
+	public static boolean ENABLE_WORLD_CHAT;
 	public static int MINIMUM_CHAT_LEVEL;
 	public static boolean ALLOW_WAREHOUSE;
 	public static boolean WAREHOUSE_CACHE;
@@ -1766,6 +1767,7 @@ public final class Config
 			PEACE_ZONE_MODE = General.getInt("PeaceZoneMode", 0);
 			DEFAULT_GLOBAL_CHAT = General.getString("GlobalChat", "ON");
 			DEFAULT_TRADE_CHAT = General.getString("TradeChat", "ON");
+			ENABLE_WORLD_CHAT = General.getBoolean("WorldChatEnabled", true);
 			MINIMUM_CHAT_LEVEL = General.getInt("MinimumChatLevel", 20);
 			ALLOW_WAREHOUSE = General.getBoolean("AllowWarehouse", true);
 			WAREHOUSE_CACHE = General.getBoolean("WarehouseCache", false);

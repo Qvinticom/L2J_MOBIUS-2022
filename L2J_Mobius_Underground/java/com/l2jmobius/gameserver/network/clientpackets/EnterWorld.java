@@ -641,7 +641,10 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
-		activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+		if (Config.ENABLE_WORLD_CHAT)
+		{
+			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
+		}
 		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar));
 		activeChar.sendPacket(ExConnectedTimeAndGettableReward.STATIC_PACKET);
 		

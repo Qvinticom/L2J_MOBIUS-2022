@@ -188,6 +188,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	private void resetWorldChatPoints()
 	{
+		if (!Config.ENABLE_WORLD_CHAT)
+		{
+			return;
+		}
+		
 		// Update data for offline players.
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?"))
