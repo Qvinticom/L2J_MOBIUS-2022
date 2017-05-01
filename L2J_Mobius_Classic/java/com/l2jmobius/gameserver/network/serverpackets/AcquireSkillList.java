@@ -17,19 +17,17 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author Sdw
+ * @author Sdw, Mobius
+ * @version Classic 2.0
  */
 public class AcquireSkillList implements IClientOutgoingPacket
 {
@@ -51,26 +49,29 @@ public class AcquireSkillList implements IClientOutgoingPacket
 		packet.writeH(_learnable.size());
 		for (L2SkillLearn skill : _learnable)
 		{
+			if (skill == null)
+			{
+				continue;
+			}
 			packet.writeD(skill.getSkillId());
-			packet.writeD(skill.getSkillLevel());
+			packet.writeH(skill.getSkillLevel());
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
-			packet.writeC(skill.getDualClassLevel());
-			packet.writeC(skill.getRequiredItems().size());
-			for (ItemHolder item : skill.getRequiredItems())
+			packet.writeC(0x00);
+			if (skill.getRequiredItems().size() > 0)
 			{
-				packet.writeD(item.getId());
-				packet.writeQ(item.getCount());
+				for (ItemHolder item : skill.getRequiredItems())
+				{
+					packet.writeC(0x01);
+					packet.writeD(item.getId());
+					packet.writeQ(item.getCount());
+				}
 			}
-			
-			final List<Skill> skillRem = skill.getRemoveSkills().stream().map(_activeChar::getKnownSkill).filter(Objects::nonNull).collect(Collectors.toList());
-			
-			packet.writeC(skillRem.size());
-			for (Skill skillRemove : skillRem)
+			else
 			{
-				packet.writeD(skillRemove.getId());
-				packet.writeD(skillRemove.getLevel());
+				packet.writeC(0x00);
 			}
+			packet.writeC(0x00);
 		}
 		return true;
 	}
