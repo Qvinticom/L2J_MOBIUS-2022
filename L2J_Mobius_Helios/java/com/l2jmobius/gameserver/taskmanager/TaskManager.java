@@ -40,7 +40,6 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskBirthday;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskCleanUp;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskRestart;
-import com.l2jmobius.gameserver.taskmanager.tasks.TaskScript;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
 
 /**
@@ -178,7 +177,6 @@ public final class TaskManager
 		registerTask(new TaskBirthday());
 		registerTask(new TaskCleanUp());
 		registerTask(new TaskRestart());
-		registerTask(new TaskScript());
 		registerTask(new TaskShutdown());
 	}
 	
