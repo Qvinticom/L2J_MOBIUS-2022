@@ -24,6 +24,10 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
+/**
+ * @author Mobius
+ * @version Classic 2.0
+ */
 public class AbnormalStatusUpdate implements IClientOutgoingPacket
 {
 	private final List<BuffInfo> _effects = new ArrayList<>();
@@ -57,9 +61,8 @@ public class AbnormalStatusUpdate implements IClientOutgoingPacket
 			{
 				packet.writeD(info.getSkill().getDisplayId());
 				packet.writeH(info.getSkill().getDisplayLevel());
-				packet.writeH(info.getSkill().getSubLevel());
-				packet.writeD(info.getSkill().getAbnormalType().getClientId());
-				writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
+				packet.writeD(0x00);
+				packet.writeH(info.getSkill().isAura() ? -1 : info.getTime());
 			}
 		}
 		for (Skill skill : _effects2)
