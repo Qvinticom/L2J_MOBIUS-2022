@@ -23,16 +23,12 @@ import java.util.StringTokenizer;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
-import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-
-import ai.bosses.Antharas.Antharas;
-import ai.bosses.Baium.Baium;
 
 /**
  * @author St3eT
@@ -327,12 +323,14 @@ public class AdminGrandBoss implements IAdminCommandHandler
 	
 	private Quest antharasAi()
 	{
-		return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
+		return null;
+		// return QuestManager.getInstance().getQuest(Antharas.class.getSimpleName());
 	}
 	
 	private Quest baiumAi()
 	{
-		return QuestManager.getInstance().getQuest(Baium.class.getSimpleName());
+		return null;
+		// return QuestManager.getInstance().getQuest(Baium.class.getSimpleName());
 	}
 	
 	@Override
