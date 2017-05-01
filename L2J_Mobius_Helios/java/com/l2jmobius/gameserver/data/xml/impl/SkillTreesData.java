@@ -1422,6 +1422,10 @@ public final class SkillTreesData implements IGameXmlReader
 		{
 			for (L2SkillLearn skill : completeClassSkillTree.values())
 			{
+				if (skill.getGetLevel() > Config.PLAYER_MAXIMUM_LEVEL)
+				{
+					continue;
+				}
 				if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()))
 				{
 					continue;
