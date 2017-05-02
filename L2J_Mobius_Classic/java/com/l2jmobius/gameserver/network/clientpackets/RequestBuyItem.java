@@ -275,5 +275,6 @@ public final class RequestBuyItem implements IClientIncomingPacket
 		
 		client.sendPacket(new ExUserInfoInvenWeight(player));
 		client.sendPacket(new ExBuySellList(player, true));
+		player.sendPacket(SystemMessageId.THE_TRADE_WAS_SUCCESSFUL);
 	}
 }
