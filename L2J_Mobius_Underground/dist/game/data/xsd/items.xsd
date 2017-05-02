@@ -48,6 +48,8 @@
 		<xs:attribute name="min" type="xs:positiveInteger" />
 		<xs:attribute name="max" type="xs:positiveInteger" />
 		<xs:attribute name="chance" type="xs:double" />
+		<xs:attribute name="minEnchant" type="xs:positiveInteger" use="optional" />
+		<xs:attribute name="maxEnchant" type="xs:positiveInteger" use="optional" />
 	</xs:complexType>
 
 	<xs:complexType name="createItemType">

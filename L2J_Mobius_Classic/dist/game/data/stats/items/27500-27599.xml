@@ -452,30 +452,42 @@
 	</item>
 	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Shiny Elemental Shirt. -->
-		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37718" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- + 8 Shiny Elemental Shirt -->
+		</capsuled_items>
 	</item>
 	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Reflect Attack T-shirt. -->
-		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46193" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- + 8 Reflect Attack T-shirt -->
+		</capsuled_items>
 	</item>
 	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
 		<!-- Double-click to get a + 8 enchanted Reflect Magic T-shirt. -->
-		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46194" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- + 8 Reflect Magic T-shirt -->
+		</capsuled_items>
 	</item>
 	<item id="27538" name="+ 7 Bloody Amaranthine Pack" type="EtcItem">
 		<!-- Double-click to get a + 7 enchanted Bloody Amaranthine weapon. -->
