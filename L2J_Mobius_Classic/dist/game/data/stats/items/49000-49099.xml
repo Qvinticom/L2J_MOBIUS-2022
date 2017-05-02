@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="49031" name="Ring Of Heir" type="Armor">
+		<set name="icon" val="icon.event_classic_ring" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="commissionItemType" val="RING" />
+		<set name="is_sellable" val="false"/>
+		<set name="is_private_storeable" val="false"/>
+		<set name="is_dropable" val="false"/>
+		<set name="is_tradable" val="false" />
+		<skills>
+			<skill id="39019" level="1"/>
+		</skills>
+		<stats>
+			<stat type="mDef">14</stat>
+		</stats>
+	</item>
+</list>
