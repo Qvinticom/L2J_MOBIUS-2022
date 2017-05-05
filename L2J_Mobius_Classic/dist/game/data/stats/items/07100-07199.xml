@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="7100" name="Importance of Strain" type="EtcItem">
-		<!-- Contains information regarding the means to strengthen and the means to defeat the ancient giant. Double-click to view contents. -->
+		<!-- Contains information on how to defeat an ancient Giant. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -19,7 +19,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7101" name="Danger of Ice Spirit" type="EtcItem">
-		<!-- Contains sorcery to surround and defeat the Spirits. Double-click to view contents. -->
+		<!-- Contains spells that can be used to surround and defeat a Spirit. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -36,8 +36,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7102" name="Guardian Angel of the Tablet - Vol. 1" type="EtcItem">
-		<!-- Contains information on how to defeat the Guardian Angel of the Tablet. Double-click to view contents. -->
+	<item id="7102" name="Guardian of Forbidden Knowledge - Part 1" type="EtcItem">
+		<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -54,8 +54,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7103" name="Guardian Angel of the Tablet - Vol. 1" type="EtcItem">
-		<!-- Contains information on how to defeat the Guardian Angel of the Tablet. Double-click to view contents. -->
+	<item id="7103" name="Guardian of Forbidden Knowledge - Part 1" type="EtcItem">
+		<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -72,8 +72,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7104" name="Guardian Angel of the Tablet - Vol. 1" type="EtcItem">
-		<!-- Contains information on how to defeat the Guardian Angel of the Tablet. Double-click to view contents. -->
+	<item id="7104" name="Guardian of Forbidden Knowledge - Part 1" type="EtcItem">
+		<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -90,8 +90,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7105" name="Guardian Angel of the Tablet - Vol. 2" type="EtcItem">
-		<!-- Contains information on how to defeat the Guardian Angel of the Tablet. Double-click to view contents. -->
+	<item id="7105" name="Guardian of Forbidden Knowledge - Part 2" type="EtcItem">
+		<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -108,8 +108,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7106" name="Guardian Angel of the Tablet - Vol. 2" type="EtcItem">
-		<!-- Contains information on how to defeat the Guardian Angel of the Tablet. Double-click to view contents. -->
+	<item id="7106" name="Guardian of Forbidden Knowledge - Part 2" type="EtcItem">
+		<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -126,8 +126,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7107" name="Guardian Angel of the Tablet - Vol. 2" type="EtcItem">
-		<!-- Contains information on how to defeat the Guardian Angel of the Tablet. Double-click to view contents. -->
+	<item id="7107" name="Guardian of Forbidden Knowledge - Part 2" type="EtcItem">
+		<!-- Contains information on how to defeat a Watchman of Tablet of Vision. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -145,7 +145,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7108" name="Guild's Secret Report" type="EtcItem">
-		<!-- Document containing information regarding the great angel, Iconoclasis. Double-click to view contents. -->
+		<!-- A document containing information about Archangel Iconoclasis. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -163,7 +163,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7109" name="Guild's Secret Report" type="EtcItem">
-		<!-- Document containing information regarding the great angel, Iconoclasis. Double-click to view contents. -->
+		<!-- A document containing information about Archangel Iconoclasis. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -181,7 +181,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7110" name="Research Report" type="EtcItem">
-		<!-- Document containing info regarding Shakiel, the guardian of vision. Double-click to view contents. -->
+		<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -199,7 +199,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7111" name="Research Report" type="EtcItem">
-		<!-- Document containing info regarding Shakiel, the guardian of vision. Double-click to view contents. -->
+		<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -217,7 +217,7 @@
 		<set name="handler" val="Book" />
 	</item>
 	<item id="7112" name="Research Report" type="EtcItem">
-		<!-- Document containing info regarding Shakiel, the guardian of vision. Double-click to view contents. -->
+		<!-- A document containing information about Vision Guardian Shakiel. Double-click to view the contents. -->
 		<set name="icon" val="icon.etc_magic_book_red_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -234,9 +234,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="Book" />
 	</item>
-	<item id="7117" name="Scroll of Escape: Talking Island Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Talking Island. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7117" name="Teleport: Talking Island Village" type="EtcItem">
+		<!-- Magical scroll that relocates you to Talking Island. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -253,9 +253,9 @@
 			<skill id="2213" level="1" /> <!-- Scroll of Escape: Talking Island Village -->
 		</skills>
 	</item>
-	<item id="7118" name="Scroll of Escape: Elven Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Elven Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7118" name="Teleport: Elven Village" type="EtcItem">
+		<!-- Magical scroll that relocates you to the Elven Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -272,9 +272,9 @@
 			<skill id="2213" level="2" /> <!-- Scroll of Escape: Elven Village -->
 		</skills>
 	</item>
-	<item id="7119" name="Scroll of Escape: Dark Elf Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Dark Elf Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7119" name="Teleport: Dark Elf Village" type="EtcItem">
+		<!-- Magical scroll that relocates you to Dark Elf Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -291,9 +291,9 @@
 			<skill id="2213" level="3" /> <!-- Scroll of Escape: Dark Elf Village -->
 		</skills>
 	</item>
-	<item id="7120" name="Scroll of Escape: Orc Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Orc Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7120" name="Teleport: Orc Village" type="EtcItem">
+		<!-- Magical scroll that relocates you to Orc Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -310,9 +310,9 @@
 			<skill id="2213" level="4" /> <!-- Scroll of Escape: Orc Village -->
 		</skills>
 	</item>
-	<item id="7121" name="Scroll of Escape: Dwarven Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Dwarven Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7121" name="Teleport: Dwarven Village" type="EtcItem">
+		<!-- Magical scroll that relocates you to Dwarven Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -329,9 +329,9 @@
 			<skill id="2213" level="5" /> <!-- Scroll of Escape: Dwarven Village -->
 		</skills>
 	</item>
-	<item id="7122" name="Scroll of Escape: Gludin Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Gludin Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7122" name="Teleport: Gludin" type="EtcItem">
+		<!-- Magical scroll that relocates you to Gludin Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -348,9 +348,9 @@
 			<skill id="2213" level="6" /> <!-- Scroll of Escape: Gludin Village -->
 		</skills>
 	</item>
-	<item id="7123" name="Scroll of Escape: Town of Gludio" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Town of Gludio. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7123" name="Teleport: Gludio" type="EtcItem">
+		<!-- Magical scroll that relocates you to the Town of Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -367,9 +367,9 @@
 			<skill id="2213" level="7" /> <!-- Scroll of Escape: Town of Gludio -->
 		</skills>
 	</item>
-	<item id="7124" name="Scroll of Escape: Town of Dion" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Town of Dion. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7124" name="Teleport: Dion" type="EtcItem">
+		<!-- Magical scroll that relocates you to the Town of Dion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -386,9 +386,9 @@
 			<skill id="2213" level="8" /> <!-- Scroll of Escape: Town of Dion -->
 		</skills>
 	</item>
-	<item id="7125" name="Scroll of Escape: Floran Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Floran Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7125" name="Teleport: Floran" type="EtcItem">
+		<!-- Magical scroll that relocates you to Floran Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -405,9 +405,9 @@
 			<skill id="2213" level="9" /> <!-- Scroll of Escape: Floran Village -->
 		</skills>
 	</item>
-	<item id="7126" name="Scroll of Escape: Town of Giran" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Town of Giran. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7126" name="Teleport: Giran" type="EtcItem">
+		<!-- Magical scroll that relocates you to the Town of Giran. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -424,8 +424,8 @@
 			<skill id="2213" level="10" /> <!-- Scroll of Escape: Town of Giran -->
 		</skills>
 	</item>
-	<item id="7127" name="Scroll of Escape: Hardin's Academy" type="EtcItem">
-		<!-- Magical scroll that relocates you to Hardin's Academy. Cannot be sold in shops. -->
+	<item id="7127" name="Teleport: Hardin's Academy" type="EtcItem">
+		<!-- Magical scroll that relocates you to Hardin's Academy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -443,9 +443,9 @@
 			<skill id="2213" level="11" /> <!-- Scroll of Escape: Hardin's Academy -->
 		</skills>
 	</item>
-	<item id="7129" name="Scroll of Escape: Town of Oren" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Town of Oren. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7129" name="Teleport: Oren" type="EtcItem">
+		<!-- Magical scroll that relocates you to the Town of Oren. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -462,9 +462,9 @@
 			<skill id="2213" level="13" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="7130" name="Scroll of Escape: Ivory Tower" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Ivory Tower. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7130" name="Teleport: Ivory Tower" type="EtcItem">
+		<!-- Magical scroll that relocates you to the Ivory Tower. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -481,9 +481,9 @@
 			<skill id="2213" level="14" /> <!-- Scroll of Escape: Ivory Tower -->
 		</skills>
 	</item>
-	<item id="7131" name="Scroll of Escape: Hunter's Village" type="EtcItem">
-		<!-- Magical scroll that relocates you to Hunter's Village. Cannot be sold in shops. -->
-		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+	<item id="7131" name="Teleport: Hunter's Village" type="EtcItem">
+		<!-- Magical scroll that relocates you to Hunter's Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
@@ -500,8 +500,8 @@
 			<skill id="2213" level="15" /> <!-- Scroll of Escape: Hunter's Village -->
 		</skills>
 	</item>
-	<item id="7139" name="Leto Lizardman Bracelet" type="EtcItem">
-		<!-- Bracelet that Leto Lizardman wears. Take this to Guard Rath in Town of Giran. -->
+	<item id="7139" name="Lizardman Bracelet" type="EtcItem">
+		<!-- Leto Lizardman Bracelet. Take it to Guard Rath in Giran. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -870,7 +870,8 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="2368" name="Squire's Gloves" type="Weapon">
+	<item id="2368" name="Training Gloves" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_training_gloves_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -902,6 +903,7 @@
 		</stats>
 	</item>
 	<item id="2369" name="Squire's Sword" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_squires_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -931,7 +933,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2370" name="Sqire's Blunt Weapon" type="Weapon">
+	<item id="2370" name="Guild Member's Club" type="Weapon">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

@@ -467,7 +467,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4350" name="Ancient Goddess Statue: ?" type="EtcItem">
+	<item id="4350" name="Ancient Goddess Statue" type="EtcItem">
 		<!-- Statue created by the ancient sculptor Berona. It Has not been evaluated by antique experts yet. -->
 		<set name="icon" val="icon.etc_statue_of_einhasad_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -694,7 +694,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4371" name="Scepter of Darkness" type="EtcItem">
-		<!-- Staff that gives off dark M. Atk. On its handle, the words Great Demon King are engraved. -->
+		<!-- Staff that gives off dark M. Atk. On its handle, the words Great Demon King are engraved.\0 -->
 		<set name="icon" val="icon.etc_imperial_scepter_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -727,7 +727,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="4374" name="Heart of Darkness" type="EtcItem">
-		<!-- Heart-shaped stone piece that gives off the aura of dark M. Atk. On its reverse, the words I love you Merkenis! are engraved. -->
+		<!-- Heart-shaped stone piece that gives off the aura of dark M. Atk. On its reverse, the words I love you Merkenis! are engraved.\0 -->
 		<set name="icon" val="icon.etc_heart_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -935,7 +935,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4393" name="Calculator" type="EtcItem">
+	<item id="4393" name="Go Get the Calculator" type="EtcItem">
 		<!-- Allows one to perform a simple calculation. -->
 		<set name="icon" val="icon.etc_calculator_i00" />
 		<set name="default_action" val="CALC" />
@@ -948,7 +948,7 @@
 		<set name="handler" val="Calculator" />
 	</item>
 	<item id="4397" name="Book of Saint" type="EtcItem">
-		<!-- The book of Saint Solina. Take it along with the blood of a Saint and the bough of a Saint to Magister Hanellin. -->
+		<!-- Holy Writ of Solina, which looks like an ordinary book. Take it to Magister Hanellin. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

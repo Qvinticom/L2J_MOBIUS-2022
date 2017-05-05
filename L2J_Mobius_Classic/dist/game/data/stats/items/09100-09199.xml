@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9138" name="Santa Hat" type="Armor">
-		<!-- Wear it for some holiday fun! Uses 2 hair accessory slots. -->
+		<!-- Santa Hat made for a merry holiday. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="icon.accessory_santas_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -13,8 +13,8 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="9140" name="Salvation Bow" type="Weapon">
-		<!-- Shoots a harmless heart-tipped arrow and allows use of the Forgiveness active skill. (Warning: If you use this skill against a monster, you will be flagged for PvP.) -->
+	<item id="9140" name="Cupid’s Bow" type="Weapon">
+		<!-- Sends a heart of love and allows using the Forgiveness active skill. Warning: If you use this bow against a monster, it will flag you for PvP. -->
 		<set name="icon" val="icon.weapon_krono_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

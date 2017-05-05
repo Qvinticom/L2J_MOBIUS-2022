@@ -11,8 +11,8 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -27,7 +27,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5801" name="For NPC (Dusk)" type="Weapon">
+	<item id="5801" name="Dusk" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -38,8 +38,8 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -54,7 +54,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5802" name="For NPC (Dawn)" type="Weapon">
+	<item id="5802" name="Dawn" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -65,8 +65,8 @@
 		<set name="material" val="ORIHARUKON" />
 		<set name="weight" val="1380" />
 		<set name="price" val="1226000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
@@ -145,7 +145,7 @@
 		</skills>
 	</item>
 	<item id="5808" name="Party Mask" type="Armor">
-		<!-- Fashion item used to display a unique appearance. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- A fashion item used to display a unique appearance. -->
 		<set name="icon" val="icon.etc_party_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -181,7 +181,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5811" name="Spellbook: Mass Slow" type="EtcItem">
-		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 62 -->
+		<!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 61 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -236,7 +236,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5816" name="Spellbook: Advanced Block" type="EtcItem">
-		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 58 -->
+		<!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -247,7 +247,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5817" name="Chrono Campana" type="Weapon">
-		<!-- Chronicle III Souvenir!!! -->
+		<!-- Chronicle III Souvenir! Cannot be dropped. -->
 		<set name="icon" val="icon.weapon_chrono_campana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -278,7 +278,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="100000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -298,7 +298,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="80000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -364,7 +364,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5863" name="Alligator Tooth" type="EtcItem">
-		<!-- Sharp canine tooth of the Alligator. Bring this to the warehouse keeper of Heine. -->
+		<!-- Sharp tooth of the Alligator. Take it to Morita on the shore of Alligator Island. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -397,8 +397,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5865" name="Carnivore Spores" type="EtcItem">
-		<!-- Tissue sample collected from a spore zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
+	<item id="5865" name="Zoogenous Spores" type="EtcItem">
+		<!-- Spore sample collected from a Spore Zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -414,7 +414,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5866" name="Herbivorous Spores" type="EtcItem">
+	<item id="5866" name="Phytogenic Spores" type="EtcItem">
 		<!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -449,7 +449,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5868" name="Snake Scale" type="EtcItem">
-		<!-- Snake scale from the bodies of Palibati and Trives. Take it to Grand Master Oltran of Town of Aden. -->
+		<!-- Snake scale from the bodies of Palibati and Trives. Take it to Priest Ruvard in Aden. -->
 		<set name="icon" val="icon.etc_scale_of_medusa_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -516,8 +516,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5872" name="Supply Items" type="EtcItem">
-		<!-- Supply items for Taik Orcs. Take it to Guard Coleman and he will give you a reward. -->
+	<item id="5872" name="Supplies" type="EtcItem">
+		<!-- Supply items of Taik Orcs. Take them to Priest Ruvard and he will reward you. -->
 		<set name="icon" val="icon.etc_squares_wood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -686,7 +686,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5882" name="Flare Shard" type="EtcItem">
+	<item id="5882" name="Fire Crystal" type="EtcItem">
 		<!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i00" />
 		<set name="immediate_effect" val="true" />
@@ -703,7 +703,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5883" name="Freezing Shard" type="EtcItem">
+	<item id="5883" name="Ice Shard" type="EtcItem">
 		<!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
 		<set name="icon" val="icon.etc_echo_crystal_i01" />
 		<set name="immediate_effect" val="true" />
@@ -721,7 +721,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5884" name="Cave Beast Tooth" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Manakia. -->
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -738,7 +738,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5885" name="Death Wave Light" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during their ritual. Take it to Priest Manakia. -->
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
 		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -789,7 +789,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5888" name="Karik Horn" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Manakia. -->
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -805,9 +805,9 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5889" name="Cave Howler Skull" type="EtcItem">
-		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Manakia. -->
-		<set name="icon" val="icon.etc_skull_red_i00" />
+	<item id="5889" name="Limal Karinness Blood" type="EtcItem">
+		<!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
+		<set name="icon" val="icon.etc_reagent_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />

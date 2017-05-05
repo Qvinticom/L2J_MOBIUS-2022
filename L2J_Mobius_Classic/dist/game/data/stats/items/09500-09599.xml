@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9589" name="Iron Bracelet" type="Armor">
-		<!-- Uses 1 talisman slot when equipped. -->
+		<!-- When equipped, opens up 1 Talisman slot. -->
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="9590" name="Bronze Bracelet" type="Armor">
-		<!-- Uses 2 talisman slots when equipped. -->
+		<!-- When equipped, opens up 2 Talisman slots. -->
 		<set name="icon" val="icon.etc_rbracelet_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
@@ -35,7 +35,7 @@
 		</skills>
 	</item>
 	<item id="9591" name="Steel Bracelet" type="Armor">
-		<!-- Uses 3 talisman slots when equipped. -->
+		<!-- When equipped, opens up 3 Talisman slots. -->
 		<set name="icon" val="icon.etc_rbracelet_a_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />

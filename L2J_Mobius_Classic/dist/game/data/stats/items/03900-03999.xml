@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="3926" name="Scroll: Guidance" type="EtcItem">
-		<!-- Accuracy increases. -->
+		<!-- Increases P. Accuracy by 2 for 20 minutes when used. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -21,12 +21,12 @@
 		</skills>
 	</item>
 	<item id="3927" name="Scroll: Death Whisper" type="EtcItem">
-		<!-- Increases P. Critical Damage. -->
+		<!-- Increases Physical Critical Damage by 25% for 20 minutes when used. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -41,12 +41,12 @@
 		</skills>
 	</item>
 	<item id="3928" name="Scroll: Focus" type="EtcItem">
-		<!-- P. Critical Rate increases. -->
+		<!-- Increases P. Critical Rate by 20% for 20 minutes when used. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -60,13 +60,13 @@
 			<skill id="2052" level="1" /> <!-- Scroll: Focus -->
 		</skills>
 	</item>
-	<item id="3929" name="Scroll: Greater Acumen" type="EtcItem">
-		<!-- Spell Casting Spd. Increases. -->
+	<item id="3929" name="Scroll: Acumen" type="EtcItem">
+		<!-- When used increases Casting Spd. by 15% for 20 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -81,12 +81,12 @@
 		</skills>
 	</item>
 	<item id="3930" name="Scroll: Haste" type="EtcItem">
-		<!-- Increases Atk. Spd. -->
+		<!-- When used increases Atk. Spd. by 15% for 20 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -106,7 +106,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -120,13 +120,13 @@
 			<skill id="2055" level="1" /> <!-- Scroll: Agility -->
 		</skills>
 	</item>
-	<item id="3932" name="Scroll: Mystic Empower" type="EtcItem">
-		<!-- M. Atk. Increases. -->
+	<item id="3932" name="Scroll: Empower" type="EtcItem">
+		<!-- When used increases M. Atk. by 55% for 20 minutes. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -146,7 +146,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -161,12 +161,12 @@
 		</skills>
 	</item>
 	<item id="3934" name="Scroll: Wind Walk" type="EtcItem">
-		<!-- Speed increases. -->
+		<!-- Increases Speed by 20 for 20 minutes when used. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -186,7 +186,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -206,7 +206,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="400000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -229,8 +229,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -261,8 +261,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -293,8 +293,8 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
@@ -357,7 +357,7 @@
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3944" name="Spellbook: Decrease Weight" type="EtcItem">
+	<item id="3944" name="Spellbook: Light" type="EtcItem">
 		<!-- Spellbook needed to learn Decrease Weight. Used by Elven Oracles. Required level: 35 -->
 		<set name="icon" val="icon.etc_spell_books_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -369,7 +369,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3947" name="Blessed Spiritshot (No-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with No-grade weapons. -->
+		<!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -386,7 +386,7 @@
 		</skills>
 	</item>
 	<item id="3948" name="Blessed Spiritshot (D-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with D-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 		</skills>
 	</item>
 	<item id="3949" name="Blessed Spiritshot (C-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with C-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -424,7 +424,7 @@
 		</skills>
 	</item>
 	<item id="3950" name="Blessed Spiritshot (B-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with B-grade weapons. -->
+		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -443,7 +443,7 @@
 		</skills>
 	</item>
 	<item id="3951" name="Blessed Spiritshot (A-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing its magic significantly. Used with a-grade weapons. -->
+		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing the power of magic attack. Used with A-grade weapons. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -522,12 +522,12 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3958" name="Blessed Scroll of Escape" type="EtcItem">
-		<!-- Magical scroll that relocates user to the nearest village -->
+		<!-- Magical scroll that relocates you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -543,7 +543,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
@@ -554,7 +554,7 @@
 		</skills>
 	</item>
 	<item id="3960" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
-		<!-- Gludio/Sword/Stationary. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -566,7 +566,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3961" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
-		<!-- Gludio/Spear/Stationary. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -578,7 +578,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3962" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
-		<!-- Gludio/Bow/Stationary. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -590,7 +590,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3963" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
-		<!-- Gludio/Cleric/Stationary. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -602,7 +602,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3964" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
-		<!-- Gludio/Wizard/Stationary. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -614,7 +614,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3965" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
-		<!-- Gludio/Sword/Mobile. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -626,7 +626,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3966" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
-		<!-- Gludio/Spear/Mobile. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -638,7 +638,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3967" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
-		<!-- Gludio/Bow/Mobile. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -650,7 +650,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3968" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
-		<!-- Gludio/Cleric/Mobile. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -662,7 +662,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3969" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
-		<!-- Gludio/Wizard/Mobile. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -674,7 +674,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3970" name="Mercenary Posting Ticket (Teleporter1)" type="EtcItem">
-		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner castle or the guardian's location. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -686,7 +686,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3971" name="Mercenary Posting Ticket (Teleporter2)" type="EtcItem">
-		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the outer castle or the guardian's location. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />
@@ -698,7 +698,7 @@
 		<set name="handler" val="MercTicket" />
 	</item>
 	<item id="3972" name="Mercenary Posting Ticket (Teleporter3)" type="EtcItem">
-		<!-- Placed in Gludio, at the Teleporter or inside the castle, this ticket allows teleportation to the inner or outer castle. -->
+		<!-- Cannot be used. Can be sold at an NPC�s store. -->
 		<set name="icon" val="icon.mticket_teleporter_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
 		<set name="immediate_effect" val="true" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5126" name="Dual Weapon Crafting Stamp" type="EtcItem">
-		<!-- Certificate obtained from a shop or quest. Essential component for making dualswords of B-grade and higher. -->
+		<!-- Essential component for making dualswords of B-grade and higher. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
@@ -21,8 +21,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -50,8 +50,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -78,8 +78,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
@@ -106,8 +106,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -135,8 +135,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -152,7 +152,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="5132" name="Monster Only (Giant Trident)" type="Weapon">
+	<item id="5132" name="Monster Only (Lesser Giant)" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -164,8 +164,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="300" />
 		<set name="price" val="81800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
@@ -182,7 +182,7 @@
 		</stats>
 	</item>
 	<item id="5133" name="Chrono Unitus" type="Weapon">
-		<!-- Chronicle II Souvenir!!! -->
+		<!-- Chronicle II Souvenir! Cannot be dropped. -->
 		<set name="icon" val="icon.weapon_chrono_tambourine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -265,7 +265,7 @@
 		</skills>
 	</item>
 	<item id="5138" name="Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- 300 compressed soulshots. A-grade. -->
+		<!-- 300 compressed Soulshots. A-grade. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -485,7 +485,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -545,7 +545,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -605,7 +605,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -669,7 +669,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="price" val="1500" />
+		<set name="price" val="400" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />

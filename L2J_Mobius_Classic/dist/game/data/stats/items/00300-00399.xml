@@ -32,7 +32,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="301" name="Scorpion" type="Weapon">
+	<item id="301" name="scorpion" type="Weapon">
 		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_scorpion_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -45,8 +45,8 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1990" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -77,8 +77,8 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="2030" />
 		<set name="price" val="352580" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -109,8 +109,8 @@
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1980" />
 		<set name="price" val="735540" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
@@ -195,8 +195,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="630" />
 		<set name="price" val="21000" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
 		<set name="isAppearanceable" val="true" />
@@ -220,8 +220,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="610" />
 		<set name="price" val="21000" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
 		<set name="isAppearanceable" val="true" />
@@ -245,8 +245,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="620" />
 		<set name="price" val="37600" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
 		<set name="isAppearanceable" val="true" />
@@ -272,8 +272,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="620" />
 		<set name="price" val="63000" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -300,8 +300,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="610" />
 		<set name="price" val="63000" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -328,8 +328,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="600" />
 		<set name="price" val="63000" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -356,8 +356,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="570" />
 		<set name="price" val="99100" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -384,8 +384,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="580" />
 		<set name="price" val="148700" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -412,8 +412,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="570" />
 		<set name="price" val="148700" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -440,8 +440,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="540" />
 		<set name="price" val="214800" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -468,8 +468,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="280000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -496,8 +496,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="304000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -524,8 +524,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="234380" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -552,8 +552,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="360000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -580,8 +580,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1600" />
 		<set name="price" val="360000" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -608,8 +608,8 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="540" />
 		<set name="price" val="441940" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_WEAPON" />
@@ -853,7 +853,7 @@
 			<stat type="pDef">166</stat>
 		</stats>
 	</item>
-	<item id="360" name="Corroded Armor of Victory" type="Armor">
+	<item id="360" name="Armor of Victory" type="Armor">
 		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -891,7 +891,7 @@
 			<stat type="pDef">185</stat>
 		</stats>
 	</item>
-	<item id="364" name="Corroded Elven Crystal Breastplate" type="Armor">
+	<item id="364" name="Elven Crystal Breastplate" type="Armor">
 		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1120,7 +1120,7 @@
 			<stat type="pDef">109</stat>
 		</stats>
 	</item>
-	<item id="385" name="Corroded Gaiters of Victory" type="Armor">
+	<item id="385" name="Gaiters of Victory" type="Armor">
 		<set name="icon" val="icon.armor_plate_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1158,7 +1158,7 @@
 			<stat type="pDef">116</stat>
 		</stats>
 	</item>
-	<item id="387" name="Corroded Elven Crystal Gaiters" type="Armor">
+	<item id="387" name="Elven Crystal Gaiters" type="Armor">
 		<set name="icon" val="icon.armor_plate_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />

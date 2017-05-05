@@ -52,7 +52,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3403" name="Timak Orc Skull" type="EtcItem">
-		<!-- The skull of a slain Timak Orc. Gather 10 of these and take them to Urutu chief Hatos. -->
+		<!-- The skull of a slain Timak Orc. Gather 10 of these and take them to Urutu Chief Hatos. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -86,7 +86,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3405" name="Neruga Axe Blade" type="EtcItem">
-		<!-- The blade portion of a ceremonial axe. Take this to Neruga Chief Tantus. -->
+		<!-- Ceremonial Axe Blade. Take it to Neruga Chief Tantus. -->
 		<set name="icon" val="icon.weapon_heavy_bone_club_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -119,7 +119,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3407" name="Marsh Spider's Feeler" type="EtcItem">
+	<item id="3407" name="Marsh Spider's Pincer" type="EtcItem">
 		<!-- Key ingredient in making the Duda-Mara tribe totem. Gather 10 of these and take them to Duda-Mara Chief Takuna. -->
 		<set name="icon" val="icon.etc_ginseng_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -307,7 +307,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3429" name="Spellbook: Greater Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Greater Heal. Used by Bishops, Elders, and Shillien Elders. Required level: Bishop- 40, Elder, Shillien Elder 48 -->
+		<!-- Spellbook needed to learn Greater Heal. Used by Bishops, Elven Elders, and Shillien Elders. Required level: Bishop- 40, Elven Elders, Shillien Elder 48 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -329,7 +329,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3431" name="Spellbook: Greater Group Heal" type="EtcItem">
-		<!-- Spellbook needed to learn Greater Group Heal. Used by Bishops, Shillien Elders, and Elders. Required level: Bishop: 40, Shillien Elder and Elder: 48 -->
+		<!-- Spellbook needed to learn Greater Group Heal. Used by Bishops, Shillien Elders, and Elven Elders. Required level: Bishop: 40, Shillien Elder and Elven Elders: 48 -->
 		<set name="icon" val="icon.etc_spell_books_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -351,6 +351,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3433" name="Elf Figure" type="EtcItem">
+		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_figure_FElf_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -366,6 +367,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3434" name="Coke" type="EtcItem">
+		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_coke_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -381,6 +383,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3435" name="Nvidia" type="EtcItem">
+		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_nvidia_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -396,6 +399,7 @@
 		<set name="is_depositable" val="false" />
 	</item>
 	<item id="3436" name="Mouse" type="EtcItem">
+		<!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_mouse_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -752,7 +756,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3467" name="Wish Potion" type="EtcItem">
+	<item id="3467" name="The Wishing Potion" type="EtcItem">
 		<!-- Magic potion that is said to make wishes come true. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -795,7 +799,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3471" name="Cybellin's Dagger" type="Weapon">
-		<!-- Dagger used in ceremony to raise the purity of blood crystal. -->
+		<!-- Dagger used in ceremony to raise the purity of blood crystal. Cannot be exchanged, dropped, sold, destroyed, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1125,7 +1129,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3499" name="Fairy Dust" type="EtcItem">
-		<!-- Powder that falls from the body of fairy. Is sold at an expensive price at shops. -->
+		<!-- Powder that falls from the body of fairy. Is sold at an expensive price at shops. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

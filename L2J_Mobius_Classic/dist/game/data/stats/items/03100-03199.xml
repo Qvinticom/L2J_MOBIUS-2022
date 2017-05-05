@@ -210,7 +210,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3119" name="Mark of Guildsman" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Guildsman. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Trial of the Guildsman. Class transfer related item. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -227,7 +227,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3120" name="Valkon's Recommendation" type="EtcItem">
-		<!-- Recommendation letter written by Warehouse Keeper Valkon. Take this and go to Blacksmith Altran of Talking Island. -->
+		<!-- Recommendation letter written by Warehouse Keeper Valkon. Take this and go to Blacksmith Altran of the Talking Island Village. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -294,7 +294,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3124" name="Altran's 2nd Recommendation" type="EtcItem">
+	<item id="3124" name="Altran's 1st Recommendation" type="EtcItem">
 		<!-- Recommendation letter written by Blacksmith Altran. Take this and go to Blacksmith Pinter of the Town of Gludio. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -482,7 +482,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3135" name="Pinter's Instructions" type="EtcItem">
-		<!-- Instructions of Blacksmith Pinter: Find and bring back 70 amber beads. -->
+		<!-- Instructions of Blacksmith Pinter: Gather 70 amber beads. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -533,7 +533,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3138" name="Journeyman Deco Beads" type="EtcItem">
-		<!-- Ingredient item used to make a journeyman's ring. -->
+		<!-- Material used to make the journeyman's ring. -->
 		<set name="icon" val="BranchSys2.icon.etc_Journeyman_deco_beads_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -567,7 +567,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3140" name="Mark of Life" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Life. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Testimony of Life. Class transfer related item. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -601,7 +601,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3142" name="Camomile Charm" type="EtcItem">
-		<!-- Talisman given by Hierarch Asterios. Take this and return to Master Cardien in the Town of Dion. -->
+		<!-- A charm given by Hierarch Asterios. Take it to Master Cardien in the Town of Dion. -->
 		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -635,7 +635,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3144" name="Moonflower Charm" type="EtcItem">
-		<!-- The charm given by Hierarch Asterios to keep in possession while searching for the water of life. -->
+		<!-- A charm given by Hierarch Asterios. Keep it while searching for the Water of life. -->
 		<set name="icon" val="icon.accessary_paradia_ring_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -651,8 +651,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3145" name="Grail Diagram" type="EtcItem">
-		<!-- Diagram of the grail, given by Thalia. Take this and go to Blacksmith Pushkin of Town of Giran. -->
+	<item id="3145" name="Cup blueprint" type="EtcItem">
+		<!-- Pure Mithril Cup blueprint given by Thalia. Take it to Blacksmith Pushkin of Town of Giran. -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -685,7 +685,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3147" name="Thalia's 2nd Letter" type="EtcItem">
+	<item id="3147" name="Thalia's 1st Letter" type="EtcItem">
 		<!-- Thalia's letter. Take this and go to Isael Silvershadow of the Hunter's Village. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -720,7 +720,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3149" name="Pushkin's List" type="EtcItem">
-		<!-- List given by Blacksmith Pushkin. 10 pure Mithril Ore, 20 ant soldier acid, 20 Wyrm talons -->
+		<!-- List given by Blacksmith Pushkin. 10 pure Mithril Ore, 20 ant soldier acid, 20 Wyrm talons\0 -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -839,7 +839,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3156" name="Isael's Instructions" type="EtcItem">
-		<!-- Document containing Isael Silvershadow's instructions. It asks you to recover 6 pieces of Talin's Spear from Leto lizardman shamans. -->
+		<!-- Isael Silvershadow's orders. Collect 6 pieces of Talin's Spear from Leto Lizardman Shamans and Leto Lizardman Chiefs. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -873,7 +873,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3158" name="Grail of Purity" type="EtcItem">
-		<!-- Grail crafted of pure mithril. Catch the tears of the unicorn with the grail and take it back to Thalia. -->
+		<!-- A cup of Pure Mithril. Gather Tears of Unicorn in the Cup and take it back to Thalia. -->
 		<set name="icon" val="icon.etc_oil_pot_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -907,7 +907,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3160" name="Water of Life" type="EtcItem">
-		<!-- The holy water that contains the powers of life to rejuvenate the Mother Tree. Take this and go to Hierarch Asterios. -->
+		<!-- Water of Life. It has the power to rejuvenate the Tree of Life. Take it to Hierarch Asterios. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -991,7 +991,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3165" name="Harpy's Down" type="EtcItem">
+	<item id="3165" name="Harpy's Feather" type="EtcItem">
 		<!-- The down feathers obtained after slaying a harpy. Gather 20 of these and take them back to Priest Adonius. -->
 		<set name="icon" val="icon.etc_feather_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1111,7 +1111,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3172" name="Mark of Fate" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Fate. Item for occupational change. -->
+		<!-- Mark given to those who have passed the Testimony of Fate. Item for class transfer. -->
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1178,8 +1178,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3176" name="Herbalism Textbook" type="EtcItem">
-		<!-- Textbook of various herbs and their usages. It also contains information about the deadly Poison belladonna. -->
+	<item id="3176" name="Herbology Textbook" type="EtcItem">
+		<!-- Textbook that contains information about the deadly Poison belladonna. -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1400,7 +1400,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3189" name="Kaira's Recommendation" type="EtcItem">
-		<!-- Recommendation letter written by Magister Kaira. Take this and go to Tetrarch Thifiell of the Dark Elf Village. -->
+		<!-- Recommendation letter written by Magister Kaira. Take it to Hierarch Thifiell of the Dark Elf Village. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1417,7 +1417,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3190" name="Palus Charm" type="EtcItem">
-		<!-- Charm given by Tetrarch Thifiell to keep in possession until the Initiation Ceremony of the Shillien Circle is complete. -->
+		<!-- A charm given by Hierarch Thifiell. Keep it though the course of the Ceremony of the Shillien Circle. -->
 		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1434,7 +1434,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3191" name="Thifiell's Letter" type="EtcItem">
-		<!-- Letter from Tetrarch Thifiell to Arkenia. Arkenia is at the Dark Elven Initiation Altar. -->
+		<!-- Letter from Hierarch Thifiell to Arkenia. Arkenia is at the Dark Elven Initiation Altar. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

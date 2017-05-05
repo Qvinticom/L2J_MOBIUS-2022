@@ -21,7 +21,7 @@
 	</item>
 	<item id="401" name="Drake Leather Armor" type="Armor">
 		<!-- Full body armor. -->
-		<set name="icon" val="icon.armor_t21_ul_i00" />
+		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
@@ -208,6 +208,7 @@
 		</stats>
 	</item>
 	<item id="425" name="Apprentice's Tunic" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t01_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -522,6 +523,7 @@
 		</stats>
 	</item>
 	<item id="461" name="Apprentice's Stockings" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t01_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />

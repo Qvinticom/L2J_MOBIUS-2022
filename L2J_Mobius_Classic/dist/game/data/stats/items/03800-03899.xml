@@ -205,7 +205,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3812" name="Kaldis Gold Dragon" type="EtcItem">
-		<!-- Coin that is the same as that which Hunter Guild President Bernard Has. Take this to Warehouse Keeper Sorint. -->
+		<!-- Coin that is the same as that which Hunter Guild President Bernard has. Take this to Warehouse Keeper Sorint. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -511,7 +511,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3830" name="Scale of Wyvern Shamhai" type="EtcItem">
-		<!-- Scale of Wyvern Shamhai. Take this and recover 20 eggs from the Basilisks and Lesser Basilisks of the Wasteland. -->
+		<!-- Scale of wyvern shamhai. Take this and recover 20 eggs from deadseekers of the Execution Grounds. -->
 		<set name="icon" val="icon.etc_seed_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -528,7 +528,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3831" name="Egg of Wyvern Shamhai" type="EtcItem">
-		<!-- Egg of Wyvern Shamhai recovered from the Basilisks and Lesser Basilisks. -->
+		<!-- Egg of wyvern shamhai recovered from deadseekers. -->
 		<set name="icon" val="icon.etc_dragon_egg_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -545,7 +545,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3832" name="Herb of Harit" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_herb_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -555,7 +555,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3833" name="Herb of Vanor" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -565,7 +565,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3834" name="Herb of Oel Mahum" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_herb_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -575,7 +575,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3835" name="Blood of Eva" type="EtcItem">
-		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. -->
+		<!-- One ingredient of antidote. Take all four antidote ingredients to the clan leader within the time. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_dragon_blood_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -584,8 +584,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3836" name="Athrea's Coin" type="EtcItem">
-		<!-- If you collect three Athrea's coins and take them to Witch Athrea, you will be able to obtain Blood of Eva. -->
+	<item id="3836" name="Ritasha's Coin" type="EtcItem">
+		<!-- If you collect three Ritasha's coins and take them to Sorceress Ritasha, you will be able to obtain Blood of Eva. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -595,7 +595,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3837" name="Symbol of Loyalty" type="EtcItem">
-		<!-- Certificate acquired in exchange for the life of a clan member. Take this to the clan leader. -->
+		<!-- Certificate acquired in exchange for the life of a clan member. Take this to the clan leader. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -605,7 +605,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3838" name="Recipe: Giant's Powerstone (25%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Quest. Required to make a Giant's Powerstone. Requires Create Item - Skill Lv. 2. The success rate is 25%. -->
+		<!-- For Dwarves only. Recipe for Quest. Required to make a Giant's Powerstone. Requires Create Item - Skill Lv. 2. The success rate is 25%. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -621,7 +621,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3839" name="Mist Drake's Egg" type="EtcItem">
-		<!-- Egg of mist drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
+		<!-- Egg of mist drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_dragon_egg_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -632,7 +632,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3840" name="Blitz Wyrm Egg" type="EtcItem">
-		<!-- Egg of blitz Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
+		<!-- Egg of blitz Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_dragon_egg_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -643,7 +643,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3841" name="Drake's Egg" type="EtcItem">
-		<!-- Egg of drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
+		<!-- Egg of drake. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_dragon_egg_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -654,7 +654,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3842" name="Thunder Wyrm Egg" type="EtcItem">
-		<!-- Egg of thunder Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. -->
+		<!-- Egg of thunder Wyrm. The clan leader must collect ten of each of four kinds of eggs and take them to Martien. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_dragon_egg_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3843" name="Brooch of the Magpie" type="EtcItem">
-		<!-- This brooch that was left by a dying Dwarf to be delivered to Head Blacksmith Kusto, his younger brother in Town of Giran. -->
+		<!-- This brooch that was left by a dying Dwarf to be delivered to Head Blacksmith Kusto, his younger brother in Town of Giran. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_feather_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -676,7 +676,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3844" name="Nebulite Crystals" type="EtcItem">
-		<!-- Soulshot of unknown identity. The clan leader must collect ten each of this and Giant's Powerstones and take it all to Balthazar. -->
+		<!-- Soulshot of unknown identity. The clan leader must collect ten each of this and Giant's Powerstones and take it all to Balthazar. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -687,7 +687,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3845" name="Giant's Broken Powerstone" type="EtcItem">
-		<!-- Giant's Powerstone. It is broken and useless. -->
+		<!-- Giant's Powerstone. It is broken and useless. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_instrument_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -698,7 +698,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3846" name="Giant's Powerstone" type="EtcItem">
-		<!-- Giant's Powerstone. The clan leader must collect ten of these and also, ten Nebulite Crystals and take them all to Balthazar. -->
+		<!-- Giant's Powerstone. The clan leader must collect ten of these and also, ten Nebulite Crystals and take them all to Balthazar. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -709,7 +709,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3847" name="Imperial Key" type="EtcItem">
-		<!-- Key used when opening imperial coffer. Must have all six to open the coffer. -->
+		<!-- Key used when opening imperial coffer. Must have all six to open the coffer. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -923,7 +923,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3860" name="2nd Fragment of Abyssal Jewel" type="EtcItem">
+	<item id="3860" name="1st Fragment of Abyssal Jewel" type="EtcItem">
 		<!-- Fragment obtained by destroying an Abyssal Jewel in Oren. Take it to Blacksmith Helton, the Watchman of the Seal. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -940,7 +940,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3861" name="3rd Fragment of Abyssal Jewel" type="EtcItem">
+	<item id="3861" name="1st Fragment of Abyssal Jewel" type="EtcItem">
 		<!-- Fragment obtained from destroying Abyssal Jewel. Take this to Antharas Watchman Theodric at the entrance to Antharas' Lair. -->
 		<set name="icon" val="icon.etc_broken_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1042,7 +1042,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3867" name="Gustav's 2nd Letter" type="EtcItem">
+	<item id="3867" name="Gustav's 1st Letter" type="EtcItem">
 		<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Balthazar of Hunter Village. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1059,7 +1059,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3868" name="Gustav's 3rd Letter" type="EtcItem">
+	<item id="3868" name="Gustav's 1st Letter" type="EtcItem">
 		<!-- Letter sent by Sir Gustav Athebaldt to those supporting him. Take it to Sir Eric Rodemai of the Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1180,8 +1180,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3875" name="Letter - A" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3875" name="Letter A" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_a_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1189,8 +1189,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3876" name="Letter - C" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3876" name="Letter C" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_c_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1198,8 +1198,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3877" name="Letter - E" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3877" name="Letter E" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_e_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1207,8 +1207,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3878" name="Letter - F" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3878" name="Letter F" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_f_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1216,8 +1216,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3879" name="Letter - G" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3879" name="Letter G" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_g_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1225,8 +1225,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3880" name="Letter - H" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3880" name="Letter H" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_h_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1234,8 +1234,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3881" name="Letter - I" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3881" name="Letter I" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_i_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1243,8 +1243,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3882" name="Letter - L" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3882" name="Letter L" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_l_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1252,8 +1252,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3883" name="Letter - N" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3883" name="Letter N" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_n_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1261,8 +1261,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3884" name="Letter - O" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3884" name="Letter O" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_o_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1270,8 +1270,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3885" name="Letter - R" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3885" name="Letter R" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_r_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1279,8 +1279,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3886" name="Letter - S" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3886" name="Letter S" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_s_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1288,8 +1288,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3887" name="Letter - T" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3887" name="Letter T" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_t_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1297,8 +1297,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3888" name="Letter - II" additionalName="Event" type="EtcItem">
-		<!-- Bring the letter to a GM to receive a great gift! -->
+	<item id="3888" name="Number II" type="EtcItem">
+		<!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
 		<set name="icon" val="icon.etc_alphabet_ii_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1306,7 +1306,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="3889" name="Potion of Recovery" type="EtcItem">
+	<item id="3889" name="Antidote" type="EtcItem">
 		<!-- Remedy that can neutralize the Poison of Witch Kalis. If the clan leader uses this, the Poisoning is healed. -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

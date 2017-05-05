@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6835" name="Circlet of Dion" type="Armor">
-		<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Torchlight Circlet. Can be worn by the lord of Dion Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -32,7 +32,7 @@
 		</skills>
 	</item>
 	<item id="6837" name="Circlet of Oren" type="Armor">
-		<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Tower Circlet. Can be worn by the lord of Oren Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -63,7 +63,7 @@
 		</skills>
 	</item>
 	<item id="6838" name="Circlet of Gludio" type="Armor">
-		<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Three-Swords Circlet. Can be worn by the lord of Gludio Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -94,7 +94,7 @@
 		</skills>
 	</item>
 	<item id="6839" name="Circlet of Giran" type="Armor">
-		<!-- Cross Circlet. Can be worn by the lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Cross Circlet. Can be worn by the lord of Giran Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_pledge_cap1_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -124,8 +124,8 @@
 			<skill id="3633" level="1" /> <!-- Residential Stun Immunity -->
 		</skills>
 	</item>
-	<item id="6840" name="Circlet of Aden" type="Armor">
-		<!-- Lion Circlet. Can be worn by the lord of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+	<item id="6840" name="Circlet of Adena" type="Armor">
+		<!-- Lion Circlet. Can be worn by the lord of Town of Aden Castle and clan members but not by allies. Allows use of Residential Skills when equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_pledge_cap2_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -156,7 +156,7 @@
 		</skills>
 	</item>
 	<item id="6841" name="Lord's Crown" type="Armor">
-		<!-- Lord's crown hair accessory. Allows use of Residential Skills when equipped. Cannot be transferred between servers. -->
+		<!-- Hair Accessory, Lord's Crown. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_crown_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -186,7 +186,7 @@
 		</skills>
 	</item>
 	<item id="6842" name="Wings of Destiny Circlet" type="Armor">
-		<!-- Hair accessory exclusively used by Heroes. Cannot be transferred between servers. -->
+		<!-- Hair Accessory, only for Heroes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_hero_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -208,7 +208,7 @@
 		</cond>
 	</item>
 	<item id="6843" name="Cat Ears" type="Armor">
-		<!-- Cat-ear shaped hair accessory -->
+		<!-- Cat-ear shaped hair accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.accessory_cat_ear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />

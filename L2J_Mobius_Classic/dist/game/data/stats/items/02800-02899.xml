@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="2800" name="Jax' Diary" type="EtcItem">
-		<!-- Diary that bodyguard Jax Has given, saying that it will aid in the search for Solt's and Makel's maps. -->
+	<item id="2800" name="Escort Jax" type="EtcItem">
+		<!-- Diary that bodyguard Jax has given, saying that it will aid in the search for Solt's and Makel's maps. -->
 		<set name="icon" val="icon.etc_spellbook_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -17,7 +17,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2801" name="1st Torn Map Piece" type="EtcItem">
+	<item id="2801" name="Torn Map Piece" type="EtcItem">
 		<!-- Piece of the map that belonged to the former lord's guard Solt. Gather 4 of these. -->
 		<set name="icon" val="icon.etc_map_piece_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -34,7 +34,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2802" name="2nd Torn Map Piece" type="EtcItem">
+	<item id="2802" name="Torn Map Piece" type="EtcItem">
 		<!-- Piece of the map that belonged to the former lord's guard Makel. Gather 4 of these. -->
 		<set name="icon" val="icon.etc_map_piece_yellow_i00" />
 		<set name="immediate_effect" val="true" />
@@ -120,7 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2807" name="Gold Bar" type="EtcItem">
-		<!-- Gold bar engraved with Duke Ashton's seal. Take this to Alex. -->
+		<!-- Gold bar engraved with Duke Ashton's seal. Take this to Captain Alex. -->
 		<set name="icon" val="icon.etc_lump_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -137,7 +137,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2808" name="Alex's Recommend" type="EtcItem">
-		<!-- Recommendation written by Alex. Take this to Master Luther. -->
+		<!-- Recommendation written by Captain Alex. Take this to Master Luther. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -154,7 +154,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2809" name="Mark of Searcher" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Searcher. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Trial of the Searcher. Class transfer related item. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -341,7 +341,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2820" name="Mark of Healer" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Healer. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Test of the Healer. Class transfer related item. -->
 		<set name="icon" val="icon.etc_jewel_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -358,7 +358,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2821" name="Mark of Reformer" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Reformer. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Trial of the Reformer. Class transfer related item. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -425,7 +425,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2825" name="Letter of Greetings" type="EtcItem">
+	<item id="2825" name="Sla's Letter" type="EtcItem">
 		<!-- Letter sent by Sla to her disciples. Go to the Orc Village, Dwarven Village, and Talking Island in this order. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -578,7 +578,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2834" name="Bone Fragment" type="EtcItem">
+	<item id="2834" name="Silent Horror's Bone Fragment" type="EtcItem">
 		<!-- Bone pieces of a Silent Horror. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_rib_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -595,7 +595,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2835" name="Bone Fragment" type="EtcItem">
+	<item id="2835" name="Skeleton Lord's Bone Fragment" type="EtcItem">
 		<!-- Bone fragment of a Skeleton Lord. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_piece_bone_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -612,7 +612,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2836" name="Bone Fragment" type="EtcItem">
+	<item id="2836" name="Skeleton Marksman's Bone Fragment" type="EtcItem">
 		<!-- Bone fragment of a Skeleton Marksman. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_molar_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -629,7 +629,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2837" name="Bone Fragment" type="EtcItem">
+	<item id="2837" name="Misery Skeleton's Bone Fragment" type="EtcItem">
 		<!-- Bone fragment from a Misery Skeleton. Take it along with other bone fragments of the undead to Ramus. -->
 		<set name="icon" val="icon.etc_molar_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -646,7 +646,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2838" name="Bone Fragment" type="EtcItem">
+	<item id="2838" name="Skeleton Archer's Bone Fragment" type="EtcItem">
 		<!-- Bone fragment of a Skeleton Archer. Take this, along with the rest of the undead bone fragments, to Ramus. -->
 		<set name="icon" val="icon.etc_rib_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -681,7 +681,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2840" name="Mark of Magus" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Magus. Item for occupational change. -->
+		<!-- Mark given to those who have passed the Trial of the Magus. Item for class transfer. -->
 		<set name="icon" val="icon.etc_mark_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -765,7 +765,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2845" name="2nd Golden Seed" type="EtcItem">
+	<item id="2845" name="1st Golden Seed" type="EtcItem">
 		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -782,7 +782,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2846" name="3rd Golden Seed" type="EtcItem">
+	<item id="2846" name="1st Golden Seed" type="EtcItem">
 		<!-- The seed of the singing flower, which absorbs blood in order to bloom. Gather 3 of these and take them to Bard Rukal. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1140,7 +1140,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2867" name="Mark of Maestro" type="EtcItem">
-		<!-- Mark given to those who have passed the Trial of the Maestro. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Trial of the Maestro. Class transfer related item. -->
 		<set name="icon" val="icon.etc_badge_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1157,7 +1157,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2868" name="Letter of Solder Detachment" type="EtcItem">
-		<!-- Letter from Captain Croto that promises to send soldiers. Deliver this to Lockirin of the Iron Gate. -->
+		<!-- Letter from Chief Croto that promises to send soldiers. Deliver this to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1174,7 +1174,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2869" name="Paint of Kamuru" type="EtcItem">
-		<!-- Painting of Kamuru. Go to the Cave of Trials in the orc kingdom to seek him out. -->
+		<!-- Painting of Kamuru. Go to the Cave of Trials on Immortal Plateau to seek him out. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1224,7 +1224,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2872" name="Teleport Device" type="EtcItem">
+	<item id="2872" name="Teleport" type="EtcItem">
 		<!-- Teleport device given by Master Toma. Deliver this to Black Anvil's Arin. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1243,7 +1243,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2873" name="Architecture of Cruma" type="EtcItem">
-		<!-- Simple explanation of Cruman architecture. Take this to the research team stationed at the entrance of the Cruma Tower. -->
+		<!-- Simple explanation of Cruman architecture. Take this to Researcher Lorain who can be found at the entrance of the Cruma Tower. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1277,7 +1277,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2875" name="Antidote Ingredients List" type="EtcItem">
-		<!-- Gather 10 Weird Wasp needles, 10 marsh spider webs, and 10 leech bloods and deliver them to Researcher Lorain. -->
+		<!-- Gather 10 Weird Wasp Needles, 10 Marsh Spider Webs, and 10 Leech Blood Vials and deliver them to Researcher Lorain. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1327,7 +1327,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2878" name="Leech Blood" type="EtcItem">
+	<item id="2878" name="Leech Blood Vial" type="EtcItem">
 		<!-- Gather 10 of these and deliver them along with the other ingredients to Researcher Lorain. -->
 		<set name="icon" val="icon.etc_reagent_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1345,7 +1345,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2879" name="Mark of Warspirit" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the War Spirit. Item for occupational change. -->
+		<!-- Mark given to those who have passed the Test of the War Spirit. Item for class transfer. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1362,7 +1362,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2880" name="Vendetta Totem" type="EtcItem">
-		<!-- Totem given to the Orcs who seek to punish betrayers of their race. Take this and hunt the Tamlin Orcs. -->
+		<!-- Totem granted to those Orcs who a ready to punish the traitors of orcish people. Take this totem to destroy Tamlin Orcs. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1395,8 +1395,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2882" name="Warspirit Totem" type="EtcItem">
-		<!-- Totem used in the Ritual of the War Spirit. Take this to Ancestor Martankus in the Cave of Trials. -->
+	<item id="2882" name="Warcryer Totem" type="EtcItem">
+		<!-- Totem used during the Test of the War Spirit. Take this to the Ancestor Martankus in the Cave of Trials. -->
 		<set name="icon" val="icon.accessary_another_worlds_necklace_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1413,7 +1413,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2883" name="Orim's Contract" type="EtcItem">
-		<!-- I will give you Braki's remains in return for 10 Porta Eyes, 10 Excuro Scales and 10 Mordeo Talons. -->
+		<!-- I will give you Braki's remains in return for 10 Porta Eyes, 10 Excuro Scales and 10 Mordeo Talons.\0 -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1430,7 +1430,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2884" name="Porta's Eye" type="EtcItem">
-		<!-- Jewel pried from the porta's eye. Gather 10 of these and take them to Orim of the Shadow. -->
+		<!-- Jewel pried from the porta's eye. Gather 10 of these and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_eyeball_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1447,7 +1447,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2885" name="Excuro's Scale" type="EtcItem">
-		<!-- The scales of an excuro. Gather 10 of these and take them to Orim of the Shadow. -->
+		<!-- Excuro's Scale. Gather 10 of these and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_parasite_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1464,7 +1464,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="2886" name="Mordeo's Talon" type="EtcItem">
-		<!-- The talons of a Mordeo. Gather 10 of these and take them to Orim of the Shadow. -->
+		<!-- The talons of a Mordeo. Gather 10 of these and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

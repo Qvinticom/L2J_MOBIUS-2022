@@ -120,7 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3307" name="Mark of Witchcraft" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of Witchcraft. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Test of Witchcraft. Class transfer related item. -->
 		<set name="icon" val="icon.etc_skull_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -137,7 +137,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3308" name="Orim's Diagram" type="EtcItem">
-		<!-- Diagram of relics, given by Orim of the Shadow. The 6 jewels needed for opening the Cube of Aklantoth are depicted here. -->
+		<!-- Diagram of relics, given by Shadow Orim. The 6 jewels needed for opening the Cube of Aklantoth are depicted here. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -154,7 +154,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3309" name="Alexandria's Book" type="EtcItem">
-		<!-- Book that contains records on who purchased Aklantoth' Gems. Magister Iker, Magister Kaira, Trader Lara -->
+		<!-- Book that contains records on who purchased Aklantoth' Gems. Magister Iker, Magister Kaira, Trader Lars\0 -->
 		<set name="icon" val="icon.etc_spellbook_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -239,7 +239,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3314" name="Lars' Memo" type="EtcItem">
-		<!-- Trader Lars' sales records. It is recorded that a man named Ismel bought the jewel from Lara. -->
+		<!-- Grocer Lars's sales records. It is recorded that a man named Ismel bought the jewel from Lars. -->
 		<set name="icon" val="icon.etc_piece_of_paper_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -256,7 +256,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3315" name="Nestle's Memo" type="EtcItem">
-		<!-- Trader Nestle's purchase records. It is recorded that Leopold of the Black Lion brought the jewel. -->
+		<!-- Accessory Merchant Nestle's purchase records. It is recorded that Leopold of the Black Lion brought the jewel. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -290,7 +290,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3317" name="Aklantoth 1st Gem" type="EtcItem">
-		<!-- Gem that can be obtained from Magister Iker. Find all 6 of Aklantoth gems and take them to Orim the Shadow. -->
+		<!-- Gem that can be obtained from Magister Iker. Find all 6 of Aklantoth gems and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_bead_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -306,8 +306,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3318" name="Aklantoth 2nd Gem" type="EtcItem">
-		<!-- The gem given by Magister Kaira. Find all 6 of Aklantoth gems and take them to Orim the Shadow. -->
+	<item id="3318" name="Aklantoth 1st Gem" type="EtcItem">
+		<!-- The gem given by Magister Kaira. Find all 6 of Aklantoth gems and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_bead_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -323,8 +323,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3319" name="Aklantoth 3rd Gem" type="EtcItem">
-		<!-- The gem that can be obtained by killing a nameless revenant. Find all 6 of Aklantoth gems and take them to Orim the Shadow. -->
+	<item id="3319" name="Aklantoth 1st Gem" type="EtcItem">
+		<!-- The gem that can be obtained by killing a Nameless Revenant. Find all 6 of Aklantoth gems and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_bead_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -340,8 +340,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3320" name="Aklantoth 4th Gem" type="EtcItem">
-		<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Orim the Shadow. -->
+	<item id="3320" name="Aklantoth 1st Gem" type="EtcItem">
+		<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -357,8 +357,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3321" name="Aklantoth 5th Gem" type="EtcItem">
-		<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Orim the Shadow. -->
+	<item id="3321" name="Aklantoth 1st Gem" type="EtcItem">
+		<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_bead_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -374,8 +374,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3322" name="Aklantoth 6th Gem" type="EtcItem">
-		<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Orim the Shadow. -->
+	<item id="3322" name="Aklantoth 1st Gem" type="EtcItem">
+		<!-- The gem that can be obtained by slaying a Skeleton Mercenary. Find all 6 of Aklantoth gems and take them to Shadow Orim. -->
 		<set name="icon" val="icon.etc_crystal_ball_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -409,7 +409,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3324" name="Orim's Instructions" type="EtcItem">
-		<!-- Set of instructions written by Orim of the Shadow. The instructions are to bring back the Sword of Seal and Soul Trap Crystal. -->
+		<!-- Set of instructions written by Shadow Orim. The instructions are to bring back the Sword of Seal and Soul Trap Crystal. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -426,7 +426,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3325" name="Orim's 1st Letter" type="EtcItem">
-		<!-- Letter from Orim of the Shadow to Sir Karol Vasper of the Town of Gludin. The letter asks for the loan of the Sword of the Seal. -->
+		<!-- Letter from Shadow Orim to Sir Karol Vasper of Gludin Village. The letter asks for the loan of the Sword of Seal. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -442,8 +442,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3326" name="Orim's 2nd Letter" type="EtcItem">
-		<!-- Letter from Orim of the Shadows to Magister Iker of Town of Giran. The letter asks for the loan of the Soul-trap Crystal. -->
+	<item id="3326" name="Orim's 1st Letter" type="EtcItem">
+		<!-- Letter from Shadow Orim to Magister Iker of Town of Giran. The letter asks for the loan of the Bound Crystal. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -562,7 +562,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3333" name="Purgatory Key" type="EtcItem">
-		<!-- Key needed to close Aklantoth' Chest. Take this to Orim of the Shadow. -->
+		<!-- Key needed to close Aklantoth' Chest. Take this to Shadow Orim. -->
 		<set name="icon" val="icon.etc_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -579,7 +579,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3334" name="Zeruel Bind Crystal" type="EtcItem">
-		<!-- Crystal that contains the trapped soul of the Dre Vanul Zeruel. Take this to Orim of the Shadow. -->
+		<!-- Crystal that contains the trapped soul of the Dre Vanul Zeruel. Take this to Shadow Orim. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -595,7 +595,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3335" name="2nd Brimstone" type="EtcItem">
+	<item id="3335" name="1st Brimstone" type="EtcItem">
 		<!-- Mark left behind by the Dre Vanul Prince Zeruel while escaping from the body of Fisher Evert. -->
 		<set name="icon" val="icon.etc_powder_orange_i00" />
 		<set name="immediate_effect" val="true" />
@@ -613,7 +613,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3336" name="Mark of Summoner" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Summoner. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Test of the Summoner. Class transfer related item. -->
 		<set name="icon" val="icon.weapon_apprentices_rod_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -630,7 +630,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3337" name="Leto Lizardman Amulet" type="EtcItem">
-		<!-- Amulet obtained after slaying a Leto Lizardman. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- Amulet obtained after slaying a Leto Lizardman. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_totem_necklace_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -647,7 +647,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3338" name="Red Spore Dust" type="EtcItem">
-		<!-- Red spores obtained from the bodies of the Giant Fungus. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- Red spores obtained from the bodies of the Giant Fungus. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_pouch_brown_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -664,7 +664,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3339" name="Karul Bugbear Totem" type="EtcItem">
-		<!-- Totem obtained after slaying the Karul Bugbear. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- Totem obtained after slaying the Karul Bugbear. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_totem_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -681,7 +681,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3340" name="Manashen Shard" type="EtcItem">
-		<!-- Shard of the shattered Manashen. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- Shard of the shattered Manashen. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -698,7 +698,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3341" name="Breka Orc Totem" type="EtcItem">
-		<!-- Totem that can be obtained after slaying a Breka orc. Collect 30 of them and take them to Trader Lara. -->
+		<!-- Totem that can be obtained after slaying a Breka orc. Collect 30 of them and take them to Trader Lars. -->
 		<set name="icon" val="icon.etc_totem_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -715,7 +715,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3342" name="Crimson Bloodstone" type="EtcItem">
-		<!-- Soul Stone embedded in the body of a fettered soul. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- Soul Stone embedded in the body of a fettered soul. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -732,7 +732,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3343" name="Tyrant's Talons" type="EtcItem">
-		<!-- The talon of a slain tyrant. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- The talon of a slain tyrant. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_claw_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -749,7 +749,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3344" name="Noble Ant's Wings" type="EtcItem">
-		<!-- Wings obtained after slaying Noble Ants at the Ant's Nest. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- Wings obtained after slaying Noble Ants at the Ant's Nest. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_feather_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -766,7 +766,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3345" name="Windsus Tusk" type="EtcItem">
-		<!-- The tusks of a slain Windsus. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- The tusks of a slain Windsus. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_horn_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -783,7 +783,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3346" name="Wyrm's Fangs" type="EtcItem">
-		<!-- The fangs of a slain Wyrm. Gather 30 of these and take them back to Trader Lara. -->
+		<!-- The fangs of a slain Wyrm. Gather 30 of these and take them back to Trader Lars. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -885,7 +885,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3352" name="Galatea's Letter" type="EtcItem">
-		<!-- Letter from Head Summoner Galatea to Trader Lara in the Town of Dion. -->
+		<!-- Letter from Head Summoner Galatea to Trader Lars in the Town of Dion. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1122,7 +1122,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3366" name="2nd Crystal of Inprogress" type="EtcItem">
+	<item id="3366" name="1st Crystal of Inprogress" type="EtcItem">
 		<!-- Indication that a Summoner battle is in progress. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1139,177 +1139,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3367" name="2nd Crystal of Foul" type="EtcItem">
-		<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Camoniell. -->
-		<set name="icon" val="icon.etc_gem_black_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3368" name="2nd Crystal of Defeat" type="EtcItem">
-		<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Camoniell. -->
-		<set name="icon" val="icon.etc_gem_red_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3369" name="2nd Crystal of Victory" type="EtcItem">
-		<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Camoniell. -->
-		<set name="icon" val="icon.etc_gem_green_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3370" name="3rd Crystal of Starting" type="EtcItem">
-		<!-- Indication that a Summoner battle Has begun. -->
-		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3371" name="3rd Crystal of Inprogress" type="EtcItem">
-		<!-- Indication that a Summoner battle is in progress. -->
-		<set name="icon" val="icon.etc_gem_clear_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3372" name="3rd Crystal of Foul" type="EtcItem">
-		<!-- Indication that foul play was involved in a summoner battle. Take this to Summoner Belthus. -->
-		<set name="icon" val="icon.etc_gem_black_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3373" name="3rd Crystal of Defeat" type="EtcItem">
-		<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Belthus. -->
-		<set name="icon" val="icon.etc_gem_red_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3374" name="3rd Crystal of Victory" type="EtcItem">
-		<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Belthus. -->
-		<set name="icon" val="icon.etc_gem_green_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3375" name="4th Crystal of Starting" type="EtcItem">
-		<!-- Indication that a Summoner battle Has begun. -->
-		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3376" name="4th Crystal of Inprogress" type="EtcItem">
-		<!-- Indication that a Summoner battle is in progress. -->
-		<set name="icon" val="icon.etc_gem_clear_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="3377" name="4th Crystal of Foul" type="EtcItem">
+	<item id="3367" name="1st Crystal of Foul" type="EtcItem">
 		<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Basillia. -->
 		<set name="icon" val="icon.etc_gem_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1326,7 +1156,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3378" name="4th Crystal of Defeat" type="EtcItem">
+	<item id="3368" name="1st Crystal of Defeat" type="EtcItem">
 		<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Basillia. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1343,7 +1173,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3379" name="4th Crystal of Victory" type="EtcItem">
+	<item id="3369" name="1st Crystal of Victory" type="EtcItem">
 		<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Basillia. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1360,7 +1190,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3380" name="5th Crystal of Starting" type="EtcItem">
+	<item id="3370" name="2nd Crystal of Starting" type="EtcItem">
 		<!-- Indication that a Summoner battle Has begun. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1377,7 +1207,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3381" name="5th Crystal of Inprogress" type="EtcItem">
+	<item id="3371" name="1st Crystal of Inprogress" type="EtcItem">
 		<!-- Indication that a Summoner battle is in progress. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1394,7 +1224,92 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3382" name="5th Crystal of Foul" type="EtcItem">
+	<item id="3372" name="1st Crystal of Foul" type="EtcItem">
+		<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Camoniell. -->
+		<set name="icon" val="icon.etc_gem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3373" name="1st Crystal of Defeat" type="EtcItem">
+		<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Camoniell. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3374" name="1st Crystal of Victory" type="EtcItem">
+		<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Camoniell. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3375" name="2nd Crystal of Starting" type="EtcItem">
+		<!-- Indication that a Summoner battle Has begun. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3376" name="1st Crystal of Inprogress" type="EtcItem">
+		<!-- Indication that a Summoner battle is in progress. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3377" name="1st Crystal of Foul" type="EtcItem">
 		<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Celestiel. -->
 		<set name="icon" val="icon.etc_gem_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1411,7 +1326,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3383" name="5th Crystal of Defeat" type="EtcItem">
+	<item id="3378" name="1st Crystal of Defeat" type="EtcItem">
 		<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Celestiel. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1428,7 +1343,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3384" name="5th Crystal of Victory" type="EtcItem">
+	<item id="3379" name="1st Crystal of Victory" type="EtcItem">
 		<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Celestiel. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1445,7 +1360,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3385" name="6th Crystal of Starting" type="EtcItem">
+	<item id="3380" name="2nd Crystal of Starting" type="EtcItem">
 		<!-- Indication that a Summoner battle Has begun. -->
 		<set name="icon" val="icon.etc_gem_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1462,7 +1377,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3386" name="6th Crystal of Inprogress" type="EtcItem">
+	<item id="3381" name="1st Crystal of Inprogress" type="EtcItem">
 		<!-- Indication that a Summoner battle is in progress. -->
 		<set name="icon" val="icon.etc_gem_clear_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1479,7 +1394,92 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3387" name="6th Crystal of Foul" type="EtcItem">
+	<item id="3382" name="1st Crystal of Foul" type="EtcItem">
+		<!-- Indication that foul play was involved in a summoner battle. Take this to Summoner Belthus. -->
+		<set name="icon" val="icon.etc_gem_black_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3383" name="1st Crystal of Defeat" type="EtcItem">
+		<!-- Indication that the Summoner Has been defeated in a battle. Take this to Summoner Belthus. -->
+		<set name="icon" val="icon.etc_gem_red_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3384" name="1st Crystal of Victory" type="EtcItem">
+		<!-- Indication that the Summoner Has been victorious in a battle. Take this to Summoner Belthus. -->
+		<set name="icon" val="icon.etc_gem_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3385" name="2nd Crystal of Starting" type="EtcItem">
+		<!-- Indication that a Summoner battle Has begun. -->
+		<set name="icon" val="icon.etc_gem_blue_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3386" name="1st Crystal of Inprogress" type="EtcItem">
+		<!-- Indication that a Summoner battle is in progress. -->
+		<set name="icon" val="icon.etc_gem_clear_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_questitem" val="true" />
+	</item>
+	<item id="3387" name="1st Crystal of Foul" type="EtcItem">
 		<!-- Indication that foul play was involved in a Summoner battle. Take this to Summoner Brynthea. -->
 		<set name="icon" val="icon.etc_gem_black_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1496,7 +1496,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3388" name="6th Crystal of Defeat" type="EtcItem">
+	<item id="3388" name="1st Crystal of Defeat" type="EtcItem">
 		<!-- Indication that the Summoner Has been defeated in a Summoner battle. Take this to Summoner Brynthea. -->
 		<set name="icon" val="icon.etc_gem_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1513,7 +1513,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3389" name="6th Crystal of Victory" type="EtcItem">
+	<item id="3389" name="1st Crystal of Victory" type="EtcItem">
 		<!-- Indication that the Summoner Has been victorious in a Summoner battle. Take this to Summoner Brynthea. -->
 		<set name="icon" val="icon.etc_gem_green_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1531,7 +1531,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3390" name="Mark of Lord" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Lord. Item for occupational change. -->
+		<!-- Mark given to those who have passed the Test of the Lord. Item for class transfer. -->
 		<set name="icon" val="icon.etc_orcish_talisman_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1564,8 +1564,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3392" name="Varkee's Charm" type="EtcItem">
-		<!-- The Atuba chief Varkee's charm. Go back to him after completing this task. -->
+	<item id="3392" name="Varkees's Charm" type="EtcItem">
+		<!-- The Atuba chief Varkees's charm. Go back to him after completing this task. -->
 		<set name="icon" val="icon.accessary_earing_of_black_ore_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

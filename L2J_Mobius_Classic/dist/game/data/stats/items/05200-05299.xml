@@ -236,8 +236,8 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="5220" name="Corroded Metal Hardener" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
+	<item id="5220" name="Metal Hardener" type="EtcItem">
+		<!-- Used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_blue_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -249,7 +249,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5230" name="Recipe: Mithril Arrow" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Mithril Arrow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Mithril Arrows. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -263,8 +263,8 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="5231" name="Recipe: Corroded Metal Hardener" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Corroded Metal Hardener. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+	<item id="5231" name="Recipe: Metal Hardener" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a Metal Hardener. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -296,7 +296,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5233" name="Keshanberk*Keshanberk" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -350,7 +350,7 @@
 		</skills>
 	</item>
 	<item id="5235" name="Facelifting Potion - A" type="EtcItem">
-		<!-- Beauty potion that changes one's facial appearance to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -372,7 +372,7 @@
 		</skills>
 	</item>
 	<item id="5236" name="Facelifting Potion - B" type="EtcItem">
-		<!-- Beauty potion that changes one's facial appearance to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -394,7 +394,7 @@
 		</skills>
 	</item>
 	<item id="5237" name="Facelifting Potion - C" type="EtcItem">
-		<!-- Beauty potion that changes one's facial appearance to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_purple_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -416,7 +416,7 @@
 		</skills>
 	</item>
 	<item id="5238" name="Dye Potion - A" type="EtcItem">
-		<!-- Beauty potion that changes one's hair color to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -438,7 +438,7 @@
 		</skills>
 	</item>
 	<item id="5239" name="Dye Potion - B" type="EtcItem">
-		<!-- Beauty potion that changes one's hair color to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -460,7 +460,7 @@
 		</skills>
 	</item>
 	<item id="5240" name="Dye Potion - C" type="EtcItem">
-		<!-- Beauty potion that changes one's hair color to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -482,7 +482,7 @@
 		</skills>
 	</item>
 	<item id="5241" name="Dye Potion - D" type="EtcItem">
-		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. Cannot be used by Kamaels or Ertheia. -->
+		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -504,7 +504,7 @@
 		</skills>
 	</item>
 	<item id="5242" name="Hair Style Change Potion - A" type="EtcItem">
-		<!-- Beauty potion that changes one's hair style to Type A. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair style to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -526,7 +526,7 @@
 		</skills>
 	</item>
 	<item id="5243" name="Hair Style Change Potion - B" type="EtcItem">
-		<!-- Beauty potion that changes one's hair style to Type B. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair style to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -548,7 +548,7 @@
 		</skills>
 	</item>
 	<item id="5244" name="Hair Style Change Potion - C" type="EtcItem">
-		<!-- Beauty potion that changes one's hair style to Type C. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair style to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -570,7 +570,7 @@
 		</skills>
 	</item>
 	<item id="5245" name="Hair Style Change Potion - D" type="EtcItem">
-		<!-- Beauty potion that changes one's hair style to Type D. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair style to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -592,7 +592,7 @@
 		</skills>
 	</item>
 	<item id="5246" name="Hair Style Change Potion - E" type="EtcItem">
-		<!-- Beauty potion that changes one's hair style to Type E. May be used by either male or female characters. The results may be viewed on the Character Creation Screen. -->
+		<!-- Beauty potion that changes one's hair style to Type E. Both genders. The results may be viewed on the Character Creation Screen. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -718,7 +718,7 @@
 		</skills>
 	</item>
 	<item id="5254" name="Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- Small package of compressed soulshots. Upon use, changes into a 1,000 A-grade soulshots. -->
+		<!-- Small package of compressed Soulshots. Upon use, changes into a 1,000 A-grade Soulshots. -->
 		<set name="icon" val="icon.etc_pouch_gray_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -928,7 +928,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -988,7 +988,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1048,7 +1048,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Blessed Spiritshot Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1078,7 +1078,7 @@
 			<skill id="2136" level="1" /> <!-- Rice Cake -->
 		</skills>
 	</item>
-	<item id="5284" name="Zweihander" type="Weapon">
+	<item id="5284" name="Zweinhander" type="Weapon">
 		<set name="icon" val="icon.weapon_zweihander_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1088,11 +1088,11 @@
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
 		<set name="price" val="37600" />
-		<set name="soulshots" val="2" />
+		<set name="soulshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="spiritshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">38</stat>
 			<stat type="mAtk">21</stat>
@@ -1115,8 +1115,8 @@
 		<set name="weight" val="1520" />
 		<set name="price" val="63000" />
 		<set name="change_weaponId" val="9210" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
@@ -1144,8 +1144,8 @@
 		<set name="weight" val="1380" />
 		<set name="price" val="942700" />
 		<set name="change_weaponId" val="9296" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
@@ -1160,7 +1160,7 @@
 		</stats>
 	</item>
 	<item id="5287" name="Sealed Dark Crystal breastplate" type="Armor">
-		<!-- Sealed Dark Crystal Breastplate. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal breastplate. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t74_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1180,7 +1180,7 @@
 		</stats>
 	</item>
 	<item id="5288" name="Sealed Dark Crystal Gaiters" type="Armor">
-		<!-- Sealed Dark Crystal Gaiters. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Gaiters. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t74_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1200,7 +1200,7 @@
 		</stats>
 	</item>
 	<item id="5289" name="Sealed Dark Crystal Helmet" type="Armor">
-		<!-- Sealed Dark Crystal Helmet. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Helmet. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1218,7 +1218,7 @@
 		</stats>
 	</item>
 	<item id="5290" name="Sealed Dark Crystal Gloves" type="Armor">
-		<!-- Sealed Dark Crystal Gloves. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Gloves. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t74_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1237,7 +1237,7 @@
 		</stats>
 	</item>
 	<item id="5291" name="Sealed Dark Crystal Boots" type="Armor">
-		<!-- Sealed Dark Crystal Boots. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Boots. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t74_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1256,7 +1256,7 @@
 		</stats>
 	</item>
 	<item id="5292" name="Sealed Dark Crystal Shield" type="Armor">
-		<!-- Sealed Dark Crystal Shield. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Shield. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.shield_dark_crystal_shield_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -1277,7 +1277,7 @@
 		</stats>
 	</item>
 	<item id="5293" name="Sealed Tallum Plate Armor" type="Armor">
-		<!-- Sealed Tallum Plate Armor. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Tallum Plate Armor. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t77_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1297,7 +1297,7 @@
 		</stats>
 	</item>
 	<item id="5294" name="Sealed Tallum Helmet" type="Armor">
-		<!-- Sealed Tallum Helmet. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Tallum Helmet. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1315,7 +1315,7 @@
 		</stats>
 	</item>
 	<item id="5295" name="Sealed Tallum Gloves" type="Armor">
-		<!-- Sealed Tallum Gloves. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Tallum Gloves. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1334,7 +1334,7 @@
 		</stats>
 	</item>
 	<item id="5296" name="Sealed Tallum Boots" type="Armor">
-		<!-- Sealed Tallum Boots. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Tallum Boots. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t77_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1353,7 +1353,7 @@
 		</stats>
 	</item>
 	<item id="5297" name="Sealed Dark Crystal Leather Armor" type="Armor">
-		<!-- Sealed Dark Crystal Leather Armor. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Leather Armor. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t75_u_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1373,7 +1373,7 @@
 		</stats>
 	</item>
 	<item id="5298" name="Sealed Dark Crystal Leggings" type="Armor">
-		<!-- Sealed Dark Crystal Leggings. The blacksmith in a village can release the seal on this item. -->
+		<!-- Sealed Dark Crystal Leggings. The seal can be removed by a blacksmith in any village. -->
 		<set name="icon" val="icon.armor_t75_l_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />

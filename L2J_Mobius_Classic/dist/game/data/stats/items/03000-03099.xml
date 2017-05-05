@@ -346,7 +346,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3023" name="Recipe: Lesser Giant's Key" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Quest. Required to make a Lesser Giant's Key. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Quest. Required to make a Lesser Giant's Key. Requires Create Item - Skill Lv. 1. The success rate is 100%. Cannot be exchanged, dropped, sold, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -369,7 +369,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3024" name="Recipe: Journeyman Ring" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Quest. Required to make a Journeyman Ring. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Quest. Required to make a Journeyman Ring. Requires Create Item - Skill Lv. 1. The success rate is 100%. Cannot be exchanged, dropped, sold, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -392,7 +392,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3025" name="Recipe: Amber Bead" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Quest. Required to make an Amber Bead. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for Quest. Required to make an Amber Bead. Requires Create Item - Skill Lv. 2. The success rate is 100%. Cannot be exchanged, dropped, sold, destroyed, or stored in a warehouse. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -415,7 +415,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3026" name="Talin's Spear" type="Weapon">
-		<!-- Use this spear to deliver the final blow to Eva's unicorn. -->
+		<!-- Use this spear to deliver the final blow to Eva's unicorn. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
 		<set name="icon" val="icon.weapon_short_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -424,8 +424,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="800" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -450,7 +450,7 @@
 		</stats>
 	</item>
 	<item id="3027" name="Old Knight Sword" type="Weapon">
-		<!-- Use this sword to deliver the final blow to the spirit of Sir Herod. -->
+		<!-- Use this sword to deliver the final blow to the spirit of Sir Herod. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
 		<set name="icon" val="icon.weapon_brandish_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -459,8 +459,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2100" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -481,7 +481,7 @@
 		</stats>
 	</item>
 	<item id="3028" name="Crescent Moon Bow" type="Weapon">
-		<!-- Use this bow to deliver the final blow to Commander Kadesh. -->
+		<!-- Use this bow to deliver the final blow to Commander Kadesh. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
 		<set name="icon" val="icon.weapon_short_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -490,8 +490,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="600" />
-		<set name="soulshots" val="6" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="mp_consume" val="1" />
 		<set name="reuse_delay" val="1500" />
 		<set name="is_tradable" val="false" />
@@ -515,7 +515,7 @@
 		</stats>
 	</item>
 	<item id="3029" name="Sword of Seal" type="Weapon">
-		<!-- Use this sword to deliver the final blow to Zeruel. -->
+		<!-- Use this sword to deliver the final blow to Zeruel. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
 		<set name="icon" val="icon.weapon_gladius_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -524,8 +524,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1200" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -556,7 +556,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3031" name="Spirit Ore" type="EtcItem">
-		<!-- Material used by Dwarves in item manufacturing. Also used to summon and maintain servitors.� Can be sold in any shop. -->
+		<!-- Material used to make Dwarven items. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_stone_gray_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />
@@ -612,7 +612,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="3035" name="Recipe: Spiritshot (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Spiritshot A-grade. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Spiritshot (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -678,7 +678,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3041" name="Spellbook: Summon Phantom Cubic" type="EtcItem">
-		<!-- Spellbook needed to learn Summon Phantom Cubic. Used by Shillien Knights and Phantom Summoners. Required level: 40 -->
+		<!-- Spellbook needed to learn Summon Phantom Cubic. Used by Shillien Knights. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_summon_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -722,7 +722,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3045" name="Spellbook: Summon Life Cubic" type="EtcItem">
-		<!-- Spellbook needed to learn Summon Life Cubic. Used by Temple Knights and Elemental Summoners. Required level: Temple Knight - 43, Elemental Summoner - 40 -->
+		<!-- Spellbook needed to learn Summon Life Cubic. Used by Temple Knights. Required level: 42 -->
 		<set name="icon" val="icon.etc_spell_books_defighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -733,7 +733,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3046" name="Spellbook: Sacrifice" type="EtcItem">
-		<!-- Spellbook needed to learn Sacrifice. Used by Paladins. Required level: 52 -->
+		<!-- Spellbook needed to learn Sacrifice. Used by Paladins. Required level: 50 -->
 		<set name="icon" val="icon.etc_spell_books_hfighter_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -920,7 +920,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3063" name="Spellbook: Anchor" type="EtcItem">
-		<!-- Spellbook needed to learn Anchor. Used by Necromancers. Required level: 44 -->
+		<!-- Spellbook needed to learn Anchor. Used by Necromancers. Required level: 40 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -953,7 +953,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3066" name="Spellbook: Curse Death Link" type="EtcItem">
-		<!-- Spellbook needed to learn Curse Death Link. Used by Necromancers and Spellhowlers. Required level: 52 -->
+		<!-- Spellbook needed to learn Curse Death Link. Used by Necromancers and Spellhowlers. Required level: 50 -->
 		<set name="icon" val="icon.etc_spell_books_black_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1206,7 +1206,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3089" name="Spellbook: Tempest" type="EtcItem">
-		<!-- Spellbook needed to learn Tempest. Used by Spellhowlers. Required level: 48 -->
+		<!-- Spellbook needed to learn Tempest. Used by Spellhowlers. Required level: 46 -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1305,7 +1305,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="3098" name="Spellbook: Return" type="EtcItem">
-		<!-- Spellbook needed to learn Return. Used by Prophets and Elders. Required level: Prophet- 40, Elder: 44 -->
+		<!-- Spellbook needed to learn Return. Used by Prophets and Elven Elders. Required level: Prophet: 40, Elven Elder: 44 -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="6611" name="Infinity Blade" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, casts a P. Def.-decreasing de-buff on the target. Also causes damage shield, increases Max HP/Max MP/Max CP, and Shield Defense. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+	<item id="6611" name="Infinity Sword" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Reflect: for 5 min. damage received +8%. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -42,8 +42,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6612" name="Infinity Cleaver" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts additional damage on the target. Also Has a chance of causing skill reflect and increasing Max HP/Max CP and P. Critical Damage/Rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+	<item id="6612" name="Infinity Slasher" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Slasher. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -84,7 +84,7 @@
 		</stats>
 	</item>
 	<item id="6613" name="Infinity Axe" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts discord on the target. Also causes damage shield. Increases Max HP/Max MP/Max CP and shield rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -127,7 +127,7 @@
 		</stats>
 	</item>
 	<item id="6614" name="Infinity Rod" type="Weapon">
-		<!-- Divine hero's weapon. Recovers HP by 100%. Increases Max MP/Max CP, Casting Spd., MP Recovery Rate when using magic skills. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Rod. Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%, when equipped. Infinity Power - Mana Limit: for 30 sec. magic skills don't consume MP. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -170,7 +170,7 @@
 		</stats>
 	</item>
 	<item id="6616" name="Infinity Scepter" type="Weapon">
-		<!-- Divine hero's weapon. Recovers HP 100% and adds holy P. Atk. Has a chance of increasing Max MP, Max CP, M. Atk., and M. Critical Rate, and of decreasing MP consumption and Magic Cancel Rate while using a magic skill. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -212,8 +212,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6617" name="Infinity Stinger" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts Silence on the target. Also causes Vampiric Rage. Increases success rate when using mortal type skills. Increases Max MP/Max CP, Atk. Spd. and MP Regeneration Rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+	<item id="6617" name="Infinity Dagger" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dagger. Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%, when equipped. Infinity Power - Immortal: for 5 min. increases the chance of deadly attack. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -255,8 +255,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="6618" name="Infinity Fang" type="Weapon">
-		<!-- Divine hero's weapon. Inflicts Stun on the target during a Critical Attack. Also Has a chance of causing skill reflect and increasing Max HP/Max MP/Max CP and Evasion. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+	<item id="6618" name="Infinity Fighter" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Fighter. Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -299,7 +299,7 @@
 		</stats>
 	</item>
 	<item id="6619" name="Infinity Bow" type="Weapon">
-		<!-- Divine hero's weapon. Inflicts Slow on the target during a Critical Attack Also causes Cheap Shot. Decreases cooldown. Increases Max MP/Max CP. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped. Infinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -343,8 +343,8 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="6620" name="Infinity Wing" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts physical skill Silence on the target. Also Has a chance of causing skill reflect and increasing Max HP/Max MP/Max CP and P. Critical Rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+	<item id="6620" name="Infinity Dualsword" type="Weapon">
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dualsword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped. Infinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
 		<set name="icon" val="icon.weapon_the_dualsword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -386,7 +386,7 @@
 		</stats>
 	</item>
 	<item id="6621" name="Infinity Spear" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts cancel on the target. Also Has a chance of causing skill reflect and increasing Max HP/Max CP, Atk. Spd., and Accuracy. Adds Holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -429,7 +429,7 @@
 		</stats>
 	</item>
 	<item id="6645" name="Beast Soulshot" type="EtcItem">
-		<!-- The light of a spirit is bestowed upon a pet/servitor and temporarily increases the power of attack. The number of soulshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
+		<!-- The power of a Soulshot is bestowed upon a servitor, increasing their physical attack. The number of Soulshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_beast_soul_shot_i00" />
 		<set name="default_action" val="SUMMON_SOULSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +447,7 @@
 		</skills>
 	</item>
 	<item id="6646" name="Beast Spiritshot" type="EtcItem">
-		<!-- The light of a spirit is bestowed upon a pet/servitor and temporarily increases the power of M. Atk. The number of spiritshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
+		<!-- The power of a Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -465,7 +465,7 @@
 		</skills>
 	</item>
 	<item id="6647" name="Blessed Beast Spiritshot" type="EtcItem">
-		<!-- The light of a higher-level spirit is bestowed upon a pet/servitor and temporarily increases the power of M. Atk. The number of blessed spiritshots consumed can be viewed in the Pet/Servitor Information window. (Used in the master's inventory.) -->
+		<!-- The power of a Blessed Spiritshot is bestowed upon a servitor, increasing their magical attack. The number of Spiritshots required is given in the servitor�s info window. (Used from the master�s inventory.) Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00" />
 		<set name="default_action" val="SUMMON_SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
@@ -483,7 +483,7 @@
 		</skills>
 	</item>
 	<item id="6660" name="Queen Ant's Ring" type="Armor">
-		<!-- MP + 21, Poison Resistance + 30%, Poison Atk. Rate + 30%, increases Accuracy, increases P. Critical Damage, Hold Resistance + 20%, and Hold Atk. Rate + 20%. When two identical rings are equipped, the effect of only one ring will be applied. -->
+		<!-- MP +9, Poison Resistance and Atk. Rate +10%, P. /M. Accuracy +1, P. /M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -505,7 +505,7 @@
 		</stats>
 	</item>
 	<item id="6661" name="Orfen's Earring" type="Armor">
-		<!-- MP + 31, Bleed Resistance + 20%, chance of Bleed attack + 20%. Increases healing effects. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_earring_of_orfen_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -527,7 +527,7 @@
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
-		<!-- MP + 21, Poison Resistance + 20%, Poison Atk. Rate + 20%. Increases Accuracy. When equipped with two identical rings, the effect of only one ring will be applied. -->
+		<!-- MP +9, Mental Resistance and Atk. Rate +10%, P. / M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

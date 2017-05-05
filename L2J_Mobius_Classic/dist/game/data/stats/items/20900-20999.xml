@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20900" name="Santa Hat" additionalName="14-day" type="Armor">
-		<!-- The Santa Hat made for celebrating Christmas. -->
+		<!-- Hat made for a merry Christmas. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_gawibawibo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -18,8 +18,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="20160" />
 	</item>
-	<item id="20901" name="Santa Hat Set" type="EtcItem">
-		<!-- The Santa Hat and Rudolph's Nose are packaged together. -->
+	<item id="20901" name="Santa's Gift" type="EtcItem">
+		<!-- Hat provided together with Santa's Red Nose. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

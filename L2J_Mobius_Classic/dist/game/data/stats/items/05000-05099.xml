@@ -122,7 +122,7 @@
 	</item>
 	<item id="5008" name="Recipe: Pata (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Pata. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_yellow_i00" />
+		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
 		<set name="immediate_effect" val="true" />
@@ -136,7 +136,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5009" name="Trophy of Alliance" type="EtcItem">
-		<!-- Mark that is needed to participate in a clan hall war. -->
+		<!-- Mark that is needed to participate in a clan hall war. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
 		<set name="icon" val="icon.etc_trophy_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -186,7 +186,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="5012" name="Leikan's Letter" type="EtcItem">
+	<item id="5012" name="Leikan's Note" type="EtcItem">
 		<!-- Letter received from Guard Leikan. Take it to Piotur at the farm east of the Orc Barracks. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="32249" name="Infinite Wooden Quiver" type="EtcItem">
-		<!-- Quiver containing arrows made of wood. Used with a No-grade bow. -->
+		<!-- Quiver with wooden arrows. Used with a No-grade bow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -56,7 +56,7 @@
 		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32253" name="Infinite Mithril Quiver" type="EtcItem">
-		<!-- Quiver containing steel arrows plated in mithril. Used with an A-grade bow. -->
+		<!-- A quiver of arrows coated by mithril. For A-grade bows. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
@@ -71,13 +71,13 @@
 	</item>
 	<item id="32254" name="Infinite Quiver of Light" type="EtcItem">
 		<!-- This quiver contains arrows made of unknown material. Used with an S-grade bow. -->
-		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_shining_arrows_i00" />
+		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_arrows_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="ARROW" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="MITHRIL" />
-		<set name="price" val="1716000" />
+		<set name="price" val="364800" />
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="S" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -91,14 +91,14 @@
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="ORIHARUKON" />
-		<set name="price" val="4528800" />
+		<set name="price" val="364800" />
 		<set name="is_freightable" val="false" />
 		<set name="crystal_type" val="R" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32256" name="Infinite Wooden Bolt Container" type="EtcItem">
-		<!-- Container with bolts made of wood. Used with a No-grade Crossbow. -->
+		<!-- Quiver with wooden bolts. Used with a No-grade Crossbow. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_bone_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
@@ -153,7 +153,7 @@
 		<set name="is_infinite" val="true" />
 	</item>
 	<item id="32260" name="Infinite Mithril Bolt Container" type="EtcItem">
-		<!-- Container with steel bolts plated in mithril. Used with an A-grade Crossbow. -->
+		<!-- A container of bolts coated by mithril. For A-grade bows. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quiver_of_mithril_bolts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />

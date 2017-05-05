@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20662" name="Agathion - Uthanka" type="Armor">
-		<!-- Bracelet that summons an Agathion - Uthanka. -->
+		<!-- Bracelet that can be used to summon Agathion - Uthanka. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -24,7 +24,7 @@
 		</skills>
 	</item>
 	<item id="20666" name="Valkyrie Hat" type="Armor">
-		<!-- The hat with Valkyrie's power in it. Uses 2 hair accessory slots. -->
+		<!-- A hat endowed with Valkyrie power. Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -44,7 +44,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20678" name="Gatekeeper Hat" type="Armor">
-		<!-- Hat worn by Gatekeepers. Uses 2 hair accessory slots. -->
+		<!-- Occupies 2 Hair Accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_gatekeeper_of_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />

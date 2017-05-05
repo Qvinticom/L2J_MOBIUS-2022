@@ -120,6 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="709" name="Leather Shirt" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_leather_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -142,6 +143,7 @@
 		</stats>
 	</item>
 	<item id="710" name="Durable Leather Shirt" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_leather_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -164,6 +166,7 @@
 		</stats>
 	</item>
 	<item id="711" name="Piece Bone Breastplate" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_mithril_banded_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -186,6 +189,7 @@
 		</stats>
 	</item>
 	<item id="712" name="Half Plate Armor" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="chest" />
@@ -208,6 +212,7 @@
 		</stats>
 	</item>
 	<item id="713" name="Leather Pants" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_squires_pants_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -230,6 +235,7 @@
 		</stats>
 	</item>
 	<item id="714" name="Durable Leather Pants" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_leather_pants_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -252,6 +258,7 @@
 		</stats>
 	</item>
 	<item id="715" name="Piece Bone Gaiters" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_mithril_banded_gaiters_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -274,6 +281,7 @@
 		</stats>
 	</item>
 	<item id="716" name="Plate Gaiters" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_dwarven_scale_mail_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="legs" />
@@ -296,6 +304,7 @@
 		</stats>
 	</item>
 	<item id="717" name="Leather Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -318,6 +327,7 @@
 		</stats>
 	</item>
 	<item id="718" name="Durable Leather Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -340,6 +350,7 @@
 		</stats>
 	</item>
 	<item id="719" name="Quality Leather Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -362,6 +373,7 @@
 		</stats>
 	</item>
 	<item id="720" name="Reinforced Gloves" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_gauntlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -384,6 +396,7 @@
 		</stats>
 	</item>
 	<item id="721" name="Leather Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -406,6 +419,7 @@
 		</stats>
 	</item>
 	<item id="722" name="Durable Leather Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -428,6 +442,7 @@
 		</stats>
 	</item>
 	<item id="723" name="Quality Leather Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_feet99" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -450,6 +465,7 @@
 		</stats>
 	</item>
 	<item id="724" name="Reinforced Boots" type="Armor">
+		<!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_iron_boots_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -472,13 +488,13 @@
 		</stats>
 	</item>
 	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Safe Enchant: +3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="1800000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -490,13 +506,13 @@
 		</skills>
 	</item>
 	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="240000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -508,7 +524,7 @@
 		</skills>
 	</item>
 	<item id="734" name="Wind Walk Potion" type="EtcItem">
-		<!-- Magical potion that increases movement Speed -->
+		<!-- Magical potion that increases movement Speed. -->
 		<set name="icon" val="icon.etc_potion_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -554,12 +570,12 @@
 		</skills>
 	</item>
 	<item id="736" name="Scroll of Escape" type="EtcItem">
-		<!-- Scroll of enchantment that relocates you to the nearest village. -->
+		<!-- Magical scroll that relocates you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="400" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -571,12 +587,12 @@
 		</skills>
 	</item>
 	<item id="737" name="Scroll of Resurrection" type="EtcItem">
-		<!-- Scroll of enchantment that resuscitates a dead person. -->
+		<!-- Magical scroll that resurrects a dead character. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="2000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -613,7 +629,7 @@
 		</stats>
 	</item>
 	<item id="739" name="Broken Sword Handle" type="EtcItem">
-		<!-- The handle portion of the sword of solidarity. Take this to Blacksmith Altran. -->
+		<!-- The handle part of the sword of solidarity. Take this to Blacksmith Altran. -->
 		<set name="icon" val="icon.weapon_small_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -630,7 +646,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="740" name="Broken Blade Bottom" type="EtcItem">
-		<!-- Take this, and the upper portion of the blade to Blacksmith Altran. -->
+		<!-- Take this, and the upper part of the blade to Blacksmith Altran. -->
 		<set name="icon" val="icon.weapon_great_sword_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -647,7 +663,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="741" name="Broken Blade Top" type="EtcItem">
-		<!-- Take this, and the lower portion of the blade to Blacksmith Altran. -->
+		<!-- Take this, and the lower part of the blade to Blacksmith Altran. -->
 		<set name="icon" val="icon.etc_sword_body_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -793,7 +809,7 @@
 		</stats>
 	</item>
 	<item id="748" name="Gallint's Oak Wand" type="Weapon">
-		<!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors. -->
+		<!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors, if used physically. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
 		<set name="icon" val="icon.weapon_club_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

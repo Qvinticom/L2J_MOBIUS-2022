@@ -1,5 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="900" name="Ring of Grace" type="Armor">
+		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="B" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="price" val="62120" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="mDef">34</stat>
+		</stats>
+	</item>
 	<item id="901" name="Ring of Holy Spirit" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_holy_spirit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -18,7 +32,7 @@
 		</stats>
 	</item>
 	<item id="902" name="Phoenix Ring" type="Armor">
-		<!-- Phoenix Ring. Produces the effect of MP + 13. -->
+		<!-- Phoenix Ring. Provides additional MP +13. -->
 		<set name="icon" val="icon.accessary_phoenixs_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -300,7 +314,7 @@
 		</stats>
 	</item>
 	<item id="924" name="Majestic Necklace" type="Armor">
-		<!-- Majestic Necklace. Produces the effect of MP + 33. -->
+		<!-- Majestic Necklace. Provides additional MP +33. -->
 		<set name="icon" val="icon.accessary_inferno_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -353,7 +367,7 @@
 		</stats>
 	</item>
 	<item id="933" name="Phoenix Necklace" type="Armor">
-		<!-- Phoenix Necklace. Produces the effect of MP + 26. -->
+		<!-- Phoenix Necklace. Provides additional MP +26. -->
 		<set name="icon" val="icon.accessary_phoenixs_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -542,11 +556,11 @@
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1100" />
 		<set name="price" val="13320" />
-		<set name="soulshots" val="2" />
+		<set name="soulshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="spiritshots" val="2" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">16</stat>
 			<stat type="mAtk">13</stat>
@@ -558,13 +572,13 @@
 		</stats>
 	</item>
 	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. + 4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="500000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -582,7 +596,7 @@
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="80000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -594,13 +608,13 @@
 		</skills>
 	</item>
 	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="110000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -618,7 +632,7 @@
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="15000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -630,13 +644,13 @@
 		</skills>
 	</item>
 	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bows, which increases by 4. M. Atk. + 2 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
+		<!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="50000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -654,7 +668,7 @@
 		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
-		<set name="weight" val="10" />
+		<set name="weight" val="120" />
 		<set name="price" val="6000" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -819,7 +833,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="972" name="Preserving Oil" type="EtcItem">
-		<!-- Oil that when used, prevents the rotting of corpses. Take this and go hunt zombies in the swamps. -->
+		<!-- Oil that prevents the rotting of corpses. Take this and go hunt zombies in the Marshlands. -->
 		<set name="icon" val="icon.etc_potion_clear_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -911,7 +925,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="977" name="2nd Badge of Sentinel" type="EtcItem">
+	<item id="977" name="1st Badge of Sentinel" type="EtcItem">
 		<!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Bhato bloodspear and report to Sentinel Kendell. -->
 		<set name="icon" val="icon.item_system03" />
 		<set name="immediate_effect" val="true" />
@@ -1038,7 +1052,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="985" name="2nd Onyx Talisman" type="EtcItem">
+	<item id="985" name="1st Onyx Talisman" type="EtcItem">
 		<!-- Necklace crafted of onyx. Recover the original scrolls from the blackskull Orcs and bring them to Abyssal Celebrant Kartia. -->
 		<set name="icon" val="icon.accessary_sages_necklace_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1090,7 +1104,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="988" name="Kartia's Translation" type="EtcItem">
-		<!-- Kartia's translation of Kaysha's Revelations. Take it to Tetrarch Thifiell. -->
+		<!-- Kartia's translation of Kaysha's Revelations. Take it to Hierarch Thifiell. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

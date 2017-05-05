@@ -628,7 +628,7 @@
 		</stats>
 	</item>
 	<item id="2437" name="Drake Leather Boots" type="Armor">
-		<set name="icon" val="icon.armor_t21_b_i00" />
+		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
@@ -970,7 +970,7 @@
 		</stats>
 	</item>
 	<item id="2461" name="Drake Leather Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t21_g_i00" />
+		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1132,7 +1132,7 @@
 		</stats>
 	</item>
 	<item id="2478" name="Tallum Gloves" type="Armor">
-		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="icon" val="icon.armor_t77_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1408,8 +1408,8 @@
 		<set name="weight" val="1440" />
 		<set name="price" val="277400" />
 		<set name="change_weaponId" val="9225" />
-		<set name="soulshots" val="3" />
-		<set name="spiritshots" val="3" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />

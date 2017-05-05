@@ -35,7 +35,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3202" name="Arkenia's Letter" type="EtcItem">
-		<!-- Letter written by Arkenia. It states that the Initiation Ceremony of the Shillien Circle is complete. Take this to Tetrarch Thifiell. -->
+		<!-- Letter written by Arkenia. It states that the Initiation Ceremony of the Shillien Circle is complete. Take it to Hierarch Thifiell. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -52,7 +52,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3203" name="Mark of Glory" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Glory. Item for occupational change. -->
+		<!-- Mark given to those who have passed the Testimony of Glory. Item for class transfer. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -272,7 +272,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3216" name="Chianta's 2nd Order" type="EtcItem">
+	<item id="3216" name="Chianta's 1st Order" type="EtcItem">
 		<!-- Gandi Chief Chianta's orders. The instructions are to come back for further orders after reaching level 38. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -289,7 +289,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3217" name="Chianta's 3rd Order" type="EtcItem">
+	<item id="3217" name="Chianta's 1st Order" type="EtcItem">
 		<!-- Gandi Chief Chianta's orders. The instructions are to bring back 20 each of Timak and Tamlin Orc heads. -->
 		<set name="icon" val="icon.etc_letter_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -647,7 +647,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3238" name="Mark of Prosperity" type="EtcItem">
-		<!-- Mark given to those who have passed the Testimony of Prosperity. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Testimony of Prosperity. Class transfer related item. -->
 		<set name="icon" val="icon.etc_coins_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -663,7 +663,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3239" name="1st Ring of Trials" type="EtcItem">
+	<item id="3239" name="Ring of Trials I" type="EtcItem">
 		<!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find the 4 proofs of prosperity. -->
 		<set name="icon" val="icon.accessary_ring_of_assistance_i00" />
 		<set name="immediate_effect" val="true" />
@@ -680,7 +680,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3240" name="2nd Ring of Trials" type="EtcItem">
+	<item id="3240" name="Ring of Trials II" type="EtcItem">
 		<!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find Maphr's tablet, which contains the ultimate secrets of geometry. -->
 		<set name="icon" val="icon.accessary_aquastone_ring_i00" />
 		<set name="immediate_effect" val="true" />
@@ -799,7 +799,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3247" name="Lockirin's Notice" type="EtcItem">
+	<item id="3247" name="Lockirin's Notice I" type="EtcItem">
 		<!-- Notice that guild contributions are due. Take this to Golden Wheel's Spiron. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -816,7 +816,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3248" name="Lockirin's Notice" type="EtcItem">
+	<item id="3248" name="Lockirin's Notice II" type="EtcItem">
 		<!-- Notice that guild contributions are due. Take this to Silver Scale's Balanki. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3249" name="Lockirin's Notice" type="EtcItem">
+	<item id="3249" name="Lockirin's Notice III" type="EtcItem">
 		<!-- Notice that guild contributions are due. Take this to Bronze Key's Keef. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -850,7 +850,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3250" name="Lockirin's Notice" type="EtcItem">
+	<item id="3250" name="Lockirin's Notice IV" type="EtcItem">
 		<!-- Notice that guild contributions are due. Take this to Filaur of the Grey Pillar. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -867,7 +867,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3251" name="Lockirin's Notice" type="EtcItem">
+	<item id="3251" name="Lockirin's Notice V" type="EtcItem">
 		<!-- Notice that guild contributions are due. Take this to Black Anvil's Arin. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="immediate_effect" val="true" />
@@ -885,7 +885,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3252" name="Contribution of Shari" type="EtcItem">
-		<!-- Trader Shari's guild contribution. Take this to Golden Wheel's Spiron. -->
+		<!-- Armor Merchant Shari's guild contribution. Take this to Golden Wheel's Spiron. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -902,7 +902,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3253" name="Contribution of Mion" type="EtcItem">
-		<!-- Trader Mion's guild contribution. Take this to Silver Scale's Balanki. -->
+		<!-- Grocer Mion's guild contribution. Take this to Silver Scale's Balanki. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -970,7 +970,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3257" name="Receipt of Bolter" type="EtcItem">
-		<!-- Miner Bolter's contribution receipt. Take this to Black Anvil's Arin to confirm if Miner Bolter Has already submitted his contribution. -->
+		<!-- Miner Bolter's contribution receipt. Take this to Filaur of the Gray Pillar Guild. -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -986,7 +986,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3258" name="Receipt of Contribution" type="EtcItem">
+	<item id="3258" name="Receipt of Contribution I" type="EtcItem">
 		<!-- The contribution receipt received from Golden Wheel's Spiron. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1003,7 +1003,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3259" name="Receipt of Contribution" type="EtcItem">
+	<item id="3259" name="Receipt of Contribution II" type="EtcItem">
 		<!-- The contribution receipt received from Silver Scale's Balanki. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1020,7 +1020,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3260" name="Receipt of Contribution" type="EtcItem">
+	<item id="3260" name="Receipt of Contribution III" type="EtcItem">
 		<!-- The contribution receipt received from Bronze Key's Keef. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1037,7 +1037,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3261" name="Receipt of Contribution" type="EtcItem">
+	<item id="3261" name="Receipt of Contribution IV" type="EtcItem">
 		<!-- Contribution receipt received from Filaur of the Grey Pillar. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1054,7 +1054,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3262" name="Receipt of Contribution" type="EtcItem">
+	<item id="3262" name="Receipt of Contribution V" type="EtcItem">
 		<!-- The contribution receipt received from Black Anvil's Arin. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1089,7 +1089,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3264" name="Bright's List" type="EtcItem">
-		<!-- List of ingredients that Guard Bright Has written. 20 mandragora petals, 10 bunches of crimson moss -->
+		<!-- List of ingredients that Guard Bright Has written. 20 mandragora petals, 10 bunches of crimson moss\0 -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1293,7 +1293,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3276" name="Mark of Champion" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Champion. Item for occupational change. -->
+		<!-- Mark given to those who have passed the Test of the Champion. Item for class transfer. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1360,8 +1360,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3280" name="Ascalon's 2nd Letter" type="EtcItem">
-		<!-- Veteran Ascalon's letter. Take this to Trader Groot of Town of Giran. -->
+	<item id="3280" name="Ascalon's 1st Letter" type="EtcItem">
+		<!-- Veteran Ascalon's letter. Take this to Dye Merchant Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1378,7 +1378,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3281" name="White Rose Insignia" type="EtcItem">
-		<!-- Insignia given by Trader Groot. It was formerly worn by the medics of the iron rose. Aid Trader Groot in his material gathering. -->
+		<!-- Insignia given by Dye Merchant Groot. It was formerly worn by the medics of the iron rose. Aid Dye Merchant Groot in his material gathering. -->
 		<set name="icon" val="icon.shield_knight_shield_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1411,7 +1411,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3283" name="Ascalon's 3rd Letter" type="EtcItem">
+	<item id="3283" name="Ascalon's 1st Letter" type="EtcItem">
 		<!-- Veteran Ascalon's letter. Take this to Captain Mouen of the Town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1429,7 +1429,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3284" name="Mouen's 1st Order" type="EtcItem">
-		<!-- Bring me 100 heads of Road Scavengers or Road Collectors. -->
+		<!-- Bring 10 heads of Road Scavengers or Road Collectors. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1445,8 +1445,8 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3285" name="Mouen's 2nd Order" type="EtcItem">
-		<!-- Destroy the Leto Lizardmen and bring back 100 of their fangs. -->
+	<item id="3285" name="Mouen's 1st Order" type="EtcItem">
+		<!-- Destroy the Leto Lizardmen and bring back 10 of their fangs. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1480,7 +1480,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3287" name="Harpy's Egg" type="EtcItem">
-		<!-- Egg obtained after slaying a harpy. Collect 30 of these and take them to Trader Groot of Town of Giran. -->
+		<!-- Egg obtained after slaying a Harpy. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_bead_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1497,7 +1497,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3288" name="Medusa's Venom" type="EtcItem">
-		<!-- The venom obtained after slaying a medusa. Collect 30 of these and take them to Trader Groot of Town of Giran. -->
+		<!-- The venom obtained after slaying a Medusa. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1514,7 +1514,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3289" name="Windsus Bile" type="EtcItem">
-		<!-- The bile obtained after slaying a Windsus. Collect 30 of these and take them to Trader Groot of Town of Giran. -->
+		<!-- The bile obtained after slaying a Windsus. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
 		<set name="icon" val="icon.etc_potion_scarlet_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1531,7 +1531,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3290" name="Bloody Axe Head" type="EtcItem">
-		<!-- The head of a Bloody Axe Elite. Collect 10 of these and return to Mason in the Town of Dion. -->
+		<!-- The head of a Bloody Axe's Escort. Collect 10 of these and return to Mason in the Town of Dion. -->
 		<set name="icon" val="icon.etc_skull_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1565,7 +1565,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3292" name="Leto Lizardman Fang" type="EtcItem">
-		<!-- Fang from a slain Leto lizardman. Collect 10 of these and take them to Captain Mouen. -->
+		<!-- Fang from a slain Leto Lizardman. Collect 10 of these and take them to Captain Mouen. -->
 		<set name="icon" val="icon.etc_fang_gray_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1582,7 +1582,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="3293" name="Mark of Sagittarius" type="EtcItem">
-		<!-- Mark given to those who have passed the Test of the Sagittarius. Occupation change related item. -->
+		<!-- Mark given to those who have passed the Test of the Sagittarius. Class transfer related item. -->
 		<set name="icon" val="icon.weapon_wooden_arrow_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -1632,7 +1632,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3296" name="Hamil's 2nd Letter" type="EtcItem">
+	<item id="3296" name="Hamil's 1st Letter" type="EtcItem">
 		<!-- Take this letter and go to Prefect Vokian of Town of Giran. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1649,7 +1649,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="3297" name="Hamil's 3rd Letter" type="EtcItem">
+	<item id="3297" name="Hamil's 1st Letter" type="EtcItem">
 		<!-- Take this letter and go to Gauen of the Ivory Tower. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="immediate_effect" val="true" />

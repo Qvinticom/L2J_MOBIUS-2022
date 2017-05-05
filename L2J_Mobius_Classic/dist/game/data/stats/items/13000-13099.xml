@@ -17,7 +17,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13015" name="My Teleport Book" type="EtcItem">
-		<!-- Increases My Teleport locations by 3 slots, which can be used to save specific locations. My Teleport locations can be expanded up to 18 slots. -->
+		<!-- A dimensional item.  Increases the number of return points to save by 3. The maximum number is 18. -->
 		<set name="icon" val="icon.bookmark_book_i00" />
 		<set name="default_action" val="CALL_SKILL" />
 		<set name="material" val="PAPER" />
@@ -33,7 +33,7 @@
 		</skills>
 	</item>
 	<item id="13016" name="My Teleport Scroll" type="EtcItem">
-		<!-- Item consumed when teleporting to a My Teleport location. -->
+		<!-- Dimensional Object. The item disappears after use. -->
 		<set name="icon" val="icon.bookmark_scroll_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -46,7 +46,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13021" name="Color Title" type="EtcItem">
-		<!-- Item that allows you to change your character's title color. You can change back to the original color by using the /resetname command after changing the title color. -->
+		<!-- A dimensional item. An item which can be used to change the color of a character�s title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse) -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -59,8 +59,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="handler" val="NicknameColor" />
 	</item>
-	<item id="13025" name="Agathion - Shiny" additionalName="30-day" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. 30-day. -->
+	<item id="13025" name="Agathion - Joy" type="Armor">
+		<!-- Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec. <Item Skill>. 2. Hidden Search: monsters don't attack first. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
