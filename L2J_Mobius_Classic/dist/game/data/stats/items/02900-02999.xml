@@ -255,38 +255,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="2915" name="Old Knight Sword" type="Weapon">
-		<!-- Use this sword to deliver the final blow to the spirit of Sir Herod. -->
-		<set name="icon" val="icon.weapon_long_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="3200" />
-		<set name="soulshots" val="2" />
-		<set name="spiritshots" val="2" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="isAppearanceable" val="true" />
-		<set name="is_depositable" val="false" />
-		<stats>
-			<stat type="pAtk">24</stat>
-			<stat type="mAtk">17</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="2916" name="Broken Teleport Device" type="EtcItem">
 		<!-- The teleport device given by Master Toma. Take this back to Master Toma. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />

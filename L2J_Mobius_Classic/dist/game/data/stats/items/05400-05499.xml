@@ -1,69 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5400" name="Recipe: Sealed Red Flame Gloves(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Red Flame Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="23200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5401" name="Recipe: Sealed Red Flame Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Red Flame Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="23200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5402" name="Recipe: Sealed Phoenix Gloves(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Phoenix Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="23200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5403" name="Recipe: Sealed Phoenix Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Phoenix Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="23200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
 	<item id="5404" name="Recipe: Sealed Gauntlets of Nightmare(60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for the Sealed Gauntlets of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
@@ -132,134 +68,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5408" name="Recipe: Sealed Dark Legion Gloves(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Dark Legion Gloves. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5409" name="Recipe: Sealed Dark Legion Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Dark Legion Gloves. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5410" name="Recipe: Sealed Gloves of Phantom(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Gloves of Phantom. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5411" name="Recipe: Sealed Gloves of Phantom" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Gloves of Phantom. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5412" name="Recipe: Sealed Cerberus Gloves(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Cerberus Gloves. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5413" name="Recipe: Sealed Cerberus Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Cerberus Gloves. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5414" name="Recipe: Sealed Dasparion's Gloves(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Dasparion's Gloves. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5415" name="Recipe: Sealed Dasparion's Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Dasparion's Gloves. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="35200" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
 		<stats>
 			<stat type="pDef">49</stat>
 		</stats>
@@ -948,38 +756,6 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="5454" name="Recipe: Orcish Halberd(60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for an Orcish Halberd. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="426000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
-	<item id="5455" name="Recipe: Orcish Halberd" type="EtcItem">
-		<!-- For Dwarves only. Recipe for an Orcish Halberd. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="426000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-		<stats>
-			<stat type="pDef">49</stat>
-		</stats>
-	</item>
 	<item id="5456" name="Recipe: Tallum Glaive(60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Tallum Glaive. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
@@ -1436,30 +1212,6 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5483" name="Phoenix Earring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Phoenix Earring. It can be sold at a regular store. -->
-		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="7215" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5484" name="Majestic Earring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make an Inferno Earring. It can be sold at a regular store. -->
-		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="9100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="5485" name="Sealed Tallum Tunic Texture" type="EtcItem">
 		<!-- Essential ingredient needed by a Dwarf to make a Sealed Tallum Tunic. It can be sold at a regular store. -->
 		<set name="icon" val="icon.etc_leather_yellow_i00" />
@@ -1520,54 +1272,6 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5490" name="Phoenix Necklace Beads" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make Phoenix Armor. It can be sold at a regular store. -->
-		<set name="icon" val="BranchSys2.icon.etc_phoenixnecklace_beads_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="9185" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5491" name="Majestic Necklace Beads" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make an Inferno Necklace. It can be sold at a regular store. -->
-		<set name="icon" val="BranchSys2.icon.etc_majesticnecklace_beads_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="13114" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5492" name="Phoenix Ring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a Phoenix Ring. It can be sold at a regular store. -->
-		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="5228" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5493" name="Majestic Ring Gemstone" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make an Inferno Ring. It can be sold at a regular store. -->
-		<set name="icon" val="icon.etc_gem_blue_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="6414" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="5494" name="Sealed Dark Crystal Shield Fragment" type="EtcItem">
 		<!-- Essential ingredient needed by a Dwarf to make a Sealed Dark Crystal Shield. It can be sold at a regular store. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
@@ -1612,30 +1316,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="8530" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5498" name="Sealed Boots of Underworld Lining" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make Sealed Boots of Underworld. It can be sold at a regular store. -->
-		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="5738" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5499" name="Sealed Gust Boot Lining" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make Sealed Gust Boots. It can be sold at a regular store. -->
-		<set name="icon" val="icon.etc_piece_of_cloth_black_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="5738" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />

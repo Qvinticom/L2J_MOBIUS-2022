@@ -90,66 +90,6 @@
 			<stat type="sDef">190</stat>
 		</stats>
 	</item>
-	<item id="104" name="Shield of Victory" type="Armor">
-		<set name="icon" val="icon.shield_small_shield_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="ORIHARUKON" />
-		<set name="weight" val="6400" />
-		<set name="price" val="83800" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="rEvas">-8</stat>
-			<stat type="rShld">20</stat>
-			<stat type="sDef">216</stat>
-		</stats>
-	</item>
-	<item id="105" name="Implosion Shield" type="Armor">
-		<set name="icon" val="icon.shield_doom_shield_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="DAMASCUS" />
-		<set name="weight" val="4800" />
-		<set name="price" val="83800" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="rEvas">-8</stat>
-			<stat type="rShld">20</stat>
-			<stat type="sDef">216</stat>
-		</stats>
-	</item>
-	<item id="106" name="Dark Dragon Shield" type="Armor">
-		<set name="icon" val="icon.shield_dark_dragon_shield_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="12" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="DAMASCUS" />
-		<set name="weight" val="4800" />
-		<set name="price" val="129960" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="rEvas">-8</stat>
-			<stat type="rShld">20</stat>
-			<stat type="sDef">230</stat>
-		</stats>
-	</item>
 	<item id="107" name="Compound Shield" type="Armor">
 		<set name="icon" val="icon.shield_composite_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -190,26 +130,6 @@
 			<stat type="sDef">230</stat>
 		</stats>
 	</item>
-	<item id="109" name="Shield of Solar Eclipse" type="Armor">
-		<set name="icon" val="icon.shield_shield_of_sola_eclipse_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="4800" />
-		<set name="price" val="83800" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="rEvas">-8</stat>
-			<stat type="rShld">20</stat>
-			<stat type="sDef">216</stat>
-		</stats>
-	</item>
 	<item id="110" name="Doom Shield" type="Armor">
 		<set name="icon" val="icon.shield_doom_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -228,26 +148,6 @@
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
 			<stat type="sDef">230</stat>
-		</stats>
-	</item>
-	<item id="111" name="Shield of Pledge" type="Armor">
-		<set name="icon" val="icon.shield_shield_of_pledge_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="4800" />
-		<set name="price" val="83800" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SHIELD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="rEvas">-8</stat>
-			<stat type="rShld">20</stat>
-			<stat type="sDef">216</stat>
 		</stats>
 	</item>
 	<item id="112" name="Apprentice's Earring" type="Armor">
@@ -809,126 +709,6 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="136" name="Zodiac Agathion Pack" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Angry Devil (30-day). -->
-		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="137" name="(Not in Use)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Shiny (30-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14076" min="1" max="1" chance="100" /> <!-- Agathion - Shiny (Event) - 30-day -->
-		</capsuled_items>
-	</item>
-	<item id="138" name="(Not in Use)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Sobbing (30-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14077" min="1" max="1" chance="100" /> <!-- Agathion - Sobbing (Event) - 30-day -->
-		</capsuled_items>
-	</item>
-	<item id="139" name="Agathion - Angry Devil Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Angry Devil (7-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14093" min="1" max="1" chance="100" /> <!-- Agathion - Angry Devil - 7-day -->
-		</capsuled_items>
-	</item>
-	<item id="140" name="Agathion - Shiny Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Shiny (7-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14094" min="1" max="1" chance="100" /> <!-- Agathion - Shiny - 7-day -->
-		</capsuled_items>
-	</item>
-	<item id="141" name="Agathion - Sobbing Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Sobbing (7-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14095" min="1" max="1" chance="100" /> <!-- Agathion - Sobbing - 7-day -->
-		</capsuled_items>
-	</item>
 	<item id="142" name="Keshanberk" type="Weapon">
 		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_kshanberk_i00" />
@@ -1071,34 +851,6 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="147" name="Tear of Darkness" type="Weapon">
-		<set name="icon" val="icon.weapon_shamshir_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="976" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="BLOOD_STEEL" />
-		<set name="weight" val="830" />
-		<set name="price" val="18300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="is_magic_weapon" val="true" />
-		<stats>
-			<stat type="pAtk">170</stat>
-			<stat type="mAtk">143</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
 	<item id="148" name="Sword of Valhalla" type="Weapon">
 		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_valhalla_i00" />
@@ -1122,34 +874,6 @@
 		<stats>
 			<stat type="pAtk">140</stat>
 			<stat type="mAtk">122</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="149" name="Corroded Sword of Life" type="Weapon">
-		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="976" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="840" />
-		<set name="price" val="18300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="is_magic_weapon" val="true" />
-		<stats>
-			<stat type="pAtk">170</stat>
-			<stat type="mAtk">143</stat>
 			<stat type="rCrit">8</stat>
 			<stat type="pAtkSpd">379</stat>
 			<stat type="randomDamage">10</stat>
@@ -1513,29 +1237,6 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="163" name="(Not in Use)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Sobbing (30-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="13026" min="1" max="1" chance="100" /> <!-- Agathion - Sobbing - 30-day -->
-		</capsuled_items>
-	</item>
 	<item id="164" name="Elysian" type="Weapon">
 		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
@@ -1558,34 +1259,6 @@
 		<stats>
 			<stat type="pAtk">232</stat>
 			<stat type="mAtk">114</stat>
-			<stat type="rCrit">6</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">20</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="165" name="Corroded Hermuncus' Hammer" type="Weapon">
-		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="1129" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="1570" />
-		<set name="price" val="35300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="BLUNT_WEAPON" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">251</stat>
-			<stat type="mAtk">121</stat>
 			<stat type="rCrit">6</stat>
 			<stat type="accCombat">8</stat>
 			<stat type="pAtkSpd">379</stat>
@@ -1704,28 +1377,6 @@
 			<stat type="randomDamage">20</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
-	</item>
-	<item id="170" name="Agathion - Angry Devil Pack (7-day) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing Agathion - Angry Devil (7-day). -->
-		<set name="icon" val="icon.etc_pi_gift_box_i02" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="FISH" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_premium" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<capsuled_items>
-			<item id="14101" min="1" max="1" chance="100" /> <!-- Agathion - Angry Devil (Event) - 7-day -->
-		</capsuled_items>
 	</item>
 	<item id="171" name="Deadman's Glory" type="Weapon">
 		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->

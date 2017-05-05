@@ -204,25 +204,6 @@
 			<stat type="maxMp">718</stat>
 		</stats>
 	</item>
-	<item id="2410" name="Tattoo of Nightmare" type="Armor">
-		<set name="icon" val="icon.armor_mithril_banded_mail_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="216" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="3600" />
-		<set name="price" val="4064000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="ARMOR_TOP" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">139</stat>
-		</stats>
-	</item>
 	<item id="2411" name="Brigandine Helmet" type="Armor">
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -374,40 +355,6 @@
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">73</stat>
-		</stats>
-	</item>
-	<item id="2420" name="Dragon Headgear" type="Armor">
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="89" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="540" />
-		<set name="price" val="2784000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="HELMET" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">77</stat>
-		</stats>
-	</item>
-	<item id="2421" name="The Hood" type="Armor">
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="89" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="540" />
-		<set name="price" val="2784000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="HELMET" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">77</stat>
 		</stats>
 	</item>
 	<item id="2422" name="Reinforced Leather Boots" type="Armor">
@@ -743,96 +690,6 @@
 		<set name="crystal_type" val="A" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1110" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
-		</stats>
-	</item>
-	<item id="2441" name="Dark Legion Boots" type="Armor">
-		<set name="icon" val="icon.armor_t45_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1120" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
-		</stats>
-	</item>
-	<item id="2442" name="Dasparion's Boots" type="Armor">
-		<set name="icon" val="icon.armor_t44_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1100" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
-		</stats>
-	</item>
-	<item id="2443" name="Dragon Leather Boots" type="Armor">
-		<set name="icon" val="icon.armor_t45_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="59" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1100" />
-		<set name="price" val="1856000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">51</stat>
-		</stats>
-	</item>
-	<item id="2444" name="The Boots" type="Armor">
-		<set name="icon" val="icon.armor_t44_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="59" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1100" />
-		<set name="price" val="1856000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">51</stat>
-		</stats>
-	</item>
-	<item id="2445" name="Dragon Scale Boots" type="Armor">
-		<set name="icon" val="icon.armor_t15_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1100" />
 		<set name="price" val="1355000" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FEET" />
@@ -1220,24 +1077,6 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="2467" name="Gloves of Blessing" type="Armor">
-		<set name="icon" val="icon.armor_t56_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="590" />
-		<set name="price" val="79820" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">41</stat>
-		</stats>
-	</item>
 	<item id="2468" name="Blessed Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t67_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1254,60 +1093,6 @@
 		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">39</stat>
-		</stats>
-	</item>
-	<item id="2469" name="Gloves of Underworld" type="Armor">
-		<set name="icon" val="icon.armor_t40_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="47" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="580" />
-		<set name="price" val="890000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">45</stat>
-		</stats>
-	</item>
-	<item id="2470" name="Gloves of Phantom" type="Armor">
-		<set name="icon" val="icon.armor_t45_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="560" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
-		</stats>
-	</item>
-	<item id="2471" name="Dark Legion Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t45_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="560" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
 		</stats>
 	</item>
 	<item id="2472" name="Dark Crystal Gloves" type="Armor">
@@ -1328,42 +1113,6 @@
 			<stat type="pDef">45</stat>
 		</stats>
 	</item>
-	<item id="2473" name="The Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t44_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="59" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="540" />
-		<set name="price" val="1856000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">51</stat>
-		</stats>
-	</item>
-	<item id="2474" name="Dasparion's Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t44_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="550" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
-		</stats>
-	</item>
 	<item id="2475" name="Sealed Doom Gloves" type="Armor">
 		<set name="icon" val="icon.armor_t71_g_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1380,42 +1129,6 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">44</stat>
-		</stats>
-	</item>
-	<item id="2476" name="Dragon Gauntlets" type="Armor">
-		<set name="icon" val="icon.armor_t15_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="66" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="540" />
-		<set name="price" val="2073000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">52</stat>
-		</stats>
-	</item>
-	<item id="2477" name="Dragon Leather Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t45_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="59" />
-		<set name="crystal_type" val="S" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="540" />
-		<set name="price" val="1856000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">51</stat>
 		</stats>
 	</item>
 	<item id="2478" name="Tallum Gloves" type="Armor">
@@ -1508,42 +1221,6 @@
 			<stat type="pDef">48</stat>
 		</stats>
 	</item>
-	<item id="2483" name="Gust Bracer" type="Armor">
-		<set name="icon" val="icon.armor_t45_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="47" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="580" />
-		<set name="price" val="890000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">45</stat>
-		</stats>
-	</item>
-	<item id="2484" name="Cerberus Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t44_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="72" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="540" />
-		<set name="price" val="1355000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">48</stat>
-		</stats>
-	</item>
 	<item id="2485" name="Implosion Gauntlets" type="Armor">
 		<set name="icon" val="icon.armor_t68_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1596,87 +1273,6 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<stats>
 			<stat type="pDef">44</stat>
-		</stats>
-	</item>
-	<item id="2488" name="Phoenix Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t44_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="47" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="570" />
-		<set name="price" val="890000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">45</stat>
-		</stats>
-	</item>
-	<item id="2489" name="Red Flame Gloves" type="Armor">
-		<set name="icon" val="icon.armor_t14_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="47" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="570" />
-		<set name="price" val="890000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">45</stat>
-		</stats>
-	</item>
-	<item id="2490" name="Cloak of Silence" type="Armor">
-		<set name="icon" val="icon.armor_back01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="250" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="CLOAK" />
-		<set name="price" val="6770" />
-		<stats>
-			<stat type="pDef">5</stat>
-		</stats>
-	</item>
-	<item id="2491" name="Golden Yarn Cloak" type="Armor">
-		<set name="icon" val="icon.armor_back01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="250" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="CLOAK" />
-		<set name="price" val="12300" />
-		<stats>
-			<stat type="pDef">5</stat>
-		</stats>
-	</item>
-	<item id="2492" name="Shadow Cloak" type="Armor">
-		<set name="icon" val="icon.armor_back01" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="back" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="42" />
-		<set name="crystal_type" val="C" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="240" />
-		<set name="price" val="126000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="CLOAK" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">12</stat>
 		</stats>
 	</item>
 	<item id="2493" name="Brigandine Shield" type="Armor">

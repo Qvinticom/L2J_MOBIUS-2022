@@ -976,22 +976,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1345" name="Arrow of Light" type="EtcItem">
-		<!-- A light arrow used for bows (S-grade). Material is unknown. -->
-		<set name="icon" val="icon.etc_shining_quiver_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="etcitem_type" val="ARROW" />
-		<set name="bodypart" val="lhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="ADAMANTAITE" />
-		<set name="weight" val="3" />
-		<set name="price" val="10" />
-		<set name="is_freightable" val="false" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="1346" name="Golem's Stoneheart" type="EtcItem">
 		<!-- Stone found within the remains of a destroyed golem. Take this to Trader Rorento. -->
 		<set name="icon" val="icon.etc_squares_gray_i00" />
@@ -1719,26 +1703,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1395" name="Spellbook: Surrender to Water" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Water. -->
-		<set name="icon" val="icon.etc_spell_books_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SPELLBOOK" />
-		<set name="price" val="1250" />
-	</item>
-	<item id="1396" name="Spellbook: Surrender to Wind" type="EtcItem">
-		<!-- Spellbook needed to learn Surrender to Water -->
-		<set name="icon" val="icon.etc_spell_books_blue_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="SPELLBOOK" />
-		<set name="price" val="1250" />
 	</item>
 	<item id="1397" name="Spellbook: Peace" type="EtcItem">
 		<!-- Spellbook needed to learn Peace. Used by Clerics. Required level: 35 -->

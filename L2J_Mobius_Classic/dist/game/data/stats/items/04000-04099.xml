@@ -460,27 +460,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="4038" name="Hatchling Food" type="EtcItem">
-		<!-- When the hunger gauge of a Hatchling reaches 55% or below, its food will be consumed automatically. -->
-		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="10" />
-		<set name="price" val="150" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="PetFood" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="PET_SUPPLIES" />
-		<set name="for_npc" val="true" />
-		<cond addName="1" msgId="113">
-			<player categoryType="HATCHLING_GROUP" />
-		</cond>
-		<skills>
-			<skill id="2063" level="1" /> <!-- Hatchling Food -->
-		</skills>
-	</item>
 	<item id="4039" name="Corroded Mold Glue" type="EtcItem">
 		<!-- Corroded ingredient. Sell it to a store or trade it in through the Aden Reconstruction Society for a new ingredient. -->
 		<set name="icon" val="icon.etc_reagent_red_i00" />

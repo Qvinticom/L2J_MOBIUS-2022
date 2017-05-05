@@ -1,53 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="5700" name="Seed: Alternative Great Cobol" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Great Cobol. For best results, a level 41- 51 character must plant it on a level 41- 51 monster. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.etc_cobol_seed_i00" />
-		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="SEED2" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="50" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Seed" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
-		<skills>
-			<skill id="2097" level="2" /> <!-- Sowing -->
-		</skills>
-	</item>
-	<item id="5701" name="Seed: Alternative Red Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Red Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="SEED2" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="40" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Seed" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
-		<skills>
-			<skill id="2097" level="3" /> <!-- Sowing -->
-		</skills>
-	</item>
-	<item id="5702" name="Seed: Alternative Sea Codran" type="EtcItem">
-		<!-- Plant this seed onto a monster in the Innadril area and it will bear the fruit of the Alternative Sea Codran. For best results, a level 44- 54 character must plant it on a level 44- 54 monster. Cannot be transferred between servers. -->
-		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="default_action" val="SEED" />
-		<set name="etcitem_type" val="SEED2" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="50" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="Seed" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
-		<skills>
-			<skill id="2097" level="3" /> <!-- Sowing -->
-		</skills>
-	</item>
 	<item id="5703" name="Lucky Charm (No-grade)" type="EtcItem">
 		<!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
@@ -65,33 +17,6 @@
 		<skills>
 			<skill id="2168" level="1" /> <!-- Lucky Charm -->
 		</skills>
-	</item>
-	<item id="5704" name="Keshanberk*Keshanberk" type="Weapon">
-		<set name="icon" val="icon.weapon_dual_sword_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
-		<set name="bodypart" val="lrhand" />
-		<set name="damage_range" val="0;0;44;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="751" />
-		<set name="crystal_type" val="A" />
-		<set name="material" val="FINE_STEEL" />
-		<set name="weight" val="2080" />
-		<set name="price" val="18300000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="DUALSWORD" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">259</stat>
-			<stat type="mAtk">107</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
 	</item>
 	<item id="5705" name="Keshanberk*Damascus" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
@@ -174,25 +99,6 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="material" val="LIQUID" />
 	</item>
-	<item id="5709" name="Sealed Zubei's Gauntlets" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t64_g_i02" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="590" />
-		<set name="price" val="79820" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">41</stat>
-		</stats>
-	</item>
 	<item id="5710" name="Zubei's Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_g_i00" />
@@ -234,25 +140,6 @@
 	<item id="5712" name="Zubei's Gauntlets" additionalName="Robe" type="Armor">
 		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="590" />
-		<set name="price" val="79820" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">41</stat>
-		</stats>
-	</item>
-	<item id="5713" name="Sealed Avadon Gloves" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t66_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -326,25 +213,6 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5717" name="Sealed Blue Wolf Gloves" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t68_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="11" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="590" />
-		<set name="price" val="123760" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">44</stat>
-		</stats>
-	</item>
 	<item id="5718" name="Blue Wolf Gloves" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy blue wolf set. -->
 		<set name="icon" val="icon.armor_t68_g_i00" />
@@ -398,25 +266,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="GLOVES" />
-		<stats>
-			<stat type="pDef">44</stat>
-		</stats>
-	</item>
-	<item id="5721" name="Sealed Doom Gloves" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t71_g_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="11" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="580" />
-		<set name="price" val="123760" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="GLOVES" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -478,25 +327,6 @@
 			<stat type="pDef">44</stat>
 		</stats>
 	</item>
-	<item id="5725" name="Sealed Zubei's Boots" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t64_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="1180" />
-		<set name="price" val="79820" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">41</stat>
-		</stats>
-	</item>
 	<item id="5726" name="Zubei's Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy Zubei's set. -->
 		<set name="icon" val="icon.armor_t64_b_i00" />
@@ -538,25 +368,6 @@
 	<item id="5728" name="Zubei's Boots" additionalName="Robe" type="Armor">
 		<!-- Part of the Zubei's robe set. -->
 		<set name="icon" val="icon.armor_t56_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="8" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="1180" />
-		<set name="price" val="79820" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">41</stat>
-		</stats>
-	</item>
-	<item id="5729" name="Sealed Avadon Boots" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t66_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
@@ -630,25 +441,6 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="5733" name="Sealed Blue Wolf Boots" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t68_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="11" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="1130" />
-		<set name="price" val="123760" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pDef">44</stat>
-		</stats>
-	</item>
 	<item id="5734" name="Blue Wolf Boots" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy blue wolf set. -->
 		<set name="icon" val="icon.armor_t68_b_i00" />
@@ -702,25 +494,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="FEET" />
-		<stats>
-			<stat type="pDef">44</stat>
-		</stats>
-	</item>
-	<item id="5737" name="Sealed Doom Boots" type="Armor">
-		<!-- The set effect will appear only after the seal is broken. -->
-		<set name="icon" val="icon.armor_t71_b_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="feet" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_count" val="11" />
-		<set name="crystal_type" val="B" />
-		<set name="material" val="MITHRIL" />
-		<set name="weight" val="1130" />
-		<set name="price" val="123760" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="FEET" />
-		<set name="isAppearanceable" val="true" />
-		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
@@ -781,310 +554,6 @@
 		<stats>
 			<stat type="pDef">44</stat>
 		</stats>
-	</item>
-	<item id="5741" name="Recipe: Sealed Zubei's Gauntlets" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Zubei's gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5742" name="Recipe: Sealed Zubei's Gauntlets (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Zubei's gauntlets. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5743" name="Recipe: Sealed Avadon Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5744" name="Recipe: Sealed Avadon Gloves (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Avadon Gloves. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5745" name="Corroded Recipe: Sealed Blue Wolf Gloves" type="EtcItem">
-		<!-- Corroded recipe. Sell it to a store. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5746" name="Recipe: Sealed Blue Wolf Gloves (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Blue Wolf gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5747" name="Recipe: Sealed Doom Gloves" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Doom Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5748" name="Recipe: Sealed Doom Gloves (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Doom Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5749" name="Recipe: Sealed Zubei's Boots" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5750" name="Recipe: Sealed Zubei's Boots (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Zubei's Boots. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5751" name="Recipe: Sealed Avadon Boots" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Avadon Boots. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5752" name="Recipe: Sealed Avadon Boots (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Sealed Avadon Boots. Requires Create Item - Skill Lv. 6. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_red_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5753" name="Recipe: Sealed Blue Wolf Boots" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5754" name="Recipe: Sealed Blue Wolf Boots (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Blue Wolf Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5755" name="Recipe: Sealed Doom Boots" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Doom Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5756" name="Recipe: Sealed Doom Boots (60%)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the sealed Doom Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
-		<set name="icon" val="icon.etc_recipe_violet_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="17700" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5757" name="Corroded Sealed Zubei's Gauntlet Fragment" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store. -->
-		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="3843" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5758" name="Sealed Avadon Glove Fragment" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Avadon Gloves. It can also be sold to a regular store. -->
-		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="3843" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5759" name="Sealed Blue Wolf Glove Fabric" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Blue Wolf Gloves. It can also be sold to a regular store. -->
-		<set name="icon" val="icon.etc_leather_gray_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="4455" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5760" name="Sealed Doom Glove Fragment" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Doom Gloves. It can also be sold to a regular store. -->
-		<set name="icon" val="icon.etc_plate_silver_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="4455" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5761" name="Corroded Sealed Zubei's Boot Design" type="EtcItem">
-		<!-- Corroded ingredient. Sell it to a store. -->
-		<set name="icon" val="icon.etc_pouch_brown_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="3843" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5762" name="Sealed Avadon Boot Design" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Avadon Boots. It can also be sold to a regular store. -->
-		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="3843" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5763" name="Sealed Blue Wolf Boot Design" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Blue Wolf Boots. It can also be sold to a regular store. -->
-		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="4455" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="5764" name="Sealed Doom Boot Fragment" type="EtcItem">
-		<!-- Essential ingredient needed by a Dwarf to make a pair of Sealed Doom Boots. It can also be sold to a regular store. -->
-		<set name="icon" val="icon.etc_codran_seed_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="4455" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="5765" name="Dark Crystal Gloves" additionalName="Heavy Armor" type="Armor">
 		<!-- Part of the heavy dark crystal set. -->

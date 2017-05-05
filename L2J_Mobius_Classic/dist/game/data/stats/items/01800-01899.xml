@@ -120,86 +120,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="1808" name="Recipe: Soulshot (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-S-grade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
-		<set name="icon" val="icon.etc_recipe_black_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="450000" />
-		<set name="recipe_id" val="24" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="handler" val="Recipes" />
-	</item>
-	<item id="1809" name="Recipe: Durable Stem" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Durable Stem. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1810" name="Recipe: Wooden Frame" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Wooden Frame. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1811" name="Recipe: Bark of Treant" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a bark of ant. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1812" name="Recipe: Coarse Bone Powder" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Coarse Bone Powder. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1813" name="Recipe: Refined Steel" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Refined Steel. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="1814" name="Recipe: Corroded Leather" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Corroded Leather. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_white_i00" />
@@ -214,32 +134,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
-	</item>
-	<item id="1815" name="Recipe: Bowstring" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Bowstring. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1816" name="Recipe: Steel Frame" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Steel Frame. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1817" name="Recipe: Corroded Cord" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Corroded Cord. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
@@ -256,97 +150,6 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1818" name="Recipe: Refined Bronze" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Refined Bronze. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1819" name="Recipe: Treant Potion" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a ant potion. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1820" name="Recipe: Magic Paper" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Magic Paper. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1821" name="Recipe: Flaming Oil" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Flaming Oil. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_white_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1822" name="Recipe: Magic Powder" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Magic Powder. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1823" name="Recipe: Refined Mithril" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Refined Mithril. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1824" name="Recipe: Reinforced Steel" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Reinforced Steel. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="1825" name="Recipe: Corroded Oriharukon" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Corroded Oriharukon. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
@@ -361,45 +164,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
-	</item>
-	<item id="1826" name="Recipe: Enchanted Solution" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Enchanted Solution. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1827" name="Recipe: Metal Frame" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a Metal Frame. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1828" name="Recipe: Top-grade Steel" type="EtcItem">
-		<!-- For Dwarves only. Recipe for Top-grade Steel. Requires Create Item - Skill Lv. 2. -->
-		<set name="icon" val="icon.etc_recipe_blue_i00" />
-		<set name="default_action" val="RECIPE" />
-		<set name="etcitem_type" val="RECIPE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="30" />
-		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="RECIPE" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1829" name="Scroll of Escape: Clan Hall" type="EtcItem">
 		<!-- Scroll that relocates you to your clan hall. If you don't have a clan hall, it will relocate you to the nearest village. -->

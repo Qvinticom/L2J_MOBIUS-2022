@@ -12,30 +12,6 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="2001" name="Helm of Avadon Design" type="EtcItem">
-		<!-- Key material that Dwarves use to make the Helm of Avadon. Can be sold in any shop. -->
-		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="1157" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2002" name="Helmet of Pledge Pattern" type="EtcItem">
-		<!-- Key material that Dwarves use to make the Helmet of Pledge. Can be sold in any shop. -->
-		<set name="icon" val="icon.etc_letter_red_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="1157" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
 	<item id="2003" name="Gauntlets of Ghost Pattern" type="EtcItem">
 		<!-- Key material that Dwarves use to make the Gauntlets of Ghost. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_letter_red_i00" />
@@ -1040,18 +1016,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="5783" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="2087" name="Tears of Fairy Drop" type="EtcItem">
-		<!-- Key material that Dwarves use to make Tears of Fairy. Can be sold in any shop. -->
-		<set name="icon" val="icon.etc_lesser_potion_clear_i00" />
-		<set name="etcitem_type" val="MATERIAL" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="60" />
-		<set name="price" val="5676" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />

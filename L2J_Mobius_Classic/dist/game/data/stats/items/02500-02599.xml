@@ -141,55 +141,6 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="2505" name="Iron Canine" type="Weapon">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
-		<set name="icon" val="icon.etc_pet_arms_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="SWORD" />
-		<set name="bodypart" val="rhand" />
-		<set name="damage_range" val="0;0;40;120" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="weight" val="100" />
-		<set name="price" val="7000" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="PET_EQUIPMENT" />
-		<set name="isAppearanceable" val="true" />
-		<set name="for_npc" val="true" />
-		<cond addName="1" msgId="113">
-			<player categoryType="ALL_WOLF_GROUP" />
-		</cond>
-		<stats>
-			<stat type="pAtk">4</stat>
-			<stat type="mAtk">5</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="pAtkSpd">277</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</item>
-	<item id="2506" name="Wolf's Leather Armor" type="Armor">
-		<!-- Double-click to wear. Only for wolves, great wolves, and fenrir. -->
-		<set name="icon" val="icon.etc_pet_armor_i00" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="chest" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LEATHER" />
-		<set name="weight" val="160" />
-		<set name="price" val="3060" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="PET_EQUIPMENT" />
-		<set name="isAppearanceable" val="true" />
-		<set name="for_npc" val="true" />
-		<cond addName="1" msgId="113">
-			<player categoryType="ALL_WOLF_GROUP" />
-		</cond>
-		<stats>
-			<stat type="mDef">14</stat>
-			<stat type="pDef">9</stat>
-		</stats>
-	</item>
 	<item id="2507" name="Lizardspear" type="Weapon">
 		<set name="icon" val="icon.weapon_doomed_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -319,46 +270,6 @@
 		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2158" level="1" /> <!-- Spiritshot (A-grade) -->
-		</skills>
-	</item>
-	<item id="2514" name="Spiritshot (S-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with an S-grade weapon. -->
-		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
-		<set name="default_action" val="SPIRITSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="150" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="SpiritShot" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="SPIRITSHOT" />
-		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
-		<skills>
-			<skill id="2159" level="1" /> <!-- Spiritshot (S-grade) -->
-		</skills>
-	</item>
-	<item id="2515" name="Wolf Food" type="EtcItem">
-		<!-- When the hunger gauge of a wolf reaches 55% or below, its food will be consumed automatically. -->
-		<set name="icon" val="icon.etc_pouch_yellow_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="LIQUID" />
-		<set name="weight" val="10" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-		<set name="is_oly_restricted" val="true" />
-		<set name="handler" val="PetFood" />
-		<set name="is_freightable" val="false" />
-		<set name="commissionItemType" val="PET_SUPPLIES" />
-		<set name="for_npc" val="true" />
-		<cond addName="1" msgId="113">
-			<player categoryType="ALL_WOLF_GROUP,SIN_EATER_GROUP,DEINONYCHUS_PET_GROUP" />
-		</cond>
-		<skills>
-			<skill id="2048" level="1" /> <!-- Wolf Food -->
 		</skills>
 	</item>
 	<item id="2516" name="Saber*Saber" type="Weapon">

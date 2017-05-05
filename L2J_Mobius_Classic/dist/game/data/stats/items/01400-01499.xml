@@ -694,74 +694,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="1448" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1449" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1450" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
-	<item id="1451" name="Mirien's Review" type="EtcItem">
-		<!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
-		<set name="icon" val="icon.item_normal129" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
-	</item>
 	<item id="1452" name="Harpy's Feather" type="EtcItem">
 		<!-- Feather taken from a harpy. Collect these and take them to Guard Belton. -->
 		<set name="icon" val="icon.etc_feather_white_i00" />
@@ -912,18 +844,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
-	<item id="1462" name="Crystal (S-grade)" type="EtcItem">
-		<!-- Crystal of S-grade. -->
-		<set name="icon" val="icon.etc_crystal_gold_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="price" val="15000" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="CRYSTAL" />
-	</item>
 	<item id="1463" name="Soulshot (D-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
@@ -999,58 +919,6 @@
 		<skills>
 			<skill id="2153" level="1" /> <!-- Soulshot (A-grade) -->
 		</skills>
-	</item>
-	<item id="1467" name="Soulshot (S-grade)" type="EtcItem">
-		<!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with an S-grade weapon. -->
-		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
-		<set name="default_action" val="SOULSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="weight" val="1" />
-		<set name="price" val="100" />
-		<set name="is_stackable" val="true" />
-		<set name="handler" val="SoulShots" />
-		<set name="is_freightable" val="false" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="commissionItemType" val="SOULSHOT" />
-		<skills>
-			<skill id="2154" level="1" /> <!-- Soulshot (S-grade) -->
-		</skills>
-	</item>
-	<item id="1468" name="Gludin Panacen" type="EtcItem">
-		<!-- Medicated herb from Gludio. Purchase at the Castle Gludio. -->
-		<set name="icon" val="icon.etc_reagent_gold_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_freightable" val="false" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1469" name="Gludin Vermouth" type="EtcItem">
-		<!-- Medicated wine from Gludio. Purchase at the Castle Gludio. -->
-		<set name="icon" val="icon.etc_fruit_green_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_freightable" val="false" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="1470" name="Artemeter" type="EtcItem">
-		<!-- Medicated herb from Gludio. Purchase at the Castle Gludio. -->
-		<set name="icon" val="icon.etc_leaf_green_i00" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_freightable" val="false" />
-		<set name="crystal_type" val="S" />
-		<set name="enchant_enabled" val="1" />
-		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1471" name="Silenos Blowgun" type="Weapon">
 		<set name="icon" val="icon.weapon_monster_i00" />
