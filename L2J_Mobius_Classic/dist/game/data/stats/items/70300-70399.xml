@@ -60,7 +60,7 @@
 	<item id="70306" name="Blessed Mysterious Soulshot (No-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For No-grade weapons. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_white_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
+		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -69,7 +69,7 @@
 	<item id="70307" name="Mysterious Blessed Soulshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For D-grade weapons. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_blue_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
+		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
@@ -79,7 +79,7 @@
 	<item id="70308" name="Mysterious Blessed Soulshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For C-grade weapons. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_green_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
+		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="PAPER" />
@@ -89,7 +89,7 @@
 	<item id="70309" name="Mysterious Blessed Soulshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_red_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
+		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="PAPER" />
@@ -99,7 +99,7 @@
 	<item id="70310" name="Mysterious Blessed Soulshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_silver_i00" />
-		<set name="default_action" val="action_bless_soulshot" />
+		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="PAPER" />

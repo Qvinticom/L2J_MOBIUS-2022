@@ -1200,27 +1200,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="247" max="578" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.883">
-					<item id="9573" min="1" max="1" chance="82.474774296336" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="15.932023366968" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9575" min="1" max="1" chance="1.5932023366968" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="2.631" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="43.2" />
@@ -1275,29 +1255,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="157" max="367" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="1808" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Soulshot (S-grade) -->
-					<item id="3036" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Spiritshot (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.682" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="22" />
 			<height normal="48.3" />
@@ -1352,27 +1310,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="104" max="243" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.08">
-					<item id="9573" min="1" max="1" chance="69.444444444444" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="27.777777777778" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9575" min="1" max="1" chance="2.7777777777778" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.062" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="16" />
 			<height normal="22.8" />
@@ -1436,29 +1374,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="162" max="378" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="3957" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
-					<item id="9546" min="1" max="1" chance="2.6315789473684" /> <!-- Fire Stone -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.706" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="17" />
 			<height normal="30" />
@@ -1523,29 +1439,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="153" max="358" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5157" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-					<item id="9547" min="1" max="1" chance="2.6315789473684" /> <!-- Water Stone -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.609" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="31" />
@@ -1663,29 +1557,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="152" max="354" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5167" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
-					<item id="9549" min="1" max="1" chance="2.6315789473684" /> <!-- Wind Stone -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.543" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="43.6" />
@@ -1745,28 +1617,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="153" max="358" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.11">
-					<item id="9573" min="1" max="1" chance="67.567567567568" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="27.027027027027" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9550" min="1" max="1" chance="2.7027027027027" /> <!-- Dark Stone -->
-					<item id="9575" min="1" max="1" chance="2.7027027027027" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.659" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="17" />
 			<height normal="29.8" />
@@ -1832,30 +1683,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="166" max="386" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.17">
-					<item id="9573" min="1" max="1" chance="64.102564102564" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="25.641025641026" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5272" min="1" max="1" chance="2.5641025641026" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-					<item id="5277" min="1" max="1" chance="2.5641025641026" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-					<item id="9551" min="1" max="1" chance="2.5641025641026" /> <!-- Holy Stone -->
-					<item id="9575" min="1" max="1" chance="2.5641025641026" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.803" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="34" grown="44" />
 			<height normal="48.8" grown="59.4" />
@@ -1916,29 +1744,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="229" max="535" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.1605">
-					<item id="9573" min="1" max="1" chance="64.62731581215" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="25.85092632486" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="960" min="1" max="1" chance="6.462731581215" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.585092632486" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="959" min="1" max="1" chance="0.4739336492891" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="2.361" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="40" />
 			<height normal="42" />
@@ -1992,28 +1798,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="158" max="368" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.11">
-					<item id="9573" min="1" max="1" chance="67.567567567568" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="27.027027027027" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="960" min="1" max="1" chance="2.7027027027027" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.7027027027027" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.622" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="43.2" />
@@ -2068,28 +1853,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="158" max="368" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.11">
-					<item id="9573" min="1" max="1" chance="67.567567567568" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="27.027027027027" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5272" min="1" max="1" chance="2.7027027027027" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.7027027027027" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.628" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="28" />
 			<height normal="47.3" />
@@ -2144,29 +1908,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="158" max="368" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.113">
-					<item id="9573" min="1" max="1" chance="67.385444743935" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.954177897574" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5277" min="1" max="1" chance="2.6954177897574" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.6954177897574" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="959" min="1" max="1" chance="0.26954177897574" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.634" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" grown="11" />
 			<height normal="29.1" grown="26.4" />
@@ -2231,29 +1973,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="156" max="364" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="1808" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Soulshot (S-grade) -->
-					<item id="5282" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.611" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="26" />
 			<height normal="43.8" />
@@ -2314,28 +2034,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="215" max="501" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.323">
-					<item id="9573" min="1" max="1" chance="72.789115646259" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="22.675736961451" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="3036" min="1" max="1" chance="2.2675736961451" /> <!-- Recipe: Spiritshot (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.2675736961451" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="2.243" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="36.4" />
@@ -2397,29 +2096,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="176" max="410" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="3957" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
-					<item id="5157" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.871" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="16" />
 			<height normal="29" />
@@ -2478,29 +2155,7 @@
 				<clan>SPIKE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="156" max="364" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.14">
-					<item id="9573" min="1" max="1" chance="65.789473684211" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="26.315789473684" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5157" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-					<item id="5162" min="1" max="1" chance="2.6315789473684" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.6315789473684" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.602" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="43.6" />
@@ -2549,26 +2204,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="107" max="248" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9546" min="1" max="1" chance="71.428571428571" /> <!-- Fire Stone -->
-					<item id="5272" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.074" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -2617,26 +2253,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="104" max="242" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9546" min="1" max="1" chance="71.428571428571" /> <!-- Fire Stone -->
-					<item id="5272" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.073" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
@@ -2685,26 +2302,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="108" max="250" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9546" min="1" max="1" chance="71.428571428571" /> <!-- Fire Stone -->
-					<item id="5272" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.113" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
@@ -2753,26 +2351,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="107" max="248" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9546" min="1" max="1" chance="71.428571428571" /> <!-- Fire Stone -->
-					<item id="5272" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.077" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="52.8" />
@@ -2821,26 +2400,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="107" max="248" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9547" min="1" max="1" chance="71.428571428571" /> <!-- Water Stone -->
-					<item id="5277" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.155" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
@@ -2890,26 +2450,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="107" max="249" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9548" min="1" max="1" chance="71.428571428571" /> <!-- Earth Stone -->
-					<item id="5282" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.056" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="19" />
 			<height normal="54.5" />
@@ -2960,26 +2501,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="104" max="243" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9549" min="1" max="1" chance="71.428571428571" /> <!-- Wind Stone -->
-					<item id="1808" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Soulshot (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.083" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -3028,26 +2550,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="107" max="249" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="9550" min="1" max="1" chance="71.428571428571" /> <!-- Dark Stone -->
-					<item id="5277" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.15" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -3097,28 +2600,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="137" max="320" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.093">
-					<item id="3036" min="1" max="1" chance="32.258064516129" /> <!-- Recipe: Spiritshot (S-grade) -->
-					<item id="3957" min="1" max="1" chance="32.258064516129" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
-					<item id="9551" min="1" max="1" chance="32.258064516129" /> <!-- Holy Stone -->
-					<item id="959" min="1" max="1" chance="3.2258064516129" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.388" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="31" />
@@ -3168,26 +2650,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="145" max="337" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0805">
-					<item id="960" min="1" max="1" chance="93.167701863354" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="959" min="1" max="1" chance="6.832298136646" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.556" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
@@ -3240,26 +2703,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="146" max="340" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.105">
-					<item id="960" min="1" max="1" chance="71.428571428571" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="5157" min="1" max="1" chance="28.571428571429" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.556" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="57.75" grown="69" />
@@ -3313,26 +2757,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="139" max="322" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.06">
-					<item id="5162" min="1" max="1" chance="50" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
-					<item id="5272" min="1" max="1" chance="50" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.387" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="17" />
 			<height normal="55" />
@@ -3385,25 +2810,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="285" max="663" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="5277" min="1" max="1" chance="100" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="3.04" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="17" />
 			<height normal="49" />
@@ -3450,25 +2857,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="298" max="694" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="5282" min="1" max="1" chance="100" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="3.139" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -3515,26 +2904,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="292" max="679" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.15">
-					<item id="1808" min="1" max="1" chance="50" /> <!-- Recipe: Soulshot (S-grade) -->
-					<item id="5282" min="1" max="1" chance="50" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="3.03" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
@@ -3581,25 +2951,7 @@
 				<clan>FIRE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="301" max="701" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="5157" min="1" max="1" chance="100" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="3.199" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.75" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.03" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="29" />
 			<height normal="42" />
@@ -3648,55 +3000,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="71" max="166" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="10216" min="1" max="1" chance="100" /> <!-- Icarus Disperser -->
-				</group>
-				<group chance="0.0439">
-					<item id="36518" min="1" max="1" chance="68.337129840547" /> <!-- Durable Leather -->
-					<item id="36548" min="1" max="1" chance="6.8337129840547" /> <!-- Weapon Fragment (Mid-grade) -->
-					<item id="36543" min="1" max="1" chance="12.5284738041" /> <!-- Adamantite Wire -->
-					<item id="3036" min="1" max="1" chance="2.0501138952164" /> <!-- Recipe: Spiritshot (S-grade) -->
-					<item id="959" min="1" max="1" chance="2.0501138952164" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="36858" min="1" max="1" chance="2.0501138952164" /> <!-- Recipe: Leather - Upgrade -->
-					<item id="36903" min="1" max="1" chance="2.0501138952164" /> <!-- Recipe: Silver Wire - Downgrade -->
-					<item id="36905" min="1" max="1" chance="2.0501138952164" /> <!-- Recipe: Silver Wire - Combination -->
-					<item id="36940" min="1" max="1" chance="2.0501138952164" /> <!-- Recipe: Greater Cokes - Upgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="41" />
@@ -3745,61 +3049,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="81" max="190" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0027">
-					<item id="10215" min="1" max="1" chance="33.333333333333" /> <!-- Icarus Sawsword -->
-					<item id="10217" min="1" max="1" chance="33.333333333333" /> <!-- Icarus Spirit -->
-					<item id="10218" min="1" max="1" chance="33.333333333333" /> <!-- Icarus Heavy Arms -->
-				</group>
-				<group chance="0.011">
-					<item id="36552" min="1" max="1" chance="50" /> <!-- Armor Fragment -->
-					<item id="36547" min="1" max="1" chance="50" /> <!-- Weapon Fragment -->
-				</group>
-				<group chance="0.3813">
-					<item id="36517" min="1" max="1" chance="78.6782061369" /> <!-- Leather -->
-					<item id="36522" min="1" max="1" chance="19.669551534225" /> <!-- Silver -->
-					<item id="5167" min="1" max="1" chance="0.2360346184107" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
-					<item id="959" min="1" max="1" chance="0.2360346184107" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="36857" min="1" max="1" chance="0.2360346184107" /> <!-- Recipe: Leather - Downgrade -->
-					<item id="36865" min="1" max="1" chance="0.2360346184107" /> <!-- Recipe: Silver - Downgrade -->
-					<item id="36866" min="1" max="1" chance="0.2360346184107" /> <!-- Recipe: Silver - Upgrade -->
-					<item id="36904" min="1" max="1" chance="0.2360346184107" /> <!-- Recipe: Silver Wire - Upgrade -->
-					<item id="36915" min="1" max="1" chance="0.2360346184107" /> <!-- Recipe: Weapon Fragment - Downgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="41" />
@@ -3847,60 +3097,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="142" max="332" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.2027">
-					<item id="15694" min="1" max="1" chance="0.074831628835121" /> <!-- Sealed Moirai Helmet -->
-					<item id="15695" min="1" max="1" chance="0.074831628835121" /> <!-- Sealed Moirai Leather Helmet -->
-					<item id="15696" min="1" max="1" chance="0.074831628835121" /> <!-- Sealed Moirai Circlet -->
-					<item id="9532" min="1" max="1" chance="24.943876278374" /> <!-- Sealed Dynasty Helmet Piece -->
-					<item id="15645" min="1" max="1" chance="24.943876278374" /> <!-- Sealed Moirai Helmet Piece -->
-					<item id="15646" min="1" max="1" chance="24.943876278374" /> <!-- Sealed Moirai Leather Helmet Piece -->
-					<item id="15647" min="1" max="1" chance="24.943876278374" /> <!-- Sealed Moirai Circlet Piece -->
-				</group>
-				<group chance="0.1146">
-					<item id="36518" min="1" max="1" chance="65.44502617801" /> <!-- Durable Leather -->
-					<item id="36523" min="1" max="1" chance="26.178010471204" /> <!-- Adamantite -->
-					<item id="36548" min="1" max="1" chance="2.6178010471204" /> <!-- Weapon Fragment (Mid-grade) -->
-					<item id="36553" min="1" max="1" chance="2.6178010471204" /> <!-- Armor Fragment (Mid-grade) -->
-					<item id="36866" min="1" max="1" chance="0.78534031413613" /> <!-- Recipe: Silver - Upgrade -->
-					<item id="36873" min="1" max="1" chance="0.78534031413613" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
-					<item id="36905" min="1" max="1" chance="0.78534031413613" /> <!-- Recipe: Silver Wire - Combination -->
-					<item id="36916" min="1" max="1" chance="0.78534031413613" /> <!-- Recipe: Weapon Fragment - Upgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.514" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="41" />
@@ -3949,56 +3146,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="162" max="378" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0018">
-					<item id="10220" min="1" max="1" chance="50" /> <!-- Icarus Hammer -->
-					<item id="10222" min="1" max="1" chance="50" /> <!-- Icarus Hall -->
-				</group>
-				<group chance="0.03">
-					<item id="36552" min="1" max="1" chance="100" /> <!-- Armor Fragment -->
-				</group>
-				<group chance="1.1277">
-					<item id="36527" min="1" max="1" chance="66.507049747273" /> <!-- Synthetic Fiber -->
-					<item id="36522" min="1" max="1" chance="26.602819898909" /> <!-- Silver -->
-					<item id="36557" min="1" max="1" chance="6.6507049747273" /> <!-- Accessory Gem -->
-					<item id="36873" min="1" max="1" chance="0.079808459696728" /> <!-- Recipe: Synthetic Fiber - Downgrade -->
-					<item id="36915" min="1" max="1" chance="0.079808459696728" /> <!-- Recipe: Weapon Fragment - Downgrade -->
-					<item id="36923" min="1" max="1" chance="0.079808459696728" /> <!-- Recipe: Armor Fragment - Downgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.746" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="41" />
@@ -4045,60 +3193,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="5909" shortRangeId="4067" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="25" max="57" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="10223" min="1" max="1" chance="100" /> <!-- Icarus Spitter -->
-				</group>
-				<group chance="0.03">
-					<item id="9542" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Circlet Piece -->
-				</group>
-				<group chance="0.03">
-					<item id="9991" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Earring Gemstone -->
-				</group>
-				<group chance="0.043">
-					<item id="36528" min="1" max="1" chance="69.767441860465" /> <!-- Metallic Fiber -->
-					<item id="36523" min="1" max="1" chance="12.790697674419" /> <!-- Adamantite -->
-					<item id="36558" min="1" max="1" chance="6.9767441860465" /> <!-- Accessory Gem (Mid-grade) -->
-					<item id="36916" min="1" max="1" chance="2.093023255814" /> <!-- Recipe: Weapon Fragment - Upgrade -->
-					<item id="36874" min="1" max="1" chance="2.093023255814" /> <!-- Recipe: Synthetic Fiber - Upgrade -->
-					<item id="36858" min="1" max="1" chance="2.093023255814" /> <!-- Recipe: Leather - Upgrade -->
-					<item id="36553" min="1" max="1" chance="2.093023255814" /> <!-- Armor Fragment (Mid-grade) -->
-					<item id="36924" min="1" max="1" chance="2.093023255814" /> <!-- Recipe: Armor Fragment - Upgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
@@ -4146,63 +3241,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4072" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="130" max="303" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="9530" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Breastplate Piece -->
-				</group>
-				<group chance="0.9777">
-					<item id="15703" min="1" max="1" chance="0.092052776925437" /> <!-- Sealed Moirai Gauntlets -->
-					<item id="15704" min="1" max="1" chance="0.092052776925437" /> <!-- Sealed Moirai Leather Gloves -->
-					<item id="15705" min="1" max="1" chance="0.092052776925437" /> <!-- Sealed Moirai Gloves -->
-					<item id="15656" min="1" max="1" chance="30.684258975146" /> <!-- Sealed Moirai Gloves Piece -->
-					<item id="15655" min="1" max="1" chance="30.684258975146" /> <!-- Sealed Moirai Leather Gloves Piece -->
-					<item id="15654" min="1" max="1" chance="30.684258975146" /> <!-- Sealed Moirai Gauntlets Piece -->
-					<item id="9542" min="1" max="1" chance="7.6710647437864" /> <!-- Sealed Dynasty Circlet Piece -->
-				</group>
-				<group chance="0.4857">
-					<item id="36527" min="1" max="1" chance="61.766522544781" /> <!-- Synthetic Fiber -->
-					<item id="36537" min="1" max="1" chance="15.441630636195" /> <!-- Leather Braid -->
-					<item id="36557" min="1" max="1" chance="15.441630636195" /> <!-- Accessory Gem -->
-					<item id="36562" min="1" max="1" chance="6.1766522544781" /> <!-- Greater Cokes -->
-					<item id="1808" min="1" max="1" chance="0.61766522544781" /> <!-- Recipe: Soulshot (S-grade) -->
-					<item id="36890" min="1" max="1" chance="0.18529956763434" /> <!-- Recipe: Leather Braid - Downgrade -->
-					<item id="36923" min="1" max="1" chance="0.18529956763434" /> <!-- Recipe: Armor Fragment - Downgrade -->
-					<item id="36931" min="1" max="1" chance="0.18529956763434" /> <!-- Recipe: Accessory Gem - Downgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.39" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="30" />
 			<height normal="52" />
@@ -4250,61 +3289,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="65" max="152" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1068">
-					<item id="15699" min="1" max="1" chance="0.84269662921348" /> <!-- Sealed Moirai Tunic -->
-					<item id="15702" min="1" max="1" chance="0.84269662921348" /> <!-- Sealed Moirai Stockings -->
-					<item id="15653" min="1" max="1" chance="70.224719101124" /> <!-- Sealed Moirai Stockings Piece -->
-					<item id="15650" min="1" max="1" chance="28.089887640449" /> <!-- Sealed Moirai Tunic Piece -->
-				</group>
-				<group chance="0.075">
-					<item id="10114" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Sigil Piece -->
-				</group>
-				<group chance="0.0506">
-					<item id="36528" min="1" max="1" chance="59.288537549407" /> <!-- Metallic Fiber -->
-					<item id="36563" min="1" max="1" chance="5.9288537549407" /> <!-- Synthetic Cokes -->
-					<item id="36558" min="1" max="1" chance="10.869565217391" /> <!-- Accessory Gem (Mid-grade) -->
-					<item id="36538" min="1" max="1" chance="10.869565217391" /> <!-- Durable Leather Braid -->
-					<item id="960" min="1" max="1" chance="5.9288537549407" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="36890" min="1" max="1" chance="1.7786561264822" /> <!-- Recipe: Leather Braid - Downgrade -->
-					<item id="36891" min="1" max="1" chance="1.7786561264822" /> <!-- Recipe: Leather Braid - Upgrade -->
-					<item id="36924" min="1" max="1" chance="1.7786561264822" /> <!-- Recipe: Armor Fragment - Upgrade -->
-					<item id="36932" min="1" max="1" chance="1.7786561264822" /> <!-- Recipe: Accessory Gem - Upgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23.5" />
 			<height normal="41.5" />
@@ -4353,59 +3338,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5909" shortRangeId="4670" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="143" max="333" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.209">
-					<item id="15706" min="1" max="1" chance="0.24813895781638" /> <!-- Sealed Moirai Boots -->
-					<item id="15707" min="1" max="1" chance="0.24813895781638" /> <!-- Sealed Moirai Leather Boots -->
-					<item id="15708" min="1" max="1" chance="0.24813895781638" /> <!-- Sealed Moirai Shoes -->
-					<item id="9532" min="1" max="1" chance="24.813895781638" /> <!-- Sealed Dynasty Helmet Piece -->
-					<item id="15657" min="1" max="1" chance="24.813895781638" /> <!-- Sealed Moirai Boots Piece -->
-					<item id="15658" min="1" max="1" chance="24.813895781638" /> <!-- Sealed Moirai Leather Boots Piece -->
-					<item id="15659" min="1" max="1" chance="24.813895781638" /> <!-- Sealed Moirai Shoes Piece -->
-				</group>
-				<group chance="0.4086">
-					<item id="36537" min="1" max="1" chance="73.421439060206" /> <!-- Leather Braid -->
-					<item id="36542" min="1" max="1" chance="18.355359765051" /> <!-- Silver Wire -->
-					<item id="36562" min="1" max="1" chance="7.3421439060206" /> <!-- Greater Cokes -->
-					<item id="36891" min="1" max="1" chance="0.22026431718062" /> <!-- Recipe: Leather Braid - Upgrade -->
-					<item id="36892" min="1" max="1" chance="0.22026431718062" /> <!-- Recipe: Leather Braid - Combination -->
-					<item id="36931" min="1" max="1" chance="0.22026431718062" /> <!-- Recipe: Accessory Gem - Downgrade -->
-					<item id="36939" min="1" max="1" chance="0.22026431718062" /> <!-- Recipe: Greater Cokes - Downgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.4715" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23" />
 			<height normal="41" />
@@ -4453,57 +3386,7 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5910" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="75" max="175" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="15710" min="1" max="1" chance="100" /> <!-- Sealed Moirai Shield -->
-				</group>
-				<group chance="0.6009">
-					<item id="15709" min="1" max="1" chance="0.14977533699451" /> <!-- Sealed Moirai Sigil -->
-					<item id="15692" min="1" max="1" chance="49.925112331503" /> <!-- Sealed Moirai Sigil Piece -->
-					<item id="15693" min="1" max="1" chance="49.925112331503" /> <!-- Sealed Moirai Shield Fragment -->
-				</group>
-				<group chance="0.0657">
-					<item id="36538" min="1" max="1" chance="45.662100456621" /> <!-- Durable Leather Braid -->
-					<item id="36543" min="1" max="1" chance="45.662100456621" /> <!-- Adamantite Wire -->
-					<item id="36563" min="1" max="1" chance="4.5662100456621" /> <!-- Synthetic Cokes -->
-					<item id="36903" min="1" max="1" chance="1.3698630136986" /> <!-- Recipe: Silver Wire - Downgrade -->
-					<item id="36932" min="1" max="1" chance="1.3698630136986" /> <!-- Recipe: Accessory Gem - Upgrade -->
-					<item id="36940" min="1" max="1" chance="1.3698630136986" /> <!-- Recipe: Greater Cokes - Upgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="41" />
@@ -4553,63 +3436,7 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
 			<skill primaryId="5910" shortRangeId="4582" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="150" max="349" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6018">
-					<item id="15699" min="1" max="1" chance="0.14955134596211" /> <!-- Sealed Moirai Tunic -->
-					<item id="15702" min="1" max="1" chance="0.14955134596211" /> <!-- Sealed Moirai Stockings -->
-					<item id="15650" min="1" max="1" chance="49.850448654038" /> <!-- Sealed Moirai Tunic Piece -->
-					<item id="15653" min="1" max="1" chance="49.850448654038" /> <!-- Sealed Moirai Stockings Piece -->
-				</group>
-				<group chance="0.03">
-					<item id="36547" min="1" max="1" chance="100" /> <!-- Weapon Fragment -->
-				</group>
-				<group chance="0.3">
-					<item id="9991" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Earring Gemstone -->
-				</group>
-				<group chance="0.3804">
-					<item id="36517" min="1" max="1" chance="78.864353312303" /> <!-- Leather -->
-					<item id="36542" min="1" max="1" chance="19.716088328076" /> <!-- Silver Wire -->
-					<item id="959" min="1" max="1" chance="0.23659305993691" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="36857" min="1" max="1" chance="0.23659305993691" /> <!-- Recipe: Leather - Downgrade -->
-					<item id="36865" min="1" max="1" chance="0.23659305993691" /> <!-- Recipe: Silver - Downgrade -->
-					<item id="36892" min="1" max="1" chance="0.23659305993691" /> <!-- Recipe: Leather Braid - Combination -->
-					<item id="36904" min="1" max="1" chance="0.23659305993691" /> <!-- Recipe: Silver Wire - Upgrade -->
-					<item id="36939" min="1" max="1" chance="0.23659305993691" /> <!-- Recipe: Greater Cokes - Downgrade -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.545" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="27.5" />
@@ -4674,44 +3501,7 @@
 				<clan>ROBBER</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="80" max="186" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="959" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="27.5" />
@@ -4776,44 +3566,7 @@
 				<clan>ROBBER</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="82" max="191" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="959" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="27.5" />
@@ -4864,44 +3617,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="6145" shortRangeId="5082" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="84" max="195" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="960" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="27.5" />
@@ -4955,44 +3671,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="6145" shortRangeId="6168" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="86" max="200" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="959" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="27.5" />
@@ -5046,44 +3725,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="6145" shortRangeId="4643" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="95" max="221" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="959" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="27.5" />
@@ -5133,44 +3775,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill shortRangeId="4643" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="89" max="208" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="5157" min="1" max="1" chance="100" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="7" />
 			<height normal="33" />
@@ -5220,44 +3825,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="4573" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="84" max="195" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="5162" min="1" max="1" chance="100" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -5307,44 +3875,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="4573" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="86" max="200" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="5167" min="1" max="1" chance="100" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="40" />
@@ -5393,44 +3924,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="4573" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="86" max="200" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="960" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12.5" />
 			<height normal="33.5" />
@@ -5484,49 +3978,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill primaryId="4032" shortRangeId="4034" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="15" max="36" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0036">
-					<item id="9448" min="1" max="1" chance="25" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="25" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="25" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="25" /> <!-- Dynasty Crusher -->
-				</group>
-				<group chance="0.012">
-					<item id="9622" min="1" max="1" chance="25" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9623" min="1" max="1" chance="25" /> <!-- Dynasty Mace Piece -->
-					<item id="10546" min="1" max="1" chance="25" /> <!-- Dynasty Staff Piece -->
-					<item id="10547" min="1" max="1" chance="25" /> <!-- Dynasty Crusher Piece -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="5272" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				<item id="5277" min="1" max="1" chance="0.003" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-				<item id="9623" min="1" max="1" chance="0.0055" /> <!-- Dynasty Mace Piece -->
-			</corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="27.5" />
@@ -5580,47 +4032,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill shortRangeId="4582" shortRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="57" max="133" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4105">
-					<item id="9573" min="1" max="1" chance="73.081607795371" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="18.270401948843" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="960" min="1" max="1" chance="7.3081607795371" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="9575" min="1" max="1" chance="1.3398294762485" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
@@ -5672,47 +4084,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
 			<skill primaryId="6145" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="29" max="68" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3385">
-					<item id="9573" min="1" max="1" chance="88.626292466765" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="8.8626292466765" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="960" min="1" max="1" chance="1.6248153618907" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="9575" min="1" max="1" chance="0.88626292466765" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="9" />
@@ -5764,47 +4136,7 @@
 		<ai clanHelpRange="300" aggroRange="300">
 			<skill shortRangeId="4582" shortRangeChance="15" longRangeId="4035" longRangeChance="15" />
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="102" max="239" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.66">
-					<item id="9573" min="1" max="1" chance="45.454545454545" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="45.454545454545" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="960" min="1" max="1" chance="4.5454545454545" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="9575" min="1" max="1" chance="4.5454545454545" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.107" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="35" />
 			<height normal="35" />
@@ -5858,52 +4190,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="149" max="348" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="9447" min="1" max="1" chance="100" /> <!-- Dynasty Halberd -->
-				</group>
-				<group chance="0.4144">
-					<item id="9573" min="1" max="1" chance="72.393822393822" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9621" min="1" max="1" chance="18.098455598456" /> <!-- Dynasty Halberd Piece -->
-					<item id="9574" min="1" max="1" chance="7.2393822393822" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9547" min="1" max="1" chance="1.3272200772201" /> <!-- Water Stone -->
-					<item id="9575" min="1" max="1" chance="0.72393822393822" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="959" min="1" max="1" chance="0.21718146718147" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.515" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="9" />
 			<height normal="25.25" />
@@ -5960,57 +4247,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="154" max="359" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6018">
-					<item id="9514" min="1" max="1" chance="0.14955134596211" /> <!-- Sealed Dynasty Breastplate -->
-					<item id="9515" min="1" max="1" chance="0.14955134596211" /> <!-- Sealed Dynasty Gaiters -->
-					<item id="9530" min="1" max="1" chance="49.850448654038" /> <!-- Sealed Dynasty Breastplate Piece -->
-					<item id="9531" min="1" max="1" chance="49.850448654038" /> <!-- Sealed Dynasty Gaiters Piece -->
-				</group>
-				<group chance="0.3">
-					<item id="9533" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Gauntlets Piece -->
-				</group>
-				<group chance="0.3415">
-					<item id="9573" min="1" max="1" chance="87.847730600293" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="8.7847730600293" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="1808" min="1" max="1" chance="0.87847730600293" /> <!-- Recipe: Soulshot (S-grade) -->
-					<item id="9548" min="1" max="1" chance="1.610541727672" /> <!-- Earth Stone -->
-					<item id="9575" min="1" max="1" chance="0.87847730600293" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.623" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -6076,54 +4313,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="154" max="359" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.6039">
-					<item id="9520" min="1" max="1" chance="0.49677098857427" /> <!-- Sealed Dynasty Leather Leggings -->
-					<item id="9519" min="1" max="1" chance="0.14903129657228" /> <!-- Sealed Dynasty Leather Armor -->
-					<item id="9535" min="1" max="1" chance="49.677098857427" /> <!-- Sealed Dynasty Leather Armor Fragment -->
-					<item id="9536" min="1" max="1" chance="49.677098857427" /> <!-- Sealed Dynasty Leather Leggings Piece -->
-				</group>
-				<group chance="0.3415">
-					<item id="9573" min="1" max="1" chance="87.847730600293" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="8.7847730600293" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="3036" min="1" max="1" chance="0.87847730600293" /> <!-- Recipe: Spiritshot (S-grade) -->
-					<item id="9549" min="1" max="1" chance="1.610541727672" /> <!-- Wind Stone -->
-					<item id="9575" min="1" max="1" chance="0.87847730600293" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.583" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="28" />
@@ -6191,58 +4381,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="160" max="375" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3789">
-					<item id="9525" min="1" max="1" chance="0.79176563737134" /> <!-- Sealed Dynasty Stockings -->
-					<item id="9524" min="1" max="1" chance="0.2375296912114" /> <!-- Sealed Dynasty Tunic -->
-					<item id="9541" min="1" max="1" chance="79.176563737134" /> <!-- Sealed Dynasty Stockings Piece -->
-					<item id="9540" min="1" max="1" chance="19.794140934283" /> <!-- Sealed Dynasty Tunic Piece -->
-				</group>
-				<group chance="0.6">
-					<item id="9533" min="1" max="1" chance="50" /> <!-- Sealed Dynasty Gauntlets Piece -->
-					<item id="9532" min="1" max="1" chance="50" /> <!-- Sealed Dynasty Helmet Piece -->
-				</group>
-				<group chance="0.3415">
-					<item id="9573" min="1" max="1" chance="87.847730600293" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="8.7847730600293" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9550" min="1" max="1" chance="1.610541727672" /> <!-- Dark Stone -->
-					<item id="3957" min="1" max="1" chance="0.87847730600293" /> <!-- Recipe: Blessed Spiritshot (S-grade) -->
-					<item id="9575" min="1" max="1" chance="0.87847730600293" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.656" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="27.6" />
@@ -6300,60 +4439,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="167" max="389" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="9534" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Boots Piece -->
-				</group>
-				<group chance="0.459">
-					<item id="9452" min="1" max="1" chance="0.65359477124183" /> <!-- Sealed Dynasty Earring -->
-					<item id="9453" min="1" max="1" chance="0.65359477124183" /> <!-- Sealed Dynasty Necklace -->
-					<item id="9454" min="1" max="1" chance="0.65359477124183" /> <!-- Sealed Dynasty Ring -->
-					<item id="9993" min="1" max="1" chance="65.359477124183" /> <!-- Sealed Dynasty Ring Gemstone -->
-					<item id="9991" min="1" max="1" chance="16.339869281046" /> <!-- Sealed Dynasty Earring Gemstone -->
-					<item id="9992" min="1" max="1" chance="16.339869281046" /> <!-- Sealed Dynasty Necklace Gemstone -->
-				</group>
-				<group chance="0.3715">
-					<item id="9573" min="1" max="1" chance="80.753701211306" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9622" min="1" max="1" chance="8.0753701211306" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9574" min="1" max="1" chance="8.0753701211306" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9551" min="1" max="1" chance="1.4804845222073" /> <!-- Holy Stone -->
-					<item id="5157" min="1" max="1" chance="0.80753701211306" /> <!-- Recipe: Soulshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="0.80753701211306" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.75" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="13" />
 			<height normal="20.8" />
@@ -6412,64 +4498,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="151" max="351" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.4554">
-					<item id="9517" min="1" max="1" chance="0.19762845849802" /> <!-- Sealed Dynasty Gauntlets -->
-					<item id="9518" min="1" max="1" chance="0.19762845849802" /> <!-- Sealed Dynasty Boots -->
-					<item id="9522" min="1" max="1" chance="0.19762845849802" /> <!-- Sealed Dynasty Leather Gloves -->
-					<item id="9523" min="1" max="1" chance="0.19762845849802" /> <!-- Sealed Dynasty Leather Boots -->
-					<item id="9527" min="1" max="1" chance="0.19762845849802" /> <!-- Sealed Dynasty Gloves -->
-					<item id="9528" min="1" max="1" chance="0.19762845849802" /> <!-- Sealed Dynasty Shoes -->
-					<item id="9544" min="1" max="1" chance="16.469038208169" /> <!-- Sealed Dynasty Shoes Piece -->
-					<item id="9543" min="1" max="1" chance="16.469038208169" /> <!-- Sealed Dynasty Gloves Piece -->
-					<item id="9539" min="1" max="1" chance="16.469038208169" /> <!-- Sealed Dynasty Leather Boots Piece -->
-					<item id="9538" min="1" max="1" chance="16.469038208169" /> <!-- Sealed Dynasty Leather Gloves Piece -->
-					<item id="9534" min="1" max="1" chance="16.469038208169" /> <!-- Sealed Dynasty Boots Piece -->
-					<item id="9533" min="1" max="1" chance="16.469038208169" /> <!-- Sealed Dynasty Gauntlets Piece -->
-				</group>
-				<group chance="0.075">
-					<item id="9993" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Ring Gemstone -->
-				</group>
-				<group chance="0.3339">
-					<item id="9573" min="1" max="1" chance="89.84725965858" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="8.984725965858" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9575" min="1" max="1" chance="0.8984725965858" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="959" min="1" max="1" chance="0.26954177897574" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.613" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="13" />
 			<height normal="20.8" />
@@ -6535,62 +4564,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="127" max="296" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0009">
-					<item id="9529" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Shield -->
-				</group>
-				<group chance="0.3036">
-					<item id="9516" min="1" max="1" chance="0.29644268774704" /> <!-- Sealed Dynasty Helmet -->
-					<item id="9521" min="1" max="1" chance="0.29644268774704" /> <!-- Sealed Dynasty Leather Helmet -->
-					<item id="9526" min="1" max="1" chance="0.29644268774704" /> <!-- Sealed Dynasty Circlet -->
-					<item id="13886" min="1" max="1" chance="0.29644268774704" /> <!-- Sealed Dynasty Sigil -->
-					<item id="9545" min="1" max="1" chance="24.703557312253" /> <!-- Sealed Dynasty Shield Fragment -->
-					<item id="9542" min="1" max="1" chance="24.703557312253" /> <!-- Sealed Dynasty Circlet Piece -->
-					<item id="9532" min="1" max="1" chance="24.703557312253" /> <!-- Sealed Dynasty Helmet Piece -->
-					<item id="10114" min="1" max="1" chance="24.703557312253" /> <!-- Sealed Dynasty Sigil Piece -->
-				</group>
-				<group chance="0.117">
-					<item id="9573" min="1" max="1" chance="64.102564102564" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9574" min="1" max="1" chance="25.641025641026" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5167" min="1" max="1" chance="2.5641025641026" /> <!-- Recipe: Blessed Spiritshot Compressed Package (S-grade) -->
-					<item id="5162" min="1" max="1" chance="2.5641025641026" /> <!-- Recipe: Spiritshot Compressed Package (S-grade) -->
-					<item id="960" min="1" max="1" chance="2.5641025641026" /> <!-- Scroll: Enchant Armor (S-grade) -->
-					<item id="9575" min="1" max="1" chance="2.5641025641026" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.35" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="9" />
 			<height normal="27" />
@@ -6645,61 +4619,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="157" max="365" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0027">
-					<item id="9442" min="1" max="1" chance="33.333333333333" /> <!-- Dynasty Sword -->
-					<item id="9443" min="1" max="1" chance="33.333333333333" /> <!-- Dynasty Blade -->
-					<item id="9444" min="1" max="1" chance="33.333333333333" /> <!-- Dynasty Phantom -->
-				</group>
-				<group chance="0.075">
-					<item id="9541" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Stockings Piece -->
-				</group>
-				<group chance="0.3">
-					<item id="9533" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Gauntlets Piece -->
-				</group>
-				<group chance="0.426">
-					<item id="9573" min="1" max="1" chance="70.422535211268" /> <!-- Life Stone - Lv. 80 -->
-					<item id="9617" min="1" max="1" chance="7.0422535211268" /> <!-- Dynasty Blade Piece -->
-					<item id="9616" min="1" max="1" chance="7.0422535211268" /> <!-- Dynasty Sword Piece -->
-					<item id="9574" min="1" max="1" chance="7.0422535211268" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="9618" min="1" max="1" chance="7.0422535211268" /> <!-- Dynasty Phantom Piece -->
-					<item id="9575" min="1" max="1" chance="0.70422535211268" /> <!-- High-grade Life Stone - Lv. 80 -->
-					<item id="5272" min="1" max="1" chance="0.70422535211268" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.704" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="11" />
 			<height normal="26" />
@@ -6753,62 +4673,7 @@
 				<clan>RAGNAORC</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="156" max="364" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0036">
-					<item id="9448" min="1" max="1" chance="25" /> <!-- Dynasty Cudgel -->
-					<item id="9449" min="1" max="1" chance="25" /> <!-- Dynasty Mace -->
-					<item id="10252" min="1" max="1" chance="25" /> <!-- Dynasty Staff -->
-					<item id="10253" min="1" max="1" chance="25" /> <!-- Dynasty Crusher -->
-				</group>
-				<group chance="0.075">
-					<item id="9531" min="1" max="1" chance="100" /> <!-- Sealed Dynasty Gaiters Piece -->
-				</group>
-				<group chance="0.489">
-					<item id="9573" min="1" max="1" chance="61.349693251534" /> <!-- Life Stone - Lv. 80 -->
-					<item id="10546" min="1" max="1" chance="6.1349693251534" /> <!-- Dynasty Staff Piece -->
-					<item id="9623" min="1" max="1" chance="6.1349693251534" /> <!-- Dynasty Mace Piece -->
-					<item id="9622" min="1" max="1" chance="6.1349693251534" /> <!-- Dynasty Cudgel Piece -->
-					<item id="9620" min="1" max="1" chance="6.1349693251534" /> <!-- Dynasty Knife Piece -->
-					<item id="10547" min="1" max="1" chance="6.1349693251534" /> <!-- Dynasty Crusher Piece -->
-					<item id="9574" min="1" max="1" chance="6.1349693251534" /> <!-- Mid-grade Life Stone - Lv. 80 -->
-					<item id="5277" min="1" max="1" chance="0.61349693251534" /> <!-- Recipe: Greater Spiritshot Compressed Package (S-grade) -->
-					<item id="5272" min="1" max="1" chance="0.61349693251534" /> <!-- Recipe: Greater Soulshot Compressed Package (S-grade) -->
-					<item id="9575" min="1" max="1" chance="0.61349693251534" /> <!-- High-grade Life Stone - Lv. 80 -->
-				</group>
-				<group chance="20">
-					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="40" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="10" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="33">
-					<item id="8603" min="1" max="1" chance="60" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="30" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="10" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="0.7">
-					<item id="34849" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Power -->
-				</group>
-				<group chance="0.7">
-					<item id="34850" min="1" max="1" chance="100" /> <!-- Mysterious Herb of Magic -->
-				</group>
-				<group chance="0.1">
-					<item id="13028" min="1" max="1" chance="100" /> <!-- Vitality Replenishing Herb -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.59" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.3" /> <!-- Synthetic Braid -->
-				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.0055" /> <!-- Recipe: Thin Braid - Upgrade -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="11" />
 			<height normal="26" />

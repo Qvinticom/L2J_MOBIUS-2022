@@ -215,7 +215,6 @@
 	<item id="70217" name="Rare Accessory Enhanced Coupon" type="EtcItem">
 		<!-- If you collect 4 of them, you will obtain Chronicle Cube -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -1033,28 +1032,24 @@
 	<item id="70294" name="Talisman of Border +1" type="Armor">
 		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 	</item>
 	<item id="70295" name="Talisman of Border +2" type="Armor">
 		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 	</item>
 	<item id="70296" name="Talisman of Border +3" type="Armor">
 		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 	</item>
 	<item id="70297" name="Talisman of Border +4" type="Armor">
 		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
@@ -1063,7 +1058,6 @@
 	<item id="70298" name="Talisman of Border +5" type="Armor">
 		<!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
@@ -1072,7 +1066,6 @@
 	<item id="70299" name="Enchant Scroll of Border" type="EtcItem">
 		<!-- An Enchant Scroll enhancing the properties of Talisman of Border. The maximum level of enchantment is +10 -->
 		<set name="icon" val="icon.etc_doom_capture" />
-		<set name="default_action" val="-1" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />

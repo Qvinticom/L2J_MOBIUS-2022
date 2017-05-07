@@ -40,13 +40,7 @@
 				<clan>M_FAIRY</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="4.939">
-					<item id="17375" min="1" max="1" chance="100" /> <!-- Kimerian's Trace -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="27" />
@@ -1745,36 +1739,7 @@
 			</attribute>
 		</stats>
 		<status attackable="false" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1262" max="2944" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0165">
-					<item id="35337" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Retributer Fragment -->
-					<item id="35336" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Caster Fragment -->
-					<item id="35335" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Buster Fragment -->
-				</group>
-				<group chance="0.0499">
-					<item id="36519" min="1" max="1" chance="60.120240480962" /> <!-- Quality Leather -->
-					<item id="9554" min="1" max="1" chance="6.0120240480962" /> <!-- Earth Crystal -->
-					<item id="9552" min="1" max="1" chance="6.0120240480962" /> <!-- Fire Crystal -->
-					<item id="17527" min="1" max="1" chance="11.022044088176" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="9556" min="1" max="1" chance="6.0120240480962" /> <!-- Dark Crystal -->
-					<item id="19447" min="1" max="1" chance="1.8036072144289" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-					<item id="17526" min="1" max="1" chance="1.8036072144289" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35459" min="1" max="1" chance="1.8036072144289" /> <!-- Recipe: Amaranthine Buster (60%) -->
-					<item id="35460" min="1" max="1" chance="1.8036072144289" /> <!-- Recipe: Amaranthine Caster (60%) -->
-					<item id="35461" min="1" max="1" chance="1.8036072144289" /> <!-- Recipe: Amaranthine Retributer (60%) -->
-					<item id="19448" min="1" max="1" chance="1.8036072144289" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36534" min="1" max="1" chance="0.075" /> <!-- Durable Braid -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
@@ -1807,32 +1772,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2737" max="6389" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.09">
-					<item id="35335" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Buster Fragment -->
-					<item id="35336" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Caster Fragment -->
-					<item id="35337" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Retributer Fragment -->
-				</group>
-				<group chance="0.0357">
-					<item id="17527" min="1" max="1" chance="84.033613445378" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="17526" min="1" max="1" chance="8.4033613445378" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35459" min="1" max="1" chance="2.5210084033613" /> <!-- Recipe: Amaranthine Buster (60%) -->
-					<item id="35460" min="1" max="1" chance="2.5210084033613" /> <!-- Recipe: Amaranthine Caster (60%) -->
-					<item id="35461" min="1" max="1" chance="2.5210084033613" /> <!-- Recipe: Amaranthine Retributer (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36534" min="1" max="1" chance="0.075" /> <!-- Durable Braid -->
-				<item id="36535" min="1" max="1" chance="0.0055" /> <!-- Quality Braid -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-				<item id="36887" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Braid - Upgrade -->
-			</corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="50" />
@@ -1865,32 +1805,7 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2737" max="6389" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.09">
-					<item id="35335" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Buster Fragment -->
-					<item id="35336" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Caster Fragment -->
-					<item id="35337" min="1" max="1" chance="33.333333333333" /> <!-- Amaranthine Retributer Fragment -->
-				</group>
-				<group chance="0.0357">
-					<item id="17527" min="1" max="1" chance="84.033613445378" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="17526" min="1" max="1" chance="8.4033613445378" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35459" min="1" max="1" chance="2.5210084033613" /> <!-- Recipe: Amaranthine Buster (60%) -->
-					<item id="35460" min="1" max="1" chance="2.5210084033613" /> <!-- Recipe: Amaranthine Caster (60%) -->
-					<item id="35461" min="1" max="1" chance="2.5210084033613" /> <!-- Recipe: Amaranthine Retributer (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36534" min="1" max="1" chance="0.075" /> <!-- Durable Braid -->
-				<item id="36535" min="1" max="1" chance="0.0055" /> <!-- Quality Braid -->
-				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
-				<item id="36887" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Braid - Upgrade -->
-			</corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="40" />

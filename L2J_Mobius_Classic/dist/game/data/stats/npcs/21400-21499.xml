@@ -51,22 +51,7 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="10" max="24" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.003">
-					<item id="729" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="11" />
 			<height normal="28.5" />
@@ -120,22 +105,7 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="11" max="25" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="30" grown="15.5" />
 			<height normal="40" grown="48.5" />
@@ -193,22 +163,7 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="11" max="27" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -265,22 +220,7 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="11" max="26" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.003">
-					<item id="729" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="729" min="1" max="1" chance="0.003" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="28" grown="33" />
@@ -337,22 +277,7 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="12" max="27" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />

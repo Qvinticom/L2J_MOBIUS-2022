@@ -25,26 +25,7 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="57" min="8810" max="20521" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.96">
-					<item id="37776" min="1" max="1" chance="47.61904761904762" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
-					<item id="37791" min="1" max="1" chance="47.61904761904762" /> <!-- Sealed Demonic Tome -->
-					<item id="37773" min="1" max="1" chance="4.761904761904762" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="40049" min="1" max="1" chance="50.15" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="5.117" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.75" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -73,24 +54,7 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="1932" max="4501" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="37791" min="1" max="1" chance="100" /> <!-- Sealed Demonic Tome -->
-				</group>
-			</death>
-			<corpse>
-				<item id="40049" min="1" max="1" chance="11.28" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="1.092" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.3" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="35" />
 			<height normal="47.5" />
@@ -121,24 +85,7 @@
 			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="50">
-					<item id="57" min="749" max="1749" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="37791" min="1" max="1" chance="100" /> <!-- Sealed Demonic Tome -->
-				</group>
-			</death>
-			<corpse>
-				<item id="40049" min="1" max="1" chance="4.358" /> <!-- Scroll: 1,000 SP -->
-				<item id="40050" min="1" max="1" chance="0.3" /> <!-- Scroll: 10,000 SP -->
-				<item id="40051" min="1" max="1" chance="0.03" /> <!-- Scroll: 100,000 SP -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="42" />
@@ -467,22 +414,7 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="21.69">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -509,22 +441,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="7" max="16" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="24.03">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -552,22 +469,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="8" max="18" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.139">
-					<item id="36551" min="1" max="1" chance="100" /> <!-- Armor Fragment (Low-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -640,22 +542,7 @@
 			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4001" level="2" /> <!-- Gust -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="8" max="18" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.75">
-					<item id="36527" min="1" max="1" chance="100" /> <!-- Synthetic Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
@@ -682,22 +569,7 @@
 			<skill id="4066" level="2" /> <!-- Twister -->
 			<skill id="4001" level="2" /> <!-- Gust -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="8" max="18" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.75">
-					<item id="36527" min="1" max="1" chance="100" /> <!-- Synthetic Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
@@ -782,27 +654,7 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="18" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0387">
-					<item id="10483" min="1" max="1" chance="77.519379844961" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9548" min="1" max="1" chance="7.7519379844961" /> <!-- Earth Stone -->
-					<item id="10484" min="1" max="1" chance="7.7519379844961" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9554" min="1" max="1" chance="2.3255813953488" /> <!-- Earth Crystal -->
-					<item id="10485" min="1" max="1" chance="2.3255813953488" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.3255813953488" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="40" />
 			<height normal="44" />
@@ -834,27 +686,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="23" max="54" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0437">
-					<item id="10483" min="1" max="1" chance="68.649885583524" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9548" min="1" max="1" chance="12.585812356979" /> <!-- Earth Stone -->
-					<item id="10484" min="1" max="1" chance="12.585812356979" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9554" min="1" max="1" chance="2.0594965675057" /> <!-- Earth Crystal -->
-					<item id="10485" min="1" max="1" chance="2.0594965675057" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.0594965675057" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
@@ -885,27 +717,7 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="24" max="55" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0437">
-					<item id="10483" min="1" max="1" chance="68.649885583524" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9548" min="1" max="1" chance="12.585812356979" /> <!-- Earth Stone -->
-					<item id="10484" min="1" max="1" chance="12.585812356979" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9554" min="1" max="1" chance="2.0594965675057" /> <!-- Earth Crystal -->
-					<item id="10485" min="1" max="1" chance="2.0594965675057" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.0594965675057" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="28" />
 			<height normal="51" />
@@ -937,27 +749,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="30" max="70" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0437">
-					<item id="10483" min="1" max="1" chance="68.649885583524" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9548" min="1" max="1" chance="12.585812356979" /> <!-- Earth Stone -->
-					<item id="10484" min="1" max="1" chance="12.585812356979" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9554" min="1" max="1" chance="2.0594965675057" /> <!-- Earth Crystal -->
-					<item id="10485" min="1" max="1" chance="2.0594965675057" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.0594965675057" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.248" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="30" />
 			<height normal="50" />
@@ -989,27 +781,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="31" max="72" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0437">
-					<item id="10483" min="1" max="1" chance="68.649885583524" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9548" min="1" max="1" chance="12.585812356979" /> <!-- Earth Stone -->
-					<item id="10484" min="1" max="1" chance="12.585812356979" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9554" min="1" max="1" chance="2.0594965675057" /> <!-- Earth Crystal -->
-					<item id="10485" min="1" max="1" chance="2.0594965675057" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.0594965675057" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.374" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="38" />
 			<height normal="63" />
@@ -1041,27 +813,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="39" max="91" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0703">
-					<item id="10483" min="1" max="1" chance="42.674253200569" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="42.674253200569" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="7.823613086771" /> <!-- Wind Stone -->
-					<item id="10485" min="1" max="1" chance="4.2674253200569" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="959" min="1" max="1" chance="1.2802275960171" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="17248" min="1" max="1" chance="1.2802275960171" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.669" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="22" />
 			<height normal="42" />
@@ -1090,27 +842,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="16" max="38" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="7.2815533980583" /> <!-- Wind Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="959" min="1" max="1" chance="2.1844660194175" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -1139,27 +871,7 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="21" max="48" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9547" min="1" max="1" chance="7.2815533980583" /> <!-- Water Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9553" min="1" max="1" chance="2.1844660194175" /> <!-- Water Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="27" />
 			<height normal="47" />
@@ -1191,27 +903,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="41" max="95" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1174">
-					<item id="10483" min="1" max="1" chance="63.884156729131" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="25.553662691652" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9547" min="1" max="1" chance="4.6848381601363" /> <!-- Water Stone -->
-					<item id="9553" min="1" max="1" chance="2.5553662691652" /> <!-- Water Crystal -->
-					<item id="10485" min="1" max="1" chance="2.5553662691652" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.76660988074957" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.762" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="44" />
@@ -1243,27 +935,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="34" max="78" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0703">
-					<item id="10483" min="1" max="1" chance="42.674253200569" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="42.674253200569" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9547" min="1" max="1" chance="7.823613086771" /> <!-- Water Stone -->
-					<item id="10485" min="1" max="1" chance="4.2674253200569" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="9553" min="1" max="1" chance="1.2802275960171" /> <!-- Water Crystal -->
-					<item id="17248" min="1" max="1" chance="1.2802275960171" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.445" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="33" />
 			<height normal="41" />
@@ -1295,27 +967,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="43" max="100" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1174">
-					<item id="10483" min="1" max="1" chance="63.884156729131" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="25.553662691652" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9547" min="1" max="1" chance="4.6848381601363" /> <!-- Water Stone -->
-					<item id="9553" min="1" max="1" chance="2.5553662691652" /> <!-- Water Crystal -->
-					<item id="10485" min="1" max="1" chance="2.5553662691652" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.76660988074957" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.836" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="33" />
 			<height normal="70" />
@@ -1344,27 +996,7 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="21" max="48" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9547" min="1" max="1" chance="7.2815533980583" /> <!-- Water Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9553" min="1" max="1" chance="2.1844660194175" /> <!-- Water Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="18" />
@@ -1398,27 +1030,7 @@
 				<clan>LEOPARD_DRAGON</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="18" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9547" min="1" max="1" chance="7.2815533980583" /> <!-- Water Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9553" min="1" max="1" chance="2.1844660194175" /> <!-- Water Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="20" />
@@ -1447,27 +1059,7 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="18" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0387">
-					<item id="10483" min="1" max="1" chance="77.519379844961" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="7.7519379844961" /> <!-- Wind Stone -->
-					<item id="10484" min="1" max="1" chance="7.7519379844961" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9555" min="1" max="1" chance="2.3255813953488" /> <!-- Wind Crystal -->
-					<item id="10485" min="1" max="1" chance="2.3255813953488" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.3255813953488" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="31" />
@@ -1498,27 +1090,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="28" max="66" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0437">
-					<item id="10483" min="1" max="1" chance="68.649885583524" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="12.585812356979" /> <!-- Wind Stone -->
-					<item id="10484" min="1" max="1" chance="12.585812356979" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9555" min="1" max="1" chance="2.0594965675057" /> <!-- Wind Crystal -->
-					<item id="10485" min="1" max="1" chance="2.0594965675057" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.0594965675057" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.198" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -1550,27 +1122,7 @@
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="42" max="99" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1174">
-					<item id="10483" min="1" max="1" chance="63.884156729131" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="25.553662691652" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="4.6848381601363" /> <!-- Wind Stone -->
-					<item id="9555" min="1" max="1" chance="2.5553662691652" /> <!-- Wind Crystal -->
-					<item id="10485" min="1" max="1" chance="2.5553662691652" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.76660988074957" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.751" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="34.5" />
@@ -1602,27 +1154,7 @@
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="44" max="102" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1174">
-					<item id="10483" min="1" max="1" chance="63.884156729131" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="25.553662691652" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="4.6848381601363" /> <!-- Wind Stone -->
-					<item id="9555" min="1" max="1" chance="2.5553662691652" /> <!-- Wind Crystal -->
-					<item id="10485" min="1" max="1" chance="2.5553662691652" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.76660988074957" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.785" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="14" />
 			<height normal="39" />
@@ -1651,27 +1183,7 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="20" max="47" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9549" min="1" max="1" chance="7.2815533980583" /> <!-- Wind Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9555" min="1" max="1" chance="2.1844660194175" /> <!-- Wind Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="21" grown="24" />
 			<height normal="31" grown="38" />
@@ -1703,27 +1215,7 @@
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="46" max="107" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1419">
-					<item id="10483" min="1" max="1" chance="52.854122621564" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="21.141649048626" /> <!-- Fire Stone -->
-					<item id="10484" min="1" max="1" chance="21.141649048626" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9552" min="1" max="1" chance="2.1141649048626" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1141649048626" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.63424947145877" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.961" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="34" />
@@ -1755,27 +1247,7 @@
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="47" max="110" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1419">
-					<item id="10483" min="1" max="1" chance="52.854122621564" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="21.141649048626" /> <!-- Fire Stone -->
-					<item id="10484" min="1" max="1" chance="21.141649048626" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9552" min="1" max="1" chance="2.1141649048626" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1141649048626" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.63424947145877" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="2.048" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="22.88" />
 			<height normal="41.6" />
@@ -1807,27 +1279,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="42" max="98" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1174">
-					<item id="10483" min="1" max="1" chance="63.884156729131" /> <!-- Life Stone - Lv. 82 -->
-					<item id="10484" min="1" max="1" chance="25.553662691652" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="4.6848381601363" /> <!-- Fire Stone -->
-					<item id="9552" min="1" max="1" chance="2.5553662691652" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.5553662691652" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.76660988074957" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="1.824" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="21.12" />
 			<height normal="40.48" />
@@ -1859,27 +1311,7 @@
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="50" max="116" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.1419">
-					<item id="10483" min="1" max="1" chance="52.854122621564" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="21.141649048626" /> <!-- Fire Stone -->
-					<item id="10484" min="1" max="1" chance="21.141649048626" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9552" min="1" max="1" chance="2.1141649048626" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1141649048626" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="0.63424947145877" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="2.121" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="40" />
@@ -1908,27 +1340,7 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="18" max="42" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0387">
-					<item id="10483" min="1" max="1" chance="77.519379844961" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="7.7519379844961" /> <!-- Fire Stone -->
-					<item id="10484" min="1" max="1" chance="7.7519379844961" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9552" min="1" max="1" chance="2.3255813953488" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.3255813953488" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.3255813953488" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="20" />
@@ -1957,27 +1369,7 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="21" max="48" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0412">
-					<item id="10483" min="1" max="1" chance="72.815533980583" /> <!-- Life Stone - Lv. 82 -->
-					<item id="9546" min="1" max="1" chance="7.2815533980583" /> <!-- Fire Stone -->
-					<item id="10484" min="1" max="1" chance="13.349514563107" /> <!-- Mid-grade Life Stone - Lv. 82 -->
-					<item id="9552" min="1" max="1" chance="2.1844660194175" /> <!-- Fire Crystal -->
-					<item id="10485" min="1" max="1" chance="2.1844660194175" /> <!-- High-grade Life Stone - Lv. 82 -->
-					<item id="17248" min="1" max="1" chance="2.1844660194175" /> <!-- Large Dragon Bone -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="32" />
 			<height normal="32" />
@@ -2011,25 +1403,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1" max="1" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="8" min="1" max="1" chance="100" /> <!-- Willow Staff -->
-				</group>
-				<group chance="0.3">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="1.313" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="14" />
@@ -2064,25 +1438,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1" max="3" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.3">
-					<item id="8" min="1" max="1" chance="100" /> <!-- Willow Staff -->
-				</group>
-				<group chance="0.75">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="4.109" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="14" />
@@ -2117,25 +1473,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="2" max="5" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="9" min="1" max="1" chance="100" /> <!-- Cedar Staff -->
-				</group>
-				<group chance="1.392">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="15" />
@@ -2170,25 +1508,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="3" max="7" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.075">
-					<item id="9" min="1" max="1" chance="100" /> <!-- Cedar Staff -->
-				</group>
-				<group chance="1.991">
-					<item id="36516" min="1" max="1" chance="100" /> <!-- Worn Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="10.74" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="15" />
@@ -2223,25 +1543,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4" max="9" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.75">
-					<item id="23" min="1" max="1" chance="100" /> <!-- Wooden Breastplate -->
-				</group>
-				<group chance="2.706">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="8" />
 			<height normal="20" />
@@ -2276,25 +1578,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="5" max="11" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="4.874">
-					<item id="29" min="1" max="1" chance="100" /> <!-- Leather Pants -->
-				</group>
-				<group chance="2.808">
-					<item id="36516" min="1" max="1" chance="100" /> <!-- Worn Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="15.42" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="6" />
 			<height normal="10.5" />
@@ -2322,25 +1606,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="5" max="11" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="5.014">
-					<item id="29" min="1" max="1" chance="100" /> <!-- Leather Pants -->
-				</group>
-				<group chance="0.3">
-					<item id="36551" min="1" max="1" chance="100" /> <!-- Armor Fragment (Low-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="15.16" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="6" />
 			<height normal="10.5" />
@@ -2374,25 +1640,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="5" max="12" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.018">
-					<item id="23" min="1" max="1" chance="100" /> <!-- Wooden Breastplate -->
-				</group>
-				<group chance="0.3">
-					<item id="36551" min="1" max="1" chance="100" /> <!-- Armor Fragment (Low-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="16.31" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="6" />
 			<height normal="17" />
@@ -2460,25 +1708,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="6.087">
-					<item id="29" min="1" max="1" chance="100" /> <!-- Leather Pants -->
-				</group>
-				<group chance="3.535">
-					<item id="36516" min="1" max="1" chance="100" /> <!-- Worn Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="18.44" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="8" />
 			<height normal="27" />
@@ -2512,25 +1742,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="3.312">
-					<item id="37" min="1" max="1" chance="100" /> <!-- Leather Shoes -->
-				</group>
-				<group chance="3.496">
-					<item id="36516" min="1" max="1" chance="100" /> <!-- Worn Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="18.51" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="20" />
@@ -2655,17 +1867,7 @@
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="34.93">
-					<item id="39597" min="1" max="1" chance="97.852848554251" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.1471514457486" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="33" />
@@ -2699,17 +1901,7 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16380" level="1" /> <!-- Dimensional Recoil Shot -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.00558631842" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9944136815799" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="26.5" />
@@ -2747,17 +1939,7 @@
 			<skill id="16372" level="1" /> <!-- Dimensional Spike -->
 			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.075753712167" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9242462878327" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="45" />
@@ -2793,17 +1975,7 @@
 			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.049789683201" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9502103167989" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="40" />
@@ -2836,11 +2008,7 @@
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="16" />
 			<height normal="6.8" />
@@ -2877,17 +2045,7 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.072868141029" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9271318589712" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -2925,17 +2083,7 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="34.07">
-					<item id="39597" min="1" max="1" chance="97.798649838568" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.2013501614323" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="30" />
 			<height normal="31.5" />
@@ -2975,17 +2123,7 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="2" max="2" chance="96.195469193401" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="3.804530806599" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
@@ -3021,17 +2159,7 @@
 			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="34.86">
-					<item id="39597" min="1" max="1" chance="97.848537005164" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.1514629948365" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -3068,17 +2196,7 @@
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.101731495561" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.8982685044391" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="40" />
@@ -3116,17 +2234,7 @@
 			<skill id="16366" level="1" /> <!-- Dimensional Resistance Decrease -->
 			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.076715606948" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9232843930522" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="42" />
@@ -3159,11 +2267,7 @@
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
@@ -3201,17 +2305,7 @@
 			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="97.995982164731" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.0040178352688" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="37" />
@@ -3251,17 +2345,7 @@
 			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="2" max="2" chance="96.179740699419" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="3.8202593005809" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23" />
 			<height normal="64" />
@@ -3297,17 +2381,7 @@
 			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="97.988300196956" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.0116998030435" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="13" />
 			<height normal="43" />
@@ -3347,17 +2421,7 @@
 			<skill id="16374" level="1" /> <!-- Dimensional Destruction -->
 			<skill id="16381" level="1" /> <!-- Dimensional Shield -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="97.993101285669" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.0068987143305" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="26" />
@@ -3393,17 +2457,7 @@
 			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
 			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.011349714297" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9886502857031" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="28.5" />
@@ -3436,11 +2490,7 @@
 			<skill id="16363" level="1" /> <!-- Dimensioal Warp Aerial Yoke -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
@@ -3478,17 +2528,7 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.058442831928" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9415571680722" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="16" />
 			<height normal="69" />
@@ -3525,17 +2565,7 @@
 			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="97.981579463061" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="2.0184205369391" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="34" />
@@ -3575,17 +2605,7 @@
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
 			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="2" max="2" chance="96.150148071228" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="3.849851928772" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="24" />
 			<height normal="61" />
@@ -3622,17 +2642,7 @@
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
 			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="39597" min="1" max="1" chance="98.05363533853" /> <!-- Warp Crystal -->
-					<item id="40051" min="1" max="1" chance="1.9463646614698" /> <!-- Scroll: 100,000 SP -->
-				</group>
-			</death>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="37" />
@@ -3666,25 +2676,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="4" max="10" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.75">
-					<item id="44" min="1" max="1" chance="100" /> <!-- Leather Helmet -->
-				</group>
-				<group chance="2.749">
-					<item id="36516" min="1" max="1" chance="100" /> <!-- Worn Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="14.01" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="8" />
 			<height normal="20" />
@@ -3744,25 +2736,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="5" max="13" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.356">
-					<item id="50" min="1" max="1" chance="100" /> <!-- Leather Gloves -->
-				</group>
-				<group chance="3.283">
-					<item id="36516" min="1" max="1" chance="100" /> <!-- Worn Leather -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36516" min="1" max="1" chance="18.41" /> <!-- Worn Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="6" />
 			<height normal="17" />
@@ -3796,26 +2770,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="704" max="1640" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.4935">
-					<item id="36538" min="1" max="1" chance="77.53598928691" /> <!-- Durable Leather Braid -->
-					<item id="36539" min="1" max="1" chance="20.087043856712" /> <!-- Quality Leather Braid -->
-					<item id="35347" min="1" max="1" chance="2.0087043856712" /> <!-- Eternal Leather Glove Ingredient -->
-					<item id="17526" min="1" max="1" chance="0.36826247070639" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36518" min="1" max="1" chance="7.185" /> <!-- Durable Leather -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="34" />
 			<height normal="35" />
@@ -3850,29 +2805,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1408" max="3281" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35345" min="1" max="1" chance="100" /> <!-- Eternal Leather Armor Ingredient -->
-				</group>
-				<group chance="2.179">
-					<item id="36538" min="1" max="1" chance="84.717760440569" /> <!-- Durable Leather Braid -->
-					<item id="36539" min="1" max="1" chance="13.767783386875" /> <!-- Quality Leather Braid -->
-					<item id="17526" min="1" max="1" chance="1.3767783386875" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35460" min="1" max="1" chance="0.13767783386875" /> <!-- Recipe: Amaranthine Caster (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36543" min="1" max="1" chance="2.524" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="30" />
 			<height normal="31.5" />
@@ -3937,26 +2870,7 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="704" max="1640" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.903">
-					<item id="36543" min="1" max="1" chance="83.056478405316" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3056478405316" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3056478405316" /> <!-- Orichalcum Wire -->
-					<item id="35471" min="1" max="1" chance="0.33222591362126" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36518" min="1" max="1" chance="7.234" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="38" />
 			<height normal="63" />
@@ -3989,26 +2903,7 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="704" max="1640" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.903">
-					<item id="36543" min="1" max="1" chance="83.056478405316" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3056478405316" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3056478405316" /> <!-- Orichalcum Wire -->
-					<item id="35472" min="1" max="1" chance="0.33222591362126" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36518" min="1" max="1" chance="7.224" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="26" />
 			<height normal="31" />
@@ -4075,25 +2970,7 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="704" max="1640" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.771">
-					<item id="36543" min="1" max="1" chance="66.120835686053" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="16.939582156973" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="16.939582156973" /> <!-- Orichalcum Wire -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36538" min="1" max="1" chance="1.861" /> <!-- Durable Leather Braid -->
-				<item id="36519" min="1" max="1" chance="0.75" /> <!-- Quality Leather -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
@@ -4127,26 +3004,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5645">
-					<item id="36538" min="1" max="1" chance="78.555449025248" /> <!-- Durable Leather Braid -->
-					<item id="36539" min="1" max="1" chance="19.175455417066" /> <!-- Quality Leather Braid -->
-					<item id="35348" min="1" max="1" chance="1.9175455417066" /> <!-- Eternal Leather Boot Ingredient -->
-					<item id="17526" min="1" max="1" chance="0.35155001597955" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36538" min="1" max="1" chance="1.925" /> <!-- Durable Leather Braid -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
@@ -4179,26 +3037,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="1.5795">
-					<item id="36538" min="1" max="1" chance="78.759100981323" /> <!-- Durable Leather Braid -->
-					<item id="36539" min="1" max="1" chance="18.993352326686" /> <!-- Quality Leather Braid -->
-					<item id="35353" min="1" max="1" chance="1.8993352326686" /> <!-- Eternal Shoe Ingredient -->
-					<item id="17526" min="1" max="1" chance="0.34821145932257" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36538" min="1" max="1" chance="1.895" /> <!-- Durable Leather Braid -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -4233,32 +3072,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1453" max="3384" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35328" min="1" max="1" chance="100" /> <!-- Amaranthine Cutter Fragment -->
-				</group>
-				<group chance="0.0055">
-					<item id="35345" min="1" max="1" chance="100" /> <!-- Eternal Leather Armor Ingredient -->
-				</group>
-				<group chance="1.9044">
-					<item id="36538" min="1" max="1" chance="83.910943079185" /> <!-- Durable Leather Braid -->
-					<item id="36539" min="1" max="1" chance="15.752993068683" /> <!-- Quality Leather Braid -->
-					<item id="17526" min="1" max="1" chance="0.28880487292586" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="35452" min="1" max="1" chance="0.047258979206049" /> <!-- Recipe: Amaranthine Cutter (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36543" min="1" max="1" chance="2.683" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="13" />
 			<height normal="25" />
@@ -4293,31 +3107,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1816" max="4229" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35332" min="1" max="1" chance="100" /> <!-- Amaranthine Stormer Fragment -->
-				</group>
-				<group chance="2.069">
-					<item id="36538" min="1" max="1" chance="82.31029482842" /> <!-- Durable Leather Braid -->
-					<item id="36539" min="1" max="1" chance="14.499758337361" /> <!-- Quality Leather Braid -->
-					<item id="17526" min="1" max="1" chance="1.4499758337361" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-					<item id="36549" min="1" max="1" chance="1.4499758337361" /> <!-- Weapon Fragment (High-grade) -->
-					<item id="35456" min="1" max="1" chance="0.14499758337361" /> <!-- Recipe: Amaranthine Stormer (60%) -->
-					<item id="35471" min="1" max="1" chance="0.14499758337361" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
@@ -4352,31 +3142,7 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="1816" max="4229" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.03">
-					<item id="35335" min="1" max="1" chance="100" /> <!-- Amaranthine Buster Fragment -->
-				</group>
-				<group chance="1.897">
-					<item id="36543" min="1" max="1" chance="66.473379019504" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="15.814443858724" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="15.814443858724" /> <!-- Orichalcum Wire -->
-					<item id="36554" min="1" max="1" chance="1.5814443858724" /> <!-- Armor Fragment (High-grade) -->
-					<item id="35459" min="1" max="1" chance="0.15814443858724" /> <!-- Recipe: Amaranthine Buster (60%) -->
-					<item id="35472" min="1" max="1" chance="0.15814443858724" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -4409,29 +3175,7 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="726" max="1692" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0055">
-					<item id="35336" min="1" max="1" chance="100" /> <!-- Amaranthine Caster Fragment -->
-				</group>
-				<group chance="0.903">
-					<item id="36543" min="1" max="1" chance="83.056478405316" /> <!-- Adamantite Wire -->
-					<item id="17527" min="1" max="1" chance="8.3056478405316" /> <!-- Scroll: Enchant Armor (R-grade) -->
-					<item id="36544" min="1" max="1" chance="8.3056478405316" /> <!-- Orichalcum Wire -->
-					<item id="35477" min="1" max="1" chance="0.33222591362126" /> <!-- Recipe: Eternal Shoes (60%) -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36518" min="1" max="1" chance="7.495" /> <!-- Durable Leather -->
-				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="15" />
 			<height normal="37" />

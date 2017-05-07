@@ -555,22 +555,7 @@
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="70">
-					<item id="57" min="6" max="14" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="21.69">
-					<item id="36526" min="1" max="1" chance="100" /> <!-- Fiber -->
-				</group>
-			</death>
-			<corpse>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</corpse>
-			<lucky_corpse>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky_corpse>
-		</drop_lists>
+
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -662,16 +647,7 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="14" />
@@ -696,16 +672,7 @@
 		<skill_list>
 			<skill id="4416" level="4" /> <!-- Animals -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="15" />
@@ -798,16 +765,7 @@
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<collision>
 			<radius normal="10" />
 			<height normal="14" />

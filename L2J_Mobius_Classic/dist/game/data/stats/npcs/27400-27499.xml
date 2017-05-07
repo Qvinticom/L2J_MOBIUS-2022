@@ -1586,16 +1586,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="28" grown="32" />
@@ -1648,16 +1639,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="28" grown="32" />
@@ -1710,16 +1692,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="28" grown="32" />
@@ -1771,16 +1744,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="65" grown="48" />
@@ -1833,16 +1797,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="16" grown="18" />
@@ -1894,16 +1849,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="19" grown="14" />
@@ -1955,16 +1901,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="21" />
@@ -2022,16 +1959,7 @@
 			<skill id="14449" level="1" /> <!-- Dedicated Blow -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<collision>
 			<radius normal="50" />
 			<height normal="60.5" />
@@ -2425,16 +2353,7 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<drop_lists>
-			<death>
-				<group chance="100">
-					<item id="8602" min="1" max="1" chance="100" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="100">
-					<item id="8605" min="1" max="1" chance="100" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<status undying="false" />
 		<collision>
 			<radius normal="18" grown="12" />
@@ -3450,20 +3369,7 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-		<drop_lists>
-			<death>
-				<group chance="33">
-					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
-					<item id="8601" min="1" max="1" chance="38" /> <!-- Major Herb of Life -->
-					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
-				</group>
-				<group chance="10">
-					<item id="8603" min="1" max="1" chance="40" /> <!-- Herb of Mana -->
-					<item id="8604" min="1" max="1" chance="52" /> <!-- Major Herb of Mana -->
-					<item id="8605" min="1" max="1" chance="8" /> <!-- Superior Herb of Mana -->
-				</group>
-			</death>
-		</drop_lists>
+
 		<collision>
 			<radius normal="6" />
 			<height normal="12" />
