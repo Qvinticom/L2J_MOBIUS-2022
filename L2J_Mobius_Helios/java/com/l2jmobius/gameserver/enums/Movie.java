@@ -110,6 +110,8 @@ public enum Movie
 	EPIC_FREYA_SCENE(115, true),
 	EPIC_KELBIM_SCENE(116, false),
 	EPIC_TAUTI_SCENE(117, false),
+	SC_RAMONA_TRANS_A(119, true),
+	SC_RAMONA_TRANS_B(120, true),
 	LAND_KSERTH_A(1000, true),
 	LAND_KSERTH_B(1001, true),
 	LAND_UNDEAD_A(1002, true),
