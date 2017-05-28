@@ -226,7 +226,6 @@ import quests.Q10317_OrbisWitch.Q10317_OrbisWitch;
 import quests.Q10318_DecayingDarkness.Q10318_DecayingDarkness;
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
 import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
-import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheBookOfGiants;
 import quests.Q10330_ToTheRuinsOfYeSagira.Q10330_ToTheRuinsOfYeSagira;
 import quests.Q10331_StartOfFate.Q10331_StartOfFate;
 import quests.Q10332_ToughRoad.Q10332_ToughRoad;
@@ -646,7 +645,6 @@ public class QuestMasterHandler
 		Q10318_DecayingDarkness.class,
 		Q10320_LetsGoToTheCentralSquare.class,
 		Q10321_QualificationsOfTheSeeker.class,
-		Q10327_IntruderWhoWantsTheBookOfGiants.class,
 		Q10330_ToTheRuinsOfYeSagira.class,
 		Q10331_StartOfFate.class,
 		Q10332_ToughRoad.class,

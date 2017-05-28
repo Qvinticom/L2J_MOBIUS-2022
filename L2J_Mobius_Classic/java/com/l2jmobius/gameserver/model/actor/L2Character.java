@@ -963,7 +963,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			// Notify to scripts
-			final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target), target, TerminateReturn.class);
+			final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target, null), target, TerminateReturn.class);
 			if ((attackedReturn != null) && attackedReturn.terminate())
 			{
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

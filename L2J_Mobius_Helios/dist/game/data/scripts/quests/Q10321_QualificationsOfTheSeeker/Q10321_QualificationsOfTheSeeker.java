@@ -16,13 +16,11 @@
  */
 package quests.Q10321_QualificationsOfTheSeeker;
 
-import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
 import quests.Q10320_LetsGoToTheCentralSquare.Q10320_LetsGoToTheCentralSquare;
@@ -60,7 +58,7 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32975-03.html":
+			case "32975-03.htm":
 			{
 				qs.startQuest();
 				qs.setCond(2); // arrow hack
@@ -78,10 +76,8 @@ public final class Q10321_QualificationsOfTheSeeker extends Quest
 			{
 				if (qs.isStarted())
 				{
-					giveAdena(player, 50, true);
-					addExpAndSp(player, 40, 5);
+					addExpAndSp(player, 300, 6);
 					qs.exitQuest(false, true);
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HM_DON_T_JUST_GO_I_STILL_HAVE_TONS_TO_TEACH_YOU);
 					htmltext = event;
 				}
 				break;

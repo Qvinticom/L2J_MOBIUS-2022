@@ -16,37 +16,47 @@
  */
 package quests.Q10542_SearchingForNewPower;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
 import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 
 /**
  * Searching for New Power (10542)
  * @URL https://l2wiki.com/Searching_for_New_Power
- * @author GIgi
+ * @author Gigi
  */
 public final class Q10542_SearchingForNewPower extends Quest
 {
 	// NPCs
 	private static final int SHANNON = 32974;
+	private static final int TOYRON = 33004;
+	private static final int THIEF = 23121;
 	// Items
-	private static final int SOULSHOT = 1835;
 	private static final int THE_WAR_OF_GODS_AND_GIANTS = 17575;
+	private static final int SOULSHOTS = 5789;
+	private static final int SPIRITSHOTS = 5790;
 	// Misc
+	public static final int KILL_COUNT_VAR = 0;
 	private static final int MAX_LEVEL = 20;
 	
 	public Q10542_SearchingForNewPower()
 	{
 		super(10542);
 		addStartNpc(SHANNON);
-		addTalkId(SHANNON);
+		addTalkId(SHANNON, TOYRON);
 		registerQuestItems(THE_WAR_OF_GODS_AND_GIANTS);
 		addCondNotRace(Race.ERTHEIA, "noRace.html");
 		addCondMaxLevel(MAX_LEVEL, "noLevel.html");
@@ -70,22 +80,41 @@ public final class Q10542_SearchingForNewPower extends Quest
 				htmltext = event;
 				break;
 			}
-			case "32974-03.htm":
+			case "check":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 10000);
-				if (!hasQuestItems(player, SOULSHOT))
+				if (player.isInCategory(CategoryType.MAGE_GROUP))
 				{
-					giveItems(player, SOULSHOT, 100);
+					giveItems(player, SPIRITSHOTS, 100);
+					showOnScreenMsg(player, NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
+					htmltext = "32974-04.htm";
 				}
-				htmltext = event;
+				else
+				{
+					giveItems(player, SOULSHOTS, 100);
+					showOnScreenMsg(player, NpcStringId.AUTOMATE_SOULSHOT_AS_SHOWN_IN_THE_TUTORIAL, ExShowScreenMessage.TOP_CENTER, 4500);
+					htmltext = "32974-03.htm";
+				}
 				break;
 			}
-			case "32974-06.html":
+			case "33004-02.html":
 			{
-				addExpAndSp(player, 3200, 8);
-				qs.exitQuest(false, true);
-				htmltext = event;
+				if (qs.isCond(3))
+				{
+					showOnScreenMsg(player, NpcStringId.AMONG_THE_4_BOOKSHELVES_FIND_THE_ONE_CONTAINING_A_VOLUME_CALLED_THE_WAR_OF_GODS_AND_GIANTS, ExShowScreenMessage.TOP_CENTER, 4500);
+					htmltext = "32974-08.html";
+				}
+				break;
+			}
+			case "32974-08.html":
+			{
+				if (qs.isCond(5))
+				{
+					giveItems(player, (player.isInCategory(CategoryType.MAGE_GROUP) ? SPIRITSHOTS : SOULSHOTS), 100);
+					addExpAndSp(player, 2550, 7);
+					qs.exitQuest(false, true);
+					htmltext = "32974-08.html";
+				}
 				break;
 			}
 		}
@@ -93,10 +122,10 @@ public final class Q10542_SearchingForNewPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
+	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
 	{
+		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
 		
 		switch (qs.getState())
 		{
@@ -110,14 +139,92 @@ public final class Q10542_SearchingForNewPower extends Quest
 			}
 			case State.STARTED:
 			{
-				if ((qs.getCond() > 0) && (qs.getCond() < 5))
+				if (npc.getId() == SHANNON)
 				{
-					htmltext = "32974-04.html";
-					qs.setCond(2);
+					switch (qs.getCond())
+					{
+						case 1:
+						case 2:
+						case 3:
+						{
+							htmltext = "32974-05.html";
+							break;
+						}
+						case 4:
+						{
+							htmltext = "32974-06.html";
+							break;
+						}
+						case 5:
+						{
+							htmltext = "32974-07.html";
+							break;
+						}
+					}
+					break;
 				}
-				else if (qs.isCond(5))
+				else if (npc.getId() == TOYRON)
 				{
-					htmltext = "32974-05.html";
+					if (qs.isCond(2))
+					{
+						htmltext = "33004-01.html";
+						if (!isSimulated)
+						{
+							qs.setCond(3, true);
+							player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+							htmltext = "33004-01.html";
+							
+							NpcStringId npcStringId = null;
+							switch (player.getClassId())
+							{
+								case FIGHTER:
+								case ELVEN_FIGHTER:
+								case DARK_FIGHTER:
+								{
+									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_MORTAL_BLOW;
+									break;
+								}
+								case MAGE:
+								case ELVEN_MAGE:
+								case DARK_MAGE:
+								{
+									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_WIND_STRIKE;
+									break;
+								}
+								case ORC_FIGHTER:
+								{
+									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_IRON_PUNCH;
+									break;
+								}
+								case ORC_MAGE:
+								{
+									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_CHILL_FLAME;
+									break;
+								}
+								case DWARVEN_FIGHTER:
+								{
+									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_SPOIL;
+									break;
+								}
+								case MALE_SOLDIER:
+								case FEMALE_SOLDIER:
+								{
+									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_FALLEN_ATTACK_OR_FALLEN_ARROW;
+									break;
+								}
+								default:
+									break;
+							}
+							if (npcStringId != null)
+							{
+								showOnScreenMsg(player, npcStringId, ExShowScreenMessage.TOP_CENTER, 4500);
+							}
+						}
+					}
+					else if (qs.isCond(5))
+					{
+						htmltext = "33004-03.html";
+					}
 				}
 				break;
 			}
@@ -128,5 +235,17 @@ public final class Q10542_SearchingForNewPower extends Quest
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	{
+		final Set<NpcLogListHolder> holder = new HashSet<>();
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(4))
+		{
+			holder.add(new NpcLogListHolder(THIEF, false, qs.getMemoStateEx(KILL_COUNT_VAR)));
+		}
+		return holder;
 	}
 }

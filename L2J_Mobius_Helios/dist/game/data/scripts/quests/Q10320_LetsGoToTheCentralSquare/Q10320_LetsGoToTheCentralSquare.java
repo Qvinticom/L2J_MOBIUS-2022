@@ -16,7 +16,6 @@
  */
 package quests.Q10320_LetsGoToTheCentralSquare;
 
-import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -31,7 +30,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 
 /**
@@ -89,11 +87,9 @@ public final class Q10320_LetsGoToTheCentralSquare extends Quest
 			{
 				if (qs.isStarted())
 				{
-					giveAdena(player, 30, true);
-					addExpAndSp(player, 30, 5);
+					addExpAndSp(player, 300, 6);
 					qs.exitQuest(false, true);
 					htmltext = event;
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WAIT_WAIT_A_MINUTE_I_STILL_HAVE_TIME);
 				}
 				break;
 			}

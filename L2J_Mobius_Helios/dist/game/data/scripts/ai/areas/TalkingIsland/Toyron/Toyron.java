@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
-import quests.Q10327_IntruderWhoWantsTheBookOfGiants.Q10327_IntruderWhoWantsTheBookOfGiants;
+import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 
 /**
  * Toyron AI.
@@ -37,7 +37,7 @@ public final class Toyron extends AbstractNpcAI
 	// Misc
 	private static final int TEMPLATE_ID = 182;
 	// Location
-	private static final Location MUSEUM_OUT = new Location(-114359, 260120, -1192);
+	private static final Location MUSEUM_OUT = new Location(-111464, 255828, -1440);
 	
 	private Toyron()
 	{
@@ -57,7 +57,10 @@ public final class Toyron extends AbstractNpcAI
 			{
 				world.finishInstance(0);
 			}
-			player.teleToLocation(MUSEUM_OUT);
+			else
+			{
+				player.teleToLocation(MUSEUM_OUT);
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -76,15 +79,15 @@ public final class Toyron extends AbstractNpcAI
 		final Instance world = npc.getInstanceWorld();
 		if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
 		{
-			final QuestState qs = player.getQuestState(Q10327_IntruderWhoWantsTheBookOfGiants.class.getSimpleName());
+			final QuestState qs = player.getQuestState(Q10542_SearchingForNewPower.class.getSimpleName());
 			if (qs != null)
 			{
 				switch (qs.getCond())
 				{
-					case 1:
+					case 3:
 						htmltext = "33004-01.html";
 						break;
-					case 2:
+					case 4:
 						htmltext = "33004-02.html";
 						break;
 				}

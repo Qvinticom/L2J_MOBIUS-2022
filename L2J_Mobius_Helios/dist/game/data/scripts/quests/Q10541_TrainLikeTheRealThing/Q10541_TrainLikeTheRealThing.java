@@ -39,7 +39,7 @@ import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 /**
  * Train Like the Real Thing (10541)
  * @URL https://l2wiki.com/Train_Like_the_Real_Thing
- * @author GIgi
+ * @author Gigi
  */
 public final class Q10541_TrainLikeTheRealThing extends Quest
 {
@@ -164,23 +164,30 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 				{
 					case SHANNON:
 					{
-						if (qs.isCond(1))
+						switch (qs.getCond())
 						{
-							htmltext = "32974-05.html";
-						}
-						else if (qs.isCond(2))
-						{
-							startQuestTimer("HTML1", 100, npc, player);
-						}
-						else if (qs.isCond(3))
-						{
-							htmltext = "32974-07.html";
-						}
-						else if (qs.isCond(5))
-						{
-							addExpAndSp(player, 2950, 7);
-							qs.exitQuest(false, true);
-							startQuestTimer("HTML", 200, npc, player);
+							case 1:
+							{
+								htmltext = "32974-05.html";
+								break;
+							}
+							case 2:
+							{
+								startQuestTimer("HTML1", 100, npc, player);
+								break;
+							}
+							case 3:
+							{
+								htmltext = "32974-07.html";
+								break;
+							}
+							case 5:
+							{
+								addExpAndSp(player, 2550, 7);
+								qs.exitQuest(false, true);
+								startQuestTimer("HTML", 200, npc, player);
+								break;
+							}
 						}
 						break;
 					}
@@ -198,7 +205,6 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 					}
 				}
 				break;
-				
 			}
 			case State.COMPLETED:
 			{

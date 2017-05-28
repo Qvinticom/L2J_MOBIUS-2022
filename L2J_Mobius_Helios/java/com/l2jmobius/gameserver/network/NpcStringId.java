@@ -13671,6 +13671,24 @@ public final class NpcStringId
 	@ClientString(id = 554107, message = "Defeating the Scarecrow")
 	public static NpcStringId DEFEATING_THE_SCARECROW;
 	
+	@ClientString(id = 554210, message = "Preapare to use the skill 'Power Strike' or 'Mortal Blow'")
+	public static NpcStringId PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_MORTAL_BLOW;
+	
+	@ClientString(id = 554211, message = "Preapare to use the skill 'Wind Strike'")
+	public static NpcStringId PREPARE_TO_USE_THE_SKILL_WIND_STRIKE;
+	
+	@ClientString(id = 554212, message = "Prepare to use the skill ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Power Strike' or ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Iron Punch")
+	public static NpcStringId PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_IRON_PUNCH;
+	
+	@ClientString(id = 554213, message = "Prepare to use the skill ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Chill Flame'")
+	public static NpcStringId PREPARE_TO_USE_THE_SKILL_CHILL_FLAME;
+	
+	@ClientString(id = 554214, message = "Prepare to use the skill ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Spoil'")
+	public static NpcStringId PREPARE_TO_USE_THE_SKILL_SPOIL;
+	
+	@ClientString(id = 554215, message = "Prepare to use the skill ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Fallen Attack' or ÃƒÂ¢Ã¢â€šÂ¬Ã‹Å“Fallen Arrow'")
+	public static NpcStringId PREPARE_TO_USE_THE_SKILL_FALLEN_ATTACK_OR_FALLEN_ARROW;
+	
 	@ClientString(id = 570101, message = "The Road to Destruction (Above Lv. 93)")
 	public static NpcStringId THE_ROAD_TO_DESTRUCTION_ABOVE_LV_93;
 	
@@ -31901,8 +31919,12 @@ public final class NpcStringId
 	
 	@ClientString(id = 1803275, message = "If the story is still in progress, I can tell it again.")
 	public static NpcStringId IF_THE_STORY_IS_STILL_IN_PROGRESS_I_CAN_TELL_IT_AGAIN;
+	
 	@ClientString(id = 1803329, message = "Speak with the ‘Adventurers' Guide for Training'.")
 	public static NpcStringId SPEAK_WITH_THE_ADVENTURERS_GUIDE_FOR_TRAINING;
+	
+	@ClientString(id = 1803330, message = "Speak with Toyron in order to return to Shannon.")
+	public static NpcStringId SPEAK_WITH_TOYRON_IN_ORDER_TO_RETURN_SHANNON;
 	
 	@ClientString(id = 1810363, message = "You are too far from the corpse.")
 	public static NpcStringId YOU_ARE_TOO_FAR_FROM_THE_CORPSE;

@@ -16,6 +16,8 @@
  */
 package quests.Q10543_SheddingWeight;
 
+import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
+
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -25,8 +27,6 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-
-import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 
 /**
  * Shedding Weight (10543)
@@ -40,12 +40,7 @@ public final class Q10543_SheddingWeight extends Quest
 	private static final int WILFORD = 30005;
 	// Items
 	// private static final int NOVICE_TRAINING_LOG = 1835; // TODO Find item ID
-	private static final int WOODEN_ARROW = 17;
-	private static final int APPRENTICE_ADVENTURERS_STAFF = 7816;
-	private static final int APPRENTICE_ADVENTURERS_BONE_CLUB = 7817;
 	private static final int APPRENTICE_ADVENTURERS_KNIFE = 7818;
-	private static final int APPRENTICE_ADVENTURERS_CESTUS = 7819;
-	private static final int APPRENTICE_ADVENTURERS_BOW = 7820;
 	private static final int APPRENTICE_ADVENTURERS_LONG_SWORD = 7821;
 	// Misc
 	private static final int MAX_LEVEL = 20;
@@ -88,12 +83,7 @@ public final class Q10543_SheddingWeight extends Quest
 			}
 			case "30005-03.html":
 			{
-				giveItems(player, WOODEN_ARROW, 500);
-				giveItems(player, APPRENTICE_ADVENTURERS_STAFF, 1);
-				giveItems(player, APPRENTICE_ADVENTURERS_BONE_CLUB, 1);
 				giveItems(player, APPRENTICE_ADVENTURERS_KNIFE, 1);
-				giveItems(player, APPRENTICE_ADVENTURERS_CESTUS, 1);
-				giveItems(player, APPRENTICE_ADVENTURERS_BOW, 1);
 				giveItems(player, APPRENTICE_ADVENTURERS_LONG_SWORD, 1);
 				player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_007_post_01.htm", TutorialShowHtml.LARGE_WINDOW));
 				showOnScreenMsg(player, NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
