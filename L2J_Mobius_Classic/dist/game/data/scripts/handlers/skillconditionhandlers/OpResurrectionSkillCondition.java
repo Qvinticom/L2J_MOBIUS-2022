@@ -46,6 +46,11 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 			return canResurrect;
 		}
 		
+		if (target == null)
+		{
+			return false;
+		}
+		
 		if (target.isPlayer())
 		{
 			final L2PcInstance player = target.getActingPlayer();
