@@ -733,13 +733,13 @@ public class CharStat
 	 */
 	public final void recalculateStats(boolean broadcast)
 	{
+		// Copy old data before wiping it out
+		final Map<Stats, Double> adds = !broadcast ? Collections.emptyMap() : new HashMap<>(_statsAdd);
+		final Map<Stats, Double> muls = !broadcast ? Collections.emptyMap() : new HashMap<>(_statsMul);
+		
 		_lock.writeLock().lock();
 		try
 		{
-			// Copy old data before wiping it out
-			final Map<Stats, Double> adds = !broadcast ? Collections.emptyMap() : new HashMap<>(_statsAdd);
-			final Map<Stats, Double> muls = !broadcast ? Collections.emptyMap() : new HashMap<>(_statsMul);
-			
 			// Wipe all the data
 			resetStats();
 			
@@ -760,32 +760,32 @@ public class CharStat
 			// Merge with additional stats
 			_additionalAdd.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));
 			_additionalMul.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeMul(holder.getStat(), holder.getValue()));
-			
-			// Notify recalculation to child classes
-			onRecalculateStats(broadcast);
-			
-			if (broadcast)
-			{
-				// Calculate the difference between old and new stats
-				final Set<Stats> changed = new HashSet<>();
-				for (Stats stat : Stats.values())
-				{
-					if (_statsAdd.getOrDefault(stat, stat.getResetAddValue()) != adds.getOrDefault(stat, stat.getResetAddValue()))
-					{
-						changed.add(stat);
-					}
-					else if (_statsMul.getOrDefault(stat, stat.getResetMulValue()) != muls.getOrDefault(stat, stat.getResetMulValue()))
-					{
-						changed.add(stat);
-					}
-				}
-				
-				_activeChar.broadcastModifiedStats(changed);
-			}
 		}
 		finally
 		{
 			_lock.writeLock().unlock();
+		}
+		
+		// Notify recalculation to child classes
+		onRecalculateStats(broadcast);
+		
+		if (broadcast)
+		{
+			// Calculate the difference between old and new stats
+			final Set<Stats> changed = new HashSet<>();
+			for (Stats stat : Stats.values())
+			{
+				if (_statsAdd.getOrDefault(stat, stat.getResetAddValue()) != adds.getOrDefault(stat, stat.getResetAddValue()))
+				{
+					changed.add(stat);
+				}
+				else if (_statsMul.getOrDefault(stat, stat.getResetMulValue()) != muls.getOrDefault(stat, stat.getResetMulValue()))
+				{
+					changed.add(stat);
+				}
+			}
+			
+			_activeChar.broadcastModifiedStats(changed);
 		}
 	}
 	
