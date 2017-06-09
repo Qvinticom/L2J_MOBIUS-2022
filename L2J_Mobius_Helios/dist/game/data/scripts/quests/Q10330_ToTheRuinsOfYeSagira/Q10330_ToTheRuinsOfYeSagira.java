@@ -16,14 +16,14 @@
  */
 package quests.Q10330_ToTheRuinsOfYeSagira;
 
+import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
+
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-
-import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
 
 /**
  * To the Ruins of Ye Sagira (10330)
@@ -82,6 +82,8 @@ public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 			case "32157-03.htm":
 			case "32146-02.htm":
 			case "32146-03.htm":
+			case "32169-05.htm":
+			case "32169-06.htm":
 			{
 				htmltext = event;
 				break;
@@ -168,24 +170,63 @@ public final class Q10330_ToTheRuinsOfYeSagira extends Quest
 			{
 				switch (npc.getId())
 				{
-					case FRANCO:
-					case RIVIAN:
-					case TOOK:
-					case DEVON:
-					case MOKA:
 					case VALFAR:
 					{
 						if (qs.isCond(1))
 						{
-							htmltext = "return.html";
+							htmltext = "32146-05.html";
+						}
+						break;
+					}
+					case MOKA:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32157-05.html";
+						}
+						break;
+					}
+					case DEVON:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32160-05.html";
+						}
+						break;
+					}
+					case TOOK:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32150-05.html";
+						}
+						break;
+					}
+					case FRANCO:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32153-05.html";
+						}
+						break;
+					}
+					case RIVIAN:
+					{
+						if (qs.isCond(1))
+						{
+							htmltext = "32147-05.html";
 						}
 						break;
 					}
 					case MILA:
 					{
-						if (qs.isCond(1) || qs.isCond(2))
+						if (qs.isCond(1))
 						{
 							htmltext = "32169-01.html";
+						}
+						else if (qs.isCond(2))
+						{
+							htmltext = "32169-04.html";
 						}
 						break;
 					}

@@ -19,6 +19,8 @@ package quests.Q10542_SearchingForNewPower;
 import java.util.HashSet;
 import java.util.Set;
 
+import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
+
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -30,8 +32,6 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-
-import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 
 /**
  * Searching for New Power (10542)
@@ -111,7 +111,7 @@ public final class Q10542_SearchingForNewPower extends Quest
 				if (qs.isCond(5))
 				{
 					giveItems(player, (player.isInCategory(CategoryType.MAGE_GROUP) ? SPIRITSHOTS : SOULSHOTS), 100);
-					addExpAndSp(player, 2550, 7);
+					addExpAndSp(player, 3200, 8);
 					qs.exitQuest(false, true);
 					htmltext = "32974-08.html";
 				}

@@ -12081,6 +12081,9 @@ public final class NpcStringId
 	@ClientString(id = 536504, message = "Seeker Escort (Lv. 16-25)")
 	public static NpcStringId SEEKER_ESCORT_LV_16_252;
 	
+	@ClientString(id = 536505, message = "Use the Ye Sagira Teleport Device shining with a red shimmer to go to Exploration Area 5")
+	public static NpcStringId USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_5;
+
 	@ClientString(id = 536601, message = "Ruins Status Update (Lv. 16-25)")
 	public static NpcStringId RUINS_STATUS_UPDATE_LV_16_25;
 	

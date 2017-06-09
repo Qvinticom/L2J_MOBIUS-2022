@@ -19,6 +19,8 @@ package quests.Q10366_ReportOnTheSituationAtTheRuins;
 import java.util.HashSet;
 import java.util.Set;
 
+import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
+
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -27,8 +29,6 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
-
-import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 
 /**
  * Report on the situation at the ruins (10366)
@@ -44,7 +44,8 @@ public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 		22993, // Critter
 		22994, // Avian
 		22995, // Rider
-		23122 // Eyesaroch
+		23122
+	// Eyesaroch
 	};
 	// Misc
 	private static final int MIN_LEVEL = 16;
@@ -58,7 +59,7 @@ public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 		addTalkId(SEBION);
 		addKillId(MONSTERS);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "32978-08.html");
-		addCondCompletedQuest(Q10365_SeekerEscort.class.getSimpleName(), "32978-08.html");
+		addCondCompletedQuest(Q10365_ForTheSearchdogKing.class.getSimpleName(), "32978-08.html");
 	}
 	
 	@Override

@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q10364_ObligationsOfTheSeeker;
+package quests.Q10365_ForTheSearchdogKing;
 
-import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
+import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -27,34 +27,33 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 /**
- * Obligations of the Seeker (10364)
- * @URL https://l2wiki.com/Obligations_of_the_Seeker
- * @author Gladicek
+ * For the Searchdog King (10365)
+ * @author Stayway
  */
-public final class Q10364_ObligationsOfTheSeeker extends Quest
+public final class Q10365_ForTheSearchdogKing extends Quest
 {
 	// NPCs
-	private static final int CELIN = 33451;
-	private static final int WALTER = 33452;
 	private static final int DEP = 33453;
-	private static final int KRAPHER = 22996;
-	private static final int AVIAN = 22994;
+	private static final int SEBION = 32978;
+	// MOBs
+	private static final int EYESAROCH = 23122;
+	private static final int CRITTER = 22993;
+	private static final int RIDER = 22995;
 	// Items
-	private static final int DIRTY_PAPER_PIECES = 17578;
-	private static final int LEATHER_SHOES = 37;
+	private static final int KINGS_TONIC = 47607;
 	// Misc
-	private static final int MIN_LEVEL = 13;
+	private static final int MIN_LEVEL = 16;
 	private static final int MAX_LEVEL = 25;
 	
-	public Q10364_ObligationsOfTheSeeker()
+	public Q10365_ForTheSearchdogKing()
 	{
-		super(10364);
-		addStartNpc(CELIN);
-		addTalkId(CELIN, WALTER, DEP);
-		addKillId(KRAPHER, AVIAN);
-		registerQuestItems(DIRTY_PAPER_PIECES);
-		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33451-04.html");
-		addCondCompletedQuest(Q10363_RequestOfTheSeeker.class.getSimpleName(), "33451-04.html");
+		super(10365);
+		addStartNpc(DEP);
+		addTalkId(DEP, SEBION);
+		registerQuestItems(KINGS_TONIC);
+		addKillId(EYESAROCH, CRITTER, RIDER);
+		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33453-06.html");
+		addCondCompletedQuest(Q10364_ObligationsOfTheSeeker.class.getSimpleName(), "33453-06.html");
 	}
 	
 	@Override
@@ -69,38 +68,23 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "33451-02.htm":
-			case "33452-02.html":
-			case "33452-03.html":
-			case "33453-02.html":
-			case "33453-03.html":
+			case "33453-02.htm":
+			case "33453-03.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "33451-03.html":
+			case "33453-04.htm":
 			{
 				qs.startQuest();
-				showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
 				htmltext = event;
 				break;
 			}
-			case "33452-04.html":
+			case "32978-02.html":
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(2))
 				{
-					qs.setCond(2, true);
-					htmltext = event;
-					break;
-				}
-				break;
-			}
-			case "33453-04.html":
-			{
-				if (qs.isCond(3))
-				{
-					giveItems(player, LEATHER_SHOES, 1);
-					addExpAndSp(player, 114000, 14);
+					addExpAndSp(player, 172000, 15);
 					qs.exitQuest(false, true);
 					htmltext = event;
 					break;
@@ -116,13 +100,13 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs != null) && qs.isCond(2))
+		if ((qs != null) && qs.isCond(1))
 		{
-			if (giveItemRandomly(killer, npc, DIRTY_PAPER_PIECES, 1, 5, 0.5, true))
+			if (giveItemRandomly(killer, npc, KINGS_TONIC, 1, 20, 0.5, true))
 			{
 				qs.setCond(0);
-				qs.setCond(3);
-				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_4, ExShowScreenMessage.TOP_CENTER, 4500);
+				qs.setCond(2);
+				showOnScreenMsg(killer, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_5, ExShowScreenMessage.TOP_CENTER, 4500);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
@@ -138,9 +122,9 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == CELIN)
+				if (npc.getId() == DEP)
 				{
-					htmltext = "33451-01.htm";
+					htmltext = "33453-01.htm";
 					break;
 				}
 				break;
@@ -149,70 +133,32 @@ public final class Q10364_ObligationsOfTheSeeker extends Quest
 			{
 				switch (npc.getId())
 				{
-					case CELIN:
+					case DEP:
 					{
 						if (qs.isCond(1))
 						{
 							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_3, ExShowScreenMessage.TOP_CENTER, 10000);
-							htmltext = "33451-06.html";
-							break;
-						}
-						break;
-					}
-					case WALTER:
-					{
-						switch (qs.getCond())
-						{
-							case 1:
-							{
-								htmltext = "33452-01.html";
-								break;
-							}
-							case 2:
-							{
-								htmltext = "33452-05.html";
-								break;
-							}
-							case 3:
-							{
-								htmltext = "33452-06.html";
-								break;
-							}
-						}
-						break;
-					}
-					case DEP:
-					{
-						if (qs.isCond(3))
-						{
-							htmltext = "33453-01.html";
+							htmltext = "33453-05.html";
 							break;
 						}
 					}
+					case SEBION:
+					{
+						if (qs.isCond(2))
+						{
+							
+							{
+								htmltext = "32978-01.html";
+								break;
+							}
+						}
 						break;
+					}
 				}
-				break;
 			}
 			case State.COMPLETED:
 			{
-				switch (npc.getId())
-				{
-					case CELIN:
-					{
-						htmltext = "33451-05.html";
-						break;
-					}
-					case WALTER:
-					{
-						htmltext = "33452-07.html";
-						break;
-					}
-					case DEP:
-					{
-						htmltext = "33453-05.html";
-						break;
-					}
-				}
+				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}

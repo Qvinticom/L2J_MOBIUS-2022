@@ -19,6 +19,9 @@ package ai.areas.TalkingIsland.YeSegiraTeleportDevice;
 import java.util.HashMap;
 import java.util.Map;
 
+import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
+import ai.AbstractNpcAI;
+
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -32,9 +35,6 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-
-import ai.AbstractNpcAI;
-import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
 
 /**
  * Ye Segira Teleport Device AI.
@@ -101,10 +101,10 @@ public final class YeSegiraTeleportDevice extends AbstractNpcAI
 			}
 			else if (event.equals("5_exploration_zone"))
 			{
-				final QuestState st = player.getQuestState(Q10365_SeekerEscort.class.getSimpleName());
+				final QuestState st = player.getQuestState(Q10365_ForTheSearchdogKing.class.getSimpleName());
 				if ((st != null) && st.isStarted() && st.isCond(1))
 				{
-					final Quest quest_10365 = QuestManager.getInstance().getQuest(Q10365_SeekerEscort.class.getSimpleName());
+					final Quest quest_10365 = QuestManager.getInstance().getQuest(Q10365_ForTheSearchdogKing.class.getSimpleName());
 					if (quest_10365 != null)
 					{
 						quest_10365.notifyEvent("TELEPORT_TO_NEXT_STAGE", null, player);

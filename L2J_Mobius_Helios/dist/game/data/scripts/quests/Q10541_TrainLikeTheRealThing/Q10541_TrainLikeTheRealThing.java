@@ -19,6 +19,8 @@ package quests.Q10541_TrainLikeTheRealThing;
 import java.util.HashSet;
 import java.util.Set;
 
+import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
+
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -33,8 +35,6 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
-
-import quests.Q10321_QualificationsOfTheSeeker.Q10321_QualificationsOfTheSeeker;
 
 /**
  * Train Like the Real Thing (10541)
@@ -179,6 +179,7 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 							case 3:
 							{
 								htmltext = "32974-07.html";
+								showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_ADVENTURERS_GUIDE_FOR_TRAINING, ExShowScreenMessage.TOP_CENTER, 5000);
 								break;
 							}
 							case 5:

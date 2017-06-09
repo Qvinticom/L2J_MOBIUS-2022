@@ -251,7 +251,7 @@ import quests.Q10360_CertificationOfFate.Q10360_CertificationOfFate;
 import quests.Q10362_CertificationOfTheSeeker.Q10362_CertificationOfTheSeeker;
 import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
-import quests.Q10365_SeekerEscort.Q10365_SeekerEscort;
+import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
 import quests.Q10366_ReportOnTheSituationAtTheRuins.Q10366_ReportOnTheSituationAtTheRuins;
 import quests.Q10369_NoblesseSoulTesting.Q10369_NoblesseSoulTesting;
 import quests.Q10370_MenacingTimes.Q10370_MenacingTimes;
@@ -670,7 +670,7 @@ public class QuestMasterHandler
 		Q10362_CertificationOfTheSeeker.class,
 		Q10363_RequestOfTheSeeker.class,
 		Q10364_ObligationsOfTheSeeker.class,
-		Q10365_SeekerEscort.class,
+		Q10365_ForTheSearchdogKing.class,
 		Q10366_ReportOnTheSituationAtTheRuins.class,
 		Q10369_NoblesseSoulTesting.class,
 		Q10370_MenacingTimes.class,
