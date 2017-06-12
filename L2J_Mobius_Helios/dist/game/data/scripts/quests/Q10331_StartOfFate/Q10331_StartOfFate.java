@@ -17,7 +17,6 @@
 package quests.Q10331_StartOfFate;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
@@ -41,7 +40,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * Start of Fate (10331)
  * @URL https://l2wiki.com/Start_of_Fate
- * @author Gladicek, Gigi
+ * @author Gladicek, Gigi, Stayway
  */
 public final class Q10331_StartOfFate extends Quest
 {
@@ -58,7 +57,7 @@ public final class Q10331_StartOfFate extends Quest
 	private static final int SOE = 736;
 	private static final int SOULSHOT = 1463;
 	private static final int BLESSED_SPIRITSHOT = 3948;
-	// private static final int PAULINAS_SET_D_GRADE = 46849; //TODO implament
+	private static final int PAULINAS_SET_D_GRADE = 46849;
 	private static final int PROOF_OF_COURAGE = 17821;
 	// Misc
 	private static final int MIN_LEVEL = 18;
@@ -102,29 +101,6 @@ public final class Q10331_StartOfFate extends Quest
 			case "32160-08.html": // Dark Elven Mage
 			case "32150-07.html": // Orc Fighter
 			case "32150-08.html": // Orc Mage
-				/**
-				 * 1st class transfer htmls for each class
-				 */
-			case "32146-09.html": // Trooper
-			case "32146-10.html": // Warder
-			case "32153-09.html": // Warrior
-			case "32153-10.html": // Knight
-			case "32153-11.html": // Rogue
-			case "32153-12.html": // Wizard
-			case "32153-13.html": // Cleric
-			case "32157-08.html": // Scavenger
-			case "32157-09.html": // Artisan
-			case "32147-09.html": // Elven Knight
-			case "32147-10.html": // Elven Scout
-			case "32147-11.html": // Elven Wizard
-			case "32147-12.html": // Elven Oracle
-			case "32160-09.html": // Palus Knight
-			case "32160-10.html": // Assasin
-			case "32160-11.html": // Dark Wizard
-			case "32160-12.html": // Shilien Oracle
-			case "32150-09.html": // Orc Raider
-			case "32150-10.html": // Orc Monk
-			case "32150-11.html": // Orc Shaman
 			{
 				if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 				{
@@ -189,7 +165,7 @@ public final class Q10331_StartOfFate extends Quest
 			}
 			default:
 			{
-				if (event.startsWith("classChange;"))
+				if (event.startsWith("classChange;") && (getQuestItemsCount(player, SARIL_NECKLACE) >= 1))
 				{
 					final ClassId newClassId = ClassId.getClassId(Integer.parseInt(event.replace("classChange;", "")));
 					final ClassId currentClassId = player.getClassId();
@@ -267,15 +243,13 @@ public final class Q10331_StartOfFate extends Quest
 					player.store(false);
 					player.broadcastUserInfo();
 					player.sendSkillList();
-					giveAdena(player, 1476, true);
 					giveItems(player, SOE, 10);
 					giveItems(player, SOULSHOT, 1500);
 					giveItems(player, BLESSED_SPIRITSHOT, 1500);
-					// giveItems(player, PAULINAS_SET_D_GRADE, 1);
+					takeItems(player, SARIL_NECKLACE, -1);
+					giveItems(player, PAULINAS_SET_D_GRADE, 1);
 					giveItems(player, PROOF_OF_COURAGE, 40);
 					addExpAndSp(player, 296000, 15);
-					MultisellData.getInstance().separateAndSend(717, player, npc, false);
-					player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2Text\\QT_009_enchant_01.htm", TutorialShowHtml.LARGE_WINDOW));
 					qs.exitQuest(false, true);
 				}
 			}

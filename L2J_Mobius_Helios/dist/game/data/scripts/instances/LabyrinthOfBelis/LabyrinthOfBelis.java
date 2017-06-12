@@ -56,7 +56,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 	private static final int ELECTRICITY_GENERATOR = 33216;
 	private static final int NEMERTESS = 22984;
 	// Items
-	private static final int SARIL_NECKLACE = 17580;
+	// private static final int SARIL_NECKLACE = 17580;
 	private static final int BELIS_MARK = 17615;
 	// Skills
 	private static final SkillHolder CURRENT_SHOCK = new SkillHolder(14698, 1);
@@ -375,7 +375,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				{
 					if (world.isStatus(4))
 					{
-						if (getRandom(100) > 60)
+						if (getRandom(100) > 10)
 						{
 							npc.dropItem(player, BELIS_MARK, 1);
 						}
@@ -399,10 +399,9 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				case NEMERTESS:
 				{
 					final QuestState qs = player.getQuestState(Q10331_StartOfFate.class.getSimpleName());
-					if (qs.isCond(3))
+					if (qs.isCond(1))
 					{
-						qs.setCond(4, true);
-						giveItems(player, SARIL_NECKLACE, 1);
+						qs.setCond(2, true);
 					}
 					npc.deleteMe();
 					playMovie(player, Movie.SC_TALKING_ISLAND_BOSS_ENDING);

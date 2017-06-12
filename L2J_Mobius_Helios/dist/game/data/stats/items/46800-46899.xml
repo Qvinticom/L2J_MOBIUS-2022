@@ -943,12 +943,27 @@
 	<item id="46838" name="Paulina's Light Armor Box (D-grade)" type="EtcItem">
 		<!-- Double click to obtain a D-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46932" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Helmet Light Armor -->
+			<item id="46933" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Shirt Light Armor -->
+			<item id="46934" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Gaiters Light Armor -->
+			<item id="46935" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Gloves Light Armor -->
+			<item id="46936" min="1" max="1" chance="100" /> <!-- Paulina's Manticore Skin Boots Light Armor -->
+			<item id="46942" min="1" max="1" chance="100" /> <!-- Paulina's Elven Necklace -->
+			<item id="46943" min="2" max="2" chance="100" /> <!-- Paulina's Elven Earrings -->
+			<item id="46943" min="2" max="2" chance="100" /> <!-- Paulina's Elven Rings -->
+		</capsuled_items>
 	</item>
 	<item id="46839" name="Paulina's Robe Box (D-grade)" type="EtcItem">
 		<!-- Double click to obtain a D-grade robe set, earrings, necklace, and ring. -->
@@ -1053,11 +1068,23 @@
 	<item id="46849" name="Paulina's Equipment Set (D-grade)" type="EtcItem">
 		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters between Lv. 20-39. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="1341" min="1500" max="1500" chance="100" /> <!-- Bone Arrow (D-grade) -->
+			<item id="46795" min="1" max="1" chance="100" /> <!-- Paulina's Light Crossbow -->
+			<item id="46796" min="1" max="1" chance="100" /> <!-- Paulina's Mithril Dagger -->
+			<item id="46838" min="1" max="1" chance="100" /> <!-- Paulina's Light Armor Box (D-Grade) -->
+		</capsuled_items>
 	</item>
 	<item id="46850" name="Paulina's Equipment Set (C-grade)" type="EtcItem">
 		<!-- Use to obtain an equipment set appropriate to your class. Can be used only by characters between Lv. 40-60. -->

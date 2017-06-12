@@ -146,19 +146,17 @@ public final class Q10365_ForTheSearchdogKing extends Quest
 					{
 						if (qs.isCond(2))
 						{
-							
-							{
-								htmltext = "32978-01.html";
-								break;
-							}
+							htmltext = "32978-01.html";
 						}
 						break;
 					}
+					
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
 				}
-			}
-			case State.COMPLETED:
-			{
-				htmltext = getAlreadyCompletedMsg(player);
 				break;
 			}
 		}
