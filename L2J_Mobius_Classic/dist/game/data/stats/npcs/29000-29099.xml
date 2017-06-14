@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
 		<!-- Confirmed CT2.5 -->
@@ -132,7 +132,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29004" level="37" type="L2Monster" name="Guard Ant">
+	<npc id="29004" level="37" type="L2Monster" name="Escort Ant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -177,7 +177,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29005" level="39" type="L2Monster" name="Court Guard Ant">
+	<npc id="29005" level="39" type="L2Monster" name="Royal Guard Ant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -655,7 +655,7 @@
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="29015" level="59" type="L2Monster" name="Raikel">
+	<npc id="29015" level="59" type="L2Monster" name="Laikel">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -700,7 +700,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29016" level="59" type="L2Monster" name="Raikel Leos">
+	<npc id="29016" level="59" type="L2Monster" name="Laikel Leos">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1006,7 +1006,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="29023" level="58" type="L2Monster" name="Doll Blader">
+	<npc id="29023" level="58" type="L2Monster" name="Maiden Doll">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />

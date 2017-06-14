@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="30900" level="70" type="L2VillageMaster" name="Marcus" title="Grand Master">
 		<!-- Confirmed CT2.5 -->
@@ -42,7 +42,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="30901" level="70" type="L2Npc" name="Arti" title="Master">
+	<npc id="30901" level="70" type="L2Npc" name="Arti" title="Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -84,7 +84,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30902" level="70" type="L2Npc" name="Karuna" title="Master">
+	<npc id="30902" level="70" type="L2Npc" name="Karuna" title="Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -126,7 +126,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30903" level="68" type="L2Npc" name="Traus" title="Master">
+	<npc id="30903" level="68" type="L2Npc" name="Traus" title="Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -167,7 +167,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30904" level="70" type="L2Npc" name="Naiel" title="Master">
+	<npc id="30904" level="70" type="L2Npc" name="Naiel" title="Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -461,7 +461,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30911" level="70" type="L2Npc" name="Brikus" title="Master">
+	<npc id="30911" level="70" type="L2Npc" name="Brikus" title="Maestro">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1060,7 +1060,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="30925" level="70" type="L2Npc" name="Morelyn" title="Eva's High Priestess">
+	<npc id="30925" level="70" type="L2Npc" name="Morelyn" title="High Priestess">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1102,7 +1102,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="30926" level="70" type="L2Npc" name="Restina" title="Eva's Priestess">
+	<npc id="30926" level="70" type="L2Npc" name="Restina" title="Priestess">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1144,7 +1144,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="30927" level="70" type="L2Npc" name="Alicia" title="Eva's Priestess">
+	<npc id="30927" level="70" type="L2Npc" name="Alicia" title="Priestess">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1513,7 +1513,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30936" level="70" type="L2Monster" name="Malcom1" title="Frog Prince">
+	<npc id="30936" level="70" type="L2Monster" name="Pona" title="Collector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1555,7 +1555,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="30937" level="70" type="L2Monster" name="Malcom2" title="Wild Boar Prince">
+	<npc id="30937" level="70" type="L2Monster" name="Morita">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="95" />
@@ -1597,7 +1597,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="30938" level="70" type="L2Monster" name="Malcom3" title="Orc Prince">
+	<npc id="30938" level="70" type="L2Monster" name="Vanutu" title="Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1639,7 +1639,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="30939" level="70" type="L2Monster" name="Malcom4" title="Prince of Darkness">
+	<npc id="30939" level="70" type="L2Monster" name="Jones" title="Moon Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1681,7 +1681,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="30940" level="70" type="L2Monster" name="Malcom5" title="Gremlin Prince">
+	<npc id="30940" level="70" type="L2Monster" name="Amora">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1723,7 +1723,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="30941" level="70" type="L2Monster" name="Malcom6" title="Prince of Wild Beast">
+	<npc id="30941" level="70" type="L2Monster" name="Gudz" title="Ol Mahum Hierarch">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1765,7 +1765,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="30942" level="70" type="L2Monster" name="Malcom7" title="Monster Eye Prince">
+	<npc id="30942" level="70" type="L2Monster" name="Ruvard" title="Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2177,7 +2177,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="30952" level="70" type="L2Npc" name="Dimensional Vortex 1">
+	<npc id="30952" level="70" type="L2Npc" name="Dimensional Vortex">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2554,7 +2554,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="30961" level="70" type="L2Npc" name="Cloth Chest">
+	<npc id="30961" level="70" type="L2Npc" name="Clothes Chest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2596,7 +2596,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30962" level="70" type="L2Npc" name="Statue of Water">
+	<npc id="30962" level="70" type="L2Npc" name="Chest Caught with an Icy Air Bait">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2638,7 +2638,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30963" level="70" type="L2Npc" name="Statue of Fire">
+	<npc id="30963" level="70" type="L2Npc" name="Chest Caught with a Bait of Flame">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2680,7 +2680,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30964" level="70" type="L2Npc" name="Statue of Wind">
+	<npc id="30964" level="70" type="L2Npc" name="Chest Caught with a Wind Bait">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2722,7 +2722,7 @@
 			<height normal="9.5" />
 		</collision>
 	</npc>
-	<npc id="30965" level="70" type="L2Npc" name="Statue of Earth">
+	<npc id="30965" level="70" type="L2Npc" name="Chest Caught with an Earth Bait">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -2930,7 +2930,7 @@
 			<height normal="20.5" />
 		</collision>
 	</npc>
-	<npc id="30970" level="70" type="L2Npc" name="Dorothy" title="Locksmith">
+	<npc id="30970" level="70" type="L2Npc" name="Dorothy" title="Blacksmith">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3013,7 +3013,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="30972" level="70" type="L2Monster" name="Orpheus Resurrecter">
+	<npc id="30972" level="70" type="L2Monster" name="Orpheus Resurrector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3389,7 +3389,7 @@
 			<height normal="36.5" />
 		</collision>
 	</npc>
-	<npc id="30981" level="70" type="L2Npc" name="Black Judge">
+	<npc id="30981" level="70" type="L2Npc" name="Dark Judge">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3979,7 +3979,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30995" level="70" type="L2RaceManager" name="Race Manager">
+	<npc id="30995" level="70" type="L2RaceManager" name="Race Manager" title="Monster Race Track">
 		<!-- Confirmed CT2.5 -->
 		<race>DWARF</race>
 		<sex>FEMALE</sex>

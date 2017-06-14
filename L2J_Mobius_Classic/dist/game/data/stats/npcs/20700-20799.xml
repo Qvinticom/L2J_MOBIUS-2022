@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="20738" level="99" type="L2Npc" name="Kobold Looter Bepook" title="">
+	<npc id="20738" level="99" type="L2Npc" name="Kobold Looter Bepook">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -22,7 +22,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20739" level="99" type="L2Npc" name="Bepook's Pet" title="">
+	<npc id="20739" level="99" type="L2Npc" name="Bepook's Pet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -364,7 +364,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="20748" level="29" type="L2Monster" name="Roxide Cohort">
+	<npc id="20748" level="29" type="L2Monster" name="Roxide's Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -793,7 +793,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="20755" level="30" type="L2Monster" name="Talakin">
+	<npc id="20755" level="30" type="L2Monster" name="Talakin Commander">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -959,7 +959,26 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20759" level="99" type="L2Npc" name="Dragon Bearer Warrior" title="">
+	<npc id="20758" level="85" type="L2Npc" name="Dragon Bearer Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="20759" level="99" type="L2Npc" name="Dragon Bearer Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -981,7 +1000,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20760" level="99" type="L2Npc" name="Dragon Bearer Archer" title="">
+	<npc id="20760" level="99" type="L2Npc" name="Dragon Bearer Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1003,7 +1022,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>	
-	<npc id="20761" level="99" type="L2Npc" name="Pytan" title="">
+	<npc id="20761" level="99" type="L2Npc" name="Pytan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1025,7 +1044,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20762" level="99" type="L2Npc" name="Pytan Knight" title="">
+	<npc id="20762" level="99" type="L2Npc" name="Pytan Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1047,7 +1066,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20763" level="99" type="L2Npc" name="Lord of the Plains" title="">
+	<npc id="20763" level="99" type="L2Npc" name="Lord of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1069,7 +1088,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20764" level="99" type="L2Npc" name="Wizard of the Plains" title="">
+	<npc id="20764" level="99" type="L2Npc" name="Wizard of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1091,7 +1110,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20765" level="99" type="L2Npc" name="Warrior of the Plains" title="">
+	<npc id="20765" level="99" type="L2Npc" name="Warrior of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1113,7 +1132,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20766" level="99" type="L2Npc" name="Scout of the Plains" title="">
+	<npc id="20766" level="99" type="L2Npc" name="Scout of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1135,7 +1154,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20767" level="45" type="L2Monster" name="Timak Orc Troop Leader">
+	<npc id="20767" level="45" type="L2Monster" name="Timak Orc Troop Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1360,6 +1379,82 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
+	<npc id="20771" level="85" type="L2Npc" name="Barif">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="20772" level="85" type="L2Npc" name="Barif's Pet">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="20773" level="85" type="L2Npc" name="Conjurer Bat Lord">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="20774" level="85" type="L2Npc" name="Conjurer Bat">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
 	<npc id="20775" level="17" type="L2Monster" name="Bugbear Raider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -1400,6 +1495,25 @@
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20776" level="85" type="L2Npc" name="Dark Succubus">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="20777" level="14" type="L2Monster" name="Hunter Bear">
@@ -1447,7 +1561,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20778" level="39" type="L2Monster" name="Ragna Orc Overlord">
+	<npc id="20778" level="39" type="L2Monster" name="Ragna Orc Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1500,7 +1614,7 @@
 			<height normal="23" grown="27.6" />
 		</collision>
 	</npc>
-	<npc id="20779" level="39" type="L2Monster" name="Ragna Orc Seer">
+	<npc id="20779" level="39" type="L2Monster" name="Ragna Orc Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1551,7 +1665,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20780" level="35" type="L2Monster" name="Bloody Axe Elite">
+	<npc id="20780" level="35" type="L2Monster" name="Bloody Axe's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1702,6 +1816,25 @@
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="20783" level="85" type="L2Npc" name="Dread Wolf">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="20784" level="36" type="L2Monster" name="Tasaba Lizardman">
@@ -1919,6 +2052,25 @@
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
+		</collision>
+	</npc>
+	<npc id="20788" level="85" type="L2Npc" name="Rakul">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="20789" level="36" type="L2Monster" name="Crokian">

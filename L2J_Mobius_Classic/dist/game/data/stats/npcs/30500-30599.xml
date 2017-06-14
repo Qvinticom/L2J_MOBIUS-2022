@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="30500" level="70" type="L2VillageMaster" name="Osborn" title="High Prefect">
 		<!-- Confirmed CT2.5 -->
@@ -1275,7 +1275,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="30531" level="70" type="L2Npc" name="Lockirin" title="Iron Gate's">
+	<npc id="30531" level="70" type="L2Npc" name="Lockirin" title="Steel Door's">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1316,7 +1316,7 @@
 			<height normal="17.5" />
 		</collision>
 	</npc>
-	<npc id="30532" level="70" type="L2Npc" name="Spiron" title="Golden Wheel's">
+	<npc id="30532" level="70" type="L2Npc" name="Spiron" title="Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1357,7 +1357,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="30533" level="70" type="L2Npc" name="Balanki" title="Silver Scale's">
+	<npc id="30533" level="70" type="L2Npc" name="Balanki" title="Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1398,7 +1398,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="30534" level="70" type="L2Npc" name="Keef" title="Bronze Key's">
+	<npc id="30534" level="70" type="L2Npc" name="Keef" title="Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1439,7 +1439,7 @@
 			<height normal="18.4" />
 		</collision>
 	</npc>
-	<npc id="30535" level="70" type="L2Npc" name="Filaur" title="Gray Pillar's">
+	<npc id="30535" level="70" type="L2Npc" name="Filaur" title="Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1480,7 +1480,7 @@
 			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="30536" level="70" type="L2Npc" name="Arin" title="Black Anvil's">
+	<npc id="30536" level="70" type="L2Npc" name="Arin" title="Elder">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1562,7 +1562,7 @@
 			<height normal="19.5" />
 		</collision>
 	</npc>
-	<npc id="30538" level="70" type="L2Npc" name="Zimenf" title="Priest of the Earth">
+	<npc id="30538" level="70" type="L2Npc" name="Zimenf" title="Head Priest of the Earth">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1644,7 +1644,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="30540" level="70" type="L2Teleporter" name="Teleport Device" title="">
+	<npc id="30540" level="70" type="L2Teleporter" name="Wirphy" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1731,7 +1731,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30542" level="99" type="L2Guard" name="Runant" title="Defender">
+	<npc id="30542" level="99" type="L2Guard" name="Runant" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1774,7 +1774,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30543" level="99" type="L2Guard" name="Ethan" title="Defender">
+	<npc id="30543" level="99" type="L2Guard" name="Ethan" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1817,7 +1817,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30544" level="99" type="L2Guard" name="Cromwell" title="Defender">
+	<npc id="30544" level="99" type="L2Guard" name="Cromwell" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1860,7 +1860,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30545" level="99" type="L2Guard" name="Proton" title="Defender">
+	<npc id="30545" level="99" type="L2Guard" name="Proton" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1903,7 +1903,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30546" level="99" type="L2Guard" name="Dinkey" title="Defender">
+	<npc id="30546" level="99" type="L2Guard" name="Dinkey" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1946,7 +1946,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30547" level="99" type="L2Guard" name="Tardyon" title="Defender">
+	<npc id="30547" level="99" type="L2Guard" name="Tardyon" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1989,7 +1989,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="30548" level="99" type="L2Guard" name="Nathan" title="Defender">
+	<npc id="30548" level="99" type="L2Guard" name="Nathan" title="Protector">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3101,7 +3101,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="30576" level="70" type="L2Teleporter" name="Teleport Device" title="">
+	<npc id="30576" level="70" type="L2Teleporter" name="Tamil" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

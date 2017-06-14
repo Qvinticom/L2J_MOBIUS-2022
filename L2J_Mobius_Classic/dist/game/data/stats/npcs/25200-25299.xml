@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25200" level="71" type="L2Monster" name="Sheshark's Family" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1248,6 +1248,25 @@
 			<height normal="38" />
 		</collision>
 	</npc>
+	<npc id="25229" level="85" type="L2Npc" name="Storm Winged Naga" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
 	<npc id="25230" level="57" type="L2RaidBoss" name="Timak Priest Ragoth" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -2105,6 +2124,63 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
+	<npc id="25249" level="85" type="L2Npc" name="Menacing Palatanos" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="25250" level="85" type="L2Npc" name="Man-Eating Plant of Palatanos" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="25251" level="85" type="L2Npc" name="Sapling of Palatanos" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
 	<npc id="25252" level="70" type="L2RaidBoss" name="Palibati Queen Themis" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -2600,6 +2676,63 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
+	<npc id="25263" level="85" type="L2Npc" name="Kernon's Faithful Servant Kelone" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="25264" level="85" type="L2Npc" name="Kelone's Assassin" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
+	<npc id="25265" level="85" type="L2Npc" name="Kelone's Secret Knight" title="Raid Fighter">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
 	<npc id="25266" level="75" type="L2RaidBoss" name="Bloody Empress Decarbia" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -3044,6 +3177,25 @@
 			<height normal="30" />
 		</collision>
 	</npc>
+	<npc id="25276" level="85" type="L2Npc" name="Death Lord Ipos" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
+		</collision>
+	</npc>
 	<npc id="25277" level="50" type="L2RaidBoss" name="Lilith' Witch Marilion" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
@@ -3392,7 +3544,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25284" level="86" type="L2Monster" name="Lilith' Agent" title="">
+	<npc id="25284" level="86" type="L2Monster" name="Lilith' Agent">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic_a" id="4316" level="8" />
@@ -3436,7 +3588,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25285" level="86" type="L2Monster" name="Lilith' Escort" title="">
+	<npc id="25285" level="86" type="L2Monster" name="Lilith' Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4179" level="8" />
@@ -3480,7 +3632,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25286" level="94" type="L2GrandBoss" name="Anakim" title="Fallen Angel"> 
+	<npc id="25286" level="94" type="L2GrandBoss" name="Anakim" title="Fallen Angel">
 		<!-- Ertheia -->
 		<parameters>
 			<minions name="Privates">
@@ -3536,7 +3688,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25287" level="91" type="L2Monster" name="Anakim's Guardian" title="">
+	<npc id="25287" level="91" type="L2Monster" name="Anakim's Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4209" level="8" />
@@ -3578,7 +3730,7 @@
 			<height normal="40.5" />
 		</collision>
 	</npc>
-	<npc id="25288" level="91" type="L2Monster" name="Anakim's Royal Guard" title="">
+	<npc id="25288" level="91" type="L2Monster" name="Anakim's Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
@@ -3649,6 +3801,25 @@
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
+		</collision>
+	</npc>
+	<npc id="25290" level="85" type="L2Npc" name="Daimon the White-eyed" title="Raid Boss">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="25291" level="77" type="L2Monster" name="Daimon's Family" title="Raid Fighter">

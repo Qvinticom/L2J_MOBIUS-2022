@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="18001" level="60" type="L2Monster" name="NoNameNpc">
+	<npc id="18001" level="60" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -212,7 +212,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="18005" level="52" type="L2Monster" name="NoNameNpc">
+	<npc id="18005" level="52" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -247,7 +247,7 @@
 			<height normal="8.5" />
 		</collision>
 	</npc>
-	<npc id="18006" level="68" type="L2Monster" name="NoNameNpc">
+	<npc id="18006" level="68" type="L2Monster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -354,7 +354,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18008" level="70" type="L2Monster" name="NoNameNpc">
+	<npc id="18008" level="70" type="L2Monster" name="">
 		<!-- Todo: Karik Does not exist -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
@@ -405,7 +405,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="18009" level="34" type="L2FestivalMonster" name="NoNameNpc">
+	<npc id="18009" level="34" type="L2FestivalMonster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -461,7 +461,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="18010" level="32" type="L2FestivalMonster" name="NoNameNpc">
+	<npc id="18010" level="32" type="L2FestivalMonster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -506,7 +506,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="18011" level="28" type="L2FestivalMonster" name="NoNameNpc">
+	<npc id="18011" level="28" type="L2FestivalMonster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -549,7 +549,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18012" level="29" type="L2FestivalMonster" name="NoNameNpc">
+	<npc id="18012" level="29" type="L2FestivalMonster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -597,7 +597,7 @@
 			<height normal="23" grown="27.6" />
 		</collision>
 	</npc>
-	<npc id="18013" level="29" type="L2FestivalMonster" name="NoNameNpc">
+	<npc id="18013" level="29" type="L2FestivalMonster" name="">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -648,7 +648,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="18014" level="37" type="L2FestivalMonster" name="NoName">
+	<npc id="18014" level="37" type="L2FestivalMonster" name="">
 		<!-- Todo:Does Not exist -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -697,7 +697,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="18015" level="34" type="L2FestivalMonster" name="Blood Knight">
+	<npc id="18015" level="34" type="L2FestivalMonster" name="Blood Knight" title="Chaos Decoy">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -746,7 +746,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="18016" level="32" type="L2FestivalMonster" name="Treasure Chest">
+	<npc id="18016" level="32" type="L2FestivalMonster" name="Treasure Chest" title="Gludio">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />

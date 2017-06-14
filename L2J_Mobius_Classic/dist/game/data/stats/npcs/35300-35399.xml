@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35300" level="89" type="L2Defender" name="Escort" title="Innadril">
 		<!-- Confirmed CT2.5 -->
@@ -817,7 +817,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35316" level="75" type="L2Merchant" name="Chamberlain of Light" title="">
+	<npc id="35316" level="75" type="L2Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -3065,7 +3065,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35363" level="75" type="L2Merchant" name="Chamberlain of Light" title="">
+	<npc id="35363" level="75" type="L2Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -3383,7 +3383,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35370" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35370" level="70" type="L2Monster" name="Partisan Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3427,7 +3427,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35371" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35371" level="70" type="L2Monster" name="Partisan Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3515,7 +3515,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35373" level="68" type="L2Monster" name="Partisan Sorcerer">
+	<npc id="35373" level="68" type="L2Monster" name="Partisan Wizard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3703,7 +3703,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="35377" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35377" level="70" type="L2Monster" name="Partisan Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3747,7 +3747,7 @@
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="35378" level="70" type="L2Monster" name="Partisan Court Guard">
+	<npc id="35378" level="70" type="L2Monster" name="Partisan Royal Guard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -3835,7 +3835,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35380" level="68" type="L2Monster" name="Partisan Sorcerer">
+	<npc id="35380" level="68" type="L2Monster" name="Partisan Wizard">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>

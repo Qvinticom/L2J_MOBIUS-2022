@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35500" level="75" type="L2Monster" name="Gatekeeper" title="Rune">
 		<!-- Confirmed CT2.5 -->
@@ -477,7 +477,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35509" level="75" type="L2Merchant" name="Chamberlain of Light" title="">
+	<npc id="35509" level="75" type="L2Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
@@ -704,7 +704,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35514" level="20" type="L2Artefact" name="Altar of Wind">
+	<npc id="35514" level="20" type="L2Artefact" name="Altar of Water">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -2695,7 +2695,7 @@
 			<height normal="17" />
 		</collision>
 	</npc>
-	<npc id="35555" level="75" type="L2Merchant" name="Chamberlain of Light" title="">
+	<npc id="35555" level="75" type="L2Merchant" name="Chamberlain of Light">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
