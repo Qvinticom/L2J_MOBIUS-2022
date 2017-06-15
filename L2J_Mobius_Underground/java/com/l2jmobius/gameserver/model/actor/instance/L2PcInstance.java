@@ -8696,9 +8696,17 @@ public final class L2PcInstance extends L2Playable
 		{
 			setActiveRubyJewel(BroochJewel.RUBY_LV4);
 		}
-		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV5.getItemId()).isEquipped()))
+		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV3.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV3.getItemId()).isEquipped()))
 		{
 			setActiveRubyJewel(BroochJewel.RUBY_LV3);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV2.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV2.getItemId()).isEquipped()))
+		{
+			setActiveRubyJewel(BroochJewel.RUBY_LV2);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.RUBY_LV1.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.RUBY_LV1.getItemId()).isEquipped()))
+		{
+			setActiveRubyJewel(BroochJewel.RUBY_LV1);
 		}
 		else
 		{
@@ -8716,6 +8724,14 @@ public final class L2PcInstance extends L2Playable
 		else if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV3.getItemId()).isEquipped()))
 		{
 			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV3);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV2.getItemId()).isEquipped()))
+		{
+			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV2);
+		}
+		else if ((getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()) != null) && (getInventory().getItemByItemId(BroochJewel.SHAPPHIRE_LV1.getItemId()).isEquipped()))
+		{
+			setActiveShappireJewel(BroochJewel.SHAPPHIRE_LV1);
 		}
 		else
 		{
