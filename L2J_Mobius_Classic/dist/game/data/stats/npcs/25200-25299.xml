@@ -125,7 +125,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="52" />
 			<height normal="86" />
@@ -258,7 +257,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="22" />
 			<height normal="120" />
@@ -383,7 +381,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -513,7 +510,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="26" grown="31.2" />
 			<height normal="42" grown="50.8" />
@@ -639,7 +635,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="44" />
@@ -1163,7 +1158,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="22.5" />
 			<height normal="54" />
@@ -1248,7 +1242,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25229" level="85" type="L2Npc" name="Storm Winged Naga" title="Raid Boss">
+	<npc id="25229" level="85" type="L2RaidBoss" name="Storm Winged Naga" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1315,7 +1309,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -1446,7 +1439,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="30" grown="40" />
 			<height normal="46.5" grown="48.4" />
@@ -1547,7 +1539,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="19" />
 			<height normal="43.5" />
@@ -1674,7 +1665,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="150" />
@@ -1798,7 +1788,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="53" />
@@ -1932,7 +1921,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="31.5" />
 			<height normal="69" />
@@ -1986,7 +1974,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="50" />
 			<height normal="66" />
@@ -2118,13 +2105,12 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25249" level="85" type="L2Npc" name="Menacing Palatanos" title="Raid Boss">
+	<npc id="25249" level="85" type="L2RaidBoss" name="Menacing Palatanos" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2162,7 +2148,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25251" level="85" type="L2Npc" name="Sapling of Palatanos" title="Raid Fighter">
+	<npc id="25251" level="85" type="L2RaidBoss" name="Sapling of Palatanos" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2229,7 +2215,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="98" />
@@ -2367,7 +2352,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="98" />
@@ -2417,7 +2401,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="37" />
@@ -2544,7 +2527,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="66" />
@@ -2595,7 +2577,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="35" />
 			<height normal="46.3765" />
@@ -2676,7 +2657,7 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25263" level="85" type="L2Npc" name="Kernon's Faithful Servant Kelone" title="Raid Boss">
+	<npc id="25263" level="85" type="L2RaidBoss" name="Kernon's Faithful Servant Kelone" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2695,7 +2676,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25264" level="85" type="L2Npc" name="Kelone's Assassin" title="Raid Fighter">
+	<npc id="25264" level="85" type="L2RaidBoss" name="Kelone's Assassin" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2714,7 +2695,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25265" level="85" type="L2Npc" name="Kelone's Secret Knight" title="Raid Fighter">
+	<npc id="25265" level="85" type="L2RaidBoss" name="Kelone's Secret Knight" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2913,7 +2894,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="46" />
 			<height normal="71.5" />
@@ -3040,7 +3020,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43.5" />
@@ -3090,7 +3069,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="35" />
 			<height normal="46.3765" />
@@ -3177,7 +3155,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25276" level="85" type="L2Npc" name="Death Lord Ipos" title="Raid Boss">
+	<npc id="25276" level="85" type="L2RaidBoss" name="Death Lord Ipos" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3538,7 +3516,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="42.5" />
 			<height normal="55" />
@@ -3682,7 +3659,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" />
-
 		<collision>
 			<radius normal="15.5" />
 			<height normal="29" />
@@ -3803,7 +3779,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25290" level="85" type="L2Npc" name="Daimon the White-eyed" title="Raid Boss">
+	<npc id="25290" level="85" type="L2RaidBoss" name="Daimon the White-eyed" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3953,7 +3929,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="10" />
 			<height normal="54" />
@@ -4076,7 +4051,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="32" />
@@ -4212,7 +4186,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="17" />
 			<height normal="46.2" />

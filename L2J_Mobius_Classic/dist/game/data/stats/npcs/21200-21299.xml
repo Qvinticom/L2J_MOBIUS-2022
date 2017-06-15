@@ -70,7 +70,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" grown="12" />
 			<height normal="36.5" grown="46" />
@@ -143,7 +142,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" grown="13.2" />
 			<height normal="39" grown="46.8" />
@@ -211,7 +209,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="39.6" />
@@ -287,7 +284,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" grown="14" />
 			<height normal="44" grown="56" />
@@ -360,7 +356,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" grown="15.6" />
 			<height normal="48" grown="57.6" />
@@ -428,7 +423,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="39.6" />
@@ -499,7 +493,6 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" grown="14" />
 			<height normal="44" grown="56" />
@@ -567,13 +560,12 @@
 				<ignore_npc_id>21186</ignore_npc_id> <!-- Lilim Guard Knight -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" grown="15.6" />
 			<height normal="48" grown="57.6" />
 		</collision>
 	</npc>
-	<npc id="21208" level="85" type="L2Npc" name="Martyrium Lookout">
+	<npc id="21208" level="85" type="L2Monster" name="Martyrium Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -592,7 +584,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21209" level="85" type="L2Npc" name="Martyrium Watchman">
+	<npc id="21209" level="85" type="L2Monster" name="Martyrium Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -611,7 +603,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21210" level="85" type="L2Npc" name="Crypt Lookout">
+	<npc id="21210" level="85" type="L2Monster" name="Crypt Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -706,7 +698,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="21213" level="85" type="L2Npc" name="Martyrium Monk">
+	<npc id="21213" level="85" type="L2Monster" name="Martyrium Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -725,7 +717,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21214" level="85" type="L2Npc" name="Crypt Sentinel">
+	<npc id="21214" level="85" type="L2Monster" name="Crypt Sentinel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -744,7 +736,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21215" level="85" type="L2Npc" name="Crypt Monk">
+	<npc id="21215" level="85" type="L2Monster" name="Crypt Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -820,7 +812,7 @@
 			<height normal="30.5" />
 		</collision>
 	</npc>
-	<npc id="21217" level="85" type="L2Npc" name="Martyrium Priest">
+	<npc id="21217" level="85" type="L2Monster" name="Martyrium Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -839,7 +831,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21218" level="85" type="L2Npc" name="Crypt Prefect">
+	<npc id="21218" level="85" type="L2Monster" name="Crypt Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -858,7 +850,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21219" level="85" type="L2Npc" name="Crypt Priest">
+	<npc id="21219" level="85" type="L2Monster" name="Crypt Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -934,7 +926,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="21221" level="85" type="L2Npc" name="Mausoleum Inquisitor">
+	<npc id="21221" level="85" type="L2Monster" name="Mausoleum Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -953,7 +945,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21222" level="85" type="L2Npc" name="Sepulcher Archon">
+	<npc id="21222" level="85" type="L2Monster" name="Sepulcher Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -972,7 +964,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21223" level="85" type="L2Npc" name="Sepulcher Inquisitor">
+	<npc id="21223" level="85" type="L2Monster" name="Sepulcher Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -991,7 +983,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21224" level="85" type="L2Npc" name="Mausoleum Royal Guardian">
+	<npc id="21224" level="85" type="L2Monster" name="Mausoleum Royal Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1010,7 +1002,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21225" level="85" type="L2Npc" name="Mausoleum Sage">
+	<npc id="21225" level="85" type="L2Monster" name="Mausoleum Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1029,7 +1021,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21226" level="85" type="L2Npc" name="Sepulcher Royal Guardian">
+	<npc id="21226" level="85" type="L2Monster" name="Sepulcher Royal Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1048,7 +1040,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21227" level="85" type="L2Npc" name="Sepulcher Sage">
+	<npc id="21227" level="85" type="L2Monster" name="Sepulcher Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1067,7 +1059,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21228" level="85" type="L2Npc" name="Mausoleum Royal Guard">
+	<npc id="21228" level="85" type="L2Monster" name="Mausoleum Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1086,7 +1078,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21229" level="85" type="L2Npc" name="Mausoleum Prophet">
+	<npc id="21229" level="85" type="L2Monster" name="Mausoleum Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1105,7 +1097,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21230" level="85" type="L2Npc" name="Sepulcher Royal Guard">
+	<npc id="21230" level="85" type="L2Monster" name="Sepulcher Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1124,7 +1116,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21231" level="85" type="L2Npc" name="Sepulcher Prophet">
+	<npc id="21231" level="85" type="L2Monster" name="Sepulcher Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1357,7 +1349,7 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21236" level="85" type="L2Npc" name="Barrow Sentinel">
+	<npc id="21236" level="85" type="L2Monster" name="Barrow Sentinel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1376,7 +1368,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21237" level="85" type="L2Npc" name="Barrow Monk">
+	<npc id="21237" level="85" type="L2Monster" name="Barrow Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1395,7 +1387,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21238" level="85" type="L2Npc" name="Tomb Sentinel">
+	<npc id="21238" level="85" type="L2Monster" name="Tomb Sentinel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1414,7 +1406,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21239" level="85" type="L2Npc" name="Tomb Monk">
+	<npc id="21239" level="85" type="L2Monster" name="Tomb Monk">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1433,7 +1425,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21240" level="85" type="L2Npc" name="Barrow Prefect">
+	<npc id="21240" level="85" type="L2Monster" name="Barrow Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1452,7 +1444,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21241" level="85" type="L2Npc" name="Barrow Priest">
+	<npc id="21241" level="85" type="L2Monster" name="Barrow Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1471,7 +1463,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21242" level="85" type="L2Npc" name="Tomb Prefect">
+	<npc id="21242" level="85" type="L2Monster" name="Tomb Prefect">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1490,7 +1482,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21243" level="85" type="L2Npc" name="Tomb Priest">
+	<npc id="21243" level="85" type="L2Monster" name="Tomb Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1509,7 +1501,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21244" level="85" type="L2Npc" name="Graveyard Archon">
+	<npc id="21244" level="85" type="L2Monster" name="Graveyard Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1528,7 +1520,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21245" level="85" type="L2Npc" name="Graveyard Inquisitor">
+	<npc id="21245" level="85" type="L2Monster" name="Graveyard Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1547,7 +1539,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21246" level="85" type="L2Npc" name="Netherworld Archon">
+	<npc id="21246" level="85" type="L2Monster" name="Netherworld Archon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1566,7 +1558,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21247" level="85" type="L2Npc" name="Netherworld Inquisitor">
+	<npc id="21247" level="85" type="L2Monster" name="Netherworld Inquisitor">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1585,7 +1577,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21248" level="85" type="L2Npc" name="Graveyard Guardian">
+	<npc id="21248" level="85" type="L2Monster" name="Graveyard Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1604,7 +1596,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21249" level="85" type="L2Npc" name="Graveyard Sage">
+	<npc id="21249" level="85" type="L2Monster" name="Graveyard Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1623,7 +1615,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21250" level="85" type="L2Npc" name="Netherworld Guardian">
+	<npc id="21250" level="85" type="L2Monster" name="Netherworld Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1642,7 +1634,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21251" level="85" type="L2Npc" name="Netherworld Sage">
+	<npc id="21251" level="85" type="L2Monster" name="Netherworld Sage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1661,7 +1653,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21252" level="85" type="L2Npc" name="Graveyard Royal Guard">
+	<npc id="21252" level="85" type="L2Monster" name="Graveyard Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1680,7 +1672,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21253" level="85" type="L2Npc" name="Graveyard Prophet">
+	<npc id="21253" level="85" type="L2Monster" name="Graveyard Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1699,7 +1691,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21254" level="85" type="L2Npc" name="Netherworld Royal Guard">
+	<npc id="21254" level="85" type="L2Monster" name="Netherworld Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1718,7 +1710,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21255" level="85" type="L2Npc" name="Netherworld Prophet">
+	<npc id="21255" level="85" type="L2Monster" name="Netherworld Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1737,7 +1729,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21256" level="85" type="L2Npc" name="Underground Werewolf">
+	<npc id="21256" level="85" type="L2Monster" name="Underground Werewolf">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1802,7 +1794,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -1852,7 +1843,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="1000" aggroRange="450" />
-
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -1907,7 +1897,6 @@
 				<clan>BEAST</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
@@ -2015,7 +2004,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="1000" aggroRange="450" />
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -2072,7 +2060,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -2129,7 +2116,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="37" grown="44.5" />
@@ -2186,7 +2172,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -2251,7 +2236,6 @@
 				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -2313,7 +2297,6 @@
 				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -2375,7 +2358,6 @@
 				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -2441,7 +2423,6 @@
 				<ignore_npc_id>21273</ignore_npc_id> <!-- Cave Noble Ant -->
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -2496,7 +2477,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -2550,7 +2530,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -2609,7 +2588,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -2667,7 +2645,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -2732,7 +2709,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />

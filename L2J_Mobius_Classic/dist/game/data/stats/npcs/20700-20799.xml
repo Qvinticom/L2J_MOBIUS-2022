@@ -22,7 +22,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20739" level="99" type="L2Npc" name="Bepook's Pet">
+	<npc id="20739" level="85" type="L2Monster" name="Bepook's Pet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -246,7 +246,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -299,7 +298,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -358,7 +356,6 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="36" />
@@ -417,7 +414,6 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -476,7 +472,6 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -533,7 +528,6 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -601,7 +595,6 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
@@ -653,7 +646,6 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai clanHelpRange="300" aggroRange="450" />
-
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
@@ -727,7 +719,6 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" grown="25" />
 			<height normal="45" grown="52" />
@@ -787,7 +778,6 @@
 				<clan>UNDEAD</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
@@ -845,7 +835,6 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -899,7 +888,6 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -953,13 +941,12 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20758" level="85" type="L2Npc" name="Dragon Bearer Captain">
+	<npc id="20758" level="49" type="L2Monster" name="Dragon Bearer Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -978,7 +965,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20759" level="99" type="L2Npc" name="Dragon Bearer Warrior">
+	<npc id="20759" level="48" type="L2Monster" name="Dragon Bearer Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1000,7 +987,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20760" level="99" type="L2Npc" name="Dragon Bearer Archer">
+	<npc id="20760" level="48" type="L2Monster" name="Dragon Bearer Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1022,7 +1009,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>	
-	<npc id="20761" level="99" type="L2Npc" name="Pytan">
+	<npc id="20761" level="68" type="L2Monster" name="Pytan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1044,7 +1031,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20762" level="99" type="L2Npc" name="Pytan Knight">
+	<npc id="20762" level="68" type="L2Monster" name="Pytan Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1066,7 +1053,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20763" level="99" type="L2Npc" name="Lord of the Plains">
+	<npc id="20763" level="40" type="L2Monster" name="Lord of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1088,7 +1075,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20764" level="99" type="L2Npc" name="Wizard of the Plains">
+	<npc id="20764" level="39" type="L2Monster" name="Wizard of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1110,7 +1097,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20765" level="99" type="L2Npc" name="Warrior of the Plains">
+	<npc id="20765" level="38" type="L2Monster" name="Warrior of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1132,7 +1119,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="20766" level="99" type="L2Npc" name="Scout of the Plains">
+	<npc id="20766" level="36" type="L2Monster" name="Scout of the Plains">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1209,7 +1196,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="24" grown="28.8" />
@@ -1265,7 +1251,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" />
 			<height normal="16" />
@@ -1319,7 +1304,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="20" />
@@ -1373,13 +1357,12 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="20771" level="85" type="L2Npc" name="Barif">
+	<npc id="20771" level="85" type="L2Monster" name="Barif">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1398,7 +1381,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20772" level="85" type="L2Npc" name="Barif's Pet">
+	<npc id="20772" level="85" type="L2Monster" name="Barif's Pet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1417,7 +1400,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20773" level="85" type="L2Npc" name="Conjurer Bat Lord">
+	<npc id="20773" level="70" type="L2Monster" name="Conjurer Bat Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1436,7 +1419,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20774" level="85" type="L2Npc" name="Conjurer Bat">
+	<npc id="20774" level="70" type="L2Monster" name="Conjurer Bat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1491,13 +1474,12 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
-
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20776" level="85" type="L2Npc" name="Dark Succubus">
+	<npc id="20776" level="20" type="L2Monster" name="Dark Succubus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1555,7 +1537,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
@@ -1707,7 +1688,6 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -1765,7 +1745,6 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
@@ -1812,13 +1791,12 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20783" level="85" type="L2Npc" name="Dread Wolf">
+	<npc id="20783" level="85" type="L2Monster" name="Dread Wolf">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1885,7 +1863,6 @@
 				<clan>LIZARDMAN1</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
@@ -1940,7 +1917,6 @@
 				<clan>LIZARDMAN1</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
@@ -1994,7 +1970,6 @@
 				<clan>LIENRIK</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -2048,13 +2023,12 @@
 				<clan>LIENRIK</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="20788" level="85" type="L2Npc" name="Rakul">
+	<npc id="20788" level="85" type="L2Monster" name="Rakul">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2121,7 +2095,6 @@
 				<clan>CROC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
@@ -2176,7 +2149,6 @@
 				<clan>CROC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="28" />
@@ -2231,7 +2203,6 @@
 				<clan>CROC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
@@ -2290,7 +2261,6 @@
 				<clan>CROC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
@@ -2346,7 +2316,6 @@
 				<clan>CROC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" grown="31.2" />
 			<height normal="42" grown="50.8" />
@@ -2402,7 +2371,6 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -2458,7 +2426,6 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -2515,7 +2482,6 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
@@ -2583,7 +2549,6 @@
 				<clan>STAKATO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
@@ -2639,7 +2604,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="44" />
@@ -2695,7 +2659,6 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
 		<ai clanHelpRange="300" aggroRange="450" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />

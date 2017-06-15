@@ -85,7 +85,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" grown="36" />
 			<height normal="63" grown="76" />
@@ -221,7 +220,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="17" />
 			<height normal="28" />
@@ -499,7 +497,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="21" />
 			<height normal="38" />
@@ -724,7 +721,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="125" />
@@ -861,7 +857,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="29" />
@@ -953,7 +948,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
@@ -1041,7 +1035,7 @@
 			<height normal="80" grown="96" />
 		</collision>
 	</npc>
-	<npc id="25423" level="85" type="L2Npc" name="Fairy Queen Timiniel" title="Raid Boss">
+	<npc id="25423" level="61" type="L2RaidBoss" name="Fairy Queen Timiniel" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1060,7 +1054,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25424" level="85" type="L2Npc" name="Timiniel's Escort" title="Raid Fighter">
+	<npc id="25424" level="85" type="L2Monster" name="Timiniel's Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1079,7 +1073,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25425" level="85" type="L2Npc" name="Timiniel's Escort Captain" title="Raid Fighter">
+	<npc id="25425" level="85" type="L2Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1141,7 +1135,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="11" />
 			<height normal="29.7" />
@@ -1270,7 +1263,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
@@ -1364,7 +1356,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="38" />
 			<height normal="45" />
@@ -1496,7 +1487,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="60" />
@@ -1632,7 +1622,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="52" />
@@ -1683,7 +1672,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="25" />
 			<height normal="50" />
@@ -1820,7 +1808,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="150" />
@@ -1947,7 +1934,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="40" />
 			<height normal="70" />
@@ -2078,7 +2064,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="38" />
@@ -2213,7 +2198,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="22" />
 			<height normal="120" />
@@ -2303,7 +2287,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="25453" level="85" type="L2Npc" name="Meanas Anor" title="Raid Boss">
+	<npc id="25453" level="85" type="L2RaidBoss" name="Meanas Anor" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2322,7 +2306,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25454" level="85" type="L2Npc" name="Swamp Wyvern" title="Raid Fighter">
+	<npc id="25454" level="85" type="L2Monster" name="Swamp Wyvern" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2341,7 +2325,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25455" level="85" type="L2Npc" name="Swamp Succubus" title="Raid Fighter">
+	<npc id="25455" level="85" type="L2Monster" name="Swamp Succubus" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2405,7 +2389,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="78" />
@@ -2582,7 +2565,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="141" />
@@ -2720,7 +2702,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="34" />
 			<height normal="28" />
@@ -3387,7 +3368,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="25" />
 			<height normal="65" />
@@ -3522,7 +3502,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="38" />
@@ -3660,7 +3639,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
@@ -4051,7 +4029,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
@@ -4176,7 +4153,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
@@ -4270,7 +4246,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="48" />

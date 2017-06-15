@@ -286,7 +286,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="9013" level="75" type="L2Npc" name="Frog" title="Cursed Woman">
+	<npc id="9013" level="75" type="L2Npc" name="Shcrowl" title="Zombie Lord">
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -331,6 +331,116 @@
 		</collision>
 	</npc>
 	<npc id="9015" level="75" type="L2Npc" name="Riana" title="Celebrating Victory">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9016" level="75" type="L2Npc" name="Elk">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9017" level="75" type="L2Npc" name="Babayaga">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9018" level="75" type="L2Npc" name="Minion Eye">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9019" level="75" type="L2Npc" name="Matryoshka">
+		<!-- Classic NPC -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<speed>
+				<walk ground="50" />
+				<run ground="120" />
+			</speed>
+			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
+			<defence physical="319.51219512195" magical="233.84045721645" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="8" />
+			<height normal="25" />
+		</collision>
+	</npc>
+	<npc id="9020" level="75" type="L2Npc" name="Frintezza" title="In Love">
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

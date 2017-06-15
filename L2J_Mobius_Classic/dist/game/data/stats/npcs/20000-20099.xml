@@ -113,7 +113,6 @@
 				<clan>GOBLIN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="16.5" />
@@ -160,7 +159,6 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -207,7 +205,6 @@
 				<clan>DEMONIC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="24" />
@@ -255,13 +252,12 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20007" level="85" type="L2Npc" name="Green Fungus">
+	<npc id="20007" level="9" type="L2Monster" name="Green Fungus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -320,7 +316,6 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -368,7 +363,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="21" />
@@ -414,7 +408,6 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -462,7 +455,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -508,7 +500,6 @@
 				<clan>WEREWOLF</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -555,7 +546,6 @@
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
@@ -602,13 +592,12 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20015" level="85" type="L2Npc" name="Zombie Forest Elf">
+	<npc id="20015" level="13" type="L2Monster" name="Zombie Forest Elf">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -627,7 +616,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20016" level="85" type="L2Npc" name="Stone Golem">
+	<npc id="20016" level="13" type="L2Monster" name="Stone Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -690,7 +679,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
@@ -783,13 +771,12 @@
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="9" />
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="20020" level="85" type="L2Npc" name="Zombie Forest Elf Researcher">
+	<npc id="20020" level="14" type="L2Monster" name="Zombie Forest Elf Researcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -847,13 +834,12 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20022" level="85" type="L2Npc" name="Misery Skeleton">
+	<npc id="20022" level="14" type="L2Monster" name="Misery Skeleton">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -911,7 +897,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" grown="17" />
 			<height normal="14.5" grown="18" />
@@ -958,13 +943,12 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20025" level="85" type="L2Npc" name="Lesser Dark Horror">
+	<npc id="20025" level="15" type="L2Monster" name="Lesser Dark Horror">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1026,7 +1010,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
@@ -1073,7 +1056,6 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
@@ -1119,7 +1101,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
@@ -1169,7 +1150,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="21" />
@@ -1215,13 +1195,12 @@
 				<clan>LIZARDMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="20031" level="85" type="L2Npc" name="Onyx Beast">
+	<npc id="20031" level="17" type="L2Monster" name="Onyx Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1281,7 +1260,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
@@ -1331,13 +1309,12 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="20034" level="85" type="L2Npc" name="Prowler">
+	<npc id="20034" level="17" type="L2Monster" name="Prowler">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1397,7 +1374,6 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" grown="13" />
 			<height normal="25" grown="31" />
@@ -1447,7 +1423,6 @@
 				<clan>ELEMENTAL2</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -1544,7 +1519,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -1591,7 +1565,6 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -1638,13 +1611,12 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20041" level="85" type="L2Npc" name="Contortion of Lunacy">
+	<npc id="20041" level="18" type="L2Monster" name="Contortion of Lunacy">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1663,7 +1635,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20042" level="85" type="L2Npc" name="Skeleton Tracker Captain">
+	<npc id="20042" level="18" type="L2Monster" name="Skeleton Tracker Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1725,7 +1697,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -1777,7 +1748,6 @@
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" />
 			<height normal="35" />
@@ -1824,13 +1794,12 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20046" level="85" type="L2Npc" name="Stink Zombie">
+	<npc id="20046" level="19" type="L2Monster" name="Stink Zombie">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1890,13 +1859,12 @@
 				<clan>WERERAT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20048" level="85" type="L2Npc" name="Lesser Succubus">
+	<npc id="20048" level="20" type="L2Monster" name="Lesser Succubus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1955,7 +1923,6 @@
 				<clan>WEREWOLF</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
@@ -2004,7 +1971,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -2051,13 +2017,12 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20052" level="85" type="L2Npc" name="Lesser Succubus Turen">
+	<npc id="20052" level="21" type="L2Monster" name="Lesser Succubus Turen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2122,7 +2087,6 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2175,7 +2139,6 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -2232,13 +2195,12 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20056" level="85" type="L2Npc" name="Dre Vanul Disposer">
+	<npc id="20056" level="22" type="L2Monster" name="Dre Vanul Disposer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2257,7 +2219,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20057" level="85" type="L2Npc" name="Lesser Succubus Tilfo">
+	<npc id="20057" level="22" type="L2Monster" name="Lesser Succubus Tilfo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2322,7 +2284,6 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -2379,7 +2340,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -2432,7 +2392,6 @@
 				<clan>SKELETON</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
@@ -2484,7 +2443,6 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="25" />
@@ -2536,7 +2494,6 @@
 				<clan>BUGBEAR</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="17" />
 			<height normal="35" />
@@ -2588,13 +2545,12 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20064" level="85" type="L2Npc" name="Tumran Bugbear Warrior">
+	<npc id="20064" level="24" type="L2Monster" name="Tumran Bugbear Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2712,7 +2668,6 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
@@ -2770,7 +2725,6 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
@@ -2829,13 +2783,12 @@
 				<clan>ALL</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20069" level="85" type="L2Npc" name="Selu Lizardman Scout">
+	<npc id="20069" level="85" type="L2Monster" name="Selu Lizardman Scout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2901,7 +2854,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20071" level="85" type="L2Npc" name="Selu Lizardman Warrior">
+	<npc id="20071" level="85" type="L2Monster" name="Selu Lizardman Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2961,13 +2914,12 @@
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20073" level="85" type="L2Npc" name="Ol Mahum Legionnaire">
+	<npc id="20073" level="85" type="L2Monster" name="Ol Mahum Legionnaire">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2986,7 +2938,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20074" level="85" type="L2Npc" name="Androscorpio">
+	<npc id="20074" level="29" type="L2Monster" name="Androscorpio">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3053,7 +3005,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="8" />
@@ -3107,13 +3058,12 @@
 				<clan>OL_MAHUM</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" grown="16" />
 			<height normal="27" grown="32" />
 		</collision>
 	</npc>
-	<npc id="20077" level="85" type="L2Npc" name="Androscorpio Hunter">
+	<npc id="20077" level="85" type="L2Monster" name="Androscorpio Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3181,7 +3131,6 @@
 				<clan>ELEMENTAL2</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="48" />
@@ -3233,7 +3182,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -3285,7 +3233,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -3340,7 +3287,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="15" />
@@ -3394,13 +3340,12 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="20083" level="85" type="L2Npc" name="Granite Golem">
+	<npc id="20083" level="33" type="L2Monster" name="Granite Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3468,13 +3413,12 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
 		</collision>
 	</npc>
-	<npc id="20085" level="85" type="L2Npc" name="Puncher">
+	<npc id="20085" level="34" type="L2Monster" name="Puncher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3543,7 +3487,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -3598,7 +3541,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -3654,7 +3596,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" grown="42" />
 			<height normal="17" grown="21" />
@@ -3706,7 +3647,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />
@@ -3761,7 +3701,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="48" grown="57" />
@@ -3807,7 +3746,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="20092" level="85" type="L2Npc" name="Monster Eye">
+	<npc id="20092" level="10" type="L2Monster" name="Monster Eye">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3869,7 +3808,6 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
@@ -3921,7 +3859,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20095" level="85" type="L2Npc" name="Vampire Bat">
+	<npc id="20095" level="10" type="L2Monster" name="Vampire Bat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3981,13 +3919,12 @@
 				<clan>ORC</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20097" level="85" type="L2Npc" name="Clawed Bat">
+	<npc id="20097" level="11" type="L2Npc" name="Clawed Bat">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -4025,7 +3962,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20099" level="85" type="L2Npc" name="Skeleton">
+	<npc id="20099" level="12" type="L2Monster" name="Skeleton">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

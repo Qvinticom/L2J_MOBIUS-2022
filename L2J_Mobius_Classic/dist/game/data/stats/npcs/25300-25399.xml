@@ -72,7 +72,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25302" level="85" type="L2Npc" name="Ketra's Commander Tayr" title="Raid Boss">
+	<npc id="25302" level="85" type="L2RaidBoss" name="Ketra's Commander Tayr" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -173,7 +173,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25305" level="85" type="L2Npc" name="Ketra's Chief Brakki" title="Raid Boss">
+	<npc id="25305" level="85" type="L2RaidBoss" name="Ketra's Chief Brakki" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -241,7 +241,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
@@ -373,7 +372,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="17" />
 			<height normal="47.5" />
@@ -455,7 +453,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25312" level="85" type="L2Npc" name="Varka's Commander Mos" title="Raid Boss">
+	<npc id="25312" level="85" type="L2RaidBoss" name="Varka's Commander Mos" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -552,7 +550,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25315" level="85" type="L2Npc" name="Varka's Chief Horus" title="Raid Boss">
+	<npc id="25315" level="85" type="L2RaidBoss" name="Varka's Chief Horus" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -620,7 +618,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="27" />
@@ -751,7 +748,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="48" />
 			<height normal="73" />
@@ -887,7 +883,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="9" grown="10" />
 			<height normal="31.5" grown="38" />
@@ -1025,7 +1020,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="8" grown="9" />
 			<height normal="30" grown="36.5" />
@@ -1154,7 +1148,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="7.5" />
 			<height normal="25.8" />
@@ -2273,7 +2266,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="34" />
 			<height normal="25" />
@@ -2368,7 +2360,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="16" />
 			<height normal="65" />
@@ -2498,7 +2489,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="25" />
@@ -2628,7 +2618,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="8" />
 			<height normal="32" />
@@ -2717,7 +2706,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -2841,7 +2829,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="34.5" />
@@ -2891,7 +2878,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="37" />
@@ -3030,7 +3016,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -3217,7 +3202,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="21" />
 			<height normal="54" />
@@ -3309,7 +3293,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="27.5" />
@@ -3403,7 +3386,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="25378" level="85" type="L2Npc" name="Madness Beast" title="Raid Boss">
+	<npc id="25378" level="85" type="L2RaidBoss" name="Madness Beast" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3422,7 +3405,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25379" level="85" type="L2Npc" name="Dementia Beast" title="Raid Fighter">
+	<npc id="25379" level="85" type="L2Monster" name="Dementia Beast" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3441,7 +3424,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25380" level="85" type="L2Npc" name="Icarus' Herald Kaysha" title="Raid Boss">
+	<npc id="25380" level="85" type="L2RaidBoss" name="Icarus' Herald Kaysha" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3460,7 +3443,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25381" level="85" type="L2Npc" name="Nightmare Flyer" title="Raid Fighter">
+	<npc id="25381" level="85" type="L2Monster" name="Nightmare Flyer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3479,7 +3462,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25382" level="85" type="L2Npc" name="Hostile Flyer" title="Raid Fighter">
+	<npc id="25382" level="85" type="L2Monster" name="Hostile Flyer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3643,7 +3626,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="21" />
 			<height normal="54" />
@@ -3777,7 +3759,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -3901,7 +3882,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="21" />
 			<height normal="40.5" />
@@ -3950,7 +3930,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="37" />
@@ -4045,7 +4024,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="17" grown="20" />
 			<height normal="39" grown="48" />
@@ -4094,7 +4072,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="72" />
@@ -4227,7 +4204,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="21" />
 			<height normal="43" />

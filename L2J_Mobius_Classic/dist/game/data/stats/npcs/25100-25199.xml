@@ -122,7 +122,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="42" />
 			<height normal="94" />
@@ -176,7 +175,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" grown="36" />
 			<height normal="63" grown="76" />
@@ -303,7 +301,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="28" />
 			<height normal="85" />
@@ -565,7 +562,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="53" />
@@ -697,7 +693,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="42" />
 			<height normal="45" />
@@ -831,7 +826,7 @@
 			<height normal="58" />
 		</collision>
 	</npc>
-	<npc id="25119" level="85" type="L2Npc" name="Fairy Queen's Messenger Berun" title="Raid Boss">
+	<npc id="25119" level="50" type="L2Monster" name="Fairy Queen's Messenger Berun" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -850,7 +845,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25120" level="85" type="L2Npc" name="Berun's Servant" title="Raid Fighter">
+	<npc id="25120" level="85" type="L2Monster" name="Berun's Servant" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -869,7 +864,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25121" level="85" type="L2Npc" name="Berun's Prattler" title="Raid Fighter">
+	<npc id="25121" level="85" type="L2Monster" name="Berun's Prattler" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -936,7 +931,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="22.5" />
 			<height normal="54" />
@@ -1063,7 +1057,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="72" />
 			<height normal="87" />
@@ -1166,7 +1159,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="19" />
 			<height normal="57" />
@@ -1216,7 +1208,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="22" />
 			<height normal="35" />
@@ -1347,7 +1338,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="57" />
@@ -1471,7 +1461,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="37.5" />
 			<height normal="30" />
@@ -1600,7 +1589,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="28" />
 			<height normal="85" />
@@ -1859,7 +1847,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13.5" grown="16" />
 			<height normal="36.5" grown="42.5" />
@@ -1987,7 +1974,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="25" />
 			<height normal="72" />
@@ -2114,7 +2100,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="21.25" />
@@ -2249,7 +2234,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="28" />
 			<height normal="75" />
@@ -2375,7 +2359,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="52" />
@@ -2509,13 +2492,12 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="126" />
 		</collision>
 	</npc>
-	<npc id="25159" level="85" type="L2Npc" name="Paniel the Unicorn" title="Raid Boss">
+	<npc id="25159" level="54" type="L2RaidBoss" name="Paniel the Unicorn" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2534,7 +2516,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25160" level="85" type="L2Npc" name="Rapini the Unicorn" title="Raid Fighter">
+	<npc id="25160" level="85" type="L2RaidBoss" name="Rapini the Unicorn" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2553,7 +2535,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="25161" level="85" type="L2Npc" name="Ririf the Unicorn" title="Raid Fighter">
+	<npc id="25161" level="85" type="L2Monster" name="Ririf the Unicorn" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2668,7 +2650,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="44" />
 			<height normal="51.5" />
@@ -2720,7 +2701,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="39" />
@@ -2853,7 +2833,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="52" />
@@ -2903,7 +2882,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" grown="36" />
 			<height normal="63" grown="76" />
@@ -3028,7 +3006,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="72" />
 			<height normal="87" />
@@ -3419,7 +3396,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="50" />
 			<height normal="180" />
@@ -3550,7 +3526,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" grown="24" />
 			<height normal="40" grown="48" />
@@ -3677,7 +3652,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="50" />
@@ -3726,7 +3700,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="8" />
 			<height normal="15" />
@@ -3860,7 +3833,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="16" />
 			<height normal="31" />
@@ -3986,7 +3958,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="55" />
 			<height normal="80.5" />
@@ -4038,7 +4009,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
