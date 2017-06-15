@@ -1320,10 +1320,6 @@
 			<vitals hp="689482245" hpRegen="1830" mp="2025740" mpRegen="1000" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3974.13793" magical="496.01325" />
-			<attribute>
-				<attack type="EARTH" value="450" />
-				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="300" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="279" />
@@ -1372,10 +1368,6 @@
 			<vitals hp="292335" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<attack physical="14312" magical="3509" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3537" magical="2031" evasion="-18" />
-			<attribute>
-				<attack type="EARTH" value="450" />
-				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="180" />
 				<run ground="180" />
@@ -1403,7 +1395,6 @@
 		<ai type="BALANCED" aggroRange="450" clanHelpRange="300" isAggressive="true">
 			<skill maxChance="25" />
 		</ai>
-
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
@@ -1420,10 +1411,6 @@
 			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
 			<attack physical="1094.11758465172" magical="4902.24" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.098247547707" magical="261.308998696584" />
-			<attribute>
-				<attack type="EARTH" value="450" />
-				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="250" />
@@ -1449,7 +1436,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -1489,7 +1475,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -1529,7 +1514,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -1569,7 +1553,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -1609,7 +1592,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -1649,7 +1631,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="37" />
 			<height normal="28" />
@@ -1666,10 +1647,6 @@
 			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
 			<attack physical="1094.11758465172" magical="4902.24" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.098247547707" magical="261.308998696584" />
-			<attribute>
-				<attack type="EARTH" value="450" />
-				<defence fire="450" water="450" wind="400" earth="450" holy="450" dark="450" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="200" />
 				<run ground="250" />
@@ -1694,7 +1671,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="200" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="42" />
 			<height normal="34.5" />

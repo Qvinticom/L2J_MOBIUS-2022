@@ -13,9 +13,6 @@
 			</speed>
 			<attack physical="17045.702302755" magical="5736.0042671637" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1103.7928684988" magical="613.99328787368" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -28,7 +25,6 @@
 			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="33" />
@@ -47,9 +43,6 @@
 			</speed>
 			<attack physical="6043.123730944" magical="5511.2118000069" critical="4" attackSpeed="553" range="40" />
 			<defence physical="1500" magical="807.1459319845" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -60,7 +53,6 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="36" />
@@ -79,9 +71,6 @@
 			</speed>
 			<attack physical="8911.6811886562" magical="5571.60819078" critical="4" attackSpeed="553" range="40" />
 			<defence physical="1442.6229508197" magical="775.48738480405" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -91,7 +80,6 @@
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="19" />
@@ -110,9 +98,6 @@
 			</speed>
 			<attack physical="6126.7808172012" magical="3041.1694708008" critical="4" attackSpeed="253" range="40" />
 			<defence physical="655.73770491803" magical="559.07230067269" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -121,7 +106,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="1000" isAggressive="true" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="26" />
@@ -140,9 +124,6 @@
 			</speed>
 			<attack physical="16428.585739186" magical="5588.0869647497" critical="4" attackSpeed="253" range="40" />
 			<defence physical="709.20544604755" magical="599.30398648481" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -152,7 +133,6 @@
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="18" grown="12" />
 			<height normal="35" grown="42" />
@@ -172,16 +152,12 @@
 			</speed>
 			<attack physical="345.42047607281" magical="108.27886895427" critical="4" attackSpeed="253" range="40" />
 			<defence physical="269.44444444444" magical="120.09534286762" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -200,16 +176,12 @@
 			</speed>
 			<attack physical="323.42577454634" magical="99.205259708436" critical="4" attackSpeed="253" range="40" />
 			<defence physical="258.21917808219" magical="115.28550115286" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" grown="15.5" />
 			<height normal="40" grown="48.5" />
@@ -228,16 +200,12 @@
 			</speed>
 			<attack physical="330.2109306557" magical="103.41138030931" critical="4" attackSpeed="253" range="40" />
 			<defence physical="263.63636363636" magical="117.70407810012" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="25.5" />
@@ -256,16 +224,12 @@
 			</speed>
 			<attack physical="323.42577454634" magical="99.205259708436" critical="4" attackSpeed="253" range="40" />
 			<defence physical="258.21917808219" magical="115.28550115286" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
-
 		<collision>
 			<radius normal="27" />
 			<height normal="25.5" />
@@ -284,16 +248,12 @@
 			</speed>
 			<attack physical="323.42577454634" magical="99.205259708436" critical="4" attackSpeed="253" range="40" />
 			<defence physical="258.21917808219" magical="115.28550115286" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -312,16 +272,12 @@
 			</speed>
 			<attack physical="394.34602603087" magical="123.47644452889" critical="4" attackSpeed="253" range="40" />
 			<defence physical="285.71428571429" magical="127.97198087156" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
-
 		<collision>
 			<radius normal="37" />
 			<height normal="64" />
@@ -340,9 +296,6 @@
 			</speed>
 			<attack physical="46.042847473859" magical="23.994391510234" critical="4" attackSpeed="253" range="40" />
 			<defence physical="74.833495472574" magical="40.997888608737" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -370,9 +323,6 @@
 			</speed>
 			<attack physical="45.758632365996" magical="23.699078735588" critical="4" attackSpeed="253" range="40" />
 			<defence physical="74.371560315335" magical="40.744815222263" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -400,9 +350,6 @@
 			</speed>
 			<attack physical="44.926657232069" magical="22.845128460488" critical="4" attackSpeed="253" range="40" />
 			<defence physical="60.606060606061" magical="40.00400040004" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -432,10 +379,6 @@
 			</speed>
 			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4920.2127659574" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -443,7 +386,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
@@ -462,10 +404,6 @@
 			</speed>
 			<attack physical="1048846.269104" magical="175972.90129492" critical="8" attackSpeed="398" range="900" />
 			<defence physical="4787.2340425532" magical="3054.5607752265" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -474,7 +412,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
@@ -493,10 +430,6 @@
 			</speed>
 			<attack physical="906897.14997713" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4840.4255319149" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -507,7 +440,6 @@
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="10" />
 			<height normal="32" />
@@ -526,10 +458,6 @@
 			</speed>
 			<attack physical="875352.90128227" magical="87986.450647461" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3124.7805631627" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -538,7 +466,6 @@
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -557,10 +484,6 @@
 			</speed>
 			<attack physical="946327.4608457" magical="87986.450647461" critical="8" attackSpeed="698" range="40" />
 			<defence physical="5319.1489361702" magical="3510.989396812" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -568,7 +491,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -587,10 +509,6 @@
 			</speed>
 			<attack physical="946327.4608457" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3124.7805631627" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -600,7 +518,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
@@ -619,10 +536,6 @@
 			</speed>
 			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3124.7805631627" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -630,7 +543,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -649,10 +561,6 @@
 			</speed>
 			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="5319.1489361702" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -660,7 +568,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -679,10 +586,6 @@
 			</speed>
 			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="5319.1489361702" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -691,7 +594,6 @@
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
@@ -710,10 +612,6 @@
 			</speed>
 			<attack physical="906897.14997713" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="2808.7915174496" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -721,7 +619,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -740,10 +637,6 @@
 			</speed>
 			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -751,7 +644,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -770,10 +662,6 @@
 			</speed>
 			<attack physical="828036.52823999" magical="175972.90129492" critical="8" attackSpeed="398" range="900" />
 			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -785,7 +673,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
@@ -804,10 +691,6 @@
 			</speed>
 			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -820,7 +703,6 @@
 			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="36" />
@@ -839,10 +721,6 @@
 			</speed>
 			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -854,7 +732,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
@@ -873,10 +750,6 @@
 			</speed>
 			<attack physical="788606.21737142" magical="175972.90129492" critical="8" attackSpeed="698" range="40" />
 			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -888,7 +761,6 @@
 			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
@@ -907,10 +779,6 @@
 			</speed>
 			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
 			<defence physical="21276.595744681" magical="12288.462888842" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -918,7 +786,6 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="36.5" />
@@ -937,9 +804,6 @@
 			</speed>
 			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="23380.874444704" magical="13236.430025981" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="300" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -950,7 +814,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
@@ -969,9 +832,6 @@
 			</speed>
 			<attack physical="78860.621737142" magical="5807.1057427324" critical="4" attackSpeed="553" range="40" />
 			<defence physical="8767.8279167641" magical="6214.4512323573" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -982,7 +842,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="34" />
@@ -1001,9 +860,6 @@
 			</speed>
 			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="23380.874444704" magical="13236.430025981" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1014,7 +870,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="32" />
@@ -1033,9 +888,6 @@
 			</speed>
 			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="23380.874444704" magical="13236.430025981" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1046,7 +898,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="27" />
@@ -1065,9 +916,6 @@
 			</speed>
 			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="23380.874444704" magical="13236.430025981" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1078,7 +926,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="53" />
@@ -1097,9 +944,6 @@
 			</speed>
 			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="23380.874444704" magical="13236.430025981" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1110,7 +954,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="70" />
 			<height normal="41" />
@@ -1129,9 +972,6 @@
 			</speed>
 			<attack physical="52573.616390392" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="23380.874444704" magical="13236.430025981" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1142,7 +982,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="23" />
 			<height normal="40" />
@@ -1161,16 +1000,12 @@
 			</speed>
 			<attack physical="709745.59563428" magical="5807.1057427324" critical="4" attackSpeed="753" range="40" />
 			<defence physical="10638.29787234" magical="6214.4512323573" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
-
 		<collision>
 			<radius normal="16" />
 			<height normal="27" />
@@ -1194,9 +1029,6 @@
 			</speed>
 			<attack physical="31589.055866298" magical="15059.044639482" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3409.0909090909" magical="1687.6687668767" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1205,7 +1037,6 @@
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="50" />
 			<height normal="60.5" />
@@ -1224,9 +1055,6 @@
 			</speed>
 			<attack physical="31589.055866298" magical="15059.044639482" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3409.0909090909" magical="1687.6687668767" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1235,7 +1063,6 @@
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="50" />
 			<height normal="60.5" />
@@ -1254,9 +1081,6 @@
 			</speed>
 			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1404.0794795147" magical="932.16768485359" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1265,7 +1089,6 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
-
 		<collision>
 			<radius normal="60" />
 			<height normal="47" />
@@ -1284,9 +1107,6 @@
 			</speed>
 			<attack physical="34884.22796843" magical="11738.75977987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1411.5879259292" magical="937.15253878329" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1295,7 +1115,6 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="44" />
 			<height normal="35" />
@@ -1314,9 +1133,6 @@
 			</speed>
 			<attack physical="34698.673564342" magical="11614.211485465" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1404.0794795147" magical="932.16768485359" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1325,7 +1141,6 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="35" />
 			<height normal="46.5" />
@@ -1344,17 +1159,12 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
-
 		<collision>
 			<radius normal="23" />
 			<height normal="44" />
@@ -1373,10 +1183,6 @@
 			</speed>
 			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1384,7 +1190,6 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
-
 		<collision>
 			<radius normal="31" />
 			<height normal="25" />
@@ -1403,10 +1208,6 @@
 			</speed>
 			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1414,7 +1215,6 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="25" />
 			<height normal="43" />
@@ -1433,10 +1233,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1444,7 +1240,6 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="25" />
 			<height normal="42" />
@@ -1463,17 +1258,12 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="1100" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
@@ -1492,10 +1282,6 @@
 			</speed>
 			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1504,7 +1290,6 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="27" />
@@ -1523,10 +1308,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="304.80017840456" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1534,7 +1315,6 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
@@ -1553,10 +1333,6 @@
 			</speed>
 			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="304.80017840456" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1565,7 +1341,6 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="35" />
 			<height normal="33" />
@@ -1584,17 +1359,12 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="35" />
@@ -1613,17 +1383,12 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
-
 		<collision>
 			<radius normal="35" />
 			<height normal="71.5" />
@@ -1642,10 +1407,6 @@
 			</speed>
 			<attack physical="47220.241292647" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1653,7 +1414,6 @@
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="42" />
@@ -1672,10 +1432,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1683,7 +1439,6 @@
 			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
@@ -1701,12 +1456,8 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="250" dark="250" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
@@ -1725,10 +1476,6 @@
 			</speed>
 			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1736,7 +1483,6 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="8" /> <!-- Angels -->
 		</skill_list>
-
 		<collision>
 			<radius normal="31" />
 			<height normal="25" />
@@ -1755,10 +1501,6 @@
 			</speed>
 			<attack physical="47220.317247387" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1766,7 +1508,6 @@
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="25" />
 			<height normal="43" />
@@ -1785,10 +1526,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1796,7 +1533,6 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="25" />
 			<height normal="42" />
@@ -1815,17 +1551,12 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="1100" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
@@ -1844,10 +1575,6 @@
 			</speed>
 			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1856,7 +1583,6 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="21" />
 			<height normal="27" />
@@ -1875,10 +1601,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="304.80017840456" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1886,7 +1608,6 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
@@ -1905,10 +1626,6 @@
 			</speed>
 			<attack physical="47220.61371589" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="304.80017840456" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1917,7 +1634,6 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="35" />
 			<height normal="33" />
@@ -1936,10 +1652,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1965,10 +1677,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -1993,10 +1701,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2006,7 +1710,6 @@
 			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -2025,10 +1728,6 @@
 			</speed>
 			<attack physical="47220.241292647" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2038,7 +1737,6 @@
 			<skill id="4458" level="3" /> <!-- Spear Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -2057,10 +1755,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2069,7 +1763,6 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="30" />
@@ -2088,10 +1781,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2099,7 +1788,6 @@
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="45" />
@@ -2118,10 +1806,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2129,7 +1813,6 @@
 			<skill id="4287" level="2" /> <!-- Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="60" />
@@ -2148,10 +1831,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2160,7 +1839,6 @@
 			<skill id="4225" level="2" /> <!-- Stun Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="45" />
@@ -2179,10 +1857,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2191,7 +1865,6 @@
 			<skill id="4287" level="2" /> <!-- Hold Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="60" />
@@ -2209,10 +1882,6 @@
 			</speed>
 			<attack physical="46490.165755271" magical="8304.8994625376" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2239,10 +1908,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.31578947368" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2256,7 +1921,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="48" />
 			<height normal="53.5" />
@@ -2275,10 +1939,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.31578947368" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2293,7 +1953,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
-
 		<collision>
 			<radius normal="40" />
 			<height normal="73" />
@@ -2312,10 +1971,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.31578947368" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2329,7 +1984,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="26" />
 			<height normal="47" />
@@ -2348,10 +2002,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.31578947368" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2363,7 +2013,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="40" />
 			<height normal="72" />
@@ -2382,10 +2031,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.31578947368" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2397,7 +2042,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="38.7" />
 			<height normal="54.5" />
@@ -2416,10 +2060,6 @@
 			</speed>
 			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2449,10 +2089,6 @@
 			</speed>
 			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2482,10 +2118,6 @@
 			</speed>
 			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2497,7 +2129,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
-
 		<collision>
 			<radius normal="28" />
 			<height normal="43.5" />
@@ -2516,10 +2147,6 @@
 			</speed>
 			<attack physical="47220.241292647" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2531,7 +2158,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 		</skill_list>
-
 		<collision>
 			<radius normal="28" />
 			<height normal="43.5" />
@@ -2550,10 +2176,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2567,7 +2189,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="33" />
 			<height normal="58.5" />
@@ -2586,10 +2207,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2603,7 +2220,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="33" />
 			<height normal="58.5" />
@@ -2622,10 +2238,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2641,7 +2253,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -2660,10 +2271,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2679,7 +2286,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="30" />
 			<height normal="55" />
@@ -2698,10 +2304,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2714,7 +2316,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="40" />
 			<height normal="45" />
@@ -2733,10 +2334,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2749,7 +2346,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="40" />
 			<height normal="55" />
@@ -2768,10 +2364,6 @@
 			</speed>
 			<attack physical="47220.306466714" magical="8304.9029160715" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.14714175852" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -2788,7 +2380,6 @@
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skill_list>
-
 		<collision>
 			<radius normal="40" />
 			<height normal="67" />

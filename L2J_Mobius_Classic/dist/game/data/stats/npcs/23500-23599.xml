@@ -13,10 +13,6 @@
 			</speed>
 			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -27,7 +23,6 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="39.5" />
@@ -46,10 +41,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8304.9567060447" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -60,7 +51,6 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
-
 		<collision>
 			<radius normal="23" />
 			<height normal="40" />
@@ -79,10 +69,6 @@
 			</speed>
 			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -93,7 +79,6 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="25" />
@@ -112,10 +97,6 @@
 			</speed>
 			<attack physical="47220.557386874" magical="8304.9017930433" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="200" wind="250" earth="250" holy="250" dark="250" />
-				<attack type="FIRE" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -126,7 +107,6 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-
 		<collision>
 			<radius normal="17" />
 			<height normal="37" />
@@ -145,10 +125,6 @@
 			</speed>
 			<attack physical="47220.368807127" magical="8305.0410766139" critical="4" attackSpeed="253" range="40" />
 			<defence physical="526.06382978723" magical="305.10497858296" />
-			<attribute>
-				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
-				<attack type="EARTH" value="330" />
-			</attribute>
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -159,7 +135,6 @@
 			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
-
 		<collision>
 			<radius normal="20" />
 			<height normal="36" />
@@ -177,9 +152,6 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3777" magical="3955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -199,7 +171,6 @@
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-
 	</npc>
 	<npc id="23506" level="101" type="L2Monster" name="Fortress Guardian Captain">
         <!-- TODO: font https://l2wiki.com/Fortress_Raider -->
@@ -213,9 +184,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -239,7 +207,6 @@
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-
 	</npc>
 	<npc id="23507" level="101" type="L2Monster" name="Atelia Passionate Soldier">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -252,9 +219,6 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3777" magical="3955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -274,7 +238,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23508" level="101" type="L2Monster" name="Atelia Elite Captain">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -287,9 +250,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -313,7 +273,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23509" level="102" type="L2Monster" name="Fortress Dark Wizard">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -327,9 +286,6 @@
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5080" magical="5650" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -351,7 +307,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23510" level="102" type="L2Monster" name="Atelia Flame Master">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -365,9 +320,6 @@
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5080" magical="5650" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -389,7 +341,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23511" level="102" type="L2Monster" name="Fortress Archon">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -403,9 +354,6 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -429,7 +377,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23512" level="102" type="L2Monster" name="Atelia High Priest">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -443,9 +390,6 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -469,7 +413,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23530" level="101" type="L2Monster" name="Fortress Guardian Captain" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -482,9 +425,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -508,7 +448,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23532" level="101" type="L2Monster" name="Atelia Elite Captain" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -521,9 +460,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -547,7 +483,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23535" level="102" type="L2Monster" name="Atelia Archon" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -560,9 +495,6 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -586,7 +518,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23536" level="102" type="L2Monster" name="Atelia High Priest" title="Kelbim's Call">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -599,9 +530,6 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -625,7 +553,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23537" level="101" type="L2Monster" name="Atelia Elite Captain" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -639,9 +566,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -665,7 +589,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23538" level="102" type="L2Monster" name="Atelia High Priest" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -678,9 +601,6 @@
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -704,7 +624,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23539" level="104" type="L2Monster" name="Atelia Trial Guardian Captain" title="Trial Guardian">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -738,9 +657,6 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3421" magical="3605" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -761,7 +677,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23542" level="101" type="L2Monster" name="Kerberos Fort">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -773,9 +688,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -796,7 +708,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23543" level="100" type="L2Monster" name="Kerberos Nero">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -808,9 +719,6 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3421" magical="3605" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -831,7 +739,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23544" level="101" type="L2Monster" name="Fury Sylph Barrena">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -843,9 +750,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> 
 				<run ground="200" /> 
@@ -866,7 +770,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23545" level="100" type="L2Monster" name="Fury Kiku">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -878,9 +781,6 @@
 			<attack physical="10561" magical="4115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="2431" magical="2000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -901,7 +801,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23546" level="101" type="L2Monster" name="Fury Sylph Temptress">
 		<!-- FIX ME NO INFO ABOUT THIS NPC -->
@@ -913,9 +812,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -948,9 +844,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -971,7 +864,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23548" level="100" type="L2Monster" name="Fury Kerberos Liger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -983,9 +875,6 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3021" magical="3105" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1005,7 +894,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23549" level="100" type="L2Monster" name="Fury Kerberos Nero">
 		<!-- Source: www.l2wiki.com -->
@@ -1017,9 +905,6 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3021" magical="3105" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1039,7 +924,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23550" level="100" type="L2Monster" name="Kerberos Liger" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1051,9 +935,6 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3421" magical="3605" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1074,7 +955,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23551" level="101" type="L2Monster" name="Kerberos Fort" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1086,9 +966,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1109,7 +986,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23552" level="100" type="L2Monster" name="Kerberos Nero" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1121,9 +997,6 @@
 			<attack physical="38999" magical="27961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3421" magical="3605" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1144,7 +1017,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23553" level="101" type="L2Monster" name="Fury Sylph Barrena" title="Spirit of the Night">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1156,9 +1028,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1179,7 +1048,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23554" level="100" type="L2Monster" name="Fury Kiku">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1211,7 +1079,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23555" level="101" type="L2Monster" name="Fury Sylph Temptress" title="Spirit of the Night">
 		<!-- FIX ME NO INFO ABOUT THIS NPC -->
@@ -1223,9 +1090,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1257,9 +1121,6 @@
 			<attack physical="32000" magical="44115" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1280,7 +1141,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23557" level="100" type="L2Monster" name="Fury Kerberos Liger">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1292,9 +1152,6 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3021" magical="3105" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1314,7 +1171,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23558" level="100" type="L2Monster" name="Fury Kerberos Nero">
 		<!-- Source: www.l2wiki.com -->
@@ -1326,9 +1182,6 @@
 			<attack physical="33999" magical="22961" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3021" magical="3105" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1348,7 +1201,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23559" level="100" type="L2Monster" name="El Floato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1360,9 +1212,6 @@
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3131" magical="2680" />	
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1384,7 +1233,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23560" level="100" type="L2Monster" name="El Floato">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1396,9 +1244,6 @@
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3131" magical="2680" />	
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1420,7 +1265,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23561" level="100" type="L2Monster" name="Harpe">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1442,7 +1286,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23562" level="101" type="L2Monster" name="Harpe" title="Separated Evil Thoughts">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1454,9 +1297,6 @@
 			<attack physical="56121" magical="62961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3021" magical="3105" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -1471,7 +1311,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23563" level="101" type="L2Monster" name="Croamis" title="Gatekeeper">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1514,7 +1353,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23565" level="100" type="L2Monster" name="Amis">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1536,7 +1374,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23566" level="100" type="L2Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
@@ -1558,7 +1395,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23567" level="100" type="L2Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
@@ -1580,7 +1416,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23568" level="100" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1602,7 +1437,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23569" level="103" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1630,7 +1464,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>	
 	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1652,7 +1485,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 		<npc id="23571" level="103" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1680,7 +1512,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23572" level="100" type="L2Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1702,7 +1533,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23573" level="103" type="L2Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1730,7 +1560,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>	
 	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Fancy">
 		<!-- Source: www.l2wiki.com -->
@@ -1756,7 +1585,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23575" level="101" type="L2Monster" name="Nymph Lily" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1778,7 +1606,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23576" level="101" type="L2Monster" name="Nymph Tulip" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1800,7 +1627,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23577" level="101" type="L2Monster" name="Nymph Cosmos" title="Fancy">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1822,7 +1648,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23578" level="102" type="L2Monster" name="Nymph Guardian" title="Guardian of the Flower">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1844,7 +1669,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23579" level="100" type="L2Monster" name="Buoyant Seed">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1866,7 +1690,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23580" level="100" type="L2Monster" name="Fluttering Seed">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1888,7 +1711,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23581" level="100" type="L2Monster" name="Apherus" title="Instilled with life">
 		<!-- Source: www.l2on.net -->
@@ -1910,7 +1732,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23582" level="101" type="L2Monster" name="Nymph Rose" title="Elegant">
 		<!-- Source: www.l2wiki.com -->
@@ -1932,7 +1753,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23583" level="101" type="L2Monster" name="Nymph Lily" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1954,7 +1774,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23584" level="101" type="L2Monster" name="Nymph Tulip" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1976,7 +1795,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23585" level="101" type="L2Monster" name="Nymph Cosmos" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -1998,7 +1816,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23586" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2010,9 +1827,6 @@
 			<attack physical="59121" magical="64961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4321" magical="4105" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -2043,9 +1857,6 @@
 			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5921" magical="5405" />
-			<attribute>
-				<defence fire="280" water="280" wind="280" earth="280" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -2060,7 +1871,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23588" level="102" type="L2Monster" name="Hummel" title="Embryo Quartermaster">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2072,9 +1882,6 @@
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="280" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -2101,9 +1908,6 @@
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5975" magical="6244" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="280" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" /> <!-- Need retail value -->
 				<run ground="200" /> <!-- Need retail value -->
@@ -2132,9 +1936,6 @@
 			<vitals hp="1426806" hpRegen="7.5" mp="78950" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
-			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -2159,9 +1960,6 @@
 			<vitals hp="1426806" hpRegen="7.5" mp="78950" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
-			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -2186,9 +1984,6 @@
 			<vitals hp="1426806" hpRegen="7.5" mp="78950" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
-			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -2213,9 +2008,6 @@
 			<vitals hp="1426806" hpRegen="7.5" mp="78950" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
-			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -2240,9 +2032,6 @@
 			<vitals hp="1426806" hpRegen="7.5" mp="78950" mpRegen="2.7" />
 			<attack physical="4422" magical="2492" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1802" magical="1651" />
-			<attribute>
-				<defence fire="160" water="160" wind="160" earth="160" holy="160" dark="160" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -2271,9 +2060,6 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3777" magical="3955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2293,7 +2079,6 @@
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-
 	</npc>
 	<npc id="23596" level="101" type="L2Monster" name="Fortress Guardian Captain" usingServerSideTitle="true">
 		 <!-- TODO: font https://l2wiki.com/Fortress_Raider -->
@@ -2307,9 +2092,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2322,7 +2104,6 @@
 			<skill id="4412" level="14" />
 			<skill id="4413" level="14" />
 			<skill id="4440" level="5" />
-			
 		</skill_list>
 		<ai aggroRange="700" clanHelpRange="500" isAggressive="true">
 			<clan_list>
@@ -2333,7 +2114,6 @@
 			<radius normal="29" />
 			<height normal="36" />
 		</collision>
-
 	</npc>
 	<npc id="23597" level="101" type="L2Monster" name="Atelia Passionate Soldier" usingServerSideTitle="true">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2346,9 +2126,6 @@
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="3777" magical="3955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -2368,7 +2145,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23598" level="102" type="L2Monster" name="Atelia Elite Captain" usingServerSideTitle="true">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2381,9 +2157,6 @@
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4718" magical="4955" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2406,7 +2179,6 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 	<npc id="23599" level="102" type="L2Monster" name="Fortress Dark Wizard" usingServerSideTitle="true">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
@@ -2420,9 +2192,6 @@
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
 			<defence physical="5080" magical="5650" />
-			<attribute>
-				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
-			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2444,6 +2213,5 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-
 	</npc>
 </list>

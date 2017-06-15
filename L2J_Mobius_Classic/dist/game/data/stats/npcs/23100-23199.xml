@@ -38,7 +38,6 @@
 				<clan>ANT</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="36" grown="42" />
 			<height normal="21" />
@@ -80,7 +79,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
@@ -208,7 +206,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13.5" />
 			<height normal="38" />
@@ -250,7 +247,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="11" />
 			<height normal="27" />
@@ -292,7 +288,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="6" />
 			<height normal="12" />
@@ -333,7 +328,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="25" />
@@ -376,7 +370,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="19" />
 			<height normal="48" />
@@ -418,7 +411,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" grown="15" />
 			<height normal="28" grown="34" />
@@ -461,7 +453,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="27" />
@@ -503,7 +494,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="37.5" />
@@ -542,7 +532,6 @@
 				<clan>OMAN</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="31.5" />
@@ -576,7 +565,6 @@
 			<skill id="14158" level="1" /> <!-- Crawler Spear -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="6.5" />
 			<height normal="18.5" />
@@ -611,7 +599,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="9.4" />
 			<height normal="20" />
@@ -645,7 +632,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="14.5" />
 			<height normal="18" />
@@ -679,7 +665,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="11" />
 			<height normal="16.5" />
@@ -714,7 +699,6 @@
 			<skill id="14162" level="1" /> <!-- Sweep -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="31" />
 			<height normal="36.5" />
@@ -749,7 +733,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="9" />
 			<height normal="22.5" />
@@ -785,7 +768,6 @@
 			<skill id="14167" level="1" /> <!-- Black Powder -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="6" />
 			<height normal="22.5" />
@@ -821,7 +803,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="6" />
 			<height normal="22.5" />
@@ -858,7 +839,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="9" />
 			<height normal="22" />
@@ -894,7 +874,6 @@
 			<skill id="14160" level="1" /> <!-- Fist Slasher -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="29" />
@@ -919,10 +898,6 @@
 			</speed>
 			<attack physical="45027.4086463771" magical="7933.39078546243" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="515.39249724918" magical="297.335874351375" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -933,7 +908,6 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="60" />
 			<height normal="99.5" />
@@ -1026,10 +1000,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1050,7 +1020,6 @@
 				<clan>EMBRYO_HIGH</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
@@ -1076,10 +1045,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
 			<defence physical="310.826151178162" magical="176.707787371517" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1099,7 +1064,6 @@
 				<clan>EMBRYO_HIGH</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
@@ -1124,10 +1088,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="80" type="POLE" distance="80" width="120" random="10" accuracy="0" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1147,7 +1107,6 @@
 				<clan>EMBRYO_HIGH</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
@@ -1172,10 +1131,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="4605.4148464766" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="310.826151178162" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1195,7 +1150,6 @@
 				<clan>EMBRYO_HIGH</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="21" />
@@ -1220,10 +1174,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="4605.4148464766" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="310.826151178162" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1243,7 +1193,6 @@
 				<clan>EMBRYO_HIGH</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="21" />
@@ -1269,10 +1218,6 @@
 			</speed>
 			<attack physical="78039.9424340284" magical="13816.2445394298" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="485.665861215878" magical="276.105917767995" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1289,7 +1234,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="29.5" />
@@ -1322,10 +1266,6 @@
 			</speed>
 			<attack physical="78039.9424340284" magical="13816.2445394298" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="485.665861215878" magical="276.105917767995" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1341,7 +1281,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -1374,10 +1313,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="4605.4148464766" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="310.826151178162" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1393,7 +1328,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="30" />
@@ -1426,10 +1360,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1446,7 +1376,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="31.5" />
@@ -1479,10 +1408,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1495,7 +1420,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -1528,10 +1452,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="4605.4148464766" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="310.826151178162" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1547,7 +1467,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="12" />
 			<height normal="32" />
@@ -1580,10 +1499,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1599,7 +1514,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -1624,10 +1538,6 @@
 			</speed>
 			<attack physical="78039.9424340284" magical="13816.2445394298" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="485.665861215878" magical="276.105917767995" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1644,7 +1554,6 @@
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="34" />
@@ -1670,10 +1579,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1694,7 +1599,6 @@
 				<clan>EMBRYO_LOW</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="33" />
@@ -1720,10 +1624,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
 			<defence physical="310.826151178162" magical="176.707787371517" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1744,7 +1644,6 @@
 				<clan>EMBRYO_LOW</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -1770,10 +1669,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="4605.4148464766" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="310.826151178162" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1794,7 +1689,6 @@
 				<clan>EMBRYO_LOW</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="36" />
@@ -1820,10 +1714,6 @@
 			</speed>
 			<attack physical="13006.6570723381" magical="2302.7074232383" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="220.884734214396" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1844,7 +1734,6 @@
 				<clan>EMBRYO_LOW</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="10" />
 			<height normal="29" />
@@ -1872,10 +1761,6 @@
 			</speed>
 			<attack physical="6745.74369699808" magical="1186.41216252556" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="525.700347194163" magical="304.76927121016" />
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="400" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1914,10 +1799,6 @@
 			</speed>
 			<attack physical="47220.2058789866" magical="8304.88513767892" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="525.700347194163" magical="304.76927121016" />
-			<attribute>
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-				<attack type="DARK" value="400" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -1958,10 +1839,6 @@
 			</speed>
 			<attack physical="6133.84931619787" magical="1082.67036126497" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="505.286762009" magical="290.083779855" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2001,10 +1878,6 @@
 			</speed>
 			<attack physical="42936.9452133851" magical="7578.69252885478" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="505.286762009" magical="290.083779855" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2046,10 +1919,6 @@
 			</speed>
 			<attack physical="5574.2816024306" magical="986.874609959272" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="248.495325991196" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2072,7 +1941,6 @@
 				<clan>EMBRYO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="28" />
 			<height normal="41" />
@@ -2104,10 +1972,6 @@
 			</speed>
 			<attack physical="5574.2816024306" magical="986.874609959272" critical="4" attackSpeed="253" range="40" type="DUAL" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="388.532688972703" magical="248.495325991196" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2130,7 +1994,6 @@
 				<clan>EMBRYO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />
@@ -2162,10 +2025,6 @@
 			</speed>
 			<attack physical="5574.2816024306" magical="986.874609959272" critical="1" attackSpeed="253" range="40" type="BLUNT" distance="80" width="120" random="20" accuracy="9" />
 			<defence physical="485.665861215878" magical="276.105917767995" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2188,7 +2047,6 @@
 				<clan>EMBRYO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
@@ -2220,10 +2078,6 @@
 			</speed>
 			<attack physical="5845.53506617802" magical="1033.01266087889" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="495.379178440196" magical="283.008565712195" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2246,7 +2100,6 @@
 				<clan>EMBRYO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="34" />
 			<height normal="34" />
@@ -2280,10 +2133,6 @@
 			</speed>
 			<attack physical="5845.53506617802" magical="1033.01266087889" critical="4" attackSpeed="253" range="80" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="396.303342752157" magical="254.707709140976" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2307,7 +2156,6 @@
 				<clan>EMBRYO</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="22.88" />
 			<height normal="41.6" />
@@ -2345,7 +2193,6 @@
 			<skill id="4158" level="1" /> <!-- Prominence -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="29" />
@@ -2389,7 +2236,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="11" />
 			<height normal="32" />
@@ -2433,7 +2279,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="35" />
@@ -2477,7 +2322,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" grown="25" />
 			<height normal="35" grown="41.5" />
@@ -2522,7 +2366,6 @@
 			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="50" />
 			<height normal="44" />
@@ -2568,7 +2411,6 @@
 			<skill id="4036" level="1" /> <!-- Poison -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="50" />
 			<height normal="44" />
@@ -2613,7 +2455,6 @@
 			<skill id="4158" level="1" /> <!-- Prominence -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="50" />
 			<height normal="66" />
@@ -2645,7 +2486,6 @@
 			<skill id="14274" level="1" /> <!-- Mechanic Shot -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" grown="25" />
 			<height normal="35" grown="41.5" />
@@ -2675,10 +2515,6 @@
 			</speed>
 			<attack physical="35459.9874241795" magical="6296.76383568414" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="466.806863913762" magical="262.801587405588" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2699,7 +2535,6 @@
 				<clan>MGG_PARTY</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="40" />
 			<height normal="54" />
@@ -2731,10 +2566,6 @@
 			</speed>
 			<attack physical="4830.82624752625" magical="261.823763291887" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="320.357651705523" magical="307.670151108981" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2755,7 +2586,6 @@
 				<clan>MGG_PARTY</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="14" />
 			<height normal="23" />
@@ -2791,10 +2621,6 @@
 			</speed>
 			<attack physical="3807.59812976916" magical="683.286551825142" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="414.511136163505" magical="226.612985189284" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2808,7 +2634,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="45" />
 			<height normal="8" />
@@ -2840,10 +2665,6 @@
 			</speed>
 			<attack physical="3807.59812976916" magical="209.402194343328" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="290.157795314454" magical="271.93558222714" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2857,7 +2678,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="23" />
 			<height normal="31" />
@@ -2890,10 +2710,6 @@
 			</speed>
 			<attack physical="3992.46856160874" magical="715.083260014663" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="422.801358886775" magical="232.278309819016" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2909,7 +2725,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="36" />
 			<height normal="31" />
@@ -2938,10 +2753,6 @@
 			</speed>
 			<attack physical="3807.59812976916" magical="683.286551825142" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="331.608908930804" magical="203.951686670355" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -2957,7 +2768,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="17" />
 			<height normal="20" />
@@ -2990,10 +2800,6 @@
 			</speed>
 			<attack physical="3992.46856160874" magical="215.12881231327" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="295.960951220743" magical="278.733971782819" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3009,7 +2815,6 @@
 			<skill id="14630" level="1" /> <!-- Discard Decayed Branch -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="36" />
 			<height normal="50" />
@@ -3043,10 +2848,6 @@
 			</speed>
 			<attack physical="3992.46856160874" magical="715.083260014663" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="422.801358886775" magical="232.278309819016" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3060,7 +2861,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="22" />
 			<height normal="22" />
@@ -3094,10 +2894,6 @@
 			</speed>
 			<attack physical="4186.37204072787" magical="748.3800155032" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="431.257386064511" magical="238.085267564491" />
-			<attribute>
-				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
-				<attack type="FIRE" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3113,7 +2909,6 @@
 			<skill id="14674" level="1" /> <!-- Cry of Destiny - Chain Strike -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="15" />
 			<height normal="20" />
@@ -3149,10 +2944,6 @@
 			</speed>
 			<attack physical="4186.37204072787" magical="748.3800155032" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="431.257386064511" magical="238.085267564491" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3167,7 +2958,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
@@ -3201,10 +2991,6 @@
 			</speed>
 			<attack physical="4393.39231302655" magical="251.933019343748" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="307.917773650061" magical="292.844879104324" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3230,7 +3016,6 @@
 			<skill id="14634" level="1" /> <!-- Stigma's Despair -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="55" />
@@ -3262,10 +3047,6 @@
 			</speed>
 			<attack physical="4393.39231302655" magical="251.933019343748" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="307.917773650061" magical="292.844879104324" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3280,7 +3061,6 @@
 			<skill id="14635" level="1" /> <!-- Corpse Explosion -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="40" />
 			<height normal="23" />
@@ -3313,10 +3093,6 @@
 			</speed>
 			<attack physical="4393.39231302655" magical="784.547871934874" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
 			<defence physical="351.906027028641" magical="219.633659328243" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3333,7 +3109,6 @@
 			<skill id="14056" level="2" /> <!-- Power Arrow -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -3365,10 +3140,6 @@
 			</speed>
 			<attack physical="4393.39231302655" magical="251.933019343748" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="307.917773650061" magical="292.844879104324" />
-			<attribute>
-				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
-				<attack type="FIRE" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3384,7 +3155,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
@@ -3417,10 +3187,6 @@
 			</speed>
 			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="398.415163555849" magical="215.693501667373" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3434,7 +3200,6 @@
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="38" />
@@ -3466,10 +3231,6 @@
 			</speed>
 			<attack physical="3463.28644201689" magical="198.371046635709" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="278.890614489094" magical="258.832202000848" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
-				<attack type="WIND" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3495,7 +3256,6 @@
 			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
@@ -3529,10 +3289,6 @@
 			</speed>
 			<attack physical="3631.33830052703" magical="652.921765425807" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="406.383466826966" magical="221.085839209057" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
-				<attack type="WIND" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3546,7 +3302,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="30" />
 			<height normal="19.5" />
@@ -3578,10 +3333,6 @@
 			</speed>
 			<attack physical="3463.28644201689" magical="623.9238874734" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="398.415163555849" magical="215.693501667373" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="50" holy="100" dark="100" />
-				<attack type="WIND" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3597,7 +3348,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="44" />
 			<height normal="38" />
@@ -3628,10 +3378,6 @@
 			</speed>
 			<attack physical="3807.59812976916" magical="683.286551825142" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="414.511136163505" magical="226.612985189284" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3645,7 +3391,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="40" />
 			<height normal="25" />
@@ -3676,10 +3421,6 @@
 			</speed>
 			<attack physical="3807.59812976916" magical="683.286551825142" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="414.511136163505" magical="226.612985189284" />
-			<attribute>
-				<defence fire="100" water="50" wind="100" earth="100" holy="100" dark="100" />
-				<attack type="FIRE" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3694,7 +3435,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="40" />
 			<height normal="44" />
@@ -3725,10 +3465,6 @@
 			</speed>
 			<attack physical="3807.59812976916" magical="683.286551825142" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="414.511136163505" magical="226.612985189284" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="180" />
-			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3744,7 +3480,6 @@
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="42" />
 			<height normal="30" />
@@ -3772,10 +3507,6 @@
 			</speed>
 			<attack physical="890.50085998804" magical="608.096657928153" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3795,7 +3526,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="25" />
@@ -3821,10 +3551,6 @@
 			</speed>
 			<attack physical="929.930814318487" magical="635.022195830619" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="337.07008" magical="246.65326" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3844,7 +3570,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="7" grown="8" />
 			<height normal="30" grown="36" />
@@ -3870,10 +3595,6 @@
 			</speed>
 			<attack physical="890.50085998804" magical="608.096657928153" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3893,7 +3614,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="7" />
 			<height normal="22" />
@@ -3919,10 +3639,6 @@
 			</speed>
 			<attack physical="890.50085998804" magical="608.096657928153" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="332.70061" magical="243.45587" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3942,7 +3658,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
@@ -3967,10 +3682,6 @@
 			</speed>
 			<attack physical="6693.44043368154" magical="4570.75213290544" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="552.978032" magical="606.967992" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -3985,7 +3696,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
@@ -4010,10 +3720,6 @@
 			</speed>
 			<attack physical="970.537548504614" magical="662.751329129412" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="341.375" magical="249.80341" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4033,7 +3739,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="25" />
@@ -4058,10 +3763,6 @@
 			</speed>
 			<attack physical="1012.32268463427" magical="691.285164307598" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.61127" magical="252.90333" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4081,7 +3782,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -4107,10 +3807,6 @@
 			</speed>
 			<attack physical="1012.32268463427" magical="691.285164307598" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
 			<defence physical="345.61127" magical="252.90333" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4130,7 +3826,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="13" />
 			<height normal="26" />
@@ -4156,10 +3851,6 @@
 			</speed>
 			<attack physical="1012.32268463427" magical="691.285164307598" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.61127" magical="252.90333" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4179,7 +3870,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="26.5" />
@@ -4205,10 +3895,6 @@
 			</speed>
 			<attack physical="1012.32268463427" magical="691.285164307598" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="345.61127" magical="252.90333" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4228,7 +3914,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="38" />
@@ -4254,10 +3939,6 @@
 			</speed>
 			<attack physical="6734.49667710476" magical="4598.788195986" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="559.639632" magical="614.28" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4274,7 +3955,6 @@
 			<skill id="14963" level="1" /> <!-- Spirit Gathering -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="21" grown="25" />
 			<height normal="48" />
@@ -4299,10 +3979,6 @@
 			</speed>
 			<attack physical="6734.49667710476" magical="4598.788195986" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="559.639632" magical="614.28" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4319,7 +3995,6 @@
 			<skill id="14963" level="1" /> <!-- Spirit Gathering -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="24" />
 			<height normal="50.4" />
@@ -4344,10 +4019,6 @@
 			</speed>
 			<attack physical="1055.28566004965" magical="720.623302603812" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="349.77477" magical="255.95" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4367,7 +4038,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="15" />
 			<height normal="20" />
@@ -4392,10 +4062,6 @@
 			</speed>
 			<attack physical="1099.42361669366" magical="750.763809564873" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="353.86144" magical="258.94045" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4415,7 +4081,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="32" />
@@ -4441,10 +4106,6 @@
 			</speed>
 			<attack physical="1099.42361669366" magical="750.763809564873" critical="8" attackSpeed="253" range="1100" type="BOW" distance="10" width="0" random="5" accuracy="0" />
 			<defence physical="353.86144" magical="258.94045" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4464,7 +4125,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="18" />
 			<height normal="27.5" />
@@ -4490,10 +4150,6 @@
 			</speed>
 			<attack physical="1099.42361669366" magical="750.763809564873" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="353.86144" magical="258.94045" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4513,7 +4169,6 @@
 				<clan>VI_NIGHTMARE</clan>
 			</clan_list>
 		</ai>
-
 		<collision>
 			<radius normal="12" />
 			<height normal="40" />
@@ -4538,10 +4193,6 @@
 			</speed>
 			<attack physical="6814.81634856241" magical="4653.63613914267" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="572.587568" magical="628.492104" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4558,7 +4209,6 @@
 			<skill id="14963" level="1" /> <!-- Spirit Gathering -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="25" />
 			<height normal="44" />
@@ -4583,10 +4233,6 @@
 			</speed>
 			<attack physical="6814.81634856241" magical="4653.63613914267" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="572.587568" magical="628.492104" />
-			<attribute>
-				<defence fire="100" water="100" wind="100" earth="100" holy="50" dark="100" />
-				<attack type="DARK" value="100" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4603,7 +4249,6 @@
 			<skill id="14963" level="1" /> <!-- Spirit Gathering -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-
 		<collision>
 			<radius normal="20" />
 			<height normal="48" />
@@ -4634,10 +4279,6 @@
 			</speed>
 			<attack physical="65652.4903459599" magical="18614.9328177446" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
 			<defence physical="277.41" magical="158.48" />
-			<attribute>
-				<defence fire="250" water="250" wind="250" earth="250" holy="200" dark="250" />
-				<attack type="DARK" value="330" />
-			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
@@ -4650,7 +4291,6 @@
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
-
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />

@@ -12,10 +12,6 @@
 			<vitals hp="292335" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<attack physical="14312" magical="3509" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3537" magical="2031" />
-			<attribute>
-				<attack type="EARTH" value="280" />
-				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" default="220" />
-			</attribute>
 			<speed>
 				<walk ground="180" />
 				<run ground="180" />
@@ -42,7 +38,6 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-
 		<collision>
 			<radius normal="63" />
 			<height normal="54" />
