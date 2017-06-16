@@ -6269,4 +6269,22 @@
 			<skill id="13341" level="3" minimumEnchant="8" /> <!-- Enchant Robe Armor Set + 8 (R-grade) -->
 		</skills>
 	</set>
+	<set id="286" minimumPieces="2">
+		<requiredItems>
+			<item id="37717"/> <!-- Talisman Seven Signs -->
+			<item id="34989"/> <!-- Talisman longing -->
+		</requiredItems>
+		<skills>
+			<skill id="13568" level="1" minimumPieces="2"/> <!-- Talisman Energy -->
+		</skills>
+	</set>
+	<set id="287" minimumPieces="2">
+		<requiredItems>
+			<item id="37717"/> <!-- Talisman Seven Signs -->
+			<item id="39572"/> <!-- Talisman insanity -->
+		</requiredItems>
+		<skills>
+			<skill id="13568" level="1" minimumPieces="2"/> <!-- Talisman Energy -->
+		</skills>
+	</set>
 </list>
