@@ -1242,23 +1242,52 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25229" level="85" type="L2RaidBoss" name="Storm Winged Naga" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25229" level="75" type="L2RaidBoss" name="Storm Winged Naga" title="Raid Boss">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<param name="doSummonNPC" value="1" />
+			<skill name="SelfRangeCancel_a" id="4177" level="8" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4175" level="8" /> <!-- BOSS Haste -->
+			<skill name="PhysicalSpecial_a" id="4170" level="8" /> <!-- BOSS Mortal Blow -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="8" /> <!-- Stun -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="712305220" sp="1255" raidPoints="3172" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="794874.502880181" hpRegen="308.04072385958" mp="1507.8" mpRegen="3" />
+			<attack physical="4902.4469608376" magical="3475.50410725631" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="200" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>190</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4170" level="8" /> <!-- BOSS Mortal Blow -->
+			<skill id="4172" level="8" /> <!-- Stun -->
+			<skill id="4175" level="8" /> <!-- BOSS Haste -->
+			<skill id="4177" level="8" /> <!-- BOSS Cancel Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4871" level="1" /> <!-- Raid Boss - Level 75 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="58" />
+			<height normal="108" />
 		</collision>
 	</npc>
 	<npc id="25230" level="57" type="L2RaidBoss" name="Timak Priest Ragoth" title="Raid Boss">
@@ -2110,61 +2139,129 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25249" level="85" type="L2RaidBoss" name="Menacing Palatanos" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25249" level="75" type="L2RaidBoss" name="Menacing Palatanos" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25250" count="3" respawnTime="360" weightPoint="1" /> <!-- Man-Eating Plant of Palatanos -->
+				<npc id="25251" count="1" respawnTime="360" weightPoint="1" /> <!-- Sapling of Palatanos -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="RangeHold_a" id="4197" level="8" /> <!-- Hold -->
+		</parameters>
+		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="712305220" sp="1255" raidPoints="3172" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="397437.25144009" hpRegen="123.216289543832" mp="1507.8" mpRegen="3" />
+			<attack physical="2451.2234804188" magical="868.876026814078" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4197" level="8" /> <!-- Hold -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4881" level="1" /> <!-- Raid Boss - Level 75 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="60" />
+			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="25250" level="85" type="L2Npc" name="Man-Eating Plant of Palatanos" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25250" level="74" type="L2Monster" name="Man-Eating Plant of Palatanos" title="Raid Fighter">
+		<parameters>
+			<skill name="DDMagic_a" id="4191" level="7" /> <!-- BOSS Windstrike -->
+			<skill name="Debuff_a" id="4198" level="7" /> <!-- Poison -->
+		</parameters>
+		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="42118.4433110056" hpRegen="122.142751323234" mp="1475.0" mpRegen="3" />
+			<attack physical="6391.81403551474" magical="6057.67068810978" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="471.989805" magical="460.5" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>200</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4191" level="7" /> <!-- BOSS Windstrike -->
+			<skill id="4198" level="7" /> <!-- Poison -->
+			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="25251" level="85" type="L2RaidBoss" name="Sapling of Palatanos" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25251" level="74" type="L2Monster" name="Sapling of Palatanos" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4739" level="7" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="62863.3482253814" hpRegen="122.142751323234" mp="1475.0" mpRegen="3" />
+			<attack physical="9587.96075229092" magical="13630.3553762947" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="471.989805" magical="460.5" evasion="-18" shield="629" shieldRate="20" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>200</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4739" level="7" /> <!-- BOSS Strike -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="26" />
 		</collision>
 	</npc>
 	<npc id="25252" level="70" type="L2RaidBoss" name="Palibati Queen Themis" title="Raid Boss">
@@ -2657,61 +2754,130 @@
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="25263" level="85" type="L2RaidBoss" name="Kernon's Faithful Servant Kelone" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25263" level="67" type="L2RaidBoss" name="Kernon's Faithful Servant Kelone" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25264" count="3" respawnTime="360" weightPoint="1" /> <!-- Kelone's Assassin -->
+				<npc id="25265" count="1" respawnTime="360" weightPoint="1" /> <!-- Kelone's Secret Knight -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="RangeHold_a" id="4197" level="6" /> <!-- Hold -->
+		</parameters>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="115114842" sp="1088" raidPoints="2708" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="356634.034509353" hpRegen="113.825370829643" mp="1251.0" mpRegen="2.7" />
+			<attack physical="1954.06059276458" magical="645.971932825732" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="844.65753" magical="412.06" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="165" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4197" level="6" /> <!-- Hold -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4887" level="1" /> <!-- Raid Boss - Level 67 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="25264" level="85" type="L2RaidBoss" name="Kelone's Assassin" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25264" level="66" type="L2Monster" name="Kelone's Assassin" title="Raid Fighter">
+		<parameters>
+			<skill name="DDMagic_a" id="4191" level="6" /> <!-- BOSS Windstrike -->
+			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" /> <!-- rhand: Kris -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="37575.4556702889" hpRegen="112.374447843527" mp="1219.8" mpRegen="2.7" />
+			<attack physical="5026.70767814607" magical="4443.43980458947" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="415.09128" magical="405" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4191" level="6" /> <!-- BOSS Windstrike -->
+			<skill id="4204" level="6" /> <!-- Bleed -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25265" level="85" type="L2RaidBoss" name="Kelone's Secret Knight" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25265" level="66" type="L2Monster" name="Kelone's Secret Knight" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4725" level="6" /> <!-- Stun -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="229" /> <!-- rhand: Kris -->
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="56082.7696571476" hpRegen="112.374447843527" mp="1219.8" mpRegen="2.7" />
+			<attack physical="7540.25002346969" magical="9998.17698056921" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="415.09128" magical="405" evasion="-18" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>520</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4725" level="6" /> <!-- Stun -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="28.5" />
 		</collision>
 	</npc>
 	<npc id="25266" level="75" type="L2RaidBoss" name="Bloody Empress Decarbia" title="Raid Boss">
@@ -3155,23 +3321,54 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25276" level="85" type="L2RaidBoss" name="Death Lord Ipos" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25276" level="75" type="L2RaidBoss" name="Death Lord Ipos" title="Raid Boss">
+		<parameters>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="SelfRangeCancel_a" id="4177" level="8" /> <!-- BOSS Cancel Magic -->
+			<skill name="SelfBuff_a" id="4176" level="8" /> <!-- BOSS Reflect Damage -->
+			<skill name="PhysicalSpecial_a" id="4168" level="8" /> <!-- BOSS Strike -->
+			<skill name="SelfRangePhysicalSpecial_a" id="4172" level="8" /> <!-- Stun -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<equipment rhand="78" /> <!-- rhand: Great Sword -->
+		<acquire exp="712305220" sp="1255" raidPoints="3172" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="794874.502880181" hpRegen="308.04072385958" mp="1507.8" mpRegen="3" />
+			<attack physical="4902.4469608376" magical="3475.50410725631" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="957.73869" magical="467.22" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>500</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4168" level="8" /> <!-- BOSS Strike -->
+			<skill id="4172" level="8" /> <!-- Stun -->
+			<skill id="4176" level="8" /> <!-- BOSS Reflect Damage -->
+			<skill id="4177" level="8" /> <!-- BOSS Cancel Magic -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4892" level="1" /> <!-- Raid Boss - Level 75 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="31" />
+			<height normal="61.5" />
 		</collision>
 	</npc>
 	<npc id="25277" level="50" type="L2RaidBoss" name="Lilith' Witch Marilion" title="Raid Boss">
@@ -3779,23 +3976,53 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="25290" level="85" type="L2RaidBoss" name="Daimon the White-eyed" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25290" level="78" type="L2RaidBoss" name="Daimon the White-eyed" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25291" count="3" respawnTime="360" weightPoint="1" /> <!-- Family of Daimon -->
+				<npc id="25292" count="1" respawnTime="360" weightPoint="1" /> <!-- Family of Daimon -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="DDMagic_a" id="4192" level="8" /> <!-- BOSS HP Drain -->
+			<skill name="SelfRangeDebuff_a" id="4185" level="8" /> <!-- Sleep -->
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="8" /> <!-- Decrease MP -->
+		</parameters>
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<acquire exp="794494284" sp="605328978" raidPoints="3344" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="410600.548543185" hpRegen="126.536105676163" mp="1607.4" mpRegen="3" />
+			<attack physical="2592.71886885803" magical="929.620860138406" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="998.10183" magical="486.92" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>540</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4185" level="8" /> <!-- Sleep -->
+			<skill id="4190" level="8" /> <!-- Decrease MP -->
+			<skill id="4192" level="8" /> <!-- BOSS HP Drain -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4900" level="1" /> <!-- Raid Boss - Level 78 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="21" />
+			<height normal="55" />
 		</collision>
 	</npc>
 	<npc id="25291" level="77" type="L2Monster" name="Daimon's Family" title="Raid Fighter">

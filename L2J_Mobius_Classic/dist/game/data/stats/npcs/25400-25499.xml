@@ -1036,60 +1036,140 @@
 		</collision>
 	</npc>
 	<npc id="25423" level="61" type="L2RaidBoss" name="Fairy Queen Timiniel" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<parameters>
+			<minions name="Privates">
+				<npc id="25424" count="4" respawnTime="360" weightPoint="1" /> <!-- Timiniel's Royal Guards -->
+				<npc id="25425" count="1" respawnTime="360" weightPoint="1" /> <!-- Timiniel's Royal Guard Captain -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm03_A" />
+			<skill name="DDMagic_a" id="4194" level="6" /> <!-- BOSS Aura Burn -->
+			<skill name="SelfRangeDebuff_a" id="4187" level="6" /> <!-- Decrease Speed -->
+			<skill name="SelfRangeDebuffAnother_a" id="4190" level="6" /> <!-- Decrease MP -->
+		</parameters>
+		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="35970059" sp="8632" raidPoints="1276" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="226767.438196184" hpRegen="74.4686933653732" mp="1066.8" mpRegen="2.7" />
+			<attack physical="822.13654045578" magical="150.225645962671" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="757.48038" magical="369.52" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>720</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4187" level="6" /> <!-- Decrease Speed -->
+			<skill id="4190" level="6" /> <!-- Decrease MP -->
+			<skill id="4194" level="6" /> <!-- BOSS Aura Burn -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4953" level="1" /> <!-- Raid Boss - Level 61 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>TIMINIEL</clan>
+				<ignore_npc_id>21797</ignore_npc_id>
+				<!-- Spirit of Timiniel -->
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25424" level="85" type="L2Monster" name="Timiniel's Escort" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25424" level="60" type="L2Monster" name="Timiniel's Escort" title="Raid Fighter">
+		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="17688.0019979944" hpRegen="72.9643823396131" mp="1036.8" mpRegen="2.4" />
+			<attack physical="1570.35490008098" magical="534.047830747273" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="371.47512" magical="362.44" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>720</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>TIMINIEL</clan>
+				<ignore_npc_id>21797</ignore_npc_id>
+				<!-- Spirit of Timiniel -->
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="5" />
-			<height normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="25425" level="85" type="L2Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25425" level="60" type="L2Monster" name="Timiniel's Escort Captain" title="Raid Fighter">
+		<parameters>
+			<skill name="PhysicalSpecial_a" id="4742" level="6" /> <!-- BOSS Strike -->
+		</parameters>
+		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="35376.0039959888" hpRegen="72.9643823396131" mp="1036.8" mpRegen="2.4" />
+			<attack physical="3140.70980016196" magical="2136.19132298909" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="371.47512" magical="362.44" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>720</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4742" level="6" /> <!-- BOSS Strike -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>TIMINIEL</clan>
+				<ignore_npc_id>21797</ignore_npc_id>
+				<!-- Spirit of Timiniel -->
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="5" />
-			<height normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="25426" level="25" type="L2RaidBoss" name="Betrayer of Urutu Freki" title="Raid Boss">
@@ -2287,61 +2367,131 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="25453" level="85" type="L2RaidBoss" name="Meanas Anor" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25453" level="70" type="L2RaidBoss" name="Meanas Anor" title="Raid Boss">
+		<parameters>
+			<minions name="Privates">
+				<npc id="25454" count="3" respawnTime="360" weightPoint="1" /> <!-- Wyvern of Marsh -->
+				<npc id="25455" count="1" respawnTime="360" weightPoint="1" /> <!-- Succubus of Marsh -->
+			</minions>
+			<param name="RaidSpawnMusic" value="Rm01_A" />
+			<skill name="DDMagic_a" id="4195" level="7" /> <!-- BOSS Twister -->
+			<skill name="SelfRangeDebuff_a" id="4184" level="7" /> <!-- Decrease Atk. Spd. -->
+			<skill name="SelfRangeDebuffAnother_a" id="4188" level="7" /> <!-- Bleed -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="226669890" sp="1103" raidPoints="2884" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="373386.071242416" hpRegen="117.68436242886" mp="1345.8" mpRegen="2.7" />
+			<attack physical="2154.88111713047" magical="717.403871261232" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="887.74791" magical="433.08" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>190</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4184" level="7" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4188" level="7" /> <!-- Bleed -->
+			<skill id="4195" level="7" /> <!-- BOSS Twister -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4962" level="1" /> <!-- Raid Boss - Level 70 -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="58" />
+			<height normal="108" />
 		</collision>
 	</npc>
-	<npc id="25454" level="85" type="L2Monster" name="Swamp Wyvern" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="25454" level="69" type="L2Monster" name="Swamp Wyvern" title="Raid Fighter">
+		<parameters>
+			<skill name="DDMagic_a" id="4196" level="6" /> <!-- Decrease Speed -->
+			<skill name="Debuff_a" id="4204" level="6" /> <!-- Bleed -->
+		</parameters>
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="39454.5022530506" hpRegen="116.468584127042" mp="1314.0" mpRegen="2.7" />
+			<attack physical="5571.20003752014" magical="4930.48366995277" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="436.725945" magical="426.1" evasion="-18" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>190</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4196" level="6" /> <!-- Decrease Speed -->
+			<skill id="4204" level="6" /> <!-- Bleed -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="29" />
+			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="25455" level="85" type="L2Monster" name="Swamp Succubus" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="25455" level="69" type="L2Monster" name="Swamp Succubus" title="Raid Fighter">
+		<parameters>
+			<skill name="HealMagic_a" id="4780" level="6" /> <!-- BOSS Heal -->
+			<skill name="SelfRangeBuff_a" id="4211" level="6" /> <!-- BOSS Might -->
+		</parameters>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+			<vitals hp="58887.3167955979" hpRegen="116.468584127042" mp="1314.0" mpRegen="2.7" />
+			<attack physical="4178.50449075237" magical="2773.51840577869" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="436.725945" magical="426.1" evasion="-18" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>840</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4211" level="6" /> <!-- BOSS Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4780" level="6" /> <!-- BOSS Heal -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" isAggressive="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="36" />
 		</collision>
 	</npc>
 	<npc id="25456" level="49" type="L2RaidBoss" name="Mirror of Oblivion" title="Raid Boss">

@@ -78,7 +78,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
@@ -121,7 +121,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
@@ -164,7 +164,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
@@ -174,7 +174,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27204" level="85" type="L2Monster" name="Turek Orc Invader">
+	<npc id="27204" level="10" type="L2Monster" name="Turek Orc Invader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -207,7 +207,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
@@ -217,7 +217,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27205" level="85" type="L2Monster" name="Wild Boar">
+	<npc id="27205" level="10" type="L2Monster" name="Wild Boar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -250,7 +250,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
@@ -293,7 +293,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
@@ -303,7 +303,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27207" level="85" type="L2Monster" name="White Wild Boar">
+	<npc id="27207" level="10" type="L2Monster" name="White Wild Boar">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
@@ -336,7 +336,7 @@
 			<skill id="4416" level="11" /> <!-- Giants -->
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450">
+		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>ELEMENTAL1</clan>
 			</clan_list>
