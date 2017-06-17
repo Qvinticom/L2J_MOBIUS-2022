@@ -1696,7 +1696,6 @@
 			<skill id="16361" level="1" /> <!-- Dimensional Warp Stun -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16380" level="1" /> <!-- Dimensional Recoil Shot -->
 		</skill_list>
 		<collision>
 			<radius normal="15" />
@@ -1759,7 +1758,6 @@
 			<skill id="16362" level="1" /> <!-- Dimensional Warp Knock Back / Knock Down -->
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 			<skill id="16368" level="1" /> <!-- Dimensional Strike -->
 		</skill_list>
 		<collision>
@@ -1951,7 +1949,6 @@
 			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
 			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -2044,8 +2041,6 @@
 			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
 			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
 		<collision>
 			<radius normal="10" />
@@ -2079,8 +2074,6 @@
 			<skill id="16371" level="1" /> <!-- Dimensional Storm -->
 			<skill id="16369" level="1" /> <!-- Dimensional Crush -->
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16375" level="1" /> <!-- Dimensional Hammer -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
 		<collision>
 			<radius normal="23" />
@@ -2178,7 +2171,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
 			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
 		<collision>
 			<radius normal="12" />
@@ -2240,7 +2232,6 @@
 			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
 			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
 		<collision>
 			<radius normal="16" />
@@ -2307,7 +2298,6 @@
 			<skill id="16384" level="1" /> <!-- Dimensional Bleed -->
 			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
 			<skill id="16365" level="1" /> <!-- Dimensional Defense Decrease -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -2339,7 +2329,6 @@
 			<skill id="16385" level="1" /> <!-- Dimesional Devil -->
 			<skill id="16370" level="1" /> <!-- Dimensional Slasher -->
 			<skill id="16367" level="1" /> <!-- Dimensional Speed Decrease -->
-			<skill id="16386" level="1" /> <!-- Dimensional Stun -->
 		</skill_list>
 		<collision>
 			<radius normal="10" />
@@ -2458,8 +2447,6 @@
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
@@ -2488,8 +2475,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
@@ -2516,8 +2501,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
 		<collision>
@@ -2544,8 +2527,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 		</skill_list>
 		<collision>
@@ -2572,8 +2553,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skill_list>
 		<collision>
@@ -2602,8 +2581,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<collision>
@@ -2630,8 +2607,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
@@ -2659,8 +2634,6 @@
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<collision>
@@ -2687,8 +2660,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
@@ -2717,8 +2688,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>
@@ -2747,8 +2716,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skill_list>
 		<collision>
@@ -2777,8 +2744,6 @@
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
@@ -2805,8 +2770,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4379" level="4" /> <!-- Spear Resistance -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="16547" level="8" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skill_list>
 		<collision>

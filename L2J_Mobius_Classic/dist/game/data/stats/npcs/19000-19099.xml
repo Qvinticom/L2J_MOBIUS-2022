@@ -3,10 +3,6 @@
 	<npc id="19000" level="88" type="L2Monster" name="Mutated Millipede" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14183" level="1" />
-			<skill name="Buff1" id="14120" level="1" />
-			<skill name="Buff2" id="14120" level="2" />
-			<skill name="Buff3" id="14120" level="3" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BUG</race>
@@ -26,10 +22,7 @@
 		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="14183" level="1" /> <!-- Millipede Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="14120" level="1" /> <!-- Enhance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -60,7 +53,6 @@
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -87,7 +79,6 @@
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -114,7 +105,6 @@
 			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -140,7 +130,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -166,7 +155,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -192,7 +180,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -218,7 +205,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -229,7 +215,6 @@
 	<npc id="19008" level="98" type="L2Monster" name="Water Cannon" title="Square Base">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="6341" level="1" />
 			<param name="Attack_BoostValue" value="151" />
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -250,9 +235,7 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4444" level="5" /> <!-- Greater Bow/Crossbow Resistance -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="6341" level="1" /> <!-- Stronghold Water Cannon -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4116" level="7" /> <!-- Magic Attack Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
@@ -279,9 +262,7 @@
 		<status attackable="false" targetable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="14179" level="1" /> <!-- Stronghold Water Cannon -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -292,7 +273,6 @@
 	<npc id="19011" level="97" type="L2Npc" name="Trap" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14180" level="1" />
 			<skill name="Skill02_ID" id="14181" level="1" />
 			<skill name="Skill03_ID" id="14372" level="1" />
 			<param name="Attack_BoostValue" value="148" />
@@ -314,8 +294,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14180" level="1" /> <!-- Trap Over Steam -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -326,7 +304,6 @@
 	<npc id="19012" level="97" type="L2Npc" name="Trap" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14180" level="1" />
 			<skill name="Skill02_ID" id="14181" level="1" />
 			<skill name="Skill03_ID" id="14372" level="1" />
 			<param name="Attack_BoostValue" value="148" />
@@ -348,8 +325,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14180" level="1" /> <!-- Trap Over Steam -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -360,7 +335,6 @@
 	<npc id="19013" level="96" type="L2Npc" name="Crystalline Golem" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Link_Skill_01" id="14283" level="1" />
 			<skill name="Link_Skill_02" id="14284" level="1" />
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -380,8 +354,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14283" level="1" /> <!-- Golem Connection -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -393,7 +365,6 @@
 	<npc id="19014" level="96" type="L2Npc" name="Crystalline Golem" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Link_Skill_01" id="14283" level="1" />
 			<skill name="Link_Skill_02" id="14284" level="1" />
 		</parameters>
 		<race>CONSTRUCT</race>
@@ -413,8 +384,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14283" level="1" /> <!-- Golem Connection -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -427,7 +396,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14184" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BUG</race>
@@ -447,9 +415,7 @@
 		<skill_list>
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="14184" level="1" /> <!-- Millipede Ultimate Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -465,7 +431,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14182" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BUG</race>
@@ -487,9 +452,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="14182" level="1" /> <!-- Millipede Blow -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -519,7 +482,6 @@
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -532,7 +494,6 @@
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="10000" />
-			<skill name="Skill01_ID" id="14139" level="1" />
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -555,8 +516,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14139" level="1" /> <!-- Teleport -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -569,7 +528,6 @@
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<param name="Skill01_Probablity" value="10000" />
-			<skill name="Skill01_ID" id="14139" level="1" />
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -592,8 +550,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14139" level="1" /> <!-- Teleport -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -605,7 +561,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14139" level="1" />
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -628,8 +583,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14139" level="1" /> <!-- Teleport -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -682,7 +635,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -717,7 +669,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<collision>
 			<radius normal="24" />
@@ -727,7 +678,6 @@
 	<npc id="19024" level="88" type="L2Monster" name="Beetle" title="Hatcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14183" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BUG</race>
@@ -749,10 +699,7 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="14183" level="1" /> <!-- Millipede Blow -->
-			<skill id="14412" level="1" /> <!-- Incubatioin -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -782,7 +729,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -808,7 +754,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -834,7 +779,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -860,7 +804,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -886,7 +829,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -912,7 +854,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -938,7 +879,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -964,7 +904,6 @@
 		<skill_list>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -990,7 +929,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1016,7 +954,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1042,7 +979,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1052,9 +988,6 @@
 	</npc>
 	<npc id="19036" level="99" type="L2Npc" name="Sealing Energy" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<skill name="Channeling_Skill" id="14216" level="1" />
-		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1072,8 +1005,6 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14216" level="1" /> <!-- Energy Seal -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1127,7 +1058,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1153,7 +1083,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1183,7 +1112,6 @@
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="false" clanHelpRange="300" />
 		<collision>
@@ -1213,7 +1141,6 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1239,7 +1166,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1265,7 +1191,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1291,7 +1216,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1317,7 +1241,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1343,7 +1266,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1369,7 +1291,6 @@
 		<skill_list>
 			<skill id="4416" level="19" /> <!-- Others -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1395,7 +1316,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1421,7 +1341,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1447,7 +1366,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1473,7 +1391,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1499,7 +1416,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1525,7 +1441,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1551,7 +1466,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1577,7 +1491,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1603,7 +1516,6 @@
 		<skill_list>
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1629,7 +1541,6 @@
 		<skill_list>
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1655,7 +1566,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1681,7 +1591,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1707,7 +1616,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1733,7 +1641,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1759,7 +1666,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1785,7 +1691,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1811,7 +1716,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1837,7 +1741,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1863,7 +1766,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1889,7 +1791,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1915,7 +1816,6 @@
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1941,7 +1841,6 @@
 		<skill_list>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1994,7 +1893,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" />
 		<collision>
@@ -2024,7 +1922,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" />
 		<collision>
@@ -2050,7 +1947,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2076,7 +1972,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2102,7 +1997,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2113,7 +2007,6 @@
 	<npc id="19076" level="93" type="L2Monster" name="Escort Paladin" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14130" level="1" />
 			<skill name="Skill02_ID" id="14135" level="1" />
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -2133,9 +2026,7 @@
 		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14130" level="1" /> <!-- Phantom Circle -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2161,7 +2052,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2188,7 +2078,6 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2215,7 +2104,6 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="19" /> <!-- Misc. -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2241,7 +2129,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2272,7 +2159,6 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4411" level="21" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
@@ -2345,9 +2231,6 @@
 	</npc>
 	<npc id="19084" level="97" type="L2Monster" name="Cursed Priest" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<skill name="Area_Skill" id="14365" level="1" />
-		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2364,9 +2247,7 @@
 		<skill_list>
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="14365" level="1" /> <!-- Hellfire -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2392,7 +2273,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2493,7 +2373,6 @@
 		<skill_list>
 			<skill id="4416" level="16" /> <!-- Dark Elves -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2594,7 +2473,6 @@
 		<skill_list>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2687,7 +2565,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2730,7 +2607,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2773,7 +2649,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2816,7 +2691,6 @@
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>

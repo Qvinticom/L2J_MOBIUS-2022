@@ -29,7 +29,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6555" level="1" /> <!-- Water Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -66,7 +65,6 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="6557" level="1" /> <!-- Water Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -103,7 +101,6 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="6557" level="1" /> <!-- Water Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -140,7 +137,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6534" level="1" /> <!-- Fire Attack -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -177,7 +173,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6534" level="1" /> <!-- Fire Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -214,7 +209,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6535" level="1" /> <!-- Fire Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -251,7 +245,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6536" level="1" /> <!-- Fire Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -288,7 +281,6 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6513" level="1" /> <!-- Unholy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -325,7 +317,6 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="6521" level="1" /> <!-- Unholy Shot -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -362,7 +353,6 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="6515" level="1" /> <!-- Unholy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -631,7 +621,6 @@
 	<npc id="23027" level="93" type="L2Monster" name="Taklacan" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14236" level="1" />
 			<skill name="Skill02_ID" id="14237" level="1" />
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -654,9 +643,7 @@
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="14236" level="1" /> <!-- Ultimate Forcefulness -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -667,7 +654,6 @@
 	<npc id="23028" level="93" type="L2Monster" name="Torumba" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14240" level="1" />
 			<skill name="Skill02_ID" id="14241" level="1" />
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -691,9 +677,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="14240" level="1" /> <!-- Poison Eruption -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -704,7 +688,6 @@
 	<npc id="23029" level="93" type="L2Monster" name="Dopagen" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14238" level="1" />
 			<skill name="Skill02_ID" id="14239" level="1" />
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -728,9 +711,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="14238" level="1" /> <!-- Sound Blade -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -741,7 +722,6 @@
 	<npc id="23030" level="98" type="L2Monster" name="Taklacan" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14236" level="1" />
 			<skill name="Skill02_ID" id="14237" level="1" />
 			<param name="Attack_BoostValue" value="151" />
 		</parameters>
@@ -764,9 +744,7 @@
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="14236" level="1" /> <!-- Ultimate Forcefulness -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -777,7 +755,6 @@
 	<npc id="23031" level="98" type="L2Monster" name="Torumba" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14240" level="1" />
 			<skill name="Skill02_ID" id="14241" level="1" />
 			<param name="Attack_BoostValue" value="151" />
 		</parameters>
@@ -801,9 +778,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4071" level="5" /> <!-- Bow/Crossbow Resistance -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="14240" level="1" /> <!-- Poison Eruption -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -814,7 +789,6 @@
 	<npc id="23032" level="98" type="L2Monster" name="Dopagen" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14238" level="1" />
 			<skill name="Skill02_ID" id="14239" level="1" />
 			<param name="Attack_BoostValue" value="151" />
 		</parameters>
@@ -838,9 +812,7 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="14238" level="1" /> <!-- Sound Blade -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -851,8 +823,6 @@
 	<npc id="23033" level="88" type="L2Monster" name="Failed Creation" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14231" level="1" />
-			<skill name="Skill02_ID" id="14232" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BEAST</race>
@@ -876,9 +846,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="14231" level="1" /> <!-- Creation's Rage -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -896,8 +864,6 @@
 	<npc id="23034" level="88" type="L2Monster" name="Failed Creation" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14232" level="1" />
-			<skill name="Skill02_ID" id="14233" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BEAST</race>
@@ -922,8 +888,6 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14232" level="1" /> <!-- Yoke of Thorns -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -941,7 +905,6 @@
 	<npc id="23035" level="88" type="L2Monster" name="Failed Creation" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14233" level="1" />
 			<skill name="Skill02_ID" id="14234" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
@@ -965,9 +928,7 @@
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="14233" level="1" /> <!-- Shock Wave -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -986,7 +947,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14234" level="1" />
-			<skill name="Skill02_ID" id="14231" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
 		<race>BEAST</race>
@@ -1009,9 +969,7 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
-			<skill id="14231" level="1" /> <!-- Creation's Rage -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -1029,7 +987,6 @@
 	<npc id="23037" level="88" type="L2Monster" name="Failed Creation" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
-			<skill name="Skill01_ID" id="14232" level="1" />
 			<skill name="Skill02_ID" id="14234" level="1" />
 			<param name="Attack_BoostValue" value="131" />
 		</parameters>
@@ -1054,8 +1011,6 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14232" level="1" /> <!-- Yoke of Thorns -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -1076,7 +1031,6 @@
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 			<param name="MoveAroundSocial2" value="120" />
-			<skill name="Skill01_ID" id="14202" level="1" />
 			<param name="Attack_BoostValue" value="142" />
 		</parameters>
 		<race>PLANT</race>
@@ -1098,8 +1052,6 @@
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14202" level="1" /> <!-- Garden Malice -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1113,7 +1065,6 @@
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 			<param name="MoveAroundSocial2" value="120" />
-			<skill name="Skill01_ID" id="14202" level="1" />
 			<param name="Attack_BoostValue" value="142" />
 		</parameters>
 		<race>PLANT</race>
@@ -1135,8 +1086,6 @@
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14202" level="1" /> <!-- Garden Malice -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1150,7 +1099,6 @@
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
 			<param name="MoveAroundSocial2" value="120" />
-			<skill name="Skill01_ID" id="14202" level="1" />
 			<param name="Attack_BoostValue" value="142" />
 		</parameters>
 		<race>PLANT</race>
@@ -1172,8 +1120,6 @@
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14202" level="1" /> <!-- Garden Malice -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -1210,9 +1156,7 @@
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="13" /> <!-- Fairies -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="14200" level="1" /> <!-- Blessing of Garden -->
 			<skill id="4415" level="12" /> <!-- Spear -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2578,7 +2522,6 @@
 			<param name="MoveAroundSocial2" value="100" />
 			<skill name="Skill01_ID" id="14256" level="1" />
 			<skill name="Skill02_ID" id="14257" level="1" />
-			<skill name="Remove_Skill" id="14176" level="1" />
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2598,8 +2541,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14176" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -2617,7 +2558,6 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
-			<skill name="Skill01_ID" id="14258" level="1" />
 			<skill name="Skill02_ID" id="14259" level="1" />
 			<param name="Attack_BoostValue" value="139" />
 		</parameters>
@@ -2637,9 +2577,7 @@
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14258" level="1" /> <!-- Scalp -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2653,10 +2591,7 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
-			<skill name="Skill01_ID" id="14260" level="1" />
-			<skill name="Skill02_ID" id="14260" level="1" />
 			<skill name="Skill03_ID" id="14261" level="1" />
-			<skill name="Remove_Skill" id="14178" level="1" />
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2676,8 +2611,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="14178" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -2695,8 +2628,6 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
-			<skill name="Skill01_ID" id="14262" level="1" />
-			<skill name="Skill02_ID" id="14262" level="1" />
 			<skill name="Skill03_ID" id="14263" level="1" />
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -2716,9 +2647,7 @@
 		<skill_list>
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14262" level="1" /> <!-- Flame Hurl -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2752,7 +2681,6 @@
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -2770,11 +2698,8 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
-			<skill name="Skill01_ID" id="14260" level="1" />
-			<skill name="Skill02_ID" id="14260" level="1" />
 			<skill name="Skill03_ID" id="14261" level="1" />
 			<skill name="summonSkill" id="14265" level="1" />
-			<skill name="holdSkill" id="14266" level="1" />
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2794,8 +2719,6 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14260" level="1" /> <!-- HP Drain -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2812,7 +2735,6 @@
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill01_ID" id="14256" level="2" />
 			<skill name="Skill02_ID" id="14257" level="2" />
-			<skill name="Remove_Skill" id="14177" level="1" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2834,8 +2756,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14177" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -2854,7 +2774,6 @@
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14258" level="2" />
 			<skill name="Skill02_ID" id="14259" level="2" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
@@ -2875,9 +2794,7 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14258" level="1" /> <!-- Scalp -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2892,10 +2809,7 @@
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14260" level="2" />
-			<skill name="Skill02_ID" id="14260" level="2" />
 			<skill name="Skill03_ID" id="14261" level="2" />
-			<skill name="Remove_Skill" id="14178" level="1" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2917,8 +2831,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14178" level="1" /> <!-- Exorcism -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -2937,8 +2849,6 @@
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14262" level="2" />
-			<skill name="Skill02_ID" id="14262" level="2" />
 			<skill name="Skill03_ID" id="14263" level="2" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
@@ -2959,9 +2869,7 @@
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14262" level="1" /> <!-- Flame Hurl -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2977,7 +2885,6 @@
 			<param name="MoveAroundSocial2" value="80" />
 			<skill name="Skill01_ID" id="14034" level="1" />
 			<skill name="Fishnet_Skill" id="14245" level="1" />
-			<skill name="Skill06_ID" id="14033" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2999,8 +2906,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14033" level="1" /> <!-- Vital Spot Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
@@ -3015,8 +2920,6 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
-			<skill name="Skill01_ID" id="14036" level="1" />
-			<skill name="Skill02_ID" id="14037" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
 		<race>BEAST</race>
@@ -3037,8 +2940,6 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14037" level="1" /> <!-- Front Foot Attack -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3052,7 +2953,6 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
 			<param name="MoveAroundSocial2" value="100" />
-			<skill name="Skill01_ID" id="14009" level="3" />
 			<skill name="Skill02_ID" id="14010" level="3" />
 			<skill name="HealSkill" id="14035" level="1" />
 			<skill name="Skill06_ID" id="14011" level="3" />
@@ -3077,9 +2977,7 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="5549" level="1" /> <!-- Melee Attack Vulnerability -->
-			<skill id="14009" level="1" /> <!-- Electric Shock -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3094,7 +2992,6 @@
 			<param name="MoveAroundSocial1" value="0" />
 			<param name="MoveAroundSocial2" value="0" />
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14038" level="1" />
 			<skill name="Skill02_ID" id="14039" level="1" />
 			<param name="Attack_BoostValue" value="155" />
 		</parameters>
@@ -3115,9 +3012,7 @@
 		<skill_list>
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14038" level="1" /> <!-- Power Strike -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -3153,7 +3048,6 @@
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="6513" level="1" /> <!-- Unholy Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3192,7 +3086,6 @@
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
 			<skill id="6513" level="1" /> <!-- Unholy Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3231,7 +3124,6 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="6513" level="1" /> <!-- Unholy Attack -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
@@ -3267,7 +3159,6 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="6525" level="1" /> <!-- Unholy Magic -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clan_list>
