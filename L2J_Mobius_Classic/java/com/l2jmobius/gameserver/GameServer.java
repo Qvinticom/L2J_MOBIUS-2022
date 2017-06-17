@@ -114,8 +114,6 @@ import com.l2jmobius.gameserver.instancemanager.CommissionManager;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.FactionManager;
-import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -357,9 +355,10 @@ public class GameServer
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
 		CastleManager.getInstance().activateInstances();
-		FortManager.getInstance().loadInstances();
-		FortManager.getInstance().activateInstances();
-		FortSiegeManager.getInstance();
+		// No fortresses
+		// FortManager.getInstance().loadInstances();
+		// FortManager.getInstance().activateInstances();
+		// FortSiegeManager.getInstance();
 		SiegeScheduleData.getInstance();
 		
 		MerchantPriceConfigTable.getInstance().updateReferences();
