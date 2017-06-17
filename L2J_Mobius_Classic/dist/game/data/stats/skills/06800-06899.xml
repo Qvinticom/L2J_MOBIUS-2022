@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6800" toLevel="1" name="Presentation - Yellow Portal Ray">
 		<!-- none -->
@@ -2037,29 +2037,6 @@
 		<effects>
 			<effect name="BlockActions" />
 		</effects>
-	</skill>
-	<skill id="6883" toLevel="1" name="Vitality Recovery Effect">
-		<!-- "For 5 minutes, energy is filled to stage 4. Returns to before as time goes on." -->
-		<operateType>A2</operateType>
-		<effectPoint>100</effectPoint>
-		<abnormalType>VP_CHANGE</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
-		<effectRange>1200</effectRange>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<irreplacableBuff>true</irreplacableBuff>
-		<affectRange>1000</affectRange>
-		<icon>icon.skilltransform4</icon>
-		<hitTime>100</hitTime>
-		<reuseDelay>2000</reuseDelay>
-		<isMagic>4</isMagic>
-		<castRange>900</castRange>
-		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<targetType>TARGET</targetType>
-		<affectScope>PARTY</affectScope>
 	</skill>
 	<skill id="6884" toLevel="1" name="Morale Boost">
 		<!-- none -->

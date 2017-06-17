@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16100" toLevel="1" name="Presentation">
 		<!-- Glory Days confirmed -->
@@ -76,26 +76,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
-	</skill>
-	<skill id="16105" toLevel="6" name="Fatal Bomber">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Deals a powerful blow and knocks down the enemy. -->
-		<icon>icon.skill10262</icon>
-		<operateType>A2</operateType>
-		<mpConsume>
-			<value level="1">50</value>
-			<value level="2">65</value>
-			<value level="3">80</value>
-			<value level="4">95</value>
-			<value level="5">110</value>
-			<value level="6">125</value>
-		</mpConsume>
-		<castRange>40</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-1050</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16106" toLevel="5" name="Chain Smash">
 		<!-- AUTO GENERATED SKILL -->
@@ -228,19 +208,6 @@
 		<effectPoint>-10000</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16115" toLevel="2" name="Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>50</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>500</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>-150</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16116" toLevel="2" name="Self-Devastation">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
@@ -284,18 +251,6 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-700</effectPoint>
 		<isMagic>1</isMagic>
-	</skill>
-	<skill id="16120" toLevel="1" name="Magma Chain">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A2</operateType>
-		<mpConsume>50</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>500</hitTime>
-		<coolTime>1000</coolTime>
-		<effectPoint>-150</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16121" toLevel="5" name="Sleeping Cloud">
 		<!-- AUTO GENERATED SKILL -->
@@ -750,34 +705,6 @@
 		</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16153" toLevel="6" name="Power Slam">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Deals a powerful blow and knocks back the enemy. -->
-		<icon>icon.skill10262</icon>
-		<operateType>A2</operateType>
-		<mpConsume>50</mpConsume>
-		<castRange>40</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>1000</reuseDelay>
-		<effectPoint>-700</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="16154" toLevel="6" name="Mass Chain Smash">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target and nearby enemies toward you. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>84</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>500</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>5000</reuseDelay>
-		<effectPoint>-2140</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16155" toLevel="1" name="Charmed Kefensis">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
@@ -953,30 +880,6 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="16169" toLevel="1" name="Pull">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>95</mpConsume>
-		<castRange>1100</castRange>
-		<hitTime>1000</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>7000</reuseDelay>
-		<effectPoint>-150</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="16170" toLevel="1" name="Hellbound Tornado">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Fly away with the shock. -->
-		<icon>icon.skill4107</icon>
-		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
-		<hitTime>7000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16171" toLevel="1" name="Summon Poison Zone">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
@@ -1067,13 +970,6 @@
 		<!-- Special armor reduces damage received from servitors. -->
 		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
-	</skill>
-	<skill id="16182" toLevel="6" name="Decrease SP">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<hitTime>200</hitTime>
-		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="16183" toLevel="1" name="Skill Reflect Barrier">
 		<!-- AUTO GENERATED SKILL -->

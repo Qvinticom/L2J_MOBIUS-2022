@@ -1,28 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="20000" toLevel="1" name="Block Checker Search">
-		<!-- "If you open your heart and look afar, you can find a hidden treasure chest." -->
-		<operateType>A1</operateType>
-		<effectPoint>1000</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
-		<affectRange>200</affectRange>
-		<affectLimit>6-12</affectLimit>
-		<icon>BranchSys2.icon.br_s_search_treasure1_i00</icon>
-		<hitTime>1500</hitTime>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>2</isMagic>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<targetConditions>
-			<condition name="OpTargetNpc">
-				<npcIds>
-					<item>13097</item>
-				</npcIds>
-			</condition>
-		</targetConditions>
-	</skill>
 	<skill id="20001" toLevel="1" name="Block Checker Hammer Punch">
 		<!-- Slams down on the treasure chest with a hammer to open it. -->
 		<operateType>A1</operateType>
@@ -172,42 +149,5 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
-	</skill>
-	<skill id="20007" toLevel="1" name="Block Invincibility">
-		<!-- Updated to Ertheia -->
-		<!-- Skill activates once Celestial Aegis wears off. -->
-		<!-- For 2 min., HP/MP Recovery Bonus increase, and Speed + 5. You cannot receive the Celestial Aegis, Celestial Protection, or the Celestial Party Protection effect. -->
-		<icon>icon.skill11560</icon>
-		<abnormalLvl>9</abnormalLvl>
-		<abnormalTime>70</abnormalTime> <!-- Tested, PLEASE CONFIRM AGAIN -->
-		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
-		<operateType>A2</operateType>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<isMagic>1</isMagic>
-		<effectPoint>1</effectPoint>
-		<isDebuff>true</isDebuff>
-		<canBeDispelled>false</canBeDispelled>
-		<effects>
-			<effect name="Speed">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="20008" toLevel="1" name="Clan Advent (Event)">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- When the clan leader logs in, clan members' P. Atk. / P. Def. / M. Def. + 5%, M. Atk. + 6%, HP/MP Recovery Bonus + 5, and XP gain + 100%. -->
-		<icon>icon.skill19009</icon>
-		<operateType>A2</operateType>
-		<effectPoint>100</effectPoint>
 	</skill>
 </list>

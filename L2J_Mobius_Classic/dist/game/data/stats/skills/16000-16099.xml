@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16001" toLevel="1" name="Presentation">
 		<!-- Glory Days confirmed -->
@@ -444,30 +444,6 @@
 		<coolTime>500</coolTime>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="16031" toLevel="1" name="Attraction">
-		<!-- Glory Days confirmed -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<effectPoint>-2</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
-		<affectRange>5000</affectRange>
-		<hitTime>500</hitTime>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="PullBack">
-				<speed>5000</speed>
-				<delay>5000</delay>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="16032" toLevel="1" name="Gi-Sung Bae's Lineage II">
 		<!-- Glory Days confirmed -->

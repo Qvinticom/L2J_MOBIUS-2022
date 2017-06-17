@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" toLevel="8" name="Pet Recharge">
 		<!-- CT2.5 retail confirmed -->
@@ -792,114 +792,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="5227" toLevel="2" name="Ground Strike">
-		<!-- Glory Days confirmed -->
-		<!-- Baylor Skills -->
-		<affectRange>300</affectRange>
-		<effectPoint>-100</effectPoint>
-		<hitTime>3000</hitTime>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">98</value>
-		</magicLvl>
-		<mpConsume>187</mpConsume>
-		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<reuseDelay>5000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">100756</value>
-					<value level="2">213631</value>
-				</power>
-				<criticalChance>20</criticalChance>
-			</effect>
-			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
-				<radius>200</radius>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="5228" toLevel="2" name="Jump Attack">
-		<!-- TODO: Auto level parse, Requires manual update -->
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
-		<affectRange>200</affectRange>
-		<effectPoint>-100</effectPoint>
-		<hitTime>3000</hitTime>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">98</value>
-		</magicLvl>
-		<mpConsume>373</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">100756</value>
-					<value level="2">213631</value>
-				</power>
-				<criticalChance>20</criticalChance>
-			</effect>
-			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;200} -->
-				<radius>200</radius>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="5229" toLevel="2" name="Strong Punch">
-		<!-- Confirmed CT2.5 -->
-		<!-- Baylor Skills -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<abnormalType>STUN</abnormalType>
-		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate>
-		<basicProperty>PHYSICAL</basicProperty>
-		<castRange>600</castRange>
-		<effectPoint>-100</effectPoint>
-		<effectRange>1100</effectRange>
-		<hitTime>3000</hitTime>
-		<icon>icon.skill0100</icon>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>2</lvlBonusRate>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">98</value>
-		</magicLvl>
-		<mpConsume>75</mpConsume>
-		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<reuseDelay>5000</reuseDelay>
-		<trait>SHOCK</trait>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">125946</value>
-					<value level="2">267038</value>
-				</power>
-				<criticalChance>20</criticalChance>
-			</effect>
-			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
-			</effect>
-			<effect name="FlyAway"> <!-- TODO: {i_fly_away;curve;push;300} -->
-				<radius>300</radius>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="5230" toLevel="1" name="Stun">
 		<!-- Confirmed CT2.5 -->
@@ -2290,33 +2182,6 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Disarm" />
-		</effects>
-	</skill>
-	<skill id="5261" toLevel="1" name="Zombie">
-		<!-- CT2.5 retail confirmed -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>7</abnormalTime>
-		<abnormalType>TRANSFORM</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<effectPoint>-100</effectPoint>
-		<hitTime>1500</hitTime>
-		<icon>icon.skilltransform3</icon>
-		<magicLvl>60</magicLvl>
-		<mpConsume>44</mpConsume>
-		<mpInitialConsume>11</mpInitialConsume>
-		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<effectRange>1100</effectRange>
-		<isDebuff>true</isDebuff>
-		<castRange>600</castRange>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="Transformation">
-				<transformationId>303</transformationId>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="5262" toLevel="12" name="Rising Shot">

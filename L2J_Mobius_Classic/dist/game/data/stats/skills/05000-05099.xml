@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5000" toLevel="1" name="Alfred Strike">
 		<!-- CT2.5 retail confirmed -->
@@ -88,38 +88,6 @@
 			<effect name="MagicalAttack">
 				<power>111</power>
 			</effect>
-		</effects>
-	</skill>
-	<skill id="5004" toLevel="1" name="Dimensional Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>2</abnormalTime>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<affectRange>300</affectRange>
-		<effectPoint>-100</effectPoint>
-		<attributeType>DARK</attributeType>
-		<attributeValue>180</attributeValue>
-		<hitTime>5800</hitTime>
-		<icon>icon.skill0100</icon>
-		<isDebuff>true</isDebuff>
-		<magicLvl>85</magicLvl>
-		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>5964</power>
-			</effect>
-			<effect name="FlyAway">
-				<radius>300</radius>
-			</effect>
-			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="5005" toLevel="1" name="Frintezza's Ghost Summoning">
@@ -502,62 +470,6 @@
 					<value level="2">8</value>
 					<value level="3">10</value>
 				</criticalChance>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="5015" toLevel="6" name="Frintezza's Daemon Charge">
-		<!-- Confirmed CT2.5 -->
-		<!-- Frintezza Skills -->
-		<affectRange>
-			<value level="1">400</value>
-			<value level="2">500</value>
-			<value level="3">700</value>
-			<value level="4">400</value>
-			<value level="5">500</value>
-			<value level="6">700</value>
-		</affectRange>
-		<castRange>150</castRange>
-		<coolTime>
-			<value level="1">0</value>
-			<value level="2">0</value>
-			<value level="3">0</value>
-			<value level="4">1500</value>
-			<value level="5">1500</value>
-			<value level="6">1500</value>
-		</coolTime>
-		<effectPoint>-100</effectPoint>
-		<effectRange>650</effectRange>
-		<attributeType>DARK</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>
-			<value level="1">0;0;400;150</value>
-			<value level="2">0;0;500;170</value>
-			<value level="3">0;0;700;200</value>
-			<value level="4">0;0;400;150</value>
-			<value level="5">0;0;500;170</value>
-			<value level="6">0;0;700;200</value>
-		</fanRange>
-		<hitTime>1500</hitTime>
-		<magicLvl>85</magicLvl>
-		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<targetType>ENEMY</targetType>
-		<affectScope>SQUARE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<cond msgId="113" addName="1">
-			<player insideZoneId="5015" />
-		</cond>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>
-					<value level="1">48761</value>
-					<value level="2">52970</value>
-					<value level="3">68074</value>
-					<value level="4">48761</value>
-					<value level="5">52970</value>
-					<value level="6">68074</value>
-				</power>
 			</effect>
 		</effects>
 	</skill>
@@ -959,77 +871,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="5038" toLevel="16" name="Servitor PvP Penalty">
-		<!-- CT2.5 retail confirmed -->
-		<magicLvl>1</magicLvl>
-		<operateType>P</operateType>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<effects>
-			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>
-					<value level="1">-2</value>
-					<value level="2">-4</value>
-					<value level="3">-6</value>
-					<value level="4">-8</value>
-					<value level="5">-10</value>
-					<value level="6">-12</value>
-					<value level="7">-14</value>
-					<value level="8">-16</value>
-					<value level="9">-18</value>
-					<value level="10">-20</value>
-					<value level="11">-22</value>
-					<value level="12">-24</value>
-					<value level="13">-26</value>
-					<value level="14">-28</value>
-					<value level="15">-30</value>
-					<value level="16">-50</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpMagicalSkillDamageBonus">
-				<amount>
-					<value level="1">-2</value>
-					<value level="2">-4</value>
-					<value level="3">-6</value>
-					<value level="4">-8</value>
-					<value level="5">-10</value>
-					<value level="6">-12</value>
-					<value level="7">-14</value>
-					<value level="8">-16</value>
-					<value level="9">-18</value>
-					<value level="10">-20</value>
-					<value level="11">-22</value>
-					<value level="12">-24</value>
-					<value level="13">-26</value>
-					<value level="14">-28</value>
-					<value level="15">-30</value>
-					<value level="16">-50</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PvpPhysicalSkillDamageBonus">
-				<amount>
-					<value level="1">-2</value>
-					<value level="2">-4</value>
-					<value level="3">-6</value>
-					<value level="4">-8</value>
-					<value level="5">-10</value>
-					<value level="6">-12</value>
-					<value level="7">-14</value>
-					<value level="8">-16</value>
-					<value level="9">-18</value>
-					<value level="10">-20</value>
-					<value level="11">-22</value>
-					<value level="12">-24</value>
-					<value level="13">-26</value>
-					<value level="14">-28</value>
-					<value level="15">-30</value>
-					<value level="16">-50</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="5039" toLevel="1" name="Ultra Bomb">
 		<isMagic>2</isMagic> <!-- Static Skill -->

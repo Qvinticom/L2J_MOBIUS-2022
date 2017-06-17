@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15500" toLevel="1" name="Major Energy of Life">
 		<!-- AUTO GENERATED SKILL -->
@@ -44,17 +44,6 @@
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>2000</reuseDelay>
-	</skill>
-	<skill id="15505" toLevel="1" name="Vitality Replenishing Aura">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Vitality is replenished when XP is gained. -->
-		<icon>icon.skilltransform4</icon>
-		<operateType>A2</operateType>
-		<castRange>2000</castRange>
-		<hitTime>100</hitTime>
-		<reuseDelay>2000</reuseDelay>
-		<effectPoint>100</effectPoint>
-		<isMagic>4</isMagic>
 	</skill>
 	<skill id="15506" toLevel="1" name="Wondrous Herb of Power">
 		<!-- AUTO GENERATED SKILL -->
@@ -572,18 +561,6 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15553" toLevel="1" name="Chain Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls a single enemy toward you. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>400</castRange>
-		<hitTime>7600</hitTime>
-		<coolTime>1000</coolTime>
-		<effectPoint>-709</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="15554" toLevel="1" name="Broad Hit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Powerful attack on target and nearby enemies. -->
@@ -656,19 +633,6 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15560" toLevel="1" name="Hurricane Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Swings a sword to Knock Back target and nearby enemies and inflict Bleed. -->
-		<icon>icon.skill0101</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>200</castRange>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>5000</reuseDelay>
-		<effectPoint>-867</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="15561" toLevel="1" name="Connected Drain">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleeding for 5 sec. -->
@@ -694,15 +658,6 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="15563" toLevel="1" name="Falling Hit">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. On nearby enemies. -->
-		<icon>icon.skill0036</icon>
-		<operateType>A1</operateType>
-		<mpConsume>10</mpConsume>
-		<effectPoint>-574</effectPoint>
-		<hitTime>500</hitTime>
 	</skill>
 	<skill id="15564" toLevel="2" name="Theor's Attack">
 		<!-- AUTO GENERATED SKILL -->
@@ -759,16 +714,6 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="15569" toLevel="1" name="Chaotic Reign">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls nearby monsters. -->
-		<icon>icon.skill1469</icon>
-		<operateType>A2</operateType>
-		<hitTime>1500</hitTime>
-		<reuseDelay>5000</reuseDelay>
-		<effectPoint>-709</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="15570" toLevel="1" name="Master Siege Shield">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 30 sec., reflects 50% of received damage. -->
@@ -800,18 +745,6 @@
 		<hitTime>1000</hitTime>
 		<effectPoint>100</effectPoint>
 		<isMagic>1</isMagic>
-	</skill>
-	<skill id="15573" toLevel="1" name="Master Siege Punch">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Powerful attack and Knock Back on nearby enemies. -->
-		<icon>icon.skill_transform_debuff</icon>
-		<operateType>A2</operateType>
-		<mpConsume>100</mpConsume>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>-867</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15574" toLevel="1" name="Master Siege Hammer">
 		<!-- AUTO GENERATED SKILL -->
@@ -1004,16 +937,6 @@
 		<effectPoint>-867</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15591" toLevel="1" name="Wind Pull">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target using the wind. -->
-		<icon>icon.skill0006</icon>
-		<operateType>A2</operateType>
-		<hitTime>2000</hitTime>
-		<coolTime>3000</coolTime>
-		<effectPoint>-867</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="15592" toLevel="1" name="Dark Wind Armor">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Reflects a part of received damage. -->
@@ -1075,14 +998,5 @@
 		<hitTime>2500</hitTime>
 		<effectPoint>-707</effectPoint>
 		<isMagic>1</isMagic>
-	</skill>
-	<skill id="15599" toLevel="1" name="Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lethal Strike. -->
-		<icon>icon.skill4107</icon>
-		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<effectPoint>-574</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 </list>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5100" toLevel="1" name="Cancel Capture B">
 		<effectPoint>1</effectPoint>
@@ -2992,26 +2992,6 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ProtectionBlessing" />
-		</effects>
-	</skill>
-	<skill id="5183" toLevel="1" name="Production: Dimensional Stun">
-		<!-- Confirmed CT2.5 -->
-		<affectRange>300</affectRange>
-		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
-		<magicLvl>85</magicLvl>
-		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
-		<isDebuff>true</isDebuff>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="FlyAway">
-				<radius>300</radius>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="5184" toLevel="1" name="Production: Valakas Dragon Breath">

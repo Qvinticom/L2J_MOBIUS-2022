@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6600" toLevel="28" name="Earth Attack">
 		<coolTime>500</coolTime>
@@ -1961,38 +1961,6 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6640" toLevel="1" name="Vitality Replenishing Aura">
-		<abnormalInstant>true</abnormalInstant>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<abnormalType>VP_UP</abnormalType>
-		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
-		<castRange>2000</castRange>
-		<effectPoint>100</effectPoint>
-		<effectRange>2000</effectRange>
-		<icon>icon.skilltransform4</icon>
-		<isMagic>4</isMagic> <!-- Item Skill -->
-		<magicLvl>-1</magicLvl>
-		<operateType>A2</operateType>
-		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
-		<hitTime>100</hitTime>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-			<condition name="CanUseVitalityConsumeItem" />
-		</conditions>
-		<effects>
-			<effect name="VitalityPointsRate">
-				<amount>-10</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
 	<skill id="6641" toLevel="1" name="Holy Ball">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Jinia Skills -->
@@ -2125,39 +2093,6 @@
 		<castRange>2000</castRange>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="6649" toLevel="1" name="Transform Treykan">
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1800</abnormalTime>
-		<abnormalType>TRANSFORM</abnormalType>
-		<blockedInOlympiad>true</blockedInOlympiad>
-		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform1</icon>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>-1</magicLvl>
-		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-1</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<effectRange>2000</effectRange>
-		<irreplacableBuff>true</irreplacableBuff>
-		<hitTime>2500</hitTime>
-		<castRange>2000</castRange>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanTransform">
-				<transformId>126</transformId>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="Transformation">
-				<transformationId>126</transformationId>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
 		<abnormalLvl>99</abnormalLvl>
@@ -2824,30 +2759,6 @@
 				<x>-178244</x>
 				<y>153389</y>
 				<z>2472</z>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="6685" toLevel="1" name="Santa Claus's Gift">
-		<!-- Confirmed CT2.5 -->
-		<coolTime>1000</coolTime>
-		<hitTime>2700</hitTime>
-		<isMagic>2</isMagic> <!-- Static Skill -->
-		<magicLvl>55</magicLvl>
-		<operateType>A1</operateType>
-		<reuseDelay>1800000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
-		<effects>
-			<effect name="Restoration">
-				<itemId>17003</itemId>
-				<itemCount>1</itemCount>
 			</effect>
 		</effects>
 	</skill>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="301" toLevel="5" name="Summon Big Boom">
 		<hitTime>6000</hitTime>
@@ -1139,80 +1139,6 @@
 					<value level="6">560</value>
 				</amount>
 				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="323" toLevel="1" name="Quiver of Arrow: Grade A">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>3000</hitTime>
-		<icon>icon.skill0323</icon>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>1461</itemConsumeId> <!-- Crystal (A-Grade) -->
-		<magicLvl>60</magicLvl>
-		<mpConsume>366</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
-				<slotsPercent>10</slotsPercent>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="RestorationRandom">
-				<items>
-					<item chance="30">
-						<item id="1344" count="700" />
-					</item>
-					<item chance="50">
-						<item id="1344" count="1400" />
-					</item>
-					<item chance="20">
-						<item id="1344" count="2800" />
-					</item>
-				</items>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="324" toLevel="1" name="Quiver of Arrow: Grade S">
-		<!-- Confirmed CT2.5 -->
-		<hitTime>3000</hitTime>
-		<icon>icon.skill0324</icon>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>1462</itemConsumeId> <!-- Crystal (S-Grade) -->
-		<magicLvl>72</magicLvl>
-		<mpConsume>398</mpConsume>
-		<operateType>A1</operateType>
-		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
-				<slotsPercent>10</slotsPercent>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="RestorationRandom">
-				<items>
-					<item chance="30">
-						<item id="1345" count="900" />
-					</item>
-					<item chance="50">
-						<item id="1345" count="1800" />
-					</item>
-					<item chance="20">
-						<item id="1345" count="3600" />
-					</item>
-				</items>
 			</effect>
 		</effects>
 	</skill>

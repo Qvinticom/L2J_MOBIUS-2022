@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15400" toLevel="1" name="Shield of Darkness">
 		<!-- AUTO GENERATED SKILL -->
@@ -20,42 +20,6 @@
 		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15401" toLevel="1" name="Burning Blood">
-		<!-- Glory Days confirmed -->
-		<!-- Restored to full health from death. Buffs/ Debuffs remain even after death, but the Noblesse Blessing and Raid Blessing disappear. (Effect only applied at Kartia's Labyrinth - Tainted Dimension Attacker.) -->
-		<icon>icon.skill5873</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<effectPoint>687</effectPoint>
-		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<effectRange>1100</effectRange>
-		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>2400</abnormalTime>
-		<reuseDelay>5000</reuseDelay>
-		<isMagic>22</isMagic>
-		<staticReuse>true</staticReuse>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpCheckAbnormal">
-				<type>RESURRECTION_SPECIAL</type>
-				<level>1</level>
-				<hasAbnormal>false</hasAbnormal>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="ResurrectionSpecial">
-				<power>100</power>
-				<instanceId>205;206;207</instanceId>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="15402" toLevel="1" name="Wisp's Blessing">
 		<!-- AUTO GENERATED SKILL -->
@@ -185,36 +149,6 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15410" toLevel="1" name="Full Attack">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls in PCs within range and inflicts damage. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>500</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>-2066</effectPoint>
-		<abnormalType>STUN</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<effectRange>900</effectRange>
-		<activateRate>200</activateRate>
-		<magicLvl>96</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<trait>PULL</trait>
-		<attributeType>EARTH</attributeType>
-		<attributeValue>50</attributeValue>
-		<affectRange>800</affectRange>
-		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15411" toLevel="1" name="Soul Break">
 		<!-- AUTO GENERATED SKILL -->
@@ -416,17 +350,6 @@
 		<effectPoint>-574</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15428" toLevel="1" name="Knock Back">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- AoE Knock Back. -->
-		<icon>icon.skill10549</icon>
-		<operateType>A2</operateType>
-		<castRange>600</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-574</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="15429" toLevel="1" name="Yoke">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Aerial Yoke. -->
@@ -436,16 +359,6 @@
 		<hitTime>10000</hitTime>
 		<isMagic>1</isMagic>
 		<effectPoint>-867</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="15430" toLevel="1" name="Lindvior's Jump">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Ranged attack. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A2</operateType>
-		<hitTime>5000</hitTime>
-		<coolTime>5000</coolTime>
-		<effectPoint>-574</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15431" toLevel="1" name="Supersonic Blaster">
@@ -1131,56 +1044,6 @@
 		<isMagic>1</isMagic>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15465" toLevel="15" name="Vitality Reward 1 (Quest)">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<effectPoint>100</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<effectRange>
-			<value level="1">1400</value>
-			<value level="2">1400</value>
-			<value level="3">1400</value>
-			<value level="4">1400</value>
-			<value level="5">1400</value>
-			<value level="6">1400</value>
-			<value level="7">1400</value>
-			<value level="8">1400</value>
-			<value level="9">1400</value>
-			<value level="10">1400</value>
-			<value level="11">1400</value>
-			<value level="12">1400</value>
-			<value level="13">1400</value>
-			<value level="14">1400</value>
-			<value level="15">-1</value>
-		</effectRange>
-		<magicLvl>1</magicLvl>
-		<isMagic>2</isMagic>
-		<castRange>
-			<value level="1">900</value>
-			<value level="2">900</value>
-			<value level="3">900</value>
-			<value level="4">900</value>
-			<value level="5">900</value>
-			<value level="6">900</value>
-			<value level="7">900</value>
-			<value level="8">900</value>
-			<value level="9">900</value>
-			<value level="10">900</value>
-			<value level="11">900</value>
-			<value level="12">900</value>
-			<value level="13">900</value>
-			<value level="14">900</value>
-			<value level="15">-1</value>
-		</castRange>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanRestoreVitalPoint" />
-		</conditions>
 	</skill>
 	<skill id="15466" toLevel="1" name="Triol's CON Increase">
 		<!-- AUTO GENERATED SKILL -->

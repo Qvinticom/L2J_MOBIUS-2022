@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16200" toLevel="1" name="Empty Cry">
 		<!-- AUTO GENERATED SKILL -->
@@ -414,18 +414,6 @@
 		<abnormalTime>10</abnormalTime>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16232" toLevel="4" name="Mass Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls nearby enemies to you. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
-		<hitTime>2000</hitTime>
-		<coolTime>800</coolTime>
-		<reuseDelay>30000</reuseDelay>
-		<effectPoint>-700</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16233" toLevel="5" name="Mass Fear">
 		<!-- TODO: Auto level parse, Requires manual update -->
 		<!-- AUTO GENERATED SKILL -->
@@ -439,27 +427,6 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-700</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="16234" toLevel="3" name="Raid Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- While effect lasts, Raid Point acquisition + 30%. -->
-		<icon>icon.etc_i.etc_rp_point_i00</icon>
-		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
-		<castRange>40</castRange>
-		<effectPoint>100</effectPoint>
-		<isMagic>1</isMagic>
-	</skill>
-	<skill id="16235" toLevel="1" name="Raid Blessing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- No longer able to receive Raid Blessing. -->
-		<icon>icon.etc_i.etc_rp_point_i00</icon>
-		<operateType>A2</operateType>
-		<mpConsume>1</mpConsume>
-		<castRange>40</castRange>
-		<isMagic>1</isMagic>
-		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16236" toLevel="1" name="88Lv. Raid Boss">

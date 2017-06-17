@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16300" toLevel="1" name="98Lv. Raid Boss">
 		<!-- AUTO GENERATED SKILL -->
@@ -140,30 +140,12 @@
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16322" toLevel="1" name="Orc Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Blown away. -->
-		<icon>icon.skill4107</icon>
-		<operateType>A2</operateType>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16323" toLevel="1" name="Orc Typhoon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Blown away. -->
 		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="16324" toLevel="1" name="Orc Typhoon">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Blown away. -->
-		<icon>icon.skill3080</icon>
-		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -309,14 +291,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16339" toLevel="1" name="Vortex Chaos">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Knocked down. -->
-		<icon>icon.skill11510</icon>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16340" toLevel="1" name="Reaper's Seal">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Branded with a seal and targeted by the Undead of Dragon Valley. -->
@@ -431,17 +405,6 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16351" toLevel="1" name="Kain's Sonic Star">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill10281</icon>
-		<operateType>A2</operateType>
-		<mpConsume>50</mpConsume>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>-700</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16352" toLevel="1" name="Kain's Sonic Storm">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0007</icon>
@@ -474,17 +437,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>5000</reuseDelay>
-	</skill>
-	<skill id="16355" toLevel="1" name="Sacred Blow Down">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill10281</icon>
-		<operateType>A2</operateType>
-		<mpConsume>50</mpConsume>
-		<hitTime>5000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>-700</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16356" toLevel="1" name="Sacred Sphere">
 		<!-- AUTO GENERATED SKILL -->
@@ -662,34 +614,12 @@
 		<effectPoint>-100</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16375" toLevel="1" name="Dimensional Hammer">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Down. -->
-		<icon>icon.skill0260</icon>
-		<operateType>A2</operateType>
-		<castRange>40</castRange>
-		<hitTime>2500</hitTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
 	<skill id="16376" toLevel="1" name="Dimensional Bind">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Attacks target with 100% of P. Atk. power and inflicts Hold for 5 sec. -->
 		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
-		<hitTime>2500</hitTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="16377" toLevel="1" name="Dimensional Chain">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 100% of P. Atk. power and pulls target toward self. -->
-		<icon>icon.skill0403</icon>
-		<operateType>A2</operateType>
-		<castRange>600</castRange>
 		<hitTime>2500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-100</effectPoint>
@@ -713,17 +643,6 @@
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
-	</skill>
-	<skill id="16380" toLevel="1" name="Dimensional Recoil Shot">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks target with 100% of P. Atk. power and inflicts Knock Back. -->
-		<icon>icon.skill10770</icon>
-		<operateType>A2</operateType>
-		<castRange>600</castRange>
-		<hitTime>2500</hitTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16381" toLevel="1" name="Dimensional Shield">
 		<!-- AUTO GENERATED SKILL -->
@@ -776,30 +695,6 @@
 		<hitTime>2500</hitTime>
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>3000</reuseDelay>
-	</skill>
-	<skill id="16386" toLevel="1" name="Dimensional Stun">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Attacks enemies to the front with 200% of P. Atk. power and inflicts Knock Down. -->
-		<icon>icon.skill0777</icon>
-		<operateType>A2</operateType>
-		<castRange>40</castRange>
-		<hitTime>2500</hitTime>
-		<reuseDelay>3000</reuseDelay>
-		<effectPoint>-100</effectPoint>
-		<isDebuff>true</isDebuff>
-	</skill>
-	<skill id="16387" toLevel="1" name="Chain Smash">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Pulls target toward you. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>600</castRange>
-		<hitTime>1000</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>5000</reuseDelay>
-		<effectPoint>-150</effectPoint>
-		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16388" toLevel="1" name="Kain's Wrath">
 		<!-- AUTO GENERATED SKILL -->

@@ -1,147 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="15200" toLevel="1" name="Tauti Ultra Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being hurled away from shock. -->
-		<icon>icon.skill3080</icon>
-		<operateType>A2</operateType>
-		<hitTime>7000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>80</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<affectRange>400</affectRange>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="15201" toLevel="1" name="Tauti Ultra Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being hurled away from shock. -->
-		<icon>icon.skill3080</icon>
-		<operateType>A2</operateType>
-		<hitTime>6000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>80</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<affectRange>400</affectRange>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="15202" toLevel="1" name="Tauti Ultra Typhoon">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
-		<icon>icon.skill3080</icon>
-		<operateType>A2</operateType>
-		<hitTime>7000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>80</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<affectRange>1500</affectRange>
-		<fanRange>0;0;600;0</fanRange>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>RING_RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="15203" toLevel="1" name="Tauti Ultra Typhoon">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Being flung away from shock. Attached characters are fine, but long-range characters are affected by this skill. -->
-		<icon>icon.skill3080</icon>
-		<operateType>A2</operateType>
-		<hitTime>6000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>80</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<affectRange>1500</affectRange>
-		<fanRange>0;0;600;0</fanRange>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>RING_RANGE</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="15204" toLevel="1" name="Tauti Omega Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
-		<icon>icon.skill10266</icon>
-		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>KNOCKDOWN</abnormalType>
-		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>70</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<trait>KNOCKDOWN</trait>
-		<affectRange>200</affectRange>
-		<affectLimit>10-10</affectLimit>
-		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="15205" toLevel="1" name="Tauti Omega Whirlwind">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Becomes knocked down after receiving Tauti's ultimate attack. -->
-		<icon>icon.skill10266</icon>
-		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>KNOCKDOWN</abnormalType>
-		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>70</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<trait>KNOCKDOWN</trait>
-		<affectRange>200</affectRange>
-		<affectLimit>10-10</affectLimit>
-		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
 	<skill id="15206" toLevel="1" name="Explosion">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
@@ -203,133 +61,6 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15209" toLevel="1" name="Pa'agrio's Gift 1">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<hitTime>2700</hitTime>
-		<coolTime>1000</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
-		<effects>
-			<effect name="Restoration">
-				<itemId>34864</itemId>
-				<itemCount>3</itemCount>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="15210" toLevel="1" name="Pa'agrio's Gift 2">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<hitTime>2700</hitTime>
-		<coolTime>1000</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
-		<effects>
-			<effect name="Restoration">
-				<itemId>34865</itemId>
-				<itemCount>1</itemCount>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="15211" toLevel="1" name="Pa'agrio's Gift 3">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<hitTime>2700</hitTime>
-		<coolTime>1000</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
-		<effects>
-			<effect name="Restoration">
-				<itemId>34864</itemId>
-				<itemCount>7</itemCount>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="15212" toLevel="1" name="Pa'agrio's Gift 4">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Gives a gift. -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-		<hitTime>2700</hitTime>
-		<coolTime>1000</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>85</magicLvl>
-		<staticReuse>true</staticReuse>
-		<isMagic>2</isMagic>
-		<reuseDelay>-1000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpNeedAgathion" />
-		</conditions>
-		<effects>
-			<effect name="Restoration">
-				<itemId>34865</itemId>
-				<itemCount>1</itemCount>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="15213" toLevel="1" name="Guillotine's Advent">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Flying away due to the twisted space. -->
-		<icon>icon.skill4107</icon>
-		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<effectPoint>-1</effectPoint>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<activateRate>80</activateRate>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>3</abnormalTime>
-		<affectRange>400</affectRange>
-		<affectLimit>10-10</affectLimit>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15214" toLevel="1" name="Tauti">
 		<!-- AUTO GENERATED SKILL -->
@@ -938,28 +669,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15240" toLevel="1" name="Toad Cannon Explosion">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- A broken Toad Cannon sparks into explosion, knocking back nearby targets. -->
-		<icon>icon.skill0036</icon>
-		<operateType>A2</operateType>
-		<effectPoint>-2</effectPoint>
-		<abnormalType>KNOCKDOWN</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<attributeType>WIND</attributeType>
-		<attributeValue>50</attributeValue>
-		<affectRange>250</affectRange>
-		<mpConsume>10</mpConsume>
-		<targetType>SELF</targetType>
-		<affectScope>POINT_BLANK</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
 	<skill id="15241" toLevel="1" name="">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
@@ -1044,32 +753,6 @@
 		<targetType>TARGET</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-	</skill>
-	<skill id="15247" toLevel="1" name="Nurka Strike">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Inflicts damage on the target and knocks them down. -->
-		<icon>icon.skill10549</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>100</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>5000</reuseDelay>
-		<effectPoint>-687</effectPoint>
-		<abnormalType>STUN</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<effectRange>400</effectRange>
-		<activateRate>120</activateRate>
-		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<trait>KNOCKDOWN</trait>
-		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
-		<isDebuff>true</isDebuff>
-		<targetType>TARGET</targetType>
-		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15248" toLevel="1" name="Nurka Howl">
 		<!-- AUTO GENERATED SKILL -->
@@ -1160,32 +843,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
-	</skill>
-	<skill id="15252" toLevel="1" name="With Nurka">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Target is pulled to Nurka. -->
-		<icon>icon.skill10015</icon>
-		<operateType>A2</operateType>
-		<mpConsume>10</mpConsume>
-		<castRange>350</castRange>
-		<hitTime>1000</hitTime>
-		<coolTime>1000</coolTime>
-		<reuseDelay>5000</reuseDelay>
-		<effectPoint>-2066</effectPoint>
-		<abnormalType>STUN</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<effectRange>630</effectRange>
-		<activateRate>200</activateRate>
-		<magicLvl>95</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1</abnormalTime>
-		<trait>PULL</trait>
-		<isDebuff>true</isDebuff>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15253" toLevel="1" name="Earth-rumbling Nurka">
 		<!-- AUTO GENERATED SKILL -->
@@ -1369,21 +1026,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15263" toLevel="1" name="Bombing">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Wave Skill Damage -->
-		<icon>icon.skill1296</icon>
-		<operateType>A2</operateType>
-		<castRange>1000</castRange>
-		<effectPoint>-686</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
 	<skill id="15264" toLevel="1" name="Lindvior's Skill 4">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's AoE Skill Presentation -->
@@ -1422,36 +1064,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
 		<hitTime>17000</hitTime>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15267" toLevel="1" name="Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Summon Whirlwind Skill Presentation -->
-		<icon>icon.skill10263</icon>
-		<operateType>A2</operateType>
-		<hitTime>100</hitTime>
-		<effectPoint>-867</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15268" toLevel="1" name="Cyclone">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Whirlwind Knockback Skill -->
-		<icon>icon.skill10263</icon>
-		<operateType>A2</operateType>
-		<hitTime>100</hitTime>
-		<effectPoint>-867</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
@@ -1502,23 +1114,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15272" toLevel="1" name="Wind Breath">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Landing Breath Skill -->
-		<icon>icon.skill10549</icon>
-		<operateType>A2</operateType>
-		<castRange>400</castRange>
-		<hitTime>2500</hitTime>
-		<coolTime>3000</coolTime>
-		<effectPoint>-574</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
 	<skill id="15273" toLevel="1" name="Tail Swipe">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Lindvior's Landing Range -->
@@ -1550,22 +1145,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="15275" toLevel="1" name="Tornado">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Lindvior's Takeoff Presentation -->
-		<icon>icon.skill10263</icon>
-		<operateType>A2</operateType>
-		<hitTime>7000</hitTime>
-		<coolTime>2000</coolTime>
-		<effectPoint>-867</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
 	<skill id="15276" toLevel="1" name="Bleed">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Bleeding -->
@@ -1574,23 +1153,6 @@
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<effectPoint>-574</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<isDebuff>true</isDebuff>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15277" toLevel="1" name="Knock Back">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Knock back -->
-		<icon>icon.skill10549</icon>
-		<operateType>A2</operateType>
-		<castRange>600</castRange>
-		<hitTime>2000</hitTime>
-		<coolTime>100</coolTime>
 		<effectPoint>-574</effectPoint>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1673,63 +1235,6 @@
 		<hitTime>17000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="15283" toLevel="1" name="Summon Jacquard">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons Jacquard, the Herald from the Fortress of the Dead. The Clan Hall Siege for the contestable Fortress of the Dead runs between 21:00 and 22:00 on the Thursday of the Castle Siege week. Jacquard teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
-		<icon>icon.skill15283</icon>
-		<operateType>A1</operateType>
-		<hitTime>1500</hitTime>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<reuseDelay>1800000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpInSiegeTime">
-				<time>64</time>
-			</condition>
-		</conditions>
-	</skill>
-	<skill id="15284" toLevel="1" name="Summon Brakel">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons Brakel, the Herald from the Fortress of Resistance. The Clan Hall Siege for the contestable Fortress of Resistance runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Brakel teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
-		<icon>icon.skill15284</icon>
-		<operateType>A1</operateType>
-		<hitTime>1500</hitTime>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<reuseDelay>1800000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpInSiegeTime">
-				<time>21</time>
-			</condition>
-		</conditions>
-	</skill>
-	<skill id="15285" toLevel="1" name="Summon Loken">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Summons Loken, the Herald from Devastated Castle. The Clan Hall Siege for the contestable Devastated Castle runs between 21:00 and 22:00 on the Friday of the Castle Siege week. Loken teleports you to the battleground, and despawns after 5 min. Cooldown is 30 min. -->
-		<icon>icon.skill15285</icon>
-		<operateType>A1</operateType>
-		<hitTime>1500</hitTime>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<reuseDelay>1800000</reuseDelay>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="OpInSiegeTime">
-				<time>34</time>
-			</condition>
-		</conditions>
 	</skill>
 	<skill id="15286" toLevel="1" name="Blood Siphon Master">
 		<!-- AUTO GENERATED SKILL -->

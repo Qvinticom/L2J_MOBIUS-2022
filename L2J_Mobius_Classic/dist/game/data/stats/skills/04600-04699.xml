@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4600" toLevel="12" name="Reducing P. Def Stun">
 		<abnormalLvl>
@@ -4990,45 +4990,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
-	</skill>
-	<skill id="4688" toLevel="1" name="Valakas Stun">
-		<!-- Confirmed CT2.5 -->
-		<!-- Valakas Skills -->
-		<!-- Valakas Tail Lash from Behind -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
-		<abnormalType>FLY_AWAY</abnormalType>
-		<activateRate>80</activateRate>
-		<affectRange>250</affectRange>
-		<basicProperty>PHYSICAL</basicProperty>
-		<coolTime>3000</coolTime>
-		<effectPoint>-100</effectPoint>
-		<attributeType>FIRE</attributeType>
-		<attributeValue>180</attributeValue>
-		<fanRange>0;180;250;500</fanRange>
-		<hitTime>3000</hitTime>
-		<icon>icon.skill4688</icon>
-		<isDebuff>true</isDebuff>
-		<lvlBonusRate>1</lvlBonusRate>
-		<magicLvl>99</magicLvl>
-		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
-		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<trait>SHOCK</trait>
-		<targetType>SELF</targetType>
-		<affectScope>SQUARE_PB</affectScope>
-		<affectObject>NOT_FRIEND</affectObject>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>27849</power>
-				<criticalChance>10</criticalChance>
-			</effect>
-			<effect name="FlyAway">
-				<radius>600</radius>
-			</effect>
-			<effect name="BlockActions" />
-		</effects>
 	</skill>
 	<skill id="4689" toLevel="2" name="Valakas Fear">
 		<!-- Confirmed CT2.5 -->

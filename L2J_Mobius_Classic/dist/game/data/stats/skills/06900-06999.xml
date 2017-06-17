@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6900" toLevel="1" name="Raid Boss (Lv. 84)">
 		<!-- High Five Skill -->
@@ -55,38 +55,6 @@
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
-	</skill>
-	<skill id="6908" toLevel="1" name="Transform Master">
-		<!-- High Five Skill -->
-		<!-- Transforms into a game Master. -->
-		<abnormalTime>-1</abnormalTime>
-		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
-		<effectPoint>1</effectPoint>
-		<abnormalType>TRANSFORM</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>-5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>-2</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.skilltransform1</icon>
-		<hitTime>2500</hitTime>
-		<reuseDelay>10000</reuseDelay>
-		<staticReuse>true</staticReuse>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="CanTransform">
-				<transformId>22</transformId>
-			</condition>
-		</conditions>
-		<effects>
-			<effect name="Transformation">
-				<transformationId>22</transformationId>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="6909" toLevel="1" name="Charming">
 		<!-- Shows the game master's charming actions. -->
