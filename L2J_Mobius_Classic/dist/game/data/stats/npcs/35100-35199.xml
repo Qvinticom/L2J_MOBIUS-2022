@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="35100" level="75" type="L2Merchant" name="Chamberlain of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -57,25 +56,24 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35101" level="75" type="L2Npc" name="Grad" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35101" level="70" type="L2Npc" name="Grad" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="63" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -92,11 +90,10 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35102" level="75" type="L2Merchant" name="Greenspan" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35102" level="70" type="L2Merchant" name="Greenspan" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -104,17 +101,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -130,12 +127,11 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
-			<radius normal="12" />
+			<radius normal="8" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35103" level="75" type="L2Merchant" name="Manor Manager" title="Gludio">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35103" level="70" type="L2Merchant" name="Manor Manager" title="Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -143,17 +139,17 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -170,11 +166,10 @@
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="9.5" />
-			<height normal="19" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35104" level="75" type="L2Npc" name="Tyron" title="Herald from Gludio">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35104" level="70" type="L2Npc" name="Tyron" title="Herald from Gludio">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -183,17 +178,17 @@
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -215,17 +210,16 @@
 		</collision>
 	</npc>
 	<npc id="35105" level="20" type="L2Artefact" name="Dion Holy Artifact">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
-			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="86.87" magical="63.57" />
 			<speed>
 				<walk ground="50" />
-				<run ground="1" />
+				<run ground="0" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -250,8 +244,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35106" level="97" type="L2Defender" name="Duke Byron Ashton">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35106" level="65" type="L2Defender" name="Duke Byron Ashton">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -259,10 +252,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="939" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="101851" hpRegen="8.5" mp="2280" mpRegen="3" />
-			<attack physical="18401.5479485936" magical="1503.70883509023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.286762009" magical="290.083779855" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="35094.90272" hpRegen="7.5" mp="3566.4" mpRegen="2.7" />
+			<attack physical="2331.27036" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -296,8 +289,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35107" level="95" type="L2Defender" name="Ivano" title="Royal Guard Captain">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35107" level="62" type="L2Defender" name="Ivano" title="Royal Guard Captain">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -305,10 +297,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
 		<acquire exp="901" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="96145" hpRegen="8.5" mp="2205" mpRegen="3" />
-			<attack physical="16722.8448072918" magical="1370.65918049899" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="485.665861215878" magical="276.105917767995" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="32604.97312" hpRegen="7.5" mp="3291" mpRegen="2.7" />
+			<attack physical="2084.49564" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -342,8 +334,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35108" level="93" type="L2Defender" name="Royal Knight" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35108" level="60" type="L2Defender" name="Royal Knight" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -351,10 +342,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- Sword of Delusion / Full Plate Shield -->
 		<acquire exp="863" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
-			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="466.806863913762" magical="262.801587405588" shield="124" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15465.92352" hpRegen="6.5" mp="3110.4" mpRegen="2.4" />
+			<attack physical="962.69102" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -388,8 +379,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35109" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35109" level="58" type="L2Defender" name="Royal Wizard" title="Dion">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -398,10 +388,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -433,11 +423,10 @@
 		</ai>
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35110" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35110" level="58" type="L2Defender" name="Royal Wizard" title="Dion">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -446,10 +435,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -484,8 +473,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35111" level="91" type="L2Defender" name="Royal Guard" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35111" level="58" type="L2Defender" name="Royal Guard" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -493,10 +481,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -530,8 +518,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35112" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35112" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -539,10 +526,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -576,8 +563,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35113" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35113" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -585,10 +571,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -622,8 +608,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35114" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35114" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -631,10 +616,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -668,8 +653,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35115" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35115" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -677,10 +661,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -714,8 +698,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35116" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35116" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -723,10 +706,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -760,8 +743,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35117" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35117" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -769,10 +751,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -806,8 +788,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35118" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35118" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -815,10 +796,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -852,8 +833,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35119" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35119" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -861,10 +841,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -898,8 +878,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35120" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35120" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -907,10 +886,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -944,8 +923,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35121" level="93" type="L2Defender" name="Royal Knight" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35121" level="60" type="L2Defender" name="Royal Knight" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -953,10 +931,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- Sword of Delusion / Full Plate Shield -->
 		<acquire exp="863" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
-			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="466.806863913762" magical="262.801587405588" shield="124" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15465.92352" hpRegen="6.5" mp="3110.4" mpRegen="2.4" />
+			<attack physical="962.69102" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -990,8 +968,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35122" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35122" level="58" type="L2Defender" name="Royal Wizard" title="Dion">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1000,10 +977,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1035,11 +1012,10 @@
 		</ai>
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35123" level="91" type="L2Defender" name="Royal Wizard" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35123" level="58" type="L2Defender" name="Royal Wizard" title="Dion">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -1048,10 +1024,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1086,8 +1062,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35124" level="91" type="L2Defender" name="Royal Guard" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35124" level="58" type="L2Defender" name="Royal Guard" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -1095,10 +1070,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1132,8 +1107,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35125" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35125" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1141,10 +1115,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1178,8 +1152,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35126" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35126" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1187,10 +1160,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1224,8 +1197,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35127" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35127" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1233,10 +1205,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1270,8 +1242,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35128" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35128" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1279,10 +1250,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1316,8 +1287,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35129" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35129" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1325,10 +1295,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1362,8 +1332,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35130" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35130" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1371,10 +1340,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1408,8 +1377,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35131" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35131" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1417,10 +1385,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1454,8 +1422,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35132" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35132" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1463,10 +1430,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1500,8 +1467,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35133" level="89" type="L2Defender" name="Escort" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35133" level="56" type="L2Defender" name="Escort" title="Dion">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -1509,10 +1475,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1547,7 +1513,6 @@
 		</collision>
 	</npc>
 	<npc id="35134" level="75" type="L2Monster" name="Gatekeeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1609,7 +1574,6 @@
 		</collision>
 	</npc>
 	<npc id="35135" level="75" type="L2Monster" name="Gatekeeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1671,7 +1635,6 @@
 		</collision>
 	</npc>
 	<npc id="35136" level="75" type="L2Monster" name="Gatekeeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1732,8 +1695,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35137" level="75" type="L2Npc" name="Mass Gatekeeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35137" level="70" type="L2Npc" name="Mass Gatekeeper" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1744,17 +1706,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1774,8 +1736,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35138" level="75" type="L2Npc" name="Outer Castle Gatekeeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35138" level="70" type="L2Npc" name="Outer Castle Gatekeeper" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1792,17 +1753,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1822,8 +1783,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35139" level="75" type="L2Npc" name="Inner Castle Gatekeeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35139" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -1840,17 +1800,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1870,8 +1830,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35140" level="75" type="L2Npc" name="Blacksmith" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35140" level="70" type="L2Npc" name="Blacksmith" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -1879,17 +1838,17 @@
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<equipment rhand="89" /> <!-- Big Hammer -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1909,25 +1868,24 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35141" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35141" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
 		</parameters>
 		<race>DWARF</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1948,7 +1906,6 @@
 		</collision>
 	</npc>
 	<npc id="35142" level="75" type="L2Merchant" name="Chamberlain of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -2004,25 +1961,24 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35143" level="75" type="L2Npc" name="Hodler" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35143" level="70" type="L2Npc" name="Hodler" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="63" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2039,11 +1995,10 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35144" level="75" type="L2Merchant" name="Mercenary Manager Sanford" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35144" level="70" type="L2Merchant" name="Mercenary Manager Sanford" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2051,17 +2006,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2077,12 +2032,11 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
-			<radius normal="12" />
+			<radius normal="8" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35145" level="75" type="L2Merchant" name="Manor Manager" title="Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35145" level="70" type="L2Merchant" name="Manor Manager" title="Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -2090,17 +2044,17 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2117,11 +2071,10 @@
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="9.5" />
-			<height normal="19" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35146" level="75" type="L2Npc" name="Gibbson" title="Herald from Dion">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35146" level="70" type="L2Npc" name="Gibbson" title="Herald from Dion">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -2130,17 +2083,17 @@
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2162,17 +2115,16 @@
 		</collision>
 	</npc>
 	<npc id="35147" level="20" type="L2Artefact" name="Giran Holy Artifact">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
-			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="86.87" magical="63.57" />
 			<speed>
 				<walk ground="50" />
-				<run ground="1" />
+				<run ground="0" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2197,8 +2149,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35148" level="97" type="L2Defender" name="Baron Carmon Esthus">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35148" level="65" type="L2Defender" name="Baron Carmon Esthus">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -2206,10 +2157,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="939" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="101851" hpRegen="8.5" mp="2280" mpRegen="3" />
-			<attack physical="18401.5479485936" magical="1503.70883509023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.286762009" magical="290.083779855" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="35094.90272" hpRegen="7.5" mp="3566.4" mpRegen="2.7" />
+			<attack physical="2331.27036" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2243,8 +2194,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35149" level="95" type="L2Defender" name="Ulric" title="Royal Guard Captain">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35149" level="62" type="L2Defender" name="Ulric" title="Royal Guard Captain">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -2252,10 +2202,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
 		<acquire exp="901" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="96145" hpRegen="8.5" mp="2205" mpRegen="3" />
-			<attack physical="16722.8448072918" magical="1370.65918049899" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="485.665861215878" magical="276.105917767995" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="32604.97312" hpRegen="7.5" mp="3291" mpRegen="2.7" />
+			<attack physical="2084.49564" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2289,8 +2239,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35150" level="93" type="L2Defender" name="Royal Knight" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35150" level="60" type="L2Defender" name="Royal Knight" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -2298,10 +2247,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- Sword of Delusion / Full Plate Shield -->
 		<acquire exp="863" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
-			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="466.806863913762" magical="262.801587405588" shield="124" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15465.92352" hpRegen="6.5" mp="3110.4" mpRegen="2.4" />
+			<attack physical="962.69102" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2335,8 +2284,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35151" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35151" level="58" type="L2Defender" name="Royal Wizard" title="Giran">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -2345,10 +2293,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2380,11 +2328,10 @@
 		</ai>
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35152" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35152" level="58" type="L2Defender" name="Royal Wizard" title="Giran">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -2393,10 +2340,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2431,8 +2378,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35153" level="91" type="L2Defender" name="Royal Guard" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35153" level="58" type="L2Defender" name="Royal Guard" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -2440,10 +2386,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2477,8 +2423,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35154" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35154" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2486,10 +2431,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2523,8 +2468,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35155" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35155" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2532,10 +2476,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2569,8 +2513,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35156" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35156" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2578,10 +2521,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2615,8 +2558,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35157" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35157" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2624,10 +2566,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2661,8 +2603,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35158" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35158" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2670,10 +2611,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2707,8 +2648,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35159" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35159" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2716,10 +2656,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2753,8 +2693,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35160" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35160" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2762,10 +2701,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2799,8 +2738,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35161" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35161" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2808,10 +2746,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2845,8 +2783,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35162" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35162" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -2854,10 +2791,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2891,8 +2828,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35163" level="93" type="L2Defender" name="Royal Knight" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35163" level="60" type="L2Defender" name="Royal Knight" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -2900,10 +2836,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- Sword of Delusion / Full Plate Shield -->
 		<acquire exp="863" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
-			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="466.806863913762" magical="262.801587405588" shield="124" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15465.92352" hpRegen="6.5" mp="3110.4" mpRegen="2.4" />
+			<attack physical="962.69102" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2937,8 +2873,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35164" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35164" level="58" type="L2Defender" name="Royal Wizard" title="Giran">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -2947,10 +2882,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2982,11 +2917,10 @@
 		</ai>
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35165" level="91" type="L2Defender" name="Royal Wizard" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35165" level="58" type="L2Defender" name="Royal Wizard" title="Giran">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -2995,10 +2929,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3033,8 +2967,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35166" level="91" type="L2Defender" name="Royal Guard" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35166" level="58" type="L2Defender" name="Royal Guard" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -3042,10 +2975,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3079,8 +3012,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35167" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35167" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3088,10 +3020,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3125,8 +3057,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35168" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35168" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3134,10 +3065,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3171,8 +3102,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35169" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35169" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3180,10 +3110,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3217,8 +3147,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35170" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35170" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3226,10 +3155,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3263,8 +3192,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35171" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35171" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3272,10 +3200,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3309,8 +3237,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35172" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35172" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3318,10 +3245,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3355,8 +3282,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35173" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35173" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3364,10 +3290,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3401,8 +3327,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35174" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35174" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3410,10 +3335,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3447,8 +3372,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35175" level="89" type="L2Defender" name="Escort" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35175" level="56" type="L2Defender" name="Escort" title="Giran">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -3456,10 +3380,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -3494,7 +3418,6 @@
 		</collision>
 	</npc>
 	<npc id="35176" level="75" type="L2Monster" name="Gatekeeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3556,7 +3479,6 @@
 		</collision>
 	</npc>
 	<npc id="35177" level="75" type="L2Monster" name="Gatekeeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3618,7 +3540,6 @@
 		</collision>
 	</npc>
 	<npc id="35178" level="75" type="L2Monster" name="Gatekeeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3679,8 +3600,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35179" level="75" type="L2Npc" name="Mass Gatekeeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35179" level="70" type="L2Npc" name="Mass Gatekeeper" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3691,17 +3611,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3721,8 +3641,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35180" level="75" type="L2Npc" name="Outer Castle Gatekeeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35180" level="70" type="L2Npc" name="Outer Castle Gatekeeper" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3739,17 +3658,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3769,8 +3688,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35181" level="75" type="L2Npc" name="Inner Castle Gatekeeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35181" level="70" type="L2Npc" name="Inner Castle Gatekeeper" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3787,17 +3705,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3817,8 +3735,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35182" level="75" type="L2Npc" name="Blacksmith" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35182" level="70" type="L2Npc" name="Blacksmith" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="93" />
@@ -3826,17 +3743,17 @@
 		<race>DWARF</race>
 		<sex>MALE</sex>
 		<equipment rhand="89" /> <!-- Big Hammer -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3856,25 +3773,24 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="35183" level="75" type="L2Warehouse" name="Warehouse Keeper" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35183" level="70" type="L2Warehouse" name="Warehouse Keeper" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
 		</parameters>
 		<race>DWARF</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3895,7 +3811,6 @@
 		</collision>
 	</npc>
 	<npc id="35184" level="75" type="L2Merchant" name="Chamberlain of Light">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="fnAgitBuff" value="castlebuff" />
 			<param name="MoveAroundSocial" value="0" />
@@ -3952,25 +3867,24 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35185" level="75" type="L2Npc" name="Bryce" title="Wyvern Manager">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35185" level="70" type="L2Npc" name="Bryce" title="Wyvern Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="63" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3987,11 +3901,10 @@
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="35186" level="75" type="L2Merchant" name="Arvid" title="Mercenary Manager">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35186" level="70" type="L2Merchant" name="Arvid" title="Mercenary Manager">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3999,17 +3912,17 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="699.75" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4025,12 +3938,11 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
-			<radius normal="12" />
+			<radius normal="8" />
 			<height normal="21.5" />
 		</collision>
 	</npc>
-	<npc id="35187" level="75" type="L2Merchant" name="Manor Manager" title="Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35187" level="70" type="L2Merchant" name="Manor Manager" title="Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="150" />
@@ -4038,17 +3950,17 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4065,11 +3977,10 @@
 		<ai clanHelpRange="300" aggroRange="1000" />
 		<collision>
 			<radius normal="9.5" />
-			<height normal="19" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35188" level="75" type="L2Npc" name="Holmes" title="Herald from Giran">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35188" level="70" type="L2Npc" name="Holmes" title="Herald from Giran">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -4078,17 +3989,17 @@
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
 		<acquire exp="561" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.5" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" canMove="false" />
+		<status attackable="false" undying="true" canMove="false" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -4110,17 +4021,16 @@
 		</collision>
 	</npc>
 	<npc id="35189" level="20" type="L2Artefact" name="Oren Holy Artifact">
-		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>ETC</sex>
 		<acquire exp="40" sp="10" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="342.5127" hpRegen="2.5" mp="192.0" mpRegen="1.2" />
-			<attack physical="44.32863" magical="30.2707" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="86.87049" magical="63.56806" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="342.5" hpRegen="2.5" mp="192" mpRegen="1.2" />
+			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="86.87" magical="63.57" />
 			<speed>
 				<walk ground="50" />
-				<run ground="1" />
+				<run ground="0" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -4145,8 +4055,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="35190" level="97" type="L2Defender" name="Balthus Van Dyke" title="Duke">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35190" level="65" type="L2Defender" name="Balthus Van Dyke" title="Duke">
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -4154,10 +4063,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="939" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="101851" hpRegen="8.5" mp="2280" mpRegen="3" />
-			<attack physical="18401.5479485936" magical="1503.70883509023" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="505.286762009" magical="290.083779855" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="35094.90272" hpRegen="7.5" mp="3566.4" mpRegen="2.7" />
+			<attack physical="2331.27036" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4191,8 +4100,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35191" level="95" type="L2Defender" name="Quant" title="Royal Guard Captain">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35191" level="62" type="L2Defender" name="Quant" title="Royal Guard Captain">
 		<parameters>
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
@@ -4200,10 +4108,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
 		<acquire exp="901" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="96145" hpRegen="8.5" mp="2205" mpRegen="3" />
-			<attack physical="16722.8448072918" magical="1370.65918049899" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="485.665861215878" magical="276.105917767995" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="32604.97312" hpRegen="7.5" mp="3291" mpRegen="2.7" />
+			<attack physical="2084.49564" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4237,8 +4145,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35192" level="93" type="L2Defender" name="Royal Knight" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35192" level="60" type="L2Defender" name="Royal Knight" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="140" />
 		</parameters>
@@ -4246,10 +4153,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="76" lhand="2497" /> <!-- Sword of Delusion / Full Plate Shield -->
 		<acquire exp="863" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
-			<attack physical="5065.71248916851" magical="899.53769081202" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="466.806863913762" magical="262.801587405588" shield="124" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15465.92352" hpRegen="6.5" mp="3110.4" mpRegen="2.4" />
+			<attack physical="962.69102" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65008" magical="181.21958" shield="124" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4283,8 +4190,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35193" level="91" type="L2Defender" name="Royal Wizard" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35193" level="58" type="L2Defender" name="Royal Wizard" title="Oren">
 		<parameters>
 			<skill name="DDMagic" id="4026" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -4293,10 +4199,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4328,11 +4234,10 @@
 		</ai>
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="35194" level="91" type="L2Defender" name="Royal Wizard" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35194" level="58" type="L2Defender" name="Royal Wizard" title="Oren">
 		<parameters>
 			<skill name="MagicHeal" id="4027" level="1" />
 			<param name="Attack_BoostValue" value="137" />
@@ -4341,10 +4246,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4379,8 +4284,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="35195" level="91" type="L2Defender" name="Royal Guard" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35195" level="58" type="L2Defender" name="Royal Guard" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="137" />
 		</parameters>
@@ -4388,10 +4292,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<acquire exp="827" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14136" hpRegen="8.5" mp="2059" mpRegen="3" />
-			<attack physical="4606.89031824671" magical="821.122892374432" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="448.680184461517" magical="250.138334234944" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14629.46128" hpRegen="6.5" mp="2932.2" mpRegen="2.4" />
+			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4425,8 +4329,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="35196" level="89" type="L2Defender" name="Escort" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35196" level="56" type="L2Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4434,10 +4337,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4471,8 +4374,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35197" level="89" type="L2Defender" name="Escort" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35197" level="56" type="L2Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4480,10 +4382,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4517,8 +4419,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35198" level="89" type="L2Defender" name="Escort" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35198" level="56" type="L2Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4526,10 +4427,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4563,8 +4464,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="35199" level="89" type="L2Defender" name="Escort" title="Oren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="35199" level="56" type="L2Defender" name="Escort" title="Oren">
 		<parameters>
 			<param name="Attack_BoostValue" value="133" />
 		</parameters>
@@ -4572,10 +4472,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<acquire exp="792" sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13812" hpRegen="8.5" mp="1988" mpRegen="3" />
-			<attack physical="4186.37204072787" magical="748.3800155032" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="431.257386064511" magical="238.085267564491" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13797.4648" hpRegen="6.5" mp="2756.4" mpRegen="2.4" />
+			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
+			<defence physical="228.40135" magical="167.1342" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />

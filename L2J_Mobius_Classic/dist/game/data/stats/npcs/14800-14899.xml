@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="14800" level="51" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="2" />
 			<param name="step_skill_target01" value="0" />
@@ -9,9 +8,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
-			<attack physical="321.13207" magical="219.29157" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1617.457556" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="204.85194" magical="149.90176" />
 			<speed>
 				<walk ground="25" />
@@ -20,7 +19,7 @@
 			<hit_time>200</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -45,7 +44,6 @@
 		</collision>
 	</npc>
 	<npc id="14801" level="60" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="3" />
 			<skill name="step_skill02" id="6096" level="1" />
@@ -56,9 +54,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
-			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2126.564484" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
 			<speed>
 				<walk ground="25" />
@@ -67,7 +65,7 @@
 			<hit_time>200</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -93,7 +91,6 @@
 		</collision>
 	</npc>
 	<npc id="14802" level="64" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="4" />
 			<skill name="step_skill02" id="6096" level="2" />
@@ -104,9 +101,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2356.003397" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="25" />
@@ -115,7 +112,7 @@
 			<hit_time>200</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -141,7 +138,6 @@
 		</collision>
 	</npc>
 	<npc id="14803" level="68" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="5" />
 			<skill name="step_skill02" id="6096" level="3" />
@@ -155,9 +151,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2580.343678" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="25" />
@@ -166,7 +162,7 @@
 			<hit_time>200</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -192,7 +188,6 @@
 		</collision>
 	</npc>
 	<npc id="14804" level="72" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="6" />
 			<skill name="step_skill02" id="6096" level="4" />
@@ -206,9 +201,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2794.168641" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
 				<walk ground="25" />
@@ -217,7 +212,7 @@
 			<hit_time>200</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -243,7 +238,6 @@
 		</collision>
 	</npc>
 	<npc id="14805" level="76" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="7" />
 			<skill name="step_skill02" id="6096" level="5" />
@@ -257,9 +251,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2991.977472" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="25" />
@@ -268,7 +262,7 @@
 			<hit_time>200</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="6" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -294,7 +288,6 @@
 		</collision>
 	</npc>
 	<npc id="14806" level="78" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="8" />
 			<skill name="step_skill02" id="6096" level="6" />
@@ -308,10 +301,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="860.08905" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -345,7 +338,6 @@
 		</collision>
 	</npc>
 	<npc id="14807" level="78" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="8" />
 			<skill name="step_skill02" id="6096" level="6" />
@@ -359,10 +351,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2812.763385" hpRegen="8.5" mp="1615.8" mpRegen="3" />
-			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.7929775" magical="244.2552175" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="864.3681" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -396,7 +388,6 @@
 		</collision>
 	</npc>
 	<npc id="14808" level="78" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="8" />
 			<skill name="step_skill02" id="6096" level="6" />
@@ -410,10 +401,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2822.62688" hpRegen="8.5" mp="1624.2" mpRegen="3" />
-			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="334.885345" magical="245.054565" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="868.64715" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -447,7 +438,6 @@
 		</collision>
 	</npc>
 	<npc id="14809" level="78" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="step_skill01" id="6095" level="8" />
 			<skill name="step_skill02" id="6096" level="6" />
@@ -461,10 +451,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2832.490375" hpRegen="8.5" mp="1632.6" mpRegen="3" />
-			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="335.9777125" magical="245.8539125" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="872.9262" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -497,8 +487,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14810" level="79" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14810" level="78" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="9" />
 			<skill name="step_skill02" id="6096" level="7" />
@@ -512,10 +501,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
-			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="877.20525" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -548,8 +537,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14811" level="79" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14811" level="78" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="9" />
 			<skill name="step_skill02" id="6096" level="7" />
@@ -563,10 +551,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2852.217365" hpRegen="8.5" mp="1649.4" mpRegen="3" />
-			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="338.1624475" magical="247.4526075" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="881.4843" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -599,8 +587,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14812" level="79" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14812" level="78" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="9" />
 			<skill name="step_skill02" id="6096" level="7" />
@@ -614,10 +601,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862.08086" hpRegen="8.5" mp="1657.8" mpRegen="3" />
-			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="339.254815" magical="248.251955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="885.76335" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -650,8 +637,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14813" level="79" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14813" level="78" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="9" />
 			<skill name="step_skill02" id="6096" level="7" />
@@ -665,10 +651,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2871.944355" hpRegen="8.5" mp="1666.2" mpRegen="3" />
-			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="340.3471825" magical="249.0513025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="890.0424" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -701,8 +687,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14814" level="80" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14814" level="78" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="10" />
 			<skill name="step_skill02" id="6096" level="8" />
@@ -719,10 +704,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="894.32145" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -755,8 +740,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14815" level="80" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14815" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="10" />
 			<skill name="step_skill02" id="6096" level="8" />
@@ -773,10 +757,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2889.8818825" hpRegen="8.5" mp="1683.25" mpRegen="3" />
-			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.45123" magical="250.5909475" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="898.6005" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -809,8 +793,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14816" level="80" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14816" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="10" />
 			<skill name="step_skill02" id="6096" level="8" />
@@ -827,10 +810,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2899.387485" hpRegen="8.5" mp="1691.7" mpRegen="3" />
-			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="343.52746" magical="251.378485" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="902.87955" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -863,8 +846,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14817" level="80" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14817" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="10" />
 			<skill name="step_skill02" id="6096" level="8" />
@@ -881,10 +863,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2908.8930875" hpRegen="8.5" mp="1700.15" mpRegen="3" />
-			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.60369" magical="252.1660225" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="907.1586" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -917,8 +899,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14818" level="81" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14818" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="11" />
 			<skill name="step_skill02" id="6096" level="9" />
@@ -935,10 +916,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2916.89894" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="911.43765" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -971,8 +952,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14819" level="81" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14819" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="11" />
 			<skill name="step_skill02" id="6096" level="9" />
@@ -989,10 +969,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2926.029605" hpRegen="8.5" mp="1717.3" mpRegen="3" />
-			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.6703375" magical="253.67831" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="915.7167" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1025,8 +1005,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14820" level="81" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14820" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="11" />
 			<skill name="step_skill02" id="6096" level="9" />
@@ -1043,10 +1022,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2935.16027" hpRegen="8.5" mp="1725.8" mpRegen="3" />
-			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.729405" magical="254.45329" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="919.99575" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1079,8 +1058,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14821" level="81" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14821" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="11" />
 			<skill name="step_skill02" id="6096" level="9" />
@@ -1097,10 +1075,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2944.290935" hpRegen="8.5" mp="1734.3" mpRegen="3" />
-			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="348.7884725" magical="255.22827" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="924.2748" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1133,8 +1111,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14822" level="82" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14822" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="12" />
 			<skill name="step_skill02" id="6096" level="10" />
@@ -1151,10 +1128,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2951.85588" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="928.55385" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1187,8 +1164,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14823" level="82" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14823" level="79" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="12" />
 			<skill name="step_skill02" id="6096" level="10" />
@@ -1205,10 +1181,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2960.595115" hpRegen="8.5" mp="1751.55" mpRegen="3" />
-			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.815645" magical="256.7116675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="932.8329" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1241,8 +1217,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14824" level="82" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14824" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="12" />
 			<skill name="step_skill02" id="6096" level="10" />
@@ -1259,10 +1234,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2969.33435" hpRegen="8.5" mp="1760.1" mpRegen="3" />
-			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="351.85652" magical="257.473335" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="937.11195" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1295,8 +1270,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14825" level="82" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14825" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="12" />
 			<skill name="step_skill02" id="6096" level="10" />
@@ -1313,10 +1287,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2978.073585" hpRegen="8.5" mp="1768.65" mpRegen="3" />
-			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.897395" magical="258.2350025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="941.391" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1349,8 +1323,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14826" level="83" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14826" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="13" />
 			<skill name="step_skill02" id="6096" level="11" />
@@ -1367,10 +1340,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2985.1835" hpRegen="8.5" mp="1777.4" mpRegen="3" />
-			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="945.67005" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1403,8 +1376,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14827" level="83" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14827" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="13" />
 			<skill name="step_skill02" id="6096" level="11" />
@@ -1421,10 +1393,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2993.515405" hpRegen="8.5" mp="1786.0" mpRegen="3" />
-			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8831075" magical="259.6880625" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="949.9491" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1457,8 +1429,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14828" level="83" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14828" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="13" />
 			<skill name="step_skill02" id="6096" level="11" />
@@ -1475,10 +1446,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3001.84731" hpRegen="8.5" mp="1794.6" mpRegen="3" />
-			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.904775" magical="260.435675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="954.22815" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1511,8 +1482,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14829" level="83" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14829" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="13" />
 			<skill name="step_skill02" id="6096" level="11" />
@@ -1529,10 +1499,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3010.179215" hpRegen="8.5" mp="1803.2" mpRegen="3" />
-			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="356.9264425" magical="261.1832875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="958.5072" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1565,8 +1535,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14830" level="84" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14830" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="14" />
 			<skill name="step_skill02" id="6096" level="12" />
@@ -1583,10 +1552,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3016.82079" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="962.78625" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1619,8 +1588,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14831" level="84" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14831" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="14" />
 			<skill name="step_skill02" id="6096" level="12" />
@@ -1637,10 +1605,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3024.7301125" hpRegen="8.5" mp="1820.65" mpRegen="3" />
-			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="358.8686775" magical="262.604525" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="967.0653" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1673,8 +1641,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14832" level="84" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14832" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="14" />
 			<skill name="step_skill02" id="6096" level="12" />
@@ -1691,10 +1658,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3032.639435" hpRegen="8.5" mp="1829.3" mpRegen="3" />
-			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="359.870125" magical="263.33734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="971.34435" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1727,8 +1694,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14833" level="85" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14833" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="15" />
 			<skill name="step_skill02" id="6096" level="13" />
@@ -1745,10 +1711,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="975.6234" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1781,8 +1747,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14834" level="85" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14834" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="15" />
 			<skill name="step_skill02" id="6096" level="13" />
@@ -1799,10 +1764,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3056.67236333333" hpRegen="8.5" mp="1858.4" mpRegen="3" />
-			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.09511" magical="265.697243333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="979.90245" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1835,8 +1800,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="14835" level="85" type="L2Pet" name="Dark Panther">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14835" level="80" type="L2Pet" name="Dark Panther">
 		<parameters>
 			<skill name="step_skill01" id="6095" level="15" />
 			<skill name="step_skill02" id="6096" level="13" />
@@ -1853,10 +1817,10 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="3" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="364.40208" magical="266.653626666667" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3180.38891" hpRegen="8.5" mp="1674.8" mpRegen="3" />
+			<attack physical="984.1815" magical="584.41" random="50" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="25" />
 				<run ground="150" />
@@ -1890,25 +1854,24 @@
 		</collision>
 	</npc>
 	<npc id="14836" level="80" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
 			<skill name="PhysicalSpecial3" id="5137" level="1" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="6" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3456" hpRegen="13.43" mp="2143" mpRegen="3.09" />
+			<attack physical="1824.2" magical="1163.4" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="556.5" magical="588" />
 			<speed>
-				<walk ground="160" />
-				<run ground="180" />
+				<walk ground="52" />
+				<run ground="198" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -1930,25 +1893,24 @@
 		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
 		<collision>
 			<radius normal="6" />
-			<height normal="16.0055" />
+			<height normal="16.01" />
 		</collision>
 	</npc>
 	<npc id="14837" level="80" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
 			<skill name="PhysicalSpecial3" id="7000" level="1" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="6" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3456" hpRegen="13.43" mp="2143" mpRegen="3.09" />
+			<attack physical="1658.3" magical="2457" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="556.5" magical="588" />
 			<speed>
-				<walk ground="160" />
-				<run ground="180" />
+				<walk ground="52" />
+				<run ground="198" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1973,30 +1935,29 @@
 		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
 		<ai type="BALANCED" />
 		<collision>
-			<radius normal="13.5" />
+			<radius normal="13.50" />
 			<height normal="17" />
 		</collision>
 	</npc>
 	<npc id="14838" level="80" type="L2Pet" name="Spectral Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5142" level="1" />
 			<skill name="PhysicalSpecial2" id="5141" level="1" />
 			<skill name="PhysicalSpecial3" id="5140" level="1" />
 		</parameters>
-		<race>DEMONIC</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="6" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2880" hpRegen="13.43" mp="2143" mpRegen="3.09" />
+			<attack physical="1395.8" magical="1169.7" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="403.2" magical="376.6" />
 			<speed>
-				<walk ground="160" />
-				<run ground="180" />
+				<walk ground="52" />
+				<run ground="198" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="4" /> <!-- HP High -->
@@ -2017,25 +1978,24 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>1.331</s_npc_prop_hp_rate>
 		<collision>
-			<radius normal="12.5" />
-			<height normal="33.5" />
+			<radius normal="12.50" />
+			<height normal="33.50" />
 		</collision>
 	</npc>
 	<npc id="14839" level="68" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.475" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2055,24 +2015,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14840" level="78" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14840" level="69" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.475" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2092,24 +2051,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14841" level="78" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14841" level="70" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.475" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2129,24 +2087,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14842" level="78" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14842" level="71" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.475" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2166,24 +2123,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14843" level="78" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14843" level="72" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.82311377" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2203,24 +2159,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14844" level="79" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14844" level="73" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.82311377" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2240,24 +2195,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14845" level="79" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14845" level="74" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="12.82311377" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2277,24 +2231,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14846" level="79" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14846" level="75" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="13.37067365" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2314,24 +2267,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14847" level="79" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14847" level="76" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="13.37067365" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2351,24 +2303,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14848" level="80" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14848" level="77" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="13.37067365" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2388,24 +2339,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14849" level="80" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14849" level="78" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="13.8353869" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2425,24 +2375,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14850" level="80" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14850" level="79" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="13.8353869" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2462,24 +2411,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
 	<npc id="14851" level="80" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="13.8353869" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2499,24 +2447,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
 	<npc id="14852" level="81" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="14.3796875" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2536,24 +2483,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14853" level="81" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14853" level="82" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="14.3796875" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2573,24 +2519,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14854" level="81" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14854" level="83" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="14.3796875" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2610,24 +2555,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14855" level="81" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14855" level="84" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="14.9239881" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2647,24 +2591,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14856" level="82" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14856" level="85" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="14.9239881" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2684,24 +2627,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14857" level="82" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14857" level="86" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="14.9239881" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2721,24 +2663,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14858" level="82" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14858" level="87" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.3767036" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2758,24 +2699,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14859" level="82" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14859" level="88" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.3767036" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2795,24 +2735,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14860" level="83" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14860" level="89" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.3767036" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2832,24 +2771,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14861" level="83" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14861" level="90" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.91784024" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2869,24 +2807,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14862" level="83" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14862" level="91" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.91784024" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2906,24 +2843,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14863" level="83" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14863" level="92" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.91784024" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2943,24 +2879,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14864" level="84" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14864" level="93" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="15.91784024" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -2980,24 +2915,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14865" level="84" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14865" level="94" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="16.45892012" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3017,24 +2951,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14866" level="84" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14866" level="95" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="16.45892012" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3054,24 +2987,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14867" level="85" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14867" level="96" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="16.45892012" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3091,24 +3023,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14868" level="85" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14868" level="97" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="16.45892012" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3128,24 +3059,23 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
-	<npc id="14869" level="85" type="L2Servitor" name="Swoop Cannon">
-		<!-- Confirmed CT2.5 -->
-		<race>SIEGE_WEAPON</race>
+	<npc id="14869" level="98" type="L2Servitor" name="Swoop Cannon">
+		<race>ETC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="8.5" mp="889.8" mpRegen="2.4" />
-			<attack physical="17" magical="265.02979" random="1" critical="4" accuracy="4.75" attackSpeed="150" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="837" magical="674" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="50000" hpRegen="11.85" mp="1138" mpRegen="2.78" />
+			<attack physical="15.4" magical="299.6" random="50" critical="1" accuracy="9" attackSpeed="165" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="919.8" magical="947.8" />
 			<speed>
-				<walk ground="60" />
-				<run ground="40" />
+				<walk ground="44" />
+				<run ground="44" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4332" level="1" /> <!-- Mental Aegis -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -3165,11 +3095,10 @@
 		<shots soul="1" spirit="1" />
 		<collision>
 			<radius normal="45" />
-			<height normal="47.5" />
+			<height normal="47.50" />
 		</collision>
 	</npc>
 	<npc id="14870" level="80" type="L2Pet" name="Divine Beast">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="lv_step5" value="80" />
 			<param name="lv_step6" value="85" />
@@ -3233,7 +3162,6 @@
 		</collision>
 	</npc>
 	<npc id="14871" level="81" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3277,7 +3205,6 @@
 		</collision>
 	</npc>
 	<npc id="14872" level="81" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3321,7 +3248,6 @@
 		</collision>
 	</npc>
 	<npc id="14873" level="81" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3365,7 +3291,6 @@
 		</collision>
 	</npc>
 	<npc id="14874" level="82" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3409,7 +3334,6 @@
 		</collision>
 	</npc>
 	<npc id="14875" level="82" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3453,7 +3377,6 @@
 		</collision>
 	</npc>
 	<npc id="14876" level="82" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3497,7 +3420,6 @@
 		</collision>
 	</npc>
 	<npc id="14877" level="83" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3541,7 +3463,6 @@
 		</collision>
 	</npc>
 	<npc id="14878" level="83" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3585,7 +3506,6 @@
 		</collision>
 	</npc>
 	<npc id="14879" level="83" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3629,7 +3549,6 @@
 		</collision>
 	</npc>
 	<npc id="14880" level="84" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3673,7 +3592,6 @@
 		</collision>
 	</npc>
 	<npc id="14881" level="84" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3717,7 +3635,6 @@
 		</collision>
 	</npc>
 	<npc id="14882" level="84" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3761,7 +3678,6 @@
 		</collision>
 	</npc>
 	<npc id="14883" level="85" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3805,7 +3721,6 @@
 		</collision>
 	</npc>
 	<npc id="14884" level="85" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3849,7 +3764,6 @@
 		</collision>
 	</npc>
 	<npc id="14885" level="85" type="L2Pet" name="Feline King">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5135" level="1" />
 			<skill name="PhysicalSpecial2" id="5136" level="1" />
@@ -3893,7 +3807,6 @@
 		</collision>
 	</npc>
 	<npc id="14886" level="81" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -3937,7 +3850,6 @@
 		</collision>
 	</npc>
 	<npc id="14887" level="81" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -3981,7 +3893,6 @@
 		</collision>
 	</npc>
 	<npc id="14888" level="81" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4025,7 +3936,6 @@
 		</collision>
 	</npc>
 	<npc id="14889" level="82" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4069,7 +3979,6 @@
 		</collision>
 	</npc>
 	<npc id="14890" level="82" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4113,7 +4022,6 @@
 		</collision>
 	</npc>
 	<npc id="14891" level="82" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4157,7 +4065,6 @@
 		</collision>
 	</npc>
 	<npc id="14892" level="83" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4201,7 +4108,6 @@
 		</collision>
 	</npc>
 	<npc id="14893" level="83" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4245,7 +4151,6 @@
 		</collision>
 	</npc>
 	<npc id="14894" level="83" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4289,7 +4194,6 @@
 		</collision>
 	</npc>
 	<npc id="14895" level="84" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4333,7 +4237,6 @@
 		</collision>
 	</npc>
 	<npc id="14896" level="84" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4377,7 +4280,6 @@
 		</collision>
 	</npc>
 	<npc id="14897" level="84" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4421,7 +4323,6 @@
 		</collision>
 	</npc>
 	<npc id="14898" level="85" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />
@@ -4465,7 +4366,6 @@
 		</collision>
 	</npc>
 	<npc id="14899" level="85" type="L2Pet" name="Magnus the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="5138" level="1" />
 			<skill name="PhysicalSpecial2" id="5139" level="1" />

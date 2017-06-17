@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="14001" level="46" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
-			<attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1844.68017" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="297.66312" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
 			<speed>
 				<walk ground="60" />
@@ -15,7 +14,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -38,12 +37,11 @@
 		</collision>
 	</npc>
 	<npc id="14002" level="54" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
-			<attack physical="370.68904" magical="253.13256" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2432.63427" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<attack physical="444.826848" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
 			<speed>
 				<walk ground="60" />
@@ -52,7 +50,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -75,12 +73,11 @@
 		</collision>
 	</npc>
 	<npc id="14003" level="62" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3056.71623" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="625.348692" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
@@ -89,7 +86,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -112,12 +109,11 @@
 		</collision>
 	</npc>
 	<npc id="14004" level="66" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3367.015725" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="724.558836" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
 			<speed>
 				<walk ground="60" />
@@ -126,7 +122,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -149,12 +145,11 @@
 		</collision>
 	</npc>
 	<npc id="14005" level="70" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3666.702285" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="826.636476" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="60" />
@@ -163,7 +158,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -186,12 +181,11 @@
 		</collision>
 	</npc>
 	<npc id="14006" level="74" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3948.29454" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="928.579176" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
 			<speed>
 				<walk ground="60" />
@@ -200,7 +194,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -223,12 +217,11 @@
 		</collision>
 	</npc>
 	<npc id="14007" level="76" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4079.96928" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="978.44574" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="60" />
@@ -237,7 +230,7 @@
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -260,13 +253,12 @@
 		</collision>
 	</npc>
 	<npc id="14008" level="78" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1032.10686" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -297,13 +289,12 @@
 		</collision>
 	</npc>
 	<npc id="14009" level="78" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2812.763385" hpRegen="8.5" mp="1615.8" mpRegen="3" />
-			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.7929775" magical="244.2552175" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1037.24172" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -334,13 +325,12 @@
 		</collision>
 	</npc>
 	<npc id="14010" level="78" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2822.62688" hpRegen="8.5" mp="1624.2" mpRegen="3" />
-			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="334.885345" magical="245.054565" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1042.37658" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -371,13 +361,12 @@
 		</collision>
 	</npc>
 	<npc id="14011" level="78" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2832.490375" hpRegen="8.5" mp="1632.6" mpRegen="3" />
-			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="335.9777125" magical="245.8539125" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1047.51144" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -407,14 +396,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14012" level="79" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14012" level="78" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
-			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1052.6463" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -444,14 +432,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14013" level="79" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14013" level="78" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2852.217365" hpRegen="8.5" mp="1649.4" mpRegen="3" />
-			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="338.1624475" magical="247.4526075" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1057.78116" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -481,14 +468,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14014" level="79" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14014" level="78" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862.08086" hpRegen="8.5" mp="1657.8" mpRegen="3" />
-			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="339.254815" magical="248.251955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1062.91602" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -518,14 +504,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14015" level="79" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14015" level="78" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2871.944355" hpRegen="8.5" mp="1666.2" mpRegen="3" />
-			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="340.3471825" magical="249.0513025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1068.05088" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -555,14 +540,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14016" level="80" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14016" level="78" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1073.18574" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -592,14 +576,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14017" level="80" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14017" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2889.8818825" hpRegen="8.5" mp="1683.25" mpRegen="3" />
-			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.45123" magical="250.5909475" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1078.3206" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -629,14 +612,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14018" level="80" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14018" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2899.387485" hpRegen="8.5" mp="1691.7" mpRegen="3" />
-			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="343.52746" magical="251.378485" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1083.45546" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -666,14 +648,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14019" level="80" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14019" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2908.8930875" hpRegen="8.5" mp="1700.15" mpRegen="3" />
-			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.60369" magical="252.1660225" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1088.59032" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -703,14 +684,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14020" level="81" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14020" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2916.89894" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1093.72518" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -740,14 +720,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14021" level="81" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14021" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2926.029605" hpRegen="8.5" mp="1717.3" mpRegen="3" />
-			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.6703375" magical="253.67831" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1098.86004" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -777,14 +756,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14022" level="81" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14022" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2935.16027" hpRegen="8.5" mp="1725.8" mpRegen="3" />
-			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.729405" magical="254.45329" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1103.9949" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -814,14 +792,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14023" level="81" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14023" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2944.290935" hpRegen="8.5" mp="1734.3" mpRegen="3" />
-			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="348.7884725" magical="255.22827" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1109.12976" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -851,14 +828,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14024" level="82" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14024" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2951.85588" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1114.26462" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -888,14 +864,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14025" level="82" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14025" level="79" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2960.595115" hpRegen="8.5" mp="1751.55" mpRegen="3" />
-			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.815645" magical="256.7116675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1119.39948" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -925,14 +900,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14026" level="82" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14026" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2969.33435" hpRegen="8.5" mp="1760.1" mpRegen="3" />
-			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="351.85652" magical="257.473335" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1124.53434" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -962,14 +936,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14027" level="82" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14027" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2978.073585" hpRegen="8.5" mp="1768.65" mpRegen="3" />
-			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.897395" magical="258.2350025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1129.6692" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -999,14 +972,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14028" level="83" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14028" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2985.1835" hpRegen="8.5" mp="1777.4" mpRegen="3" />
-			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1134.80406" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1036,14 +1008,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14029" level="83" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14029" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2993.515405" hpRegen="8.5" mp="1786.0" mpRegen="3" />
-			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8831075" magical="259.6880625" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1139.93892" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1073,14 +1044,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14030" level="83" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14030" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3001.84731" hpRegen="8.5" mp="1794.6" mpRegen="3" />
-			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.904775" magical="260.435675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1145.07378" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1110,14 +1080,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14031" level="83" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14031" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3010.179215" hpRegen="8.5" mp="1803.2" mpRegen="3" />
-			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="356.9264425" magical="261.1832875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1150.20864" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1147,14 +1116,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14032" level="84" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14032" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3016.82079" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1155.3435" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1184,14 +1152,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14033" level="84" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14033" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3024.7301125" hpRegen="8.5" mp="1820.65" mpRegen="3" />
-			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="358.8686775" magical="262.604525" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1160.47836" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1221,14 +1188,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14034" level="84" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14034" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3032.639435" hpRegen="8.5" mp="1829.3" mpRegen="3" />
-			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="359.870125" magical="263.33734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1165.61322" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1258,14 +1224,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14035" level="85" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14035" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1170.74808" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1295,14 +1260,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14036" level="85" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14036" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3056.67236333333" hpRegen="8.5" mp="1858.4" mpRegen="3" />
-			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.09511" magical="265.697243333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1175.88294" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1332,14 +1296,13 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="14037" level="85" type="L2Pet" name="Reanimated Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14037" level="80" type="L2Pet" name="Reanimated Man">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="3" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="364.40208" magical="266.653626666667" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1181.0178" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -1370,16 +1333,15 @@
 		</collision>
 	</npc>
 	<npc id="14038" level="42" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="4" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1576.22478" hpRegen="5.5" mp="796.5" mpRegen="2.1" />
+			<attack physical="238.015092" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<speed>
 				<walk ground="15" />
@@ -1388,7 +1350,7 @@
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1412,16 +1374,15 @@
 		</collision>
 	</npc>
 	<npc id="14039" level="50" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="5" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2131.501545" hpRegen="5.5" mp="1121.7" mpRegen="2.1" />
+			<attack physical="366.658872" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
 				<walk ground="15" />
@@ -1430,7 +1391,7 @@
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1454,16 +1415,15 @@
 		</collision>
 	</npc>
 	<npc id="14040" level="58" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="5" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
-			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2743.02399" hpRegen="6.5" mp="1466.1" mpRegen="2.4" />
+			<attack physical="531.47904" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="15" />
@@ -1472,7 +1432,7 @@
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1496,16 +1456,15 @@
 		</collision>
 	</npc>
 	<npc id="14041" level="64" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="6" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3212.731905" hpRegen="7.5" mp="1737" mpRegen="2.7" />
+			<attack physical="674.4273" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="15" />
@@ -1514,7 +1473,7 @@
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1538,16 +1497,15 @@
 		</collision>
 	</npc>
 	<npc id="14042" level="68" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="6" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3518.65047" hpRegen="7.5" mp="1923.6" mpRegen="2.7" />
+			<attack physical="775.415616" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="15" />
@@ -1556,7 +1514,7 @@
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1580,16 +1538,15 @@
 		</collision>
 	</npc>
 	<npc id="14043" level="72" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="7" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3810.229965" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<attack physical="877.830072" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
 				<walk ground="15" />
@@ -1598,7 +1555,7 @@
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="7" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -1622,17 +1579,16 @@
 		</collision>
 	</npc>
 	<npc id="14044" level="78" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1032.10686" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1664,17 +1620,16 @@
 		</collision>
 	</npc>
 	<npc id="14045" level="78" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2812.763385" hpRegen="8.5" mp="1615.8" mpRegen="3" />
-			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.7929775" magical="244.2552175" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1037.24172" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1706,17 +1661,16 @@
 		</collision>
 	</npc>
 	<npc id="14046" level="78" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2822.62688" hpRegen="8.5" mp="1624.2" mpRegen="3" />
-			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="334.885345" magical="245.054565" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1042.37658" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1748,17 +1702,16 @@
 		</collision>
 	</npc>
 	<npc id="14047" level="78" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2832.490375" hpRegen="8.5" mp="1632.6" mpRegen="3" />
-			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="335.9777125" magical="245.8539125" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1047.51144" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1789,18 +1742,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14048" level="79" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14048" level="78" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
-			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1052.6463" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1831,18 +1783,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14049" level="79" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14049" level="78" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="8" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2852.217365" hpRegen="8.5" mp="1649.4" mpRegen="3" />
-			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="338.1624475" magical="247.4526075" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1057.78116" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1873,18 +1824,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14050" level="79" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14050" level="78" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862.08086" hpRegen="8.5" mp="1657.8" mpRegen="3" />
-			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="339.254815" magical="248.251955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1062.91602" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1915,18 +1865,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14051" level="79" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14051" level="78" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2871.944355" hpRegen="8.5" mp="1666.2" mpRegen="3" />
-			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="340.3471825" magical="249.0513025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1068.05088" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1957,18 +1906,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14052" level="80" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14052" level="78" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1073.18574" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -1999,18 +1947,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14053" level="80" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14053" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2889.8818825" hpRegen="8.5" mp="1683.25" mpRegen="3" />
-			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.45123" magical="250.5909475" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1078.3206" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2041,18 +1988,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14054" level="80" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14054" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2899.387485" hpRegen="8.5" mp="1691.7" mpRegen="3" />
-			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="343.52746" magical="251.378485" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1083.45546" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2083,18 +2029,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14055" level="80" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14055" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="9" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2908.8930875" hpRegen="8.5" mp="1700.15" mpRegen="3" />
-			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.60369" magical="252.1660225" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1088.59032" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2125,18 +2070,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14056" level="81" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14056" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2916.89894" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1093.72518" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2167,18 +2111,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14057" level="81" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14057" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2926.029605" hpRegen="8.5" mp="1717.3" mpRegen="3" />
-			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.6703375" magical="253.67831" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1098.86004" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2209,18 +2152,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14058" level="81" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14058" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2935.16027" hpRegen="8.5" mp="1725.8" mpRegen="3" />
-			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.729405" magical="254.45329" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1103.9949" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2251,18 +2193,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14059" level="81" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14059" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2944.290935" hpRegen="8.5" mp="1734.3" mpRegen="3" />
-			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="348.7884725" magical="255.22827" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1109.12976" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2293,18 +2234,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14060" level="82" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14060" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2951.85588" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1114.26462" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2335,18 +2275,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14061" level="82" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14061" level="79" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="10" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2960.595115" hpRegen="8.5" mp="1751.55" mpRegen="3" />
-			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.815645" magical="256.7116675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1119.39948" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2377,18 +2316,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14062" level="82" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14062" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2969.33435" hpRegen="8.5" mp="1760.1" mpRegen="3" />
-			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="351.85652" magical="257.473335" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1124.53434" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2419,18 +2357,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14063" level="82" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14063" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2978.073585" hpRegen="8.5" mp="1768.65" mpRegen="3" />
-			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.897395" magical="258.2350025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1129.6692" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2461,18 +2398,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14064" level="83" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14064" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2985.1835" hpRegen="8.5" mp="1777.4" mpRegen="3" />
-			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1134.80406" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2503,18 +2439,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14065" level="83" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14065" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2993.515405" hpRegen="8.5" mp="1786.0" mpRegen="3" />
-			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8831075" magical="259.6880625" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1139.93892" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2545,18 +2480,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14066" level="83" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14066" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3001.84731" hpRegen="8.5" mp="1794.6" mpRegen="3" />
-			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.904775" magical="260.435675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1145.07378" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2587,18 +2521,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14067" level="83" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14067" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="11" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3010.179215" hpRegen="8.5" mp="1803.2" mpRegen="3" />
-			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="356.9264425" magical="261.1832875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1150.20864" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2629,18 +2562,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14068" level="84" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14068" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3016.82079" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1155.3435" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2671,18 +2603,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14069" level="84" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14069" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3024.7301125" hpRegen="8.5" mp="1820.65" mpRegen="3" />
-			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="358.8686775" magical="262.604525" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1160.47836" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2713,18 +2644,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14070" level="84" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14070" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3032.639435" hpRegen="8.5" mp="1829.3" mpRegen="3" />
-			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="359.870125" magical="263.33734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1165.61322" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2755,18 +2685,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14071" level="85" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14071" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1170.74808" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2797,18 +2726,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14072" level="85" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14072" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3056.67236333333" hpRegen="8.5" mp="1858.4" mpRegen="3" />
-			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.09511" magical="265.697243333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1175.88294" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2839,18 +2767,17 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="14073" level="85" type="L2Pet" name="Corrupted Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14073" level="80" type="L2Pet" name="Corrupted Man">
 		<parameters>
 			<skill name="DDMagic" id="4260" level="12" />
 			<param name="step1_action01" value="47" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="3" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="364.40208" magical="266.653626666667" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4204.349835" hpRegen="8.5" mp="2411.1" mpRegen="3" />
+			<attack physical="1181.0178" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="15" />
 				<run ground="140" />
@@ -2882,17 +2809,16 @@
 		</collision>
 	</npc>
 	<npc id="14074" level="58" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="1" />
 			<skill name="PhysicalSpecial2" id="4708" level="1" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
-			<attack physical="442.8992" magical="302.44274" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="237.99429" magical="174.1539" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2194.416" hpRegen="7.8" mp="977.4" mpRegen="2.4" />
+			<attack physical="575.77" magical="302.44" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="237.99" magical="174.15" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2925,17 +2851,16 @@
 		</collision>
 	</npc>
 	<npc id="14075" level="62" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="2" />
 			<skill name="PhysicalSpecial2" id="4708" level="2" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2445.372" hpRegen="9" mp="1097" mpRegen="2.7" />
+			<attack physical="677.456" magical="355.86" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="257.34" magical="188.31" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -2968,17 +2893,16 @@
 		</collision>
 	</npc>
 	<npc id="14076" level="66" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="3" />
 			<skill name="PhysicalSpecial2" id="4708" level="3" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="276.72752" magical="202.49719" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2693.616" hpRegen="9" mp="1219.8" mpRegen="2.7" />
+			<attack physical="784.94" magical="412.32" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="276.73" magical="202.5" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3011,17 +2935,16 @@
 		</collision>
 	</npc>
 	<npc id="14077" level="70" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="4" />
 			<skill name="PhysicalSpecial2" id="4708" level="4" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2933.364" hpRegen="9" mp="1345.8" mpRegen="2.7" />
+			<attack physical="895.518" magical="470.4" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3054,17 +2977,16 @@
 		</collision>
 	</npc>
 	<npc id="14078" level="72" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="5" />
 			<skill name="PhysicalSpecial2" id="4708" level="5" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3048.18" hpRegen="10.2" mp="1410" mpRegen="3" />
+			<attack physical="950.989" magical="499.54" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="305.36" magical="223.45" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3097,17 +3019,16 @@
 		</collision>
 	</npc>
 	<npc id="14079" level="74" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="6" />
 			<skill name="PhysicalSpecial2" id="4708" level="6" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3158.64" hpRegen="10.2" mp="1475" mpRegen="3" />
+			<attack physical="1005.966" magical="528.42" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="314.66" magical="230.25" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3140,17 +3061,16 @@
 		</collision>
 	</npc>
 	<npc id="14080" level="76" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="7" />
 			<skill name="PhysicalSpecial2" id="4708" level="7" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3263.976" hpRegen="10.2" mp="1540.8" mpRegen="3" />
+			<attack physical="1059.981" magical="556.79" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="323.78" magical="236.93" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3183,17 +3103,16 @@
 		</collision>
 	</npc>
 	<npc id="14081" level="78" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1112.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3226,17 +3145,16 @@
 		</collision>
 	</npc>
 	<npc id="14082" level="78" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2812.763385" hpRegen="8.5" mp="1615.8" mpRegen="3" />
-			<attack physical="860.7348" magical="587.770295" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.7929775" magical="244.2552175" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1120.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3269,17 +3187,16 @@
 		</collision>
 	</npc>
 	<npc id="14083" level="78" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2822.62688" hpRegen="8.5" mp="1624.2" mpRegen="3" />
-			<attack physical="865.65573" magical="591.13065" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="334.885345" magical="245.054565" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1128.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3312,17 +3229,16 @@
 		</collision>
 	</npc>
 	<npc id="14084" level="78" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2832.490375" hpRegen="8.5" mp="1632.6" mpRegen="3" />
-			<attack physical="870.57666" magical="594.491005" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="335.9777125" magical="245.8539125" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1136.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3354,18 +3270,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14085" level="79" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14085" level="78" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
-			<attack physical="875.49759" magical="597.85136" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1144.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3397,18 +3312,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14086" level="79" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14086" level="78" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2852.217365" hpRegen="8.5" mp="1649.4" mpRegen="3" />
-			<attack physical="880.41852" magical="601.211715" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="338.1624475" magical="247.4526075" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1152.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3440,18 +3354,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14087" level="79" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14087" level="78" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862.08086" hpRegen="8.5" mp="1657.8" mpRegen="3" />
-			<attack physical="885.33945" magical="604.57207" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="339.254815" magical="248.251955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1160.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3483,18 +3396,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14088" level="79" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14088" level="78" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2871.944355" hpRegen="8.5" mp="1666.2" mpRegen="3" />
-			<attack physical="890.26038" magical="607.932425" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="340.3471825" magical="249.0513025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1168.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3526,18 +3438,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14089" level="80" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14089" level="78" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1176.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3569,18 +3480,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14090" level="80" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14090" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="8" />
 			<skill name="PhysicalSpecial2" id="4708" level="8" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2889.8818825" hpRegen="8.5" mp="1683.25" mpRegen="3" />
-			<attack physical="899.5737775" magical="614.2922725" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.45123" magical="250.5909475" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1184.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3612,18 +3522,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14091" level="80" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14091" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2899.387485" hpRegen="8.5" mp="1691.7" mpRegen="3" />
-			<attack physical="904.389015" magical="617.580455" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="343.52746" magical="251.378485" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1192.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3655,18 +3564,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14092" level="80" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14092" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2908.8930875" hpRegen="8.5" mp="1700.15" mpRegen="3" />
-			<attack physical="909.2042525" magical="620.8686375" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.60369" magical="252.1660225" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1200.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3698,18 +3606,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14093" level="81" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14093" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2916.89894" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1208.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3741,18 +3648,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14094" level="81" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14094" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2926.029605" hpRegen="8.5" mp="1717.3" mpRegen="3" />
-			<attack physical="918.2459525" magical="627.0429525" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.6703375" magical="253.67831" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1216.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3784,18 +3690,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14095" level="81" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14095" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2935.16027" hpRegen="8.5" mp="1725.8" mpRegen="3" />
-			<attack physical="922.943435" magical="630.250725" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.729405" magical="254.45329" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1224.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3827,18 +3732,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14096" level="81" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14096" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2944.290935" hpRegen="8.5" mp="1734.3" mpRegen="3" />
-			<attack physical="927.6409175" magical="633.4584975" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="348.7884725" magical="255.22827" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1232.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3870,18 +3774,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14097" level="82" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14097" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2951.85588" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="931.81944" magical="636.31188" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1240.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3913,18 +3816,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14098" level="82" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14098" level="79" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2960.595115" hpRegen="8.5" mp="1751.55" mpRegen="3" />
-			<attack physical="936.3871825" magical="639.431055" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.815645" magical="256.7116675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1248.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -3956,18 +3858,17 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="14099" level="82" type="L2Pet" name="Cursed Man">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14099" level="80" type="L2Pet" name="Cursed Man">
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4709" level="9" />
 			<skill name="PhysicalSpecial2" id="4708" level="9" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2969.33435" hpRegen="8.5" mp="1760.1" mpRegen="3" />
-			<attack physical="940.954925" magical="642.55023" random="10" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="351.85652" magical="257.473335" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="10.2" mp="1607.4" mpRegen="3" />
+			<attack physical="1256.553" magical="584.41" random="30" critical="8" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />

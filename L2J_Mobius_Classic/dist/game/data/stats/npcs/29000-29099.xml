@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
@@ -11,10 +10,10 @@
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2179535" sp="523" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="40218408" hpRegen="208" mp="300.8" mpRegen="2.1" />
-			<attack physical="105" magical="8" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1252" magical="229" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="96595.8" hpRegen="208" mp="300.8" mpRegen="2.1" />
+			<attack physical="105" magical="8" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="229" magical="229" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
@@ -51,14 +50,13 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="29002" level="38" type="L2Monster" name="Queen Ant Larva">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29002" level="29" type="L2Monster" name="Queen Ant Larva">
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="591.9" hpRegen="3.5" mp="315.1" mpRegen="1.5" />
-			<attack physical="89.21" magical="59.01" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="89.21" magical="59.01" random="30" critical="7" accuracy="40" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="118.72" magical="84.16" />
 			<speed>
 				<walk ground="40" />
@@ -67,7 +65,7 @@
 			<hit_time>350</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -92,13 +90,12 @@
 		</collision>
 	</npc>
 	<npc id="29003" level="35" type="L2Monster" name="Nurse Ant">
-		<!-- Confirmed CT2.5 -->
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4000" hpRegen="108" mp="402.6" mpRegen="1.8" />
-			<attack physical="637" magical="395" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="637" magical="395" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="547" magical="200" />
 			<speed>
 				<walk ground="40" />
@@ -133,7 +130,6 @@
 		</collision>
 	</npc>
 	<npc id="29004" level="37" type="L2Monster" name="Escort Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -142,9 +138,9 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4343" hpRegen="115" mp="432.7" mpRegen="1.8" />
-			<attack physical="178" magical="27" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="178" magical="27" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="578" magical="211" />
 			<speed>
 				<walk ground="40" />
@@ -178,7 +174,6 @@
 		</collision>
 	</npc>
 	<npc id="29005" level="39" type="L2Monster" name="Royal Guard Ant">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -187,9 +182,9 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="7051" hpRegen="122" mp="463.3" mpRegen="1.8" />
-			<attack physical="1190" magical="1074" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1190" magical="1074" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="610" magical="223" />
 			<speed>
 				<walk ground="40" />
@@ -223,7 +218,6 @@
 		</collision>
 	</npc>
 	<npc id="29006" level="50" type="L2GrandBoss" name="Core">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
@@ -234,10 +228,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="2041407" sp="489" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="261551.926" hpRegen="441.65" mp="1708.8" mpRegen="20" />
-			<attack physical="722.31" magical="1398.68" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1602" magical="293" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="261551.68" hpRegen="273" mp="259.2" mpRegen="1.5" />
+			<attack physical="158.48" magical="44.27" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="293" magical="293" />
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
@@ -271,7 +265,6 @@
 		</collision>
 	</npc>
 	<npc id="29007" level="50" type="L2Monster" name="Death Knight">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -281,9 +274,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="13817" hpRegen="166" mp="747.8" mpRegen="2.1" />
-			<attack physical="410" magical="69" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="410" magical="69" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="801" magical="293" />
 			<speed>
 				<walk ground="27" />
@@ -319,7 +312,6 @@
 		</collision>
 	</npc>
 	<npc id="29008" level="55" type="L2Monster" name="Doom Wraith">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -330,9 +322,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane -->
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="16012" hpRegen="185" mp="889.8" mpRegen="2.4" />
-			<attack physical="470" magical="715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="470" magical="715" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="895" magical="327" />
 			<speed>
 				<walk ground="100" />
@@ -364,12 +356,11 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="15" grown="25" />
-			<height normal="45" grown="52" />
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="29009" level="47" type="L2Monster" name="Dicor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -379,9 +370,9 @@
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12544" hpRegen="154" mp="665.0" mpRegen="2.1" />
-			<attack physical="354" magical="60" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12544" hpRegen="154" mp="665" mpRegen="2.1" />
+			<attack physical="354" magical="60" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="747" magical="273" />
 			<speed>
 				<walk ground="80" />
@@ -416,7 +407,6 @@
 		</collision>
 	</npc>
 	<npc id="29010" level="46" type="L2Monster" name="Validus">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -425,9 +415,9 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12130" hpRegen="150" mp="637.8" mpRegen="2.1" />
-			<attack physical="337" magical="58" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="337" magical="58" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="729" magical="267" />
 			<speed>
 				<walk ground="70" />
@@ -461,7 +451,6 @@
 		</collision>
 	</npc>
 	<npc id="29011" level="49" type="L2Monster" name="Susceptor">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -471,9 +460,9 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13389" hpRegen="162" mp="720.0" mpRegen="2.1" />
-			<attack physical="391" magical="66" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13389" hpRegen="162" mp="720" mpRegen="2.1" />
+			<attack physical="391" magical="66" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="783" magical="286" />
 			<speed>
 				<walk ground="27" />
@@ -503,12 +492,11 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20" grown="25" />
-			<height normal="35" grown="41.5" />
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="29012" level="48" type="L2Monster" name="Perum">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -518,9 +506,9 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12964" hpRegen="158" mp="692.4" mpRegen="2.1" />
-			<attack physical="372" magical="63" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="372" magical="63" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="765" magical="280" />
 			<speed>
 				<walk ground="20" />
@@ -558,18 +546,17 @@
 		</collision>
 	</npc>
 	<npc id="29013" level="45" type="L2Monster" name="Premo">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
 			<param name="MoveAroundSocial2" value="135" />
 		</parameters>
-		<race>GIANT</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
 			<vitals hp="11721" hpRegen="146" mp="610.8" mpRegen="2.1" />
-			<attack physical="320" magical="55" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="320" magical="55" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="711" magical="260" />
 			<speed>
 				<walk ground="55" />
@@ -602,8 +589,7 @@
 			<height normal="35" grown="43" />
 		</collision>
 	</npc>
-	<npc id="29014" level="60" type="L2GrandBoss" name="Orfen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29014" level="50" type="L2GrandBoss" name="Orfen">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -612,13 +598,13 @@
 				<npc id="29016" count="4" respawnTime="360" weightPoint="1" />
 			</minions>
 		</parameters>
-		<race>FAIRY</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="12776400" sp="3066" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="34079799" hpRegen="441.65" mp="36939" mpRegen="20" />
-			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1602" magical="293" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="261551.68" hpRegen="273" mp="747.8" mpRegen="2.1" />
+			<attack physical="164" magical="11" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="293" magical="293" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -655,19 +641,18 @@
 			<height normal="143" />
 		</collision>
 	</npc>
-	<npc id="29015" level="59" type="L2Monster" name="Laikel">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29015" level="48" type="L2Monster" name="Laikel">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
 			<param name="MoveAroundSocial2" value="70" />
 		</parameters>
-		<race>BUG</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="158" mp="36936" mpRegen="2.1" />
-			<attack physical="298" magical="40" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6482" hpRegen="158" mp="692.4" mpRegen="2.1" />
+			<attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="765" magical="280" />
 			<speed>
 				<walk ground="60" />
@@ -700,19 +685,18 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29016" level="59" type="L2Monster" name="Laikel Leos">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29016" level="49" type="L2Monster" name="Laikel Leos">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
 			<param name="MoveAroundSocial2" value="70" />
 		</parameters>
-		<race>BUG</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="162" mp="36936" mpRegen="2.1" />
-			<attack physical="1058" magical="1563" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6694" hpRegen="162" mp="720" mpRegen="2.1" />
+			<attack physical="1058" magical="1563" random="30" critical="15" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="783" magical="286" />
 			<speed>
 				<walk ground="60" />
@@ -745,8 +729,7 @@
 			<height normal="64" />
 		</collision>
 	</npc>
-	<npc id="29017" level="59" type="L2Monster" name="Riba">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29017" level="48" type="L2Monster" name="Riba">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -755,9 +738,9 @@
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="158" mp="36936" mpRegen="2.1" />
-			<attack physical="298" magical="40" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6482" hpRegen="158" mp="692.4" mpRegen="2.1" />
+			<attack physical="298" magical="40" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="765" magical="280" />
 			<speed>
 				<walk ground="60" />
@@ -790,14 +773,13 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="29018" level="59" type="L2Monster" name="Riba Iren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29018" level="49" type="L2Monster" name="Riba Iren">
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire sp="1" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="162" mp="36936" mpRegen="2.1" />
-			<attack physical="1058" magical="1563" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13389" hpRegen="162" mp="720" mpRegen="2.1" />
+			<attack physical="1058" magical="1563" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="783" magical="286" />
 			<speed>
 				<walk ground="60" />
@@ -832,14 +814,13 @@
 		</collision>
 	</npc>
 	<npc id="29019" level="79" type="L2GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="262720917" sp="63053" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="7500000" hpRegen="1100" mp="18000.0" mpRegen="99" />
-			<attack physical="4900" magical="2550" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3840" magical="825" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="7000000" hpRegen="1000" mp="9999" mpRegen="99" />
+			<attack physical="3260" magical="1700" random="30" critical="4" accuracy="40" attackSpeed="206" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="440" magical="440" />
 			<speed>
 				<walk ground="50" />
 				<run ground="186" />
@@ -880,15 +861,14 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29020" level="78" type="L2GrandBoss" name="Baium">
-		<!-- Confirmed CT2.5 -->
-		<race>UNDEAD</race>
+	<npc id="29020" level="75" type="L2GrandBoss" name="Baium">
+		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="11090076" sp="2661" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="53342293" hpRegen="750" mp="18000.0" mpRegen="99" />
-			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3300" magical="2200" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="1554000" hpRegen="281" mp="1507.8" mpRegen="3" />
+			<attack physical="1646" magical="278" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1264" magical="1264" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -922,15 +902,14 @@
 		</collision>
 	</npc>
 	<npc id="29021" level="74" type="L2Monster" name="Archangel">
-		<!-- Confirmed CT2.5 -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
 		<acquire exp="9855" sp="2" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="186915" hpRegen="158" mp="1475.0" mpRegen="3" />
-			<attack physical="1395" magical="371" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="5108" magical="1686" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="186915" hpRegen="158" mp="1475" mpRegen="3" />
+			<attack physical="395" magical="371" random="30" critical="4" accuracy="40" attackSpeed="206" type="POLE" range="40" distance="80" width="120" />
+			<defence physical="5108" magical="1686" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -965,17 +944,16 @@
 		</collision>
 	</npc>
 	<npc id="29022" level="60" type="L2GrandBoss" name="Zaken">
-		<!-- Confirmed CT2.5 -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="4879744" sp="1171" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="360722" hpRegen="346.8" mp="180000.0" mpRegen="100" />
-			<attack physical="3616" magical="1520" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1981" magical="966.39" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="360721.85" hpRegen="336" mp="889.8" mpRegen="2.4" />
+			<attack physical="2009" magical="1520" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="362" magical="362" />
 			<speed>
 				<walk ground="42" />
-				<run ground="190" />
+				<run ground="170" />
 			</speed>
 			<hit_time>590</hit_time>
 			<abnormalResist physical="230" magical="230" />
@@ -1007,7 +985,6 @@
 		</collision>
 	</npc>
 	<npc id="29023" level="58" type="L2Monster" name="Maiden Doll">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -1016,9 +993,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5129" /> <!-- Doll Knife -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="1828" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
-			<attack physical="442" magical="302" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
+			<attack physical="442" magical="302" random="30" critical="4" accuracy="40" attackSpeed="253" type="DUAL" range="40" distance="80" width="120" />
 			<defence physical="261" magical="191" />
 			<speed>
 				<walk ground="22" />
@@ -1053,7 +1030,6 @@
 		</collision>
 	</npc>
 	<npc id="29024" level="59" type="L2Monster" name="Veil Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1061,9 +1037,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1880" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
-			<attack physical="461" magical="315" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1880" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<attack physical="461" magical="315" random="30" critical="4" accuracy="40" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267" magical="195" />
 			<speed>
 				<walk ground="70" />
@@ -1097,21 +1073,20 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="29025" level="78" type="L2Npc" name="Baium">
-		<!-- Confirmed CT2.5 -->
-		<race>UNDEAD</race>
+	<npc id="29025" level="75" type="L2Npc" name="Baium">
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1709400" hpRegen="718" mp="18000.0" mpRegen="99" />
-			<attack physical="1874.18" magical="1596.95" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3300" magical="2200" evasion="-18" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="2676.7" hpRegen="8.5" mp="1507.8" mpRegen="3" />
+			<attack physical="874.18" magical="596.95" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="233.61" magical="233.61" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" undying="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -1133,7 +1108,6 @@
 		</collision>
 	</npc>
 	<npc id="29026" level="60" type="L2Monster" name="Pirate Zombie Captain">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1142,9 +1116,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
-			<attack physical="420" magical="328" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1933" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<attack physical="420" magical="328" random="10" critical="8" accuracy="40" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="272" magical="199" />
 			<speed>
 				<walk ground="14" />
@@ -1176,7 +1150,6 @@
 		</collision>
 	</npc>
 	<npc id="29027" level="57" type="L2Monster" name="Pirate Zombie">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1185,9 +1158,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="225" /> <!-- Mithril Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1776" hpRegen="6.5" mp="584.0" mpRegen="2.1" />
-			<attack physical="371" magical="289" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1776" hpRegen="6.5" mp="584" mpRegen="2.1" />
+			<attack physical="371" magical="289" random="10" critical="8" accuracy="40" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="256" magical="187" />
 			<speed>
 				<walk ground="11" />
@@ -1218,21 +1191,20 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="29066" level="79" type="L2GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29066" level="1" type="L2GrandBoss" name="Antharas">
 		<parameters>
 			<param name="ultra_respawn_time" value="8" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<acquire exp="262720917" sp="63053" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="6100000" hpRegen="1100" mp="1800000.0" mpRegen="1000" />
-			<attack physical="4900" magical="2550" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3456" magical="862.5" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -1259,25 +1231,24 @@
 			<skill maxChance="25" />
 		</ai>
 		<collision>
-			<radius normal="300" />
-			<height normal="300" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29067" level="79" type="L2GrandBoss" name="Antharas">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29067" level="1" type="L2GrandBoss" name="Antharas">
 		<parameters>
 			<param name="ultra_respawn_time" value="5" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<acquire exp="354676030" sp="85122" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="6800000" hpRegen="1100" mp="1800000.0" mpRegen="1000" />
-			<attack physical="4900" magical="2550" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3456" magical="862.5" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="50" />
-				<run ground="186" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -1304,25 +1275,24 @@
 			<skill maxChance="25" />
 		</ai>
 		<collision>
-			<radius normal="300" />
-			<height normal="300" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29068" level="104" type="L2GrandBoss" name="Antharas" title="Land Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29068" level="1" type="L2GrandBoss" name="Antharas" title="Land Dragon">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<acquire exp="155833466880" sp="225935474" raidPoints="1000" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="689482245" hpRegen="1830" mp="2025740" mpRegen="1000" />
-			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3974.13793" magical="496.01325" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="50" />
-				<run ground="279" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -1351,26 +1321,25 @@
 			<skill maxChance="25" primaryId="4112" />
 		</ai>
 		<collision>
-			<radius normal="300" />
-			<height normal="300" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29069" level="99" type="L2Monster" name="Behemoth Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29069" level="1" type="L2Monster" name="Behemoth Dragon">
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="PhysicalSpecial" id="5095" level="1" />
 			<skill name="LongRangePhysicalSpecial" id="5096" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="292335" hpRegen="8.5" mp="22800" mpRegen="30" />
-			<attack physical="14312" magical="3509" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3537" magical="2031" evasion="-18" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="180" />
-				<run ground="180" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1396,24 +1365,23 @@
 			<skill maxChance="25" />
 		</ai>
 		<collision>
-			<radius normal="63" />
-			<height normal="54" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29070" level="99" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29070" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
-			<attack physical="1094.11758465172" magical="4902.24" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.098247547707" magical="261.308998696584" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="250" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1437,24 +1405,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="37" />
-			<height normal="28" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29071" level="78" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29071" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="245" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1476,24 +1443,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="37" />
-			<height normal="28" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29072" level="78" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29072" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="255" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1515,24 +1481,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="37" />
-			<height normal="28" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29073" level="78" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29073" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="247" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1554,24 +1519,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="37" />
-			<height normal="28" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29074" level="78" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29074" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="252" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1593,24 +1557,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="37" />
-			<height normal="28" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29075" level="78" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29075" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1000" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="243" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1632,24 +1595,23 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="37" />
-			<height normal="28" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="29076" level="99" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29076" level="1" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>DRAGON</race>
+		<race>FAIRY</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
-			<attack physical="1094.11758465172" magical="4902.24" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.098247547707" magical="261.308998696584" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
+			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44.44444" magical="32.52252" />
 			<speed>
-				<walk ground="200" />
-				<run ground="250" />
+				<walk ground="20" />
+				<run ground="50" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -1672,12 +1634,11 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="200" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="42" />
-			<height normal="34.5" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="29077" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="177456" />
 			<param name="suicide2_x" value="177120" />
@@ -1728,7 +1689,6 @@
 		</collision>
 	</npc>
 	<npc id="29078" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175952" />
 			<param name="suicide2_x" value="175712" />
@@ -1779,7 +1739,6 @@
 		</collision>
 	</npc>
 	<npc id="29079" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175120" />
 			<param name="suicide2_x" value="175024" />
@@ -1830,7 +1789,6 @@
 		</collision>
 	</npc>
 	<npc id="29080" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="174640" />
 			<param name="suicide2_x" value="174576" />
@@ -1881,7 +1839,6 @@
 		</collision>
 	</npc>
 	<npc id="29081" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="173968" />
 			<param name="suicide2_x" value="173856" />
@@ -1932,7 +1889,6 @@
 		</collision>
 	</npc>
 	<npc id="29082" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="173920" />
 			<param name="suicide2_x" value="174064" />
@@ -1983,7 +1939,6 @@
 		</collision>
 	</npc>
 	<npc id="29083" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="174704" />
 			<param name="suicide2_x" value="174800" />
@@ -2034,7 +1989,6 @@
 		</collision>
 	</npc>
 	<npc id="29084" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="175424" />
 			<param name="suicide2_x" value="175632" />
@@ -2085,7 +2039,6 @@
 		</collision>
 	</npc>
 	<npc id="29085" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="176880" />
 			<param name="suicide2_x" value="177200" />
@@ -2136,7 +2089,6 @@
 		</collision>
 	</npc>
 	<npc id="29086" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="178368" />
 			<param name="suicide2_x" value="178592" />
@@ -2187,7 +2139,6 @@
 		</collision>
 	</npc>
 	<npc id="29087" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="179696" />
 			<param name="suicide2_x" value="179920" />
@@ -2238,7 +2189,6 @@
 		</collision>
 	</npc>
 	<npc id="29088" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180592" />
 			<param name="suicide2_x" value="180752" />
@@ -2289,7 +2239,6 @@
 		</collision>
 	</npc>
 	<npc id="29089" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180896" />
 			<param name="suicide2_x" value="180784" />
@@ -2340,7 +2289,6 @@
 		</collision>
 	</npc>
 	<npc id="29090" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180496" />
 			<param name="suicide2_x" value="180512" />
@@ -2391,7 +2339,6 @@
 		</collision>
 	</npc>
 	<npc id="29091" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180896" />
 			<param name="suicide2_x" value="181040" />
@@ -2442,7 +2389,6 @@
 		</collision>
 	</npc>
 	<npc id="29092" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180720" />
 			<param name="suicide2_x" value="180640" />
@@ -2493,7 +2439,6 @@
 		</collision>
 	</npc>
 	<npc id="29093" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="180048" />
 			<param name="suicide2_x" value="179920" />
@@ -2544,7 +2489,6 @@
 		</collision>
 	</npc>
 	<npc id="29094" level="78" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="suicide1_x" value="178848" />
 			<param name="suicide2_x" value="178560" />

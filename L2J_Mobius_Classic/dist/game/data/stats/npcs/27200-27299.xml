@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27200" level="36" type="L2Monster" name="Krudel Lizardman" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="58" />
 			<param name="MoveAroundSocial1" value="58" />
@@ -10,9 +9,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- Trident -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="809.52639" hpRegen="4.5" mp="417.6" mpRegen="1.8" />
-			<attack physical="137.86467" magical="94.1437" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
+			<attack physical="137.86467" magical="94.1437" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<speed>
 				<walk ground="43" />
@@ -45,7 +44,6 @@
 		</collision>
 	</npc>
 	<npc id="27201" level="10" type="L2Monster" name="Ol Mahum Thief">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -89,7 +87,6 @@
 		</collision>
 	</npc>
 	<npc id="27202" level="31" type="L2Monster" name="Turek Orc Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -132,7 +129,6 @@
 		</collision>
 	</npc>
 	<npc id="27203" level="31" type="L2Monster" name="Turek Orc Commander">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -175,7 +171,6 @@
 		</collision>
 	</npc>
 	<npc id="27204" level="10" type="L2Monster" name="Turek Orc Invader">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -218,7 +213,6 @@
 		</collision>
 	</npc>
 	<npc id="27205" level="10" type="L2Monster" name="Wild Boar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -261,7 +255,6 @@
 		</collision>
 	</npc>
 	<npc id="27206" level="85" type="L2Monster" name="Black Wild Boar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -304,7 +297,6 @@
 		</collision>
 	</npc>
 	<npc id="27207" level="10" type="L2Monster" name="White Wild Boar">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -347,7 +339,6 @@
 		</collision>
 	</npc>
 	<npc id="27208" level="10" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -390,7 +381,6 @@
 		</collision>
 	</npc>
 	<npc id="27209" level="10" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -433,7 +423,6 @@
 		</collision>
 	</npc>
 	<npc id="27210" level="10" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -476,7 +465,6 @@
 		</collision>
 	</npc>
 	<npc id="27211" level="10" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -519,7 +507,6 @@
 		</collision>
 	</npc>
 	<npc id="27212" level="10" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -562,7 +549,6 @@
 		</collision>
 	</npc>
 	<npc id="27213" level="10" type="L2Monster" name="">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -605,7 +591,6 @@
 		</collision>
 	</npc>
 	<npc id="27214" level="76" type="L2Monster" name="Guardian of Forbidden Knowledge" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -614,9 +599,9 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -649,7 +634,6 @@
 		</collision>
 	</npc>
 	<npc id="27215" level="76" type="L2Monster" name="Keeper of the Holy Edict" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -658,9 +642,9 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -693,7 +677,6 @@
 		</collision>
 	</npc>
 	<npc id="27216" level="76" type="L2Monster" name="Watcher of the Ancient Pledge" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -702,9 +685,9 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -737,7 +720,6 @@
 		</collision>
 	</npc>
 	<npc id="27217" level="63" type="L2Monster" name="Soul of the Well" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -746,10 +728,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
-			<attack physical="541.44774" magical="369.73862" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="262.19426" magical="191.86238" />
+			<attack physical="541.44774" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="222.865121" magical="191.86238" evasion="10" />
 			<speed>
 				<walk ground="100" />
 				<run ground="180" />
@@ -778,7 +760,6 @@
 		</collision>
 	</npc>
 	<npc id="27218" level="65" type="L2Monster" name="Triol's Pawn" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -787,9 +768,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
-			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="80" />
@@ -798,7 +779,7 @@
 			<hit_time>350</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4073" level="6" /> <!-- Stun -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -819,7 +800,6 @@
 		</collision>
 	</npc>
 	<npc id="27219" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -828,9 +808,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -859,7 +839,6 @@
 		</collision>
 	</npc>
 	<npc id="27220" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -868,9 +847,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -899,7 +878,6 @@
 		</collision>
 	</npc>
 	<npc id="27221" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -908,9 +886,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -939,7 +917,6 @@
 		</collision>
 	</npc>
 	<npc id="27222" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -948,9 +925,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -979,7 +956,6 @@
 		</collision>
 	</npc>
 	<npc id="27223" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -988,9 +964,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1019,7 +995,6 @@
 		</collision>
 	</npc>
 	<npc id="27224" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1028,9 +1003,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1059,7 +1034,6 @@
 		</collision>
 	</npc>
 	<npc id="27225" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1068,9 +1042,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1099,7 +1073,6 @@
 		</collision>
 	</npc>
 	<npc id="27226" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1108,9 +1081,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1139,7 +1112,6 @@
 		</collision>
 	</npc>
 	<npc id="27227" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1148,9 +1120,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1179,7 +1151,6 @@
 		</collision>
 	</npc>
 	<npc id="27228" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1188,9 +1159,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1219,7 +1190,6 @@
 		</collision>
 	</npc>
 	<npc id="27229" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1228,9 +1198,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1259,7 +1229,6 @@
 		</collision>
 	</npc>
 	<npc id="27230" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1268,9 +1237,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1299,7 +1268,6 @@
 		</collision>
 	</npc>
 	<npc id="27231" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1308,9 +1276,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1339,7 +1307,6 @@
 		</collision>
 	</npc>
 	<npc id="27232" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1348,9 +1315,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1379,7 +1346,6 @@
 		</collision>
 	</npc>
 	<npc id="27233" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1388,9 +1354,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1419,7 +1385,6 @@
 		</collision>
 	</npc>
 	<npc id="27234" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1428,9 +1393,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1459,7 +1424,6 @@
 		</collision>
 	</npc>
 	<npc id="27235" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1468,9 +1432,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1499,7 +1463,6 @@
 		</collision>
 	</npc>
 	<npc id="27236" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1508,9 +1471,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1539,7 +1502,6 @@
 		</collision>
 	</npc>
 	<npc id="27237" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1548,9 +1510,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1579,7 +1541,6 @@
 		</collision>
 	</npc>
 	<npc id="27238" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1588,9 +1549,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1619,7 +1580,6 @@
 		</collision>
 	</npc>
 	<npc id="27239" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1628,9 +1588,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1659,7 +1619,6 @@
 		</collision>
 	</npc>
 	<npc id="27240" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1668,9 +1627,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1699,7 +1658,6 @@
 		</collision>
 	</npc>
 	<npc id="27241" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1708,9 +1666,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1739,7 +1697,6 @@
 		</collision>
 	</npc>
 	<npc id="27242" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1748,9 +1705,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1779,7 +1736,6 @@
 		</collision>
 	</npc>
 	<npc id="27243" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1788,9 +1744,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1819,7 +1775,6 @@
 		</collision>
 	</npc>
 	<npc id="27244" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1828,9 +1783,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1859,7 +1814,6 @@
 		</collision>
 	</npc>
 	<npc id="27245" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1868,9 +1822,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1899,7 +1853,6 @@
 		</collision>
 	</npc>
 	<npc id="27246" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1908,9 +1861,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1939,7 +1892,6 @@
 		</collision>
 	</npc>
 	<npc id="27247" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1948,9 +1900,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -1979,7 +1931,6 @@
 		</collision>
 	</npc>
 	<npc id="27248" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -1988,9 +1939,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -2019,7 +1970,6 @@
 		</collision>
 	</npc>
 	<npc id="27249" level="76" type="L2Monster" name="Halisha's Archon" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2028,9 +1978,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6722" /> <!-- Monster Only (Ahrimanes) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="35" />
@@ -2059,7 +2009,6 @@
 		</collision>
 	</npc>
 	<npc id="27250" level="76" type="L2Monster" name="Fallen Angel Allector" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2071,9 +2020,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5439.95904" hpRegen="17" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="37" />
@@ -2107,7 +2056,6 @@
 		</collision>
 	</npc>
 	<npc id="27251" level="76" type="L2Monster" name="Fallen Angel Allector" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2119,9 +2067,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5439.95904" hpRegen="17" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="37" />
@@ -2155,7 +2103,6 @@
 		</collision>
 	</npc>
 	<npc id="27252" level="76" type="L2Monster" name="Fallen Angel Allector" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -2167,9 +2114,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5439.95904" hpRegen="17" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="37" />
@@ -2203,7 +2150,6 @@
 		</collision>
 	</npc>
 	<npc id="27253" level="76" type="L2Monster" name="Hell Fire" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2214,12 +2160,12 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1359.98976" hpRegen="4.25" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
-				<walk ground="25" />
+				<walk ground="80" />
 				<run ground="170" />
 			</speed>
 			<hit_time>100</hit_time>
@@ -2248,8 +2194,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27254" level="78" type="L2Monster" name="Unknown Stopper" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27254" level="81" type="L2Monster" name="Unknown Stopper" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2257,10 +2202,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="293.7695795" magical="252.90333" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -2268,7 +2213,7 @@
 			<hit_time>760</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2288,8 +2233,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="27255" level="78" type="L2Monster" name="Unknown Stopper" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27255" level="81" type="L2Monster" name="Unknown Stopper" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2297,10 +2241,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="293.7695795" magical="252.90333" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -2308,7 +2252,7 @@
 			<hit_time>760</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2328,8 +2272,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="27256" level="78" type="L2Monster" name="Unknown Stopper" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27256" level="81" type="L2Monster" name="Unknown Stopper" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2337,10 +2280,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="293.7695795" magical="252.90333" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -2348,7 +2291,7 @@
 			<hit_time>760</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2369,7 +2312,6 @@
 		</collision>
 	</npc>
 	<npc id="27257" level="76" type="L2Monster" name="Archangel Iconoclasis" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2382,10 +2324,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2417,7 +2359,6 @@
 		</collision>
 	</npc>
 	<npc id="27258" level="76" type="L2Monster" name="Archangel Iconoclasis" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2431,10 +2372,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2467,7 +2408,6 @@
 		</collision>
 	</npc>
 	<npc id="27259" level="76" type="L2Monster" name="Archangel Iconoclasis" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2479,10 +2419,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2510,7 +2450,6 @@
 		</collision>
 	</npc>
 	<npc id="27260" level="76" type="L2Monster" name="Archangel Iconoclasis" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="85" />
 			<param name="MoveAroundSocial1" value="85" />
@@ -2522,10 +2461,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2553,7 +2492,6 @@
 		</collision>
 	</npc>
 	<npc id="27261" level="76" type="L2Monster" name="Bead of Sacred Flame" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2561,12 +2499,12 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
-				<walk ground="25" />
+				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 			<hit_time>100</hit_time>
@@ -2592,8 +2530,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="27262" level="78" type="L2Monster" name="Death Lord Hallate" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27262" level="81" type="L2Monster" name="Death Lord Hallate" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2602,10 +2539,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -2613,7 +2550,7 @@
 			<hit_time>500</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2633,8 +2570,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27263" level="78" type="L2Monster" name="Death Lord Hallate" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27263" level="81" type="L2Monster" name="Death Lord Hallate" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2643,10 +2579,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -2654,7 +2590,7 @@
 			<hit_time>500</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2674,8 +2610,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27264" level="78" type="L2Monster" name="Death Lord Hallate" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27264" level="81" type="L2Monster" name="Death Lord Hallate" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2684,10 +2619,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -2695,7 +2630,7 @@
 			<hit_time>500</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2715,8 +2650,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="27265" level="78" type="L2Monster" name="Lich King Icarus" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27265" level="81" type="L2Monster" name="Lich King Icarus" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2725,10 +2659,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="205" /> <!-- Ghoul's Staff -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="293.7695795" magical="252.90333" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -2736,7 +2670,7 @@
 			<hit_time>740</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -2757,7 +2691,6 @@
 		</collision>
 	</npc>
 	<npc id="27266" level="76" type="L2Monster" name="Fallen Angel Haures" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2768,10 +2701,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5439.95904" hpRegen="17" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2800,7 +2733,6 @@
 		</collision>
 	</npc>
 	<npc id="27267" level="76" type="L2Monster" name="Fallen Angel Haures" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2811,10 +2743,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5439.95904" hpRegen="17" mp="1540.8" mpRegen="3" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2843,7 +2775,6 @@
 		</collision>
 	</npc>
 	<npc id="27268" level="76" type="L2Monster" name="Haures' Escort" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="126" />
 			<param name="MoveAroundSocial1" value="126" />
@@ -2851,10 +2782,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="713.4500188" magical="556.793" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2883,7 +2814,6 @@
 		</collision>
 	</npc>
 	<npc id="27269" level="76" type="L2Monster" name="Fallen Angel Naverius" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2895,10 +2825,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2929,7 +2859,6 @@
 		</collision>
 	</npc>
 	<npc id="27270" level="76" type="L2Monster" name="Fallen Angel Naverius" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2941,10 +2870,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -2975,7 +2904,6 @@
 		</collision>
 	</npc>
 	<npc id="27271" level="76" type="L2Monster" name="Chimera Golem" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -2988,9 +2916,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="13" />
@@ -3019,12 +2947,11 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="38" />
+			<radius normal="22" />
 			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="27272" level="76" type="L2Monster" name="Hallate's Dancer Lillian" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3036,10 +2963,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -3069,8 +2996,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27273" level="78" type="L2Monster" name="Assassin Pezel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27273" level="81" type="L2Monster" name="Assassin Pezel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3079,10 +3005,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="799.3549113" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -3090,7 +3016,7 @@
 			<hit_time>520</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3110,8 +3036,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="27274" level="78" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27274" level="81" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3120,10 +3045,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="286" /> <!-- Eminence Bow -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="43" />
 				<run ground="180" />
@@ -3131,7 +3056,7 @@
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3151,8 +3076,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="27275" level="78" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27275" level="81" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3161,10 +3085,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="286" /> <!-- Eminence Bow -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="43" />
 				<run ground="180" />
@@ -3172,7 +3096,7 @@
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3192,8 +3116,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="27276" level="78" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27276" level="81" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3202,10 +3125,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="286" /> <!-- Eminence Bow -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="43" />
 				<run ground="180" />
@@ -3213,7 +3136,7 @@
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3233,8 +3156,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="27277" level="78" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27277" level="81" type="L2Monster" name="Fallen Angel Tanakia" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3243,10 +3165,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="286" /> <!-- Eminence Bow -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="2029.9047" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="43" />
 				<run ground="180" />
@@ -3254,7 +3176,7 @@
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3274,8 +3196,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="27278" level="78" type="L2Monster" name="Beleth' Shadow" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27278" level="81" type="L2Monster" name="Beleth' Shadow" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -3284,10 +3205,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="205" /> <!-- Ghoul's Staff -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="20" critical="1" accuracy="12" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -3295,7 +3216,7 @@
 			<hit_time>740</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3315,8 +3236,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="27279" level="78" type="L2Monster" name="Cursed Kesadein" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27279" level="81" type="L2Monster" name="Cursed Kesadein" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3324,10 +3244,10 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="799.3549113" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="293.7695795" magical="252.90333" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -3335,7 +3255,7 @@
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3355,8 +3275,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="27280" level="78" type="L2Monster" name="Fallen Angel Narcissus" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27280" level="81" type="L2Monster" name="Fallen Angel Narcissus" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3364,10 +3283,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
@@ -3375,7 +3294,7 @@
 			<hit_time>450</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3395,8 +3314,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="27281" level="78" type="L2Monster" name="Fallen Angel Metellus" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27281" level="81" type="L2Monster" name="Fallen Angel Metellus" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="140" />
@@ -3404,10 +3322,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
@@ -3415,7 +3333,7 @@
 			<hit_time>450</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3435,8 +3353,7 @@
 			<height normal="90" grown="109" />
 		</collision>
 	</npc>
-	<npc id="27282" level="78" type="L2Monster" name="Dark Angel Othiel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27282" level="81" type="L2Monster" name="Dark Angel Othiel" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -3445,10 +3362,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -3456,7 +3373,7 @@
 			<hit_time>760</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3476,8 +3393,7 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="27283" level="78" type="L2Monster" name="Grandpapa Askalius" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27283" level="81" type="L2Monster" name="Grandpapa Askalius" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3485,10 +3401,10 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="20" critical="1" accuracy="12" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="78" />
 				<run ground="180" />
@@ -3496,7 +3412,7 @@
 			<hit_time>520</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3516,8 +3432,7 @@
 			<height normal="72" />
 		</collision>
 	</npc>
-	<npc id="27284" level="78" type="L2Monster" name="Flame Evil Spirit Azira" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27284" level="81" type="L2Monster" name="Flame Evil Spirit Azira" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -3525,10 +3440,10 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="38" />
 				<run ground="180" />
@@ -3536,7 +3451,7 @@
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3556,8 +3471,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="27285" level="78" type="L2Monster" name="Lizard's Totem Sharuhi" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
+	<npc id="27285" level="81" type="L2Monster" name="Lizard's Totem Sharuhi" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3566,10 +3480,10 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- StormBringer -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2975.2369188" hpRegen="8.721" mp="1742.976" mpRegen="3.0804" />
-			<attack physical="938.20801458" magical="656.66638089" random="10" critical="4" accuracy="7.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8183475" magical="259.6406685" evasion="3" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="26252.09046" hpRegen="76.5" mp="1708.8" mpRegen="3" />
+			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="345.61127" magical="252.90333" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -3577,7 +3491,7 @@
 			<hit_time>460</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status />
+		<status undying="true" />
 		<skill_list>
 			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
@@ -3598,7 +3512,6 @@
 		</collision>
 	</npc>
 	<npc id="27286" level="76" type="L2Monster" name="Fallen Knight Adhil" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="92" />
@@ -3612,9 +3525,9 @@
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="107" /> <!-- Damascus Sword / Compound Shield -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" shield="162" shieldRate="20" />
 			<speed>
 				<walk ground="50" />
@@ -3647,7 +3560,6 @@
 		</collision>
 	</npc>
 	<npc id="27287" level="76" type="L2Monster" name="Bound Elf Panacea" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="79" />
@@ -3661,9 +3573,9 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<equipment rhand="145" /> <!-- Sword of Whispering Death -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -3696,7 +3608,6 @@
 		</collision>
 	</npc>
 	<npc id="27288" level="76" type="L2Monster" name="Sword Player Biel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="127" />
@@ -3708,9 +3619,9 @@
 		<race>ELF</race>
 		<sex>MALE</sex>
 		<equipment rhand="6579" lhand="74" /> <!-- Arcana Mace / Katana -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" shield="167" />
 			<speed>
 				<walk ground="50" />
@@ -3737,11 +3648,10 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="8" />
-			<height normal="23.5" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="27289" level="76" type="L2Monster" name="Ancient Sword Master Iron" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3756,9 +3666,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" shield="162" shieldRate="20" />
 			<speed>
 				<walk ground="56" />
@@ -3793,7 +3703,6 @@
 		</collision>
 	</npc>
 	<npc id="27290" level="76" type="L2Monster" name="White Wing Commander" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -3805,9 +3714,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -3836,7 +3745,6 @@
 		</collision>
 	</npc>
 	<npc id="27291" level="76" type="L2Monster" name="White Wing Fighter" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -3845,9 +3753,9 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="1132.550944" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -3877,7 +3785,6 @@
 		</collision>
 	</npc>
 	<npc id="27292" level="76" type="L2Monster" name="Fallen Noble Orc Muhark" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -3892,9 +3799,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7834" /> <!-- Art of Battle Axe -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="36" />
@@ -3929,7 +3836,6 @@
 		</collision>
 	</npc>
 	<npc id="27293" level="76" type="L2Monster" name="Khavatari Uruz" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -3943,9 +3849,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="36" />
@@ -3980,7 +3886,6 @@
 		</collision>
 	</npc>
 	<npc id="27294" level="76" type="L2Monster" name="Overlord Atrus" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -3997,9 +3902,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10879.91808" hpRegen="34" mp="1540.8" mpRegen="3" />
+			<attack physical="1132.550944" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="182" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="24" />
@@ -4035,7 +3940,6 @@
 		</collision>
 	</npc>
 	<npc id="27295" level="76" type="L2Monster" name="Sharuhi Mouth Mudaha" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="54" />
@@ -4052,9 +3956,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10879.91808" hpRegen="34" mp="1540.8" mpRegen="3" />
+			<attack physical="1132.550944" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="182" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="24" />
@@ -4090,7 +3994,6 @@
 		</collision>
 	</npc>
 	<npc id="27296" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -4106,9 +4009,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -4145,7 +4048,6 @@
 		</collision>
 	</npc>
 	<npc id="27297" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -4161,9 +4063,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -4200,7 +4102,6 @@
 		</collision>
 	</npc>
 	<npc id="27298" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -4216,9 +4117,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />
@@ -4255,7 +4156,6 @@
 		</collision>
 	</npc>
 	<npc id="27299" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="98" />
@@ -4270,9 +4170,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="50" />

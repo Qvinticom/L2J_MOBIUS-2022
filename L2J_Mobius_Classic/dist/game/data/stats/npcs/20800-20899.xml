@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20800" level="47" type="L2Monster" name="Eva's Watchman">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -16,10 +15,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="8873" sp="2" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
-			<attack physical="261.69549" magical="178.7041" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="186.63569" magical="136.5719" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2553.07256" hpRegen="11" mp="665" mpRegen="2.1" />
+			<attack physical="237.9049909" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="205.299259" magical="136.5719" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -52,7 +51,6 @@
 		</collision>
 	</npc>
 	<npc id="20801" level="48" type="L2Monster" name="Theeder Piker">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -70,10 +68,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="302" /> <!-- Body Slasher -->
 		<acquire exp="10699" sp="2" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
-			<attack physical="275.82705" magical="188.35412" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="191.12803" magical="139.8592" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2648.03246" hpRegen="11" mp="692.4" mpRegen="2.1" />
+			<attack physical="292.6274249" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="210.240833" magical="139.8592" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -110,7 +108,6 @@
 		</collision>
 	</npc>
 	<npc id="20802" level="49" type="L2Monster" name="Theeder Mage">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -130,10 +127,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="192" /> <!-- Crystal Staff -->
 		<acquire exp="10891" sp="2" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
-			<attack physical="290.44588" magical="198.33688" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="195.66302" magical="143.17771" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2744.37136" hpRegen="11" mp="720" mpRegen="2.1" />
+			<attack physical="319.490468" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="151.1941518" magical="143.17771" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -171,7 +168,6 @@
 		</collision>
 	</npc>
 	<npc id="20803" level="50" type="L2Monster" name="Doll Master">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -188,10 +184,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="21327" sp="5" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="146.5258" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4263.00309" hpRegen="16.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="369.7143626" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="165.486314" magical="146.5258" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -225,7 +221,6 @@
 		</collision>
 	</npc>
 	<npc id="20804" level="41" type="L2Monster" name="Crokian Lad">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -237,13 +232,13 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4074" level="2" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
 		<acquire exp="19275" sp="4" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
-			<attack physical="187.11878" magical="127.77787" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2016.47562" hpRegen="11" mp="504.8" mpRegen="2.1" />
+			<attack physical="187.11878" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="160.69002" magical="117.58598" />
 			<speed>
 				<walk ground="18" />
@@ -279,7 +274,6 @@
 		</collision>
 	</npc>
 	<npc id="20805" level="42" type="L2Monster" name="Dailaon Lad">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -291,14 +285,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4228" level="4" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="5127" /> <!-- Dailaon Knife -->
 		<acquire exp="20894" sp="5" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="164.88513" magical="120.65578" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2101.63304" hpRegen="11" mp="531" mpRegen="2.1" />
+			<attack physical="484.7970732" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="149.8955727" magical="120.65578" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
@@ -333,7 +327,6 @@
 		</collision>
 	</npc>
 	<npc id="20806" level="43" type="L2Monster" name="Crokian Lad Warrior">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="115" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -345,14 +338,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4030" level="3" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
 		<acquire exp="20055" sp="4" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
-			<attack physical="210.04832" magical="143.43577" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="169.13417" magical="123.76505" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2188.57886" hpRegen="11" mp="557.4" mpRegen="2.1" />
+			<attack physical="231.053152" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="153.7583364" magical="123.76505" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
@@ -387,7 +380,6 @@
 		</collision>
 	</npc>
 	<npc id="20807" level="44" type="L2Monster" name="Farhite Lad">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -401,14 +393,14 @@
 			<skill name="W_ShortRangeDDMagic" id="4160" level="4" />
 			<skill name="MagicHeal" id="4065" level="4" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="5131" /> <!-- Monster Only (Parhit Staff) -->
 		<acquire exp="21094" sp="5" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1138.62924" hpRegen="5.5" mp="584.0" mpRegen="2.1" />
-			<attack physical="222.23112" magical="151.75505" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="173.43552" magical="126.91259" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2277.25848" hpRegen="11" mp="584" mpRegen="2.1" />
+			<attack physical="244.454232" magical="151.75505" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="134.0183564" magical="126.91259" evasion="10" />
 			<speed>
 				<walk ground="15" />
 				<run ground="174" />
@@ -445,7 +437,6 @@
 		</collision>
 	</npc>
 	<npc id="20808" level="45" type="L2Monster" name="Nos Lad">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="81" />
@@ -457,14 +448,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4103" level="2" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" /> <!-- Knight's Sword -->
 		<acquire exp="26116" sp="6" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
-			<attack physical="234.89829" magical="160.40508" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="177.78746" magical="130.09715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2367.61188" hpRegen="11" mp="610.8" mpRegen="2.1" />
+			<attack physical="213.5439" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="195.566206" magical="130.09715" />
 			<speed>
 				<walk ground="18" />
 				<run ground="174" />
@@ -517,10 +508,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="26212" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5799.72132" hpRegen="19.5" mp="1036.8" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="247.65008" magical="164.888215781956" />
+			<defence physical="247.65008" magical="181.21958" />
 			<speed>
 				<walk ground="80" />
 				<run ground="143" />
@@ -576,10 +567,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="26212" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
-			<attack physical="481.34551" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="247.65008" magical="164.888215781956" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5799.72132" hpRegen="19.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="529.480061" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="225.1364364" magical="181.21958" />
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
@@ -633,10 +624,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="30906" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="252.49346" magical="168.112997103103" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5956.67778" hpRegen="22.5" mp="1066.8" mpRegen="2.7" />
+			<attack physical="398.5869045" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="277.742806" magical="184.76376" />
 			<speed>
 				<walk ground="21" />
 				<run ground="150" />
@@ -687,10 +678,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="284" /> <!-- rhand: Dark Elven Long Bow -->
 		<acquire exp="30510" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
-			<attack physical="501.08068" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="252.49346" magical="168.112997103103" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5956.67778" hpRegen="22.5" mp="1066.8" mpRegen="2.7" />
+			<attack physical="1224.741398" magical="342.17315" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="195.1085827" magical="184.76376" evasion="10" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -739,10 +730,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="27714" sp="6" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6113.43246" hpRegen="22.5" mp="1097" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="171.341654516443" />
+			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -794,10 +785,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- rhand: Sword of Damascus -->
 		<acquire exp="32000" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
-			<defence physical="257.34267" magical="171.341654516443" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6113.43246" hpRegen="22.5" mp="1097" mpRegen="2.7" />
+			<attack physical="668.9667633" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="233.9478818" magical="188.3122" />
 			<speed>
 				<walk ground="60" />
 				<run ground="143" />
@@ -850,10 +841,10 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="39602" sp="9" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
-			<attack physical="541.44774" magical="369.73862" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="262.19426" magical="174.571895122369" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8359.69096" hpRegen="30" mp="1127.4" mpRegen="2.7" />
+			<attack physical="492.2252182" magical="369.73862" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="288.413686" magical="191.86238" />
 			<speed>
 				<walk ground="24" />
 				<run ground="165" />
@@ -904,10 +895,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- rhand: Skeleton Dagger lhand: Skeleton Buckler -->
 		<acquire exp="33040" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
-			<attack physical="541.44774" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="262.19426" magical="174.571895122369" shield="131" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6269.76822" hpRegen="22.5" mp="1127.4" mpRegen="2.7" />
+			<attack physical="430.6970659" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="288.413686" magical="191.86238" shield="131" shieldRate="20" />
 			<speed>
 				<walk ground="80" />
 				<run ground="164" />
@@ -961,10 +952,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="210" /> <!-- rhand: Staff of Evil Spirits -->
 		<acquire exp="34447" sp="8" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="177.801362329617" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6425.46381" hpRegen="22.5" mp="1158" mpRegen="2.7" />
+			<attack physical="618.225025" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="206.3527073" magical="195.41171" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="160" />
@@ -1015,10 +1006,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- rhand: Great Sword -->
 		<acquire exp="31922" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="177.801362329617" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6425.46381" hpRegen="22.5" mp="1158" mpRegen="2.7" />
+			<attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="242.7678909" magical="195.41171" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -1066,10 +1057,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="31685" sp="7" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
-			<attack physical="582.81759" magical="397.98887" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="271.89033" magical="181.027644954078" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6580.29426" hpRegen="22.5" mp="1188.8" mpRegen="2.7" />
+			<attack physical="1424.522753" magical="397.98887" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="247.1730273" magical="198.95754" />
 			<speed>
 				<walk ground="70" />
 				<run ground="165" />
@@ -1124,10 +1115,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- rhand: Tallum Blade -->
 		<acquire exp="63162" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
-			<attack physical="582.81759" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="271.89033" magical="181.027644954078" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8773.72568" hpRegen="30" mp="1188.8" mpRegen="2.7" />
+			<attack physical="529.8341727" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="299.079363" magical="198.95754" />
 			<speed>
 				<walk ground="27" />
 				<run ground="160" />
@@ -1183,10 +1174,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- rhand: Lady's Fan -->
 		<acquire exp="46096" sp="11" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="276.72752" magical="184.248304515217" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8978.7086" hpRegen="30" mp="1219.8" mpRegen="2.7" />
+			<attack physical="548.9082091" magical="412.31647" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="258.7402312" magical="202.49719" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="165" />
@@ -1239,10 +1230,10 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="42897" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="276.72752" magical="184.248304515217" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8978.7086" hpRegen="30" mp="1219.8" mpRegen="2.7" />
+			<attack physical="480.294683" magical="412.31647" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="304.400272" magical="202.49719" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
@@ -1296,10 +1287,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- rhand: Soulfire Dirk -->
 		<acquire exp="49804" sp="11" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="187.460838840844" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9181.92616" hpRegen="30" mp="1251" mpRegen="2.7" />
+			<attack physical="601.4970404" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="255.9568273" magical="206.02791" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1348,10 +1339,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
 		<acquire exp="44790" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="281.55251" magical="187.460838840844" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9181.92616" hpRegen="30" mp="1251" mpRegen="2.7" />
+			<attack physical="687.425189" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="255.9568273" magical="206.02791" />
 			<speed>
 				<walk ground="100" />
 				<run ground="170" />
@@ -1402,10 +1393,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="46783" sp="11" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="286.3615" magical="190.662718462344" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9383.06792" hpRegen="30" mp="1282.4" mpRegen="2.7" />
+			<attack physical="710.797648" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="260.3286364" magical="209.54692" />
 			<speed>
 				<walk ground="37" />
 				<run ground="170" />
@@ -1461,10 +1452,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
 		<acquire exp="49573" sp="11" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="286.3615" magical="190.662718462344" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7037.30094" hpRegen="22.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="1579.392374" magical="441.25696" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="221.2793409" magical="209.54692" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1517,10 +1508,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
 		<acquire exp="51764" sp="12" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2395.45533" hpRegen="7.5" mp="1314.0" mpRegen="2.7" />
-			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="291.15063" magical="193.851368417065" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9581.82132" hpRegen="30" mp="1314" mpRegen="2.7" />
+			<attack physical="606.8214636" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="320.265693" magical="213.05139" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1580,10 +1571,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="202" /> <!-- rhand: Mace of Underworld -->
 		<acquire exp="63524" sp="15" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="197.024195544734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12222.34095" hpRegen="37.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="757.750103" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="269.0145182" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -1640,10 +1631,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="91255" sp="21" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2492.727" hpRegen="8.5" mp="1377.8" mpRegen="3" />
-			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="300.65359" magical="200.178552092236" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12463.635" hpRegen="42.5" mp="1377.8" mpRegen="3" />
+			<attack physical="645.6531818" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="330.718949" magical="220.00525" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -1700,10 +1691,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="203.311781207645" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10160.61324" hpRegen="34" mp="1410" mpRegen="3" />
+			<attack physical="885.1453226" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="252.3631983" magical="223.44881" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -1759,10 +1750,10 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="206.421198742611" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12933.3449" hpRegen="42.5" mp="1442.4" mpRegen="3" />
+			<attack physical="910.8145288" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="256.2228017" magical="226.8662" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -1799,8 +1790,7 @@
 			<height normal="36.5" grown="42.5" />
 		</collision>
 	</npc>
-	<npc id="20832" level="92" type="L2Monster" name="Zaken's Pikeman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20832" level="43" type="L2Monster" name="Zaken's Pikeman">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1819,10 +1809,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="292" /> <!-- Pike -->
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="210.04832" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="169.13417" magical="112.611442266143" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
+			<attack physical="157.8124117" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191.3499432" magical="123.76505" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="174" />
@@ -1857,8 +1847,7 @@
 			<height normal="28" grown="33" />
 		</collision>
 	</npc>
-	<npc id="20833" level="92" type="L2Monster" name="Zaken's Archer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20833" level="44" type="L2Monster" name="Zaken's Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -1877,10 +1866,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="222.23112" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="173.43552" magical="115.475328468187" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1138.62924" hpRegen="5.5" mp="584" mpRegen="2.1" />
+			<attack physical="370.9974069" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="196.2162756" magical="126.91259" evasion="10" />
 			<speed>
 				<walk ground="40" />
 				<run ground="174" />
@@ -1916,7 +1905,6 @@
 		</collision>
 	</npc>
 	<npc id="20834" level="42" type="L2Monster" name="Mardian">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1931,10 +1919,10 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="8103" sp="1" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="164.88513" magical="120.65578" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2101.63304" hpRegen="11" mp="531" mpRegen="2.1" />
+			<attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="149.8955727" magical="120.65578" />
 			<speed>
 				<walk ground="72" />
 				<run ground="174" />
@@ -1968,8 +1956,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20835" level="92" type="L2Monster" name="Zaken's Watchman">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20835" level="45" type="L2Monster" name="Zaken's Watchman">
 		<parameters>
 			<param name="MoveAroundSocial" value="57" />
 			<param name="MoveAroundSocial1" value="57" />
@@ -1988,10 +1975,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="177.78746" magical="118.372898457316" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<attack physical="176.482562" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="201.1398429" magical="130.09715" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -2024,8 +2011,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="20836" level="92" type="L2Monster" name="Pirate Zombie">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20836" level="44" type="L2Monster" name="Pirate Zombie">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2043,10 +2029,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="225" /> <!-- Mithril Dagger -->
 		<acquire exp="40831" sp="9" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="222.23112" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="173.43552" magical="115.475328468187" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2277.25848" hpRegen="11" mp="584" mpRegen="2.1" />
+			<attack physical="213.897453" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="157.6686545" magical="126.91259" />
 			<speed>
 				<walk ground="11" />
 				<run ground="174" />
@@ -2083,7 +2069,6 @@
 		</collision>
 	</npc>
 	<npc id="20837" level="45" type="L2Monster" name="Tainted Ogre">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -2095,14 +2080,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="4" />
 		</parameters>
-		<race>GIANT</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="194" /> <!-- Heavy Doom Axe -->
 		<acquire exp="9237" sp="2" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
-			<attack physical="234.89829" magical="160.40508" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="177.78746" magical="130.09715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2367.61188" hpRegen="11" mp="610.8" mpRegen="2.1" />
+			<attack physical="358.9010973" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="182" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="161.6249636" magical="130.09715" />
 			<speed>
 				<walk ground="22" />
 				<run ground="174" />
@@ -2138,7 +2123,6 @@
 		</collision>
 	</npc>
 	<npc id="20838" level="45" type="L2Monster" name="Bloody Bat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2150,13 +2134,13 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4088" level="4" />
 		</parameters>
-		<race>ANIMAL</race>
+		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="8658" sp="2" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
-			<attack physical="234.89829" magical="160.40508" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="177.78746" magical="130.09715" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2367.61188" hpRegen="11" mp="610.8" mpRegen="2.1" />
+			<attack physical="186.8509125" magical="160.40508" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="195.566206" magical="130.09715" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -2190,8 +2174,7 @@
 			<height normal="33.5" />
 		</collision>
 	</npc>
-	<npc id="20839" level="92" type="L2Monster" name="Dismal Humming">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20839" level="46" type="L2Monster" name="Dismal Humming">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2209,10 +2192,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="182.18816" magical="121.302932993263" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="186.3655898" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="242.492441" magical="133.31739" />
 			<speed>
 				<walk ground="21" />
 				<run ground="174" />
@@ -2248,8 +2231,7 @@
 			<height normal="26" />
 		</collision>
 	</npc>
-	<npc id="20840" level="92" type="L2Monster" name="Death Flyer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20840" level="47" type="L2Monster" name="Death Flyer">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2267,10 +2249,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="261.69549" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="186.63569" magical="124.264149144103" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665" mpRegen="2.1" />
+			<attack physical="196.615695" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="211.1502879" magical="136.5719" evasion="10" />
 			<speed>
 				<walk ground="100" />
 				<run ground="174" />
@@ -2307,8 +2289,7 @@
 			<height normal="35" grown="42" />
 		</collision>
 	</npc>
-	<npc id="20841" level="92" type="L2Monster" name="Fiend Archer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20841" level="48" type="L2Monster" name="Fiend Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2328,10 +2309,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="275.82705" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="191.12803" magical="127.255200286259" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+			<attack physical="460.4716041" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="216.2326967" magical="139.8592" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -2370,8 +2351,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="20842" level="92" type="L2Monster" name="Musveren">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20842" level="49" type="L2Monster" name="Musveren">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -2389,10 +2369,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
-			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="195.66302" magical="130.274648808072" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720" mpRegen="2.1" />
+			<attack physical="218.2162885" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="260.4274796" magical="143.17771" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -2428,8 +2408,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20843" level="92" type="L2Monster" name="Zaken's Royal Guard">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20843" level="50" type="L2Monster" name="Zaken's Royal Guard">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2448,10 +2427,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="225" lhand="945" /> <!-- Mithril Dagger / Skeleton Buckler -->
 		<acquire exp="243882" sp="58" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="304477" hpRegen="5.5" mp="20960" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="200.23844" magical="133.321011603844" shield="100" shieldRate="20" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="200.8680898" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="266.5173636" magical="146.5258" shield="100" shieldRate="20" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -2489,8 +2468,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="20844" level="92" type="L2Monster" name="Kaim Vanul">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20844" level="51" type="L2Monster" name="Kaim Vanul">
 		<parameters>
 			<param name="MoveAroundSocial" value="108" />
 			<param name="MoveAroundSocial1" value="108" />
@@ -2508,10 +2486,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="6.5" mp="2096" mpRegen="2.4" />
-			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="204.85194" magical="136.392732777413" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="241.2712772" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="272.6579321" magical="149.90176" />
 			<speed>
 				<walk ground="37" />
 				<run ground="174" />
@@ -2548,8 +2526,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="20845" level="92" type="L2Monster" name="Pirate Zombie Captain">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20845" level="52" type="L2Monster" name="Pirate Zombie Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -2570,10 +2547,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
 		<acquire exp="16755" sp="4" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="6.5" mp="2096" mpRegen="2.4" />
-			<attack physical="337.18867" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="209.50106" magical="139.488165444537" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<attack physical="221.6679837" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="278.8459109" magical="153.30378" />
 			<speed>
 				<walk ground="14" />
 				<run ground="174" />
@@ -2608,8 +2585,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="20846" level="92" type="L2Monster" name="Maiden Doll">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20846" level="53" type="L2Monster" name="Maiden Doll">
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -2630,10 +2606,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="6.5" mp="2096" mpRegen="2.4" />
-			<attack physical="353.71092" magical="241.5387" random="10" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="214.18326" magical="142.605626325743" shield="94" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+			<attack physical="232.5297183" magical="241.5387" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="242.3162312" magical="156.73001" evasion="10" shield="94" />
 			<speed>
 				<walk ground="22" />
 				<run ground="174" />
@@ -2672,8 +2648,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="20847" level="92" type="L2Monster" name="Veil Master">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20847" level="54" type="L2Monster" name="Veil Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2694,10 +2669,10 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="14374" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="6.5" mp="2096" mpRegen="2.4" />
-			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="218.89589" magical="145.743350252286" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1621.75618" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<attack physical="278.5041623" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.6478652" magical="160.17851" evasion="10" />
 			<speed>
 				<walk ground="70" />
 				<run ground="174" />
@@ -2737,8 +2712,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="20848" level="92" type="L2Monster" name="Light Bringer">
-		<!-- Confirmed CT2.5 -->
+	<npc id="20848" level="46" type="L2Monster" name="Light Bringer">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2753,10 +2727,10 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<acquire exp="38828" sp="9" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14213" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2459.57356" hpRegen="11" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="182.18816" magical="121.302932993263" />
+			<defence physical="182.18816" magical="133.31739" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -2791,7 +2765,6 @@
 		</collision>
 	</npc>
 	<npc id="20849" level="41" type="L2Monster" name="Light Worm">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2803,13 +2776,13 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4076" level="3" />
 		</parameters>
-		<race>ANIMAL</race>
+		<race>BUG</race>
 		<sex>MALE</sex>
 		<acquire exp="6957" sp="1" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
-			<attack physical="187.11878" magical="127.77787" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="160.69002" magical="117.58598" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2016.47562" hpRegen="11" mp="504.8" mpRegen="2.1" />
+			<attack physical="170.1079818" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="176.759022" magical="117.58598" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -2847,7 +2820,6 @@
 		</collision>
 	</npc>
 	<npc id="20850" level="50" type="L2Monster" name="Golden Stag Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -2862,9 +2834,9 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5674" sp="1" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
 				<walk ground="35" />
@@ -2902,7 +2874,6 @@
 		</collision>
 	</npc>
 	<npc id="20851" level="47" type="L2Monster" name="Theeder">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2916,9 +2887,9 @@
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="5114" sp="1" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
-			<attack physical="261.69549" magical="178.7041" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665" mpRegen="2.1" />
+			<attack physical="305.3986368" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="216" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="136.5719" />
 			<speed>
 				<walk ground="80" />
@@ -2954,7 +2925,6 @@
 		</collision>
 	</npc>
 	<npc id="20852" level="60" type="L2Monster" name="Banshee">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2969,10 +2939,10 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
 		<acquire exp="8010" sp="1" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
-			<attack physical="481.34551" magical="328.69659" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="247.65008" magical="181.21958" />
+			<attack physical="463.2950534" magical="328.69659" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="225.1364364" magical="181.21958" />
 			<speed>
 				<walk ground="80" />
 				<run ground="174" />
@@ -3007,7 +2977,6 @@
 		</collision>
 	</npc>
 	<npc id="20853" level="65" type="L2Monster" name="Kel Mahum">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3025,9 +2994,9 @@
 		<sex>MALE</sex>
 		<equipment rhand="242" /> <!-- Soulfire Dirk -->
 		<acquire exp="14082" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
-			<attack physical="582.81759" magical="397.98887" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<attack physical="509.9653913" magical="397.98887" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="50" />
@@ -3081,10 +3050,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
 		<acquire exp="13835" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="276.72752" magical="184.248304515217" />
+			<attack physical="664.178933" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="251.5704727" magical="202.49719" />
 			<speed>
 				<walk ground="50" />
 				<run ground="174" />
@@ -3136,10 +3105,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
 		<acquire exp="16020" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251.0" mpRegen="2.7" />
-			<attack physical="624.93199" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
-			<defence physical="281.55251" magical="187.460838840844" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<attack physical="1527.45877" magical="426.74754" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="217.5633032" magical="206.02791" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="174" />
@@ -3191,10 +3160,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="202" /> <!-- rhand: Mace of Underworld -->
 		<acquire exp="11503" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="286.3615" magical="190.662718462344" />
+			<attack physical="710.797648" magical="441.25696" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="221.2793409" magical="209.54692" evasion="10" />
 			<speed>
 				<walk ground="50" />
 				<run ground="174" />
@@ -3228,7 +3197,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20857" level="68" type="L2Monster" name="Kel Mahum Champion">
+	<npc id="20857" level="70" type="L2Monster" name="Kel Mahum Champion">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -3244,10 +3213,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="14669" sp="3" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2445" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="197.024195544734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="757.750103" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="269.0145182" magical="216.53847" />
 			<speed>
 				<walk ground="50" />
 				<run ground="174" />
@@ -3287,7 +3256,6 @@
 		</collision>
 	</npc>
 	<npc id="20858" level="72" type="L2Monster" name="Angel">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="50" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -3305,10 +3273,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<acquire exp="16382" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2540.15331" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="804.677566" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="277.5995182" magical="223.44881" />
 			<speed>
 				<walk ground="30" />
 				<run ground="174" />
@@ -3365,10 +3333,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
 		<acquire exp="107492" sp="25" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10160.61324" hpRegen="34" mp="1410" mpRegen="3" />
+			<attack physical="804.677566" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="277.5995182" magical="223.44881" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -3423,10 +3391,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="148" /> <!-- rhand: Sword of Valhalla -->
 		<acquire exp="150652" sp="36" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
-			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="310.02959" magical="226.8662" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="12933.3449" hpRegen="42.5" mp="1442.4" mpRegen="3" />
+			<attack physical="684.3084364" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.032549" magical="226.8662" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -3464,7 +3432,6 @@
 		</collision>
 	</npc>
 	<npc id="20861" level="56" type="L2Monster" name="Oel Mahum Champion">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="140" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3482,10 +3449,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="9960" sp="2" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1724.6831" hpRegen="6.5" mp="918.8" mpRegen="2.4" />
-			<attack physical="405.96455" magical="277.22116" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="228.40135" magical="167.1342" />
+			<attack physical="446.561005" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="207.6375909" magical="167.1342" />
 			<speed>
 				<walk ground="67" />
 				<run ground="174" />
@@ -3526,7 +3493,6 @@
 		</collision>
 	</npc>
 	<npc id="20862" level="75" type="L2Monster" name="Death Lord">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3544,10 +3510,10 @@
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<acquire exp="13993" sp="3" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2676.65854" hpRegen="8.5" mp="1507.8" mpRegen="3" />
-			<attack physical="794.70901" magical="542.68324" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="319.24623" magical="233.61053" />
+			<attack physical="874.179911" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="290.2238455" magical="233.61053" />
 			<speed>
 				<walk ground="40" />
 				<run ground="174" />

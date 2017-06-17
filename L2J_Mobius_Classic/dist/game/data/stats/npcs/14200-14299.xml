@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="14200" level="83" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14200" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="11" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3010.179215" hpRegen="8.5" mp="1803.2" mpRegen="3" />
-			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="356.9264425" magical="261.1832875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="954.22815" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -43,18 +42,17 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14201" level="84" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14201" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3016.82079" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="958.5072" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -86,18 +84,17 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14202" level="84" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14202" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3024.7301125" hpRegen="8.5" mp="1820.65" mpRegen="3" />
-			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="358.8686775" magical="262.604525" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="962.78625" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -129,18 +126,17 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14203" level="84" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14203" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3032.639435" hpRegen="8.5" mp="1829.3" mpRegen="3" />
-			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="359.870125" magical="263.33734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="967.0653" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -172,18 +168,17 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14204" level="85" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14204" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="971.34435" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -215,18 +210,17 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14205" level="85" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14205" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3056.67236333333" hpRegen="8.5" mp="1858.4" mpRegen="3" />
-			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.09511" magical="265.697243333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="975.6234" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -258,18 +252,17 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14206" level="85" type="L2Pet" name="Mew the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14206" level="80" type="L2Pet" name="Mew the Cat">
 		<parameters>
 			<skill name="DDMagic" id="4261" level="12" />
 			<param name="step1_action01" value="46" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="3" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="364.40208" magical="266.653626666667" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="4484.64" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="979.90245" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
 				<run ground="140" />
@@ -302,25 +295,24 @@
 		</collision>
 	</npc>
 	<npc id="14207" level="42" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="4" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1260.979824" hpRegen="5.5" mp="531" mpRegen="2.1" />
+			<attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -344,25 +336,24 @@
 		</collision>
 	</npc>
 	<npc id="14208" level="46" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="4" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
-			<attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1475.744136" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="272.85786" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -386,25 +377,24 @@
 		</collision>
 	</npc>
 	<npc id="14209" level="50" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
-			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1705.201236" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -428,25 +418,24 @@
 		</collision>
 	</npc>
 	<npc id="14210" level="54" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
-			<attack physical="370.68904" magical="253.13256" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1946.107416" hpRegen="6.5" mp="861" mpRegen="2.4" />
+			<attack physical="407.757944" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -470,25 +459,24 @@
 		</collision>
 	</npc>
 	<npc id="14211" level="58" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="5" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
-			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2194.419192" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="487.18912" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -512,25 +500,24 @@
 		</collision>
 	</npc>
 	<npc id="14212" level="60" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
-			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2319.888528" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="529.480061" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -554,25 +541,24 @@
 		</collision>
 	</npc>
 	<npc id="14213" level="62" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2445.372984" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -596,25 +582,24 @@
 		</collision>
 	</npc>
 	<npc id="14214" level="64" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2570.185524" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="267.04468" magical="195.41171" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -638,25 +623,24 @@
 		</collision>
 	</npc>
 	<npc id="14215" level="66" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2693.61258" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="664.178933" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="276.72752" magical="202.49719" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -680,25 +664,24 @@
 		</collision>
 	</npc>
 	<npc id="14216" level="68" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="6" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2814.920376" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="710.797648" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -722,25 +705,24 @@
 		</collision>
 	</npc>
 	<npc id="14217" level="70" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2933.361828" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="757.750103" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -764,25 +746,24 @@
 		</collision>
 	</npc>
 	<npc id="14218" level="72" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3048.183972" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="804.677566" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -806,25 +787,24 @@
 		</collision>
 	</npc>
 	<npc id="14219" level="74" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3158.635632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="851.197578" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -848,25 +828,24 @@
 		</collision>
 	</npc>
 	<npc id="14220" level="76" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="7" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3263.975424" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="896.908595" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="3" /> <!-- HP Medium-High -->
@@ -890,20 +869,19 @@
 		</collision>
 	</npc>
 	<npc id="14221" level="78" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="332.70061" magical="243.45587" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="941.391" magical="584.41" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -932,20 +910,19 @@
 		</collision>
 	</npc>
 	<npc id="14222" level="78" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2812.763385" hpRegen="8.5" mp="1615.8" mpRegen="3" />
-			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.7929775" magical="244.2552175" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="946.097955" magical="591.0000196" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -974,20 +951,19 @@
 		</collision>
 	</npc>
 	<npc id="14223" level="78" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2822.62688" hpRegen="8.5" mp="1624.2" mpRegen="3" />
-			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="334.885345" magical="245.054565" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="950.80491" magical="597.5900392" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1016,20 +992,19 @@
 		</collision>
 	</npc>
 	<npc id="14224" level="78" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2832.490375" hpRegen="8.5" mp="1632.6" mpRegen="3" />
-			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="335.9777125" magical="245.8539125" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="955.511865" magical="604.1800588" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1057,21 +1032,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14225" level="79" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14225" level="78" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
-			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="960.21882" magical="610.7700784" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1099,21 +1073,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14226" level="79" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14226" level="78" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="8" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2852.217365" hpRegen="8.5" mp="1649.4" mpRegen="3" />
-			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="338.1624475" magical="247.4526075" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="964.925775" magical="617.360098" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1141,21 +1114,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14227" level="79" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14227" level="78" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862.08086" hpRegen="8.5" mp="1657.8" mpRegen="3" />
-			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="339.254815" magical="248.251955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="969.63273" magical="623.9501175" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1183,21 +1155,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14228" level="79" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14228" level="78" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2871.944355" hpRegen="8.5" mp="1666.2" mpRegen="3" />
-			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="340.3471825" magical="249.0513025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="974.339685" magical="630.5401371" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1225,21 +1196,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14229" level="80" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14229" level="78" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="979.04664" magical="637.1301567" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1267,21 +1237,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14230" level="80" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14230" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2889.8818825" hpRegen="8.5" mp="1683.25" mpRegen="3" />
-			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.45123" magical="250.5909475" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="983.753595" magical="643.7201763" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1309,21 +1278,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14231" level="80" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14231" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2899.387485" hpRegen="8.5" mp="1691.7" mpRegen="3" />
-			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="343.52746" magical="251.378485" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="988.46055" magical="650.3101959" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1351,21 +1319,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14232" level="80" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14232" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="9" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2908.8930875" hpRegen="8.5" mp="1700.15" mpRegen="3" />
-			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.60369" magical="252.1660225" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="993.167505" magical="656.9002155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1393,21 +1360,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14233" level="81" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14233" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2916.89894" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="997.87446" magical="663.4902351" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1435,21 +1401,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14234" level="81" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14234" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2926.029605" hpRegen="8.5" mp="1717.3" mpRegen="3" />
-			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.6703375" magical="253.67831" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1002.581415" magical="670.0802547" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1477,21 +1442,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14235" level="81" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14235" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2935.16027" hpRegen="8.5" mp="1725.8" mpRegen="3" />
-			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.729405" magical="254.45329" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1007.28837" magical="676.6702743" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1519,21 +1483,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14236" level="81" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14236" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2944.290935" hpRegen="8.5" mp="1734.3" mpRegen="3" />
-			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="348.7884725" magical="255.22827" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1011.995325" magical="683.2602939" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1561,21 +1524,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14237" level="82" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14237" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2951.85588" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1016.70228" magical="689.8503135" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1603,21 +1565,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14238" level="82" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14238" level="79" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="10" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2960.595115" hpRegen="8.5" mp="1751.55" mpRegen="3" />
-			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.815645" magical="256.7116675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1021.409235" magical="696.440333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1645,21 +1606,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14239" level="82" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14239" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2969.33435" hpRegen="8.5" mp="1760.1" mpRegen="3" />
-			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="351.85652" magical="257.473335" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1026.11619" magical="703.0303526" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1687,21 +1647,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14240" level="82" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14240" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2978.073585" hpRegen="8.5" mp="1768.65" mpRegen="3" />
-			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.897395" magical="258.2350025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1030.823145" magical="709.6203722" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1729,21 +1688,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14241" level="83" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14241" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2985.1835" hpRegen="8.5" mp="1777.4" mpRegen="3" />
-			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1035.5301" magical="716.2103918" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1771,21 +1729,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14242" level="83" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14242" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2993.515405" hpRegen="8.5" mp="1786.0" mpRegen="3" />
-			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8831075" magical="259.6880625" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1040.237055" magical="722.8004114" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1813,21 +1770,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14243" level="83" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14243" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3001.84731" hpRegen="8.5" mp="1794.6" mpRegen="3" />
-			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.904775" magical="260.435675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1044.94401" magical="729.390431" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1855,21 +1811,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14244" level="83" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14244" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="11" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3010.179215" hpRegen="8.5" mp="1803.2" mpRegen="3" />
-			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="356.9264425" magical="261.1832875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1049.650965" magical="735.9804506" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1897,21 +1852,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14245" level="84" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14245" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3016.82079" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1054.35792" magical="742.5704702" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1940,21 +1894,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14246" level="84" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14246" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3024.7301125" hpRegen="8.5" mp="1820.65" mpRegen="3" />
-			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="358.8686775" magical="262.604525" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1059.064875" magical="749.1604898" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1983,21 +1936,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14247" level="84" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14247" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3032.639435" hpRegen="8.5" mp="1829.3" mpRegen="3" />
-			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="359.870125" magical="263.33734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1063.77183" magical="755.7505094" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2026,21 +1978,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14248" level="85" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14248" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1068.478785" magical="762.340529" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2069,21 +2020,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14249" level="85" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14249" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3056.67236333333" hpRegen="8.5" mp="1858.4" mpRegen="3" />
-			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.09511" magical="265.697243333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1073.18574" magical="768.9305486" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2112,21 +2062,20 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14250" level="85" type="L2Pet" name="Kai the Cat">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14250" level="80" type="L2Pet" name="Kai the Cat">
 		<parameters>
 			<skill name="HealMagic" id="4378" level="12" />
 			<param name="step1_action01" value="42" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="3" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="364.40208" magical="266.653626666667" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="3363.48" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="1077.892695" magical="775.5205681" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.7" magical="243.46" />
 			<speed>
 				<walk ground="48" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2156,7 +2105,6 @@
 		</collision>
 	</npc>
 	<npc id="14251" level="58" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
@@ -2168,15 +2116,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1828.68266" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
-			<attack physical="442.8992" magical="302.44274" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="237.99429" magical="174.1539" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1828.68" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="177.76" magical="302.44" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99" magical="174.15" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2209,7 +2157,6 @@
 		</collision>
 	</npc>
 	<npc id="14252" level="60" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
@@ -2221,15 +2168,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1933.24044" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
-			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="247.65008" magical="181.21958" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1933.24" hpRegen="6.5" mp="1036.8" mpRegen="2.4" />
+			<attack physical="190.6" magical="328.7" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="247.65" magical="181.22" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2262,7 +2209,6 @@
 		</collision>
 	</npc>
 	<npc id="14253" level="62" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="1" />
 			<skill name="Buff2" id="4700" level="1" />
@@ -2274,15 +2220,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2037.81082" hpRegen="7.5" mp="1097.0" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2037.81" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<attack physical="203.62" magical="355.86" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="257.34" magical="188.31" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2315,7 +2261,6 @@
 		</collision>
 	</npc>
 	<npc id="14254" level="64" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="2" />
 			<skill name="Buff2" id="4700" level="2" />
@@ -2327,15 +2272,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2141.82127" hpRegen="7.5" mp="1158.0" mpRegen="2.7" />
-			<attack physical="562.02275" magical="383.78868" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="267.04468" magical="195.41171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2141.82" hpRegen="7.5" mp="1158" mpRegen="2.7" />
+			<attack physical="216.73" magical="383.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="267.04" magical="195.41" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2368,7 +2313,6 @@
 		</collision>
 	</npc>
 	<npc id="14255" level="66" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="2" />
 			<skill name="Buff2" id="4700" level="2" />
@@ -2380,15 +2324,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
-			<attack physical="603.79903" magical="412.31647" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="276.72752" magical="202.49719" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2244.68" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
+			<attack physical="229.83" magical="412.32" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="276.73" magical="202.5" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2421,7 +2365,6 @@
 		</collision>
 	</npc>
 	<npc id="14256" level="68" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="2" />
 			<skill name="Buff2" id="4700" level="2" />
@@ -2433,15 +2376,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
-			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="286.3615" magical="209.54692" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2345.77" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
+			<attack physical="242.83" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="286.36" magical="209.55" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2474,7 +2417,6 @@
 		</collision>
 	</npc>
 	<npc id="14257" level="70" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2486,15 +2428,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2444.47" hpRegen="7.5" mp="1345.8" mpRegen="2.7" />
+			<attack physical="255.62" magical="470.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="295.92" magical="216.54" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2527,7 +2469,6 @@
 		</collision>
 	</npc>
 	<npc id="14258" level="72" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2539,15 +2480,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540.15331" hpRegen="8.5" mp="1410.0" mpRegen="3" />
-			<attack physical="731.52506" magical="499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="305.35947" magical="223.44881" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2540.15" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<attack physical="268.07" magical="499.54" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="305.36" magical="223.45" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2580,7 +2521,6 @@
 		</collision>
 	</npc>
 	<npc id="14259" level="74" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2592,15 +2532,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2632.19636" hpRegen="8.5" mp="1475.0" mpRegen="3" />
-			<attack physical="773.81598" magical="528.41601" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="314.65987" magical="230.25444" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2632.2" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<attack physical="280.09" magical="528.42" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="314.66" magical="230.25" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2633,7 +2573,6 @@
 		</collision>
 	</npc>
 	<npc id="14260" level="76" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="3" />
 			<skill name="Buff2" id="4700" level="3" />
@@ -2645,15 +2584,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2719.97952" hpRegen="8.5" mp="1540.8" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2719.98" hpRegen="8.5" mp="1540.8" mpRegen="3" />
+			<attack physical="291.56" magical="556.79" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="323.78" magical="236.93" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2686,7 +2625,6 @@
 		</collision>
 	</npc>
 	<npc id="14265" level="78" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="4" />
 			<skill name="Buff2" id="4700" level="4" />
@@ -2698,15 +2636,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
 			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
-			<attack physical="855.81387" magical="584.40994" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2739,7 +2677,6 @@
 		</collision>
 	</npc>
 	<npc id="14266" level="78" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="4" />
 			<skill name="Buff2" id="4700" level="4" />
@@ -2751,15 +2688,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2812.763385" hpRegen="8.5" mp="1615.8" mpRegen="3" />
-			<attack physical="860.7348" magical="587.770295" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="333.7929775" magical="244.2552175" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2792,7 +2729,6 @@
 		</collision>
 	</npc>
 	<npc id="14267" level="78" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="4" />
 			<skill name="Buff2" id="4700" level="4" />
@@ -2804,15 +2740,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2822.62688" hpRegen="8.5" mp="1624.2" mpRegen="3" />
-			<attack physical="865.65573" magical="591.13065" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="334.885345" magical="245.054565" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2845,7 +2781,6 @@
 		</collision>
 	</npc>
 	<npc id="14268" level="78" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff1" id="4699" level="5" />
 			<skill name="Buff2" id="4700" level="5" />
@@ -2857,15 +2792,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2832.490375" hpRegen="8.5" mp="1632.6" mpRegen="3" />
-			<attack physical="870.57666" magical="594.491005" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="335.9777125" magical="245.8539125" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2897,8 +2832,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14269" level="79" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14269" level="78" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="5" />
 			<skill name="Buff2" id="4700" level="5" />
@@ -2910,15 +2844,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2842.35387" hpRegen="8.5" mp="1641.0" mpRegen="3" />
-			<attack physical="875.49759" magical="597.85136" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2950,8 +2884,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14270" level="79" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14270" level="78" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="5" />
 			<skill name="Buff2" id="4700" level="5" />
@@ -2963,15 +2896,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2852.217365" hpRegen="8.5" mp="1649.4" mpRegen="3" />
-			<attack physical="880.41852" magical="601.211715" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="338.1624475" magical="247.4526075" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3003,8 +2936,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14271" level="79" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14271" level="78" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="6" />
 			<skill name="Buff2" id="4700" level="6" />
@@ -3016,15 +2948,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2862.08086" hpRegen="8.5" mp="1657.8" mpRegen="3" />
-			<attack physical="885.33945" magical="604.57207" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="339.254815" magical="248.251955" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3056,8 +2988,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14272" level="79" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14272" level="78" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="6" />
 			<skill name="Buff2" id="4700" level="6" />
@@ -3069,15 +3000,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2871.944355" hpRegen="8.5" mp="1666.2" mpRegen="3" />
-			<attack physical="890.26038" magical="607.932425" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="340.3471825" magical="249.0513025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3109,8 +3040,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14273" level="80" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14273" level="78" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="6" />
 			<skill name="Buff2" id="4700" level="6" />
@@ -3122,15 +3052,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2880.37628" hpRegen="8.5" mp="1674.8" mpRegen="3" />
-			<attack physical="894.75854" magical="611.00409" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3162,8 +3092,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14274" level="80" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14274" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="7" />
 			<skill name="Buff2" id="4700" level="7" />
@@ -3175,15 +3104,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2889.8818825" hpRegen="8.5" mp="1683.25" mpRegen="3" />
-			<attack physical="899.5737775" magical="614.2922725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="342.45123" magical="250.5909475" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3215,8 +3144,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14275" level="80" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14275" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="7" />
 			<skill name="Buff2" id="4700" level="7" />
@@ -3228,15 +3156,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2899.387485" hpRegen="8.5" mp="1691.7" mpRegen="3" />
-			<attack physical="904.389015" magical="617.580455" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="343.52746" magical="251.378485" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3268,8 +3196,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14276" level="80" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14276" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="7" />
 			<skill name="Buff2" id="4700" level="7" />
@@ -3281,15 +3208,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2908.8930875" hpRegen="8.5" mp="1700.15" mpRegen="3" />
-			<attack physical="909.2042525" magical="620.8686375" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="344.60369" magical="252.1660225" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3321,8 +3248,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14277" level="81" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14277" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="8" />
 			<skill name="Buff2" id="4700" level="8" />
@@ -3334,15 +3260,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2916.89894" hpRegen="8.5" mp="1708.8" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3374,8 +3300,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14278" level="81" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14278" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="8" />
 			<skill name="Buff2" id="4700" level="8" />
@@ -3387,15 +3312,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2926.029605" hpRegen="8.5" mp="1717.3" mpRegen="3" />
-			<attack physical="918.2459525" magical="627.0429525" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="346.6703375" magical="253.67831" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3427,8 +3352,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14279" level="81" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14279" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="8" />
 			<skill name="Buff2" id="4700" level="8" />
@@ -3440,15 +3364,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2935.16027" hpRegen="8.5" mp="1725.8" mpRegen="3" />
-			<attack physical="922.943435" magical="630.250725" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="347.729405" magical="254.45329" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3480,8 +3404,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14280" level="81" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14280" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="9" />
 			<skill name="Buff2" id="4700" level="9" />
@@ -3493,15 +3416,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2944.290935" hpRegen="8.5" mp="1734.3" mpRegen="3" />
-			<attack physical="927.6409175" magical="633.4584975" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="348.7884725" magical="255.22827" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3533,8 +3456,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14281" level="82" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14281" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="9" />
 			<skill name="Buff2" id="4700" level="9" />
@@ -3546,15 +3468,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2951.85588" hpRegen="8.5" mp="1743.0" mpRegen="3" />
-			<attack physical="931.81944" magical="636.31188" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="349.77477" magical="255.95" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3586,8 +3508,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14282" level="82" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14282" level="79" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="9" />
 			<skill name="Buff2" id="4700" level="9" />
@@ -3599,15 +3520,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2960.595115" hpRegen="8.5" mp="1751.55" mpRegen="3" />
-			<attack physical="936.3871825" magical="639.431055" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="350.815645" magical="256.7116675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3639,8 +3560,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14283" level="82" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14283" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="10" />
 			<skill name="Buff2" id="4700" level="10" />
@@ -3652,15 +3572,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2969.33435" hpRegen="8.5" mp="1760.1" mpRegen="3" />
-			<attack physical="940.954925" magical="642.55023" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="351.85652" magical="257.473335" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3692,8 +3612,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14284" level="82" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14284" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="10" />
 			<skill name="Buff2" id="4700" level="10" />
@@ -3705,15 +3624,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2978.073585" hpRegen="8.5" mp="1768.65" mpRegen="3" />
-			<attack physical="945.5226675" magical="645.669405" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="352.897395" magical="258.2350025" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3745,8 +3664,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14285" level="83" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14285" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="10" />
 			<skill name="Buff2" id="4700" level="10" />
@@ -3758,15 +3676,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2985.1835" hpRegen="8.5" mp="1777.4" mpRegen="3" />
-			<attack physical="949.52401" magical="648.40181" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="353.86144" magical="258.94045" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3798,8 +3716,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14286" level="83" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14286" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="11" />
 			<skill name="Buff2" id="4700" level="11" />
@@ -3811,15 +3728,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2993.515405" hpRegen="8.5" mp="1786.0" mpRegen="3" />
-			<attack physical="953.9501525" magical="651.4242925" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="354.8831075" magical="259.6880625" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3851,8 +3768,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14287" level="83" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14287" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="11" />
 			<skill name="Buff2" id="4700" level="11" />
@@ -3864,15 +3780,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3001.84731" hpRegen="8.5" mp="1794.6" mpRegen="3" />
-			<attack physical="958.376295" magical="654.446775" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="355.904775" magical="260.435675" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3904,8 +3820,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14288" level="83" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14288" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="11" />
 			<skill name="Buff2" id="4700" level="11" />
@@ -3917,15 +3832,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3010.179215" hpRegen="8.5" mp="1803.2" mpRegen="3" />
-			<attack physical="962.8024375" magical="657.4692575" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="356.9264425" magical="261.1832875" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3957,8 +3872,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14289" level="84" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14289" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="12" />
 			<skill name="Buff2" id="4700" level="12" />
@@ -3970,15 +3884,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3016.82079" hpRegen="8.5" mp="1812.0" mpRegen="3" />
-			<attack physical="966.61544" magical="660.07304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4010,8 +3924,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14290" level="84" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14290" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="12" />
 			<skill name="Buff2" id="4700" level="12" />
@@ -4023,15 +3936,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3024.7301125" hpRegen="8.5" mp="1820.65" mpRegen="3" />
-			<attack physical="970.8882975" magical="662.9908475" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="358.8686775" magical="262.604525" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4063,8 +3976,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14291" level="84" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14291" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="12" />
 			<skill name="Buff2" id="4700" level="12" />
@@ -4076,15 +3988,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3032.639435" hpRegen="8.5" mp="1829.3" mpRegen="3" />
-			<attack physical="975.161155" magical="665.908655" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="359.870125" magical="263.33734" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4116,8 +4028,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14292" level="85" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14292" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="13" />
 			<skill name="Buff2" id="4700" level="13" />
@@ -4129,15 +4040,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3046.70947" hpRegen="8.5" mp="1846.8" mpRegen="3" />
-			<attack physical="983.0479" magical="671.29428" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4169,8 +4080,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14293" level="85" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14293" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="13" />
 			<skill name="Buff2" id="4700" level="13" />
@@ -4182,15 +4092,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3056.67236333333" hpRegen="8.5" mp="1858.4" mpRegen="3" />
-			<attack physical="988.525386666667" magical="675.034693333333" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="363.09511" magical="265.697243333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4222,8 +4132,7 @@
 			<height normal="15" />
 		</collision>
 	</npc>
-	<npc id="14294" level="85" type="L2Pet" name="Feline Queen">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14294" level="80" type="L2Pet" name="Feline Queen">
 		<parameters>
 			<skill name="Buff1" id="4699" level="13" />
 			<skill name="Buff2" id="4700" level="13" />
@@ -4235,15 +4144,15 @@
 			<param name="buff_action4" value="1052" />
 			<param name="buff_action5" value="1053" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3066.63525666667" hpRegen="8.5" mp="1870.0" mpRegen="3" />
-			<attack physical="994.002873333333" magical="678.775106666667" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="364.40208" magical="266.653626666667" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2802.89989" hpRegen="8.5" mp="1607.4" mpRegen="3" />
+			<attack physical="297.05" magical="584.40994" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="26" />
-				<run ground="170" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4276,16 +4185,15 @@
 		</collision>
 	</npc>
 	<npc id="14295" level="22" type="L2Pet" name="Boxer the Unicorn">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic" id="4025" level="2" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="387.02878" hpRegen="3.5" mp="218.52" mpRegen="1.5" />
-			<attack physical="51.75278" magical="35.34044" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="619.246048" hpRegen="3.5" mp="218.52" mpRegen="1.5" />
+			<attack physical="51.75278" magical="35.34044" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="92.65694" magical="67.80232" />
 			<speed>
 				<walk ground="27" />
@@ -4294,7 +4202,7 @@
 			<hit_time>710</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -4317,59 +4225,16 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="14296" level="27" type="L2Pet" name="Boxer the Unicorn">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14296" level="32" type="L2Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="2" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="515.17856" hpRegen="3.5" mp="286.92" mpRegen="1.5" />
-			<attack physical="74.99121" magical="51.20928" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="108.28767" magical="79.24022" />
-			<speed>
-				<walk ground="27" />
-				<run ground="140" />
-			</speed>
-			<hit_time>710</hit_time>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skill_list>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
-			<skill id="4025" level="2" /> <!-- Master Recharge -->
-		</skill_list>
-		<shots soul="1" spirit="1" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
-		<collision>
-			<radius normal="11" />
-			<height normal="18" />
-		</collision>
-	</npc>
-	<npc id="14297" level="32" type="L2Pet" name="Boxer the Unicorn">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<skill name="HealMagic" id="4025" level="3" />
-			<param name="step1_action01" value="45" />
-		</parameters>
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="668.47132" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
-			<attack physical="106.16525" magical="72.49711" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1069.554112" hpRegen="4.5" mp="358.32" mpRegen="1.8" />
+			<attack physical="106.16525" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="91.89199" />
 			<speed>
 				<walk ground="27" />
@@ -4378,7 +4243,7 @@
 			<hit_time>710</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
@@ -4391,9 +4256,9 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
-			<skill id="4025" level="3" /> <!-- Master Recharge -->
+			<skill id="4025" level="2" /> <!-- Master Recharge -->
 		</skill_list>
-		<shots soul="2" spirit="1" />
+		<shots soul="1" spirit="1" />
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
 		<collision>
@@ -4401,59 +4266,16 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="14298" level="37" type="L2Pet" name="Boxer the Unicorn">
-		<!-- Confirmed CT2.5 -->
+	<npc id="14297" level="42" type="L2Pet" name="Boxer the Unicorn">
 		<parameters>
 			<skill name="HealMagic" id="4025" level="3" />
 			<param name="step1_action01" value="45" />
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="847.31754" hpRegen="4.5" mp="432.72" mpRegen="1.8" />
-			<attack physical="146.82587" magical="100.26304" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="144.47758" magical="105.72243" />
-			<speed>
-				<walk ground="27" />
-				<run ground="140" />
-			</speed>
-			<hit_time>710</hit_time>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skill_list>
-			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
-			<skill id="4025" level="3" /> <!-- Master Recharge -->
-		</skill_list>
-		<shots soul="2" spirit="1" />
-		<ex_crt_effect>false</ex_crt_effect>
-		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
-		<collision>
-			<radius normal="11" />
-			<height normal="18" />
-		</collision>
-	</npc>
-	<npc id="14299" level="42" type="L2Pet" name="Boxer the Unicorn">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<skill name="HealMagic" id="4025" level="4" />
-			<param name="step1_action01" value="45" />
-		</parameters>
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1050.81652" hpRegen="5.5" mp="531.0" mpRegen="2.1" />
-			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="1681.306432" hpRegen="5.5" mp="531" mpRegen="2.1" />
+			<attack physical="198.34591" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<speed>
 				<walk ground="27" />
@@ -4462,7 +4284,89 @@
 			<hit_time>710</hit_time>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" />
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+			<skill id="4025" level="3" /> <!-- Master Recharge -->
+		</skill_list>
+		<shots soul="2" spirit="1" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14298" level="50" type="L2Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="3" />
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2273.601648" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="146.5258" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hit_time>710</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
+		<skill_list>
+			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5038" level="7" /> <!-- Summon PVP Penalty -->
+			<skill id="4025" level="3" /> <!-- Master Recharge -->
+		</skill_list>
+		<shots soul="2" spirit="1" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>1.61051</s_npc_prop_hp_rate>
+		<collision>
+			<radius normal="11" />
+			<height normal="18" />
+		</collision>
+	</npc>
+	<npc id="14299" level="58" type="L2Pet" name="Boxer the Unicorn">
+		<parameters>
+			<skill name="HealMagic" id="4025" level="4" />
+			<param name="step1_action01" value="45" />
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+			<vitals hp="2925.892256" hpRegen="6.5" mp="977.4" mpRegen="2.4" />
+			<attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="237.99429" magical="174.1539" />
+			<speed>
+				<walk ground="27" />
+				<run ground="140" />
+			</speed>
+			<hit_time>710</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status attackable="false" undying="false" />
 		<skill_list>
 			<skill id="4121" level="9" /> <!-- Summoned Monster Magic Protection -->
 			<skill id="4408" level="6" /> <!-- HP Very High -->
