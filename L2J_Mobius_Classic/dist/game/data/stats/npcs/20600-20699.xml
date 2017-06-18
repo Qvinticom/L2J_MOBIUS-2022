@@ -16,7 +16,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- Morning Star -->
-		<acquire exp="4935" sp="1" />
+		<acquire exp="2889" sp="86" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
 			<attack physical="193.996847" magical="120.43155" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -48,6 +48,26 @@
 			<radius normal="17" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="629" min="1" max="1" chance="0.03" /> <!-- Kite Shield -->
+				<item id="2411" min="1" max="1" chance="0.03" /> <!-- Brigandine Helmet -->
+				<item id="2493" min="1" max="1" chance="0.03" /> <!-- Brigandine Shield -->
+				<item id="57" min="214" max="502" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="15.06" /> <!-- Thread -->
+				<item id="1341" min="20" max="60" chance="12.43" /> <!-- Bone Arrow -->
+				<item id="1867" min="1" max="1" chance="9.96" /> <!-- Animal Skin -->
+				<item id="1866" min="1" max="1" chance="5.022" /> <!-- Suede -->
+				<item id="1947" min="1" max="1" chance="2.746" /> <!-- Kite Shield Fragment -->
+				<item id="2929" min="1" max="1" chance="2.661" /> <!-- Brigandine Shield Fragment -->
+				<item id="2922" min="1" max="1" chance="0.75" /> <!-- Brigandine Helmet Design -->
+				<item id="2196" min="1" max="1" chance="0.3" /> <!-- Recipe: Plate Gaiters -->
+			</death>
+			<corpse>
+				<item id="1873" min="1" max="1" chance="52.75" /> <!-- Silver Nugget -->
+				<item id="1945" min="1" max="1" chance="10.22" /> <!-- Mithril Stocking Design -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20601" level="41" type="L2Monster" name="Tamlin Orc">
 		<parameters>
@@ -65,7 +85,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
-		<acquire exp="4399" sp="1" />
+		<acquire exp="3025" sp="90" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
 			<attack physical="187.11878" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -101,6 +121,24 @@
 			<radius normal="9" />
 			<height normal="21.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="353" min="1" max="1" chance="0.03" /> <!-- Half Plate Armor -->
+				<item id="380" min="1" max="1" chance="0.03" /> <!-- Plate Gaiters -->
+				<item id="57" min="221" max="515" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="1" chance="10.59" /> <!-- Animal Bone -->
+				<item id="1871" min="1" max="1" chance="7.762" /> <!-- Charcoal -->
+				<item id="1870" min="1" max="1" chance="7.703" /> <!-- Coal -->
+				<item id="1951" min="1" max="1" chance="1.466" /> <!-- Plate Gaiter Fragment -->
+				<item id="1879" min="1" max="1" chance="1.266" /> <!-- Cokes -->
+				<item id="1950" min="1" max="1" chance="0.75" /> <!-- Half Plate Temper -->
+				<item id="1805" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (C-grade) -->
+			</death>
+			<corpse>
+				<item id="1880" min="1" max="1" chance="16.18" /> <!-- Steel -->
+				<item id="2304" min="1" max="1" chance="0.75" /> <!-- Recipe: Heavy Doom Hammer -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20602" level="42" type="L2Monster" name="Tamlin Orc Archer">
 		<parameters>
@@ -117,7 +155,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="5955" sp="1" />
+		<acquire exp="3175" sp="95" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1050.81652" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="440.724612" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -153,6 +191,22 @@
 			<radius normal="11" />
 			<height normal="21.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="280" min="1" max="1" chance="0.0075" /> <!-- Light Crossbow -->
+				<item id="57" min="235" max="550" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="1" chance="11.5" /> <!-- Animal Bone -->
+				<item id="1871" min="1" max="1" chance="8.21" /> <!-- Charcoal -->
+				<item id="1870" min="1" max="1" chance="8.204" /> <!-- Coal -->
+				<item id="1879" min="1" max="1" chance="1.319" /> <!-- Cokes -->
+				<item id="2054" min="1" max="1" chance="0.75" /> <!-- Light Crossbow Shaft -->
+				<item id="1805" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot (C-grade) -->
+			</death>
+			<corpse>
+				<item id="2999" min="1" max="1" chance="11.23" /> <!-- Recipe: Plated Leather Gloves -->
+				<item id="1889" min="1" max="1" chance="10.87" /> <!-- Synthetic Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20603" level="43" type="L2Monster" name="Kronbe Spider">
 		<parameters>
@@ -167,7 +221,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="4887" sp="1" />
+		<acquire exp="3312" sp="99" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="190.9530182" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -198,6 +252,31 @@
 			<radius normal="26" />
 			<height normal="25.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="61" min="1" max="1" chance="0.03" /> <!-- Mithril Gloves -->
+				<item id="607" min="1" max="1" chance="0.03" /> <!-- Ogre Power Gauntlets -->
+				<item id="1125" min="1" max="1" chance="0.03" /> <!-- Assault Boots -->
+				<item id="2427" min="1" max="1" chance="0.03" /> <!-- Salamander Skin Boots -->
+				<item id="2428" min="1" max="1" chance="0.03" /> <!-- Plate Boots -->
+				<item id="2451" min="1" max="1" chance="0.03" /> <!-- Sage's Worn Gloves -->
+				<item id="57" min="204" max="477" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="18.31" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="6.02" /> <!-- Suede -->
+				<item id="1884" min="1" max="1" chance="5.551" /> <!-- Cord -->
+				<item id="2933" min="1" max="1" chance="0.75" /> <!-- Sage's Worn Glove Lining -->
+				<item id="2932" min="1" max="1" chance="0.75" /> <!-- Plate Boot Design -->
+				<item id="2931" min="1" max="1" chance="0.75" /> <!-- Salamander Skin Boot Lining -->
+				<item id="1963" min="1" max="1" chance="0.75" /> <!-- Ogre Power Gauntlet Fragment -->
+				<item id="1957" min="1" max="1" chance="0.75" /> <!-- Assault Boot Fragment -->
+				<item id="1949" min="1" max="1" chance="0.75" /> <!-- Mithril Glove Design -->
+				<item id="3954" min="1" max="1" chance="0.03" /> <!-- Recipe: Blessed Spiritshot (C-grade) -->
+			</death>
+			<corpse>
+				<item id="1952" min="1" max="1" chance="4.689" /> <!-- Salamander Skin Mail Texture -->
+				<item id="2311" min="1" max="1" chance="0.75" /> <!-- Recipe: Chakram -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20604" level="44" type="L2Monster" name="Lakin">
 		<parameters>
@@ -214,7 +293,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="89" /> <!-- Big Hammer -->
-		<acquire exp="5970" sp="1" />
+		<acquire exp="3496" sp="104" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1138.62924" hpRegen="5.5" mp="584" mpRegen="2.1" />
 			<attack physical="244.454232" magical="151.75505" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -246,6 +325,22 @@
 			<radius normal="17" grown="20" />
 			<height normal="39" grown="48" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="852" min="1" max="1" chance="0.03" /> <!-- Moonstone Earring -->
+				<item id="883" min="1" max="1" chance="0.03" /> <!-- Aquastone Ring -->
+				<item id="915" min="1" max="1" chance="0.03" /> <!-- Aquastone Necklace -->
+				<item id="57" min="237" max="555" chance="70" /> <!-- Adena -->
+				<item id="1909" min="1" max="1" chance="2.854" /> <!-- Aquastone Ring Wire -->
+				<item id="1908" min="1" max="1" chance="1.923" /> <!-- Moonstone Earring Wire -->
+				<item id="1910" min="1" max="1" chance="1.545" /> <!-- Aquastone Necklace Chain -->
+				<item id="2212" min="1" max="1" chance="1.464" /> <!-- Recipe: Plated Leather Gaiters -->
+			</death>
+			<corpse>
+				<item id="2322" min="1" max="1" chance="0.75" /> <!-- Recipe: Soulfire Dirk -->
+				<item id="2323" min="1" max="1" chance="0.75" /> <!-- Recipe: Elemental Bow -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20605" level="45" type="L2Monster" name="Weird Drake">
 		<parameters>
@@ -261,7 +356,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="5406" sp="1" />
+		<acquire exp="3645" sp="109" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -298,6 +393,24 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="439" min="1" max="1" chance="0.03" /> <!-- Karmian Tunic -->
+				<item id="471" min="1" max="1" chance="0.03" /> <!-- Karmian Stockings -->
+				<item id="57" min="248" max="579" chance="70" /> <!-- Adena -->
+				<item id="1864" min="1" max="1" chance="16.6" /> <!-- Stem -->
+				<item id="1866" min="1" max="1" chance="5.845" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="3.503" /> <!-- Durable Braid -->
+				<item id="1954" min="1" max="1" chance="1.738" /> <!-- Karmian Stocking Design -->
+				<item id="2251" min="1" max="1" chance="1.448" /> <!-- Recipe: Steel Arrow -->
+				<item id="1962" min="1" max="1" chance="0.99" /> <!-- Karmian Tunic Pattern -->
+				<item id="5154" min="1" max="1" chance="0.03" /> <!-- Recipe: Soulshot Compressed Package (C-grade) -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="5" chance="78.74" /> <!-- Animal Skin -->
+				<item id="2059" min="1" max="1" chance="1.293" /> <!-- Flamberge Blade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20606" level="27" type="L2Monster" name="Kuran Kobold">
 		<parameters>
@@ -313,7 +426,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3422" sp="1" />
+		<acquire exp="2602" sp="78" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1030.35712" hpRegen="7" mp="286.92" mpRegen="1.5" />
 			<attack physical="68.17382727" magical="51.20928" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -350,6 +463,20 @@
 			<radius normal="10" />
 			<height normal="15" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="220" min="1" max="1" chance="0.075" /> <!-- Crafted Dagger -->
+				<item id="57" min="187" max="438" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="16.93" /> <!-- Animal Skin -->
+				<item id="1868" min="1" max="3" chance="13.31" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="8.59" /> <!-- Suede -->
+				<item id="2262" min="1" max="1" chance="0.3" /> <!-- Recipe: Elven Bow -->
+			</death>
+			<corpse>
+				<item id="1932" min="1" max="1" chance="22.26" /> <!-- Bone Helmet Design -->
+				<item id="2260" min="1" max="1" chance="2.297" /> <!-- Recipe: Mace of Judgment -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20607" level="28" type="L2Monster" name="Kuran Kobold Warrior">
 		<parameters>
@@ -365,7 +492,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="3623" sp="1" />
+		<acquire exp="2746" sp="82" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1087.59152" hpRegen="7" mp="300.96" mpRegen="1.5" />
 			<attack physical="88.594616" magical="54.99876" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -402,6 +529,25 @@
 			<radius normal="10" />
 			<height normal="15" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="101" min="1" max="1" chance="0.03" /> <!-- Scroll of Wisdom -->
+				<item id="312" min="1" max="1" chance="0.03" /> <!-- Branch of Life -->
+				<item id="313" min="1" max="1" chance="0.03" /> <!-- Temptation of Abyss -->
+				<item id="314" min="1" max="1" chance="0.03" /> <!-- Proof of Revenge -->
+				<item id="57" min="197" max="460" chance="70" /> <!-- Adena -->
+				<item id="1834" min="1" max="1" chance="11.87" /> <!-- Emergency Dressing -->
+				<item id="1868" min="1" max="3" chance="11.13" /> <!-- Thread -->
+				<item id="1865" min="1" max="1" chance="11.09" /> <!-- Varnish -->
+				<item id="1866" min="1" max="1" chance="7.176" /> <!-- Suede -->
+				<item id="1867" min="1" max="3" chance="4.736" /> <!-- Animal Skin -->
+				<item id="2020" min="1" max="1" chance="0.75" /> <!-- Temptation of Abyss Piece -->
+			</death>
+			<corpse>
+				<item id="2020" min="1" max="1" chance="2.721" /> <!-- Temptation of Abyss Piece -->
+				<item id="626" min="1" max="1" chance="1.367" /> <!-- Bronze Shield -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20608" level="29" type="L2Monster" name="Patin Archer">
 		<parameters>
@@ -417,7 +563,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="3680" sp="1" />
+		<acquire exp="2893" sp="86" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1146.85834" hpRegen="7" mp="315.12" mpRegen="1.5" />
 			<attack physical="192.0252844" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -456,6 +602,23 @@
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="315" min="1" max="1" chance="0.03" /> <!-- Divine Tome -->
+				<item id="57" min="191" max="447" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="1" chance="9.907" /> <!-- Animal Bone -->
+				<item id="1870" min="1" max="1" chance="7.489" /> <!-- Coal -->
+				<item id="1865" min="1" max="1" chance="7.476" /> <!-- Varnish -->
+				<item id="1869" min="1" max="1" chance="7.441" /> <!-- Iron Ore -->
+				<item id="1871" min="1" max="1" chance="7.39" /> <!-- Charcoal -->
+				<item id="1876" min="1" max="1" chance="1.482" /> <!-- Mithril Ore -->
+				<item id="2153" min="1" max="1" chance="1.164" /> <!-- Recipe: Tiger's Eye -->
+			</death>
+			<corpse>
+				<item id="1874" min="1" max="1" chance="12.07" /> <!-- Oriharukon Ore -->
+				<item id="2022" min="1" max="1" chance="2.798" /> <!-- Mace of Judgment Head -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20609" level="30" type="L2Monster" name="Salamander Lakin">
 		<parameters>
@@ -473,7 +636,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="3848" sp="1" />
+		<acquire exp="3059" sp="91" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1208.16838" hpRegen="7" mp="329.4" mpRegen="1.5" />
 			<attack physical="84.22023636" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -514,6 +677,20 @@
 			<radius normal="16" />
 			<height normal="6.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="259" min="1" max="1" chance="0.03" /> <!-- Single-Edged Jamadhr -->
+				<item id="57" min="269" max="631" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="22.78" /> <!-- Thread -->
+				<item id="1867" min="1" max="1" chance="15.15" /> <!-- Animal Skin -->
+				<item id="1866" min="1" max="1" chance="7.882" /> <!-- Suede -->
+				<item id="2153" min="1" max="1" chance="1.845" /> <!-- Recipe: Tiger's Eye -->
+			</death>
+			<corpse>
+				<item id="2265" min="1" max="1" chance="1.687" /> <!-- Recipe: Spiked Club -->
+				<item id="433" min="1" max="1" chance="0.3" /> <!-- Elven Tunic -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20610" level="31" type="L2Monster" name="Watchman Of Fire">
 		<parameters>
@@ -533,7 +710,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="3899" sp="1" />
+		<acquire exp="3257" sp="97" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1271.52874" hpRegen="9" mp="343.8" mpRegen="1.8" />
 			<attack physical="109.141846" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -573,6 +750,20 @@
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="292" min="1" max="1" chance="0.03" /> <!-- Pike -->
+				<item id="57" min="289" max="672" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="16.16" /> <!-- Animal Skin -->
+				<item id="1868" min="1" max="3" chance="12.51" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="8.403" /> <!-- Suede -->
+				<item id="2268" min="1" max="1" chance="0.3" /> <!-- Recipe: Tome of Blood -->
+			</death>
+			<corpse>
+				<item id="2025" min="1" max="1" chance="2.413" /> <!-- Dwarven Trident Edge -->
+				<item id="2267" min="1" max="1" chance="1.836" /> <!-- Recipe: Gastraphetes -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20611" level="32" type="L2Monster" name="Dre Vanul Warrior">
 		<parameters>
@@ -590,7 +781,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4155" sp="1" />
+		<acquire exp="3471" sp="104" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1336.94264" hpRegen="9" mp="358.32" mpRegen="1.8" />
 			<attack physical="116.781775" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -631,6 +822,28 @@
 			<radius normal="14" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="86" min="1" max="1" chance="0.0075" /> <!-- Tomahawk -->
+				<item id="179" min="1" max="1" chance="0.0075" /> <!-- Mace of Prayer -->
+				<item id="180" min="1" max="1" chance="0.0075" /> <!-- Mace of Judgment -->
+				<item id="181" min="1" max="1" chance="0.0075" /> <!-- Mace of Miracle -->
+				<item id="182" min="1" max="1" chance="0.0075" /> <!-- Doom Hammer -->
+				<item id="183" min="1" max="1" chance="0.0075" /> <!-- Mystic Staff -->
+				<item id="184" min="1" max="1" chance="0.0075" /> <!-- Conjuror's Staff -->
+				<item id="185" min="1" max="1" chance="0.0075" /> <!-- Staff of Mana -->
+				<item id="57" min="307" max="719" chance="70" /> <!-- Adena -->
+				<item id="1832" min="1" max="1" chance="20.88" /> <!-- Greater Antidote -->
+				<item id="1873" min="1" max="1" chance="7.196" /> <!-- Silver Nugget -->
+				<item id="2022" min="1" max="1" chance="0.3" /> <!-- Mace of Judgment Head -->
+				<item id="2023" min="1" max="1" chance="0.3" /> <!-- Conjuror's Staff Head -->
+				<item id="2264" min="1" max="1" chance="0.3" /> <!-- Recipe: Two-handed Sword -->
+			</death>
+			<corpse>
+				<item id="2153" min="1" max="1" chance="27.91" /> <!-- Recipe: Tiger's Eye -->
+				<item id="467" min="1" max="1" chance="0.75" /> <!-- Dark Stockings -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20612" level="33" type="L2Monster" name="Salamander Rowin">
 		<parameters>
@@ -648,7 +861,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="4748" sp="1" />
+		<acquire exp="3702" sp="111" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1404.40926" hpRegen="9" mp="372.96" mpRegen="1.8" />
 			<attack physical="103.1733182" magical="77.49941" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -689,6 +902,22 @@
 			<radius normal="16" />
 			<height normal="6.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="436" min="1" max="1" chance="0.3" /> <!-- Tunic of Knowledge -->
+				<item id="469" min="1" max="1" chance="0.3" /> <!-- Stockings of Knowledge -->
+				<item id="57" min="330" max="773" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="14.96" /> <!-- Animal Skin -->
+				<item id="1865" min="1" max="1" chance="11.84" /> <!-- Varnish -->
+				<item id="1868" min="1" max="3" chance="11.27" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="7.79" /> <!-- Suede -->
+				<item id="2155" min="1" max="1" chance="1.823" /> <!-- Recipe: Elven Ring -->
+			</death>
+			<corpse>
+				<item id="1869" min="1" max="5" chance="66.6" /> <!-- Iron Ore -->
+				<item id="349" min="1" max="1" chance="0.3" /> <!-- Compound Scale Mail -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20613" level="27" type="L2Monster" name="Lafi Lizardman">
 		<parameters>
@@ -705,7 +934,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- Trident -->
-		<acquire exp="3422" sp="1" />
+		<acquire exp="2590" sp="77" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1030.35712" hpRegen="7" mp="286.92" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -742,6 +971,22 @@
 			<radius normal="10" />
 			<height normal="23" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="432" min="1" max="1" chance="0.3" /> <!-- Cursed Tunic -->
+				<item id="465" min="1" max="1" chance="0.3" /> <!-- Cursed Stockings -->
+				<item id="57" min="186" max="436" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="13.17" /> <!-- Animal Skin -->
+				<item id="1832" min="1" max="1" chance="11.9" /> <!-- Greater Antidote -->
+				<item id="1868" min="1" max="3" chance="10.5" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="6.804" /> <!-- Suede -->
+				<item id="2259" min="1" max="1" chance="0.3" /> <!-- Recipe: Spinebone Sword -->
+			</death>
+			<corpse>
+				<item id="1934" min="1" max="1" chance="20.01" /> <!-- Quality Leather Glove Lining -->
+				<item id="40" min="1" max="1" chance="1.368" /> <!-- Leather Boots -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20614" level="28" type="L2Monster" name="Lafi Lizardman Scout">
 		<parameters>
@@ -757,7 +1002,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- Lizardspear -->
-		<acquire exp="3384" sp="1" />
+		<acquire exp="2754" sp="82" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1087.59152" hpRegen="7" mp="300.96" mpRegen="1.5" />
 			<attack physical="162.6919312" magical="54.99876" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -793,6 +1038,20 @@
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="220" min="1" max="1" chance="0.075" /> <!-- Crafted Dagger -->
+				<item id="57" min="197" max="462" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="18.05" /> <!-- Animal Skin -->
+				<item id="1868" min="1" max="3" chance="14.04" /> <!-- Thread -->
+				<item id="1866" min="1" max="1" chance="9.075" /> <!-- Suede -->
+				<item id="956" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (D-grade) -->
+			</death>
+			<corpse>
+				<item id="1869" min="1" max="3" chance="75.3" /> <!-- Iron Ore -->
+				<item id="1899" min="1" max="1" chance="23.39" /> <!-- Necklace of Devotion Chain -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20615" level="29" type="L2Monster" name="Ritmal Swordsman">
 		<parameters>
@@ -809,7 +1068,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
-		<acquire exp="3937" sp="1" />
+		<acquire exp="2893" sp="86" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1146.85834" hpRegen="7" mp="315.12" mpRegen="1.5" />
 			<attack physical="86.42002" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -849,6 +1108,21 @@
 			<radius normal="11" grown="13" />
 			<height normal="27" grown="34" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="46" min="1" max="1" chance="0.3" /> <!-- Bronze Helmet -->
+				<item id="627" min="1" max="1" chance="0.3" /> <!-- Aspis -->
+				<item id="57" min="191" max="447" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="1" chance="13.55" /> <!-- Varnish -->
+				<item id="1869" min="1" max="1" chance="12.41" /> <!-- Iron Ore -->
+				<item id="1876" min="1" max="1" chance="2.66" /> <!-- Mithril Ore -->
+				<item id="2267" min="1" max="1" chance="0.3" /> <!-- Recipe: Gastraphetes -->
+			</death>
+			<corpse>
+				<item id="2185" min="1" max="1" chance="36.68" /> <!-- Recipe: Iron Boots -->
+				<item id="392" min="1" max="1" chance="0.3" /> <!-- Lion Skin Shirt -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20616" level="30" type="L2Monster" name="Undine Lakin">
 		<parameters>
@@ -864,7 +1138,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="5163" sp="1" />
+		<acquire exp="3297" sp="98" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1208.16838" hpRegen="7" mp="329.4" mpRegen="1.5" />
 			<attack physical="101.906486" magical="63.26266" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -905,6 +1179,25 @@
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="466" min="1" max="1" chance="0.075" /> <!-- Elven Stockings -->
+				<item id="467" min="1" max="1" chance="0.075" /> <!-- Dark Stockings -->
+				<item id="468" min="1" max="1" chance="0.075" /> <!-- Wizard Stockings -->
+				<item id="433" min="1" max="1" chance="0.03" /> <!-- Elven Tunic -->
+				<item id="434" min="1" max="1" chance="0.03" /> <!-- White Tunic -->
+				<item id="435" min="1" max="1" chance="0.03" /> <!-- Wizard Tunic -->
+				<item id="57" min="290" max="681" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="10.11" /> <!-- Silver Nugget -->
+				<item id="1933" min="1" max="1" chance="2.245" /> <!-- Dark Stocking Fabric -->
+				<item id="1936" min="1" max="1" chance="1.537" /> <!-- White Tunic Pattern -->
+				<item id="956" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (D-grade) -->
+			</death>
+			<corpse>
+				<item id="1937" min="1" max="1" chance="14.57" /> <!-- Scale Gaiter Fragment -->
+				<item id="1874" min="1" max="1" chance="11.23" /> <!-- Oriharukon Ore -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20617" level="31" type="L2Monster" name="Watchman Of Water">
 		<parameters>
@@ -923,7 +1216,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="3937" sp="1" />
+		<acquire exp="3267" sp="98" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1271.52874" hpRegen="9" mp="343.8" mpRegen="1.8" />
 			<attack physical="90.19987273" magical="67.7543" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -963,6 +1256,18 @@
 			<radius normal="11" grown="13" />
 			<height normal="20" grown="24" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="392" min="1" max="1" chance="0.3" /> <!-- Lion Skin Shirt -->
+				<item id="414" min="1" max="1" chance="0.3" /> <!-- Lion Skin Gaiters -->
+				<item id="57" min="290" max="674" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="10.11" /> <!-- Silver Nugget -->
+				<item id="2265" min="1" max="1" chance="0.3" /> <!-- Recipe: Spiked Club -->
+			</death>
+			<corpse>
+				<item id="435" min="1" max="1" chance="0.75" /> <!-- Wizard Tunic -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20618" level="32" type="L2Monster" name="Kanil Succubus">
 		<parameters>
@@ -980,7 +1285,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4378" sp="1" />
+		<acquire exp="3471" sp="104" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1336.94264" hpRegen="9" mp="358.32" mpRegen="1.8" />
 			<attack physical="116.781775" magical="72.49711" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1021,6 +1326,17 @@
 			<radius normal="10" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="315" min="1" max="1" chance="0.075" /> <!-- Divine Tome -->
+				<item id="57" min="307" max="719" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="21.61" /> <!-- Silver Nugget -->
+			</death>
+			<corpse>
+				<item id="1885" min="1" max="1" chance="15.18" /> <!-- High-grade Suede -->
+				<item id="1935" min="1" max="1" chance="10.46" /> <!-- Scale Mail Fragment -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20619" level="33" type="L2Monster" name="Undine Rowin">
 		<parameters>
@@ -1037,7 +1353,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4506" sp="1" />
+		<acquire exp="3702" sp="111" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1404.40926" hpRegen="9" mp="372.96" mpRegen="1.8" />
 			<attack physical="103.1733182" magical="77.49941" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1077,6 +1393,19 @@
 			<radius normal="12" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="157" min="1" max="1" chance="0.03" /> <!-- Spiked Club -->
+				<item id="186" min="1" max="1" chance="0.03" /> <!-- Staff of Magic -->
+				<item id="57" min="330" max="773" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="23.59" /> <!-- Silver Nugget -->
+				<item id="2027" min="1" max="1" chance="0.75" /> <!-- Spiked Club Head -->
+			</death>
+			<corpse>
+				<item id="2981" min="1" max="1" chance="26.97" /> <!-- Recipe: Elven Mithril Gloves -->
+				<item id="2270" min="1" max="1" chance="1.464" /> <!-- Recipe: Goat Head Staff -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20620" level="61" type="L2Monster" name="Cave Beast">
 		<parameters>
@@ -1092,7 +1421,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="23241" sp="5" />
+		<acquire exp="35730" sp="1071" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="5956.67778" hpRegen="22.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="551.188748" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1124,6 +1453,25 @@
 			<radius normal="21" grown="25" />
 			<height normal="35" grown="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="887" min="1" max="1" chance="0.3" /> <!-- Adamantite Ring -->
+				<item id="57" min="2325" max="5433" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="18.78" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="16.62" /> <!-- Stem -->
+				<item id="4049" min="1" max="3" chance="6.28" /> <!-- Adamantite Earring Gemstone -->
+				<item id="1865" min="7" max="21" chance="4.57" /> <!-- Varnish -->
+				<item id="4051" min="2" max="6" chance="3.402" /> <!-- Adamantite Necklace Chain -->
+				<item id="4044" min="1" max="1" chance="2.29" /> <!-- Thons -->
+				<item id="4050" min="5" max="15" chance="2.215" /> <!-- Adamantite Ring Wire -->
+				<item id="4959" min="1" max="1" chance="1.378" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
+				<item id="4944" min="1" max="1" chance="0.3" /> <!-- Recipe: Avadon Breastplate (60%) -->
+			</death>
+			<corpse>
+				<item id="4959" min="1" max="1" chance="31.72" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
+				<item id="4944" min="1" max="1" chance="7.89" /> <!-- Recipe: Avadon Breastplate (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20621" level="62" type="L2Monster" name="Death Wave">
 		<parameters>
@@ -1142,7 +1490,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="25051" sp="6" />
+		<acquire exp="35555" sp="1066" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="6113.43246" hpRegen="22.5" mp="1097" mpRegen="2.7" />
 			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1180,6 +1528,35 @@
 			<radius normal="13" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="600" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Boots -->
+				<item id="612" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="673" min="1" max="1" chance="0.03" /> <!-- Avadon Shield -->
+				<item id="2397" min="1" max="1" chance="0.03" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="0.03" /> <!-- Avadon Robe -->
+				<item id="57" min="2303" max="5373" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="16.16" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="14.75" /> <!-- Stem -->
+				<item id="4070" min="1" max="1" chance="4.242" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4439" min="1" max="3" chance="4.052" /> <!-- Avadon Shield Fragment -->
+				<item id="1865" min="7" max="21" chance="3.855" /> <!-- Varnish -->
+				<item id="4069" min="1" max="1" chance="2.721" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4098" min="1" max="3" chance="2.108" /> <!-- Sealed Avadon Boot Design -->
+				<item id="4071" min="1" max="1" chance="2.107" /> <!-- Avadon Robe Fabric -->
+				<item id="4044" min="1" max="1" chance="1.926" /> <!-- Thons -->
+				<item id="4100" min="2" max="6" chance="1.587" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4953" min="1" max="1" chance="1.082" /> <!-- Recipe: Sealed Avadon Gloves (60%) -->
+				<item id="4945" min="1" max="1" chance="0.3" /> <!-- Recipe: Avadon Gaiters (60%) -->
+				<item id="4948" min="1" max="1" chance="0.3" /> <!-- Recipe: Avadon Leather Armor (60%) -->
+			</death>
+			<corpse>
+				<item id="4953" min="1" max="1" chance="20.65" /> <!-- Recipe: Sealed Avadon Gloves (60%) -->
+				<item id="4945" min="1" max="1" chance="8.41" /> <!-- Recipe: Avadon Gaiters (60%) -->
+				<item id="4948" min="1" max="1" chance="4.784" /> <!-- Recipe: Avadon Leather Armor (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20622" level="63" type="L2Monster" name="Maluk Soldier">
 		<parameters>
@@ -1196,7 +1573,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="221" /> <!-- rhand: Assassin Knife -->
-		<acquire exp="26749" sp="6" />
+		<acquire exp="37749" sp="1132" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="6269.76822" hpRegen="22.5" mp="1127.4" mpRegen="2.7" />
 			<attack physical="521.1434498" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
@@ -1235,6 +1612,34 @@
 			<radius normal="11" />
 			<height normal="28.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="357" min="1" max="1" chance="0.03" /> <!-- Zubei's Breastplate -->
+				<item id="383" min="1" max="1" chance="0.03" /> <!-- Zubei's Gaiters -->
+				<item id="554" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Boots -->
+				<item id="633" min="1" max="1" chance="0.03" /> <!-- Zubei's Shield -->
+				<item id="2379" min="1" max="1" chance="0.03" /> <!-- Avadon Gaiters -->
+				<item id="2464" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Gloves -->
+				<item id="57" min="2467" max="5755" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="29.2" /> <!-- Silver Nugget -->
+				<item id="1869" min="3" max="9" chance="11.93" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.263" /> <!-- Steel -->
+				<item id="4101" min="1" max="3" chance="3.593" /> <!-- Zubei's Shield Fragment -->
+				<item id="4065" min="1" max="1" chance="3.499" /> <!-- Avadon Gaiter Material -->
+				<item id="4057" min="1" max="1" chance="3.467" /> <!-- Zubei's Gaiter Material -->
+				<item id="4056" min="1" max="1" chance="2.281" /> <!-- Zubei's Breastplate Part -->
+				<item id="4073" min="1" max="3" chance="2.132" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4097" min="2" max="6" chance="1.697" /> <!-- Sealed Zubei's Boot Design -->
+				<item id="4936" min="1" max="1" chance="1.377" /> <!-- Recipe: Avadon Shield (60%) -->
+				<item id="4951" min="1" max="1" chance="0.3" /> <!-- Recipe: Avadon Robe (60%) -->
+				<item id="5006" min="1" max="1" chance="0.075" /> <!-- Recipe: Bellion Cestus (60%) -->
+			</death>
+			<corpse>
+				<item id="4936" min="1" max="1" chance="22.29" /> <!-- Recipe: Avadon Shield (60%) -->
+				<item id="4951" min="1" max="1" chance="5.096" /> <!-- Recipe: Avadon Robe (60%) -->
+				<item id="5006" min="1" max="1" chance="0.75" /> <!-- Recipe: Bellion Cestus (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20623" level="64" type="L2Monster" name="Plando">
 		<parameters>
@@ -1251,7 +1656,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- rhand: Lizardspear -->
-		<acquire exp="35667" sp="8" />
+		<acquire exp="38638" sp="1159" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8567.28508" hpRegen="30" mp="1158" mpRegen="2.7" />
 			<attack physical="1135.285955" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -1287,6 +1692,33 @@
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="110" min="1" max="1" chance="0.03" /> <!-- Doom Shield -->
+				<item id="2384" min="1" max="1" chance="0.03" /> <!-- Zubei's Leather Shirt -->
+				<item id="2388" min="1" max="1" chance="0.03" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2390" min="1" max="1" chance="0.03" /> <!-- Avadon Leather Armor -->
+				<item id="57" min="2526" max="5897" chance="70" /> <!-- Adena -->
+				<item id="1882" min="1" max="1" chance="10.78" /> <!-- Leather -->
+				<item id="1872" min="4" max="12" chance="8.143" /> <!-- Animal Bone -->
+				<item id="4067" min="1" max="1" chance="6.929" /> <!-- Zubei's Leather Gaiter Texture -->
+				<item id="1881" min="1" max="1" chance="6.549" /> <!-- Coarse Bone Powder -->
+				<item id="4066" min="1" max="1" chance="4.503" /> <!-- Zubei's Leather Shirt Fabric -->
+				<item id="4077" min="1" max="3" chance="4.417" /> <!-- Doom Shield Fragment -->
+				<item id="1867" min="7" max="21" chance="4.399" /> <!-- Animal Skin -->
+				<item id="4068" min="1" max="1" chance="3.507" /> <!-- Avadon Leather Armor Lining -->
+				<item id="1875" min="1" max="1" chance="3.214" /> <!-- Stone of Purity -->
+				<item id="4992" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Boots (60%) -->
+				<item id="4981" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Breastplate (60%) -->
+				<item id="4982" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Gaiters (60%) -->
+				<item id="3101" min="1" max="1" chance="0.075" /> <!-- Spellbook: Death Whisper -->
+			</death>
+			<corpse>
+				<item id="4992" min="1" max="1" chance="14.58" /> <!-- Recipe: Sealed Blue Wolf Boots (60%) -->
+				<item id="4982" min="1" max="1" chance="5.951" /> <!-- Recipe: Blue Wolf Gaiters (60%) -->
+				<item id="4981" min="1" max="1" chance="3.75" /> <!-- Recipe: Blue Wolf Breastplate (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20624" level="65" type="L2Monster" name="Cave Howler">
 		<parameters>
@@ -1304,7 +1736,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="36266" sp="8" />
+		<acquire exp="41604" sp="1248" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8773.72568" hpRegen="30" mp="1188.8" mpRegen="2.7" />
 			<attack physical="529.8341727" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1336,6 +1768,35 @@
 			<radius normal="17" grown="20" />
 			<height normal="39" grown="48" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="895" min="1" max="1" chance="0.075" /> <!-- Black Ore Ring -->
+				<item id="864" min="1" max="1" chance="0.03" /> <!-- Black Ore Earring -->
+				<item id="264" min="1" max="1" chance="0.003" /> <!-- Pata -->
+				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
+				<item id="300" min="1" max="1" chance="0.003" /> <!-- Great Axe -->
+				<item id="57" min="2694" max="6292" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="16.04" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="13.66" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="11.88" /> <!-- Stem -->
+				<item id="4053" min="1" max="1" chance="7.077" /> <!-- Black Ore Ring Gemstone -->
+				<item id="4052" min="1" max="1" chance="5.87" /> <!-- Black Ore Earring Piece -->
+				<item id="1878" min="2" max="6" chance="3.838" /> <!-- Durable Braid -->
+				<item id="4044" min="1" max="1" chance="1.553" /> <!-- Thons -->
+				<item id="4103" min="1" max="1" chance="1.071" /> <!-- Pata Blade -->
+				<item id="4998" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Gloves (60%) -->
+				<item id="4113" min="1" max="1" chance="0.75" /> <!-- Great Axe Head -->
+				<item id="4111" min="1" max="1" chance="0.75" /> <!-- Arthro Nail Blade -->
+				<item id="4988" min="1" max="1" chance="0.3" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
+				<item id="4041" min="1" max="1" chance="0.3" /> <!-- Mold Hardener -->
+				<item id="4613" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR   4 CON - 4) -->
+				<item id="4622" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN (Men   4 Wit - 4) -->
+			</death>
+			<corpse>
+				<item id="4998" min="1" max="1" chance="23.44" /> <!-- Recipe: Sealed Blue Wolf Gloves (60%) -->
+				<item id="4988" min="1" max="1" chance="13.29" /> <!-- Recipe: Blue Wolf Stockings (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20625" level="66" type="L2Monster" name="Maluk Knight">
 		<parameters>
@@ -1352,7 +1813,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- rhand: Great Sword -->
-		<acquire exp="36219" sp="8" />
+		<acquire exp="44065" sp="1321" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8978.7086" hpRegen="30" mp="1219.8" mpRegen="2.7" />
 			<attack physical="548.9082091" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1388,6 +1849,34 @@
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2399" min="1" max="1" chance="0.03" /> <!-- Tunic of Doom -->
+				<item id="2404" min="1" max="1" chance="0.03" /> <!-- Stockings of Doom -->
+				<item id="91" min="1" max="1" chance="0.0075" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.0075" /> <!-- Spirit's Staff -->
+				<item id="57" min="2881" max="6724" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="21.83" /> <!-- Silver Nugget -->
+				<item id="1869" min="3" max="9" chance="9.365" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="5.609" /> <!-- Steel -->
+				<item id="4087" min="1" max="1" chance="5.134" /> <!-- Stockings of Doom Pattern -->
+				<item id="4085" min="1" max="1" chance="3.889" /> <!-- Tunic of Doom Pattern -->
+				<item id="4105" min="1" max="1" chance="1.302" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="1.273" /> <!-- Spirit's Staff Head -->
+				<item id="4958" min="1" max="1" chance="1.042" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
+				<item id="4974" min="1" max="1" chance="0.75" /> <!-- Recipe: Black Ore Ring (70%) -->
+				<item id="4940" min="1" max="1" chance="0.3" /> <!-- Recipe: Zubei's Breastplate (60%) -->
+				<item id="4614" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR   4 DEX - 4) -->
+				<item id="4616" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con   4 DEX - 4) -->
+				<item id="5001" min="1" max="1" chance="0.03" /> <!-- Recipe: Lance (60%) -->
+			</death>
+			<corpse>
+				<item id="4958" min="1" max="1" chance="20.06" /> <!-- Recipe: Sealed Zubei's Boots (60%) -->
+				<item id="4974" min="1" max="1" chance="16.44" /> <!-- Recipe: Black Ore Ring (70%) -->
+				<item id="4940" min="1" max="1" chance="4.969" /> <!-- Recipe: Zubei's Breastplate (60%) -->
+				<item id="5001" min="1" max="1" chance="0.75" /> <!-- Recipe: Lance (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20626" level="67" type="L2Monster" name="Maluk Berserker">
 		<parameters>
@@ -1406,7 +1895,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" /> <!-- rhand: Tsurugi -->
-		<acquire exp="51984" sp="12" />
+		<acquire exp="46213" sp="1386" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="9181.92616" hpRegen="30" mp="1251" mpRegen="2.7" />
 			<attack physical="756.1677079" magical="426.74754" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1442,6 +1931,28 @@
 			<radius normal="12" grown="14.5" />
 			<height normal="31" grown="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2381" min="1" max="1" chance="0.03" /> <!-- Doom Plate Armor -->
+				<item id="78" min="1" max="1" chance="0.0075" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="0.0075" /> <!-- Keshanberk -->
+				<item id="57" min="3041" max="7101" chance="70" /> <!-- Adena -->
+				<item id="1869" min="3" max="9" chance="14.38" /> <!-- Iron Ore -->
+				<item id="1873" min="2" max="6" chance="8.883" /> <!-- Silver Nugget -->
+				<item id="1880" min="1" max="1" chance="8.816" /> <!-- Steel -->
+				<item id="4081" min="1" max="1" chance="3.022" /> <!-- Doom Plate Armor Temper -->
+				<item id="4104" min="1" max="1" chance="1.842" /> <!-- Great Sword Blade -->
+				<item id="4107" min="1" max="1" chance="1.814" /> <!-- Keshanberk Blade -->
+				<item id="4999" min="1" max="1" chance="1.141" /> <!-- Recipe: Sealed Doom Boots (60%) -->
+				<item id="5002" min="1" max="1" chance="0.075" /> <!-- Recipe: Deadman's Glory (60%) -->
+				<item id="5005" min="1" max="1" chance="0.075" /> <!-- Recipe: Demon's Dagger (60%) -->
+			</death>
+			<corpse>
+				<item id="4999" min="1" max="1" chance="18.58" /> <!-- Recipe: Sealed Doom Boots (60%) -->
+				<item id="5005" min="1" max="1" chance="1.147" /> <!-- Recipe: Demon's Dagger (60%) -->
+				<item id="5002" min="1" max="1" chance="1.073" /> <!-- Recipe: Deadman's Glory (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20627" level="68" type="L2Monster" name="Maluk Lord">
 		<parameters>
@@ -1462,7 +1973,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
-		<acquire exp="44682" sp="10" />
+		<acquire exp="47808" sp="1434" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="11728.8349" hpRegen="37.5" mp="1282.4" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1501,6 +2012,35 @@
 			<radius normal="15" />
 			<height normal="45" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2392" min="1" max="1" chance="0.03" /> <!-- Leather Armor of Doom -->
+				<item id="229" min="1" max="1" chance="0.0075" /> <!-- Kris -->
+				<item id="243" min="1" max="1" chance="0.0075" /> <!-- Twilight Knife -->
+				<item id="57" min="3115" max="7276" chance="70" /> <!-- Adena -->
+				<item id="1869" min="1" max="3" chance="19.44" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="1" chance="16.31" /> <!-- Silver Nugget -->
+				<item id="1880" min="1" max="1" chance="3.884" /> <!-- Steel -->
+				<item id="4083" min="1" max="1" chance="3.536" /> <!-- Leather Armor of Doom Design -->
+				<item id="1874" min="1" max="1" chance="2.624" /> <!-- Oriharukon Ore -->
+				<item id="4110" min="1" max="1" chance="1.826" /> <!-- Twilight Knife Edge -->
+				<item id="4109" min="1" max="1" chance="1.813" /> <!-- Kris Edge -->
+				<item id="4039" min="1" max="1" chance="1.321" /> <!-- Mold Glue -->
+				<item id="4042" min="1" max="1" chance="0.75" /> <!-- Enria -->
+				<item id="4960" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Zubei's Gauntlets (60%) -->
+				<item id="4941" min="1" max="1" chance="0.3" /> <!-- Recipe: Zubei's Gaiters (60%) -->
+				<item id="4993" min="1" max="1" chance="0.3" /> <!-- Recipe: Sealed Doom Gloves (60%) -->
+				<item id="4983" min="1" max="1" chance="0.075" /> <!-- Recipe: Doom Plate Armor (60%) -->
+				<item id="5007" min="1" max="1" chance="0.03" /> <!-- Recipe: Bow of Peril (60%) -->
+				<item id="4964" min="1" max="1" chance="0.03" /> <!-- Recipe: Heavy War Axe (60%) -->
+				<item id="4963" min="1" max="1" chance="0.03" /> <!-- Recipe: Great Sword (60%) -->
+				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
+			</death>
+			<corpse>
+				<item id="4993" min="1" max="1" chance="28.15" /> <!-- Recipe: Sealed Doom Gloves (60%) -->
+				<item id="4983" min="1" max="1" chance="4.773" /> <!-- Recipe: Doom Plate Armor (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20628" level="69" type="L2Monster" name="Limal Karinness">
 		<parameters>
@@ -1518,7 +2058,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="48146" sp="11" />
+		<acquire exp="49322" sp="1479" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="11977.27665" hpRegen="37.5" mp="1314" mpRegen="2.7" />
 			<attack physical="734.253971" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1556,6 +2096,32 @@
 			<radius normal="14" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="926" min="1" max="1" chance="0.075" /> <!-- Black Ore Necklace -->
+				<item id="97" min="1" max="1" chance="0.0075" /> <!-- Lance -->
+				<item id="268" min="1" max="1" chance="0.0075" /> <!-- Bellion Cestus -->
+				<item id="57" min="3228" max="7531" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="15.64" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="13.68" /> <!-- Stem -->
+				<item id="4054" min="1" max="1" chance="6.421" /> <!-- Black Ore Necklace Beads -->
+				<item id="1878" min="2" max="6" chance="4.449" /> <!-- Durable Braid -->
+				<item id="1865" min="9" max="27" chance="3.2" /> <!-- Varnish -->
+				<item id="4044" min="1" max="1" chance="1.852" /> <!-- Thons -->
+				<item id="4120" min="1" max="1" chance="1.458" /> <!-- Bellion Cestus Edge -->
+				<item id="4115" min="1" max="1" chance="1.389" /> <!-- Lance Blade -->
+				<item id="4973" min="1" max="1" chance="0.75" /> <!-- Recipe: Black Ore Earring (70%) -->
+				<item id="4980" min="1" max="1" chance="0.75" /> <!-- Recipe: Doom Shield (60%) -->
+				<item id="4041" min="1" max="1" chance="0.3" /> <!-- Mold Hardener -->
+				<item id="4972" min="1" max="1" chance="0.075" /> <!-- Recipe: Great Axe (60%) -->
+				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
+			</death>
+			<corpse>
+				<item id="4980" min="1" max="1" chance="17.79" /> <!-- Recipe: Doom Shield (60%) -->
+				<item id="4973" min="1" max="1" chance="15.95" /> <!-- Recipe: Black Ore Earring (70%) -->
+				<item id="4972" min="1" max="1" chance="1.819" /> <!-- Recipe: Great Axe (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20629" level="70" type="L2Monster" name="Karik">
 		<parameters>
@@ -1573,7 +2139,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="59260" sp="14" />
+		<acquire exp="51585" sp="1547" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12222.34095" hpRegen="37.5" mp="1345.8" mpRegen="2.7" />
 			<attack physical="757.750103" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1613,8 +2179,41 @@
 			<radius normal="25" grown="30" />
 			<height normal="90" grown="109" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2398" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Tunic -->
+				<item id="2403" min="1" max="1" chance="0.03" /> <!-- Blue Wolf Stockings -->
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
+				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
+				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
+				<item id="57" min="3399" max="7931" chance="70" /> <!-- Adena -->
+				<item id="1882" min="1" max="1" chance="11.81" /> <!-- Leather -->
+				<item id="1872" min="4" max="12" chance="9.076" /> <!-- Animal Bone -->
+				<item id="1881" min="1" max="1" chance="7.244" /> <!-- Coarse Bone Powder -->
+				<item id="4089" min="1" max="1" chance="6.62" /> <!-- Sealed Doom Helmet Design -->
+				<item id="1867" min="7" max="21" chance="4.817" /> <!-- Animal Skin -->
+				<item id="4086" min="1" max="1" chance="4.056" /> <!-- Blue Wolf Stocking Pattern -->
+				<item id="1875" min="1" max="1" chance="3.573" /> <!-- Stone of Purity -->
+				<item id="4088" min="1" max="3" chance="3.25" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="4084" min="1" max="1" chance="2.983" /> <!-- Blue Wolf Tunic Fabric -->
+				<item id="4950" min="1" max="1" chance="0.75" /> <!-- Recipe: Stockings of Zubei (60%) -->
+				<item id="4118" min="1" max="1" chance="0.75" /> <!-- Evil Spirit Head -->
+				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
+				<item id="4989" min="1" max="1" chance="0.3" /> <!-- Recipe: Stockings of Doom (60%) -->
+				<item id="4623" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit   4 Int - 4) -->
+				<item id="4624" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit   4 Men - 4) -->
+				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
+				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
+			</death>
+			<corpse>
+				<item id="4963" min="1" max="1" chance="1.826" /> <!-- Recipe: Great Sword (60%) -->
+				<item id="4964" min="1" max="1" chance="1.787" /> <!-- Recipe: Heavy War Axe (60%) -->
+				<item id="5007" min="1" max="1" chance="1.233" /> <!-- Recipe: Bow of Peril (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20630" level="40" type="L2Monster" name="Taik Orc">
+	<npc id="20630" level="45" type="L2Monster" name="Taik Orc">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1628,7 +2227,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="4188" sp="1" />
+		<acquire exp="3645" sp="109" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="966.57792" hpRegen="4.5" mp="478.8" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1663,8 +2262,15 @@
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<corpse>
+				<item id="1876" min="1" max="1" chance="0.0009" /> <!-- Mithril Ore -->
+				<item id="1962" min="1" max="1" chance="0.0009" /> <!-- Karmian Tunic Pattern -->
+				<item id="2073" min="1" max="1" chance="0.0009" /> <!-- Chakram Edge -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20631" level="41" type="L2Monster" name="Taik Orc Archer">
+	<npc id="20631" level="46" type="L2Monster" name="Taik Orc Archer">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1679,7 +2285,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="5673" sp="1" />
+		<acquire exp="7409" sp="222" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1008.23781" hpRegen="5.5" mp="504.8" mpRegen="2.1" />
 			<attack physical="377.9799356" magical="127.77787" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -1716,7 +2322,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="20632" level="42" type="L2Monster" name="Taik Orc Warrior">
+	<npc id="20632" level="47" type="L2Monster" name="Taik Orc Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1732,7 +2338,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
-		<acquire exp="5660" sp="1" />
+		<acquire exp="7408" sp="222" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1050.81652" hpRegen="5.5" mp="531" mpRegen="2.1" />
 			<attack physical="218.180501" magical="135.44454" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1768,8 +2374,33 @@
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="1126" min="1" max="1" chance="0.03" /> <!-- Crimson Boots -->
+				<item id="2434" min="1" max="1" chance="0.03" /> <!-- Rind Leather Boots -->
+				<item id="2455" min="1" max="1" chance="0.03" /> <!-- Plated Leather Gloves -->
+				<item id="2457" min="1" max="1" chance="0.03" /> <!-- Gloves of Seal -->
+				<item id="2458" min="1" max="1" chance="0.03" /> <!-- Rind Leather Gloves -->
+				<item id="57" min="519" max="1210" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="1" chance="15.75" /> <!-- Coal -->
+				<item id="1871" min="1" max="1" chance="14.74" /> <!-- Charcoal -->
+				<item id="1879" min="1" max="1" chance="2.572" /> <!-- Cokes -->
+				<item id="1974" min="1" max="1" chance="2.362" /> <!-- Crimson Boot Fabric -->
+				<item id="2951" min="1" max="1" chance="2.334" /> <!-- Rind Leather Glove Design -->
+				<item id="2948" min="1" max="1" chance="2.328" /> <!-- Rind Leather Boot Lining -->
+				<item id="2950" min="1" max="1" chance="2.321" /> <!-- Gloves of Seal Pattern -->
+				<item id="2946" min="1" max="1" chance="1.463" /> <!-- Plated Leather Glove Design -->
+				<item id="49432" min="1" max="1" chance="0.075" /> <!-- Spellbook: Stigma of Shilen -->
+				<item id="5815" min="1" max="1" chance="0.03" /> <!-- Spellbook: Wild Magic -->
+				<item id="49568" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sonic Move -->
+			</death>
+			<corpse>
+				<item id="1895" min="1" max="3" chance="52.61" /> <!-- Metallic Fiber -->
+				<item id="2944" min="1" max="1" chance="34.79" /> <!-- Karmian Glove Fabric -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20633" level="43" type="L2Monster" name="Taik Orc Shaman">
+	<npc id="20633" level="48" type="L2Monster" name="Taik Orc Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1786,7 +2417,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="9" /> <!-- Cedar Staff -->
-		<acquire exp="5523" sp="1" />
+		<acquire exp="15408" sp="462" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1094.28943" hpRegen="5.5" mp="557.4" mpRegen="2.1" />
 			<attack physical="190.9530182" magical="143.43577" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1825,7 +2456,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="20634" level="44" type="L2Monster" name="Taik Orc Captain">
+	<npc id="20634" level="49" type="L2Monster" name="Taik Orc Captain">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -1840,7 +2471,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" lhand="104" /> <!-- Caliburs / Shield of Victory -->
-		<acquire exp="10597" sp="2" />
+		<acquire exp="8018" sp="240" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2277.25848" hpRegen="11" mp="584" mpRegen="2.1" />
 			<attack physical="202.0282909" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1877,8 +2508,31 @@
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="96" min="1" max="1" chance="0.003" /> <!-- Scythe -->
+				<item id="298" min="1" max="1" chance="0.003" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="0.003" /> <!-- Body Slasher -->
+				<item id="57" min="586" max="1369" chance="70" /> <!-- Adena -->
+				<item id="1871" min="1" max="1" chance="16.47" /> <!-- Charcoal -->
+				<item id="1870" min="1" max="1" chance="16.38" /> <!-- Coal -->
+				<item id="1879" min="1" max="1" chance="2.813" /> <!-- Cokes -->
+				<item id="2076" min="1" max="1" chance="0.3" /> <!-- Body Slasher Blade -->
+				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
+				<item id="2070" min="1" max="1" chance="0.3" /> <!-- Cursed Dagger Blade -->
+				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
+				<item id="49423" min="1" max="1" chance="0.075" /> <!-- Spellbook: Dual Weapon Defense -->
+				<item id="49424" min="1" max="1" chance="0.075" /> <!-- Spellbook: Broad Sweep -->
+				<item id="49569" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sand Bomb -->
+			</death>
+			<corpse>
+				<item id="2251" min="1" max="1" chance="46.84" /> <!-- Recipe: Steel Arrow -->
+				<item id="1880" min="1" max="1" chance="26.56" /> <!-- Steel -->
+				<item id="2940" min="1" max="1" chance="24.67" /> <!-- Dwarven Chain Boot Fragment -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20635" level="45" type="L2Monster" name="Carinkain">
+	<npc id="20635" level="47" type="L2Monster" name="Carinkain">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1892,7 +2546,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="5353" sp="1" />
+		<acquire exp="3989" sp="119" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="258.388119" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1924,6 +2578,29 @@
 			<radius normal="11" />
 			<height normal="20" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="853" min="1" max="1" chance="0.03" /> <!-- Earring of Protection -->
+				<item id="884" min="1" max="1" chance="0.03" /> <!-- Ring of Protection -->
+				<item id="916" min="1" max="1" chance="0.03" /> <!-- Necklace of Protection -->
+				<item id="57" min="284" max="662" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="1" chance="13.07" /> <!-- Animal Bone -->
+				<item id="1912" min="1" max="1" chance="2.235" /> <!-- Ring of Protection Gemstone -->
+				<item id="1911" min="1" max="1" chance="1.592" /> <!-- Earring of Protection Gemstone -->
+				<item id="1913" min="1" max="1" chance="1.25" /> <!-- Necklace of Protection Gemstone -->
+				<item id="1877" min="1" max="1" chance="0.3" /> <!-- Adamantite Nugget -->
+				<item id="2330" min="1" max="1" chance="0.03" /> <!-- Recipe: Homunkulus' Sword -->
+				<item id="8388" min="1" max="1" chance="0.03" /> <!-- Spellbook: Greater Might -->
+				<item id="8389" min="1" max="1" chance="0.03" /> <!-- Spellbook: Greater Shield -->
+				<item id="49571" min="1" max="1" chance="0.03" /> <!-- Spellbook: Clear Mind -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="3" chance="66.47" /> <!-- Animal Skin -->
+				<item id="2335" min="1" max="1" chance="0.3" /> <!-- Recipe: War Axe -->
+				<item id="2346" min="1" max="1" chance="0.3" /> <!-- Recipe: Fisted Blade -->
+				<item id="2351" min="1" max="1" chance="0.3" /> <!-- Recipe: Scorpion -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20636" level="46" type="L2Monster" name="Forest of Mirrors Ghost">
 		<parameters>
@@ -2098,7 +2775,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="15314" sp="3" />
+		<acquire exp="6410" sp="192" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2744.37136" hpRegen="11" mp="720" mpRegen="2.1" />
 			<attack physical="264.0417091" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2138,6 +2815,29 @@
 			<radius normal="26" />
 			<height normal="52" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="73" min="1" max="1" chance="0.003" /> <!-- Shamshir -->
+				<item id="74" min="1" max="1" chance="0.003" /> <!-- Katana -->
+				<item id="131" min="1" max="1" chance="0.003" /> <!-- Spirit Sword -->
+				<item id="133" min="1" max="1" chance="0.003" /> <!-- Raid Sword -->
+				<item id="57" min="586" max="1369" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="6.907" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="3.405" /> <!-- Mithril Ore -->
+				<item id="2081" min="1" max="1" chance="0.3" /> <!-- Raid Sword Blade -->
+				<item id="2080" min="1" max="1" chance="0.3" /> <!-- Spirit Sword Blade -->
+				<item id="2078" min="1" max="1" chance="0.3" /> <!-- Katana Blade -->
+				<item id="2077" min="1" max="1" chance="0.3" /> <!-- Shamshir Blade -->
+				<item id="49562" min="1" max="1" chance="0.075" /> <!-- Spellbook: Spirit Sharing -->
+				<item id="3080" min="1" max="1" chance="0.03" /> <!-- Spellbook: Sleeping Cloud -->
+				<item id="3109" min="1" max="1" chance="0.03" /> <!-- Amulet: Seal of Silence -->
+				<item id="49570" min="1" max="1" chance="0.03" /> <!-- Spellbook: Mass Curse Gloom -->
+			</death>
+			<corpse>
+				<item id="3007" min="1" max="1" chance="15.35" /> <!-- Recipe: Theca Leather Boots -->
+				<item id="2079" min="1" max="1" chance="2.925" /> <!-- Bec de Corbin Blade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20640" level="50" type="L2Monster" name="Harit Lizardman">
 		<parameters>
@@ -2153,7 +2853,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" lhand="945" /> <!-- Morning Star / Skeleton Buckler -->
-		<acquire exp="6544" sp="1" />
+		<acquire exp="8316" sp="249" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2188,6 +2888,27 @@
 			<radius normal="11" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="96" min="1" max="1" chance="0.003" /> <!-- Scythe -->
+				<item id="298" min="1" max="1" chance="0.003" /> <!-- Orcish Glaive -->
+				<item id="302" min="1" max="1" chance="0.003" /> <!-- Body Slasher -->
+				<item id="57" min="556" max="1301" chance="70" /> <!-- Adena -->
+				<item id="1864" min="1" max="3" chance="24.16" /> <!-- Stem -->
+				<item id="1867" min="1" max="3" chance="11.39" /> <!-- Animal Skin -->
+				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
+				<item id="2070" min="1" max="1" chance="0.3" /> <!-- Cursed Dagger Blade -->
+				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
+				<item id="2076" min="1" max="1" chance="0.3" /> <!-- Body Slasher Blade -->
+				<item id="3064" min="1" max="1" chance="0.03" /> <!-- Spellbook: Silence -->
+				<item id="3111" min="1" max="1" chance="0.03" /> <!-- Amulet: Seal of Suspension -->
+			</death>
+			<corpse>
+				<item id="2251" min="1" max="1" chance="43.03" /> <!-- Recipe: Steel Arrow -->
+				<item id="1880" min="1" max="1" chance="26.49" /> <!-- Steel -->
+				<item id="2940" min="1" max="1" chance="23.42" /> <!-- Dwarven Chain Boot Fragment -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20641" level="51" type="L2Monster" name="Harit Lizardman Soldier">
 		<parameters>
@@ -2204,7 +2925,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="70" /> <!-- Claymore -->
-		<acquire exp="8102" sp="1" />
+		<acquire exp="8651" sp="259" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2240,6 +2961,26 @@
 			<radius normal="11" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="355" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Mail Shirt -->
+				<item id="382" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Gaiters -->
+				<item id="57" min="580" max="1356" chance="70" /> <!-- Adena -->
+				<item id="1864" min="1" max="3" chance="25.09" /> <!-- Stem -->
+				<item id="1867" min="1" max="3" chance="11.36" /> <!-- Animal Skin -->
+				<item id="1969" min="1" max="1" chance="2.355" /> <!-- Dwarven Chain Gaiter Material -->
+				<item id="1968" min="1" max="1" chance="1.405" /> <!-- Dwarven Chain Mail Shirt Material -->
+				<item id="2331" min="1" max="1" chance="0.3" /> <!-- Recipe: Poleaxe -->
+				<item id="49432" min="1" max="1" chance="0.3" /> <!-- Spellbook: Stigma of Shilen -->
+				<item id="5815" min="1" max="1" chance="0.03" /> <!-- Spellbook: Wild Magic -->
+			</death>
+			<corpse>
+				<item id="2216" min="1" max="1" chance="8.547" /> <!-- Recipe: Great Helmet -->
+				<item id="3008" min="1" max="1" chance="7.577" /> <!-- Recipe: Theca Leather Gloves -->
+				<item id="2166" min="1" max="1" chance="6.951" /> <!-- Recipe: Earring of Seal -->
+				<item id="5279" min="1" max="1" chance="0.75" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (C-grade) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20642" level="52" type="L2Monster" name="Harit Lizardman Archer">
 		<parameters>
@@ -2256,7 +2997,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="7585" sp="1" />
+		<acquire exp="8893" sp="266" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1520.38155" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<attack physical="681.1211134" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -2309,7 +3050,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- Trident -->
-		<acquire exp="7796" sp="1" />
+		<acquire exp="9674" sp="290" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="389.082012" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2345,6 +3086,23 @@
 			<radius normal="13" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="7898" min="1" max="1" chance="0.0075" /> <!-- Karik Horn -->
+				<item id="7891" min="1" max="1" chance="0.003" /> <!-- Ecliptic Axe -->
+				<item id="7897" min="1" max="1" chance="0.003" /> <!-- Dwarven Hammer -->
+				<item id="57" min="656" max="1535" chance="70" /> <!-- Adena -->
+				<item id="1864" min="1" max="3" chance="23.77" /> <!-- Stem -->
+				<item id="1867" min="1" max="3" chance="9.89" /> <!-- Animal Skin -->
+				<item id="3047" min="1" max="1" chance="0.03" /> <!-- Spellbook: Iron Will -->
+				<item id="3050" min="1" max="1" chance="0.03" /> <!-- Spellbook: Hex -->
+				<item id="4912" min="1" max="1" chance="0.03" /> <!-- Spellbook: Benediction -->
+			</death>
+			<corpse>
+				<item id="1877" min="1" max="1" chance="19" /> <!-- Adamantite Nugget -->
+				<item id="2357" min="1" max="1" chance="0.75" /> <!-- Recipe: Crystal Dagger -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20644" level="54" type="L2Monster" name="Harit Lizardman Shaman">
 		<parameters>
@@ -2363,7 +3121,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="9" /> <!-- Cedar Staff -->
-		<acquire exp="7632" sp="1" />
+		<acquire exp="19543" sp="586" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1621.75618" hpRegen="6.5" mp="861" mpRegen="2.4" />
 			<attack physical="407.757944" magical="253.13256" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2417,7 +3175,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="221" /> <!-- Assassin Knife -->
-		<acquire exp="17166" sp="4" />
+		<acquire exp="10320" sp="309" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3346.10946" hpRegen="13" mp="889.8" mpRegen="2.4" />
 			<attack physical="352.8285636" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2456,6 +3214,27 @@
 			<radius normal="20" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="94" min="1" max="1" chance="0.0075" /> <!-- Bec de Corbin -->
+				<item id="57" min="700" max="1638" chance="70" /> <!-- Adena -->
+				<item id="1864" min="1" max="3" chance="18.29" /> <!-- Stem -->
+				<item id="1867" min="1" max="3" chance="7.787" /> <!-- Animal Skin -->
+				<item id="1878" min="1" max="1" chance="7.056" /> <!-- Durable Braid -->
+				<item id="1882" min="1" max="1" chance="3.832" /> <!-- Leather -->
+				<item id="2079" min="1" max="1" chance="0.75" /> <!-- Bec de Corbin Blade -->
+				<item id="5274" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
+				<item id="3072" min="1" max="1" chance="0.03" /> <!-- Spellbook: Purify -->
+				<item id="3099" min="1" max="1" chance="0.03" /> <!-- Spellbook: Haste -->
+				<item id="3116" min="1" max="1" chance="0.03" /> <!-- Amulet: Chant of Fury -->
+			</death>
+			<corpse>
+				<item id="2950" min="1" max="1" chance="21.53" /> <!-- Gloves of Seal Pattern -->
+				<item id="4125" min="1" max="1" chance="10.91" /> <!-- Recipe: Maestro Mold -->
+				<item id="2327" min="1" max="1" chance="0.75" /> <!-- Recipe: Caliburs -->
+				<item id="5269" min="1" max="1" chance="0.75" /> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20646" level="55" type="L2Monster" name="Halingka">
 		<parameters>
@@ -3145,7 +3924,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="20659" level="45" type="L2Monster" name="Graveyard Wanderer">
+	<npc id="20659" level="67" type="L2Monster" name="Graveyard Wanderer">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3159,7 +3938,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="7421" sp="1" />
+		<acquire exp="7660" sp="229" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3195,8 +3974,28 @@
 			<radius normal="13" />
 			<height normal="21" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="856" min="1" max="1" chance="0.03" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="0.03" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="0.03" /> <!-- Adamantite Necklace -->
+				<item id="57" min="746" max="1741" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="13.81" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="12.02" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="10.79" /> <!-- Stem -->
+				<item id="4050" min="1" max="1" chance="4.684" /> <!-- Adamantite Ring Wire -->
+				<item id="4049" min="1" max="1" chance="3.975" /> <!-- Adamantite Earring Gemstone -->
+				<item id="4051" min="1" max="1" chance="2.889" /> <!-- Adamantite Necklace Chain -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="5" chance="86.81" /> <!-- Varnish -->
+				<item id="1864" min="1" max="11" chance="86.69" /> <!-- Stem -->
+				<item id="1895" min="1" max="1" chance="75.61" /> <!-- Metallic Fiber -->
+				<item id="4044" min="1" max="1" chance="8.873" /> <!-- Thons -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20660" level="46" type="L2Monster" name="Archer of Greed">
+	<npc id="20660" level="67" type="L2Monster" name="Archer of Greed">
 		<parameters>
 			<param name="MoveAroundSocial" value="157" />
 			<param name="MoveAroundSocial1" value="157" />
@@ -3211,7 +4010,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="7285" sp="1" />
+		<acquire exp="6491" sp="194" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="606.2901649" magical="169.38777" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
@@ -3249,8 +4048,33 @@
 			<radius normal="11" />
 			<height normal="27" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="554" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Boots -->
+				<item id="601" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Boots -->
+				<item id="2439" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Boots -->
+				<item id="57" min="652" max="1522" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="3" chance="18.91" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="13.04" /> <!-- Animal Skin -->
+				<item id="1882" min="1" max="1" chance="6.279" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="3.784" /> <!-- Coarse Bone Powder -->
+				<item id="4098" min="1" max="1" chance="2.634" /> <!-- Sealed Avadon Boot Design -->
+				<item id="4097" min="1" max="1" chance="2.573" /> <!-- Sealed Zubei's Boot Design -->
+				<item id="4099" min="1" max="1" chance="2.311" /> <!-- Sealed Doom Boot Fragment -->
+				<item id="4090" min="1" max="1" chance="2.228" /> <!-- Sealed Blue Wolf Boot Design -->
+			</death>
+			<corpse>
+				<item id="1872" min="1" max="5" chance="69.92" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="5" chance="67.78" /> <!-- Animal Skin -->
+				<item id="1882" min="1" max="1" chance="36" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="20.16" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="5.162" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="3.138" /> <!-- Mold Lubricant -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20661" level="47" type="L2Monster" name="Hatar Ratman Thief">
+	<npc id="20661" level="68" type="L2Monster" name="Hatar Ratman Thief">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3265,7 +4089,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<acquire exp="6881" sp="1" />
+		<acquire exp="6658" sp="199" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1276.53628" hpRegen="5.5" mp="665" mpRegen="2.1" />
 			<attack physical="228.9835538" magical="178.7041" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
@@ -3301,8 +4125,30 @@
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="612" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Gloves -->
+				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="57" min="670" max="1566" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="3" chance="25.89" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="17.96" /> <!-- Animal Skin -->
+				<item id="1881" min="1" max="1" chance="5.155" /> <!-- Coarse Bone Powder -->
+				<item id="4073" min="1" max="1" chance="2.703" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4100" min="1" max="1" chance="2.649" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4096" min="1" max="1" chance="2.306" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="4091" min="1" max="1" chance="2.293" /> <!-- Sealed Doom Glove Fragment -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="7" chance="81.33" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="7" chance="79.06" /> <!-- Animal Bone -->
+				<item id="1881" min="1" max="1" chance="33.22" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="7.963" /> <!-- Asofe -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20662" level="48" type="L2Monster" name="Hatar Ratman Boss">
+	<npc id="20662" level="68" type="L2Monster" name="Hatar Ratman Boss">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -3317,7 +4163,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="221" /> <!-- Assassin Knife -->
-		<acquire exp="7176" sp="1" />
+		<acquire exp="6658" sp="199" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="241.3486688" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
@@ -3353,8 +4199,28 @@
 			<radius normal="14" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="110" min="1" max="1" chance="0.03" /> <!-- Doom Shield -->
+				<item id="2388" min="1" max="1" chance="0.03" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2384" min="1" max="1" chance="0.0075" /> <!-- Zubei's Leather Shirt -->
+				<item id="2390" min="1" max="1" chance="0.003" /> <!-- Avadon Leather Armor -->
+				<item id="57" min="670" max="1566" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="30.82" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.936" /> <!-- Oriharukon Ore -->
+				<item id="4077" min="1" max="1" chance="2.338" /> <!-- Doom Shield Fragment -->
+				<item id="4067" min="1" max="1" chance="1.83" /> <!-- Zubei's Leather Gaiter Texture -->
+				<item id="4066" min="1" max="1" chance="1.144" /> <!-- Zubei's Leather Shirt Fabric -->
+				<item id="4068" min="1" max="1" chance="0.75" /> <!-- Avadon Leather Armor Lining -->
+			</death>
+			<corpse>
+				<item id="1870" min="1" max="7" chance="80.41" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="20.37" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="20.17" /> <!-- Stone of Purity -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20663" level="49" type="L2Monster" name="Hatar Hanishee">
+	<npc id="20663" level="69" type="L2Monster" name="Hatar Hanishee">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3368,7 +4234,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6284" sp="1" />
+		<acquire exp="6884" sp="206" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1372.18568" hpRegen="5.5" mp="720" mpRegen="2.1" />
 			<attack physical="319.490468" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3404,8 +4270,31 @@
 			<radius normal="10" />
 			<height normal="25" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="673" min="1" max="1" chance="0.03" /> <!-- Avadon Shield -->
+				<item id="2402" min="1" max="1" chance="0.03" /> <!-- Stockings of Zubei -->
+				<item id="2397" min="1" max="1" chance="0.0075" /> <!-- Tunic of Zubei -->
+				<item id="2406" min="1" max="1" chance="0.003" /> <!-- Avadon Robe -->
+				<item id="57" min="695" max="1622" chance="70" /> <!-- Adena -->
+				<item id="1878" min="1" max="1" chance="12.28" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="10.14" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="8.665" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="7.591" /> <!-- Stem -->
+				<item id="4439" min="1" max="1" chance="3.623" /> <!-- Avadon Shield Fragment -->
+				<item id="4070" min="1" max="1" chance="1.909" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4069" min="1" max="1" chance="1.273" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4071" min="1" max="1" chance="0.75" /> <!-- Avadon Robe Fabric -->
+			</death>
+			<corpse>
+				<item id="1864" min="1" max="11" chance="86.7" /> <!-- Stem -->
+				<item id="1865" min="1" max="5" chance="80.8" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="69.09" /> <!-- Metallic Fiber -->
+				<item id="1878" min="1" max="3" chance="49.7" /> <!-- Durable Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20664" level="50" type="L2Monster" name="Deprive">
+	<npc id="20664" level="70" type="L2Monster" name="Deprive">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -3419,7 +4308,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="6609" sp="1" />
+		<acquire exp="7085" sp="212" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3451,8 +4340,27 @@
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
+				<item id="57" min="718" max="1675" chance="70" /> <!-- Adena -->
+				<item id="1878" min="1" max="1" chance="12.49" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="10.91" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="8.951" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="7.852" /> <!-- Stem -->
+				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="5" chance="84.43" /> <!-- Varnish -->
+				<item id="1864" min="1" max="11" chance="83.86" /> <!-- Stem -->
+				<item id="1895" min="1" max="1" chance="73.42" /> <!-- Metallic Fiber -->
+				<item id="1878" min="1" max="3" chance="51.65" /> <!-- Durable Braid -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20665" level="51" type="L2Monster" name="Taik Orc Supply">
+	<npc id="20665" level="71" type="L2Monster" name="Taik Orc Supply">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -3467,7 +4375,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="69" /> <!-- Bastard Sword -->
-		<acquire exp="8102" sp="1" />
+		<acquire exp="7216" sp="216" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
 			<attack physical="291.9382455" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3503,6 +4411,31 @@
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="633" min="1" max="1" chance="0.03" /> <!-- Zubei's Shield -->
+				<item id="357" min="1" max="1" chance="0.0075" /> <!-- Zubei's Breastplate -->
+				<item id="383" min="1" max="1" chance="0.0075" /> <!-- Zubei's Gaiters -->
+				<item id="2379" min="1" max="1" chance="0.0075" /> <!-- Avadon Gaiters -->
+				<item id="57" min="735" max="1714" chance="70" /> <!-- Adena -->
+				<item id="1878" min="1" max="1" chance="13.41" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="10.89" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="9.185" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="8.096" /> <!-- Stem -->
+				<item id="4101" min="1" max="1" chance="3.32" /> <!-- Zubei's Shield Fragment -->
+				<item id="4065" min="1" max="1" chance="1.561" /> <!-- Avadon Gaiter Material -->
+				<item id="4057" min="1" max="1" chance="1.518" /> <!-- Zubei's Gaiter Material -->
+				<item id="4056" min="1" max="1" chance="1.054" /> <!-- Zubei's Breastplate Part -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="3" chance="87.05" /> <!-- Varnish -->
+				<item id="1864" min="1" max="7" chance="83.61" /> <!-- Stem -->
+				<item id="1878" min="1" max="1" chance="69.09" /> <!-- Durable Braid -->
+				<item id="1895" min="1" max="1" chance="50.13" /> <!-- Metallic Fiber -->
+				<item id="4044" min="1" max="1" chance="5.737" /> <!-- Thons -->
+				<item id="4041" min="1" max="1" chance="1.492" /> <!-- Mold Hardener -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20666" level="52" type="L2Monster" name="Taik Orc Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3518,12 +4451,33 @@
 			<defence physical="190.4555091" magical="153.30378" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="265" min="1" max="1" chance="0.003" /> <!-- Fisted Blade -->
+				<item id="57" min="334" max="781" chance="70" /> <!-- Adena -->
+				<item id="1871" min="1" max="1" chance="28.68" /> <!-- Charcoal -->
+				<item id="1870" min="1" max="3" chance="14.5" /> <!-- Coal -->
+				<item id="2108" min="1" max="1" chance="0.3" /> <!-- Fisted Blade Piece -->
+			</death>
+			<corpse>
+				<item id="4124" min="1" max="1" chance="7.036" /> <!-- Recipe: Craftsman Mold -->
+				<item id="2092" min="1" max="1" chance="0.75" /> <!-- Homunkulus' Sword Blade -->
+				<item id="2353" min="1" max="1" chance="0.3" /> <!-- Recipe: Samurai Long Sword -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20667" level="53" type="L2Monster" name="Farcran" title="Violent">
+	<npc id="20667" level="72" type="L2Monster" name="Farcran" title="Violent">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3537,7 +4491,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="8663" sp="2" />
+		<acquire exp="15580" sp="467" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3569,6 +4523,28 @@
 			<radius normal="19" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="503" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Circlet -->
+				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
+				<item id="57" min="814" max="1899" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="1" chance="36.07" /> <!-- Coal -->
+				<item id="4102" min="1" max="1" chance="2.854" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="4072" min="1" max="1" chance="2.759" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="1874" min="1" max="1" chance="2.389" /> <!-- Oriharukon Ore -->
+				<item id="4089" min="1" max="1" chance="2.372" /> <!-- Sealed Doom Helmet Design -->
+				<item id="4088" min="1" max="1" chance="2.348" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="1875" min="1" max="1" chance="2.342" /> <!-- Stone of Purity -->
+				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
+			</death>
+			<corpse>
+				<item id="1870" min="1" max="9" chance="77.2" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="26.77" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="25.37" /> <!-- Stone of Purity -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20668" level="54" type="L2Monster" name="Grave Guard">
 		<parameters>
@@ -3584,7 +4560,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="7709" sp="1" />
+		<acquire exp="5224" sp="156" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1621.75618" hpRegen="6.5" mp="861" mpRegen="2.4" />
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3619,6 +4595,26 @@
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="355" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Mail Shirt -->
+				<item id="382" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Gaiters -->
+				<item id="57" min="358" max="836" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="21.11" /> <!-- Animal Skin -->
+				<item id="1864" min="1" max="3" chance="16.33" /> <!-- Stem -->
+				<item id="1878" min="1" max="1" chance="6.238" /> <!-- Durable Braid -->
+				<item id="1882" min="1" max="1" chance="3.455" /> <!-- Leather -->
+				<item id="1969" min="1" max="1" chance="1.421" /> <!-- Dwarven Chain Gaiter Material -->
+				<item id="1968" min="1" max="1" chance="0.75" /> <!-- Dwarven Chain Mail Shirt Material -->
+				<item id="2331" min="1" max="1" chance="0.075" /> <!-- Recipe: Poleaxe -->
+			</death>
+			<corpse>
+				<item id="2216" min="1" max="1" chance="5.302" /> <!-- Recipe: Great Helmet -->
+				<item id="3008" min="1" max="1" chance="4.599" /> <!-- Recipe: Theca Leather Gloves -->
+				<item id="2166" min="1" max="1" chance="4.273" /> <!-- Recipe: Earring of Seal -->
+				<item id="5279" min="1" max="1" chance="0.3" /> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (C-grade) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20669" level="55" type="L2Monster" name="Taik Orc Supply Officer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3634,10 +4630,33 @@
 			<defence physical="203.3056364" magical="163.64727" />
 		</stats>
 		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skill_list>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="282" min="1" max="1" chance="0.003" /> <!-- Elemental Bow -->
+				<item id="285" min="1" max="1" chance="0.003" /> <!-- Noble Elven Bow -->
+				<item id="57" min="375" max="877" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="1" chance="22.15" /> <!-- Coal -->
+				<item id="1871" min="1" max="1" chance="21.96" /> <!-- Charcoal -->
+				<item id="1879" min="1" max="1" chance="3.592" /> <!-- Cokes -->
+				<item id="2085" min="1" max="1" chance="0.3" /> <!-- Elemental Crossbow Shaft -->
+				<item id="2086" min="1" max="1" chance="0.3" /> <!-- Noble Elven Bow Shaft -->
+			</death>
+			<corpse>
+				<item id="3010" min="1" max="1" chance="7.208" /> <!-- Recipe: Compound Helmet -->
+				<item id="2329" min="1" max="1" chance="0.75" /> <!-- Recipe: Tsurugi -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20670" level="61" type="L2Monster" name="Crimson Drake">
 		<parameters>
@@ -3653,7 +4672,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="9837" sp="2" />
+		<acquire exp="6720" sp="201" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1985.55926" hpRegen="7.5" mp="1066.8" mpRegen="2.7" />
 			<attack physical="551.188748" magical="342.17315" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3686,6 +4705,33 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="110" min="1" max="1" chance="0.0075" /> <!-- Doom Shield -->
+				<item id="2388" min="1" max="1" chance="0.0075" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2384" min="1" max="1" chance="0.003" /> <!-- Zubei's Leather Shirt -->
+				<item id="2390" min="1" max="1" chance="0.003" /> <!-- Avadon Leather Armor -->
+				<item id="57" min="425" max="994" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="16.99" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="16.79" /> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="2.762" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="1.676" /> <!-- Coarse Bone Powder -->
+				<item id="4077" min="1" max="1" chance="1.532" /> <!-- Doom Shield Fragment -->
+				<item id="4067" min="1" max="1" chance="1.123" /> <!-- Zubei's Leather Gaiter Texture -->
+				<item id="4066" min="1" max="1" chance="0.75" /> <!-- Zubei's Leather Shirt Fabric -->
+				<item id="4068" min="1" max="1" chance="0.75" /> <!-- Avadon Leather Armor Lining -->
+				<item id="4043" min="1" max="1" chance="0.3" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="0.3" /> <!-- Mold Lubricant -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="3" chance="67.76" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="67.52" /> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="22.51" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="13.18" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="3.404" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="1.982" /> <!-- Mold Lubricant -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20671" level="62" type="L2Monster" name="Kadios">
 		<parameters>
@@ -3701,7 +4747,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="10263" sp="2" />
+		<acquire exp="6942" sp="208" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2037.81082" hpRegen="7.5" mp="1097" mpRegen="2.7" />
 			<attack physical="573.236301" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3737,6 +4783,30 @@
 			<radius normal="35" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="228" min="1" max="1" chance="0.0009" /> <!-- Crystal Dagger -->
+				<item id="266" min="1" max="1" chance="0.0009" /> <!-- Great Pata -->
+				<item id="267" min="1" max="1" chance="0.0009" /> <!-- Arthro Nail -->
+				<item id="299" min="1" max="1" chance="0.0009" /> <!-- Orcish Poleaxe -->
+				<item id="300" min="1" max="1" chance="0.0009" /> <!-- Great Axe -->
+				<item id="57" min="441" max="1029" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="24.53" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="3" chance="12.98" /> <!-- Animal Bone -->
+				<item id="1881" min="1" max="1" chance="2.552" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="0.75" /> <!-- Asofe -->
+				<item id="2120" min="1" max="1" chance="0.3" /> <!-- Great Pata Blade -->
+				<item id="2122" min="1" max="1" chance="0.3" /> <!-- Orcish Poleaxe Blade -->
+				<item id="4111" min="1" max="1" chance="0.3" /> <!-- Arthro Nail Blade -->
+				<item id="4113" min="1" max="1" chance="0.3" /> <!-- Great Axe Head -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="5" chance="71.36" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="5" chance="69.58" /> <!-- Animal Bone -->
+				<item id="1881" min="1" max="1" chance="21.55" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="5.295" /> <!-- Asofe -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20672" level="63" type="L2Monster" name="Trives">
 		<parameters>
@@ -3757,7 +4827,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="10390" sp="2" />
+		<acquire exp="7110" sp="213" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2089.92274" hpRegen="7.5" mp="1127.4" mpRegen="2.7" />
 			<attack physical="492.2252182" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3796,6 +4866,33 @@
 			<radius normal="17" />
 			<height normal="46" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2399" min="1" max="1" chance="0.003" /> <!-- Tunic of Doom -->
+				<item id="2404" min="1" max="1" chance="0.003" /> <!-- Stockings of Doom -->
+				<item id="91" min="1" max="1" chance="0.0009" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.0009" /> <!-- Spirit's Staff -->
+				<item id="57" min="452" max="1055" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="17.94" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="16.94" /> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="2.892" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="1.73" /> <!-- Coarse Bone Powder -->
+				<item id="4087" min="1" max="1" chance="0.75" /> <!-- Stockings of Doom Pattern -->
+				<item id="4085" min="1" max="1" chance="0.75" /> <!-- Tunic of Doom Pattern -->
+				<item id="4105" min="1" max="1" chance="0.3" /> <!-- Heavy War Axe Head -->
+				<item id="4043" min="1" max="1" chance="0.3" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="0.3" /> <!-- Mold Lubricant -->
+				<item id="4106" min="1" max="1" chance="0.3" /> <!-- Spirit's Staff Head -->
+			</death>
+			<corpse>
+				<item id="1872" min="1" max="3" chance="69.85" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="69.68" /> <!-- Animal Skin -->
+				<item id="1882" min="1" max="1" chance="24.61" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="14.17" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="3.545" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="2.155" /> <!-- Mold Lubricant -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20673" level="64" type="L2Monster" name="Palibati">
 		<parameters>
@@ -3812,7 +4909,7 @@
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="73" /> <!-- Shamshir -->
-		<acquire exp="10829" sp="2" />
+		<acquire exp="7338" sp="220" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2141.82127" hpRegen="7.5" mp="1158" mpRegen="2.7" />
 			<attack physical="510.9297727" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3844,6 +4941,31 @@
 			<radius normal="25" />
 			<height normal="65" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="0.003" /> <!-- Keshanberk -->
+				<item id="2381" min="1" max="1" chance="0.003" /> <!-- Doom Plate Armor -->
+				<item id="57" min="468" max="1092" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="18.2" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="1" chance="18.06" /> <!-- Animal Bone -->
+				<item id="1882" min="1" max="1" chance="2.966" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="1.771" /> <!-- Coarse Bone Powder -->
+				<item id="4104" min="1" max="1" chance="0.3" /> <!-- Great Sword Blade -->
+				<item id="4081" min="1" max="1" chance="0.3" /> <!-- Doom Plate Armor Temper -->
+				<item id="4043" min="1" max="1" chance="0.3" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="0.3" /> <!-- Mold Lubricant -->
+				<item id="4107" min="1" max="1" chance="0.3" /> <!-- Keshanberk Blade -->
+			</death>
+			<corpse>
+				<item id="1872" min="1" max="3" chance="72.6" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="72.19" /> <!-- Animal Skin -->
+				<item id="1882" min="1" max="1" chance="23.78" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="14.21" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="3.692" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="2.277" /> <!-- Mold Lubricant -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20674" level="65" type="L2Monster" name="Doom Knight">
 		<parameters>
@@ -3862,7 +4984,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="1472" /> <!-- Dreadbane -->
-		<acquire exp="74542" sp="17" />
+		<acquire exp="15235" sp="457" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
 			<attack physical="641.099349" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3917,7 +5039,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="10263" sp="2" />
+		<acquire exp="4479" sp="134" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
 			<attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3953,6 +5075,38 @@
 			<radius normal="13" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2436" min="1" max="1" chance="0.0075" /> <!-- Theca Leather Boots -->
+				<item id="2460" min="1" max="1" chance="0.0075" /> <!-- Theca Leather Gloves -->
+				<item id="603" min="1" max="1" chance="0.003" /> <!-- Divine Boots -->
+				<item id="2437" min="1" max="1" chance="0.003" /> <!-- Drake Leather Boots -->
+				<item id="2438" min="1" max="1" chance="0.003" /> <!-- Full Plate Boots -->
+				<item id="2461" min="1" max="1" chance="0.003" /> <!-- Drake Leather Gloves -->
+				<item id="2462" min="1" max="1" chance="0.003" /> <!-- Full Plate Gauntlets -->
+				<item id="2463" min="1" max="1" chance="0.003" /> <!-- Divine Gloves -->
+				<item id="2468" min="1" max="1" chance="0.003" /> <!-- Blessed Gloves -->
+				<item id="57" min="304" max="713" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="5.354" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="2.606" /> <!-- Mithril Ore -->
+				<item id="2955" min="1" max="1" chance="0.75" /> <!-- Theca Leather Glove Texture -->
+				<item id="2954" min="1" max="1" chance="0.75" /> <!-- Theca Leather Boot Texture -->
+				<item id="1875" min="1" max="1" chance="0.75" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="0.75" /> <!-- Oriharukon Ore -->
+				<item id="2964" min="1" max="1" chance="0.3" /> <!-- Divine Glove Pattern -->
+				<item id="2963" min="1" max="1" chance="0.3" /> <!-- Full Plate Gauntlet Fragment -->
+				<item id="2962" min="1" max="1" chance="0.3" /> <!-- Drake Leather Glove Design -->
+				<item id="2961" min="1" max="1" chance="0.3" /> <!-- Full Plate Boot Fragment -->
+				<item id="2960" min="1" max="1" chance="0.3" /> <!-- Drake Leather Boot Design -->
+				<item id="2958" min="1" max="1" chance="0.3" /> <!-- Divine Boot Fabric -->
+				<item id="2965" min="1" max="1" chance="0.3" /> <!-- Blessed Glove Design -->
+			</death>
+			<corpse>
+				<item id="1895" min="1" max="1" chance="42.22" /> <!-- Metallic Fiber -->
+				<item id="4071" min="1" max="1" chance="2.67" /> <!-- Avadon Robe Fabric -->
+				<item id="2112" min="1" max="1" chance="0.75" /> <!-- Pa'agrio Axe Blade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 		<npc id="20676" level="65" type="L2Monster" name="Judge of Marsh">
 		<!-- Fix me -->
@@ -3969,7 +5123,7 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="10263" sp="2" />
+		<acquire exp="14170" sp="425" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2193.43142" hpRegen="7.5" mp="1188.8" mpRegen="2.7" />
 			<attack physical="641.099349" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4005,6 +5159,25 @@
 			<radius normal="35" grown="42" />
 			<height normal="80" grown="96" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="926" min="1" max="1" chance="0.0075" /> <!-- Black Ore Necklace -->
+				<item id="97" min="1" max="1" chance="0.0009" /> <!-- Lance -->
+				<item id="268" min="1" max="1" chance="0.0009" /> <!-- Bellion Cestus -->
+				<item id="57" min="536" max="1252" chance="70" /> <!-- Adena -->
+				<item id="1869" min="1" max="1" chance="29.9" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="1" chance="12.87" /> <!-- Silver Nugget -->
+				<item id="1880" min="1" max="1" chance="3.192" /> <!-- Steel -->
+				<item id="4054" min="1" max="1" chance="1.022" /> <!-- Black Ore Necklace Beads -->
+				<item id="4115" min="1" max="1" chance="0.3" /> <!-- Lance Blade -->
+				<item id="4120" min="1" max="1" chance="0.3" /> <!-- Bellion Cestus Edge -->
+			</death>
+			<corpse>
+				<item id="1869" min="1" max="5" chance="84.05" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="3" chance="51.98" /> <!-- Silver Nugget -->
+				<item id="1880" min="1" max="1" chance="24.71" /> <!-- Steel -->
+			</corpse>
+		</drop_lists>
 	</npc>
 		<npc id="20677" level="66" type="L2Monster" name="Tulben">
 		<!-- Todo: Fix me -->
@@ -4021,7 +5194,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="10263" sp="2" />
+		<acquire exp="14583" sp="437" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2244.67715" hpRegen="7.5" mp="1219.8" mpRegen="2.7" />
 			<attack physical="603.79903" magical="412.31647" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4057,6 +5230,29 @@
 			<radius normal="10" />
 			<height normal="33.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="554" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Boots -->
+				<item id="601" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Boots -->
+				<item id="2439" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Boots -->
+				<item id="57" min="552" max="1289" chance="70" /> <!-- Adena -->
+				<item id="1869" min="1" max="1" chance="23.27" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="1" chance="9.644" /> <!-- Silver Nugget -->
+				<item id="1880" min="1" max="1" chance="2.373" /> <!-- Steel -->
+				<item id="4098" min="1" max="1" chance="2.233" /> <!-- Sealed Avadon Boot Design -->
+				<item id="4097" min="1" max="1" chance="2.177" /> <!-- Sealed Zubei's Boot Design -->
+				<item id="4090" min="1" max="1" chance="1.924" /> <!-- Sealed Blue Wolf Boot Design -->
+				<item id="4099" min="1" max="1" chance="1.854" /> <!-- Sealed Doom Boot Fragment -->
+				<item id="1874" min="1" max="1" chance="1.604" /> <!-- Oriharukon Ore -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="5" chance="83.97" /> <!-- Animal Skin -->
+				<item id="1872" min="1" max="5" chance="83.02" /> <!-- Animal Bone -->
+				<item id="1881" min="1" max="1" chance="25.23" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="6.488" /> <!-- Asofe -->
+			</corpse>
+		</drop_lists>
 	</npc>
 		<npc id="20678" level="53" type="L2Monster" name="Tortured Undead">
 		<!-- Todo :Fix Me -->
@@ -4073,7 +5269,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="10263" sp="2" />
+		<acquire exp="10129" sp="303" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
 			<attack physical="389.082012" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4110,7 +5306,7 @@
 			<height normal="40" grown="48.5" />
 		</collision>
 	</npc>
-	<npc id="20679" level="54" type="L2Monster" name="Marsh Stalker">
+	<npc id="20679" level="67" type="L2Monster" name="Marsh Stalker">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4124,7 +5320,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="36032" sp="8" />
+		<acquire exp="8080" sp="242" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1621.75618" hpRegen="6.5" mp="861" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4160,8 +5356,25 @@
 			<radius normal="16" />
 			<height normal="50" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="601" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Boots -->
+				<item id="2439" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Boots -->
+				<item id="57" min="520" max="1213" chance="70" /> <!-- Adena -->
+				<item id="1869" min="1" max="1" chance="30.79" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="1" chance="11.97" /> <!-- Silver Nugget -->
+				<item id="4099" min="1" max="1" chance="3.618" /> <!-- Sealed Doom Boot Fragment -->
+				<item id="4090" min="1" max="1" chance="3.539" /> <!-- Sealed Blue Wolf Boot Design -->
+				<item id="1880" min="1" max="1" chance="3.048" /> <!-- Steel -->
+			</death>
+			<corpse>
+				<item id="1869" min="1" max="5" chance="85.96" /> <!-- Iron Ore -->
+				<item id="1873" min="1" max="3" chance="49.82" /> <!-- Silver Nugget -->
+				<item id="1880" min="1" max="1" chance="23.72" /> <!-- Steel -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20680" level="55" type="L2Monster" name="Marsh Drake">
+	<npc id="20680" level="68" type="L2Monster" name="Marsh Drake">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4175,7 +5388,7 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="35355" sp="8" />
+		<acquire exp="8350" sp="250" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<attack physical="426.922562" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4209,8 +5422,31 @@
 			<radius normal="30" />
 			<height normal="100" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="57" min="539" max="1258" chance="70" /> <!-- Adena -->
+				<item id="1871" min="1" max="1" chance="16.49" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="1" chance="10.9" /> <!-- Suede -->
+				<item id="1870" min="1" max="3" chance="7.807" /> <!-- Coal -->
+				<item id="1895" min="1" max="1" chance="4.489" /> <!-- Metallic Fiber -->
+				<item id="4091" min="1" max="1" chance="3.752" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="4096" min="1" max="1" chance="3.668" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="1876" min="1" max="1" chance="3.184" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="2.606" /> <!-- Cokes -->
+			</death>
+			<corpse>
+				<item id="1866" min="1" max="1" chance="83.84" /> <!-- Suede -->
+				<item id="1870" min="1" max="3" chance="65.29" /> <!-- Coal -->
+				<item id="1871" min="1" max="3" chance="64.31" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="35.07" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="25.66" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="22.06" /> <!-- Cokes -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20681" level="45" type="L2Monster" name="Vanor Silenos">
+	<npc id="20681" level="60" type="L2Monster" name="Vanor Silenos">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4226,7 +5462,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="88" /> <!-- Morning Star -->
-		<acquire exp="5565" sp="1" />
+		<acquire exp="5184" sp="155" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4262,8 +5498,28 @@
 			<radius normal="13" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="856" min="1" max="1" chance="0.03" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="1" chance="0.03" /> <!-- Adamantite Ring -->
+				<item id="918" min="1" max="1" chance="0.03" /> <!-- Adamantite Necklace -->
+				<item id="57" min="563" max="1313" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="11.3" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="9.41" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="8.151" /> <!-- Stem -->
+				<item id="4050" min="1" max="1" chance="3.588" /> <!-- Adamantite Ring Wire -->
+				<item id="4049" min="1" max="1" chance="3.078" /> <!-- Adamantite Earring Gemstone -->
+				<item id="4051" min="1" max="1" chance="2.269" /> <!-- Adamantite Necklace Chain -->
+			</death>
+			<corpse>
+				<item id="1864" min="1" max="9" chance="78.83" /> <!-- Stem -->
+				<item id="1865" min="1" max="5" chance="65.68" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="57.01" /> <!-- Metallic Fiber -->
+				<item id="4044" min="1" max="1" chance="6.672" /> <!-- Thons -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20682" level="46" type="L2Monster" name="Vanor Silenos Solider">
+	<npc id="20682" level="61" type="L2Monster" name="Vanor Silenos Solider">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4278,7 +5534,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="158" lhand="18" /> <!-- Tarbar / Leather Shield -->
-		<acquire exp="5539" sp="1" />
+		<acquire exp="5358" sp="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4314,8 +5570,33 @@
 			<radius normal="13" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="554" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Boots -->
+				<item id="600" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Boots -->
+				<item id="601" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Boots -->
+				<item id="2439" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Boots -->
+				<item id="57" min="530" max="1238" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="3" chance="14.87" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="10.81" /> <!-- Animal Skin -->
+				<item id="1882" min="1" max="1" chance="5.195" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="3.067" /> <!-- Coarse Bone Powder -->
+				<item id="4097" min="1" max="1" chance="2.143" /> <!-- Sealed Zubei's Boot Design -->
+				<item id="4098" min="1" max="1" chance="2.118" /> <!-- Sealed Avadon Boot Design -->
+				<item id="4090" min="1" max="1" chance="1.849" /> <!-- Sealed Blue Wolf Boot Design -->
+				<item id="4099" min="1" max="1" chance="1.847" /> <!-- Sealed Doom Boot Fragment -->
+			</death>
+			<corpse>
+				<item id="1872" min="1" max="3" chance="87.93" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="81.74" /> <!-- Animal Skin -->
+				<item id="1882" min="1" max="1" chance="26.76" /> <!-- Leather -->
+				<item id="1881" min="1" max="1" chance="15.98" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="4.2" /> <!-- Asofe -->
+				<item id="4040" min="1" max="1" chance="2.473" /> <!-- Mold Lubricant -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20683" level="47" type="L2Monster" name="Vanor Silenos Scout">
+	<npc id="20683" level="62" type="L2Monster" name="Vanor Silenos Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4330,7 +5611,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5" /> <!-- Mace -->
-		<acquire exp="7208" sp="1" />
+		<acquire exp="5503" sp="165" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1276.53628" hpRegen="5.5" mp="665" mpRegen="2.1" />
 			<attack physical="237.9049909" magical="178.7041" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4367,8 +5648,30 @@
 			<radius normal="13" />
 			<height normal="29" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="612" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Gauntlets -->
+				<item id="2464" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Gloves -->
+				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
+				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
+				<item id="57" min="546" max="1275" chance="70" /> <!-- Adena -->
+				<item id="1872" min="1" max="3" chance="21.16" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="3" chance="14.03" /> <!-- Animal Skin -->
+				<item id="1881" min="1" max="1" chance="4.289" /> <!-- Coarse Bone Powder -->
+				<item id="4100" min="1" max="1" chance="2.187" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4073" min="1" max="1" chance="2.144" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4096" min="1" max="1" chance="1.927" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="4091" min="1" max="1" chance="1.885" /> <!-- Sealed Doom Glove Fragment -->
+			</death>
+			<corpse>
+				<item id="1872" min="1" max="5" chance="89.4" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="5" chance="82.56" /> <!-- Animal Skin -->
+				<item id="1881" min="1" max="1" chance="25.5" /> <!-- Coarse Bone Powder -->
+				<item id="4043" min="1" max="1" chance="6.454" /> <!-- Asofe -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20684" level="48" type="L2Monster" name="Vanor Silenos Warrior">
+	<npc id="20684" level="63" type="L2Monster" name="Vanor Silenos Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="50" />
@@ -4383,7 +5686,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="160" /> <!-- Battle Axe -->
-		<acquire exp="7539" sp="1" />
+		<acquire exp="5739" sp="172" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="303.409755" magical="188.35412" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4420,8 +5723,28 @@
 			<radius normal="13" />
 			<height normal="31" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="110" min="1" max="1" chance="0.03" /> <!-- Doom Shield -->
+				<item id="2384" min="1" max="1" chance="0.0075" /> <!-- Zubei's Leather Shirt -->
+				<item id="2388" min="1" max="1" chance="0.0075" /> <!-- Zubei's Leather Gaiters -->
+				<item id="2390" min="1" max="1" chance="0.003" /> <!-- Avadon Leather Armor -->
+				<item id="57" min="570" max="1330" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="3" chance="23.76" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="3.303" /> <!-- Oriharukon Ore -->
+				<item id="4077" min="1" max="1" chance="1.955" /> <!-- Doom Shield Fragment -->
+				<item id="4067" min="1" max="1" chance="1.581" /> <!-- Zubei's Leather Gaiter Texture -->
+				<item id="4066" min="1" max="1" chance="0.993" /> <!-- Zubei's Leather Shirt Fabric -->
+				<item id="4068" min="1" max="1" chance="0.75" /> <!-- Avadon Leather Armor Lining -->
+			</death>
+			<corpse>
+				<item id="1870" min="1" max="5" chance="90.315" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="18.68" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="18.41" /> <!-- Stone of Purity -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20685" level="49" type="L2Monster" name="Vanor Silenos Shaman">
+	<npc id="20685" level="64" type="L2Monster" name="Vanor Silenos Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4438,7 +5761,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="9" /> <!-- Cedar Staff -->
-		<acquire exp="6284" sp="1" />
+		<acquire exp="5922" sp="177" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1372.18568" hpRegen="5.5" mp="720" mpRegen="2.1" />
 			<attack physical="319.490468" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -4476,8 +5799,31 @@
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="673" min="1" max="1" chance="0.03" /> <!-- Avadon Shield -->
+				<item id="2397" min="1" max="1" chance="0.0075" /> <!-- Tunic of Zubei -->
+				<item id="2402" min="1" max="1" chance="0.0075" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="0.003" /> <!-- Avadon Robe -->
+				<item id="57" min="590" max="1377" chance="70" /> <!-- Adena -->
+				<item id="1878" min="1" max="1" chance="10.54" /> <!-- Durable Braid -->
+				<item id="1865" min="1" max="3" chance="8.606" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="7.322" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="6.392" /> <!-- Stem -->
+				<item id="4439" min="1" max="1" chance="3.046" /> <!-- Avadon Shield Fragment -->
+				<item id="4070" min="1" max="1" chance="1.619" /> <!-- Stockings of Zubei Fabric -->
+				<item id="4069" min="1" max="1" chance="1.125" /> <!-- Tunic of Zubei Fabric -->
+				<item id="4071" min="1" max="1" chance="0.75" /> <!-- Avadon Robe Fabric -->
+			</death>
+			<corpse>
+				<item id="1878" min="1" max="1" chance="82.62" /> <!-- Durable Braid -->
+				<item id="1864" min="1" max="9" chance="80.24" /> <!-- Stem -->
+				<item id="1865" min="1" max="5" chance="71.67" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="61.09" /> <!-- Metallic Fiber -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20686" level="50" type="L2Monster" name="Vanor Silenos Chieftain">
+	<npc id="20686" level="65" type="L2Monster" name="Vanor Silenos Chieftain">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -4492,7 +5838,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="75" /> <!-- Caliburs -->
-		<acquire exp="13096" sp="3" />
+		<acquire exp="11280" sp="338" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2842.00206" hpRegen="11" mp="747.8" mpRegen="2.1" />
 			<attack physical="277.7718727" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4529,5 +5875,30 @@
 			<radius normal="13" />
 			<height normal="31.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="383" min="1" max="1" chance="0.03" /> <!-- Zubei's Gaiters -->
+				<item id="633" min="1" max="1" chance="0.03" /> <!-- Zubei's Shield -->
+				<item id="2379" min="1" max="1" chance="0.03" /> <!-- Avadon Gaiters -->
+				<item id="357" min="1" max="1" chance="0.0075" /> <!-- Zubei's Breastplate -->
+				<item id="57" min="1109" max="2590" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="16.59" /> <!-- Varnish -->
+				<item id="1895" min="1" max="1" chance="14" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="12.37" /> <!-- Stem -->
+				<item id="4101" min="1" max="1" chance="4.881" /> <!-- Zubei's Shield Fragment -->
+				<item id="1878" min="2" max="6" chance="3.829" /> <!-- Durable Braid -->
+				<item id="4057" min="1" max="1" chance="2.397" /> <!-- Zubei's Gaiter Material -->
+				<item id="4065" min="1" max="1" chance="2.339" /> <!-- Avadon Gaiter Material -->
+				<item id="4056" min="1" max="1" chance="1.513" /> <!-- Zubei's Breastplate Part -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="5" chance="90.245" /> <!-- Varnish -->
+				<item id="1864" min="1" max="11" chance="83.74" /> <!-- Stem -->
+				<item id="1895" min="1" max="1" chance="74.55" /> <!-- Metallic Fiber -->
+				<item id="1878" min="1" max="3" chance="53.42" /> <!-- Durable Braid -->
+				<item id="4044" min="1" max="1" chance="8.808" /> <!-- Thons -->
+				<item id="4041" min="1" max="1" chance="2.306" /> <!-- Mold Hardener -->
+			</corpse>
+		</drop_lists>
 	</npc>
 </list>

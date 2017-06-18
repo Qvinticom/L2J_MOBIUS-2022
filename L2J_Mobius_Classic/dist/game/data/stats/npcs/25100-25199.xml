@@ -760,7 +760,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="96" /> <!-- Scythe -->
-		<acquire exp="382477" sp="91" />
+		<acquire exp="9525600" sp="285768" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="91673" hpRegen="66.9859801832901" mp="402.6" mpRegen="1.8" />
 			<attack physical="327.391297293902" magical="51.7199871013021" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -799,6 +799,21 @@
 			<radius normal="20" />
 			<height normal="58" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="93" min="1" max="1" chance="3.63" /> <!-- Winged Spear -->
+				<item id="172" min="1" max="1" chance="3.605" /> <!-- Heavy Bone Club -->
+				<item id="169" min="1" max="1" chance="3.597" /> <!-- Skull Breaker -->
+				<item id="90" min="1" max="1" chance="3.592" /> <!-- Goat Head Staff -->
+				<item id="158" min="1" max="1" chance="3.56" /> <!-- Tarbar -->
+				<item id="88" min="1" max="1" chance="3.543" /> <!-- Morning Star -->
+				<item id="129" min="1" max="1" chance="3.526" /> <!-- Sword of Revolution -->
+				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25119" level="50" type="L2RaidBoss" name="Fairy Queen's Messenger Berun" title="Raid Boss">
 		<parameters>
@@ -1058,7 +1073,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="106892354" sp="25654" />
+		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="688201.003654661" hpRegen="199.028977534023" mp="1188.8" mpRegen="2.7" />
 			<attack physical="1946.68955029173" magical="701.405704892511" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1095,6 +1110,25 @@
 			<radius normal="72" />
 			<height normal="87" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="918" min="1" max="1" chance="31.31" /> <!-- Adamantite Necklace -->
+				<item id="856" min="1" max="1" chance="31.12" /> <!-- Adamantite Earring -->
+				<item id="887" min="1" max="3" chance="29.93" /> <!-- Adamantite Ring -->
+				<item id="78" min="1" max="1" chance="2.561" /> <!-- Great Sword -->
+				<item id="229" min="1" max="1" chance="2.558" /> <!-- Kris -->
+				<item id="267" min="1" max="1" chance="2.53" /> <!-- Arthro Nail -->
+				<item id="300" min="1" max="1" chance="2.527" /> <!-- Great Axe -->
+				<item id="284" min="1" max="1" chance="2.524" /> <!-- Dark Elven Longbow -->
+				<item id="142" min="1" max="1" chance="2.491" /> <!-- Keshanberk -->
+				<item id="243" min="1" max="1" chance="2.47" /> <!-- Twilight Knife -->
+				<item id="91" min="1" max="1" chance="2.435" /> <!-- Heavy War Axe -->
+				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="947" min="1" max="1" chance="50.93" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="49.42" /> <!-- Scroll: Enchant Armor (B-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25126" level="79" type="L2RaidBoss" name="Longhorn Golkonda" title="Raid Boss">
 		<parameters>
@@ -1156,7 +1190,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="124" /> <!-- Two-handed Sword -->
-		<acquire exp="1452603" sp="348" />
+		<acquire exp="5001523" sp="150045" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="55111" hpRegen="44.9019254294477" mp="245.52" mpRegen="1.5" />
 			<attack physical="136.640905723798" magical="17.2030105157932" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1193,6 +1227,23 @@
 			<radius normal="19" />
 			<height normal="57" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="432" min="1" max="3" chance="8.069" /> <!-- Cursed Tunic -->
+				<item id="604" min="2" max="6" chance="8.067" /> <!-- Quality Leather Gloves -->
+				<item id="465" min="1" max="3" chance="8.017" /> <!-- Cursed Stockings -->
+				<item id="626" min="2" max="6" chance="8.011" /> <!-- Bronze Shield -->
+				<item id="376" min="1" max="3" chance="8.009" /> <!-- Iron Plate Gaiters -->
+				<item id="391" min="1" max="3" chance="8.001" /> <!-- Puma Skin Shirt -->
+				<item id="347" min="1" max="3" chance="7.987" /> <!-- Ring Breastplate -->
+				<item id="40" min="2" max="6" chance="7.984" /> <!-- Leather Boots -->
+				<item id="413" min="1" max="3" chance="7.966" /> <!-- Puma Skin Gaiters -->
+				<item id="45" min="2" max="6" chance="7.939" /> <!-- Bone Helmet -->
+				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25128" level="33" type="L2RaidBoss" name="Vuku Grand Priest Gharmash" title="Raid Boss">
 		<parameters>
@@ -2447,7 +2498,7 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="160" /> <!-- Battle Axe -->
-		<acquire exp="6601700" sp="1584" />
+		<acquire exp="17915904" sp="537477" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="255345" hpRegen="123.970910323478" mp="692.4" mpRegen="2.1" />
 			<attack physical="810.398805832026" magical="191.374926873733" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2484,6 +2535,35 @@
 			<radius normal="45" />
 			<height normal="126" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="852" min="1" max="3" chance="31.77" /> <!-- Moonstone Earring -->
+				<item id="883" min="1" max="3" chance="30.36" /> <!-- Aquastone Ring -->
+				<item id="915" min="1" max="1" chance="30.22" /> <!-- Aquastone Necklace -->
+				<item id="2495" min="1" max="3" chance="5.397" /> <!-- Chain Shield -->
+				<item id="2430" min="1" max="3" chance="5.336" /> <!-- Karmian Boots -->
+				<item id="2452" min="1" max="3" chance="5.333" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2453" min="1" max="3" chance="5.329" /> <!-- Chain Gloves -->
+				<item id="354" min="1" max="3" chance="5.307" /> <!-- Chain Mail Shirt -->
+				<item id="2429" min="1" max="3" chance="5.306" /> <!-- Chain Boots -->
+				<item id="2387" min="1" max="3" chance="5.303" /> <!-- Reinforced Mithril Gaiters -->
+				<item id="2454" min="1" max="3" chance="5.29" /> <!-- Karmian Gloves -->
+				<item id="2432" min="1" max="3" chance="5.283" /> <!-- Dwarven Chain Boots -->
+				<item id="381" min="1" max="3" chance="5.281" /> <!-- Chain Gaiters -->
+				<item id="2413" min="1" max="3" chance="5.27" /> <!-- Chain Hood -->
+				<item id="2433" min="1" max="3" chance="5.255" /> <!-- Boots of Seal -->
+				<item id="2431" min="1" max="3" chance="5.246" /> <!-- Plated Leather Boots -->
+				<item id="439" min="1" max="3" chance="5.243" /> <!-- Karmian Tunic -->
+				<item id="397" min="1" max="3" chance="5.234" /> <!-- Reinforced Mithril Shirt -->
+				<item id="62" min="1" max="3" chance="5.223" /> <!-- Reinforced Mithril Boots -->
+				<item id="631" min="1" max="3" chance="5.221" /> <!-- Eldarake -->
+				<item id="471" min="1" max="3" chance="5.209" /> <!-- Karmian Stockings -->
+				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="70000" min="7" max="20" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="951" min="1" max="1" chance="28.73" /> <!-- Scroll: Enchant Weapon (C-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25159" level="54" type="L2RaidBoss" name="Paniel the Unicorn" title="Raid Boss">
 		<parameters>
@@ -2838,7 +2918,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- StormBringer -->
-		<acquire exp="2417861" sp="580" />
+		<acquire exp="6998400" sp="209952" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="93379" hpRegen="54.2850964385025" mp="329.4" mpRegen="1.5" />
 			<attack physical="222.437554766423" magical="28.8595106837795" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2875,6 +2955,22 @@
 			<radius normal="24" />
 			<height normal="52" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="849" min="1" max="3" chance="32.76" /> <!-- Tiger's Eye -->
+				<item id="880" min="1" max="3" chance="31.55" /> <!-- Black Pearl Ring -->
+				<item id="912" min="1" max="1" chance="30.2" /> <!-- Near Forest Necklace -->
+				<item id="47" min="1" max="3" chance="19.84" /> <!-- Helmet -->
+				<item id="2423" min="1" max="3" chance="19.01" /> <!-- Boots of Knowledge -->
+				<item id="436" min="1" max="3" chance="18.98" /> <!-- Tunic of Knowledge -->
+				<item id="469" min="1" max="3" chance="18.53" /> <!-- Stockings of Knowledge -->
+				<item id="2447" min="1" max="3" chance="18.27" /> <!-- Gloves of Knowledge -->
+				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25170" level="38" type="L2RaidBoss" name="Lizardmen Captain Hellion" title="Raid Boss">
 		<parameters>

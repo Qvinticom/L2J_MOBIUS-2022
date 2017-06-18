@@ -859,7 +859,7 @@
 	<npc id="29020" level="75" type="L2GrandBoss" name="Baium">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="11090076" sp="2661" />
+		<acquire exp="51267002" sp="1538010" raidPoints="450" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="1554000" hpRegen="281" mp="1507.8" mpRegen="3" />
 			<attack physical="1646" magical="278" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
@@ -894,6 +894,83 @@
 			<radius normal="65" />
 			<height normal="174" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6328" min="1" max="3" chance="51.12" /> <!-- Sealed Majestic Ring -->
+				<item id="49580" min="1" max="1" chance="31.16" /> <!-- Baium's Ring -->
+				<item id="6327" min="1" max="1" chance="20.48" /> <!-- Sealed Majestic Earring -->
+				<item id="7900" min="1" max="1" chance="17.56" /> <!-- Ice Storm Hammer -->
+				<item id="7892" min="1" max="1" chance="17.24" /> <!-- Spell Breaker -->
+				<item id="7893" min="1" max="1" chance="16.68" /> <!-- Kaim Vanul's Bones -->
+				<item id="7883" min="1" max="1" chance="16.27" /> <!-- Guardian's Sword -->
+				<item id="7889" min="1" max="1" chance="15.97" /> <!-- Wizard's Tear -->
+				<item id="6325" min="1" max="3" chance="15.56" /> <!-- Sealed Phoenix Ring -->
+				<item id="7901" min="1" max="1" chance="15.55" /> <!-- Star Buster -->
+				<item id="6326" min="1" max="1" chance="8.065" /> <!-- Sealed Majestic Necklace -->
+				<item id="5292" min="1" max="3" chance="6.963" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="6.03" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5296" min="1" max="3" chance="5.068" /> <!-- Sealed Tallum Boots -->
+				<item id="235" min="1" max="1" chance="5.067" /> <!-- Bloody Orchid -->
+				<item id="288" min="1" max="1" chance="5.066" /> <!-- Carnage Bow -->
+				<item id="5290" min="1" max="3" chance="5.065" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5295" min="1" max="3" chance="5.053" /> <!-- Sealed Tallum Gloves -->
+				<item id="269" min="1" max="1" chance="5.053" /> <!-- Blood Tornado -->
+				<item id="5294" min="1" max="3" chance="5.052" /> <!-- Sealed Tallum Helmet -->
+				<item id="80" min="1" max="1" chance="5.04" /> <!-- Tallum Blade -->
+				<item id="2504" min="1" max="1" chance="5.031" /> <!-- Meteor Shower -->
+				<item id="7884" min="1" max="1" chance="5.025" /> <!-- Infernal Master -->
+				<item id="7894" min="1" max="1" chance="5.019" /> <!-- Spiritual Eye -->
+				<item id="7899" min="1" max="1" chance="4.982" /> <!-- Destroyer Hammer -->
+				<item id="150" min="1" max="1" chance="4.982" /> <!-- Elemental Sword -->
+				<item id="5291" min="1" max="3" chance="4.954" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="98" min="1" max="1" chance="4.949" /> <!-- Halberd -->
+				<item id="5289" min="1" max="3" chance="4.946" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="151" min="1" max="1" chance="4.933" /> <!-- Sword of Miracles -->
+				<item id="289" min="1" max="1" chance="4.933" /> <!-- Soul Bow -->
+				<item id="164" min="1" max="1" chance="4.064" /> <!-- Elysian -->
+				<item id="213" min="1" max="1" chance="4.062" /> <!-- Branch of the Mother Tree -->
+				<item id="236" min="1" max="1" chance="4.051" /> <!-- Soul Separator -->
+				<item id="270" min="1" max="1" chance="4.026" /> <!-- Dragon Grinder -->
+				<item id="81" min="1" max="1" chance="4.019" /> <!-- Dragon Slayer -->
+				<item id="6324" min="1" max="1" chance="3.987" /> <!-- Sealed Phoenix Earring -->
+				<item id="7895" min="1" max="1" chance="3.969" /> <!-- Flaming Dragon Skull -->
+				<item id="2500" min="1" max="1" chance="3.962" /> <!-- Dark Legion's Edge -->
+				<item id="305" min="1" max="1" chance="3.956" /> <!-- Tallum Glaive -->
+				<item id="7902" min="1" max="1" chance="3.95" /> <!-- Doom Crusher -->
+				<item id="212" min="1" max="1" chance="3.93" /> <!-- Dasparion's Staff -->
+				<item id="5288" min="1" max="1" chance="3.055" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5317" min="1" max="1" chance="3.028" /> <!-- Sealed Majestic Circlet -->
+				<item id="5297" min="1" max="1" chance="3.017" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5312" min="1" max="1" chance="3.01" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5318" min="1" max="1" chance="3.005" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5293" min="1" max="1" chance="2.999" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5314" min="1" max="1" chance="2.995" /> <!-- Sealed Boots of Nightmare -->
+				<item id="49683" min="1" max="1" chance="2.978" /> <!-- Talisman of Baium -->
+				<item id="5301" min="1" max="1" chance="2.967" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5319" min="1" max="1" chance="2.961" /> <!-- Sealed Majestic Boots -->
+				<item id="5308" min="1" max="1" chance="2.959" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5313" min="1" max="1" chance="2.955" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5304" min="1" max="1" chance="2.955" /> <!-- Sealed Tallum Tunic -->
+				<item id="5287" min="1" max="1" chance="2.944" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5298" min="1" max="1" chance="2.94" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5305" min="1" max="1" chance="2.937" /> <!-- Sealed Tallum Stockings -->
+				<item id="5329" min="1" max="1" chance="2.066" /> <!-- Sealed Majestic Robe -->
+				<item id="5316" min="1" max="1" chance="2.05" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5323" min="1" max="1" chance="1.992" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5311" min="1" max="1" chance="1.983" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5320" min="1" max="1" chance="1.982" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5326" min="1" max="1" chance="1.965" /> <!-- Sealed Robe of Nightmare -->
+				<item id="6323" min="1" max="1" chance="0.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="8621" min="1" max="3" chance="100" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+				<item id="70000" min="1356" max="4068" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="730" min="1" max="1" chance="51.23" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="51.18" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="33808" min="1" max="1" chance="51.11" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="33814" min="2" max="4" chance="50.87" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="49682" min="1" max="1" chance="28.27" /> <!-- Baium’s Soul -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29021" level="74" type="L2Monster" name="Archangel">
 		<race>DIVINE</race>
@@ -937,10 +1014,10 @@
 			<height normal="80" />
 		</collision>
 	</npc>
-	<npc id="29022" level="60" type="L2GrandBoss" name="Zaken">
+	<npc id="29022" level="75" type="L2GrandBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="4879744" sp="1171" />
+		<acquire exp="102487500" sp="3074625" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
 			<vitals hp="360721.85" hpRegen="336" mp="889.8" mpRegen="2.4" />
 			<attack physical="2009" magical="1520" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
@@ -976,6 +1053,81 @@
 			<radius normal="16" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6328" min="1" max="1" chance="52.5" /> <!-- Sealed Majestic Ring -->
+				<item id="90763" min="1" max="1" chance="20.82" /> <!-- Zaken's Earring -->
+				<item id="6327" min="1" max="1" chance="20.33" /> <!-- Sealed Majestic Earring -->
+				<item id="6325" min="1" max="1" chance="14.7" /> <!-- Sealed Phoenix Ring -->
+				<item id="6326" min="1" max="1" chance="8.048" /> <!-- Sealed Majestic Necklace -->
+				<item id="7883" min="1" max="1" chance="6.851" /> <!-- Guardian's Sword -->
+				<item id="7893" min="1" max="1" chance="6.819" /> <!-- Kaim Vanul's Bones -->
+				<item id="7892" min="1" max="1" chance="6.807" /> <!-- Spell Breaker -->
+				<item id="7900" min="1" max="1" chance="6.781" /> <!-- Ice Storm Hammer -->
+				<item id="7901" min="1" max="1" chance="6.412" /> <!-- Star Buster -->
+				<item id="7889" min="1" max="1" chance="6.41" /> <!-- Wizard's Tear -->
+				<item id="6324" min="1" max="1" chance="3.981" /> <!-- Sealed Phoenix Earring -->
+				<item id="5292" min="1" max="1" chance="3.524" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="3.026" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5294" min="1" max="1" chance="2.557" /> <!-- Sealed Tallum Helmet -->
+				<item id="5295" min="1" max="1" chance="2.524" /> <!-- Sealed Tallum Gloves -->
+				<item id="5290" min="1" max="1" chance="2.512" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5296" min="1" max="1" chance="2.477" /> <!-- Sealed Tallum Boots -->
+				<item id="5289" min="1" max="1" chance="2.444" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5291" min="1" max="1" chance="2.441" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5298" min="1" max="1" chance="1.56" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5288" min="1" max="1" chance="1.547" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5297" min="1" max="1" chance="1.53" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5312" min="1" max="1" chance="1.53" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5287" min="1" max="1" chance="1.529" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5318" min="1" max="1" chance="1.493" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5317" min="1" max="1" chance="1.487" /> <!-- Sealed Majestic Circlet -->
+				<item id="5314" min="1" max="1" chance="1.479" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5319" min="1" max="1" chance="1.474" /> <!-- Sealed Majestic Boots -->
+				<item id="5305" min="1" max="1" chance="1.469" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="1.455" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5301" min="1" max="1" chance="1.448" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="5304" min="1" max="1" chance="1.443" /> <!-- Sealed Tallum Tunic -->
+				<item id="5313" min="1" max="1" chance="1.441" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5293" min="1" max="1" chance="1.432" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="151" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles -->
+				<item id="164" min="1" max="1" chance="0.75" /> <!-- Elysian -->
+				<item id="235" min="1" max="1" chance="0.75" /> <!-- Bloody Orchid -->
+				<item id="212" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff -->
+				<item id="213" min="1" max="1" chance="0.75" /> <!-- Branch of the Mother Tree -->
+				<item id="7884" min="1" max="1" chance="0.75" /> <!-- Infernal Master -->
+				<item id="150" min="1" max="1" chance="0.75" /> <!-- Elemental Sword -->
+				<item id="7894" min="1" max="1" chance="0.75" /> <!-- Spiritual Eye -->
+				<item id="7895" min="1" max="1" chance="0.75" /> <!-- Flaming Dragon Skull -->
+				<item id="7899" min="1" max="1" chance="0.75" /> <!-- Destroyer Hammer -->
+				<item id="98" min="1" max="1" chance="0.75" /> <!-- Halberd -->
+				<item id="81" min="1" max="1" chance="0.75" /> <!-- Dragon Slayer -->
+				<item id="7902" min="1" max="1" chance="0.75" /> <!-- Doom Crusher -->
+				<item id="236" min="1" max="1" chance="0.75" /> <!-- Soul Separator -->
+				<item id="269" min="1" max="1" chance="0.75" /> <!-- Blood Tornado -->
+				<item id="2504" min="1" max="1" chance="0.75" /> <!-- Meteor Shower -->
+				<item id="2500" min="1" max="1" chance="0.75" /> <!-- Dark Legion's Edge -->
+				<item id="305" min="1" max="1" chance="0.75" /> <!-- Tallum Glaive -->
+				<item id="5311" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare -->
+				<item id="289" min="1" max="1" chance="0.75" /> <!-- Soul Bow -->
+				<item id="288" min="1" max="1" chance="0.75" /> <!-- Carnage Bow -->
+				<item id="5316" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="5320" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare -->
+				<item id="5323" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor -->
+				<item id="5326" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe -->
+				<item id="6323" min="1" max="1" chance="0.75" /> <!-- Sealed Phoenix Necklace -->
+				<item id="270" min="1" max="1" chance="0.75" /> <!-- Dragon Grinder -->
+				<item id="80" min="1" max="1" chance="0.75" /> <!-- Tallum Blade -->
+				<item id="70000" min="1356" max="4068" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="49756" min="1" max="3" chance="49.12" /> <!-- Cloth Piece -->
+				<item id="33814" min="1" max="1" chance="36.55" /> <!-- Improved Scroll: Enchant Armor (B-grade) -->
+				<item id="33808" min="1" max="1" chance="33.38" /> <!-- Improved Scroll: Enchant Weapon (B-grade) -->
+				<item id="729" min="1" max="1" chance="24.09" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="730" min="1" max="1" chance="24.08" /> <!-- Scroll: Enchant Armor (A-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="29023" level="58" type="L2Monster" name="Maiden Doll">
 		<parameters>

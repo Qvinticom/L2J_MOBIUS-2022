@@ -874,7 +874,7 @@
 			<height normal="14.5" grown="18" />
 		</collision>
 	</npc>
-	<npc id="25420" level="48" type="L2RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
+	<npc id="25420" level="58" type="L2RaidBoss" name="Orfen's Handmaiden" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25421" count="3" respawnTime="360" weightPoint="1" />
@@ -1619,7 +1619,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="145" /> <!-- Sword of Whispering Death -->
-		<acquire exp="5918765" sp="1420" />
+		<acquire exp="15746400" sp="472392" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="159961" hpRegen="108.35639820142" mp="610.8" mpRegen="2.1" />
 			<attack physical="667.348949019213" magical="142.928040387499" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1658,6 +1658,21 @@
 			<radius normal="24" />
 			<height normal="52" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="159" min="1" max="1" chance="5.45" /> <!-- Bonebreaker -->
+				<item id="2499" min="1" max="1" chance="5.428" /> <!-- Elven Long Sword -->
+				<item id="280" min="1" max="1" chance="5.424" /> <!-- Light Crossbow -->
+				<item id="297" min="1" max="1" chance="5.423" /> <!-- Glaive -->
+				<item id="262" min="1" max="1" chance="5.408" /> <!-- Scallop Jamadhr -->
+				<item id="70" min="1" max="1" chance="5.401" /> <!-- Claymore -->
+				<item id="187" min="1" max="1" chance="5.369" /> <!-- Atuba Hammer -->
+				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="6" max="18" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="955" min="1" max="1" chance="49.25" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25438" level="44" type="L2RaidBoss" name="Thief Kelbar" title="Raid Boss">
 		<parameters>

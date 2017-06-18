@@ -1743,7 +1743,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="968" sp="28" />
+		<acquire exp="792" sp="23" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="301.66622" hpRegen="2.5" mp="174.64" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1782,6 +1782,24 @@
 			<radius normal="21" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="217" min="1" max="1" chance="0.075" /> <!-- Shining Knife -->
+				<item id="218" min="1" max="1" chance="0.075" /> <!-- Throwing Knife -->
+				<item id="57" min="41" max="97" chance="70" /> <!-- Adena -->
+				<item id="1868" min="1" max="1" chance="6.507" /> <!-- Thread -->
+				<item id="1864" min="1" max="1" chance="6.434" /> <!-- Stem -->
+				<item id="1867" min="1" max="1" chance="4.28" /> <!-- Animal Skin -->
+				<item id="1871" min="1" max="1" chance="3.273" /> <!-- Charcoal -->
+				<item id="1869" min="1" max="1" chance="3.191" /> <!-- Iron Ore -->
+				<item id="1866" min="1" max="1" chance="2.124" /> <!-- Suede -->
+			</death>
+			<corpse>
+				<item id="1868" min="1" max="1" chance="52.46" /> <!-- Thread -->
+				<item id="1897" min="1" max="1" chance="6.266" /> <!-- Necklace of Wisdom Chain -->
+				<item id="734" min="1" max="1" chance="4.401" /> <!-- Wind Walk Potion -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="21258" level="58" type="L2Monster" name="Fallen Orc Shaman">
 		<parameters>

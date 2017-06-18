@@ -3952,7 +3952,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="2417861" sp="580" />
+		<acquire exp="8468064" sp="254041" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="82365" hpRegen="61.2927353271519" mp="372.96" mpRegen="1.8" />
 			<attack physical="281.115059392479" magical="44.7780251490961" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3989,6 +3989,25 @@
 			<radius normal="21" />
 			<height normal="40.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="912" min="1" max="1" chance="23.28" /> <!-- Near Forest Necklace -->
+				<item id="849" min="1" max="3" chance="22.76" /> <!-- Tiger's Eye -->
+				<item id="880" min="1" max="3" chance="22.31" /> <!-- Black Pearl Ring -->
+				<item id="379" min="1" max="3" chance="10.068" /> <!-- Dwarven Scale Gaiters -->
+				<item id="350" min="1" max="3" chance="10.051" /> <!-- Dwarven Scale Mail -->
+				<item id="378" min="1" max="3" chance="9.989" /> <!-- Compound Scale Gaiters -->
+				<item id="553" min="1" max="3" chance="9.978" /> <!-- Iron Boots -->
+				<item id="351" min="1" max="3" chance="9.971" /> <!-- Breastplate -->
+				<item id="63" min="1" max="3" chance="9.967" /> <!-- Gauntlets -->
+				<item id="47" min="1" max="3" chance="9.95" /> <!-- Helmet -->
+				<item id="349" min="1" max="3" chance="9.943" /> <!-- Compound Scale Mail -->
+				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25392" level="32" type="L2RaidBoss" name="Queen's Royal Guard Captain" title="Raid Boss">
 		<parameters>

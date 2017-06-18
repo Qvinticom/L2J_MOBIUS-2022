@@ -746,7 +746,7 @@
 		<race>FAIRY</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- Trident -->
-		<acquire exp="2615583" sp="627" />
+		<acquire exp="5305500" sp="159165" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="57177" hpRegen="46.0963284168942" mp="259.2" mpRegen="1.5" />
 			<attack physical="148.444637760902" magical="18.7186896910546" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -783,6 +783,19 @@
 			<radius normal="42" />
 			<height normal="73" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="156" min="1" max="1" chance="7.546" /> <!-- Hand Axe -->
+				<item id="221" min="1" max="1" chance="7.53" /> <!-- Assassin Knife -->
+				<item id="166" min="1" max="1" chance="7.5175" /> <!-- Heavy Mace -->
+				<item id="167" min="1" max="1" chance="7.46" /> <!-- Scalpel -->
+				<item id="312" min="1" max="1" chance="7.455" /> <!-- Branch of Life -->
+				<item id="101" min="1" max="1" chance="7.434" /> <!-- Scroll of Wisdom -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+				<item id="955" min="1" max="1" chance="48.86" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25020" level="34" type="L2RaidBoss" name="Breka Warlock Pastu" title="Raid Boss">
 		<parameters>
@@ -2605,7 +2618,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
-		<acquire exp="5476116" sp="1314" />
+		<acquire exp="9525600" sp="285768" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="91673" hpRegen="66.9859801832901" mp="402.6" mpRegen="1.8" />
 			<attack physical="327.391297293902" magical="51.7199871013021" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2642,6 +2655,19 @@
 			<radius normal="24" />
 			<height normal="51" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="238" min="1" max="1" chance="6.45" /> <!-- Dagger of Mana -->
+				<item id="278" min="1" max="1" chance="6.437" /> <!-- Gastraphetes -->
+				<item id="260" min="1" max="1" chance="6.421" /> <!-- Triple-Edged Jamadhr -->
+				<item id="240" min="1" max="1" chance="6.346" /> <!-- Conjurer's Knife -->
+				<item id="223" min="1" max="1" chance="6.344" /> <!-- Kukuri -->
+				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25064" level="40" type="L2RaidBoss" name="Wizard of Storm Teruk" title="Raid Boss">
 		<parameters>
@@ -3634,7 +3660,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="3818044" sp="916" />
+		<acquire exp="14377824" sp="431334" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="194788" hpRegen="98.5281886703186" mp="557.4" mpRegen="2.1" />
 			<attack physical="583.088791057736" magical="119.062093508884" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3671,6 +3697,21 @@
 			<radius normal="15" />
 			<height normal="63" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="882" min="1" max="3" chance="31.14" /> <!-- Mithril Ring -->
+				<item id="914" min="1" max="1" chance="31.03" /> <!-- Dark Necklace -->
+				<item id="851" min="1" max="3" chance="30.5" /> <!-- Onyx Beast's Eye Earring -->
+				<item id="438" min="1" max="3" chance="24.855" /> <!-- Sage's Rags -->
+				<item id="1125" min="1" max="3" chance="24.305" /> <!-- Assault Boots -->
+				<item id="2451" min="1" max="3" chance="24.265" /> <!-- Sage's Worn Gloves -->
+				<item id="630" min="1" max="3" chance="24" /> <!-- Square Shield -->
+				<item id="955" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="6" max="17" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25089" level="59" type="L2RaidBoss" name="Soulless Wild Boar" title="Raid Boss">
 		<parameters>
@@ -4056,7 +4097,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="5476116" sp="1314" />
+		<acquire exp="9525600" sp="285768" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="91673" hpRegen="66.9859801832901" mp="402.6" mpRegen="1.8" />
 			<attack physical="327.391297293902" magical="51.7199871013021" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4093,6 +4134,22 @@
 			<radius normal="30" />
 			<height normal="43" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="880" min="1" max="3" chance="31.33" /> <!-- Black Pearl Ring -->
+				<item id="912" min="1" max="1" chance="30.74" /> <!-- Near Forest Necklace -->
+				<item id="849" min="1" max="3" chance="30.49" /> <!-- Tiger's Eye -->
+				<item id="2422" min="1" max="3" chance="19.9" /> <!-- Reinforced Leather Boots -->
+				<item id="416" min="1" max="3" chance="19.88" /> <!-- Reinforced Leather Gaiters -->
+				<item id="2446" min="1" max="3" chance="19.36" /> <!-- Reinforced Leather Gloves -->
+				<item id="394" min="1" max="3" chance="18.81" /> <!-- Reinforced Leather Shirt -->
+				<item id="47" min="1" max="3" chance="18.39" /> <!-- Helmet -->
+				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
+				<item id="70000" min="4" max="11" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25099" level="56" type="L2RaidBoss" name="Rotting Tree Repiro" title="Raid Boss">
 		<parameters>

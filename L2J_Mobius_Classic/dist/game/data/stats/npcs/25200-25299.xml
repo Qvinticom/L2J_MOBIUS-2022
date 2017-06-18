@@ -3061,7 +3061,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" /> <!-- Tsurugi -->
-		<acquire exp="2615582" sp="627" />
+		<acquire exp="6299596" sp="188987" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="64658" hpRegen="50.5321359969236" mp="300.96" mpRegen="1.5" />
 			<attack physical="189.606914466364" magical="24.2395745441976" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -3098,6 +3098,22 @@
 			<radius normal="21" />
 			<height normal="43.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="314" min="1" max="1" chance="5.74" /> <!-- Proof of Revenge -->
+				<item id="258" min="1" max="1" chance="5.71" /> <!-- Bagh-Nakh -->
+				<item id="313" min="1" max="1" chance="5.7" /> <!-- Temptation of Abyss -->
+				<item id="274" min="1" max="1" chance="5.697" /> <!-- Reinforced Bow -->
+				<item id="123" min="1" max="1" chance="5.644" /> <!-- Saber -->
+				<item id="291" min="1" max="1" chance="5.636" /> <!-- Trident -->
+				<item id="178" min="1" max="1" chance="5.624" /> <!-- Bone Staff -->
+				<item id="220" min="1" max="1" chance="5.614" /> <!-- Crafted Dagger -->
+				<item id="168" min="1" max="1" chance="5.597" /> <!-- Work Hammer -->
+				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Lv. 1 -->
+			<!-- FIXME: Also drops herbs. -->
+			</death>
+		</drop_lists>
 	</npc>
 	<npc id="25273" level="50" type="L2RaidBoss" name="Carnamakos" title="Raid Boss">
 		<parameters>
