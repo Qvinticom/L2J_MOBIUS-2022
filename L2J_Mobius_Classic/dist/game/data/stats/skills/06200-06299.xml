@@ -311,7 +311,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6209" toLevel="4" name="Weapon Grade Penalty">
+	<skill id="6209" toLevel="4" name="Grade Penalty">
 		<icon>
 			<value level="1">icon.skill6209_1</value>
 			<value level="2">icon.skill6209_2</value>
@@ -355,7 +355,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6213" toLevel="4" name="Armor Grade Penalty">
+	<skill id="6213" toLevel="4" name="Grade Penalty">
 		<icon>
 			<value level="1">icon.skill6213_1</value>
 			<value level="2">icon.skill6213_2</value>
@@ -1131,7 +1131,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6267" toLevel="1" name="Soul Drain">
+	<skill id="6267" toLevel="1" name="Soul Sucking">
 		<effectPoint>-2</effectPoint>
 		<magicLvl>90</magicLvl>
 		<operateType>CA2</operateType>
@@ -1519,7 +1519,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6284" toLevel="1" name="Freya's Bless">
+	<skill id="6284" toLevel="1" name="Freya's Blessing">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills -->
 		<abnormalLvl>3</abnormalLvl>

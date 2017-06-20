@@ -635,7 +635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6821" toLevel="1" name="P. Def. Decrease">
+	<skill id="6821" toLevel="1" name="Decrease P. Def.">
 		<!-- "For 4 seconds, P. Def. decreases by 23%." -->
 		<abnormalTime>4</abnormalTime>
 		<activateRate>80</activateRate>
@@ -657,7 +657,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6822" toLevel="1" name="P. Def. Decrease">
+	<skill id="6822" toLevel="1" name="Decrease P. Def.">
 		<!-- "For 4 seconds, P. Def. decreases by 40%." -->
 		<operateType>A2</operateType>
 		<effectPoint>-347</effectPoint>
@@ -741,7 +741,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6826" toLevel="1" name="Critical Strike">
+	<skill id="6826" toLevel="1" name="Critical Blow">
 		<!-- none -->
 		<effectPoint>-10000</effectPoint>
 		<operateType>A1</operateType>
@@ -1175,7 +1175,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6849" toLevel="1" name="Summoner Strike">
+	<skill id="6849" toLevel="1" name="Summoner's Blow">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<castRange>40</castRange>
@@ -1988,7 +1988,7 @@
 			<effect name="Mute" />
 		</effects>
 	</skill>
-	<skill id="6881" toLevel="1" name="Critical Strike">
+	<skill id="6881" toLevel="1" name="Critical Blow">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<castRange>40</castRange>

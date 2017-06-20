@@ -689,7 +689,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="6733" toLevel="1" name="Antharas's Stigma">
+	<skill id="6733" toLevel="1" name="Antharas' Stigma">
 		<!-- "Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP." -->
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
@@ -1011,7 +1011,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6748" toLevel="1" name="Stun Attack">
+	<skill id="6748" toLevel="1" name="Shock Attack">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>1</abnormalLvl>
@@ -1537,7 +1537,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6768" toLevel="1" name="Stun Attack">
+	<skill id="6768" toLevel="1" name="Shock Attack">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>1</abnormalLvl>
@@ -1718,7 +1718,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6774" toLevel="1" name="Stun Attack">
+	<skill id="6774" toLevel="1" name="Shock Attack">
 		<!-- High Five Skill -->
 		<!-- FIXME: value unconfirmed -->
 		<abnormalLvl>1</abnormalLvl>
@@ -1959,7 +1959,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6784" toLevel="1" name="Presentation - Eris's Suffering">
+	<skill id="6784" toLevel="1" name="Presentation - Eris' Suffering">
 		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -2018,7 +2018,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6789" toLevel="1" name="Presentation - Etis's Defeat">
+	<skill id="6789" toLevel="1" name="Presentation - Etis' Defeat">
 		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>

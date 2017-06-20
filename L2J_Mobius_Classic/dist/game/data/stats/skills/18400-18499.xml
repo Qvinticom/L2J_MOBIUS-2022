@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18448" toLevel="1" name="Summon Piero">
+	<skill id="18448" toLevel="1" name="Summon Byo">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Summon Piero. -->
 		<!-- On summon npcString: 1802963 -->
@@ -30,7 +30,7 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>6000</reuseDelay>
 	</skill>
-	<skill id="18450" toLevel="6" name="Check Giveaway Number">
+	<skill id="18450" toLevel="6" name="Confirm Number">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Shows number 1. -->
 		<!-- Piero casts the skill, 3 seconds later, you cast the skill. Skill level is random. You can guess who wins by logging the skill level when skill cast starts. -->
@@ -45,7 +45,7 @@
 		<effectPoint>204</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="18451" toLevel="2" name="11th Anniversary Buff">
+	<skill id="18451" toLevel="2" name="11th Anniversary Effect">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Receive an additional 11% XP/SP when hunting. Receive an 11th Anniversary Coin once the buff ends. (Note:) Cannot receive item if you are dead or don't have space in your inventory. -->
 		<!-- When level 1 ends, you get 11 coins and lvl 2 is casted. It cannot be canceled. Lv2 gives no coins. NPC which gives this buff doesnt give again, until it disappears. -->
@@ -71,12 +71,12 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18472" toLevel="6" name="Giveaway Number 1">
+	<skill id="18472" toLevel="6" name="Lucky number 1">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18475" toLevel="2" name="11th Anniversary Buff">
+	<skill id="18475" toLevel="2" name="11th Anniversary Coin">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.ev_buff_11th</icon>
 		<operateType>A2</operateType>

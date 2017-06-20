@@ -29,7 +29,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5701" toLevel="7" name="Decrease P. Atk">
+	<skill id="5701" toLevel="7" name="P. Atk. Decrease">
 		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
 		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
 		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
@@ -1301,7 +1301,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5737" toLevel="6" name="Power Stamp">
+	<skill id="5737" toLevel="6" name="Power Strike">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<affectRange>200</affectRange>
@@ -1414,7 +1414,7 @@
 			<effect name="DebuffBlock" />
 		</effects>
 	</skill>
-	<skill id="5740" toLevel="1" name="Recovery Pot">
+	<skill id="5740" toLevel="1" name="Pet Regeneration">
 		<!-- Confirmed CT2.5 -->
 		<!-- Kratei Cube Skills -->
 		<castRange>900</castRange>
@@ -1879,7 +1879,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5750" toLevel="12" name="Flash">
+	<skill id="5750" toLevel="12" name="Blaze">
 		<castRange>40</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -2061,7 +2061,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5752" toLevel="12" name="Flare">
+	<skill id="5752" toLevel="12" name="Blaze">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-138</value>
@@ -2260,7 +2260,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5760" toLevel="9" name="Critical Hit">
+	<skill id="5760" toLevel="9" name="Critical Blow">
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2884,7 +2884,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5794" toLevel="1" name="Decrease Spd.">
+	<skill id="5794" toLevel="1" name="Decrease Speed">
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2933,7 +2933,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5796" toLevel="1" name="Decrease Spd.">
+	<skill id="5796" toLevel="1" name="Decrease Speed">
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>

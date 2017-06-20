@@ -1616,7 +1616,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6626" toLevel="1" name="Energy of Life's Power">
+	<skill id="6626" toLevel="1" name="Major Energy of Life">
 		<!-- This skill only has one level, 2. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1636,7 +1636,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6627" toLevel="1" name="Energy of Life's Highest Power">
+	<skill id="6627" toLevel="1" name="Superior Energy of Life">
 		<!-- This skill only has one level, 3. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1675,7 +1675,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6629" toLevel="1" name="Energy of Mana's Power">
+	<skill id="6629" toLevel="1" name="Major Energy of Mana">
 		<!-- This skill only has one level, 2. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1695,7 +1695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6630" toLevel="1" name="Energy of Mana's Highest Power">
+	<skill id="6630" toLevel="1" name="Superior Energy of Mana">
 		<!-- This skill only has one level, 3. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1715,7 +1715,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6631" toLevel="1" name="Energy of Power">
+	<skill id="6631" toLevel="1" name="Energy of Strength">
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2619,7 +2619,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6679" toLevel="1" name="Summoner's Strike">
+	<skill id="6679" toLevel="1" name="Summoner's Blow">
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-684</effectPoint>
@@ -3030,7 +3030,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6698" toLevel="1" name="Freeze - Eternal Ice">
+	<skill id="6698" toLevel="1" name="Freeze">
 		<!-- Confirmed CT2.5 -->
 		<!-- Freya Skills (Triggered from 6698) -->
 		<abnormalLvl>3</abnormalLvl>

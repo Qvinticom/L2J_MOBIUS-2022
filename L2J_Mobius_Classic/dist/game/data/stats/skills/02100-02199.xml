@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="2100" toLevel="1" name="Escape: 1 second">
+	<skill id="2100" toLevel="1" name="Escape (1-second)">
 		<!-- Confirmed CT2.5 -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>1000</hitTime>
@@ -43,7 +43,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="2104" toLevel="1" name="Greater Compressed Package of Soulshots: No-grade">
+	<skill id="2104" toLevel="1" name="Greater Soulshot Compressed Package (No-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -66,7 +66,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2105" toLevel="1" name="Greater Compressed Package of Soulshots: D-grade">
+	<skill id="2105" toLevel="1" name="Greater Soulshot Compressed Package (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -89,7 +89,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2106" toLevel="1" name="Greater Compressed Package of Soulshots: C-grade">
+	<skill id="2106" toLevel="1" name="Greater Soulshot Compressed Package (C-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -112,7 +112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2107" toLevel="1" name="Greater Compressed Package of Soulshots: B-grade">
+	<skill id="2107" toLevel="1" name="Greater Soulshot Compressed Package (B-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -158,7 +158,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2110" toLevel="1" name="Greater Compressed Package of Spiritshots: No-grade">
+	<skill id="2110" toLevel="1" name="Greater Spiritshot Compressed Package (No-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -181,7 +181,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2111" toLevel="1" name="Greater Compressed Package of Spiritshots: D-grade">
+	<skill id="2111" toLevel="1" name="Greater Spiritshot Compressed Package (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -204,7 +204,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2112" toLevel="1" name="Greater Compressed Package of Spiritshots: C-grade">
+	<skill id="2112" toLevel="1" name="Greater Spiritshot Compressed Package (C-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -227,7 +227,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2113" toLevel="1" name="Greater Compressed Package of Spiritshots: B-grade">
+	<skill id="2113" toLevel="1" name="Greater Spiritshot Compressed Package (B-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -273,7 +273,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2116" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: No-grade">
+	<skill id="2116" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (No-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -296,7 +296,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2117" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: D-grade">
+	<skill id="2117" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (D-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -319,7 +319,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2118" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: C-grade">
+	<skill id="2118" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (C-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -342,7 +342,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2119" toLevel="1" name="Greater Compressed Package of Blessed Spiritshots: B-grade">
+	<skill id="2119" toLevel="1" name="Greater Blessed Spiritshot Compressed Package (B-grade)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -777,7 +777,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2150" toLevel="1" name="Soulshot: D-Grade">
+	<skill id="2150" toLevel="1" name="Soulshot (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -787,7 +787,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2151" toLevel="1" name="Soulshot: C-Grade">
+	<skill id="2151" toLevel="1" name="Soulshot (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -797,7 +797,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2152" toLevel="1" name="Soulshot: B-Grade">
+	<skill id="2152" toLevel="1" name="Soulshot (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -817,7 +817,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2155" toLevel="1" name="Spiritshot: D-Grade">
+	<skill id="2155" toLevel="1" name="Spiritshot (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -827,7 +827,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2156" toLevel="1" name="Spiritshot: C-Grade">
+	<skill id="2156" toLevel="1" name="Spiritshot (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -837,7 +837,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2157" toLevel="1" name="Spiritshot: B-Grade">
+	<skill id="2157" toLevel="1" name="Spiritshot (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -857,7 +857,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2160" toLevel="1" name="Blessed Spiritshot: D-Grade">
+	<skill id="2160" toLevel="1" name="Blessed Spiritshot (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -867,7 +867,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2161" toLevel="1" name="Blessed Spiritshot: C-Grade">
+	<skill id="2161" toLevel="1" name="Blessed Spiritshot (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -877,7 +877,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2162" toLevel="1" name="Blessed Spiritshot: B-Grade">
+	<skill id="2162" toLevel="1" name="Blessed Spiritshot (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1315,7 +1315,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2180" toLevel="1" name="Feed: Castle Strider">
+	<skill id="2180" toLevel="1" name="Wyvern Food">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>

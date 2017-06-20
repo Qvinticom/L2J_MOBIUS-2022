@@ -80,7 +80,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6911" toLevel="1" name="Greeting">
+	<skill id="6911" toLevel="1" name="Cheer">
 		<!-- Shows the game master's greeting. -->
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -115,7 +115,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="6913" toLevel="1" name="Challenge of Faith">
+	<skill id="6913" toLevel="1" name="Challenge for Fate">
 		<!-- High Five Skill -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -180,7 +180,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6916" toLevel="1" name="Antharas's Cute Tricks">
+	<skill id="6916" toLevel="1" name="Antharas' Cute Tricks">
 		<!-- You can see the summoned spirit's cute tricks. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>

@@ -249,25 +249,25 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4013" toLevel="1" name="Resistance To Fire, Vulnerable To Water">
+	<skill id="4013" toLevel="1" name="Fire Resistance, Water Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4014" toLevel="1" name="Resistance To Water, Vulnerable To Fire">
+	<skill id="4014" toLevel="1" name="Water Resistance, Fire Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4015" toLevel="1" name="Resistance To Wind, Vulnerable To Earth">
+	<skill id="4015" toLevel="1" name="Wind Resistance, Earth Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="4016" toLevel="1" name="Resistance To Earth, Vulnerable To Wind">
+	<skill id="4016" toLevel="1" name="Earth Resistance, Wind Vulnerability">
 		<!-- Confirmed CT2.5 -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1084,7 +1084,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4037" toLevel="3" name="Decrease P.Atk">
+	<skill id="4037" toLevel="3" name="Weakness">
 		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1130,7 +1130,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4038" toLevel="5" name="Decrease Atk.Spd.">
+	<skill id="4038" toLevel="5" name="Shackle">
 		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1907,7 +1907,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4053" toLevel="16" name="Decrease P.Atk">
+	<skill id="4053" toLevel="16" name="Cubic Weakness">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
@@ -1968,7 +1968,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4054" toLevel="16" name="Decrease P. Def">
+	<skill id="4054" toLevel="16" name="Cubic Hex">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
@@ -2029,7 +2029,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4055" toLevel="16" name="Decrease Atk.Speed">
+	<skill id="4055" toLevel="16" name="Cubic Shackle">
 		<!-- Cubic Skill -->
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
@@ -3120,7 +3120,7 @@
 			<effect name="Root" />
 		</effects>
 	</skill>
-	<skill id="4083" toLevel="1" name="Die! You fool!">
+	<skill id="4083" toLevel="1" name="Kalis' Poison">
 		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<coolTime>800</coolTime>

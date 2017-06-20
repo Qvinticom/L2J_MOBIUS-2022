@@ -1544,19 +1544,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5462" toLevel="1" name="Fire Attack">
+	<skill id="5462" toLevel="1" name="Fire Attribute">
 		<icon>icon.skill4279_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5463" toLevel="1" name="Water Attack">
+	<skill id="5463" toLevel="1" name="Water Attribute">
 		<icon>icon.skill4280_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5464" toLevel="1" name="Wind Attack">
+	<skill id="5464" toLevel="1" name="Wind Attribute">
 		<icon>icon.skill4281_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1574,7 +1574,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="5467" toLevel="1" name="Dark Attack">
+	<skill id="5467" toLevel="1" name="Darkness Protection">
 		<icon>icon.skill4336_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1789,7 +1789,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5486" toLevel="1" name="Endurance Offense Up">
+	<skill id="5486" toLevel="1" name="Endurance Defense Up">
 		<!-- Increases P. Atk. Effect 1. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1871,7 +1871,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5491" toLevel="1" name="Decrease Bow/Crossbow Atk. Spd.">
+	<skill id="5491" toLevel="1" name="Decreases bow/crossbow Atk. Spd.">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skilltransform3</icon>
 		<magicLvl>1</magicLvl>

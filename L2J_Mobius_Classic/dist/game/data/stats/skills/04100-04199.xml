@@ -662,7 +662,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4116" toLevel="10" name="Resist M.Atk">
+	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
@@ -1163,7 +1163,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4127" toLevel="1" name="Baium: General Attack">
+	<skill id="4127" toLevel="1" name="Baium Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baium Skills -->
 		<affectRange>200</affectRange>
@@ -1279,7 +1279,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4132" toLevel="1" name="Spear: Pound the Ground">
+	<skill id="4132" toLevel="1" name="Spear Attack">
 		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
@@ -1905,7 +1905,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4145" toLevel="3" name="Decrease P. Atk.">
+	<skill id="4145" toLevel="3" name="P. Atk. Decrease">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<abnormalLvl>
@@ -1939,7 +1939,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4146" toLevel="3" name="Decrease P.Def">
+	<skill id="4146" toLevel="3" name="Decrease P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<abnormalLvl>
@@ -2198,7 +2198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4151" toLevel="12" name="Wind Strike">
+	<skill id="4151" toLevel="12" name="Dagger Storm">
 		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2881,7 +2881,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4162" toLevel="3" name="Decrease P. Atk.">
+	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<abnormalLvl>
@@ -4091,7 +4091,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4183" toLevel="12" name="Decrease P. Atk.">
+	<skill id="4183" toLevel="12" name="P. Atk. Decrease">
 		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4685,7 +4685,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4191" toLevel="12" name="Wind Strike">
+	<skill id="4191" toLevel="12" name="Dagger Storm">
 		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
@@ -4806,7 +4806,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4193" toLevel="12" name="Life Drain">
+	<skill id="4193" toLevel="12" name="Drain Energy">
 		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>
@@ -5203,7 +5203,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4199" toLevel="12" name="Decrease P. Atk.">
+	<skill id="4199" toLevel="12" name="P. Atk. Decrease">
 		<!-- Freya retail confirmed -->
 		<abnormalLvl>
 			<value level="1">1</value>

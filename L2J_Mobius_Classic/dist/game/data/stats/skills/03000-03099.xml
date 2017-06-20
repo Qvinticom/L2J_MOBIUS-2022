@@ -360,7 +360,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="3017" toLevel="4" name="">
+	<skill id="3017" toLevel="4" name="Special Ability: Magic Regeneration">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -1874,7 +1874,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3049" toLevel="2" name="Special Ability: Increase Critical">
+	<skill id="3049" toLevel="2" name="Special Ability: Magic Damage">
 		<!-- Confirmed CT2.5 -->
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2416,7 +2416,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3077" toLevel="6" name="Special Ability: Magic Power">
+	<skill id="3077" toLevel="6" name="Special Ability: M. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill1059</icon>
 		<magicLvl>
@@ -2590,7 +2590,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3081" toLevel="15" name="Item Skill: Charm">
+	<skill id="3081" toLevel="15" name="Item Skill: Charm (Attack Active)">
 		<!-- Confirmed CT2.5 -->
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -2692,7 +2692,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3083" toLevel="15" name="Item Skill: Slow">
+	<skill id="3083" toLevel="15" name="Item Skill: Slow (Attack Active)">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2741,7 +2741,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3084" toLevel="10" name="Item Skill: Winter">
+	<skill id="3084" toLevel="10" name="Item Skill: Winter (Attack Active)">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3042,7 +3042,7 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="3091" toLevel="20" name="Item Skill: Poison">
+	<skill id="3091" toLevel="20" name="Item Skill: Poison (Attack Active)">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3135,7 +3135,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3092" toLevel="15" name="Item Skill: Bleed">
+	<skill id="3092" toLevel="15" name="Item Skill: Bleed (Attack Active)">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3351,7 +3351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3096" toLevel="15" name="Item Skill: Slow">
+	<skill id="3096" toLevel="15" name="Item Skill: Slow (Magic Active)">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3401,7 +3401,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3097" toLevel="10" name="Item Skill: Winter">
+	<skill id="3097" toLevel="10" name="Item Skill: Winter (Magic Active)">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>

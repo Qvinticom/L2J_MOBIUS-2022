@@ -36,7 +36,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5103" toLevel="1" name="Production - Clan / Transfer">
+	<skill id="5103" toLevel="1" name="">
 		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -621,7 +621,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5118" toLevel="1" name="Cancel Sairen Use">
+	<skill id="5118" toLevel="1" name="Cancel Sailren Use">
 		<!-- CT2.5 retail confirmed -->
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
@@ -2559,7 +2559,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5171" toLevel="10" name="Paralyze">
+	<skill id="5171" toLevel="10" name="Paralysis">
 		<!-- Confirmed CT2.5 -->
 		<!-- Augmentation Skill (Trigger) -->
 		<abnormalLvl>1</abnormalLvl>
@@ -2994,7 +2994,7 @@
 			<effect name="ProtectionBlessing" />
 		</effects>
 	</skill>
-	<skill id="5184" toLevel="1" name="Production: Valakas Dragon Breath">
+	<skill id="5184" toLevel="1" name="Dragon Breath">
 		<!-- Confirmed CT2.5 -->
 		<affectRange>1200</affectRange>
 		<castRange>600</castRange>
@@ -3012,7 +3012,7 @@
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="5185" toLevel="1" name="Production: Magic-type Guard">
+	<skill id="5185" toLevel="1" name="Presentation - Magic-type Guard">
 		<!-- Confirmed CT2.5 -->
 		<castRange>900</castRange>
 		<effectPoint>-655</effectPoint>
