@@ -235,15 +235,51 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55047" toLevel="1" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="55047" toLevel="1" name="Refined Romantic Chapeau lvl 1 - Blessed Body lv1">		
+		<icon>icon.skill55047</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalType>MAX_HP_UP</abnormalType>
+		<abnormalTime>1200</abnormalTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>52</magicLvl>
+		<hitTime>4000</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="55048" toLevel="1" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="55048" toLevel="1" name="Refined Romantic Chapeau lvl 1 - Wind Walk">
+		<icon>icon.skill55048</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalType>SPEED_UP</abnormalType>
+		<abnormalTime>300</abnormalTime>
+		<effectPoint>1</effectPoint>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>30</magicLvl>
+		<hitTime>4000</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Speed">
+				<amount>33</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55049" toLevel="1" name="">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -461,14 +497,42 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55093" toLevel="10" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill55093</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="55094" toLevel="1" name="">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+	<skill id="55094" toLevel="1" name="Fire Dragon Pendant - Lv. 3">
+		<icon>icon.skill55094</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>26</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55095" toLevel="10" name="">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

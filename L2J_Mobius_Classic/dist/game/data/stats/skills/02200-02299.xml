@@ -40,34 +40,26 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2213" toLevel="22" name="Scroll of Escape: Talking Island Village">
+	<skill id="2213" toLevel="14" name="Teleport: TOWN">
 		<!-- Confirmed CT2.5 -->
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
-			<value level="1">7117</value>
-			<value level="2">7118</value>
-			<value level="3">7119</value>
-			<value level="4">7120</value>
-			<value level="5">7121</value>
-			<value level="6">7122</value>
-			<value level="7">7123</value>
-			<value level="8">7124</value>
-			<value level="9">7125</value>
-			<value level="10">7126</value>
-			<value level="11">7127</value>
-			<value level="12">7128</value>
-			<value level="13">7129</value>
-			<value level="14">7130</value>
-			<value level="15">7131</value>
-			<value level="16">7132</value>
-			<value level="17">7133</value>
-			<value level="18">7134</value>
-			<value level="19">7135</value>
-			<value level="20">7618</value>
-			<value level="21">7619</value>
-			<value level="22">9647</value>
+			<value level="1">7117</value> <!-- Talking Island -->
+			<value level="2">7118</value> <!-- Elven Village -->
+			<value level="3">7119</value> <!-- Dark Elf Village -->
+			<value level="4">7120</value> <!-- Orc Village -->
+			<value level="5">7121</value> <!-- Dwarven Village -->
+			<value level="6">7122</value> <!-- Gludin Village -->
+			<value level="7">7123</value> <!-- Town of Gludio -->
+			<value level="8">7124</value> <!-- Town of Dion -->
+			<value level="9">7125</value> <!-- Town of Dion -->
+			<value level="10">7126</value> <!-- Town of Giran -->
+			<value level="11">7127</value> <!-- Hardin's Academy -->
+			<value level="12">70113</value> <!-- Town of Aden -->
+			<value level="13">7129</value> <!-- Town of Oren -->
+			<value level="14">7120</value>
 		</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -96,17 +88,9 @@
 					<value level="9">17860</value>
 					<value level="10">83378</value>
 					<value level="11">105760</value>
-					<value level="12">111388</value>
+					<value level="12">147087</value>
 					<value level="13">82916</value>
 					<value level="14">85289</value>
-					<value level="15">117052</value>
-					<value level="16">146818</value>
-					<value level="17">147922</value>
-					<value level="18">43840</value>
-					<value level="19">87326</value>
-					<value level="20">149800</value>
-					<value level="21">107946</value>
-					<value level="22">-118092</value>
 				</x>
 				<y>
 					<value level="1">244566</value>
@@ -120,17 +104,9 @@
 					<value level="9">170191</value>
 					<value level="10">147999</value>
 					<value level="11">113064</value>
-					<value level="12">219331</value>
+					<value level="12">25751</value>
 					<value level="13">53210</value>
 					<value level="14">16225</value>
-					<value level="15">76884</value>
-					<value level="16">25807</value>
-					<value level="17">-55316</value>
-					<value level="18">-47779</value>
-					<value level="19">-143370</value>
-					<value level="20">-79999</value>
-					<value level="21">-52280</value>
-					<value level="22">46955</value>
 				</y>
 				<z>
 					<value level="1">-3728</value>
@@ -144,17 +120,9 @@
 					<value level="9">-3496</value>
 					<value level="10">-3400</value>
 					<value level="11">-3176</value>
-					<value level="12">-3544</value>
+					<value level="12">-2018</value>
 					<value level="13">-1488</value>
 					<value level="14">-3672</value>
-					<value level="15">-2688</value>
-					<value level="16">-2008</value>
-					<value level="17">-2728</value>
-					<value level="18">-792</value>
-					<value level="19">-1319</value>
-					<value level="20">-5568</value>
-					<value level="21">-2408</value>
-					<value level="22">342</value>
 				</z>
 			</effect>
 		</effects>

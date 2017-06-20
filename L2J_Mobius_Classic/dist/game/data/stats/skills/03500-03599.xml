@@ -1035,21 +1035,30 @@
 		</effects>
 	</skill>
 	<skill id="3560" toLevel="1" name="Orfen's Earring">
-		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<icon>icon.accessory_earring_of_orfen_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="AttackTrait">
-				<BLEED>20</BLEED>
-			</effect>
 			<effect name="DefenceTrait">
-				<BLEED>20</BLEED>
+				<HOLD>10</HOLD>
+				<DERANGEMENT>10</DERANGEMENT>
+			</effect>
+			<effect name="AttackTrait">
+				<SHOCK>5</SHOCK>
+				<DERANGEMENT>5</DERANGEMENT>
 			</effect>
 			<effect name="HealEffect">
-				<amount>6</amount>
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>19</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1097,25 +1106,32 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>30</POISON>
-				<HOLD>20</HOLD>
+				<POISON>10</POISON>
+				<HOLD>10</HOLD>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>30</POISON>
-				<HOLD>20</HOLD>
+				<POISON>10</POISON>
+				<HOLD>10</HOLD>
 			</effect>
 			<effect name="Accuracy">
 				<amount>2</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>15</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>9</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="3563" toLevel="1" name="Ring of Core">
-		<!-- Confirmed CT2.5 -->
 		<!-- Boss Jewel Skill -->
 		<icon>icon.accessory_ring_of_core_i00</icon>
 		<magicLvl>75</magicLvl>
@@ -1123,14 +1139,36 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="AttackTrait">
-				<POISON>20</POISON>
+				<POISON>10</POISON>
 			</effect>
 			<effect name="DefenceTrait">
-				<POISON>20</POISON>
+				<POISON>10</POISON>
 			</effect>
 			<effect name="Accuracy">
 				<amount>1</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>2</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>2</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>2</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

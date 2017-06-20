@@ -110,11 +110,21 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="is_freightable" val="false" />	
+		<set name="commissionItemType" val="EARRING" />
+		<set name="handler" val="ItemSkills" />
+		<set name="enchant_enabled" val="7" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="3563" level="1" /> <!-- Ring of Core -->
+		</skills>
 		<stats>
 			<stat type="mDef">32</stat>
 			<stat type="maxMp">9</stat>
