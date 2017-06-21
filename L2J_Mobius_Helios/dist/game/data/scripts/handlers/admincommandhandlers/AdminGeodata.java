@@ -19,9 +19,11 @@ package handlers.admincommandhandlers;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -39,7 +41,8 @@ public class AdminGeodata implements IAdminCommandHandler
 		"admin_geo_can_move",
 		"admin_geo_can_see",
 		"admin_geogrid",
-		"admin_geomap"
+		"admin_geomap",
+		"admin_geomap_missing_htmls"
 	};
 	
 	@Override
@@ -135,6 +138,28 @@ public class AdminGeodata implements IAdminCommandHandler
 				final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
 				final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
 				activeChar.sendMessage("GeoMap: " + x + "_" + y + " (" + ((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + "," + ((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + " to " + ((((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1) + "," + ((((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1) + ")");
+				break;
+			}
+			case "admin_geomap_missing_htmls":
+			{
+				final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+				final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+				final int topLeftX = (x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE;
+				final int topLeftY = (y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE;
+				final int bottomRightX = (((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
+				final int bottomRightY = (((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
+				activeChar.sendMessage("GeoMap: " + x + "_" + y + " (" + topLeftX + "," + topLeftY + " to " + bottomRightX + "," + bottomRightY + ")");
+				for (L2Object obj : L2World.getInstance().getVisibleObjects())
+				{
+					if (obj.isNpc() && !obj.isMonster())
+					{
+						final L2Npc npc = (L2Npc) obj;
+						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !HtmCache.getInstance().htmlNameExists("" + npc.getId()))
+						{
+							activeChar.sendMessage("NPC " + npc.getId() + " does not have an html.");
+						}
+					}
+				}
 				break;
 			}
 		}

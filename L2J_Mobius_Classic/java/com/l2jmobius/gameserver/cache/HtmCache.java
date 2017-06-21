@@ -180,6 +180,23 @@ public class HtmCache
 		return (path == null) || path.isEmpty() ? "" : _cache.get(path) == null ? loadFile(new File(Config.DATAPACK_ROOT, path)) : _cache.get(path);
 	}
 	
+	/**
+	 * Used by admin_geomap_missing_htmls
+	 * @param search String
+	 * @return if html name exists
+	 */
+	public boolean htmlNameExists(String search)
+	{
+		for (String s : _cache.keySet())
+		{
+			if (s.contains(search))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public boolean contains(String path)
 	{
 		return _cache.containsKey(path);
