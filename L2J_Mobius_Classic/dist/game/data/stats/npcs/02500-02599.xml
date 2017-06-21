@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="2501" level="80" type="L2Npc" name="Lucky Pig" title="The Spirit of Fortune">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
+			<vitals hp="2444" mp="2444.0" />
+			<attack physical="500" magical="500" attackSpeed="278" range="40" />
+			<defence physical="500" magical="500" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="23325" level="1" /> <!-- Enlarge - Luckpy -->
+			<skill id="23326" level="1" /> <!-- Reduce - Luckpy -->
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2502" level="1" type="L2Npc" name="Wingless Lucky Pig">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
+			<vitals hp="4630" mp="2444.0" />
+			<attack physical="500" magical="500" attackSpeed="278" range="40" />
+			<defence physical="500" magical="500" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="2503" level="1" type="L2Npc" name="Wingless Lucky Pig">
+		<!-- TODO: Must be confirmed -->
+		<sex>MALE</sex>
+		<stats str="10" int="10" dex="10" wit="10" con="10" men="10">
+			<vitals hp="4630" mp="2444.0" />
+			<attack physical="500" magical="500" attackSpeed="278" range="40" />
+			<defence physical="500" magical="500" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="160" />
+			</speed>
+		</stats>
+		<collision>
+			<radius normal="15" />
+			<height normal="18.3" />
+		</collision>
+	</npc>
+	<npc id="2507" level="85" type="L2Npc" name="Ancient Kartia Scout">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6710" hpRegen="7.5" mp="6710" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2508" level="86" type="L2Npc" name="Ancient Kartia Guard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7036" hpRegen="7.5" mp="7036" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2509" level="86" type="L2Npc" name="Ancient Kartia Watchman">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7036" hpRegen="7.5" mp="7036" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2510" level="86" type="L2Npc" name="Ancient Kartia Researcher">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="7036" hpRegen="7.5" mp="7036" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2511" level="88" type="L2Npc" name="Kajin" title="Cool-headed">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9297" hpRegen="7.5" mp="9297" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="5" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2512" level="88" type="L2Npc" name="Beryn" title="Valiant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="9297" hpRegen="7.5" mp="9297" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="5" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2513" level="90" type="L2Npc" name="Ancient Kartia Scout">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8531" hpRegen="7.5" mp="8531" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2514" level="91" type="L2Npc" name="Ancient Kartia Guard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8958" hpRegen="7.5" mp="8958" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2515" level="91" type="L2Npc" name="Ancient Kartia Watchman">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8958" hpRegen="7.5" mp="8958" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2516" level="91" type="L2Npc" name="Ancient Kartia Researcher">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8958" hpRegen="7.5" mp="8958" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2517" level="93" type="L2Npc" name="Kajin" title="Cool-headed">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11869" hpRegen="7.5" mp="11869" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="5" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2518" level="93" type="L2Npc" name="Beryn" title="Valiant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11869" hpRegen="7.5" mp="11869" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="5" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2519" level="95" type="L2Npc" name="Ancient Kartia Scout">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="10923" hpRegen="7.5" mp="10923" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2520" level="96" type="L2Npc" name="Ancient Kartia Guard">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11487" hpRegen="7.5" mp="11487" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2521" level="96" type="L2Npc" name="Ancient Kartia Watchman">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11487" hpRegen="7.5" mp="11487" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2522" level="96" type="L2Npc" name="Ancient Kartia Researcher">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="11487" hpRegen="7.5" mp="11487" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" />
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2523" level="98" type="L2Npc" name="Kajin" title="Cool-headed">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15269" hpRegen="7.5" mp="15269" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="5" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2524" level="98" type="L2Npc" name="Beryn" title="Valiant">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>HUMANOID</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="15269" hpRegen="7.5" mp="15269" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="5" accuracy="4.75" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="6" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2525" level="98" type="L2Npc" name="Kartia Power Source">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13881" hpRegen="7.5" mp="13881" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="0" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="12" />
+			<height normal="22.5" />
+		</collision>
+	</npc>
+	<npc id="2526" level="75" type="L2Npc" name="Ancient Kartia Watchman" title="35% Drop">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13881" hpRegen="7.5" mp="13881" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2527" level="80" type="L2Npc" name="Ancient Kartia Researcher" title="50% Drop">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="13881" hpRegen="7.5" mp="13881" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<collision>
+			<radius normal="1" />
+			<height normal="1" />
+		</collision>
+	</npc>
+	<npc id="2528" level="85" type="L2Npc" name="">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>DEMONIC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6710" hpRegen="7.5" mp="6710" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="9" />
+		</skill_list>
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="2529" level="99" type="L2Npc" name="Tree of Life">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="14612" hpRegen="7.5" mp="14612" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="51" />
+			<height normal="50.5" />
+		</collision>
+	</npc>
+	<npc id="2530" level="99" type="L2Npc" name="Festering Zombie">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="2531" level="99" type="L2Npc" name="Festering Zombie Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="21.25" />
+		</collision>
+	</npc>
+	<npc id="2532" level="99" type="L2Npc" name="Infected Zombie">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>ETC</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="11" />
+			<height normal="24.6" />
+		</collision>
+	</npc>
+	<npc id="2533" level="99" type="L2Npc" name="Festering Zombie">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="2534" level="99" type="L2Npc" name="Festering Zombie Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="21.25" />
+		</collision>
+	</npc>
+	<npc id="2535" level="99" type="L2Npc" name="Festering Zombie">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="2536" level="99" type="L2Npc" name="Festering Zombie Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="21.25" />
+		</collision>
+	</npc>
+	<npc id="2537" level="99" type="L2Npc" name="Festering Zombie">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
+	</npc>
+	<npc id="2538" level="99" type="L2Npc" name="Festering Zombie Lord">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>UNDEAD</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="1" />
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="21.25" />
+		</collision>
+	</npc>
+	<npc id="2539" level="99" type="L2Npc" name="Festering Parasite">
+		<!-- Source http://l2i-god.gaikotsu.ru/ (Lindvior) -->
+		<race>BUG</race>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="4630" hpRegen="7.5" mp="4630" mpRegen="2.7" />
+			<attack physical="100" magical="100" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="0" distance="80" width="120" />
+			<defence physical="100" magical="100" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<hit_time>500</hit_time>
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4416" level="12" />
+		</skill_list>
+		<collision>
+			<radius normal="12" />
+			<height normal="9" />
+		</collision>
+	</npc>
+</list>
