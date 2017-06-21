@@ -36,15 +36,30 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35007" toLevel="10" name="Fire Dragon Pendant Enchant Effect">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<icon>icon.skill0000</icon>
-		<operateType>A2</operateType>
+		<!-- TODO: FIX IT -->
+		<abnormalLvl>3</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>26</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>1</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35008" toLevel="1" name="Fire Dragon Resistance">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
