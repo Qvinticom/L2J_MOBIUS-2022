@@ -16,6 +16,9 @@
  */
 package handlers.admincommandhandlers;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.GeoData;
@@ -149,16 +152,22 @@ public class AdminGeodata implements IAdminCommandHandler
 				final int bottomRightX = (((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
 				final int bottomRightY = (((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
 				activeChar.sendMessage("GeoMap: " + x + "_" + y + " (" + topLeftX + "," + topLeftY + " to " + bottomRightX + "," + bottomRightY + ")");
+				final List<Integer> results = new ArrayList<>();
 				for (L2Object obj : L2World.getInstance().getVisibleObjects())
 				{
 					if (obj.isNpc() && !obj.isMonster())
 					{
 						final L2Npc npc = (L2Npc) obj;
-						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !HtmCache.getInstance().htmlNameExists("" + npc.getId()))
+						if (!results.contains(npc.getId()) && (npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !HtmCache.getInstance().htmlNameExists("" + npc.getId()))
 						{
-							activeChar.sendMessage("NPC " + npc.getId() + " does not have an html.");
+							results.add(npc.getId());
 						}
 					}
+				}
+				Collections.sort(results);
+				for (int id : results)
+				{
+					activeChar.sendMessage("NPC " + id + " does not have an html.");
 				}
 				break;
 			}
