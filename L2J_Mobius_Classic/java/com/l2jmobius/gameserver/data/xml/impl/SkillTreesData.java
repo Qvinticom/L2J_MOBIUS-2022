@@ -685,7 +685,7 @@ public final class SkillTreesData implements IGameXmlReader
 			return result;
 		}
 		
-		final boolean isAwaken = player.isInCategory(CategoryType.AWAKEN_GROUP) && (player.getRace() != Race.ERTHEIA);
+		final boolean isAwaken = player.isInCategory(CategoryType.AWAKEN_GROUP);
 		
 		for (Entry<Long, L2SkillLearn> entry : skills.entrySet())
 		{
