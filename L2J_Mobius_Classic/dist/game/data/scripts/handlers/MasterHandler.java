@@ -150,6 +150,8 @@ import handlers.bypasshandlers.PrivateWarehouse;
 import handlers.bypasshandlers.QuestLink;
 import handlers.bypasshandlers.ReleaseAttribute;
 import handlers.bypasshandlers.SkillList;
+import handlers.bypasshandlers.SupportBlessing;
+import handlers.bypasshandlers.SupportMagic;
 import handlers.bypasshandlers.TerritoryStatus;
 import handlers.bypasshandlers.TutorialClose;
 import handlers.bypasshandlers.VoiceCommand;
@@ -455,6 +457,8 @@ public class MasterHandler
 			PrivateWarehouse.class,
 			ReleaseAttribute.class,
 			SkillList.class,
+			SupportBlessing.class,
+			SupportMagic.class,
 			TerritoryStatus.class,
 			TutorialClose.class,
 			VoiceCommand.class,
