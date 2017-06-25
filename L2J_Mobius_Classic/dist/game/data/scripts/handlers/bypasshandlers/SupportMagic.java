@@ -127,16 +127,16 @@ public class SupportMagic implements IBypassHandler
 				npc.setTarget(s);
 				for (SkillHolder skill : SUMMON_BUFFS)
 				{
-					npc.doCast(skill.getSkill());
+					SkillCaster.triggerCast(npc, player, skill.getSkill());
 				}
 				
 				if (level >= HASTE_LEVEL_2)
 				{
-					npc.doCast(HASTE_2.getSkill());
+					SkillCaster.triggerCast(npc, player, HASTE_2.getSkill());
 				}
 				else
 				{
-					npc.doCast(HASTE_1.getSkill());
+					SkillCaster.triggerCast(npc, player, HASTE_1.getSkill());
 				}
 			}
 		}
@@ -147,23 +147,23 @@ public class SupportMagic implements IBypassHandler
 			{
 				for (SkillHolder skill : MAGE_BUFFS)
 				{
-					npc.doCast(skill.getSkill());
+					SkillCaster.triggerCast(npc, player, skill.getSkill());
 				}
 			}
 			else
 			{
 				for (SkillHolder skill : FIGHTER_BUFFS)
 				{
-					npc.doCast(skill.getSkill());
+					SkillCaster.triggerCast(npc, player, skill.getSkill());
 				}
 				
 				if (level >= HASTE_LEVEL_2)
 				{
-					npc.doCast(HASTE_2.getSkill());
+					SkillCaster.triggerCast(npc, player, HASTE_2.getSkill());
 				}
 				else
 				{
-					npc.doCast(HASTE_1.getSkill());
+					SkillCaster.triggerCast(npc, player, HASTE_1.getSkill());
 				}
 			}
 			
