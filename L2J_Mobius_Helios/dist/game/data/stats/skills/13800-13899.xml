@@ -293,28 +293,160 @@
 		</effects>
 	</skill>
 	<skill id="13816" toLevel="1" name="Kelbim's Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%, and 20% of it is reflected back to the attacker. -->
 		<icon>icon.weapon_kelbim_cutter_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13817" toLevel="1" name="Kelbim's Dual Dagger">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%, and 20% of it is reflected back to the attacker. -->
 		<icon>icon.weapon_kelbim_dual_dagger_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13818" toLevel="1" name="Kelbim's Bow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%, and 20% of it is reflected back to the attacker. -->
 		<icon>icon.weapon_kelbim_bow_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13819" toLevel="1" name="Kelbim's Crossbow">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP Damage + 15%, Max HP + 25%, P. Atk. + 10%, Atk. Spd. + 15%, P. Critical Damage + 15%, and 20% of it is reflected back to the attacker. -->
 		<icon>icon.weapon_kelbim_crossbow_i01</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13820" toLevel="1" name="Kelbim's Shout">
 		<!-- AUTO GENERATED SKILL -->
