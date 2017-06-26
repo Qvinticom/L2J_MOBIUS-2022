@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding;
+package com.l2jmobius.gameserver.geodata.pathfinding;
 
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.geodata.pathfinding.cellnodes.CellPathFinding;
+import com.l2jmobius.gameserver.geodata.pathfinding.geonodes.GeoPathFinding;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.pathfinding.cellnodes.CellPathFinding;
-import com.l2jmobius.gameserver.pathfinding.geonodes.GeoPathFinding;
 
 /**
  * @author -Nemesiss-

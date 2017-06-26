@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.cellnodes;
+package com.l2jmobius.gameserver.geodata.pathfinding.cellnodes;
 
-import com.l2jmobius.commons.geodriver.Cell;
-import com.l2jmobius.gameserver.GeoData;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geodata.geodriver.Cell;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 
 /**
  * @author -Nemesiss-, HorridoJoho

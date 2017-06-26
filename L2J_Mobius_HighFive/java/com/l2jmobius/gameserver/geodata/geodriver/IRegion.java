@@ -14,23 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.geodriver;
+package com.l2jmobius.gameserver.geodata.geodriver;
 
 /**
  * @author HorridoJoho
  */
-public interface IBlock
+public interface IRegion
 {
-	int TYPE_FLAT = 0;
-	int TYPE_COMPLEX = 1;
-	int TYPE_MULTILAYER = 2;
+	/** Blocks in a region on the x axis. */
+	int REGION_BLOCKS_X = 256;
+	/** Blocks in a region on the y axis. */
+	int REGION_BLOCKS_Y = 256;
+	/** Blocks in a region. */
+	int REGION_BLOCKS = REGION_BLOCKS_X * REGION_BLOCKS_Y;
 	
-	/** Cells in a block on the x axis */
-	int BLOCK_CELLS_X = 8;
-	/** Cells in a block on the y axis */
-	int BLOCK_CELLS_Y = 8;
-	/** Cells in a block */
-	int BLOCK_CELLS = BLOCK_CELLS_X * BLOCK_CELLS_Y;
+	/** Cells in a region on the x axis. */
+	int REGION_CELLS_X = REGION_BLOCKS_X * IBlock.BLOCK_CELLS_X;
+	/** Cells in a regioin on the y axis. */
+	int REGION_CELLS_Y = REGION_BLOCKS_Y * IBlock.BLOCK_CELLS_Y;
+	/** Cells in a region. */
+	int REGION_CELLS = REGION_CELLS_X * REGION_CELLS_Y;
 	
 	boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe);
 	
@@ -39,4 +42,6 @@ public interface IBlock
 	int getNextLowerZ(int geoX, int geoY, int worldZ);
 	
 	int getNextHigherZ(int geoX, int geoY, int worldZ);
+	
+	boolean hasGeo();
 }

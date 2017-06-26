@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.geonodes;
+package com.l2jmobius.gameserver.geodata.pathfinding.geonodes;
 
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
 
 /**
  * @author -Nemesiss-

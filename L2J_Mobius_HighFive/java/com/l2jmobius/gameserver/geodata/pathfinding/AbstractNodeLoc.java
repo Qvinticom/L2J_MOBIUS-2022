@@ -14,47 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.geonodes;
-
-import com.l2jmobius.gameserver.pathfinding.AbstractNode;
+package com.l2jmobius.gameserver.geodata.pathfinding;
 
 /**
  * @author -Nemesiss-
  */
-public class GeoNode extends AbstractNode<GeoNodeLoc>
+public abstract class AbstractNodeLoc
 {
-	private final int _neighborsIdx;
-	private short _cost;
-	private GeoNode[] _neighbors;
+	public abstract int getX();
 	
-	public GeoNode(GeoNodeLoc Loc, int Neighbors_idx)
-	{
-		super(Loc);
-		_neighborsIdx = Neighbors_idx;
-	}
+	public abstract int getY();
 	
-	public short getCost()
-	{
-		return _cost;
-	}
+	public abstract int getZ();
 	
-	public void setCost(int cost)
-	{
-		_cost = (short) cost;
-	}
+	public abstract void setZ(short z);
 	
-	public GeoNode[] getNeighbors()
-	{
-		return _neighbors;
-	}
+	public abstract int getNodeX();
 	
-	public void attachNeighbors(GeoNode[] neighbors)
-	{
-		_neighbors = neighbors;
-	}
-	
-	public int getNeighborsIdx()
-	{
-		return _neighborsIdx;
-	}
+	public abstract int getNodeY();
 }

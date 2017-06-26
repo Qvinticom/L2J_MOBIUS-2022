@@ -14,16 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.geodriver.regions;
+package com.l2jmobius.gameserver.geodata.geodriver.blocks;
 
-import com.l2jmobius.commons.geodriver.IRegion;
+import java.nio.ByteBuffer;
+
+import com.l2jmobius.gameserver.geodata.geodriver.IBlock;
 
 /**
  * @author HorridoJoho
  */
-public final class NullRegion implements IRegion
+public class FlatBlock implements IBlock
 {
-	public static final NullRegion INSTANCE = new NullRegion();
+	private final short _height;
+	
+	public FlatBlock(ByteBuffer bb)
+	{
+		_height = bb.getShort();
+	}
 	
 	@Override
 	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
@@ -34,24 +41,18 @@ public final class NullRegion implements IRegion
 	@Override
 	public int getNearestZ(int geoX, int geoY, int worldZ)
 	{
-		return worldZ;
+		return _height;
 	}
 	
 	@Override
 	public int getNextLowerZ(int geoX, int geoY, int worldZ)
 	{
-		return worldZ;
+		return _height <= worldZ ? _height : worldZ;
 	}
 	
 	@Override
 	public int getNextHigherZ(int geoX, int geoY, int worldZ)
 	{
-		return worldZ;
-	}
-	
-	@Override
-	public boolean hasGeo()
-	{
-		return false;
+		return _height >= worldZ ? _height : worldZ;
 	}
 }

@@ -14,22 +14,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding;
+package com.l2jmobius.gameserver.geodata.geodriver.regions;
+
+import com.l2jmobius.gameserver.geodata.geodriver.IRegion;
 
 /**
- * @author -Nemesiss-
+ * @author HorridoJoho
  */
-public abstract class AbstractNodeLoc
+public final class NullRegion implements IRegion
 {
-	public abstract int getX();
+	public static final NullRegion INSTANCE = new NullRegion();
 	
-	public abstract int getY();
+	@Override
+	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
+	{
+		return true;
+	}
 	
-	public abstract int getZ();
+	@Override
+	public int getNearestZ(int geoX, int geoY, int worldZ)
+	{
+		return worldZ;
+	}
 	
-	public abstract void setZ(short z);
+	@Override
+	public int getNextLowerZ(int geoX, int geoY, int worldZ)
+	{
+		return worldZ;
+	}
 	
-	public abstract int getNodeX();
+	@Override
+	public int getNextHigherZ(int geoX, int geoY, int worldZ)
+	{
+		return worldZ;
+	}
 	
-	public abstract int getNodeY();
+	@Override
+	public boolean hasGeo()
+	{
+		return false;
+	}
 }

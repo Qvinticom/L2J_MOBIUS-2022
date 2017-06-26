@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.zone.form;
 
 import java.awt.Polygon;
 
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 import com.l2jmobius.util.Rnd;

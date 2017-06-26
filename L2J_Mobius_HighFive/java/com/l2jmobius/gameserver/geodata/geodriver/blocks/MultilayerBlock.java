@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.geodriver.blocks;
+package com.l2jmobius.gameserver.geodata.geodriver.blocks;
 
 import java.nio.ByteBuffer;
 
-import com.l2jmobius.commons.geodriver.IBlock;
+import com.l2jmobius.gameserver.geodata.geodriver.IBlock;
 
 /**
  * @author HorridoJoho

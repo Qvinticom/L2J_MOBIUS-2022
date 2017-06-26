@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.geodriver;
+package com.l2jmobius.gameserver.geodata.geodriver;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -23,8 +23,8 @@ import java.nio.channels.FileChannel.MapMode;
 import java.nio.file.Path;
 import java.util.concurrent.atomic.AtomicReferenceArray;
 
-import com.l2jmobius.commons.geodriver.regions.NullRegion;
-import com.l2jmobius.commons.geodriver.regions.Region;
+import com.l2jmobius.gameserver.geodata.geodriver.regions.NullRegion;
+import com.l2jmobius.gameserver.geodata.geodriver.regions.Region;
 
 /**
  * @author HorridoJoho

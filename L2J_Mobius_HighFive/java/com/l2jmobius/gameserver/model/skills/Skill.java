@@ -28,11 +28,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.ShotType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;

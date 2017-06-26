@@ -14,56 +14,36 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.cellnodes;
+package com.l2jmobius.gameserver.geodata.pathfinding.utils;
 
-import com.l2jmobius.gameserver.pathfinding.AbstractNode;
+import java.util.ArrayList;
 
-public class CellNode extends AbstractNode<NodeLoc>
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNode;
+
+/**
+ * @author -Nemesiss-
+ */
+public class FastNodeList
 {
-	private CellNode _next = null;
-	private boolean _isInUse = true;
-	private float _cost = -1000;
+	private final ArrayList<AbstractNode<?>> _list;
 	
-	public CellNode(NodeLoc loc)
+	public FastNodeList(int size)
 	{
-		super(loc);
+		_list = new ArrayList<>(size);
 	}
 	
-	public boolean isInUse()
+	public void add(AbstractNode<?> n)
 	{
-		return _isInUse;
+		_list.add(n);
 	}
 	
-	public void setInUse()
+	public boolean contains(AbstractNode<?> n)
 	{
-		_isInUse = true;
+		return _list.contains(n);
 	}
 	
-	public CellNode getNext()
+	public boolean containsRev(AbstractNode<?> n)
 	{
-		return _next;
-	}
-	
-	public void setNext(CellNode next)
-	{
-		_next = next;
-	}
-	
-	public float getCost()
-	{
-		return _cost;
-	}
-	
-	public void setCost(double cost)
-	{
-		_cost = (float) cost;
-	}
-	
-	public void free()
-	{
-		setParent(null);
-		_cost = -1000;
-		_isInUse = false;
-		_next = null;
+		return _list.lastIndexOf(n) != -1;
 	}
 }

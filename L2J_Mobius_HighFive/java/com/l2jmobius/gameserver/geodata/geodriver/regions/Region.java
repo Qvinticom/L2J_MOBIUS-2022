@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.geodriver.regions;
+package com.l2jmobius.gameserver.geodata.geodriver.regions;
 
 import java.nio.ByteBuffer;
 
-import com.l2jmobius.commons.geodriver.IBlock;
-import com.l2jmobius.commons.geodriver.IRegion;
-import com.l2jmobius.commons.geodriver.blocks.ComplexBlock;
-import com.l2jmobius.commons.geodriver.blocks.FlatBlock;
-import com.l2jmobius.commons.geodriver.blocks.MultilayerBlock;
+import com.l2jmobius.gameserver.geodata.geodriver.IBlock;
+import com.l2jmobius.gameserver.geodata.geodriver.IRegion;
+import com.l2jmobius.gameserver.geodata.geodriver.blocks.ComplexBlock;
+import com.l2jmobius.gameserver.geodata.geodriver.blocks.FlatBlock;
+import com.l2jmobius.gameserver.geodata.geodriver.blocks.MultilayerBlock;
 
 /**
  * @author HorridoJoho

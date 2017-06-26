@@ -23,13 +23,13 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
 import com.l2jmobius.util.Rnd;
 
 public class L2SummonAI extends L2PlayableAI implements Runnable

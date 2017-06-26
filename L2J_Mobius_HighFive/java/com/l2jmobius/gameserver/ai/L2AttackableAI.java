@@ -28,12 +28,12 @@ import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;

@@ -14,45 +14,47 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.commons.geodriver.blocks;
+package com.l2jmobius.gameserver.geodata.pathfinding.geonodes;
 
-import java.nio.ByteBuffer;
-
-import com.l2jmobius.commons.geodriver.IBlock;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNode;
 
 /**
- * @author HorridoJoho
+ * @author -Nemesiss-
  */
-public class FlatBlock implements IBlock
+public class GeoNode extends AbstractNode<GeoNodeLoc>
 {
-	private final short _height;
+	private final int _neighborsIdx;
+	private short _cost;
+	private GeoNode[] _neighbors;
 	
-	public FlatBlock(ByteBuffer bb)
+	public GeoNode(GeoNodeLoc Loc, int Neighbors_idx)
 	{
-		_height = bb.getShort();
+		super(Loc);
+		_neighborsIdx = Neighbors_idx;
 	}
 	
-	@Override
-	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
+	public short getCost()
 	{
-		return true;
+		return _cost;
 	}
 	
-	@Override
-	public int getNearestZ(int geoX, int geoY, int worldZ)
+	public void setCost(int cost)
 	{
-		return _height;
+		_cost = (short) cost;
 	}
 	
-	@Override
-	public int getNextLowerZ(int geoX, int geoY, int worldZ)
+	public GeoNode[] getNeighbors()
 	{
-		return _height <= worldZ ? _height : worldZ;
+		return _neighbors;
 	}
 	
-	@Override
-	public int getNextHigherZ(int geoX, int geoY, int worldZ)
+	public void attachNeighbors(GeoNode[] neighbors)
 	{
-		return _height >= worldZ ? _height : worldZ;
+		_neighbors = neighbors;
+	}
+	
+	public int getNeighborsIdx()
+	{
+		return _neighborsIdx;
 	}
 }

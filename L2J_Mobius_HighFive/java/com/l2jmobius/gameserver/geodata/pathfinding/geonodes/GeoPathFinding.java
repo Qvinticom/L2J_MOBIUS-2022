@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.geonodes;
+package com.l2jmobius.gameserver.geodata.pathfinding.geonodes;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,13 +34,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNode;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geodata.pathfinding.utils.FastNodeList;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.pathfinding.AbstractNode;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
-import com.l2jmobius.gameserver.pathfinding.utils.FastNodeList;
 import com.l2jmobius.gameserver.util.Util;
 
 /**

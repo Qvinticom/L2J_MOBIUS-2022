@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.cellnodes;
+package com.l2jmobius.gameserver.geodata.pathfinding.cellnodes;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -24,13 +24,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNode;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.pathfinding.AbstractNode;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
 
 /**
  * @author Sami, DS Credits to Diamond

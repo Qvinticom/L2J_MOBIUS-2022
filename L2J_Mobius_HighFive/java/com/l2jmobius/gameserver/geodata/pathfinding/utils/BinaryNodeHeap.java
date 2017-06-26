@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.utils;
+package com.l2jmobius.gameserver.geodata.pathfinding.utils;
 
-import com.l2jmobius.gameserver.pathfinding.geonodes.GeoNode;
+import com.l2jmobius.gameserver.geodata.pathfinding.geonodes.GeoNode;
 
 /**
  * @author -Nemesiss-
