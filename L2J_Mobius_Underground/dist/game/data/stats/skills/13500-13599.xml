@@ -743,8 +743,7 @@
 					<value level="10">5</value>
 				</amount>
 				<chance>30</chance>
-				<mode>PER</mode>
-			</effect>
+				</effect>
 			<effect name="MagicMpCost">
 				<amount>
 					<value level="1">0</value>
@@ -1012,11 +1011,50 @@
 		</effects>
 	</skill>
 	<skill id="13568" toLevel="1" name="Talisman Energy">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases resistance for all weapons by 3. When equipped with a weapon that has an attribute, the attack attribute increases + 50. -->
 		<icon>icon.r85_talisman_pa_up_passive</icon>
 		<operateType>P</operateType>
-		<isMagic>3</isMagic>
+		<magicLvl>3</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+		<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		<effect name="DefenceTrait">
+				<BLUNT>3</BLUNT>
+				<SWORD>3</SWORD>
+				<DUAL>3</DUAL>
+				<ANCIENTSWORD>3</ANCIENTSWORD>
+				<DAGGER>3</DAGGER>
+				<RAPIER>3</RAPIER>
+				<DUALFIST>3</DUALFIST>
+				<DUALDAGGER>3</DUALDAGGER>
+				<BOW>3</BOW>
+				<CROSSBOW>3</CROSSBOW>
+			</effect>
+			</effects>
 	</skill>
 	<skill id="13569" toLevel="3" name="Talisman - Lilith">
 		<!-- Increase M. Def. + 552, MP recovery + 3, dark resistance + 10, and damage reflect resistance + 6. -->
@@ -1062,7 +1100,7 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="DamageShield">
+			<effect name="DamageShieldResist">
 				<amount>
 					<value level="1">6</value>
 					<value level="2">6</value>
@@ -1109,6 +1147,14 @@
 					<value level="3">10</value>
 				</amount>
 				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+				</amount>
+				<attribute>DARK</attribute>
 			</effect>
 		</effects>
 	</skill>

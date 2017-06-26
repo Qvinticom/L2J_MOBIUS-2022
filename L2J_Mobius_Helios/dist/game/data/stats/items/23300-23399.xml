@@ -35,6 +35,16 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<skills>
+			<skill id="9371" level="1" type="ON_ENCHANT" type_value="7" />
+			<skill id="9371" level="1" type="ON_ENCHANT" type_value="8" />
+			<skill id="9371" level="1" type="ON_ENCHANT" type_value="9" />
+			<skill id="9371" level="1" type="ON_ENCHANT" type_value="10" />
+			<skill id="9373" level="1" type="ON_ENCHANT" type_value="7" />
+			<skill id="9373" level="1" type="ON_ENCHANT" type_value="8" />
+			<skill id="9373" level="2" type="ON_ENCHANT" type_value="9" />
+			<skill id="9373" level="2" type="ON_ENCHANT" type_value="10" />
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -91,6 +101,12 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<skills>
+			<skill id="9365" level="1" type="ON_ENCHANT" type_value="7" />
+			<skill id="9365" level="1" type="ON_ENCHANT" type_value="8" />
+			<skill id="9365" level="2" type="ON_ENCHANT" type_value="9" />
+			<skill id="9365" level="2" type="ON_ENCHANT" type_value="10" />
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -147,6 +163,12 @@
 		<set name="equip_reuse_delay" val="30" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="130" />
+		<skills>
+			<skill id="9369" level="1" type="ON_ENCHANT" type_value="7" />
+			<skill id="9369" level="1" type="ON_ENCHANT" type_value="8" />
+			<skill id="9369" level="2" type="ON_ENCHANT" type_value="9" />
+			<skill id="9369" level="2" type="ON_ENCHANT" type_value="10" />
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>

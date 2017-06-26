@@ -230,7 +230,7 @@
 		<icon>icon.reflect_attack_shirt</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="DefenceCriticalDamage">
+			<effect name="DefenceMagicCriticalDamage">
 				<amount>
 					<value level="2">8</value>
 					<value level="3">12</value>
@@ -249,7 +249,7 @@
 				</amount>
 				<type>PHYSICAL</type>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="PhysicalDefence">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">6</value>
@@ -453,8 +453,11 @@
 				<amount>
 					<value level="4">1</value>
 					<value level="5">2</value>
-					<value fromLevel="6" toLevel="7">3</value>
-					<value fromLevel="8" toLevel="10">4</value>
+					<value level="6">3</value>
+					<value level="7">3</value>
+					<value level="8">4</value>
+					<value level="9">4</value>
+					<value level="10">4</value>
 				</amount>
 				<stat>STR</stat>
 			</effect>

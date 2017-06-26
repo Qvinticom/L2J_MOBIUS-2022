@@ -233,7 +233,6 @@
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
-		<set name="duration" val="600" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -255,7 +254,6 @@
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
-		<set name="duration" val="600" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -283,7 +281,6 @@
 		<set name="bodypart" val="deco1" />
 		<set name="useSkillDisTime" val="6" />
 		<set name="equip_reuse_delay" val="30" />
-		<set name="duration" val="600" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -302,20 +299,34 @@
 		<!-- Sparkly magic shirt containing Einhasad's energy. It can be enchanted up to +10 using Enchant Scroll: Elemental Shirt. When enchanted to +4 or more, passive and stats are increased. When enchanted to +6 or more, various use skills are bestowed. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
-		<set name="bodypart" val="underwear" />
-		<set name="enchant_enabled" val="8" />
-		<set name="immediate_effect" val="true" />
-		<set name="equip_reuse_delay" val="30" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="commissionItemType" val="UNDERWEAR" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="8" />
 		<set name="weight" val="130" />
+		<skills>
+			<skill id="13563" level="1" type="ON_ENCHANT" type_value="6" />
+			<skill id="13563" level="2" type="ON_ENCHANT" type_value="7" />
+			<skill id="13563" level="3" type="ON_ENCHANT" type_value="8" />
+			<skill id="13563" level="4" type="ON_ENCHANT" type_value="9" />
+			<skill id="13563" level="5" type="ON_ENCHANT" type_value="10" />
+			<skill id="13564" level="1" type="ON_ENCHANT" type_value="7" />
+			<skill id="13564" level="2" type="ON_ENCHANT" type_value="8" />
+			<skill id="13564" level="3" type="ON_ENCHANT" type_value="9" /> 
+			<skill id="13564" level="4" type="ON_ENCHANT" type_value="10" /> 
+			<skill id="13565" level="1" type="ON_ENCHANT" type_value="8" /> 
+			<skill id="13565" level="2" type="ON_ENCHANT" type_value="9" /> 
+			<skill id="13565" level="3" type="ON_ENCHANT" type_value="10" /> 
+			<skill id="13566" level="1" type="ON_ENCHANT" type_value="9" /> 
+			<skill id="13566" level="2" type="ON_ENCHANT" type_value="10" />
+			<skill id="13567" level="1" type="ON_ENCHANT" type_value="10" />  
+		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -840,6 +851,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="220" />
+		<skills>
+			<skill id="13771" level="1" />
+		</skills>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
