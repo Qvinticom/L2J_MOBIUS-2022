@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -38,6 +37,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;

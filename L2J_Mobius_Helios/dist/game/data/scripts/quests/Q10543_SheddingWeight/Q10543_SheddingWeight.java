@@ -16,8 +16,6 @@
  */
 package quests.Q10543_SheddingWeight;
 
-import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
-
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -27,6 +25,8 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+
+import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 
 /**
  * Shedding Weight (10543)

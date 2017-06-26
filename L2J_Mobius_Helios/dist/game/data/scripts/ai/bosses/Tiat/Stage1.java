@@ -30,10 +30,10 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.TrapAction;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jmobius.gameserver.model.L2Territory;
 import com.l2jmobius.gameserver.model.L2World;

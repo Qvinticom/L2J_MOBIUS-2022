@@ -19,9 +19,6 @@ package ai.areas.TalkingIsland.YeSegiraTeleportDevice;
 import java.util.HashMap;
 import java.util.Map;
 
-import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
-import ai.AbstractNpcAI;
-
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
@@ -35,6 +32,9 @@ import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+
+import ai.AbstractNpcAI;
+import quests.Q10365_ForTheSearchdogKing.Q10365_ForTheSearchdogKing;
 
 /**
  * Ye Segira Teleport Device AI.

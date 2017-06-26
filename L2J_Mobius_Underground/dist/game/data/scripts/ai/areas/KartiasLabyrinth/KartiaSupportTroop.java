@@ -18,8 +18,8 @@ package ai.areas.KartiasLabyrinth;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;

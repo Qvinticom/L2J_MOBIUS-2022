@@ -20,10 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;

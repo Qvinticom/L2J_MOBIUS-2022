@@ -21,8 +21,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;

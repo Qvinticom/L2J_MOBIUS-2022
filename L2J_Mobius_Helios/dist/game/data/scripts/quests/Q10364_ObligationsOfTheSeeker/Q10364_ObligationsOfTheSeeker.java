@@ -16,8 +16,6 @@
  */
 package quests.Q10364_ObligationsOfTheSeeker;
 
-import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
-
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -25,6 +23,8 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+
+import quests.Q10363_RequestOfTheSeeker.Q10363_RequestOfTheSeeker;
 
 /**
  * Obligations of the Seeker (10364)

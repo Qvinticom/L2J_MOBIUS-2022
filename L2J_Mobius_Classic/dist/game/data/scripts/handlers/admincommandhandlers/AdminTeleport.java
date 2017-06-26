@@ -25,11 +25,11 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.AdminTeleportType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;

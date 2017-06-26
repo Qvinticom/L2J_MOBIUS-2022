@@ -37,7 +37,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
@@ -50,6 +49,7 @@ import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;

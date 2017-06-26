@@ -16,8 +16,6 @@
  */
 package quests.Q10365_ForTheSearchdogKing;
 
-import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
-
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -25,6 +23,8 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+
+import quests.Q10364_ObligationsOfTheSeeker.Q10364_ObligationsOfTheSeeker;
 
 /**
  * For the Searchdog King (10365)

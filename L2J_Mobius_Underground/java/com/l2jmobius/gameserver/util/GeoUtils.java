@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.util;
 
 import java.awt.Color;
 
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.geodata.geodriver.Cell;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;

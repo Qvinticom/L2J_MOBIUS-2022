@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;

@@ -35,7 +35,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNode;
 import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;

@@ -16,10 +16,10 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;

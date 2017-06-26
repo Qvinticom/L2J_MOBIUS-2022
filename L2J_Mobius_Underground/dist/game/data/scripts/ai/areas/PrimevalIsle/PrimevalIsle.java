@@ -17,9 +17,9 @@
 package ai.areas.PrimevalIsle;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.model.L2World;

@@ -16,8 +16,8 @@
  */
 package ai.areas.TalkingIsland;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;

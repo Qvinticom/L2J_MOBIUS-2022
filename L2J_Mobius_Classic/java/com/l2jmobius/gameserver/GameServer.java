@@ -98,6 +98,7 @@ import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.handler.ConditionHandler;
 import com.l2jmobius.gameserver.handler.DailyMissionHandler;

@@ -21,7 +21,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;

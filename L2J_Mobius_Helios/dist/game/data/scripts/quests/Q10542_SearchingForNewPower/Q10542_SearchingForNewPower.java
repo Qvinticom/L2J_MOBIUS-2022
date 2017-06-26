@@ -19,8 +19,6 @@ package quests.Q10542_SearchingForNewPower;
 import java.util.HashSet;
 import java.util.Set;
 
-import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
-
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -32,6 +30,8 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
+
+import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 
 /**
  * Searching for New Power (10542)

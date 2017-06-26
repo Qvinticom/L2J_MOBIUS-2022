@@ -20,11 +20,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;

@@ -28,10 +28,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;

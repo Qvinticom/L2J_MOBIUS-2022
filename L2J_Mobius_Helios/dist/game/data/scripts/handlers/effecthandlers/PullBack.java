@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;

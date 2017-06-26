@@ -16,8 +16,8 @@
  */
 package handlers.skillconditionhandlers;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.enums.Position;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;

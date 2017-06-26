@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.zone.form;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
