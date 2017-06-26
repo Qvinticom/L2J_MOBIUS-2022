@@ -63,6 +63,8 @@ import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.enums.UserInfoType;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
@@ -153,8 +155,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 import com.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jmobius.gameserver.util.Util;
 

@@ -22,9 +22,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.geodriver.Cell;
-import com.l2jmobius.commons.geodriver.GeoDriver;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.geodata.geodriver.Cell;
+import com.l2jmobius.gameserver.geodata.geodriver.GeoDriver;
 import com.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;

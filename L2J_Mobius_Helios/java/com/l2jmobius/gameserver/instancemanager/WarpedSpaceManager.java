@@ -18,11 +18,11 @@ package com.l2jmobius.gameserver.instancemanager;
 
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.holders.WarpedSpaceHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.util.Util;
 
 /**

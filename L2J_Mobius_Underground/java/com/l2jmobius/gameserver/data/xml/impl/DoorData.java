@@ -34,12 +34,12 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
 
 /**
  * This class loads and hold info about doors.
