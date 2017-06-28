@@ -10,6 +10,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="9293" level="1" /> <!-- Player Commendation - Soulshot (No-grade) -->
 		</skills>
@@ -25,6 +26,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="9294" level="1" /> <!-- Player Commendation - Soulshot (D-grade) -->
 		</skills>
@@ -40,6 +42,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="9295" level="1" /> <!-- Player Commendation - Soulshot (C-grade) -->
 		</skills>
@@ -55,6 +58,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="9296" level="1" /> <!-- Player Commendation - Soulshot (B-grade) -->
 		</skills>
@@ -70,6 +74,7 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
 		<skills>
 			<skill id="9297" level="1" /> <!-- Player Commendation - Soulshot (A-grade) -->
 		</skills>
@@ -84,8 +89,9 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9300" level="1" /> <!-- Player Commendation - Blessed Spiritshot (No-grade) -->
+			<skill id="8910" level="1" /> <!-- Player Commendation - Blessed Spiritshot (No-grade) -->
 		</skills>
 	</item>
 	<item id="34611" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
@@ -99,8 +105,9 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9301" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
+			<skill id="8911" level="1" /> <!-- Player Commendation - Blessed Spiritshot (D-grade) -->
 		</skills>
 	</item>
 	<item id="34612" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
@@ -114,8 +121,9 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9302" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
+			<skill id="8912" level="1" /> <!-- Player Commendation - Blessed Spiritshot (C-grade) -->
 		</skills>
 	</item>
 	<item id="34613" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
@@ -129,8 +137,9 @@
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9303" level="1" /> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
+			<skill id="8913" level="1" /> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
 		</skills>
 	</item>
 	<item id="34614" name="Mysterious Blessed Spiritshot (A-grade)" type="EtcItem">
@@ -143,9 +152,11 @@
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
 		<skills>
-			<skill id="9304" level="1" /> <!-- Player Commendation - Blessed Spiritshot (A-grade) -->
+			<skill id="8907" level="1" /> <!-- Player Commendation - Blessed Spiritshot (A-grade) -->
 		</skills>
 	</item>
 </list>

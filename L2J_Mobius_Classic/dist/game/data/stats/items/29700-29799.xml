@@ -515,6 +515,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SoulShots" />
+		<skills>
+			<skill id="55139" level="1" /> <!-- Player Commendation - Soulshot (B-grade) -->
+		</skills>
 	</item>
 	<item id="29747" name="Mysterious Blessed Spiritshot (B-grade)" type="EtcItem">
 		<!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
@@ -525,6 +529,12 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSpiritShot" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="55140" level="1" /> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
+		</skills>
 	</item>
 	<item id="29748" name="Package: Mysterious Soulshot (C-grade, 100 pcs.)" type="EtcItem">
 		<!-- Double-click on the item to receive 100 Mysterious Soulshots (B-grade). -->

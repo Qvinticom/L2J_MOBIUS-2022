@@ -773,6 +773,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="39029" level="1" /> <!-- Player Commendation - Spiritshot (No-grade) -->
+		</skills>
 	</item>
 	<item id="49063" name="Mysterious Spiritshot (D-grade)" type="EtcItem">
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
@@ -786,6 +790,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="39030" level="1" /> <!-- Player Commendation - Spiritshot (D-grade) -->
+		</skills>
 	</item>
 	<item id="49064" name="Mysterious Spiritshot (C-grade)" type="EtcItem">
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
@@ -799,6 +807,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="39031" level="1" /> <!-- Player Commendation - Spiritshot (C-grade) -->
+		</skills>
 	</item>
 	<item id="49065" name="Lucky Package: Blessed Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
 		<!-- Open the package to get from 100 to 10 000 Mysterious Blessed Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->

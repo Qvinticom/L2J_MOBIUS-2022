@@ -556,6 +556,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="8908" level="1" /> <!-- Player Commendation - Spiritshot (B-grade) -->
+		</skills>
 	</item>
 	<item id="49750" name="Mysterious Spiritshot (A-grade)" type="EtcItem">
 		<!-- The power of a Mysterious Spiritshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
@@ -569,6 +573,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="SpiritShot" />
+		<skills>
+			<skill id="8909" level="1" /> <!-- Player Commendation - Spiritshot (A-grade) -->
+		</skills>
 	</item>
 	<item id="49751" name="Recipe: Blessed Soulshot (D)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for creating a Blessed Soulshot (D). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
