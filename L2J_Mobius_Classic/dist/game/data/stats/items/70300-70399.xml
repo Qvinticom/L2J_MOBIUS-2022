@@ -63,8 +63,17 @@
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="55384" level="1" /> <!-- Player Commendation - Blessed Soulshot (No-grade) -->
+		</skills>
 	</item>
 	<item id="70307" name="Mysterious Blessed Soulshot (D-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For D-grade weapons. -->
@@ -73,8 +82,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="55385" level="1" /> <!-- Player Commendation - Blessed Soulshot (D-grade) -->
+		</skills>
 	</item>
 	<item id="70308" name="Mysterious Blessed Soulshot (C-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For C-grade weapons. -->
@@ -83,8 +101,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="55386" level="1" /> <!-- Player Commendation - Blessed Soulshot (C-grade) -->
+		</skills>
 	</item>
 	<item id="70309" name="Mysterious Blessed Soulshot (B-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. -->
@@ -93,8 +120,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="55387" level="1" /> <!-- Player Commendation - Blessed Soulshot (B-grade) -->
+		</skills>
 	</item>
 	<item id="70310" name="Mysterious Blessed Soulshot (A-grade)" additionalName="Event" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. -->
@@ -103,8 +139,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="55388" level="1" /> <!-- Player Commendation - Blessed Soulshot (A-grade) -->
+		</skills>
 	</item>
 	<item id="70311" name="Forbidden Limit Scroll Box" type="EtcItem">
 		<!-- Double-click to receive 300 Enchant Scrolls of Border and 1 Scroll of Forbidden Limit. -->

@@ -486,11 +486,17 @@
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="8910" level="1" /> <!-- Player Commendation - Blessed Soulshot (No-grade) -->
+		</skills>
 	</item>
 	<item id="49745" name="Mysterious Blessed Soulshot (D-grade)" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For D-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
@@ -499,11 +505,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="8911" level="1" /> <!-- Player Commendation - Blessed Soulshot (D-grade) -->
+		</skills>
 	</item>
 	<item id="49746" name="Mysterious Blessed Soulshot (C-grade)" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For C-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
@@ -512,11 +524,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="8912" level="1" /> <!-- Player Commendation - Blessed Soulshot (C-grade) -->
+		</skills>
 	</item>
 	<item id="49747" name="Mysterious Blessed Soulshot (B-grade)" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
@@ -525,11 +543,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="8913" level="1" /> <!-- Player Commendation - Blessed Soulshot (B-grade) -->
+		</skills>
 	</item>
 	<item id="49748" name="Mysterious Blessed Soulshot (A-grade)" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
@@ -538,11 +562,17 @@
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
 		<set name="material" val="PAPER" />
+		<set name="commissionItemType" val="SOULSHOT" />
+		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="BlessedSoulShots" />
+		<skills>
+			<skill id="8907" level="1" /> <!-- Player Commendation - Blessed Soulshot (A-grade) -->
+		</skills>
 	</item>
 	<item id="49749" name="Mysterious Spiritshot (B-grade)" type="EtcItem">
 		<!-- The power of a Mysterious Spiritshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
