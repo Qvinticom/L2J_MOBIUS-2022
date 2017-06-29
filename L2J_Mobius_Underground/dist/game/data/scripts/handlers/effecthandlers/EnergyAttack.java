@@ -139,7 +139,18 @@ public final class EnergyAttack extends AbstractEffect
 			// Skill specific mods.
 			final double energyChargesBoost = 1 + (charge * 0.1); // 10% bonus damage for each charge used.
 			final double critMod = critical ? Formulas.calcCritDamage(attacker, effected, skill) : 1;
-			final double ssmod = (skill.useSoulShot() && attacker.isChargedShot(ShotType.SOULSHOTS)) ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1; // 2.04 for dual weapon?
+			double ssmod = 1;
+			if (skill.useSoulShot())
+			{
+				if (attacker.isChargedShot(ShotType.SOULSHOTS))
+				{
+					ssmod = 2 * attacker.getStat().getValue(Stats.SHOTS_BONUS); // 2.04 for dual weapon?
+				}
+				else if (attacker.isChargedShot(ShotType.BLESSED_SOULSHOTS))
+				{
+					ssmod = 4 * attacker.getStat().getValue(Stats.SHOTS_BONUS);
+				}
+			}
 			
 			// ...................________Initial Damage_________...__Charges Additional Damage__...____________________________________
 			// ATTACK CALCULATION ((77 * ((pAtk * lvlMod) + power) * (1 + (0.1 * chargesConsumed)) / pdef) * skillPower) + skillPowerAdd

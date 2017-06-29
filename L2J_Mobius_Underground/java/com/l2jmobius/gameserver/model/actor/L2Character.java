@@ -1134,7 +1134,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				setCurrentCp(getCurrentCp() - 10);
 			}
 			
-			final boolean wasSSCharged = isChargedShot(ShotType.SOULSHOTS); // Verify if soulshots are charged.
+			final boolean wasSSCharged = isChargedShot(ShotType.SOULSHOTS) || isChargedShot(ShotType.BLESSED_SOULSHOTS); // Verify if soulshots are charged.
 			final int timeAtk = Formulas.calculateTimeBetweenAttacks(this, weaponType); // Get the Attack Speed of the L2Character (delay (in milliseconds) before next attack)
 			final int timeToHit = timeAtk / 2; // the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
 			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGrade().ordinal() : 0;
@@ -4013,7 +4013,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		else
 		{
 			// If we didn't miss the hit, discharge the shoulshots, if any
-			setChargedShot(ShotType.SOULSHOTS, false);
+			setChargedShot(isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS, false);
 		}
 		
 		// Check Raidboss attack

@@ -221,7 +221,7 @@ public class SkillChannelizer implements Runnable
 							}
 							else
 							{
-								_channelizer.setChargedShot(ShotType.SOULSHOTS, false);
+								_channelizer.setChargedShot(_channelizer.isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS, false);
 							}
 							
 							// Shots are re-charged every cast.

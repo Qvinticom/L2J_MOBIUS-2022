@@ -78,7 +78,7 @@ public final class Backstab extends AbstractEffect
 			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
-		final boolean ss = skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS);
+		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
 		final byte shld = Formulas.calcShldUse(effector, effected);
 		double damage = Formulas.calcBlowDamage(effector, effected, skill, true, _power, shld, ss);
 		

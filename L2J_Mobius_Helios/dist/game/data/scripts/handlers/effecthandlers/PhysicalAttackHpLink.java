@@ -113,7 +113,18 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			final double wpnMod = effector.getAttackType().isRanged() ? 70 : (70 * 1.10113);
 			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
 			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
-			final double ssmod = (skill.useSoulShot() && effector.isChargedShot(ShotType.SOULSHOTS)) ? effector.getStat().getValue(Stats.SHOTS_BONUS, 2) : 1; // 2.04 for dual weapon?
+			double ssmod = 1;
+			if (skill.useSoulShot())
+			{
+				if (effector.isChargedShot(ShotType.SOULSHOTS))
+				{
+					ssmod = 2 * effector.getStat().getValue(Stats.SHOTS_BONUS); // 2.04 for dual weapon?
+				}
+				else if (effector.isChargedShot(ShotType.BLESSED_SOULSHOTS))
+				{
+					ssmod = 4 * effector.getStat().getValue(Stats.SHOTS_BONUS);
+				}
+			}
 			
 			// ...................____________Melee Damage_____________......................................___________________Ranged Damage____________________
 			// ATTACK CALCULATION 77 * ((pAtk * lvlMod) + power) / pdef            RANGED ATTACK CALCULATION 70 * ((pAtk * lvlMod) + power + patk + power) / pdef

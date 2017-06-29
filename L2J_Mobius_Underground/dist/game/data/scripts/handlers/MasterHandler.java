@@ -179,6 +179,7 @@ import handlers.communityboard.RegionBoard;
 import handlers.itemhandlers.Appearance;
 import handlers.itemhandlers.BeastSoulShot;
 import handlers.itemhandlers.BeastSpiritShot;
+import handlers.itemhandlers.BlessedSoulShots;
 import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
@@ -493,6 +494,7 @@ public class MasterHandler
 			Appearance.class,
 			BeastSoulShot.class,
 			BeastSpiritShot.class,
+			BlessedSoulShots.class,
 			BlessedSpiritShot.class,
 			Book.class,
 			Bypass.class,

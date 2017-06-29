@@ -1467,7 +1467,7 @@ public final class Skill implements IIdentifiable
 			}
 			else if (useSoulShot())
 			{
-				caster.setChargedShot(ShotType.SOULSHOTS, false);
+				caster.setChargedShot(caster.isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS, false);
 			}
 		}
 		
