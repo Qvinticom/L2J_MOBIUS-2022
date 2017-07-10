@@ -942,32 +942,54 @@
 	<item id="40268" name="Sayha's Box" additionalName="Eviscerator" type="EtcItem">
 		<!-- Box containing Sayha's power. Double-click to use. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item chance="100.0" id="40200" max="1" min="1" /> <!-- Sayha's Cloak -->
+			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
+			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+		</capsuled_items>
+		<skills>
+			<skill id="12801" level="1" /> <!-- Box for the Awakened -->
+		</skills>
 	</item>
 	<item id="40269" name="Sayha's Box" additionalName="Sayha's Seer" type="EtcItem">
 		<!-- Box containing Sayha's power. Double-click to use. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="is_stackable" val="true" />
+		<capsuled_items>
+			<item chance="100.0" id="40200" max="1" min="1" /> <!-- Sayha's Cloak -->
+			<item chance="100.0" id="32316" max="5" min="5" /> <!-- Elixir of Blessing -->
+			<item chance="100.0" id="33502" max="1" min="1" /> <!-- Weapon Attribute Change Crystal (S-grade) -->
+		</capsuled_items>
+		<skills>
+			<skill id="12801" level="1" /> <!-- Box for the Awakened -->
+		</skills>
 	</item>
 	<item id="40270" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Dark Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
