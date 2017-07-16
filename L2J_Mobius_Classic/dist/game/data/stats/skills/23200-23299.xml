@@ -16,6 +16,23 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
+	<skill id="23235" toLevel="1" name="Release Agathion's Seal - Singer and Dancer">
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>1594</npcId>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="23298" toLevel="1" name="Flame Hawk">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
