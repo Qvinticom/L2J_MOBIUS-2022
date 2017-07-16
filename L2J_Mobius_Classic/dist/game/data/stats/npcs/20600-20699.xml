@@ -2615,7 +2615,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="5959" sp="1" />
+		<acquire exp="3821" sp="114" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
 			<attack physical="272.85786" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2653,6 +2653,36 @@
 			<radius normal="9" />
 			<height normal="16.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2429" min="1" max="1" chance="0.03" /> <!-- Chain Boots -->
+				<item id="2430" min="1" max="1" chance="0.03" /> <!-- Karmian Boots -->
+				<item id="2431" min="1" max="1" chance="0.03" /> <!-- Plated Leather Boots -->
+				<item id="2432" min="1" max="1" chance="0.03" /> <!-- Dwarven Chain Boots -->
+				<item id="2452" min="1" max="1" chance="0.03" /> <!-- Reinforced Mithril Gloves -->
+				<item id="2453" min="1" max="1" chance="0.03" /> <!-- Chain Gloves -->
+				<item id="2454" min="1" max="1" chance="0.03" /> <!-- Karmian Gloves -->
+				<item id="57" min="260" max="608" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="1" chance="6.585" /> <!-- Varnish -->
+				<item id="1869" min="1" max="1" chance="6.476" /> <!-- Iron Ore -->
+				<item id="2508" min="1" max="1" chance="5.373" /> <!-- Cursed Bone -->
+				<item id="2944" min="1" max="1" chance="0.75" /> <!-- Karmian Glove Fabric -->
+				<item id="2943" min="1" max="1" chance="0.75" /> <!-- Chain Glove Design -->
+				<item id="2942" min="1" max="1" chance="0.75" /> <!-- Reinforced Mithril Glove Design -->
+				<item id="2940" min="1" max="1" chance="0.75" /> <!-- Dwarven Chain Boot Fragment -->
+				<item id="2939" min="1" max="1" chance="0.75" /> <!-- Plated Leather Boot Lining -->
+				<item id="2938" min="1" max="1" chance="0.75" /> <!-- Karmian Boot Fabric -->
+				<item id="2937" min="1" max="1" chance="0.75" /> <!-- Chain Boot Fragment -->
+				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
+				<item id="3942" min="1" max="1" chance="0.03" /> <!-- Spellbook: Party Return -->
+				<item id="6350" min="1" max="1" chance="0.03" /> <!-- Amulet: Pa'agrio's Honor -->
+				<item id="49429" min="1" max="1" chance="0.03" /> <!-- Spellbook: Hide -->
+			</death>
+			<corpse>
+				<item id="1873" min="1" max="1" chance="75.83" /> <!-- Silver Nugget -->
+				<item id="2075" min="1" max="1" chance="1.483" /> <!-- Orcish Glaive Blade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20637" level="47" type="L2Monster" name="Forest of Mirrors Ghost">
 		<parameters>
@@ -2667,7 +2697,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="6221" sp="1" />
+		<acquire exp="3989" sp="119" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1276.53628" hpRegen="5.5" mp="665" mpRegen="2.1" />
 			<attack physical="287.865039" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2705,6 +2735,43 @@
 			<radius normal="7" />
 			<height normal="21" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="2460" min="1" max="1" chance="0.0075" /> <!-- Theca Leather Gloves -->
+				<item id="2436" min="1" max="1" chance="0.0075" /> <!-- Theca Leather Boots -->
+				<item id="2459" min="1" max="1" chance="0.0075" /> <!-- Demon's Gloves -->
+				<item id="2463" min="1" max="1" chance="0.0075" /> <!-- Divine Gloves -->
+				<item id="2462" min="1" max="1" chance="0.0075" /> <!-- Full Plate Gauntlets -->
+				<item id="2461" min="1" max="1" chance="0.0075" /> <!-- Drake Leather Gloves -->
+				<item id="603" min="1" max="1" chance="0.0075" /> <!-- Divine Boots -->
+				<item id="2438" min="1" max="1" chance="0.0075" /> <!-- Full Plate Boots -->
+				<item id="2437" min="1" max="1" chance="0.0075" /> <!-- Drake Leather Boots -->
+				<item id="2468" min="1" max="1" chance="0.0075" /> <!-- Blessed Gloves -->
+				<item id="57" min="284" max="662" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="1" chance="7.143" /> <!-- Varnish -->
+				<item id="1869" min="1" max="1" chance="7.065" /> <!-- Iron Ore -->
+				<item id="2508" min="1" max="1" chance="5.931" /> <!-- Cursed Bone -->
+				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
+				<item id="2965" min="1" max="1" chance="0.75" /> <!-- Blessed Glove Design -->
+				<item id="2964" min="1" max="1" chance="0.3" /> <!-- Divine Glove Pattern -->
+				<item id="2963" min="1" max="1" chance="0.3" /> <!-- Full Plate Gauntlet Fragment -->
+				<item id="2962" min="1" max="1" chance="0.3" /> <!-- Drake Leather Glove Design -->
+				<item id="2961" min="1" max="1" chance="0.3" /> <!-- Full Plate Boot Fragment -->
+				<item id="2960" min="1" max="1" chance="0.3" /> <!-- Drake Leather Boot Design -->
+				<item id="2958" min="1" max="1" chance="0.3" /> <!-- Divine Boot Fabric -->
+				<item id="2955" min="1" max="1" chance="0.3" /> <!-- Theca Leather Glove Texture -->
+				<item id="2954" min="1" max="1" chance="0.3" /> <!-- Theca Leather Boot Texture -->
+				<item id="2953" min="1" max="1" chance="0.3" /> <!-- Demon's Glove Fabric -->
+				<item id="1875" min="1" max="1" chance="0.3" /> <!-- Stone of Purity -->
+				<item id="49425" min="1" max="1" chance="0.03" /> <!-- Spellbook: Immortal Life -->
+				<item id="5811" min="1" max="1" chance="0.0075" /> <!-- Spellbook: Mass Slow -->
+			</death>
+			<corpse>
+				<item id="1895" min="1" max="1" chance="37.66" /> <!-- Metallic Fiber -->
+				<item id="4071" min="1" max="1" chance="2.436" /> <!-- Avadon Robe Fabric -->
+				<item id="2112" min="1" max="1" chance="0.75" /> <!-- Pa'agrio Axe Blade -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20638" level="48" type="L2Monster" name="Forest of Mirrors Ghost">
 		<parameters>
@@ -2719,7 +2786,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="6489" sp="1" />
+		<acquire exp="4161" sp="124" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
 			<attack physical="303.409755" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2757,6 +2824,31 @@
 			<radius normal="8" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="853" min="1" max="1" chance="0.03" /> <!-- Earring of Protection -->
+				<item id="884" min="1" max="1" chance="0.03" /> <!-- Ring of Protection -->
+				<item id="916" min="1" max="1" chance="0.03" /> <!-- Necklace of Protection -->
+				<item id="57" min="309" max="722" chance="70" /> <!-- Adena -->
+				<item id="1869" min="1" max="1" chance="7.797" /> <!-- Iron Ore -->
+				<item id="1865" min="1" max="1" chance="7.725" /> <!-- Varnish -->
+				<item id="2508" min="1" max="1" chance="6.39" /> <!-- Cursed Bone -->
+				<item id="1912" min="1" max="1" chance="2.53" /> <!-- Ring of Protection Gemstone -->
+				<item id="1911" min="1" max="1" chance="1.743" /> <!-- Earring of Protection Gemstone -->
+				<item id="1913" min="1" max="1" chance="1.409" /> <!-- Necklace of Protection Gemstone -->
+				<item id="1880" min="1" max="1" chance="0.75" /> <!-- Steel -->
+				<item id="1875" min="1" max="1" chance="0.75" /> <!-- Stone of Purity -->
+				<item id="2330" min="1" max="1" chance="0.075" /> <!-- Recipe: Homunkulus' Sword -->
+				<item id="6351" min="1" max="1" chance="0.03" /> <!-- Amulet: Ritual of Life -->
+				<item id="49430" min="1" max="1" chance="0.03" /> <!-- Spellbook: Mystic Immunity -->
+			</death>
+			<corpse>
+				<item id="1867" min="1" max="3" chance="73.82" /> <!-- Animal Skin -->
+				<item id="2335" min="1" max="1" chance="0.3" /> <!-- Recipe: War Axe -->
+				<item id="2346" min="1" max="1" chance="0.3" /> <!-- Recipe: Fisted Blade -->
+				<item id="2351" min="1" max="1" chance="0.3" /> <!-- Recipe: Scorpion -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20639" level="49" type="L2Monster" name="Mirror">
 		<parameters>
@@ -3236,7 +3328,7 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="20646" level="55" type="L2Monster" name="Halingka">
+	<npc id="20646" level="76" type="L2Monster" name="Halingka">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -3250,11 +3342,11 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="42205" sp="10" />
+		<acquire exp="34863" sp="1045" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3346.10946" hpRegen="13" mp="889.8" mpRegen="2.4" />
-			<attack physical="426.922562" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="203.3056364" magical="163.64727" />
+			<vitals hp="10599" hpRegen="13" mp="1987" mpRegen="2.4" />
+			<attack physical="861.922562" magical="601.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="393.78455" magical="286.93149" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
@@ -3286,8 +3378,25 @@
 			<radius normal="34" />
 			<height normal="28" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
+				<item id="57" min="1471" max="3432" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="29.64" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="10.66" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.584" /> <!-- Steel -->
+				<item id="6345" min="1" max="1" chance="2.94" /> <!-- Sealed Phoenix Ring Gemstone -->
+				<item id="6341" min="1" max="1" chance="2.049" /> <!-- Sealed Phoenix Earring Gemstone -->
+				<item id="6343" min="1" max="1" chance="1.552" /> <!-- Sealed Phoenix Necklace Beads -->
+			</death>
+			<corpse>
+				<item id="1880" min="1" max="1" chance="69.4" /> <!-- Steel -->
+				<item id="6333" min="1" max="1" chance="4.023" /> <!-- Recipe: Sealed Phoenix Ring (70%) -->
+				<item id="6331" min="1" max="1" chance="2.705" /> <!-- Recipe: Sealed Phoenix Earring (70%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20647" level="56" type="L2Monster" name="Yintzu">
+	<npc id="20647" level="76" type="L2Monster" name="Yintzu">
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
 			<param name="MoveAroundSocial1" value="40" />
@@ -3301,11 +3410,11 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="46911" sp="11" />
+		<acquire exp="23427" sp="702" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3449.3662" hpRegen="13" mp="918.8" mpRegen="2.4" />
-			<attack physical="446.561005" magical="277.22116" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="207.6375909" magical="167.1342" />
+			<vitals hp="8927" hpRegen="13" mp="1756" mpRegen="2.4" />
+			<attack physical="901.561005" magical="677.22116" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="371.6375909" magical="254.1342" />
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
@@ -3339,8 +3448,25 @@
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
+				<item id="57" min="1004" max="2341" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="19.07" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="7.338" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="5.861" /> <!-- Steel -->
+				<item id="6345" min="1" max="1" chance="1.911" /> <!-- Sealed Phoenix Ring Gemstone -->
+				<item id="6341" min="1" max="1" chance="1.431" /> <!-- Sealed Phoenix Earring Gemstone -->
+				<item id="6343" min="1" max="1" chance="1.051" /> <!-- Sealed Phoenix Necklace Beads -->
+			</death>
+			<corpse>
+				<item id="1880" min="1" max="1" chance="46.46" /> <!-- Steel -->
+				<item id="6333" min="1" max="1" chance="2.79" /> <!-- Recipe: Sealed Phoenix Ring (70%) -->
+				<item id="6331" min="1" max="1" chance="1.733" /> <!-- Recipe: Sealed Phoenix Earring (70%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20648" level="57" type="L2Monster" name="Paliote">
+	<npc id="20648" level="77" type="L2Monster" name="Paliote">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3356,11 +3482,11 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="52508" sp="12" />
+		<acquire exp="35787" sp="1073" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3553.16036" hpRegen="13" mp="948" mpRegen="2.4" />
-			<attack physical="466.656245" magical="289.69611" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="211.9894455" magical="170.63714" />
+			<vitals hp="10555" hpRegen="13" mp="1941" mpRegen="2.4" />
+			<attack physical="946.44055895414" magical="603.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="378.27073" magical="290.21427" />
 			<speed>
 				<walk ground="80" />
 				<run ground="140" />
@@ -3393,8 +3519,26 @@
 			<radius normal="13" />
 			<height normal="22" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6325" min="1" max="1" chance="0.03" /> <!-- Sealed Phoenix Ring -->
+				<item id="57" min="1512" max="3533" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="22.3" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.327" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="6.696" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.297" /> <!-- Silver Nugget -->
+				<item id="6345" min="1" max="1" chance="3.009" /> <!-- Sealed Phoenix Ring Gemstone -->
+				<item id="6341" min="1" max="1" chance="2.137" /> <!-- Sealed Phoenix Earring Gemstone -->
+				<item id="6343" min="1" max="1" chance="1.646" /> <!-- Sealed Phoenix Necklace Beads -->
+			</death>
+			<corpse>
+				<item id="1880" min="1" max="1" chance="72.06" /> <!-- Steel -->
+				<item id="6333" min="1" max="1" chance="4.168" /> <!-- Recipe: Sealed Phoenix Ring (70%) -->
+				<item id="6331" min="1" max="1" chance="2.671" /> <!-- Recipe: Sealed Phoenix Earring (70%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20649" level="58" type="L2Monster" name="Hamrut">
+	<npc id="20649" level="77" type="L2Monster" name="Hamrut">
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -3408,11 +3552,11 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="46159" sp="11" />
+		<acquire exp="21095" sp="632" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3657.36532" hpRegen="13" mp="977.4" mpRegen="2.4" />
-			<attack physical="487.18912" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="216.3584455" magical="174.1539" />
+			<vitals hp="9382" hpRegen="7.5" mp="1897" mpRegen="2.4" />
+			<attack physical="876.64055715418" magical="556.137884935572" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="372.42025" magical="281.91622" />
 			<speed>
 				<walk ground="60" />
 				<run ground="140" />
@@ -3445,8 +3589,27 @@
 			<radius normal="27" />
 			<height normal="25.5" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6325" min="1" max="1" chance="0.0075" /> <!-- Sealed Phoenix Ring -->
+				<item id="57" min="905" max="2114" chance="70" /> <!-- Adena -->
+				<item id="1873" min="1" max="1" chance="15.29" /> <!-- Silver Nugget -->
+				<item id="1865" min="1" max="3" chance="12.92" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="4.995" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="3.896" /> <!-- Steel -->
+				<item id="6345" min="1" max="1" chance="1.833" /> <!-- Sealed Phoenix Ring Gemstone -->
+				<item id="6341" min="1" max="1" chance="1.219" /> <!-- Sealed Phoenix Earring Gemstone -->
+				<item id="6343" min="1" max="1" chance="0.75" /> <!-- Sealed Phoenix Necklace Beads -->
+			</death>
+			<corpse>
+				<item id="1880" min="1" max="1" chance="32.54" /> <!-- Steel -->
+				<item id="6333" min="1" max="1" chance="1.89" /> <!-- Recipe: Sealed Phoenix Ring (70%) -->
+				<item id="6331" min="1" max="1" chance="1.27" /> <!-- Recipe: Sealed Phoenix Earring (70%) -->
+				<item id="6329" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Phoenix Necklace (70%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20650" level="59" type="L2Monster" name="Kranrot">
+	<npc id="20650" level="78" type="L2Monster" name="Kranrot">
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -3460,11 +3623,11 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="53668" sp="12" />
+		<acquire exp="38256" sp="1147" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3761.85038" hpRegen="13" mp="1007" mpRegen="2.4" />
-			<attack physical="508.138257" magical="315.44778" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="220.7417545" magical="177.68216" />
+			<vitals hp="12013" hpRegen="8.5" mp="1999" mpRegen="2.4" />
+			<attack physical="912.50085998804" magical="628.096657928153" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="372.70061" magical="283.45587" />
 			<speed>
 				<walk ground="37" />
 				<run ground="170" />
@@ -3497,8 +3660,27 @@
 			<radius normal="19" />
 			<height normal="36" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="6328" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Ring -->
+				<item id="57" min="1622" max="3787" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.15" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.916" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.147" /> <!-- Steel -->
+				<item id="1873" min="1" max="1" chance="5.715" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="2.671" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.883" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="1.252" /> <!-- Sealed Majestic Necklace Beads -->
+			</death>
+			<corpse>
+				<item id="1873" min="1" max="5" chance="77.02" /> <!-- Silver Nugget -->
+				<item id="2249" min="1" max="1" chance="1.89" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.416" /> <!-- Recipe: Sealed Majestic Earring (70%)	 -->
+				<item id="6335" min="1" max="1" chance="1.15" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20651" level="60" type="L2Monster" name="Gamlin">
+	<npc id="20651" level="77" type="L2Monster" name="Gamlin">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3511,11 +3693,11 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="14752" sp="3" />
+		<acquire exp="35787" sp="1073" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3866.48088" hpRegen="13" mp="1036.8" mpRegen="2.4" />
-			<attack physical="437.5868273" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="272.415088" magical="181.21958" />
+			<vitals hp="11911" hpRegen="8.5" mp="2104" mpRegen="2.4" />
+			<attack physical="886.44055895414" magical="604.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="358.27073" magical="260.21427" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
@@ -3546,8 +3728,29 @@
 			<radius normal="11" />
 			<height normal="32" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5296" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1512" max="3533" chance="70" /> <!-- Adena -->
+				<item id="1876" min="1" max="1" chance="13.66" /> <!-- Mithril Ore -->
+				<item id="1874" min="1" max="1" chance="4.435" /> <!-- Oriharukon Ore -->
+				<item id="1877" min="1" max="1" chance="2.705" /> <!-- Adamantite Nugget -->
+				<item id="5508" min="1" max="1" chance="1.515" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5497" min="1" max="1" chance="1.462" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5509" min="1" max="1" chance="1.435" /> <!-- Sealed Tallum Glove Design -->
+				<item id="5496" min="1" max="1" chance="1.397" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="90045" min="1" max="1" chance="0.03" /> <!-- Magical Tablet -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="9" chance="89.46" /> <!-- Varnish -->
+				<item id="5370" min="1" max="1" chance="1.871" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5394" min="1" max="1" chance="1.842" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5368" min="1" max="1" chance="1.840" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="1.828" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20652" level="61" type="L2Monster" name="Leogul">
+	<npc id="20652" level="77" type="L2Monster" name="Leogul">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3561,11 +3764,11 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="15553" sp="3" />
+		<acquire exp="136793" sp="4103" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3971.11852" hpRegen="15" mp="1066.8" mpRegen="2.7" />
-			<attack physical="455.5278909" magical="342.17315" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="277.742806" magical="184.76376" />
+			<vitals hp="16414" hpRegen="15" mp="2161" mpRegen="2.7" />
+			<attack physical="896.44055895414" magical="614.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="428.5882" magical="317.21427" />
 			<speed>
 				<walk ground="80" />
 				<run ground="170" />
@@ -3597,6 +3800,26 @@
 			<radius normal="15" />
 			<height normal="35" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="57" min="6418" max="14990" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="14.39" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="12.12" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="6.238" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="3.739" /> <!-- Spiritual Eye Piece -->
+				<item id="5534" min="1" max="1" chance="0.75" /> <!-- Soul Bow Shaft -->
+				<item id="5543" min="1" max="1" chance="0.75" /> <!-- Dasparion's Staff Head -->
+				<item id="5546" min="1" max="1" chance="0.75" /> <!-- Sword of Miracles Edge -->
+				<item id="5547" min="1" max="1" chance="0.75" /> <!-- Elemental Sword Edge -->
+				<item id="5535" min="1" max="1" chance="0.75" /> <!-- Carnage Bow Shaft -->
+			</death>
+			<corpse>
+				<item id="1875" min="1" max="3" chance="76.78" /> <!-- Stone of Purity -->
+				<item id="5444" min="1" max="1" chance="0.75" /> <!-- Recipe: Carnage Bow (60%) -->
+				<item id="5460" min="1" max="1" chance="0.75" /> <!-- Recipe: Dasparion's Staff (60%) -->
+				<item id="5468" min="1" max="1" chance="0.75" /> <!-- Recipe: Elemental Sword (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20653" level="61" type="L2Monster" name="Lesser Giant">
 		<parameters>
@@ -3648,7 +3871,7 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="20654" level="62" type="L2Monster" name="Lesser Giant Soldier">
+	<npc id="20654" level="76" type="L2Monster" name="Lesser Giant Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
 			<param name="MoveAroundSocial1" value="170" />
@@ -3665,11 +3888,11 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3937" /> <!-- rhand: Giant Bar -->
-		<acquire exp="33609" sp="8" />
+		<acquire exp="248131" sp="7443" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6113.43246" hpRegen="22.5" mp="1097" mpRegen="2.7" />
-			<attack physical="630.5599311" magical="355.86007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="212.6798926" magical="188.3122" />
+			<vitals hp="33146.43246" hpRegen="22.5" mp="2102" mpRegen="2.7" />
+			<attack physical="830.5599311" magical="475.86007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="276.6798926" magical="215.3122" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
@@ -3702,8 +3925,29 @@
 			<radius normal="21" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5297" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="57" min="6953" max="16220" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="16.8" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.403" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.831" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="3.07" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="1873" min="22" max="66" chance="2.664" /> <!-- Silver Nugget -->
+				<item id="5478" min="1" max="1" chance="2.011" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="1.339" /> <!-- Sealed Tallum Leather Armor Pattern -->
+			</death>
+			<corpse>
+				<item id="1873" min="1" max="21" chance="85.47" /> <!-- Silver Nugget -->
+				<item id="5340" min="1" max="1" chance="5.727" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="3.526" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="2.464" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20655" level="63" type="L2Monster" name="Lesser Giant Shooter">
+	<npc id="20655" level="76" type="L2Monster" name="Lesser Giant Shooter">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3716,11 +3960,11 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="4028" /> <!-- rhand: Giant Cannon -->
-		<acquire exp="27459" sp="6" />
+		<acquire exp="243360" sp="7300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6269.76822" hpRegen="22.5" mp="1127.4" mpRegen="2.7" />
-			<attack physical="1203.096878" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="262.19426" magical="191.86238" />
+			<vitals hp="33146.43246" hpRegen="22.5" mp="2102" mpRegen="2.7" />
+			<attack physical="744.78823" magical="275.86007" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="282.19426" magical="211.86238" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -3752,8 +3996,28 @@
 			<radius normal="21" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5295" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Gloves -->
+				<item id="57" min="4995" max="11652" chance="70" /> <!-- Adena -->
+				<item id="1865" min="7" max="21" chance="18.88" /> <!-- Varnish -->
+				<item id="1869" min="24" max="72" chance="6.096" /> <!-- Iron Ore -->
+				<item id="5496" min="1" max="1" chance="4.798" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="4.725" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="4.723" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="4.717" /> <!-- Sealed Tallum Glove Design -->
+				<item id="1880" min="3" max="9" chance="4.132" /> <!-- Steel -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="29" chance="91.77" /> <!-- Varnish -->
+				<item id="5368" min="1" max="1" chance="6.191" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="6.154" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="5394" min="1" max="1" chance="6.13" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5370" min="1" max="1" chance="6.103" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20656" level="63" type="L2Monster" name="Lesser Giant Scout">
+	<npc id="20656" level="76" type="L2Monster" name="Lesser Giant Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -3767,11 +4031,11 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="4028" /> <!-- rhand: Giant Cannon -->
-		<acquire exp="25052" sp="6" />
+		<acquire exp="243360" sp="7300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6269.76822" hpRegen="22.5" mp="1127.4" mpRegen="2.7" />
-			<attack physical="1203.096878" magical="369.73862" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="222.865121" magical="191.86238" evasion="10" />
+			<vitals hp="33146.43246" hpRegen="22.5" mp="2102" mpRegen="2.7" />
+			<attack physical="744.78823" magical="275.86007" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
+			<defence physical="282.19426" magical="211.86238" evasion="10" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -3805,8 +4069,28 @@
 			<radius normal="21" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5295" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Gloves -->
+				<item id="57" min="4995" max="11652" chance="70" /> <!-- Adena -->
+				<item id="1865" min="7" max="21" chance="18.88" /> <!-- Varnish -->
+				<item id="1869" min="24" max="72" chance="6.096" /> <!-- Iron Ore -->
+				<item id="5496" min="1" max="1" chance="4.798" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="4.725" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="4.723" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="4.717" /> <!-- Sealed Tallum Glove Design -->
+				<item id="1880" min="3" max="9" chance="4.132" /> <!-- Steel -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="29" chance="91.77" /> <!-- Varnish -->
+				<item id="5368" min="1" max="1" chance="6.191" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="6.154" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="5394" min="1" max="1" chance="6.13" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5370" min="1" max="1" chance="6.103" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20657" level="64" type="L2Monster" name="Lesser Giant Wizard">
+	<npc id="20657" level="77" type="L2Monster" name="Lesser Giant Wizard">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3822,11 +4106,11 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3938" /> <!-- rhand: Giant Rod -->
-		<acquire exp="19841" sp="4" />
+		<acquire exp="257609" sp="7728" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4283.64254" hpRegen="15" mp="1158" mpRegen="2.7" />
-			<attack physical="618.225025" magical="383.78868" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="242.7678909" magical="195.41171" />
+			<vitals hp="34828.64254" hpRegen="10" mp="2110" mpRegen="2.7" />
+			<attack physical="807.66491" magical="317.2599" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="262.7678909" magical="217.41171" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
@@ -3860,8 +4144,28 @@
 			<radius normal="21" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5319" min="1" max="1" chance="0.03" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="5301" max="12380" chance="70" /> <!-- Adena -->
+				<item id="1865" min="7" max="21" chance="21.4" /> <!-- Varnish -->
+				<item id="1869" min="24" max="72" chance="6.408" /> <!-- Iron Ore -->
+				<item id="1880" min="3" max="9" chance="4.309" /> <!-- Steel -->
+				<item id="5503" min="1" max="1" chance="3.678" /> <!-- Sealed Majestic Boot Lining-->
+				<item id="5514" min="1" max="1" chance="3.657" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="3.621" /> <!-- Sealed Majestic Gauntlet Design -->
+				<item id="5502" min="1" max="1" chance="3.594" /> <!-- Sealed Boots of Nightmare Lining -->
+			</death>
+			<corpse>
+				<item id="1865" min="1" max="31" chance="92.99" /> <!-- Varnish -->
+				<item id="5406" min="1" max="1" chance="4.354" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="5382" min="1" max="1" chance="4.34" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5380" min="1" max="1" chance="4.308" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5404" min="1" max="1" chance="4.229" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
-	<npc id="20658" level="65" type="L2Monster" name="Lesser Giant Elder">
+	<npc id="20658" level="78" type="L2Monster" name="Lesser Giant Elder">
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -3880,11 +4184,11 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="3938" /> <!-- rhand: Giant Rod -->
-		<acquire exp="19167" sp="4" />
+		<acquire exp="336445" sp="10093" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4386.86284" hpRegen="15" mp="1188.8" mpRegen="2.7" />
-			<attack physical="641.099349" magical="397.98887" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="247.1730273" magical="198.95754" />
+			<vitals hp="53058.86284" hpRegen="10" mp="2211" mpRegen="2.7" />
+			<attack physical="875.37145" magical="596.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="363.78455" magical="255.579412824268" />
 			<speed>
 				<walk ground="15" />
 				<run ground="180" />
@@ -3923,6 +4227,27 @@
 			<radius normal="21" />
 			<height normal="44" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
+				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="57" min="6803" max="15882" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.85" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="17.18" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.251" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.723" /> <!-- Steel -->
+				<item id="5489" min="1" max="1" chance="2.997" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.964" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="1.425" /> <!-- Sealed Dark Crystal Robe Fabric -->
+			</death>
+			<corpse>
+				<item id="1873" min="1" max="21" chance="86.7" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="5.564" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="3.429" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="2.392" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20659" level="67" type="L2Monster" name="Graveyard Wanderer">
 		<parameters>
@@ -4438,26 +4763,49 @@
 		</drop_lists>
 	</npc>
 	<npc id="20666" level="52" type="L2Monster" name="Taik Orc Watchman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- L2wiki: https://l2wiki.com/classic/Taik_Orc_Watchman -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="5" /> <!-- Stun -->
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="72" /> <!-- rhand: Stormbringer -->
+		<acquire exp="4883" sp="146" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1520.38155" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<speed>
 				<walk ground="45" />
 				<run ground="174" />
 			</speed>
+			<hit_time>460</hit_time>
 			<attack physical="370.907537" magical="230.25615" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="190.4555091" magical="153.30378" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ORC</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />
@@ -4617,26 +4965,49 @@
 		</drop_lists>
 	</npc>
 	<npc id="20669" level="55" type="L2Monster" name="Taik Orc Supply Officer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- L2wiki: https://l2wiki.com/classic/Taik_Orc_Supply_Officer -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="PhysicalSpecial" id="4073" level="5" /> <!-- Stun -->
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="75" /> <!-- rhand: Caliburs -->
+		<acquire exp="54603" sp="163" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
 			</speed>
+			<hit_time>540</hit_time>
 			<attack physical="426.922562" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="203.3056364" magical="163.64727" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="500" clanHelpRange="300">
+			<clan_list>
+				<clan>ORC</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" grown="14" />
 			<height normal="24" grown="28.8" />

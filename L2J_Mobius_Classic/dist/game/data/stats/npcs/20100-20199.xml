@@ -2034,7 +2034,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="654" sp="16" />
+		<acquire exp="529" sp="15" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="199.62322" hpRegen="2.5" mp="124.48" mpRegen="1.2" />
 			<attack physical="22.99606" magical="15.70333" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2068,6 +2068,23 @@
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
+		<drop_lists>
+			<death>
+				<item id="20" min="1" max="1" chance="2.924" /> <!-- Buckler -->
+				<item id="43" min="1" max="1" chance="2.017" /> <!-- Wooden Helmet -->
+				<item id="57" min="38" max="91" chance="70" /> <!-- Adena -->
+				<item id="1833" min="1" max="1" chance="8.182" /> <!-- Bandage -->
+				<item id="1868" min="1" max="1" chance="6.179" /> <!-- Thread -->
+				<item id="1864" min="1" max="1" chance="6.07" /> <!-- Stem -->
+				<item id="1867" min="1" max="1" chance="4.018" /> <!-- Animal Skin -->
+				<item id="1871" min="1" max="1" chance="3.12" /> <!-- Charcoal -->
+				<item id="1869" min="1" max="1" chance="3.065" /> <!-- Iron Ore -->
+			</death>
+			<corpse>
+				<item id="1872" min="1" max="1" chance="50.83" /> <!-- Animal Bone -->
+				<item id="1867" min="1" max="1" chance="48.94" /> <!-- Animal Skin -->
+			</corpse>
+		</drop_lists>
 	</npc>
 	<npc id="20144" level="35" type="L2Monster" name="Hangman Tree">
 		<!-- L2wiki: https://l2wiki.com/classic/Hangman_Tree -->
