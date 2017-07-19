@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.skills.effects;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation;
@@ -92,7 +92,7 @@ final class EffectThrowUp extends L2Effect
 		_y = getEffector().getY() - (int) (offset * sin);
 		_z = getEffected().getZ();
 		
-		if (Config.GEODATA > 0)
+		if (Config.PATHFINDING > 0)
 		{
 			final Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), _x, _y, _z);
 			_x = destiny.getX();

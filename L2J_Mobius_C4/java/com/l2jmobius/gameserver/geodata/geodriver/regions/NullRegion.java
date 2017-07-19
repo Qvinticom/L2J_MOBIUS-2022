@@ -14,50 +14,44 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.geonodes;
+package com.l2jmobius.gameserver.geodata.geodriver.regions;
 
-import com.l2jmobius.gameserver.pathfinding.AbstractNode;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.geodriver.IRegion;
 
 /**
- * @author -Nemesiss-
+ * @author HorridoJoho
  */
-public class GeoNode extends AbstractNode
+public final class NullRegion implements IRegion
 {
-	private final int _neighborsIdx;
-	private short _cost;
-	private GeoNode[] _neighbors;
+	public static final NullRegion INSTANCE = new NullRegion();
 	
-	public GeoNode(AbstractNodeLoc Loc, int Neighbors_idx)
+	@Override
+	public boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe)
 	{
-		super(Loc);
-		_neighborsIdx = Neighbors_idx;
+		return true;
 	}
 	
-	public short getCost()
+	@Override
+	public int getNearestZ(int geoX, int geoY, int worldZ)
 	{
-		return _cost;
+		return worldZ;
 	}
 	
-	public void setCost(int cost)
+	@Override
+	public int getNextLowerZ(int geoX, int geoY, int worldZ)
 	{
-		_cost = (short) cost;
+		return worldZ;
 	}
 	
-	public GeoNode[] getNeighbors()
+	@Override
+	public int getNextHigherZ(int geoX, int geoY, int worldZ)
 	{
-		return _neighbors;
+		return worldZ;
 	}
 	
-	public void attachNeighbors()
+	@Override
+	public boolean hasGeo()
 	{
-		if (getLoc() == null)
-		{
-			_neighbors = null;
-		}
-		else
-		{
-			_neighbors = GeoPathFinding.getInstance().readNeighbors(this, _neighborsIdx);
-		}
+		return false;
 	}
 }

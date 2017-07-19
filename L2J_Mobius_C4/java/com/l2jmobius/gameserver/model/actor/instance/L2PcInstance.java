@@ -35,7 +35,6 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.L2DatabaseFactory;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ItemsAutoDestroy;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.Olympiad;
@@ -63,6 +62,7 @@ import com.l2jmobius.gameserver.datatables.NobleSkillTable;
 import com.l2jmobius.gameserver.datatables.NpcTable;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.SkillTreeTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -3996,7 +3996,7 @@ public final class L2PcInstance extends L2PlayableInstance
 				
 				{
 					
-					if (Config.GEODATA > 0)
+					if (Config.PATHFINDING > 0)
 					
 					{
 						
@@ -4030,7 +4030,7 @@ public final class L2PcInstance extends L2PlayableInstance
 					// This Action Failed packet avoids player getting stuck when clicking three or more times
 					
 					player.sendPacket(new ActionFailed());
-					if (Config.GEODATA > 0)
+					if (Config.PATHFINDING > 0)
 					
 					{
 						

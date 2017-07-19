@@ -23,8 +23,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.datatables.SkillTreeTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.actor.instance.L2ArtefactInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ChestInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;

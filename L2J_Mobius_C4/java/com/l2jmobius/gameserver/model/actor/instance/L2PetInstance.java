@@ -24,10 +24,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.L2DatabaseFactory;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -316,7 +316,7 @@ public class L2PetInstance extends L2Summon
 			// Check if the pet is attackable (without a forced attack) and isn't dead
 			if (isAutoAttackable(player) && !isOwner)
 			{
-				if (Config.GEODATA > 0)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoData.getInstance().canSeeTarget(player, this))
 					{
@@ -333,7 +333,7 @@ public class L2PetInstance extends L2Summon
 			}
 			else if (!isInsideRadius(player, 150, false, false))
 			{
-				if (Config.GEODATA > 0)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoData.getInstance().canSeeTarget(player, this))
 					{

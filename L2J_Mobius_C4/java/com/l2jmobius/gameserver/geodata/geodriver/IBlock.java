@@ -14,50 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.pathfinding.utils;
-
-import com.l2jmobius.gameserver.pathfinding.AbstractNode;
+package com.l2jmobius.gameserver.geodata.geodriver;
 
 /**
- * @author -Nemesiss-
+ * @author HorridoJoho
  */
-public class FastNodeList
+public interface IBlock
 {
-	private final AbstractNode[] _list;
-	private int _size;
+	int TYPE_FLAT = 0;
+	int TYPE_COMPLEX = 1;
+	int TYPE_MULTILAYER = 2;
 	
-	public FastNodeList(int size)
-	{
-		_list = new AbstractNode[size];
-	}
+	/** Cells in a block on the x axis */
+	int BLOCK_CELLS_X = 8;
+	/** Cells in a block on the y axis */
+	int BLOCK_CELLS_Y = 8;
+	/** Cells in a block */
+	int BLOCK_CELLS = BLOCK_CELLS_X * BLOCK_CELLS_Y;
 	
-	public void add(AbstractNode n)
-	{
-		_list[_size] = n;
-		_size++;
-	}
+	boolean checkNearestNswe(int geoX, int geoY, int worldZ, int nswe);
 	
-	public boolean contains(AbstractNode n)
-	{
-		for (int i = 0; i < _size; i++)
-		{
-			if (_list[i].equals(n))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+	int getNearestZ(int geoX, int geoY, int worldZ);
 	
-	public boolean containsRev(AbstractNode n)
-	{
-		for (int i = _size - 1; i >= 0; i--)
-		{
-			if (_list[i].equals(n))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+	int getNextLowerZ(int geoX, int geoY, int worldZ);
+	
+	int getNextHigherZ(int geoX, int geoY, int worldZ);
 }

@@ -72,6 +72,8 @@ public abstract class Inventory extends ItemContainer
 	// Speed percentage mods
 	public static final double MAX_ARMOR_WEIGHT = 12000;
 	
+	public static final int ADENA_ID = 57;
+	
 	private final L2ItemInstance[] _paperdoll;
 	private final List<PaperdollListener> _paperdollListeners;
 	

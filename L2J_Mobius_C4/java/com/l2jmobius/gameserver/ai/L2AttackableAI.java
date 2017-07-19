@@ -25,9 +25,9 @@ import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.Territory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.model.L2Attackable;
 import com.l2jmobius.gameserver.model.L2CharPosition;
@@ -976,7 +976,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		
 		// Considering, if bigger range will be attempted
-		if ((dist2 < (10000 + (combinedCollision * combinedCollision))) && !_selfAnalysis.isFighter && !_selfAnalysis.isBalanced && (_selfAnalysis.hasLongRangeSkills || _selfAnalysis.isArcher) && (_mostHatedAnalysis.isBalanced || _mostHatedAnalysis.isFighter) && (_mostHatedAnalysis.character.isRooted() || _mostHatedAnalysis.isSlower) && ((Config.GEODATA == 2 ? 20 : 12) >= Rnd.get(100))) // chance
+		if ((dist2 < (10000 + (combinedCollision * combinedCollision))) && !_selfAnalysis.isFighter && !_selfAnalysis.isBalanced && (_selfAnalysis.hasLongRangeSkills || _selfAnalysis.isArcher) && (_mostHatedAnalysis.isBalanced || _mostHatedAnalysis.isFighter) && (_mostHatedAnalysis.character.isRooted() || _mostHatedAnalysis.isSlower) && ((Config.PATHFINDING == 2 ? 20 : 12) >= Rnd.get(100))) // chance
 		{
 			int posX = _actor.getX();
 			int posY = _actor.getY();

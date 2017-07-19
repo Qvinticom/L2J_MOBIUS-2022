@@ -24,8 +24,8 @@ import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Attackable;
 import com.l2jmobius.gameserver.model.L2Character;
 import com.l2jmobius.gameserver.model.L2Effect;

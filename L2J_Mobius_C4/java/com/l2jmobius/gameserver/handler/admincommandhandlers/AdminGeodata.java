@@ -17,10 +17,12 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.GeoUtils;
 
 /**
  * @author -Nemesiss-
@@ -32,7 +34,9 @@ public class AdminGeodata implements IAdminCommandHandler
 		"admin_geo_pos",
 		"admin_geo_spawn_pos",
 		"admin_geo_can_move",
-		"admin_geo_can_see"
+		"admin_geo_can_see",
+		"admin_geogrid",
+		"admin_geomap"
 	};
 	
 	private static final int REQUIRED_LEVEL = Config.GM_MIN;
@@ -75,7 +79,7 @@ public class AdminGeodata implements IAdminCommandHandler
 			
 			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
 			{
-				activeChar.sendMessage("WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getSpawnHeight(worldX, worldY, worldZ, worldZ));
+				activeChar.sendMessage("WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getSpawnHeight(worldX, worldY, worldZ));
 			}
 			else
 			{
@@ -119,6 +123,16 @@ public class AdminGeodata implements IAdminCommandHandler
 			{
 				activeChar.sendMessage("Incorrect Target.");
 			}
+		}
+		else if (command.equals("admin_geogrid"))
+		{
+			GeoUtils.debugGrid(activeChar);
+		}
+		else if (command.equals("admin_geomap"))
+		{
+			final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+			final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			activeChar.sendMessage("GeoMap: " + x + "_" + y);
 		}
 		else
 		{

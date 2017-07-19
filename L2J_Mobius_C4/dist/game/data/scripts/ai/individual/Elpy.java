@@ -16,8 +16,8 @@
  */
 package ai.individual;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2CharPosition;
 import com.l2jmobius.gameserver.model.L2Character;
 import com.l2jmobius.gameserver.model.L2Summon;

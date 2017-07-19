@@ -27,11 +27,11 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.templates.StatsSet;
 

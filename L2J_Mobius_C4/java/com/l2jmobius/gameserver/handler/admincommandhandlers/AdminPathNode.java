@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
 
 public class AdminPathNode implements IAdminCommandHandler
 {
@@ -79,7 +79,7 @@ public class AdminPathNode implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_find_path"))
 		{
-			if (Config.GEODATA < 2)
+			if (Config.PATHFINDING < 2)
 			{
 				activeChar.sendMessage("PathFinding has not been enabled.");
 				return true;

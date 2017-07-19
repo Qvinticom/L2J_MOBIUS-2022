@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Character;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;

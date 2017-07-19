@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.geoeditorcon.GeoEditorListener;
 import com.l2jmobius.gameserver.model.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
@@ -113,14 +112,6 @@ public class ValidatePosition extends L2GameClientPacket
 			activeChar.getParty().broadcastToPartyMembers(activeChar, new PartyMemberPosition(activeChar));
 		}
 		
-		if (Config.ACCEPT_GEOEDITOR_CONN)
-		{
-			if ((GeoEditorListener.getInstance().getThread() != null) && GeoEditorListener.getInstance().getThread().isWorking() && GeoEditorListener.getInstance().getThread().isSend(activeChar))
-			{
-				GeoEditorListener.getInstance().getThread().sendGmPosition(_x, _y, (short) _z);
-			}
-		}
-		
 		if (activeChar.isFlying() || activeChar.isInsideZone(L2Character.ZONE_WATER))
 		{
 			activeChar.setXYZ(realX, realY, _z);
@@ -165,7 +156,7 @@ public class ValidatePosition extends L2GameClientPacket
 			// intended for geodata. Sends a validation packet to client
 			// when too far from server calculated true coordinate.
 			// Due to geodata "holes", some Z axis checks are made.
-			if ((Config.GEODATA > 0) && ((diffSq > 250000) || (Math.abs(dz) > 200)))
+			if ((Config.PATHFINDING > 0) && ((diffSq > 250000) || (Math.abs(dz) > 200)))
 			{
 				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - activeChar.getClientZ()) < 800))
 				{

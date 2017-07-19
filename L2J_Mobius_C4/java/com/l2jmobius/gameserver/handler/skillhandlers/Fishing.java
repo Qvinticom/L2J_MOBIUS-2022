@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.datatables.ZoneTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.model.Inventory;
 import com.l2jmobius.gameserver.model.L2Character;
@@ -169,7 +169,7 @@ public class Fishing implements ISkillHandler
 		if (aimingTo != null)
 		{
 			// fishing zone found, we can fish here
-			if (Config.GEODATA > 0)
+			if (Config.PATHFINDING > 0)
 			{
 				// geodata enabled, checking if we can see end of the pole
 				if (GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), z, x, y, z))

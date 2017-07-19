@@ -23,9 +23,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.SkillTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.model.L2Character;
 import com.l2jmobius.gameserver.model.L2Effect;
@@ -165,24 +165,20 @@ public class Baium extends Quest
 			final L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM, loc_x, loc_y, loc_z, heading, false, 0);
 			GrandBossManager.getInstance().addBoss(baium);
 			final L2NpcInstance _baium = baium;
-			ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+			ThreadPoolManager.getInstance().scheduleGeneral(() ->
 			{
-				@Override
-				public void run()
+				try
 				{
-					try
-					{
-						_baium.setCurrentHpMp(hp, mp);
-						_baium.setIsInvul(true);
-						_baium.setIsImmobilized(true);
-						_baium.setRunning();
-						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
-						startQuestTimer("baium_wakeup", 15000, _baium, null);
-					}
-					catch (final Exception e)
-					{
-						e.printStackTrace();
-					}
+					_baium.setCurrentHpMp(hp, mp);
+					_baium.setIsInvul(true);
+					_baium.setIsImmobilized(true);
+					_baium.setRunning();
+					_baium.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
+					startQuestTimer("baium_wakeup", 15000, _baium, null);
+				}
+				catch (final Exception e)
+				{
+					e.printStackTrace();
 				}
 			}, 100L);
 		}
@@ -219,20 +215,16 @@ public class Baium extends Quest
 				startQuestTimer("baium_despawn", 60000, npc, null, true);
 				startQuestTimer("skill_range", 500, npc, null, true);
 				final L2NpcInstance baium = npc;
-				ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+				ThreadPoolManager.getInstance().scheduleGeneral(() ->
 				{
-					@Override
-					public void run()
+					try
 					{
-						try
-						{
-							baium.setIsInvul(false);
-							baium.setIsImmobilized(false);
-						}
-						catch (final Exception e)
-						{
-							e.printStackTrace();
-						}
+						baium.setIsInvul(false);
+						baium.setIsImmobilized(false);
+					}
+					catch (final Exception e)
+					{
+						e.printStackTrace();
 					}
 				}, 11100L);
 				
@@ -313,23 +305,19 @@ public class Baium extends Quest
 				final L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM, npc);
 				GrandBossManager.getInstance().addBoss(baium);
 				final L2NpcInstance _baium = baium;
-				ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
+				ThreadPoolManager.getInstance().scheduleGeneral(() ->
 				{
-					@Override
-					public void run()
+					try
 					{
-						try
-						{
-							_baium.setIsInvul(true);
-							_baium.setIsImmobilized(true);
-							_baium.setRunning();
-							_baium.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
-							startQuestTimer("baium_wakeup", 15000, _baium, null);
-						}
-						catch (final Exception e)
-						{
-							e.printStackTrace();
-						}
+						_baium.setIsInvul(true);
+						_baium.setIsImmobilized(true);
+						_baium.setRunning();
+						_baium.broadcastPacket(new SocialAction(_baium.getObjectId(), 2));
+						startQuestTimer("baium_wakeup", 15000, _baium, null);
+					}
+					catch (final Exception e)
+					{
+						e.printStackTrace();
 					}
 				}, 100L);
 			}

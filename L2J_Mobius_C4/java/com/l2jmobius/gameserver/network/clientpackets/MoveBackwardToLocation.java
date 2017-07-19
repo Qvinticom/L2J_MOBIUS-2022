@@ -104,7 +104,7 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 		}
 		
 		// Disable keyboard movement when geodata is not enabled and player is not flying.
-		if ((_moveMovement == 0) && (Config.GEODATA < 1) && !activeChar.isFlying())
+		if ((_moveMovement == 0) && (Config.PATHFINDING < 1) && !activeChar.isFlying())
 		{
 			activeChar.sendPacket(new ActionFailed());
 		}

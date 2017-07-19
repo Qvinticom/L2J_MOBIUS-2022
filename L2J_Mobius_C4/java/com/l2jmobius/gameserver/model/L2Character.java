@@ -26,7 +26,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -36,6 +35,9 @@ import com.l2jmobius.gameserver.datatables.DoorTable;
 import com.l2jmobius.gameserver.datatables.MapRegionTable;
 import com.l2jmobius.gameserver.datatables.MapRegionTable.TeleportWhereType;
 import com.l2jmobius.gameserver.datatables.SkillTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
@@ -80,8 +82,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
-import com.l2jmobius.gameserver.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.skills.Calculator;
 import com.l2jmobius.gameserver.skills.Formulas;
 import com.l2jmobius.gameserver.skills.Stats;
@@ -4407,10 +4407,10 @@ public abstract class L2Character extends L2Object
 		final boolean isFloating = isFlying() || isInsideZone(L2Character.ZONE_WATER);
 		
 		// Z coordinate will follow geodata or client values
-		if ((Config.GEODATA > 0) && (Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && !(this instanceof L2BoatInstance) && ((GameTimeController.getGameTicks() % 10) == 0 // once a second to reduce possible cpu load
+		if ((Config.PATHFINDING > 0) && (Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && !(this instanceof L2BoatInstance) && ((GameTimeController.getGameTicks() % 10) == 0 // once a second to reduce possible cpu load
 		) && GeoData.getInstance().hasGeo(xPrev, yPrev))
 		{
-			final int geoHeight = GeoData.getInstance().getSpawnHeight(xPrev, yPrev, zPrev - 30, zPrev + 30);
+			final int geoHeight = GeoData.getInstance().getSpawnHeight(xPrev, yPrev, zPrev - 30);
 			dz = m._zDestination - geoHeight;
 			// quite a big difference, compare to validatePosition packet
 			if ((this instanceof L2PcInstance) && (Math.abs(((L2PcInstance) this).getClientZ() - geoHeight) > 200) && (Math.abs(((L2PcInstance) this).getClientZ() - geoHeight) < 1500))
@@ -4650,7 +4650,7 @@ public abstract class L2Character extends L2Object
 		
 		// make water move short and use no geodata checks for swimming chars
 		// distance in a click can easily be over 3000
-		if ((Config.GEODATA > 0) && !(this instanceof L2BoatInstance) && isInsideZone(ZONE_WATER) && (distance > 700))
+		if ((Config.PATHFINDING > 0) && !(this instanceof L2BoatInstance) && isInsideZone(ZONE_WATER) && (distance > 700))
 		{
 			final double divider = 700 / distance;
 			x = curX + (int) (divider * dx);
@@ -4728,7 +4728,7 @@ public abstract class L2Character extends L2Object
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if ((Config.GEODATA > 0) && !isFlying() // currently flying characters not checked
+		if ((Config.PATHFINDING > 0) && !isFlying() // currently flying characters not checked
 			&& !(this instanceof L2NpcWalkerInstance) && !(this instanceof L2BoatInstance) && (!isInsideZone(ZONE_WATER) || isInsideZone(ZONE_SIEGE))) // swimming also not checked - but distance is limited
 		{
 			final boolean isInBoat = (this instanceof L2PcInstance) && ((L2PcInstance) this).isInBoat();
@@ -4747,12 +4747,7 @@ public abstract class L2Character extends L2Object
 			// Movement checks:
 			// when geodata == 2, for all characters except mobs returning home (could be changed later to teleport if pathfinding fails)
 			// when geodata == 1, for l2playableinstance and l2riftinvaderinstance
-			if (((Config.GEODATA == 2) && !((this instanceof L2Attackable) && ((L2Attackable) this).isReturningToSpawnPoint())) || ((this instanceof L2PcInstance) && !(isInBoat && (distance > 1500))) || isAfraid() || (this instanceof L2RiftInvaderInstance) || ((this instanceof L2Summon) && !(getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW))) // assuming
-																																																																																									// intention_follow
-																																																																																									// only
-																																																																																									// when
-																																																																																									// following
-																																																																																									// owner
+			if (((Config.PATHFINDING == 2) && !((this instanceof L2Attackable) && ((L2Attackable) this).isReturningToSpawnPoint())) || ((this instanceof L2PcInstance) && !(isInBoat && (distance > 1500))) || isAfraid() || (this instanceof L2RiftInvaderInstance) || ((this instanceof L2Summon) && !(getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW))) // assuming
 			{
 				if (isOnGeodataPath())
 				{
@@ -4806,7 +4801,7 @@ public abstract class L2Character extends L2Object
 			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
 			// than the original movement was and the LoS gives a shorter distance than 2000
 			// This way of detecting need for pathfinding could be changed.
-			if ((Config.GEODATA == 2) && ((originalDistance - distance) > 30) && (distance < 2000) && !isAfraid())
+			if ((Config.PATHFINDING == 2) && ((originalDistance - distance) > 30) && (distance < 2000) && !isAfraid())
 			{
 				// Path calculation
 				// Overrides previous movement check
@@ -4876,7 +4871,7 @@ public abstract class L2Character extends L2Object
 			}
 			
 			// If no distance to go through, the movement is cancelled
-			if ((distance < 1) && ((Config.GEODATA == 2) || (this instanceof L2PlayableInstance) || isAfraid() || (this instanceof L2RiftInvaderInstance)))
+			if ((distance < 1) && ((Config.PATHFINDING == 2) || (this instanceof L2PlayableInstance) || isAfraid() || (this instanceof L2RiftInvaderInstance)))
 			{
 				if (this instanceof L2Summon)
 				{

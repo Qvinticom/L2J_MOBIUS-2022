@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2CharPosition;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.Location;
@@ -110,7 +110,7 @@ final class EffectFear extends L2Effect
 		posX += _dX * FEAR_RANGE;
 		posY += _dY * FEAR_RANGE;
 		
-		if (Config.GEODATA > 0)
+		if (Config.PATHFINDING > 0)
 		{
 			final Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), posX, posY, posZ);
 			posX = destiny.getX();

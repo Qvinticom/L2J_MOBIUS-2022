@@ -17,11 +17,11 @@
 package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2SummonAI;
 import com.l2jmobius.gameserver.datatables.SkillTable;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.model.L2Attackable.AggroInfo;
 import com.l2jmobius.gameserver.model.L2Skill.SkillTargetType;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
@@ -213,7 +213,7 @@ public abstract class L2Summon extends L2PlayableInstance
 			player.sendPacket(new ValidateLocation(this));
 			if (isAutoAttackable(player))
 			{
-				if (Config.GEODATA > 0)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoData.getInstance().canSeeTarget(player, this))
 					{
@@ -231,7 +231,7 @@ public abstract class L2Summon extends L2PlayableInstance
 			{
 				// This Action Failed packet avoids player getting stuck when clicking three or more times
 				player.sendPacket(new ActionFailed());
-				if (Config.GEODATA > 0)
+				if (Config.PATHFINDING > 0)
 				{
 					if (GeoData.getInstance().canSeeTarget(player, this))
 					{

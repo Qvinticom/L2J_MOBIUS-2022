@@ -63,7 +63,8 @@ import com.l2jmobius.gameserver.datatables.StaticObjects;
 import com.l2jmobius.gameserver.datatables.SummonItemsData;
 import com.l2jmobius.gameserver.datatables.TeleportLocationTable;
 import com.l2jmobius.gameserver.datatables.ZoneTable;
-import com.l2jmobius.gameserver.geoeditorcon.GeoEditorListener;
+import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
@@ -87,7 +88,6 @@ import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminEnchant;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminEventEngine;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminExpSp;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminFightCalculator;
-import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminGeoEditor;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminGeodata;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminGm;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminGmChat;
@@ -223,7 +223,6 @@ import com.l2jmobius.gameserver.model.entity.AutoRewarder;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.L2GamePacketHandler;
-import com.l2jmobius.gameserver.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.script.faenor.FaenorScriptEngine;
 import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.AutoAnnounceTaskManager;
@@ -359,7 +358,7 @@ public class GameServer
 		ClanTable.getInstance();
 		
 		GeoData.getInstance();
-		if (Config.GEODATA == 2)
+		if (Config.PATHFINDING > 0)
 		{
 			PathFinding.getInstance();
 		}
@@ -588,7 +587,6 @@ public class GameServer
 		_adminCommandHandler.registerAdminCommandHandler(new AdminQuest());
 		_adminCommandHandler.registerAdminCommandHandler(new AdminZone());
 		_adminCommandHandler.registerAdminCommandHandler(new AdminGeodata());
-		_adminCommandHandler.registerAdminCommandHandler(new AdminGeoEditor());
 		_adminCommandHandler.registerAdminCommandHandler(new AdminManor());
 		
 		// _adminCommandHandler.registerAdminCommandHandler(new AdminRadar());
@@ -629,11 +627,6 @@ public class GameServer
 		
 		// read pet stats from db
 		L2PetDataTable.getInstance().loadPetsData();
-		
-		if (Config.ACCEPT_GEOEDITOR_CONN)
-		{
-			GeoEditorListener.getInstance();
-		}
 		
 		_shutdownHandler = Shutdown.getInstance();
 		Runtime.getRuntime().addShutdownHook(_shutdownHandler);

@@ -22,12 +22,16 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.math.BigInteger;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.base.Experience;
 import com.l2jmobius.gameserver.util.FloodProtectorConfig;
 import com.l2jmobius.util.StringUtil;
@@ -46,6 +50,9 @@ import javolution.util.FastMap;
 public final class Config
 {
 	protected static Logger _log = Logger.getLogger(Config.class.getName());
+	
+	public static final String EOL = System.lineSeparator();
+	
 	/** Debug/release mode */
 	public static boolean DEBUG;
 	/** Enable/disable assertions */
@@ -578,8 +585,6 @@ public final class Config
 	/** Accept multi-items drop ? */
 	public static boolean MULTIPLE_ITEM_DROP;
 	
-	/** Coord Synchronization */
-	public static int COORD_SYNCHRONIZE;
 	/** Falling Damage */
 	public static boolean ENABLE_FALLING_DAMAGE;
 	
@@ -730,6 +735,8 @@ public final class Config
 	public static final String OLYMPIAD_CONFIGURATION_FILE = "config/olympiad.ini";
 	/** Properties file for extensions configurations */
 	public static final String EXTENSIONS_CONFIGURATION_FILE = "config/extensions.ini";
+	/** Properties file for GeoData configurations */
+	public static final String GEODATA_CONFIGURATION_FILE = "config/GeoData.ini";
 	/** Text file containing hexadecimal value of server ID */
 	public static final String HEXID_FILE = "./config/hexid.txt";
 	/**
@@ -1269,12 +1276,8 @@ public final class Config
 	public static int CS_SUPPORT3_FEE;
 	public static int CS_SUPPORT4_FEE;
 	
-	/** GeoData 0/1/2 */
-	public static int GEODATA;
-	public static String GEODATA_DRIVER;
-	
-	/** Cell PathFinding */
-	public static boolean GEODATA_CELLFINDING;
+	/** GeoData Settings */
+	public static int PATHFINDING;
 	public static File PATHNODE_DIR;
 	public static String PATHFIND_BUFFERS;
 	public static float LOW_WEIGHT;
@@ -1284,10 +1287,11 @@ public final class Config
 	public static float DIAGONAL_WEIGHT;
 	public static int MAX_POSTFILTER_PASSES;
 	public static boolean DEBUG_PATH;
-	
-	/** Force loading GeoData to physical memory */
 	public static boolean FORCE_GEODATA;
-	public static boolean ACCEPT_GEOEDITOR_CONN;
+	public static int COORD_SYNCHRONIZE;
+	public static Path GEODATA_PATH;
+	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
+	public static Map<String, Boolean> GEODATA_REGIONS;
 	
 	/** Max number of buffs */
 	public static byte BUFFS_MAX_AMOUNT;
@@ -1376,6 +1380,45 @@ public final class Config
 				throw new Error("MinProtocolRevision is bigger than MaxProtocolRevision in server configuration file.");
 			}
 			
+			_log.info("Loading GeoData Configuration Files.");
+			
+			final Properties geoData = new Properties();
+			try (InputStream is = new FileInputStream(new File(GEODATA_CONFIGURATION_FILE)))
+			{
+				geoData.load(is);
+			}
+			catch (final Exception e)
+			{
+				e.printStackTrace();
+				throw new Error("Failed to Load " + GEODATA_CONFIGURATION_FILE + " File.");
+			}
+			
+			PATHFINDING = Integer.parseInt(geoData.getProperty("PathFinding", "0"));
+			PATHFIND_BUFFERS = geoData.getProperty("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
+			LOW_WEIGHT = Float.parseFloat(geoData.getProperty("LowWeight", "0.5f"));
+			MEDIUM_WEIGHT = Float.parseFloat(geoData.getProperty("MediumWeight", "2"));
+			HIGH_WEIGHT = Float.parseFloat(geoData.getProperty("HighWeight", "3"));
+			ADVANCED_DIAGONAL_STRATEGY = Boolean.parseBoolean(geoData.getProperty("AdvancedDiagonalStrategy", "true"));
+			DIAGONAL_WEIGHT = Float.parseFloat(geoData.getProperty("DiagonalWeight", "0.707f"));
+			MAX_POSTFILTER_PASSES = Integer.parseInt(geoData.getProperty("MaxPostfilterPasses", "3"));
+			DEBUG_PATH = Boolean.parseBoolean(geoData.getProperty("DebugPath", "false"));
+			FORCE_GEODATA = Boolean.parseBoolean(geoData.getProperty("ForceGeoData", "true"));
+			COORD_SYNCHRONIZE = Integer.parseInt(geoData.getProperty("CoordSynchronize", "-1"));
+			GEODATA_PATH = Paths.get(geoData.getProperty("GeoDataPath", "./data/geodata"));
+			TRY_LOAD_UNSPECIFIED_REGIONS = Boolean.parseBoolean(geoData.getProperty("TryLoadUnspecifiedRegions", "true"));
+			GEODATA_REGIONS = new HashMap<>();
+			for (int regionX = L2World.TILE_X_MIN; regionX <= L2World.TILE_X_MAX; regionX++)
+			{
+				for (int regionY = L2World.TILE_Y_MIN; regionY <= L2World.TILE_Y_MAX; regionY++)
+				{
+					final String key = regionX + "_" + regionY;
+					if (geoData.containsKey(regionX + "_" + regionY))
+					{
+						GEODATA_REGIONS.put(key, Boolean.parseBoolean(geoData.getProperty(key, "false")));
+					}
+				}
+			}
+			
 			final Properties optionsSettings = new Properties();
 			try (InputStream is = new FileInputStream(new File(OPTIONS_FILE)))
 			{
@@ -1392,7 +1435,6 @@ public final class Config
 			DEBUG = Boolean.parseBoolean(optionsSettings.getProperty("Debug", "false"));
 			ASSERT = Boolean.parseBoolean(optionsSettings.getProperty("Assert", "false"));
 			DEVELOPER = Boolean.parseBoolean(optionsSettings.getProperty("Developer", "false"));
-			ACCEPT_GEOEDITOR_CONN = Boolean.parseBoolean(optionsSettings.getProperty("AcceptGeoeditorConn", "False"));
 			TEST_SERVER = Boolean.parseBoolean(optionsSettings.getProperty("TestServer", "false"));
 			SERVER_LIST_TESTSERVER = Boolean.parseBoolean(optionsSettings.getProperty("TestServer", "false"));
 			
@@ -1422,7 +1464,7 @@ public final class Config
 			MULTIPLE_ITEM_DROP = Boolean.valueOf(optionsSettings.getProperty("MultipleItemDrop", "True"));
 			
 			final String str = optionsSettings.getProperty("EnableFallingDamage", "auto");
-			ENABLE_FALLING_DAMAGE = "auto".equalsIgnoreCase(str) ? GEODATA > 0 : Boolean.parseBoolean(str);
+			ENABLE_FALLING_DAMAGE = "auto".equalsIgnoreCase(str) ? PATHFINDING > 0 : Boolean.parseBoolean(str);
 			
 			ALLOW_WAREHOUSE = Boolean.valueOf(optionsSettings.getProperty("AllowWarehouse", "True"));
 			WAREHOUSE_CACHE = Boolean.valueOf(optionsSettings.getProperty("WarehouseCache", "False"));
@@ -1510,31 +1552,6 @@ public final class Config
 			GRIDS_ALWAYS_ON = Boolean.parseBoolean(optionsSettings.getProperty("GridsAlwaysOn", "False"));
 			GRID_NEIGHBOR_TURNON_TIME = Integer.parseInt(optionsSettings.getProperty("GridNeighborTurnOnTime", "1"));
 			GRID_NEIGHBOR_TURNOFF_TIME = Integer.parseInt(optionsSettings.getProperty("GridNeighborTurnOffTime", "90"));
-			
-			GEODATA = Integer.parseInt(optionsSettings.getProperty("GeoData", "0"));
-			GEODATA_DRIVER = optionsSettings.getProperty("GeoDataDriver", "com.l2j.geodriver.GeoDriver");
-			GEODATA_CELLFINDING = Boolean.parseBoolean(optionsSettings.getProperty("CellPathFinding", "False"));
-			
-			try
-			{
-				PATHNODE_DIR = new File(optionsSettings.getProperty("PathnodeDirectory", "./data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
-			}
-			catch (final Exception e)
-			{
-				_log.warning("Error setting pathnode directory!");
-				PATHNODE_DIR = new File("./data/pathnode");
-			}
-			
-			PATHFIND_BUFFERS = optionsSettings.getProperty("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-			LOW_WEIGHT = Float.parseFloat(optionsSettings.getProperty("LowWeight", "0.5"));
-			MEDIUM_WEIGHT = Float.parseFloat(optionsSettings.getProperty("MediumWeight", "2"));
-			HIGH_WEIGHT = Float.parseFloat(optionsSettings.getProperty("HighWeight", "3"));
-			ADVANCED_DIAGONAL_STRATEGY = Boolean.parseBoolean(optionsSettings.getProperty("AdvancedDiagonalStrategy", "True"));
-			DIAGONAL_WEIGHT = Float.parseFloat(optionsSettings.getProperty("DiagonalWeight", "0.707"));
-			MAX_POSTFILTER_PASSES = Integer.parseInt(optionsSettings.getProperty("MaxPostfilterPasses", "3"));
-			DEBUG_PATH = Boolean.parseBoolean(optionsSettings.getProperty("DebugPath", "False"));
-			FORCE_GEODATA = Boolean.parseBoolean(optionsSettings.getProperty("ForceGeoData", "True"));
-			COORD_SYNCHRONIZE = Integer.parseInt(optionsSettings.getProperty("CoordSynchronize", "-1"));
 			
 			// ---------------------------------------------------
 			// Configuration values not found in config files

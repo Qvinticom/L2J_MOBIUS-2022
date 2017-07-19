@@ -22,9 +22,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.GeoData;
 import com.l2jmobius.gameserver.Territory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
@@ -581,7 +581,7 @@ public class L2Spawn
 		// don't correct z of flying npc's
 		if (!mob.isFlying())
 		{
-			newlocz = GeoData.getInstance().getSpawnHeight(newlocx, newlocy, newlocz, newlocz);
+			newlocz = GeoData.getInstance().getSpawnHeight(newlocx, newlocy, newlocz);
 		}
 		
 		for (final L2Effect f : mob.getAllEffects())
