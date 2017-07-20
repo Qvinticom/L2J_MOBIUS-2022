@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zone.xsd">
-
-<!-- Jail -->
+	<!-- Jail -->
 	<zone id="11000" type="JailZone" shape="Cuboid" minZ="-3200" maxZ="-2800"/>
-
-<!-- Monster Derby Track -->
+	<!-- Monster Derby Track -->
 	<zone id="11001" type="DerbyTrackZone" shape="NPoly" minZ="-3600" maxZ="-2000"/>
-
-<!-- Arenas -->
+	<!-- Arenas -->
 	<zone id="11010" type="Arena" shape="Cuboid" minZ="-3800" maxZ="-3600">
 		<stat name="name" val="Giran Arena"/>
 		<spawn X="73890" Y="142656" Z="-3778"/>
@@ -23,8 +20,7 @@
 	<zone id="11013" type="Arena" shape="Cuboid" minZ="-3600" maxZ="-3500">
 		<spawn X="12312" Y="182752" Z="-3558"/>
 	</zone>
-
-<!-- Towns -->
+	<!-- Towns -->
 	<zone id="11020" type="Town" shape="NPoly" minZ="-3800" maxZ="-3300">
 		<stat name="name" val="Giran Castle Town"/>
 		<stat name="townId" val="9"/>
@@ -44,7 +40,7 @@
 		<spawn X="81033" Y="148883" Z="-3350"/>
 		<spawn X="81637" Y="149427" Z="-3350"/>
 		<spawn X="82292" Y="149450" Z="-3350"/>
-                <spawn X="74450" Y="144238" Z="-3730" isChaotic="true"/>
+		<spawn X="74450" Y="144238" Z="-3730" isChaotic="true"/>
 		<spawn X="74209" Y="142395" Z="-3730" isChaotic="true"/>
 		<spawn X="77279" Y="145045" Z="-3630" isChaotic="true"/>
 		<spawn X="74809" Y="146119" Z="-3600" isChaotic="true"/>
@@ -73,7 +69,7 @@
 		<spawn X="10146" Y="16965" Z="-4500"/>
 		<spawn X="10691" Y="16343" Z="-4500"/>
 		<spawn X="11193" Y="15963" Z="-4500"/>
-                <spawn X="3040" Y="24240" Z="-3700" isChaotic="true"/>
+		<spawn X="3040" Y="24240" Z="-3700" isChaotic="true"/>
 		<spawn X="1184" Y="21856" Z="-3240" isChaotic="true"/>
 		<spawn X="3760" Y="25136" Z="-3700" isChaotic="true"/>
 		<spawn X="672" Y="20096" Z="-3350" isChaotic="true"/>
@@ -112,7 +108,7 @@
 		<spawn X="-84892" Y="242479" Z="-3700"/>
 		<spawn X="-84756" Y="242155" Z="-3700"/>
 		<spawn X="-83761" Y="243620" Z="-3700"/>
-                <spawn X="-79411" Y="240677" Z="-3450" isChaotic="true"/>
+		<spawn X="-79411" Y="240677" Z="-3450" isChaotic="true"/>
 		<spawn X="-80480" Y="242640" Z="-3690" isChaotic="true"/>
 		<spawn X="-80336" Y="244656" Z="-3680" isChaotic="true"/>
 		<spawn X="-82464" Y="247248" Z="-3570" isChaotic="true"/>
@@ -149,7 +145,7 @@
 		<spawn X="45912" Y="49363" Z="-2950"/>
 		<spawn X="45788" Y="49861" Z="-2950"/>
 		<spawn X="45325" Y="50067" Z="-2950"/>
-                <spawn X="40720" Y="56064" Z="-3580" isChaotic="true"/>
+		<spawn X="40720" Y="56064" Z="-3580" isChaotic="true"/>
 		<spawn X="39760" Y="55040" Z="-3410" isChaotic="true"/>
 		<spawn X="43152" Y="55920" Z="-3620" isChaotic="true"/>
 		<spawn X="44192" Y="56960" Z="-3580" isChaotic="true"/>
@@ -190,7 +186,7 @@
 		<spawn X="-44637" Y="-112373" Z="-80"/>
 		<spawn X="-44189" Y="-113065" Z="-80"/>
 		<spawn X="-44048" Y="-113463" Z="-80"/>
-                <spawn X="-43552" Y="-121488" Z="-233" isChaotic="true"/>
+		<spawn X="-43552" Y="-121488" Z="-233" isChaotic="true"/>
 		<spawn X="-42560" Y="-121344" Z="-188" isChaotic="true"/>
 		<spawn X="-41536" Y="-122960" Z="-308" isChaotic="true"/>
 		<spawn X="-40464" Y="-122752" Z="-364" isChaotic="true"/>
@@ -221,7 +217,7 @@
 		<spawn X="-83529" Y="151205" Z="-3000"/>
 		<spawn X="-82035" Y="152647" Z="-3000"/>
 		<spawn X="-80053" Y="154348" Z="-3000"/>
-                <spawn X="-81616" Y="157104" Z="-3150" isChaotic="true"/>
+		<spawn X="-81616" Y="157104" Z="-3150" isChaotic="true"/>
 		<spawn X="-80688" Y="157216" Z="-3150" isChaotic="true"/>
 		<spawn X="-79568" Y="156960" Z="-3150" isChaotic="true"/>
 		<spawn X="-78800" Y="157744" Z="-3150" isChaotic="true"/>
@@ -260,7 +256,7 @@
 		<spawn X="116775" Y="-182367" Z="-1400"/>
 		<spawn X="116587" Y="-183032" Z="-1400"/>
 		<spawn X="116321" Y="-182734" Z="-1400"/>
-                <spawn X="118160" Y="-179328" Z="-1578" isChaotic="true"/>
+		<spawn X="118160" Y="-179328" Z="-1578" isChaotic="true"/>
 		<spawn X="119024" Y="-180208" Z="-2180" isChaotic="true"/>
 		<spawn X="119728" Y="-180912" Z="-2649" isChaotic="true"/>
 		<spawn X="119776" Y="-181968" Z="-2948" isChaotic="true"/>
@@ -289,7 +285,7 @@
 		<spawn X="-13513" Y="123752" Z="-3000"/>
 		<spawn X="-14683" Y="121945" Z="-3000"/>
 		<spawn X="-14491" Y="121915" Z="-3000"/>
-                <spawn X="-17280" Y="125392" Z="-3120" isChaotic="true"/>
+		<spawn X="-17280" Y="125392" Z="-3120" isChaotic="true"/>
 		<spawn X="-16128" Y="126944" Z="-3120" isChaotic="true"/>
 		<spawn X="-14464" Y="128288" Z="-3250" isChaotic="true"/>
 		<spawn X="-13040" Y="128768" Z="-3350" isChaotic="true"/>
@@ -327,7 +323,7 @@
 		<spawn X="17398" Y="145456" Z="-3000"/>
 		<spawn X="17144" Y="145055" Z="-3000"/>
 		<spawn X="19012" Y="145140" Z="-3020"/>
-                <spawn X="17555" Y="170393" Z="-3400" isChaotic="true"/>
+		<spawn X="17555" Y="170393" Z="-3400" isChaotic="true"/>
 		<spawn X="17699" Y="170153" Z="-3400" isChaotic="true"/>
 		<spawn X="17315" Y="170041" Z="-3400" isChaotic="true"/>
 		<spawn X="17283" Y="170329" Z="-3400" isChaotic="true"/>
@@ -358,7 +354,7 @@
 		<spawn X="80054" Y="53209" Z="-1500"/>
 		<spawn X="79706" Y="52986" Z="-1500"/>
 		<spawn X="82123" Y="53535" Z="-1440"/>
-                <spawn X="76576" Y="50151" Z="-3200" isChaotic="true"/>
+		<spawn X="76576" Y="50151" Z="-3200" isChaotic="true"/>
 		<spawn X="77310" Y="50317" Z="-3160" isChaotic="true"/>
 		<spawn X="77250" Y="51285" Z="-3160" isChaotic="true"/>
 		<spawn X="78811" Y="51106" Z="-3160" isChaotic="true"/>
@@ -397,7 +393,7 @@
 		<spawn X="116737" Y="76738" Z="-2650"/>
 		<spawn X="115193" Y="77594" Z="-2670"/>
 		<spawn X="116158" Y="77443" Z="-2660"/>
-                <spawn X="122098" Y="70373" Z="-2864" isChaotic="true"/>
+		<spawn X="122098" Y="70373" Z="-2864" isChaotic="true"/>
 		<spawn X="118674" Y="71218" Z="-2743" isChaotic="true"/>
 		<spawn X="118040" Y="67175" Z="-2905" isChaotic="true"/>
 		<spawn X="119300" Y="70660" Z="-2850" isChaotic="true"/>
@@ -429,7 +425,7 @@
 		<spawn X="147970" Y="27040" Z="-2191"/>
 		<spawn X="146814" Y="27108" Z="-2189"/>
 		<spawn X="146819" Y="28063" Z="-2252"/>
-                <spawn X="136398" Y="28901" Z="-3582" isChaotic="true"/>
+		<spawn X="136398" Y="28901" Z="-3582" isChaotic="true"/>
 		<spawn X="137292" Y="28485" Z="-3290" isChaotic="true"/>
 		<spawn X="155925" Y="28554" Z="-3164" isChaotic="true"/>
 		<spawn X="157608" Y="23866" Z="-3760" isChaotic="true"/>
@@ -468,7 +464,7 @@
 		<spawn X="144960" Y="-56224" Z="-2979"/>
 		<spawn X="144944" Y="-55392" Z="-2979"/>
 		<spawn X="144496" Y="-55088" Z="-2979"/>
-                <spawn X="142656" Y="-55008" Z="-3024" isChaotic="true"/>
+		<spawn X="142656" Y="-55008" Z="-3024" isChaotic="true"/>
 		<spawn X="142832" Y="-55680" Z="-3462" isChaotic="true"/>
 		<spawn X="143152" Y="-56368" Z="-3456" isChaotic="true"/>
 		<spawn X="145344" Y="-59472" Z="-3344" isChaotic="true"/>
@@ -507,7 +503,7 @@
 		<spawn X="44864" Y="-47824" Z="-800"/>
 		<spawn X="43744" Y="-47920" Z="-800"/>
 		<spawn X="43792" Y="-48928" Z="-800"/>
-                <spawn X="42640" Y="-54496" Z="-2310" isChaotic="true"/>
+		<spawn X="42640" Y="-54496" Z="-2310" isChaotic="true"/>
 		<spawn X="38304" Y="-55440" Z="-1136" isChaotic="true"/>
 		<spawn X="40192" Y="-57600" Z="-2343" isChaotic="true"/>
 		<spawn X="38400" Y="-56832" Z="-992" isChaotic="true"/>
@@ -538,7 +534,7 @@
 		<spawn X="112112" Y="220576" Z="-3624"/>
 		<spawn X="112064" Y="219792" Z="-3624"/>
 		<spawn X="111888" Y="219584" Z="-3624"/>
-                <spawn X="117872" Y="225536" Z="-3200" isChaotic="true"/>
+		<spawn X="117872" Y="225536" Z="-3200" isChaotic="true"/>
 		<spawn X="118064" Y="225648" Z="-3200" isChaotic="true"/>
 		<spawn X="101696" Y="221808" Z="-3520" isChaotic="true"/>
 		<spawn X="101552" Y="221568" Z="-3520" isChaotic="true"/>
@@ -561,7 +557,7 @@
 		<spawn X="17398" Y="145456" Z="-3000"/>
 		<spawn X="17144" Y="145055" Z="-3000"/>
 		<spawn X="19012" Y="145140" Z="-3020"/>
-                <spawn X="17555" Y="170393" Z="-3451" isChaotic="true"/>
+		<spawn X="17555" Y="170393" Z="-3451" isChaotic="true"/>
 		<spawn X="17699" Y="170153" Z="-3451" isChaotic="true"/>
 		<spawn X="17315" Y="170041" Z="-3451" isChaotic="true"/>
 		<spawn X="17283" Y="170329" Z="-3451" isChaotic="true"/>
@@ -573,8 +569,7 @@
 		<spawn X="18054" Y="170263" Z="-3451" isChaotic="true"/>
 		<spawn X="17931" Y="170381" Z="-3451" isChaotic="true"/>
 	</zone>
-
-<!-- Mother trees -->
+	<!-- Mother trees -->
 	<zone id="11050" type="MotherTree" shape="Cuboid" minZ="-3500" maxZ="-3400">
 		<stat name="affectedRace" val="1"/>
 	</zone>
@@ -590,11 +585,9 @@
 	<zone id="11054" type="MotherTree" shape="Cuboid" minZ="-3800" maxZ="-3600">
 		<stat name="affectedRace" val="1"/>
 	</zone>
-
-<!-- No landing -->
+	<!-- No landing -->
 	<zone id="11060" type="NoLandingZone" shape="Cuboid" minZ="-5150" maxZ="10100"/>
-
-<!-- Olympiad Stadia -->
+	<!-- Olympiad Stadia -->
 	<zone id="11070" type="OlympiadStadium" shape="Cuboid" minZ="-3100" maxZ="-3000">
 		<stat name="stadiumId" val="1"/>
 	</zone>
@@ -661,8 +654,7 @@
 	<zone id="11091" type="OlympiadStadium" shape="Cuboid" minZ="-3400" maxZ="-3200">
 		<stat name="stadiumId" val="22"/>
 	</zone>
-
-<!-- Clan hall zones -->
+	<!-- Clan hall zones -->
 	<zone id="11100" type="ClanHallZone" shape="Cuboid" minZ="-2000" maxZ="-1800">
 		<stat name="clanHallId" val="21"/>
 		<spawn X="43399" Y="108888" Z="-1980"/>
@@ -783,8 +775,7 @@
 		<stat name="clanHallId" val="50"/>
 		<spawn X="149390" Y="-55587" Z="-2765"/>
 	</zone>
-
-<!-- Castle zones -->
+	<!-- Castle zones -->
 	<zone id="112000" type="NoHqZone" shape="NPoly" minZ="-4448" maxZ="3551"/>
 	<zone id="11200" type="SiegeZone" shape="NPoly" minZ="-4448" maxZ="3551">
 		<stat name="castleId" val="1"/>
@@ -820,8 +811,7 @@
 		<stat name="castleId" val="7"/>
 		<spawn X="147451" Y="-46878" Z="-961"/>
 	</zone>
-
-<!-- Castle teleport zones -->
+	<!-- Castle teleport zones -->
 	<zone id="11209" type="CastleTeleportZone" shape="Cuboid" minZ="-1827" maxZ="-1682">
 		<stat name="castleId" val="1"/>
 		<stat name="spawnMinX" val="-17727"/>
@@ -878,8 +868,7 @@
 		<stat name="spawnMaxY" val="-48779"/>
 		<stat name="spawnZ" val="-2276"/>
 	</zone>
-
-<!-- Boss Zones -->
+	<!-- Boss Zones -->
         <zone id='12001' type='BossZone' shape='Cuboid' minZ='-7230' maxZ='-6621'>
 		<stat name='name' val='Four Sepulcher'/>
 		<stat name='oustX' val='169589'/>
@@ -936,8 +925,7 @@
 		<stat name="name" val="Lair of Anakim"/>
                 <stat name="InvadeTime" val="1800000"/>
 	</zone>
-
-<!-- Hot Springs Illusion Zones -->
+	<!-- Hot Springs Illusion Zones -->
 	<zone id="20200" type="EffectZone" shape="NPoly" minZ="-3634" maxZ="-3434"> <!-- [24_14] spa_11 -->
 		<stat name="SkillId" val="4559"/> <!-- s_spa_big_head -->
                 <stat name="SkillLevel" val="1"/>
@@ -992,8 +980,7 @@
 		<stat name="InitialDelay" val="1000"/>
 		<stat name="Reuse" val="3000"/>
 	</zone>
-
-<!-- Peace Zones -->
+	<!-- Peace Zones -->
 	<zone id="13001" type="PeaceZone" shape="NPoly" minZ="-3500" maxZ="-2000"/> <!-- Coliseum Entrance -->
 	<zone id="13002" type="PeaceZone" shape="NPoly" minZ="-3500" maxZ="-2000"/> <!-- Coliseum Entrance -->
 	<zone id="13003" type="PeaceZone" shape="Cuboid" minZ="-4350" maxZ="-3700"/> <!-- Ivory Tower Basement -->
@@ -1007,8 +994,7 @@
 	<zone id="13011" type="PeaceZone" shape="Cuboid" minZ="-6900" maxZ="-5500"/> <!-- Dimensional Rift -->
 	<zone id="13012" type="PeaceZone" shape="NPoly" minZ="-5000" maxZ="-4500"/> <!-- Oracle of Dawn -->
 	<zone id="13013" type="PeaceZone" shape="NPoly" minZ="-5300" maxZ="-4800"/> <!-- Oracle of Dusk -->
-
-<!-- Fishing zones -->
+	<!-- Fishing zones -->
 	<zone id="11400" type="FishingZone" shape="NPoly" minZ="-3991" maxZ="-3759"/>
 	<zone id="11401" type="FishingZone" shape="NPoly" minZ="-3634" maxZ="-3586"/>
 	<zone id="11403" type="FishingZone" shape="NPoly" minZ="-3668" maxZ="-3620"/>
@@ -1045,8 +1031,7 @@
 	<zone id="11434" type="FishingZone" shape="NPoly" minZ="-3772" maxZ="-772"/>
 	<zone id="11435" type="FishingZone" shape="NPoly" minZ="-4892" maxZ="-1892"/>
 	<zone id="11436" type="FishingZone" shape="NPoly" minZ="-3600" maxZ="-3346"/>
-
-<!-- Water zones -->
+	<!-- Water zones -->
 	<zone id="15000" type="WaterZone" shape="NPoly" minZ="-4810" maxZ="-3810"/> <!-- [16_21_1] water zone -->
 	<zone id="15001" type="WaterZone" shape="NPoly" minZ="-4810" maxZ="-3810"/> <!-- [16_22_1] water zone -->
 	<zone id="15002" type="WaterZone" shape="NPoly" minZ="-4810" maxZ="-3810"/> <!-- [16_23_1] water zone -->
