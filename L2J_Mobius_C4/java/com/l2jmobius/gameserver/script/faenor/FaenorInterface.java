@@ -17,50 +17,31 @@
 package com.l2jmobius.gameserver.script.faenor;
 
 import java.util.List;
-import java.util.Map;
-
-import javax.script.ScriptContext;
+import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.Announcements;
 import com.l2jmobius.gameserver.EventDroplist;
 import com.l2jmobius.gameserver.model.L2DropCategory;
 import com.l2jmobius.gameserver.model.L2DropData;
-import com.l2jmobius.gameserver.model.L2PetData;
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.script.EngineInterface;
-import com.l2jmobius.gameserver.script.Expression;
 import com.l2jmobius.gameserver.templates.L2NpcTemplate;
 
-import javolution.util.FastList;
-
 /**
- * @author Luis Arias TODO To change the template for this generated type comment go to Window - Preferences - Java - Code Style - Code Templates
+ * @author Luis Arias
  */
 public class FaenorInterface implements EngineInterface
 {
-	private static FaenorInterface _instance;
+	protected static final Logger _log = Logger.getLogger(FaenorInterface.class.getName());
 	
 	public static FaenorInterface getInstance()
 	{
-		if (_instance == null)
-		{
-			_instance = new FaenorInterface();
-		}
-		return _instance;
+		return SingletonHolder._instance;
 	}
 	
-	public FaenorInterface()
-	{
-	}
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.script.EngineInterface#getAllPlayers()
-	 */
 	public List<?> getAllPlayers()
 	{
-		// TODO Auto-generated method stub
 		return null;
 	}
 	
@@ -144,7 +125,6 @@ public class FaenorInterface implements EngineInterface
 			maxCategory++;
 			npc.addDropData(drop, maxCategory);
 		}
-		
 	}
 	
 	/**
@@ -158,39 +138,10 @@ public class FaenorInterface implements EngineInterface
 		npc.addDropData(drop, category);
 	}
 	
-	/**
-	 * @param npcID
-	 * @return Returns the _questDrops.
-	 */
-	public List<L2DropData> getQuestDrops(int npcID)
-	{
-		final L2NpcTemplate npc = _npcTable.getTemplate(npcID);
-		if (npc == null)
-		{
-			return null;
-		}
-		
-		final List<L2DropData> questDrops = new FastList<>();
-		if (npc.getDropData() != null)
-		{
-			for (final L2DropCategory cat : npc.getDropData())
-			{
-				for (final L2DropData drop : cat.getAllDrops())
-				{
-					if (drop.getQuestID() != null)
-					{
-						questDrops.add(drop);
-					}
-				}
-			}
-		}
-		return questDrops;
-	}
-	
 	@Override
 	public void addEventDrop(int[] items, int[] count, double chance, DateRange range)
 	{
-		EventDroplist.getInstance().addGlobalDrop(items, count, (int) (chance * L2DropData.MAX_CHANCE), range);
+		EventDroplist.getInstance().addGlobalDrop(items, count, (int) (chance * 1000000), range);
 	}
 	
 	@Override
@@ -199,23 +150,8 @@ public class FaenorInterface implements EngineInterface
 		Announcements.getInstance().addEventAnnouncement(validDateRange, message);
 	}
 	
-	public void addPetData(ScriptContext context, int petID, int levelStart, int levelEnd, Map<String, String> stats)
+	private static class SingletonHolder
 	{
-		final L2PetData[] petData = new L2PetData[(levelEnd - levelStart) + 1];
-		int value = 0;
-		for (int level = levelStart; level <= levelEnd; level++)
-		{
-			petData[level - 1] = new L2PetData();
-			petData[level - 1].setPetID(petID);
-			petData[level - 1].setPetLevel(level);
-			
-			context.setAttribute("level", new Double(level), ScriptContext.ENGINE_SCOPE);
-			for (final String stat : stats.keySet())
-			{
-				value = ((Number) Expression.eval(context, "beanshell", stats.get(stat))).intValue();
-				petData[level - 1].setStat(stat, value);
-			}
-			context.removeAttribute("level", ScriptContext.ENGINE_SCOPE);
-		}
+		protected static final FaenorInterface _instance = new FaenorInterface();
 	}
 }

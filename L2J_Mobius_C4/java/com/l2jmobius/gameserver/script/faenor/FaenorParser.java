@@ -34,10 +34,8 @@ import com.l2jmobius.gameserver.script.Parser;
  */
 public abstract class FaenorParser extends Parser
 {
-	protected static FaenorInterface bridge = FaenorInterface.getInstance();
-	protected static DateFormat DATE_FORMAT = new SimpleDateFormat("dd MMM yyyy", Locale.US);
-	
-	public final static boolean DEBUG = true;
+	protected static FaenorInterface _bridge = FaenorInterface.getInstance();
+	protected final DateFormat DATE_FORMAT = new SimpleDateFormat("dd MMM yyyy", Locale.US);
 	
 	/*
 	 * UTILITY FUNCTIONS
@@ -58,7 +56,7 @@ public abstract class FaenorParser extends Parser
 		{
 			return node.getAttributes().getNamedItem(attributeName).getNodeValue();
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 			if (defaultValue != null)
 			{
@@ -72,17 +70,17 @@ public abstract class FaenorParser extends Parser
 	{
 		try
 		{
-			final NodeList list = parentNode.getChildNodes();
+			NodeList list = parentNode.getChildNodes();
 			for (int i = 0; i < list.getLength(); i++)
 			{
-				final Node node = list.item(i);
+				Node node = list.item(i);
 				if (node.getNodeName().equalsIgnoreCase(elementName))
 				{
 					return node.getTextContent();
 				}
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
 		}
 		if (defaultValue != null)
@@ -90,7 +88,6 @@ public abstract class FaenorParser extends Parser
 			return defaultValue;
 		}
 		throw new NullPointerException();
-		
 	}
 	
 	public static boolean isNodeName(Node node, String name)
@@ -98,7 +95,7 @@ public abstract class FaenorParser extends Parser
 		return node.getNodeName().equalsIgnoreCase(name);
 	}
 	
-	public static Date getDate(String date) throws ParseException
+	public Date getDate(String date) throws ParseException
 	{
 		return DATE_FORMAT.parse(date);
 	}
@@ -128,6 +125,10 @@ public abstract class FaenorParser extends Parser
 		return "faenor.Faenor" + name + "Parser";
 	}
 	
+	/**
+	 * @param node
+	 * @param context
+	 */
 	@Override
 	public abstract void parseScript(Node node, ScriptContext context);
 }

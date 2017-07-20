@@ -17,12 +17,14 @@
 package com.l2jmobius.gameserver.script.faenor;
 
 import java.util.Date;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.script.ScriptContext;
 
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.script.IntList;
@@ -36,38 +38,25 @@ import com.l2jmobius.gameserver.script.ScriptEngine;
 public class FaenorEventParser extends FaenorParser
 {
 	static Logger _log = Logger.getLogger(FaenorEventParser.class.getName());
-	private DateRange eventDates = null;
+	private DateRange _eventDates = null;
 	
 	@Override
 	public void parseScript(final Node eventNode, ScriptContext context)
 	{
-		final String ID = attribute(eventNode, "ID");
+		String ID = attribute(eventNode, "ID");
+		_eventDates = DateRange.parse(attribute(eventNode, "Active"), DATE_FORMAT);
 		
-		if (DEBUG)
-		{
-			_log.fine("Parsing Event \"" + ID + "\"");
-		}
-		
-		eventDates = DateRange.parse(attribute(eventNode, "Active"), DATE_FORMAT);
-		
-		final Date currentDate = new Date();
-		if (eventDates.getEndDate().before(currentDate))
+		Date currentDate = new Date();
+		if (_eventDates.getEndDate().before(currentDate))
 		{
 			_log.info("Event ID: (" + ID + ") has passed... Ignored.");
 			return;
 		}
 		
-		if (eventDates.getStartDate().after(currentDate))
+		if (_eventDates.getStartDate().after(currentDate))
 		{
 			_log.info("Event ID: (" + ID + ") is not active yet... Ignored.");
-			ThreadPoolManager.getInstance().scheduleGeneral(new Runnable()
-			{
-				@Override
-				public void run()
-				{
-					parseEventDropAndMessage(eventNode);
-				}
-			}, eventDates.getStartDate().getTime() - currentDate.getTime());
+			ThreadPoolManager.getInstance().scheduleGeneral(() -> parseEventDropAndMessage(eventNode), _eventDates.getStartDate().getTime() - currentDate.getTime());
 			return;
 		}
 		
@@ -91,35 +80,24 @@ public class FaenorEventParser extends FaenorParser
 	
 	private void parseEventMessage(Node sysMsg)
 	{
-		if (DEBUG)
-		{
-			_log.fine("Parsing Event Message.");
-		}
-		
 		try
 		{
-			final String type = attribute(sysMsg, "Type");
-			final String[] message = attribute(sysMsg, "Msg").split("\n");
+			String type = attribute(sysMsg, "Type");
+			String[] message = attribute(sysMsg, "Msg").split(Config.EOL);
 			
 			if (type.equalsIgnoreCase("OnJoin"))
 			{
-				bridge.onPlayerLogin(message, eventDates);
+				_bridge.onPlayerLogin(message, _eventDates);
 			}
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
-			_log.warning("Error in event parser.");
-			e.printStackTrace();
+			_log.log(Level.WARNING, "Error in event parser: " + e.getMessage(), e);
 		}
 	}
 	
 	private void parseEventDropList(Node dropList)
 	{
-		if (DEBUG)
-		{
-			_log.fine("Parsing Droplist.");
-		}
-		
 		for (Node node = dropList.getFirstChild(); node != null; node = node.getNextSibling())
 		{
 			if (isNodeName(node, "AllDrop"))
@@ -131,22 +109,17 @@ public class FaenorEventParser extends FaenorParser
 	
 	private void parseEventDrop(Node drop)
 	{
-		if (DEBUG)
-		{
-			_log.fine("Parsing Drop.");
-		}
-		
 		try
 		{
-			final int[] items = IntList.parse(attribute(drop, "Items"));
-			final int[] count = IntList.parse(attribute(drop, "Count"));
-			final double chance = getPercent(attribute(drop, "Chance"));
+			int[] items = IntList.parse(attribute(drop, "Items"));
+			int[] count = IntList.parse(attribute(drop, "Count"));
+			double chance = getPercent(attribute(drop, "Chance"));
 			
-			bridge.addEventDrop(items, count, chance, eventDates);
+			_bridge.addEventDrop(items, count, chance, _eventDates);
 		}
-		catch (final Exception e)
+		catch (Exception e)
 		{
-			_log.warning("ERROR(parseEventDrop):" + e.getMessage());
+			_log.log(Level.WARNING, "ERROR(parseEventDrop):" + e.getMessage(), e);
 		}
 	}
 	
