@@ -34,7 +34,6 @@ import org.mmocore.network.MMOConnection;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.L2DatabaseFactory;
-import com.l2jmobius.gameserver.GameCrypt;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import com.l2jmobius.gameserver.Olympiad;
