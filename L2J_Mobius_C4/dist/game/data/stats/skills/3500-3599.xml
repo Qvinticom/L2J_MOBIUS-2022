@@ -747,7 +747,7 @@
 		</for>
 	</skill>
 	<skill id="3542" levels="6" name="Special Ability: Critical Damage">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Lvl 1 - Inflicts additional damage during critical attacks.	Lvl 2 - Inflicts additional damage during critical attacks.	Lvl 3 - Inflicts additional damage during critical attacks.	Lvl 4 - Inflicts additional damage during critical attacks.	Lvl 5 - Inflicts additional damage during critical attacks.	Lvl 6 - Inflicts additional damage during critical attacks. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Lvl 1 - Inflicts additional damage during critical attacks. Lvl 2 - Inflicts additional damage during critical attacks. Lvl 3 - Inflicts additional damage during critical attacks. Lvl 4 - Inflicts additional damage during critical attacks. Lvl 5 - Inflicts additional damage during critical attacks. Lvl 6 - Inflicts additional damage during critical attacks. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -755,7 +755,7 @@
 		<for/>
 	</skill>
 	<skill id="3543" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases maximum HP. -->
+		<!-- Description(s): Increases maximum HP. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -767,7 +767,7 @@
 		</for>
 	</skill>
 	<skill id="3544" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases maximum HP. -->
+		<!-- Description(s): Increases maximum HP. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -779,7 +779,7 @@
 		</for>
 	</skill>
 	<skill id="3545" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases maximum HP. -->
+		<!-- Description(s): Increases maximum HP. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -791,7 +791,7 @@
 		</for>
 	</skill>
 	<skill id="3546" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases M. Def. -->
+		<!-- Description(s): Increases M. Def. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -803,7 +803,7 @@
 		</for>
 	</skill>
 	<skill id="3547" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases shield defense rate. -->
+		<!-- Description(s): Increases shield defense rate. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -815,7 +815,7 @@
 		</for>
 	</skill>
 	<skill id="3548" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases shield defense rate. -->
+		<!-- Description(s): Increases shield defense rate. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -827,7 +827,7 @@
 		</for>
 	</skill>
 	<skill id="3549" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases shield defense rate. -->
+		<!-- Description(s): Increases shield defense rate. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -839,7 +839,7 @@
 		</for>
 	</skill>
 	<skill id="3550" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Increases shield defense rate. -->
+		<!-- Description(s): Increases shield defense rate. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -851,7 +851,7 @@
 		</for>
 	</skill>
 	<skill id="3551" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack. -->
+		<!-- Description(s): Returns damage inflicted by enemy back upon him. Not applied to damage inflicted by a skill or remote attack. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -863,7 +863,7 @@
 		</for>
 	</skill>
 	<skill id="3552" levels="2" name="Special Ability: PvP Damage">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Lvl 1 - Increases damage inflicted during PvP.	Lv1 2 - Launches an attack that strikes multiple opponents, and inflicts additional damage during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Lvl 1 - Increases damage inflicted during PvP. Lv1 2 - Launches an attack that strikes multiple opponents, and inflicts additional damage during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -894,7 +894,7 @@
 		</for>
 	</skill>
 	<skill id="3554" levels="1" name="Equipped with Shield">
-		<!-- 	Description(s):	Additional resistance to Poison/Bleed. -->
+		<!-- Description(s): Additional resistance to Poison/Bleed. -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="ITEM_SA"/>
@@ -1065,7 +1065,7 @@
 		</for>
 	</skill>
 	<skill id="3564" levels="1" name="Special Ability: Haste">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases Atk.Speed and enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases Atk.Speed and enhances damage to target during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1073,7 +1073,7 @@
 		<for/>
 	</skill>
 	<skill id="3565" levels="1" name="Special Ability: Focus">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases critical attack success rate and damage inflicted during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1081,7 +1081,7 @@
 		<for/>
 	</skill>
 	<skill id="3566" levels="1" name="Special Ability: Focus">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases critical attack success rate and damage inflicted during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1102,7 +1102,7 @@
 		</for>
 	</skill>
 	<skill id="3568" levels="1" name="Special Ability: HP Drain">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack.	Enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Partially restores HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Enhances damage to target during PvP. -->
 		<set name="element" val="6"/>
 		<!-- Dark -->
 		<set name="target" val="TARGET_NONE"/>
@@ -1112,7 +1112,7 @@
 		<for/>
 	</skill>
 	<skill id="3569" levels="1" name="Special Ability: HP Regeneration">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases HP regeneration rate and enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases HP regeneration rate and enhances damage to target during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1120,7 +1120,7 @@
 		<for/>
 	</skill>
 	<skill id="3570" levels="1" name="Special Ability: Robust Health">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases MaxHP, MaxMP, MaxCP and enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases MaxHP, MaxMP, MaxCP and enhances damage to target during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1139,7 +1139,7 @@
 		</for>
 	</skill>
 	<skill id="3572" levels="1" name="Special Ability: Crt. Damage">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases critical attack success rate and damage inflicted during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases critical attack success rate and damage inflicted during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1147,7 +1147,7 @@
 		<for/>
 	</skill>
 	<skill id="3573" levels="1" name="Special Ability: Guidance">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases Accuracy and enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases Accuracy and enhances damage to target during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1170,7 +1170,7 @@
 		</for>
 	</skill>
 	<skill id="3575" levels="1" name="Special Ability: Empower Option">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases M. Atk. Enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases M. Atk. Enhances damage to target during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1178,7 +1178,7 @@
 		<for/>
 	</skill>
 	<skill id="3576" levels="1" name="Special Ability: MP Regeneration">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Increases MP regeneration rate and enhances damage to target during PvP. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Increases MP regeneration rate and enhances damage to target during PvP. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1186,7 +1186,7 @@
 		<for/>
 	</skill>
 	<skill id="3577" levels="1" name="Special Ability: Magic Hold">
-		<!-- 	Needs to be finished. 	Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. 	Description(s):	Magically Immobilizes target. -->
+		<!-- Needs to be finished. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Description(s): Magically Immobilizes target. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>

@@ -197,7 +197,7 @@
 		</for>
 	</skill>
 	<skill id="3020" levels="6" name="Special Ability: Critical Bleed">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: A wound appears and HP falls. Effect 5. 	6: A wound appears and HP falls. Effect 7. 	created 2005-05-29 23:34:30 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: A wound appears and HP falls. Effect 5. 6: A wound appears and HP falls. Effect 7. created 2005-05-29 23:34:30 -->
 		<table name="#dmg"> 13 17 22 27 31 34 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -211,7 +211,7 @@
 		</for>
 	</skill>
 	<skill id="3021" levels="6" name="Special Ability: Critical Bleed">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: A wound appears and HP falls. Effect 5. 	6: A wound appears and HP falls. Effect 7. 	created 2005-05-29 23:34:30 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: A wound appears and HP falls. Effect 5. 6: A wound appears and HP falls. Effect 7. created 2005-05-29 23:34:30 -->
 		<table name="#dmg"> 13 17 22 27 31 34 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -225,7 +225,7 @@
 		</for>
 	</skill>
 	<skill id="3022" levels="7" name="Special Ability: Critical Drain">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	created 2005-05-29 23:34:30 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. created 2005-05-29 23:34:30 -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="hitTime" val="3000"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -246,7 +246,7 @@
 		</for>
 	</skill>
 	<skill id="3024" levels="6" name="Special Ability: Critical Poison">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: Causes poisoning. Effect 5. 	6: Causes poisoning. Effect 7. 	created 2005-05-29 23:34:30 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: Causes poisoning. Effect 5. 6: Causes poisoning. Effect 7. created 2005-05-29 23:34:30 -->
 		<table name="#dmg"> 12 18 24 31 38 44 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -261,7 +261,7 @@
 		</for>
 	</skill>
 	<skill id="3025" levels="6" name="Special Ability: Critical Anger">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	created 2005-05-29 23:34:30 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. created 2005-05-29 23:34:30 -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -269,7 +269,7 @@
 		<for/>
 	</skill>
 	<skill id="3026" levels="6" name="Special Ability: Critical Anger">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: Causes additional damage during a critical attack while reducing one's own HP. 	6: Causes additional damage during a critical attack while reducing one's own HP. 	created 2005-05-29 23:34:30 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: Causes additional damage during a critical attack while reducing one's own HP. 6: Causes additional damage during a critical attack while reducing one's own HP. created 2005-05-29 23:34:30 -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="ITEM_SA"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -448,7 +448,7 @@
 		<set name="isMagic" val="true"/>
 	</skill>
 	<skill id="3040" levels="6" name="Special Ability: Critical Poison">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to POISON for server compatability. 	Descriptions: 	1: Causes poisoning. Effect 5. 	6: Causes poisoning. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to POISON for server compatability. Descriptions: 1: Causes poisoning. Effect 5. 6: Causes poisoning. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 12 18 24 31 38 44 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -463,7 +463,7 @@
 		</for>
 	</skill>
 	<skill id="3041" levels="6" name="Special Ability: Critical Poison">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to POISON for server compatability. 	Descriptions: 	1: Causes poisoning. Effect 5. 	6: Causes poisoning. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to POISON for server compatability. Descriptions: 1: Causes poisoning. Effect 5. 6: Causes poisoning. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 12 18 24 31 38 44 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -618,7 +618,7 @@
 		</for>
 	</skill>
 	<skill id="3052" levels="2" name="Special Ability: Critical Bleed">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to BLEED for server compatability. 	Descriptions: 	1: A wound appears and HP falls. Effect 7. 	2: A wound appears and HP falls. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to BLEED for server compatability. Descriptions: 1: A wound appears and HP falls. Effect 7. 2: A wound appears and HP falls. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 31 34 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -632,7 +632,7 @@
 		</for>
 	</skill>
 	<skill id="3053" levels="2" name="Special Ability: Critical Bleed">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to BLEED for server compatability. 	Descriptions: 	1: A wound appears and HP falls. Effect 7. 	2: A wound appears and HP falls. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to BLEED for server compatability. Descriptions: 1: A wound appears and HP falls. Effect 7. 2: A wound appears and HP falls. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 31 34 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -646,7 +646,7 @@
 		</for>
 	</skill>
 	<skill id="3054" levels="2" name="Special Ability: Critical Bleed">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to BLEED for server compatability. 	Descriptions: 	1: A wound appears and HP falls. Effect 7. 	2: A wound appears and HP falls. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to BLEED for server compatability. Descriptions: 1: A wound appears and HP falls. Effect 7. 2: A wound appears and HP falls. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 31 34 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -660,7 +660,7 @@
 		</for>
 	</skill>
 	<skill id="3055" levels="2" name="Special Ability: Critical Bleed">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to BLEED for server compatability. 	Descriptions: 	1: A wound appears and HP falls. Effect 7. 	2: A wound appears and HP falls. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to BLEED for server compatability. Descriptions: 1: A wound appears and HP falls. Effect 7. 2: A wound appears and HP falls. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 31 34 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -746,7 +746,7 @@
 		<set name="isMagic" val="true"/>
 	</skill>
 	<skill id="3061" levels="3" name="Special Ability: Critical Poison">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: Causes poisoning. Effect 7. 	2: Causes poisoning. Effect 7. 	3: Causes poisoning. Effect 7.	<- to be confirmed 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: Causes poisoning. Effect 7. 2: Causes poisoning. Effect 7. 3: Causes poisoning. Effect 7. <- to be confirmed created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 18 31 44 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -761,7 +761,7 @@
 		</for>
 	</skill>
 	<skill id="3062" levels="2" name="Special Ability: Critical Poison">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: Causes poisoning. Effect 7. 	2: Causes poisoning. Effect 7. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: Causes poisoning. Effect 7. 2: Causes poisoning. Effect 7. created 2005-05-29 23:34:31 -->
 		<table name="#dmg"> 18 31 44 </table>
 		<set name="power" val="100"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -944,7 +944,7 @@
 		</for>
 	</skill>
 	<skill id="3075" levels="2" name="Special Ability: Magic Paralyze">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: Paralyzes target. 	2: Paralyzes target. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: Paralyzes target. 2: Paralyzes target. created 2005-05-29 23:34:31 -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="power" val="100"/>
 		<set name="skillType" val="PARALYZE"/>
@@ -993,7 +993,7 @@
 		</for>
 	</skill>
 	<skill id="3079" levels="6" name="Special Ability: Magic Paralyze">
-		<!-- 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Descriptions: 	1: Paralyzes target. 	6: Paralyzes target. 	created 2005-05-29 23:34:31 -->
+		<!-- Automatically generated from C3 client files. Need to be checked/fixed. Descriptions: 1: Paralyzes target. 6: Paralyzes target. created 2005-05-29 23:34:31 -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PARALYZE"/>
 		<set name="power" val="100"/>

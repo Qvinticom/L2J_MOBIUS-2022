@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4300" levels="1" name="Race">
-		<!-- - 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to NOTDONE for server compatability. 	Descriptions: 	1: Giant 	created 2005-05-29 23:34:33 -->
+		<!-- - Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Descriptions: 1: Giant created 2005-05-29 23:34:33 -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -10,7 +10,7 @@
 		<for/>
 	</skill>
 	<skill id="4301" levels="1" name="Race">
-		<!-- - 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to NOTDONE for server compatability. 	Descriptions: 	1: Bug 	created 2005-05-29 23:34:33 -->
+		<!-- - Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Descriptions: 1: Bug created 2005-05-29 23:34:33 -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -19,7 +19,7 @@
 		<for/>
 	</skill>
 	<skill id="4302" levels="1" name="Race">
-		<!-- - 	Automatically generated from C3 client files. 	Need to be checked/fixed. 	Target is set to TARGET_NONE, skillType	to NOTDONE for server compatability. 	Descriptions: 	1: Fairy 	created 2005-05-29 23:34:33 -->
+		<!-- - Automatically generated from C3 client files. Need to be checked/fixed. Target is set to TARGET_NONE, skillType to NOTDONE for server compatability. Descriptions: 1: Fairy created 2005-05-29 23:34:33 -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1313,7 +1313,7 @@
 		<for/>
 	</skill>
 	<skill id="4391" levels="2" name="Wind Walk">
-		<!-- 	Description(s):	Lvl 1 - Temporarily increases movement speed. Effect 1.	Lvl 2 - Temporarily increases movement speed. Effect 2. 	 -->
+		<!-- Description(s): Lvl 1 - Temporarily increases movement speed. Effect 1. Lvl 2 - Temporarily increases movement speed. Effect 2. -->
 		<table name="#Tab-runSpd">20 33</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="100"/>
@@ -1329,7 +1329,7 @@
 		</for>
 	</skill>
 	<skill id="4392" levels="3" name="Shield">
-		<!-- 	Description(s):	Lvl 1 - Temporarily increases P. Def. Effect 1.	Lvl 2 - Temporarily increases P. Def. Effect 2.	Lvl 3 - Temporarily increases P. Def. Effect 3. 	 -->
+		<!-- Description(s): Lvl 1 - Temporarily increases P. Def. Effect 1. Lvl 2 - Temporarily increases P. Def. Effect 2. Lvl 3 - Temporarily increases P. Def. Effect 3. -->
 		<table name="#rate">1.08 1.12 1.15</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="100"/>
@@ -1345,7 +1345,7 @@
 		</for>
 	</skill>
 	<skill id="4393" levels="3" name="Might">
-		<!-- 	by DrLecter	 -->
+		<!-- by DrLecter -->
 		<set name="reuseDelay" val="100"/>
 		<table name="#pAtk">1.08 1.12 1.15</table>
 		<set name="target" val="TARGET_ONE"/>
@@ -1361,7 +1361,7 @@
 		</for>
 	</skill>
 	<skill id="4394" levels="6" name="Bless the Body">
-		<!-- 	Description(s):	Lvl 1 - Temporarily increases maximum HP. Effect 1.	Lvl 2 - Temporarily increases maximum HP. Effect 2.	Lvl 3 - Temporarily increases maximum HP. Effect 3.	Lvl 4 - Temporarily increases maximum HP. Effect 4.	Lvl 5 - Temporarily increases maximum HP. Effect 5.	Lvl 6 - Temporarily increases maximum HP. Effect 6. 	 -->
+		<!-- Description(s): Lvl 1 - Temporarily increases maximum HP. Effect 1. Lvl 2 - Temporarily increases maximum HP. Effect 2. Lvl 3 - Temporarily increases maximum HP. Effect 3. Lvl 4 - Temporarily increases maximum HP. Effect 4. Lvl 5 - Temporarily increases maximum HP. Effect 5. Lvl 6 - Temporarily increases maximum HP. Effect 6. -->
 		<table name="#Tab-maxHp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="100"/>
@@ -1377,7 +1377,7 @@
 		</for>
 	</skill>
 	<skill id="4395" levels="6" name="Bless the Soul">
-		<!-- 	Description(s):	Lvl 1 - Temporarily increases maximum MP. Effect 1.	Lvl 2 - Temporarily increases maximum MP. Effect 2.	Lvl 3 - Temporarily increases maximum MP. Effect 3.	Lvl 4 - Temporarily increases maximum MP. Effect 4.	Lvl 5 - Temporarily increases maximum MP. Effect 5.	Lvl 6 - Temporarily increases maximum MP. Effect 6. 	 -->
+		<!-- Description(s): Lvl 1 - Temporarily increases maximum MP. Effect 1. Lvl 2 - Temporarily increases maximum MP. Effect 2. Lvl 3 - Temporarily increases maximum MP. Effect 3. Lvl 4 - Temporarily increases maximum MP. Effect 4. Lvl 5 - Temporarily increases maximum MP. Effect 5. Lvl 6 - Temporarily increases maximum MP. Effect 6. -->
 		<table name="#Tab-maxMp">1.1 1.15 1.2 1.25 1.3 1.35</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="100"/>
@@ -1393,7 +1393,7 @@
 		</for>
 	</skill>
 	<skill id="4396" levels="2" name="Magic Barrier">
-		<!-- 	Description(s):	Lvl 1 - Temporarily increases M. Def. Effect 2.	Lvl 2 - Temporarily increases M. Def. Effect 3. 	 -->
+		<!-- Description(s): Lvl 1 - Temporarily increases M. Def. Effect 2. Lvl 2 - Temporarily increases M. Def. Effect 3. -->
 		<table name="#Tab-mDef">1.23 1.3</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="100"/>
@@ -1409,7 +1409,7 @@
 		</for>
 	</skill>
 	<skill id="4397" levels="2" name="Berserker Spirit">
-		<!-- 	by DrLecter	 -->
+		<!-- by DrLecter -->
 		<table name="#pAtk">1.05 1.08</table>
 		<table name="#pAtkSpd">1.05 1.08</table>
 		<table name="#mAtk">1.1 1.16</table>
@@ -1437,7 +1437,7 @@
 		</for>
 	</skill>
 	<skill id="4398" levels="6" name="Bless Shield">
-		<!-- 	Description(s):	Lvl 1 - Temporarily increases the probability of shield defense. Effect 1.	Lvl 2 - Temporarily increases the probability of shield defense. Effect 2.	Lvl 3 - Temporarily increases the probability of shield defense. Effect 3.	Lvl 4 - Temporarily increases the probability of shield defense. Effect 4.	Lvl 5 - Temporarily increases the probability of shield defense. Effect 5.	Lvl 6 - Temporarily increases the probability of shield defense. Effect 6. 	 -->
+		<!-- Description(s): Lvl 1 - Temporarily increases the probability of shield defense. Effect 1. Lvl 2 - Temporarily increases the probability of shield defense. Effect 2. Lvl 3 - Temporarily increases the probability of shield defense. Effect 3. Lvl 4 - Temporarily increases the probability of shield defense. Effect 4. Lvl 5 - Temporarily increases the probability of shield defense. Effect 5. Lvl 6 - Temporarily increases the probability of shield defense. Effect 6. -->
 		<table name="#Tab-rShld">1.3 1.4 1.5 1.6 1.7 1.8</table>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="reuseDelay" val="100"/>
@@ -1453,7 +1453,7 @@
 		</for>
 	</skill>
 	<skill id="4399" levels="4" name="Vampiric Rage">
-		<!-- 	by DrLecter	 -->
+		<!-- by DrLecter -->
 		<table name="#Tab-absorbDam">6 7 8 9</table>
 		<set name="reuseDelay" val="100"/>
 		<set name="target" val="TARGET_ONE"/>

@@ -326,14 +326,14 @@
 		<for/>
 	</skill>
 	<skill id="4217" levels="1" name="None">
-		<!-- 	Zaken skills teleport pc and zaken	 -->
+		<!-- Zaken skills teleport pc and zaken -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="coolTime" val="100"/>
 		<set name="hitTime" val="2900"/>
 		<set name="skillRadius" val="300"/>
 		<set name="skillType" val="BUFF"/>
-		<!-- 	Just Broadcast	 -->
+		<!-- Just Broadcast -->
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="800"/>
 		<set name="effectRange" val="1300"/>
@@ -353,8 +353,8 @@
 		<set name="castRange" val="600"/>
 		<set name="effectRange" val="1100"/>
 		<set name="absorbPart" val="0.8"/>
-		<!-- 	absorbs 80% of damage	 -->
-		<!-- 	Missing MP -274	 -->
+		<!-- absorbs 80% of damage -->
+		<!-- Missing MP -274 -->
 		<for/>
 	</skill>
 	<skill id="4219" levels="1" name="Hold">
@@ -408,7 +408,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="BUFF"/>
-		<!-- 	Just Broadcast	 -->
+		<!-- Just Broadcast -->
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
@@ -421,7 +421,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Buff" time="14400" val="0"/>
-			<!-- 	TODO: abnormal change texture O.o	 -->
+			<!-- TODO: abnormal change texture O.o -->
 		</for>
 	</skill>
 	<skill id="4224" levels="1" name="Face Chance: Day to Night">
@@ -430,7 +430,7 @@
 		<set name="coolTime" val="1900"/>
 		<set name="hitTime" val="1100"/>
 		<set name="skillType" val="BUFF"/>
-		<!-- 	Just Broadcast	 -->
+		<!-- Just Broadcast -->
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
@@ -455,7 +455,7 @@
 		<for/>
 	</skill>
 	<skill id="4227" levels="1" name="Zaken Regeneration">
-		<!-- 	Zaken skills	 -->
+		<!-- Zaken skills -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -669,7 +669,7 @@
 		<for/>
 	</skill>
 	<skill id="4242" levels="1" name="Zaken Regeneration">
-		<!-- 	Zaken skills	 -->
+		<!-- Zaken skills -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>

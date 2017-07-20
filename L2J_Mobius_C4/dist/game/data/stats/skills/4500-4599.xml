@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4500" levels="1" name="Treasure Chest - Level 27">
-		<!-- - TODO 	1: A locked chest that could contain treasure or a nasty surprise. -->
+		<!-- - TODO 1: A locked chest that could contain treasure or a nasty surprise. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -136,7 +136,7 @@
 		<for/>
 	</skill>
 	<skill id="4515" levels="1" name="Petrification">
-		<!-- Curse of the guardian spirit of a Raid Boss.	It's a state in which one's body is temporarily petrified like a stone.	One can receive  this curse when trying to kill a raid monster whose level is lower than  one's level by 9 or more. This curse cannot be undone. -->
+		<!-- Curse of the guardian spirit of a Raid Boss. It's a state in which one's body is temporarily petrified like a stone. One can receive this curse when trying to kill a raid monster whose level is lower than one's level by 9 or more. This curse cannot be undone. -->
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PARALYZE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -208,7 +208,7 @@
 		<for/>
 	</skill>
 	<skill id="4522" levels="1" name="Eye of Assassin">
-		<!-- - TODO Extreme assassin sensation. Greatly increases critical  chances and the success rate of dagger skills. -->
+		<!-- - TODO Extreme assassin sensation. Greatly increases critical chances and the success rate of dagger skills. -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1022,7 +1022,7 @@
 		<for/>
 	</skill>
 	<skill id="4584" levels="12" name="Reducing P.Def Shock">
-		<!-- - TODO Instantly decreases P. Def. and gets shocked so that one's  target cannot move temporarily. Effect 3. -->
+		<!-- - TODO Instantly decreases P. Def. and gets shocked so that one's target cannot move temporarily. Effect 3. -->
 		<table name="#mpConsume"> 25 41 57 77 100 123 143 153 161 166 170 172 </table>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="hitTime" val="1800"/>
@@ -1060,7 +1060,7 @@
 		<for/>
 	</skill>
 	<skill id="4587" levels="12" name="Decrease P.Atk">
-		<!-- - TODO Temporarily decreases Accuracy.	Effect 3. -->
+		<!-- - TODO Temporarily decreases Accuracy. Effect 3. -->
 		<table name="#mpConsume"> 18 29 40 53 68 83 98 104 109 113 115 117 </table>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="hitTime" val="1500"/>
