@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.script.Parser;
 import com.l2jmobius.gameserver.script.ParserNotCreatedException;
 import com.l2jmobius.gameserver.script.ScriptDocument;
 import com.l2jmobius.gameserver.script.ScriptEngine;
-import com.l2jmobius.gameserver.util.file.filter.XMLFilter;
+import com.l2jmobius.util.file.filter.XMLFilter;
 
 /**
  * @author Luis Arias

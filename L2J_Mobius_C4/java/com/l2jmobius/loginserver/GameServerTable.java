@@ -137,7 +137,7 @@ public class GameServerTable
 	 */
 	private void loadServerNames()
 	{
-		try (InputStream in = new FileInputStream("servername.xml");
+		try (InputStream in = new FileInputStream("data/servername.xml");
 			UTF8StreamReader utf8 = new UTF8StreamReader())
 		{
 			final XMLStreamReaderImpl xpp = new XMLStreamReaderImpl();
@@ -397,14 +397,7 @@ public class GameServerTable
 		Collections.sort(_gameServerList, gsComparator);
 	}
 	
-	private final Comparator<GameServer> gsComparator = new Comparator<GameServer>()
-	{
-		@Override
-		public int compare(GameServer gs1, GameServer gs2)
-		{
-			return (gs1.server_id < gs2.server_id ? -1 : gs1.server_id == gs2.server_id ? 0 : 1);
-		}
-	};
+	private final Comparator<GameServer> gsComparator = (gs1, gs2) -> (gs1.server_id < gs2.server_id ? -1 : gs1.server_id == gs2.server_id ? 0 : 1);
 	
 	/**
 	 * @param thread
