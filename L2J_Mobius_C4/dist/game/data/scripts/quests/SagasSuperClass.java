@@ -67,7 +67,7 @@ public class SagasSuperClass extends QuestJython
 	{
 		super(id, name, descr);
 		qnu = id;
-		setInitialState(new State("Start", this));
+		setInitialState(new State("Started", this));
 	}
 	
 	public void registerNPCs()
