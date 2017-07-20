@@ -314,7 +314,7 @@
 		</for>
 	</skill>
 	<skill id="4216" levels="1" name="Scatter Enemy">
-		<!--- Zaken skills - teleport PC -->
+		<!-- - Zaken skills - teleport PC -->
 		<set name="magicLvl" val="60"/>
 		<set name="hitTime" val="2900"/>
 		<set name="coolTime" val="100"/>
@@ -326,21 +326,21 @@
 		<for/>
 	</skill>
 	<skill id="4217" levels="1" name="None">
-		<!--	Zaken skills teleport pc and zaken	-->
+		<!-- 	Zaken skills teleport pc and zaken	 -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="coolTime" val="100"/>
 		<set name="hitTime" val="2900"/>
 		<set name="skillRadius" val="300"/>
 		<set name="skillType" val="BUFF"/>
-		<!--	Just Broadcast	-->
+		<!-- 	Just Broadcast	 -->
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="800"/>
 		<set name="effectRange" val="1300"/>
 		<for/>
 	</skill>
 	<skill id="4218" levels="1" name="Absorb HP MP">
-		<!--- Zaken skills -->
+		<!-- - Zaken skills -->
 		<set name="magicLvl" val="60"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="hitTime" val="2000"/>
@@ -353,12 +353,12 @@
 		<set name="castRange" val="600"/>
 		<set name="effectRange" val="1100"/>
 		<set name="absorbPart" val="0.8"/>
-		<!--	absorbs 80% of damage	-->
-		<!--	Missing MP -274	-->
+		<!-- 	absorbs 80% of damage	 -->
+		<!-- 	Missing MP -274	 -->
 		<for/>
 	</skill>
 	<skill id="4219" levels="1" name="Hold">
-		<!--- Zaken skills -->
+		<!-- - Zaken skills -->
 		<set name="magicLvl" val="60"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="power" val="95"/>
@@ -374,7 +374,7 @@
 		</for>
 	</skill>
 	<skill id="4220" levels="1" name="Deadly Two-Sword Weapon">
-		<!--- Zaken skills -->
+		<!-- - Zaken skills -->
 		<set name="magicLvl" val="60"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="power" val="7224.0"/>
@@ -388,7 +388,7 @@
 		<for/>
 	</skill>
 	<skill id="4221" levels="1" name="Deadly Two-Sword Weapon: Range Attack">
-		<!--- Zaken skills -->
+		<!-- - Zaken skills -->
 		<set name="magicLvl" val="60"/>
 		<set name="lvlDepend" val="1"/>
 		<set name="hitTime" val="1500"/>
@@ -403,12 +403,12 @@
 		<for/>
 	</skill>
 	<skill id="4222" levels="1" name="Instant Move">
-		<!--- Zaken skills - teleport -->
+		<!-- - Zaken skills - teleport -->
 		<set name="magicLvl" val="60"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="hitTime" val="500"/>
 		<set name="skillType" val="BUFF"/>
-		<!--	Just Broadcast	-->
+		<!-- 	Just Broadcast	 -->
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
@@ -421,7 +421,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect name="Buff" time="14400" val="0"/>
-			<!--	TODO: abnormal change texture O.o	-->
+			<!-- 	TODO: abnormal change texture O.o	 -->
 		</for>
 	</skill>
 	<skill id="4224" levels="1" name="Face Chance: Day to Night">
@@ -430,7 +430,7 @@
 		<set name="coolTime" val="1900"/>
 		<set name="hitTime" val="1100"/>
 		<set name="skillType" val="BUFF"/>
-		<!--	Just Broadcast	-->
+		<!-- 	Just Broadcast	 -->
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
@@ -455,7 +455,7 @@
 		<for/>
 	</skill>
 	<skill id="4227" levels="1" name="Zaken Regeneration">
-		<!--	Zaken skills	-->
+		<!-- 	Zaken skills	 -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -548,7 +548,7 @@
 		<for/>
 	</skill>
 	<skill id="4233" levels="1" name="Vampiric Attack">
-		<!--- Summon Shadow Skill -->
+		<!-- - Summon Shadow Skill -->
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
@@ -629,7 +629,7 @@
 		</for>
 	</skill>
 	<skill id="4238" levels="1" name="Increase Re-use Time">
-		<!-- Dietrich Skill pReuse needed-->
+		<!-- Dietrich Skill pReuse needed -->
 		<set name="hitTime" val="4000"/>
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
@@ -669,7 +669,7 @@
 		<for/>
 	</skill>
 	<skill id="4242" levels="1" name="Zaken Regeneration">
-		<!--	Zaken skills	-->
+		<!-- 	Zaken skills	 -->
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -756,7 +756,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="1000"/>
 		<set name="effectRange" val="1500"/>
-		<set name="absorbPart" val="0.2" />
+		<set name="absorbPart" val="0.2"/>
 		<for/>
 	</skill>
 	<skill id="4249" levels="12" name="Decrease Speed">
@@ -974,7 +974,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="#cast"/>
 		<set name="effectRange" val="1400"/>
-		<set name="absorbPart" val="0.2" />
+		<set name="absorbPart" val="0.2"/>
 		<!-- absorbs 20% of damage -->
 		<for/>
 	</skill>
@@ -1307,7 +1307,7 @@
 		<for/>
 	</skill>
 	<skill id="4290" levels="1" name="Race">
-		<!--- 1: Undead -->
+		<!-- - 1: Undead -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1316,7 +1316,7 @@
 		<for/>
 	</skill>
 	<skill id="4291" levels="1" name="Race">
-		<!--- 1: Construct -->
+		<!-- - 1: Construct -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1325,7 +1325,7 @@
 		<for/>
 	</skill>
 	<skill id="4292" levels="1" name="Race">
-		<!--- 1: Beast -->
+		<!-- - 1: Beast -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1334,7 +1334,7 @@
 		<for/>
 	</skill>
 	<skill id="4293" levels="1" name="Race">
-		<!--- 1: Animal -->
+		<!-- - 1: Animal -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1343,7 +1343,7 @@
 		<for/>
 	</skill>
 	<skill id="4294" levels="1" name="Race">
-		<!--- 1: Plant -->
+		<!-- - 1: Plant -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1352,7 +1352,7 @@
 		<for/>
 	</skill>
 	<skill id="4295" levels="1" name="Race">
-		<!--- 1: Humanoid -->
+		<!-- - 1: Humanoid -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1361,7 +1361,7 @@
 		<for/>
 	</skill>
 	<skill id="4296" levels="1" name="Race">
-		<!--- 1: Spirit -->
+		<!-- - 1: Spirit -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1370,7 +1370,7 @@
 		<for/>
 	</skill>
 	<skill id="4297" levels="1" name="Race">
-		<!--- 1: Divine -->
+		<!-- - 1: Divine -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1379,7 +1379,7 @@
 		<for/>
 	</skill>
 	<skill id="4298" levels="1" name="Race">
-		<!--- 1: Demonic -->
+		<!-- - 1: Demonic -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
@@ -1388,7 +1388,7 @@
 		<for/>
 	</skill>
 	<skill id="4299" levels="1" name="Race">
-		<!--- 1: Dragon -->
+		<!-- - 1: Dragon -->
 		<set name="target" val="TARGET_NONE"/>
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>

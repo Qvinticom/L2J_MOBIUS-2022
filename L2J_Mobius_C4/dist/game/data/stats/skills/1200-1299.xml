@@ -446,9 +446,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12348 12061 12349 12062 12350 12063 12351 12177 12352 12420 12421 12422 12423 12424 12425 12426 12427 12428 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.9" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.9"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1226" levels="18" name="Summon Unicorn Boxer" enchantLevels1="30">
@@ -480,9 +480,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12064 12353 12065 12354 12066 12355 12178 12356 12179 12438 12439 12440 12441 12442 12443 12444 12445 12446 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.3" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.3"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1227" levels="18" name="Summon Unicorn Mirage" enchantLevels1="30">
@@ -510,9 +510,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12357 12067 12358 12068 12359 12069 12360 12180 12361 12429 12430 12431 12432 12433 12434 12435 12436 12437 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.9" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.9"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1228" levels="18" name="Summon Silhouette" enchantLevels1="30">
@@ -540,9 +540,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12366 12073 12367 12074 12368 12075 12369 12183 12370 12456 12457 12458 12459 12460 12461 12462 12463 12464 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.9" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.9"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1229" levels="18" name="Chant of Life" enchantLevels1="30" enchantLevels2="30">
@@ -720,7 +720,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="900"/>
 		<set name="effectRange" val="1400"/>
-		<set name="absorbPart" val="0.4" />
+		<set name="absorbPart" val="0.4"/>
 		<!-- absorbs 40% of damage -->
 		<enchant1 name="power" val="#ench1Power"/>
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -774,7 +774,7 @@
 		<set name="lvlDepend" val="1"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="3100"/>
-		<set name="coolTime" val="200" />
+		<set name="coolTime" val="200"/>
 		<set name="element" val="3"/>
 		<set name="reuseDelay" val="8000"/>
 		<set name="skillType" val="MDAM"/>
@@ -1047,7 +1047,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="900"/>
 		<set name="effectRange" val="1400"/>
-		<set name="absorbPart" val="0.8" />
+		<set name="absorbPart" val="0.8"/>
 		<!-- absorbs 80% of damage -->
 		<enchant1 name="power" val="#ench1Power"/>
 		<enchant2 name="mpConsume" val="#ench2MpConsume"/>
@@ -1912,7 +1912,7 @@
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
 		<set name="itemConsumeId" val="1459"/>
-		<set name="itemConsumeCount" val="#itemConsumeCount" />
+		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="itemConsumeIdOT" val="1459"/>
 		<set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
 		<set name="itemConsumeSteps" val="4"/>
@@ -1930,9 +1930,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12477 12478 12479 12480 12481 12482 12483 12484 12485 12486 12487 12488 12489 12536 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.1" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.1"/>
+		<set name="isCubic" val="false"/>
 	</skill>
 	<skill id="1277" levels="14" name="Summon Unicorn Merrow" enchantLevels1="30">
 		<table name="#enchantNpcId"> 13433 13434 13435 13436 13437 13438 13439 13440 13441 13442 13443 13444 13445 13446 13447 13448 13449 13450 13451 13452 13453 13454 13455 13456 13457 13458 13459 13460 13461 13462 </table>
@@ -1963,9 +1963,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12490 12491 12492 12493 12494 12495 12496 12497 12498 12499 12500 12501 12502 12537 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.1" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.1"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1278" levels="14" name="Summon Soulless" enchantLevels1="30">
@@ -2007,7 +2007,7 @@
 		<table name="#itemConsumeCount"> 5 6 7 8 9 9 11 12 13 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeId" val="1458"/>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2019,9 +2019,9 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
-		<set name="npcId" val="6" />
-		<set name="expPenalty" val="0.0" />
-		<set name="isCubic" val="true" />
+		<set name="npcId" val="6"/>
+		<set name="expPenalty" val="0.0"/>
+		<set name="isCubic" val="true"/>
 		<for/>
 	</skill>
 	<skill id="1280" levels="9" name="Summon Aqua Cubic">
@@ -2030,7 +2030,7 @@
 		<table name="#itemConsumeCount"> 2 3 3 4 4 5 6 6 7 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeId" val="1458"/>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="power" val="0.0"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2042,9 +2042,9 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
-		<set name="npcId" val="7" />
-		<set name="expPenalty" val="0.0" />
-		<set name="isCubic" val="true" />
+		<set name="npcId" val="7"/>
+		<set name="expPenalty" val="0.0"/>
+		<set name="isCubic" val="true"/>
 		<for/>
 	</skill>
 	<skill id="1281" levels="9" name="Summon Spark Cubic">
@@ -2053,7 +2053,7 @@
 		<table name="#itemConsumeCount"> 5 6 7 8 9 9 11 12 13 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeId" val="1458"/>
 		<set name="itemConsumeCount" val="#itemConsumeCount"/>
 		<set name="power" val="80"/>
 		<set name="target" val="TARGET_SELF"/>
@@ -2065,9 +2065,9 @@
 		<set name="castRange" val="-1"/>
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
-		<set name="npcId" val="8" />
-		<set name="expPenalty" val="0.0" />
-		<set name="isCubic" val="true" />
+		<set name="npcId" val="8"/>
+		<set name="expPenalty" val="0.0"/>
+		<set name="isCubic" val="true"/>
 		<for/>
 	</skill>
 	<skill id="1282" levels="2" name="Speed of Paagrio" enchantLevels1="30" enchantLevels2="30">

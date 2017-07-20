@@ -209,9 +209,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12006 12344 12007 12345 12008 12346 12175 12347 12176 12411 12412 12413 12414 12415 12416 12417 12418 12419 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.3" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.3"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1126" levels="34" name="Servitor Recharge" enchantLevels1="30" enchantLevels2="30">
@@ -289,9 +289,9 @@
 		<set name="effectRange" val="-1"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12070 12362 12071 12363 12072 12364 12181 12365 12182 12447 12448 12449 12450 12451 12452 12453 12454 12455 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.3" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.3"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1129" levels="7" name="Summon Reanimated Man" enchantLevels1="30">
@@ -303,10 +303,10 @@
 		<table name="#itemConsumeCountOT"> 1 1 2 3 3 4 4 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="1459" />
-		<set name="itemConsumeCount" val="#itemConsumeCount" />
-		<set name="itemConsumeIdOT" val="1459" />
-		<set name="itemConsumeCountOT" val="#itemConsumeCountOT" />
+		<set name="itemConsumeId" val="1459"/>
+		<set name="itemConsumeCount" val="#itemConsumeCount"/>
+		<set name="itemConsumeIdOT" val="1459"/>
+		<set name="itemConsumeCountOT" val="#itemConsumeCountOT"/>
 		<set name="itemConsumeSteps" val="4"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
 		<set name="summonTimeLostIdle" val="500"/>
@@ -322,9 +322,9 @@
 		<set name="effectRange" val="400"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12192 12193 12465 12466 12467 12468 12469 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.15" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.15"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1139" levels="2" name="Servitor Magic Shield" enchantLevels1="30" enchantLevels2="30">
@@ -555,7 +555,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="600"/>
 		<set name="effectRange" val="1100"/>
-		<set name="absorbPart" val="0.4" />
+		<set name="absorbPart" val="0.4"/>
 		<!-- absorbs 40% of damage -->
 		<for/>
 	</skill>
@@ -572,8 +572,8 @@
 		<table name="#power"> 58.0 65.0 72.0 78.0 82.0 85.0 89.0 92.0 96.0 99.0 102.0 105.0 108.0 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeId" val="2508" />
-		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="2508"/>
+		<set name="itemConsumeCount" val="1"/>
 		<set name="magicLvl" val="#magicLvl"/>
 		<set name="power" val="#power"/>
 		<set name="target" val="TARGET_ONE"/>
@@ -631,8 +631,8 @@
 		<table name="#mpConsume"> 56 69 82 92 98 104 </table>
 		<set name="mpInitialConsume" val="#mpConsume_Init"/>
 		<set name="mpConsume" val="#mpConsume"/>
-		<set name="itemConsumeCount" val="3" />
-		<set name="itemConsumeId" val="1458" />
+		<set name="itemConsumeCount" val="3"/>
+		<set name="itemConsumeId" val="1458"/>
 		<set name="itemConsumeSteps" val="0"/>
 		<set name="summonTotalLifeTime" val="1200000"/>
 		<set name="summonTimeLostIdle" val="500"/>
@@ -648,9 +648,9 @@
 		<set name="effectRange" val="400"/>
 		<!-- Summon-specific -->
 		<table name="#npcIds"> 12194 12195 12196 12470 12471 12472 </table>
-		<set name="npcId" val="#npcIds" />
-		<set name="expPenalty" val="0.9" />
-		<set name="isCubic" val="false" />
+		<set name="npcId" val="#npcIds"/>
+		<set name="expPenalty" val="0.9"/>
+		<set name="isCubic" val="false"/>
 		<for/>
 	</skill>
 	<skill id="1155" levels="15" name="Corpse Burst" enchantLevels1="30" enchantLevels2="30">
@@ -1201,7 +1201,7 @@
 		<set name="lvlDepend" val="1"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="hitTime" val="3100"/>
-		<set name="coolTime" val="200" />
+		<set name="coolTime" val="200"/>
 		<set name="element" val="3"/>
 		<set name="reuseDelay" val="8000"/>
 		<set name="skillType" val="MDAM"/>

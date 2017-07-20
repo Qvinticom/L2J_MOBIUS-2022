@@ -645,17 +645,17 @@
 	<skill id="4139" levels="12" name="Boom Attack">
 		<table name="#power"> 52 78 112 155 203 255 305 328 348 364 377 387 </table>
 		<table name="#magicLvl"> 10 20 30 40 50 60 70 75 80 85 90 95 </table>
-		<set name="power" val="#power" />
-		<set name="target" val="TARGET_AURA" />
-		<set name="skillRadius" val="150" />
-		<set name="reuseDelay" val="8000" />
-		<set name="hitTime" val="6000" />
-		<set name="skillType" val="MDAM" />
-		<set name="magicLvl" val="#magicLvl" />
-		<set name="isSuicideAttack" val="true" />
-		<set name="element" val="2" />
+		<set name="power" val="#power"/>
+		<set name="target" val="TARGET_AURA"/>
+		<set name="skillRadius" val="150"/>
+		<set name="reuseDelay" val="8000"/>
+		<set name="hitTime" val="6000"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="magicLvl" val="#magicLvl"/>
+		<set name="isSuicideAttack" val="true"/>
+		<set name="element" val="2"/>
 		<!-- Fire -->
-		<set name="operateType" val="OP_ACTIVE" />
+		<set name="operateType" val="OP_ACTIVE"/>
 		<for/>
 	</skill>
 	<skill id="4140" levels="12" name="Contract Payment">
@@ -804,7 +804,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="600"/>
 		<set name="effectRange" val="1100"/>
-		<set name="absorbPart" val="0.2" />
+		<set name="absorbPart" val="0.2"/>
 		<for/>
 	</skill>
 	<skill id="4153" levels="12" name="Decrease Speed">
@@ -960,7 +960,7 @@
 		<for/>
 	</skill>
 	<skill id="4161" levels="1" name="Summon PC">
-		<!--- Teleports player to mob (Porta/Perum skill) -->
+		<!-- - Teleports player to mob (Porta/Perum skill) -->
 		<set name="hitTime" val="2000"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="GET_PLAYER"/>
@@ -1553,7 +1553,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="750"/>
 		<set name="effectRange" val="1250"/>
-		<set name="absorbPart" val="0.4" />
+		<set name="absorbPart" val="0.4"/>
 		<!-- absorbs 40% of damage -->
 		<for/>
 	</skill>
@@ -1572,7 +1572,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="castRange" val="750"/>
 		<set name="effectRange" val="1250"/>
-		<set name="absorbPart" val="0.8" />
+		<set name="absorbPart" val="0.8"/>
 		<!-- absorbs 80% of damage -->
 		<for/>
 	</skill>

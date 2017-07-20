@@ -1128,12 +1128,12 @@
 		<for/>
 	</skill>
 	<skill id="3571" levels="1" name="Special Ability: Crt. Stun">
-		<set name="target" val="TARGET_ONE" />
-		<set name="skillType" val="STUN" />
-		<set name="operateType" val="OP_ACTIVE" />
-		<set name="power" val="70" />
-		<set name="magicLvl" val="65" />
-		<set name="lvlDepend" val="1" />
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="STUN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="70"/>
+		<set name="magicLvl" val="65"/>
+		<set name="lvlDepend" val="1"/>
 		<for>
 			<effect count="1" name="Stun" time="9" val="0" stackOrder="1" stackType="Stun"/>
 		</for>
