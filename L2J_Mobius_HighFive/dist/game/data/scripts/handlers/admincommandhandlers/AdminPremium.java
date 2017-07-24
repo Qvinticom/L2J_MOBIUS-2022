@@ -17,6 +17,7 @@
 package handlers.admincommandhandlers;
 
 import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -118,15 +119,21 @@ public class AdminPremium implements IAdminCommandHandler
 		}
 		
 		// TODO: Add check if account exists XD
-		PremiumManager.getInstance().updatePremiumData(months, accountName);
-		admin.sendMessage("Account " + accountName + " will now have premium status until " + String.valueOf(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName))) + ".");
+		PremiumManager.getInstance().addPremiumTime(accountName, months * 30, TimeUnit.DAYS);
+		admin.sendMessage("Account " + accountName + " will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(accountName)) + ".");
 	}
 	
 	private void viewPremiumInfo(L2PcInstance admin, String accountName)
 	{
-		if (PremiumManager.getInstance().getPremiumEndDate(accountName) > 0)
+		if (!Config.PREMIUM_SYSTEM_ENABLED)
 		{
-			admin.sendMessage("Account " + accountName + " has premium status until " + String.valueOf(new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumEndDate(accountName))) + ".");
+			admin.sendMessage("Premium system is disabled.");
+			return;
+		}
+		
+		if (PremiumManager.getInstance().getPremiumExpiration(accountName) > 0)
+		{
+			admin.sendMessage("Account " + accountName + " has premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(accountName)) + ".");
 		}
 		else
 		{
@@ -136,7 +143,13 @@ public class AdminPremium implements IAdminCommandHandler
 	
 	private void removePremium(L2PcInstance admin, String accountName)
 	{
-		if (PremiumManager.getInstance().getPremiumEndDate(accountName) > 0)
+		if (!Config.PREMIUM_SYSTEM_ENABLED)
+		{
+			admin.sendMessage("Premium system is disabled.");
+			return;
+		}
+		
+		if (PremiumManager.getInstance().getPremiumExpiration(accountName) > 0)
 		{
 			PremiumManager.getInstance().removePremiumStatus(accountName);
 			admin.sendMessage("Account " + accountName + " has no longer premium status.");

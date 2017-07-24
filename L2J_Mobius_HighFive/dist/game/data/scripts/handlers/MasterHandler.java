@@ -174,6 +174,7 @@ import handlers.chathandlers.ChatShout;
 import handlers.chathandlers.ChatTrade;
 import handlers.chathandlers.ChatWhisper;
 import handlers.communityboard.ClanBoard;
+import handlers.communityboard.DropSearchBoard;
 import handlers.communityboard.FavoriteBoard;
 import handlers.communityboard.FriendsBoard;
 import handlers.communityboard.HomeBoard;
@@ -459,6 +460,7 @@ public class MasterHandler
 		{
 			// Community Board
 			ClanBoard.class,
+			DropSearchBoard.class,
 			FavoriteBoard.class,
 			FriendsBoard.class,
 			HomeBoard.class,

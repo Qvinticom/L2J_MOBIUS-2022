@@ -801,10 +801,16 @@ public final class Config
 	public static boolean COMMUNITYBOARD_ENABLE_MULTISELLS;
 	public static boolean COMMUNITYBOARD_ENABLE_TELEPORTS;
 	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
+	public static boolean COMMUNITYBOARD_ENABLE_HEAL;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
+	public static int COMMUNITYBOARD_HEAL_PRICE;
 	public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
 	public static boolean COMMUNITYBOARD_KARMA_DISABLED;
+	public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
+	public static boolean COMMUNITY_PREMIUM_SYSTEM_ENABLED;
+	public static int COMMUNITY_PREMIUM_COIN_ID;
+	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -2595,10 +2601,16 @@ public final class Config
 			COMMUNITYBOARD_ENABLE_MULTISELLS = CustomSettings.getBoolean("CommunityEnableMultisells", true);
 			COMMUNITYBOARD_ENABLE_TELEPORTS = CustomSettings.getBoolean("CommunityEnableTeleports", true);
 			COMMUNITYBOARD_ENABLE_BUFFS = CustomSettings.getBoolean("CommunityEnableBuffs", true);
+			COMMUNITYBOARD_ENABLE_HEAL = CustomSettings.getBoolean("CommunityEnableHeal", true);
 			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
+			COMMUNITYBOARD_HEAL_PRICE = CustomSettings.getInt("CommunityHealPrice", 0);
 			COMMUNITYBOARD_COMBAT_DISABLED = CustomSettings.getBoolean("CommunityCombatDisabled", true);
 			COMMUNITYBOARD_KARMA_DISABLED = CustomSettings.getBoolean("CommunityKarmaDisabled", true);
+			COMMUNITYBOARD_CAST_ANIMATIONS = CustomSettings.getBoolean("CommunityCastAnimations", false);
+			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("CommunityPremiumSystem", false);
+			COMMUNITY_PREMIUM_COIN_ID = CustomSettings.getInt("CommunityPremiumBuyCoinId", 57);
+			COMMUNITY_PREMIUM_PRICE_PER_DAY = CustomSettings.getInt("CommunityPremiumPricePerDay", 1000000);
 			
 			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
 			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);
@@ -2959,12 +2971,15 @@ public final class Config
 			final Properties hexSetting = new Properties();
 			final File file = new File(fileName);
 			// Create a new empty file only if it doesn't exist
-			file.createNewFile();
-			try (OutputStream out = new FileOutputStream(file))
+			if (!file.exists())
 			{
-				hexSetting.setProperty("ServerID", String.valueOf(serverId));
-				hexSetting.setProperty("HexID", hexId);
-				hexSetting.store(out, "The HexId to Auth into LoginServer");
+				try (OutputStream out = new FileOutputStream(file))
+				{
+					hexSetting.setProperty("ServerID", String.valueOf(serverId));
+					hexSetting.setProperty("HexID", hexId);
+					hexSetting.store(out, "The HexId to Auth into LoginServer");
+					_log.log(Level.INFO, "Gameserver: Generated new HexID file for server id " + serverId + ".");
+				}
 			}
 		}
 		catch (Exception e)

@@ -408,6 +408,11 @@ public class ItemTable
 		return _weapons.keySet();
 	}
 	
+	public L2Item[] getAllItems()
+	{
+		return _allTemplates;
+	}
+	
 	public int getArraySize()
 	{
 		return _allTemplates.length;
