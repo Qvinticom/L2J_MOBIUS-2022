@@ -3,9 +3,11 @@ L2J-Mobius Classic 2.0
 Client: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
-What has is done
+What is done
 -Classic packet compatibility
 -Parsed item data from client
+-Proper Daily Mission rewards
+-Zone changes to match starting locations
 -Parsed dummy skills from 2.0 client
 -Parsed most skill names from 1.5 client (need 2.0 SkillName_Classic-eu)
 -Parsed NPC names from client
@@ -16,12 +18,12 @@ What has is done
 -Further manual NPC corrections from L2Wiki
 
 TODO list
--Retail gatekeeper prices
+-Retail gatekeeper teleports
 -Parse retail monster spawns by zone
 -Make further manual spawn fixes
 -Fix skill levels
--NPC dialogs
--NPC Buylists
+-Retail NPC dialogs
+-Retail NPC buylists
 -Tutorial quest
 -Class transfer quests
 -Other quests
