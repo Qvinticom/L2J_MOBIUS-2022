@@ -16,6 +16,7 @@ What has is done
 -Further manual NPC corrections from L2Wiki
 
 TODO list
+-Retail gatekeeper prices
 -Parse retail monster spawns by zone
 -Make further manual spawn fixes
 -Fix skill levels
