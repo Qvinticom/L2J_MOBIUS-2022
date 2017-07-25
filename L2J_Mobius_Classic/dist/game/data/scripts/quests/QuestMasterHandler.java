@@ -19,6 +19,8 @@ package quests;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import quests.Q00255_Tutorial.Q00255_Tutorial;
+
 /**
  * @author NosBit
  */
@@ -28,7 +30,7 @@ public class QuestMasterHandler
 	
 	private static final Class<?>[] QUESTS =
 	{
-		// Q00013_ParcelDelivery.class,
+		Q00255_Tutorial.class,
 	};
 	
 	public static void main(String[] args)
