@@ -2254,7 +2254,7 @@
 			<height normal="39" grown="48" />
 		</collision>
 	</npc>
-	<npc id="20950" level="60" type="L2Npc" name="Innersen">
+	<npc id="20950" level="60" type="L2Monster" name="Innersen">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -5573,7 +5573,7 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="20996" level="50" type="L2Npc" name="Spiteful Ghost of Ruins">
+	<npc id="20996" level="50" type="L2Monster" name="Spiteful Ghost of Ruins">
 		<!-- L2wiki: https://l2wiki.com/classic/Spiteful_Ghost_of_Ruins -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -5643,7 +5643,7 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="20997" level="51" type="L2Npc" name="Soldier of Grief">
+	<npc id="20997" level="51" type="L2Monster" name="Soldier of Grief">
 		<!-- L2wiki: https://l2wiki.com/classic/Soldier_of_Grief -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />

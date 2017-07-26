@@ -536,49 +536,94 @@
 		</drop_lists>
 	</npc>
 	<npc id="21108" level="67" type="L2Monster" name="Glow Wisp">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- L2wiki: https://l2wiki.com/classic/Glow_Wisp -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="DDMagic1" id="4100" level="6" /> <!-- NPC Prominence -->
+			<skill name="DDMagic2" id="4039" level="6" /> <!-- NPC MP Drain -->
+			<skill name="DeBuff" id="4076" level="3" /> <!-- Decrease Speed -->
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
+		<acquire exp="30058" sp="901" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2295.48154" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<vitals hp="4653" hpRegen="7.5" mp="1251" mpRegen="2.7" />
 			<speed>
 				<walk ground="80" />
 				<run ground="160" />
 			</speed>
+			<hit_time>100</hit_time>
 			<attack physical="624.93199" magical="426.74754" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4280" level="1" /> <!-- Water Vulnerability -->
 			<skill id="4276" level="1" /> <!-- Bow / Crossbow Vulnerability -->
 		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ALL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="13" />
 			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="21109" level="68" type="L2Monster" name="Hames Orc Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<!-- L2wiki: https://l2wiki.com/classic/Hames_Orc_Scout -->
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="DaggerBackAttack" value="1" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="PhysicalSpecial" id="4067" level="6" /> <!-- NPC Mortal Blow -->
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="229" /> <!-- rhand: Kris -->
+		<acquire exp="9698" sp="937" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2345.76698" hpRegen="7.5" mp="1282.4" mpRegen="2.7" />
 			<speed>
 				<walk ground="45" />
 				<run ground="185" />
 			</speed>
+			<hit_time>460</hit_time>
 			<attack physical="565.40722" magical="441.25696" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="243.407275" magical="209.54692" evasion="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai type="BALANCED" aggroRange="350" clanHelpRange="400" isAggressive="false">
+			<clan_list>
+				<clan>ORC</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="12" />
 			<height normal="29" />

@@ -4,7 +4,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- Carnage Bow -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="31866.8020137814" hpRegen="91.4930863014358" mp="1641.0" mpRegen="3" />
 			<attack physical="2848.82203115447" magical="1105.91356508692" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="505.60512" magical="493.3" evasion="-18" />
@@ -39,7 +39,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="23781.1955326727" hpRegen="91.4930863014358" mp="1641.0" mpRegen="3" />
 			<attack physical="2848.82203115447" magical="1105.91356508692" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="505.60512" magical="493.3" evasion="-18" />
@@ -124,7 +124,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="213" /> <!-- Branch of the Mother Tree -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="34165.7207559158" hpRegen="92.3387631310317" mp="1830.722" mpRegen="3" />
 			<attack physical="3854.12430279486" magical="1994.73682918201" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-15" />
@@ -164,7 +164,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" lhand="6919" /> <!-- Damascus Sword / Monster Only (Shield of Ketra Orc) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="50993.613068531" hpRegen="92.3387631310317" mp="1830.722" mpRegen="3" />
 			<attack physical="5781.33098746697" magical="4488.35423115713" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-15" shield="708" shieldRate="20" />
@@ -302,7 +302,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="37741.4365366214" hpRegen="92.3387631310317" mp="1994.708" mpRegen="3" />
 			<attack physical="5781.33098746697" magical="4488.35423115713" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-12" />
@@ -339,7 +339,7 @@
 	<npc id="25308" level="80" type="L2Monster" name="Family of Nastron" title="Raid Fighter">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="18870.7182683107" hpRegen="92.3387631310317" mp="1994.708" mpRegen="3" />
 			<attack physical="2890.66549373349" magical="1122.08855778928" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-12" />
@@ -430,7 +430,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="47562.3910653454" hpRegen="91.4930863014358" mp="1641.0" mpRegen="3" />
 			<attack physical="5697.64406230895" magical="4423.65426034769" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="505.60512" magical="493.3" evasion="-18" shield="674" shieldRate="20" />
@@ -466,7 +466,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="23781.1955326727" hpRegen="91.4930863014358" mp="1641.0" mpRegen="3" />
 			<attack physical="2848.82203115447" magical="1105.91356508692" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="505.60512" magical="493.3" evasion="-18" />
@@ -551,7 +551,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="50993.613068531" hpRegen="92.3387631310317" mp="1830.722" mpRegen="3" />
 			<attack physical="2890.66549373349" magical="1122.08855778928" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-15" />
@@ -588,7 +588,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="25496.8065342655" hpRegen="92.3387631310317" mp="1830.722" mpRegen="3" />
 			<attack physical="2890.66549373349" magical="1122.08855778928" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-15" />
@@ -726,7 +726,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="37741.4365366214" hpRegen="92.3387631310317" mp="1994.708" mpRegen="3" />
 			<attack physical="5781.33098746697" magical="4488.35423115713" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-12" />
@@ -763,7 +763,7 @@
 	<npc id="25318" level="80" type="L2Monster" name="Family of Ashutar" title="Raid Fighter">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="18870.7182683107" hpRegen="92.3387631310317" mp="1994.708" mpRegen="3" />
 			<attack physical="2890.66549373349" magical="1122.08855778928" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-12" />
@@ -853,7 +853,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="48632.4656466246" hpRegen="139.474076658488" mp="1884.48" mpRegen="3.12" />
 			<attack physical="7413.2545534839" magical="7859.00328968377" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="558.2728788" magical="544.6896" evasion="-14" />
@@ -896,7 +896,7 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="72585.7696218277" hpRegen="139.474076658488" mp="1884.48" mpRegen="3.12" />
 			<attack physical="5560.07991711085" magical="4420.88276406805" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="558.2728788" magical="544.6896" evasion="-14" />
@@ -985,7 +985,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="99" /> <!-- Apprentice's Spellbook -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="36887.5737958898" hpRegen="79.6115910136094" mp="1188.8" mpRegen="2.7" />
 			<attack physical="2595.52117740397" magical="1246.88892158742" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="407.835495" magical="397.92" evasion="-18" />
@@ -1027,7 +1027,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="178" /> <!-- Bone Staff -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="55056.0802923729" hpRegen="79.6115910136094" mp="1188.8" mpRegen="2.7" />
 			<attack physical="3893.37910058347" magical="2805.62281957004" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="407.835495" magical="397.92" evasion="-18" />
@@ -1117,7 +1117,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="58887.3167955979" hpRegen="83.5603013365645" mp="1314.0" mpRegen="2.7" />
 			<attack physical="4493.83416522179" magical="3218.1584430212" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="436.725945" magical="426.1" evasion="-18" />
@@ -1153,7 +1153,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="6718" /> <!-- Monster Only (Einhasad Shaman) -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="29443.6583977989" hpRegen="83.5603013365645" mp="1314.0" mpRegen="2.7" />
 			<attack physical="2246.91708261089" magical="804.539610755299" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="436.725945" magical="426.1" evasion="-18" />
@@ -1242,7 +1242,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="40026.986837187" hpRegen="84.4129073248345" mp="1345.8" mpRegen="2.7" />
 			<attack physical="3092.30943628943" magical="1480.92251235857" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="443.873955" magical="433.08" evasion="-18" />
@@ -1285,7 +1285,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="40026.986837187" hpRegen="84.4129073248345" mp="1345.8" mpRegen="2.7" />
 			<attack physical="3092.30943628943" magical="1480.92251235857" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="443.873955" magical="433.08" evasion="-18" />
@@ -1328,7 +1328,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="40026.986837187" hpRegen="84.4129073248345" mp="1345.8" mpRegen="2.7" />
 			<attack physical="3092.30943628943" magical="1480.92251235857" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="443.873955" magical="433.08" evasion="-18" />
@@ -1370,7 +1370,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="234" /> <!-- Demon's Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="59741.7713987865" hpRegen="84.4129073248345" mp="1345.8" mpRegen="2.7" />
 			<attack physical="4638.58011893711" magical="3332.22143749468" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="443.873955" magical="433.08" evasion="-18" />
@@ -1760,7 +1760,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="33541.6419443144" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="1715.74219599948" magical="974.826217605108" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -1798,7 +1798,7 @@
 	<npc id="25341" level="80" type="L2Monster" name="Knight of Shadow">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="16770.8209721572" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="1715.74219599948" magical="974.826217605108" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -1888,7 +1888,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="33541.6419443144" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="1715.74219599948" magical="974.826217605108" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -1926,7 +1926,7 @@
 	<npc id="25344" level="80" type="L2Monster" name="Knight of Shadow">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="22472.9001026906" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="1715.74219599948" magical="974.826217605108" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -1966,7 +1966,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="22472.9001026906" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="2287.59906992611" magical="1732.9485670366" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -2057,7 +2057,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="22472.9001026906" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="2287.59906992611" magical="1732.9485670366" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -2099,7 +2099,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="78" /> <!-- Great Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="33541.6419443144" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="3431.48439199896" magical="3899.30487042043" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -2195,7 +2195,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="22472.9001026906" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="2287.59906992611" magical="1732.9485670366" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -2237,7 +2237,7 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="33541.6419443144" hpRegen="71.614397311965" mp="1674.8" mpRegen="3" />
 			<attack physical="1715.74219599948" magical="974.826217605108" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="512.0625" magical="499.6" evasion="-18" />
@@ -2323,7 +2323,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="5410" hpRegen="20.9291966395288" mp="315.12" mpRegen="1.5" />
 			<attack physical="410.881184697441" magical="104.90220368531" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="172.50897" magical="168.32" evasion="-18" />
@@ -2411,7 +2411,7 @@
 	<npc id="25355" level="34" type="L2Monster" name="Sirocco's Gargoyle" title="Raid Fighter">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3473" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
 			<attack physical="303.485602119585" magical="48.1624477605241" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
@@ -2451,7 +2451,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="6947" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
 			<attack physical="606.971204239169" magical="192.649791042096" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
@@ -2540,7 +2540,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="216" /> <!-- Dirk -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3891" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
 			<attack physical="195.300657715485" magical="38.1182001422702" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="130.305735" magical="127.14" evasion="-18" />
@@ -2580,7 +2580,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- Mace of Prayer -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3891" hpRegen="16.5400323223535" mp="192.0" mpRegen="1.2" />
 			<attack physical="97.6503288577427" magical="9.52955003556756" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="130.305735" magical="127.14" evasion="-18" />
@@ -2664,7 +2664,7 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4574" hpRegen="18.4385313667577" mp="259.2" mpRegen="1.5" />
 			<attack physical="296.889275521805" magical="74.8747587642184" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="152.752995" magical="149.04" evasion="-18" />
@@ -2747,7 +2747,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2" /> <!-- Long Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2061" hpRegen="42.8942203568865" mp="218.52" mpRegen="1.5" />
 			<attack physical="115.593111188517" magical="14.544467728838" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="277.97082" magical="135.6" evasion="-18" />
@@ -2782,7 +2782,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2507" /> <!-- Lizardspear -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2762" hpRegen="42.8942203568865" mp="218.52" mpRegen="1.5" />
 			<attack physical="115.593111188517" magical="14.544467728838" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="277.97082" magical="135.6" evasion="-18" />
@@ -2916,7 +2916,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="1" lhand="102" /> <!-- Short Sword / Round Shield -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4123" hpRegen="17.1576881427546" mp="218.52" mpRegen="1.5" />
 			<attack physical="231.186222377034" magical="58.1778709153521" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="138.98541" magical="135.6" evasion="-18" shield="185" shieldRate="20" />
@@ -2956,7 +2956,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="179" /> <!-- Mace of Prayer -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4123" hpRegen="17.1576881427546" mp="218.52" mpRegen="1.5" />
 			<attack physical="115.593111188517" magical="14.544467728838" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="138.98541" magical="135.6" evasion="-18" />
@@ -3050,7 +3050,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4408" hpRegen="17.9607701717791" mp="245.52" mpRegen="1.5" />
 			<attack physical="273.281811447597" magical="68.8120420631729" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="148.063785" magical="144.46" evasion="-18" />
@@ -3090,7 +3090,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2204" hpRegen="17.9607701717791" mp="245.52" mpRegen="1.5" />
 			<attack physical="136.640905723798" magical="17.2030105157932" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="148.063785" magical="144.46" evasion="-18" />
@@ -3229,7 +3229,7 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3891" hpRegen="41.3500808058837" mp="192.0" mpRegen="1.2" />
 			<attack physical="97.6503288577427" magical="9.52955003556756" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="260.61147" magical="127.14" evasion="-18" />
@@ -3317,7 +3317,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3793" hpRegen="16.2943663177076" mp="183.28" mpRegen="1.2" />
 			<attack physical="179.477904052609" magical="33.8323268495015" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="126.11457" magical="123.04" evasion="-18" />
@@ -3360,7 +3360,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3793" hpRegen="16.2943663177076" mp="183.28" mpRegen="1.2" />
 			<attack physical="89.7389520263043" magical="8.45808171237537" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="126.11457" magical="123.04" evasion="-18" />
@@ -3654,7 +3654,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="6589" hpRegen="24.5170941308607" mp="372.96" mpRegen="1.8" />
 			<attack physical="562.230118784958" magical="179.112100596385" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="193.846425" magical="189.14" evasion="-18" />
@@ -3749,7 +3749,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" /> <!-- Knight's Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="7333" hpRegen="26.794392073316" mp="402.6" mpRegen="1.8" />
 			<attack physical="654.782594587805" magical="206.879948405209" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="205.09422" magical="200.1" evasion="-18" />
@@ -3789,7 +3789,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3666" hpRegen="26.794392073316" mp="402.6" mpRegen="1.8" />
 			<attack physical="327.391297293902" magical="51.7199871013021" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="205.09422" magical="200.1" evasion="-18" />
@@ -3875,7 +3875,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4654" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
 			<attack physical="303.485602119585" magical="48.1624477605241" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
@@ -3910,7 +3910,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="128" /> <!-- Knight's Sword -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="3473" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
 			<attack physical="303.485602119585" magical="48.1624477605241" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />
@@ -4062,7 +4062,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- Kukuri -->
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="5951" hpRegen="22.5711585980223" mp="343.8" mpRegen="1.8" />
 			<attack physical="481.334007030119" magical="148.973617630946" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="182.982285" magical="178.54" evasion="-18" />
@@ -4199,7 +4199,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12129" hpRegen="103.367606069297" mp="584.0" mpRegen="2.1" />
 			<attack physical="624.124257296051" magical="130.530898435504" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="520.30656" magical="253.82" evasion="-18" />
@@ -4238,7 +4238,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="12129" hpRegen="103.367606069297" mp="584.0" mpRegen="2.1" />
 			<attack physical="624.124257296051" magical="130.530898435504" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="520.30656" magical="253.82" evasion="-18" />
@@ -4327,7 +4327,7 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="4654" hpRegen="25.6128307622386" mp="387.72" mpRegen="1.8" />
 			<attack physical="404.637353306042" magical="85.6183833838837" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="199.4229" magical="194.58" evasion="-18" />

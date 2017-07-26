@@ -2872,22 +2872,32 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="21652" level="75" type="L2Npc" name="Fiery Ifrit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="21652" level="75" type="L2Monster" name="Fiery Ifrit">
+		<!-- L2wiki: https://l2wiki.com/classic/Fiery_Ifrit -->
+		<parameters>
+			<param name="MoveAroundSocial" value="62" />
+			<param name="MoveAroundSocial1" value="62" />
+			<param name="MoveAroundSocial2" value="62" />
+		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
+		<acquire exp="6750" sp="202" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14211.76935" hpRegen="42.5" mp="1641" mpRegen="3" />
+			<vitals hp="4461" hpRegen="42.5" mp="1507" mpRegen="3" />
+			<attack physical="766.0603913" magical="597.85136" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="337.07008" magical="246.65326" />
 			<speed>
 				<walk ground="25" />
 				<run ground="165" />
 			</speed>
-			<attack physical="766.0603913" magical="597.85136" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="337.07008" magical="246.65326" />
+			<hit_time>580</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4085" level="1" /> <!-- Critical damage -->
+			<skill id="4086" level="1" /> <!-- Critical rate -->
 		</skill_list>
 		<collision>
 			<radius normal="15" />
@@ -2914,22 +2924,32 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="21653" level="75" type="L2Npc" name="Ikedit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="21653" level="75" type="L2Monster" name="Ikedit">
+		<!-- L2wiki: https://l2wiki.com/classic/Ikedit -->
+		<parameters>
+			<param name="MoveAroundSocial" value="62" />
+			<param name="MoveAroundSocial1" value="62" />
+			<param name="MoveAroundSocial2" value="62" />
+		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
+		<acquire exp="6750" sp="202" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14401.8814" hpRegen="42.5" mp="1674.8" mpRegen="3" />
+			<vitals hp="4461" hpRegen="42.5" mp="15078" mpRegen="3" />
+			<attack physical="894.75854" magical="611.00409" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="341.375" magical="249.80341" />
 			<speed>
 				<walk ground="45" />
 				<run ground="165" />
 			</speed>
-			<attack physical="894.75854" magical="611.00409" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
+			<hit_time>590</hit_time>
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4085" level="1" /> <!-- Critical damage -->
+			<skill id="4086" level="1" /> <!-- Critical rate -->
 		</skill_list>
 		<collision>
 			<radius normal="19" />
@@ -2957,7 +2977,7 @@
 			</corpse>
 		</drop_lists>
 	</npc>
-	<npc id="21654" level="81" type="L2Npc" name="Dreco" title="Earth Guardian">
+	<npc id="21654" level="81" type="L2Monster" name="Dreco" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2970,7 +2990,7 @@
 			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
@@ -2979,7 +2999,7 @@
 			<height normal="48" />
 		</collision>
 	</npc>
-	<npc id="21655" level="82" type="L2Npc" name="Raido" title="Earth Guardian">
+	<npc id="21655" level="82" type="L2Monster" name="Raido" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -2992,7 +3012,7 @@
 			<attack physical="1294.297202" magical="636.31188" random="30" critical="4" accuracy="4.75" attackSpeed="182" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
@@ -3001,7 +3021,7 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="21656" level="84" type="L2Npc" name="Golem" title="Earth Guardian">
+	<npc id="21656" level="84" type="L2Monster" name="Golem" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -3014,7 +3034,7 @@
 			<attack physical="966.61544" magical="660.07304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
@@ -3023,7 +3043,7 @@
 			<height normal="49" />
 		</collision>
 	</npc>
-	<npc id="21657" level="85" type="L2Npc" name="Wyrm" title="Earth Guardian">
+	<npc id="21657" level="85" type="L2Monster" name="Wyrm" title="Earth Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>MALE</sex>
@@ -3036,7 +3056,7 @@
 			<attack physical="983.0479" magical="671.29428" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
