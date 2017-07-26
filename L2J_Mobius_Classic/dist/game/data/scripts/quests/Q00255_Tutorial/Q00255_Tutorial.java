@@ -134,10 +134,13 @@ public class Q00255_Tutorial extends Quest
 			}
 			case "start_newbie_tutorial":
 			{
-				qs.startQuest();
-				qs.setMemoState(1);
-				playTutorialVoice(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getSound());
-				showTutorialHtml(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getHtml());
+				if (!qs.isCompleted())
+				{
+					qs.startQuest();
+					qs.setMemoState(1);
+					playTutorialVoice(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getSound());
+					showTutorialHtml(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getHtml());
+				}
 				break;
 			}
 			case "goto_newbie_guide":
@@ -273,12 +276,9 @@ public class Q00255_Tutorial extends Quest
 		}
 		
 		QuestState qs = getQuestState(player, true);
-		if (qs != null)
+		if ((qs != null) && !qs.isCompleted() && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
 		{
-			if (!qs.isCompleted() && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
-			{
-				startQuestTimer("start_newbie_tutorial", 5000, null, player);
-			}
+			startQuestTimer("start_newbie_tutorial", 5000, null, player);
 		}
 	}
 	
