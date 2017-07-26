@@ -234,6 +234,10 @@ public final class SkillTreesData implements IGameXmlReader
 								}
 								
 								final L2SkillLearn skillLearn = new L2SkillLearn(learnSkillSet);
+								
+								// test if skill exists
+								SkillData.getInstance().getSkill(skillLearn.getSkillId(), skillLearn.getSkillLevel());
+								
 								for (Node b = c.getFirstChild(); b != null; b = b.getNextSibling())
 								{
 									attrs = b.getAttributes();
