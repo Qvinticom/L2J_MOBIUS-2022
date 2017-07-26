@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.HtmlActionScope;
+import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -33,11 +35,13 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypas
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerItemPickup;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
+import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 
 /**
@@ -53,11 +57,6 @@ public class Q00255_Tutorial extends Quest
 	private final static int STARTING_HELPER_DE = 30131;
 	private final static int STARTING_HELPER_OR = 30575;
 	private final static int STARTING_HELPER_DW = 30530;
-	private final static int NEWBIE_BUFFER_HU = 30598;
-	private final static int NEWBIE_BUFFER_EL = 30599;
-	private final static int NEWBIE_BUFFER_DE = 30600;
-	private final static int NEWBIE_BUFFER_OR = 30602;
-	private final static int NEWBIE_BUFFER_DW = 30601;
 	// Monsters
 	private final static int[] GREMLINS =
 	{
@@ -66,6 +65,8 @@ public class Q00255_Tutorial extends Quest
 	};
 	// Items
 	private final static int BLUE_GEM = 6353;
+	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 100);
+	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
 	{
@@ -109,7 +110,6 @@ public class Q00255_Tutorial extends Quest
 	{
 		super(255);
 		addTalkId(STARTING_HELPER_HF, STARTING_HELPER_HM, STARTING_HELPER_EL, STARTING_HELPER_DE, STARTING_HELPER_OR, STARTING_HELPER_DW);
-		addFirstTalkId(NEWBIE_BUFFER_HU, NEWBIE_BUFFER_EL, NEWBIE_BUFFER_DE, NEWBIE_BUFFER_OR, NEWBIE_BUFFER_DW);
 		addKillId(GREMLINS);
 		registerQuestItems(BLUE_GEM);
 	}
@@ -135,7 +135,7 @@ public class Q00255_Tutorial extends Quest
 			case "user_connected":
 			{
 				// start the newbie tutorial
-				if (!qs.isCompleted() && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
+				if ((qs.getMemoState() < 4) && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
 				{
 					startQuestTimer("start_newbie_tutorial", 5000, null, player);
 				}
@@ -155,7 +155,8 @@ public class Q00255_Tutorial extends Quest
 				{
 					playTutorialVoice(player, "tutorial_voice_011");
 					playSound(player, "ItemSound.quest_tutorial");
-					htmltext = "tutorial_09.html";
+					player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "tutorial_09t.html")));
+					return null;
 				}
 				break;
 			}
@@ -171,6 +172,12 @@ public class Q00255_Tutorial extends Quest
 				}
 				break;
 			}
+			case "close_tutorial":
+			{
+				player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+				player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+				return null;
+			}
 		}
 		return htmltext;
 	}
@@ -178,46 +185,28 @@ public class Q00255_Tutorial extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		
-		switch (npc.getId())
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && (qs.getMemoState() < 4) && (qs.getMemoState() > 1) && hasQuestItems(player, BLUE_GEM))
 		{
-			case STARTING_HELPER_HF:
-			case STARTING_HELPER_HM:
-			case STARTING_HELPER_EL:
-			case STARTING_HELPER_DE:
-			case STARTING_HELPER_OR:
-			case STARTING_HELPER_DW:
+			qs.setMemoState(4); // finish here!
+			takeItems(player, BLUE_GEM, -1);
+			final int classId = player.getClassId().getId();
+			addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
+			playSound(player, "ItemSound.quest_tutorial");
+			if (player.isMageClass() && (player.getRace() != Race.ORC))
 			{
-				if ((qs.getMemoState() > 2) || hasQuestItems(player, BLUE_GEM))
-				{
-					takeItems(player, BLUE_GEM, -1);
-					final int classId = player.getClassId().getId();
-					qs.setMemoState(4);
-					addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
-					playSound(player, "ItemSound.quest_tutorial");
-					htmltext = "tutorial_15.html";
-				}
-				else if (!hasQuestItems(player, BLUE_GEM))
-				{
-					htmltext = "tutorial_09.html";
-				}
-				break;
+				giveItems(player, SPIRITSHOT_REWARD);
+			}
+			else
+			{
+				giveItems(player, SOULSHOT_REWARD);
 			}
 		}
-		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.getMemoState() == 4))
+		if ((qs != null) && (qs.getMemoState() > 1))
 		{
-			qs.exitQuest(false, false);
+			return "tutorial_15.html";
 		}
-		return npc.getId() + ".html";
+		return "tutorial_09.html";
 	}
 	
 	@Override
@@ -253,7 +242,8 @@ public class Q00255_Tutorial extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.getMemoState() == 1))
 		{
-			player.sendPacket(TutorialCloseHtml.STATIC_PACKET); // FIXME: close does not work?
+			player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
+			player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 			qs.setMemoState(2);
 			playTutorialVoice(player, "tutorial_voice_013");
 			playSound(player, "ItemSound.quest_tutorial");
@@ -265,7 +255,8 @@ public class Q00255_Tutorial extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		if (event.getMarkId() == 1) // tutorial mark
+		final QuestState qs = getQuestState(event.getActiveChar(), false);
+		if ((qs != null) && (qs.getMemoState() < 4) && (event.getMarkId() == 1)) // tutorial mark
 		{
 			startQuestTimer("goto_newbie_guide", 100, null, event.getActiveChar());
 		}
