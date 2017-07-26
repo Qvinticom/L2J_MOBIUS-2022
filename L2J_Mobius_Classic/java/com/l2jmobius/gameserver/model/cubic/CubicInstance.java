@@ -89,7 +89,7 @@ public class CubicInstance
 					final L2Character target = findTarget(cubicSkill);
 					if (target != null)
 					{
-						_caster.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
+						_owner.broadcastPacket(new MagicSkillUse(_owner, target, skill.getDisplayId(), skill.getDisplayLevel(), skill.getHitTime(), skill.getReuseDelay()));
 						skill.activateSkill(_owner, target);
 						break;
 					}
