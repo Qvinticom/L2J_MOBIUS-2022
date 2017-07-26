@@ -65,8 +65,8 @@ public class Q00255_Tutorial extends Quest
 	};
 	// Items
 	private final static int BLUE_GEM = 6353;
-	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 100);
-	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
+	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 400);
+	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 400);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
 	{

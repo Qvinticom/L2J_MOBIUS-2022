@@ -187,7 +187,7 @@ public class HtmCache
 	 */
 	public boolean htmlNameExists(String search)
 	{
-		for (String s : _cache.keySet())
+		for (String s : _cache.values())
 		{
 			if (s.contains(search))
 			{
