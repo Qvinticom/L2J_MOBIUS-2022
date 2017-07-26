@@ -72,10 +72,10 @@ public class SupportMagic implements IBypassHandler
 	
 	// Levels
 	private static final int LOWEST_LEVEL = 6;
-	private static final int HIGHEST_LEVEL = 75;
+	private static final int HIGHEST_LEVEL = 40;
 	private static final int CUBIC_LOWEST = 16;
 	private static final int CUBIC_HIGHEST = 34;
-	private static final int HASTE_LEVEL_2 = 40;
+	private static final int HASTE_LEVEL_2 = HIGHEST_LEVEL + 1; // disabled
 	
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
