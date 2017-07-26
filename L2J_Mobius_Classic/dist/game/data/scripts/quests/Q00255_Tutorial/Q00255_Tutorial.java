@@ -129,16 +129,7 @@ public class Q00255_Tutorial extends Quest
 			case "tutorial_02.html":
 			{
 				playTutorialVoice(player, "tutorial_voice_003");
-				htmltext = event;
-				break;
-			}
-			case "user_connected":
-			{
-				// start the newbie tutorial
-				if ((qs.getMemoState() < 4) && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
-				{
-					startQuestTimer("start_newbie_tutorial", 5000, null, player);
-				}
+				showTutorialHtml(player, event);
 				break;
 			}
 			case "start_newbie_tutorial":
@@ -146,18 +137,7 @@ public class Q00255_Tutorial extends Quest
 				qs.startQuest();
 				qs.setMemoState(1);
 				playTutorialVoice(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getSound());
-				htmltext = STARTING_VOICE_HTML.get(player.getClassId().getId()).getHtml();
-				break;
-			}
-			case "newbie_pick_up_items":
-			{
-				if (qs.getMemoState() <= 1)
-				{
-					playTutorialVoice(player, "tutorial_voice_011");
-					playSound(player, "ItemSound.quest_tutorial");
-					player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "tutorial_09t.html")));
-					return null;
-				}
+				showTutorialHtml(player, STARTING_VOICE_HTML.get(player.getClassId().getId()).getHtml());
 				break;
 			}
 			case "goto_newbie_guide":
@@ -176,7 +156,7 @@ public class Q00255_Tutorial extends Quest
 			{
 				player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 				player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
-				return null;
+				break;
 			}
 		}
 		return htmltext;
@@ -186,13 +166,9 @@ public class Q00255_Tutorial extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && (qs.getMemoState() < 4) && (qs.getMemoState() > 1) && hasQuestItems(player, BLUE_GEM))
+		if ((qs != null) && !qs.isCompleted() && (qs.getMemoState() > 1) && hasQuestItems(player, BLUE_GEM))
 		{
-			qs.setMemoState(4); // finish here!
-			takeItems(player, BLUE_GEM, -1);
-			final int classId = player.getClassId().getId();
-			addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
-			playSound(player, "ItemSound.quest_tutorial");
+			qs.exitQuest(false, false); // finish here!
 			if (player.isMageClass() && (player.getRace() != Race.ORC))
 			{
 				giveItems(player, SPIRITSHOT_REWARD);
@@ -201,8 +177,11 @@ public class Q00255_Tutorial extends Quest
 			{
 				giveItems(player, SOULSHOT_REWARD);
 			}
+			final int classId = player.getClassId().getId();
+			addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
+			playSound(player, "ItemSound.quest_tutorial");
 		}
-		if ((qs != null) && (qs.getMemoState() > 1))
+		if ((qs != null) && (qs.isCompleted() || (qs.getMemoState() > 1)))
 		{
 			return "tutorial_15.html";
 		}
@@ -226,7 +205,12 @@ public class Q00255_Tutorial extends Quest
 			}
 			if (counter < 10) // do not drop if more than 10
 			{
-				startQuestTimer("newbie_pick_up_items", 100, null, killer);
+				if (qs.getMemoState() <= 1)
+				{
+					playSound(killer, "ItemSound.quest_tutorial");
+					playTutorialVoice(killer, "tutorial_voice_011");
+					showTutorialHtml(killer, "tutorial_09t.html");
+				}
 				npc.dropItem(killer, BLUE_GEM, 1);
 			}
 		}
@@ -245,8 +229,8 @@ public class Q00255_Tutorial extends Quest
 			player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 			player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 			qs.setMemoState(2);
-			playTutorialVoice(player, "tutorial_voice_013");
 			playSound(player, "ItemSound.quest_tutorial");
+			playTutorialVoice(player, "tutorial_voice_013");
 			player.sendPacket(new TutorialShowQuestionMark(0, 1));
 		}
 	}
@@ -256,9 +240,9 @@ public class Q00255_Tutorial extends Quest
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
 		final QuestState qs = getQuestState(event.getActiveChar(), false);
-		if ((qs != null) && (qs.getMemoState() < 4) && (event.getMarkId() == 1)) // tutorial mark
+		if ((qs != null) && (event.getMarkId() == 1)) // tutorial mark
 		{
-			startQuestTimer("goto_newbie_guide", 100, null, event.getActiveChar());
+			notifyEvent("goto_newbie_guide", null, event.getActiveChar());
 		}
 	}
 	
@@ -291,8 +275,16 @@ public class Q00255_Tutorial extends Quest
 		QuestState qs = getQuestState(player, true);
 		if (qs != null)
 		{
-			notifyEvent("user_connected", null, player);
+			if (!qs.isCompleted() && STARTING_VOICE_HTML.containsKey(player.getClassId().getId()))
+			{
+				startQuestTimer("start_newbie_tutorial", 5000, null, player);
+			}
 		}
+	}
+	
+	private void showTutorialHtml(L2PcInstance player, String html)
+	{
+		player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), html)));
 	}
 	
 	public void playTutorialVoice(L2PcInstance player, String voice)
