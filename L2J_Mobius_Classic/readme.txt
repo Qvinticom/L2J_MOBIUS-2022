@@ -16,6 +16,12 @@ What is done
 -Skilltrees info from L2Wiki
 -Parsed NPC droplists from L2Wiki
 -Further manual NPC corrections from L2Wiki
+-Basic Tutorial quest
+
+Custom work
+Start NPC dialogs until Newbie Helper
+Newbie Helper NPC location info
+Newbie Helper buff support until 40 level
 
 TODO list
 -Retail gatekeeper teleports
@@ -24,6 +30,5 @@ TODO list
 -Fix skill levels
 -Retail NPC dialogs
 -Retail NPC buylists
--Tutorial quest
 -Class transfer quests
 -Other quests
