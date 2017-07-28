@@ -90,6 +90,10 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 						{
 							htmltext += "mystic.html";
 						}
+						else
+						{
+							htmltext += "no.html";
+						}
 					}
 					else if (npc instanceof L2VillageMasterFighterInstance)
 					{
