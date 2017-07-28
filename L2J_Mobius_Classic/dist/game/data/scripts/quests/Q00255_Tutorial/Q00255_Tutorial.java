@@ -66,7 +66,7 @@ public class Q00255_Tutorial extends Quest
 	// Items
 	private final static int BLUE_GEM = 6353;
 	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 400);
-	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 400);
+	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 200);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
 	{
@@ -175,10 +175,12 @@ public class Q00255_Tutorial extends Quest
 			if (player.isMageClass() && (player.getRace() != Race.ORC))
 			{
 				giveItems(player, SPIRITSHOT_REWARD);
+				playTutorialVoice(player, "tutorial_voice_027");
 			}
 			else
 			{
 				giveItems(player, SOULSHOT_REWARD);
+				playTutorialVoice(player, "tutorial_voice_026");
 			}
 			final int classId = player.getClassId().getId();
 			addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
