@@ -169,6 +169,7 @@ public class AdminGeodata implements IAdminCommandHandler
 				{
 					activeChar.sendMessage("NPC " + id + " does not have a default html.");
 				}
+				activeChar.sendMessage("Found " + results.size() + " results.");
 				break;
 			}
 		}

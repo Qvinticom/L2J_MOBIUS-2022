@@ -189,7 +189,14 @@ public class HtmCache
 	{
 		for (String s : _cache.keySet())
 		{
-			if (s.contains(search))
+			if (s.contains(search) && (!s.contains("quest")))
+			{
+				return true;
+			}
+		}
+		for (String s : _cache.values())
+		{
+			if (s.contains(search) && (!s.contains("quest")))
 			{
 				return true;
 			}
