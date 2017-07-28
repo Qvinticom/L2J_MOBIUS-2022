@@ -199,9 +199,35 @@ public abstract class AbstractSagaQuest extends Quest
 					else
 					{
 						takeItems(player, Items[10], -1);
-						addExpAndSp(player, 2299404, 0);
-						giveAdena(player, 5000000, true);
-						giveItems(player, 6622, 1);
+						addExpAndSp(player, 3100000, 103000);
+						switch (player.getRace())
+						{
+							case HUMAN:
+							{
+								giveItems(player, 90038, 1);
+								break;
+							}
+							case ELF:
+							{
+								giveItems(player, 90039, 1);
+								break;
+							}
+							case DARK_ELF:
+							{
+								giveItems(player, 90040, 1);
+								break;
+							}
+							case ORC:
+							{
+								giveItems(player, 90042, 1);
+								break;
+							}
+							case DWARF:
+							{
+								giveItems(player, 90041, 1);
+								break;
+							}
+						}
 						int Class = getClassId(player);
 						int prevClass = getPrevClass(player);
 						player.setClassId(Class);
