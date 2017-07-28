@@ -971,9 +971,35 @@ public abstract class AbstractSagaQuest extends Quest
 								if ((getClassId(player) < 131) || (getClassId(player) > 135)) // in Kamael quests, npc wants to chat for a bit before changing class
 								{
 									st.exitQuest(false, true);
-									addExpAndSp(player, 2299404, 0);
-									giveAdena(player, 5000000, true);
-									giveItems(player, 6622, 1); // XXX rewardItems?
+									addExpAndSp(player, 3100000, 103000);
+									switch (player.getRace())
+									{
+										case HUMAN:
+										{
+											giveItems(player, 90038, 1);
+											break;
+										}
+										case ELF:
+										{
+											giveItems(player, 90039, 1);
+											break;
+										}
+										case DARK_ELF:
+										{
+											giveItems(player, 90040, 1);
+											break;
+										}
+										case ORC:
+										{
+											giveItems(player, 90042, 1);
+											break;
+										}
+										case DWARF:
+										{
+											giveItems(player, 90041, 1);
+											break;
+										}
+									}
 									int classId = getClassId(player);
 									int prevClass = getPrevClass(player);
 									player.setClassId(classId);
