@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="400" toLevel="10" name="Tribunal">
+	<skill id="400" toLevel="17" name="Tribunal">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -12,6 +12,13 @@
 			<value level="8">2</value>
 			<value level="9">2</value>
 			<value level="10">3</value>
+			<value level="11">3</value>
+			<value level="12">3</value>
+			<value level="13">3</value>
+			<value level="14">3</value>
+			<value level="15">3</value>
+			<value level="16">4</value>
+			<value level="17">4</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
@@ -30,6 +37,13 @@
 			<value level="8">-1524</value>
 			<value level="9">-1549</value>
 			<value level="10">-1570</value>
+			<value level="11">-1617</value>
+			<value level="12">-1634</value>
+			<value level="13">-1655</value>
+			<value level="14">-1667</value>
+			<value level="15">-1688</value>
+			<value level="16">-1703</value>
+			<value level="17">-1748</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>HOLY</attributeType>
@@ -39,16 +53,23 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
-			<value level="1">55</value>
-			<value level="2">58</value>
-			<value level="3">60</value>
-			<value level="4">62</value>
-			<value level="5">64</value>
-			<value level="6">66</value>
-			<value level="7">68</value>
-			<value level="8">70</value>
-			<value level="9">72</value>
-			<value level="10">74</value>
+			<value level="1">40</value>
+			<value level="2">43</value>
+			<value level="3">46</value>
+			<value level="4">49</value>
+			<value level="5">52</value>
+			<value level="6">55</value>
+			<value level="7">58</value>
+			<value level="8">60</value>
+			<value level="9">62</value>
+			<value level="10">64</value>
+			<value level="11">66</value>
+			<value level="12">68</value>
+			<value level="13">70</value>
+			<value level="14">72</value>
+			<value level="15">74</value>
+			<value level="16">76</value>
+			<value level="17">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -61,6 +82,13 @@
 			<value level="8">68</value>
 			<value level="9">70</value>
 			<value level="10">72</value>
+			<value level="11">74</value>
+			<value level="12">76</value>
+			<value level="13">78</value>
+			<value level="14">80</value>
+			<value level="15">82</value>
+			<value level="16">90</value>
+			<value level="17">92</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -80,16 +108,23 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">924</value>
-					<value level="2">1054</value>
-					<value level="3">1146</value>
-					<value level="4">1240</value>
-					<value level="5">1337</value>
-					<value level="6">1437</value>
-					<value level="7">1538</value>
-					<value level="8">1639</value>
-					<value level="9">1741</value>
-					<value level="10">1841</value>
+					<value level="1">395</value>
+					<value level="2">470</value>
+					<value level="3">545</value>
+					<value level="4">620</value>
+					<value level="5">690</value>
+					<value level="6">770</value>
+					<value level="7">850</value>
+					<value level="8">930</value>
+					<value level="9">1010</value>
+					<value level="10">1090</value>
+					<value level="11">1175</value>
+					<value level="12">1260</value>
+					<value level="13">1345</value>
+					<value level="14">1430</value>
+					<value level="15">1515</value>
+					<value level="16">1881</value>
+					<value level="17">1921</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -106,6 +141,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</BLUNT>
 				<DUAL>
 					<value level="1">-12</value>
@@ -118,6 +160,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DUAL>
 				<POLE>
 					<value level="1">-12</value>
@@ -130,6 +179,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</POLE>
 				<RAPIER>
 					<value level="1">-12</value>
@@ -142,6 +198,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</RAPIER>
 				<DAGGER>
 					<value level="1">-12</value>
@@ -154,6 +217,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DAGGER>
 				<ANCIENTSWORD>
 					<value level="1">-12</value>
@@ -166,6 +236,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</ANCIENTSWORD>
 				<SWORD>
 					<value level="1">-12</value>
@@ -178,6 +255,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</SWORD>
 				<DUALDAGGER>
 					<value level="1">-12</value>
@@ -190,6 +274,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DUALDAGGER>
 				<DUALFIST>
 					<value level="1">-12</value>
@@ -202,38 +293,59 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DUALFIST>
 			</effect>
 			<effect name="GetAgro" />
 			<effect name="CriticalRate">
 				<amount>
-					<value level="1">-30</value>
-					<value level="2">-30</value>
-					<value level="3">-30</value>
-					<value level="4">-30</value>
-					<value level="5">-30</value>
-					<value level="6">-40</value>
-					<value level="7">-40</value>
-					<value level="8">-40</value>
-					<value level="9">-40</value>
-					<value level="10">-50</value>
+					<value level="1">-20</value>
+					<value level="2">-20</value>
+					<value level="3">-20</value>
+					<value level="4">-20</value>
+					<value level="5">-20</value>
+					<value level="6">-30</value>
+					<value level="7">-30</value>
+					<value level="8">-30</value>
+					<value level="9">-30</value>
+					<value level="10">-30</value>
+					<value level="11">-40</value>
+					<value level="12">-40</value>
+					<value level="13">-40</value>
+					<value level="14">-40</value>
+					<value level="15">-50</value>
+					<value level="16">-50</value>
+					<value level="17">-50</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="401" toLevel="10" name="Judgment">
+	<skill id="401" toLevel="17" name="Judgment">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
 			<value level="3">1</value>
 			<value level="4">1</value>
-			<value level="5">2</value>
+			<value level="5">1</value>
 			<value level="6">2</value>
 			<value level="7">2</value>
 			<value level="8">2</value>
 			<value level="9">2</value>
 			<value level="10">3</value>
+			<value level="11">3</value>
+			<value level="12">3</value>
+			<value level="13">3</value>
+			<value level="14">3</value>
+			<value level="15">3</value>
+			<value level="16">4</value>
+			<value level="17">4</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
@@ -252,6 +364,13 @@
 			<value level="8">-1524</value>
 			<value level="9">-1549</value>
 			<value level="10">-1570</value>
+			<value level="11">-1617</value>
+			<value level="12">-1634</value>
+			<value level="13">-1655</value>
+			<value level="14">-1667</value>
+			<value level="15">-1688</value>
+			<value level="16">-1703</value>
+			<value level="17">-1748</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>DARK</attributeType>
@@ -261,16 +380,23 @@
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
-			<value level="1">55</value>
-			<value level="2">58</value>
-			<value level="3">60</value>
-			<value level="4">62</value>
-			<value level="5">64</value>
-			<value level="6">66</value>
-			<value level="7">68</value>
-			<value level="8">70</value>
-			<value level="9">72</value>
-			<value level="10">74</value>
+			<value level="1">40</value>
+			<value level="2">43</value>
+			<value level="3">46</value>
+			<value level="4">49</value>
+			<value level="5">52</value>
+			<value level="6">55</value>
+			<value level="7">58</value>
+			<value level="8">60</value>
+			<value level="9">62</value>
+			<value level="10">64</value>
+			<value level="11">66</value>
+			<value level="12">68</value>
+			<value level="13">70</value>
+			<value level="14">72</value>
+			<value level="15">74</value>
+			<value level="16">76</value>
+			<value level="17">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -283,6 +409,13 @@
 			<value level="8">68</value>
 			<value level="9">70</value>
 			<value level="10">72</value>
+			<value level="11">74</value>
+			<value level="12">76</value>
+			<value level="13">78</value>
+			<value level="14">80</value>
+			<value level="15">82</value>
+			<value level="16">90</value>
+			<value level="17">92</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -304,16 +437,23 @@
 		<effects>
 			<effect name="PhysicalAttack">
 				<power>
-					<value level="1">1056</value>
-					<value level="2">1205</value>
-					<value level="3">1309</value>
-					<value level="4">1417</value>
-					<value level="5">1528</value>
-					<value level="6">1642</value>
-					<value level="7">1757</value>
-					<value level="8">1873</value>
-					<value level="9">1989</value>
-					<value level="10">2104</value>
+					<value level="1">433</value>
+					<value level="2">521</value>
+					<value level="3">609</value>
+					<value level="4">697</value>
+					<value level="5">785</value>
+					<value level="6">880</value>
+					<value level="7">975</value>
+					<value level="8">1070</value>
+					<value level="9">1165</value>
+					<value level="10">1260</value>
+					<value level="11">1362</value>
+					<value level="12">1464</value>
+					<value level="13">1566</value>
+					<value level="14">1668</value>
+					<value level="15">1770</value>
+					<value level="16">2149</value>
+					<value level="17">2195</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
@@ -330,6 +470,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</BLUNT>
 				<DUAL>
 					<value level="1">-12</value>
@@ -342,6 +489,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DUAL>
 				<POLE>
 					<value level="1">-12</value>
@@ -354,6 +508,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</POLE>
 				<RAPIER>
 					<value level="1">-12</value>
@@ -366,6 +527,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</RAPIER>
 				<DAGGER>
 					<value level="1">-12</value>
@@ -378,6 +546,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DAGGER>
 				<ANCIENTSWORD>
 					<value level="1">-12</value>
@@ -390,6 +565,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</ANCIENTSWORD>
 				<SWORD>
 					<value level="1">-12</value>
@@ -402,6 +584,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</SWORD>
 				<DUALDAGGER>
 					<value level="1">-12</value>
@@ -414,6 +603,13 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DUALDAGGER>
 				<DUALFIST>
 					<value level="1">-12</value>
@@ -426,27 +622,41 @@
 					<value level="8">-16</value>
 					<value level="9">-16</value>
 					<value level="10">-20</value>
+					<value level="11">-20</value>
+					<value level="12">-20</value>
+					<value level="13">-20</value>
+					<value level="14">-20</value>
+					<value level="15">-24</value>
+					<value level="16">-24</value>
+					<value level="17">-24</value>
 				</DUALFIST>
 			</effect>
 			<effect name="GetAgro" />
 			<effect name="CriticalDamage">
 				<amount>
-					<value level="1">-25</value>
-					<value level="2">-25</value>
-					<value level="3">-25</value>
-					<value level="4">-25</value>
-					<value level="5">-25</value>
-					<value level="6">-30</value>
-					<value level="7">-30</value>
-					<value level="8">-30</value>
-					<value level="9">-30</value>
-					<value level="10">-35</value>
+					<value level="1">-20</value>
+					<value level="2">-20</value>
+					<value level="3">-20</value>
+					<value level="4">-20</value>
+					<value level="5">-20</value>
+					<value level="6">-25</value>
+					<value level="7">-25</value>
+					<value level="8">-25</value>
+					<value level="9">-25</value>
+					<value level="10">-25</value>
+					<value level="11">-30</value>
+					<value level="12">-30</value>
+					<value level="13">-30</value>
+					<value level="14">-30</value>
+					<value level="15">-35</value>
+					<value level="16">-35</value>
+					<value level="17">-35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="402" toLevel="10" name="Arrest">
+	<skill id="402" toLevel="12" name="Arrest">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -465,6 +675,8 @@
 			<value level="8">-1270</value>
 			<value level="9">-1291</value>
 			<value level="10">-1309</value>
+			<value level="11">-1325</value>
+			<value level="12">-1346</value>
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>2000</hitTime>
@@ -482,6 +694,8 @@
 			<value level="8">70</value>
 			<value level="9">72</value>
 			<value level="10">74</value>
+			<value level="11">76</value>
+			<value level="12">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">25</value>
@@ -494,6 +708,8 @@
 			<value level="8">33</value>
 			<value level="9">34</value>
 			<value level="10">34</value>
+			<value level="11">37</value>
+			<value level="12">38</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -1420,7 +1636,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="412" toLevel="10" name="Sand Bomb">
+	<skill id="412" toLevel="11" name="Sand Bomb">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1433,6 +1649,7 @@
 			<value level="8">2</value>
 			<value level="9">2</value>
 			<value level="10">3</value>
+			<value level="11">3</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
@@ -1450,6 +1667,7 @@
 			<value level="8">-635</value>
 			<value level="9">-646</value>
 			<value level="10">-655</value>
+			<value level="11">-664</value>
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>2000</hitTime>
@@ -1467,6 +1685,7 @@
 			<value level="8">70</value>
 			<value level="9">72</value>
 			<value level="10">74</value>
+			<value level="11">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">25</value>
@@ -1479,6 +1698,7 @@
 			<value level="8">33</value>
 			<value level="9">34</value>
 			<value level="10">34</value>
+			<value level="11">37</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -1499,6 +1719,7 @@
 					<value level="8">-9</value>
 					<value level="9">-9</value>
 					<value level="10">-12</value>
+					<value level="11">-12</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2949,27 +3170,31 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="451" toLevel="2" name="Sonic Move">
+	<skill id="451" toLevel="3" name="Sonic Move">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<chargeConsume>
-			<value level="1">2</value>
-			<value level="2">3</value>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">2</value>
 		</chargeConsume>
 		<effectPoint>
-			<value level="1">582</value>
-			<value level="2">624</value>
+			<value level="1">472</value>
+			<value level="2">542</value>
+			<value level="3">611</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0451</icon>
 		<magicLvl>
-			<value level="1">62</value>
-			<value level="2">68</value>
+			<value level="1">56</value>
+			<value level="2">62</value>
+			<value level="3">68</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">29</value>
-			<value level="2">32</value>
+			<value level="1">26</value>
+			<value level="2">29</value>
+			<value level="3">32</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -2987,16 +3212,18 @@
 			</condition>
 			<condition name="EnergySaved">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">3</value>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
 				</amount>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>
-					<value level="1">40</value>
-					<value level="2">66</value>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3073,21 +3300,24 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="461" toLevel="2" name="Break Duress">
+	<skill id="461" toLevel="3" name="Break Duress">
 		<chargeConsume>
-			<value level="1">2</value>
+			<value level="1">3</value>
 			<value level="2">3</value>
+			<value level="3">3</value>
 		</chargeConsume>
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
 		<icon>icon.skill0461</icon>
 		<magicLvl>
-			<value level="1">60</value>
-			<value level="2">66</value>
+			<value level="1">52</value>
+			<value level="2">60</value>
+			<value level="3">66</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">33</value>
-			<value level="2">37</value>
+			<value level="1">29</value>
+			<value level="2">33</value>
+			<value level="3">37</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -3098,16 +3328,18 @@
 		<conditions>
 			<condition name="EnergySaved">
 				<amount>
-					<value level="1">2</value>
+					<value level="1">3</value>
 					<value level="2">3</value>
+					<value level="3">3</value>
 				</amount>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="DispelBySlot">
 				<dispel>
-					<value level="1">ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
+					<value level="1">SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
 					<value level="2">SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
+					<value level="3">SPEED_DOWN,3;ROOT_PHYSICALLY,3;ROOT_MAGICALLY,3</value>
 				</dispel>
 			</effect>
 		</effects>

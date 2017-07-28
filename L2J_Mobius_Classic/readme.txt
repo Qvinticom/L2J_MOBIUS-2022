@@ -17,19 +17,23 @@ What is done
 -Parsed NPC droplists from L2Wiki
 -Further manual NPC corrections from L2Wiki
 -Basic Tutorial quest
+-Added 153 quest scripts
 -Village Master AI scripts
+-Fixed skill levels to match retail
 
 Custom work
-Start NPC dialogs until Newbie Helper
-Newbie Helper NPC location info
-Newbie Helper buff support until 40 level
+-Start NPC dialogs until Newbie Helper
+-Newbie Helper NPC location info
+-Newbie Helper buff support until 40 level
 
 TODO list
 -Retail gatekeeper teleports
 -Parse retail monster spawns by zone
 -Make further manual spawn fixes
--Fix skill levels
 -Retail NPC dialogs
 -Retail NPC buylists
--Class transfer quests
--Other quests
+-Test quests and update rewards
+-Add new class mounts
+-Fisherman NPC updates
+-Giran Luxury Shop updates
+-Blacksmith NPC updates

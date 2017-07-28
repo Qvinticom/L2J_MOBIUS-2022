@@ -50,8 +50,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="302" toLevel="9" name="Spoil Festival">
-		<!-- Confirmed CT2.5 -->
+	<skill id="302" toLevel="11" name="Spoil Festival">
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -65,6 +64,8 @@
 			<value level="7">-611</value>
 			<value level="8">-635</value>
 			<value level="9">-655</value>
+			<value level="10">-673</value>
+			<value level="11">-692</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
@@ -79,6 +80,8 @@
 			<value level="7">66</value>
 			<value level="8">70</value>
 			<value level="9">74</value>
+			<value level="10">76</value>
+			<value level="11">78</value>	
 		</magicLvl>
 		<mpConsume>
 			<value level="1">73</value>
@@ -90,6 +93,8 @@
 			<value level="7">183</value>
 			<value level="8">194</value>
 			<value level="9">204</value>
+			<value level="10">224</value>
+			<value level="11">225</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -592,7 +597,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="314" toLevel="16" name="Fatal Counter">
+	<skill id="314" toLevel="19" name="Fatal Counter">
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -612,6 +617,9 @@
 			<value level="14">-656</value>
 			<value level="15">-661</value>
 			<value level="16">-665</value>
+			<value level="17">-669</value>
+			<value level="18">-675</value>
+			<value level="19">-682</value>
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
@@ -633,6 +641,9 @@
 			<value level="14">72</value>
 			<value level="15">73</value>
 			<value level="16">74</value>
+			<value level="17">76</value>
+			<value level="18">77</value>
+			<value level="19">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">116</value>
@@ -651,6 +662,9 @@
 			<value level="14">144</value>
 			<value level="15">146</value>
 			<value level="16">148</value>
+			<value level="17">162</value>
+			<value level="18">164</value>
+			<value level="19">166</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -684,6 +698,9 @@
 					<value level="14">4604</value>
 					<value level="15">4738</value>
 					<value level="16">4870</value>
+					<value level="14">4915</value>
+					<value level="15">4959</value>
+					<value level="16">5003</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -799,7 +816,7 @@
 			<effect name="PhysicalShieldAngleAll" />
 		</effects>
 	</skill>
-	<skill id="317" toLevel="5" name="Focus Attack">
+	<skill id="317" toLevel="6" name="Focus Attack">
 		<icon>icon.skill0317</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -807,6 +824,7 @@
 			<value level="3">58</value>
 			<value level="4">66</value>
 			<value level="5">74</value>
+			<value level="6">76</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">18</value>
@@ -814,6 +832,7 @@
 			<value level="3">27</value>
 			<value level="4">31</value>
 			<value level="5">34</value>
+			<value level="6">37</value>
 		</mpConsume>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -835,6 +854,7 @@
 					<value level="3">4</value>
 					<value level="4">5</value>
 					<value level="5">6</value>
+					<value level="6">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -843,11 +863,11 @@
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">25</value>
-					<value level="5">30</value>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">7</value>
+					<value level="5">8</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -2383,7 +2403,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="361" toLevel="1" name="Stun Blast">
+	<skill id="361" toLevel="2" name="Stun Blast">
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2393,15 +2413,27 @@
 		<affectRange>150</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>500</castRange>
-		<effectPoint>-507</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2500</hitTime>
-		<hpConsume>507</hpConsume>
+		<effectPoint>
+			<value level="1">-507</value>
+			<value level="2">-531</value>
+		</effectPoint>
+		<hpConsume>
+			<value level="1">-507</value>
+			<value level="2">-558</value>
+		</hpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">80</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">53</value>
+			<value level="2">58</value>
+		</mpConsume>
 		<icon>icon.skill0361</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>77</magicLvl>
-		<mpConsume>53</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2424,7 +2456,10 @@
 			<effect name="PhysicalAttack">
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
-				<power>2486</power>
+			<power>
+ 				<value level="1">2486</value>
+				<value level="2">2731</value>
+			</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 			<effect name="BlockActions">
@@ -3287,11 +3322,29 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="392" toLevel="1" name="Clan Fortune">
-		<!-- Confirmed CT2.5 -->
-		<magicLvl>1</magicLvl>
+	<skill id="392" toLevel="3" name="Clan Fortune">
+		<magicLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+		</abnormalLvl>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">6</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="393" toLevel="1" name="none">
 		<!-- Confirmed CT2.5 -->

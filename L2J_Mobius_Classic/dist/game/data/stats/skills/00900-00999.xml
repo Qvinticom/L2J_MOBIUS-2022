@@ -1309,16 +1309,26 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="922" toLevel="1" name="Hide">
-		<!-- Confirmed CT2.5 -->
-		<!-- NOTE: Description says "Increases Speed" but is client typo, it "Decrease Speed" -->
+	<skill id="922" toLevel="3" name="Hide">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-		<effectPoint>679</effectPoint>
+		<abnormalTime>
+			<value level="1">15</value>
+			<value level="2">20</value>
+			<value level="3">25</value>
+		</abnormalTime>
+		<effectPoint>
+			<value level="1">619</value>
+			<value level="2">679</value>
+			<value level="3">713</value>
+		</effectPoint>
+		<magicLvl>
+			<value level="1">51</value>
+			<value level="2">61</value>
+			<value level="3">71</value>
+		</magicLvl>
 		<icon>icon.skill0922</icon>
-		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<removedOnDamage>true</removedOnDamage>

@@ -2410,7 +2410,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1535" toLevel="1" name="Chant of Movement">
+	<skill id="1535" toLevel="2" name="Chant of Movement">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
@@ -2420,9 +2420,18 @@
 		<hitTime>1500</hitTime>
 		<icon>icon.skill1535</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>72</magicLvl>
-		<mpConsume>55</mpConsume>
-		<mpInitialConsume>14</mpInitialConsume>
+		<magicLvl>
+			<value level="1">44</value>
+			<value level="2">52</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">69</value>
+			<value level="2">76</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">14</value>
+			<value level="2">14</value>
+		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2439,7 +2448,10 @@
 				<slot>SPEED_UP;AVOID_UP</slot>
 			</effect>
 			<effect name="Speed">
-				<amount>33</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">33</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
@@ -2565,12 +2577,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1539" toLevel="4" name="Stigma of Shilen">
+	<skill id="1539" toLevel="5" name="Stigma of Shilen">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 			<value level="4">4</value>
+			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>STIGMA_OF_SILEN</abnormalType>
@@ -2580,6 +2593,7 @@
 			<value level="2">700</value>
 			<value level="3">800</value>
 			<value level="4">900</value>
+			<value level="5">1000</value>
 		</castRange>
 		<effectPoint>-635</effectPoint>
 		<effectRange>
@@ -2587,6 +2601,7 @@
 			<value level="2">1200</value>
 			<value level="3">1300</value>
 			<value level="4">1400</value>
+			<value level="5">1500</value>
 		</effectRange>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill1539</icon>
@@ -2596,12 +2611,14 @@
 			<value level="2">52</value>
 			<value level="3">62</value>
 			<value level="4">70</value>
+			<value level="5">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">18</value>
 			<value level="2">24</value>
 			<value level="3">29</value>
 			<value level="4">33</value>
+			<value level="5">42</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2619,54 +2636,63 @@
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</SWORD>
 				<DAGGER>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</DAGGER>
 				<DUALFIST>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</DUALFIST>
 				<ANCIENTSWORD>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</ANCIENTSWORD>
 				<DUALDAGGER>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</DUALDAGGER>
 				<BLUNT>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</BLUNT>
 				<POLE>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</POLE>
 				<DUAL>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</DUAL>
 				<RAPIER>
 					<value level="1">-16</value>
 					<value level="2">-24</value>
 					<value level="3">-32</value>
 					<value level="4">-40</value>
+					<value level="5">-48</value>
 				</RAPIER>
 			</effect>
 		</effects>

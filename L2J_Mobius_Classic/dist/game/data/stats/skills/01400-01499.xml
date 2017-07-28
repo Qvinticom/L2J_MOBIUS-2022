@@ -455,9 +455,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1411" toLevel="1" name="Mystic Immunity">
+	<skill id="1411" toLevel="3" name="Mystic Immunity">
 		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
@@ -465,8 +464,21 @@
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1411</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>79</magicLvl>
-		<mpConsume>73</mpConsume>
+		<abnormalTime>
+			<value level="1">5</value>
+			<value level="2">10</value>
+			<value level="3">15</value>
+		</abnormalTime>
+		<magicLvl>
+			<value level="1">51</value>
+			<value level="2">60</value>
+			<value level="3">69</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">59</value>
+			<value level="2">66</value>
+			<value level="3">73</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -3061,7 +3073,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1459" toLevel="1" name="Divine Power">
+	<skill id="1459" toLevel="3" name="Divine Power">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HEAL_POWER_UP</abnormalType>
@@ -3069,8 +3081,16 @@
 		<hitTime>2000</hitTime>
 		<icon>icon.skill1459</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>79</magicLvl>
-		<mpConsume>109</mpConsume>
+		<magicLvl>
+			<value level="1">51</value>
+			<value level="2">60</value>
+			<value level="3">69</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">70</value>
+			<value level="2">88</value>
+			<value level="3">109</value>
+		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -3080,7 +3100,11 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="HealEffect">
-				<amount>1000</amount>
+				<amount>
+					<value level="1">100</value>
+					<value level="2">300</value>
+					<value level="3">500</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
