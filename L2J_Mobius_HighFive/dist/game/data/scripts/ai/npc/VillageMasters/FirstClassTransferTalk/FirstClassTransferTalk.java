@@ -95,6 +95,10 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 					{
 						htmltext += "fighter.html";
 					}
+					else
+					{
+						htmltext += "no.html";
+					}
 				}
 				else if (player.getClassId().level() == 1)
 				{
