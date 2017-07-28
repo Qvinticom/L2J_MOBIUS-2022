@@ -17,6 +17,7 @@ What is done
 -Parsed NPC droplists from L2Wiki
 -Further manual NPC corrections from L2Wiki
 -Basic Tutorial quest
+-Village Master AI scripts
 
 Custom work
 Start NPC dialogs until Newbie Helper

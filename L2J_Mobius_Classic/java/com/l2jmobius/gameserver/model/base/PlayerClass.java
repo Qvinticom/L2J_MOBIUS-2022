@@ -24,9 +24,13 @@ import static com.l2jmobius.gameserver.model.base.ClassType.Fighter;
 import static com.l2jmobius.gameserver.model.base.ClassType.Mystic;
 import static com.l2jmobius.gameserver.model.base.ClassType.Priest;
 
+import java.util.EnumMap;
 import java.util.EnumSet;
+import java.util.Set;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * @author luisantonioa
@@ -246,15 +250,113 @@ public enum PlayerClass
 	eviscerator(Race.ERTHEIA, Fighter, ClassLevel.AWAKEN),
 	sayhaSeer(Race.ERTHEIA, Mystic, ClassLevel.AWAKEN);
 	
+	private static final Set<PlayerClass> mainSubclassSet;
+	private static final Set<PlayerClass> neverSubclassed = EnumSet.of(Overlord, Warsmith);
+	
+	private static final Set<PlayerClass> subclasseSet1 = EnumSet.of(DarkAvenger, Paladin, TempleKnight, ShillienKnight);
+	private static final Set<PlayerClass> subclasseSet2 = EnumSet.of(TreasureHunter, AbyssWalker, Plainswalker);
+	private static final Set<PlayerClass> subclasseSet3 = EnumSet.of(Hawkeye, SilverRanger, PhantomRanger);
+	private static final Set<PlayerClass> subclasseSet4 = EnumSet.of(Warlock, ElementalSummoner, PhantomSummoner);
+	private static final Set<PlayerClass> subclasseSet5 = EnumSet.of(Sorceror, Spellsinger, Spellhowler);
+	
 	private Race _race;
 	private ClassLevel _level;
 	private ClassType _type;
+	
+	private static final EnumMap<PlayerClass, Set<PlayerClass>> subclassSetMap = new EnumMap<>(PlayerClass.class);
+	static
+	{
+		final Set<PlayerClass> subclasses = getSet(null, THIRD);
+		subclasses.removeAll(neverSubclassed);
+		
+		mainSubclassSet = subclasses;
+		
+		subclassSetMap.put(DarkAvenger, subclasseSet1);
+		subclassSetMap.put(Paladin, subclasseSet1);
+		subclassSetMap.put(TempleKnight, subclasseSet1);
+		subclassSetMap.put(ShillienKnight, subclasseSet1);
+		
+		subclassSetMap.put(TreasureHunter, subclasseSet2);
+		subclassSetMap.put(AbyssWalker, subclasseSet2);
+		subclassSetMap.put(Plainswalker, subclasseSet2);
+		
+		subclassSetMap.put(Hawkeye, subclasseSet3);
+		subclassSetMap.put(SilverRanger, subclasseSet3);
+		subclassSetMap.put(PhantomRanger, subclasseSet3);
+		
+		subclassSetMap.put(Warlock, subclasseSet4);
+		subclassSetMap.put(ElementalSummoner, subclasseSet4);
+		subclassSetMap.put(PhantomSummoner, subclasseSet4);
+		
+		subclassSetMap.put(Sorceror, subclasseSet5);
+		subclassSetMap.put(Spellsinger, subclasseSet5);
+		subclassSetMap.put(Spellhowler, subclasseSet5);
+	}
 	
 	private PlayerClass(Race race, ClassType pType, ClassLevel pLevel)
 	{
 		_race = race;
 		_level = pLevel;
 		_type = pType;
+	}
+	
+	public final Set<PlayerClass> getAvailableSubclasses(L2PcInstance player)
+	{
+		Set<PlayerClass> subclasses = null;
+		
+		if (_level == THIRD)
+		{
+			if (player.getRace() != Race.KAMAEL)
+			{
+				subclasses = EnumSet.copyOf(mainSubclassSet);
+				
+				subclasses.remove(this);
+				
+				switch (player.getRace())
+				{
+					case ELF:
+						subclasses.removeAll(getSet(Race.DARK_ELF, THIRD));
+						break;
+					case DARK_ELF:
+						subclasses.removeAll(getSet(Race.ELF, THIRD));
+						break;
+				}
+				
+				subclasses.removeAll(getSet(Race.KAMAEL, THIRD));
+				
+				final Set<PlayerClass> unavailableClasses = subclassSetMap.get(this);
+				
+				if (unavailableClasses != null)
+				{
+					subclasses.removeAll(unavailableClasses);
+				}
+				
+			}
+			else
+			{
+				subclasses = getSet(Race.KAMAEL, THIRD);
+				subclasses.remove(this);
+				// Check sex, male subclasses female and vice versa
+				// If server owner set MaxSubclass > 3 some kamael's cannot take 4 sub
+				// So, in that situation we must skip sex check
+				if (Config.MAX_SUBCLASS <= 3)
+				{
+					if (player.getAppearance().getSex())
+					{
+						subclasses.removeAll(EnumSet.of(femaleSoulbreaker));
+					}
+					else
+					{
+						subclasses.removeAll(EnumSet.of(maleSoulbreaker));
+					}
+				}
+				if (!player.getSubClasses().containsKey(2) || (player.getSubClasses().get(2).getLevel() < 75))
+				{
+					subclasses.removeAll(EnumSet.of(inspector));
+				}
+			}
+		}
+		return subclasses;
 	}
 	
 	public static EnumSet<PlayerClass> getSet(Race race, ClassLevel level)

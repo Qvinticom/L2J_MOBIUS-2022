@@ -225,7 +225,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30109" level="70" type="L2VillageMaster" name="Hannavalt" title="Grand Master">
+	<npc id="30109" level="70" type="L2VillageMasterFighter" name="Hannavalt" title="Grand Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="63" />
@@ -449,7 +449,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30115" level="70" type="L2VillageMaster" name="Jurek" title="Grand Magister">
+	<npc id="30115" level="70" type="L2VillageMasterMystic" name="Jurek" title="Grand Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -644,7 +644,7 @@
 			<height normal="22.2" />
 		</collision>
 	</npc>
-	<npc id="30120" level="70" type="L2VillageMaster" name="Maximilian" title="High Priest">
+	<npc id="30120" level="70" type="L2VillageMasterPriest" name="Maximilian" title="High Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -1890,7 +1890,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30155" level="70" type="L2Npc" name="Ellenia" title="Grand Master">
+	<npc id="30154" level="70" type="L2VillageMasterPriest" name="Asterios" title="Hierarch">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="123" />
@@ -2337,7 +2337,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30174" level="70" type="L2VillageMaster" name="Arkenias" title="Grand Magister">
+	<npc id="30174" level="70" type="L2VillageMasterMystic" name="Arkenias" title="Grand Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="100" />
@@ -2376,7 +2376,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="30175" level="70" type="L2VillageMaster" name="Fairen" title="Grand Magister">
+	<npc id="30175" level="70" type="L2VillageMasterMystic" name="Fairen" title="Grand Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2415,7 +2415,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30176" level="70" type="L2VillageMaster" name="Valleria" title="Grand Magister">
+	<npc id="30176" level="70" type="L2VillageMasterMystic" name="Valleria" title="Grand Magister">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -2826,7 +2826,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="30187" level="70" type="L2VillageMaster" name="Klaus Blackbird" title="Grand Master">
+	<npc id="30187" level="70" type="L2VillageMasterFighter" name="Klaus Blackbird" title="Grand Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="63" />
@@ -2978,7 +2978,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="30191" level="70" type="L2VillageMaster" name="Hollint" title="High Priest">
+	<npc id="30191" level="70" type="L2VillageMasterPriest" name="Hollint" title="High Priest">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="135" />
@@ -3092,7 +3092,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="30195" level="70" type="L2VillageMaster" name="Brecson" title="Grand Master">
+	<npc id="30195" level="70" type="L2VillageMasterDElf" name="Brecson" title="Grand Master">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="103" />
