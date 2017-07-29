@@ -20,6 +20,7 @@ What is done
 -Added 153 quest scripts
 -Village Master AI scripts
 -Fixed skill levels to match retail
+-Added new class mounts
 
 Custom work
 -Start NPC dialogs until Newbie Helper
@@ -33,7 +34,8 @@ TODO list
 -Retail NPC dialogs
 -Retail NPC buylists
 -Test quests and update rewards
--Add new class mounts
 -Fisherman NPC updates
 -Giran Luxury Shop updates
 -Blacksmith NPC updates
+-New Race Track arena
+-Custom ClassMaster NPCs
