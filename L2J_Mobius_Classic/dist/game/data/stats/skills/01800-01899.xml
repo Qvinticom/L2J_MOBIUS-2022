@@ -1,19 +1,88 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1800" toLevel="1" name="Pirate">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skill1800</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>56</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>165</transformId> <!-- TODO: proper id -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>165</transformationId> <!-- TODO: proper id -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1801" toLevel="1" name="Dark Assassin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skill1801</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>56</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>166</transformId> <!-- TODO: proper id -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>166</transformationId> <!-- TODO: proper id -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1802" toLevel="1" name="White Assassin">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>300</abnormalTime>
+		<abnormalType>TRANSFORM</abnormalType>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<icon>icon.skill1802</icon>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>56</magicLvl>
+		<operateType>A2</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>167</transformId> <!-- TODO: proper id -->
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>167</transformationId> <!-- TODO: proper id -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="1810" toLevel="1" name="">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
