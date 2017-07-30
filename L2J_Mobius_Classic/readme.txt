@@ -12,6 +12,7 @@ What is done
 -Parsed NPC names from client
 -Temporary NPC info from Interlude retail files
 -Temporary spawns from Interlude retail files
+-Further manual spawn fixes
 -Skilltrees info from L2Wiki
 -Parsed NPC droplists from L2Wiki
 -Further manual NPC corrections from L2Wiki
@@ -29,7 +30,6 @@ Custom work
 TODO list
 -Retail gatekeeper teleports
 -Parse retail monster spawns by zone
--Make further manual spawn fixes
 -Retail NPC dialogs
 -Retail NPC buylists
 -Test quests and update rewards
