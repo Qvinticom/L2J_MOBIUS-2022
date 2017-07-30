@@ -464,7 +464,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				spawn.setInstanceId(activeChar.getInstanceId());
 			}
 			
-			SpawnTable.getInstance().addNewSpawn(spawn, activeChar.isInInstance());
+			SpawnTable.getInstance().addNewSpawn(spawn, true);
 			spawn.init();
 			
 			if (activeChar.isInInstance())
