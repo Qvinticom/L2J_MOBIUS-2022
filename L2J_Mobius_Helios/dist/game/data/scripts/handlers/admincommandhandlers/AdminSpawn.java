@@ -53,6 +53,7 @@ public class AdminSpawn implements IAdminCommandHandler
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_show_spawns",
+		"admin_spawnat",
 		"admin_spawn",
 		"admin_spawn_monster",
 		"admin_spawn_index",
@@ -223,6 +224,29 @@ public class AdminSpawn implements IAdminCommandHandler
 			DBSpawnManager.getInstance().load();
 			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
+		}
+		else if (command.startsWith("admin_spawnat"))
+		{
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			try
+			{
+				@SuppressWarnings("unused")
+				final String cmd = st.nextToken();
+				final String id = st.nextToken();
+				final String x = st.nextToken();
+				final String y = st.nextToken();
+				final String z = st.nextToken();
+				int h = activeChar.getHeading();
+				if (st.hasMoreTokens())
+				{
+					h = Integer.parseInt(st.nextToken());
+				}
+				spawnMonster(activeChar, Integer.parseInt(id), Integer.parseInt(x), Integer.parseInt(y), Integer.parseInt(z), h);
+			}
+			catch (Exception e)
+			{ // Case of wrong or missing monster data
+				AdminHtml.showAdminHtml(activeChar, "spawns.htm");
+			}
 		}
 		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
 		{
@@ -406,6 +430,48 @@ public class AdminSpawn implements IAdminCommandHandler
 			{
 				spawn.stopRespawn();
 			}
+			
+			spawn.getLastSpawn().broadcastInfo();
+			activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId());
+		}
+		catch (Exception e)
+		{
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+		}
+	}
+	
+	private void spawnMonster(L2PcInstance activeChar, int id, int x, int y, int z, int h)
+	{
+		L2Object target = activeChar.getTarget();
+		if (target == null)
+		{
+			target = activeChar;
+		}
+		
+		final L2NpcTemplate template1 = NpcData.getInstance().getTemplate(id);
+		
+		try
+		{
+			final L2Spawn spawn = new L2Spawn(template1);
+			spawn.setX(x);
+			spawn.setY(y);
+			spawn.setZ(z);
+			spawn.setAmount(1);
+			spawn.setHeading(h);
+			spawn.setRespawnDelay(60);
+			if (activeChar.isInInstance())
+			{
+				spawn.setInstanceId(activeChar.getInstanceId());
+			}
+			
+			SpawnTable.getInstance().addNewSpawn(spawn, activeChar.isInInstance());
+			spawn.init();
+			
+			if (activeChar.isInInstance())
+			{
+				spawn.stopRespawn();
+			}
+			spawn.getLastSpawn().broadcastInfo();
 			activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId());
 		}
 		catch (Exception e)
