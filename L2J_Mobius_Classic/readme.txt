@@ -8,8 +8,7 @@ What is done
 -Parsed item data from client
 -Proper Daily Mission rewards
 -Zone changes to match starting locations
--Parsed dummy skills from 2.0 client
--Parsed most skill names from 1.5 client (need 2.0 SkillName_Classic-eu)
+-Parsed skill names from client
 -Parsed NPC names from client
 -Temporary NPC info from Interlude retail files
 -Temporary spawns from Interlude retail files
