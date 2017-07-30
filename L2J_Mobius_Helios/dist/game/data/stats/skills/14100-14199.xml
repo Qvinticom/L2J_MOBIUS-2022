@@ -2727,7 +2727,6 @@
 		</conditions>
 	</skill>
 	<skill id="14187" toLevel="1" name="Magmeld Teleport">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Teleports to Magmeld Ancient City Arcan. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -2744,6 +2743,14 @@
 			<condition name="OpCanEscape" />
 			<condition name="OpNeedAgathion" />
 		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<!-- Town of Magmeld -->
+				<x>206867</x>
+				<y>86995</y>
+				<z>-1019</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="14188" toLevel="1" name="Millipede's Gas">
 		<!-- Glory Days confirmed -->
