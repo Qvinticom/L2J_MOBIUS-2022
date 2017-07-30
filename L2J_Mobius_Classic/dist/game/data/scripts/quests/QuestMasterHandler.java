@@ -132,6 +132,7 @@ import quests.Q00294_CovertBusiness.Q00294_CovertBusiness;
 import quests.Q00295_DreamingOfTheSkies.Q00295_DreamingOfTheSkies;
 import quests.Q00296_TarantulasSpiderSilk.Q00296_TarantulasSpiderSilk;
 import quests.Q00297_GatekeepersFavor.Q00297_GatekeepersFavor;
+import quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman;
 import quests.Q00303_CollectArrowheads.Q00303_CollectArrowheads;
 import quests.Q00306_CrystalOfFireAndIce.Q00306_CrystalOfFireAndIce;
 import quests.Q00313_CollectSpores.Q00313_CollectSpores;
@@ -148,6 +149,7 @@ import quests.Q00329_CuriosityOfADwarf.Q00329_CuriosityOfADwarf;
 import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
 import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
 import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
+import quests.Q00348_AnArrogantSearch.Q00348_AnArrogantSearch;
 import quests.Q00354_ConquestOfAlligatorIsland.Q00354_ConquestOfAlligatorIsland;
 import quests.Q00355_FamilyHonor.Q00355_FamilyHonor;
 import quests.Q00356_DigUpTheSeaOfSpores.Q00356_DigUpTheSeaOfSpores;
@@ -173,6 +175,7 @@ import quests.Q00415_PathOfTheOrcMonk.Q00415_PathOfTheOrcMonk;
 import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
 import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
+import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 
 /**
  * @author NosBit
@@ -296,6 +299,7 @@ public class QuestMasterHandler
 		Q00295_DreamingOfTheSkies.class,
 		Q00296_TarantulasSpiderSilk.class,
 		Q00297_GatekeepersFavor.class,
+		Q00300_HuntingLetoLizardman.class,
 		Q00303_CollectArrowheads.class,
 		Q00306_CrystalOfFireAndIce.class,
 		Q00313_CollectSpores.class,
@@ -312,6 +316,7 @@ public class QuestMasterHandler
 		Q00331_ArrowOfVengeance.class,
 		Q00333_HuntOfTheBlackLion.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
+		Q00348_AnArrogantSearch.class,
 		Q00354_ConquestOfAlligatorIsland.class,
 		Q00355_FamilyHonor.class,
 		Q00356_DigUpTheSeaOfSpores.class,
@@ -337,6 +342,7 @@ public class QuestMasterHandler
 		Q00416_PathOfTheOrcShaman.class,
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
+		Q00662_AGameOfCards.class,
 	};
 	
 	public static void main(String[] args)
