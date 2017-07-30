@@ -16,11 +16,9 @@
  */
 package ai.others.OlyBuffer;
 
-import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 import ai.AbstractNpcAI;
 
@@ -33,17 +31,18 @@ public final class OlyBuffer extends AbstractNpcAI
 	// NPC
 	private static final int OLYMPIAD_BUFFER = 36402;
 	// Skills
-	private static final int[] ALLOWED_BUFFS =
+	private static final SkillHolder[] ALLOWED_BUFFS =
 	{
-		14738, // Olympiad - Horn Melody
-		14739, // Olympiad - Drum Melody
-		14740, // Olympiad - Pipe Organ Melody
-		14741, // Olympiad - Guitar Melody
-		14742, // Olympiad - Harp Melody
-		14743, // Olympiad - Lute Melody
-		14744, // Olympiad - Knight's Harmony
-		14745, // Olympiad - Warrior's Harmony
-		14746, // Olympiad - Wizard's Harmony
+		new SkillHolder(4357, 2), // Haste Lv2
+		new SkillHolder(4342, 2), // Wind Walk Lv2
+		new SkillHolder(4356, 3), // Empower Lv3
+		new SkillHolder(4355, 3), // Acumen Lv3
+		new SkillHolder(4351, 6), // Concentration Lv6
+		new SkillHolder(4345, 3), // Might Lv3
+		new SkillHolder(4358, 3), // Guidance Lv3
+		new SkillHolder(4359, 3), // Focus Lv3
+		new SkillHolder(4360, 3), // Death Whisper Lv3
+		new SkillHolder(4352, 2), // Berserker Spirit Lv2
 	};
 	
 	private OlyBuffer()
@@ -71,21 +70,16 @@ public final class OlyBuffer extends AbstractNpcAI
 		if (event.startsWith("giveBuff;") && (npc.getScriptValue() < 5))
 		{
 			final int buffId = Integer.parseInt(event.replace("giveBuff;", ""));
-			if (CommonUtil.contains(ALLOWED_BUFFS, buffId))
+			if (ALLOWED_BUFFS[buffId] != null)
 			{
-				final Skill buff = SkillData.getInstance().getSkill(buffId, 1);
-				if (buff != null)
-				{
-					npc.setScriptValue(npc.getScriptValue() + 1);
-					addSkillCastDesire(npc, player, buff, 23);
-					htmltext = "OlyBuffer-afterBuff.html";
-				}
-				
-				if (npc.getScriptValue() >= 5)
-				{
-					htmltext = "OlyBuffer-noMore.html";
-					getTimers().addTimer("DELETE_ME", 5000, evnt -> npc.deleteMe());
-				}
+				npc.setScriptValue(npc.getScriptValue() + 1);
+				addSkillCastDesire(npc, player, ALLOWED_BUFFS[buffId], 23);
+				htmltext = "OlyBuffer-afterBuff.html";
+			}
+			if (npc.getScriptValue() >= 5)
+			{
+				htmltext = "OlyBuffer-noMore.html";
+				getTimers().addTimer("DELETE_ME", 5000, evnt -> npc.deleteMe());
 			}
 		}
 		return htmltext;

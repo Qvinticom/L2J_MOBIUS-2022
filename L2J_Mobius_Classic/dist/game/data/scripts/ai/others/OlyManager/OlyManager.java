@@ -144,9 +144,9 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					htmltext = "OlyManager-subclass.html";
 				}
-				else if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+				else if ((!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55)) // avoid exploits
 				{
-					htmltext = "OlyManager-awaken.html";
+					htmltext = "OlyManager-noNoble.html";
 				}
 				else if (Olympiad.getInstance().getNoblePoints(player) <= 0)
 				{
@@ -241,42 +241,67 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				break;
 			}
-			case "rank_148": // Sigel Phoenix Knight
-			case "rank_149": // Sigel Hell Knight
-			case "rank_150": // Sigel Eva's Templar
-			case "rank_151": // Sigel Shillien Templar
-			case "rank_152": // Tyrr Duelist
-			case "rank_153": // Tyrr Dreadnought
-			case "rank_154": // Tyrr Titan
-			case "rank_155": // Tyrr Grand Khavatari
-			case "rank_156": // Tyrr Maestro
-			case "rank_157": // Tyrr Doombringer
-			case "rank_158": // Othell Adventurer
-			case "rank_159": // Othell Wind Rider
-			case "rank_160": // Othell Ghost Hunter
-			case "rank_161": // Othell Fortune Seeker
-			case "rank_162": // Yul Sagittarius
-			case "rank_163": // Yul Moonlight Sentinel
-			case "rank_164": // Yul Ghost Sentinel
-			case "rank_165": // Yul Trickster
-			case "rank_166": // Feoh Archmage
-			case "rank_167": // Feoh Soultaker
-			case "rank_168": // Feoh Mystic Muse
-			case "rank_169": // Feoh Storm Screamer
-			case "rank_170": // Feoh Soul Hound
-			case "rank_171": // Iss Hierophant
-			case "rank_172": // Iss Sword Muse
-			case "rank_173": // Iss Spectral Dancer
-			case "rank_174": // Iss Dominator
-			case "rank_175": // Iss Doomcryer
-			case "rank_176": // Wynn Arcana Lord
-			case "rank_177": // Wynn Elemental Master
-			case "rank_178": // Wynn Spectral Master
-			case "rank_179": // Aeore Cardinal
-			case "rank_180": // Aeore Eva's Saint
-			case "rank_181": // Aeore Shillien Saint
-			case "rank_188": // Eviscerator
-			case "rank_189": // Sayha's Seer
+			case "rank_2": // Gladiator
+			case "rank_3": // Warlord
+			case "rank_5": // Paladin
+			case "rank_6": // Dark Avenger
+			case "rank_8": // Treasure Hunter
+			case "rank_9": // Hawkeye
+			case "rank_12": // Sorcerer
+			case "rank_13": // Necromancer
+			case "rank_14": // Warlock
+			case "rank_16": // Bishop
+			case "rank_17": // Prophet
+			case "rank_20": // Temple Knight
+			case "rank_21": // Sword Singer
+			case "rank_23": // Plains Walker
+			case "rank_24": // Silver Ranger
+			case "rank_27": // Spellsinger
+			case "rank_28": // Elemental Summoner
+			case "rank_30": // Elven Elder
+			case "rank_33": // Shillien Knight
+			case "rank_34": // Bladedancer
+			case "rank_36": // Abyss Walker
+			case "rank_37": // Phantom Ranger
+			case "rank_40": // Spellhowler
+			case "rank_41": // Phantom Summoner
+			case "rank_43": // Shillien Elder
+			case "rank_46": // Destroyer
+			case "rank_48": // Tyrant
+			case "rank_51": // Overlord
+			case "rank_52": // Warcryer
+			case "rank_55": // Bounty Hunter
+			case "rank_88": // Duelist
+			case "rank_89": // Dreadnought
+			case "rank_90": // Phoenix Knight
+			case "rank_91": // Hell Knight
+			case "rank_92": // Sagittarius
+			case "rank_93": // Adventurer
+			case "rank_94": // Archmage
+			case "rank_95": // Soultaker
+			case "rank_96": // Arcana Lord
+			case "rank_97": // Cardinal
+			case "rank_98": // Hierophant
+			case "rank_99": // Eva's Templar
+			case "rank_100": // Sword Muse
+			case "rank_101": // Wind Rider
+			case "rank_102": // Moonlight Sentinel
+			case "rank_103": // Mystic Muse
+			case "rank_104": // Elemental Master
+			case "rank_105": // Eva's Saint
+			case "rank_106": // Shillien Templar
+			case "rank_107": // Spectral Dancer
+			case "rank_108": // Ghost Hunter
+			case "rank_109": // Ghost Sentinel
+			case "rank_110": // Storm Screamer
+			case "rank_111": // Spectral Master
+			case "rank_112": // Shillien Saint
+			case "rank_113": // Titan
+			case "rank_114": // Grand Khavatari
+			case "rank_115": // Dominator
+			case "rank_116": // Doom Cryer
+			case "rank_117": // Fortune Seeker
+			case "rank_118": // Maestro
 			{
 				final int classId = Integer.parseInt(event.replace("rank_", ""));
 				final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
@@ -311,7 +336,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		
 		if (!player.isCursedWeaponEquipped())
 		{
-			htmltext = player.isNoble() ? "OlyManager-noble.html" : "OlyManager-noNoble.html";
+			htmltext = (!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55) ? "OlyManager-noNoble.html" : "OlyManager-noble.html";
 		}
 		else
 		{
