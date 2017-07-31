@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
 import ai.AbstractNpcAI;
@@ -46,6 +47,7 @@ public class NewbieGuide extends AbstractNpcAI
 	// Other
 	private final static String TUTORIAL_QUEST = "Q00255_Tutorial";
 	private final static String TUTORIAL_SHOT_VAR = "TUTORIAL_SHOT_REWARDED";
+	private final static String SUPPORT_MAGIC_STRING = "<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h Link default/SupportMagic.htm\">Receive help from beneficial magic.</Button>";
 	
 	private NewbieGuide()
 	{
@@ -60,7 +62,18 @@ public class NewbieGuide extends AbstractNpcAI
 		String htmltext = null;
 		if (event.equals("0"))
 		{
-			htmltext = npc.getId() + ".htm";
+			if (Config.MAX_NEWBIE_BUFF_LEVEL > 0)
+			{
+				htmltext = npc.getId() + ".htm";
+			}
+			else
+			{
+				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+				html.setFile(player.getHtmlPrefix(), "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
+				html.replace(SUPPORT_MAGIC_STRING, "");
+				player.sendPacket(html);
+				return htmltext;
+			}
 		}
 		else
 		{
@@ -91,7 +104,15 @@ public class NewbieGuide extends AbstractNpcAI
 		{
 			return npc.getId() + "-no.htm";
 		}
-		return npc.getId() + ".htm";
+		if (Config.MAX_NEWBIE_BUFF_LEVEL > 0)
+		{
+			return npc.getId() + ".htm";
+		}
+		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+		html.setFile(player.getHtmlPrefix(), "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
+		html.replace(SUPPORT_MAGIC_STRING, "");
+		player.sendPacket(html);
+		return null;
 	}
 	
 	public void playTutorialVoice(L2PcInstance player, String voice)
