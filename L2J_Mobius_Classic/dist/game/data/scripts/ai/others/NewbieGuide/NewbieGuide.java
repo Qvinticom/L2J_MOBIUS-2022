@@ -85,6 +85,10 @@ public class NewbieGuide extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
+		if (npc.getRace() != player.getTemplate().getRace())
+		{
+			return npc.getId() + "-no.htm";
+		}
 		final QuestState qs = player.getQuestState(TUTORIAL_QUEST);
 		if ((qs != null) && qs.isCompleted() && !Config.DISABLE_TUTORIAL && !player.getVariables().getBoolean(TUTORIAL_SHOT_VAR, true))
 		{
@@ -99,10 +103,6 @@ public class NewbieGuide extends AbstractNpcAI
 				giveItems(player, SOULSHOT_REWARD);
 				playTutorialVoice(player, "tutorial_voice_026");
 			}
-		}
-		if (npc.getRace() != player.getTemplate().getRace())
-		{
-			return npc.getId() + "-no.htm";
 		}
 		if (Config.MAX_NEWBIE_BUFF_LEVEL > 0)
 		{
