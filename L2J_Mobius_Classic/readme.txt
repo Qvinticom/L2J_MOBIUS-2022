@@ -23,6 +23,7 @@ What is done
 -Added new class mounts
 -Fisherman NPC updates
 -Olympiad NPC updates
+-Dimensional Merchant updates
 
 Custom work
 -Start NPC dialogs until Newbie Helper
