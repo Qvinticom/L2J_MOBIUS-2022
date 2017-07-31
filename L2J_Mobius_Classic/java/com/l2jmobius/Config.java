@@ -274,6 +274,7 @@ public final class Config
 	public static int MAX_PETITIONS_PENDING;
 	public static boolean ALT_GAME_FREE_TELEPORT;
 	public static int MAX_FREE_TELEPORT_LEVEL;
+	public static int MAX_NEWBIE_BUFF_LEVEL;
 	public static int DELETE_DAYS;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
@@ -1627,6 +1628,7 @@ public final class Config
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
 			ALT_GAME_FREE_TELEPORT = Character.getBoolean("AltFreeTeleporting", false);
 			MAX_FREE_TELEPORT_LEVEL = Character.getInt("MaxFreeTeleportLevel", 0);
+			MAX_NEWBIE_BUFF_LEVEL = Character.getInt("MaxNewbieBuffLevel", 0);
 			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 1);
 			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "level").toLowerCase();
 			PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);

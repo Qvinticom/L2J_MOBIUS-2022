@@ -16,6 +16,7 @@
  */
 package handlers.bypasshandlers;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -72,10 +73,9 @@ public class SupportMagic implements IBypassHandler
 	
 	// Levels
 	private static final int LOWEST_LEVEL = 6;
-	private static final int HIGHEST_LEVEL = 40;
 	private static final int CUBIC_LOWEST = 16;
 	private static final int CUBIC_HIGHEST = 34;
-	private static final int HASTE_LEVEL_2 = HIGHEST_LEVEL + 1; // disabled
+	private static final int HASTE_LEVEL_2 = Config.MAX_NEWBIE_BUFF_LEVEL + 1; // disabled
 	
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
@@ -104,14 +104,14 @@ public class SupportMagic implements IBypassHandler
 			npc.showChatWindow(player, "data/html/default/SupportMagicNoSummon.htm");
 			return;
 		}
-		else if (level > HIGHEST_LEVEL)
-		{
-			npc.showChatWindow(player, "data/html/default/SupportMagicHighLevel.htm");
-			return;
-		}
 		else if (level < LOWEST_LEVEL)
 		{
 			npc.showChatWindow(player, "data/html/default/SupportMagicLowLevel.htm");
+			return;
+		}
+		else if (level > Config.MAX_NEWBIE_BUFF_LEVEL)
+		{
+			npc.showChatWindow(player, "data/html/default/SupportMagicHighLevel.htm");
 			return;
 		}
 		else if (player.getClassId().level() == 3)

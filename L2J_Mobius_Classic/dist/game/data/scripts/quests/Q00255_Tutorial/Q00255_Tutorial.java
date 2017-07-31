@@ -65,8 +65,8 @@ public class Q00255_Tutorial extends Quest
 	};
 	// Items
 	private final static int BLUE_GEM = 6353;
-	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 400);
-	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 200);
+	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
+	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
 	{
@@ -105,6 +105,7 @@ public class Q00255_Tutorial extends Quest
 		COMPLETE_LOCATION.put(53, new Location(115632, -177996, -905));
 	}
 	private static final String TUTORIAL_BUYPASS = "Quest Q00255_Tutorial ";
+	private final static String TUTORIAL_SHOT_VAR = "TUTORIAL_SHOT_REWARDED";
 	
 	public Q00255_Tutorial()
 	{
@@ -171,6 +172,7 @@ public class Q00255_Tutorial extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && !qs.isCompleted() && (qs.getMemoState() > 1) && hasQuestItems(player, BLUE_GEM))
 		{
+			player.getVariables().set(TUTORIAL_SHOT_VAR, false);
 			qs.exitQuest(false, false); // finish here!
 			if (player.isMageClass() && (player.getRace() != Race.ORC))
 			{
