@@ -111,6 +111,7 @@ public class Q00255_Tutorial extends Quest
 	{
 		super(255);
 		addTalkId(STARTING_HELPER_HF, STARTING_HELPER_HM, STARTING_HELPER_EL, STARTING_HELPER_DE, STARTING_HELPER_OR, STARTING_HELPER_DW);
+		addFirstTalkId(STARTING_HELPER_HF, STARTING_HELPER_HM, STARTING_HELPER_EL, STARTING_HELPER_DE, STARTING_HELPER_OR, STARTING_HELPER_DW);
 		addKillId(GREMLINS);
 		registerQuestItems(BLUE_GEM);
 	}
@@ -170,36 +171,50 @@ public class Q00255_Tutorial extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && !qs.isCompleted() && (qs.getMemoState() > 1) && hasQuestItems(player, BLUE_GEM))
+		if (qs != null)
 		{
-			player.getVariables().set(TUTORIAL_SHOT_VAR, false);
-			qs.exitQuest(false, false); // finish here!
-			if (player.isMageClass() && (player.getRace() != Race.ORC))
+			if (!qs.isCompleted() && (qs.getMemoState() > 1) && hasQuestItems(player, BLUE_GEM))
 			{
-				giveItems(player, SPIRITSHOT_REWARD);
-				playTutorialVoice(player, "tutorial_voice_027");
+				player.getVariables().set(TUTORIAL_SHOT_VAR, false);
+				qs.exitQuest(false, false); // finish here!
+				if (player.isMageClass() && (player.getRace() != Race.ORC))
+				{
+					giveItems(player, SPIRITSHOT_REWARD);
+					playTutorialVoice(player, "tutorial_voice_027");
+				}
+				else
+				{
+					giveItems(player, SOULSHOT_REWARD);
+					playTutorialVoice(player, "tutorial_voice_026");
+				}
+				final int classId = player.getClassId().getId();
+				addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
+				playSound(player, "ItemSound.quest_tutorial");
 			}
-			else
+			if (qs.isCompleted())
 			{
-				giveItems(player, SOULSHOT_REWARD);
-				playTutorialVoice(player, "tutorial_voice_026");
+				return "tutorial_15.html";
 			}
-			final int classId = player.getClassId().getId();
-			addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
-			playSound(player, "ItemSound.quest_tutorial");
-		}
-		if ((qs != null) && (qs.isCompleted() || (qs.getMemoState() > 1)))
-		{
-			return "tutorial_15.html";
 		}
 		return "tutorial_09.html";
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCompleted())
+		{
+			return "tutorial_newbie_done.html";
+		}
+		return npc.getId() + ".html";
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && (qs.getMemoState() < 2) && !hasQuestItems(killer, BLUE_GEM))
+		if ((qs != null) && (qs.getMemoState() < 2) && !hasQuestItems(killer, BLUE_GEM) && (getRandom(100) < 30))
 		{
 			// check for too many gems on ground
 			int counter = 0;

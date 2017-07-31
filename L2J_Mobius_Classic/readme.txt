@@ -41,3 +41,4 @@ TODO list
 -Custom ClassMaster NPCs
 -Blacksmith NPC updates
 -Floran Agricultural Area clan halls
+-Test Castle Sieges and Merc stats
