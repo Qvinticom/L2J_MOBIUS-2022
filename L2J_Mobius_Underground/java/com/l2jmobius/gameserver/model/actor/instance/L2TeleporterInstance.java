@@ -228,7 +228,7 @@ public final class L2TeleporterInstance extends L2Npc
 	{
 		if (type == TeleportType.NORMAL)
 		{
-			if (!player.isSubClassActive() && (player.getLevel() < (Config.MAX_FREE_TELEPORT_LEVEL + 1)))
+			if (!player.isSubClassActive() && (player.getLevel() <= Config.MAX_FREE_TELEPORT_LEVEL))
 			{
 				return 0;
 			}
@@ -497,7 +497,7 @@ public final class L2TeleporterInstance extends L2Npc
 			final Calendar cal = Calendar.getInstance();
 			int price = list.getPrice();
 			
-			if (player.getLevel() < 41)
+			if (player.getLevel() <= Config.MAX_FREE_TELEPORT_LEVEL)
 			{
 				price = 0;
 			}
