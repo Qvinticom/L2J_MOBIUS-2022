@@ -64,7 +64,21 @@ public final class FirstClassTransferTalk extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		return event;
+		String htmltext = null;
+		
+		switch (event)
+		{
+			case "30525_no1.html":
+			case "30525_no1a.html":
+			case "30525_no1b.html":
+			case "30525_no2.html":
+			case "30525_no2a.html":
+			{
+				htmltext = event;
+				break;
+			}
+		}
+		return htmltext;
 	}
 	
 	@Override
