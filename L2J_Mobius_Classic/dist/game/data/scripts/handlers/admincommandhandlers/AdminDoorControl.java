@@ -160,6 +160,8 @@ public class AdminDoorControl implements IAdminCommandHandler
 					packet.addLine(color, door.getX(0), door.getY(0), door.getZMax(), door.getX(1), door.getY(1), door.getZMin());
 					packet.addLine(color, door.getX(2), door.getY(2), door.getZMax(), door.getX(3), door.getY(3), door.getZMin());
 					activeChar.sendPacket(packet);
+					// send message
+					activeChar.sendMessage("Found door " + door.getId());
 				});
 			}
 		}
