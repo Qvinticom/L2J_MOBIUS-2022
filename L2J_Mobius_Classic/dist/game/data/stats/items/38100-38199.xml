@@ -9,5 +9,9 @@
 		<set name="price" val="500" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="FishShots" />
+		<skills>
+			<skill id="17386" level="1" /> <!-- Fishing Shot -->
+		</skills>
 	</item>
 </list>

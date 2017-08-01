@@ -17,6 +17,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39076" level="1" /> <!-- Fish Stew. The guild's gratitude -->
+		</skills>
 	</item>
 	<item id="49502" name="Teleport: Giran Harbor" type="EtcItem">
 		<!-- Magic scroll, that teleports one to Giran Harbor. -->
@@ -24,8 +33,23 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39078" level="1" /> <!-- Teleport: Giran Harbor -->
+		</skills>
 	</item>
 	<item id="49503" name="Teleport: Gludin Harbor" type="EtcItem">
 		<!-- Magic scroll, that teleports one to Gludin Harbor. -->
@@ -33,8 +57,23 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_private_storeable" val="false" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="39077" level="1" /> <!-- Teleport: Gludin Harbor -->
+		</skills>
 	</item>
 	<item id="49504" name="Report about Fish" type="EtcItem">
 		<!-- Report of Analysis Result of local fish. Take it to water researcher Baikal. -->

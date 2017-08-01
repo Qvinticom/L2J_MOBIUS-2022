@@ -919,7 +919,7 @@
 		<!-- Bracelet that can be used to summon Agathion - Pisces. 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 60 minutes) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -928,12 +928,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="17619" level="1" /> <!-- Release Agathion - Pisces -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="49459" name="Agathion - Cancer" additionalName="15-day" type="Armor">
 		<!-- Bracelet that can be used to summon Agathion - Cancer. 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 60 minutes) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -942,6 +946,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="17621" level="1" /> <!-- Release Agathion - Cancer -->
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+		</skills>
 	</item>
 	<item id="49460" name="Fish Stew: Might" type="EtcItem">
 		<!-- Increases P. Atk. by 8% for 20 minutes. The item cannot be dropped. -->
@@ -951,6 +959,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39047" level="1" /> <!-- Fish Stew: Might -->
+		</skills>
 	</item>
 	<item id="49461" name="Fish Stew: Shield" type="EtcItem">
 		<!-- Increases P. Def. by 8% for 20 minutes. The item cannot be dropped. -->
@@ -960,6 +977,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39048" level="1" /> <!-- Fish Stew: Shield -->
+		</skills>
 	</item>
 	<item id="49462" name="Fish Stew: Magic Barrier" type="EtcItem">
 		<!-- Increases M. Def. by 23% for 20 minutes. The item cannot be dropped. -->
@@ -969,6 +995,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39049" level="1" /> <!-- Fish Stew: Magic Barrier -->
+		</skills>
 	</item>
 	<item id="49463" name="Fish Stew: Vampiric Rage" type="EtcItem">
 		<!-- Restores 6% from received physical damage for 20 minutes. The item cannot be dropped. -->
@@ -978,6 +1013,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39050" level="1" /> <!-- Fish Stew: Vampiric Rage -->
+		</skills>
 	</item>
 	<item id="49464" name="Fish Stew: Empower" type="EtcItem">
 		<!-- Increases M. Atk. by 55% for 20 minutes. The item cannot be dropped. -->
@@ -987,6 +1031,15 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<skills>
+			<skill id="39051" level="1" /> <!-- Fish Stew: Empower -->
+		</skills>
 	</item>
 	<item id="49465" name="Fishing Rod" additionalName="For NPC" type="Weapon">
 		<set name="icon" val="icon.weapon_fishing_rod_i03" />
