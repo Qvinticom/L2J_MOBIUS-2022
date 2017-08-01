@@ -22,10 +22,12 @@ What is done
 -Fixed skill levels to match retail
 -Added new class mounts
 -Fisherman NPC updates
+-Quest Fishing Specialist's Request
+-Fixed fishing to match retail
 -Olympiad NPC updates
 -Dimensional Merchant updates
 -Retail gatekeeper teleports
--Quest Fishing Specialist's Request
+-Admin menu teleport and shop cleanups
 
 Custom work
 -Start NPC dialogs until Newbie Helper
