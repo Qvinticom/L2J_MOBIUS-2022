@@ -51,20 +51,16 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	private static final int WINGS_OF_DESTINY_CIRCLET = 6842;
 	private static final int[] WEAPONS =
 	{
-		30392, // Infinity Shaper (dagger)
-		30393, // Infinity Cutter (1-H Sword)
-		30394, // Infinity Slasher (2-H Sword)
-		30395, // Infinity Avenger (1-H Blunt Weapon)
-		30396, // Infinity Fighter (Fist)
-		30397, // Infinity Stormer (Polearm)
-		30398, // Infinity Thrower (bow)
-		30399, // Infinity Shooter (crossbow)
-		30400, // Infinity Buster (magic sword)
-		30401, // Infinity Caster (magic blunt weapon)
-		30402, // Infinity Retributer (two-handed magic blunt weapon)
-		30403, // Infinity Dual Sword (Dual Swords)
-		30404, // Infinity Dual Dagger (Dual Daggers)
-		30405, // Infinity Dual Blunt Weapon (Dual Blunt Weapon)
+		6611, // Infinity Blade
+		6612, // Infinity Cleaver
+		6613, // Infinity Axe
+		6614, // Infinity Rod
+		6616, // Infinity Scepter
+		6617, // Infinity Stinger
+		6618, // Infinity Fang
+		6619, // Infinity Bow
+		6620, // Infinity Wing
+		6621, // Infinity Spear
 	};
 	
 	private MonumentOfHeroes()
@@ -228,20 +224,16 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 				}
 				break;
 			}
-			case "give_30392": // Infinity Shaper (dagger)
-			case "give_30393": // Infinity Cutter (1-H Sword)
-			case "give_30394": // Infinity Slasher (2-H Sword)
-			case "give_30395": // Infinity Avenger (1-H Blunt Weapon)
-			case "give_30396": // Infinity Fighter (Fist)
-			case "give_30397": // Infinity Stormer (Polearm)
-			case "give_30398": // Infinity Thrower (bow)
-			case "give_30399": // Infinity Shooter (crossbow)
-			case "give_30400": // Infinity Buster (magic sword)
-			case "give_30401": // Infinity Caster (magic blunt weapon)
-			case "give_30402": // Infinity Retributer (two-handed magic blunt weapon)
-			case "give_30403": // Infinity Dual Sword (Dual Swords)
-			case "give_30404": // Infinity Dual Dagger (Dual Daggers)
-			case "give_30405": // Infinity Dual Blunt Weapon (Dual Blunt Weapon)
+			case "give_6611": // Infinity Blade
+			case "give_6612": // Infinity Cleaver
+			case "give_6613": // Infinity Axe
+			case "give_6614": // Infinity Rod
+			case "give_6616": // Infinity Scepter
+			case "give_6617": // Infinity Stinger
+			case "give_6618": // Infinity Fang
+			case "give_6619": // Infinity Bow
+			case "give_6620": // Infinity Wing
+			case "give_6621": // Infinity Spear
 			{
 				final int weaponId = Integer.parseInt(event.replace("give_", ""));
 				giveItems(player, weaponId, 1);

@@ -19,9 +19,7 @@ package ai.others.OlyManager;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -35,7 +33,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -56,18 +53,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 	// NPC
 	private static final int MANAGER = 31688;
 	// Misc
-	private static final Map<CategoryType, Integer> EQUIPMENT_MULTISELL = new HashMap<>();
-	
-	{
-		EQUIPMENT_MULTISELL.put(CategoryType.SIGEL_GROUP, 917);
-		EQUIPMENT_MULTISELL.put(CategoryType.TYRR_GROUP, 918);
-		EQUIPMENT_MULTISELL.put(CategoryType.OTHELL_GROUP, 919);
-		EQUIPMENT_MULTISELL.put(CategoryType.YUL_GROUP, 920);
-		EQUIPMENT_MULTISELL.put(CategoryType.FEOH_GROUP, 921);
-		EQUIPMENT_MULTISELL.put(CategoryType.ISS_GROUP, 923);
-		EQUIPMENT_MULTISELL.put(CategoryType.WYNN_GROUP, 922);
-		EQUIPMENT_MULTISELL.put(CategoryType.AEORE_GROUP, 924);
-	}
+	private static final int EQUIPMENT_MULTISELL = 3168801;
 	
 	private static final String[] BYPASSES =
 	{
@@ -213,32 +199,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "showEquipmentReward":
 			{
-				int multisellId = -1;
-				
-				if (player.getClassId() == ClassId.SAYHA_SEER)
-				{
-					multisellId = 926;
-				}
-				else if (player.getClassId() == ClassId.EVISCERATOR)
-				{
-					multisellId = 925;
-				}
-				else
-				{
-					for (CategoryType type : EQUIPMENT_MULTISELL.keySet())
-					{
-						if (player.isInCategory(type))
-						{
-							multisellId = EQUIPMENT_MULTISELL.get(type);
-							break;
-						}
-					}
-				}
-				
-				if (multisellId > 0)
-				{
-					MultisellData.getInstance().separateAndSend(multisellId, player, npc, false);
-				}
+				MultisellData.getInstance().separateAndSend(EQUIPMENT_MULTISELL, player, npc, false);
 				break;
 			}
 			case "rank_2": // Gladiator
