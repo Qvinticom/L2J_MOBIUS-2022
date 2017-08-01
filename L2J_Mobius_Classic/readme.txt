@@ -30,7 +30,6 @@ What is done
 -Admin menu teleport and shop cleanups
 
 Custom work
--Start NPC dialogs until Newbie Helper
 -Newbie Helper NPC location info
 -Newbie Helper buff support until 40 level
 
@@ -45,3 +44,4 @@ TODO list
 -Blacksmith NPC updates
 -Floran Agricultural Area clan halls
 -Test Castle Sieges and Merc stats
+-Whisper of Dreams quests
