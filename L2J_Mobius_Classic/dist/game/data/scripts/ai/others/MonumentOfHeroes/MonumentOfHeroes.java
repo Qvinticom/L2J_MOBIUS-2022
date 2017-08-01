@@ -47,7 +47,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	};
 	// Items
 	private static final int HERO_CLOAK = 30372;
-	private static final int GLORIOUS_CLOAK = 30373;
+	// private static final int GLORIOUS_CLOAK = 30373;
 	private static final int WINGS_OF_DESTINY_CIRCLET = 6842;
 	private static final int[] WEAPONS =
 	{
@@ -97,7 +97,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 				final int olympiadRank = getOlympiadRank(player);
 				if (olympiadRank == 1)
 				{
-					if (!hasAtLeastOneQuestItem(player, HERO_CLOAK, GLORIOUS_CLOAK))
+					if (!hasAtLeastOneQuestItem(player, HERO_CLOAK/* , GLORIOUS_CLOAK */))
 					{
 						if (player.isInventoryUnder80(false))
 						{
@@ -113,24 +113,10 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 						htmltext = "MonumentOfHeroes-cloakHave.html";
 					}
 				}
-				else if ((olympiadRank == 2) || (olympiadRank == 3))
-				{
-					if (!hasAtLeastOneQuestItem(player, HERO_CLOAK, GLORIOUS_CLOAK))
-					{
-						if (player.isInventoryUnder80(false))
-						{
-							giveItems(player, GLORIOUS_CLOAK, 1);
-						}
-						else
-						{
-							player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
-						}
-					}
-					else
-					{
-						htmltext = "MonumentOfHeroes-cloakHave.html";
-					}
-				}
+				/*
+				 * else if ((olympiadRank == 2) || (olympiadRank == 3)) { if (!hasAtLeastOneQuestItem(player, HERO_CLOAK, GLORIOUS_CLOAK)) { if (player.isInventoryUnder80(false)) { giveItems(player, GLORIOUS_CLOAK, 1); } else {
+				 * player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY); } } else { htmltext = "MonumentOfHeroes-cloakHave.html"; } }
+				 */
 				else
 				{
 					htmltext = "MonumentOfHeroes-cloakNo.html";
