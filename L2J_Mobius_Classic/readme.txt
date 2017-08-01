@@ -24,6 +24,8 @@ What is done
 -Fisherman NPC updates
 -Olympiad NPC updates
 -Dimensional Merchant updates
+-Retail gatekeeper teleports
+-Quest Fishing Specialist's Request
 
 Custom work
 -Start NPC dialogs until Newbie Helper
@@ -31,7 +33,6 @@ Custom work
 -Newbie Helper buff support until 40 level
 
 TODO list
--Retail gatekeeper teleports
 -Parse retail monster spawns by zone
 -Retail NPC dialogs
 -Retail NPC buylists

@@ -63,6 +63,7 @@ import quests.Q00105_SkirmishWithOrcs.Q00105_SkirmishWithOrcs;
 import quests.Q00106_ForgottenTruth.Q00106_ForgottenTruth;
 import quests.Q00107_MercilessPunishment.Q00107_MercilessPunishment;
 import quests.Q00108_JumbleTumbleDiamondFuss.Q00108_JumbleTumbleDiamondFuss;
+import quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest;
 import quests.Q00151_CureForFever.Q00151_CureForFever;
 import quests.Q00152_ShardsOfGolem.Q00152_ShardsOfGolem;
 import quests.Q00153_DeliverGoods.Q00153_DeliverGoods;
@@ -230,6 +231,7 @@ public class QuestMasterHandler
 		Q00106_ForgottenTruth.class,
 		Q00107_MercilessPunishment.class,
 		Q00108_JumbleTumbleDiamondFuss.class,
+		Q00127_FishingSpecialistsRequest.class,
 		Q00151_CureForFever.class,
 		Q00152_ShardsOfGolem.class,
 		Q00153_DeliverGoods.class,

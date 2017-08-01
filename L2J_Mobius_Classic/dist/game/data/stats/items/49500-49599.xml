@@ -44,6 +44,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="49505" name="Sealed Bottle" type="EtcItem">
 		<!-- A bottle filled with water polluting substance. Take it to Fisher Pierre. -->
@@ -53,6 +54,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="49506" name="Fishing Rod" additionalName="10-day" type="Weapon">
 		<!-- A Fishing Rod for 10 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Float usage: 1 -->
@@ -89,6 +91,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49506" min="1" max="1" chance="100" /> <!-- Fishing Rod - 10-day -->
+		</capsuled_items>
 	</item>
 	<item id="49508" name="Normal Bait" additionalName="Event" type="EtcItem">
 		<!-- Fishing bait enables to fish. Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. -->
@@ -138,6 +145,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="49511" name="Sheep Gift" type="EtcItem">
 		<!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick Healing Potion, Warrior's Major Healing Potion. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->

@@ -141,7 +141,7 @@ public class Fishing
 		}
 		
 		final FishingBaitData baitData = getCurrentBaitData();
-		final int minPlayerLevel = baitData == null ? 85 : baitData.getMinPlayerLevel();
+		final int minPlayerLevel = baitData == null ? 20 : baitData.getMinPlayerLevel();
 		if (_player.getLevel() < minPlayerLevel)
 		{
 			if (minPlayerLevel == 85)

@@ -59,11 +59,14 @@
 	<item id="45495" name="Normal Bait" type="EtcItem">
 		<!-- Used for fishing. Can't be sold. -->
 		<set name="icon" val="icon.etc_huge_lure" />
+		<set name="bodypart" val="lhand" />
 		<set name="default_action" val="EQUIP" />
+		<set name="etcitem_type" val="LURE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
+		<set name="material" val="LIQUID" />
 		<set name="price" val="6000" />
-		<set name="is_sellable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 </list>
