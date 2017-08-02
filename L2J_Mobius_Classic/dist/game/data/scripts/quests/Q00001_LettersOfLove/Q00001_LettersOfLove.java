@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * Letters of Love (1)
@@ -38,7 +37,7 @@ public class Q00001_LettersOfLove extends Quest
 	private static final int ROXXYS_KERCHIEF = 688;
 	private static final int DARINS_RECEIPT = 1079;
 	private static final int BAULROS_POTION = 1080;
-	private static final int NECKLACE_OF_KNOWLEDGE = 906;
+	private static final int NECKLACE_OF_KNOWLEDGE = 29471;
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
@@ -193,10 +192,8 @@ public class Q00001_LettersOfLove extends Quest
 							case DARIN:
 							{
 								// TODO: Beside this message something should be set for the Newbie Guide.
-								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
+								// showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
 								giveItems(player, NECKLACE_OF_KNOWLEDGE, 1);
-								addExpAndSp(player, 5672, 446);
-								giveAdena(player, 2466, false);
 								st.exitQuest(false, true);
 								htmltext = "30048-10.html";
 								break;

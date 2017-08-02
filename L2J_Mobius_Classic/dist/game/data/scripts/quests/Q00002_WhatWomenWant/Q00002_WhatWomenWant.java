@@ -41,7 +41,7 @@ public class Q00002_WhatWomenWant extends Quest
 	private static final int ARUJIENS_LETTER3 = 1094;
 	private static final int POETRY_BOOK = 689;
 	private static final int GREENIS_LETTER = 693;
-	private static final int EARRING = 113;
+	private static final int EARRING = 29486;
 	// Misc
 	private static final int MIN_LEVEL = 2;
 	
@@ -124,9 +124,7 @@ public class Q00002_WhatWomenWant extends Quest
 								st.exitQuest(false, true);
 								htmltext = "30223-11.html";
 								// Newbie Guide
-								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
-								addExpAndSp(player, 4254, 335);
-								giveAdena(player, 1850, true);
+								// showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000);
 								break;
 						}
 						break;
