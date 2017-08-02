@@ -488,7 +488,6 @@ public final class Config
 	public static int INSTANCE_FINISH_TIME;
 	public static boolean RESTORE_PLAYER_INSTANCE;
 	public static int EJECT_DEAD_PLAYER_TIME;
-	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
 	public static boolean ALLOW_RENTPET;
 	public static boolean ALLOW_FISHING;
@@ -1787,7 +1786,6 @@ public final class Config
 			INSTANCE_FINISH_TIME = General.getInt("DefaultFinishTime", 5);
 			RESTORE_PLAYER_INSTANCE = General.getBoolean("RestorePlayerInstance", false);
 			EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);
-			ALLOW_RACE = General.getBoolean("AllowRace", true);
 			ALLOW_WATER = General.getBoolean("AllowWater", true);
 			ALLOW_RENTPET = General.getBoolean("AllowRentPet", false);
 			ALLOW_FISHING = General.getBoolean("AllowFishing", true);

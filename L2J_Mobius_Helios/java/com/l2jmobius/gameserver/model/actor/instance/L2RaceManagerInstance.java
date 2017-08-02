@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.MonsterRace;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -93,6 +94,12 @@ public class L2RaceManagerInstance extends L2Npc
 	{
 		super(template);
 		setInstanceType(InstanceType.L2RaceManagerInstance);
+		
+		if (!Config.ALLOW_RACE)
+		{
+			return;
+		}
+		
 		if (_notInitialized)
 		{
 			_notInitialized = false;
@@ -120,7 +127,6 @@ public class L2RaceManagerInstance extends L2Npc
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
 			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
-			// */
 		}
 		_managers.add(this);
 	}
@@ -256,17 +262,29 @@ public class L2RaceManagerInstance extends L2Npc
 	{
 		if (command.startsWith("BuyTicket") && (_state != ACCEPTING_BETS))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			player.sendPacket(SystemMessageId.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE);
 			command = "Chat 0";
 		}
 		if (command.startsWith("ShowOdds") && (_state == ACCEPTING_BETS))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			player.sendPacket(SystemMessageId.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD);
 			command = "Chat 0";
 		}
 		
 		if (command.startsWith("BuyTicket"))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			int val = Integer.parseInt(command.substring(10));
 			if (val == 0)
 			{
@@ -281,18 +299,34 @@ public class L2RaceManagerInstance extends L2Npc
 		}
 		else if (command.equals("ShowOdds"))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			showOdds(player);
 		}
 		else if (command.equals("ShowInfo"))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			showMonsterInfo(player);
 		}
 		else if (command.equals("calculateWin"))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			// displayCalculateWinnings(player);
 		}
 		else if (command.equals("viewHistory"))
 		{
+			if (!Config.ALLOW_RACE)
+			{
+				return;
+			}
 			// displayHistory(player);
 		}
 		else
@@ -533,6 +567,7 @@ public class L2RaceManagerInstance extends L2Npc
 			{
 				obj = new DeleteObject(MonsterRace.getInstance().getMonsters()[i]);
 				broadcast(obj);
+				MonsterRace.getInstance().getMonsters()[i].deleteMe();
 			}
 		}
 	}

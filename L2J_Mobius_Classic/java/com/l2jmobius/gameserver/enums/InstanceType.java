@@ -77,7 +77,6 @@ public enum InstanceType
 	L2ObservationInstance(L2Npc),
 	L2OlympiadManagerInstance(L2Npc),
 	L2PetManagerInstance(L2MerchantInstance),
-	L2RaceManagerInstance(L2Npc),
 	L2TeleporterInstance(L2Npc),
 	L2VillageMasterInstance(L2NpcInstance),
 	// Doormens

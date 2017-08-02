@@ -378,7 +378,10 @@ public class GameServer
 			ItemsAutoDestroy.getInstance();
 		}
 		
-		MonsterRace.getInstance();
+		if (Config.ALLOW_RACE)
+		{
+			MonsterRace.getInstance();
+		}
 		TaskManager.getInstance();
 		
 		AntiFeedManager.getInstance().registerEvent(AntiFeedManager.GAME_ID);
