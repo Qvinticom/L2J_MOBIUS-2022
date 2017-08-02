@@ -31,35 +31,11 @@
 				<category>FOURTH_CLASS_GROUP</category>
 			</appliesTo>
 			<rewards>
-				<item id="37044" count="1" chance="10" /> <!-- Immortal Scroll (Skill Enchantment, untradable) -->
+				<item id="37044" count="1" /> <!-- Immortal Scroll (Skill Enchantment, untradable) -->
 			</rewards>
 			<conditions>
 				<item id="57" count="3000000" /> <!-- 3 million Adena for fourth class -->
 				<item id="5575" count="300000" /> <!-- 300k Ancient Adena for fourth class -->
-			</conditions>
-		</classChangeOption>
-		<classChangeOption name="Pay more Adena for a chance to not pay Ancient Adena">
-			<appliesTo>
-				<category>FOURTH_CLASS_GROUP</category>
-			</appliesTo>
-			<rewards>
-				<item id="37044" count="1" chance="10" /> <!-- Immortal Scroll (Skill Enchantment, untradable) -->
-			</rewards>
-			<conditions>
-				<item id="57" count="6000000" /> <!-- 6 million Adena -->
-				<item id="5575" count="300000" chance="50" /> <!-- 50% chance to take your 300k Ancient Adena for third class -->
-			</conditions>
-		</classChangeOption>
-		<classChangeOption name="Pay Lots of Adena and Ancient Adena for a 100% reward.">
-			<appliesTo>
-				<category>FOURTH_CLASS_GROUP</category>
-			</appliesTo>
-			<rewards>
-				<item id="37044" count="1" chance="100" /> <!-- Immortal Scroll (Skill Enchantment, untradable) -->
-			</rewards>
-			<conditions>
-				<item id="57" count="10000000" /> <!-- 10 million adena -->
-				<item id="5575" count="1000000" /> <!-- 1 million Ancient Adena -->
 			</conditions>
 		</classChangeOption>
 	</classMaster>
