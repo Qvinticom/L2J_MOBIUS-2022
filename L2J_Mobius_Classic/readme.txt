@@ -19,7 +19,7 @@ What is done
 -Parsed NPC droplists from L2Wiki
 -Further manual NPC corrections from L2Wiki
 -Basic Tutorial quest
--Added 153 quest scripts
+-Added 156 quest scripts
 -Village Master AI scripts
 -Fixed skill levels to match retail
 -Added new class mounts
@@ -30,11 +30,13 @@ What is done
 -Dimensional Merchant updates
 -Retail gatekeeper teleports
 -Admin menu teleport and shop cleanups
+-Blacksmith NPC updates
+-New Race Track arena zone
 
 Custom work
 -Newbie Helper NPC location info
 -Newbie Helper buff support until 40 level
--ClassMaster (Test Server Helper) NPCs
+-Test Server Helper NPCs
 
 TODO list
 -Parse retail monster spawns by zone
@@ -42,8 +44,6 @@ TODO list
 -Retail NPC buylists
 -Test quests and update rewards
 -Giran Luxury Shop updates
--New Race Track arena
--Blacksmith NPC updates
 -Floran Agricultural Area clan halls
--Test Castle Sieges and Merc stats
+-Test castle sieges
 -Whisper of Dreams quests
