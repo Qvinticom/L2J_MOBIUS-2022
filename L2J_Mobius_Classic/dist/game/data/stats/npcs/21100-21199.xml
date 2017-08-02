@@ -937,25 +937,47 @@
 	</npc>
 	<npc id="21114" level="70" type="L2Monster" name="Cursed Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="SelfRangeDDMagic" id="4033" level="7" /> <!-- NPC Burn -->
+		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<equipment rhand="1472" /> <!-- rhand: Dreadbane -->
+		<acquire exp="16405" sp="492" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2586.66898" hpRegen="8.5" mp="1442.4" mpRegen="3" />
+			<vitals hp="5140.5555" hpRegen="8.5" mp="1345" mpRegen="3" />
 			<speed>
 				<walk ground="100" />
 				<run ground="175" />
 			</speed>
+			<hit_time>450</hit_time>
 			<attack physical="752.73928" magical="514.02335" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="263.5251515" magical="226.8662" evasion="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
 		<skill_list>
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
 		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="400" clanHelpRange="200" isAggressive="false">
+			<clan_list>
+				<clan>ALL</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="15" />
 			<height normal="45" />
