@@ -642,6 +642,7 @@ public final class Instance implements IIdentifiable, INamable
 	public void removeNpcs()
 	{
 		_spawns.forEach(SpawnTemplate::despawnAll);
+		_npcs.forEach(L2Npc::deleteMe);
 		_npcs.clear();
 	}
 	
