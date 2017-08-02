@@ -1,10 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16608" toLevel="10" name="Servitor Attack Weakness">
-	<!-- AUTO GENERATED SKILL -->
-	<!-- A slight weakness to Servitor attacks. -->
-	<icon>icon.skill1497</icon>
-	<operateType>P</operateType>
-	<targetType>SELF</targetType>
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A slight weakness to Servitor attacks. -->
+		<icon>icon.skill1497</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+	</skill>
+	<skill id="16641" toLevel="1" name="Hyper Mega Plasma Shot">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magic skill that deals great damage to a single enemy -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<castRange>1100</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16642" toLevel="1" name="Hyper Mega Plasma Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Magic skill; when one enemy is targeted and hit with magic, damage is dealt to other enemies around the target as well -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<castRange>1100</castRange>
+		<hitTime>2000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16643" toLevel="1" name="Napalm Death">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- A fan-shaped flame rages around the target, causing damage. Similar to Valakas' Breath -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<castRange>1100</castRange>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16644" toLevel="1" name="Ride the Lightning">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- An electric field is generated around oneself, dealing damage to the enemy. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16645" toLevel="1" name="Ride the Lightning Mega Burst">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Damage by the electric field has caused paralysis and made movement impossible temporarily. -->
+		<icon>icon.skill0279</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<effectPoint>-438</effectPoint>
+		<isMagic>1</isMagic>
+		<isDebuff>1</isDebuff>
+	</skill>
+	<skill id="16646" toLevel="1" name="Hyper Mega Telekinesis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Users around oneself are pushed away, dealing damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
+	</skill>
+	<skill id="16647" toLevel="1" name="Ultra Mega Telekinesis">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Users far away from oneself are drawn in, dealing damage. -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>-52</effectPoint>
+		<isMagic>1</isMagic>
 	</skill>
 </list>
