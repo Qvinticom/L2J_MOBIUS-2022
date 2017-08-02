@@ -748,7 +748,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			else if (command.equals("Q10753_close"))
 			{
 				player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
-				player.sendPacket(new TutorialShowQuestionMark(getId()));
+				player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 				player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 			}
 		}
@@ -778,7 +778,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			{
 				showOnScreenMsg(player, NpcStringId.MASTER_KATALIN_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}
@@ -805,7 +805,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			{
 				showOnScreenMsg(player, NpcStringId.MASTER_KATALIN_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
 			}
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}

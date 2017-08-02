@@ -252,7 +252,7 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}
@@ -271,7 +271,7 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		
 		if ((qs == null) && canStartQuest(player))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}

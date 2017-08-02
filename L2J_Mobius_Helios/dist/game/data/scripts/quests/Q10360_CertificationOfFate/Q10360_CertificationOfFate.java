@@ -506,7 +506,7 @@ public final class Q10360_CertificationOfFate extends Quest
 		
 		if ((oldLevel < newLevel) && (newLevel == MIN_LEVEL) && (player.getRace() != Race.ERTHEIA) && (player.isInCategory(CategoryType.SECOND_CLASS_GROUP)))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			
 		}
 	}
@@ -522,7 +522,7 @@ public final class Q10360_CertificationOfFate extends Quest
 			final QuestState st = getQuestState(player, true);
 			if (st.isCreated())
 			{
-				player.sendPacket(new TutorialShowQuestionMark(getId()));
+				player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			}
 		}
 	}

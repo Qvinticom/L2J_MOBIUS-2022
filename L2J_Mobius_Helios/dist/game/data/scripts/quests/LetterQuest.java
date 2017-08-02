@@ -216,7 +216,7 @@ public abstract class LetterQuest extends Quest
 		
 		if ((st == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 			showOnScreenMsg(player, _startMessage, ExShowScreenMessage.TOP_CENTER, 10000);
 		}
@@ -236,7 +236,7 @@ public abstract class LetterQuest extends Quest
 		
 		if ((st == null) && canStartQuest(player))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 			showOnScreenMsg(player, _startMessage, ExShowScreenMessage.TOP_CENTER, 10000);
 		}

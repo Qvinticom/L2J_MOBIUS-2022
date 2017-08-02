@@ -288,7 +288,7 @@ public class Q10304_ForForgottenHeroes extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && (event.getOldLevel() < event.getNewLevel()) && canStartQuest(player) && (player.getLevel() >= MIN_LEVEL))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}
@@ -301,7 +301,7 @@ public class Q10304_ForForgottenHeroes extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs == null) && canStartQuest(player) && (player.getLevel() >= MIN_LEVEL))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 			playSound(player, QuestSound.ITEMSOUND_QUEST_TUTORIAL);
 		}
 	}

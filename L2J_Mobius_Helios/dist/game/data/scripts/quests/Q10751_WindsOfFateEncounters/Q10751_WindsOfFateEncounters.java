@@ -520,7 +520,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 			else if (command.equals("Q10751_close"))
 			{
 				player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
-				player.sendPacket(new TutorialShowQuestionMark(getId()));
+				player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 				player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 			}
 		}
@@ -538,7 +538,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 		if ((st == null) && (player.getRace().equals(Race.ERTHEIA)) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 		}
 	}
 	
@@ -552,7 +552,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 		if ((st == null) && player.getRace().equals(Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 		}
 	}
 }

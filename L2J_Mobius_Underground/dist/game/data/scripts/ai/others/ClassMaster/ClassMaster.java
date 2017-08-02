@@ -17,6 +17,7 @@
 package ai.others.ClassMaster;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -29,7 +30,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -50,7 +50,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevel
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.spawns.SpawnTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
@@ -65,11 +65,11 @@ import ai.AbstractNpcAI;
 public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 {
 	// NPCs
-	private static final int[] CLASS_MASTER =
+	private static final List<Integer> CLASS_MASTERS = new ArrayList<>();
 	{
-		31756, // Mr. Cat
-		31757, // Queen of Hearts
-	};
+		CLASS_MASTERS.add(31756); // Mr. Cat
+		CLASS_MASTERS.add(31757); // Queen of Hearts
+	}
 	// Misc
 	private boolean _isEnabled;
 	private boolean _spawnClassMasters;
@@ -80,9 +80,9 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 	public ClassMaster()
 	{
 		load();
-		addStartNpc(CLASS_MASTER);
-		addTalkId(CLASS_MASTER);
-		addFirstTalkId(CLASS_MASTER);
+		addStartNpc(CLASS_MASTERS);
+		addTalkId(CLASS_MASTERS);
+		addFirstTalkId(CLASS_MASTERS);
 	}
 	
 	@Override
@@ -128,8 +128,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 							if ("classChangeOption".equals(c.getNodeName()))
 							{
 								final List<CategoryType> appliedCategories = new LinkedList<>();
-								final List<ItemChanceHolder> requiredItems = new LinkedList<>();
-								final List<ItemChanceHolder> rewardedItems = new LinkedList<>();
+								final List<ItemHolder> requiredItems = new LinkedList<>();
+								final List<ItemHolder> rewardedItems = new LinkedList<>();
 								boolean setNoble = false;
 								boolean setHero = false;
 								final String optionName = parseString(attrs, "name", "");
@@ -163,9 +163,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 											{
 												final int itemId = parseInteger(attrs, "id");
 												final int count = parseInteger(attrs, "count", 1);
-												final int chance = parseInteger(attrs, "chance", 100);
 												
-												rewardedItems.add(new ItemChanceHolder(itemId, chance, count));
+												rewardedItems.add(new ItemHolder(itemId, count));
 											}
 											else if ("setNoble".equals(r.getNodeName()))
 											{
@@ -186,9 +185,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 											{
 												final int itemId = parseInteger(attrs, "id");
 												final int count = parseInteger(attrs, "count", 1);
-												final int chance = parseInteger(attrs, "chance", 100);
 												
-												requiredItems.add(new ItemChanceHolder(itemId, chance, count));
+												requiredItems.add(new ItemHolder(itemId, count));
 											}
 										}
 									}
@@ -251,7 +249,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		{
 			case "buyitems":
 			{
-				htmltext = npc.getId() == CLASS_MASTER[0] ? "test_server_helper001a.html" : "test_server_helper001b.html";
+				htmltext = npc.getId() == CLASS_MASTERS.get(0) ? "test_server_helper001a.html" : "test_server_helper001b.html";
 				break;
 			}
 			case "setnoble":
@@ -374,31 +372,22 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 							htmltext = htmltext.replace("%options%", getClassChangeOptions(player, classId));
 							return htmltext;
 						}
-						
-						final ClassChangeData data = getClassChangeData(classDataIndex);
-						if (data == null)
+					}
+					
+					final ClassChangeData data = getClassChangeData(classDataIndex);
+					if ((data != null) && (data.getItemsRequired().size() > 0))
+					{
+						for (ItemHolder ri : data.getItemsRequired())
 						{
-							return null;
+							if (player.getInventory().getInventoryItemCount(ri.getId(), -1) < ri.getCount())
+							{
+								player.sendMessage("You do not have enough items.");
+								return null; // No class change if payment failed.
+							}
 						}
-						
-						//@formatter:off
-						final boolean paid = data.getItemsRequired().stream()
-						.filter(ich -> ich.getChance() > Rnd.get(100)) // Chance to pay the price
-						.filter(ih -> player.getInventory().getInventoryItemCount(ih.getId(), -1) >= ih.getCount())
-						.allMatch(ih -> player.destroyItemByItemId(getClass().getSimpleName(), ih.getId(), ih.getCount(), npc, true));
-						//@formatter:on
-						
-						if (paid)
+						for (ItemHolder ri : data.getItemsRequired())
 						{
-							//@formatter:off
-							data.getItemsRewarded().stream()
-							.filter(ich -> ich.getChance() > Rnd.get(100)) // Chance to receive the reward
-							.forEach(ih -> player.addItem(getClass().getSimpleName(), ih.getId(), ih.getCount(), npc, true));
-							//@formatter:on
-						}
-						else
-						{
-							return null; // No class change if payment failed.
+							player.destroyItemByItemId(getClass().getSimpleName(), ri.getId(), ri.getCount(), npc, true);
 						}
 					}
 					
@@ -460,6 +449,14 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 				{
 					player.getClan().setLevel(player.getClan().getLevel() + 1);
 					player.getClan().broadcastClanStatus();
+				}
+				break;
+			}
+			case "test_server_helper001.html":
+			{
+				if (CLASS_MASTERS.contains(npc.getId()))
+				{
+					htmltext = event;
 				}
 				break;
 			}
@@ -906,14 +903,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			{
 				option.getItemsRequired().forEach(ih ->
 				{
-					if (ih.getChance() >= 100)
-					{
-						sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
-					}
-					else
-					{
-						sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30><font color=LEVEL>" + ih.getChance() + "%</font></td></tr>");
-					}
+					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
 				});
 			}
 			sb.append("<tr><td>Rewards:</td></tr>");
@@ -938,14 +928,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			{
 				option.getItemsRewarded().forEach(ih ->
 				{
-					if (ih.getChance() >= 100)
-					{
-						sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
-					}
-					else
-					{
-						sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30><font color=LEVEL>" + ih.getChance() + "%</font></td></tr>");
-					}
+					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
 				});
 				
 				if (option.isRewardNoblesse())
@@ -971,8 +954,8 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		private final List<CategoryType> _appliedCategories;
 		private boolean _rewardNoblesse;
 		private boolean _rewardHero;
-		private List<ItemChanceHolder> _itemsRequired;
-		private List<ItemChanceHolder> _itemsRewarded;
+		private List<ItemHolder> _itemsRequired;
+		private List<ItemHolder> _itemsRewarded;
 		
 		public ClassChangeData(String name, List<CategoryType> appliedCategories)
 		{
@@ -1026,22 +1009,22 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			_rewardHero = rewardHero;
 		}
 		
-		void setItemsRequired(List<ItemChanceHolder> itemsRequired)
+		void setItemsRequired(List<ItemHolder> itemsRequired)
 		{
 			_itemsRequired = itemsRequired;
 		}
 		
-		public List<ItemChanceHolder> getItemsRequired()
+		public List<ItemHolder> getItemsRequired()
 		{
 			return _itemsRequired != null ? _itemsRequired : Collections.emptyList();
 		}
 		
-		void setItemsRewarded(List<ItemChanceHolder> itemsRewarded)
+		void setItemsRewarded(List<ItemHolder> itemsRewarded)
 		{
 			_itemsRewarded = itemsRewarded;
 		}
 		
-		public List<ItemChanceHolder> getItemsRewarded()
+		public List<ItemHolder> getItemsRewarded()
 		{
 			return _itemsRewarded != null ? _itemsRewarded : Collections.emptyList();
 		}

@@ -1,5 +1,5 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../data/xsd/classMaster.xsd">
-	<classMaster classChangeEnabled="false" spawnClassMasters="false" showPopupWindow="false">
+	<classMaster classChangeEnabled="true" spawnClassMasters="true" showPopupWindow="true">
 		<classChangeOption name="Free">
 			<appliesTo>
 				<category>FIRST_CLASS_GROUP</category>
@@ -18,13 +18,16 @@
 				<item id="57" count="500000" /> <!-- 500,000 Adena for third class -->
 			</conditions>
 		</classChangeOption>
-		<classChangeOption name="Pay Ancient Adena">
+		<!--
+		You can add alternative payment methods.
+		<classChangeOption name="Pay Coin of Luck">
 			<appliesTo>
 				<category>THIRD_CLASS_GROUP</category>
 			</appliesTo>
 			<conditions>
-				<item id="5575" count="50000" /> <!-- 50,000 Ancient Adena for third class -->
+				<item id="4037" count="100" />
 			</conditions>
 		</classChangeOption>
+		-->
 	</classMaster>
 </list>

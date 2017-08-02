@@ -357,7 +357,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 		
 		if ((oldLevel < newLevel) && (newLevel == _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 		}
 	}
 	
@@ -374,9 +374,10 @@ public abstract class ThirdClassTransferQuest extends Quest
 		
 		if ((player.getLevel() >= _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
-			if (getQuestState(player, true).isCreated())
+			final QuestState qs = getQuestState(player, true);
+			if (qs.isCreated())
 			{
-				player.sendPacket(new TutorialShowQuestionMark(getId()));
+				player.sendPacket(new TutorialShowQuestionMark(getId(), 1)); // Seems not to work. - blank text
 			}
 		}
 	}

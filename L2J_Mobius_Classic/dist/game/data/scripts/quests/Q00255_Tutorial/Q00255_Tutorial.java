@@ -253,7 +253,7 @@ public class Q00255_Tutorial extends Quest
 			qs.setMemoState(2);
 			playSound(player, "ItemSound.quest_tutorial");
 			playTutorialVoice(player, "tutorial_voice_013");
-			player.sendPacket(new TutorialShowQuestionMark(0, 1));
+			player.sendPacket(new TutorialShowQuestionMark(1, 0));
 		}
 	}
 	

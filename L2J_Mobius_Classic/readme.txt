@@ -3,6 +3,8 @@ L2J-Mobius Classic 2.0
 Client: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
+Mirror: https://drive.google.com/file/d/0B0Pl9EOrFIjuSVNPXzRpRFRZWlk
+
 What is done
 -Classic packet compatibility
 -Parsed item data from client
@@ -32,6 +34,7 @@ What is done
 Custom work
 -Newbie Helper NPC location info
 -Newbie Helper buff support until 40 level
+-ClassMaster (Test Server Helper) NPCs
 
 TODO list
 -Parse retail monster spawns by zone
@@ -40,7 +43,6 @@ TODO list
 -Test quests and update rewards
 -Giran Luxury Shop updates
 -New Race Track arena
--Custom ClassMaster NPCs
 -Blacksmith NPC updates
 -Floran Agricultural Area clan halls
 -Test Castle Sieges and Merc stats

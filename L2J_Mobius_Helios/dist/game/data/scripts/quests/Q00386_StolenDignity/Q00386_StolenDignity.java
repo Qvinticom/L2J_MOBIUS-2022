@@ -144,7 +144,7 @@ public final class Q00386_StolenDignity extends Quest
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
 				qs.setMemoState(336);
 				qs.startQuest();
-				player.sendPacket(new TutorialShowQuestionMark(336));
+				player.sendPacket(new TutorialShowQuestionMark(336, 1)); // why not getId() ?
 				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				return "30843-05.htm";
 			}

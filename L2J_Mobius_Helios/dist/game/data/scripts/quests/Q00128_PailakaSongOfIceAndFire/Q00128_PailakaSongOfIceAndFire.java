@@ -367,7 +367,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 		
 		if ((oldLevel < newLevel) && (newLevel == MIN_LEVEL))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId()));
+			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
 		}
 	}
 	

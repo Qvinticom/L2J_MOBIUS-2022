@@ -19,13 +19,18 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
+/**
+ * @author Mobius
+ */
 public final class TutorialShowQuestionMark implements IClientOutgoingPacket
 {
-	private final int _markId;
+	private final int _questId;
+	private final int _condition;
 	
-	public TutorialShowQuestionMark(int blink)
+	public TutorialShowQuestionMark(int questId, int condition)
 	{
-		_markId = blink;
+		_questId = questId;
+		_condition = condition;
 	}
 	
 	@Override
@@ -33,8 +38,8 @@ public final class TutorialShowQuestionMark implements IClientOutgoingPacket
 	{
 		OutgoingPackets.TUTORIAL_SHOW_QUESTION_MARK.writeId(packet);
 		
-		packet.writeC(0x01); // Number of mark, most likely ?
-		packet.writeD(_markId);
+		packet.writeC(_condition);
+		packet.writeD(_questId);
 		return true;
 	}
 }
