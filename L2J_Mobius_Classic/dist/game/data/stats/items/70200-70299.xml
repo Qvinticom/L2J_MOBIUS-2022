@@ -910,43 +910,63 @@
 		<!-- Double-click to add 10 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55362" level="1" /> <!-- Clan Reputation Score - 10 -->
+		</skills>
 	</item>
 	<item id="70281" name="Clan Reputation Score - 50" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to add 50 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55363" level="1" /> <!-- Clan Reputation Score - 50 -->
+		</skills>
 	</item>
 	<item id="70282" name="Clan Reputation Score - 150" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to add 150 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55364" level="1" /> <!-- Clan Reputation Score - 150 -->
+		</skills>
 	</item>
 	<item id="70283" name="Superspeed Potion" type="EtcItem">
 		<!-- Increases Speed to its maximum for 15 seconds. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="PAPER" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="20" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="55361" level="1" /> <!-- Superspeed Potion -->
+		</skills>
 	</item>
 	<item id="70284" name="Weapon Supply Box (B-grade)" type="EtcItem">
 		<!-- Double-click to receive a B-grade weapon. -->

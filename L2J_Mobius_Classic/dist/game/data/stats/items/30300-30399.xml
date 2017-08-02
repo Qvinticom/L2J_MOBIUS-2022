@@ -6,12 +6,18 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13136" level="1" /> <!-- Hero's Cloak -->
+		</skills>
 	</item>
 	<item id="30373" name="Glorious Cloak" type="Armor">
 		<!-- STR + 2, DEX + 2, CON + 2, INT + 2, WIT + 2, MEN + 2. Additional damage in PVP -5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -19,8 +25,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />

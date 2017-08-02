@@ -5,63 +5,47 @@
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLvl>55</magicLvl>
 		<effects>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MaxHp">
 				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxCp">
-				<amount>15</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="MaxMp">
 				<amount>10</amount>
-				<attribute>FIRE</attribute>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="PvpMagicalSkillDefenceBonus">
 				<amount>10</amount>
-				<attribute>WATER</attribute>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>10</amount>
-				<attribute>WIND</attribute>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceAttribute">
+			<effect name="PvpPhysicalSkillDefenceBonus">
 				<amount>10</amount>
-				<attribute>EARTH</attribute>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>DARK</attribute>
+			<effect name="DamageShield">
+				<amount>4</amount>
+				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceAttribute">
-				<amount>10</amount>
-				<attribute>HOLY</attribute>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>STR</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>DEX</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>INT</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>WIT</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>CON</stat>
-			</effect>
-			<effect name="StatUp">
-				<amount>2</amount>
-				<stat>MEN</stat>
+			<effect name="CriticalRate">
+				<amount>20</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
