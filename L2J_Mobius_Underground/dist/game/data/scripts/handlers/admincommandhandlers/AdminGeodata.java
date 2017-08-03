@@ -45,7 +45,8 @@ public class AdminGeodata implements IAdminCommandHandler
 		"admin_geo_can_see",
 		"admin_geogrid",
 		"admin_geomap",
-		"admin_geomap_missing_htmls"
+		"admin_geomap_missing_htmls",
+		"admin_world_missing_htmls"
 	};
 	
 	@Override
@@ -159,6 +160,29 @@ public class AdminGeodata implements IAdminCommandHandler
 					{
 						final L2Npc npc = (L2Npc) obj;
 						if (!results.contains(npc.getId()) && (npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
+						{
+							results.add(npc.getId());
+						}
+					}
+				}
+				Collections.sort(results);
+				for (int id : results)
+				{
+					activeChar.sendMessage("NPC " + id + " does not have a default html.");
+				}
+				activeChar.sendMessage("Found " + results.size() + " results.");
+				break;
+			}
+			case "admin_world_missing_htmls":
+			{
+				activeChar.sendMessage("Missing htmls for the whole world.");
+				final List<Integer> results = new ArrayList<>();
+				for (L2Object obj : L2World.getInstance().getVisibleObjects())
+				{
+					if (obj.isNpc() && !obj.isMonster())
+					{
+						final L2Npc npc = (L2Npc) obj;
+						if (!results.contains(npc.getId()) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());
 						}
