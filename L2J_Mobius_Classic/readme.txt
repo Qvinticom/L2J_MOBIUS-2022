@@ -49,3 +49,4 @@ TODO list
 -Whisper of Dreams quests
 -Moon Knight quest
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
+-New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
