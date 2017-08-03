@@ -1247,20 +1247,23 @@
 	</item>
 	<item id="70094" name="XP Rune - 100%" additionalName="2 hours" type="EtcItem">
 		<!-- A 2-hour item. When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.skill19226" />
+		<set name="icon" val="icon.skill70094" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="120" />
-		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="immediate_effect" val="true" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<skills>
 			<skill id="55234" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>

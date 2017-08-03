@@ -458,18 +458,10 @@
 	</skill>
 	<skill id="55234" toLevel="2" name="XP Rune 100%">
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
-		<abnormalTime>3600</abnormalTime>
-		<operateType>A2</operateType>
+		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<stayAfterDeath>true</stayAfterDeath>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>
-			<value level="1">70094</value>
-			<value level="2">29650</value>
-		</itemConsumeId>
 		<passiveConditions>
 			<condition name="CheckLevel">
 				<minLevel>1</minLevel>
