@@ -158,6 +158,7 @@ import quests.Q00358_IllegitimateChildOfTheGoddess.Q00358_IllegitimateChildOfThe
 import quests.Q00360_PlunderTheirSupplies.Q00360_PlunderTheirSupplies;
 import quests.Q00369_CollectorOfJewels.Q00369_CollectorOfJewels;
 import quests.Q00370_AnElderSowsSeeds.Q00370_AnElderSowsSeeds;
+import quests.Q00374_WhisperOfDreams_Part1.Q00374_WhisperOfDreams_Part1;
 import quests.Q00401_PathOfTheWarrior.Q00401_PathOfTheWarrior;
 import quests.Q00402_PathOfTheHumanKnight.Q00402_PathOfTheHumanKnight;
 import quests.Q00403_PathOfTheRogue.Q00403_PathOfTheRogue;
@@ -317,6 +318,7 @@ public class QuestMasterHandler
 		Q00329_CuriosityOfADwarf.class,
 		Q00331_ArrowOfVengeance.class,
 		Q00333_HuntOfTheBlackLion.class,
+		Q00374_WhisperOfDreams_Part1.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
 		Q00348_AnArrogantSearch.class,
 		Q00354_ConquestOfAlligatorIsland.class,
