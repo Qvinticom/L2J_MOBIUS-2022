@@ -24,6 +24,7 @@ import java.sql.Statement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -44,6 +45,8 @@ import com.l2jmobius.util.file.filter.NumericNameFilter;
  */
 public final class BuyListData implements IXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
+	
 	private final Map<Integer, L2BuyList> _buyLists = new HashMap<>();
 	private static final FileFilter NUMERIC_FILTER = new NumericNameFilter();
 	
@@ -140,7 +143,16 @@ public final class BuyListData implements IXmlReader
 							final L2Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
-								buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
+								if ((price > -1) && (item.getReferencePrice() > price) && (buyList.getNpcsAllowed() != null))
+								{
+									LOGGER.warning("Item price is too low. BuyList:" + buyList.getListId() + " ItemID:" + itemId + " File:" + f.getName());
+									LOGGER.warning("Setting price to reference price " + item.getReferencePrice() + " instead of " + price + ".");
+									buyList.addProduct(new Product(buyList.getListId(), item, item.getReferencePrice(), restockDelay, count));
+								}
+								else
+								{
+									buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
+								}
 							}
 							else
 							{
