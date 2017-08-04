@@ -34,6 +34,7 @@ What is done
 -New Race Track arena zone
 -Giran Luxury Shop updates
 -Grandboss scripts and stats
+-Whisper of Dreams quests
 
 Custom work
 -Newbie Helper NPC location info
@@ -47,7 +48,6 @@ TODO list
 -Test quests and update rewards
 -Floran Agricultural Area clan halls
 -Test castle sieges
--Whisper of Dreams quests
 -Moon Knight quest
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
