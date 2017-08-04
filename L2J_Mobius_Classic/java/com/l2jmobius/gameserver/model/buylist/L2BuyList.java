@@ -69,4 +69,9 @@ public final class L2BuyList
 	{
 		return (_allowedNpcs != null) && _allowedNpcs.contains(npcId);
 	}
+	
+	public Set<Integer> getNpcsAllowed()
+	{
+		return _allowedNpcs;
+	}
 }

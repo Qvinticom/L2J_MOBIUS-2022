@@ -143,7 +143,16 @@ public final class BuyListData implements IGameXmlReader
 							final L2Item item = ItemTable.getInstance().getTemplate(itemId);
 							if (item != null)
 							{
-								buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
+								if ((price > -1) && (item.getReferencePrice() > price) && (buyList.getNpcsAllowed() != null))
+								{
+									LOGGER.warning("Item price is too low. BuyList:" + buyList.getListId() + " ItemID:" + itemId + " File:" + f.getName());
+									LOGGER.warning("Setting price to reference price " + item.getReferencePrice() + " instead of " + price + ".");
+									buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
+								}
+								else
+								{
+									buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
+								}
 							}
 							else
 							{
