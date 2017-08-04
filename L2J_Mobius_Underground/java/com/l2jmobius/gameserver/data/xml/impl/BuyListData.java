@@ -147,7 +147,7 @@ public final class BuyListData implements IGameXmlReader
 								{
 									LOGGER.warning("Item price is too low. BuyList:" + buyList.getListId() + " ItemID:" + itemId + " File:" + f.getName());
 									LOGGER.warning("Setting price to reference price " + item.getReferencePrice() + " instead of " + price + ".");
-									buyList.addProduct(new Product(buyList.getListId(), item, price, restockDelay, count));
+									buyList.addProduct(new Product(buyList.getListId(), item, item.getReferencePrice(), restockDelay, count));
 								}
 								else
 								{
