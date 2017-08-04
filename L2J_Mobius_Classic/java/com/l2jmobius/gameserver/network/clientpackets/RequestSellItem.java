@@ -175,7 +175,7 @@ public final class RequestSellItem implements IClientIncomingPacket
 		if (merchant instanceof L2MerchantInstance)
 		{
 			final L2MerchantInstance npc = ((L2MerchantInstance) merchant);
-			final long taxCollection = (long) (totalPrice * npc.getMpc().getTotalTaxRate(TaxType.SELL));
+			final long taxCollection = (long) (totalPrice * (1.0 - npc.getTotalTaxRate(TaxType.SELL)));
 			npc.getCastle().addToTreasury(taxCollection);
 			totalPrice -= taxCollection;
 		}

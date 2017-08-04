@@ -114,7 +114,6 @@ public final class RequestBuyItem implements IClientIncomingPacket
 		}
 		
 		double castleTaxRate = 0;
-		double baseTaxRate = 0;
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
@@ -137,15 +136,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 				return;
 			}
 			
-			if (merchant instanceof L2MerchantInstance)
-			{
-				castleTaxRate = ((L2MerchantInstance) merchant).getMpc().getCastleTaxRate();
-				baseTaxRate = ((L2MerchantInstance) merchant).getMpc().getBaseTaxRate();
-			}
-			else
-			{
-				baseTaxRate = 0.5;
-			}
+			castleTaxRate = ((L2MerchantInstance) merchant).getCastleTaxRate();
 		}
 		
 		long subTotal = 0;
@@ -207,7 +198,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 				return;
 			}
 			// first calculate price per item with tax, then multiply by count
-			price = (long) (price * (1 + castleTaxRate + baseTaxRate));
+			price = (long) (price * (1 + castleTaxRate));
 			subTotal += i.getCount() * price;
 			if (subTotal > MAX_ADENA)
 			{

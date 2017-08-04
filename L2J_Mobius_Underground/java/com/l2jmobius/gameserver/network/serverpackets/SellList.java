@@ -79,7 +79,7 @@ public class SellList implements IClientOutgoingPacket
 			int price = item.getItem().getReferencePrice() / 2;
 			if (_lease != null)
 			{
-				price -= (price * _lease.getMpc().getTotalTaxRate(TaxType.SELL));
+				price -= (price * _lease.getTotalTaxRate(TaxType.SELL));
 			}
 			
 			packet.writeH(item.getItem().getType1());

@@ -17,8 +17,6 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
-import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
-import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable.MerchantPriceConfig;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -34,8 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
  */
 public class L2MerchantInstance extends L2NpcInstance
 {
-	private MerchantPriceConfig _mpc;
-	
 	public L2MerchantInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -54,13 +50,6 @@ public class L2MerchantInstance extends L2NpcInstance
 	}
 	
 	@Override
-	public void onSpawn()
-	{
-		super.onSpawn();
-		_mpc = MerchantPriceConfigTable.getInstance().getMerchantPriceConfig(this);
-	}
-	
-	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
 		String pom = "";
@@ -75,14 +64,6 @@ public class L2MerchantInstance extends L2NpcInstance
 		}
 		
 		return "data/html/merchant/" + pom + ".htm";
-	}
-	
-	/**
-	 * @return Returns the mpc.
-	 */
-	public MerchantPriceConfig getMpc()
-	{
-		return _mpc;
 	}
 	
 	public final void showBuyWindow(L2PcInstance player, int val)
@@ -107,13 +88,30 @@ public class L2MerchantInstance extends L2NpcInstance
 			return;
 		}
 		
-		final double buyTaxRate = (applyTax) ? getMpc().getTotalTaxRate(TaxType.BUY) : 0;
-		final double sellTaxRate = (applyTax) ? getMpc().getTotalTaxRate(TaxType.SELL) : 0;
-		
 		player.setInventoryBlockingStatus(true);
 		
-		player.sendPacket(new BuyList(buyList, player.getAdena(), buyTaxRate));
-		player.sendPacket(new ExBuySellList(player, false, sellTaxRate));
+		player.sendPacket(new BuyList(buyList, player.getAdena(), (applyTax) ? getTotalTaxRate(TaxType.BUY) : 0));
+		player.sendPacket(new ExBuySellList(player, false, (applyTax) ? getTotalTaxRate(TaxType.SELL) : 0));
 		player.sendPacket(ActionFailed.STATIC_PACKET);
+	}
+	
+	public boolean hasCastle()
+	{
+		return getCastle() != null;
+	}
+	
+	public double getCastleTaxRate()
+	{
+		return hasCastle() ? getCastle().getTaxRate() : 0.0;
+	}
+	
+	public int getTotalTax(TaxType taxType)
+	{
+		return hasCastle() ? getCastle().getTaxPercent(taxType) : 0;
+	}
+	
+	public double getTotalTaxRate(TaxType taxType)
+	{
+		return getTotalTax(taxType) / 100.0;
 	}
 }

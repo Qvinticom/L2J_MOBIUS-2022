@@ -97,7 +97,6 @@ import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
 import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
 import com.l2jmobius.gameserver.handler.ConditionHandler;
@@ -231,7 +230,6 @@ public class GameServer
 		OptionData.getInstance();
 		EnsoulData.getInstance();
 		EnchantItemHPBonusData.getInstance();
-		MerchantPriceConfigTable.getInstance().loadInstances();
 		BuyListData.getInstance();
 		MultisellData.getInstance();
 		RecipeData.getInstance();
@@ -363,7 +361,6 @@ public class GameServer
 		FortSiegeManager.getInstance();
 		SiegeScheduleData.getInstance();
 		
-		MerchantPriceConfigTable.getInstance().updateReferences();
 		CastleManorManager.getInstance();
 		SiegeGuardManager.getInstance();
 		QuestManager.getInstance().report();
