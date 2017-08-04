@@ -32,6 +32,8 @@ What is done
 -Admin menu teleport and shop cleanups
 -Blacksmith NPC updates
 -New Race Track arena zone
+-Giran Luxury Shop updates
+-Grandboss scripts and stats
 
 Custom work
 -Newbie Helper NPC location info
@@ -43,7 +45,6 @@ TODO list
 -Retail NPC dialogs
 -Retail NPC buylists
 -Test quests and update rewards
--Giran Luxury Shop updates
 -Floran Agricultural Area clan halls
 -Test castle sieges
 -Whisper of Dreams quests
