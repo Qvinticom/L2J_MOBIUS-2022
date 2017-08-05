@@ -46,7 +46,6 @@ public final class Q00300_HuntingLetoLizardman extends Quest
 	private static final int REQUIRED_BRACELET_COUNT = 60;
 	// Monsters
 	private static final Map<Integer, Integer> MOBS_SAC = new HashMap<>();
-	
 	static
 	{
 		MOBS_SAC.put(20577, 360); // Leto Lizardman

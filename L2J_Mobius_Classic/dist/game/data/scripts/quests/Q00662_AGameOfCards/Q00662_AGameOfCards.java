@@ -44,7 +44,6 @@ public final class Q00662_AGameOfCards extends Quest
 	private static final int REQUIRED_CHIP_COUNT = 50;
 	// Monsters
 	private static final Map<Integer, Integer> MONSTERS = new HashMap<>();
-	
 	static
 	{
 		MONSTERS.put(20672, 357); // Trives
