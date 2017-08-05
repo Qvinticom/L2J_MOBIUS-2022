@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -159,6 +160,10 @@ public class AdminGeodata implements IAdminCommandHandler
 					if (obj.isNpc() && !obj.isMonster() && !results.contains(obj.getId()))
 					{
 						final L2Npc npc = (L2Npc) obj;
+						if (npc.getInstanceType() == InstanceType.L2ObservationInstance)
+						{
+							continue;
+						}
 						if ((npc.getLocation().getX() > topLeftX) && (npc.getLocation().getX() < bottomRightX) && (npc.getLocation().getY() > topLeftY) && (npc.getLocation().getY() < bottomRightY) && npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());
@@ -182,6 +187,10 @@ public class AdminGeodata implements IAdminCommandHandler
 					if (obj.isNpc() && !obj.isMonster() && !results.contains(obj.getId()))
 					{
 						final L2Npc npc = (L2Npc) obj;
+						if (npc.getInstanceType() == InstanceType.L2ObservationInstance)
+						{
+							continue;
+						}
 						if (npc.isTalkable() && !npc.hasListener(EventType.ON_NPC_FIRST_TALK) && (npc.getHtmlPath(npc.getId(), 0) == "data/html/npcdefault.htm"))
 						{
 							results.add(npc.getId());
