@@ -3080,7 +3080,7 @@ public final class Config
 			String externalIp = "127.0.0.1";
 			try
 			{
-				final URL autoIp = new URL("http://ipconfig.l2junity.org/");
+				final URL autoIp = new URL("http://ip1.dynupdate.no-ip.com:8245/");
 				try (BufferedReader in = new BufferedReader(new InputStreamReader(autoIp.openStream())))
 				{
 					externalIp = in.readLine();
@@ -3088,7 +3088,7 @@ public final class Config
 			}
 			catch (IOException e)
 			{
-				LOGGER.info("Network Config: Failed to connect to ipconfig.l2junity.org please check your internet connection using 127.0.0.1!");
+				LOGGER.log(Level.INFO, "Failed to connect to api.externalip.net please check your internet connection using 127.0.0.1!");
 				externalIp = "127.0.0.1";
 			}
 			
