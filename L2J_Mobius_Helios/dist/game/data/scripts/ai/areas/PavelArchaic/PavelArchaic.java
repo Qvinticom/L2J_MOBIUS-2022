@@ -27,7 +27,7 @@ import ai.AbstractNpcAI;
  */
 public final class PavelArchaic extends AbstractNpcAI
 {
-	private static final int SAFETY_DEVICE = 18917; // Pavel Safety Device
+	// private static final int SAFETY_DEVICE = 18917; // Pavel Safety Device
 	private static final int PINCER_GOLEM = 22801; // Cruel Pincer Golem
 	private static final int PINCER_GOLEM2 = 22802; // Cruel Pincer Golem
 	private static final int PINCER_GOLEM3 = 22803; // Cruel Pincer Golem
@@ -35,7 +35,7 @@ public final class PavelArchaic extends AbstractNpcAI
 	
 	private PavelArchaic()
 	{
-		addKillId(SAFETY_DEVICE, PINCER_GOLEM, JACKHAMMER_GOLEM);
+		addKillId(/* SAFETY_DEVICE, */ PINCER_GOLEM, JACKHAMMER_GOLEM);
 	}
 	
 	@Override

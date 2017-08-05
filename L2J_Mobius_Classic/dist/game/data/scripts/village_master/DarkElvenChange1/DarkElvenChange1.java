@@ -37,7 +37,6 @@ public final class DarkElvenChange1 extends AbstractNpcAI
 		30290, // Xenos
 		30297, // Tobias
 		30462, // Tronix
-		32160, // Devon
 	};
 	// Items
 	private static int GAZE_OF_ABYSS = 1244;

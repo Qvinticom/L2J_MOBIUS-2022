@@ -36,15 +36,8 @@ import ai.AbstractNpcAI;
  */
 public final class MonumentOfHeroes extends AbstractNpcAI
 {
-	// NPCs
-	private static final int[] MONUMENTS =
-	{
-		31690,
-		31769,
-		31770,
-		31771,
-		31772,
-	};
+	// NPC
+	private static final int MONUMENT = 31690;
 	// Items
 	private static final int HERO_CLOAK = 30372;
 	// private static final int GLORIOUS_CLOAK = 30373;
@@ -65,9 +58,9 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	
 	private MonumentOfHeroes()
 	{
-		addStartNpc(MONUMENTS);
-		addFirstTalkId(MONUMENTS);
-		addTalkId(MONUMENTS);
+		addStartNpc(MONUMENT);
+		addFirstTalkId(MONUMENT);
+		addTalkId(MONUMENT);
 	}
 	
 	@Override

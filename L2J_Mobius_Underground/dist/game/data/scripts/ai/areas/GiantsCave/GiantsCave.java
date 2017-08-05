@@ -35,7 +35,6 @@ public final class GiantsCave extends AbstractNpcAI
 	private static final int[] SCOUTS =
 	{
 		22668, // Gamlin (Scout)
-		22669, // Leogul (Scout)
 	};
 	
 	private GiantsCave()

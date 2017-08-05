@@ -19,7 +19,6 @@ package instances.NightmareKamaloka;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -38,7 +37,7 @@ public final class NightmareKamaloka extends AbstractInstance
 	private static final int DARK_RIDER = 26102;
 	private static final int INVISIBLE_NPC = 18919;
 	// Skills
-	private static final int DARK_RIDER_UD = 16574;
+	// private static final int DARK_RIDER_UD = 16574;
 	//@formatter:off
 	private static final Map<Integer, Integer> BOSS_MAP = new HashMap<>();
 	static
@@ -59,7 +58,7 @@ public final class NightmareKamaloka extends AbstractInstance
 		addStartNpc(KURTIZ);
 		addTalkId(KURTIZ);
 		addSpawnId(INVISIBLE_NPC);
-		addAttackId(DARK_RIDER_UD);
+		// addAttackId(DARK_RIDER_UD);
 		addKillId(BOSS_MAP.keySet());
 	}
 	
@@ -123,38 +122,12 @@ public final class NightmareKamaloka extends AbstractInstance
 		return super.onKill(npc, killer, isSummon);
 	}
 	
-	@Override
-	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
-	{
-		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
-		{
-			if (npc.getId() == DARK_RIDER_UD)
-			{
-				if ((npc.getCurrentHpPercent() >= 95) && npc.isScriptValue(0))
-				{
-					npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 1));
-					npc.setScriptValue(1);
-				}
-				else if ((npc.getCurrentHpPercent() >= 75) && npc.isScriptValue(1))
-				{
-					npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 2));
-					npc.setScriptValue(2);
-				}
-				else if ((npc.getCurrentHpPercent() >= 50) && npc.isScriptValue(2))
-				{
-					npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 3));
-					npc.setScriptValue(3);
-				}
-				else if ((npc.getCurrentHpPercent() >= 25) && npc.isScriptValue(3))
-				{
-					npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 4));
-					npc.setScriptValue(4);
-				}
-			}
-		}
-		return super.onAttack(npc, attacker, damage, isSummon);
-	}
+	/*
+	 * @Override public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon) { final Instance instance = npc.getInstanceWorld(); if (isInInstance(instance)) { if (npc.getId() == DARK_RIDER_UD) { if ((npc.getCurrentHpPercent() >= 95) && npc.isScriptValue(0)) {
+	 * npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 1)); npc.setScriptValue(1); } else if ((npc.getCurrentHpPercent() >= 75) && npc.isScriptValue(1)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 2)); npc.setScriptValue(2); } else if ((npc.getCurrentHpPercent() >= 50) &&
+	 * npc.isScriptValue(2)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 3)); npc.setScriptValue(3); } else if ((npc.getCurrentHpPercent() >= 25) && npc.isScriptValue(3)) { npc.doCast(SkillData.getInstance().getSkill(DARK_RIDER_UD, 4)); npc.setScriptValue(4); } } } return
+	 * super.onAttack(npc, attacker, damage, isSummon); }
+	 */
 	
 	public static void main(String[] args)
 	{

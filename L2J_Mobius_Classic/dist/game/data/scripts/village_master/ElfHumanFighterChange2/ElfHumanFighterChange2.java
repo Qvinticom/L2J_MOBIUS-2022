@@ -37,9 +37,6 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 		30689, // Siria
 		30849, // Sedrick
 		30900, // Marcus
-		31276, // Bernhard
-		31321, // Siegmund
-		31965, // Hector
 	};
 	
 	// Items

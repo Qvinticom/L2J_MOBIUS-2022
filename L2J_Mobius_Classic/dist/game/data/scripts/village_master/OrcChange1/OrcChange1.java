@@ -36,7 +36,6 @@ public final class OrcChange1 extends AbstractNpcAI
 		30500, // Osborn
 		30505, // Drikus
 		30508, // Castor
-		32097, // Finker
 	};
 	
 	// Items

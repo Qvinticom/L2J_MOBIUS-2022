@@ -36,18 +36,8 @@ public final class FleeMonsters extends AbstractNpcAI
 	// NPCs
 	private static final int[] MOBS =
 	{
-		18150, // Victim
-		18151, // Victim
-		18152, // Victim
-		18153, // Victim
-		18154, // Victim
-		18155, // Victim
-		18156, // Victim
-		18157, // Victim
 		20002, // Rabbit
 		20432, // Elpy
-		22228, // Grey Elpy
-		25604, // Mutated Elpy
 	};
 	// Misc
 	private static final int FLEE_DISTANCE = 500;

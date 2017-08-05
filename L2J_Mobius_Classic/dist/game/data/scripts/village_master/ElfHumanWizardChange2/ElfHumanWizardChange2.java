@@ -37,9 +37,6 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 		30176, // Valleria
 		30694, // Scraide
 		30854, // Drikiyan
-		31331, // Valdis
-		31755, // Halaster
-		31996, // Javier
 	};
 	
 	// Items

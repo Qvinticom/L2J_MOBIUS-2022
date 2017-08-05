@@ -35,7 +35,6 @@ public final class DwarfWarehouseChange1 extends AbstractNpcAI
 		30498, // Moke
 		30503, // Rikadio
 		30594, // Ranspo
-		32092, // Alder
 	};
 	
 	// Items

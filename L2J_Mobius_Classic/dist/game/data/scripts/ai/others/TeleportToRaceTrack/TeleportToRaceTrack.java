@@ -55,7 +55,6 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 	};
 	// Misc
 	private static final Map<Integer, Integer> TELEPORTERS = new HashMap<>();
-	
 	static
 	{
 		TELEPORTERS.put(30059, 2); // Trisha
@@ -66,9 +65,6 @@ public final class TeleportToRaceTrack extends AbstractNpcAI
 		TELEPORTERS.put(30320, 0); // Richlin
 		TELEPORTERS.put(30848, 6); // Elisa
 		TELEPORTERS.put(30899, 4); // Flauen
-		TELEPORTERS.put(31320, 8); // Ilyana
-		TELEPORTERS.put(31275, 9); // Tatiana
-		TELEPORTERS.put(31964, 10); // Bilia
 	}
 	
 	// Player Variables

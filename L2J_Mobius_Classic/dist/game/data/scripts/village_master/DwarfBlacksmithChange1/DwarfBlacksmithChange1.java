@@ -35,7 +35,6 @@ public final class DwarfBlacksmithChange1 extends AbstractNpcAI
 		30499, // Tapoy
 		30504, // Mendio
 		30595, // Opix
-		32093, // Bolin
 	};
 	
 	// Items
