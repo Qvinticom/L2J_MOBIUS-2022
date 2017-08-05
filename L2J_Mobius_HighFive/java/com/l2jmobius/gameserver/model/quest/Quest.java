@@ -35,6 +35,7 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.TrapAction;
@@ -2589,6 +2590,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void registerQuestItems(int... items)
 	{
+		for (int id : items)
+		{
+			if ((id != 0) && (ItemTable.getInstance().getTemplate(id) == null))
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found registerQuestItems for non existing item: " + id + "!");
+			}
+		}
 		questItemIds = items;
 	}
 	

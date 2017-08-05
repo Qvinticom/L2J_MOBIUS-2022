@@ -308,6 +308,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_ATTACKABLE_KILL, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -319,6 +326,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setAttackableKillId(Consumer<OnAttackableKill> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addKillId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_ATTACKABLE_KILL, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -367,6 +381,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_FIRST_TALK, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -378,6 +399,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcFirstTalkId(Consumer<OnNpcFirstTalk> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addFirstTalkId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_FIRST_TALK, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -390,6 +418,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcTalkId(Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerDummy(EventType.ON_NPC_TALK, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -400,6 +435,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcTalkId(int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addTalkId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerDummy(EventType.ON_NPC_TALK, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -436,6 +478,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcQuestStartId(int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
+			}
+		}
 		return registerDummy(EventType.ON_NPC_QUEST_START, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -446,6 +495,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcQuestStartId(Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addStartNpc for non existing NPC: " + id + "!");
+			}
+		}
 		return registerDummy(EventType.ON_NPC_QUEST_START, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -459,6 +515,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -470,6 +533,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcSkillSeeId(Consumer<OnNpcSkillSee> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addSkillSeeId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_SKILL_SEE, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -483,6 +553,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_SKILL_FINISHED, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -494,6 +571,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcSkillFinishedId(Consumer<OnNpcSkillFinished> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addSpellFinishedId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_SKILL_FINISHED, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -507,6 +591,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -518,6 +609,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setNpcSpawnId(Consumer<OnNpcSpawn> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addSpawnId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_NPC_SPAWN, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -767,6 +865,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, int... npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_ATTACKABLE_ATTACK, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -778,6 +883,13 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected final List<AbstractEventListener> setAttackableAttackId(Consumer<OnAttackableAttack> callback, Collection<Integer> npcIds)
 	{
+		for (int id : npcIds)
+		{
+			if (NpcData.getInstance().getTemplate(id) == null)
+			{
+				_log.severe(super.getClass().getSimpleName() + ": Found addAttackId for non existing NPC: " + id + "!");
+			}
+		}
 		return registerConsumer(callback, EventType.ON_ATTACKABLE_ATTACK, ListenerRegisterType.NPC, npcIds);
 	}
 	
@@ -1972,11 +2084,11 @@ public abstract class AbstractScript extends ManagedScript
 	public static int getEnchantLevel(L2PcInstance player, int itemId)
 	{
 		final L2ItemInstance enchantedItem = player.getInventory().getItemByItemId(itemId);
-		if (enchantedItem != null)
+		if (enchantedItem == null)
 		{
-			return enchantedItem.getEnchantLevel();
+			return 0;
 		}
-		return 0;
+		return enchantedItem.getEnchantLevel();
 	}
 	
 	/**
