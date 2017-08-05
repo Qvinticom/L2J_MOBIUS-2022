@@ -52,4 +52,4 @@ TODO list
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
 -Provisional Clan Halls
- 
+-Aden fishing zones
