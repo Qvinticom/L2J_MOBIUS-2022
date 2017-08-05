@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q00374_WhisperOfDreams_Part1;
+package quests.Q00374_WhisperOfDreamsPart1;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
  * Whisper Of Dreams Part1 (374)
  * @author Stayway
  */
-public class Q00374_WhisperOfDreams_Part1 extends Quest
+public class Q00374_WhisperOfDreamsPart1 extends Quest
 {
 	// NPCs
 	private static final int VANUTU = 30938;
@@ -47,7 +47,7 @@ public class Q00374_WhisperOfDreams_Part1 extends Quest
 	private static final int MIN_LEVEL = 56;
 	private static final int MAX_LEVEL = 66;
 	
-	public Q00374_WhisperOfDreams_Part1()
+	public Q00374_WhisperOfDreamsPart1()
 	{
 		super(374);
 		addStartNpc(VANUTU);
