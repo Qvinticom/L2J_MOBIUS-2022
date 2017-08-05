@@ -18,8 +18,6 @@ package com.l2jmobius.loginserver.model.data;
 
 import java.util.Objects;
 
-import com.warrenstrange.googleauth.GoogleAuthenticator;
-
 /**
  * @author HorridoJoho
  */
@@ -29,7 +27,6 @@ public final class AccountInfo
 	private final String _passHash;
 	private final int _accessLevel;
 	private final int _lastServer;
-	private String _otpKey;
 	
 	public AccountInfo(String login, String passHash, int accessLevel, int lastServer)
 	{
@@ -49,23 +46,6 @@ public final class AccountInfo
 		_passHash = passHash;
 		_accessLevel = accessLevel;
 		_lastServer = lastServer;
-	}
-	
-	public void setOTP(String otpKey)
-	{
-		_otpKey = otpKey;
-	}
-	
-	public boolean checkOTP(int otp)
-	{
-		if (_otpKey == null)
-		{
-			// No OTP set
-			return true;
-		}
-		
-		final GoogleAuthenticator gAuth = new GoogleAuthenticator();
-		return gAuth.authorize(_otpKey, otp);
 	}
 	
 	public boolean checkPassHash(String passHash)

@@ -34,7 +34,6 @@ import com.l2jmobius.loginserver.network.serverpackets.AccountKicked;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked.AccountKickedReason;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.LoginOk;
-import com.l2jmobius.loginserver.network.serverpackets.LoginOtpFail;
 import com.l2jmobius.loginserver.network.serverpackets.ServerList;
 
 /**
@@ -53,7 +52,6 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	
 	private String _user;
 	private String _password;
-	private int _ncotp;
 	
 	/**
 	 * @return
@@ -69,11 +67,6 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	public String getUser()
 	{
 		return _user;
-	}
-	
-	public int getOneTimePassword()
-	{
-		return _ncotp;
 	}
 	
 	@Override
@@ -121,13 +114,11 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			{
 				_user = new String(decrypted, 0x4E, 50).trim() + new String(decrypted, 0xCE, 14).trim();
 				_password = new String(decrypted, 0xDC, 16).trim();
-				_ncotp = (decrypted[0xFC] & 0xFF) | ((decrypted[0xFD] & 0xFF) << 8) | ((decrypted[0xFE] & 0xFF) << 16) | ((decrypted[0xFF] & 0xFF) << 24);
 			}
 			else
 			{
 				_user = new String(decrypted, 0x5E, 14).trim();
 				_password = new String(decrypted, 0x6C, 16).trim();
-				_ncotp = (decrypted[0x7C] & 0xFF) | ((decrypted[0x7D] & 0xFF) << 8) | ((decrypted[0x7E] & 0xFF) << 16) | ((decrypted[0x7F] & 0xFF) << 24);
 			}
 		}
 		catch (Exception e)
@@ -143,11 +134,6 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		{
 			// user or pass wrong
 			client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG);
-			return;
-		}
-		else if (!info.checkOTP(_ncotp))
-		{
-			client.sendPacket(new LoginOtpFail());
 			return;
 		}
 		
