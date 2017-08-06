@@ -28,9 +28,9 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.geodata.GeoData;
@@ -306,9 +306,9 @@ public class L2CharacterAI extends AbstractAI
 			return;
 		}
 		
-		if (_actor.getAttackEndTime() > GameTimeController.getInstance().getGameTicks())
+		if (_actor.isAttackingNow())
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new CastTask(_actor, skill, target, item, forceUse, dontMove), _actor.getAttackEndTime() - System.currentTimeMillis());
+			ThreadPoolManager.getInstance().scheduleGeneral(new CastTask(_actor, skill, target, item, forceUse, dontMove), _actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 		}
 		else
 		{

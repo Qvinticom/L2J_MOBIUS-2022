@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
@@ -255,7 +256,7 @@ public final class UseItem implements IClientIncomingPacket
 					
 					// Equip or unEquip
 					activeChar.useEquippableItem(item, false);
-				}, activeChar.getAttackEndTime() - System.currentTimeMillis());
+				}, activeChar.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
 			{
