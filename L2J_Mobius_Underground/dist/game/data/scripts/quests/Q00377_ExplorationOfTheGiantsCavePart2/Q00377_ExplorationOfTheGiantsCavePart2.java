@@ -53,7 +53,6 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 		MOBS2.put(22666, 0.276); // barif_re
 		MOBS2.put(22667, 0.284); // barif_pet_re
 		MOBS2.put(22668, 0.240); // gamlin_re
-		MOBS2.put(22669, 0.240); // leogul_re
 	}
 	
 	public Q00377_ExplorationOfTheGiantsCavePart2()
