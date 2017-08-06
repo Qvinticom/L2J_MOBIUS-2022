@@ -36,8 +36,8 @@ public class Q00034_InSearchOfCloth extends Quest
 	// Monsters
 	private static final int[] MOBS =
 	{
-		20560, // Trisalim Spider
-		20561, // Trisalim Tarantula
+		23307, // Corpse Spider
+		23308, // Explosive Spider
 	};
 	// Items
 	private static final int SUEDE = 1866;
