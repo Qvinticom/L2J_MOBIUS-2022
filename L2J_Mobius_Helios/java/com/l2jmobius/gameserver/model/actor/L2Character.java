@@ -33,6 +33,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Predicate;
@@ -1139,7 +1140,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final int timeToHit = timeAtk / 2; // the hit is calculated to happen halfway to the animation - might need further tuning e.g. in bow case
 			final int ssGrade = (weaponItem != null) ? weaponItem.getItemGrade().ordinal() : 0;
 			final Attack attack = new Attack(this, target, wasSSCharged, ssGrade);
-			_attackEndTime = System.currentTimeMillis() + timeAtk;
+			_attackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(timeAtk);
 			
 			// Make sure that char is facing selected target
 			// also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
@@ -3156,7 +3157,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final boolean isAttackingNow()
 	{
-		return _attackEndTime > System.currentTimeMillis();
+		return _attackEndTime > System.nanoTime();
 	}
 	
 	/**
