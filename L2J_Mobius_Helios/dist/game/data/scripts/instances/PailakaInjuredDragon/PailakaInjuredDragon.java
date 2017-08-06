@@ -39,7 +39,6 @@ import quests.Q00144_PailakaInjuredDragon.Q00144_PailakaInjuredDragon;
 public class PailakaInjuredDragon extends AbstractInstance
 {
 	// NPCs
-	private static final int KETRA_ORC_SHAMAN = 34799;
 	private static final int KETRA_ORC_SUPPORTER_END = 32512;
 	// Monsters
 	private static final int RECRUIT = 18635;
@@ -86,7 +85,6 @@ public class PailakaInjuredDragon extends AbstractInstance
 	{
 		super(TEMPLATE_ID);
 		addInstanceEnterId(TEMPLATE_ID);
-		addStartNpc(KETRA_ORC_SHAMAN);
 		addKillId(ANTELOPE1, ANTELOPE2, ANTELOPE3, GENERAL, GREAT_MAGUS, PROPHET, ELITE_GUARD, COMMANDER, OFFICER, RECRUIT, FOOTMAN, WARRIOR, PROPHET_GUARD, HEAD_GUARD, SHAMAN, CHIEF_PRIEST, GRAND_PRIEST, LATANA);
 		addSpawnId(LATANA);
 		addAggroRangeEnterId(LATANA);
