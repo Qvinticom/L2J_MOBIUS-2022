@@ -356,7 +356,6 @@ public class Q00255_Tutorial extends Quest
 			}
 			else if (qs.isMemoState(3))
 			{
-				showOnScreenMsg(event.getActiveChar(), NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
 				final int classId = event.getActiveChar().getClassId().getId();
 				addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
 				showTutorialHtml(event.getActiveChar(), "tutorial_06.html");

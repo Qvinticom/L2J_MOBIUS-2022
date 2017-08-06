@@ -109,6 +109,11 @@ public class QuestLink implements IBypassHandler
 		
 		for (Quest quest : quests)
 		{
+			if (quest.getId() == 255) // do not list tutorial quest
+			{
+				continue;
+			}
+			
 			final QuestState qs = player.getQuestState(quest.getScriptName());
 			if ((qs == null) || qs.isCreated() || (qs.isCompleted() && qs.isNowAvailable()))
 			{
