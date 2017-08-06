@@ -46,7 +46,6 @@ public class NewbieGuide extends AbstractNpcAI
 	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
 	// Other
 	private final static String TUTORIAL_QUEST = "Q00255_Tutorial";
-	private final static String TUTORIAL_SHOT_VAR = "TUTORIAL_SHOT_REWARDED";
 	private final static String SUPPORT_MAGIC_STRING = "<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h Link default/SupportMagic.htm\">Receive help from beneficial magic.</Button>";
 	
 	private NewbieGuide()
@@ -90,9 +89,9 @@ public class NewbieGuide extends AbstractNpcAI
 			return npc.getId() + "-no.htm";
 		}
 		final QuestState qs = player.getQuestState(TUTORIAL_QUEST);
-		if ((qs != null) && qs.isCompleted() && !Config.DISABLE_TUTORIAL && !player.getVariables().getBoolean(TUTORIAL_SHOT_VAR, true))
+		if ((qs != null) && !Config.DISABLE_TUTORIAL && qs.isMemoState(5))
 		{
-			player.getVariables().set(TUTORIAL_SHOT_VAR, true);
+			qs.setMemoState(6);
 			if (player.isMageClass() && (player.getRace() != Race.ORC))
 			{
 				giveItems(player, SPIRITSHOT_REWARD);

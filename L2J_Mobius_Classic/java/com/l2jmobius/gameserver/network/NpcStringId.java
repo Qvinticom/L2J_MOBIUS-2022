@@ -12083,7 +12083,7 @@ public final class NpcStringId
 	
 	@ClientString(id = 536505, message = "Use the Ye Sagira Teleport Device shining with a red shimmer to go to Exploration Area 5")
 	public static NpcStringId USE_THE_YE_SAGIRA_TELEPORT_DEVICE_SHINING_WITH_A_RED_SHIMMER_TO_GO_TO_EXPLORATION_AREA_5;
-
+	
 	@ClientString(id = 536601, message = "Ruins Status Update (Lv. 16-25)")
 	public static NpcStringId RUINS_STATUS_UPDATE_LV_16_25;
 	
@@ -30387,8 +30387,8 @@ public final class NpcStringId
 	@ClientString(id = 1802763, message = "You think this will be enough to defeat me? Not a chance!")
 	public static NpcStringId YOU_THINK_THIS_WILL_BE_ENOUGH_TO_DEFEAT_ME_NOT_A_CHANCE;
 	
-	@ClientString(id = 1802764, message = "STABILIZING BLAZING SWAMP")
-	public static NpcStringId STABILIZING_BLAZING_SWAMP;
+	@ClientString(id = 1802764, message = "Speak with the Newbie Helper.")
+	public static NpcStringId SPEAK_WITH_THE_NEWBIE_HELPER;
 	
 	@ClientString(id = 1802765, message = "Defense Reduction")
 	public static NpcStringId DEFENSE_REDUCTION;
