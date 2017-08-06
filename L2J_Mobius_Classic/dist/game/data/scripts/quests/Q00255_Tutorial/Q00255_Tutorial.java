@@ -331,7 +331,7 @@ public class Q00255_Tutorial extends Quest
 	{
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isMemoState(2))
+		if ((qs != null) && (qs.getMemoState() < 3))
 		{
 			qs.setMemoState(3);
 			playSound(player, "ItemSound.quest_tutorial");
