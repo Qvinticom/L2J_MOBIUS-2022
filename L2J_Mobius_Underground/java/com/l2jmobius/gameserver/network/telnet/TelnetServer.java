@@ -27,7 +27,6 @@ import com.l2jmobius.Config;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -96,7 +95,7 @@ public class TelnetServer
 			//@formatter:off
 			new ServerBootstrap().group(_workerGroup)
 				.channel(NioServerSocketChannel.class)
-				.option(ChannelOption.SO_KEEPALIVE, true)
+				//.option(ChannelOption.SO_KEEPALIVE, true)
 				.childHandler(new TelnetServerInitializer())
 				.bind(socket);
 			//@formatter:on
