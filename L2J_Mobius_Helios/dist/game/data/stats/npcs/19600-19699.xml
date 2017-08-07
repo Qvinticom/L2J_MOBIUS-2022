@@ -613,6 +613,30 @@
 			<height normal="71.4" />
 		</collision>
 	</npc>
+	<npc id="19642" level="104" type="L2Monster" name="MP Controller" title="">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="73968.0" hpRegen="7.5" mp="25460.0" mpRegen="2.7" />
+			<speed>
+				<walk ground="50.0" />
+				<run ground="1.0" />
+			</speed>
+			<attack physical="10220.2058789866" magical="4304.88513767892" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" /> <!-- Need retail value -->
+			<defence physical="4679.90243035914" magical="3133.38489847112" /> <!-- Need retail value -->
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" /> <!-- TODO -->
+				<attack type="DARK" value="430" /> <!-- TODO -->
+			</attribute>
+			<abnormalResist physical="230" magical="230" /> <!-- TODO -->
+		</stats>
+		<status attackable="false" canMove="false" />
+		<collision>
+			<radius normal="140.0" />
+			<height normal="75.0" />
+		</collision>
+	</npc>
 	<npc id="19644" level="104" type="L2RaidBoss" name="Ramona">
 		<race>GIANT</race>
 		<acquire exp="576969277248" sp="1384726265" />
