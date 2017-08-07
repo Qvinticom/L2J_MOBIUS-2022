@@ -32,7 +32,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.loginserver.mail.MailSystem;
 import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.L2LoginPacketHandler;
 import com.l2jmobius.loginserver.network.mmocore.SelectorConfig;
@@ -105,11 +104,6 @@ public final class L2LoginServer
 		GameServerTable.getInstance();
 		
 		loadBanFile();
-		
-		if (Config.EMAIL_SYS_ENABLED)
-		{
-			MailSystem.getInstance();
-		}
 		
 		InetAddress bindAddress = null;
 		if (!Config.LOGIN_BIND_ADDRESS.equals("*"))
