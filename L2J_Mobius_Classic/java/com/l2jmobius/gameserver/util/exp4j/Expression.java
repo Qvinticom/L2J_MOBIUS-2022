@@ -26,15 +26,6 @@ import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
-import com.l2jmobius.gameserver.util.exp4j.function.Function;
-import com.l2jmobius.gameserver.util.exp4j.function.Functions;
-import com.l2jmobius.gameserver.util.exp4j.operator.Operator;
-import com.l2jmobius.gameserver.util.exp4j.tokenizer.FunctionToken;
-import com.l2jmobius.gameserver.util.exp4j.tokenizer.NumberToken;
-import com.l2jmobius.gameserver.util.exp4j.tokenizer.OperatorToken;
-import com.l2jmobius.gameserver.util.exp4j.tokenizer.Token;
-import com.l2jmobius.gameserver.util.exp4j.tokenizer.VariableToken;
-
 public class Expression
 {
 	private final Token[] tokens;
