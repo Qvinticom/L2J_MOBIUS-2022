@@ -1195,4 +1195,139 @@
 			<height normal="28.25" />
 		</collision>
 	</npc>
+	<npc id="26141" level="104" type="L2Npc" name="Ramona" title="Queen">
+		<race>GIANT</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
+			<speed>
+				<walk ground="40.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skill_list>
+		<status attackable="true" />
+		<collision>
+			<radius normal="40.0" />
+			<height normal="87.0" />
+		</collision>
+	</npc>
+	<npc id="26142" level="104" type="L2Npc" name="Ramona" title="Queen">
+		<race>GIANT</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
+			<speed>
+				<walk ground="40.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skill_list>
+		<status attackable="true" />
+		<collision>
+			<radius normal="40.0" />
+			<height normal="87.0" />
+		</collision>
+	</npc>
+	<npc id="26143" level="104" type="L2RaidBoss" name="Ramona" title="Queen">
+		<race>GIANT</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="64735849" hpRegen="7.5" mp="50920.0" mpRegen="2.7" />
+			<speed>
+				<walk ground="40.0" />
+				<run ground="180.0" />
+			</speed>
+		</stats>
+		<skill_list>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+		</skill_list>
+		<status attackable="true" />
+		<collision>
+			<radius normal="40.0" />
+			<height normal="82.0" />
+		</collision>
+		<drop_lists>
+			<death>
+				<item id="47244" min="1" max="1" chance="51.23" /> <!-- Ramona's Fancy Earring -->
+				<item id="47129" min="60" max="60" chance="100" /> <!-- Particle Dissolver -->
+				<item id="47128" min="60" max="60" chance="100" /> <!-- Giants Lightning Protection Potion -->
+				<item id="47127" min="60" max="60" chance="100" /> <!-- Giants Deterioration Protection Potion -->
+				<item id="36389" min="1" max="1" chance="80.2" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="46506" min="1" max="2" chance="23.58" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="2" chance="23.23" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="2" chance="23.12" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46477" min="1" max="1" chance="20.29" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="36386" min="1" max="1" chance="20.15" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="46507" min="1" max="1" chance="19.88" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="18.95" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="17.09" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="17.07" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="17711" min="1" max="1" chance="16.58" /> <!-- Lv. 5 Legendary CON Dye -->
+				<item id="17713" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Legendary WIT Dye -->
+				<item id="17710" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Legendary DEX Dye -->
+				<item id="17714" min="1" max="1" chance="16.52" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17709" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Legendary STR Dye -->
+				<item id="17712" min="1" max="1" chance="16.46" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="46446" min="1" max="2" chance="15.94" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="2" chance="15.56" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46508" min="1" max="1" chance="15.54" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46462" min="1" max="1" chance="13.09" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="12.66" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="11.45" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="10.58" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46509" min="1" max="1" chance="9.755" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="9.726" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="9.705" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="38063" min="1" max="1" chance="7.851" /> <!-- Eternal Leather Gloves Crafting Pack -->
+				<item id="38061" min="1" max="1" chance="7.836" /> <!-- Eternal Leather Armor Crafting Pack -->
+				<item id="38064" min="1" max="1" chance="7.771" /> <!-- Eternal Leather Boots Crafting Pack -->
+				<item id="38060" min="1" max="1" chance="7.763" /> <!-- Eternal Leather Helmet Crafting Pack -->
+				<item id="38062" min="1" max="1" chance="7.748" /> <!-- Eternal Leather Leggings Crafting Pack -->
+				<item id="46449" min="1" max="1" chance="6.616" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38067" min="1" max="1" chance="6.536" /> <!-- Eternal Stockings Crafting Pack -->
+				<item id="38059" min="1" max="1" chance="6.537" /> <!-- Eternal Shield Crafting Pack -->
+				<item id="46464" min="1" max="1" chance="6.533" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="38066" min="1" max="1" chance="6.522" /> <!-- Eternal Tunic Crafting Pack -->
+				<item id="38058" min="1" max="1" chance="6.522" /> <!-- Eternal Boots Crafting Pack -->
+				<item id="38069" min="1" max="1" chance="6.519" /> <!-- Eternal Shoes Crafting Pack -->
+				<item id="38068" min="1" max="1" chance="6.514" /> <!-- Eternal Gloves Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="6.513" /> <!-- Eternal Helmet Crafting Pack -->
+				<item id="38065" min="1" max="1" chance="6.512" /> <!-- Eternal Circlet Crafting Pack -->
+				<item id="38056" min="1" max="1" chance="6.51" /> <!-- Eternal Gaiters Crafting Pack -->
+				<item id="38057" min="1" max="1" chance="6.487" /> <!-- Eternal Gauntlets Crafting Pack -->
+				<item id="38070" min="1" max="1" chance="6.486" /> <!-- Eternal Sigil Crafting Pack -->
+				<item id="38055" min="1" max="1" chance="6.457" /> <!-- Eternal Breastplate Crafting Pack -->
+				<item id="46480" min="1" max="1" chance="3.308" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="3.24" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="3.213" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="35569" min="1" max="1" chance="2.454" /> <!-- Bloody Eternal Enhancement Stone -->
+				<item id="35567" min="1" max="1" chance="2.444" /> <!-- Dark Eternal Enhancement Stone -->
+				<item id="46450" min="1" max="1" chance="2.183" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="2.136" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="38053" min="1" max="1" chance="1.057" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+			</death>
+			<lucky_corpse>
+				<item id="39629" min="3" max="3" chance="0.01" /> <!-- Fortune Pocket - Stage 1 --> <!-- Lucky Drop -->
+				<item id="40198" min="1" max="1" chance="0.0002545" /> <!-- Disassembly Recipe Pouch: Armor --> <!-- Lucky Drop -->
+			</lucky_corpse>
+		</drop_lists>
+	</npc>
 </list>
