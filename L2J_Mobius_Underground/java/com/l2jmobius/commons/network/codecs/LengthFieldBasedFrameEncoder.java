@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.commons.network.codecs;
 
-import java.nio.ByteOrder;
 import java.util.List;
 
 import io.netty.buffer.ByteBuf;
@@ -35,7 +34,7 @@ public class LengthFieldBasedFrameEncoder extends MessageToMessageEncoder<ByteBu
 	{
 		final ByteBuf buf = ctx.alloc().buffer(2);
 		final short length = (short) (msg.readableBytes() + 2);
-		buf.writeShort(buf.order() != ByteOrder.LITTLE_ENDIAN ? Short.reverseBytes(length) : length);
+		buf.writeShortLE(length);
 		out.add(buf);
 		out.add(msg.retain());
 	}

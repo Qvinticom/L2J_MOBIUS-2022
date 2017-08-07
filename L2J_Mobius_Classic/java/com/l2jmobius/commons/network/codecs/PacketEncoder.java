@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.commons.network.codecs;
 
-import java.nio.ByteOrder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -36,24 +35,17 @@ public class PacketEncoder extends MessageToByteEncoder<IOutgoingPacket>
 {
 	private static final Logger LOGGER = Logger.getLogger(PacketEncoder.class.getName());
 	
-	private final ByteOrder _byteOrder;
 	private final int _maxPacketSize;
 	
-	public PacketEncoder(ByteOrder byteOrder, int maxPacketSize)
+	public PacketEncoder(int maxPacketSize)
 	{
 		super();
-		_byteOrder = byteOrder;
 		_maxPacketSize = maxPacketSize;
 	}
 	
 	@Override
 	protected void encode(ChannelHandlerContext ctx, IOutgoingPacket packet, ByteBuf out)
 	{
-		if (out.order() != _byteOrder)
-		{
-			out = out.order(_byteOrder);
-		}
-		
 		try
 		{
 			if (packet.write(new PacketWriter(out)))

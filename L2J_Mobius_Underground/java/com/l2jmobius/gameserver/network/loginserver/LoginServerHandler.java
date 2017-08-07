@@ -27,7 +27,7 @@ import io.netty.channel.ChannelHandlerContext;
 public class LoginServerHandler extends ChannelInboundHandler<LoginServerHandler>
 {
 	@Override
-	protected void messageReceived(ChannelHandlerContext ctx, IIncomingPacket<LoginServerHandler> msg) throws Exception
+	protected void channelRead0(ChannelHandlerContext ctx, IIncomingPacket<LoginServerHandler> msg) throws Exception
 	{
 		msg.run(this);
 	}

@@ -27,15 +27,15 @@ import com.l2jmobius.Config;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.AttributeKey;
 
 /**
  * @author UnAfraid
  */
 @Sharable
-public class TelnetServerHandler extends ChannelHandlerAdapter
+public class TelnetServerHandler extends ChannelInboundHandlerAdapter
 {
 	private static final Pattern COMMAND_ARGS_PATTERN = Pattern.compile("\"([^\"]*)\"|([^\\s]+)");
 	private static final AttributeKey<Boolean> AUTHORIZED = AttributeKey.valueOf(TelnetServerHandler.class, "AUTHORIZED");
@@ -58,7 +58,7 @@ public class TelnetServerHandler extends ChannelHandlerAdapter
 	}
 	
 	@Override
-	public void channelActive(ChannelHandlerContext ctx)
+	public void handlerAdded(ChannelHandlerContext ctx)
 	{
 		String ip = ctx.channel().remoteAddress().toString();
 		ip = ip.substring(1, ip.lastIndexOf(':')); // Trim out /127.0.0.1:14013
@@ -79,12 +79,12 @@ public class TelnetServerHandler extends ChannelHandlerAdapter
 		{
 			// Ask password
 			ctx.write("Password:");
-			ctx.attr(AUTHORIZED).set(Boolean.FALSE);
+			ctx.channel().attr(AUTHORIZED).set(Boolean.FALSE);
 		}
 		else
 		{
 			ctx.write("Type 'help' to see all available commands." + Config.EOL);
-			ctx.attr(AUTHORIZED).set(Boolean.TRUE);
+			ctx.channel().attr(AUTHORIZED).set(Boolean.TRUE);
 		}
 		ctx.flush();
 	}
@@ -100,11 +100,11 @@ public class TelnetServerHandler extends ChannelHandlerAdapter
 		String response = null;
 		boolean close = false;
 		
-		if (Boolean.FALSE.equals(ctx.attr(AUTHORIZED).get()))
+		if (Boolean.FALSE.equals(ctx.channel().attr(AUTHORIZED).get()))
 		{
 			if (Config.TELNET_PASSWORD.equals(request))
 			{
-				ctx.attr(AUTHORIZED).set(Boolean.TRUE);
+				ctx.channel().attr(AUTHORIZED).set(Boolean.TRUE);
 				request = "";
 			}
 			else
@@ -114,7 +114,7 @@ public class TelnetServerHandler extends ChannelHandlerAdapter
 			}
 		}
 		
-		if (Boolean.TRUE.equals(ctx.attr(AUTHORIZED).get()))
+		if (Boolean.TRUE.equals(ctx.channel().attr(AUTHORIZED).get()))
 		{
 			if (request.isEmpty())
 			{

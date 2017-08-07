@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.commons.network.codecs;
 
-import java.nio.ByteOrder;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -37,13 +36,11 @@ public class PacketDecoder<T>extends ByteToMessageDecoder
 {
 	private static final Logger LOGGER = Logger.getLogger(PacketDecoder.class.getName());
 	
-	private final ByteOrder _byteOrder;
 	private final IIncomingPackets<T>[] _incomingPackets;
 	private final T _client;
 	
-	public PacketDecoder(ByteOrder byteOrder, IIncomingPackets<T>[] incomingPackets, T client)
+	public PacketDecoder(IIncomingPackets<T>[] incomingPackets, T client)
 	{
-		_byteOrder = byteOrder;
 		_incomingPackets = incomingPackets;
 		_client = client;
 	}
@@ -54,11 +51,6 @@ public class PacketDecoder<T>extends ByteToMessageDecoder
 		if ((in == null) || !in.isReadable())
 		{
 			return;
-		}
-		
-		if (in.order() != _byteOrder)
-		{
-			in = in.order(_byteOrder);
 		}
 		
 		try

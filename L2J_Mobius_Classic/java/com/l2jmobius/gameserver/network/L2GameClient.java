@@ -155,7 +155,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 	}
 	
 	@Override
-	protected void messageReceived(ChannelHandlerContext ctx, IIncomingPacket<L2GameClient> packet)
+	protected void channelRead0(ChannelHandlerContext ctx, IIncomingPacket<L2GameClient> packet)
 	{
 		try
 		{
