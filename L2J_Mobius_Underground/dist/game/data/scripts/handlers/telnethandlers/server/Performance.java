@@ -19,7 +19,6 @@ package handlers.telnethandlers.server;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -28,10 +27,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Performance implements ITelnetCommand
 {
-	private Performance()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -54,10 +49,5 @@ public class Performance implements ITelnetCommand
 			sb.append(line + Config.EOL);
 		}
 		return sb.toString();
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Performance());
 	}
 }

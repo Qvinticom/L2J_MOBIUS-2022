@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.GMAudit;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -33,10 +32,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Enchant implements ITelnetCommand
 {
-	private Enchant()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -167,10 +162,5 @@ public class Enchant implements ITelnetCommand
 			return true;
 		}
 		return false;
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Enchant());
 	}
 }

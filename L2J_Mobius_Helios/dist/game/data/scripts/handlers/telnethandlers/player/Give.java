@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Util;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -31,10 +30,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Give implements ITelnetCommand
 {
-	private Give()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -86,10 +81,5 @@ public class Give implements ITelnetCommand
 			return "Item has been successfully given to the player.";
 		}
 		return "Couldn't find player with such name.";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Give());
 	}
 }

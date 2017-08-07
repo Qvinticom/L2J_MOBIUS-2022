@@ -18,7 +18,6 @@ package handlers.telnethandlers.server;
 
 import com.l2jmobius.gameserver.Shutdown;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Util;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -28,10 +27,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class ServerRestart implements ITelnetCommand
 {
-	private ServerRestart()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -54,10 +49,5 @@ public class ServerRestart implements ITelnetCommand
 		final int time = Integer.parseInt(args[0]);
 		Shutdown.getInstance().startTelnetShutdown(ctx.channel().remoteAddress().toString(), time, true);
 		return "Server will restart in " + time + " seconds!";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new ServerRestart());
 	}
 }

@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -29,10 +28,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class GMChat implements ITelnetCommand
 {
-	private GMChat()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -59,10 +54,5 @@ public class GMChat implements ITelnetCommand
 		}
 		AdminData.getInstance().broadcastToGMs(new CreatureSay(0, ChatType.ALLIANCE, "Telnet GM Broadcast", sb.toString()));
 		return "GMChat sent!";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new GMChat());
 	}
 }

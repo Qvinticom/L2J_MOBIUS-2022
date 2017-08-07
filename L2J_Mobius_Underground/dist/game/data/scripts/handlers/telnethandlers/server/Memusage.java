@@ -20,7 +20,6 @@ import java.text.DecimalFormat;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -29,10 +28,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Memusage implements ITelnetCommand
 {
-	private Memusage()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -73,10 +68,5 @@ public class Memusage implements ITelnetCommand
 		sb.append("| Useable Memory:" + df2.format(useable) + df.format((useable / max) * 100) + Config.EOL); // ...
 		sb.append("+----" + Config.EOL);
 		return sb.toString();
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Memusage());
 	}
 }

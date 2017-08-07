@@ -46,7 +46,6 @@ import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -58,10 +57,6 @@ import io.netty.channel.ChannelHandlerContext;
 public class Reload implements ITelnetCommand
 {
 	private static final Logger LOGGER = Logger.getLogger(Reload.class.getName());
-	
-	private Reload()
-	{
-	}
 	
 	@Override
 	public String getCommand()
@@ -265,10 +260,5 @@ public class Reload implements ITelnetCommand
 			}
 		}
 		return null;
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Reload());
 	}
 }

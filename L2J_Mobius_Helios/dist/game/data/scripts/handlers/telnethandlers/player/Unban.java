@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -60,10 +59,5 @@ public class Unban implements ITelnetCommand
 			return "Player has been successfully unbanned.";
 		}
 		return "Couldn't find player with such name.";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Unban());
 	}
 }

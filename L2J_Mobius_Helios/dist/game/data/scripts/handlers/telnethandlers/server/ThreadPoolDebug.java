@@ -30,7 +30,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ThreadPoolManager.RunnableWrapper;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -168,10 +167,5 @@ public class ThreadPoolDebug implements ITelnetCommand
 			LOGGER.log(Level.WARNING, "Error while retrieving object of " + sourceInstance.getClass().getName() + "." + fieldName, e);
 		}
 		return null;
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new ThreadPoolDebug());
 	}
 }

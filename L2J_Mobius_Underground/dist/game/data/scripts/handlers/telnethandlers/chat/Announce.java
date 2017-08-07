@@ -17,7 +17,6 @@
 package handlers.telnethandlers.chat;
 
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -27,10 +26,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Announce implements ITelnetCommand
 {
-	private Announce()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -57,10 +52,5 @@ public class Announce implements ITelnetCommand
 		}
 		Broadcast.toAllOnlinePlayers(sb.toString());
 		return "Announcement sent!";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Announce());
 	}
 }

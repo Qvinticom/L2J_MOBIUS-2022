@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Util;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -32,10 +31,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Ban implements ITelnetCommand
 {
-	private Ban()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -85,10 +80,5 @@ public class Ban implements ITelnetCommand
 			return "Player has been successfully banned.";
 		}
 		return "Couldn't find player with such name.";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Ban());
 	}
 }

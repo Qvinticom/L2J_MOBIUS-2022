@@ -17,7 +17,6 @@
 package handlers.telnethandlers.server;
 
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -26,10 +25,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class ForceGC implements ITelnetCommand
 {
-	private ForceGC()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -47,10 +42,5 @@ public class ForceGC implements ITelnetCommand
 	{
 		System.gc();
 		return "RAM Used: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576);
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new ForceGC());
 	}
 }

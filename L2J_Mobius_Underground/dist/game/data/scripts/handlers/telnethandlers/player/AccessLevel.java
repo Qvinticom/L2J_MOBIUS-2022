@@ -19,7 +19,6 @@ package handlers.telnethandlers.player;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Util;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -29,10 +28,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class AccessLevel implements ITelnetCommand
 {
-	private AccessLevel()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -60,10 +55,5 @@ public class AccessLevel implements ITelnetCommand
 			return "Player " + player.getName() + "'s access level has been changed to: " + level;
 		}
 		return "Couldn't find player with such name.";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new AccessLevel());
 	}
 }

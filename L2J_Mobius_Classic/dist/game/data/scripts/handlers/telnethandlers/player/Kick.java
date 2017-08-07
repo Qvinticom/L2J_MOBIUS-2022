@@ -19,7 +19,6 @@ package handlers.telnethandlers.player;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -28,10 +27,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Kick implements ITelnetCommand
 {
-	private Kick()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -58,10 +53,5 @@ public class Kick implements ITelnetCommand
 			return "Player has been successfully kicked.";
 		}
 		return "Couldn't find player with such name.";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Kick());
 	}
 }

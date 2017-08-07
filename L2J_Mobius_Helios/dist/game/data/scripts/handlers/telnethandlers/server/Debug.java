@@ -48,7 +48,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -59,10 +58,6 @@ import io.netty.channel.ChannelHandlerContext;
 public class Debug implements ITelnetCommand
 {
 	private static final Logger LOGGER = Logger.getLogger(Debug.class.getName());
-	
-	private Debug()
-	{
-	}
 	
 	@Override
 	public String getCommand()
@@ -460,10 +455,5 @@ public class Debug implements ITelnetCommand
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 		return format.format(cal.getTime());
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Debug());
 	}
 }

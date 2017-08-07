@@ -18,7 +18,6 @@ package handlers.telnethandlers.server;
 
 import com.l2jmobius.gameserver.Shutdown;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -27,10 +26,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class ServerAbort implements ITelnetCommand
 {
-	private ServerAbort()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -48,10 +43,5 @@ public class ServerAbort implements ITelnetCommand
 	{
 		Shutdown.getInstance().telnetAbort(ctx.channel().remoteAddress().toString());
 		return "Server shutdown/restart aborted!";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new ServerAbort());
 	}
 }

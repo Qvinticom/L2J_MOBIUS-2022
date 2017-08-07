@@ -17,7 +17,6 @@
 package handlers.telnethandlers.server;
 
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -26,10 +25,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Status implements ITelnetCommand
 {
-	private Status()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -46,10 +41,5 @@ public class Status implements ITelnetCommand
 	public String handle(ChannelHandlerContext ctx, String[] args)
 	{
 		return Debug.getServerStatus();
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Status());
 	}
 }

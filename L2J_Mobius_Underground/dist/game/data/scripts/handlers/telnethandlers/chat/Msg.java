@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
-import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 
 import io.netty.channel.ChannelHandlerContext;
 
@@ -30,10 +29,6 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public class Msg implements ITelnetCommand
 {
-	private Msg()
-	{
-	}
-	
 	@Override
 	public String getCommand()
 	{
@@ -65,10 +60,5 @@ public class Msg implements ITelnetCommand
 			return "Announcement sent!";
 		}
 		return "Couldn't find player with such name.";
-	}
-	
-	public static void main(String[] args)
-	{
-		TelnetServer.getInstance().addHandler(new Msg());
 	}
 }
