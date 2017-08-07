@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.eventengine.cron4j;
+package com.l2jmobius.gameserver.util.cron4j;
 
 import java.util.Calendar;
 import java.util.Date;

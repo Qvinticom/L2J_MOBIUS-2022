@@ -14,20 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.eventengine.cron4j;
+package com.l2jmobius.gameserver.util.cron4j;
 
 /**
- * This ValueMatcher always returns true!
+ * <p>
+ * This interface describes the ValueMatcher behavior. A ValueMatcher is an object that validate an integer value against a set of rules.
+ * </p>
  * @author Carlo Pelliccia
  */
-class AlwaysTrueValueMatcher implements ValueMatcher
+interface ValueMatcher
 {
 	/**
-	 * Always true!
+	 * Validate the given integer value against a set of rules.
+	 * @param value The value.
+	 * @return true if the given value matches the rules of the ValueMatcher, false otherwise.
 	 */
-	@Override
-	public boolean match(int value)
-	{
-		return true;
-	}
+	public boolean match(int value);
 }

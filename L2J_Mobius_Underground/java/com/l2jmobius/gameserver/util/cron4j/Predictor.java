@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.eventengine.cron4j;
+package com.l2jmobius.gameserver.util.cron4j;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -22,24 +22,41 @@ import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 /**
- * @author UnAfraid
+ * <p>
+ * A predictor is able to predict when a scheduling pattern will be matched.
+ * </p>
+ * <p>
+ * Suppose you want to know when the scheduler will execute a task scheduled with the pattern <em>0 3 * jan-jun,sep-dec mon-fri</em>. You can predict the next <em>n</em> execution of the task using a Predictor instance:
+ * </p>
+ * 
+ * <pre>
+ * String pattern = &quot;0 3 * jan-jun,sep-dec mon-fri&quot;;
+ * Predictor p = new Predictor(pattern);
+ * for (int i = 0; i &lt; n; i++)
+ * {
+ * 	System.out.println(p.nextMatchingDate());
+ * }
+ * </pre>
+ * 
+ * @author Carlo Pelliccia
+ * @since 1.1
  */
-public class PastPredictor
+public class Predictor
 {
 	/**
 	 * The scheduling pattern on which the predictor works.
 	 */
-	private final SchedulingPattern _schedulingPattern;
+	private final SchedulingPattern schedulingPattern;
 	
 	/**
 	 * The start time for the next prediction.
 	 */
-	private long _time;
+	private long time;
 	
 	/**
 	 * The time zone for the prediction.
 	 */
-	private TimeZone _timeZone = TimeZone.getDefault();
+	private TimeZone timeZone = TimeZone.getDefault();
 	
 	/**
 	 * It builds a predictor with the given scheduling pattern and start time.
@@ -47,10 +64,10 @@ public class PastPredictor
 	 * @param start The start time of the prediction.
 	 * @throws InvalidPatternException In the given scheduling pattern isn't valid.
 	 */
-	public PastPredictor(String schedulingPattern, long start) throws InvalidPatternException
+	public Predictor(String schedulingPattern, long start) throws InvalidPatternException
 	{
-		_schedulingPattern = new SchedulingPattern(schedulingPattern);
-		_time = (start / (1000 * 60)) * 1000 * 60;
+		this.schedulingPattern = new SchedulingPattern(schedulingPattern);
+		this.time = (start / (1000 * 60)) * 1000 * 60;
 	}
 	
 	/**
@@ -59,7 +76,7 @@ public class PastPredictor
 	 * @param start The start time of the prediction.
 	 * @throws InvalidPatternException In the given scheduling pattern isn't valid.
 	 */
-	public PastPredictor(String schedulingPattern, Date start) throws InvalidPatternException
+	public Predictor(String schedulingPattern, Date start) throws InvalidPatternException
 	{
 		this(schedulingPattern, start.getTime());
 	}
@@ -69,7 +86,7 @@ public class PastPredictor
 	 * @param schedulingPattern The pattern on which the prediction will be based.
 	 * @throws InvalidPatternException In the given scheduling pattern isn't valid.
 	 */
-	public PastPredictor(String schedulingPattern) throws InvalidPatternException
+	public Predictor(String schedulingPattern) throws InvalidPatternException
 	{
 		this(schedulingPattern, System.currentTimeMillis());
 	}
@@ -80,10 +97,10 @@ public class PastPredictor
 	 * @param start The start time of the prediction.
 	 * @since 2.0
 	 */
-	public PastPredictor(SchedulingPattern schedulingPattern, long start)
+	public Predictor(SchedulingPattern schedulingPattern, long start)
 	{
-		_schedulingPattern = schedulingPattern;
-		_time = (start / (1000 * 60)) * 1000 * 60;
+		this.schedulingPattern = schedulingPattern;
+		this.time = (start / (1000 * 60)) * 1000 * 60;
 	}
 	
 	/**
@@ -92,7 +109,7 @@ public class PastPredictor
 	 * @param start The start time of the prediction.
 	 * @since 2.0
 	 */
-	public PastPredictor(SchedulingPattern schedulingPattern, Date start)
+	public Predictor(SchedulingPattern schedulingPattern, Date start)
 	{
 		this(schedulingPattern, start.getTime());
 	}
@@ -102,7 +119,7 @@ public class PastPredictor
 	 * @param schedulingPattern The pattern on which the prediction will be based.
 	 * @since 2.0
 	 */
-	public PastPredictor(SchedulingPattern schedulingPattern)
+	public Predictor(SchedulingPattern schedulingPattern)
 	{
 		this(schedulingPattern, System.currentTimeMillis());
 	}
@@ -114,42 +131,42 @@ public class PastPredictor
 	 */
 	public void setTimeZone(TimeZone timeZone)
 	{
-		_timeZone = timeZone;
+		this.timeZone = timeZone;
 	}
 	
 	/**
-	 * It returns the previous matching moment as a millis value.
-	 * @return The previous matching moment as a millis value.
+	 * It returns the next matching moment as a millis value.
+	 * @return The next matching moment as a millis value.
 	 */
-	public synchronized long prevMatchingTime()
+	public synchronized long nextMatchingTime()
 	{
-		// Go a minute back.
-		_time -= 60000;
+		// Go a minute ahead.
+		time += 60000;
 		// Is it matching?
-		if (_schedulingPattern.match(_time))
+		if (schedulingPattern.match(time))
 		{
-			return _time;
+			return time;
 		}
 		// Go through the matcher groups.
-		int size = _schedulingPattern.matcherSize;
+		int size = schedulingPattern.matcherSize;
 		long[] times = new long[size];
 		for (int k = 0; k < size; k++)
 		{
 			// Ok, split the time!
 			GregorianCalendar c = new GregorianCalendar();
-			c.setTimeInMillis(_time);
-			c.setTimeZone(_timeZone);
+			c.setTimeInMillis(time);
+			c.setTimeZone(timeZone);
 			int minute = c.get(Calendar.MINUTE);
 			int hour = c.get(Calendar.HOUR_OF_DAY);
 			int dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
 			int month = c.get(Calendar.MONTH);
 			int year = c.get(Calendar.YEAR);
 			// Gets the matchers.
-			ValueMatcher minuteMatcher = _schedulingPattern.minuteMatchers.get(k);
-			ValueMatcher hourMatcher = _schedulingPattern.hourMatchers.get(k);
-			ValueMatcher dayOfMonthMatcher = _schedulingPattern.dayOfMonthMatchers.get(k);
-			ValueMatcher dayOfWeekMatcher = _schedulingPattern.dayOfWeekMatchers.get(k);
-			ValueMatcher monthMatcher = _schedulingPattern.monthMatchers.get(k);
+			ValueMatcher minuteMatcher = schedulingPattern.minuteMatchers.get(k);
+			ValueMatcher hourMatcher = schedulingPattern.hourMatchers.get(k);
+			ValueMatcher dayOfMonthMatcher = schedulingPattern.dayOfMonthMatchers.get(k);
+			ValueMatcher dayOfWeekMatcher = schedulingPattern.dayOfWeekMatchers.get(k);
+			ValueMatcher monthMatcher = schedulingPattern.monthMatchers.get(k);
 			for (;;)
 			{ // day of week
 				for (;;)
@@ -164,34 +181,34 @@ public class PastPredictor
 								{
 									break;
 								}
-								minute--;
-								if (minute < 0)
+								minute++;
+								if (minute > 59)
 								{
-									minute = 59;
-									hour--;
+									minute = 0;
+									hour++;
 								}
 							}
-							if (hour < 0)
+							if (hour > 23)
 							{
-								hour = 23;
-								dayOfMonth--;
+								hour = 0;
+								dayOfMonth++;
 							}
 							if (hourMatcher.match(hour))
 							{
 								break;
 							}
-							hour--;
-							minute = 59;
+							hour++;
+							minute = 0;
 						}
-						if (dayOfMonth < 1)
+						if (dayOfMonth > 31)
 						{
-							dayOfMonth = 31;
-							month--;
+							dayOfMonth = 1;
+							month++;
 						}
-						if (month < Calendar.JANUARY)
+						if (month > Calendar.DECEMBER)
 						{
-							month = Calendar.DECEMBER;
-							year--;
+							month = Calendar.JANUARY;
+							year++;
 						}
 						if (dayOfMonthMatcher instanceof DayOfMonthValueMatcher)
 						{
@@ -200,9 +217,9 @@ public class PastPredictor
 							{
 								break;
 							}
-							dayOfMonth--;
-							hour = 23;
-							minute = 59;
+							dayOfMonth++;
+							hour = 0;
+							minute = 0;
 						}
 						else if (dayOfMonthMatcher.match(dayOfMonth))
 						{
@@ -210,23 +227,23 @@ public class PastPredictor
 						}
 						else
 						{
-							dayOfMonth--;
-							hour = 23;
-							minute = 59;
+							dayOfMonth++;
+							hour = 0;
+							minute = 0;
 						}
 					}
 					if (monthMatcher.match(month + 1))
 					{
 						break;
 					}
-					month--;
-					dayOfMonth = 31;
-					hour = 23;
-					minute = 59;
+					month++;
+					dayOfMonth = 1;
+					hour = 0;
+					minute = 0;
 				}
 				// Is this ok?
 				c = new GregorianCalendar();
-				c.setTimeZone(_timeZone);
+				c.setTimeZone(timeZone);
 				c.set(Calendar.MINUTE, minute);
 				c.set(Calendar.HOUR_OF_DAY, hour);
 				c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
@@ -241,28 +258,6 @@ public class PastPredictor
 				year = c.get(Calendar.YEAR);
 				if ((month != oldMonth) || (dayOfMonth != oldDayOfMonth) || (year != oldYear))
 				{
-					do
-					{
-						dayOfMonth = oldDayOfMonth - 1;
-						month = oldMonth;
-						year = oldYear;
-						c = new GregorianCalendar();
-						c.setTimeZone(_timeZone);
-						c.set(Calendar.MINUTE, minute);
-						c.set(Calendar.HOUR_OF_DAY, hour);
-						c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-						c.set(Calendar.MONTH, month);
-						c.set(Calendar.YEAR, year);
-						// Day-of-month/month/year compatibility check.
-						oldDayOfMonth = dayOfMonth;
-						oldMonth = month;
-						oldYear = year;
-						dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
-						month = c.get(Calendar.MONTH);
-						year = c.get(Calendar.YEAR);
-						
-					}
-					while ((month != oldMonth) || (dayOfMonth != oldDayOfMonth) || (year != oldYear));
 					// Take another spin!
 					continue;
 				}
@@ -272,17 +267,17 @@ public class PastPredictor
 				{
 					break;
 				}
-				dayOfMonth--;
-				hour = 23;
-				minute = 59;
-				if (dayOfMonth < 1)
+				dayOfMonth++;
+				hour = 0;
+				minute = 0;
+				if (dayOfMonth > 31)
 				{
-					dayOfMonth = 31;
-					month--;
-					if (month < Calendar.JANUARY)
+					dayOfMonth = 1;
+					month++;
+					if (month > Calendar.DECEMBER)
 					{
-						month = Calendar.DECEMBER;
-						year--;
+						month = Calendar.JANUARY;
+						year++;
 					}
 				}
 			}
@@ -299,17 +294,17 @@ public class PastPredictor
 			}
 		}
 		// Updates the object current time value.
-		_time = min;
+		time = min;
 		// Here it is.
-		return _time;
+		return time;
 	}
 	
 	/**
-	 * It returns the previous matching moment as a {@link Date} object.
-	 * @return The previous matching moment as a {@link Date} object.
+	 * It returns the next matching moment as a {@link Date} object.
+	 * @return The next matching moment as a {@link Date} object.
 	 */
-	public synchronized Date prevMatchingDate()
+	public synchronized Date nextMatchingDate()
 	{
-		return new Date(prevMatchingTime());
+		return new Date(nextMatchingTime());
 	}
 }

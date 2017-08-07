@@ -14,29 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.eventengine.cron4j;
+package com.l2jmobius.gameserver.util.cron4j;
 
 /**
- * <p>
- * This kind of exception is thrown if an invalid scheduling pattern is encountered by the scheduler.
- * </p>
+ * This ValueMatcher always returns true!
  * @author Carlo Pelliccia
  */
-public class InvalidPatternException extends RuntimeException
+class AlwaysTrueValueMatcher implements ValueMatcher
 {
 	/**
-	 * Package-reserved construction.
+	 * Always true!
 	 */
-	InvalidPatternException()
+	@Override
+	public boolean match(int value)
 	{
-	}
-	
-	/**
-	 * Package-reserved construction.
-	 * @param message String
-	 */
-	InvalidPatternException(String message)
-	{
-		super(message);
+		return true;
 	}
 }

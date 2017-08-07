@@ -14,20 +14,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.eventengine.cron4j;
+package com.l2jmobius.gameserver.util.cron4j;
 
 /**
  * <p>
- * This interface describes the ValueMatcher behavior. A ValueMatcher is an object that validate an integer value against a set of rules.
+ * This kind of exception is thrown if an invalid scheduling pattern is encountered by the scheduler.
  * </p>
  * @author Carlo Pelliccia
  */
-interface ValueMatcher
+public class InvalidPatternException extends RuntimeException
 {
 	/**
-	 * Validate the given integer value against a set of rules.
-	 * @param value The value.
-	 * @return true if the given value matches the rules of the ValueMatcher, false otherwise.
+	 * Package-reserved construction.
 	 */
-	public boolean match(int value);
+	InvalidPatternException()
+	{
+	}
+	
+	/**
+	 * Package-reserved construction.
+	 * @param message String
+	 */
+	InvalidPatternException(String message)
+	{
+		super(message);
+	}
 }
