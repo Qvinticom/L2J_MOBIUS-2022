@@ -45,8 +45,7 @@ import com.l2jmobius.gameserver.model.skills.EffectScope;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillConditionScope;
-
-import net.objecthunter.exp4j.ExpressionBuilder;
+import com.l2jmobius.gameserver.util.exp4j.ExpressionBuilder;
 
 /**
  * Skill data parser.
