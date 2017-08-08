@@ -121,6 +121,9 @@ public class Q00255_Tutorial extends Quest
 		COMPLETE_LOCATION.put(53, new Location(115632, -177996, -905));
 	}
 	private static final String TUTORIAL_BUYPASS = "Quest Q00255_Tutorial ";
+	private static final int QUESTION_MARK_ID_1 = 1;
+	private static final int QUESTION_MARK_ID_2 = 5;
+	private static final int QUESTION_MARK_ID_3 = 28;
 	
 	public Q00255_Tutorial()
 	{
@@ -169,7 +172,7 @@ public class Q00255_Tutorial extends Quest
 			{
 				if (qs.isMemoState(1))
 				{
-					player.sendPacket(new TutorialShowQuestionMark(1, 0));
+					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_1, 0));
 					player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 					player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 				}
@@ -191,9 +194,7 @@ public class Q00255_Tutorial extends Quest
 						playTutorialVoice(player, "tutorial_voice_026");
 					}
 					htmltext = (npc != null ? npc.getId() : player.getTarget().getId()) + "-3.html";
-					final int classId = player.getClassId().getId();
-					addRadar(player, COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
-					playSound(player, "ItemSound.quest_tutorial");
+					player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_3, 0));
 				}
 				break;
 			}
@@ -294,7 +295,7 @@ public class Q00255_Tutorial extends Quest
 				case 5:
 				case 6:
 				{
-					return npc.getId() + "-3.html";
+					return npc.getId() + "-4.html";
 				}
 			}
 		}
@@ -336,7 +337,7 @@ public class Q00255_Tutorial extends Quest
 			qs.setMemoState(3);
 			playSound(player, "ItemSound.quest_tutorial");
 			playTutorialVoice(player, "tutorial_voice_013");
-			player.sendPacket(new TutorialShowQuestionMark(1, 0));
+			player.sendPacket(new TutorialShowQuestionMark(QUESTION_MARK_ID_2, 0));
 		}
 	}
 	
@@ -345,20 +346,41 @@ public class Q00255_Tutorial extends Quest
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
 		final QuestState qs = getQuestState(event.getActiveChar(), false);
-		if ((qs != null) && (event.getMarkId() == 1)) // tutorial mark
+		if (qs != null)
 		{
-			if (qs.isMemoState(1))
+			switch (event.getMarkId())
 			{
-				showOnScreenMsg(event.getActiveChar(), NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
-				final int classId = event.getActiveChar().getClassId().getId();
-				addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
-				showTutorialHtml(event.getActiveChar(), "tutorial_04.html");
-			}
-			else if (qs.isMemoState(3))
-			{
-				final int classId = event.getActiveChar().getClassId().getId();
-				addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
-				showTutorialHtml(event.getActiveChar(), "tutorial_06.html");
+				case QUESTION_MARK_ID_1:
+				{
+					if (qs.isMemoState(1))
+					{
+						showOnScreenMsg(event.getActiveChar(), NpcStringId.SPEAK_WITH_THE_NEWBIE_HELPER, ExShowScreenMessage.TOP_CENTER, 5000);
+						final int classId = event.getActiveChar().getClassId().getId();
+						addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
+						showTutorialHtml(event.getActiveChar(), "tutorial_04.html");
+					}
+					break;
+				}
+				case QUESTION_MARK_ID_2:
+				{
+					if (qs.isMemoState(3))
+					{
+						final int classId = event.getActiveChar().getClassId().getId();
+						addRadar(event.getActiveChar(), HELPER_LOCATION.get(classId).getX(), HELPER_LOCATION.get(classId).getY(), HELPER_LOCATION.get(classId).getZ());
+						showTutorialHtml(event.getActiveChar(), "tutorial_06.html");
+					}
+					break;
+				}
+				case QUESTION_MARK_ID_3:
+				{
+					if (qs.isMemoState(5))
+					{
+						final int classId = event.getActiveChar().getClassId().getId();
+						addRadar(event.getActiveChar(), COMPLETE_LOCATION.get(classId).getX(), COMPLETE_LOCATION.get(classId).getY(), COMPLETE_LOCATION.get(classId).getZ());
+						playSound(event.getActiveChar(), "ItemSound.quest_tutorial");
+					}
+					break;
+				}
 			}
 		}
 	}
