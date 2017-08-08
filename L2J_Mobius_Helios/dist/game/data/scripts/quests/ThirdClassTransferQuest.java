@@ -77,6 +77,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 	// Misc
 	private final int _minLevel;
 	private final Race _race;
+	private static final int QUESTIONMARK_ID = 101;
 	
 	public ThirdClassTransferQuest(int questId, int minLevel, Race race)
 	{
@@ -335,7 +336,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerPressTutorialMark(OnPlayerPressTutorialMark event)
 	{
-		if (event.getMarkId() == getId())
+		if (event.getMarkId() == QUESTIONMARK_ID)
 		{
 			final L2PcInstance player = event.getActiveChar();
 			player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "popupInvite.html")));
@@ -357,7 +358,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 		
 		if ((oldLevel < newLevel) && (newLevel == _minLevel) && (player.getRace() == _race) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
-			player.sendPacket(new TutorialShowQuestionMark(getId(), 1));
+			player.sendPacket(new TutorialShowQuestionMark(QUESTIONMARK_ID, 1));
 		}
 	}
 	
@@ -377,7 +378,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 			final QuestState qs = getQuestState(player, true);
 			if (qs.isCreated())
 			{
-				player.sendPacket(new TutorialShowQuestionMark(getId(), 1)); // Seems not to work. - blank text
+				player.sendPacket(new TutorialShowQuestionMark(QUESTIONMARK_ID, 1));
 			}
 		}
 	}
