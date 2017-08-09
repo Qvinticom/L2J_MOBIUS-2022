@@ -92,7 +92,7 @@ public final class Q00760_BlockTheExit extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = null;

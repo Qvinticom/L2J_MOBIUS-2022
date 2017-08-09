@@ -91,7 +91,7 @@ public final class Q00485_HotSpringWater extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -120,14 +120,11 @@ public final class Q00485_HotSpringWater extends Quest
 					}
 					else if (npc.getId() == WALDERAL)
 					{
-						if (!isSimulated)
+						st.exitQuest(QuestType.DAILY, true);
+						giveAdena(player, 371_745, true);
+						if (player.getLevel() >= MIN_LEVEL)
 						{
-							st.exitQuest(QuestType.DAILY, true);
-							giveAdena(player, 371_745, true);
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								addExpAndSp(player, 9_483_000, 2_275);
-							}
+							addExpAndSp(player, 9_483_000, 2_275);
 						}
 						htmltext = "30844-02.html";
 					}
@@ -138,10 +135,7 @@ public final class Q00485_HotSpringWater extends Quest
 			{
 				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
 				{
-					if (!isSimulated)
-					{
-						st.setState(State.CREATED);
-					}
+					st.setState(State.CREATED);
 					htmltext = "32327-01.html";
 				}
 				else if ((npc.getId() == WALDERAL) && st.isCompleted() && !st.isNowAvailable())

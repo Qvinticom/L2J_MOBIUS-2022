@@ -146,7 +146,7 @@ public final class Q00017_LightAndDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -179,21 +179,15 @@ public final class Q00017_LightAndDarkness extends Quest
 							}
 							else
 							{
-								if (!isSimulated)
-								{
-									qs.exitQuest(true, true);
-								}
+								qs.exitQuest(true, true);
 								htmltext = "31517-06.html";
 							}
 							break;
 						}
 						else if (qs.isCond(5))
 						{
-							if (!isSimulated)
-							{
-								addExpAndSp(player, 1_469_840, 352);
-								qs.exitQuest(false, true);
-							}
+							addExpAndSp(player, 1_469_840, 352);
+							qs.exitQuest(false, true);
 							htmltext = "31517-05.html";
 						}
 					}

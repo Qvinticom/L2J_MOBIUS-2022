@@ -88,7 +88,7 @@ public final class Q10744_StrongerThanSteel extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -126,12 +126,9 @@ public final class Q10744_StrongerThanSteel extends Quest
 					}
 					else if (qs.isCond(3))
 					{
-						if (!isSimulated)
-						{
-							giveAdena(player, 34000, true);
-							addExpAndSp(player, 112001, 5);
-							qs.exitQuest(false, true);
-						}
+						giveAdena(player, 34000, true);
+						addExpAndSp(player, 112001, 5);
+						qs.exitQuest(false, true);
 						htmltext = "33954-05.html";
 					}
 				}

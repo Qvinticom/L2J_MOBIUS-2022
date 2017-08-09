@@ -98,7 +98,7 @@ public final class Q10358_DividedSakumPoslof extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -123,11 +123,8 @@ public final class Q10358_DividedSakumPoslof extends Quest
 					{
 						if (npc.getId() == LEF)
 						{
-							if (!isSimulated)
-							{
-								st.setCond(3);
-								giveItems(player, SAKUM_SKETCH, 1);
-							}
+							st.setCond(3);
+							giveItems(player, SAKUM_SKETCH, 1);
 							htmltext = "33510-05.html";
 						}
 						else if (npc.getId() == ADVENTURER_GUIDE)

@@ -140,7 +140,7 @@ public final class Q00761_AssistingTheGoldenRamArmy extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = null;
@@ -165,10 +165,7 @@ public final class Q00761_AssistingTheGoldenRamArmy extends Quest
 				}
 				else
 				{
-					if (!isSimulated)
-					{
-						st.setState(State.CREATED);
-					}
+					st.setState(State.CREATED);
 					htmltext = "31553-01.htm";
 				}
 				break;

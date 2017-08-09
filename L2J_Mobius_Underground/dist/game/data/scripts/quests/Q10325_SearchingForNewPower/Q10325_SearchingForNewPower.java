@@ -128,7 +128,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
@@ -151,20 +151,17 @@ public final class Q10325_SearchingForNewPower extends Quest
 					{
 						if (qs.isCond(8))
 						{
-							if (!isSimulated)
+							if (player.isMageClass())
 							{
-								if (player.isMageClass())
-								{
-									giveItems(player, SPIRITSHOTS);
-								}
-								else
-								{
-									giveItems(player, SOULSHOTS);
-								}
-								addExpAndSp(player, 4654, 5);
-								giveAdena(player, 120, true);
-								qs.exitQuest(false, true);
+								giveItems(player, SPIRITSHOTS);
 							}
+							else
+							{
+								giveItems(player, SOULSHOTS);
+							}
+							addExpAndSp(player, 4654, 5);
+							giveAdena(player, 120, true);
+							qs.exitQuest(false, true);
 							htmltext = "32980-04.html";
 							break;
 						}
@@ -180,10 +177,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(2)))
 							{
-								if (!isSimulated)
-								{
-									qs.setCond(8);
-								}
+								qs.setCond(8);
 								htmltext = "32156-01.html";
 								break;
 							}
@@ -199,10 +193,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(3)))
 							{
-								if (!isSimulated)
-								{
-									qs.setCond(8);
-								}
+								qs.setCond(8);
 								htmltext = "32148-01.html";
 								break;
 							}
@@ -218,10 +209,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(4)))
 							{
-								if (!isSimulated)
-								{
-									qs.setCond(8);
-								}
+								qs.setCond(8);
 								htmltext = "32161-01.html";
 								break;
 							}
@@ -237,10 +225,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(5)))
 							{
-								if (!isSimulated)
-								{
-									qs.setCond(8);
-								}
+								qs.setCond(8);
 								htmltext = "32151-01.html";
 								break;
 							}
@@ -256,10 +241,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(6)))
 							{
-								if (!isSimulated)
-								{
-									qs.setCond(8);
-								}
+								qs.setCond(8);
 								htmltext = "32159-01.html";
 								break;
 							}
@@ -275,10 +257,7 @@ public final class Q10325_SearchingForNewPower extends Quest
 						{
 							if ((qs.isCond(7)))
 							{
-								if (!isSimulated)
-								{
-									qs.setCond(8);
-								}
+								qs.setCond(8);
 								htmltext = "32144-01.html";
 								break;
 							}

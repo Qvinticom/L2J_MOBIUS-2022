@@ -108,7 +108,7 @@ public final class Q00476_PlainMission extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -137,14 +137,11 @@ public final class Q00476_PlainMission extends Quest
 					}
 					else if (npc.getId() == ANDREI)
 					{
-						if (!isSimulated)
+						st.exitQuest(QuestType.DAILY, true);
+						giveAdena(player, 142_200, true);
+						if (player.getLevel() >= MIN_LEVEL)
 						{
-							st.exitQuest(QuestType.DAILY, true);
-							giveAdena(player, 142_200, true);
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								addExpAndSp(player, 4_685_175, 1_124);
-							}
+							addExpAndSp(player, 4_685_175, 1_124);
 						}
 						htmltext = "31292-01.html";
 					}
@@ -155,10 +152,7 @@ public final class Q00476_PlainMission extends Quest
 			{
 				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
 				{
-					if (!isSimulated)
-					{
-						st.setState(State.CREATED);
-					}
+					st.setState(State.CREATED);
 					htmltext = "32327-01.htm";
 				}
 				else if ((npc.getId() == ANDREI) && st.isCompleted() && !st.isNowAvailable())

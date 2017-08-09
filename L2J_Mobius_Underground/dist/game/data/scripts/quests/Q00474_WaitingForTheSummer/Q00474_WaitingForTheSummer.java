@@ -84,7 +84,7 @@ public final class Q00474_WaitingForTheSummer extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -111,15 +111,12 @@ public final class Q00474_WaitingForTheSummer extends Quest
 		}
 		else if (qs.isStarted() && qs.isCond(2))
 		{
-			if (!isSimulated)
+			giveAdena(player, 194000, true);
+			if (player.getLevel() >= MIN_LEVEL)
 			{
-				giveAdena(player, 194000, true);
-				if (player.getLevel() >= MIN_LEVEL)
-				{
-					addExpAndSp(player, 1879400, 451);
-				}
-				qs.exitQuest(QuestType.DAILY, true);
+				addExpAndSp(player, 1879400, 451);
 			}
+			qs.exitQuest(QuestType.DAILY, true);
 			htmltext = "31981-01.html";
 		}
 		else if (qs.isCompleted() && !qs.isNowAvailable())

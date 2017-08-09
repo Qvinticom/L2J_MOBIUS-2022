@@ -88,7 +88,7 @@ public final class Q10746_SeeTheWorld extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -122,10 +122,7 @@ public final class Q10746_SeeTheWorld extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						if (!isSimulated)
-						{
-							qs.setCond(2, true);
-						}
+						qs.setCond(2, true);
 						htmltext = "33948-01.html";
 					}
 					else if (qs.isCond(2))
@@ -139,21 +136,18 @@ public final class Q10746_SeeTheWorld extends Quest
 			{
 				if (qs.isStarted() && qs.isCond(2))
 				{
-					if (!isSimulated)
+					giveAdena(player, 43000, true);
+					addExpAndSp(player, 53422, 5);
+					if (player.isMageClass())
 					{
-						giveAdena(player, 43000, true);
-						addExpAndSp(player, 53422, 5);
-						if (player.isMageClass())
-						{
-							giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
-						}
-						else
-						{
-							giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
-						}
-						showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
+						giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
 					}
+					else
+					{
+						giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
+					}
+					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
 					htmltext = "30037-01.html";
 				}
 				else if (qs.isCompleted())

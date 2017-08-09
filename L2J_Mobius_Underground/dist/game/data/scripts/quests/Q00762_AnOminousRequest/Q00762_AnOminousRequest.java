@@ -169,7 +169,7 @@ public final class Q00762_AnOminousRequest extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = null;
@@ -194,10 +194,7 @@ public final class Q00762_AnOminousRequest extends Quest
 				}
 				else
 				{
-					if (!isSimulated)
-					{
-						st.setState(State.CREATED);
-					}
+					st.setState(State.CREATED);
 					htmltext = "31522-01.htm";
 				}
 				break;

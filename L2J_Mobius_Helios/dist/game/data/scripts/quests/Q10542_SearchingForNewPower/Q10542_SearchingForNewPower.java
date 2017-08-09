@@ -122,7 +122,7 @@ public final class Q10542_SearchingForNewPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -168,57 +168,54 @@ public final class Q10542_SearchingForNewPower extends Quest
 					if (qs.isCond(2))
 					{
 						htmltext = "33004-01.html";
-						if (!isSimulated)
+						qs.setCond(3, true);
+						player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
+						htmltext = "33004-01.html";
+						
+						NpcStringId npcStringId = null;
+						switch (player.getClassId())
 						{
-							qs.setCond(3, true);
-							player.sendPacket(new TutorialShowHtml(npc.getObjectId(), "..\\L2text\\QT_004_skill_01.htm", TutorialShowHtml.LARGE_WINDOW));
-							htmltext = "33004-01.html";
-							
-							NpcStringId npcStringId = null;
-							switch (player.getClassId())
+							case FIGHTER:
+							case ELVEN_FIGHTER:
+							case DARK_FIGHTER:
 							{
-								case FIGHTER:
-								case ELVEN_FIGHTER:
-								case DARK_FIGHTER:
-								{
-									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_MORTAL_BLOW;
-									break;
-								}
-								case MAGE:
-								case ELVEN_MAGE:
-								case DARK_MAGE:
-								{
-									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_WIND_STRIKE;
-									break;
-								}
-								case ORC_FIGHTER:
-								{
-									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_IRON_PUNCH;
-									break;
-								}
-								case ORC_MAGE:
-								{
-									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_CHILL_FLAME;
-									break;
-								}
-								case DWARVEN_FIGHTER:
-								{
-									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_SPOIL;
-									break;
-								}
-								case MALE_SOLDIER:
-								case FEMALE_SOLDIER:
-								{
-									npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_FALLEN_ATTACK_OR_FALLEN_ARROW;
-									break;
-								}
-								default:
-									break;
+								npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_MORTAL_BLOW;
+								break;
 							}
-							if (npcStringId != null)
+							case MAGE:
+							case ELVEN_MAGE:
+							case DARK_MAGE:
 							{
-								showOnScreenMsg(player, npcStringId, ExShowScreenMessage.TOP_CENTER, 4500);
+								npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_WIND_STRIKE;
+								break;
 							}
+							case ORC_FIGHTER:
+							{
+								npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_POWER_STRIKE_OR_IRON_PUNCH;
+								break;
+							}
+							case ORC_MAGE:
+							{
+								npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_CHILL_FLAME;
+								break;
+							}
+							case DWARVEN_FIGHTER:
+							{
+								npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_SPOIL;
+								break;
+							}
+							case MALE_SOLDIER:
+							case FEMALE_SOLDIER:
+							{
+								npcStringId = NpcStringId.PREPARE_TO_USE_THE_SKILL_FALLEN_ATTACK_OR_FALLEN_ARROW;
+								break;
+							}
+							default:
+								break;
+						}
+						if (npcStringId != null)
+						{
+							showOnScreenMsg(player, npcStringId, ExShowScreenMessage.TOP_CENTER, 4500);
 						}
 					}
 					else if (qs.isCond(5))

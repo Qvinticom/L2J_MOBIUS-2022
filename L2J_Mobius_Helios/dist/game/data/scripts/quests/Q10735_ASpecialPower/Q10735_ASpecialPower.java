@@ -76,7 +76,7 @@ public final class Q10735_ASpecialPower extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -108,13 +108,10 @@ public final class Q10735_ASpecialPower extends Quest
 					}
 					case 7:
 					{
-						if (!isSimulated)
-						{
-							giveAdena(player, 900, true);
-							rewardItems(player, SPIRITSHOTS_REWARD);
-							addExpAndSp(player, 3154, 0);
-							qs.exitQuest(false, true);
-						}
+						giveAdena(player, 900, true);
+						rewardItems(player, SPIRITSHOTS_REWARD);
+						addExpAndSp(player, 3154, 0);
+						qs.exitQuest(false, true);
 						htmltext = "33942-05.html";
 						break;
 					}

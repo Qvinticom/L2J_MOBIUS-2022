@@ -87,6 +87,10 @@ public class QuestLink implements IBypassHandler
 		final StringBuilder sbCanStart = new StringBuilder(128);
 		final StringBuilder sbCantStart = new StringBuilder(128);
 		final StringBuilder sbCompleted = new StringBuilder(128);
+		int availableQuestCounter = 0;
+		int inProgressQuestCounter = 0;
+		Quest lastSavedAvailableQuest = null;
+		Quest lastSavedProgressQuest = null;
 		
 		//@formatter:off
 		final Set<Quest> startingQuests = npc.getListeners(EventType.ON_NPC_QUEST_START).stream()
@@ -123,6 +127,8 @@ public class QuestLink implements IBypassHandler
 					sbCanStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
 					sbCanStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
 					sbCanStart.append("</button></font>");
+					availableQuestCounter++;
+					lastSavedAvailableQuest = quest;
 				}
 				else
 				{
@@ -132,16 +138,14 @@ public class QuestLink implements IBypassHandler
 					sbCantStart.append("</button></font>");
 				}
 			}
-			else if (Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
-			{
-				continue;
-			}
 			else if (qs.isStarted())
 			{
 				sbStarted.append("<font color=\"ffdd66\">");
 				sbStarted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
 				sbStarted.append(quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>");
 				sbStarted.append("</button></font>");
+				inProgressQuestCounter++;
+				lastSavedProgressQuest = quest;
 			}
 			else if (qs.isCompleted())
 			{
@@ -150,6 +154,17 @@ public class QuestLink implements IBypassHandler
 				sbCompleted.append(quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>");
 				sbCompleted.append("</button></font>");
 			}
+		}
+		
+		if ((availableQuestCounter == 0) && (inProgressQuestCounter == 1) && (lastSavedProgressQuest != null))
+		{
+			showQuestWindow(player, npc, lastSavedProgressQuest.getName());
+			return;
+		}
+		if ((availableQuestCounter == 1) && (inProgressQuestCounter == 0) && (lastSavedAvailableQuest != null))
+		{
+			showQuestWindow(player, npc, lastSavedAvailableQuest.getName());
+			return;
 		}
 		
 		String content;
@@ -218,7 +233,7 @@ public class QuestLink implements IBypassHandler
 				}
 			}
 			
-			q.notifyTalk(npc, player, false);
+			q.notifyTalk(npc, player);
 		}
 		else
 		{
@@ -249,7 +264,6 @@ public class QuestLink implements IBypassHandler
 			.filter(Quest.class::isInstance)
 			.map(Quest.class::cast)
 			.filter(quest -> (quest.getId() > 0) && (quest.getId() < 20000))
-			//.filter(quest -> !Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
 			.distinct()
 			.collect(Collectors.toSet());
 		//@formatter:on

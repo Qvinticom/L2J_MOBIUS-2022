@@ -101,7 +101,7 @@ public final class Q00470_DivinityProtector extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -130,14 +130,11 @@ public final class Q00470_DivinityProtector extends Quest
 					}
 					else if (npc.getId() == AGRIPEL)
 					{
-						if (!isSimulated)
+						st.exitQuest(QuestType.DAILY, true);
+						giveAdena(player, 194_000, true);
+						if (player.getLevel() >= MIN_LEVEL)
 						{
-							st.exitQuest(QuestType.DAILY, true);
-							giveAdena(player, 194_000, true);
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								addExpAndSp(player, 1_879_400, 451);
-							}
+							addExpAndSp(player, 1_879_400, 451);
 						}
 						htmltext = "31348-02.html";
 					}
@@ -148,10 +145,7 @@ public final class Q00470_DivinityProtector extends Quest
 			{
 				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
 				{
-					if (!isSimulated)
-					{
-						st.setState(State.CREATED);
-					}
+					st.setState(State.CREATED);
 					htmltext = "32327-01.htm";
 				}
 				break;

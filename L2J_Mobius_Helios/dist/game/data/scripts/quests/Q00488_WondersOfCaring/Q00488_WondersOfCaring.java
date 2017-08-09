@@ -90,7 +90,7 @@ public final class Q00488_WondersOfCaring extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -119,14 +119,11 @@ public final class Q00488_WondersOfCaring extends Quest
 					}
 					else if (npc.getId() == DOLPHREN)
 					{
-						if (!isSimulated)
+						st.exitQuest(QuestType.DAILY, true);
+						giveAdena(player, 490_545, true);
+						if (player.getLevel() >= MIN_LEVEL)
 						{
-							st.exitQuest(QuestType.DAILY, true);
-							giveAdena(player, 490_545, true);
-							if (player.getLevel() >= MIN_LEVEL)
-							{
-								addExpAndSp(player, 22_901_550, 5_496);
-							}
+							addExpAndSp(player, 22_901_550, 5_496);
 						}
 						htmltext = "32880-02.html";
 					}
@@ -137,10 +134,7 @@ public final class Q00488_WondersOfCaring extends Quest
 			{
 				if ((npc.getId() == ADVENTURER) && st.isNowAvailable())
 				{
-					if (!isSimulated)
-					{
-						st.setState(State.CREATED);
-					}
+					st.setState(State.CREATED);
 					htmltext = "32327-01.htm";
 				}
 				else if ((npc.getId() == DOLPHREN) && st.isCompleted() && !st.isNowAvailable())

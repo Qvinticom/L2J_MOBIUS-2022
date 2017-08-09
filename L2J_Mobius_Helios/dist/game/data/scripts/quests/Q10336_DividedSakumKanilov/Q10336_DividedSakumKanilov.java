@@ -97,7 +97,7 @@ public final class Q10336_DividedSakumKanilov extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -122,11 +122,8 @@ public final class Q10336_DividedSakumKanilov extends Quest
 					{
 						if (npc.getId() == ZENATH)
 						{
-							if (!isSimulated)
-							{
-								st.setCond(3);
-								giveItems(player, SAKUM_SKETCH, 1);
-							}
+							st.setCond(3);
+							giveItems(player, SAKUM_SKETCH, 1);
 							htmltext = "33509-05.html";
 						}
 						else

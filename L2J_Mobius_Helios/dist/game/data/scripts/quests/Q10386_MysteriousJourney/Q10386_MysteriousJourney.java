@@ -112,7 +112,7 @@ public final class Q10386_MysteriousJourney extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -151,16 +151,13 @@ public final class Q10386_MysteriousJourney extends Quest
 								break;
 							case 4:
 							{
-								if (!isSimulated)
+								giveAdena(player, 58_707, true);
+								giveItems(player, EWR, 1);
+								if (player.getLevel() >= MIN_LEVEL)
 								{
-									giveAdena(player, 58_707, true);
-									giveItems(player, EWR, 1);
-									if (player.getLevel() >= MIN_LEVEL)
-									{
-										addExpAndSp(player, 27_244_350, 6_538);
-									}
-									st.exitQuest(false, true);
+									addExpAndSp(player, 27_244_350, 6_538);
 								}
+								st.exitQuest(false, true);
 								htmltext = "33780-06.html";
 								break;
 							}

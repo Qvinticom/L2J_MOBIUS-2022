@@ -143,7 +143,7 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = null;
@@ -171,11 +171,8 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 						}
 						case 2:
 						{
-							if (!isSimulated)
-							{
-								showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 4500);
-								qs.setCond(3, true);
-							}
+							showOnScreenMsg(player, NpcStringId.USE_THE_YE_SAGIRA_TELEPORT_DEVICE_TO_GO_TO_EXPLORATION_AREA_2, ExShowScreenMessage.TOP_CENTER, 4500);
+							qs.setCond(3, true);
 							htmltext = "33449-05.html";
 							break;
 						}

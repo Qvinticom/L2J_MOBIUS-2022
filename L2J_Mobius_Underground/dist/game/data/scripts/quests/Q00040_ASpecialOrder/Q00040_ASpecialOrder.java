@@ -107,7 +107,7 @@ public final class Q00040_ASpecialOrder extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -172,12 +172,9 @@ public final class Q00040_ASpecialOrder extends Quest
 						{
 							if (hasQuestItems(player, ELCYUM_CRYSTAL))
 							{
-								if (!isSimulated)
-								{
-									takeItems(player, ELCYUM_CRYSTAL, 1);
-									giveItems(player, WONDEROUS_CUBIC, 1);
-									st.exitQuest(false, true);
-								}
+								takeItems(player, ELCYUM_CRYSTAL, 1);
+								giveItems(player, WONDEROUS_CUBIC, 1);
+								st.exitQuest(false, true);
 								htmltext = "30081-08.html";
 							}
 							else

@@ -173,7 +173,7 @@ public final class Q10742_AFurryFriend extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -193,12 +193,9 @@ public final class Q10742_AFurryFriend extends Quest
 					}
 					else if (qs.isCond(2))
 					{
-						if (!isSimulated)
-						{
-							giveAdena(player, 2500, true);
-							addExpAndSp(player, 52516, 5);
-							qs.exitQuest(false, true);
-						}
+						giveAdena(player, 2500, true);
+						addExpAndSp(player, 52516, 5);
+						qs.exitQuest(false, true);
 						htmltext = "33952-04.html";
 					}
 					break;

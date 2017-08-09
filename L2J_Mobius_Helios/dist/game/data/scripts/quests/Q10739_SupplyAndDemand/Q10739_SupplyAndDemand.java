@@ -120,7 +120,7 @@ public final class Q10739_SupplyAndDemand extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -191,17 +191,14 @@ public final class Q10739_SupplyAndDemand extends Quest
 			case SIVANTHE:
 				if (qs.isStarted() && qs.isCond(4))
 				{
-					if (!isSimulated)
-					{
-						giveItems(player, LEATHER_SHIRT);
-						giveItems(player, LEATHER_PANTS);
-						giveItems(player, APPRENTICE_EARRING);
-						giveItems(player, NECKLACE_OF_KNOWNLEDGE);
-						giveAdena(player, 1400, true);
-						addExpAndSp(player, 8136, 0);
-						showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
-						qs.exitQuest(false, true);
-					}
+					giveItems(player, LEATHER_SHIRT);
+					giveItems(player, LEATHER_PANTS);
+					giveItems(player, APPRENTICE_EARRING);
+					giveItems(player, NECKLACE_OF_KNOWNLEDGE);
+					giveAdena(player, 1400, true);
+					addExpAndSp(player, 8136, 0);
+					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
+					qs.exitQuest(false, true);
 					htmltext = "33951-01.html";
 				}
 				else if (qs.isCompleted())

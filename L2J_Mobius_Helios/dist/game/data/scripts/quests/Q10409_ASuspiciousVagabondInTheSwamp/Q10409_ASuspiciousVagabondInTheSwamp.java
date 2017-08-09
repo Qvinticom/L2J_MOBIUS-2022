@@ -93,7 +93,7 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = null;
@@ -116,10 +116,7 @@ public final class Q10409_ASuspiciousVagabondInTheSwamp extends Quest
 				}
 				else if ((npc.getId() == VAGABOND) && st.isCond(1))
 				{
-					if (!isSimulated)
-					{
-						st.setCond(2, true);
-					}
+					st.setCond(2, true);
 					htmltext = "33848-01.html";
 				}
 				break;

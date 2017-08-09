@@ -265,7 +265,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -306,13 +306,10 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 									htmltext = "31281-10.html";
 									break;
 								case 14:
-									if (!isSimulated)
+									final Quest instance = QuestManager.getInstance().getQuest(EvasHiddenSpace.class.getSimpleName());
+									if (instance != null)
 									{
-										final Quest instance = QuestManager.getInstance().getQuest(EvasHiddenSpace.class.getSimpleName());
-										if (instance != null)
-										{
-											instance.onAdvEvent("enterInstance", npc, player);
-										}
+										instance.onAdvEvent("enterInstance", npc, player);
 									}
 									htmltext = null;
 									break;
@@ -339,19 +336,16 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 									htmltext = "33686-06.html";
 									break;
 								case 18:
-									if (!isSimulated)
-									{
-										player.doCast(NOBLESSE_PRESENTATION.getSkill());
-										showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 5000);
-										player.setNoble(true);
-										player.broadcastUserInfo();
-										giveItems(player, DIMENSIONAL_DIAMOND, 10);
-										giveItems(player, NOBLESSE_TIARA, 1);
-										takeItems(player, ASHES_OF_REMNANTS, -1);
-										giveItems(player, STEEL_COIN, 87);
-										addExpAndSp(player, 12_625_440, 0);
-										qs.exitQuest(false, true);
-									}
+									player.doCast(NOBLESSE_PRESENTATION.getSkill());
+									showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 5000);
+									player.setNoble(true);
+									player.broadcastUserInfo();
+									giveItems(player, DIMENSIONAL_DIAMOND, 10);
+									giveItems(player, NOBLESSE_TIARA, 1);
+									takeItems(player, ASHES_OF_REMNANTS, -1);
+									giveItems(player, STEEL_COIN, 87);
+									addExpAndSp(player, 12_625_440, 0);
+									qs.exitQuest(false, true);
 									htmltext = "33686-07.html";
 									break;
 							}
@@ -380,13 +374,10 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 									htmltext = "33696-10.html";
 									break;
 								case 13:
-									if (!isSimulated)
-									{
-										qs.setCond(14, true);
-										takeItems(player, HARD_FOSSIL_CONTAINING_WATER_ENERGY, -1);
-										giveItems(player, SACK_CONTAINING_INGREDIENTS, 1);
-										giveItems(player, SOE_SECRET_ROOM, 1);
-									}
+									qs.setCond(14, true);
+									takeItems(player, HARD_FOSSIL_CONTAINING_WATER_ENERGY, -1);
+									giveItems(player, SACK_CONTAINING_INGREDIENTS, 1);
+									giveItems(player, SOE_SECRET_ROOM, 1);
 									htmltext = "33696-11.html";
 									break;
 							}

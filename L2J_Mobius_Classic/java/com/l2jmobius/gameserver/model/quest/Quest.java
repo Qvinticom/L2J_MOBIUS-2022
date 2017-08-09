@@ -613,9 +613,8 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc
 	 * @param player
-	 * @param isSimulated
 	 */
-	public final void notifyTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public final void notifyTalk(L2Npc npc, L2PcInstance player)
 	{
 		String res = null;
 		try
@@ -636,7 +635,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			}
 			else
 			{
-				res = onTalk(npc, player, isSimulated);
+				res = onTalk(npc, player);
 			}
 		}
 		catch (Exception e)
@@ -1123,19 +1122,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
 		return null;
-	}
-	
-	/**
-	 * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.<br>
-	 * <font color="red"><b>This method overrides {@link #onTalk(L2Npc, L2PcInstance)}</b></font>
-	 * @param npc this parameter contains a reference to the exact instance of the NPC that the player is talking with.
-	 * @param talker this parameter contains a reference to the exact instance of the player who is talking to the NPC.
-	 * @param isSimulated this parameter contains indication if the call to this onTalk is just to verify if the player has some buisness with this npc or not, no actions should be taken if its true!
-	 * @return the text returned by the event (may be {@code null}, a filename or just text)
-	 */
-	public String onTalk(L2Npc npc, L2PcInstance talker, boolean isSimulated)
-	{
-		return onTalk(npc, talker);
 	}
 	
 	/**

@@ -165,7 +165,7 @@ public final class Q00016_TheComingDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -194,21 +194,15 @@ public final class Q00016_TheComingDarkness extends Quest
 							}
 							else
 							{
-								if (!isSimulated)
-								{
-									qs.exitQuest(true, true);
-								}
+								qs.exitQuest(true, true);
 								htmltext = "31517-06.html";
 							}
 							break;
 						}
 						else if (qs.isCond(6))
 						{
-							if (!isSimulated)
-							{
-								addExpAndSp(player, 1_795_524, 79);
-								qs.exitQuest(false, true);
-							}
+							addExpAndSp(player, 1_795_524, 79);
+							qs.exitQuest(false, true);
 							htmltext = "31517-05.html";
 						}
 					}

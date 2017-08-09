@@ -96,7 +96,7 @@ public final class Q00512_BladeUnderFoot extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -116,11 +116,8 @@ public final class Q00512_BladeUnderFoot extends Quest
 			}
 			else
 			{
-				if (!isSimulated)
-				{
-					takeItems(player, MARK, itemCount);
-					giveItems(player, KNIGHT_EPALUETTE, itemCount * 2);
-				}
+				takeItems(player, MARK, itemCount);
+				giveItems(player, KNIGHT_EPALUETTE, itemCount * 2);
 				htmltext = "Warden-08.html";
 			}
 		}

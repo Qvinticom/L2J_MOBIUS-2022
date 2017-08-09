@@ -83,7 +83,7 @@ public final class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
@@ -106,6 +106,6 @@ public final class Q10341_DayOfDestinyHumansFate extends ThirdClassTransferQuest
 				}
 			}
 		}
-		return (!htmltext.equals(getNoQuestMsg(player)) ? htmltext : super.onTalk(npc, player, isSimulated));
+		return (!htmltext.equals(getNoQuestMsg(player)) ? htmltext : super.onTalk(npc, player));
 	}
 }

@@ -289,14 +289,14 @@ public final class EvilIncubator extends AbstractInstance
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player);
 		
 		if ((st == null) || !st.isStarted())
 		{
-			return super.onTalk(npc, player, isSimulated);
+			return super.onTalk(npc, player);
 		}
 		
 		if (st.getState() == State.STARTED)

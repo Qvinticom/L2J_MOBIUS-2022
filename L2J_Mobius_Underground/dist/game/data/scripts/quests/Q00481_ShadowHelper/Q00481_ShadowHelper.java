@@ -104,7 +104,7 @@ public final class Q00481_ShadowHelper extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -131,11 +131,8 @@ public final class Q00481_ShadowHelper extends Quest
 				}
 				else
 				{
-					if (!isSimulated)
-					{
-						addExpAndSp(player, 240000, 57);
-						qs.exitQuest(QuestType.DAILY, true);
-					}
+					addExpAndSp(player, 240000, 57);
+					qs.exitQuest(QuestType.DAILY, true);
 					htmltext = "33302-08.html";
 				}
 				break;

@@ -260,7 +260,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
@@ -276,7 +276,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 			{
 				if ((qs.getCond() >= 1) && (qs.getCond() < 6))
 				{
-					htmltext = !isSimulated ? generateItemListHtml(player, npc) : null;
+					htmltext = generateItemListHtml(player, npc);
 				}
 				else if (qs.isCond(6))
 				{

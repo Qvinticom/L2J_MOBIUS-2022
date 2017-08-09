@@ -106,7 +106,7 @@ public final class Q10339_FightingTheForgotten extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = null;
@@ -142,12 +142,9 @@ public final class Q10339_FightingTheForgotten extends Quest
 							break;
 						case 3:
 						{
-							if (!isSimulated)
-							{
-								st.exitQuest(false, true);
-								giveAdena(player, 528_210, true);
-								addExpAndSp(player, 238_423_500, 57_221);
-							}
+							st.exitQuest(false, true);
+							giveAdena(player, 528_210, true);
+							addExpAndSp(player, 238_423_500, 57_221);
 							htmltext = "33344-03.html";
 							break;
 						}

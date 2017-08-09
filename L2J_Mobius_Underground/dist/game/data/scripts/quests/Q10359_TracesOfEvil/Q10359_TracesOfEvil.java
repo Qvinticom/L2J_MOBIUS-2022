@@ -134,7 +134,7 @@ public final class Q10359_TracesOfEvil extends Quest
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player, boolean isSimulated)
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
@@ -177,54 +177,32 @@ public final class Q10359_TracesOfEvil extends Quest
 								switch (player.getRace())
 								{
 									case HUMAN:
-										if (!isSimulated)
-										{
-											st.setCond(player.isMageClass() ? 4 : 5);
-										}
+										st.setCond(player.isMageClass() ? 4 : 5);
 										htmltext = player.isMageClass() ? "33179-06.htm" : "33179-11.htm";
 										break;
 									case DARK_ELF:
-										if (!isSimulated)
-										{
-											st.setCond(6);
-										}
+										st.setCond(6);
 										htmltext = "33179-05.htm";
 										break;
 									case ORC:
-										if (!isSimulated)
-										{
-											st.setCond(7);
-										}
+										st.setCond(7);
 										htmltext = "33179-07.htm";
 										break;
 									case DWARF:
-										if (!isSimulated)
-										{
-											st.setCond(8);
-										}
+										st.setCond(8);
 										htmltext = "33179-08.htm";
 										break;
 									case KAMAEL:
-										if (!isSimulated)
-										{
-											st.setCond(9);
-										}
+										st.setCond(9);
 										htmltext = "33179-09.htm";
 										break;
 									case ELF:
-										if (!isSimulated)
-										{
-											st.setCond(player.isMageClass() ? 11 : 10);
-										}
+										st.setCond(player.isMageClass() ? 11 : 10);
 										htmltext = player.isMageClass() ? "33179-12.htm" : "33179-10.htm";
 										break;
 								}
-								
-								if (!isSimulated)
-								{
-									takeItems(player, FRAGMENT, 20);
-									playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-								}
+								takeItems(player, FRAGMENT, 20);
+								playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 								break;
 							}
 						}
