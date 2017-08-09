@@ -147,7 +147,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_talkable = set.getBoolean("talkable", true);
 		_undying = set.getBoolean("undying", true);
 		_showName = set.getBoolean("showName", true);
-		_randomWalk = set.getBoolean("randomWalk", true);
+		_randomWalk = set.getBoolean("randomWalk", !_type.equals("L2Guard"));
 		_randomAnimation = set.getBoolean("randomAnimation", true);
 		_flying = set.getBoolean("flying", false);
 		_canMove = set.getBoolean("canMove", true);

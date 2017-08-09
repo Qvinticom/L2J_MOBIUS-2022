@@ -158,6 +158,22 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				return false;
 			}
+			
+			if (me instanceof L2GuardInstance)
+			{
+				L2World.getInstance().forEachVisibleObjectInRange(me, L2GuardInstance.class, 500, guard ->
+				{
+					if (guard.isAttackingNow() && (guard.getTarget() == player))
+					{
+						me.getAI().startFollow(player);
+						me.addDamageHate(player, 0, 10);
+					}
+				});
+				if (player.getReputation() < 0)
+				{
+					return true;
+				}
+			}
 		}
 		else if (me.isMonster())
 		{
@@ -334,7 +350,6 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				_globalAggro--;
 			}
 		}
-		
 		// Add all autoAttackable L2Character in L2Attackable Aggro Range to its _aggroList with 0 damage and 1 hate
 		// A L2Attackable isn't aggressive during 10s after its spawn because _globalAggro is set to -10
 		if (_globalAggro >= 0)
@@ -354,15 +369,22 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 							{
 								return;
 							}
-						}
-						
-						// Get the hate level of the L2Attackable against this L2Character target contained in _aggroList
-						final int hating = npc.getHating(t);
-						
-						// Add the attacker to the L2Attackable _aggroList with 0 damage and 1 hate
-						if (hating == 0)
-						{
-							npc.addDamageHate(t, 0, 1);
+							
+							// Get the hate level of the L2Attackable against this L2Character target contained in _aggroList
+							final int hating = npc.getHating(t);
+							
+							// Add the attacker to the L2Attackable _aggroList with 0 damage and 1 hate
+							if (hating == 0)
+							{
+								npc.addDamageHate(t, 0, 1);
+							}
+							if (npc instanceof L2GuardInstance)
+							{
+								L2World.getInstance().forEachVisibleObjectInRange(npc, L2GuardInstance.class, 500, guard ->
+								{
+									guard.addDamageHate(t, 0, 10);
+								});
+							}
 						}
 					}
 				});
@@ -422,7 +444,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		
 		// Check if the actor is a L2GuardInstance
-		if ((npc instanceof L2GuardInstance) && !npc.isWalker())
+		if ((npc instanceof L2GuardInstance) && !npc.isWalker() && !npc.isRandomWalkingEnabled())
 		{
 			// Order to the L2GuardInstance to return to its home location because there's no target to attack
 			npc.returnHome();

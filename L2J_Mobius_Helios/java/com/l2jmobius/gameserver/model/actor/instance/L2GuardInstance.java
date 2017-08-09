@@ -23,13 +23,13 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
@@ -66,21 +66,34 @@ public class L2GuardInstance extends L2Attackable
 		return super.isAutoAttackable(attacker);
 	}
 	
+	@Override
+	public void addDamage(L2Character attacker, int damage, Skill skill)
+	{
+		super.addDamage(attacker, damage, skill);
+		getAI().startFollow(attacker);
+		addDamageHate(attacker, 0, 10);
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2GuardInstance.class, 500, guard ->
+		{
+			guard.getAI().startFollow(attacker);
+			guard.addDamageHate(attacker, 0, 10);
+		});
+	}
+	
 	/**
 	 * Set the home location of its L2GuardInstance.
 	 */
 	@Override
 	public void onSpawn()
 	{
-		setRandomWalking(false);
 		super.onSpawn();
-		
+		setRandomWalking(getTemplate().isRandomWalkEnabled());
+		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		final L2WorldRegion region = L2World.getInstance().getRegion(this);
-		if ((region != null) && (!region.isActive()))
-		{
-			getAI().stopAITask();
-		}
+		// final L2WorldRegion region = L2World.getInstance().getRegion(this);
+		// if ((region != null) && (!region.isActive()))
+		// {
+		// getAI().stopAITask();
+		// }
 	}
 	
 	/**

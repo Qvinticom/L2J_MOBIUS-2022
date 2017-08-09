@@ -1386,13 +1386,13 @@ public class L2Attackable extends L2Npc
 		setWalking();
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		if (!isInActiveRegion())
-		{
-			if (hasAI())
-			{
-				getAI().stopAITask();
-			}
-		}
+		// if (!isInActiveRegion())
+		// {
+		// if (hasAI())
+		// {
+		// getAI().stopAITask();
+		// }
+		// }
 	}
 	
 	@Override

@@ -24,12 +24,14 @@ import com.l2jmobius.gameserver.ai.L2SpecialSiegeGuardAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 public class L2DefenderInstance extends L2Attackable
@@ -51,6 +53,16 @@ public class L2DefenderInstance extends L2Attackable
 			return new L2SiegeGuardAI(this);
 		}
 		return new L2SpecialSiegeGuardAI(this);
+	}
+	
+	@Override
+	public void addDamage(L2Character attacker, int damage, Skill skill)
+	{
+		super.addDamage(attacker, damage, skill);
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2DefenderInstance.class, 500, defender ->
+		{
+			defender.addDamageHate(attacker, 0, 10);
+		});
 	}
 	
 	/**
