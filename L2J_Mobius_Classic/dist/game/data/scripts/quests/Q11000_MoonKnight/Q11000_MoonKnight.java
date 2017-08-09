@@ -111,7 +111,7 @@ public class Q11000_MoonKnight extends Quest
 				{
 					if (qs.isCond(4))
 					{
-						qs.setCond(5);
+						qs.setCond(5, true);
 						htmltext = event;
 					}
 					break;
@@ -120,7 +120,7 @@ public class Q11000_MoonKnight extends Quest
 				{
 					if (qs.isCond(5))
 					{
-						qs.setCond(6);
+						qs.setCond(6, true);
 						htmltext = event;
 					}
 					break;
@@ -129,7 +129,7 @@ public class Q11000_MoonKnight extends Quest
 				{
 					if (qs.isCond(6))
 					{
-						qs.setCond(7);
+						qs.setCond(7, true);
 						htmltext = event;
 					}
 					break;
@@ -138,7 +138,7 @@ public class Q11000_MoonKnight extends Quest
 				{
 					if (qs.isCond(7))
 					{
-						qs.setCond(8);
+						qs.setCond(8, true);
 						takeItems(player, ARMOR_TRADE_CONTRACT, 1);
 						giveItems(player, ROLENTO_BAG, 1);
 						giveItems(player, IRON_SCALE_GUILD_CERTIFICATE, 1);
@@ -150,7 +150,7 @@ public class Q11000_MoonKnight extends Quest
 				{
 					if (qs.isCond(8))
 					{
-						qs.setCond(9);
+						qs.setCond(9, true);
 						takeItems(player, TUREK_ORC_ORDER, 1);
 						takeItems(player, ROLENTO_BAG, 1);
 						takeItems(player, IRON_SCALE_GUILD_CERTIFICATE, 1);
@@ -303,7 +303,7 @@ public class Q11000_MoonKnight extends Quest
 					case 1:
 					{
 						htmltext = "30208-01.html";
-						qs.setCond(2);
+						qs.setCond(2, true);
 						break;
 					}
 					case 2:
@@ -317,7 +317,7 @@ public class Q11000_MoonKnight extends Quest
 						{
 							takeItems(talker, AMORA_RECEIPT, 1);
 							htmltext = "30208-03.html";
-							qs.setCond(4);
+							qs.setCond(4, true);
 						}
 						break;
 					}
@@ -335,7 +335,7 @@ public class Q11000_MoonKnight extends Quest
 				{
 					giveItems(talker, AMORA_RECEIPT, 1);
 					takeItems(talker, MOLD, 10);
-					qs.setCond(3);
+					qs.setCond(3, true);
 					htmltext = "30940-01.html";
 				}
 				else if (qs.isCond(3))
@@ -349,7 +349,7 @@ public class Q11000_MoonKnight extends Quest
 				if (qs.isCond(6) && hasQuestItems(talker, TUREK_ORC_ORDER, ARMOR_TRADE_CONTRACT))
 				{
 					htmltext = "30425-01.html";
-					qs.setCond(7);
+					qs.setCond(7, true);
 				}
 				else if (qs.isCond(7))
 				{
@@ -387,7 +387,7 @@ public class Q11000_MoonKnight extends Quest
 						{
 							htmltext = "30941-05.html";
 							takeItems(talker, TUREK_ORC_INVADER_HEAD, 10);
-							qs.setCond(10);
+							qs.setCond(10, true);
 						}
 						else
 						{
