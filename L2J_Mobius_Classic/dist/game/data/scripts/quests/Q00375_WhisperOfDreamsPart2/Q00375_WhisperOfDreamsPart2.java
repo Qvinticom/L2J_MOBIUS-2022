@@ -204,7 +204,7 @@ public class Q00375_WhisperOfDreamsPart2 extends Quest
 			}
 			if (qs.isCond(1) && (getQuestItemsCount(killer, LIMAL_KARINESS_BLOOD) >= 325) && (getQuestItemsCount(killer, KARIK_HORN) >= 325))
 			{
-				qs.setCond(2);
+				qs.setCond(2, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

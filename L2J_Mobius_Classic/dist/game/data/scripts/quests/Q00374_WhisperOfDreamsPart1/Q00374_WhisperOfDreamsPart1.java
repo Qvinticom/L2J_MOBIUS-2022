@@ -74,8 +74,11 @@ public class Q00374_WhisperOfDreamsPart1 extends Quest
 				}
 				case "30938-06.html":
 				{
-					qs.setCond(3);
-					htmltext = event;
+					if (qs.isCond(2))
+					{
+						qs.setCond(3, true);
+						htmltext = event;
+					}
 					break;
 				}
 				case "reward1":
@@ -270,11 +273,11 @@ public class Q00374_WhisperOfDreamsPart1 extends Quest
 			}
 			if (qs.isCond(1) && (hasAllItems(qs.getPlayer(), true, DEATH_WAVE_LIGHT, CAVE_BEAST_TOOTH)))
 			{
-				qs.setCond(2);
+				qs.setCond(2, true);
 			}
 			if (qs.isCond(3) && (hasAllItems(qs.getPlayer(), true, SEALED_MYSTERIOUS_STONE)))
 			{
-				qs.setCond(4);
+				qs.setCond(4, true);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);
