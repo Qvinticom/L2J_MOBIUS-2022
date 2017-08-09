@@ -82,7 +82,6 @@ import quests.Q00165_ShilensHunt.Q00165_ShilensHunt;
 import quests.Q00166_MassOfDarkness.Q00166_MassOfDarkness;
 import quests.Q00167_DwarvenKinship.Q00167_DwarvenKinship;
 import quests.Q00168_DeliverSupplies.Q00168_DeliverSupplies;
-import quests.Q00169_OffspringOfNightmares.Q00169_OffspringOfNightmares;
 import quests.Q00170_DangerousSeduction.Q00170_DangerousSeduction;
 import quests.Q00211_TrialOfTheChallenger.Q00211_TrialOfTheChallenger;
 import quests.Q00212_TrialOfDuty.Q00212_TrialOfDuty;
@@ -179,6 +178,7 @@ import quests.Q00416_PathOfTheOrcShaman.Q00416_PathOfTheOrcShaman;
 import quests.Q00417_PathOfTheScavenger.Q00417_PathOfTheScavenger;
 import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
+import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 
 /**
  * @author NosBit
@@ -252,7 +252,6 @@ public class QuestMasterHandler
 		Q00166_MassOfDarkness.class,
 		Q00167_DwarvenKinship.class,
 		Q00168_DeliverSupplies.class,
-		Q00169_OffspringOfNightmares.class,
 		Q00170_DangerousSeduction.class,
 		Q00211_TrialOfTheChallenger.class,
 		Q00212_TrialOfDuty.class,
@@ -349,6 +348,7 @@ public class QuestMasterHandler
 		Q00417_PathOfTheScavenger.class,
 		Q00418_PathOfTheArtisan.class,
 		Q00662_AGameOfCards.class,
+		Q11000_MoonKnight.class,
 	};
 	
 	public static void main(String[] args)

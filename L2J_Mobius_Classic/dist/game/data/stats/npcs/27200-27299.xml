@@ -43,13 +43,19 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27201" level="10" type="L2Monster" name="Ol Mahum Thief">
-		<parameters>
-			<param name="MoveAroundSocial" value="124" />
-			<param name="MoveAroundSocial1" value="124" />
-			<param name="MoveAroundSocial2" value="124" />
+	<npc id="27201" level="23" type="L2Monster" name="Ol Mahum Thief">
+			<!-- Guessed -->
+	<parameters>
+			<param name="MoveAroundSocial" value="130" />
+			<param name="MoveAroundSocial1" value="130" />
+			<param name="MoveAroundSocial2" value="130" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
-		<race>GIANT</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="291" /> <!-- Trident -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -77,13 +83,10 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="500" clanHelpRange="300" isAggressive="false">
-			<clan_list>
-				<clan>ELEMENTAL1</clan>
-			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="17" />
-			<height normal="35" />
+			<radius normal="13.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="27202" level="31" type="L2Monster" name="Turek Orc Commander">
