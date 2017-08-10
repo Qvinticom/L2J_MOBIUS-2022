@@ -212,11 +212,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="HELMET" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 		<stats>
 			<stat type="pDef">37</stat>
 		</stats>
@@ -237,14 +232,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FULL_BODY" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
-			</and>
-		</cond>
 		<stats>
 			<stat type="pDef">158</stat>
 		</stats>
@@ -264,14 +251,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
-			</and>
-		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -291,14 +270,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
-			</and>
-		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -319,11 +290,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FULL_BODY" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -343,11 +309,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -367,11 +328,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<player pledgeClass="1" />
-			<!-- Vassal (Academy) -->
-		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -392,14 +348,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FULL_BODY" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
-			</and>
-		</cond>
 		<stats>
 			<stat type="pDef">79</stat>
 			<stat type="maxMp">239</stat>
@@ -420,14 +368,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
-			</and>
-		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
@@ -447,14 +387,6 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FEET" />
 		<set name="isAppearanceable" val="true" />
-		<set name="equip_condition" val="{{ec_academy;1}}" />
-		<cond msgId="1518">
-			<and>
-				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
-				<player pledgeClass="1" />
-				<!-- Vassal (Academy) -->
-			</and>
-		</cond>
 		<stats>
 			<stat type="pDef">24</stat>
 		</stats>
