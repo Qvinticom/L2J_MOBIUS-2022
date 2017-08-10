@@ -73,48 +73,24 @@ public final class RequestRefineCancel implements IClientIncomingPacket
 		int price = 0;
 		switch (targetItem.getItem().getCrystalType())
 		{
+			case D:
+			{
+				price = 80000; // classic
+				break;
+			}
 			case C:
 			{
-				if (targetItem.getCrystalCount() < 1720)
-				{
-					price = 95000;
-				}
-				else if (targetItem.getCrystalCount() < 2452)
-				{
-					price = 150000;
-				}
-				else
-				{
-					price = 210000;
-				}
+				price = 240000; // classic
 				break;
 			}
 			case B:
 			{
-				if (targetItem.getCrystalCount() < 1746)
-				{
-					price = 240000;
-				}
-				else
-				{
-					price = 270000;
-				}
+				price = 720000; // classic
 				break;
 			}
 			case A:
 			{
-				if (targetItem.getCrystalCount() < 2160)
-				{
-					price = 330000;
-				}
-				else if (targetItem.getCrystalCount() < 2824)
-				{
-					price = 390000;
-				}
-				else
-				{
-					price = 420000;
-				}
+				price = 1500000; // classic - guessed
 				break;
 			}
 			case S:

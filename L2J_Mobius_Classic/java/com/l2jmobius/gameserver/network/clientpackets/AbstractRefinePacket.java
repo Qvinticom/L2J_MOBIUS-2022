@@ -76,7 +76,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		// lifestone level to player level table
 		private static final int[] LEVELS =
 		{
-			46,
+			1, // 46?
 			49,
 			52,
 			55,
@@ -255,6 +255,11 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 		_lifeStones.put(45934, new LifeStone(GRADE_ACC, 13));
 		_lifeStones.put(45935, new LifeStone(GRADE_ACC, 14));
 		_lifeStones.put(45936, new LifeStone(GRADE_ACC, 15));
+		
+		_lifeStones.put(90012, new LifeStone(GRADE_NONE, 0)); // Classic
+		_lifeStones.put(90013, new LifeStone(GRADE_MID, 0)); // Classic
+		_lifeStones.put(90014, new LifeStone(GRADE_HIGH, 0)); // Classic
+		_lifeStones.put(90015, new LifeStone(GRADE_TOP, 0)); // Classic
 	}
 	
 	protected static LifeStone getLifeStone(int itemId)
@@ -531,9 +536,22 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 	{
 		switch (itemGrade)
 		{
+			case D:
+			{
+				return GEMSTONE_D; // classic
+			}
 			case C:
+			{
+				return GEMSTONE_C; // classic
+			}
 			case B:
+			{
+				return GEMSTONE_B; // classic
+			}
 			case A:
+			{
+				return GEMSTONE_A; // classic
+			}
 			case S:
 			case S80:
 			case S84:
@@ -604,9 +622,22 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			{
 				switch (itemGrade)
 				{
+					case D:
+					{
+						return 200; // classic
+					}
 					case C:
+					{
+						return 300; // classic
+					}
 					case B:
+					{
+						return 400; // classic
+					}
 					case A:
+					{
+						return 500; // classic
+					}
 					case S:
 					case S80:
 					case S84:
