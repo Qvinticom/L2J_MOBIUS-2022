@@ -69,9 +69,10 @@ public final class Q00371_ShrieksOfGhosts extends Quest
 	private static final Map<Integer, DropInfo> MOBS = new HashMap<>();
 	static
 	{
-		MOBS.put(20818, new DropInfo(350, 400)); // hallates_warrior
-		MOBS.put(20820, new DropInfo(583, 673)); // hallates_knight
-		MOBS.put(20824, new DropInfo(458, 538)); // hallates_commander
+		MOBS.put(20977, new DropInfo(350, 400)); // Elmoreden's Lady
+		MOBS.put(20978, new DropInfo(583, 673)); // Elmoreden's Archer
+		MOBS.put(20979, new DropInfo(458, 538)); // Elmoreden's Maid
+		MOBS.put(21073, new DropInfo(540, 620)); // Elmoreden's Warrior
 	}
 	
 	public Q00371_ShrieksOfGhosts()

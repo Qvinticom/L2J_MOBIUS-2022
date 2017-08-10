@@ -33,8 +33,14 @@ public final class Q00043_HelpTheSister extends Quest
 	private static final int COOPER = 30829;
 	private static final int GALLADUCCI = 30097;
 	// Monsters
-	private static final int SPECTER = 20171;
-	private static final int SORROW_MAIDEN = 20197;
+	private static final int HOBGOBLIN = 20147;
+	private static final int DION_GRIZZLY = 20203;
+	private static final int DIRE_WOLF = 20205;
+	private static final int OL_MAHUM_RANGER = 20224;
+	private static final int MONSTER_EYE_SEARCHER = 20265;
+	private static final int MONSTER_EYE_GAZER = 20266;
+	private static final int ENKU_ORC_HERO = 20291;
+	private static final int ENKU_ORC_SHAMAN = 20292;
 	// Items
 	private static final int CRAFTED_DAGGER = 220;
 	private static final int MAP_PIECE = 7550;
@@ -48,7 +54,7 @@ public final class Q00043_HelpTheSister extends Quest
 		super(43);
 		addStartNpc(COOPER);
 		addTalkId(COOPER, GALLADUCCI);
-		addKillId(SORROW_MAIDEN, SPECTER);
+		addKillId(DION_GRIZZLY, HOBGOBLIN, DIRE_WOLF, OL_MAHUM_RANGER, MONSTER_EYE_SEARCHER, MONSTER_EYE_GAZER, ENKU_ORC_HERO, ENKU_ORC_SHAMAN);
 		registerQuestItems(MAP, MAP_PIECE);
 		addCondMinLevel(MIN_LVL, "30829-00a.html");
 	}

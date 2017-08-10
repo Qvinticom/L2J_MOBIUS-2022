@@ -32,12 +32,14 @@ public class Q00137_TempleChampionPart1 extends Quest
 	private static final int SYLVAIN = 30070;
 	private static final int MOBS[] =
 	{
-		20083, // Granite Golem
-		20144, // Hangman Tree
-		20199, // Amber Basilisk
-		20200, // Strain
-		20201, // Ghoul
-		20202, // Dead Seeker
+		20147, // Hobgoblin
+		20203, // Dion Grizzly
+		20205, // Dire Wolf
+		20224, // Ol Mahum Ranger
+		20265, // Monster Eye Searcher
+		20266, // Monster Eye Gazer
+		20291, // Enku Orc Hero
+		20292, // Enku Orc Shaman
 	};
 	// Items
 	private static final int FRAGMENT = 10340;
