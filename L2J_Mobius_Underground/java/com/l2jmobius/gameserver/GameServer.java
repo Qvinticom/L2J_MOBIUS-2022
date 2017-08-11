@@ -228,6 +228,7 @@ public class GameServer
 		EnchantItemOptionsData.getInstance();
 		ItemCrystalizationData.getInstance();
 		OptionData.getInstance();
+		AugmentationData.getInstance();
 		EnsoulData.getInstance();
 		EnchantItemHPBonusData.getInstance();
 		BuyListData.getInstance();
@@ -319,7 +320,6 @@ public class GameServer
 		UIData.getInstance();
 		MatchingRoomManager.getInstance();
 		PetitionManager.getInstance();
-		AugmentationData.getInstance();
 		CursedWeaponsManager.getInstance();
 		TransformData.getInstance();
 		BotReportTable.getInstance();
