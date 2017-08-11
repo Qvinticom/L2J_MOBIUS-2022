@@ -46,7 +46,7 @@ public class Q00784_TheQuietKiller extends Quest
 		21515, // Needle Stakato Soldier
 		21516, // Needle Stakato Drone
 		21517, // Needle Stakato Drone
-		20518, // Frenzied Stakato Soldier
+		// 20518, // Frenzied Stakato Soldier
 		20919 // Frenzied Stakato Drone
 	};
 	// Items
