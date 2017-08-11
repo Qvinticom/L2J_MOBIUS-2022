@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Stolen Dignity (386)
- * @author Zealar
+ * @author Zealar / Stayway (Rework Helios)
  */
 public final class Q00386_StolenDignity extends Quest
 {
@@ -40,30 +40,19 @@ public final class Q00386_StolenDignity extends Quest
 	// Monsters
 	private static final int CRIMSON_DRAKE = 20670;
 	private static final int KADIOS = 20671;
-	private static final int HUNGRY_CORPSE = 20954;
-	private static final int PAST_KNIGHT = 20956;
-	private static final int BLADE_DEATH = 20958;
-	private static final int DARK_GUARD = 20959;
-	private static final int BLOODY_GHOST = 20960;
-	private static final int BLOODY_LORD = 20963;
 	private static final int PAST_CREATURE = 20967;
 	private static final int GIANT_SHADOW = 20969;
 	private static final int ANCIENTS_SOLDIER = 20970;
 	private static final int ANCIENTS_WARRIOR = 20971;
-	private static final int SPITE_SOUL_LEADER = 20974;
-	private static final int SPITE_SOUL_WIZARD = 20975;
-	private static final int WRECKED_ARCHER = 21001;
-	private static final int FLOAT_OF_GRAVE = 21003;
-	private static final int GRAVE_PREDATOR = 21005;
+	private static final int SPITEFUL_SOUL_LEADER = 20974;
+	private static final int SPITEFUL_SOUL_WIZARD = 20975;
+	private static final int ARCHER_OF_DESTRUCTIONS = 21001;
+	private static final int GRAVEYARD_LICH = 21003;
+	private static final int GRAVEYARD_PREDATOR = 21005;
 	private static final int FALLEN_ORC_SHAMAN = 21020;
 	private static final int SHARP_TALON_TIGER = 21021;
-	private static final int GLOW_WISP = 21108;
-	private static final int MARSH_PREDATOR = 21110;
 	private static final int HAMES_ORC_SNIPER = 21113;
-	private static final int CURSED_GUARDIAN = 21114;
-	private static final int HAMES_ORC_CHIEFTAIN = 21116;
-	private static final int FALLEN_ORC_SHAMAN_TRANS = 21258;
-	private static final int SHARP_TALON_TIGER_TRANS = 21259;
+	private static final int HAMES_ORC_PREFECT = 21116;
 	// Items
 	private static final int Q_STOLEN_INF_ORE = 6363;
 	// Reward
@@ -106,7 +95,7 @@ public final class Q00386_StolenDignity extends Quest
 		super(386);
 		addStartNpc(WAREHOUSE_KEEPER_ROMP);
 		addTalkId(WAREHOUSE_KEEPER_ROMP);
-		addKillId(CRIMSON_DRAKE, KADIOS, HUNGRY_CORPSE, PAST_KNIGHT, BLADE_DEATH, DARK_GUARD, BLOODY_GHOST, BLOODY_LORD, PAST_CREATURE, GIANT_SHADOW, ANCIENTS_SOLDIER, ANCIENTS_WARRIOR, SPITE_SOUL_LEADER, SPITE_SOUL_WIZARD, WRECKED_ARCHER, FLOAT_OF_GRAVE, GRAVE_PREDATOR, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, GLOW_WISP, MARSH_PREDATOR, HAMES_ORC_SNIPER, CURSED_GUARDIAN, HAMES_ORC_CHIEFTAIN, FALLEN_ORC_SHAMAN_TRANS, SHARP_TALON_TIGER_TRANS);
+		addKillId(CRIMSON_DRAKE, KADIOS, PAST_CREATURE, GIANT_SHADOW, ANCIENTS_SOLDIER, ANCIENTS_WARRIOR, SPITEFUL_SOUL_LEADER, SPITEFUL_SOUL_WIZARD, ARCHER_OF_DESTRUCTIONS, GRAVEYARD_LICH, GRAVEYARD_PREDATOR, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, HAMES_ORC_SNIPER, HAMES_ORC_PREFECT);
 	}
 	
 	@Override
@@ -690,54 +679,6 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case HUNGRY_CORPSE:
-				{
-					if (getRandom(1000) < 184)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case PAST_KNIGHT:
-				{
-					if (getRandom(1000) < 216)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case BLADE_DEATH:
-				{
-					if (getRandom(100) < 17)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case DARK_GUARD:
-				{
-					if (getRandom(1000) < 273)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case BLOODY_GHOST:
-				{
-					if (getRandom(1000) < 149)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case BLOODY_LORD:
-				{
-					if (getRandom(1000) < 199)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
 				case PAST_CREATURE:
 				{
 					if (getRandom(1000) < 257)
@@ -770,7 +711,7 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case SPITE_SOUL_LEADER:
+				case SPITEFUL_SOUL_LEADER:
 				{
 					if (getRandom(100) < 44)
 					{
@@ -778,7 +719,7 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case SPITE_SOUL_WIZARD:
+				case SPITEFUL_SOUL_WIZARD:
 				{
 					if (getRandom(100) < 39)
 					{
@@ -786,7 +727,7 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case WRECKED_ARCHER:
+				case ARCHER_OF_DESTRUCTIONS:
 				{
 					if (getRandom(1000) < 214)
 					{
@@ -794,7 +735,7 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case FLOAT_OF_GRAVE:
+				case GRAVEYARD_LICH:
 				{
 					if (getRandom(1000) < 173)
 					{
@@ -802,7 +743,7 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case GRAVE_PREDATOR:
+				case GRAVEYARD_PREDATOR:
 				{
 					if (getRandom(1000) < 211)
 					{
@@ -826,22 +767,6 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case GLOW_WISP:
-				{
-					if (getRandom(1000) < 245)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case MARSH_PREDATOR:
-				{
-					if (getRandom(100) < 26)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
 				case HAMES_ORC_SNIPER:
 				{
 					if (getRandom(100) < 37)
@@ -850,17 +775,7 @@ public final class Q00386_StolenDignity extends Quest
 					}
 					break;
 				}
-				case CURSED_GUARDIAN:
-				{
-					if (getRandom(1000) < 352)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case HAMES_ORC_CHIEFTAIN:
-				case FALLEN_ORC_SHAMAN_TRANS:
-				case SHARP_TALON_TIGER_TRANS:
+				case HAMES_ORC_PREFECT:
 				{
 					if (getRandom(1000) < 487)
 					{

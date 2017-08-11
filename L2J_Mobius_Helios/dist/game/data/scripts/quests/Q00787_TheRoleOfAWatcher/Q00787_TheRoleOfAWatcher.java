@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.model.quest.State;
 /**
  * The Role of a Watcher (00787)
  * @URL https://l2wiki.com/The_Role_of_a_Watcher
- * @author Gigi
+ * @author Gigi / Stayway (rework helios)
  */
 public class Q00787_TheRoleOfAWatcher extends Quest
 {
@@ -55,7 +55,6 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 		23442, // Dark Grave Warrior
 		23443, // Dark Grave Wizard
 		23444, // Dark Grave Knight
-		23447 // Gust Spiral
 	};
 	
 	// Items

@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Reclaim Our Era (902)
- * @author netvirus
+ * @author netvirus / Stayway (Rework Helios)
  */
 public final class Q00902_ReclaimOurEra extends Quest
 {
@@ -47,11 +47,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 	static
 	{
 		MONSTER_DROPS.put(25309, SHATTERED_BONES); // Varka's Hero Shadith
-		MONSTER_DROPS.put(25312, SHATTERED_BONES); // Varka's Commander Mos
-		MONSTER_DROPS.put(25315, SHATTERED_BONES); // Varka's Chief Horus
 		MONSTER_DROPS.put(25299, SHATTERED_BONES); // Ketra's Hero Hekaton
-		MONSTER_DROPS.put(25302, SHATTERED_BONES); // Ketra's Commander Tayr
-		MONSTER_DROPS.put(25305, SHATTERED_BONES); // Ketra's Chief Brakki
 		MONSTER_DROPS.put(25667, CANNIBALISTIC_STAKATO_LDR_CLAW); // Cannibalistic Stakato Chief
 		MONSTER_DROPS.put(25668, CANNIBALISTIC_STAKATO_LDR_CLAW); // Cannibalistic Stakato Chief
 		MONSTER_DROPS.put(25669, CANNIBALISTIC_STAKATO_LDR_CLAW); // Cannibalistic Stakato Chief

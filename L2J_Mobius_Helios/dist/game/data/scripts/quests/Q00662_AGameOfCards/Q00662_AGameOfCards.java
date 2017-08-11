@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 /**
  * A Game of Cards (662)
- * @author Zoey76
+ * @author Zoey76 / Stayway (Rework Helios)
  */
 public final class Q00662_AGameOfCards extends Quest
 {
@@ -51,15 +51,13 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(20672, 357); // Trives
 		MONSTERS.put(20673, 357); // Falibati
 		MONSTERS.put(20674, 583); // Doom Knight
-		MONSTERS.put(20677, 435); // Tulben
 		MONSTERS.put(20955, 358); // Ghostly Warrior
 		MONSTERS.put(20958, 283); // Death Agent
 		MONSTERS.put(20959, 455); // Dark Guard
 		MONSTERS.put(20961, 365); // Bloody Knight
 		MONSTERS.put(20962, 348); // Bloody Priest
 		MONSTERS.put(20965, 457); // Chimera Piece
-		MONSTERS.put(20966, 493); // Changed Creation
-		MONSTERS.put(20968, 418); // Nonexistent Man
+		MONSTERS.put(20968, 418); // Forgotten Face
 		MONSTERS.put(20972, 350); // Shaman of Ancient Times
 		MONSTERS.put(20973, 453); // Forgotten Ancient People
 		MONSTERS.put(21002, 315); // Doom Scout
@@ -67,10 +65,6 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(21006, 335); // Doom Servant
 		MONSTERS.put(21008, 462); // Doom Archer
 		MONSTERS.put(21010, 397); // Doom Warrior
-		MONSTERS.put(21109, 507); // Hames Orc Scout
-		MONSTERS.put(21112, 552); // Hames Orc Footman
-		MONSTERS.put(21114, 587); // Cursed Guardian
-		MONSTERS.put(21116, 812); // Hames Orc Overlord
 		MONSTERS.put(21278, 483); // Antelope
 		MONSTERS.put(21279, 483); // Antelope
 		MONSTERS.put(21280, 483); // Antelope
@@ -85,7 +79,6 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(21526, 552); // Wisdom of Splendor
 		MONSTERS.put(21530, 488); // Victory of Splendor
 		MONSTERS.put(21535, 573); // Signet of Splendor
-		MONSTERS.put(18001, 232); // Blood Queen
 	}
 	
 	public Q00662_AGameOfCards()

@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * A Clan's Fame (509)
- * @author Adry_85
+ * @author Adry_85 / Stayway (Rework Helios)
  */
 public class Q00509_AClansFame extends Quest
 {
@@ -46,7 +46,6 @@ public class Q00509_AClansFame extends Quest
 	private static final Map<Integer, List<Integer>> REWARD_POINTS = new HashMap<>();
 	static
 	{
-		REWARD_POINTS.put(1, Arrays.asList(25290, 8489, 1378)); // Daimon The White-Eyed
 		REWARD_POINTS.put(2, Arrays.asList(25293, 8490, 1378)); // Hestia, Guardian Deity Of The Hot Springs
 		REWARD_POINTS.put(3, Arrays.asList(25523, 8491, 1070)); // Plague Golem
 		REWARD_POINTS.put(4, Arrays.asList(25322, 8492, 782)); // Demon's Agent Falston
