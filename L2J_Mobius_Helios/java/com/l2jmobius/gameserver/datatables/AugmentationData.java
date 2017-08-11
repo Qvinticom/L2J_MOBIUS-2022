@@ -390,7 +390,14 @@ public class AugmentationData
 																aAugmentId = Integer.parseInt(aNodeAttributes.getNamedItem("id").getNodeValue());
 																aAugmentChance = Float.parseFloat(aNodeAttributes.getNamedItem("chance").getNodeValue());
 																
-																_augmentationChances.add(new AugmentationChance(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
+																if (OptionData.getInstance().getOptions(aAugmentId) != null)
+																{
+																	_augmentationChances.add(new AugmentationChance(aWeaponType, aStoneId, aVariationId, aCategoryChance, aAugmentId, aAugmentChance));
+																}
+																else
+																{
+																	LOGGER.warning(getClass().getSimpleName() + ": Missing augment " + aAugmentId + " for stone " + aStoneId + " variation " + aVariationId + ".");
+																}
 															}
 														}
 													}

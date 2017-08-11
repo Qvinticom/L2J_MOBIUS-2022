@@ -75,48 +75,24 @@ public final class RequestConfirmCancelItem implements IClientIncomingPacket
 		int price = 0;
 		switch (item.getItem().getCrystalType())
 		{
+			case D:
+			{
+				price = 80000; // classic
+				break;
+			}
 			case C:
 			{
-				if (item.getCrystalCount() < 1720)
-				{
-					price = 95000;
-				}
-				else if (item.getCrystalCount() < 2452)
-				{
-					price = 150000;
-				}
-				else
-				{
-					price = 210000;
-				}
+				price = 240000; // classic
 				break;
 			}
 			case B:
 			{
-				if (item.getCrystalCount() < 1746)
-				{
-					price = 240000;
-				}
-				else
-				{
-					price = 270000;
-				}
+				price = 720000; // classic
 				break;
 			}
 			case A:
 			{
-				if (item.getCrystalCount() < 2160)
-				{
-					price = 330000;
-				}
-				else if (item.getCrystalCount() < 2824)
-				{
-					price = 390000;
-				}
-				else
-				{
-					price = 420000;
-				}
+				price = 1500000; // classic - guessed
 				break;
 			}
 			case S:
