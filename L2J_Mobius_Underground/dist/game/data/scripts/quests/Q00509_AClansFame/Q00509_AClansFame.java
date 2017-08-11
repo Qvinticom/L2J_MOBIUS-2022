@@ -53,7 +53,6 @@ public class Q00509_AClansFame extends Quest
 	
 	private static final int[] RAID_BOSS =
 	{
-		25290,
 		25293,
 		25523,
 		25322
