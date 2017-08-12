@@ -16,6 +16,7 @@ What is done
 -Store offline trader transactions in realtime
 -Addition of many retail AIs
 -New spawns for Giants Cave
+-Paulina's item rewards
 
 TODO list
 -Helios grandboss
