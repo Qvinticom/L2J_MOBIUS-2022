@@ -36,6 +36,7 @@ What is done
 -Grandboss scripts and stats
 -Whisper of Dreams quests
 -Moon Knight quest
+-Aden fishing zones
 
 Custom work
 -Newbie Helper NPC location info
@@ -52,4 +53,3 @@ TODO list
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
 -Provisional Clan Halls
--Aden fishing zones
