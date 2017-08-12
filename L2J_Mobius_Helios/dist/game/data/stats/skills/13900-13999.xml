@@ -174,4 +174,282 @@
 			</effect>
 		</effects>
  	</skill>
+	<skill id="13931" toLevel="3" name="Set Effect - Paulina's Heavy Armor, 5-piece">
+		<icon>icon.m_class_heavy</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">10</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower" fromLevel="3" toLevel="3">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13932" toLevel="3" name="Set Effect - Paulina's Light Armor, 5-piece">
+		<icon>icon.m_class_light</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">0</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">14</value>
+				</amount>
+				<mode>
+					<value fromLevel="1" toLevel="2">PER</value>
+					<value level="3">DIFF</value>
+				</mode>
+			</effect>
+			<effect name="PAtk" fromLevel="3" toLevel="3">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="3">
+				<amount>20</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="3">
+				<amount>20</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="3">
+				<amount>20</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="3">
+				<amount>20</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="3">
+				<amount>20</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute" fromLevel="3" toLevel="3">
+				<amount>20</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13933" toLevel="3" name="Set Effect - Paulina's Robe, 5-piece">
+		<icon>icon.m_class_robe</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">15</value>
+					<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp"  fromLevel="3" toLevel="3">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost" fromLevel="3" toLevel="3">
+				<amount>-5</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost" fromLevel="3" toLevel="3">
+				<amount>-5</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13934" toLevel="3" name="Paulina's Necklace - Skill Cooldown">
+		<icon>icon.skill5239</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+					<value level="3">-10</value>
+				</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+					<value level="3">-10</value>
+				</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-5</value>
+					<value level="3">-10</value>
+				</amount>
+				<magicType>3</magicType>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13935" toLevel="3" name="Paulina's Earrings - Vampiric Rage">
+		<icon>icon.skill1268</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="VampiricAttack">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">6</value>
+					<value level="3">9</value>
+				</amount>
+				<chance>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">30</value>
+				</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13936" toLevel="3" name="Paulina's Earrings - MP Consumption">
+		<icon>icon.skill1397</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+				</amount>
+				<magicType>0</magicType>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+				</amount>
+				<magicType>1</magicType>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13937" toLevel="3" name="Paulina's Ring - Critical Damage">
+		<icon>icon.skill0531</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+					<value level="3">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="13938" toLevel="3" name="Paulina's Ring - Critical Rate">
+		<icon>icon.skill0137</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">40</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
 </list>
