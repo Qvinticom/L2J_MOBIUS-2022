@@ -199,6 +199,7 @@ import handlers.itemhandlers.ItemSkillsTemplate;
 import handlers.itemhandlers.Maps;
 import handlers.itemhandlers.MercTicket;
 import handlers.itemhandlers.NicknameColor;
+import handlers.itemhandlers.PaulinasSupportBox;
 import handlers.itemhandlers.PetFood;
 import handlers.itemhandlers.Recipes;
 import handlers.itemhandlers.RollingDice;
@@ -538,6 +539,7 @@ public class MasterHandler
 			Maps.class,
 			MercTicket.class,
 			NicknameColor.class,
+			PaulinasSupportBox.class,
 			PetFood.class,
 			Recipes.class,
 			RollingDice.class,
