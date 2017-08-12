@@ -37,6 +37,7 @@ public class PaulinasSupportBox implements IItemHandler
 	private static final int BOX_C_GRADE = 46850;
 	private static final int BOX_A_GRADE = 46851;
 	private static final int BOX_S_GRADE = 46852;
+	private static final int BOX_R_GRADE = 46919;
 	// Rewards
 	private static final int BOX_D_HEAVY = 46837;
 	private static final int BOX_D_LIGHT = 46838;
@@ -50,6 +51,9 @@ public class PaulinasSupportBox implements IItemHandler
 	private static final int BOX_S_HEAVY = 46846;
 	private static final int BOX_S_LIGHT = 46847;
 	private static final int BOX_S_ROBE = 46848;
+	private static final int BOX_R_HEAVY = 46924;
+	private static final int BOX_R_LIGHT = 46925;
+	private static final int BOX_R_ROBE = 46926;
 	
 	@Override
 	public boolean useItem(L2Playable playable, L2ItemInstance item, boolean forceUse)
@@ -278,6 +282,61 @@ public class PaulinasSupportBox implements IItemHandler
 						else
 						{
 							player.addItem(getClass().getSimpleName(), BOX_S_LIGHT, 1, player, true);
+						}
+						break;
+					}
+				}
+				break;
+			}
+			case BOX_R_GRADE:
+			{
+				switch (race)
+				{
+					case HUMAN:
+					case ELF:
+					case DARK_ELF:
+					case DWARF:
+					{
+						if (player.isMageClass())
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_ROBE, 1, player, true);
+						}
+						else if (CategoryData.getInstance().isInCategory(CategoryType.OTHELL_GROUP, classId.getId()) || CategoryData.getInstance().isInCategory(CategoryType.YUL_GROUP, classId.getId()))
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
+						}
+						else
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_HEAVY, 1, player, true);
+						}
+						break;
+					}
+					case ORC:
+					{
+						if (player.isMageClass())
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
+						}
+						else
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_HEAVY, 1, player, true);
+						}
+						break;
+					}
+					case KAMAEL:
+					{
+						player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
+						break;
+					}
+					case ERTHEIA:
+					{
+						if (player.isMageClass())
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_ROBE, 1, player, true);
+						}
+						else
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
 						}
 						break;
 					}

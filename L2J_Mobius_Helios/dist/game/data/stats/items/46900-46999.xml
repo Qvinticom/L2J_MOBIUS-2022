@@ -345,14 +345,16 @@
 	<item id="46919" name="Paulina's Equipment Set (R-grade)" additionalName="30-day" type="EtcItem">
 		<!-- Use to obtain a 30-day equipment set appropriate to your class. Can be used only by characters of Lv. 85 and above. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="handler" val="ExtractableItems" />
+		<set name="handler" val="PaulinasSupportBox" />
 		<cond msgId="1902">
 			<player levelRange="85;105" />
 		</cond>
@@ -432,32 +434,83 @@
 	<item id="46924" name="Paulina's Heavy Armor Box (R-grade)" type="EtcItem">
 		<!-- Double click to obtain an R-grade heavy armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47021" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Helmet -->
+			<item id="47022" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Breastplate -->
+			<item id="47023" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gaiters -->
+			<item id="47024" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gauntlets -->
+			<item id="47025" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Boots -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace -->
+			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
+			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
+			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+		</capsuled_items>
 	</item>
 	<item id="46925" name="Paulina's Light Armor Box (R-grade)" type="EtcItem">
 		<!-- Double click to obtain an R-grade light armor set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47027" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Helmet -->
+			<item id="47028" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Armor -->
+			<item id="47029" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Leggings -->
+			<item id="47030" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Gloves -->
+			<item id="47031" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Leather Boots -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace -->
+			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
+			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
+			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+		</capsuled_items>
 	</item>
 	<item id="46926" name="Paulina's Robe Box (R-grade)" type="EtcItem">
 		<!-- Double click to obtain an R-grade robe set, earrings, necklace, and ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47032" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Circlet -->
+			<item id="47033" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Tunic -->
+			<item id="47034" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Stockings -->
+			<item id="47035" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Gloves -->
+			<item id="47036" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Shoes -->
+			<item id="47038" min="1" max="1" chance="100" /> <!-- Paulina's Twilight Necklace -->
+			<item id="47039" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
+			<item id="47040" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Earring -->
+			<item id="47041" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+			<item id="47042" min="2" max="2" chance="100" /> <!-- Paulina's Twilight Ring -->
+		</capsuled_items>
 	</item>
 	<item id="46927" name="Paulina's Brigandine Helmet" additionalName="Heavy Armor" type="Armor">
 		<!-- Brigandine Helmet imbued with the energy of Paulina. Enchantment and Attribute Assignment not possible. -->
