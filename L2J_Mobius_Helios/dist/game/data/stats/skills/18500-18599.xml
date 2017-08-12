@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18500" toLevel="1" name="Aden Vanguard Supply Box">
 		<!-- AUTO GENERATED SKILL -->
@@ -99,7 +99,7 @@
 		<hitTime>120000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="18515" toLevel="3" name="Decrease P. Def.">
+	<skill id="18515" toLevel="3" name="Weakened Defense">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P./M. Def. is decreased by 10%%. -->
 		<icon>icon.skill1042</icon>
@@ -161,7 +161,7 @@
 		<effectPoint>1000</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
-	<skill id="18531" toLevel="1" name="Rare Accessory Box">
+	<skill id="18531" toLevel="1" name="Rare Accessory Pack">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Double-click to get one of the following: Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, or Blessed Zaken's Earring (7-day). Cannot be used in the Olympiad. Deleted after event. -->
 		<icon>icon.skill0000</icon>
@@ -374,7 +374,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18557" toLevel="1" name="Zubei Armor Appearance Stone">
+	<skill id="18557" toLevel="1" name="Red Zubei Armor Appearance Stone">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changes the appearance of your entire armor into that of Red Zubei. Tops and one-pieces only. -->
 		<icon>icon.skill0000</icon>
@@ -408,21 +408,21 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18563" toLevel="4" name="Red Libra Supplies Lv. 2">
+	<skill id="18563" toLevel="4" name="Red Libra Supply Items Lv5">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18564" toLevel="1" name="Shadai's Jewelry Box">
+	<skill id="18564" toLevel="1" name="Shadai's Shiny Jewelry Box">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.etc_bm_jewelbox_shhadai</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="18565" toLevel="5" name="Tanzanite - Barrier">
+	<skill id="18565" toLevel="5" name="Greater Tanzanite - Barrier">
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. -->
 		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. -->
 		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. -->
@@ -453,7 +453,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18566" toLevel="5" name="Garnet">
+	<skill id="18566" toLevel="5" name="Greater Garnet">
 		<!-- Resistance to Debuffs + 3%, 6%, 12%, 20%, 30%. -->
 		<!-- Need info -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
@@ -471,7 +471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18567" toLevel="1" name="Garnet - Purge">
+	<skill id="18567" toLevel="1" name="Greater Garnet - Cancel Debuffs">
 		<!-- Cancels your debuffs. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
 		<operateType>A1</operateType>
@@ -487,11 +487,16 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18568" toLevel="5" name="Vital Stone">
+	<skill id="18568" toLevel="5" name="Greater Vital Stone">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Vitality Status Bonus EXP by 3%. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>P</operateType>
+	</skill>
+	<skill id="18569" toLevel="1" name="Reward Fishing Rod Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="18570" toLevel="1" name="Function Test Item">
 		<!-- AUTO GENERATED SKILL -->
@@ -500,8 +505,148 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
+	<skill id="18571" toLevel="1" name="Warrior Basics I">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18572" toLevel="1" name="Warrior Basics II">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18573" toLevel="1" name="Warrior Basics III">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18574" toLevel="1" name="Peaceful Town of Giran">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18575" toLevel="1" name="Hunting Cry I">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18576" toLevel="1" name="Hunting Cry II">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18577" toLevel="1" name="Roar of the Battlefield">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18578" toLevel="1" name="The World's Next Top Singer">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="18579" toLevel="1" name="Entrance Pass: Embryo Command Post">
 		<!-- AUTO GENERATED SKILL -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18580" toLevel="1" name="Entrance Pass: Nightmare Kamaloka">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18581" toLevel="1" name="Pa'agrio's Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18582" toLevel="7" name="Teleport to the Giant's Cave">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18583" toLevel="1" name="Inject Shine Energy">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18584" toLevel="1" name="Steel Armor Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18585" toLevel="1" name="Schumadriba's Reward Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18586" toLevel="1" name="Schumadriba's Advanced Reward Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18587" toLevel="1" name="Giant Evolution Control">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18588" toLevel="13" name="Tanzanite Treasure Chest of Good Fortune">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18589" toLevel="1" name="Vitality Replenishing Potion of Quest Pride">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18590" toLevel="1" name="Equipment Enchantment Chest of Quest Pride">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18591" toLevel="1" name="Skill Enchantment Chest of Quest Pride">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18592" toLevel="1" name="Good Fortune Chest of Quest Pride">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18593" toLevel="1" name="Mentor's Harmony">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18594" toLevel="1" name="Mentor's Art of Seduction">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18595" toLevel="1" name="Blue Dynasty Transformation">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18596" toLevel="1" name="Red Zubei Transformation">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18597" toLevel="5" name="Paulina's Equipment Set (R-grade)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18598" toLevel="5" name="Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18599" toLevel="3" name="Advanced Supply Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>

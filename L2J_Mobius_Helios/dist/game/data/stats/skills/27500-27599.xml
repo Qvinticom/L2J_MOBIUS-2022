@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="27500" toLevel="1" name="Pirate Crew Appeareance Stone">
 		<!-- AUTO GENERATED SKILL -->
@@ -996,7 +996,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27548" toLevel="1" name="Garnet - Purge">
+	<skill id="27548" toLevel="1" name="Greater Garnet - Cancel Debuffs">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Cancels your debuffs. -->
 		<icon>icon.etc_bm_jewel_garnet</icon>
@@ -1005,7 +1005,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>180000</reuseDelay>
 	</skill>
-	<skill id="27549" toLevel="5" name="Tanzanite - Barrier">
+	<skill id="27549" toLevel="5" name="Greater Tanzanite - Barrier">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. -->
 		<icon>icon.etc_bm_jewel_tanzanite</icon>
@@ -1014,7 +1014,7 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>180000</reuseDelay>
 	</skill>
-	<skill id="27550" toLevel="5" name="Vital Stone">
+	<skill id="27550" toLevel="5" name="Greater Vital Stone">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Vitality Status Bonus EXP by 3%. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
@@ -2232,19 +2232,19 @@
 		<icon>BranchIcon.icon.shirt_of_explorer_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27586" toLevel="1" name="Novice Adventurer's Circlet – Critical Rate">
+	<skill id="27586" toLevel="1" name="Novice Adventurer's Circlet � Critical Rate">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Critical Rate + $s1 -->
 		<icon>icon.accessory_au_karm_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27587" toLevel="1" name="Experienced Adventurer's Circlet – Critical Rate">
+	<skill id="27587" toLevel="1" name="Experienced Adventurer's Circlet � Critical Rate">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Critical Rate + $s1 -->
 		<icon>icon.accessory_ar_karm_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="27588" toLevel="1" name="Adventurer's Circlet – Critical Rate">
+	<skill id="27588" toLevel="1" name="Adventurer's Circlet � Critical Rate">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + $s1, M. Atk. + $s2 -->
 		<icon>BranchSys.icon.br_valkyrie_cap_i00</icon>

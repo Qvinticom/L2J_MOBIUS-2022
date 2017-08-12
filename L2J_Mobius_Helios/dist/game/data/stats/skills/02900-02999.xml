@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2900" toLevel="1" name="Ancient Herb - Slayer">
 		<abnormalInstant>true</abnormalInstant>
@@ -182,7 +182,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="2907" toLevel="5" name="Battlefield Use Secret Medicine of Life">
+	<skill id="2907" toLevel="5" name="Elixir of Life (Battleground)">
 		<!-- Glory Days Confirmed -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -206,7 +206,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2908" toLevel="5" name="Battlefield Use Secret Medicine of Mind">
+	<skill id="2908" toLevel="5" name="Elixir of Mind (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -230,7 +230,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2909" toLevel="5" name="Battlefield Use Secret Medicine of Will">
+	<skill id="2909" toLevel="5" name="Elixir of CP (Battleground)">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -307,7 +307,7 @@
 			<condition name="ConsumeBody" />
 		</conditions>
 	</skill>
-	<skill id="2914" toLevel="3" name="Equipment Set Pack (10-day)">
+	<skill id="2914" toLevel="3" name="Equipment Set Pack (90-day)">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -608,7 +608,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2920" toLevel="1" name="Titan's Ancient Book">
+	<skill id="2920" toLevel="1" name="Lesser Giant's Ancient Book">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4500" toLevel="1" name="Treasure Chest (Lv. 27)">
 		<!-- This Skill Is Only For Description In The Client -->
@@ -109,7 +109,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>NONE</affectScope>
 	</skill>
-	<skill id="4515" toLevel="1" name="Raid Curse">
+	<skill id="4515" toLevel="1" name="Giants Raid Curse">
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
@@ -728,7 +728,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4542" toLevel="1" name="Quest - Henchman 90% Sleep Stun Weakness">
+	<skill id="4542" toLevel="1" name="Sleep/Stun Resistance">
 		<magicLvl>76</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2861,7 +2861,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4584" toLevel="12" name="Reducing P. Def Stun">
+	<skill id="4584" toLevel="12" name="P. Def.-decreasing Stun">
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>

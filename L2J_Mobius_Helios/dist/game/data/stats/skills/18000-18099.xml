@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="18000" toLevel="1" name="Scroll of Escape: The Cemetary">
+	<skill id="18000" toLevel="1" name="Scroll of Escape: Cemetery">
 		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
@@ -222,7 +222,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="18017" toLevel="1" name="Maphr's Pouch">
+	<skill id="18017" toLevel="1" name="Fortune Pocket - Stage 1">
 		<!-- Use to obtain 400,000 XP. Can combine 2 Lv. 1 pouches. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -241,7 +241,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18018" toLevel="1" name="Maphr's Pouch">
+	<skill id="18018" toLevel="1" name="Fortune Pocket - Stage 2">
 		<!-- Use to obtain 1,600,000 XP. Can combine 2 Lv. 2 pouches. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -279,7 +279,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18020" toLevel="2" name="Maphr's Pouch">
+	<skill id="18020" toLevel="2" name="Fortune Pocket - Stage 3">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -320,7 +320,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18021" toLevel="1" name="Maphr's Pouch">
+	<skill id="18021" toLevel="1" name="Fortune Pocket - Stage 4">
 		<!-- Use to obtain 80,000 XP. Can combine 2 Lv. 4 pouches. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -358,7 +358,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18023" toLevel="2" name="Maphr's Pouch">
+	<skill id="18023" toLevel="2" name="Fortune Pocket - Stage 5">
 		<!-- Random Prize. -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>

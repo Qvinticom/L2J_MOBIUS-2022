@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4100" toLevel="12" name="Prominence">
 		<!-- Freya retail confirmed -->
@@ -700,7 +700,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4116" toLevel="10" name="Resist M.Atk">
+	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
@@ -1201,7 +1201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4127" toLevel="1" name="Baium: General Attack">
+	<skill id="4127" toLevel="1" name="Baium Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Baium Skills -->
 		<affectRange>200</affectRange>
@@ -1317,7 +1317,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4132" toLevel="1" name="Spear: Pound the Ground">
+	<skill id="4132" toLevel="1" name="Spear Attack">
 		<!-- Confirmed CT2.5 -->
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
@@ -1977,7 +1977,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4146" toLevel="3" name="Decrease P.Def">
+	<skill id="4146" toLevel="3" name="Decrease P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<abnormalLvl>
@@ -2236,7 +2236,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4151" toLevel="12" name="Wind Strike">
+	<skill id="4151" toLevel="12" name="(Wind Strike)">
 		<!-- Freya retail confirmed -->
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
@@ -2919,7 +2919,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4162" toLevel="3" name="Decrease P. Atk.">
+	<skill id="4162" toLevel="3" name="Decrease Atk. Spd.">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zone Skill -->
 		<abnormalLvl>
@@ -4723,7 +4723,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4191" toLevel="12" name="Wind Strike">
+	<skill id="4191" toLevel="12" name="(Wind Strike)">
 		<!-- Freya retail confirmed -->
 		<castRange>750</castRange>
 		<effectPoint>-100</effectPoint>

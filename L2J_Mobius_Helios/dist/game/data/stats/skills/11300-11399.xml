@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
 		<!-- Glory Days confirmed -->
@@ -431,7 +431,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11310" toLevel="2" name="Mass Servitor Blessing">
+	<skill id="11310" toLevel="2" name="Mass Servitor Ultimate Defense">
 		<!-- Updated to IO -->
 		<!-- Glory Days confirmed -->
 		<!-- Increases all servitor's P. Def. by 4680 and M. Def. by 4212 for 60 seconds. -->
@@ -1919,7 +1919,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11348" toLevel="4" name="Servitor Death Whisper">
+	<skill id="11348" toLevel="4" name="Greater Servitor Death Whisper">
 		<!-- Updated to IO -->
 		<!-- For 30 min., all servitors' Critical Damage + 10%. -->
 		<icon>icon.skill11348</icon>
@@ -2107,7 +2107,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11351" toLevel="5" name="Arcane Link">
+	<skill id="11351" toLevel="5" name="Link of Loyalty">
 		<!-- Updated to IO -->
 		<!-- Servitor's wrath. P. Atk. + 1%, Critical Rate + 10%, and Critical Damage + 1%. -->
 		<icon>icon.skill11351</icon>
@@ -3936,5 +3936,20 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="11393" toLevel="4" name="Freezing Invoke">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11394" toLevel="4" name="Surrender to the Elemental">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11395" toLevel="4" name="Curse Exposure">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

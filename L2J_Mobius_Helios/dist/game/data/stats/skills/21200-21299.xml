@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21200" toLevel="1" name="Age of Three Kingdoms">
 		<!-- For 20 minutes, raises moving speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, physical P. Atk., and physical P. Def. by 15%. Reuse Delay 2 hours. Consumes 1 Proof of Friendship upon skill use. -->
@@ -438,7 +438,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21224" toLevel="1" name="Soul of an Adventurer of Immortality's Ability">
+	<skill id="21224" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Resistance to de-buffs by 10%. Reuse delay is 1 hour." -->
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -458,7 +458,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21225" toLevel="1" name="Soul of a Strong Warrior's Ability">
+	<skill id="21225" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Bestows the ability to recover as HP 5% of the standard short-range physical damage inflicted on an enemy. Reuse delay is 1 hour." -->
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -478,7 +478,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21226" toLevel="1" name="Soul of a Wise Magician's Ability">
+	<skill id="21226" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- "For 5 minutes, receives the soul's help to raise Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP consumption for skill use by 5%. Reuse delay is 1 hour." -->
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -498,7 +498,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21227" toLevel="1" name="Ability of Prominent Adventure's Soul">
+	<skill id="21227" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- "For 5 minutes, receives the soul's help to raise Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Reuse delay is 1 hour." -->
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -518,7 +518,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21228" toLevel="1" name="Soul of a Brave Warrior's Ability">
+	<skill id="21228" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- "For 5 minutes, increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20% with the soul's help. Increases Critical Damage by 20% and critical rate by 20%. Reuse delay is 1 hour." -->
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -633,7 +633,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21233" toLevel="1" name="Release Agathion's Seal - Singer and Dancer">
+	<skill id="21233" toLevel="1" name="Release Agathion's Seal - Singer & Dancer">
 		<!-- High Five Skill -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -669,7 +669,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21235" toLevel="1" name="7th Anniversary T-shirt: Speed">
+	<skill id="21235" toLevel="1" name="Power Shirt: Speed">
 		<!-- High Five Skill -->
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -682,7 +682,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21236" toLevel="1" name="7th Anniversary T-shirt: Blessed Escape Ability">
+	<skill id="21236" toLevel="1" name="Power Shirt: Blessed Escape">
 		<!-- High Five Skill -->
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -705,7 +705,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21237" toLevel="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
+	<skill id="21237" toLevel="1" name="Power Shirt: Invincibility">
 		<!-- High Five Skill -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -905,7 +905,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21246" toLevel="1" name="Rudolph's Energy">
+	<skill id="21246" toLevel="1" name="Rudolph's Vitality">
 		<!-- "For 10 minute(s), energy is replenished when Exp. is acquired through hunting. Reuse time is 30 minutes." -->
 		<operateType>A2</operateType>
 		<abnormalType>VP_UP</abnormalType>
@@ -1000,7 +1000,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21250" toLevel="1" name="Academy Benefaction">
+	<skill id="21250" toLevel="1" name="Academy Growth">
 		<!-- Can acquire additional 10% XP. The death XP penalty decreases by 50%. Can only be used by characters at Lv.s 1~84. -->
 		<icon>icon.accessory_academy_i00</icon>
 		<abnormalTime>7200</abnormalTime>

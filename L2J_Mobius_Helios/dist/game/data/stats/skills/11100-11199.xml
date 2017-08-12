@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11100" toLevel="1" name="Elemental Destruction: Double Casting">
 		<!-- Updated to IO -->
@@ -2929,6 +2929,26 @@
 				</power>
 			</effect>
 		</selfEffects>
+	</skill>
+	<skill id="11153" toLevel="1" name="Chain Blaze">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11154" toLevel="1" name="Fire Potential">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11155" toLevel="1" name="Water Potential">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11156" toLevel="1" name="Chain Blaze_Test">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="11174" toLevel="5" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 5 -->
 		<!-- Glory Days confirmed -->

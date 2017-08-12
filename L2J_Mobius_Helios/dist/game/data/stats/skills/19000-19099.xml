@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19001" toLevel="1" name="Test Bleed">
 		<!-- AUTO GENERATED SKILL -->
@@ -1222,7 +1222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19041" toLevel="1" name="Escape: Castle">
+	<skill id="19041" toLevel="1" name="King's Call">
 		<!-- TODO: Confirm me -->
 		<!-- Return to Castle. -->
 		<hitTime>20000</hitTime>
@@ -1244,7 +1244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19042" toLevel="1" name="Blessed Scroll of Escape: Castle">
+	<skill id="19042" toLevel="1" name="King's Summon">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Return to Castle. -->
 		<icon>icon.vesper_cloack_i00</icon>
@@ -1626,7 +1626,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="19092" toLevel="2" name="Chat Prohibited">
+	<skill id="19092" toLevel="2" name="Mass Return">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Chatting is restricted. -->
 		<icon>

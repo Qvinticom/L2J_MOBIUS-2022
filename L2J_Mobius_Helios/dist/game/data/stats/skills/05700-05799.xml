@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5700" toLevel="7" name="Decrease M. Def.">
 		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
@@ -29,7 +29,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5701" toLevel="7" name="Decrease P. Atk">
+	<skill id="5701" toLevel="7" name="Decrease P. Atk.">
 		<!-- Lvl 1 - Kamaloka (Labyrinth of the Abyss) 29 -->
 		<!-- Lvl 2 - Kamaloka (Labyrinth of the Abyss) 39 -->
 		<!-- Lvl 3 - Kamaloka (Labyrinth of the Abyss) 49 -->
@@ -2940,7 +2940,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5794" toLevel="1" name="Decrease Spd.">
+	<skill id="5794" toLevel="1" name="Decrease Speed">
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2989,7 +2989,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5796" toLevel="1" name="Decrease Spd.">
+	<skill id="5796" toLevel="1" name="Decrease Speed">
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16500" toLevel="1" name="99Lv. Raid Boss">
 		<!-- AUTO GENERATED SKILL -->
@@ -102,7 +102,7 @@
 		<icon>icon.skill0335</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16517" toLevel="2" name="Kelbim">
+	<skill id="16517" toLevel="2" name="Isabella">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- One of the seven disciples of Embryo. Received the power of the Seal of Calamity froM Etis van Etina, and is in control of the Atelia Fortress. Materializes the power of the Seal of Calamity. Currently, in charge of turning the Atelia obtained from the Garden of Spirits into Dark Atelia. -->
 		<icon>icon.skillraid</icon>
@@ -370,7 +370,7 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
 	</skill>
-	<skill id="16542" toLevel="3" name="Supply Blockade">
+	<skill id="16542" toLevel="3" name="Indiscipline">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- The supplies to the 1st floor have been blocked because of Quartermaster Hummel's death, decreasing their Max HP by 15%. The effect disappears when Quartermaster Hummel respawns. -->
 		<icon>icon.skill1263</icon>
@@ -682,7 +682,7 @@
 		<effectPoint>-182</effectPoint>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="16571" toLevel="1" name="Decrease P. Def.">
+	<skill id="16571" toLevel="1" name="Weakened Defense">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. is decreased. -->
 		<icon>icon.skill11276</icon>
@@ -905,5 +905,55 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
+	</skill>
+	<skill id="16590" toLevel="1" name="Ancient Power Thunder">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16591" toLevel="1" name="Ancient Plasma Wave">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16592" toLevel="1" name="Ancient Earthquake">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16593" toLevel="1" name="Prayer for the Emperor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16594" toLevel="1" name="Plasma Strike">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16595" toLevel="1" name="Plasma Shooter">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16596" toLevel="1" name="Plasma Ball">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16597" toLevel="1" name="Plasma Wave">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16598" toLevel="1" name="Stun Strike">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="16599" toLevel="1" name="Piercing Bolt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

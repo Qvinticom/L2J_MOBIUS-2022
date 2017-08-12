@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13900" toLevel="2" name="Sigel">
 		<!-- AUTO GENERATED SKILL -->
@@ -45,7 +45,7 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="13906" toLevel="1" name="Red Libra Talisman - Restoration">
+	<skill id="13906" toLevel="1" name="Red Libra Talisman - Recovery">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Restores all party members' HP/MP/CP and has a chance of dispelling their debuffs. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
@@ -63,7 +63,7 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>100000</reuseDelay>
 	</skill>
-	<skill id="13908" toLevel="1" name="Red Libra Talisman - Speed">
+	<skill id="13908" toLevel="1" name="Red Libra Talisman - Teleport">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Party's Speed + 70 for 10 seconds. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
@@ -174,6 +174,36 @@
 			</effect>
 		</effects>
  	</skill>
+	<skill id="13925" toLevel="1" name="Emperor Shunaiman's Authority">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13926" toLevel="1" name="Emperor Shunaiman's Authority">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13927" toLevel="1" name="Special Ability">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13928" toLevel="1" name="Special Ability">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13929" toLevel="2" name="Paulina's Battle Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13930" toLevel="2" name="Paulina's Magic Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="13931" toLevel="3" name="Set Effect - Paulina's Heavy Armor, 5-piece">
 		<icon>icon.m_class_heavy</icon>
 		<operateType>P</operateType>
@@ -451,5 +481,125 @@
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="13939" toLevel="1" name="Paulina's CON Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13940" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13941" toLevel="1" name="Paulina's Magic Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13942" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13943" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13944" toLevel="1" name="Paulina's Magic Enhancement Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13945" toLevel="1" name="Old Elemental Shirt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13946" toLevel="1" name="Commando Belt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13947" toLevel="10" name="PvP Othell">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13948" toLevel="10" name="PvP. Iss">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13949" toLevel="10" name="PvP. Aeore">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13950" toLevel="10" name="PvE. Othell">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13951" toLevel="10" name="PvE. Iss">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13952" toLevel="10" name="PvE. Aeore">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13953" toLevel="10" name="Activate.Stun">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13954" toLevel="10" name="Activate.Silence">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13955" toLevel="10" name="Activate.Hold">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13956" toLevel="10" name="Activate.Stun">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13957" toLevel="10" name="Activate.Silence">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13958" toLevel="10" name="Activate.Hold">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13959" toLevel="1" name="Mammon's Talisman - Skill Power">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13960" toLevel="1" name="Mammon's Talisman Box - Attack Attribute">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13961" toLevel="1" name="Mammon's Talisman - Skill Cooldown">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="13962" toLevel="1" name="Duo's Bracelet">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>
