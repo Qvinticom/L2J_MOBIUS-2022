@@ -66,7 +66,10 @@ public final class Q10360_CertificationOfFate extends Quest
 	private static final int SAKUM = 27453;
 	// Items
 	private static final int SHINE_STONE = 17587;
-	private static final int PROOF_OF_JUSTICE = 17822;
+	private static final int MAJOR_HEALING_POTION = 1061;
+	private static final int SOULSHOT = 1464;
+	private static final int SPIRITSHOT = 3949;
+	private static final int PAULINA_EQUIPMENT_SET = 46850;
 	// Locations
 	private static final Location WASTELANDS_TELEPORT = new Location(-24795, 188754, -3960);
 	// Misc
@@ -217,8 +220,11 @@ public final class Q10360_CertificationOfFate extends Quest
 					player.store(false);
 					player.broadcastUserInfo();
 					player.sendSkillList();
-					giveAdena(player, 110000, true);
-					giveItems(player, PROOF_OF_JUSTICE, 40);
+					giveAdena(player, 461880, true);
+					giveItems(player, MAJOR_HEALING_POTION, 50);
+					giveItems(player, SOULSHOT, 3000);
+					giveItems(player, SPIRITSHOT, 3000);
+					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					addExpAndSp(player, 2700000, 648);
 					MultisellData.getInstance().separateAndSend(718, player, npc, false);
 					st.exitQuest(false, true);

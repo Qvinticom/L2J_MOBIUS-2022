@@ -44,7 +44,10 @@ public final class Q10784_TheBrokenDevice extends Quest
 	};
 	// Items
 	private static final int BROKE_MAGIC_DEVICE_FRAGMENT = 39723;
-	private static final int ENCHANT_ARMOR_B = 948;
+	private static final int SOULSHOT = 1466;
+	private static final int SPIRITSHOT = 3951;
+	private static final int PAULINA_EQUIPMENT_SET = 46851;
+	private static final int BLESSED_SCROLL_OF_ESCAPE = 33640;
 	// Misc
 	private static final int MIN_LEVEL = 58;
 	private static final int MAX_LEVEL = 61;
@@ -84,9 +87,13 @@ public final class Q10784_TheBrokenDevice extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_B, 5);
 					giveStoryQuestReward(player, 40);
-					addExpAndSp(player, 6579090, 1578);
+					giveAdena(player, 990_000, true);
+					giveItems(player, SOULSHOT, 6000);
+					giveItems(player, SPIRITSHOT, 6000);
+					giveItems(player, BLESSED_SCROLL_OF_ESCAPE, 3);
+					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
+					addExpAndSp(player, 14369328, 1578);
 					qs.exitQuest(false, true);
 				}
 				break;

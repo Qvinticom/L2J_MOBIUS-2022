@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -38,8 +37,10 @@ public final class Q10746_SeeTheWorld extends Quest
 	private static final int ASTIEL = 33948;
 	private static final int LEVIAN = 30037;
 	// Items
-	private static final ItemHolder EMISSARY_SUPPORT_BOX_WARRIOR = new ItemHolder(40264, 1);
-	private static final ItemHolder EMISSARY_SUPPORT_BOX_MAGE = new ItemHolder(40265, 1);
+	private static final int SOULSHOT = 1463;
+	private static final int SPIRITSHOT = 3948;
+	private static final int SCROLL_OF_ESCAPE = 736;
+	private static final int PAULINA_EQUIPMENT_SET = 46849;
 	// Location
 	private static final Location GLUDIN_VILLAGE = new Location(-80684, 149770, -3040);
 	// Misc
@@ -136,16 +137,11 @@ public final class Q10746_SeeTheWorld extends Quest
 			{
 				if (qs.isStarted() && qs.isCond(2))
 				{
-					giveAdena(player, 43000, true);
+					giveItems(player, SOULSHOT, 1500);
+					giveItems(player, SPIRITSHOT, 1500);
+					giveItems(player, SCROLL_OF_ESCAPE, 10);
+					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					addExpAndSp(player, 53422, 5);
-					if (player.isMageClass())
-					{
-						giveItems(player, EMISSARY_SUPPORT_BOX_MAGE);
-					}
-					else
-					{
-						giveItems(player, EMISSARY_SUPPORT_BOX_WARRIOR);
-					}
 					showOnScreenMsg(player, NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, ExShowScreenMessage.TOP_CENTER, 10000);
 					qs.exitQuest(false, true);
 					htmltext = "30037-01.html";

@@ -72,12 +72,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 	};
 	// Items
 	private static final int WIND_SPIRIT_REALMS_RELIC = 39535;
-	// private static final int PAULINAS_EQUIPMENT_SET_D_GRADE = 00000; //TODO
-	private static final int NAVARI_SUPPORT_BOX_FIGHTER = 40266;
-	private static final int BLESSED_SPIRITHSHOT_C = 3949;
-	private static final int SOULSHOT_C = 1464;
 	private static final int MAJOR_HEALING_POTION = 1061;
-	private static final int NAVARI_SUPPORT_BOX_MAGE = 40267;
+	private static final int SOULSHOT = 1464;
+	private static final int SPIRITSHOT = 3949;
+	private static final int PAULINA_EQUIPMENT_SET = 46850;
 	// Location
 	private static final Location TELEPORT_LOC = new Location(-80565, 251763, -3080);
 	// Misc
@@ -217,11 +215,11 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 23));
-					giveAdena(player, 461880, false);
-					giveItems(player, BLESSED_SPIRITHSHOT_C, 3000);
-					giveItems(player, SOULSHOT_C, 3000);
+					giveAdena(player, 11000, true);
 					giveItems(player, MAJOR_HEALING_POTION, 50);
-					giveItems(player, NAVARI_SUPPORT_BOX_MAGE, 1);
+					giveItems(player, SOULSHOT, 3000);
+					giveItems(player, SPIRITSHOT, 3000);
+					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					addExpAndSp(player, 2700000, 648);
 					qs.exitQuest(false, true);
 				}
@@ -237,11 +235,11 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 23));
-					giveAdena(player, 461880, false);
-					giveItems(player, BLESSED_SPIRITHSHOT_C, 3000);
-					giveItems(player, SOULSHOT_C, 3000);
+					giveAdena(player, 11000, true);
 					giveItems(player, MAJOR_HEALING_POTION, 50);
-					giveItems(player, NAVARI_SUPPORT_BOX_FIGHTER, 1);
+					giveItems(player, SOULSHOT, 3000);
+					giveItems(player, SPIRITSHOT, 3000);
+					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					addExpAndSp(player, 2700000, 648);
 					qs.exitQuest(false, true);
 				}
