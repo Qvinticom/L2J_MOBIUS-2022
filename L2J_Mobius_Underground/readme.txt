@@ -20,3 +20,4 @@ TODO list
 -Lindvior
 -Trasken
 -Underground five man dungeons
+-Kamaloka

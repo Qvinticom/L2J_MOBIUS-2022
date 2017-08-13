@@ -20,3 +20,8 @@ What is done
 
 TODO list
 -Helios grandboss
+-Lindvior
+-Trasken
+-Underground five man dungeons
+-Check all quests rewards
+-Kamaloka
