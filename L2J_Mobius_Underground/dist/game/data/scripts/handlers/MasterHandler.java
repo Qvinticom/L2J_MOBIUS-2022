@@ -99,6 +99,7 @@ import handlers.admincommandhandlers.AdminLogin;
 import handlers.admincommandhandlers.AdminManor;
 import handlers.admincommandhandlers.AdminMenu;
 import handlers.admincommandhandlers.AdminMessages;
+import handlers.admincommandhandlers.AdminMissingHtmls;
 import handlers.admincommandhandlers.AdminMobGroup;
 import handlers.admincommandhandlers.AdminMonsterRace;
 import handlers.admincommandhandlers.AdminOlympiad;
@@ -427,6 +428,7 @@ public class MasterHandler
 			AdminManor.class,
 			AdminMenu.class,
 			AdminMessages.class,
+			AdminMissingHtmls.class,
 			AdminMobGroup.class,
 			AdminMonsterRace.class,
 			AdminOlympiad.class,
