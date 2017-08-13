@@ -298,9 +298,9 @@ public final class Q10331_StartOfFate extends Quest
 				{
 					case FRANCO:
 					{
-						if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
+						if (player.getRace() == Race.HUMAN)
 						{
-							if (player.getRace() == Race.HUMAN)
+							if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 							{
 								switch (player.getClassId())
 								{
@@ -318,13 +318,17 @@ public final class Q10331_StartOfFate extends Quest
 								break;
 							}
 						}
+						else
+						{
+							htmltext = "32153-04.html";
+						}
 						break;
 					}
 					case RIVIAN:
 					{
-						if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
+						if (player.getRace() == Race.ELF)
 						{
-							if (player.getRace() == Race.ELF)
+							if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 							{
 								switch (player.getClassId())
 								{
@@ -342,13 +346,17 @@ public final class Q10331_StartOfFate extends Quest
 								break;
 							}
 						}
+						else
+						{
+							htmltext = "32147-04.html";
+						}
 						break;
 					}
 					case DEVON:
 					{
-						if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
+						if (player.getRace() == Race.DARK_ELF)
 						{
-							if (player.getRace() == Race.DARK_ELF)
+							if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 							{
 								switch (player.getClassId())
 								{
@@ -366,13 +374,17 @@ public final class Q10331_StartOfFate extends Quest
 								break;
 							}
 						}
+						else
+						{
+							htmltext = "32160-04.html";
+						}
 						break;
 					}
 					case TOOK:
 					{
-						if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
+						if (player.getRace() == Race.ORC)
 						{
-							if (player.getRace() == Race.ORC)
+							if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 							{
 								switch (player.getClassId())
 								{
@@ -390,25 +402,33 @@ public final class Q10331_StartOfFate extends Quest
 								break;
 							}
 						}
+						else
+						{
+							htmltext = "32150-04.html";
+						}
 						break;
 					}
 					case MOKA:
 					{
-						if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
+						if (player.getRace() == Race.DWARF)
 						{
-							if (player.getRace() == Race.DWARF)
+							if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 							{
 								htmltext = "32157-07.html";
 								break;
 							}
 						}
+						else
+						{
+							htmltext = "32157-04.html";
+						}
 						break;
 					}
 					case VALFAR:
 					{
-						if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
+						if (player.getRace() == Race.KAMAEL)
 						{
-							if (player.getRace() == Race.KAMAEL)
+							if ((qs.getCond() >= 3) && (qs.getCond() <= 8))
 							{
 								switch (player.getClassId())
 								{
@@ -425,6 +445,10 @@ public final class Q10331_StartOfFate extends Quest
 								}
 								break;
 							}
+						}
+						else
+						{
+							htmltext = "32146-04.html";
 						}
 						break;
 					}
