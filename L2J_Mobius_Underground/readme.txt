@@ -21,3 +21,4 @@ TODO list
 -Trasken
 -Underground five man dungeons
 -Kamaloka
+-Provisional Clan Halls
