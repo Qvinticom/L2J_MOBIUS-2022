@@ -208,7 +208,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 					}
 					case State.STARTED:
 					{
-						htmltext = (st.getCond() > 1) ? "32497-00.htm" : "32497-03.htm";
+						htmltext = (st.getCond() > 1) ? "32497-00.htm" : "32497-01.htm";
 						break;
 					}
 					case State.COMPLETED:
