@@ -37,7 +37,8 @@ What is done
 -Whisper of Dreams quests
 -Moon Knight quest
 -Aden fishing zones
--Classic Henna list
+-Item augmentation support
+-Retail Henna list
 
 Custom work
 -Newbie Helper NPC location info
@@ -49,8 +50,9 @@ TODO list
 -Retail NPC dialogs
 -Retail NPC buylists
 -Test quests and update rewards
--Floran Agricultural Area clan halls
+-Test Floran Agricultural Area clan halls
 -Test castle sieges
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
 -Provisional Clan Halls
+-Update augmentation retailchances.xml https://l2wiki.com/classic/Item_Augmentation_-_effects#Effects
