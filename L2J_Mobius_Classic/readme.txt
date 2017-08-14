@@ -37,6 +37,7 @@ What is done
 -Whisper of Dreams quests
 -Moon Knight quest
 -Aden fishing zones
+-Classic Henna list
 
 Custom work
 -Newbie Helper NPC location info
