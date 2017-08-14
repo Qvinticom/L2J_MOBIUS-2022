@@ -31,7 +31,7 @@ import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 /**
  * Shedding Weight (10543)
  * @URL https://l2wiki.com/Shedding_Weight
- * @author GIgi
+ * @author Gigi
  */
 public final class Q10543_SheddingWeight extends Quest
 {
@@ -77,6 +77,8 @@ public final class Q10543_SheddingWeight extends Quest
 			case "32974-03.htm":
 			{
 				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				// giveItems(player, NOVICE_TRAINING_LOG, 1);
 				htmltext = event;
 				break;
