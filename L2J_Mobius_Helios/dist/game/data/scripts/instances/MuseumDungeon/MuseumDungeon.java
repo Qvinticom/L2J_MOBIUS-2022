@@ -19,11 +19,13 @@ package instances.MuseumDungeon;
 import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
@@ -75,6 +77,7 @@ public final class MuseumDungeon extends AbstractInstance
 		addFirstTalkId(DESK);
 		addTalkId(SHANNON, TOYRON);
 		addAttackId(THIEF);
+		addSkillSeeId(THIEF);
 	}
 	
 	@Override
@@ -142,6 +145,19 @@ public final class MuseumDungeon extends AbstractInstance
 			showOnScreenMsg(attacker, NpcStringId.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ExShowScreenMessage.TOP_CENTER, 2500);
 		}
 		return onAttack(npc, attacker, damage, isSummon);
+	}
+	
+	@Override
+	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
+	{
+		if (npc.isScriptValue(0) && (skill == SPOIL.getSkill()) && (caster.getTarget() == npc) && (npc.calculateDistance(caster, false, false) < 200))
+		{
+			final L2Npc toyron = npc.getInstanceWorld().getNpc(TOYRON);
+			((L2QuestGuardInstance) toyron).addDamageHate(npc, 0, 9999); // TODO: Find better way for attack
+			npc.reduceCurrentHp(1, toyron, null);
+			npc.setScriptValue(1);
+		}
+		return super.onSkillSee(npc, caster, skill, targets, isSummon);
 	}
 	
 	@Override
@@ -232,18 +248,11 @@ public final class MuseumDungeon extends AbstractInstance
 	{
 		final L2Character creature = event.getAttacker();
 		final L2Npc npc = (L2Npc) event.getTarget();
-		final Skill skill = event.getSkill();
 		final Instance instance = npc.getInstanceWorld();
 		
 		if (isInInstance(instance) && !creature.isPlayer() && npc.isScriptValue(1))
 		{
 			getTimers().addTimer("THIEF_DIE", 500, npc, null);
-		}
-		else if (isInInstance(instance) && creature.isPlayer() && (skill == SPOIL.getSkill()) && npc.isScriptValue(0))
-		{
-			final L2Npc toyron = instance.getNpc(TOYRON);
-			addAttackDesire(toyron, npc);
-			npc.setScriptValue(1);
 		}
 	}
 	
@@ -268,7 +277,8 @@ public final class MuseumDungeon extends AbstractInstance
 					}
 					
 					final L2Npc toyron = instance.getNpc(TOYRON);
-					addAttackDesire(toyron, target);
+					((L2QuestGuardInstance) toyron).addDamageHate(target, 0, 9999); // TODO: Find better way for attack
+					target.reduceCurrentHp(1, toyron, null);
 					((L2Npc) target).setScriptValue(1);
 					return new DamageReturn(false, true, false, target.getMaxHp() * DAMAGE_BY_SKILL);
 				}
