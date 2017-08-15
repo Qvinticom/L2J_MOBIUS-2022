@@ -47,7 +47,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 		MOB1.put(20805, 0.91); // dailaon_lad
 		MOB1.put(20806, 0.88); // crokian_lad_warrior
 		MOB1.put(20807, 0.92); // farhite_lad
-		MOB2.put(22208, 14); // nos_lad
+		MOB2.put(20808, 14); // nos_lad
 		MOB2.put(20991, 69); // tribe_of_swamp
 	}
 	
