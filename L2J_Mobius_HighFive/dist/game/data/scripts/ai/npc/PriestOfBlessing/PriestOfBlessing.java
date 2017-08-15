@@ -109,14 +109,14 @@ public final class PriestOfBlessing extends AbstractNpcAI
 		{
 			if (player.getAdena() >= PRICE_VOICE)
 			{
-				final String value = getGlobalQuestVar(player.getAccountName() + "_voice");
+				final String value = player.getVariables().getString("PriestOfBlessing_voice");
 				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (System.currentTimeMillis() > _reuse_time)
 				{
 					takeItems(player, Inventory.ADENA_ID, PRICE_VOICE);
 					giveItems(player, NEVIT_VOICE, 1);
-					saveGlobalQuestVar(player.getAccountName() + "_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
+					player.getVariables().set("PriestOfBlessing_voice", Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
 				{
@@ -140,7 +140,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 			
 			if (player.getAdena() >= _price_hourglass)
 			{
-				final String value = getGlobalQuestVar(player.getAccountName() + "_hg_" + _index);
+				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + _index);
 				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (System.currentTimeMillis() > _reuse_time)
@@ -149,7 +149,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 					final int _nevit_hourglass = _hg[getRandom(0, _hg.length - 1)];
 					takeItems(player, Inventory.ADENA_ID, _price_hourglass);
 					giveItems(player, _nevit_hourglass, 1);
-					saveGlobalQuestVar(player.getAccountName() + "_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
+					player.getVariables().set("PriestOfBlessing_hg_" + _index, Long.toString(System.currentTimeMillis() + (20 * 3600000)));
 				}
 				else
 				{

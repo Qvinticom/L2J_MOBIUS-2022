@@ -17,6 +17,7 @@
 package ai.individual;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -86,7 +87,7 @@ public final class QueenShyeed extends AbstractNpcAI
 	
 	private void spawnShyeed()
 	{
-		final String respawn = getGlobalQuestVar("Respawn");
+		final String respawn = GlobalVariablesManager.getInstance().getString("QueenShyeedRespawn");
 		final long remain = !respawn.isEmpty() ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
 		if (remain > 0)
 		{
@@ -103,7 +104,7 @@ public final class QueenShyeed extends AbstractNpcAI
 	private void startRespawn()
 	{
 		final int respawnTime = RESPAWN - getRandom(RANDOM_RESPAWN);
-		saveGlobalQuestVar("Respawn", Long.toString(System.currentTimeMillis() + respawnTime));
+		GlobalVariablesManager.getInstance().set("QueenShyeedRespawn", Long.toString(System.currentTimeMillis() + respawnTime));
 		startQuestTimer("respawn", respawnTime, null, null);
 		MOB_BUFF_ZONE.setEnabled(false);
 		MOB_BUFF_DISPLAY_ZONE.setEnabled(false);

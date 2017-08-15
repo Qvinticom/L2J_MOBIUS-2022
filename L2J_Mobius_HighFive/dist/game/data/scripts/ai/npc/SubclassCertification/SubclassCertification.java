@@ -245,7 +245,7 @@ public final class SubclassCertification extends AbstractNpcAI
 		
 		String htmltext;
 		final String tmp = variable + level + "-" + player.getClassIndex();
-		final String globalVariable = getGlobalQuestVar(tmp);
+		final String globalVariable = player.getVariables().getString(tmp);
 		
 		if (!globalVariable.equals("") && !globalVariable.equals("0"))
 		{
@@ -268,7 +268,7 @@ public final class SubclassCertification extends AbstractNpcAI
 			smsg.addItemName(item);
 			player.sendPacket(smsg);
 			
-			saveGlobalQuestVar(tmp, String.valueOf(item.getObjectId()));
+			player.getVariables().set(tmp, String.valueOf(item.getObjectId()));
 			htmltext = "GetAbility.html";
 		}
 		return htmltext;

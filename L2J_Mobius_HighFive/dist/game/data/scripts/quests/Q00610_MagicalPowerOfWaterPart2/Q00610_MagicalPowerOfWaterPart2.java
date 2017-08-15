@@ -18,6 +18,7 @@ package quests.Q00610_MagicalPowerOfWaterPart2;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -52,7 +53,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		addKillId(ASHUTAR);
 		registerQuestItems(GREEN_TOTEM, ASHUTAR_HEART);
 		
-		final String test = getGlobalQuestVar("Q00610_respawn");
+		final String test = GlobalVariablesManager.getInstance().getString("Q00610_respawn");
 		final long remain = (!test.isEmpty()) ? (Long.parseLong(test) - System.currentTimeMillis()) : 0;
 		if (remain > 0)
 		{
@@ -146,7 +147,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		final int respawnMaxDelay = (int) (129600000 * Config.RAID_MAX_RESPAWN_MULTIPLIER);
 		final int respawnDelay = getRandom(respawnMinDelay, respawnMaxDelay);
 		cancelQuestTimer("despawn_ashutar", npc, null);
-		saveGlobalQuestVar("Q00610_respawn", String.valueOf(System.currentTimeMillis() + respawnDelay));
+		GlobalVariablesManager.getInstance().set("Q00610_respawn", String.valueOf(System.currentTimeMillis() + respawnDelay));
 		startQuestTimer("spawn_npc", respawnDelay, null, null);
 		executeForEachPlayer(killer, npc, isSummon, true, false);
 		return super.onKill(npc, killer, isSummon);

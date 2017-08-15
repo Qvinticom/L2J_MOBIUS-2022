@@ -226,7 +226,7 @@ public final class Q00411_PathOfTheAssassin extends Quest
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						saveGlobalQuestVar("1ClassQuestFinished", "1");
+						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "30416-06.html";
 					}
 					else if (!hasAtLeastOneQuestItem(player, LEIKANS_NOTE, SHILENS_TEARS, ARKENIAS_RECOMMENDATION, IRON_HEART, SHILENS_CALL) && hasQuestItems(player, ARKENIAS_LETTER))

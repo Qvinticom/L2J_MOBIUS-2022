@@ -17,6 +17,7 @@
 package quests.Q00307_ControlDeviceOfTheGiants;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -100,7 +101,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					return "32711-09.html";
 				}
-				final String respawn = loadGlobalQuestVar("Respawn");
+				final String respawn = GlobalVariablesManager.getInstance().getString("GiantsControlDeviceRespawn");
 				final long remain = !respawn.isEmpty() ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
 				if (remain > 0)
 				{
@@ -170,7 +171,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 							qst.setCond(2, true);
 						}
 					}
-					saveGlobalQuestVar("Respawn", Long.toString(System.currentTimeMillis() + RESPAWN_DELAY));
+					GlobalVariablesManager.getInstance().set("GiantsControlDeviceRespawn", Long.toString(System.currentTimeMillis() + RESPAWN_DELAY));
 				}
 				break;
 			}

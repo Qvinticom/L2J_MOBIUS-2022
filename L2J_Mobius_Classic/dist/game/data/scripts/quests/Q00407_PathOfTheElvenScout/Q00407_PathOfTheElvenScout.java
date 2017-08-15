@@ -255,7 +255,7 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 						giveAdena(player, 163800, true);
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						saveGlobalQuestVar("1ClassQuestFinished", "1");
+						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "30328-07.html";
 					}
 					break;

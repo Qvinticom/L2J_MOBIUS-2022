@@ -195,7 +195,7 @@ public class AvantGarde extends AbstractNpcAI
 					{
 						for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
 						{
-							final String qvar = getGlobalQuestVar(varName + i);
+							final String qvar = player.getVariables().getString(varName + i);
 							if (!qvar.isEmpty() && (qvar.endsWith(";") || !qvar.equals("0")))
 							{
 								activeCertifications++;
@@ -213,7 +213,7 @@ public class AvantGarde extends AbstractNpcAI
 							for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
 							{
 								final String qvarName = varName + i;
-								final String qvar = getGlobalQuestVar(qvarName);
+								final String qvar = player.getVariables().getString(qvarName);
 								if (qvar.endsWith(";"))
 								{
 									final String skillIdVar = qvar.replace(";", "");
@@ -224,7 +224,7 @@ public class AvantGarde extends AbstractNpcAI
 										if (sk != null)
 										{
 											player.removeSkill(sk);
-											saveGlobalQuestVar(qvarName, "0");
+											player.getVariables().set(qvarName, "0");
 										}
 									}
 									else
@@ -255,7 +255,7 @@ public class AvantGarde extends AbstractNpcAI
 												_log.warning("Somehow " + player.getName() + " deleted a certification book!");
 											}
 										}
-										saveGlobalQuestVar(qvarName, "0");
+										player.getVariables().set(qvarName, "0");
 									}
 									else
 									{

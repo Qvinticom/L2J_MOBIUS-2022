@@ -23,6 +23,7 @@ import java.util.Map;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -227,18 +228,18 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		});
 		
 		int buffsNow = 0;
-		final String var = loadGlobalQuestVar("SeedNextStatusChange");
+		final String var = GlobalVariablesManager.getInstance().getString("SeedNextStatusChange");
 		if (var.equalsIgnoreCase("") || (Long.parseLong(var) < System.currentTimeMillis()))
 		{
 			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
-			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
+			GlobalVariablesManager.getInstance().set("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
-			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
+			GlobalVariablesManager.getInstance().set("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
 		}
 		else
 		{
 			_seedsNextStatusChange = Long.parseLong(var);
-			buffsNow = Integer.parseInt(loadGlobalQuestVar("SeedBuffsList"));
+			buffsNow = Integer.parseInt(GlobalVariablesManager.getInstance().getString("SeedBuffsList"));
 		}
 		for (int i = 0; i < _regionsData.length; i++)
 		{
@@ -301,9 +302,9 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{
 			final int buffsNow = getRandom(ZONE_BUFFS_LIST.length);
-			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
+			GlobalVariablesManager.getInstance().set("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
-			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
+			GlobalVariablesManager.getInstance().set("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
 			for (int i = 0; i < _regionsData.length; i++)
 			{
 				_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];

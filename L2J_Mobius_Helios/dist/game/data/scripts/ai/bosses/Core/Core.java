@@ -21,6 +21,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -82,7 +83,7 @@ public final class Core extends AbstractNpcAI
 		}
 		else
 		{
-			final String test = loadGlobalQuestVar("Core_Attacked");
+			final String test = GlobalVariablesManager.getInstance().getString("Core_Attacked");
 			if (test.equalsIgnoreCase("true"))
 			{
 				_firstAttacked = true;
@@ -102,7 +103,7 @@ public final class Core extends AbstractNpcAI
 	@Override
 	public void onSave()
 	{
-		saveGlobalQuestVar("Core_Attacked", Boolean.toString(_firstAttacked));
+		GlobalVariablesManager.getInstance().set("Core_Attacked", Boolean.toString(_firstAttacked));
 	}
 	
 	public void spawnBoss(L2GrandBossInstance npc)

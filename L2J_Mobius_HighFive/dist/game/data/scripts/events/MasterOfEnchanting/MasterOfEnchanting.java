@@ -93,7 +93,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
 			final long curTime = System.currentTimeMillis();
-			final String value = getGlobalQuestVar(player.getAccountName());
+			final String value = player.getVariables().getString("MasterOfEnchanting");
 			final long reuse = value == "" ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(EVENT_START))
 			{
@@ -106,7 +106,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				{
 					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
 					giveItems(player, MASTER_YOGI_SCROLL, 24);
-					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					player.getVariables().set("MasterOfEnchanting", Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else
@@ -134,21 +134,18 @@ public final class MasterOfEnchanting extends LongTimeEvent
 					player.sendPacket(sm);
 					htmltext = "32599-scroll24.htm";
 				}
+				// Little glitch. There is no SystemMessage with seconds only.
+				// If time is less than 1 minute player can buy scrolls
+				else if (getQuestItemsCount(player, Inventory.ADENA_ID) > SCROLL_24_PRICE)
+				{
+					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
+					giveItems(player, MASTER_YOGI_SCROLL, 24);
+					player.getVariables().set("MasterOfEnchanting", Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					htmltext = "32599-scroll24.htm";
+				}
 				else
 				{
-					// Little glitch. There is no SystemMessage with seconds only.
-					// If time is less than 1 minute player can buy scrolls
-					if (getQuestItemsCount(player, Inventory.ADENA_ID) > SCROLL_24_PRICE)
-					{
-						takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
-						giveItems(player, MASTER_YOGI_SCROLL, 24);
-						saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
-						htmltext = "32599-scroll24.htm";
-					}
-					else
-					{
-						htmltext = "32599-s24-no.htm";
-					}
+					htmltext = "32599-s24-no.htm";
 				}
 			}
 		}
@@ -185,76 +182,118 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				switch (getEnchantLevel(player, MASTER_YOGI_STAFF))
 				{
 					case 4:
+					{
 						giveItems(player, 6406, 1); // Firework
 						break;
+					}
 					case 5:
+					{
 						giveItems(player, 6406, 2); // Firework
 						giveItems(player, 6407, 1); // Large Firework
 						break;
+					}
 					case 6:
+					{
 						giveItems(player, 6406, 3); // Firework
 						giveItems(player, 6407, 2); // Large Firework
 						break;
+					}
 					case 7:
+					{
 						giveItems(player, HAT_SHADOW_REWARD[getRandom(3)], 1);
 						break;
+					}
 					case 8:
+					{
 						giveItems(player, 955, 1); // Scroll: Enchant Weapon (D)
 						break;
+					}
 					case 9:
+					{
 						giveItems(player, 955, 1); // Scroll: Enchant Weapon (D)
 						giveItems(player, 956, 1); // Scroll: Enchant Armor (D)
 						break;
+					}
 					case 10:
+					{
 						giveItems(player, 951, 1); // Scroll: Enchant Weapon (C)
 						break;
+					}
 					case 11:
+					{
 						giveItems(player, 951, 1); // Scroll: Enchant Weapon (C)
 						giveItems(player, 952, 1); // Scroll: Enchant Armor (C)
 						break;
+					}
 					case 12:
+					{
 						giveItems(player, 948, 1); // Scroll: Enchant Armor (B)
 						break;
+					}
 					case 13:
+					{
 						giveItems(player, 729, 1); // Scroll: Enchant Weapon (A)
 						break;
+					}
 					case 14:
+					{
 						giveItems(player, HAT_EVENT_REWARD[getRandom(3)], 1);
 						break;
+					}
 					case 15:
+					{
 						giveItems(player, 13992, 1); // Grade S Accessory Chest (Event)
 						break;
+					}
 					case 16:
+					{
 						giveItems(player, 8762, 1); // Top-Grade Life Stone: level 76
 						break;
+					}
 					case 17:
+					{
 						giveItems(player, 959, 1); // Scroll: Enchant Weapon (S)
 						break;
+					}
 					case 18:
+					{
 						giveItems(player, 13991, 1); // Grade S Armor Chest (Event)
 						break;
+					}
 					case 19:
+					{
 						giveItems(player, 13990, 1); // Grade S Weapon Chest (Event)
 						break;
+					}
 					case 20:
+					{
 						giveItems(player, CRYSTAL_REWARD[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
+					}
 					case 21:
+					{
 						giveItems(player, 8762, 1); // Top-Grade Life Stone: level 76
 						giveItems(player, 8752, 1); // High-Grade Life Stone: level 76
 						giveItems(player, CRYSTAL_REWARD[getRandom(3)], 1); // Red/Blue/Green Soul Crystal - Stage 14
 						break;
+					}
 					case 22:
+					{
 						giveItems(player, 13989, 1); // S80 Grade Armor Chest (Event)
 						break;
+					}
 					case 23:
+					{
 						giveItems(player, 13988, 1); // S80 Grade Weapon Chest (Event)
+						break;
+					}
 					default:
+					{
 						if (getEnchantLevel(player, MASTER_YOGI_STAFF) > 23)
 						{
 							giveItems(player, 13988, 1); // S80 Grade Weapon Chest (Event)
 						}
-						break;
+					}
 				}
 				takeItems(player, MASTER_YOGI_STAFF, 1);
 				htmltext = "32599-rewardok.htm";

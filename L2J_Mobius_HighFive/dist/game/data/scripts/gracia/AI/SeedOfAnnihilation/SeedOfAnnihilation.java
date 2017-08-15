@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -40,6 +41,14 @@ import ai.AbstractNpcAI;
 public class SeedOfAnnihilation extends AbstractNpcAI
 {
 	private static final Map<Integer, Location> TELEPORT_ZONES = new HashMap<>();
+	static
+	{
+		TELEPORT_ZONES.put(60002, new Location(-213175, 182648, -10992));
+		TELEPORT_ZONES.put(60003, new Location(-181217, 186711, -10528));
+		TELEPORT_ZONES.put(60004, new Location(-180211, 182984, -15152));
+		TELEPORT_ZONES.put(60005, new Location(-179275, 186802, -10720));
+	}
+	
 	private static final int ANNIHILATION_FURNACE = 18928;
 	
 	// Strength, Agility, Wisdom
@@ -66,14 +75,6 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 	// 0: Bistakon, 1: Reptilikon, 2: Cokrakon
 	private final SeedRegion[] _regionsData = new SeedRegion[3];
 	private Long _seedsNextStatusChange;
-	
-	static
-	{
-		TELEPORT_ZONES.put(60002, new Location(-213175, 182648, -10992));
-		TELEPORT_ZONES.put(60003, new Location(-181217, 186711, -10528));
-		TELEPORT_ZONES.put(60004, new Location(-180211, 182984, -15152));
-		TELEPORT_ZONES.put(60005, new Location(-179275, 186802, -10720));
-	}
 	
 	public SeedOfAnnihilation()
 	{
@@ -226,18 +227,18 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		});
 		
 		int buffsNow = 0;
-		final String var = getGlobalQuestVar("SeedNextStatusChange");
+		final String var = GlobalVariablesManager.getInstance().getString("SeedNextStatusChange");
 		if (var.equalsIgnoreCase("") || (Long.parseLong(var) < System.currentTimeMillis()))
 		{
 			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
-			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
+			GlobalVariablesManager.getInstance().set("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
-			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
+			GlobalVariablesManager.getInstance().set("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
 		}
 		else
 		{
 			_seedsNextStatusChange = Long.parseLong(var);
-			buffsNow = Integer.parseInt(getGlobalQuestVar("SeedBuffsList"));
+			buffsNow = Integer.parseInt(GlobalVariablesManager.getInstance().getString("SeedBuffsList"));
 		}
 		for (int i = 0; i < _regionsData.length; i++)
 		{
@@ -300,9 +301,9 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		if (event.equalsIgnoreCase("ChangeSeedsStatus"))
 		{
 			final int buffsNow = getRandom(ZONE_BUFFS_LIST.length);
-			saveGlobalQuestVar("SeedBuffsList", String.valueOf(buffsNow));
+			GlobalVariablesManager.getInstance().set("SeedBuffsList", String.valueOf(buffsNow));
 			_seedsNextStatusChange = getNextSeedsStatusChangeTime();
-			saveGlobalQuestVar("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
+			GlobalVariablesManager.getInstance().set("SeedNextStatusChange", String.valueOf(_seedsNextStatusChange));
 			for (int i = 0; i < _regionsData.length; i++)
 			{
 				_regionsData[i].activeBuff = ZONE_BUFFS_LIST[buffsNow][i];

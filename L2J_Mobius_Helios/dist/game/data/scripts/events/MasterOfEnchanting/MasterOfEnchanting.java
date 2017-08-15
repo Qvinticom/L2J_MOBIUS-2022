@@ -92,7 +92,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
 			final long curTime = System.currentTimeMillis();
-			final String value = loadGlobalQuestVar(player.getAccountName());
+			final String value = player.getVariables().getString("MasterOfEnchanting");
 			final long reuse = value == "" ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(EVENT_START))
 			{
@@ -105,7 +105,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				{
 					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
 					giveItems(player, MASTER_YOGI_SCROLL, 24);
-					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					player.getVariables().set("MasterOfEnchanting", Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else
@@ -139,7 +139,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 				{
 					takeItems(player, Inventory.ADENA_ID, SCROLL_24_PRICE);
 					giveItems(player, MASTER_YOGI_SCROLL, 24);
-					saveGlobalQuestVar(player.getAccountName(), Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
+					player.getVariables().set("MasterOfEnchanting", Long.toString(System.currentTimeMillis() + (SCROLL_24_TIME * 3600000)));
 					htmltext = "32599-scroll24.htm";
 				}
 				else

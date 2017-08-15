@@ -323,7 +323,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					saveGlobalQuestVar("1ClassQuestFinished", "1");
+					player.getVariables().set("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -671,7 +671,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						saveGlobalQuestVar("1ClassQuestFinished", "1");
+						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "30316-05.html";
 					}
 					break;
