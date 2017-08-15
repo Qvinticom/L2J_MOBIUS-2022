@@ -87,9 +87,6 @@ public class QuestLink implements IBypassHandler
 		final StringBuilder sbCanStart = new StringBuilder(128);
 		final StringBuilder sbCantStart = new StringBuilder(128);
 		final StringBuilder sbCompleted = new StringBuilder(128);
-		Quest lastSavedAvailableQuest = null;
-		Quest lastSavedProgressQuest = null;
-		int questCounter = 0;
 		
 		//@formatter:off
 		final Set<Quest> startingQuests = npc.getListeners(EventType.ON_NPC_QUEST_START).stream()
@@ -126,8 +123,6 @@ public class QuestLink implements IBypassHandler
 					sbCanStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
 					sbCanStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
 					sbCanStart.append("</button></font>");
-					lastSavedAvailableQuest = quest;
-					questCounter++;
 				}
 				else
 				{
@@ -135,8 +130,11 @@ public class QuestLink implements IBypassHandler
 					sbCantStart.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
 					sbCantStart.append(quest.isCustomQuest() ? quest.getPath() : "<fstring>" + quest.getNpcStringId() + "01</fstring>");
 					sbCantStart.append("</button></font>");
-					questCounter++;
 				}
+			}
+			else if (Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
+			{
+				continue;
 			}
 			else if (qs.isStarted())
 			{
@@ -144,8 +142,6 @@ public class QuestLink implements IBypassHandler
 				sbStarted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
 				sbStarted.append(quest.isCustomQuest() ? quest.getPath() + " (In Progress)" : "<fstring>" + quest.getNpcStringId() + "02</fstring>");
 				sbStarted.append("</button></font>");
-				lastSavedProgressQuest = quest;
-				questCounter++;
 			}
 			else if (qs.isCompleted())
 			{
@@ -153,21 +149,6 @@ public class QuestLink implements IBypassHandler
 				sbCompleted.append("<button icon=\"quest\" align=\"left\" action=\"bypass -h npc_" + npc.getObjectId() + "_Quest " + quest.getName() + "\">");
 				sbCompleted.append(quest.isCustomQuest() ? quest.getPath() + " (Done) " : "<fstring>" + quest.getNpcStringId() + "03</fstring>");
 				sbCompleted.append("</button></font>");
-				questCounter++;
-			}
-		}
-		
-		if (questCounter == 1)
-		{
-			if (lastSavedProgressQuest != null)
-			{
-				showQuestWindow(player, npc, lastSavedProgressQuest.getName());
-				return;
-			}
-			if (lastSavedAvailableQuest != null)
-			{
-				showQuestWindow(player, npc, lastSavedAvailableQuest.getName());
-				return;
 			}
 		}
 		
@@ -267,7 +248,8 @@ public class QuestLink implements IBypassHandler
 			.map(AbstractEventListener::getOwner)
 			.filter(Quest.class::isInstance)
 			.map(Quest.class::cast)
-			.filter(quest -> (quest.getId() > 0) && (quest.getId() < 20000))
+			.filter(quest -> (quest.getId() > 0) && (quest.getId() < 20000) && (quest.getId() != 255))
+			.filter(quest -> !Quest.getNoQuestMsg(player).equals(quest.onTalk(npc, player, true)))
 			.distinct()
 			.collect(Collectors.toSet());
 		//@formatter:on

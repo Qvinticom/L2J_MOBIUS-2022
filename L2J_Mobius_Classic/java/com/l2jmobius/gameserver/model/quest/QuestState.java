@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerQuestComplete;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
@@ -49,6 +48,9 @@ public final class QuestState
 	
 	/** The current state of the quest */
 	private byte _state;
+	
+	/** Used for simulating Quest onTalk */
+	private boolean _simulated = false;
 	
 	/** A map of key->value pairs containing the quest state variables and their values */
 	private Map<String, String> _vars;
@@ -153,6 +155,10 @@ public final class QuestState
 	 */
 	public boolean setState(byte state, boolean saveInDb)
 	{
+		if (_simulated)
+		{
+			return false;
+		}
 		if (_state == state)
 		{
 			return false;
@@ -183,6 +189,11 @@ public final class QuestState
 	 */
 	public String setInternal(String var, String val)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
@@ -199,6 +210,10 @@ public final class QuestState
 	
 	public String set(String var, int val)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
 		return set(var, Integer.toString(val));
 	}
 	
@@ -219,6 +234,11 @@ public final class QuestState
 	 */
 	public String set(String var, String val)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		if (_vars == null)
 		{
 			_vars = new HashMap<>();
@@ -279,6 +299,11 @@ public final class QuestState
 	 */
 	private void setCond(int cond, int old)
 	{
+		if (_simulated)
+		{
+			return;
+		}
+		
 		if (cond == old)
 		{
 			return;
@@ -368,6 +393,11 @@ public final class QuestState
 	 */
 	public String unset(String var)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		if (_vars == null)
 		{
 			return null;
@@ -445,6 +475,11 @@ public final class QuestState
 	 */
 	public QuestState setCond(int value)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		if (isStarted())
 		{
 			set("cond", Integer.toString(value));
@@ -501,6 +536,11 @@ public final class QuestState
 	 */
 	public QuestState setCond(int value, boolean playQuestMiddle)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		if (!isStarted())
 		{
 			return this;
@@ -509,13 +549,17 @@ public final class QuestState
 		
 		if (playQuestMiddle)
 		{
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_MIDDLE.getPacket());
 		}
 		return this;
 	}
 	
 	public QuestState setMemoState(int value)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
 		set("memoState", String.valueOf(value));
 		return this;
 	}
@@ -559,6 +603,10 @@ public final class QuestState
 	 */
 	public QuestState setMemoStateEx(int slot, int value)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
 		set("memoStateEx" + slot, String.valueOf(value));
 		return this;
 	}
@@ -574,21 +622,6 @@ public final class QuestState
 		return (getMemoStateEx(slot) == memoStateEx);
 	}
 	
-	public void addRadar(int x, int y, int z)
-	{
-		_player.getRadar().addMarker(x, y, z);
-	}
-	
-	public void removeRadar(int x, int y, int z)
-	{
-		_player.getRadar().removeMarker(x, y, z);
-	}
-	
-	public void clearRadar()
-	{
-		_player.getRadar().removeAllMarkers();
-	}
-	
 	/**
 	 * @return {@code true} if quest is to be exited on clean up by QuestStateManager, {@code false} otherwise
 	 */
@@ -602,6 +635,10 @@ public final class QuestState
 	 */
 	public void setIsExitQuestOnCleanUp(boolean isExitQuestOnCleanUp)
 	{
+		if (_simulated)
+		{
+			return;
+		}
 		_isExitQuestOnCleanUp = isExitQuestOnCleanUp;
 	}
 	
@@ -612,11 +649,15 @@ public final class QuestState
 	 */
 	public QuestState startQuest()
 	{
+		if (_simulated)
+		{
+			return null;
+		}
 		if (isCreated() && !getQuest().isCustomQuest())
 		{
 			set("cond", "1");
 			setState(State.STARTED);
-			AbstractScript.playSound(getPlayer(), QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_ACCEPT.getPacket());
 			getQuest().sendNpcLogList(getPlayer());
 		}
 		return this;
@@ -633,6 +674,11 @@ public final class QuestState
 	 */
 	public QuestState exitQuest(QuestType type)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		switch (type)
 		{
 			case DAILY:
@@ -668,10 +714,14 @@ public final class QuestState
 	 */
 	public QuestState exitQuest(QuestType type, boolean playExitQuest)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
 		exitQuest(type);
 		if (playExitQuest)
 		{
-			AbstractScript.playSound(getPlayer(), QuestSound.ITEMSOUND_QUEST_FINISH);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
 		}
 		return this;
 	}
@@ -687,6 +737,11 @@ public final class QuestState
 	 */
 	private QuestState exitQuest(boolean repeatable)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		_player.removeNotifyQuestOfDeath(this);
 		
 		if (!isStarted())
@@ -723,10 +778,15 @@ public final class QuestState
 	 */
 	public QuestState exitQuest(boolean repeatable, boolean playExitQuest)
 	{
+		if (_simulated)
+		{
+			return null;
+		}
+		
 		exitQuest(repeatable);
 		if (playExitQuest)
 		{
-			AbstractScript.playSound(getPlayer(), QuestSound.ITEMSOUND_QUEST_FINISH);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
 		}
 		
 		// Notify to scripts
@@ -741,6 +801,11 @@ public final class QuestState
 	 */
 	public void setRestartTime()
 	{
+		if (_simulated)
+		{
+			return;
+		}
+		
 		final Calendar reDo = Calendar.getInstance();
 		if (reDo.get(Calendar.HOUR_OF_DAY) >= getQuest().getResetHour())
 		{
@@ -759,5 +824,10 @@ public final class QuestState
 	{
 		final String val = get("restartTime");
 		return (val != null) && (!Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis()));
+	}
+	
+	public void setSimulated(boolean simulated)
+	{
+		_simulated = simulated;
 	}
 }

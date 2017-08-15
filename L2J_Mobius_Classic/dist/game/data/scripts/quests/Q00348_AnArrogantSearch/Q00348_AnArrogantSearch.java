@@ -357,8 +357,8 @@ public class Q00348_AnArrogantSearch extends Quest
 							st.setMemoStateEx(1, st.getMemoStateEx(1) + 10);
 							if ((st.getMemoStateEx(1) % 10) == 0)
 							{
-								st.clearRadar();
-								st.addRadar(-2908, 44128, -2712);
+								clearRadar(attacker);
+								addRadar(attacker, -2908, 44128, -2712);
 							}
 							else
 							{
@@ -1073,7 +1073,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					if (hasQuestItems(player, FIRST_KEY_OF_ARK))
 					{
 						giveItems(player, BLOOD_OF_SAINT, 1);
-						st.clearRadar();
+						clearRadar(player);
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
 							if (hasQuestItems(player, BOOK_OF_SAINT, BOUGH_OF_SAINT))
@@ -1119,7 +1119,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					{
 						giveItems(player, BOOK_OF_SAINT, 1);
 						takeItems(player, SECOND_KEY_OF_ARK, 1);
-						st.clearRadar();
+						clearRadar(player);
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
 							if (hasQuestItems(player, BLOOD_OF_SAINT, BOUGH_OF_SAINT))
@@ -1172,7 +1172,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					{
 						giveItems(player, BOUGH_OF_SAINT, 1);
 						takeItems(player, THIRD_KEY_OF_ARK, 1);
-						st.clearRadar();
+						clearRadar(player);
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
 							if (hasQuestItems(player, BLOOD_OF_SAINT, BOOK_OF_SAINT))
@@ -1224,7 +1224,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					if ((st.getMemoState() < 8) && (((st.getMemoStateEx(1) % 100) / 10) == 1) && !hasQuestItems(player, FIRST_KEY_OF_ARK) && !hasQuestItems(player, BLOOD_OF_SAINT))
 					{
 						htmltext = "30980-02.html";
-						st.clearRadar();
+						clearRadar(player);
 						if ((st.getMemoStateEx(1) % 10) != 0)
 						{
 							st.setCond(18, true);
@@ -1237,7 +1237,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					else if ((st.getMemoState() < 8) && (((st.getMemoStateEx(1) % 100) / 10) == 2) && !hasQuestItems(player, FIRST_KEY_OF_ARK) && !hasQuestItems(player, BLOOD_OF_SAINT))
 					{
 						giveItems(player, FIRST_KEY_OF_ARK, 1);
-						st.addRadar(-418, 44174, -3568);
+						addRadar(player, -418, 44174, -3568);
 						htmltext = "30980-03.html";
 					}
 					else if (hasAtLeastOneQuestItem(player, FIRST_KEY_OF_ARK, BLOOD_OF_SAINT))
@@ -1253,7 +1253,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						int i0 = st.getMemoStateEx(1) + 100;
 						if ((i0 % 10) == 0)
 						{
-							st.addRadar(181472, 7158, -2725);
+							addRadar(player, 181472, 7158, -2725);
 						}
 						else
 						{
@@ -1269,7 +1269,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						// retail typo
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
-							st.addRadar(181472, 7158, -2725);
+							addRadar(player, 181472, 7158, -2725);
 						}
 						
 						htmltext = "31001-03.html";
@@ -1278,7 +1278,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					{
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
-							st.addRadar(181472, 7158, -2725);
+							addRadar(player, 181472, 7158, -2725);
 						}
 						
 						htmltext = "31001-04.html";
@@ -1296,7 +1296,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						int i0 = st.getMemoStateEx(1) + 10;
 						if ((i0 % 10) == 0)
 						{
-							st.addRadar(2908, 44128, -2712);
+							addRadar(player, 2908, 44128, -2712);
 						}
 						else
 						{
@@ -1312,7 +1312,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						// retail typo
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
-							st.addRadar(2908, 44128, -2712);
+							addRadar(player, 2908, 44128, -2712);
 						}
 						
 						htmltext = "30144-03.html";
@@ -1321,7 +1321,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					{
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
-							st.addRadar(2908, 44128, -2712);
+							addRadar(player, 2908, 44128, -2712);
 						}
 						
 						htmltext = "30144-04.html";
@@ -1339,7 +1339,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						int i0 = st.getMemoStateEx(1) + 1000;
 						if ((i0 % 10) == 0)
 						{
-							st.addRadar(50693, 158674, 376);
+							addRadar(player, 50693, 158674, 376);
 						}
 						else
 						{
@@ -1355,7 +1355,7 @@ public class Q00348_AnArrogantSearch extends Quest
 						// retail typo
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
-							st.addRadar(50693, 158674, 376);
+							addRadar(player, 50693, 158674, 376);
 						}
 						
 						htmltext = "30645-03.html";
@@ -1364,7 +1364,7 @@ public class Q00348_AnArrogantSearch extends Quest
 					{
 						if ((st.getMemoStateEx(1) % 10) == 0)
 						{
-							st.addRadar(50693, 158674, 376);
+							addRadar(player, 50693, 158674, 376);
 						}
 						
 						htmltext = "30645-04.html";

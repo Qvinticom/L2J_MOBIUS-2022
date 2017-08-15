@@ -579,6 +579,9 @@ public final class L2PcInstance extends L2Playable
 	/** Last NPC Id talked on a quest */
 	private int _questNpcObject = 0;
 	
+	/** Used for simulating Quest onTalk */
+	private boolean _simulatedTalking = false;
+	
 	/** The table containing all Quests began by the L2PcInstance */
 	private final Map<String, QuestState> _quests = new ConcurrentHashMap<>();
 	
@@ -1370,6 +1373,16 @@ public final class L2PcInstance extends L2Playable
 	public void setLastQuestNpcObject(int npcId)
 	{
 		_questNpcObject = npcId;
+	}
+	
+	public boolean isSimulatingTalking()
+	{
+		return _simulatedTalking;
+	}
+	
+	public void setSimulatedTalking(boolean value)
+	{
+		_simulatedTalking = value;
 	}
 	
 	/**

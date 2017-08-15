@@ -635,7 +635,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			}
 			else
 			{
-				res = onTalk(npc, player);
+				res = onTalk(npc, player, false);
 			}
 		}
 		catch (Exception e)
@@ -1111,6 +1111,24 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		return null;
+	}
+	
+	/**
+	 * This function is called whenever a player clicks to the "Quest" link of an NPC that is registered for the quest.
+	 * @param npc this parameter contains a reference to the exact instance of the NPC that the player is talking with.
+	 * @param talker this parameter contains a reference to the exact instance of the player who is talking to the NPC.
+	 * @param simulated Used by QuestLink to determine state of quest.
+	 * @return the text returned by the event (may be {@code null}, a filename or just text)
+	 */
+	public String onTalk(L2Npc npc, L2PcInstance talker, boolean simulated)
+	{
+		final QuestState qs = talker.getQuestState(getName());
+		if (qs != null)
+		{
+			qs.setSimulated(simulated);
+		}
+		talker.setSimulatedTalking(simulated);
+		return onTalk(npc, talker);
 	}
 	
 	/**
