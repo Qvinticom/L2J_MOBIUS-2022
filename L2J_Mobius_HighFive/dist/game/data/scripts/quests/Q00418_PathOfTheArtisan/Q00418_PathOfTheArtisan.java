@@ -218,7 +218,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -244,7 +244,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -270,7 +270,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -296,7 +296,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -370,7 +370,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -406,7 +406,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;

@@ -307,7 +307,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 								}
 								qs.exitQuest(false, true);
 								player.sendPacket(new SocialAction(player.getObjectId(), 3));
-								qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+								saveGlobalQuestVar("1ClassQuestFinished", "1");
 								htmltext = "30293-08.html";
 							}
 						}

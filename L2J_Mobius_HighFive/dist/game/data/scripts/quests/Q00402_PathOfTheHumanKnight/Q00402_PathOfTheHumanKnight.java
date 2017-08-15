@@ -169,7 +169,7 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -196,7 +196,7 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 					}
 					qs.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+					saveGlobalQuestVar("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -409,7 +409,7 @@ public final class Q00402_PathOfTheHumanKnight extends Quest
 							}
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
-							qs.saveGlobalQuestVar("1ClassQuestFinished", "1");
+							saveGlobalQuestVar("1ClassQuestFinished", "1");
 							htmltext = "30417-12.html";
 						}
 					}

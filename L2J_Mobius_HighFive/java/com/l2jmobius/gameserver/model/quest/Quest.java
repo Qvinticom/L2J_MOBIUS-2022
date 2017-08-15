@@ -1568,7 +1568,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param var the name of the variable to load
 	 * @return the current value of the specified variable, or an empty string if the variable does not exist
 	 */
-	public final String loadGlobalQuestVar(String var)
+	public final String getGlobalQuestVar(String var)
 	{
 		String result = "";
 		try (Connection con = DatabaseFactory.getInstance().getConnection();

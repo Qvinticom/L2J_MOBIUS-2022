@@ -328,7 +328,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 				{
 					for (int i = 1; i <= Config.MAX_SUBCLASS; i++)
 					{
-						final String itemOID = st.getGlobalQuestVar(varName + i);
+						final String itemOID = st.getQuest().getGlobalQuestVar(varName + i);
 						if (!itemOID.isEmpty() && !itemOID.endsWith(";") && !itemOID.equals("0"))
 						{
 							if (Util.isDigit(itemOID))
@@ -345,7 +345,7 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 											{
 												giveSkill(activeChar, trainer, skill);
 												// Logging the given skill.
-												st.saveGlobalQuestVar(varName + i, skill.getId() + ";");
+												st.getQuest().saveGlobalQuestVar(varName + i, skill.getId() + ";");
 											}
 											return;
 										}

@@ -100,7 +100,7 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest
 				{
 					return "32711-09.html";
 				}
-				final String respawn = loadGlobalQuestVar("Respawn");
+				final String respawn = getGlobalQuestVar("Respawn");
 				final long remain = !respawn.isEmpty() ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
 				if (remain > 0)
 				{

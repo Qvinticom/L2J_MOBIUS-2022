@@ -79,7 +79,7 @@ public final class Core extends AbstractNpcAI
 		}
 		else
 		{
-			final String test = loadGlobalQuestVar("Core_Attacked");
+			final String test = getGlobalQuestVar("Core_Attacked");
 			if (test.equalsIgnoreCase("true"))
 			{
 				_firstAttacked = true;

@@ -80,7 +80,7 @@ public final class FreyaCelebration extends LongTimeEvent
 			if (getQuestItemsCount(player, Inventory.ADENA_ID) > 1)
 			{
 				final long _curr_time = System.currentTimeMillis();
-				final String value = loadGlobalQuestVar(player.getAccountName());
+				final String value = getGlobalQuestVar(player.getAccountName());
 				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (_curr_time > _reuse_time)

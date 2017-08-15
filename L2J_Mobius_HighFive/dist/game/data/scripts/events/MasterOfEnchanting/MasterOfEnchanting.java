@@ -93,7 +93,7 @@ public final class MasterOfEnchanting extends LongTimeEvent
 		else if (event.equalsIgnoreCase("buy_scroll_24"))
 		{
 			final long curTime = System.currentTimeMillis();
-			final String value = loadGlobalQuestVar(player.getAccountName());
+			final String value = getGlobalQuestVar(player.getAccountName());
 			final long reuse = value == "" ? 0 : Long.parseLong(value);
 			if (player.getCreateDate().after(EVENT_START))
 			{

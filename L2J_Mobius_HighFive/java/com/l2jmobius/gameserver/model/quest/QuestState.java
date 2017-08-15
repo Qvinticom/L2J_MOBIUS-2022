@@ -16,16 +16,12 @@
  */
 package com.l2jmobius.gameserver.model.quest;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
@@ -389,86 +385,17 @@ public final class QuestState
 	}
 	
 	/**
-	 * Insert (or update) in the database variables that need to stay persistent for this player after a reboot. This function is for storage of values that are not related to a specific quest but are global instead, i.e. can be used by any script.
-	 * @param var the name of the variable to save
-	 * @param value the value of the variable
-	 */
-	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
-	public final void saveGlobalQuestVar(String var, String value)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_quest_global_data (charId, var, value) VALUES (?, ?, ?)"))
-		{
-			ps.setInt(1, _player.getObjectId());
-			ps.setString(2, var);
-			ps.setString(3, value);
-			ps.executeUpdate();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Could not insert player's global quest variable: " + e.getMessage(), e);
-		}
-	}
-	
-	/**
-	 * Read from the database a previously saved variable for this quest.<br>
-	 * Due to performance considerations, this function should best be used only when the quest is first loaded.<br>
-	 * Subclasses of this class can define structures into which these loaded values can be saved.<br>
-	 * However, on-demand usage of this function throughout the script is not prohibited, only not recommended.<br>
-	 * Values read from this function were entered by calls to "saveGlobalQuestVar".
-	 * @param var the name of the variable whose value to get
-	 * @return the value of the variable or an empty string if the variable does not exist in the database
-	 */
-	// TODO: these methods should not be here, they could be used by other classes to save some variables, but they can't because they require to create a QuestState first.
-	public final String getGlobalQuestVar(String var)
-	{
-		String result = "";
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT value FROM character_quest_global_data WHERE charId = ? AND var = ?"))
-		{
-			ps.setInt(1, _player.getObjectId());
-			ps.setString(2, var);
-			try (ResultSet rs = ps.executeQuery())
-			{
-				if (rs.first())
-				{
-					result = rs.getString(1);
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Could not load player's global quest variable: " + e.getMessage(), e);
-		}
-		return result;
-	}
-	
-	/**
-	 * Permanently delete a global quest variable from the database.
-	 * @param var the name of the variable to delete
-	 */
-	public final void deleteGlobalQuestVar(String var)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_quest_global_data WHERE charId = ? AND var = ?"))
-		{
-			ps.setInt(1, _player.getObjectId());
-			ps.setString(2, var);
-			ps.executeUpdate();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "could not delete player's global quest variable; charId = " + _player.getObjectId() + ", variable name = " + var + ". Exception: " + e.getMessage(), e);
-		}
-	}
-	
-	/**
 	 * @param var the name of the variable to get
 	 * @return the value of the variable from the list of quest variables
 	 */
 	public String get(String var)
 	{
-		return _vars == null ? null : _vars.get(var);
+		if (_vars == null)
+		{
+			return null;
+		}
+		
+		return _vars.get(var);
 	}
 	
 	/**

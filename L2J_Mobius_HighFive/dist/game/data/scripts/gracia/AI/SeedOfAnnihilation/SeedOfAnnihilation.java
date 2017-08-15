@@ -226,7 +226,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		});
 		
 		int buffsNow = 0;
-		final String var = loadGlobalQuestVar("SeedNextStatusChange");
+		final String var = getGlobalQuestVar("SeedNextStatusChange");
 		if (var.equalsIgnoreCase("") || (Long.parseLong(var) < System.currentTimeMillis()))
 		{
 			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
@@ -237,7 +237,7 @@ public class SeedOfAnnihilation extends AbstractNpcAI
 		else
 		{
 			_seedsNextStatusChange = Long.parseLong(var);
-			buffsNow = Integer.parseInt(loadGlobalQuestVar("SeedBuffsList"));
+			buffsNow = Integer.parseInt(getGlobalQuestVar("SeedBuffsList"));
 		}
 		for (int i = 0; i < _regionsData.length; i++)
 		{

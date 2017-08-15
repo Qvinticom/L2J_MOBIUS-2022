@@ -109,7 +109,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 		{
 			if (player.getAdena() >= PRICE_VOICE)
 			{
-				final String value = loadGlobalQuestVar(player.getAccountName() + "_voice");
+				final String value = getGlobalQuestVar(player.getAccountName() + "_voice");
 				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (System.currentTimeMillis() > _reuse_time)
@@ -140,7 +140,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 			
 			if (player.getAdena() >= _price_hourglass)
 			{
-				final String value = loadGlobalQuestVar(player.getAccountName() + "_hg_" + _index);
+				final String value = getGlobalQuestVar(player.getAccountName() + "_hg_" + _index);
 				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
 				
 				if (System.currentTimeMillis() > _reuse_time)

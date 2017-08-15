@@ -112,7 +112,15 @@ public class QuestTimer
 	 */
 	public boolean isMatch(Quest quest, String name, L2Npc npc, L2PcInstance player)
 	{
-		return (quest != null) && (name != null) && (quest == _quest) && name.equalsIgnoreCase(getName()) && (npc == _npc) && (player == _player);
+		if ((quest == null) || (name == null))
+		{
+			return false;
+		}
+		if ((quest != _quest) || !name.equalsIgnoreCase(getName()))
+		{
+			return false;
+		}
+		return ((npc == _npc) && (player == _player));
 	}
 	
 	public final boolean getIsActive()

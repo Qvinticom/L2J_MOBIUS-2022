@@ -52,7 +52,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		addKillId(NASTRON);
 		registerQuestItems(RED_TOTEM, NASTRON_HEART);
 		
-		final String test = loadGlobalQuestVar("Q00616_respawn");
+		final String test = getGlobalQuestVar("Q00616_respawn");
 		final long remain = (!test.isEmpty()) ? (Long.parseLong(test) - System.currentTimeMillis()) : 0;
 		if (remain > 0)
 		{
