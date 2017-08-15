@@ -308,7 +308,6 @@ public final class Q00403_PathOfTheRogue extends Quest
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "30379-09.html";
 					}
 					else if (!hasQuestItems(player, HORSESHOE_OF_LIGHT) && hasQuestItems(player, BEZIQUES_LETTER))

@@ -309,7 +309,6 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "30501-03.html";
 					}
 					break;
@@ -345,7 +344,6 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 							}
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
-							player.getVariables().set("1ClassQuestFinished", "1");
 							htmltext = "31978-05.html";
 						}
 					}

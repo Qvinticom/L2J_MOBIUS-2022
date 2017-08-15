@@ -261,7 +261,6 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "30329-11.html";
 					}
 					else if (hasAtLeastOneQuestItem(player, VIRGILS_LETTER, MORTE_TALISMAN))

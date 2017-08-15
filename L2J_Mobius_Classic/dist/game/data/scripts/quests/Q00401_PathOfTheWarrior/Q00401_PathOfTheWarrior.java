@@ -279,7 +279,6 @@ public final class Q00401_PathOfTheWarrior extends Quest
 							addExpAndSp(player, 6080, 0); // Player now only gets EXP Fixed rate.
 							qs.exitQuest(false, true);
 							player.sendPacket(new SocialAction(player.getObjectId(), 3));
-							player.getVariables().set("1ClassQuestFinished", "1");
 							htmltext = "30010-13.html";
 						}
 					}

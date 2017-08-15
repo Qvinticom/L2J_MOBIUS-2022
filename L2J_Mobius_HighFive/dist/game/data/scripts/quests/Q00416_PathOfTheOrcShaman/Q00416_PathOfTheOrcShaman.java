@@ -189,7 +189,6 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 					giveAdena(player, 163800, true);
 					st.exitQuest(false, true);
 					player.sendPacket(new SocialAction(player.getObjectId(), 3));
-					player.getVariables().set("1ClassQuestFinished", "1");
 					htmltext = event;
 				}
 				break;
@@ -503,7 +502,6 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 						giveAdena(player, 81900, true);
 						st.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						player.getVariables().set("1ClassQuestFinished", "1");
 						htmltext = "31979-03.html";
 					}
 					break;

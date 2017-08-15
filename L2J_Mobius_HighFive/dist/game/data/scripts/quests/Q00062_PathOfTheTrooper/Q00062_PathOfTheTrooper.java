@@ -231,7 +231,6 @@ public final class Q00062_PathOfTheTrooper extends Quest
 								}
 								qs.exitQuest(false, true);
 								player.sendPacket(new SocialAction(player.getObjectId(), 3));
-								player.getVariables().set("1ClassQuestFinished", "1");
 								htmltext = "32197-10.html";
 							}
 							break;
