@@ -34,7 +34,7 @@ import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTh
 /**
  * Reconnaissance at Dragon Valley (10800)
  * @URL https://l2wiki.com/Reconnaissance_at_Dragon_Valley
- * @author Gigi
+ * @author Gigi / Stayway (Rework Helios)
  */
 public class Q10800_ReconnaissanceAtDragonValley extends Quest
 {
@@ -51,7 +51,6 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 		23442, // Dark Grave Warrior
 		23443, // Dark Grave Wizard
 		23444, // Dark Grave Knight
-		23447 // Gust Spiral
 	};
 	// Item
 	private static final int EAS = 960;

@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 /**
  * Strange Things Afoot in the Valley (10799)
  * @URL https://l2wiki.com/Strange_Things_Afoot_in_the_Valley
- * @author Gigi
+ * @author Gigi / Stayway (Rework Helios)
  */
 public class Q10799_StrangeThingsAfootInTheValley extends Quest
 {
@@ -52,7 +52,6 @@ public class Q10799_StrangeThingsAfootInTheValley extends Quest
 		23438, // Metallic Cave Servant
 		23439, // Iron Cave Servant
 		23440, // Headless Knight
-		23447 // Gust Spiral
 	};
 	// Items
 	private static final int EAS = 960;
