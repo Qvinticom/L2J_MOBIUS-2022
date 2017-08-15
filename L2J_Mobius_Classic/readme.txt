@@ -24,9 +24,9 @@ What is done
 -Fixed skill levels to match retail
 -Added new class mounts
 -Fisherman NPC updates
--Quest Fishing Specialist's Request
 -Fixed fishing to match retail
--Added new fishing zone locations.
+-Added new fishing zone locations
+-Quest Fishing Specialist's Request
 -Olympiad NPC updates
 -Dimensional Merchant updates
 -Retail gatekeeper teleports
@@ -37,7 +37,6 @@ What is done
 -Grandboss scripts and stats
 -Whisper of Dreams quests
 -Moon Knight quest
--Aden fishing zones
 -Item augmentation support
 -Retail Henna list
 
