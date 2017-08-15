@@ -41,7 +41,6 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 	private static final int MARTIAN = 30645;
 	private static final int RALDO = 30646;
 	private static final int CHEST_OF_SHYSLASSYS = 30647;
-	private static final int MARKETEER_OF_MAMMON = 31092;
 	// Items
 	private static final int LETTER_OF_KASH = 2628;
 	private static final int WATCHERS_EYE1 = 2629;
@@ -71,7 +70,7 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 	{
 		super(211, Q00211_TrialOfTheChallenger.class.getSimpleName(), "Trial of the Challenger");
 		addStartNpc(KASH);
-		addTalkId(FILAUR, KASH, MARTIAN, RALDO, CHEST_OF_SHYSLASSYS, MARKETEER_OF_MAMMON);
+		addTalkId(FILAUR, KASH, MARTIAN, RALDO, CHEST_OF_SHYSLASSYS);
 		addKillId(SHYSLASSYS, GORR, BARAHAM, QUEEN_OF_SUCCUBUS);
 		registerQuestItems(LETTER_OF_KASH, WATCHERS_EYE1, WATCHERS_EYE2, SCROLL_OF_SHYSLASSYS, BROKEN_KEY);
 	}
