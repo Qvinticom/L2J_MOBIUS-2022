@@ -508,9 +508,9 @@
 		</for>
 	</skill>
 	<skill id="21242" levels="1" name="Zaken's Call">
-		<!-- Confirmed High Five -->
+		<!-- High Five Confirmed -->
 		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="20000" />
+		<set name="hitTime" val="10000" />
 		<set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -533,9 +533,9 @@
 		</for>
 	</skill>
 	<skill id="21243" levels="1" name="Freya's Call">
-		<!-- Confirmed High Five -->
+		<!-- High Five Confirmed -->
 		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="20000" />
+		<set name="hitTime" val="10000" />
 		<set name="icon" val="BranchSys2.Icon.br_freya_cloak_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -553,14 +553,14 @@
 		</cond>
 		<for>
 			<effect name="Teleport">
-				<param x="102744" y="-124296" z="-2784" />
+				<param x="102605" y="-124399" z="-2784" />
 			</effect>
 		</for>
 	</skill>
 	<skill id="21244" levels="1" name="Frintezza's Call">
-		<!-- Confirmed High Five -->
+		<!-- High Five Confirmed -->
 		<set name="blockedInOlympiad" val="true" />
-		<set name="hitTime" val="20000" />
+		<set name="hitTime" val="10000" />
 		<set name="icon" val="BranchSys2.Icon.br_frintessa_cloak_i00" />
 		<set name="isMagic" val="2" /> <!-- Static Skill -->
 		<set name="magicLvl" val="1" />
@@ -578,7 +578,7 @@
 		</cond>
 		<for>
 			<effect name="Teleport">
-				<param x="181384" y="-80856" z="-2728" />
+				<param x="181380" y="-80878" z="-2728" />
 			</effect>
 		</for>
 	</skill>

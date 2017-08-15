@@ -138,7 +138,7 @@ public class Q00021_HiddenTruth extends Quest
 						final L2Npc ghost = addSpawn(GHOST_OF_VON_HELLMAN, GHOST_LOC, false, 0);
 						ghost.broadcastPacket(new NpcSay(ghost.getObjectId(), ChatType.GENERAL, ghost.getId(), NpcStringId.WHO_AWOKE_ME));
 						GHOST_SPAWNED = true;
-						st.startQuestTimer("DESPAWN_GHOST", 1000 * 300, ghost);
+						startQuestTimer("DESPAWN_GHOST", 1000 * 300, ghost, player);
 						st.setCond(2);
 						playSound(player, QuestSound.SKILLSOUND_HORROR_2);
 						htmltext = event;
@@ -297,7 +297,7 @@ public class Q00021_HiddenTruth extends Quest
 						if (MOVE_ENDED)
 						{
 							htmltext = "31525-02.html";
-							st.startQuestTimer("DESPAWN", 3000, npc);
+							startQuestTimer("DESPAWN", 3000, npc, player);
 						}
 						else
 						{
@@ -449,7 +449,7 @@ public class Q00021_HiddenTruth extends Quest
 		final QuestState st = L2World.getInstance().getPlayer(npc.getScriptValue()).getQuestState(getName());
 		if (st != null)
 		{
-			st.startQuestTimer("DESPAWN", 15000, npc);
+			startQuestTimer("DESPAWN", 15000, npc, null);
 			MOVE_ENDED = true;
 		}
 	}

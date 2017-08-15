@@ -116,8 +116,22 @@
 	</skill>
 	<skill id="23312" levels="1" name="Fall of the Dragon">
 		<!-- Nevit's gift to honor those warriors who caused the evil dragon's fall. Increases Nevit's blessing by 3 hour(s). -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="2" />
+		<set name="abnormalTime" val="10800" />
+		<set name="abnormalType" val="VOTE" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="icon" val="BranchSys2.icon.the_fall_of_dragon" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="canBeDispeled" val="false" />
+		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="23313" levels="5" name="Action Prohibit Immunity">
 		<!-- Increases resistance to action-inhibiting attacks by 100%. -->

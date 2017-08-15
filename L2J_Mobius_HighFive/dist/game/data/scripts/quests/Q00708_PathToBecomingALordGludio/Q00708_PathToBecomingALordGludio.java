@@ -293,7 +293,7 @@ public class Q00708_PathToBecomingALordGludio extends Quest
 		{
 			if ((npc.getId() != HeadlessKnight) && (Rnd.get(9) == 0))
 			{
-				qs.addSpawn(HeadlessKnight, npc, 300000);
+				addSpawn(HeadlessKnight, npc, true, 300000);
 			}
 			else if (npc.getId() == HeadlessKnight)
 			{

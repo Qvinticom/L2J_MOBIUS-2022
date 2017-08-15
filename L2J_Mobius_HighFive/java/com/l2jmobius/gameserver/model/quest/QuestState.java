@@ -31,9 +31,7 @@ import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.events.AbstractScript;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowQuestMark;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
@@ -573,7 +571,7 @@ public final class QuestState
 		
 		if (playQuestMiddle)
 		{
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_MIDDLE.getPacket());
 		}
 		return this;
 	}
@@ -669,224 +667,6 @@ public final class QuestState
 	}
 	
 	/**
-	 * Start a timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed
-	 */
-	public void startQuestTimer(String name, long time)
-	{
-		getQuest().startQuestTimer(name, time, null, _player, false);
-	}
-	
-	/**
-	 * Start a timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed
-	 * @param npc the L2Npc associated with this event
-	 */
-	public void startQuestTimer(String name, long time, L2Npc npc)
-	{
-		getQuest().startQuestTimer(name, time, npc, _player, false);
-	}
-	
-	/**
-	 * Start a repeating timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed/repeated
-	 */
-	public void startRepeatingQuestTimer(String name, long time)
-	{
-		getQuest().startQuestTimer(name, time, null, _player, true);
-	}
-	
-	/**
-	 * Start a repeating timed event for a quest.<br>
-	 * Will call an event in onEvent/onAdvEvent.
-	 * @param name the name of the timer/event
-	 * @param time time in milliseconds till the event is executed/repeated
-	 * @param npc the L2Npc associated with this event
-	 */
-	public void startRepeatingQuestTimer(String name, long time, L2Npc npc)
-	{
-		getQuest().startQuestTimer(name, time, npc, _player, true);
-	}
-	
-	/**
-	 * @param name the name of the QuestTimer required
-	 * @return the {@link QuestTimer} object with the specified name or {@code null} if it doesn't exist
-	 */
-	public final QuestTimer getQuestTimer(String name)
-	{
-		return getQuest().getQuestTimer(name, null, _player);
-	}
-	
-	// --- Spawn methods ---
-	/**
-	 * Add a temporary spawn of the specified npc.<br>
-	 * Player's coordinates will be used for the spawn.
-	 * @param npcId the Id of the npc to spawn
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId)
-	{
-		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, 0, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.<br>
-	 * Player's coordinates will be used for the spawn.
-	 * @param npcId the Id of the npc to spawn
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, int despawnDelay)
-	{
-		return addSpawn(npcId, _player.getX(), _player.getY(), _player.getZ(), 0, false, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z)
-	{
-		return addSpawn(npcId, x, y, z, 0, false, 0, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int despawnDelay)
-	{
-		return addSpawn(npcId, x, y, z, 0, false, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param cha the character whose coordinates will be used for the npc spawn
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, L2Character cha)
-	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, 0, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param cha the character whose coordinates will be used for the npc spawn
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, L2Character cha, int despawnDelay)
-	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), true, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param cha the character whose coordinates will be used for the npc spawn
-	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	 */
-	public L2Npc addSpawn(int npcId, L2Character cha, boolean randomOffset, int despawnDelay)
-	{
-		return addSpawn(npcId, cha.getX(), cha.getY(), cha.getZ(), cha.getHeading(), randomOffset, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @param heading the heading of the npc
-	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int, int, int, int, int, boolean, int, boolean)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay)
-	{
-		return addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, false);
-	}
-	
-	/**
-	 * Add a temporary spawn of the specified npc.
-	 * @param npcId the Id of the npc to spawn
-	 * @param x the X coordinate of the npc spawn location
-	 * @param y the Y coordinate of the npc spawn location
-	 * @param z the Z coordinate (height) of the npc spawn location
-	 * @param heading the heading of the npc
-	 * @param randomOffset if {@code true}, adds +/- 50~100 to X/Y coordinates of the spawn location
-	 * @param despawnDelay time in milliseconds till the npc is despawned (default: 0)
-	 * @param isSummonSpawn if {@code true}, displays a summon animation on npc spawn (default: {@code false})
-	 * @return the {@link L2Npc} object of the newly spawned npc or {@code null} if the npc doesn't exist
-	 * @see #addSpawn(int)
-	 * @see #addSpawn(int, int)
-	 * @see #addSpawn(int, L2Character)
-	 * @see #addSpawn(int, L2Character, int)
-	 * @see #addSpawn(int, int, int, int)
-	 * @see #addSpawn(int, L2Character, boolean, int)
-	 * @see #addSpawn(int, int, int, int, int)
-	 * @see #addSpawn(int, int, int, int, int, boolean, int)
-	 * @see #addSpawn(int, int, int, int, int, boolean, int, boolean)
-	 */
-	public L2Npc addSpawn(int npcId, int x, int y, int z, int heading, boolean randomOffset, int despawnDelay, boolean isSummonSpawn)
-	{
-		return AbstractScript.addSpawn(npcId, x, y, z, heading, randomOffset, despawnDelay, isSummonSpawn);
-	}
-	
-	/**
-	 * Send an HTML file to the specified player.
-	 * @param filename the name of the HTML file to show
-	 * @return the contents of the HTML file that was sent to the player
-	 * @see #showHtmlFile(String, L2Npc)
-	 * @see Quest#showHtmlFile(L2PcInstance, String)
-	 * @see Quest#showHtmlFile(L2PcInstance, String, L2Npc)
-	 */
-	public String showHtmlFile(String filename)
-	{
-		return showHtmlFile(filename, null);
-	}
-	
-	/**
-	 * Send an HTML file to the specified player.
-	 * @param filename the name of the HTML file to show
-	 * @param npc the NPC that is showing the HTML file
-	 * @return the contents of the HTML file that was sent to the player
-	 * @see Quest#showHtmlFile(L2PcInstance, String)
-	 * @see Quest#showHtmlFile(L2PcInstance, String, L2Npc)
-	 */
-	public String showHtmlFile(String filename, L2Npc npc)
-	{
-		return getQuest().showHtmlFile(_player, filename, npc);
-	}
-	
-	/**
 	 * Set condition to 1, state to STARTED and play the "ItemSound.quest_accept".<br>
 	 * Works only if state is CREATED and the quest is not a custom quest.
 	 * @return the newly created {@code QuestState} object
@@ -897,7 +677,7 @@ public final class QuestState
 		{
 			set("cond", "1");
 			setState(State.STARTED);
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_ACCEPT);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_ACCEPT.getPacket());
 		}
 		return this;
 	}
@@ -947,7 +727,7 @@ public final class QuestState
 		exitQuest(type);
 		if (playExitQuest)
 		{
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_FINISH);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
 		}
 		return this;
 	}
@@ -1002,7 +782,7 @@ public final class QuestState
 		exitQuest(repeatable);
 		if (playExitQuest)
 		{
-			AbstractScript.playSound(_player, QuestSound.ITEMSOUND_QUEST_FINISH);
+			_player.sendPacket(QuestSound.ITEMSOUND_QUEST_FINISH.getPacket());
 		}
 		return this;
 	}

@@ -39,13 +39,13 @@ public final class Alexandria extends AbstractNpcAI
 	// Items
 	private static final ItemHolder[] REQUIRED_ITEMS = new ItemHolder[]
 	{
-		new ItemHolder(57, 3550000),
-		new ItemHolder(5094, 400),
-		new ItemHolder(6471, 200),
-		new ItemHolder(9814, 40),
-		new ItemHolder(9815, 30),
-		new ItemHolder(9816, 50),
-		new ItemHolder(9817, 50),
+		new ItemHolder(57, 7500000),
+		new ItemHolder(5094, 50),
+		new ItemHolder(6471, 25),
+		new ItemHolder(9814, 4),
+		new ItemHolder(9815, 3),
+		new ItemHolder(9816, 5),
+		new ItemHolder(9817, 5),
 	};
 	// Agathions
 	private static final QuestItemHolder[] LITTLE_DEVILS = new QuestItemHolder[]
@@ -97,7 +97,7 @@ public final class Alexandria extends AbstractNpcAI
 			for (QuestItemHolder agathion : AGATHIONS.get(event))
 			{
 				chance3 += agathion.getChance();
-				if ((chance >= chance2) && (chance2 < chance3))
+				if ((chance2 <= chance) && (chance < chance3))
 				{
 					if (takeAllItems(player, REQUIRED_ITEMS))
 					{

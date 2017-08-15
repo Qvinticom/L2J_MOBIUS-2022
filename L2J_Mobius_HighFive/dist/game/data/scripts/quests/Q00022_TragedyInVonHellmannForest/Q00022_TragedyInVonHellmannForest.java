@@ -175,7 +175,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 						_tifarenOwner = player.getObjectId();
 						final L2Npc ghost2 = addSpawn(GHOST_OF_PRIEST, PRIEST_LOC, true, 0);
 						ghost2.setScriptValue(player.getObjectId());
-						qs.startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2);
+						startQuestTimer("DESPAWN_GHOST2", 1000 * 120, ghost2, player);
 						ghost2.broadcastPacket(new NpcSay(ghost2.getObjectId(), ChatType.NPC_GENERAL, ghost2.getId(), NpcStringId.DID_YOU_CALL_ME_S1).addStringParameter(player.getName()));
 						if (((cond == 5) || (cond == 6)) && hasQuestItems(player, LOST_SKULL_OF_ELF))
 						{
@@ -208,7 +208,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 				{
 					qt.cancelAndRemove();
 					npc.setScriptValue(0);
-					qs.startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc);
+					startQuestTimer("DESPAWN_GHOST2", 1000 * 3, npc, player);
 					qs.setCond(8);
 					htmltext = event;
 				}
@@ -267,8 +267,8 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 				if (qs.isCond(10) && (_soulWellNpc == null))
 				{
 					_soulWellNpc = addSpawn(SOUL_OF_WELL, SOUL_WELL_LOC, true, 0);
-					qs.startQuestTimer("activateSoulOfWell", 90000, _soulWellNpc);
-					qs.startQuestTimer("despawnSoulOfWell", 120000, _soulWellNpc);
+					startQuestTimer("activateSoulOfWell", 90000, _soulWellNpc, player);
+					startQuestTimer("despawnSoulOfWell", 120000, _soulWellNpc, player);
 					_soulWellNpc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 					playSound(player, QuestSound.SKILLSOUND_ANTARAS_FEAR);
 					htmltext = event;

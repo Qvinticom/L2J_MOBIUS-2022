@@ -87,7 +87,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 					}
 					else if ((count > 10) && (count < 66) && (getRandom(100) < 10))
 					{
-						st.addSpawn(VARANGKAS_TRACKER);
+						addSpawn(VARANGKAS_TRACKER, killer);
 						giveItems(killer, VARANGKAS_PARASITE, 1);
 					}
 					break;

@@ -306,6 +306,7 @@ import quests.Q00330_AdeptOfTaste.Q00330_AdeptOfTaste;
 import quests.Q00331_ArrowOfVengeance.Q00331_ArrowOfVengeance;
 import quests.Q00333_HuntOfTheBlackLion.Q00333_HuntOfTheBlackLion;
 import quests.Q00334_TheWishingPotion.Q00334_TheWishingPotion;
+import quests.Q00335_TheSongOfTheHunter.Q00335_TheSongOfTheHunter;
 import quests.Q00336_CoinsOfMagic.Q00336_CoinsOfMagic;
 import quests.Q00337_AudienceWithTheLandDragon.Q00337_AudienceWithTheLandDragon;
 import quests.Q00338_AlligatorHunter.Q00338_AlligatorHunter;
@@ -315,6 +316,7 @@ import quests.Q00343_UnderTheShadowOfTheIvoryTower.Q00343_UnderTheShadowOfTheIvo
 import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
 import quests.Q00345_MethodToRaiseTheDead.Q00345_MethodToRaiseTheDead;
 import quests.Q00347_GoGetTheCalculator.Q00347_GoGetTheCalculator;
+import quests.Q00348_AnArrogantSearch.Q00348_AnArrogantSearch;
 import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
 import quests.Q00351_BlackSwan.Q00351_BlackSwan;
 import quests.Q00352_HelpRoodRaiseANewPet.Q00352_HelpRoodRaiseANewPet;
@@ -345,6 +347,7 @@ import quests.Q00380_BringOutTheFlavorOfIngredients.Q00380_BringOutTheFlavorOfIn
 import quests.Q00381_LetsBecomeARoyalMember.Q00381_LetsBecomeARoyalMember;
 import quests.Q00382_KailsMagicCoin.Q00382_KailsMagicCoin;
 import quests.Q00383_TreasureHunt.Q00383_TreasureHunt;
+import quests.Q00384_WarehouseKeepersPastime.Q00384_WarehouseKeepersPastime;
 import quests.Q00385_YokeOfThePast.Q00385_YokeOfThePast;
 import quests.Q00386_StolenDignity.Q00386_StolenDignity;
 import quests.Q00401_PathOfTheWarrior.Q00401_PathOfTheWarrior;
@@ -415,6 +418,7 @@ import quests.Q00616_MagicalPowerOfFirePart2.Q00616_MagicalPowerOfFirePart2;
 import quests.Q00617_GatherTheFlames.Q00617_GatherTheFlames;
 import quests.Q00618_IntoTheFlame.Q00618_IntoTheFlame;
 import quests.Q00619_RelicsOfTheOldEmpire.Q00619_RelicsOfTheOldEmpire;
+import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00621_EggDelivery.Q00621_EggDelivery;
 import quests.Q00622_SpecialtyLiquorDelivery.Q00622_SpecialtyLiquorDelivery;
 import quests.Q00623_TheFinestFood.Q00623_TheFinestFood;
@@ -452,6 +456,7 @@ import quests.Q00659_IdRatherBeCollectingFairyBreath.Q00659_IdRatherBeCollecting
 import quests.Q00660_AidingTheFloranVillage.Q00660_AidingTheFloranVillage;
 import quests.Q00661_MakingTheHarvestGroundsSafe.Q00661_MakingTheHarvestGroundsSafe;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
+import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
 import quests.Q00690_JudesRequest.Q00690_JudesRequest;
 import quests.Q00691_MatrasSuspiciousRequest.Q00691_MatrasSuspiciousRequest;
@@ -514,7 +519,7 @@ import quests.Q10292_SevenSignsGirlOfDoubt.Q10292_SevenSignsGirlOfDoubt;
 import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom;
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
 import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
-import quests.Q10296_SevenSignsPowerOfTheSeal.Q10296_SevenSignsPowerOfTheSeal;
+import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
 import quests.Q10503_FrintezzaEmbroideredSoulCloak.Q10503_FrintezzaEmbroideredSoulCloak;
@@ -817,6 +822,7 @@ public class QuestMasterHandler
 		Q00331_ArrowOfVengeance.class,
 		Q00333_HuntOfTheBlackLion.class,
 		Q00334_TheWishingPotion.class,
+		Q00335_TheSongOfTheHunter.class,
 		Q00336_CoinsOfMagic.class,
 		Q00337_AudienceWithTheLandDragon.class,
 		Q00338_AlligatorHunter.class,
@@ -826,6 +832,7 @@ public class QuestMasterHandler
 		Q00344_1000YearsTheEndOfLamentation.class,
 		Q00345_MethodToRaiseTheDead.class,
 		Q00347_GoGetTheCalculator.class,
+		Q00348_AnArrogantSearch.class,
 		Q00350_EnhanceYourWeapon.class,
 		Q00351_BlackSwan.class,
 		Q00352_HelpRoodRaiseANewPet.class,
@@ -856,6 +863,7 @@ public class QuestMasterHandler
 		Q00381_LetsBecomeARoyalMember.class,
 		Q00382_KailsMagicCoin.class,
 		Q00383_TreasureHunt.class,
+		Q00384_WarehouseKeepersPastime.class,
 		Q00385_YokeOfThePast.class,
 		Q00386_StolenDignity.class,
 		Q00401_PathOfTheWarrior.class,
@@ -926,6 +934,7 @@ public class QuestMasterHandler
 		Q00617_GatherTheFlames.class,
 		Q00618_IntoTheFlame.class,
 		Q00619_RelicsOfTheOldEmpire.class,
+		Q00620_FourGoblets.class,
 		Q00621_EggDelivery.class,
 		Q00622_SpecialtyLiquorDelivery.class,
 		Q00623_TheFinestFood.class,
@@ -963,6 +972,7 @@ public class QuestMasterHandler
 		Q00660_AidingTheFloranVillage.class,
 		Q00661_MakingTheHarvestGroundsSafe.class,
 		Q00662_AGameOfCards.class,
+		Q00663_SeductiveWhispers.class,
 		Q00688_DefeatTheElrokianRaiders.class,
 		Q00690_JudesRequest.class,
 		Q00691_MatrasSuspiciousRequest.class,
@@ -1025,7 +1035,7 @@ public class QuestMasterHandler
 		Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class,
 		Q10294_SevenSignsToTheMonasteryOfSilence.class,
 		Q10295_SevenSignsSolinasTomb.class,
-		Q10296_SevenSignsPowerOfTheSeal.class,
+		Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
 		Q10503_FrintezzaEmbroideredSoulCloak.class,

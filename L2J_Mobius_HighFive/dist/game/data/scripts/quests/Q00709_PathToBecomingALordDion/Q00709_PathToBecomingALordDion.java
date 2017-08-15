@@ -286,7 +286,7 @@ public class Q00709_PathToBecomingALordDion extends Quest
 		{
 			if ((npc.getId() != BloodyAxeAide) && (Rnd.get(9) == 0))
 			{
-				qs.addSpawn(BloodyAxeAide, npc, 300000);
+				addSpawn(BloodyAxeAide, npc, true, 300000);
 			}
 			else if (npc.getId() == BloodyAxeAide)
 			{

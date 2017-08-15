@@ -125,11 +125,11 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 			case "PURE_UNICORN":
 				npc.getSpawn().stopRespawn();
 				npc.deleteMe();
-				final L2Npc npc_pure = st.addSpawn(PURE_UNICORN, 85884, -76588, -3470, 30000);
+				final L2Npc npc_pure = addSpawn(PURE_UNICORN, 85884, -76588, -3470, 30000);
 				startQuestTimer("FALLEN_UNICORN", 30000, npc_pure, player);
 				return null;
 			case "FALLEN_UNICORN":
-				final L2Npc npc_fallen = st.addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0);
+				final L2Npc npc_fallen = addSpawn(FALLEN_UNICORN, 85884, -76588, -3470, 0);
 				npc_fallen.getSpawn().startRespawn();
 				return null;
 		}

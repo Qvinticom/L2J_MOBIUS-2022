@@ -101,7 +101,7 @@ public final class Q00276_TotemOfTheHestui extends Quest
 					{
 						if ((chance1 >= spawnChance.getId()) && (chance2 <= spawnChance.getCount()))
 						{
-							st.addSpawn(KASHA_BEAR_TOTEM);
+							addSpawn(KASHA_BEAR_TOTEM, killer);
 							takeItems(killer, KASHA_PARASITE, -1);
 							chance3 = false;
 							break;

@@ -19,6 +19,7 @@ package instances;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import instances.CastleDungeon.CastleDungeon;
 import instances.CavernOfThePirateCaptain.CavernOfThePirateCaptain;
 import instances.ChambersOfDelusion.ChamberOfDelusionEast;
 import instances.ChambersOfDelusion.ChamberOfDelusionNorth;
@@ -42,12 +43,10 @@ import instances.Kamaloka.Kamaloka;
 import instances.LibraryOfSages.LibraryOfSages;
 import instances.MithrilMine.MithrilMine;
 import instances.MonasteryOfSilence1.MonasteryOfSilence1;
-import instances.MonasteryOfSilence2.MonasteryOfSilence2;
 import instances.NornilsGarden.NornilsGarden;
 import instances.NornilsGardenQuest.NornilsGardenQuest;
 import instances.PailakaDevilsLegacy.PailakaDevilsLegacy;
 import instances.PailakaSongOfIceAndFire.PailakaSongOfIceAndFire;
-import instances.RimKamaloka.RimKamaloka;
 import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
 
 /**
@@ -60,6 +59,7 @@ public final class InstanceLoader
 	
 	private static final Class<?>[] SCRIPTS =
 	{
+		CastleDungeon.class,
 		CavernOfThePirateCaptain.class,
 		CrystalCaverns.class,
 		DarkCloudMansion.class,
@@ -83,12 +83,10 @@ public final class InstanceLoader
 		LibraryOfSages.class,
 		MithrilMine.class,
 		MonasteryOfSilence1.class,
-		MonasteryOfSilence2.class,
 		NornilsGarden.class,
 		NornilsGardenQuest.class,
 		PailakaDevilsLegacy.class,
 		PailakaSongOfIceAndFire.class,
-		RimKamaloka.class,
 		SanctumOftheLordsOfDawn.class,
 	};
 	

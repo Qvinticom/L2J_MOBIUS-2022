@@ -16,6 +16,7 @@
  */
 package quests.Q00551_OlympiadStarter;
 
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -27,7 +28,7 @@ import com.l2jmobius.gameserver.model.quest.State;
 
 /**
  * Olympiad Starter (551)
- * @author Gnacik
+ * @author Gnacik, Adry_85
  */
 public class Q00551_OlympiadStarter extends Quest
 {
@@ -52,32 +53,42 @@ public class Q00551_OlympiadStarter extends Quest
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
 			return getNoQuestMsg(player);
 		}
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("31688-03.html"))
+		switch (event)
 		{
-			qs.startQuest();
-		}
-		else if (event.equalsIgnoreCase("31688-04.html"))
-		{
-			final long count = Math.min(getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5), 2);
-			if (count > 0)
+			case "31688-03.html":
 			{
-				giveItems(player, OLY_CHEST, count); // max 2
-				if (count == 2)
-				{
-					giveItems(player, MEDAL_OF_GLORY, 3);
-				}
-				qs.exitQuest(QuestType.DAILY, true);
+				st.startQuest();
+				st.setMemoState(1);
+				st.setMemoStateEx(1, 0);
+				break;
 			}
-			else
+			case "31688-04.html":
 			{
-				htmltext = getNoQuestMsg(player);
+				if ((getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5)) > 0)
+				{
+					if (hasQuestItems(player, CERT_3))
+					{
+						giveItems(player, OLY_CHEST, 1);
+						takeItems(player, CERT_3, -1);
+					}
+					
+					if (hasQuestItems(player, CERT_5))
+					{
+						giveItems(player, OLY_CHEST, 1);
+						giveItems(player, MEDAL_OF_GLORY, 3);
+						takeItems(player, CERT_5, -1);
+					}
+					
+					st.exitQuest(QuestType.DAILY, true);
+				}
+				break;
 			}
 		}
 		return htmltext;
@@ -86,44 +97,35 @@ public class Q00551_OlympiadStarter extends Quest
 	@Override
 	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
 	{
-		if (loser == null)
+		if (loser != null)
 		{
-			return;
-		}
-		final QuestState qs = getQuestState(loser, false);
-		if ((qs == null) || !qs.isStarted())
-		{
-			return;
-		}
-		final int matches = qs.getInt("matches") + 1;
-		switch (matches)
-		{
-			case 3:
+			final QuestState st = getQuestState(loser, false);
+			if ((st != null) && st.isStarted() && st.isMemoState(1))
 			{
-				if (!hasQuestItems(loser, CERT_3))
+				final int memoStateEx = st.getMemoStateEx(1);
+				if (memoStateEx == 9)
 				{
-					giveItems(loser, CERT_3, 1);
-				}
-				break;
-			}
-			case 5:
-			{
-				if (!hasQuestItems(loser, CERT_5))
-				{
-					giveItems(loser, CERT_5, 1);
-				}
-				break;
-			}
-			case 10:
-			{
-				if (!hasQuestItems(loser, CERT_10))
-				{
+					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					st.setMemoState(2);
+					st.setCond(2, true);
 					giveItems(loser, CERT_10, 1);
 				}
-				break;
+				else if (memoStateEx < 9)
+				{
+					if (st.isMemoStateEx(1, 2))
+					{
+						giveItems(loser, CERT_3, 1);
+					}
+					else if (st.isMemoStateEx(1, 4))
+					{
+						giveItems(loser, CERT_5, 1);
+					}
+					
+					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					playSound(loser, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
 			}
 		}
-		qs.set("matches", String.valueOf(matches));
 	}
 	
 	@Override
@@ -136,92 +138,76 @@ public class Q00551_OlympiadStarter extends Quest
 			{
 				return;
 			}
-			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isStarted())
+			final QuestState st = getQuestState(player, false);
+			if ((st != null) && st.isStarted() && st.isMemoState(1))
 			{
-				final int matches = qs.getInt("matches") + 1;
-				switch (matches)
+				final int memoStateEx = st.getMemoStateEx(1);
+				if (memoStateEx == 9)
 				{
-					case 3:
-					{
-						if (!hasQuestItems(player, CERT_3))
-						{
-							giveItems(player, CERT_3, 1);
-						}
-						break;
-					}
-					case 5:
-					{
-						if (!hasQuestItems(player, CERT_5))
-						{
-							giveItems(player, CERT_5, 1);
-						}
-						break;
-					}
-					case 10:
-					{
-						if (!hasQuestItems(player, CERT_10))
-						{
-							giveItems(player, CERT_10, 1);
-						}
-						break;
-					}
+					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					st.setMemoState(2);
+					st.setCond(2, true);
+					giveItems(player, CERT_10, 1);
 				}
-				qs.set("matches", String.valueOf(matches));
+				else if (memoStateEx < 9)
+				{
+					if (st.isMemoStateEx(1, 2))
+					{
+						giveItems(player, CERT_3, 1);
+					}
+					else if (st.isMemoStateEx(1, 4))
+					{
+						giveItems(player, CERT_5, 1);
+					}
+					
+					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
 			}
 		}
 		
-		if (looser == null)
+		if (looser != null)
 		{
-			return;
-		}
-		final L2PcInstance player = looser.getPlayer();
-		if (player == null)
-		{
-			return;
-		}
-		final QuestState qs = getQuestState(player, false);
-		if ((qs == null) || !qs.isStarted())
-		{
-			return;
-		}
-		final int matches = qs.getInt("matches") + 1;
-		switch (matches)
-		{
-			case 3:
+			final L2PcInstance player = looser.getPlayer();
+			if (player == null)
 			{
-				if (!hasQuestItems(player, CERT_3))
-				{
-					giveItems(player, CERT_3, 1);
-				}
-				break;
+				return;
 			}
-			case 5:
+			final QuestState st = getQuestState(player, false);
+			if ((st != null) && st.isStarted() && st.isMemoState(1))
 			{
-				if (!hasQuestItems(player, CERT_5))
+				final int memoStateEx = st.getMemoStateEx(1);
+				if (memoStateEx == 9)
 				{
-					giveItems(player, CERT_5, 1);
-				}
-				break;
-			}
-			case 10:
-			{
-				if (!hasQuestItems(player, CERT_10))
-				{
+					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					st.setMemoState(2);
+					st.setCond(2, true);
 					giveItems(player, CERT_10, 1);
 				}
-				break;
+				else if (memoStateEx < 9)
+				{
+					if (st.isMemoStateEx(1, 2))
+					{
+						giveItems(player, CERT_3, 1);
+					}
+					else if (st.isMemoStateEx(1, 4))
+					{
+						giveItems(player, CERT_5, 1);
+					}
+					
+					st.setMemoStateEx(1, st.getMemoStateEx(1) + 1);
+					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
 			}
 		}
-		qs.set("matches", String.valueOf(matches));
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
+		final QuestState st = getQuestState(player, true);
+		if (st == null)
 		{
 			return htmltext;
 		}
@@ -230,15 +216,15 @@ public class Q00551_OlympiadStarter extends Quest
 		{
 			htmltext = "31688-00.htm";
 		}
-		else if (qs.isCreated())
+		else if (st.isCreated())
 		{
 			htmltext = "31688-01.htm";
 		}
-		else if (qs.isCompleted())
+		else if (st.isCompleted())
 		{
-			if (qs.isNowAvailable())
+			if (st.isNowAvailable())
 			{
-				qs.setState(State.CREATED);
+				st.setState(State.CREATED);
 				htmltext = (player.getLevel() < 75) || !player.isNoble() ? "31688-00.htm" : "31688-01.htm";
 			}
 			else
@@ -246,19 +232,18 @@ public class Q00551_OlympiadStarter extends Quest
 				htmltext = "31688-05.html";
 			}
 		}
-		else if (qs.isStarted())
+		else if (st.isStarted())
 		{
-			final long count = Math.min(getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5) + getQuestItemsCount(player, CERT_10), 3);
-			if (count >= 3)
+			if (st.isMemoState(1))
 			{
-				htmltext = "31688-04.html";
+				htmltext = (((getQuestItemsCount(player, CERT_3) + getQuestItemsCount(player, CERT_5) + getQuestItemsCount(player, CERT_10)) > 0) ? "31688-07.html" : "31688-06.html");
+			}
+			else if (st.isMemoState(2))
+			{
 				giveItems(player, OLY_CHEST, 4);
 				giveItems(player, MEDAL_OF_GLORY, 5);
-				qs.exitQuest(QuestType.DAILY, true);
-			}
-			else
-			{
-				htmltext = "31688-s" + count + ".html";
+				st.exitQuest(QuestType.DAILY, true);
+				htmltext = "31688-04.html";
 			}
 		}
 		return htmltext;

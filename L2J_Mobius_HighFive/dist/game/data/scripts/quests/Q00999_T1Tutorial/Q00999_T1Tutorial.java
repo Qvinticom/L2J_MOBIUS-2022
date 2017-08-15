@@ -217,7 +217,7 @@ public class Q00999_T1Tutorial extends Quest
 			if ((getQuestItemsCount(player, item) > 0) && (st.getInt("onlyone") == 0))
 			{
 				addExpAndSp(player, 0, 50);
-				st.startQuestTimer("TimerEx_GrandMaster", 60000);
+				startQuestTimer("TimerEx_GrandMaster", 60000, npc, player);
 				takeItems(player, item, 1);
 				st.set("step", "3");
 				if (Ex <= 3)
@@ -293,7 +293,7 @@ public class Q00999_T1Tutorial extends Quest
 					if ((step == 0) && (Ex < 0))
 					{
 						qs.set("Ex", "0");
-						st.startQuestTimer("TimerEx_NewbieHelper", 30000);
+						startQuestTimer("TimerEx_NewbieHelper", 30000, npc, player);
 						if (player.getClassId().isMage())
 						{
 							st.set("step", "1");
@@ -314,7 +314,7 @@ public class Q00999_T1Tutorial extends Quest
 							giveItems(player, talk.item, 1);
 							st.set("step", "2");
 							qs.set("Ex", "3");
-							st.startQuestTimer("TimerEx_NewbieHelper", 30000);
+							startQuestTimer("TimerEx_NewbieHelper", 30000, npc, player);
 							qs.set("ucMemo", "3");
 							if (player.getClassId().isMage())
 							{

@@ -139,10 +139,10 @@ public abstract class AbstractSagaQuest extends Quest
 				final int xx = st2.getPlayer().getX();
 				final int yy = st2.getPlayer().getY();
 				final int zz = st2.getPlayer().getZ();
-				final L2Npc Archon = st2.addSpawn(Mob[1], xx, yy, zz);
+				final L2Npc Archon = addSpawn(Mob[1], xx, yy, zz, -1);
 				addSpawn(st2, Archon);
 				st2.set("spawned", "1");
-				st2.startQuestTimer("Archon Hellisha has despawned", 600000, Archon);
+				startQuestTimer("Archon Hellisha has despawned", 600000, Archon, player);
 				autoChat(Archon, Text[13].replace("PLAYERNAME", st2.getPlayer().getName()));
 				((L2Attackable) Archon).addDamageHate(st2.getPlayer(), 0, 99999);
 				Archon.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, st2.getPlayer(), null);
@@ -293,8 +293,8 @@ public abstract class AbstractSagaQuest extends Quest
 					{
 						final L2Npc Mob_1 = addSpawn(Mob[0], npcSpawnLocations[0], false, 0);
 						st.set("spawned", "1");
-						st.startQuestTimer("Mob_1 Timer 1", 500, Mob_1);
-						st.startQuestTimer("Mob_1 has despawned", 300000, Mob_1);
+						startQuestTimer("Mob_1 Timer 1", 500, Mob_1, player);
+						startQuestTimer("Mob_1 has despawned", 300000, Mob_1, player);
 						addSpawn(st, Mob_1);
 						htmltext = "7-02.htm";
 					}
@@ -331,10 +331,10 @@ public abstract class AbstractSagaQuest extends Quest
 						st.set("Mob_2", String.valueOf(Mob_2.getObjectId()));
 						st.set("Quest0", "1");
 						st.set("Quest1", "45");
-						st.startRepeatingQuestTimer("Mob_3 Timer 1", 500, Mob_3);
-						st.startQuestTimer("Mob_3 has despawned", 59000, Mob_3);
-						st.startQuestTimer("Mob_2 Timer 1", 500, Mob_2);
-						st.startQuestTimer("Mob_2 has despawned", 60000, Mob_2);
+						startQuestTimer("Mob_3 Timer 1", 500, Mob_3, player, true);
+						startQuestTimer("Mob_3 has despawned", 59000, Mob_3, player);
+						startQuestTimer("Mob_2 Timer 1", 500, Mob_2, player);
+						startQuestTimer("Mob_2 has despawned", 60000, Mob_2, player);
 						htmltext = "10-02.htm";
 					}
 					else if (st.getInt("Quest1") == 45)
@@ -387,7 +387,7 @@ public abstract class AbstractSagaQuest extends Quest
 					return null;
 				case "Mob_2 Timer 1":
 					autoChat(npc, Text[7].replace("PLAYERNAME", player.getName()));
-					st.startQuestTimer("Mob_2 Timer 2", 1500, npc);
+					startQuestTimer("Mob_2 Timer 2", 1500, npc, player);
 					if (st.getInt("Quest1") == 45)
 					{
 						st.set("Quest1", "0");
@@ -395,12 +395,12 @@ public abstract class AbstractSagaQuest extends Quest
 					return null;
 				case "Mob_2 Timer 2":
 					autoChat(npc, Text[8].replace("PLAYERNAME", player.getName()));
-					st.startQuestTimer("Mob_2 Timer 3", 10000, npc);
+					startQuestTimer("Mob_2 Timer 3", 10000, npc, player);
 					return null;
 				case "Mob_2 Timer 3":
 					if (st.getInt("Quest0") == 0)
 					{
-						st.startQuestTimer("Mob_2 Timer 3", 13000, npc);
+						startQuestTimer("Mob_2 Timer 3", 13000, npc, player);
 						if (getRandomBoolean())
 						{
 							autoChat(npc, Text[9].replace("PLAYERNAME", player.getName()));
@@ -429,7 +429,7 @@ public abstract class AbstractSagaQuest extends Quest
 					}
 					else
 					{
-						st.startQuestTimer("Mob_2 has despawned", 1000, npc);
+						startQuestTimer("Mob_2 has despawned", 1000, npc, player);
 					}
 					return null;
 			}

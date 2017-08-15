@@ -16,324 +16,365 @@
  */
 package quests.Q10270_BirthOfTheSeed;
 
-import com.l2jmobius.gameserver.model.L2CommandChannel;
-import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.util.Util;
 
-public class Q10270_BirthOfTheSeed extends Quest
+import quests.Q10272_LightFragment.Q10272_LightFragment;
+
+/**
+ * Birth of the Seed (10270)
+ * @author Adry_85
+ * @since 2.6.0.0
+ */
+public final class Q10270_BirthOfTheSeed extends Quest
 {
-	private static final int PLENOS = 32563;
-	private static final int KLODEKUS = 25665;
-	private static final int KLANIKUS = 25666;
-	private static final int COHEMENES = 25634;
-	private static final int JINBI = 32566;
-	private static final int RELRIKIA = 32567;
+	// NPCs
 	private static final int ARTIUS = 32559;
+	private static final int PLENOS = 32563;
+	private static final int GINBY = 32566;
+	private static final int LELRIKIA = 32567;
+	// Monsters
+	private static final int COHEMENES = 25634;
+	private static final int YEHAN_KLODEKUS = 25665;
+	private static final int YEHAN_KLANIKUS = 25666;
+	// Items
+	private static final int YEHAN_KLODEKUS_BADGE = 13868;
+	private static final int YEHAN_KLANIKUS_BADGE = 13869;
+	private static final int LICH_CRYSTAL = 13870;
+	// Misc
+	private static final int MIN_LEVEL = 75;
+	// Location
+	private static final Location INSTANCE_EXIT = new Location(-185057, 242821, 1576);
 	
 	public Q10270_BirthOfTheSeed()
 	{
 		super(10270, Q10270_BirthOfTheSeed.class.getSimpleName(), "Birth of the Seed");
-		questItemIds = new int[]
-		{
-			13868,
-			13869,
-			13870
-		};
 		addStartNpc(PLENOS);
-		addTalkId(PLENOS);
-		addTalkId(RELRIKIA);
-		addTalkId(JINBI);
-		addTalkId(ARTIUS);
-		addKillId(KLANIKUS);
-		addKillId(KLODEKUS);
-		addKillId(COHEMENES);
+		addTalkId(PLENOS, GINBY, LELRIKIA, ARTIUS);
+		addKillId(COHEMENES, YEHAN_KLODEKUS, YEHAN_KLANIKUS);
+		registerQuestItems(YEHAN_KLODEKUS_BADGE, YEHAN_KLANIKUS_BADGE, LICH_CRYSTAL);
+	}
+	
+	@Override
+	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
+	{
+		final QuestState st = getQuestState(player, false);
+		if ((st != null) && st.isMemoState(2) && Util.checkIfInRange(1500, npc, player, false))
+		{
+			switch (npc.getId())
+			{
+				case YEHAN_KLODEKUS:
+				{
+					if (!hasQuestItems(player, YEHAN_KLODEKUS_BADGE))
+					{
+						giveItems(player, YEHAN_KLODEKUS_BADGE, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case YEHAN_KLANIKUS:
+				{
+					if (!hasQuestItems(player, YEHAN_KLANIKUS_BADGE))
+					{
+						giveItems(player, YEHAN_KLANIKUS_BADGE, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+				case COHEMENES:
+				{
+					if (!hasQuestItems(player, LICH_CRYSTAL))
+					{
+						giveItems(player, LICH_CRYSTAL, 1);
+						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+					}
+					break;
+				}
+			}
+		}
 	}
 	
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = event;
-		final QuestState qs = player.getQuestState(getName());
-		if (event.equalsIgnoreCase("32563-05.html"))
+		final QuestState st = getQuestState(player, false);
+		if (st == null)
 		{
-			qs.startQuest();
-		}
-		else if (event.equalsIgnoreCase("32559-03.html"))
-		{
-			qs.setCond(2, true);
-		}
-		else if (event.equalsIgnoreCase("32559-09.html"))
-		{
-			qs.setCond(4, true);
-		}
-		else if (event.equalsIgnoreCase("32559-13.html"))
-		{
-			qs.exitQuest(false);
-			addExpAndSp(player, 251602, 25244);
-			giveAdena(player, 41677, true);
-		}
-		else if (event.equalsIgnoreCase("32566-05.html"))
-		{
-			if (getQuestItemsCount(player, 57) < 10000)
-			{
-				htmltext = "32566-04a.html";
-			}
-			else
-			{
-				takeItems(player, 57, 10000);
-				qs.set("pay", "1");
-			}
-		}
-		else if (event.equalsIgnoreCase("32567-05.html"))
-		{
-			qs.setCond(5, true);
+			return null;
 		}
 		
+		String htmltext = null;
+		switch (event)
+		{
+			case "32563-02.htm":
+			{
+				htmltext = event;
+				break;
+			}
+			case "32563-03.htm":
+			{
+				st.startQuest();
+				st.setMemoState(1);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+				htmltext = event;
+				break;
+			}
+			case "32566-02.html":
+			{
+				if (st.isMemoState(4))
+				{
+					final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
+					if ((st1 == null) || (st1.isStarted() && (st1.getMemoState() < 10)))
+					{
+						htmltext = event;
+					}
+					else if ((st1.isStarted() && (st1.getMemoState() >= 10)) || st1.isCompleted())
+					{
+						htmltext = "32566-03.html";
+					}
+				}
+				break;
+			}
+			case "32566-04.html":
+			{
+				if (st.isMemoState(4))
+				{
+					if (getQuestItemsCount(player, Inventory.ADENA_ID) < 10000)
+					{
+						htmltext = event;
+					}
+					else
+					{
+						takeItems(player, Inventory.ADENA_ID, 10000);
+						st.setMemoState(5);
+						htmltext = "32566-05.html";
+					}
+				}
+				break;
+			}
+			case "32566-06.html":
+			{
+				if (st.isMemoState(5))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "32567-02.html":
+			case "32567-03.html":
+			{
+				if (st.isMemoState(10))
+				{
+					htmltext = event;
+				}
+				break;
+			}
+			case "32567-04.html":
+			{
+				if (st.isMemoState(10))
+				{
+					st.setMemoState(11);
+					st.setCond(5, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "32567-05.html":
+			{
+				if (st.isMemoState(11))
+				{
+					st.setMemoState(20);
+					player.setInstanceId(0);
+					player.teleToLocation(INSTANCE_EXIT, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "32559-02.html":
+			{
+				if (st.isMemoState(1))
+				{
+					st.setMemoState(2);
+					st.setCond(2, true);
+					htmltext = event;
+				}
+				break;
+			}
+			case "32559-08.html":
+			{
+				if (st.isMemoState(3))
+				{
+					final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
+					if ((st1 == null) || (st1.isStarted() && (st1.getMemoState() < 10)))
+					{
+						st.setMemoState(4);
+						st.setCond(4, true);
+						htmltext = event;
+					}
+				}
+				break;
+			}
+			case "32559-10.html":
+			{
+				if (st.isMemoState(3))
+				{
+					final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
+					if ((st1 != null) && ((st1.isStarted() && (st1.getMemoState() >= 10)) || st1.isCompleted()))
+					{
+						st.setMemoState(4);
+						st.setCond(4, true);
+						htmltext = event;
+					}
+				}
+				break;
+			}
+		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
+	{
+		executeForEachPlayer(killer, npc, isSummon, true, false);
+		return super.onKill(npc, killer, isSummon);
 	}
 	
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState qs = getQuestState(player, true);
-		final int cond = qs.getCond();
+		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		
-		switch (npc.getId())
+		if (st.isCompleted())
 		{
-			case PLENOS:
+			if (npc.getId() == PLENOS)
 			{
-				switch (qs.getState())
-				{
-					case State.CREATED:
-					{
-						if (player.getLevel() < 75)
-						{
-							htmltext = "32563-02.html";
-						}
-						else
-						{
-							htmltext = "32563-01.htm";
-						}
-						break;
-					}
-					case State.STARTED:
-					{
-						if (cond == 1)
-						{
-							htmltext = "32563-06.html";
-						}
-						break;
-					}
-					case State.COMPLETED:
-					{
-						htmltext = "32563-03.html";
-						break;
-					}
-				}
-				break;
+				htmltext = "32563-05.html";
 			}
-			case ARTIUS:
+			else if (npc.getId() == ARTIUS)
 			{
-				if (cond == 1)
-				{
-					htmltext = "32559-01.html";
-				}
-				else if (cond == 2)
-				{
-					if ((getQuestItemsCount(player, 13868) < 1) && (getQuestItemsCount(player, 13869) < 1) && (getQuestItemsCount(player, 13870) < 1))
-					{
-						htmltext = "32559-04.html";
-					}
-					else if ((getQuestItemsCount(player, 13868) + getQuestItemsCount(player, 13869) + getQuestItemsCount(player, 13870)) < 3)
-					{
-						htmltext = "32559-05.html";
-					}
-					else if ((getQuestItemsCount(player, 13868) == 1) && (getQuestItemsCount(player, 13869) == 1) && (getQuestItemsCount(player, 13870) == 1))
-					{
-						htmltext = "32559-06.html";
-						takeItems(player, 13868, 1);
-						takeItems(player, 13869, 1);
-						takeItems(player, 13870, 1);
-						qs.setCond(3, true);
-					}
-				}
-				else if ((cond == 3) || (cond == 4))
-				{
-					htmltext = "32559-07.html";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "32559-12.html";
-				}
-				if (qs.getState() == State.COMPLETED)
-				{
-					htmltext = "32559-02.html";
-				}
-				break;
-			}
-			case JINBI:
-			{
-				if (cond < 4)
-				{
-					htmltext = "32566-02.html";
-				}
-				else if (cond == 4)
-				{
-					if (qs.getInt("pay") == 1)
-					{
-						htmltext = "32566-10.html";
-					}
-					else
-					{
-						htmltext = "32566-04.html";
-					}
-				}
-				else if (cond > 4)
-				{
-					htmltext = "32566-12.html";
-				}
-				
-				break;
-			}
-			case RELRIKIA:
-			{
-				if (cond == 4)
-				{
-					htmltext = "32567-01.html";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "32567-07.html";
-				}
-				break;
+				htmltext = "32559-03.html";
 			}
 		}
-		
+		else if (st.isCreated())
+		{
+			htmltext = (player.getLevel() >= MIN_LEVEL) ? "32563-01.htm" : "32563-04.htm";
+		}
+		else if (st.isStarted())
+		{
+			switch (npc.getId())
+			{
+				case PLENOS:
+				{
+					if (st.isMemoState(1))
+					{
+						htmltext = "32563-06.html";
+					}
+					break;
+				}
+				case GINBY:
+				{
+					final int memoState = st.getMemoState();
+					if (memoState == 4)
+					{
+						htmltext = "32566-01.html";
+					}
+					else if (memoState < 4)
+					{
+						htmltext = "32566-07.html";
+					}
+					else if (memoState == 5)
+					{
+						htmltext = "32566-06.html";
+					}
+					else if ((memoState >= 10) && (memoState < 20))
+					{
+						htmltext = "32566-08.html";
+					}
+					else if (memoState == 20)
+					{
+						htmltext = "32566-09.html";
+					}
+					break;
+				}
+				case LELRIKIA:
+				{
+					final int memoState = st.getMemoState();
+					if (memoState == 10)
+					{
+						htmltext = "32567-01.html";
+					}
+					else if (memoState == 11)
+					{
+						htmltext = "32567-06.html";
+					}
+					break;
+				}
+				case ARTIUS:
+				{
+					switch (st.getMemoState())
+					{
+						case 1:
+						{
+							htmltext = "32559-01.html";
+							break;
+						}
+						case 2:
+						{
+							if (hasQuestItems(player, YEHAN_KLODEKUS_BADGE, YEHAN_KLANIKUS_BADGE, LICH_CRYSTAL))
+							{
+								st.setMemoState(3);
+								st.setCond(3, true);
+								takeItems(player, -1, YEHAN_KLODEKUS_BADGE, YEHAN_KLANIKUS_BADGE, LICH_CRYSTAL);
+								htmltext = "32559-04.html";
+							}
+							else
+							{
+								if (!hasQuestItems(player, YEHAN_KLODEKUS_BADGE) && !hasQuestItems(player, YEHAN_KLANIKUS_BADGE) && !hasQuestItems(player, LICH_CRYSTAL))
+								{
+									htmltext = "32559-05.html";
+								}
+								else
+								{
+									htmltext = "32559-06.html";
+								}
+							}
+							break;
+						}
+						case 3:
+						{
+							final QuestState st1 = player.getQuestState(Q10272_LightFragment.class.getSimpleName());
+							if ((st1 == null) || (st1.isStarted() && (st1.getMemoState() < 10)))
+							{
+								htmltext = "32559-07.html";
+							}
+							else if ((st1.isStarted() && (st1.getMemoState() >= 10)) || st1.isCompleted())
+							{
+								htmltext = "32559-09.html";
+							}
+							break;
+						}
+						case 20:
+						{
+							if (player.getLevel() >= MIN_LEVEL)
+							{
+								giveAdena(player, 133590, true);
+								addExpAndSp(player, 625343, 48222);
+								st.exitQuest(false, true);
+								htmltext = "32559-11.html";
+							}
+							break;
+						}
+					}
+					break;
+				}
+			}
+		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
-	{
-		if (npc.getId() == KLANIKUS)
-		{
-			if (player.getParty() != null)
-			{
-				final L2Party party = player.getParty();
-				if (party.getCommandChannel() != null)
-				{
-					final L2CommandChannel cc = party.getCommandChannel();
-					for (L2PcInstance partyMember : cc.getMembers())
-					{
-						final QuestState qs = partyMember.getQuestState(getName());
-						if ((qs != null) && qs.isCond(2))
-						{
-							giveItems(partyMember, 13869, 1);
-						}
-					}
-				}
-				else
-				{
-					for (L2PcInstance partyMember : party.getMembers())
-					{
-						final QuestState qs = partyMember.getQuestState(getName());
-						if ((qs != null) && qs.isCond(2))
-						{
-							giveItems(partyMember, 13869, 1);
-						}
-					}
-				}
-			}
-			else
-			{
-				final QuestState qs = player.getQuestState(getName());
-				if ((qs != null) && qs.isCond(2))
-				{
-					giveItems(player, 13869, 1);
-				}
-			}
-		}
-		else if (npc.getId() == KLODEKUS)
-		{
-			if (player.getParty() != null)
-			{
-				final L2Party party = player.getParty();
-				if (party.getCommandChannel() != null)
-				{
-					final L2CommandChannel cc = party.getCommandChannel();
-					for (L2PcInstance partyMember : cc.getMembers())
-					{
-						final QuestState qs = partyMember.getQuestState(getName());
-						if ((qs != null) && qs.isCond(2))
-						{
-							giveItems(partyMember, 13868, 1);
-						}
-					}
-				}
-				else
-				{
-					for (L2PcInstance partyMember : party.getMembers())
-					{
-						final QuestState qs = partyMember.getQuestState(getName());
-						if ((qs != null) && qs.isCond(2))
-						{
-							giveItems(partyMember, 13868, 1);
-						}
-					}
-				}
-			}
-			else
-			{
-				final QuestState qs = player.getQuestState(getName());
-				if ((qs != null) && qs.isCond(2))
-				{
-					giveItems(player, 13868, 1);
-				}
-			}
-		}
-		else if (npc.getId() == COHEMENES)
-		{
-			if (player.getParty() != null)
-			{
-				final L2Party party = player.getParty();
-				if (party.getCommandChannel() != null)
-				{
-					final L2CommandChannel cc = party.getCommandChannel();
-					for (L2PcInstance partyMember : cc.getMembers())
-					{
-						final QuestState qs = partyMember.getQuestState(getName());
-						if ((qs != null) && qs.isCond(2))
-						{
-							giveItems(partyMember, 13870, 1);
-						}
-					}
-				}
-				else
-				{
-					for (L2PcInstance partyMember : party.getMembers())
-					{
-						final QuestState qs = partyMember.getQuestState(getName());
-						if ((qs != null) && qs.isCond(2))
-						{
-							giveItems(partyMember, 13870, 1);
-						}
-					}
-				}
-			}
-			else
-			{
-				final QuestState qs = player.getQuestState(getName());
-				if ((qs != null) && qs.isCond(2))
-				{
-					giveItems(player, 13870, 1);
-				}
-			}
-		}
-		return super.onKill(npc, player, isPet);
 	}
 }

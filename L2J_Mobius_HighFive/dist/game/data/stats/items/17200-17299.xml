@@ -218,28 +218,53 @@
 	<item id="17227" type="EtcItem" name="Elcadia's Token">
 		<!-- Description: Rune token created by magic for Elcadia's test. -->
 		<set name="icon" val="icon.etc_fire_rune_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17228" type="EtcItem" name="Scroll of Abstinence">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. This scroll emanates an unusual energy. The scroll is very old and worn. It must be handled with care. -->
 		<set name="icon" val="icon.etc_spell_books_element_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17229" type="EtcItem" name="Shield of Sacrifice">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. This shield emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
 		<set name="icon" val="icon.shield_shrnoens_shield_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17230" type="EtcItem" name="Sword of Holy Spirit">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. The sword emanates an unusual energy. But it is very worn and large. It is fragile and cannot be used in battle. -->
 		<set name="icon" val="icon.weapon_raid_sword_i01" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17231" type="EtcItem" name="Staff of Blessing">
 		<!-- Description: One of the relics stored inside the Seal of the Saintess. This staff emanates an unusual energy. But it is very worn and heavy. It is fragile cannot be used in battle. -->
 		<set name="icon" val="icon.weapon_mace_of_prayer_i01" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17232" type="EtcItem" name="Ball Trapping Gnosian Agathion Pack">
 		<!-- Description: Wrapped pack containing a Ball Trapping Gnosian Agathion. Cannot be exchanged or dropped. Cannot use a private store. Can be stored in a private warehouse. -->
@@ -398,7 +423,9 @@
 	<item id="17249" type="EtcItem" name="Large Dragon Skull">
 		<!-- Description: Dragon Skull obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the dragon skulls from all 7 different raid monsters, bring them to Gilmore. -->
 		<set name="icon" val="icon.etc_fang_red_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -408,23 +435,47 @@
 	<item id="17250" type="EtcItem" name="Large Baby Dragon">
 		<!-- Description: Baby Dragon obtained after finishing off the raid monster that lives in the Dragon Valley. After obtaining the baby dragon, bring it to the separated soul in the Dragon Valley. -->
 		<set name="icon" val="icon.etc_claw_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17251" type="EtcItem" name="Drake Lord's Essence">
 		<!-- Description: Drake Lord's essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17252" type="EtcItem" name="Behemoth Leader's Essence">
 		<!-- Description: Behemoth Leader's Essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_green_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17253" type="EtcItem" name="Dragon Beast's Essence">
 		<!-- Description: Dragon Beast's Essence. Bring it to Theodric. -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17254" type="EtcItem" name="Box of Theodric">
 		<!-- Description: Old and tattered box. You can hear a rattling sound when you shake it. -->
@@ -505,7 +556,12 @@
 	<item id="17265" type="EtcItem" name="Certificate of Dawn">
 		<!-- Description: A certificate received from the Witness of Dawn Franz. It says that if you show this certificate to Priest Wood, he will exchange it for an occupation specific Forgotten Scroll that can be learned at level 81. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17266" type="EtcItem" name="Will of Antharas">
 		<!-- Description: A command stone made by Antharas embedded in his high commanding minions so he will always have control over them. Used to create Antharas Blood Crystal. Bring it to a Separated Soul. -->
