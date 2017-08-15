@@ -667,7 +667,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13584" level="1" /> <!-- Aria's Bracelet: CON -->
+		</skills>
 	</item>
 	<item id="38566" name="Aria's Bracelet: MEN" type="Armor">
 		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, MEN + 3. -->
@@ -681,7 +686,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13585" level="1" /> <!-- Aria's Bracelet: MEN -->
+		</skills>
 	</item>
 	<item id="38567" name="Aria's Bracelet: DEX" type="Armor">
 		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, DEX + 3. -->
@@ -695,7 +705,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13586" level="1" /> <!-- Aria's Bracelet: DEX -->
+		</skills>
 	</item>
 	<item id="38568" name="Aria's Bracelet: WIT" type="Armor">
 		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, WIT + 3. -->
@@ -709,7 +724,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13587" level="1" /> <!-- Aria's Bracelet: WIT -->
+		</skills>
 	</item>
 	<item id="38569" name="Aria's Bracelet: STR" type="Armor">
 		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, STR + 3. -->
@@ -723,7 +743,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13588" level="1" /> <!-- Aria's Bracelet: STR -->
+		</skills>
 	</item>
 	<item id="38570" name="Aria's Bracelet: INT" type="Armor">
 		<!-- Aria's Bracelet. Activates 5 Talisman slots. HP + 531, INT + 3. -->
@@ -737,7 +762,12 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="rbracelet" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="13589" level="1" /> <!-- Aria's Bracelet: INT -->
+		</skills>
 	</item>
 	<item id="38571" name="Aria's Life Stone" type="EtcItem">
 		<!-- Stone containing Aria's power. Can be used as an ingredient for augmenting a special accessory. -->
