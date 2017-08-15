@@ -69,20 +69,6 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(21112, 552); // Hames Orc Footman
 		MONSTERS.put(21114, 587); // Cursed Guardian
 		MONSTERS.put(21116, 812); // Hames Orc Overlord
-		MONSTERS.put(21278, 483); // Antelope
-		MONSTERS.put(21279, 483); // Antelope
-		MONSTERS.put(21280, 483); // Antelope
-		MONSTERS.put(21286, 515); // Buffalo
-		MONSTERS.put(21287, 515); // Buffalo
-		MONSTERS.put(21288, 515); // Buffalo
-		MONSTERS.put(21508, 493); // Splinter Stakato
-		MONSTERS.put(21510, 527); // Splinter Stakato Soldier
-		MONSTERS.put(21513, 562); // Needle Stakato
-		MONSTERS.put(21515, 598); // Needle Stakato Soldier
-		MONSTERS.put(21520, 458); // Eye of Splendor
-		MONSTERS.put(21526, 552); // Wisdom of Splendor
-		MONSTERS.put(21530, 488); // Victory of Splendor
-		MONSTERS.put(21535, 573); // Signet of Splendor
 		MONSTERS.put(18001, 232); // Blood Queen
 	}
 	

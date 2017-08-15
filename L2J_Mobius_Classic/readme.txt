@@ -26,6 +26,7 @@ What is done
 -Fisherman NPC updates
 -Quest Fishing Specialist's Request
 -Fixed fishing to match retail
+-Added new fishing zone locations.
 -Olympiad NPC updates
 -Dimensional Merchant updates
 -Retail gatekeeper teleports
