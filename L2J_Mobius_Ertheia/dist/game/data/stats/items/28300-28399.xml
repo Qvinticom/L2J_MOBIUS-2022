@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="28355" name="Prestige Cube" additionalName="7-day" type="EtcItem">
+		<!-- Double-click to obtain either Dark/Bloody Eternal Enhancement Stone, various Weapon Enchant Scrolls, Giant's Energy, or Gemstone (R-grade). Once a day. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="28356" name="Prestige Cube Pack" additionalName="7-day" type="EtcItem">
+		<!-- Wrapped Pack containing 1 Prestige Cube (7-day). -->
+		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+</list>
