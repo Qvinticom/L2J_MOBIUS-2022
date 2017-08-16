@@ -53,8 +53,8 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		addKillId(ASHUTAR);
 		registerQuestItems(GREEN_TOTEM, ASHUTAR_HEART);
 		
-		final String test = GlobalVariablesManager.getInstance().getString("Q00610_respawn");
-		final long remain = (!test.isEmpty()) ? (Long.parseLong(test) - System.currentTimeMillis()) : 0;
+		final long test = GlobalVariablesManager.getInstance().getLong("Q00610_respawn", 0);
+		final long remain = test != 0 ? test - System.currentTimeMillis() : 0;
 		if (remain > 0)
 		{
 			startQuestTimer("spawn_npc", remain, null, null);

@@ -52,15 +52,19 @@ public final class QueenShyeed extends AbstractNpcAI
 		switch (event)
 		{
 			case "respawn":
+			{
 				spawnShyeed();
 				break;
+			}
 			case "despawn":
+			{
 				if (!npc.isDead())
 				{
 					npc.deleteMe();
 					startRespawn();
 				}
 				break;
+			}
 		}
 		return null;
 	}
@@ -82,8 +86,8 @@ public final class QueenShyeed extends AbstractNpcAI
 	
 	private void spawnShyeed()
 	{
-		final String respawn = GlobalVariablesManager.getInstance().getString("QueenShyeedRespawn");
-		final long remain = (!respawn.isEmpty()) ? Long.parseLong(respawn) - System.currentTimeMillis() : 0;
+		final long respawn = GlobalVariablesManager.getInstance().getLong("QueenShyeedRespawn", 0);
+		final long remain = respawn != 0 ? respawn - System.currentTimeMillis() : 0;
 		if (remain > 0)
 		{
 			startQuestTimer("respawn", remain, null, null);

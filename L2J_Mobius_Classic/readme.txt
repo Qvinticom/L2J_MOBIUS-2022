@@ -29,7 +29,7 @@ What is done
 -Quest Fishing Specialist's Request
 -Olympiad NPC updates
 -Dimensional Merchant updates
--Retail gatekeeper teleports
+-Classic gatekeeper teleports
 -Admin menu teleport and shop cleanups
 -Blacksmith NPC updates
 -New Race Track arena zone
@@ -39,6 +39,7 @@ What is done
 -Moon Knight quest
 -Item augmentation support
 -Retail Henna list
+-Floran Agricultural Area clan halls
 
 Custom work
 -Newbie Helper NPC location info
@@ -50,7 +51,6 @@ TODO list
 -Retail NPC dialogs
 -Retail NPC buylists
 -Test quests and update rewards
--Test Floran Agricultural Area clan halls
 -Test castle sieges
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills

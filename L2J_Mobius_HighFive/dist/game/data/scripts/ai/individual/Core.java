@@ -80,8 +80,8 @@ public final class Core extends AbstractNpcAI
 		}
 		else
 		{
-			final String test = GlobalVariablesManager.getInstance().getString("Core_Attacked");
-			if (test.equalsIgnoreCase("true"))
+			final boolean test = GlobalVariablesManager.getInstance().getBoolean("Core_Attacked", false);
+			if (test)
 			{
 				_firstAttacked = true;
 			}
@@ -100,7 +100,7 @@ public final class Core extends AbstractNpcAI
 	@Override
 	public void onSave()
 	{
-		GlobalVariablesManager.getInstance().set("Core_Attacked", Boolean.toString(_firstAttacked));
+		GlobalVariablesManager.getInstance().set("Core_Attacked", _firstAttacked);
 	}
 	
 	public void spawnBoss(L2GrandBossInstance npc)

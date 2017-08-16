@@ -228,8 +228,8 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		});
 		
 		int buffsNow = 0;
-		final String var = GlobalVariablesManager.getInstance().getString("SeedNextStatusChange");
-		if (var.equalsIgnoreCase("") || (Long.parseLong(var) < System.currentTimeMillis()))
+		final Long var = GlobalVariablesManager.getInstance().getLong("SeedNextStatusChange", 0);
+		if (var < System.currentTimeMillis())
 		{
 			buffsNow = getRandom(ZONE_BUFFS_LIST.length);
 			GlobalVariablesManager.getInstance().set("SeedBuffsList", String.valueOf(buffsNow));
@@ -238,8 +238,8 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		}
 		else
 		{
-			_seedsNextStatusChange = Long.parseLong(var);
-			buffsNow = Integer.parseInt(GlobalVariablesManager.getInstance().getString("SeedBuffsList"));
+			_seedsNextStatusChange = var;
+			buffsNow = GlobalVariablesManager.getInstance().getInt("SeedBuffsList", 0);
 		}
 		for (int i = 0; i < _regionsData.length; i++)
 		{
