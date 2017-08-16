@@ -1924,16 +1924,16 @@
 		<parameters>
 			<param name="ultra_respawn_time" value="5" />
 		</parameters>
-		<race>FAIRY</race>
+		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="354676030" sp="85122" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
-			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="44.44444" magical="32.52252" />
+		<acquire exp="262720918" sp="29116376" raidPoints="30780" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="6100000" hpRegen="1100" mp="1800000.0" mpRegen="1000" />
+			<attack physical="4900" magical="2550" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3456" magical="862.5" />
 			<speed>
-				<walk ground="20" />
-				<run ground="50" />
+				<walk ground="50" />
+				<run ground="186" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -1964,7 +1964,7 @@
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
 			<death>
-				<item id="8620" min="10" max="30" chance="50" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+				<item id="8620" min="1" max="1" chance="25" /> <!-- Ancient Book: Divine Inspiration -->
 				<item id="80" min="1" max="2" chance="25" /> <!-- Tallum Blade -->
 				<item id="98" min="1" max="2" chance="25" /> <!-- Halberd -->
 				<item id="269" min="1" max="2" chance="25" /> <!-- Blood Tornado -->
@@ -2030,20 +2030,21 @@
 			</death>
 		</drop_lists>
 	</npc>
-	<npc id="29068" level="1" type="L2GrandBoss" name="Antharas" title="Land Dragon">
+	<npc id="29068" level="79" type="L2GrandBoss" name="Antharas" title="Land Dragon">
+		<!-- Todo: CT2.5 -->	
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
-		<race>FAIRY</race>
+		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="155833466880" sp="225935474" raidPoints="1000" />
+		<acquire exp="538538584" sp="63323403" raidPoints="38248" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
-			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="44.44444" magical="32.52252" />
+			<vitals hp="26387521.42857" hpRegen="1830" mp="900000.0" mpRegen="1000" />
+			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3974.13793" magical="496.01325" />
 			<speed>
-				<walk ground="20" />
-				<run ground="50" />
+				<walk ground="50" />
+				<run ground="186" />
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
@@ -2071,25 +2072,26 @@
 			<skill maxChance="25" primaryId="4112" />
 		</ai>
 		<collision>
-			<radius normal="10" />
-			<height normal="15" />
+			<radius normal="300" />
+			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29069" level="1" type="L2Monster" name="Behemoth Dragon">
+	<npc id="29069" level="79" type="L2Monster" name="Behemoth Dragon">
+		<!-- Todo: CT2.5 -->
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="PhysicalSpecial" id="5095" level="1" />
 			<skill name="LongRangePhysicalSpecial" id="5096" level="1" />
 		</parameters>
-		<race>FAIRY</race>
+		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
-			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="44.44444" magical="32.52252" />
+			<vitals hp="401551.696720203" hpRegen="76.71" mp="1809.0" mpRegen="3" />
+			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1071.29474264312" magical="522.626863116263" evasion="-18" />
 			<speed>
-				<walk ground="20" />
-				<run ground="50" />
+				<walk ground="180" />
+				<run ground="180" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2114,23 +2116,24 @@
 			<skill maxChance="25" />
 		</ai>
 		<collision>
-			<radius normal="10" />
-			<height normal="15" />
+			<radius normal="63" />
+			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29070" level="1" type="L2Monster" name="Dragon Bomber">
+	<npc id="29070" level="79" type="L2Monster" name="Dragon Bomber">
+		<!-- Todo: CT2.5 -->
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
-		<race>FAIRY</race>
+		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39.74519" hpRegen="2" mp="40" mpRegen="0.9" />
-			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="44.44444" magical="32.52252" />
+			<vitals hp="1353.6766" hpRegen="8.5" mp="1809.0" mpRegen="3" />
+			<attack physical="1094.11758465172" magical="4902.24" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="357.098247547707" magical="261.308998696584" />
 			<speed>
-				<walk ground="20" />
-				<run ground="50" />
+				<walk ground="200" />
+				<run ground="250" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2153,8 +2156,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="100" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="10" />
-			<height normal="15" />
+			<radius normal="37" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="29071" level="1" type="L2Monster" name="Dragon Bomber">

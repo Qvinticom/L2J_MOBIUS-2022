@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29190" level="99" type="L2Monster" name="Tarask Dragon">
+	<npc id="29190" level="79" type="L2Monster" name="Tarask Dragon">
+		<!-- Todo: CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="5095" level="1" />
 			<skill name="Skill02_ID" id="5096" level="1" />
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="292335" hpRegen="8.5" mp="22800" mpRegen="30" />
-			<attack physical="14312" magical="3509" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3537" magical="2031" />
+		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+			<vitals hp="401551.696720203" hpRegen="76.71" mp="1809.0" mpRegen="3" />
+			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1071.29474264312" magical="522.626863116263" />
 			<speed>
 				<walk ground="180" />
 				<run ground="180" />
