@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29100" level="83" type="L2Monster" name="Crystal Prison Guard">
 		<!-- Confirmed CT2.5 -->
@@ -751,7 +751,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="29120" level="80" type="L2Npc" name="Beleth Camera 1">
+	<npc id="29120" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -784,7 +784,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29121" level="80" type="L2Npc" name="Beleth Camera 2">
+	<npc id="29121" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -817,7 +817,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29122" level="80" type="L2Npc" name="Beleth Camera 3">
+	<npc id="29122" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -850,7 +850,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29123" level="80" type="L2Npc" name="Beleth Camera 4">
+	<npc id="29123" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -883,7 +883,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29124" level="80" type="L2Npc" name="Beleth Camera 5">
+	<npc id="29124" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -916,7 +916,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="29125" level="80" type="L2Npc" name="Beleth Camera 6">
+	<npc id="29125" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -949,7 +949,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="29126" level="80" type="L2Npc" name="Beleth Presentation Incarnation 1">
+	<npc id="29126" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -983,7 +983,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="29127" level="80" type="L2Npc" name="Beleth Presentation Incarnation 2">
+	<npc id="29127" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
@@ -1017,7 +1017,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="29128" level="80" type="L2Npc" name="Beleth Presentation Elf">
+	<npc id="29128" level="80" type="L2Npc" name="">
 		<!-- Confirmed CT2.5 -->
 		<race>ELF</race>
 		<sex>MALE</sex>
@@ -1051,7 +1051,7 @@
 			<height normal="22.2" />
 		</collision>
 	</npc>
-	<npc id="29129" level="29" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29129" level="29" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1187,7 +1187,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="29132" level="39" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29132" level="39" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1346,7 +1346,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="29135" level="49" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29135" level="49" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1504,7 +1504,7 @@
 			<height normal="32.8" />
 		</collision>
 	</npc>
-	<npc id="29138" level="59" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29138" level="59" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1668,7 +1668,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="29141" level="69" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29141" level="69" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1824,7 +1824,7 @@
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="29144" level="78" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29144" level="78" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -1996,7 +1996,7 @@
 			<height normal="38.5" grown="46.5" />
 		</collision>
 	</npc>
-	<npc id="29147" level="81" type="L2RaidBoss" name="Lost Captain">
+	<npc id="29147" level="81" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3075,7 +3075,7 @@
 			<height normal="160" />
 		</collision>
 	</npc>
-	<npc id="29173" level="73" type="L2Npc" name="Tiat Priest">
+	<npc id="29173" level="73" type="L2Npc" name="Priest Tiat">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3109,7 +3109,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="29174" level="73" type="L2Npc" name="Tiat Priest">
+	<npc id="29174" level="73" type="L2Npc" name="Priest Tiat">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
@@ -3903,7 +3903,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29191" level="98" type="L2RaidBoss" name="Octavis" title="">
+	<npc id="29191" level="98" type="L2RaidBoss" name="Octavis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14285" level="1" /> <!-- Octavis' Arrow Shaft -->
@@ -3941,7 +3941,7 @@
 			<height normal="68" />
 		</collision>
 	</npc>
-	<npc id="29192" level="98" type="L2Monster" name="Octavis' Beast" title="">
+	<npc id="29192" level="98" type="L2Monster" name="Octavis' Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14023" level="1" />
@@ -3981,7 +3981,7 @@
 			<height normal="56" />
 		</collision>
 	</npc>
-	<npc id="29193" level="98" type="L2RaidBoss" name="Octavis" title="">
+	<npc id="29193" level="98" type="L2RaidBoss" name="Octavis">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="boss_skill_01" id="14026" level="1" />
@@ -4020,7 +4020,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="29194" level="98" type="L2RaidBoss" name="Octavis" title="">
+	<npc id="29194" level="98" type="L2RaidBoss" name="Octavis">
 		<parameters>
 			<skill name="boss_skill_01" id="14030" level="1" />
 			<skill name="boss_skill_02" id="14031" level="1" />
@@ -4545,7 +4545,7 @@
 			<height normal="1450" />
 		</collision>
 	</npc>
-	<npc id="29198" level="99" type="L2Monster" name="Tentacle" title="">
+	<npc id="29198" level="99" type="L2Monster" name="Tentacle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01" id="14331" level="1" />
@@ -4590,7 +4590,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="29199" level="99" type="L2Monster" name="Giant Tentacle" title="">
+	<npc id="29199" level="99" type="L2Monster" name="Giant Tentacle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01" id="14333" level="1" />

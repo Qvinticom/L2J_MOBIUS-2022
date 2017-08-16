@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 
 /**
  * Little Wing (420)
- * @author Pandragon / Stayway (Rework Helios)
+ * @author Pandragon / Stayway
  */
 public final class Q00420_LittleWing extends Quest
 {
@@ -81,19 +81,22 @@ public final class Q00420_LittleWing extends Quest
 	private static final int LETO_WARRIOR = 20580;
 	private static final int[] DELUXE_STONE_BREAKERS =
 	{
-		23566, // Nymph Rose
-		23567, // Nymph Rose
-		23568, // Nymph Lily
-		23569, // Nymph Lily
-		23570, // Nymph Tulip
-		23571, // Nymph Tulip
-		23572, // Nymph Cosmos
-		23573, // Nymph Cosmos
-		23578, // Nymph Guardian
-		23579, // Buoyant Seed
-		23580, // Fluttering Seed
-		23581, // Apherus
-		23582, // Nymph Rose
+		20589, // Fline
+		20590, // Liele
+		20591, // Valley Treant
+		20592, // Satyr
+		20593, // Unicorn
+		20594, // Forest Runner
+		20595, // Fline Elder
+		20596, // Liele Elder
+		20597, // Valley Treant Elder
+		20598, // Satyr Elder
+		20599, // Unicorn Elder
+		27185, // Fairy Tree of Wind (Quest Monster)
+		27186, // Fairy Tree of Star (Quest Monster)
+		27187, // Fairy Tree of Twilight (Quest Monster)
+		27188, // Fairy Tree of Abyss (Quest Monster)
+		27189, // Soul of Tree Guardian (Quest Monster)
 	};
 	// Rewards
 	private static final int DRAGONFLUTE_OF_WIND = 3500;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="13100" level="55" type="L2Npc" name="Anakim">
 		<!-- Confirmed CT2.5 -->
@@ -762,7 +762,7 @@
 			<height normal="51.8" />
 		</collision>
 	</npc>
-	<npc id="13120" level="80" type="L2Monster" name="Giant rat">
+	<npc id="13120" level="80" type="L2Monster" name="Giant Rat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="event_animal" value="1" />
@@ -808,7 +808,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="13121" level="80" type="L2Monster" name="Giant rat">
+	<npc id="13121" level="80" type="L2Monster" name="Giant Rat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="event_animal" value="1" />
@@ -852,7 +852,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="13122" level="80" type="L2Monster" name="Giant rat">
+	<npc id="13122" level="80" type="L2Monster" name="Giant Rat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="event_animal" value="1" />
@@ -896,7 +896,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="13123" level="80" type="L2Monster" name="Super giant rat">
+	<npc id="13123" level="80" type="L2Monster" name="Super Giant Rat">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="event_animal" value="1" />
@@ -1194,7 +1194,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="13130" level="55" type="L2Npc" name="Light Purple Maned Horse">
+	<npc id="13130" level="55" type="L2Npc" name="Darkmane Pacer">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -1232,7 +1232,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="13131" level="55" type="L2Npc" name="Grizzly Bear">
+	<npc id="13131" level="55" type="L2Npc" name="Grizzly">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -1271,7 +1271,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="13132" level="55" type="L2Npc" name="Timitran">
+	<npc id="13132" level="55" type="L2Npc" name="Treant">
 		<!-- Confirmed CT2.5 -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
@@ -1730,7 +1730,7 @@
 			<height normal="32.7" />
 		</collision>
 	</npc>
-	<npc id="13144" level="55" type="L2Npc" name="Aurabird-Falcon">
+	<npc id="13144" level="55" type="L2Npc" name="Aura Bird - Falcon">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
@@ -1767,7 +1767,7 @@
 			<height normal="14.25" />
 		</collision>
 	</npc>
-	<npc id="13145" level="55" type="L2Npc" name="Aurabird-Owl">
+	<npc id="13145" level="55" type="L2Npc" name="Aura Bird - Owl">
 		<!-- Confirmed CT2.5 -->
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -1804,7 +1804,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="13146" level="55" type="L2Npc" name="Tawny-Maned Lion">
+	<npc id="13146" level="55" type="L2Npc" name="Tawny-maned Lion">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -2438,7 +2438,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="13162" level="55" type="L2Npc" name="Tin Plate Golem">
+	<npc id="13162" level="55" type="L2Npc" name="Tinplate Golem">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2475,7 +2475,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="13163" level="55" type="L2Npc" name="Tow">
+	<npc id="13163" level="55" type="L2Npc" name="Makeshift Bat">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -2512,7 +2512,7 @@
 			<height normal="8.25" />
 		</collision>
 	</npc>
-	<npc id="13164" level="55" type="L2Npc" name="Lure Tow">
+	<npc id="13164" level="55" type="L2Npc" name="Lady Tow">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -2549,7 +2549,7 @@
 			<height normal="8.25" />
 		</collision>
 	</npc>
-	<npc id="13165" level="55" type="L2Npc" name="Heavy Tow">
+	<npc id="13165" level="55" type="L2Npc" name="Angry tow">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -2586,7 +2586,7 @@
 			<height normal="8.25" />
 		</collision>
 	</npc>
-	<npc id="13166" level="55" type="L2Npc" name="Wing Tow">
+	<npc id="13166" level="55" type="L2Npc" name="Sleepy Tow">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3072,7 +3072,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="13179" level="55" type="L2Npc" name="Knight Leader Elite Mercenary">
+	<npc id="13179" level="55" type="L2Npc" name="Knight Captain Elite Mercenary">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3265,7 +3265,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="13184" level="80" type="L2Npc" name="Santa Claus">
+	<npc id="13184" level="80" type="L2Npc" name="Santa">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3302,7 +3302,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="13185" level="80" type="L2Npc" name="Santa Claus">
+	<npc id="13185" level="80" type="L2Npc" name="Santa">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3339,7 +3339,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="13186" level="80" type="L2Npc" name="Santa Claus">
+	<npc id="13186" level="80" type="L2Npc" name="Santa">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
@@ -3412,7 +3412,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="13188" level="85" type="L2Monster" name="Head Milk Cow">
+	<npc id="13188" level="85" type="L2Monster" name="Milk Cow Captain">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
@@ -3560,7 +3560,7 @@
 			<height normal="12.5" />
 		</collision>
 	</npc>
-	<npc id="13192" level="85" type="L2Monster" name="Gloomy Head Milk Cow">
+	<npc id="13192" level="85" type="L2Monster" name="Gloomy Milk Cow Captain">
 		<!-- Confirmed CT2.5 -->
 		<race>ANIMAL</race>
 		<sex>MALE</sex>

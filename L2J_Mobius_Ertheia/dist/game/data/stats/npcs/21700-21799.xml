@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21797" level="55" type="L2Monster" name="Timiniel's Spirit">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4562" level="5" /> <!-- NPC Solar Flare -->
+		</parameters>
+		<race>FAIRY</race>
+		<sex>FEMALE</sex>
+		<acquire exp="3562" sp="1" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="148.899508363765" />
+			<attribute>
+				<defence fire="20" water="20" wind="189" earth="-5" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="165" />
+			</speed>
+			<hit_time>720</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+			<skill id="4562" level="5" /> <!-- NPC Solar Flare -->
+			<skill id="4011" level="5" /> <!-- Wind Resistance -->
+			<skill id="4282" level="1" /> <!-- Earth Attack Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>0.5</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>TIMINIEL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="315" max="643" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.6668000221252441">
+					<item id="2497" min="1" max="1" chance="0.7653" /> <!-- Full Plate Shield -->
+					<item id="2966" min="1" max="1" chance="60.4723" /> <!-- Full Plate Shield Fragment -->
+					<item id="2414" min="1" max="1" chance="0.5357" /> <!-- Full Plate Helmet -->
+					<item id="2959" min="1" max="1" chance="38.2267" /> <!-- Full Plate Helmet Design -->
+				</group>
+				<group chance="15.31820011138916">
+					<item id="1869" min="1" max="1" chance="17.4926" /> <!-- Iron Ore -->
+					<item id="1870" min="1" max="1" chance="17.4926" /> <!-- Coal -->
+					<item id="1871" min="1" max="1" chance="17.4926" /> <!-- Charcoal -->
+					<item id="1872" min="1" max="1" chance="23.3234" /> <!-- Animal Bone -->
+					<item id="1867" min="1" max="1" chance="23.3234" /> <!-- Animal Skin -->
+					<item id="4175" min="1" max="1" chance="0.337" /> <!-- Recipe: Sealed Avadon Boots (100%) -->
+					<item id="4972" min="1" max="1" chance="0.0202" /> <!-- Recipe: Great Axe (60%) -->
+					<item id="8726" min="1" max="1" chance="0.4049" /> <!-- Life Stone - Level 55 -->
+					<item id="8736" min="1" max="1" chance="0.1012" /> <!-- Mid-Grade Life Stone - Level 55 -->
+					<item id="8746" min="1" max="1" chance="0.0101" /> <!-- High-Grade Life Stone - Level 55 -->
+					<item id="8756" min="1" max="1" chance="0.002" /> <!-- Top-Grade Life Stone - Level 55 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2961" min="1" max="1" chance="4.3468" /> <!-- Full Plate Boots Part -->
+				<item id="1867" min="1" max="3" chance="53.219" /> <!-- Animal Skin -->
+				<item id="1869" min="1" max="1" chance="79.8286" /> <!-- Iron Ore -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="5" />
+			<height normal="25" />
+		</collision>
+	</npc>
+</list>

@@ -10,6 +10,11 @@ What is done
 -Hennas
 -Augments
 -Alchemy
+-Skilltrees
+-Parsed NPC names from client
+
+TODO
+-Modify all skill levels/sublevels based on client
 
 Known issues
 -Skill enchanting must be reworked

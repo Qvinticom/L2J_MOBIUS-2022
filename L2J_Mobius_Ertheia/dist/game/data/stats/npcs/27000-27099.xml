@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27001" level="10" type="L2Monster" name="Orc Sniper">
 		<!-- Confirmed CT2.5 -->
@@ -43,7 +43,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="27002" level="12" type="L2Monster" name="Orc Fighter">
+	<npc id="27002" level="12" type="L2Monster" name="Orc Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -474,7 +474,7 @@
 			<height normal="21" />
 		</collision>
 	</npc>
-	<npc id="27018" level="10" type="L2Monster" name="Orc Warrior">
+	<npc id="27018" level="10" type="L2Monster" name="Orc Lieutenant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -516,7 +516,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="27019" level="11" type="L2Monster" name="Orc Warrior Leader">
+	<npc id="27019" level="11" type="L2Monster" name="Orc Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18800" level="77" type="L2Monster" name="Fledgling Lavasaurus">
 		<!-- Confirmed CT2.5 -->
@@ -325,7 +325,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="18806" level="83" type="L2Monster" name="Brazier of Purity">
+	<npc id="18806" level="83" type="L2Monster" name="Purifying Magic Circle">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -455,7 +455,7 @@
 			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="18809" level="82" type="L2Monster" name="Varangka's Retainer">
+	<npc id="18809" level="82" type="L2Monster" name="Varangka's Confidant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="9" />
@@ -504,7 +504,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="18810" level="82" type="L2Monster" name="Varangka's Page">
+	<npc id="18810" level="82" type="L2Monster" name="Varangka's Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="HealProb" value="3333" />
@@ -593,7 +593,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18812" level="81" type="L2Monster" name="Kasha's Eye">
+	<npc id="18812" level="81" type="L2Monster" name="Kasha's Eye" title="Atk. Spd. Boost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="1" />
@@ -631,7 +631,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18813" level="81" type="L2Monster" name="Kasha's Eye">
+	<npc id="18813" level="81" type="L2Monster" name="Kasha's Eye" title="P. Atk. Boost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="2" />
@@ -669,7 +669,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="18814" level="81" type="L2Monster" name="Kasha's Eye">
+	<npc id="18814" level="81" type="L2Monster" name="Kasha's Eye" title="Critical Rate Boost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="my_buff_type" value="3" />
@@ -1108,7 +1108,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="18826" level="80" type="L2Npc" name="Shilen's Evil Thoughts For Presentation">
+	<npc id="18826" level="80" type="L2Npc" name="Shilen's Evil Thoughts (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1141,7 +1141,7 @@
 			<height normal="27.5" />
 		</collision>
 	</npc>
-	<npc id="18827" level="80" type="L2Npc" name="Priest Cain for Presentation">
+	<npc id="18827" level="80" type="L2Npc" name="Priest Cain (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>MERCENARY</race>
 		<sex>MALE</sex>
@@ -1207,7 +1207,7 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="18829" level="80" type="L2Npc" name="Shilen's Evil Thoughts Leader For Presentation">
+	<npc id="18829" level="80" type="L2Npc" name="Shilen's Evil Thoughts Captain (Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1241,7 +1241,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18830" level="1" type="L2Npc" name="ssq For Presentation Camera Dummy 1">
+	<npc id="18830" level="1" type="L2Npc" name="Boz' Energy">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1275,7 +1275,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18831" level="1" type="L2Npc" name="ssq For Presentation Camera Dummy 2">
+	<npc id="18831" level="1" type="L2Npc" name="Camera Dummy 2 (ssq Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1308,7 +1308,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="18832" level="1" type="L2Npc" name="ssq For Presentation Camera Dummy 3">
+	<npc id="18832" level="1" type="L2Npc" name="Camera Dummy 3 (ssq Presentation)">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1374,7 +1374,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18834" level="85" type="L2Monster" name="Guards of the Dawn">
+	<npc id="18834" level="85" type="L2Monster" name="Guard of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Fstring_Num" value="19514" />
@@ -1417,7 +1417,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18835" level="85" type="L2Monster" name="Guards of the Dawn">
+	<npc id="18835" level="85" type="L2Monster" name="Guard of the Dawn">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="Fstring_Num" value="19506" />
@@ -1746,7 +1746,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18843" level="85" type="L2Npc" name="Cokrakon's Ward">
+	<npc id="18843" level="85" type="L2Npc" name="Kokracon's Ward">
 		<!-- Confirmed CT2.5 -->
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -2159,7 +2159,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18854" level="85" type="L2Monster" name="Archer's Breath">
+	<npc id="18854" level="85" type="L2Monster" name="Icy Breath">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill_Blizzard" id="6299" level="1" />
@@ -2200,7 +2200,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18855" level="85" type="L2Monster" name="Archery Knight">
+	<npc id="18855" level="85" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2255,7 +2255,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="18856" level="88" type="L2Monster" name="Archery Knight">
+	<npc id="18856" level="88" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2782,7 +2782,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="18868" level="85" type="L2Monster" name="Energy Plant">
+	<npc id="18868" level="85" type="L2Monster" name="Vitality Plant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6430" level="1" />

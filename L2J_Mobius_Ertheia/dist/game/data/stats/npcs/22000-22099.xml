@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22001" level="25" type="L2Monster" name="Grim Wolf">
 		<!-- Confirmed CT2.5 -->
@@ -89,7 +89,7 @@
 			<height normal="11" />
 		</collision>
 	</npc>
-	<npc id="22002" level="26" type="L2Monster" name="Grim Grizzly">
+	<npc id="22002" level="26" type="L2Monster" name="Grim Bear">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1275,7 +1275,7 @@
 			<height normal="18.5" />
 		</collision>
 	</npc>
-	<npc id="22025" level="38" type="L2Monster" name="Frozen Wasteland Werewolf">
+	<npc id="22025" level="38" type="L2Monster" name="Snow Werewolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -2039,7 +2039,7 @@
 			<height normal="34.7" />
 		</collision>
 	</npc>
-	<npc id="22055" level="49" type="L2Monster" name="Cruel Vice Golem">
+	<npc id="22055" level="49" type="L2Monster" name="Cruel Pincer Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3369,7 +3369,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="22075" level="52" type="L2Monster" name="Epic Cannon Golem Adjunct">
+	<npc id="22075" level="52" type="L2Monster" name="Epic Cannon Golem's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -3763,7 +3763,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="22081" level="53" type="L2Monster" name="Lost Watcher">
+	<npc id="22081" level="53" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -3857,7 +3857,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="22082" level="54" type="L2Monster" name="Elder Lost Watcher">
+	<npc id="22082" level="54" type="L2Monster" name="Lost Elder Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="40" />
@@ -4633,7 +4633,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="22091" level="58" type="L2Monster" name="Lost Iron Golem">
+	<npc id="22091" level="58" type="L2Monster" name="Lost Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4709,7 +4709,7 @@
 			<height normal="42.5" />
 		</collision>
 	</npc>
-	<npc id="22092" level="59" type="L2Monster" name="Frost Iron Golem">
+	<npc id="22092" level="59" type="L2Monster" name="Frost Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

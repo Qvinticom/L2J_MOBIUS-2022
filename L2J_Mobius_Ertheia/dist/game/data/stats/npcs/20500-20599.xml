@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20500" level="33" type="L2Monster" name="Turek Orc Sentinel">
 		<!-- Confirmed CT2.5 -->
@@ -87,7 +87,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="20501" level="38" type="L2Monster" name="Turek Orc Shaman">
+	<npc id="20501" level="38" type="L2Monster" name="Turek Orc Priest">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -315,7 +315,7 @@
 			<height normal="25" grown="31" />
 		</collision>
 	</npc>
-	<npc id="20506" level="30" type="L2Monster" name="Ruin Imp">
+	<npc id="20506" level="30" type="L2Monster" name="Ruin Imp" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -402,7 +402,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20507" level="32" type="L2Monster" name="Ruin Imp Elder">
+	<npc id="20507" level="32" type="L2Monster" name="Ruin Imp Elder" title="Enraged">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1302,7 +1302,7 @@
 			<height normal="31" grown="37.5" />
 		</collision>
 	</npc>
-	<npc id="20527" level="4" type="L2Monster" name="Great Snow Wolf">
+	<npc id="20527" level="4" type="L2Monster" name="Snow Wolf">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2212,7 +2212,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20547" level="23" type="L2Monster" name="Ol Mahum Reserve">
+	<npc id="20547" level="23" type="L2Monster" name="Ol Mahum Support Troop">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -3211,7 +3211,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="20564" level="41" type="L2Monster" name="Enchanted Monstereye">
+	<npc id="20564" level="41" type="L2Monster" name="Reinforced Monster Eye">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3306,7 +3306,7 @@
 			<height normal="43" />
 		</collision>
 	</npc>
-	<npc id="20565" level="42" type="L2Monster" name="Enchanted Stone Golem">
+	<npc id="20565" level="42" type="L2Monster" name="Reinforced Stone Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="116" />
@@ -3399,7 +3399,7 @@
 			<height normal="40.3" />
 		</collision>
 	</npc>
-	<npc id="20566" level="43" type="L2Monster" name="Enchanted Iron Golem">
+	<npc id="20566" level="43" type="L2Monster" name="Reinforced Steel Golem">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3492,7 +3492,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="20567" level="44" type="L2Monster" name="Enchanted Gargoyle">
+	<npc id="20567" level="44" type="L2Monster" name="Reinforced Gargoyle">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3931,7 +3931,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="20572" level="49" type="L2Monster" name="Tarlk Bugbear High Warrior">
+	<npc id="20572" level="49" type="L2Monster" name="Tarlk Bugbear Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="149" />
@@ -4310,7 +4310,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="20576" level="55" type="L2Monster" name="Oel Mahum Witch Doctor">
+	<npc id="20576" level="55" type="L2Monster" name="Oel Mahum Shaman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -5410,7 +5410,7 @@
 			<height normal="16" />
 		</collision>
 	</npc>
-	<npc id="20588" level="45" type="L2Monster" name="Timak Orc Overlord">
+	<npc id="20588" level="45" type="L2Monster" name="Timak Orc Prefect">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -5504,6 +5504,1184 @@
 		<collision>
 			<radius normal="12" grown="14.5" />
 			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="20589" level="45" type="L2Monster" name="Fline">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4001" level="4" /> <!-- NPC Windstrike -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="9957" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1183.80594" hpRegen="5.5" mp="610.8" mpRegen="2.1" />
+			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="177.78746" magical="118.372898457316" />
+			<attribute>
+				<defence fire="20" water="20" wind="110" earth="-5" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="174" />
+			</speed>
+			<hit_time>560</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4011" level="5" /> <!-- Wind Resistance -->
+			<skill id="4282" level="1" /> <!-- Earth Attack Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="400" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="874" max="1776" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.270900011062622">
+					<item id="439" min="1" max="1" chance="0.7904" /> <!-- Karmian Tunic -->
+					<item id="1962" min="1" max="1" chance="36.8033" /> <!-- Karmian Tunic Pattern -->
+					<item id="471" min="1" max="1" chance="1.2632" /> <!-- Karmian Stockings -->
+					<item id="1954" min="1" max="1" chance="61.1431" /> <!-- Karmian Stocking Design -->
+				</group>
+				<group chance="26.00309944152832">
+					<item id="1868" min="1" max="1" chance="73.0427" /> <!-- Thread -->
+					<item id="1873" min="1" max="1" chance="14.6085" /> <!-- Silver Nugget -->
+					<item id="5549" min="1" max="1" chance="3.6521" /> <!-- Metallic Thread -->
+					<item id="1889" min="1" max="1" chance="2.4348" /> <!-- Compound Braid -->
+					<item id="4044" min="1" max="1" chance="1.2174" /> <!-- Thons -->
+					<item id="3003" min="1" max="1" chance="2.2684" /> <!-- Recipe: Gloves of Seal -->
+					<item id="2214" min="1" max="1" chance="0.9062" /> <!-- Recipe: Dwarven Chain Gaiters -->
+					<item id="8723" min="1" max="1" chance="1.4609" /> <!-- Life Stone - Level 46 -->
+					<item id="8733" min="1" max="1" chance="0.3652" /> <!-- Mid-Grade Life Stone - Level 46 -->
+					<item id="8743" min="1" max="1" chance="0.0365" /> <!-- High-Grade Life Stone - Level 46 -->
+					<item id="8753" min="1" max="1" chance="0.0073" /> <!-- Top-Grade Life Stone - Level 46 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1961" min="1" max="1" chance="7.073" /> <!-- Mithril Shirt Fabric -->
+				<item id="1962" min="1" max="1" chance="7.073" /> <!-- Karmian Tunic Pattern -->
+				<item id="1908" min="1" max="1" chance="20.9311" /> <!-- Moonstone Earring Wire -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="11" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20590" level="46" type="L2Monster" name="Liele">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4001" level="4" /> <!-- NPC Windstrike -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="10302" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1229.78678" hpRegen="5.5" mp="637.8" mpRegen="2.1" />
+			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="182.18816" magical="121.302932993263" />
+			<attribute>
+				<defence fire="-5" water="110" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="174" />
+			</speed>
+			<hit_time>350</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4001" level="4" /> <!-- NPC Windstrike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4010" level="5" /> <!-- Water Resistance -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="901" max="1842" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.244499921798706">
+					<item id="354" min="1" max="1" chance="0.6196" /> <!-- Chain Mail Shirt -->
+					<item id="1959" min="1" max="1" chance="32.4262" /> <!-- Chain Mail Shirt Material -->
+					<item id="381" min="1" max="1" chance="0.9912" /> <!-- Chain Gaiters -->
+					<item id="1960" min="1" max="1" chance="65.963" /> <!-- Chain Gaiters Part -->
+				</group>
+				<group chance="29.622600555419922">
+					<item id="1867" min="1" max="1" chance="44.2276" /> <!-- Animal Skin -->
+					<item id="1872" min="1" max="1" chance="44.2276" /> <!-- Animal Bone -->
+					<item id="1882" min="1" max="1" chance="7.3713" /> <!-- Leather -->
+					<item id="1894" min="1" max="1" chance="1.1639" /> <!-- Crafted Leather -->
+					<item id="4042" min="1" max="1" chance="0.5528" /> <!-- Enria -->
+					<item id="2230" min="1" max="1" chance="0.6428" /> <!-- Recipe: Theca Leather Gaiters -->
+					<item id="2320" min="1" max="1" chance="0.1156" /> <!-- Recipe: Cursed Staff -->
+					<item id="8723" min="1" max="1" chance="1.3268" /> <!-- Life Stone - Level 46 -->
+					<item id="8733" min="1" max="1" chance="0.3317" /> <!-- Mid-Grade Life Stone - Level 46 -->
+					<item id="8743" min="1" max="1" chance="0.0332" /> <!-- High-Grade Life Stone - Level 46 -->
+					<item id="8753" min="1" max="1" chance="0.0067" /> <!-- Top-Grade Life Stone - Level 46 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2935" min="1" max="1" chance="12.1583" /> <!-- Reinforced Mithril Gaiters Fragment -->
+				<item id="2068" min="1" max="1" chance="1.6483" /> <!-- Stick of Faith Shaft -->
+				<item id="2163" min="1" max="1" chance="11.6683" /> <!-- Recipe: Earring of Protection -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="20591" level="47" type="L2Monster" name="Valley Treant">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagicSlow" id="4248" level="4" /> <!-- NPC HP Drain - Slow -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="15208" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1276.53628" hpRegen="5.5" mp="665.0" mpRegen="2.1" />
+			<attack physical="261.69549" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="186.63569" magical="124.264149144103" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="12" />
+				<run ground="12" />
+			</speed>
+			<hit_time>610</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4248" level="4" /> <!-- NPC HP Drain - Slow -->
+			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
+			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1058" max="2159" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.41350001096725464">
+					<item id="94" min="1" max="1" chance="1.3003" /> <!-- Bec de Corbin -->
+					<item id="2079" min="1" max="1" chance="98.6997" /> <!-- Bec De Corbin Blade -->
+				</group>
+				<group chance="32.562599182128906">
+					<item id="1867" min="1" max="1" chance="44.2276" /> <!-- Animal Skin -->
+					<item id="1872" min="1" max="1" chance="44.2276" /> <!-- Animal Bone -->
+					<item id="1882" min="1" max="1" chance="7.3713" /> <!-- Leather -->
+					<item id="1894" min="1" max="1" chance="1.1639" /> <!-- Crafted Leather -->
+					<item id="4042" min="1" max="1" chance="0.5528" /> <!-- Enria -->
+					<item id="2230" min="1" max="1" chance="0.6428" /> <!-- Recipe: Theca Leather Gaiters -->
+					<item id="2320" min="1" max="1" chance="0.1156" /> <!-- Recipe: Cursed Staff -->
+					<item id="8723" min="1" max="1" chance="1.3268" /> <!-- Life Stone - Level 46 -->
+					<item id="8733" min="1" max="1" chance="0.3317" /> <!-- Mid-Grade Life Stone - Level 46 -->
+					<item id="8743" min="1" max="1" chance="0.0332" /> <!-- High-Grade Life Stone - Level 46 -->
+					<item id="8753" min="1" max="1" chance="0.0067" /> <!-- Top-Grade Life Stone - Level 46 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2947" min="1" max="1" chance="19.154" /> <!-- Dwarven Chain Shield Fragment -->
+				<item id="951" min="1" max="1" chance="0.4876" /> <!-- Scroll: Enchant Weapon (C-Grade) -->
+				<item id="1911" min="1" max="1" chance="19.9446" /> <!-- Earring of Protection Gemstone -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="23" />
+			<height normal="90" />
+		</collision>
+	</npc>
+	<npc id="20592" level="48" type="L2Monster" name="Satyr">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="71" />
+			<param name="MoveAroundSocial1" value="71" />
+			<param name="MoveAroundSocial2" value="71" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<equipment rhand="291" /> <!-- rhand: Trident -->
+		<acquire exp="16611" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1324.01623" hpRegen="5.5" mp="692.4" mpRegen="2.1" />
+			<attack physical="275.82705" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="191.12803" magical="127.255200286259" />
+			<attribute>
+				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="174" />
+			</speed>
+			<hit_time>580</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1458" max="2964" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.570900022983551">
+					<item id="195" min="1" max="1" chance="0.6476" /> <!-- Cursed Staff -->
+					<item id="2082" min="1" max="1" chance="50.4292" /> <!-- Cursed Staff Head -->
+					<item id="2502" min="1" max="1" chance="0.6476" /> <!-- Dwarven War Hammer -->
+					<item id="2968" min="1" max="1" chance="48.2756" /> <!-- Dwarven War Hammer Head -->
+				</group>
+				<group chance="27.049800872802734">
+					<item id="1871" min="1" max="1" chance="54.9097" /> <!-- Charcoal -->
+					<item id="1866" min="1" max="1" chance="36.6065" /> <!-- Suede -->
+					<item id="1877" min="1" max="1" chance="2.1964" /> <!-- Adamantite Nugget -->
+					<item id="4041" min="1" max="1" chance="0.4775" /> <!-- Mold Hardener -->
+					<item id="4040" min="1" max="1" chance="1.0982" /> <!-- Mold Lubricant -->
+					<item id="2340" min="1" max="1" chance="0.1277" /> <!-- Recipe: Pa'agrian Hammer -->
+					<item id="3006" min="1" max="1" chance="2.2412" /> <!-- Recipe: Demon's Gloves -->
+					<item id="8724" min="1" max="1" chance="1.8303" /> <!-- Life Stone - Level 49 -->
+					<item id="8734" min="1" max="1" chance="0.4576" /> <!-- Mid-Grade Life Stone - Level 49 -->
+					<item id="8744" min="1" max="1" chance="0.0458" /> <!-- High-Grade Life Stone - Level 49 -->
+					<item id="8754" min="1" max="1" chance="0.0091" /> <!-- Top-Grade Life Stone - Level 49 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1880" min="1" max="1" chance="36.8745" /> <!-- Steel -->
+				<item id="2951" min="1" max="1" chance="31.0131" /> <!-- Rind Leather Gloves Design -->
+				<item id="2166" min="1" max="1" chance="12.4998" /> <!-- Recipe: Earrings of Binding (100%) -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="14" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20593" level="49" type="L2Monster" name="Unicorn">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="Buff" id="4030" level="3" /> <!-- NPC Clan Might -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="17819" sp="4" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1372.18568" hpRegen="5.5" mp="720.0" mpRegen="2.1" />
+			<attack physical="290.44588" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="195.66302" magical="130.274648808072" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="174" />
+			</speed>
+			<hit_time>740</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1563" max="3187" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="4.114099979400635">
+					<item id="398" min="1" max="1" chance="0.3108" /> <!-- Plated Leather -->
+					<item id="1966" min="1" max="1" chance="19.4595" /> <!-- Plated Leather Fragment -->
+					<item id="399" min="1" max="1" chance="0.2866" /> <!-- Rind Leather Armor -->
+					<item id="1975" min="1" max="1" chance="17.5068" /> <!-- Rind Leather Armor Design -->
+					<item id="418" min="1" max="1" chance="0.497" /> <!-- Plated Leather Gaiters -->
+					<item id="1967" min="1" max="1" chance="29.0698" /> <!-- Plated Leather Gaiters Material -->
+					<item id="419" min="1" max="1" chance="0.4589" /> <!-- Rind Leather Gaiters -->
+					<item id="1976" min="1" max="1" chance="32.4106" /> <!-- Rind Leather Gaiters Material -->
+				</group>
+				<group chance="29.044700622558594">
+					<item id="1871" min="1" max="1" chance="54.9097" /> <!-- Charcoal -->
+					<item id="1866" min="1" max="1" chance="36.6065" /> <!-- Suede -->
+					<item id="1877" min="1" max="1" chance="2.1964" /> <!-- Adamantite Nugget -->
+					<item id="4041" min="1" max="1" chance="0.4775" /> <!-- Mold Hardener -->
+					<item id="4040" min="1" max="1" chance="1.0982" /> <!-- Mold Lubricant -->
+					<item id="2340" min="1" max="1" chance="0.1277" /> <!-- Recipe: Pa'agrian Hammer -->
+					<item id="3006" min="1" max="1" chance="2.2412" /> <!-- Recipe: Demon's Gloves -->
+					<item id="8724" min="1" max="1" chance="1.8303" /> <!-- Life Stone - Level 49 -->
+					<item id="8734" min="1" max="1" chance="0.4576" /> <!-- Mid-Grade Life Stone - Level 49 -->
+					<item id="8744" min="1" max="1" chance="0.0458" /> <!-- High-Grade Life Stone - Level 49 -->
+					<item id="8754" min="1" max="1" chance="0.0091" /> <!-- Top-Grade Life Stone - Level 49 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2083" min="1" max="1" chance="2.6308" /> <!-- Stiletto Edge -->
+				<item id="2341" min="1" max="1" chance="0.9208" /> <!-- Recipe: Sage's Staff -->
+				<item id="1912" min="1" max="1" chance="42.6659" /> <!-- Ring of Protection Gemstone -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="14" />
+			<height normal="30" />
+		</collision>
+	</npc>
+	<npc id="20594" level="50" type="L2Monster" name="Forest Runner">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>PLANT</race>
+		<sex>FEMALE</sex>
+		<acquire exp="12173" sp="2" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1421.00103" hpRegen="5.5" mp="747.8" mpRegen="2.1" />
+			<attack physical="305.54906" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="200.23844" magical="133.321011603844" />
+			<attribute>
+				<defence fire="-34" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="80" />
+				<run ground="174" />
+			</speed>
+			<hit_time>130</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1071" max="2178" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.3086000084877014">
+					<item id="231" min="1" max="1" chance="0.5492" /> <!-- Grace Dagger -->
+					<item id="2106" min="1" max="1" chance="49.4508" /> <!-- Grace Dagger Edge -->
+					<item id="233" min="1" max="1" chance="0.5492" /> <!-- Dark Screamer -->
+					<item id="2107" min="1" max="1" chance="49.4508" /> <!-- Dark Screamer Edge -->
+				</group>
+				<group chance="27.80660057067871">
+					<item id="1867" min="1" max="1" chance="41.3115" /> <!-- Animal Skin -->
+					<item id="1872" min="1" max="1" chance="41.3115" /> <!-- Animal Bone -->
+					<item id="1882" min="1" max="1" chance="6.8852" /> <!-- Leather -->
+					<item id="1894" min="1" max="1" chance="1.0871" /> <!-- Crafted Leather -->
+					<item id="4042" min="1" max="1" chance="0.5164" /> <!-- Enria -->
+					<item id="2234" min="1" max="1" chance="0.4618" /> <!-- Recipe: Divine Stockings -->
+					<item id="4609" min="1" max="1" chance="0.0689" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+					<item id="2356" min="1" max="1" chance="0.0505" /> <!-- Recipe: Demon's Staff -->
+					<item id="6669" min="1" max="1" chance="7.2055" /> <!-- Deluxe Chest Key - Grade 5 -->
+					<item id="8725" min="1" max="1" chance="0.8607" /> <!-- Life Stone - Level 52 -->
+					<item id="8735" min="1" max="1" chance="0.2152" /> <!-- Mid-Grade Life Stone - Level 52 -->
+					<item id="8745" min="1" max="1" chance="0.0215" /> <!-- High-Grade Life Stone - Level 52 -->
+					<item id="8755" min="1" max="1" chance="0.0042" /> <!-- Top-Grade Life Stone - Level 52 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1978" min="1" max="1" chance="17.3613" /> <!-- Tower Shield Fragment -->
+				<item id="1871" min="1" max="5" chance="90.2788" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="77.3819" /> <!-- Metallic Fiber -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="25.5" />
+		</collision>
+	</npc>
+	<npc id="20595" level="51" type="L2Monster" name="Fline Elder">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="80" />
+			<param name="MoveAroundSocial1" value="80" />
+			<param name="MoveAroundSocial2" value="80" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4001" level="5" /> <!-- NPC Windstrike -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="12664" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1470.41596" hpRegen="6.5" mp="775.8" mpRegen="2.4" />
+			<attack physical="321.13207" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="204.85194" magical="136.392732777413" />
+			<attribute>
+				<defence fire="20" water="20" wind="110" earth="-5" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="174" />
+			</speed>
+			<hit_time>560</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4011" level="5" /> <!-- Wind Resistance -->
+			<skill id="4282" level="1" /> <!-- Earth Attack Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1117" max="2270" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.321399986743927">
+					<item id="231" min="1" max="1" chance="0.5492" /> <!-- Grace Dagger -->
+					<item id="2106" min="1" max="1" chance="49.4508" /> <!-- Grace Dagger Edge -->
+					<item id="233" min="1" max="1" chance="0.5492" /> <!-- Dark Screamer -->
+					<item id="2107" min="1" max="1" chance="49.4508" /> <!-- Dark Screamer Edge -->
+				</group>
+				<group chance="23.77079963684082">
+					<item id="1870" min="1" max="1" chance="44.6176" /> <!-- Coal -->
+					<item id="1865" min="1" max="1" chance="44.6176" /> <!-- Varnish -->
+					<item id="1874" min="1" max="1" chance="2.9745" /> <!-- Oriharukon Ore -->
+					<item id="4043" min="1" max="1" chance="1.4873" /> <!-- Asofe -->
+					<item id="4039" min="1" max="1" chance="1.4873" /> <!-- Mold Glue -->
+					<item id="4125" min="1" max="1" chance="1.983" /> <!-- Recipe: Maestro Mold (100%) -->
+					<item id="3014" min="1" max="1" chance="1.2463" /> <!-- Recipe: Full Plate Boots -->
+					<item id="8725" min="1" max="1" chance="1.2394" /> <!-- Life Stone - Level 52 -->
+					<item id="8735" min="1" max="1" chance="0.3098" /> <!-- Mid-Grade Life Stone - Level 52 -->
+					<item id="8745" min="1" max="1" chance="0.031" /> <!-- High-Grade Life Stone - Level 52 -->
+					<item id="8755" min="1" max="1" chance="0.0062" /> <!-- Top-Grade Life Stone - Level 52 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2096" min="1" max="1" chance="1.5374" /> <!-- Sword of Whispering Death Blade -->
+				<item id="2354" min="1" max="1" chance="0.4602" /> <!-- Recipe: Deadman's Staff -->
+				<item id="1894" min="1" max="1" chance="9.8988" /> <!-- Crafted Leather -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="11" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20596" level="52" type="L2Monster" name="Liele Elder">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4001" level="5" /> <!-- NPC Windstrike -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>FEMALE</sex>
+		<acquire exp="13430" sp="3" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1520.38155" hpRegen="6.5" mp="804.0" mpRegen="2.4" />
+			<attack physical="337.18867" magical="230.25615" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="209.50106" magical="139.488165444537" />
+			<attribute>
+				<defence fire="-5" water="110" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="174" />
+			</speed>
+			<hit_time>350</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4010" level="5" /> <!-- Water Resistance -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="1000" clanHelpRange="300">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1189" max="2403" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="0.34459999203681946">
+					<item id="162" min="1" max="1" chance="0.1359" /> <!-- War Axe -->
+					<item id="2097" min="1" max="1" chance="12.0268" /> <!-- War Axe Blade -->
+					<item id="174" min="1" max="1" chance="0.1359" /> <!-- Nirvana Axe -->
+					<item id="2098" min="1" max="1" chance="12.0268" /> <!-- Nirvana Axe Blade -->
+					<item id="196" min="1" max="1" chance="0.1359" /> <!-- Stick of Eternity -->
+					<item id="2099" min="1" max="1" chance="12.6573" /> <!-- Stick of Eternity Shaft -->
+					<item id="197" min="1" max="1" chance="0.1359" /> <!-- Paradia Staff -->
+					<item id="2100" min="1" max="1" chance="12.6573" /> <!-- Paradia Staff Head -->
+					<item id="199" min="1" max="1" chance="0.1359" /> <!-- Pa'agrian Hammer -->
+					<item id="2102" min="1" max="1" chance="12.2033" /> <!-- Pa'agrian Hammer Head -->
+					<item id="200" min="1" max="1" chance="0.1359" /> <!-- Sage's Staff -->
+					<item id="2103" min="1" max="1" chance="12.6573" /> <!-- Sage's Staff Head -->
+					<item id="201" min="1" max="1" chance="0.1359" /> <!-- Club of Nature -->
+					<item id="2104" min="1" max="1" chance="12.6573" /> <!-- Club of Nature Head -->
+					<item id="202" min="1" max="1" chance="0.1359" /> <!-- Mace of Underworld -->
+					<item id="2105" min="1" max="1" chance="12.0267" /> <!-- Mace of Underworld Head -->
+				</group>
+				<group chance="28.56999969482422">
+					<item id="1873" min="1" max="1" chance="12.3817" /> <!-- Silver Nugget -->
+					<item id="1868" min="1" max="1" chance="61.9083" /> <!-- Thread -->
+					<item id="1876" min="1" max="1" chance="6.1908" /> <!-- Mithril Ore -->
+					<item id="1895" min="1" max="1" chance="8.844" /> <!-- Metallic Fiber -->
+					<item id="4042" min="1" max="1" chance="0.5159" /> <!-- Enria -->
+					<item id="4608" min="1" max="1" chance="0.0688" /> <!-- Greater Dye of INT <Int+3 Wit-3> -->
+					<item id="3017" min="1" max="1" chance="0.8646" /> <!-- Recipe: Divine Gloves -->
+					<item id="5155" min="1" max="1" chance="0.0619" /> <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
+					<item id="3017" min="1" max="1" chance="0.8646" /> <!-- Recipe: Divine Gloves -->
+					<item id="6669" min="1" max="1" chance="7.1986" /> <!-- Deluxe Chest Key - Grade 5 -->
+					<item id="8725" min="1" max="1" chance="0.8598" /> <!-- Life Stone - Level 52 -->
+					<item id="8735" min="1" max="1" chance="0.215" /> <!-- Mid-Grade Life Stone - Level 52 -->
+					<item id="8745" min="1" max="1" chance="0.0215" /> <!-- High-Grade Life Stone - Level 52 -->
+					<item id="8755" min="1" max="1" chance="0.0045" /> <!-- Top-Grade Life Stone - Level 52 -->
+				</group>
+				<group chance="42.0">
+					<item id="8600" min="1" max="1" chance="55" /> <!-- Herb of Life -->
+					<item id="8601" min="1" max="1" chance="38" /> <!-- Greater Herb of Life -->
+					<item id="8602" min="1" max="1" chance="7" /> <!-- Superior Herb of Life -->
+				</group>
+				<group chance="11.0">
+					<item id="8603" min="1" max="1" chance="50" /> <!-- Herb of Mana -->
+					<item id="8604" min="1" max="1" chance="43" /> <!-- Greater Herb of Mana -->
+					<item id="8605" min="1" max="1" chance="7" /> <!-- Superior Herb of Mana -->
+				</group>
+				<group chance="25.0">
+					<item id="8606" min="1" max="1" chance="20" /> <!-- Herb of Power -->
+					<item id="8608" min="1" max="1" chance="20" /> <!-- Herb of Alacrity -->
+					<item id="8610" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Probability -->
+					<item id="10655" min="1" max="1" chance="20" /> <!-- Herb of Vampiric Rage -->
+					<item id="10656" min="1" max="1" chance="20" /> <!-- Herb of Critical Attack - Power -->
+				</group>
+				<group chance="10.0">
+					<item id="8607" min="1" max="1" chance="50" /> <!-- Herb of Magic -->
+					<item id="8609" min="1" max="1" chance="50" /> <!-- Herb of Casting Spd. -->
+				</group>
+				<group chance="1.0">
+					<item id="8612" min="1" max="1" chance="33" /> <!-- Herb of the Warrior -->
+					<item id="8613" min="1" max="1" chance="33" /> <!-- Herb of the Mystic -->
+					<item id="8614" min="1" max="1" chance="34" /> <!-- Herb of Recovery -->
+				</group>
+				<group chance="11.0">
+					<item id="8611" min="1" max="1" chance="94" /> <!-- Herb of Speed -->
+					<item id="10657" min="1" max="1" chance="3" /> <!-- Herb of Doubt -->
+					<item id="13028" min="1" max="1" chance="3" /> <!-- Vitality Replenishing Herb -->
+				</group>
+			</death>
+			<corpse>
+				<item id="1875" min="1" max="1" chance="19.9596" /> <!-- Stone of Purity -->
+				<item id="1539" min="1" max="1" chance="66.5319" /> <!-- Greater Healing Potion -->
+				<item id="4609" min="1" max="1" chance="0.6653" /> <!-- Greater Dye of MEN <Men+3 Int-3> -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="20597" level="53" type="L2Monster" name="Valley Treant Elder">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="120" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagicSlow" id="4250" level="5" /> <!-- NPC Twister - Slow -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="28074" sp="6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1570.8463" hpRegen="6.5" mp="832.4" mpRegen="2.4" />
+			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="214.18326" magical="142.605626325743" />
+			<attribute>
+				<defence fire="-5" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="12" />
+				<run ground="12" />
+			</speed>
+			<hit_time>610</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
+			<skill id="4250" level="5" /> <!-- NPC Twister - Slow -->
+			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
+			<skill id="4284" level="5" /> <!-- Resist Bleed Attacks -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1973" max="4008" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.300100088119507">
+					<item id="442" min="1" max="1" chance="0.485" /> <!-- Divine Tunic -->
+					<item id="1988" min="1" max="1" chance="38.4414" /> <!-- Divine Tunic Fabric -->
+					<item id="473" min="1" max="1" chance="0.7758" /> <!-- Divine Stockings -->
+					<item id="1989" min="1" max="1" chance="60.2978" /> <!-- Divine Stocking Pattern -->
+				</group>
+				<group chance="33.66510009765625">
+					<item id="1870" min="1" max="1" chance="45.5637" /> <!-- Coal -->
+					<item id="1865" min="1" max="1" chance="45.5637" /> <!-- Varnish -->
+					<item id="1874" min="1" max="1" chance="3.0376" /> <!-- Oriharukon Ore -->
+					<item id="4043" min="1" max="1" chance="1.5188" /> <!-- Asofe -->
+					<item id="4039" min="1" max="1" chance="1.5188" /> <!-- Mold Glue -->
+					<item id="4133" min="1" max="1" chance="0.2191" /> <!-- Recipe: Zubei's Breastplate (100%) -->
+					<item id="4959" min="1" max="1" chance="0.8779" /> <!-- Recipe: Sealed Avadon Boots (60%) -->
+					<item id="4941" min="1" max="1" chance="0.3505" /> <!-- Recipe: Zubei's Gaiters (60%) -->
+					<item id="8726" min="1" max="1" chance="1.0547" /> <!-- Life Stone - Level 55 -->
+					<item id="8736" min="1" max="1" chance="0.2637" /> <!-- Mid-Grade Life Stone - Level 55 -->
+					<item id="8746" min="1" max="1" chance="0.0264" /> <!-- High-Grade Life Stone - Level 55 -->
+					<item id="8756" min="1" max="1" chance="0.0051" /> <!-- Top-Grade Life Stone - Level 55 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="3034" min="1" max="1" chance="0.997" /> <!-- Recipe: Spiritshot B -->
+				<item id="2113" min="1" max="1" chance="2.4141" /> <!-- Scorpion Blade -->
+				<item id="1918" min="1" max="1" chance="21.5903" /> <!-- Nassen's Earring Gemstone -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="23" />
+			<height normal="90" />
+		</collision>
+	</npc>
+	<npc id="20598" level="54" type="L2Monster" name="Satyr Elder">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="71" />
+			<param name="MoveAroundSocial1" value="71" />
+			<param name="MoveAroundSocial2" value="71" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>FAIRY</race>
+		<sex>MALE</sex>
+		<equipment rhand="297" /> <!-- rhand: Glaive -->
+		<acquire exp="20610" sp="4" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1621.75618" hpRegen="6.5" mp="861.0" mpRegen="2.4" />
+			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="218.89589" magical="145.743350252286" />
+			<attribute>
+				<defence fire="20" water="20" wind="53" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="45" />
+				<run ground="174" />
+			</speed>
+			<hit_time>580</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="13" /> <!-- Fairies -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1822" max="3711" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="2.1284000873565674">
+					<item id="442" min="1" max="1" chance="0.485" /> <!-- Divine Tunic -->
+					<item id="1988" min="1" max="1" chance="38.4414" /> <!-- Divine Tunic Fabric -->
+					<item id="473" min="1" max="1" chance="0.7758" /> <!-- Divine Stockings -->
+					<item id="1989" min="1" max="1" chance="60.2978" /> <!-- Divine Stocking Pattern -->
+				</group>
+				<group chance="43.9989013671875">
+					<item id="1864" min="1" max="3" chance="32.2596" /> <!-- Stem -->
+					<item id="1869" min="1" max="1" chance="32.2596" /> <!-- Iron Ore -->
+					<item id="1878" min="1" max="1" chance="12.9039" /> <!-- Braided Hemp -->
+					<item id="1884" min="1" max="1" chance="19.8521" /> <!-- Cord -->
+					<item id="4039" min="1" max="1" chance="1.0753" /> <!-- Mold Glue -->
+					<item id="4178" min="1" max="1" chance="0.5919" /> <!-- Recipe: Zubei's Shield (100%) -->
+					<item id="4184" min="1" max="1" chance="0.0372" /> <!-- Recipe: Sprite's Staff (100%) -->
+					<item id="5160" min="1" max="1" chance="0.0645" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
+					<item id="8726" min="1" max="1" chance="0.7468" /> <!-- Life Stone - Level 55 -->
+					<item id="8736" min="1" max="1" chance="0.1867" /> <!-- Mid-Grade Life Stone - Level 55 -->
+					<item id="8746" min="1" max="1" chance="0.0187" /> <!-- High-Grade Life Stone - Level 55 -->
+					<item id="8756" min="1" max="1" chance="0.0037" /> <!-- Top-Grade Life Stone - Level 55 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="4180" min="1" max="1" chance="51.2556" /> <!-- Recipe: Silver Arrow (100%) -->
+				<item id="2120" min="1" max="1" chance="2.2159" /> <!-- Great Pata Blade -->
+				<item id="1806" min="1" max="1" chance="0.9226" /> <!-- Recipe: Soulshot (B-Grade) -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="14" />
+			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="20599" level="55" type="L2Monster" name="Elder the Unicorn">
+		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<param name="MoveAroundSocial" value="60" />
+			<param name="MoveAroundSocial1" value="60" />
+			<param name="MoveAroundSocial2" value="60" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4001" level="5" /> <!-- NPC Windstrike -->
+		</parameters>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="21380" sp="5" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1673.05473" hpRegen="6.5" mp="889.8" mpRegen="2.4" />
+			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="223.6362" magical="148.899508363765" />
+			<attribute>
+				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+			</attribute>
+			<speed>
+				<walk ground="46" />
+				<run ground="174" />
+			</speed>
+			<hit_time>740</hit_time>
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4001" level="5" /> <!-- NPC Windstrike -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="7" /> <!-- Spirits -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
+		<ai aggroRange="1000" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>ELEMENTAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<death>
+				<group chance="70">
+					<item id="57" min="1893" max="3856" chance="100" /> <!-- Adena -->
+				</group>
+				<group chance="5.109000205993652">
+					<item id="2436" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Boots -->
+					<item id="2954" min="1" max="1" chance="15.652" /> <!-- Theca Leather Boots Texture -->
+					<item id="2437" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Boots -->
+					<item id="2960" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Boots Design -->
+					<item id="2438" min="1" max="1" chance="0.1798" /> <!-- Full Plate Boots -->
+					<item id="2961" min="1" max="1" chance="13.4659" /> <!-- Full Plate Boots Part -->
+					<item id="2460" min="1" max="1" chance="0.2337" /> <!-- Theca Leather Gloves -->
+					<item id="2955" min="1" max="1" chance="15.652" /> <!-- Theca Leather Gloves Texture -->
+					<item id="2461" min="1" max="1" chance="0.1798" /> <!-- Drake Leather Gloves -->
+					<item id="2962" min="1" max="1" chance="13.4659" /> <!-- Drake Leather Gloves Design -->
+					<item id="2462" min="1" max="1" chance="0.1798" /> <!-- Full Plate Gauntlets -->
+					<item id="2963" min="1" max="1" chance="13.4659" /> <!-- Full Plate Gauntlets Part -->
+					<item id="2463" min="1" max="1" chance="0.1798" /> <!-- Divine Gloves -->
+					<item id="2964" min="1" max="1" chance="13.466" /> <!-- Divine Gloves Pattern -->
+				</group>
+				<group chance="45.68429946899414">
+					<item id="1864" min="1" max="3" chance="32.2596" /> <!-- Stem -->
+					<item id="1869" min="1" max="1" chance="32.2596" /> <!-- Iron Ore -->
+					<item id="1878" min="1" max="1" chance="12.9039" /> <!-- Braided Hemp -->
+					<item id="1884" min="1" max="1" chance="19.8521" /> <!-- Cord -->
+					<item id="4039" min="1" max="1" chance="1.0753" /> <!-- Mold Glue -->
+					<item id="4178" min="1" max="1" chance="0.5919" /> <!-- Recipe: Zubei's Shield (100%) -->
+					<item id="4184" min="1" max="1" chance="0.0372" /> <!-- Recipe: Sprite's Staff (100%) -->
+					<item id="5160" min="1" max="1" chance="0.0645" /> <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
+					<item id="8726" min="1" max="1" chance="0.7468" /> <!-- Life Stone - Level 55 -->
+					<item id="8736" min="1" max="1" chance="0.1867" /> <!-- Mid-Grade Life Stone - Level 55 -->
+					<item id="8746" min="1" max="1" chance="0.0187" /> <!-- High-Grade Life Stone - Level 55 -->
+					<item id="8756" min="1" max="1" chance="0.0037" /> <!-- Top-Grade Life Stone - Level 55 -->
+				</group>
+			</death>
+			<corpse>
+				<item id="2120" min="1" max="1" chance="2.3008" /> <!-- Great Pata Blade -->
+				<item id="4146" min="1" max="1" chance="3.0703" /> <!-- Recipe: Tunic of Zubei (100%) -->
+				<item id="4590" min="1" max="1" chance="1.5966" /> <!-- Greater Dye of STR <Str+2 Dex-2> -->
+			</corpse>
+		</drop_lists>
+		<collision>
+			<radius normal="14" />
+			<height normal="30" />
 		</collision>
 	</npc>
 </list>

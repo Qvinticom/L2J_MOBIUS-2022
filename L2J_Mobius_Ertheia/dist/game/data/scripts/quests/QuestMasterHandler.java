@@ -78,10 +78,8 @@ import quests.Q00184_ArtOfPersuasion.Q00184_ArtOfPersuasion;
 import quests.Q00185_NikolasCooperation.Q00185_NikolasCooperation;
 import quests.Q00186_ContractExecution.Q00186_ContractExecution;
 import quests.Q00187_NikolasHeart.Q00187_NikolasHeart;
-import quests.Q00188_SealRemoval.Q00188_SealRemoval;
 import quests.Q00189_ContractCompletion.Q00189_ContractCompletion;
 import quests.Q00190_LostDream.Q00190_LostDream;
-import quests.Q00191_VainConclusion.Q00191_VainConclusion;
 import quests.Q00192_SevenSignsSeriesOfDoubt.Q00192_SevenSignsSeriesOfDoubt;
 import quests.Q00193_SevenSignsDyingMessage.Q00193_SevenSignsDyingMessage;
 import quests.Q00194_SevenSignsMammonsContract.Q00194_SevenSignsMammonsContract;
@@ -203,7 +201,6 @@ import quests.Q00755_InNeedOfPetras.Q00755_InNeedOfPetras;
 import quests.Q00756_TopQualityPetra.Q00756_TopQualityPetra;
 import quests.Q00757_TriolsMovement.Q00757_TriolsMovement;
 import quests.Q00758_TheFallenKingsMen.Q00758_TheFallenKingsMen;
-import quests.Q00760_BlockTheExit.Q00760_BlockTheExit;
 import quests.Q00761_AssistingTheGoldenRamArmy.Q00761_AssistingTheGoldenRamArmy;
 import quests.Q00762_AnOminousRequest.Q00762_AnOminousRequest;
 import quests.Q00763_ADauntingTask.Q00763_ADauntingTask;
@@ -214,14 +211,10 @@ import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragmen
 import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
 import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
 import quests.Q00778_OperationRoaringFlame.Q00778_OperationRoaringFlame;
-import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
 import quests.Q00784_TheQuietKiller.Q00784_TheQuietKiller;
 import quests.Q00785_ASuspiciousIngredient.Q00785_ASuspiciousIngredient;
 import quests.Q00786_AwaitingTheVoiceOfTheGods.Q00786_AwaitingTheVoiceOfTheGods;
 import quests.Q00787_TheRoleOfAWatcher.Q00787_TheRoleOfAWatcher;
-import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
-import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
-import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -248,7 +241,6 @@ import quests.Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.Q10293_SevenS
 import quests.Q10294_SevenSignsToTheMonasteryOfSilence.Q10294_SevenSignsToTheMonasteryOfSilence;
 import quests.Q10295_SevenSignsSolinasTomb.Q10295_SevenSignsSolinasTomb;
 import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal;
-import quests.Q10297_GrandOpeningComeToOurPub.Q10297_GrandOpeningComeToOurPub;
 import quests.Q10301_ShadowOfTerrorBlackishRedFog.Q10301_ShadowOfTerrorBlackishRedFog;
 import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
 import quests.Q10303_CrossroadsBetweenLightAndDarkness.Q10303_CrossroadsBetweenLightAndDarkness;
@@ -382,7 +374,6 @@ import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunte
 import quests.Q10461_TappingThePowerWithin.Q10461_TappingThePowerWithin;
 import quests.Q10462_TemperARustingBlade.Q10462_TemperARustingBlade;
 import quests.Q10464_BePreparedForAnything.Q10464_BePreparedForAnything;
-import quests.Q10465_SoulFrostSword.Q10465_SoulFrostSword;
 import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
@@ -458,33 +449,6 @@ import quests.Q10797_CrossingFate.Q10797_CrossingFate;
 import quests.Q10798_LettersFromTheQueenDragonValley.Q10798_LettersFromTheQueenDragonValley;
 import quests.Q10799_StrangeThingsAfootInTheValley.Q10799_StrangeThingsAfootInTheValley;
 import quests.Q10800_ReconnaissanceAtDragonValley.Q10800_ReconnaissanceAtDragonValley;
-import quests.Q10811_ExaltedOneWhoFacesTheLimit.Q10811_ExaltedOneWhoFacesTheLimit;
-import quests.Q10812_FacingSadness.Q10812_FacingSadness;
-import quests.Q10813_ForGlory.Q10813_ForGlory;
-import quests.Q10814_BefittingOfTheStatus.Q10814_BefittingOfTheStatus;
-import quests.Q10815_StepUp.Q10815_StepUp;
-import quests.Q10817_ExaltedOneWhoOvercomesTheLimit.Q10817_ExaltedOneWhoOvercomesTheLimit;
-import quests.Q10818_ConfrontingAGiantMonster.Q10818_ConfrontingAGiantMonster;
-import quests.Q10819_ForHonor.Q10819_ForHonor;
-import quests.Q10820_RelationshipsBefittingOfTheStatus.Q10820_RelationshipsBefittingOfTheStatus;
-import quests.Q10821_HelpingOthers.Q10821_HelpingOthers;
-import quests.Q10823_ExaltedOneWhoShattersTheLimit.Q10823_ExaltedOneWhoShattersTheLimit;
-import quests.Q10824_ConfrontingTheGreatestDanger.Q10824_ConfrontingTheGreatestDanger;
-import quests.Q10825_ForVictory.Q10825_ForVictory;
-import quests.Q10826_LuckBefittingOfTheStatus.Q10826_LuckBefittingOfTheStatus;
-import quests.Q10827_StepUpToLead.Q10827_StepUpToLead;
-import quests.Q10829_InSearchOfTheCause.Q10829_InSearchOfTheCause;
-import quests.Q10830_TheLostGardenOfSpirits.Q10830_TheLostGardenOfSpirits;
-import quests.Q10831_UnbelievableSight.Q10831_UnbelievableSight;
-import quests.Q10832_EnergyOfSadnessAndAnger.Q10832_EnergyOfSadnessAndAnger;
-import quests.Q10833_PutTheQueenOfSpiritsToSleep.Q10833_PutTheQueenOfSpiritsToSleep;
-import quests.Q10836_DisappearedClanMember.Q10836_DisappearedClanMember;
-import quests.Q10837_LookingForTheBlackbirdClanMember.Q10837_LookingForTheBlackbirdClanMember;
-import quests.Q10838_TheReasonForNotBeingAbleToGetOut.Q10838_TheReasonForNotBeingAbleToGetOut;
-import quests.Q10839_BlackbirdsNameValue.Q10839_BlackbirdsNameValue;
-import quests.Q10840_TimeToRecover.Q10840_TimeToRecover;
-import quests.Q10841_DeepInsideAteliaFortress.Q10841_DeepInsideAteliaFortress;
-import quests.Q10843_AnomalyInTheEnchantedValley.Q10843_AnomalyInTheEnchantedValley;
 
 /**
  * @author NosBit
@@ -554,10 +518,8 @@ public class QuestMasterHandler
 		Q00185_NikolasCooperation.class,
 		Q00186_ContractExecution.class,
 		Q00187_NikolasHeart.class,
-		Q00188_SealRemoval.class,
 		Q00189_ContractCompletion.class,
 		Q00190_LostDream.class,
-		Q00191_VainConclusion.class,
 		Q00192_SevenSignsSeriesOfDoubt.class,
 		Q00193_SevenSignsDyingMessage.class,
 		Q00194_SevenSignsMammonsContract.class,
@@ -679,7 +641,6 @@ public class QuestMasterHandler
 		Q00756_TopQualityPetra.class,
 		Q00757_TriolsMovement.class,
 		Q00758_TheFallenKingsMen.class,
-		Q00760_BlockTheExit.class,
 		Q00761_AssistingTheGoldenRamArmy.class,
 		Q00762_AnOminousRequest.class,
 		Q00763_ADauntingTask.class,
@@ -690,14 +651,10 @@ public class QuestMasterHandler
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,
 		Q00778_OperationRoaringFlame.class,
-		Q00783_VestigeOfTheMagicPower.class,
 		Q00784_TheQuietKiller.class,
 		Q00785_ASuspiciousIngredient.class,
 		Q00786_AwaitingTheVoiceOfTheGods.class,
 		Q00787_TheRoleOfAWatcher.class,
-		Q00790_ObtainingFerinsTrust.class,
-		Q00817_BlackAteliaResearch.class,
-		Q00823_DisappearedRaceNewFairy.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,
@@ -724,7 +681,6 @@ public class QuestMasterHandler
 		Q10294_SevenSignsToTheMonasteryOfSilence.class,
 		Q10295_SevenSignsSolinasTomb.class,
 		Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class,
-		Q10297_GrandOpeningComeToOurPub.class,
 		Q10301_ShadowOfTerrorBlackishRedFog.class,
 		Q10302_UnsettlingShadowAndRumors.class,
 		Q10303_CrossroadsBetweenLightAndDarkness.class,
@@ -858,7 +814,6 @@ public class QuestMasterHandler
 		Q10461_TappingThePowerWithin.class,
 		Q10462_TemperARustingBlade.class,
 		Q10464_BePreparedForAnything.class,
-		Q10465_SoulFrostSword.class,
 		Q10472_WindsOfFateEncroachingShadows.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
@@ -933,34 +888,7 @@ public class QuestMasterHandler
 		Q10797_CrossingFate.class,
 		Q10798_LettersFromTheQueenDragonValley.class,
 		Q10799_StrangeThingsAfootInTheValley.class,
-		Q10800_ReconnaissanceAtDragonValley.class,
-		Q10811_ExaltedOneWhoFacesTheLimit.class,
-		Q10812_FacingSadness.class,
-		Q10813_ForGlory.class,
-		Q10814_BefittingOfTheStatus.class,
-		Q10815_StepUp.class,
-		Q10817_ExaltedOneWhoOvercomesTheLimit.class,
-		Q10818_ConfrontingAGiantMonster.class,
-		Q10819_ForHonor.class,
-		Q10820_RelationshipsBefittingOfTheStatus.class,
-		Q10821_HelpingOthers.class,
-		Q10823_ExaltedOneWhoShattersTheLimit.class,
-		Q10824_ConfrontingTheGreatestDanger.class,
-		Q10825_ForVictory.class,
-		Q10826_LuckBefittingOfTheStatus.class,
-		Q10827_StepUpToLead.class,
-		Q10829_InSearchOfTheCause.class,
-		Q10830_TheLostGardenOfSpirits.class,
-		Q10831_UnbelievableSight.class,
-		Q10832_EnergyOfSadnessAndAnger.class,
-		Q10833_PutTheQueenOfSpiritsToSleep.class,
-		Q10836_DisappearedClanMember.class,
-		Q10837_LookingForTheBlackbirdClanMember.class,
-		Q10838_TheReasonForNotBeingAbleToGetOut.class,
-		Q10839_BlackbirdsNameValue.class,
-		Q10840_TimeToRecover.class,
-		Q10841_DeepInsideAteliaFortress.class,
-		Q10843_AnomalyInTheEnchantedValley.class
+		Q10800_ReconnaissanceAtDragonValley.class
 	};
 	
 	public static void main(String[] args)

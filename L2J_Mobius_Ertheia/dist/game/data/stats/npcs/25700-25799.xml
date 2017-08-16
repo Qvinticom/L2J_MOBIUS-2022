@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25700" level="88" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
 		<!-- Confirmed CT2.5 -->
@@ -138,7 +138,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25702" level="84" type="L2Monster" name="Guard of the Grail">
+	<npc id="25702" level="84" type="L2Monster" name="Guardian of the Grail">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6326" level="1" />
@@ -344,7 +344,7 @@
 			<height normal="13" />
 		</collision>
 	</npc>
-	<npc id="25706" level="83" type="L2Monster" name="Lost Watcher">
+	<npc id="25706" level="83" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -401,7 +401,7 @@
 			<height normal="48.5" />
 		</collision>
 	</npc>
-	<npc id="25707" level="83" type="L2Monster" name="Lost Watcher">
+	<npc id="25707" level="83" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -564,7 +564,7 @@
 			<height normal="57" />
 		</collision>
 	</npc>
-	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Captain">
+	<npc id="25710" level="83" type="L2RaidBoss" name="Lost Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2748,7 +2748,7 @@
 			<height normal="52" />
 		</collision>
 	</npc>
-	<npc id="25746" level="90" type="L2Monster" name="Kimerian Ghost" title="">
+	<npc id="25746" level="90" type="L2Monster" name="Kimerian Ghost">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4431,7 +4431,7 @@
 			<height normal="100" />
 		</collision>
 	</npc>
-	<npc id="25775" level="94" type="L2RaidBoss" name="Apherus" title="">
+	<npc id="25775" level="94" type="L2RaidBoss" name="Apherus">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />
@@ -4742,7 +4742,7 @@
 			<height normal="81" />
 		</collision>
 	</npc>
-	<npc id="25780" level="94" type="L2Monster" name="Spezion's Subordinate" title="">
+	<npc id="25780" level="94" type="L2Monster" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4788,7 +4788,7 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="25781" level="94" type="L2Monster" name="Spezion's Subordinate" title="">
+	<npc id="25781" level="94" type="L2Monster" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4833,7 +4833,7 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25782" level="94" type="L2RaidBoss" name="Spezion's Subordinate" title="">
+	<npc id="25782" level="94" type="L2RaidBoss" name="Spezion's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -4972,7 +4972,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25785" level="88" type="L2RaidBoss" name="Teredor" title="">
+	<npc id="25785" level="88" type="L2RaidBoss" name="Teredor">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5917,7 +5917,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25798" level="97" type="L2Monster" name="Kechi's Subordinate" title="">
+	<npc id="25798" level="97" type="L2Monster" name="Kechi's Subordinate">
 		<!-- TODO: Must be confirmed -->
 		<parameters>
 			<skill name="selfbuff1" id="4084" level="2" />

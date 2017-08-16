@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22100" level="58" type="L2Monster" name="Freya's Gardener">
 		<!-- Confirmed CT2.5 -->
@@ -728,7 +728,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="22111" level="75" type="L2Monster" name="Spiked Stakato Sorcerer">
+	<npc id="22111" level="75" type="L2Monster" name="Spiked Stakato Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -784,7 +784,7 @@
 			<height normal="43.6" />
 		</collision>
 	</npc>
-	<npc id="22112" level="74" type="L2Monster" name="Cannibalistic Stakato Follower">
+	<npc id="22112" level="74" type="L2Monster" name="Cannibalistic Stakato Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -1069,7 +1069,7 @@
 			<height normal="47.3" />
 		</collision>
 	</npc>
-	<npc id="22117" level="78" type="L2Monster" name="Spiked Stakato Captain">
+	<npc id="22117" level="78" type="L2Monster" name="Spiked Stakato Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="20" />
@@ -1739,7 +1739,7 @@
 			<height normal="15.6" />
 		</collision>
 	</npc>
-	<npc id="22129" level="78" type="L2Monster" name="Warrior Monk">
+	<npc id="22129" level="78" type="L2Monster" name="Priest Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2019,7 +2019,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="22134" level="78" type="L2Monster" name="Guardian of the Holy Land">
+	<npc id="22134" level="78" type="L2Monster" name="Martyrium Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2127,7 +2127,7 @@
 			<height normal="47" />
 		</collision>
 	</npc>
-	<npc id="22136" level="99" type="L2Monster" name="Doorman Zombie">
+	<npc id="22136" level="99" type="L2Monster" name="Gatekeeper Zombie">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="pass1" value="36228" />
@@ -2191,7 +2191,7 @@
 			<id>1</id>
 		</extend_drop>
 	</npc>
-	<npc id="22137" level="99" type="L2Monster" name="Penance Guard">
+	<npc id="22137" level="99" type="L2Monster" name="Anteroom Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2257,7 +2257,7 @@
 			<id>1</id>
 		</extend_drop>
 	</npc>
-	<npc id="22138" level="99" type="L2Monster" name="Chapel Guard">
+	<npc id="22138" level="99" type="L2Monster" name="Chapel Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2407,7 +2407,7 @@
 			<id>1</id>
 		</extend_drop>
 	</npc>
-	<npc id="22140" level="98" type="L2Monster" name="Zombie Worker">
+	<npc id="22140" level="98" type="L2Monster" name="Resurrected Worker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5114,7 +5114,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22175" level="99" type="L2Monster" name="Andreas' Captain of the Royal Guard">
+	<npc id="22175" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5218,7 +5218,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22176" level="99" type="L2Monster" name="Andreas' Royal Guards">
+	<npc id="22176" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5306,7 +5306,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22188" level="99" type="L2Monster" name="Andreas' Captain of the Royal Guard">
+	<npc id="22188" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5400,7 +5400,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22189" level="99" type="L2Monster" name="Andreas' Royal Guards">
+	<npc id="22189" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5555,7 +5555,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22191" level="99" type="L2Monster" name="Andreas' Captain of the Royal Guard">
+	<npc id="22191" level="99" type="L2Monster" name="Andreas' Escort Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5657,7 +5657,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22192" level="99" type="L2Monster" name="Andreas' Royal Guards">
+	<npc id="22192" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5742,7 +5742,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22193" level="99" type="L2Monster" name="Andreas' Royal Guards">
+	<npc id="22193" level="99" type="L2Monster" name="Andreas' Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -5825,7 +5825,7 @@
 			<id>5</id>
 		</extend_drop>
 	</npc>
-	<npc id="22194" level="99" type="L2Monster" name="Penance Guard">
+	<npc id="22194" level="99" type="L2Monster" name="Anteroom Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />

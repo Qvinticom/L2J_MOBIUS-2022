@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="18001" level="60" type="L2Monster" name="Blood Queen">
 		<!-- Confirmed CT2.5 -->
@@ -148,7 +148,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="18003" level="1" type="L2Monster" name="Bearded Keltir">
+	<npc id="18003" level="1" type="L2Monster" name="Nepetir">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -760,7 +760,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="18016" level="32" type="L2FestivalMonster" name="Offering of the Branded, Marksman">
+	<npc id="18016" level="32" type="L2FestivalMonster" name="Offering of the Branded, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -1232,7 +1232,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="18026" level="43" type="L2FestivalMonster" name="Apostate's Offering, Marksman">
+	<npc id="18026" level="43" type="L2FestivalMonster" name="Apostate's Offering, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
@@ -1705,7 +1705,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="18036" level="54" type="L2FestivalMonster" name="Witch's Offering, Marksman">
+	<npc id="18036" level="54" type="L2FestivalMonster" name="Witch's Offering, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -2178,7 +2178,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="18046" level="65" type="L2FestivalMonster" name="Dark Omen Offering Marksman">
+	<npc id="18046" level="65" type="L2FestivalMonster" name="Dark Omen Offering Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />
@@ -2651,7 +2651,7 @@
 			<height normal="34.8" />
 		</collision>
 	</npc>
-	<npc id="18056" level="76" type="L2FestivalMonster" name="Offering of Forbidden Path, Marksman">
+	<npc id="18056" level="76" type="L2FestivalMonster" name="Offering of Forbidden Path, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="5" />
@@ -3124,7 +3124,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="18066" level="32" type="L2FestivalMonster" name="Offering of the Branded, Marksman">
+	<npc id="18066" level="32" type="L2FestivalMonster" name="Offering of the Branded, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="1" />
@@ -3597,7 +3597,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="18076" level="43" type="L2FestivalMonster" name="Apostate's Offering, Marksman">
+	<npc id="18076" level="43" type="L2FestivalMonster" name="Apostate's Offering, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="2" />
@@ -3784,7 +3784,7 @@
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="18080" level="54" type="L2FestivalMonster" name="Witch's Offering,">
+	<npc id="18080" level="54" type="L2FestivalMonster" name="Witch's Offering">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -4070,7 +4070,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="18086" level="54" type="L2FestivalMonster" name="Witch's Offering, Marksman">
+	<npc id="18086" level="54" type="L2FestivalMonster" name="Witch's Offering, Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="3" />
@@ -4543,7 +4543,7 @@
 			<height normal="25.3" />
 		</collision>
 	</npc>
-	<npc id="18096" level="65" type="L2FestivalMonster" name="Dark Omen Offering Marksman">
+	<npc id="18096" level="65" type="L2FestivalMonster" name="Dark Omen Offering Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RoomIndex" value="4" />

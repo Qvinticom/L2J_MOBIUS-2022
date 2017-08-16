@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25500" level="44" type="L2Monster" name="Alligator of Istary" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1348,7 +1348,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25533" level="82" type="L2Monster" name="Kechi's Henchman">
+	<npc id="25533" level="82" type="L2Monster" name="Kechi's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="0" />
@@ -3065,7 +3065,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="25565" level="99" type="L2Monster" name="Atrielle's Minion">
+	<npc id="25565" level="99" type="L2Monster" name="Atrielle's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3347,7 +3347,7 @@
 			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="25570" level="99" type="L2Monster" name="Jax's Vanguard">
+	<npc id="25570" level="99" type="L2Monster" name="Jax' Vanguard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3394,7 +3394,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25571" level="99" type="L2Monster" name="Jax's Raider">
+	<npc id="25571" level="99" type="L2Monster" name="Jax' Raider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -3498,7 +3498,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25573" level="93" type="L2Monster" name="Hager's Henchman">
+	<npc id="25573" level="93" type="L2Monster" name="Hager's Follower">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="HealMagic_a" id="4780" level="10" />
@@ -3547,7 +3547,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="25574" level="93" type="L2Monster" name="Hager's Bodyguard">
+	<npc id="25574" level="93" type="L2Monster" name="Hager's Escort">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -4390,7 +4390,7 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="25590" level="97" type="L2Monster" name="Brand's Chamberlain">
+	<npc id="25590" level="97" type="L2Monster" name="Brand's Servant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial_a" id="4725" level="10" />
@@ -4438,7 +4438,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25591" level="97" type="L2Monster" name="Brand's Servant">
+	<npc id="25591" level="97" type="L2Monster" name="Brand's Maid">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />
@@ -4662,7 +4662,7 @@
 			<height normal="22" grown="27" />
 		</collision>
 	</npc>
-	<npc id="25595" level="99" type="L2Monster" name="Gerg's Henchman">
+	<npc id="25595" level="99" type="L2Monster" name="Gerg's Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="different_level_9_attacked" id="5456" level="1" />

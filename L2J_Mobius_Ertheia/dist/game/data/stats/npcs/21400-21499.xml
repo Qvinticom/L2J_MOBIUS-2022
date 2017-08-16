@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21438" level="65" type="L2Monster" name="Heathen Warrior">
 		<!-- Confirmed CT2.5 -->
@@ -72,7 +72,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="21439" level="66" type="L2Monster" name="Heathen Executed">
+	<npc id="21439" level="66" type="L2Monster" name="Heathen Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -214,7 +214,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="21441" level="68" type="L2Monster" name="Heathen Grunt">
+	<npc id="21441" level="68" type="L2Monster" name="Heathen Soldier">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

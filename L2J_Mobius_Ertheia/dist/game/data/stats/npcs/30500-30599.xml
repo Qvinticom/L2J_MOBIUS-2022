@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="30500" level="70" type="L2VillageMaster" name="Osborn" title="High Prefect">
 		<!-- Confirmed CT2.5 -->
@@ -1644,7 +1644,7 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="30540" level="70" type="L2Teleporter" name="Teleport Device" title="">
+	<npc id="30540" level="70" type="L2Teleporter" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3101,7 +3101,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="30576" level="70" type="L2Teleporter" name="Teleport Device" title="">
+	<npc id="30576" level="70" type="L2Teleporter" name="Teleport Device">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4027,7 +4027,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="30598" level="70" type="L2Npc" name="Newbie Guide">
+	<npc id="30598" level="70" type="L2Npc" name="Newbie Helper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -4068,7 +4068,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="30599" level="70" type="L2Npc" name="Newbie Guide">
+	<npc id="30599" level="70" type="L2Npc" name="Newbie Helper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />

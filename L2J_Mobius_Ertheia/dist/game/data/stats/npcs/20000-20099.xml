@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20001" level="1" type="L2Monster">
 		<!-- Confirmed CT2.5 -->
@@ -959,7 +959,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="20017" level="22" type="L2Monster" name="Vuku Orc Fighter">
+	<npc id="20017" level="22" type="L2Monster" name="Vuku Orc Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -2213,7 +2213,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="20038" level="18" type="L2Monster" name="Venomous Spider">
+	<npc id="20038" level="18" type="L2Monster" name="Giant Venomous Spider">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2302,7 +2302,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="20039" level="18" type="L2Monster" name="Scavenger Wererat">
+	<npc id="20039" level="18" type="L2Monster" name="Ratman Scavenger">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2386,7 +2386,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20040" level="18" type="L2Monster" name="Sukar Wererat">
+	<npc id="20040" level="18" type="L2Monster" name="Sukar Ratman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -2708,7 +2708,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="20047" level="19" type="L2Monster" name="Sukar Wererat Leader">
+	<npc id="20047" level="19" type="L2Monster" name="Sukar Ratman Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -3184,7 +3184,7 @@
 			<height normal="27" grown="34" />
 		</collision>
 	</npc>
-	<npc id="20055" level="21" type="L2Monster" name="Wandering Eye">
+	<npc id="20055" level="21" type="L2Monster" name="Monster Eye Watchman">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3366,7 +3366,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20059" level="22" type="L2Monster" name="Hungry Eye">
+	<npc id="20059" level="22" type="L2Monster" name="Monster Eye Patrol">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3871,7 +3871,7 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="20066" level="25" type="L2Monster" name="Ol Mahum Captain">
+	<npc id="20066" level="25" type="L2Monster" name="Ol Mahum Officer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -5501,7 +5501,7 @@
 			<height normal="48" grown="57" />
 		</collision>
 	</npc>
-	<npc id="20090" level="38" type="L2Monster" name="Noble Ant Leader">
+	<npc id="20090" level="38" type="L2Monster" name="Noble Ant Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -5632,7 +5632,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="20093" level="10" type="L2Monster" name="Orc Fighter">
+	<npc id="20093" level="10" type="L2Monster" name="Orc Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
@@ -5703,7 +5703,7 @@
 			<height normal="22" grown="26.4" />
 		</collision>
 	</npc>
-	<npc id="20094" level="10" type="L2Monster" name="Orc Marksman">
+	<npc id="20094" level="10" type="L2Monster" name="Orc Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="104" />

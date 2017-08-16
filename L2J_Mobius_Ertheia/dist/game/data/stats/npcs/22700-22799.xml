@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22701" level="81" type="L2Monster" name="Varangka's Dre Vanul">
 		<!-- Confirmed CT2.5 -->
@@ -454,7 +454,7 @@
 			<height normal="28.8" />
 		</collision>
 	</npc>
-	<npc id="22706" level="82" type="L2Monster" name="Turka Follower's Ghost">
+	<npc id="22706" level="82" type="L2Monster" name="Turka Subordinate's Ghost">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -2553,7 +2553,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="22736" level="84" type="L2Monster" name="Mutant Overlord">
+	<npc id="22736" level="84" type="L2Monster" name="Mutant Sniper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -5077,7 +5077,7 @@
 			<height normal="8" />
 		</collision>
 	</npc>
-	<npc id="22767" level="85" type="L2Monster" name="Archery Knight">
+	<npc id="22767" level="85" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -5579,7 +5579,7 @@
 			<height normal="40.25" />
 		</collision>
 	</npc>
-	<npc id="22773" level="83" type="L2Monster" name="Tanta Lizardman Magician">
+	<npc id="22773" level="83" type="L2Monster" name="Tanta Lizardman Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -6193,7 +6193,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22779" level="84" type="L2Monster" name="Sel Mahum Escort Guard">
+	<npc id="22779" level="84" type="L2Monster" name="Sel Mahum Warrior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6339" level="1" />
@@ -7248,7 +7248,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="22789" level="83" type="L2Monster" name="Guide Solina">
+	<npc id="22789" level="83" type="L2Monster" name="Solina Guide">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6303" level="1" />
@@ -7341,7 +7341,7 @@
 			<height normal="23.4" />
 		</collision>
 	</npc>
-	<npc id="22790" level="83" type="L2Monster" name="Seeker Solina">
+	<npc id="22790" level="83" type="L2Monster" name="Solina Seeker">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6305" level="1" />
@@ -7434,7 +7434,7 @@
 			<height normal="25.4" />
 		</collision>
 	</npc>
-	<npc id="22791" level="83" type="L2Monster" name="Savior Solina">
+	<npc id="22791" level="83" type="L2Monster" name="Solina Savior">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6307" level="1" />
@@ -7527,7 +7527,7 @@
 			<height normal="15.6" />
 		</collision>
 	</npc>
-	<npc id="22792" level="83" type="L2Monster" name="Disciple Solina">
+	<npc id="22792" level="83" type="L2Monster" name="Solina Disciple">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6309" level="1" />
@@ -7622,7 +7622,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="22793" level="83" type="L2Monster" name="Ascetic Solina">
+	<npc id="22793" level="83" type="L2Monster" name="Solina Ascetic">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6310" level="1" />

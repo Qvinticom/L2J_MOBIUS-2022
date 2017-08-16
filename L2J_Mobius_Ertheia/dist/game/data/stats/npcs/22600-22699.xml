@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="22602" level="73" type="L2Monster" name="Mutant Bird">
 		<!-- Confirmed CT2.5 -->
@@ -314,7 +314,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="22606" level="76" type="L2Monster" name="Floating Skull">
+	<npc id="22606" level="76" type="L2Monster" name="Floating Skeleton">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -398,7 +398,7 @@
 			<height normal="39" />
 		</collision>
 	</npc>
-	<npc id="22607" level="77" type="L2Monster" name="Floating Skull">
+	<npc id="22607" level="77" type="L2Monster" name="Floating Skeleton">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1612,7 +1612,7 @@
 			<height normal="28.4" />
 		</collision>
 	</npc>
-	<npc id="22623" level="82" type="L2Monster" name="Spiked Stakato Sorcerer">
+	<npc id="22623" level="82" type="L2Monster" name="Spiked Stakato Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="4563" level="9" />
@@ -1691,7 +1691,7 @@
 			<height normal="43.6" />
 		</collision>
 	</npc>
-	<npc id="22624" level="82" type="L2Monster" name="Cannibalistic Stakato Follower">
+	<npc id="22624" level="82" type="L2Monster" name="Cannibalistic Stakato Subordinate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial1" id="4232" level="8" />
@@ -2095,7 +2095,7 @@
 			<height normal="47.3" />
 		</collision>
 	</npc>
-	<npc id="22629" level="83" type="L2Monster" name="Spiked Stakato Captain">
+	<npc id="22629" level="83" type="L2Monster" name="Spiked Stakato Guard Captain">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="PhysicalSpecial" id="4032" level="9" />
@@ -3265,7 +3265,7 @@
 			<height normal="57.75" grown="69" />
 		</collision>
 	</npc>
-	<npc id="22645" level="78" type="L2Monster" name="Balrog of Destruction">
+	<npc id="22645" level="78" type="L2Monster" name="Balor of Destruction">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3906,7 +3906,7 @@
 			<height normal="41" />
 		</collision>
 	</npc>
-	<npc id="22653" level="84" type="L2Monster" name="Mucrokian Preacher">
+	<npc id="22653" level="84" type="L2Monster" name="Mucrokian Prophet">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4582" level="9" />
@@ -4310,7 +4310,7 @@
 			<height normal="41.5" />
 		</collision>
 	</npc>
-	<npc id="22657" level="84" type="L2Monster" name="Exterminator">
+	<npc id="22657" level="84" type="L2Monster" name="Executioner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4670" level="9" />
@@ -4860,7 +4860,7 @@
 			<height normal="66" />
 		</collision>
 	</npc>
-	<npc id="22664" level="82" type="L2Monster" name="Lesser Giant Mage">
+	<npc id="22664" level="82" type="L2Monster" name="Lesser Giant Wizard">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="W_LongRangeDDMagic" id="6144" level="1" />
@@ -5220,7 +5220,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="22670" level="80" type="L2Monster" name="Cursed Lord">
+	<npc id="22670" level="80" type="L2Monster" name="Beastial Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -5297,7 +5297,7 @@
 			<height normal="56" />
 		</collision>
 	</npc>
-	<npc id="22671" level="80" type="L2Monster" name="Cursed Guardian!">
+	<npc id="22671" level="80" type="L2Monster" name="Beastial Guardian">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="DDMagic" id="4039" level="9" />
@@ -5369,7 +5369,7 @@
 			<height normal="14.5" />
 		</collision>
 	</npc>
-	<npc id="22672" level="80" type="L2Monster" name="Cursed Seer">
+	<npc id="22672" level="80" type="L2Monster" name="Beastial Seer">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="MagicHeal" id="4065" level="9" />
@@ -6801,7 +6801,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="22689" level="82" type="L2Monster" name="Mine Bug">
+	<npc id="22689" level="82" type="L2Monster" name="Spelunking Bug">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -6893,7 +6893,7 @@
 			<height normal="9" />
 		</collision>
 	</npc>
-	<npc id="22690" level="82" type="L2Monster" name="Earthworm's Descendant">
+	<npc id="22690" level="82" type="L2Monster" name="Earth Wyrm's Descendant">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="DeBuffProb" value="5000" />

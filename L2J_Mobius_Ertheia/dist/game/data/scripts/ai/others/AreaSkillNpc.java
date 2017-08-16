@@ -46,18 +46,12 @@ public final class AreaSkillNpc extends AbstractNpcAI
 		13323, // Whisper of Fear
 		13324, // Whisper of Fear
 		13325, // Whisper of Fear
-		13458, // Whisper of Fear
-		13459, // Whisper of Fear
-		13460, // Whisper of Fear
 		13310, // Solo Dance
 		13377, // Solo Dance
 		13378, // Solo Dance
 		13379, // Solo Dance
 		13380, // Solo Dance
 		13381, // Solo Dance
-		13452, // Solo Dance
-		13453, // Solo Dance
-		13454, // Solo Dance
 	};
 	private static final int[] TOTEMS = // ai_totem_of_body
 	{
