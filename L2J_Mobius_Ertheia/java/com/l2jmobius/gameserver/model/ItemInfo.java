@@ -16,13 +16,10 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.buylist.Product;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2WarehouseItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -79,8 +76,6 @@ public class ItemInfo
 	};
 	
 	private int[] _option;
-	private Collection<EnsoulOption> _soulCrystalOptions;
-	private Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
 	private long _visualExpiration;
 	
@@ -104,7 +99,7 @@ public class ItemInfo
 		// Get the augmentation boni
 		if (item.isAugmented())
 		{
-			_augmentation = item.getAugmentation().getId();
+			_augmentation = item.getAugmentation().getAugmentationId();
 		}
 		else
 		{
@@ -153,8 +148,6 @@ public class ItemInfo
 			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_option = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSpecialAbilities();
-		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
 	}
 	
@@ -211,8 +204,6 @@ public class ItemInfo
 		}
 		
 		_option = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSoulCrystalOptions();
-		_soulCrystalOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
 	}
 	
@@ -253,9 +244,6 @@ public class ItemInfo
 		_time = -9999;
 		
 		_location = 0;
-		
-		_soulCrystalOptions = Collections.emptyList();
-		_soulCrystalSpecialOptions = Collections.emptyList();
 	}
 	
 	public ItemInfo(L2WarehouseItem item)
@@ -306,8 +294,6 @@ public class ItemInfo
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_option = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSoulCrystalOptions();
-		_soulCrystalOptions = item.getSoulCrystalSpecialOptions();
 	}
 	
 	public int getObjectId()
@@ -408,16 +394,6 @@ public class ItemInfo
 	public int getVisualId()
 	{
 		return _visualId;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalOptions()
-	{
-		return _soulCrystalOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-	{
-		return _soulCrystalSpecialOptions;
 	}
 	
 	public long getVisualExpiration()

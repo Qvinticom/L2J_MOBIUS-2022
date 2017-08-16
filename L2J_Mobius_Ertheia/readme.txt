@@ -1,24 +1,15 @@
-L2J-Mobius Underground
+L2J-Mobius Ertheia (experimental branch)
 
-Client: https://mega.nz/#!h1FXyByZ!XmyZBtk4qSOlKb435rx7X372_NreN1PTH8l7A4lNCoo
+Client: https://mega.nz/#F!BxkyzLBA!CIuE1GQOO1JMel7S7UxPfQ
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
 What is done
--Underground packet compatibility
--Parsed item data from client
--Reworked new quests
--Gainak Underground
--Custom community board
--Factions system (GvE)
--Premium system
--Vote reward system
--Fixed server lag on many occasions
--Store offline trader transactions in realtime
--Addition of many retail AIs
+-Ertheia packet compatibility
+-Level up crystals
+-Recipes
+-Hennas
+-Augments
+-Alchemy
 
-TODO list
--Lindvior
--Trasken
--Underground five man dungeons
--Kamaloka
--Provisional Clan Halls
+Known issues
+-Skill enchanting must be reworked

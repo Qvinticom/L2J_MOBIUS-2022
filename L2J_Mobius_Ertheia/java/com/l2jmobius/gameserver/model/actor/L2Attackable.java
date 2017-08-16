@@ -50,6 +50,7 @@ import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.PcCafePointsManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
+import com.l2jmobius.gameserver.model.AbsorberInfo;
 import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.DamageDoneInfo;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -110,6 +111,9 @@ public class L2Attackable extends L2Npc
 	private volatile L2CommandChannel _firstCommandChannelAttacked = null;
 	private CommandChannelTimer _commandChannelTimer = null;
 	private long _commandChannelLastAttack = 0;
+	// Soul crystal
+	private boolean _absorbed;
+	private final Map<Integer, AbsorberInfo> _absorbersList = new ConcurrentHashMap<>();
 	// Misc
 	private boolean _mustGiveExpSp;
 	
@@ -1255,6 +1259,56 @@ public class L2Attackable extends L2Npc
 	public boolean isOverhit()
 	{
 		return _overhit;
+	}
+	
+	/**
+	 * Activate the absorbed soul condition on the L2Attackable.
+	 */
+	public void absorbSoul()
+	{
+		_absorbed = true;
+	}
+	
+	/**
+	 * @return True if the L2Attackable had his soul absorbed.
+	 */
+	public boolean isAbsorbed()
+	{
+		return _absorbed;
+	}
+	
+	/**
+	 * Adds an attacker that successfully absorbed the soul of this L2Attackable into the _absorbersList.
+	 * @param attacker
+	 */
+	public void addAbsorber(L2PcInstance attacker)
+	{
+		// If we have no _absorbersList initiated, do it
+		final AbsorberInfo ai = _absorbersList.get(attacker.getObjectId());
+		
+		// If the L2Character attacker isn't already in the _absorbersList of this L2Attackable, add it
+		if (ai == null)
+		{
+			_absorbersList.put(attacker.getObjectId(), new AbsorberInfo(attacker.getObjectId(), getCurrentHp()));
+		}
+		else
+		{
+			ai.setAbsorbedHp(getCurrentHp());
+		}
+		
+		// Set this L2Attackable as absorbed
+		absorbSoul();
+	}
+	
+	public void resetAbsorbList()
+	{
+		_absorbed = false;
+		_absorbersList.clear();
+	}
+	
+	public Map<Integer, AbsorberInfo> getAbsorbersList()
+	{
+		return _absorbersList;
 	}
 	
 	/**

@@ -460,11 +460,6 @@ public class PcInventory extends Inventory
 					actor.sendItemList(false);
 				}
 				
-				if (item.isEtcItem() && (item.getItemType() == EtcItemType.SOULSHOT))
-				{
-					actor.handleAutoShots(false);
-				}
-				
 				// Notify to scripts
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getItem());
 			}
@@ -514,11 +509,6 @@ public class PcInventory extends Inventory
 			else
 			{
 				actor.sendItemList(false);
-			}
-			
-			if (item.isEtcItem() && (item.getItemType() == EtcItemType.SOULSHOT))
-			{
-				actor.handleAutoShots(false);
 			}
 			
 			// Notify to scripts
@@ -994,10 +984,6 @@ public class PcInventory extends Inventory
 		{
 			item.giveSkillsToOwner();
 			item.applyEnchantStats();
-			if (item.isEquipped())
-			{
-				item.applySpecialAbilities();
-			}
 		}
 	}
 	

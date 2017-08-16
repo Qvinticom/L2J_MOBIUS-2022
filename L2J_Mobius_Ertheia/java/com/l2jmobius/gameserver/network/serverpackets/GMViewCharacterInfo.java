@@ -88,8 +88,11 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		
 		for (int slot : getPaperdollOrder())
 		{
-			packet.writeQ(_activeChar.getInventory().getPaperdollAugmentationId(slot));
+			packet.writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
 		}
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		packet.writeD(0x00);
 		
 		packet.writeC(_activeChar.getInventory().getTalismanSlots()); // CT2.3
 		packet.writeC(_activeChar.getInventory().canEquipCloak() ? 1 : 0); // CT2.3

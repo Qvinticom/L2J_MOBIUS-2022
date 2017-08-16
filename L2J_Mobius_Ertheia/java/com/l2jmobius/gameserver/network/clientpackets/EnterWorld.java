@@ -63,11 +63,9 @@ import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.Die;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
-import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.ExBasicActionList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBeautyItemList;
 import com.l2jmobius.gameserver.network.serverpackets.ExCastleState;
-import com.l2jmobius.gameserver.network.serverpackets.ExConnectedTimeAndGettableReward;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetBookMarkInfoPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExNoticePostArrived;
 import com.l2jmobius.gameserver.network.serverpackets.ExNotifyPremiumItem;
@@ -99,7 +97,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 
 /**
@@ -644,20 +641,6 @@ public class EnterWorld implements IClientIncomingPacket
 		if (Config.ENABLE_WORLD_CHAT)
 		{
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
-		}
-		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar));
-		activeChar.sendPacket(ExConnectedTimeAndGettableReward.STATIC_PACKET);
-		
-		if (Config.ENABLE_AUTO_SHOTS)
-		{
-			activeChar.handleAutoShots(true);
-		}
-		else
-		{
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 0));
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 1));
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 2));
-			activeChar.sendPacket(new ExAutoSoulShot(0, false, 3));
 		}
 		
 		if (Config.HARDWARE_INFO_ENABLED)

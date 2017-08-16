@@ -121,8 +121,8 @@ public final class RequestRefine extends AbstractRefinePacket
 		final L2Augmentation aug = AugmentationData.getInstance().generateRandomAugmentation(lifeStoneLevel, lifeStoneGrade, targetItem.getItem().getBodyPart(), refinerItem.getId(), targetItem);
 		targetItem.setAugmentation(aug);
 		
-		final int stat12 = 0x0000FFFF & aug.getId();
-		final int stat34 = aug.getId() >> 16;
+		final int stat12 = 0x0000FFFF & aug.getAugmentationId();
+		final int stat34 = aug.getAugmentationId() >> 16;
 		activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1));
 		
 		final InventoryUpdate iu = new InventoryUpdate();

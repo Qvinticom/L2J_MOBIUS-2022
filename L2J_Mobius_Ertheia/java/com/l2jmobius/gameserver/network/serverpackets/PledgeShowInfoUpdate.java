@@ -37,7 +37,7 @@ public class PledgeShowInfoUpdate implements IClientOutgoingPacket
 		
 		// sending empty data so client will ask all the info in response ;)
 		packet.writeD(_clan.getId());
-		packet.writeD(Config.SERVER_ID);
+		packet.writeD(Config.SERVER_ID); // TODO: Remove line on problems
 		packet.writeD(_clan.getCrestId());
 		packet.writeD(_clan.getLevel()); // clan level
 		packet.writeD(_clan.getCastleId());

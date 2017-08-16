@@ -314,9 +314,6 @@ public abstract class Inventory extends ItemContainer
 			// Clear enchant bonus
 			item.clearEnchantStats();
 			
-			// Clear SA Bonus
-			item.clearSpecialAbilities();
-			
 			it.forEachSkill(ItemSkillType.NORMAL, holder ->
 			{
 				final Skill Skill = holder.getSkill();
@@ -370,11 +367,6 @@ public abstract class Inventory extends ItemContainer
 						}
 					});
 				}
-				
-				if (item.isWeapon())
-				{
-					player.handleAutoShots(false);
-				}
 			}
 			
 			// Apply skill, if weapon have "skills on unequip"
@@ -424,9 +416,6 @@ public abstract class Inventory extends ItemContainer
 			// Apply enchant stats
 			item.applyEnchantStats();
 			
-			// Apply SA skill
-			item.applySpecialAbilities();
-			
 			item.getItem().forEachSkill(ItemSkillType.NORMAL, holder ->
 			{
 				final Skill skill = holder.getSkill();
@@ -465,11 +454,6 @@ public abstract class Inventory extends ItemContainer
 			if (updateTimestamp.get())
 			{
 				player.sendPacket(new SkillCoolTime(player));
-			}
-			
-			if (item.isWeapon())
-			{
-				player.handleAutoShots(Config.ENABLE_AUTO_SHOTS);
 			}
 		}
 	}
@@ -962,7 +946,7 @@ public abstract class Inventory extends ItemContainer
 	public int getPaperdollAugmentationId(int slot)
 	{
 		final L2ItemInstance item = _paperdoll[slot];
-		return ((item != null) && (item.getAugmentation() != null)) ? item.getAugmentation().getId() : 0;
+		return ((item != null) && (item.getAugmentation() != null)) ? item.getAugmentation().getAugmentationId() : 0;
 	}
 	
 	/**

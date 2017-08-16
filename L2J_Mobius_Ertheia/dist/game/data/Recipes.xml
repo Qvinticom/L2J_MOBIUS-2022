@@ -9015,12 +9015,12 @@
 	<item id="806" recipeId="8316" name="mk_dragon_flame_head_i" craftLevel="8" type="dwarven" successRate="60">
 		<ingredient id="8316" count="1" /> <!-- Recipe: Flaming Dragon Skull (60%) -->
 		<ingredient id="8342" count="10" /> <!-- Flaming Dragon Skull Piece -->
-		<ingredient id="36523" count="53" /> <!-- Adamantite -->
-		<ingredient id="36543" count="25" /> <!-- Adamantite Wire -->
-		<ingredient id="36548" count="21" /> <!-- Weapon Fragment (Mid-grade) -->
-		<ingredient id="36563" count="16" /> <!-- Synthetic Cokes -->
-		<ingredient id="2133" count="13" /> <!-- Gemstone (A-grade) -->
-		<ingredient id="1461" count="166" /> <!-- Crystal (A-grade) -->
+		<ingredient id="36523" count="11" /> <!-- Adamantite -->
+		<ingredient id="36543" count="5" /> <!-- Adamantite Wire -->
+		<ingredient id="36548" count="5" /> <!-- Weapon Fragment (Mid-grade) -->
+		<ingredient id="36563" count="4" /> <!-- Synthetic Cokes -->
+		<ingredient id="2133" count="3" /> <!-- Gemstone (A-grade) -->
+		<ingredient id="1461" count="34" /> <!-- Crystal (A-grade) -->
 		<production id="7895" count="1" /> <!-- Flaming Dragon Skull -->
 		<productionRare id="12425" count="1" rarity="4" /> <!-- Foundation Flaming Dragon Skull -->
 		<statUse name="MP" value="201" />
@@ -9041,12 +9041,12 @@
 	<item id="808" recipeId="8326" name="mk_doom_crusher_i" craftLevel="8" type="dwarven" successRate="60">
 		<ingredient id="8326" count="1" /> <!-- Recipe: Doom Crusher (60%) -->
 		<ingredient id="8349" count="10" /> <!-- Doom Crusher Head -->
-		<ingredient id="36523" count="53" /> <!-- Adamantite -->
-		<ingredient id="36543" count="25" /> <!-- Adamantite Wire -->
-		<ingredient id="36548" count="21" /> <!-- Weapon Fragment (Mid-grade) -->
-		<ingredient id="36563" count="16" /> <!-- Synthetic Cokes -->
-		<ingredient id="2133" count="13" /> <!-- Gemstone (A-grade) -->
-		<ingredient id="1461" count="166" /> <!-- Crystal (A-grade) -->
+		<ingredient id="36523" count="11" /> <!-- Adamantite -->
+		<ingredient id="36543" count="5" /> <!-- Adamantite Wire -->
+		<ingredient id="36548" count="5" /> <!-- Weapon Fragment (Mid-grade) -->
+		<ingredient id="36563" count="4" /> <!-- Synthetic Cokes -->
+		<ingredient id="2133" count="3" /> <!-- Gemstone (A-grade) -->
+		<ingredient id="1461" count="34" /> <!-- Crystal (A-grade) -->
 		<production id="7902" count="1" /> <!-- Doom Crusher -->
 		<productionRare id="12422" count="1" rarity="4" /> <!-- Foundation Doom Crusher -->
 		<statUse name="MP" value="201" />
@@ -11162,7 +11162,7 @@
 		<production id="16109" count="1" /> <!-- Refined Cow Hat -->
 		<statUse name="MP" value="168" />
 	</item>
-	<item id="1000" recipeId="17603" name="mk_q466_supplement_potion" craftLevel="1" type="common" successRate="100">
+	<item id="1000" recipeId="17596" name="mk_q466_supplement_potion" craftLevel="1" type="dwarven" successRate="100">
 		<ingredient id="17597" count="1" /> <!-- Fairy Wing -->
 		<ingredient id="17598" count="1" /> <!-- Cocoon Fragment -->
 		<ingredient id="17599" count="1" /> <!-- Kimerian's Breath -->
@@ -16656,565 +16656,70 @@
 		<production id="40204" count="1" /> <!-- Supply Box (R99-grade) -->
 		<statUse name="MP" value="276" />
 	</item>
-	<item id="4298" recipeId="45643" name="mk_r_citrine_pendant" craftLevel="14" type="dwarven" successRate="10">
-		<ingredient id="45643" count="1" /> <!-- Recipe: Citrine Pendant (10%) -->
-		<ingredient id="45639" count="1" /> <!-- Citrine Pendant Fragment -->
-		<ingredient id="17371" count="200" /> <!-- Crystal (R-grade) -->
-		<production id="45640" count="1" /> <!-- Citrine Pendant -->
-		<statUse name="MP" value="270" />
+	<item id="4900" recipeId="26306" name="mk_test1" craftLevel="1" type="dwarven" successRate="10">
+		<ingredient id="1" count="1" /> <!-- Short Sword -->
+		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
+		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+		<production id="26317" count="1" /> <!-- Offering Test Ingredient 7 -->
+		<statUse name="MP" value="276" />
 	</item>
-	<item id="4299" recipeId="46080" name="mk_mystic_soulshot_r" craftLevel="14" type="dwarven" successRate="100">
-		<ingredient id="1785" count="160" /> <!-- Soulstone -->
-		<ingredient id="17371" count="6" /> <!-- Crystal (R-grade) -->
-		<production id="46082" count="500" /> <!-- Mysterious Soulshot (R-grade) -->
-		<statUse name="MP" value="258" />
+	<item id="4901" recipeId="26307" name="mk_test2" craftLevel="1" type="dwarven" successRate="10">
+		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
+		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+		<production id="26316" count="1" /> <!-- Offering Test Ingredient 6 -->
+		<statUse name="MP" value="276" />
 	</item>
-	<item id="4300" recipeId="46081" name="mk_mystic_spiritshot_r" craftLevel="14" type="dwarven" successRate="100">
-		<ingredient id="3031" count="1000" /> <!-- Spirit Ore -->
-		<ingredient id="17371" count="6" /> <!-- Crystal (R-grade) -->
-		<production id="46083" count="500" /> <!-- Mysterious Blessed Spiritshot (R-grade) -->
-		<statUse name="MP" value="258" />
+	<item id="4902" recipeId="26308" name="mk_test3" craftLevel="1" type="dwarven" successRate="10">
+		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
+		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+		<production id="26315" count="1" /> <!-- Offering Test Ingredient 5 -->
+		<statUse name="MP" value="276" />
 	</item>
-	<item id="5000" recipeId="26342" name="mk_richness_talisman_lv1" craftLevel="10" type="common" successRate="25">
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
+	<item id="4903" recipeId="26309" name="mk_test4" craftLevel="1" type="dwarven" successRate="10">
+		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
+		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+		<production id="26314" count="1" /> <!-- Offering Test Ingredient 4 -->
+		<statUse name="MP" value="276" />
+	</item>
+	<item id="4904" recipeId="26310" name="mk_test5" craftLevel="1" type="dwarven" successRate="10">
+		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
+		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
+		<production id="26313" count="1" /> <!-- Offering Test Ingredient 3 -->
+		<statUse name="MP" value="276" />
+	</item>
+	<item id="5000" recipeId="26342" name="mk_richness_talisman_lv1" craftLevel="10" type="dwarven" successRate="25">
+		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter -->
+		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer -->
+		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer -->
+		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw -->
 		<production id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
 		<statUse name="MP" value="276" />
 	</item>
-	<item id="5001" recipeId="26343" name="mk_richness_talisman_lv2" craftLevel="10" type="common" successRate="25">
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
+	<item id="5001" recipeId="26343" name="mk_richness_talisman_lv2" craftLevel="10" type="dwarven" successRate="25">
+		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter -->
+		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer -->
+		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer -->
+		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw -->
 		<ingredient id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
 		<production id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
 		<statUse name="MP" value="276" />
 	</item>
-	<item id="5002" recipeId="26344" name="mk_richness_talisman_lv3" craftLevel="10" type="common" successRate="25">
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
+	<item id="5002" recipeId="26344" name="mk_richness_talisman_lv3" craftLevel="10" type="dwarven" successRate="25">
+		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter -->
+		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer -->
+		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer -->
+		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw -->
 		<ingredient id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
 		<production id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
 		<statUse name="MP" value="276" />
 	</item>
-	<item id="5003" recipeId="26345" name="mk_richness_talisman_lv4" craftLevel="10" type="common" successRate="25">
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
+	<item id="5003" recipeId="26345" name="mk_richness_talisman_lv4" craftLevel="10" type="dwarven" successRate="25">
+		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter -->
+		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer -->
+		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer -->
+		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw -->
 		<ingredient id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
 		<production id="26341" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
 		<statUse name="MP" value="276" />
-	</item>
-	<item id="5004" recipeId="26418" name="mk_richness_talisman_lv1_conrec" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26418" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 1 (High-grade) -->
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
-		<production id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5005" recipeId="26419" name="mk_richness_talisman_lv2_conrec" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26419" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 2 (High-grade) -->
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
-		<ingredient id="26338" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
-		<production id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5006" recipeId="26420" name="mk_richness_talisman_lv3_conrec" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26420" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 3 (High-grade) -->
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
-		<ingredient id="26339" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
-		<production id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5007" recipeId="26421" name="mk_richness_talisman_lv4_conrec" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26421" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 4 (High-grade) -->
-		<ingredient id="23837" count="1" /> <!-- Talisman - Hunter - Abundance -->
-		<ingredient id="23838" count="1" /> <!-- Talisman - Slaughterer - Abundance -->
-		<ingredient id="23839" count="1" /> <!-- Talisman - Conquerer - Abundance -->
-		<ingredient id="23840" count="1" /> <!-- Talisman - Outlaw - Abundance -->
-		<ingredient id="26340" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
-		<production id="26341" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5008" recipeId="26459" name="mk_richness_talisman_lv1_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<production id="26455" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5009" recipeId="26460" name="mk_richness_talisman_lv2_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<ingredient id="26455" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
-		<production id="26456" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5010" recipeId="26461" name="mk_richness_talisman_lv3_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<ingredient id="26456" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
-		<production id="26457" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5011" recipeId="26462" name="mk_richness_talisman_lv4_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<ingredient id="26457" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
-		<production id="26458" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5012" recipeId="26463" name="mk_richness_talisman_lv1_conrec_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26463" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 1 (High-grade) -->
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<production id="26455" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5013" recipeId="26464" name="mk_richness_talisman_lv2_conrec_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26464" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 2 (High-grade) -->
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<ingredient id="26455" count="1" /> <!-- Talisman - Abundance Lv. 1 (High-grade) -->
-		<production id="26456" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5014" recipeId="26465" name="mk_richness_talisman_lv3_conrec_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26465" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 3 (High-grade) -->
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<ingredient id="26456" count="1" /> <!-- Talisman - Abundance Lv. 2 (High-grade) -->
-		<production id="26457" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5015" recipeId="26466" name="mk_richness_talisman_lv4_conrec_us" craftLevel="10" type="common" successRate="25">
-		<ingredient id="26466" count="1" /> <!-- Recipe: Talisman - Abundance Lv. 4 (High-grade) -->
-		<ingredient id="26451" count="1" /> <!-- Talisman - Abundance - Hunter -->
-		<ingredient id="26452" count="1" /> <!-- Talisman - Abundance - Slaughterer -->
-		<ingredient id="26453" count="1" /> <!-- Talisman - Abundance - Conquerer -->
-		<ingredient id="26454" count="1" /> <!-- Talisman - Abundance - Outlaw -->
-		<ingredient id="26457" count="1" /> <!-- Talisman - Abundance Lv. 3 (High-grade) -->
-		<production id="26458" count="1" /> <!-- Talisman - Abundance Lv. 4 (High-grade) -->
-		<statUse name="MP" value="276" />
-	</item>
-	<item id="5016" recipeId="27717" name="mk_g_necklace_of_grankain_lv1" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="8191" count="1" /> <!-- Frintezza's Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27678" count="1" /> <!-- Gran Kain's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5017" recipeId="27718" name="mk_g_necklace_of_grankain_lv2" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27678" count="1" /> <!-- Gran Kain's Necklace -->
-		<ingredient id="16025" count="1" /> <!-- Freya's Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27679" count="1" /> <!-- Gran Kain's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5018" recipeId="27719" name="mk_g_necklace_of_grankain_lv3" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27679" count="1" /> <!-- Gran Kain's Necklace -->
-		<ingredient id="16026" count="1" /> <!-- Blessed Freya's Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27680" count="1" /> <!-- Gran Kain's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5019" recipeId="27720" name="mk_g_necklace_of_grankain_lv4" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27680" count="1" /> <!-- Gran Kain's Necklace -->
-		<ingredient id="6657" count="1" /> <!-- Valakas' Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27681" count="1" /> <!-- Gran Kain's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5020" recipeId="27721" name="mk_g_necklace_of_grankain_lv5" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27681" count="1" /> <!-- Gran Kain's Necklace -->
-		<ingredient id="37522" count="1" /> <!-- Frintezza's Soul Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27682" count="1" /> <!-- Gran Kain's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5021" recipeId="27722" name="mk_g_necklace_of_grankain_lv6" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27682" count="1" /> <!-- Gran Kain's Necklace -->
-		<ingredient id="19464" count="1" /> <!-- Blessed Valakas' Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27683" count="1" /> <!-- Gran Kain's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5022" recipeId="27723" name="mk_g_necklace_of_einhasad_lv1" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="8191" count="1" /> <!-- Frintezza's Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27684" count="1" /> <!-- Einhasad's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5023" recipeId="27724" name="mk_g_necklace_of_einhasad_lv2" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27684" count="1" /> <!-- Einhasad's Necklace -->
-		<ingredient id="16025" count="1" /> <!-- Freya's Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27685" count="1" /> <!-- Einhasad's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5024" recipeId="27725" name="mk_g_necklace_of_einhasad_lv3" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27685" count="1" /> <!-- Einhasad's Necklace -->
-		<ingredient id="16026" count="1" /> <!-- Blessed Freya's Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27686" count="1" /> <!-- Einhasad's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5025" recipeId="27726" name="mk_g_necklace_of_einhasad_lv4" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27686" count="1" /> <!-- Einhasad's Necklace -->
-		<ingredient id="6657" count="1" /> <!-- Valakas' Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27687" count="1" /> <!-- Einhasad's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5026" recipeId="27727" name="mk_g_necklace_of_einhasad_lv5" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27687" count="1" /> <!-- Einhasad's Necklace -->
-		<ingredient id="37522" count="1" /> <!-- Frintezza's Soul Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27688" count="1" /> <!-- Einhasad's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5027" recipeId="27728" name="mk_g_necklace_of_einhasad_lv6" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27688" count="1" /> <!-- Einhasad's Necklace -->
-		<ingredient id="19464" count="1" /> <!-- Blessed Valakas' Necklace -->
-		<ingredient id="27714" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 1 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27689" count="1" /> <!-- Einhasad's Necklace -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5028" recipeId="27729" name="mk_g_earring_of_paagrio_lv1" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="6661" count="1" /> <!-- Orfen's Earring -->
-		<ingredient id="6659" count="1" /> <!-- Zaken's Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27690" count="1" /> <!-- Pa'agrio's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5029" recipeId="27730" name="mk_g_earring_of_paagrio_lv2" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27690" count="1" /> <!-- Pa'agrio's Earring -->
-		<ingredient id="21712" count="1" /> <!-- Blessed Zaken's Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27691" count="1" /> <!-- Pa'agrio's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5030" recipeId="27731" name="mk_g_earring_of_paagrio_lv3" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27691" count="1" /> <!-- Pa'agrio's Earring -->
-		<ingredient id="36255" count="1" /> <!-- Orfen's Soul Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27692" count="1" /> <!-- Pa'agrio's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5031" recipeId="27732" name="mk_g_earring_of_paagrio_lv4" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27692" count="1" /> <!-- Pa'agrio's Earring -->
-		<ingredient id="6656" count="1" /> <!-- Antharas' Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27693" count="1" /> <!-- Pa'agrio's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5032" recipeId="27733" name="mk_g_earring_of_paagrio_lv5" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27693" count="1" /> <!-- Pa'agrio's Earring -->
-		<ingredient id="19463" count="1" /> <!-- Blessed Antharas' Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27694" count="1" /> <!-- Pa'agrio's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5033" recipeId="27734" name="mk_g_earring_of_paagrio_lv6" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27694" count="1" /> <!-- Pa'agrio's Earring -->
-		<ingredient id="36946" count="1" /> <!-- Lindvior's Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27695" count="1" /> <!-- Pa'agrio's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5034" recipeId="27735" name="mk_g_earring_of_eva_lv1" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="6661" count="1" /> <!-- Orfen's Earring -->
-		<ingredient id="6659" count="1" /> <!-- Zaken's Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27696" count="1" /> <!-- Eva's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5035" recipeId="27736" name="mk_g_earring_of_eva_lv2" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27696" count="1" /> <!-- Eva's Earring -->
-		<ingredient id="21712" count="1" /> <!-- Blessed Zaken's Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27697" count="1" /> <!-- Eva's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5036" recipeId="27737" name="mk_g_earring_of_eva_lv3" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27697" count="1" /> <!-- Eva's Earring -->
-		<ingredient id="36255" count="1" /> <!-- Orfen's Soul Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27698" count="1" /> <!-- Eva's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5037" recipeId="27738" name="mk_g_earring_of_eva_lv4" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27698" count="1" /> <!-- Eva's Earring -->
-		<ingredient id="6656" count="1" /> <!-- Antharas' Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27699" count="1" /> <!-- Eva's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5038" recipeId="27739" name="mk_g_earring_of_eva_lv5" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27699" count="1" /> <!-- Eva's Earring -->
-		<ingredient id="19463" count="1" /> <!-- Blessed Antharas' Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27700" count="1" /> <!-- Eva's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5039" recipeId="27740" name="mk_g_earring_of_eva_lv6" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27700" count="1" /> <!-- Eva's Earring -->
-		<ingredient id="36946" count="1" /> <!-- Lindvior's Earring -->
-		<ingredient id="27715" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 2 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27701" count="1" /> <!-- Eva's Earring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5040" recipeId="27741" name="mk_g_ring_of_sayhas_lv1" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="6660" count="1" /> <!-- Queen Ant's Ring -->
-		<ingredient id="10314" count="1" /> <!-- Beleth's Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27702" count="1" /> <!-- Sayha's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5041" recipeId="27742" name="mk_g_ring_of_sayhas_lv2" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27702" count="1" /> <!-- Sayha's Ring -->
-		<ingredient id="6658" count="1" /> <!-- Baium's Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27703" count="1" /> <!-- Sayha's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5042" recipeId="27743" name="mk_g_ring_of_sayhas_lv3" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27703" count="1" /> <!-- Sayha's Ring -->
-		<ingredient id="36254" count="1" /> <!-- Queen Ant's Soul Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27704" count="1" /> <!-- Sayha's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5043" recipeId="27744" name="mk_g_ring_of_sayhas_lv4" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27704" count="1" /> <!-- Sayha's Ring -->
-		<ingredient id="37521" count="1" /> <!-- Baium's Soul Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27705" count="1" /> <!-- Sayha's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5044" recipeId="27745" name="mk_g_ring_of_sayhas_lv5" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27705" count="1" /> <!-- Sayha's Ring -->
-		<ingredient id="35570" count="1" /> <!-- Tauti's Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27706" count="1" /> <!-- Sayha's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5045" recipeId="27746" name="mk_g_ring_of_sayhas_lv6" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27706" count="1" /> <!-- Sayha's Ring -->
-		<ingredient id="17623" count="1" /> <!-- Earth Wyrm Heart Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27707" count="1" /> <!-- Sayha's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5046" recipeId="27747" name="mk_g_ring_of_maphr_lv1" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="6660" count="1" /> <!-- Queen Ant's Ring -->
-		<ingredient id="10314" count="1" /> <!-- Beleth's Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27708" count="1" /> <!-- Maphr's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5047" recipeId="27748" name="mk_g_ring_of_maphr_lv2" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27708" count="1" /> <!-- Maphr's Ring -->
-		<ingredient id="6658" count="1" /> <!-- Baium's Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27709" count="1" /> <!-- Maphr's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5048" recipeId="27749" name="mk_g_ring_of_maphr_lv3" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27709" count="1" /> <!-- Maphr's Ring -->
-		<ingredient id="36254" count="1" /> <!-- Queen Ant's Soul Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27710" count="1" /> <!-- Maphr's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5049" recipeId="27750" name="mk_g_ring_of_maphr_lv4" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27710" count="1" /> <!-- Maphr's Ring -->
-		<ingredient id="37521" count="1" /> <!-- Baium's Soul Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27711" count="1" /> <!-- Maphr's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5050" recipeId="27751" name="mk_g_ring_of_maphr_lv5" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27711" count="1" /> <!-- Maphr's Ring -->
-		<ingredient id="35570" count="1" /> <!-- Tauti's Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27712" count="1" /> <!-- Maphr's Ring -->
-		<statUse name="MP" value="309" />
-	</item>
-	<item id="5051" recipeId="27752" name="mk_g_ring_of_maphr_lv6" craftLevel="10" type="dwarven" successRate="25">
-		<ingredient id="27712" count="1" /> <!-- Maphr's Ring -->
-		<ingredient id="17623" count="1" /> <!-- Earth Wyrm Heart Ring -->
-		<ingredient id="27716" count="1" /> <!-- Recipe: Gran Kain's Necklace - Stage 3 -->
-		<ingredient id="19440" count="1" /> <!-- Gemstone (R-grade) -->
-		<ingredient id="17371" count="1" /> <!-- Crystal (R-grade) -->
-		<ingredient id="35562" count="1" /> <!-- Energy of Destruction -->
-		<ingredient id="35563" count="1" /> <!-- Giant's Energy -->
-		<production id="27713" count="1" /> <!-- Maphr's Ring -->
-		<statUse name="MP" value="309" />
 	</item>
 </list>

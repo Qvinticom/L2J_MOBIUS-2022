@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import static com.l2jmobius.gameserver.data.xml.impl.MultisellData.PAGE_SIZE;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.multisell.Entry;
 import com.l2jmobius.gameserver.model.multisell.Ingredient;
@@ -79,17 +78,6 @@ public final class MultiSellList implements IClientOutgoingPacket
 			packet.writeH(0x00);
 			packet.writeH(0x00);
 			packet.writeH(0x00);
-			packet.writeC(0); // Size of regular soul crystal options.
-			// for (EnsoulOption option : item.getSoulCrystalOptions())
-			// {
-			// packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-			// }
-			
-			packet.writeC(0); // Size of special soul crystal options.
-			// for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-			// {
-			// packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-			// }
 			
 			packet.writeH(ent.getProducts().size());
 			packet.writeH(ent.getIngredients().size());
@@ -123,18 +111,6 @@ public final class MultiSellList implements IClientOutgoingPacket
 						final AttributeHolder holder = item.getElementals()[i];
 						packet.writeH(holder != null ? holder.getValue() : 0);
 					}
-					
-					packet.writeC(item.getSpecialAbilities().size()); // Size of regular soul crystal options.
-					for (EnsoulOption option : item.getSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					}
-					
-					packet.writeC(item.getAdditionalSpecialAbilities().size()); // Size of special soul crystal options.
-					for (EnsoulOption option : item.getAdditionalSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					}
 				}
 				else
 				{
@@ -150,17 +126,6 @@ public final class MultiSellList implements IClientOutgoingPacket
 					packet.writeH(0x00); // earth
 					packet.writeH(0x00); // holy
 					packet.writeH(0x00); // dark
-					packet.writeC(0); // Size of regular soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalOptions())
-					// {
-					// packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					// }
-					
-					packet.writeC(0); // Size of special soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-					// {
-					// packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					// }
 				}
 			}
 			
@@ -182,17 +147,6 @@ public final class MultiSellList implements IClientOutgoingPacket
 						final AttributeHolder holder = item.getElementals()[i];
 						packet.writeH(holder != null ? holder.getValue() : 0);
 					}
-					packet.writeC(item.getSpecialAbilities().size()); // Size of regular soul crystal options.
-					for (EnsoulOption option : item.getSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					}
-					
-					packet.writeC(item.getAdditionalSpecialAbilities().size()); // Size of special soul crystal options.
-					for (EnsoulOption option : item.getAdditionalSpecialAbilities())
-					{
-						packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					}
 				}
 				else
 				{
@@ -207,17 +161,6 @@ public final class MultiSellList implements IClientOutgoingPacket
 					packet.writeH(0x00); // earth
 					packet.writeH(0x00); // holy
 					packet.writeH(0x00); // dark
-					packet.writeC(0); // Size of regular soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalOptions())
-					// {
-					// packet.writeD(option.getId()); // Regular Soul Crystal Ability ID.
-					// }
-					
-					packet.writeC(0); // Size of special soul crystal options.
-					// for (EnsoulOption option : item.getSoulCrystalSpecialOptions())
-					// {
-					// packet.writeD(option.getId()); // Special Soul Crystal Ability ID.
-					// }
 				}
 			}
 		}

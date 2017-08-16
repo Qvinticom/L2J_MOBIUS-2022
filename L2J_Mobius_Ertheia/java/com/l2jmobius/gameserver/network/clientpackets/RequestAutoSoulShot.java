@@ -34,14 +34,12 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public final class RequestAutoSoulShot implements IClientIncomingPacket
 {
 	private int _itemId;
-	private boolean _enable;
 	private int _type;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_itemId = packet.readD();
-		_enable = packet.readD() == 1;
 		_type = packet.readD();
 		return true;
 	}
@@ -63,7 +61,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 				return;
 			}
 			
-			if (_enable)
+			if (_type == 1)
 			{
 				if (!activeChar.getInventory().canManipulateWithItemId(item.getId()))
 				{
@@ -116,7 +114,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 						
 						// Activate shots
 						activeChar.addAutoSoulShot(_itemId);
-						client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+						client.sendPacket(new ExAutoSoulShot(_itemId, _type));
 						
 						// Send message
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
@@ -152,7 +150,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 					
 					// Activate shots
 					activeChar.addAutoSoulShot(_itemId);
-					client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+					client.sendPacket(new ExAutoSoulShot(_itemId, _type));
 					
 					// Send message
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED);
@@ -167,7 +165,7 @@ public final class RequestAutoSoulShot implements IClientIncomingPacket
 			{
 				// Cancel auto shots
 				activeChar.removeAutoSoulShot(_itemId);
-				client.sendPacket(new ExAutoSoulShot(_itemId, _enable, _type));
+				client.sendPacket(new ExAutoSoulShot(_itemId, _type));
 				
 				// Send message
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);

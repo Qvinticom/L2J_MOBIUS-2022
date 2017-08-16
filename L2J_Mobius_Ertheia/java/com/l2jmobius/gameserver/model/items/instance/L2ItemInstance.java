@@ -25,11 +25,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
@@ -40,7 +38,6 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
-import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AttributeType;
@@ -63,7 +60,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerAugment;
@@ -179,8 +175,6 @@ public final class L2ItemInstance extends L2Object
 	private int _shotsMask = 0;
 	
 	private final List<Options> _enchantOptions = new ArrayList<>();
-	private final Map<Integer, EnsoulOption> _ensoulOptions = new LinkedHashMap<>(3);
-	private final Map<Integer, EnsoulOption> _ensoulSpecialOptions = new LinkedHashMap<>(3);
 	
 	/**
 	 * Constructor of the L2ItemInstance from the objectId and the itemId.
@@ -251,7 +245,6 @@ public final class L2ItemInstance extends L2Object
 		if (isEquipable())
 		{
 			restoreAttributes();
-			restoreSpecialAbilities();
 		}
 	}
 	
@@ -1038,7 +1031,7 @@ public final class L2ItemInstance extends L2Object
 		try (PreparedStatement ps = con.prepareStatement("REPLACE INTO item_attributes VALUES(?,?)"))
 		{
 			ps.setInt(1, getObjectId());
-			ps.setInt(2, _augmentation != null ? _augmentation.getId() : -1);
+			ps.setInt(2, _augmentation != null ? _augmentation.getAttributes() : -1);
 			ps.executeUpdate();
 		}
 		catch (SQLException e)
@@ -2077,185 +2070,6 @@ public final class L2ItemInstance extends L2Object
 			return op.getOptions();
 		}
 		return DEFAULT_ENCHANT_OPTIONS;
-	}
-	
-	public Collection<EnsoulOption> getSpecialAbilities()
-	{
-		return Collections.unmodifiableCollection(_ensoulOptions.values());
-	}
-	
-	public EnsoulOption getSpecialAbility(int index)
-	{
-		return _ensoulOptions.get(index);
-	}
-	
-	public Collection<EnsoulOption> getAdditionalSpecialAbilities()
-	{
-		return Collections.unmodifiableCollection(_ensoulSpecialOptions.values());
-	}
-	
-	public EnsoulOption getAdditionalSpecialAbility(int index)
-	{
-		return _ensoulSpecialOptions.get(index);
-	}
-	
-	public void addSpecialAbility(EnsoulOption option, int position, int type, boolean updateInDB)
-	{
-		if (type == 1) // Adding regular ability
-		{
-			final EnsoulOption oldOption = _ensoulOptions.put(position, option);
-			if (oldOption != null)
-			{
-				removeSpecialAbility(oldOption);
-			}
-		}
-		else if (type == 2) // Adding special ability
-		{
-			final EnsoulOption oldOption = _ensoulSpecialOptions.put(position, option);
-			if (oldOption != null)
-			{
-				removeSpecialAbility(oldOption);
-			}
-		}
-		
-		if (updateInDB)
-		{
-			updateSpecialAbilities();
-		}
-	}
-	
-	public void clearSpecialAbilities()
-	{
-		_ensoulOptions.values().forEach(this::clearSpecialAbility);
-		_ensoulSpecialOptions.values().forEach(this::clearSpecialAbility);
-	}
-	
-	public void applySpecialAbilities()
-	{
-		if (!isEquipped())
-		{
-			return;
-		}
-		
-		_ensoulOptions.values().forEach(this::applySpecialAbility);
-		_ensoulSpecialOptions.values().forEach(this::applySpecialAbility);
-	}
-	
-	private void removeSpecialAbility(EnsoulOption option)
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM item_special_abilities WHERE objectId = ? AND optionId = ?"))
-		{
-			ps.setInt(1, getObjectId());
-			ps.setInt(2, option.getId());
-			ps.execute();
-			
-			final Skill skill = option.getSkill();
-			if (skill != null)
-			{
-				final L2PcInstance player = getActingPlayer();
-				if (player != null)
-				{
-					player.removeSkill(skill.getId());
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't remove special ability for item: " + this, e);
-		}
-	}
-	
-	private void applySpecialAbility(EnsoulOption option)
-	{
-		final Skill skill = option.getSkill();
-		if (skill != null)
-		{
-			final L2PcInstance player = getActingPlayer();
-			if (player != null)
-			{
-				if (player.getSkillLevel(skill.getId()) != skill.getLevel())
-				{
-					player.addSkill(skill, false);
-				}
-			}
-		}
-	}
-	
-	private void clearSpecialAbility(EnsoulOption option)
-	{
-		final Skill skill = option.getSkill();
-		if (skill != null)
-		{
-			final L2PcInstance player = getActingPlayer();
-			if (player != null)
-			{
-				player.removeSkill(skill, false, true);
-			}
-		}
-	}
-	
-	private void restoreSpecialAbilities()
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT * FROM item_special_abilities WHERE objectId = ? ORDER BY position"))
-		{
-			ps.setInt(1, getObjectId());
-			try (ResultSet rs = ps.executeQuery())
-			{
-				while (rs.next())
-				{
-					final int optionId = rs.getInt("optionId");
-					final int type = rs.getInt("type");
-					final int position = rs.getInt("position");
-					final EnsoulOption option = EnsoulData.getInstance().getOption(optionId);
-					if (option != null)
-					{
-						addSpecialAbility(option, position, type, false);
-					}
-				}
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't restore special abilities for item: " + this, e);
-		}
-	}
-	
-	private void updateSpecialAbilities()
-	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO item_special_abilities (`objectId`, `type`, `optionId`, `position`) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE type = ?, optionId = ?, position = ?"))
-		{
-			ps.setInt(1, getObjectId());
-			for (Entry<Integer, EnsoulOption> entry : _ensoulOptions.entrySet())
-			{
-				ps.setInt(2, 1); // regular options
-				ps.setInt(3, entry.getValue().getId());
-				ps.setInt(4, entry.getKey());
-				
-				ps.setInt(5, 1); // regular options
-				ps.setInt(6, entry.getValue().getId());
-				ps.setInt(7, entry.getKey());
-				ps.execute();
-			}
-			
-			for (Entry<Integer, EnsoulOption> entry : _ensoulSpecialOptions.entrySet())
-			{
-				ps.setInt(2, 2); // special options
-				ps.setInt(3, entry.getValue().getId());
-				ps.setInt(4, entry.getKey());
-				
-				ps.setInt(5, 2); // special options
-				ps.setInt(6, entry.getValue().getId());
-				ps.setInt(7, entry.getKey());
-				ps.execute();
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Couldn't update item special abilities", e);
-		}
 	}
 	
 	/**

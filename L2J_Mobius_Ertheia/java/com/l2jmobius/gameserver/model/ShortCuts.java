@@ -128,7 +128,7 @@ public class ShortCuts implements IRestorable
 			{
 				if (_owner.removeAutoSoulShot(item.getId()))
 				{
-					_owner.sendPacket(new ExAutoSoulShot(item.getId(), false, 0));
+					_owner.sendPacket(new ExAutoSoulShot(item.getId(), 0));
 				}
 			}
 		}
@@ -137,7 +137,7 @@ public class ShortCuts implements IRestorable
 		
 		for (int shotId : _owner.getAutoSoulShot())
 		{
-			_owner.sendPacket(new ExAutoSoulShot(shotId, true, 0));
+			_owner.sendPacket(new ExAutoSoulShot(shotId, 1));
 		}
 	}
 	

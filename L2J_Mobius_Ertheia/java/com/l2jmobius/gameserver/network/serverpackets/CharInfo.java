@@ -133,7 +133,7 @@ public class CharInfo implements IClientOutgoingPacket
 		
 		for (int slot : getPaperdollOrderAugument())
 		{
-			packet.writeQ(_activeChar.getInventory().getPaperdollAugmentationId(slot)); // Confirmed
+			packet.writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot)); // Confirmed
 		}
 		
 		packet.writeC(_armorEnchant);

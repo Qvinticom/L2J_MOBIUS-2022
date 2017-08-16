@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
+import com.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 /**
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
@@ -41,8 +42,18 @@ public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_skillId = packet.readD();
-		_skillLvl = packet.readH();
-		_skillSubLvl = packet.readH();
+		final int level = packet.readD();
+		if (level < 100)
+		{
+			_skillLvl = level;
+			_skillSubLvl = 0;
+		}
+		else
+		{
+			_skillLvl = client.getActiveChar().getKnownSkill(_skillId).getLevel();
+			_skillSubLvl = SkillEnchantConverter.levelToUnderground(level);
+		}
+		
 		return true;
 	}
 	

@@ -55,7 +55,8 @@ public final class ShortCutInit implements IClientOutgoingPacket
 					packet.writeD(sc.getSharedReuseGroup());
 					packet.writeD(0x00);
 					packet.writeD(0x00);
-					packet.writeQ(0x00); // Augment id
+					packet.writeH(0x00);
+					packet.writeH(0x00);
 					packet.writeD(0x00); // Visual id
 					break;
 				}

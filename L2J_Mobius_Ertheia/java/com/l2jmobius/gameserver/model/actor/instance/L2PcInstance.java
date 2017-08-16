@@ -8653,8 +8653,7 @@ public final class L2PcInstance extends L2Playable
 		if (_activeSoulShots.contains(itemId))
 		{
 			removeAutoSoulShot(itemId);
-			sendPacket(new ExAutoSoulShot(itemId, false, 0));
-			
+			sendPacket(new ExAutoSoulShot(itemId, 0));
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 			sm.addItemName(itemId);
 			sendPacket(sm);
@@ -8670,7 +8669,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		for (int itemId : _activeSoulShots)
 		{
-			sendPacket(new ExAutoSoulShot(itemId, false, 0));
+			sendPacket(new ExAutoSoulShot(itemId, 0));
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
 			sm.addItemName(itemId);
 			sendPacket(sm);
@@ -13827,93 +13826,6 @@ public final class L2PcInstance extends L2Playable
 			_onlineTimeUpdateTask.cancel(true);
 			_onlineTimeUpdateTask = null;
 		}
-	}
-	
-	public void handleAutoShots(boolean force)
-	{
-		if (getAutoSoulShot().isEmpty() && !force)
-		{
-			return;
-		}
-		
-		final L2ItemInstance weapon = getActiveWeaponInstance();
-		int soulShotId = 0;
-		int spiritShotId = 0;
-		int summonSoulShotId = 0;
-		int summonSpiritShotId = 0;
-		
-		for (L2ItemInstance item : getInventory().getItems(L2ItemInstance::isEtcItem, i -> i.getItemType() == EtcItemType.SOULSHOT))
-		{
-			switch (item.getEtcItem().getDefaultAction())
-			{
-				case SOULSHOT:
-				{
-					if ((weapon != null) && (weapon.getItemType() != WeaponType.FISHINGROD) && (weapon.getItem().getCrystalTypePlus() == item.getItem().getCrystalType()))
-					{
-						soulShotId = item.getId();
-					}
-					break;
-				}
-				case SPIRITSHOT:
-				{
-					if ((weapon != null) && (weapon.getItem().getCrystalTypePlus() == item.getItem().getCrystalType()))
-					{
-						spiritShotId = item.getId();
-					}
-					break;
-				}
-				case SUMMON_SOULSHOT:
-				{
-					if (hasSummon())
-					{
-						summonSoulShotId = item.getId();
-					}
-					break;
-				}
-				case SUMMON_SPIRITSHOT:
-				{
-					if (hasSummon())
-					{
-						summonSpiritShotId = item.getId();
-					}
-					break;
-				}
-				case FISHINGSHOT:
-				{
-					if ((weapon != null) && (weapon.getItemType() == WeaponType.FISHINGROD) && (weapon.getItem().getCrystalType() == item.getItem().getCrystalType()))
-					{
-						soulShotId = item.getId();
-					}
-					break;
-				}
-			}
-		}
-		
-		_activeSoulShots.clear();
-		
-		if (soulShotId != 0)
-		{
-			addAutoSoulShot(soulShotId);
-		}
-		if (spiritShotId != 0)
-		{
-			addAutoSoulShot(spiritShotId);
-		}
-		if (summonSoulShotId != 0)
-		{
-			addAutoSoulShot(summonSoulShotId);
-		}
-		if (summonSpiritShotId != 0)
-		{
-			addAutoSoulShot(summonSpiritShotId);
-		}
-		
-		sendPacket(new ExAutoSoulShot(soulShotId, true, 0));
-		sendPacket(new ExAutoSoulShot(spiritShotId, true, 1));
-		sendPacket(new ExAutoSoulShot(summonSoulShotId, true, 2));
-		sendPacket(new ExAutoSoulShot(summonSpiritShotId, true, 3));
-		
-		rechargeShots(true, true, true);
 	}
 	
 	public GroupType getGroupType()

@@ -23,6 +23,7 @@ import java.util.List;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
+import com.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 public final class SkillList implements IClientOutgoingPacket
 {
@@ -70,8 +71,14 @@ public final class SkillList implements IClientOutgoingPacket
 		for (Skill temp : _skills)
 		{
 			packet.writeD(temp.passive ? 1 : 0);
-			packet.writeH(temp.level);
-			packet.writeH(temp.subLevel);
+			if (temp.subLevel > 1000)
+			{
+				packet.writeD(SkillEnchantConverter.levelToErtheia(temp.subLevel));
+			}
+			else
+			{
+				packet.writeD(temp.level);
+			}
 			packet.writeD(temp.id);
 			packet.writeD(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
 			packet.writeC(temp.disabled ? 1 : 0); // iSkillDisabled

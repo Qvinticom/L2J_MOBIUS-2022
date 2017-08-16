@@ -26,8 +26,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
-import com.l2jmobius.gameserver.data.xml.impl.DailyMissionData;
-import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.L2World;
@@ -64,7 +62,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	{
 		resetClanBonus();
 		resetExtendDrop();
-		resetDailyMissionRewards();
 		resetDailySkills();
 		resetRecommends();
 		resetWorldChatPoints();
@@ -245,11 +242,6 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			player.sendPacket(new ExVoteSystemInfo(player));
 			player.broadcastUserInfo();
 		});
-	}
-	
-	private void resetDailyMissionRewards()
-	{
-		DailyMissionData.getInstance().getDailyMissionData().forEach(DailyMissionDataHolder::reset);
 	}
 	
 	public static DailyTaskManager getInstance()

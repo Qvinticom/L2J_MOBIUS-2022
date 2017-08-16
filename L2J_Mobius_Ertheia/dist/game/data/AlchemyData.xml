@@ -121,16 +121,6 @@
 			<item id="32316" count="2" type="ON_FAILURE" /> <!-- Elixir of Blessing -->
 		</production>
 	</skill>
-	<skill id="17922" level="5" grade="4" category="1">
-		<ingredients>
-			<item id="39479" count="1" /> <!-- High-grade Love Potion -->
-			<item id="39461" count="400" /> <!-- Air Stone -->
-		</ingredients>
-		<production>
-			<item id="46530" count="1" type="ON_SUCCESS" /> <!-- Top-grade Love Potion - Party -->
-			<item id="32316" count="2" type="ON_FAILURE" /> <!-- Elixir of Blessing -->
-		</production>
-	</skill>
 	<skill id="17923" level="1" grade="1" category="1">
 		<ingredients>
 			<item id="37097" count="2" /> <!-- High-grade Elixir of Life (R-grade) -->
@@ -1003,55 +993,105 @@
 			<item id="39389" count="1" type="ON_FAILURE" /> <!-- Lv. 4 Windy LUC Dye -->
 		</production>
 	</skill>
-	<skill id="18370" level="1" grade="1" category="4">
+	<skill id="17937" level="1" grade="1" category="4">
 		<ingredients>
-			<item id="45929" count="5" /> <!-- Spirit Stone -->
+			<item id="18563" count="3" /> <!-- Life Stone (R-grade) -->
+			<item id="39461" count="100" /> <!-- Air Stone -->
+		</ingredients>
+		<production>
+			<item id="18564" count="2" type="ON_SUCCESS" /> <!-- Mid-grade Life Stone (R-grade) -->
+			<item id="18563" count="2" type="ON_FAILURE" /> <!-- Life Stone (R-grade) -->
+		</production>
+	</skill>
+	<skill id="17937" level="2" grade="1" category="4">
+		<ingredients>
+			<item id="18564" count="2" /> <!-- Mid-grade Life Stone (R-grade) -->
+			<item id="39461" count="200" /> <!-- Air Stone -->
+		</ingredients>
+		<production>
+			<item id="18565" count="1" type="ON_SUCCESS" /> <!-- High-grade Life Stone (R-grade) -->
+			<item id="18564" count="1" type="ON_FAILURE" /> <!-- Mid-grade Life Stone (R-grade) -->
+		</production>
+	</skill>
+	<skill id="17937" level="3" grade="1" category="4">
+		<ingredients>
+			<item id="18565" count="3" /> <!-- High-grade Life Stone (R-grade) -->
 			<item id="39461" count="300" /> <!-- Air Stone -->
 		</ingredients>
 		<production>
-			<item id="45930" count="1" type="ON_SUCCESS" /> <!-- Mid-grade Spirit Stone -->
-			<item id="45929" count="1" type="ON_FAILURE" /> <!-- Spirit Stone -->
+			<item id="18566" count="1" type="ON_SUCCESS" /> <!-- Top-grade Life Stone (R-grade) -->
+			<item id="18565" count="1" type="ON_FAILURE" /> <!-- High-grade Life Stone (R-grade) -->
 		</production>
 	</skill>
-	<skill id="18371" level="1" grade="2" category="4">
+	<skill id="17938" level="1" grade="2" category="4">
 		<ingredients>
-			<item id="45930" count="4" /> <!-- Mid-grade Spirit Stone -->
+			<item id="18568" count="2" /> <!-- Life Stone (R95-grade) -->
+			<item id="39461" count="100" /> <!-- Air Stone -->
+		</ingredients>
+		<production>
+			<item id="18569" count="1" type="ON_SUCCESS" /> <!-- Mid-grade Life Stone (R95-grade) -->
+			<item id="18568" count="1" type="ON_FAILURE" /> <!-- Life Stone (R95-grade) -->
+		</production>
+	</skill>
+	<skill id="17938" level="2" grade="2" category="4">
+		<ingredients>
+			<item id="18569" count="2" /> <!-- Mid-grade Life Stone (R95-grade) -->
+			<item id="39461" count="200" /> <!-- Air Stone -->
+		</ingredients>
+		<production>
+			<item id="18570" count="1" type="ON_SUCCESS" /> <!-- High-grade Life Stone (R95-grade) -->
+			<item id="18569" count="1" type="ON_FAILURE" /> <!-- Mid-grade Life Stone (R95-grade) -->
+		</production>
+	</skill>
+	<skill id="17938" level="3" grade="2" category="4">
+		<ingredients>
+			<item id="18570" count="3" /> <!-- High-grade Life Stone (R95-grade) -->
+			<item id="39461" count="200" /> <!-- Air Stone -->
+		</ingredients>
+		<production>
+			<item id="18571" count="1" type="ON_SUCCESS" /> <!-- Top-grade Life Stone (R95-grade) -->
+			<item id="18570" count="1" type="ON_FAILURE" /> <!-- High-grade Life Stone (R95-grade) -->
+		</production>
+	</skill>
+	<skill id="17939" level="1" grade="3" category="4">
+		<ingredients>
+			<item id="18573" count="2" /> <!-- Life Stone (R99-grade) -->
+			<item id="39461" count="100" /> <!-- Air Stone -->
+		</ingredients>
+		<production>
+			<item id="18574" count="1" type="ON_SUCCESS" /> <!-- Mid-grade Life Stone (R99-grade) -->
+			<item id="18573" count="1" type="ON_FAILURE" /> <!-- Life Stone (R99-grade) -->
+		</production>
+	</skill>
+	<skill id="17939" level="2" grade="3" category="4">
+		<ingredients>
+			<item id="18574" count="2" /> <!-- Mid-grade Life Stone (R99-grade) -->
 			<item id="39461" count="300" /> <!-- Air Stone -->
 		</ingredients>
 		<production>
-			<item id="45931" count="1" type="ON_SUCCESS" /> <!-- High-grade Spirit Stone -->
-			<item id="45930" count="1" type="ON_FAILURE" /> <!-- Mid-grade Spirit Stone -->
+			<item id="18575" count="1" type="ON_SUCCESS" /> <!-- High-grade Life Stone (R99-grade) -->
+			<item id="18574" count="1" type="ON_FAILURE" /> <!-- Mid-grade Life Stone (R99-grade) -->
 		</production>
 	</skill>
-	<skill id="18372" level="1" grade="3" category="4">
+	<skill id="17939" level="3" grade="3" category="4">
 		<ingredients>
-			<item id="45931" count="3" /> <!-- High-grade Spirit Stone -->
+			<item id="18575" count="3" /> <!-- High-grade Life Stone (R99-grade) -->
 			<item id="39461" count="300" /> <!-- Air Stone -->
 		</ingredients>
 		<production>
-			<item id="45932" count="1" type="ON_SUCCESS" /> <!-- Top-grade Spirit Stone -->
-			<item id="45931" count="1" type="ON_FAILURE" /> <!-- High-grade Spirit Stone -->
+			<item id="18576" count="1" type="ON_SUCCESS" /> <!-- Top-grade Life Stone (R99-grade) -->
+			<item id="18575" count="1" type="ON_FAILURE" /> <!-- High-grade Life Stone (R99-grade) -->
 		</production>
 	</skill>
-	<skill id="18373" level="1" grade="4" category="4">
+	<skill id="17940" level="1" grade="4" category="4">
 		<ingredients>
-			<item id="45932" count="20" /> <!-- Top-grade Spirit Stone -->
+			<item id="18576" count="10" /> <!-- Top-grade Life Stone (R99-grade) -->
 			<item id="36515" count="20" /> <!-- Elcyum -->
 			<item id="39592" count="50" /> <!-- Tempest Stone -->
 		</ingredients>
 		<production>
 			<item id="36731" count="1" type="ON_SUCCESS" /> <!-- Life Stone Instilled with Giants' Power -->
-			<item id="45932" count="1" type="ON_FAILURE" /> <!-- Top-grade Spirit Stone -->
-		</production>
-	</skill>
-	<skill id="18522" level="1" grade="1" category="1">
-		<ingredients>
-			<item id="36513" count="1" /> <!-- Elcyum Powder -->
-			<item id="39461" count="300" /> <!-- Air Stone -->
-		</ingredients>
-		<production>
-			<item id="46531" count="1" type="ON_SUCCESS" /> <!-- Flash Grenade -->
-			<item id="36513" count="1" type="ON_FAILURE" /> <!-- Elcyum Powder -->
+			<item id="18576" count="1" type="ON_FAILURE" /> <!-- Top-grade Life Stone (R99-grade) -->
 		</production>
 	</skill>
 	<skill id="26906" level="1" grade="1" category="1">
@@ -1156,66 +1196,66 @@
 	</skill>
 	<skill id="26908" level="3" grade="2" category="1">
 		<ingredients>
-			<item id="24377" count="1" /> <!-- Sayha's Rune: Luck -->
-			<item id="39461" count="1" /> <!-- Air Stone -->
+			<item id="24377" count="1" />
+			<item id="39461" count="1" />
 		</ingredients>
 		<production>
-			<item id="24378" count="1" type="ON_SUCCESS" /> <!-- Sayha's Rune: Luck -->
-			<item id="24377" count="1" type="ON_FAILURE" /> <!-- Sayha's Rune: Luck -->
+			<item id="24378" count="1" type="ON_SUCCESS" />
+			<item id="27377" count="1" type="ON_FAILURE" />
 		</production>
 	</skill>
 	<skill id="26908" level="4" grade="3" category="1">
 		<ingredients>
-			<item id="24378" count="1" /> <!-- Sayha's Rune: Luck -->
-			<item id="39461" count="1" /> <!-- Air Stone -->
+			<item id="24378" count="1" />
+			<item id="39461" count="1" />
 		</ingredients>
 		<production>
-			<item id="24379" count="1" type="ON_SUCCESS" /> <!-- Sayha's Rune: Luck -->
-			<item id="24378" count="1" type="ON_FAILURE" /> <!-- Sayha's Rune: Luck -->
+			<item id="24379" count="1" type="ON_SUCCESS" />
+			<item id="24378" count="1" type="ON_FAILURE" />
 		</production>
 	</skill>
 	<skill id="26909" level="1" grade="1" category="1">
 		<ingredients>
-			<item id="24368" count="1" /> <!-- Sayha's Rune: Growth -->
-			<item id="24372" count="1" /> <!-- Sayha's Rune: Skill -->
-			<item id="24376" count="1" /> <!-- Sayha's Rune: Luck -->
+			<item id="24368" count="1" />
+			<item id="24372" count="1" />
+			<item id="24376" count="1" />
 		</ingredients>
 		<production>
-			<item id="24380" count="1" type="ON_SUCCESS" /> <!-- Sayha's Rune -->
-			<item id="24368" count="1" type="ON_FAILURE" /> <!-- Sayha's Rune: Growth -->
+			<item id="24380" count="1" type="ON_SUCCESS" />
+			<item id="24368" count="1" type="ON_FAILURE" />
 		</production>
 	</skill>
 	<skill id="26909" level="2" grade="1" category="1">
 		<ingredients>
-			<item id="24369" count="1" /> <!-- Sayha's Rune: Growth -->
-			<item id="24373" count="1" /> <!-- Sayha's Rune: Skill -->
-			<item id="24377" count="1" /> <!-- Sayha's Rune: Luck -->
+			<item id="24369" count="1" />
+			<item id="24373" count="1" />
+			<item id="24377" count="1" />
 		</ingredients>
 		<production>
-			<item id="24381" count="1" type="ON_SUCCESS" /> <!-- Sayha's Rune -->
-			<item id="24369" count="1" type="ON_FAILURE" /> <!-- Sayha's Rune: Growth -->
+			<item id="24381" count="1" type="ON_SUCCESS" />
+			<item id="24369" count="1" type="ON_FAILURE" />
 		</production>
 	</skill>
 	<skill id="26909" level="3" grade="2" category="1">
 		<ingredients>
-			<item id="24370" count="1" /> <!-- Sayha's Rune: Growth -->
-			<item id="24374" count="1" /> <!-- Sayha's Rune: Skill -->
-			<item id="24378" count="1" /> <!-- Sayha's Rune: Luck -->
+			<item id="24370" count="1" />
+			<item id="24374" count="1" />
+			<item id="24378" count="1" />
 		</ingredients>
 		<production>
-			<item id="24382" count="1" type="ON_SUCCESS" /> <!-- Sayha's Rune -->
-			<item id="24370" count="1" type="ON_FAILURE" /> <!-- Sayha's Rune: Growth -->
+			<item id="24382" count="1" type="ON_SUCCESS" />
+			<item id="24370" count="1" type="ON_FAILURE" />
 		</production>
 	</skill>
 	<skill id="26909" level="4" grade="3" category="1">
 		<ingredients>
-			<item id="24371" count="1" /> <!-- Sayha's Rune: Growth -->
-			<item id="24375" count="1" /> <!-- Sayha's Rune: Skill -->
-			<item id="24379" count="1" /> <!-- Sayha's Rune: Luck -->
+			<item id="24371" count="1" />
+			<item id="24375" count="1" />
+			<item id="24379" count="1" />
 		</ingredients>
 		<production>
-			<item id="24383" count="1" type="ON_SUCCESS" /> <!-- Sayha's Rune -->
-			<item id="24371" count="1" type="ON_FAILURE" /> <!-- Sayha's Rune: Growth -->
+			<item id="24383" count="1" type="ON_SUCCESS" />
+			<item id="24371" count="1" type="ON_FAILURE" />
 		</production>
 	</skill>
 </list>

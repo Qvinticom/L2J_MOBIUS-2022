@@ -282,7 +282,6 @@ public final class Config
 	public static boolean EXPERTISE_PENALTY;
 	public static boolean STORE_RECIPE_SHOPLIST;
 	public static boolean STORE_UI_SETTINGS;
-	public static boolean ENABLE_AUTO_SHOTS;
 	public static String[] FORBIDDEN_NAMES;
 	public static boolean SILENCE_MODE_EXCLUDE;
 	public static boolean SHOW_GOD_VIDEO_INTRO;
@@ -1633,7 +1632,6 @@ public final class Config
 			EXPERTISE_PENALTY = Character.getBoolean("ExpertisePenalty", true);
 			STORE_RECIPE_SHOPLIST = Character.getBoolean("StoreRecipeShopList", false);
 			STORE_UI_SETTINGS = Character.getBoolean("StoreCharUiSettings", true);
-			ENABLE_AUTO_SHOTS = Character.getBoolean("EnableAutoShots", true);
 			FORBIDDEN_NAMES = Character.getString("ForbiddenNames", "").split(",");
 			SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
 			SHOW_GOD_VIDEO_INTRO = Character.getBoolean("GoDVideoIntro", true);

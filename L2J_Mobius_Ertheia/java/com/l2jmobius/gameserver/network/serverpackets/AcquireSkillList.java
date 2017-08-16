@@ -52,7 +52,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 		for (L2SkillLearn skill : _learnable)
 		{
 			packet.writeD(skill.getSkillId());
-			packet.writeD(skill.getSkillLevel());
+			packet.writeH(skill.getSkillLevel());
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
 			packet.writeC(skill.getDualClassLevel());
@@ -69,7 +69,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			for (Skill skillRemove : skillRem)
 			{
 				packet.writeD(skillRemove.getId());
-				packet.writeD(skillRemove.getLevel());
+				packet.writeH(skillRemove.getLevel());
 			}
 		}
 		return true;

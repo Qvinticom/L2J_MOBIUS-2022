@@ -74,7 +74,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList.SubPledgeS
 import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
 import com.l2jmobius.gameserver.util.EnumIntBitmask;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -3115,9 +3114,6 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		// force store
 		getVariables().storeMe();
-		
-		// Send Packet
-		broadcastToOnlineMembers(ExPledgeBonusMarkReset.STATIC_PACKET);
 	}
 	
 	public ClanVariables getVariables()

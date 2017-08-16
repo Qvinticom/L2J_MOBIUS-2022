@@ -165,7 +165,7 @@ public class PlayerVariables extends AbstractVariables
 		return L2World.getInstance().getPlayer(_objectId);
 	}
 	
-	public void addDailyMissionReward(int rewardId)
+	public void addhdf4fReward(int rewardId)
 	{
 		String result = getString(DAILY_MISSION_REWARDS, "");
 		if (result.isEmpty())
@@ -179,7 +179,7 @@ public class PlayerVariables extends AbstractVariables
 		set(DAILY_MISSION_REWARDS, result);
 	}
 	
-	public void removeDailyMissionReward(int rewardId)
+	public void removehdf4fReward(int rewardId)
 	{
 		String result = "";
 		final String data = getString(DAILY_MISSION_REWARDS, "");
@@ -201,7 +201,7 @@ public class PlayerVariables extends AbstractVariables
 		set(DAILY_MISSION_REWARDS, result);
 	}
 	
-	public boolean hasDailyMissionReward(int rewardId)
+	public boolean hashdf4fReward(int rewardId)
 	{
 		final String data = getString(DAILY_MISSION_REWARDS, "");
 		for (String s : data.split(","))
@@ -214,7 +214,7 @@ public class PlayerVariables extends AbstractVariables
 		return false;
 	}
 	
-	public List<Integer> getDailyMissionRewards()
+	public List<Integer> gethdf4fRewards()
 	{
 		List<Integer> rewards = null;
 		final String data = getString(DAILY_MISSION_REWARDS, "");

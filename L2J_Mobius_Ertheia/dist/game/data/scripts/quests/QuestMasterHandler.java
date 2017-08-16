@@ -103,8 +103,11 @@ import quests.Q00310_OnlyWhatRemains.Q00310_OnlyWhatRemains;
 import quests.Q00336_CoinsOfMagic.Q00336_CoinsOfMagic;
 import quests.Q00337_AudienceWithTheLandDragon.Q00337_AudienceWithTheLandDragon;
 import quests.Q00344_1000YearsTheEndOfLamentation.Q00344_1000YearsTheEndOfLamentation;
+import quests.Q00350_EnhanceYourWeapon.Q00350_EnhanceYourWeapon;
+import quests.Q00357_WarehouseKeepersAmbition.Q00357_WarehouseKeepersAmbition;
 import quests.Q00359_ForASleeplessDeadman.Q00359_ForASleeplessDeadman;
 import quests.Q00371_ShrieksOfGhosts.Q00371_ShrieksOfGhosts;
+import quests.Q00372_LegacyOfInsolence.Q00372_LegacyOfInsolence;
 import quests.Q00373_SupplierOfReagents.Q00373_SupplierOfReagents;
 import quests.Q00376_ExplorationOfTheGiantsCavePart1.Q00376_ExplorationOfTheGiantsCavePart1;
 import quests.Q00377_ExplorationOfTheGiantsCavePart2.Q00377_ExplorationOfTheGiantsCavePart2;
@@ -170,6 +173,8 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
 import quests.Q00621_EggDelivery.Q00621_EggDelivery;
 import quests.Q00622_SpecialtyLiquorDelivery.Q00622_SpecialtyLiquorDelivery;
 import quests.Q00623_TheFinestFood.Q00623_TheFinestFood;
+import quests.Q00624_TheFinestIngredientsPart1.Q00624_TheFinestIngredientsPart1;
+import quests.Q00625_TheFinestIngredientsPart2.Q00625_TheFinestIngredientsPart2;
 import quests.Q00626_ADarkTwilight.Q00626_ADarkTwilight;
 import quests.Q00627_HeartInSearchOfPower.Q00627_HeartInSearchOfPower;
 import quests.Q00631_DeliciousTopChoiceMeat.Q00631_DeliciousTopChoiceMeat;
@@ -184,6 +189,10 @@ import quests.Q00652_AnAgedExAdventurer.Q00652_AnAgedExAdventurer;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
+import quests.Q00699_GuardianOfTheSkies.Q00699_GuardianOfTheSkies;
+import quests.Q00700_CursedLife.Q00700_CursedLife;
+import quests.Q00701_ProofOfExistence.Q00701_ProofOfExistence;
+import quests.Q00702_ATrapForRevenge.Q00702_ATrapForRevenge;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
 import quests.Q00751_LiberatingTheSpirits.Q00751_LiberatingTheSpirits;
@@ -570,8 +579,11 @@ public class QuestMasterHandler
 		Q00336_CoinsOfMagic.class,
 		Q00337_AudienceWithTheLandDragon.class,
 		Q00344_1000YearsTheEndOfLamentation.class,
+		Q00350_EnhanceYourWeapon.class,
+		Q00357_WarehouseKeepersAmbition.class,
 		Q00359_ForASleeplessDeadman.class,
 		Q00371_ShrieksOfGhosts.class,
+		Q00372_LegacyOfInsolence.class,
 		Q00373_SupplierOfReagents.class,
 		Q00376_ExplorationOfTheGiantsCavePart1.class,
 		Q00377_ExplorationOfTheGiantsCavePart2.class,
@@ -637,6 +649,8 @@ public class QuestMasterHandler
 		Q00621_EggDelivery.class,
 		Q00622_SpecialtyLiquorDelivery.class,
 		Q00623_TheFinestFood.class,
+		Q00624_TheFinestIngredientsPart1.class,
+		Q00625_TheFinestIngredientsPart2.class,
 		Q00626_ADarkTwilight.class,
 		Q00627_HeartInSearchOfPower.class,
 		Q00631_DeliciousTopChoiceMeat.class,
@@ -651,6 +665,10 @@ public class QuestMasterHandler
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
 		Q00688_DefeatTheElrokianRaiders.class,
+		Q00699_GuardianOfTheSkies.class,
+		Q00700_CursedLife.class,
+		Q00701_ProofOfExistence.class,
+		Q00702_ATrapForRevenge.class,
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
 		Q00751_LiberatingTheSpirits.class,

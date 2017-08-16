@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.model.L2Augmentation;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.multisell.Entry;
@@ -425,22 +424,6 @@ public class MultiSellChoose implements IClientIncomingPacket
 											{
 												product.getVariables().set(ItemVariables.VISUAL_APPEARANCE_LIFE_TIME, info.getVisualIdLifeTime());
 												product.scheduleVisualLifeTime();
-											}
-										}
-										if (!info.getSpecialAbilities().isEmpty())
-										{
-											int position = 0;
-											for (EnsoulOption option : info.getSpecialAbilities())
-											{
-												product.addSpecialAbility(option, position++, 1, true);
-											}
-										}
-										if (!info.getAdditionalSpecialAbilities().isEmpty())
-										{
-											int position = 0;
-											for (EnsoulOption option : info.getAdditionalSpecialAbilities())
-											{
-												product.addSpecialAbility(option, position++, 2, true);
 											}
 										}
 									}

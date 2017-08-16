@@ -16,12 +16,9 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Objects;
 
 import com.l2jmobius.gameserver.enums.AttributeType;
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
@@ -48,8 +45,6 @@ public class TradeItem
 		0
 	};
 	private final int[] _enchantOptions;
-	private final Collection<EnsoulOption> _soulCrystalOptions;
-	private final Collection<EnsoulOption> _soulCrystalSpecialOptions;
 	private int _visualId;
 	private int _augmentId;
 	
@@ -71,10 +66,8 @@ public class TradeItem
 			_elemDefAttr[type.getClientId()] = item.getDefenceAttribute(type);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSpecialAbilities();
-		_soulCrystalSpecialOptions = item.getAdditionalSpecialAbilities();
 		_visualId = item.getVisualId();
-		_augmentId = item.isAugmented() ? item.getAugmentation().getId() : 0;
+		_augmentId = item.isAugmented() ? item.getAugmentation().getAugmentationId() : 0;
 	}
 	
 	public TradeItem(L2Item item, long count, long price)
@@ -92,8 +85,6 @@ public class TradeItem
 		_elemAtkType = Elementals.NONE;
 		_elemAtkPower = 0;
 		_enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
-		_soulCrystalOptions = Collections.emptyList();
-		_soulCrystalSpecialOptions = Collections.emptyList();
 	}
 	
 	public TradeItem(TradeItem item, long count, long price)
@@ -115,8 +106,6 @@ public class TradeItem
 			_elemDefAttr[i] = item.getElementDefAttr(i);
 		}
 		_enchantOptions = item.getEnchantOptions();
-		_soulCrystalOptions = item.getSoulCrystalOptions();
-		_soulCrystalSpecialOptions = item.getSoulCrystalSpecialOptions();
 		_visualId = item.getVisualId();
 	}
 	
@@ -203,16 +192,6 @@ public class TradeItem
 	public int[] getEnchantOptions()
 	{
 		return _enchantOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalOptions()
-	{
-		return _soulCrystalOptions;
-	}
-	
-	public Collection<EnsoulOption> getSoulCrystalSpecialOptions()
-	{
-		return _soulCrystalSpecialOptions;
 	}
 	
 	public int getAugmentId()

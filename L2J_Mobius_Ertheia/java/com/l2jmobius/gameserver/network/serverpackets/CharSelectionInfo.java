@@ -48,6 +48,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	{
 		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_LHAND,
+		Inventory.PAPERDOLL_RHAND, // this is correct?
 		Inventory.PAPERDOLL_GLOVES,
 		Inventory.PAPERDOLL_CHEST,
 		Inventory.PAPERDOLL_LEGS,
@@ -174,9 +175,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeD(0x00); // ??
 			packet.writeD(0x00); // ??
-			packet.writeD(0x00); // ??
-			packet.writeC(0x00); // Armor Enchant
-			packet.writeC(0x00); // Weapon Enchant
+			packet.writeH(0x00); // ??
 			
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
@@ -190,7 +189,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(i == _activeId ? 1 : 0);
 			
 			packet.writeC(charInfoPackage.getEnchantEffect() > 127 ? 127 : charInfoPackage.getEnchantEffect());
-			packet.writeQ(charInfoPackage.getAugmentationId());
+			packet.writeD(charInfoPackage.getAugmentationId());
 			
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.

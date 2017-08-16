@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
+import com.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 /**
  * @author KenM
@@ -34,16 +35,20 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	private final SkillEnchantType _type;
 	private final int _skillId;
 	private final int _skillLvl;
-	private final int _skillSubLvl;
 	private final EnchantSkillHolder _enchantSkillHolder;
 	
 	public ExEnchantSkillInfoDetail(SkillEnchantType type, int skillId, int skillLvl, int skillSubLvl, L2PcInstance player)
 	{
 		_type = type;
 		_skillId = skillId;
-		_skillLvl = skillLvl;
-		_skillSubLvl = skillSubLvl;
-		
+		if (skillSubLvl > 1000)
+		{
+			_skillLvl=SkillEnchantConverter.levelToUnderground(skillSubLvl);
+		}
+		else
+		{
+			_skillLvl = skillLvl;
+		}
 		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLvl % 1000);
 	}
 	
@@ -54,8 +59,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
-		packet.writeH(_skillLvl);
-		packet.writeH(_skillSubLvl);
+		packet.writeD(_skillLvl);
 		if (_enchantSkillHolder != null)
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));
@@ -68,6 +72,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 				packet.writeD((int) holder.getCount());
 			});
 		}
+		
 		return _enchantSkillHolder != null;
 	}
 }

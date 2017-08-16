@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.multisell;
 
-import java.util.Collection;
-
-import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.variables.ItemVariables;
@@ -35,21 +32,17 @@ public class ItemInfo
 	private final int _visualId;
 	private final int _visualStoneId;
 	private final long _visualIdLifetime;
-	private final Collection<EnsoulOption> _specialAbilities;
-	private final Collection<EnsoulOption> _additionalSpecialAbilities;
 	
 	public ItemInfo(L2ItemInstance item)
 	{
 		_enchantLevel = item.getEnchantLevel();
-		_augmentId = item.getAugmentation() != null ? item.getAugmentation().getId() : 0;
+		_augmentId = item.getAugmentation() != null ? item.getAugmentation().getAugmentationId() : 0;
 		_elementId = item.getAttackAttributeType().getClientId();
 		_elementPower = item.getAttackAttributePower();
 		_attributes = item.getAttributes() != null ? item.getAttributes().toArray(new AttributeHolder[6]) : new AttributeHolder[6];
 		_visualId = item.getVisualId();
 		_visualStoneId = item.getVariables().getInt(ItemVariables.VISUAL_APPEARANCE_STONE_ID, 0);
 		_visualIdLifetime = item.getVisualLifeTime();
-		_specialAbilities = item.getSpecialAbilities();
-		_additionalSpecialAbilities = item.getAdditionalSpecialAbilities();
 	}
 	
 	public final int getEnchantLevel()
@@ -90,15 +83,5 @@ public class ItemInfo
 	public long getVisualIdLifeTime()
 	{
 		return _visualIdLifetime;
-	}
-	
-	public Collection<EnsoulOption> getSpecialAbilities()
-	{
-		return _specialAbilities;
-	}
-	
-	public Collection<EnsoulOption> getAdditionalSpecialAbilities()
-	{
-		return _additionalSpecialAbilities;
 	}
 }
