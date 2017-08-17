@@ -24,6 +24,7 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.SkillEnchantType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 
 /**
  * @author Sdw
@@ -80,5 +81,29 @@ public class EnchantSkillHolder
 	public Set<ItemHolder> getRequiredItems(SkillEnchantType type)
 	{
 		return _requiredItems.getOrDefault(type, Collections.emptySet());
+	}
+	
+	public ItemHolder getRequiredBook(SkillEnchantType type)
+	{
+		for (ItemHolder item : _requiredItems.getOrDefault(type, Collections.emptySet()))
+		{
+			if (item.getId() != Inventory.ADENA_ID)
+			{
+				return item;
+			}
+		}
+		return null;
+	}
+	
+	public ItemHolder getRequiredAdena(SkillEnchantType type)
+	{
+		for (ItemHolder item : _requiredItems.getOrDefault(type, Collections.emptySet()))
+		{
+			if (item.getId() == Inventory.ADENA_ID)
+			{
+				return item;
+			}
+		}
+		return new ItemHolder(Inventory.ADENA_ID, 0);
 	}
 }

@@ -16,19 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.Set;
-
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.enums.SkillEnchantType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.EnchantSkillHolder;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.util.SkillEnchantConverter;
 
 /**
- * @author KenM
+ * @author KenM, Mobius
  */
 public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 {
@@ -57,13 +54,11 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));
 			packet.writeD(_enchantSkillHolder.getChance(_type));
-			final Set<ItemHolder> holders = _enchantSkillHolder.getRequiredItems(_type);
-			packet.writeD(holders.size());
-			holders.forEach(holder ->
-			{
-				packet.writeD(holder.getId());
-				packet.writeD((int) holder.getCount());
-			});
+			packet.writeD(0x02); // item count
+			packet.writeD(_enchantSkillHolder.getRequiredAdena(_type).getId());
+			packet.writeD((int) _enchantSkillHolder.getRequiredAdena(_type).getCount());
+			packet.writeD(_enchantSkillHolder.getRequiredBook(_type).getId());
+			packet.writeD((int) _enchantSkillHolder.getRequiredBook(_type).getCount());
 		}
 		
 		return _enchantSkillHolder != null;
