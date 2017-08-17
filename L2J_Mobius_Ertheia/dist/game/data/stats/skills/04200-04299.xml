@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
 		<!-- Freya retail confirmed -->
@@ -1046,7 +1046,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4217" toLevel="1" name="none">
+	<skill id="4217" toLevel="1" name="">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<!-- Teleport PC Area Animation -->
@@ -1140,7 +1140,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4221" toLevel="1" name="Deadly Dual-Sword Weapon: Range Attack">
+	<skill id="4221" toLevel="1" name="Range Dual Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<affectRange>100</affectRange>
@@ -1172,7 +1172,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4223" toLevel="1" name="Face Chance: Night to Day">
+	<skill id="4223" toLevel="1" name="Daytime Zaken">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<abnormalLvl>1</abnormalLvl>
@@ -1190,7 +1190,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4224" toLevel="1" name="Face Chance: Day to Night">
+	<skill id="4224" toLevel="1" name="Nighttime Zaken">
 		<!-- Confirmed CT2.5 -->
 		<!-- Zaken skills -->
 		<!-- Change Texture for Day to Night Face -->
@@ -1904,7 +1904,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4246" toLevel="1" name="Strong in 'nan' activity magic DOT">
+	<skill id="4246" toLevel="1" name="Bow Magic Resistance">
 		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2490,7 +2490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4256" toLevel="1" name="100% Stun Resistance.">
+	<skill id="4256" toLevel="1" name="Stun Resistance">
 		<!-- Freya retail confirmed -->
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

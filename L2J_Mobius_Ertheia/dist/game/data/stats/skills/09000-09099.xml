@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="9000" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -4251,7 +4251,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9068" toLevel="2" name="Potion of Vitality Maintenance">
+	<skill id="9068" toLevel="2" name="Vitality Maintaining Potion">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -4284,7 +4284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9069" toLevel="1" name="10,000 SP scroll">
+	<skill id="9069" toLevel="1" name="Scroll: 1,000 SP">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -4582,7 +4582,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9079" toLevel="1" name="Santa's Buff Scroll">
+	<skill id="9079" toLevel="1" name="Scroll: Santa's Buff">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -4671,7 +4671,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9080" toLevel="1" name="Santa's Sock">
+	<skill id="9080" toLevel="1" name="Santa's Stockings">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -4837,7 +4837,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9085" toLevel="1" name="Santa Claus's Gift">
+	<skill id="9085" toLevel="1" name="Santa' Gift">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -5179,7 +5179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9086" toLevel="2" name="Santa - Potion of Will">
+	<skill id="9086" toLevel="2" name="Santa - CP Potion">
 		<!-- Confirmed CT2.5 -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -5231,7 +5231,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9088" toLevel="1" name="Cupid's Arrow">
+	<skill id="9088" toLevel="1" name="Cupid's Cure">
 		<effectPoint>-1000</effectPoint>
 		<icon>icon.skill3260</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -5262,7 +5262,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9089" toLevel="1" name="Cupid's Major Cure">
+	<skill id="9089" toLevel="1" name="Cupid's Enhanced Cure">
 		<effectPoint>-1000</effectPoint>
 		<icon>icon.skill3260</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->

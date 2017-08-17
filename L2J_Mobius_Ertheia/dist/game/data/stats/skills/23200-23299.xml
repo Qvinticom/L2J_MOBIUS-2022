@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23200" toLevel="1" name="Penalty Kick Agathion Special Skill: Soccer Ball of Cheering">
 		<!-- Confirmed CT2.5 -->
@@ -779,7 +779,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23215" toLevel="1" name="Good/Bad of Mind">
+	<skill id="23215" toLevel="1" name="State of the Mind">
 		<!-- Confirmed CT2.5 -->
 		<!-- Triggered from 22176 -->
 		<icon>icon.skill0001</icon>
@@ -855,7 +855,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23219" toLevel="1" name="Flower Fairy Spirit Agathion Special Skill - Fairy's Blessing">
+	<skill id="23219" toLevel="1" name="Flower Fairy Spirit Agathion Special Skill: Fairy's Blessing">
 		<!-- For 5 minutes, increases Atk. Spd. by 30% and all attribute defense by 10. Reuse delay is 1 hours. -->
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1142,7 +1142,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23233" toLevel="1" name="Handy Agathion Special Skill - Halloween's Blessing">
+	<skill id="23233" toLevel="1" name="Handy Agathion Special Skill: Halloween's Blessing">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases resistance to darkness by 20. Reuse delay is 2 hours. -->
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1244,7 +1244,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="23238" toLevel="1" name="Master's Blessing - Eye of Pa'agrio">
+	<skill id="23238" toLevel="1" name="Master's Blessing - Pa'agrio's Eye">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -1281,7 +1281,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23239" toLevel="1" name="Master's Blessing - Soul of Pa'agrio">
+	<skill id="23239" toLevel="1" name="Master's Blessing - Pa'agrio's Soul">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -1621,7 +1621,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23247" toLevel="1" name="Master's Blessing - Elemental Protection">
+	<skill id="23247" toLevel="1" name="Master's Blessing - Elemental Resistance">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>4</abnormalLvl>
@@ -2751,7 +2751,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23280" toLevel="1" name="Master's Blessing - Improve Critical">
+	<skill id="23280" toLevel="1" name="Master's Blessing - Improve Critical Attack">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -2920,7 +2920,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23284" toLevel="1" name="Master's Blessing - Face Harden">
+	<skill id="23284" toLevel="1" name="Master's Blessing - Encase Armor">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -2951,7 +2951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23285" toLevel="1" name="Master's Blessing - Blessing of Noblesse">
+	<skill id="23285" toLevel="1" name="Master's Blessing - Noblesse Blessing">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -2976,7 +2976,7 @@
 			<effect name="NoblesseBless" />
 		</effects>
 	</skill>
-	<skill id="23286" toLevel="1" name="Master's Blessing - Eye of Pa'agrio">
+	<skill id="23286" toLevel="1" name="Master's Blessing - Pa'agrio's Eye">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -3013,7 +3013,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23287" toLevel="1" name="Master's Blessing - Soul of Pa'agrio">
+	<skill id="23287" toLevel="1" name="Master's Blessing - Pa'agrio's Soul">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -3353,7 +3353,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23295" toLevel="1" name="Master's Blessing - Elemental Protection">
+	<skill id="23295" toLevel="1" name="Master's Blessing - Elemental Resistance">
 		<!-- High Five Skill -->
 		<!-- GM Skill -->
 		<abnormalLvl>4</abnormalLvl>
@@ -3423,7 +3423,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="23297" toLevel="1" name="Santa Claus's Blessing">
+	<skill id="23297" toLevel="1" name="Rudolph's Blessing">
 		<!-- "Rudolph's Blessing. For 20 minutes, increases Atk. Spd. by 10%, Casting Spd. by 10%, and Speed by 10. Rudolph consumes 2 fresh herbs." -->
 		<operateType>A2</operateType>
 		<abnormalType>EVENT_SANTA_REWARD</abnormalType>

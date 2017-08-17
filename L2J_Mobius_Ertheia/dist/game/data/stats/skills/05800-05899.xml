@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5800" toLevel="1" name="Self-destruction">
 		<effectPoint>-676</effectPoint>
@@ -199,7 +199,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5810" toLevel="1" name="Decrease Spd.">
+	<skill id="5810" toLevel="1" name="Decrease Speed">
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>

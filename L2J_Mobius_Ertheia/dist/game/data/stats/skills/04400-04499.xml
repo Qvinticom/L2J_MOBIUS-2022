@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" toLevel="3" name="Acumen">
 		<!-- Confirmed CT2.5 -->
@@ -392,7 +392,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4410" toLevel="22" name="P. Atk. Modifiers">
+	<skill id="4410" toLevel="22" name="Extremely Weak P. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0141</value>
@@ -451,7 +451,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4411" toLevel="22" name="M. Atk. Modifiers">
+	<skill id="4411" toLevel="22" name="Extremely Weak M. Atk.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4411_normal</value>
@@ -510,7 +510,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4412" toLevel="22" name="P. Def. Modifiers">
+	<skill id="4412" toLevel="22" name="Extremely Weak P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill0142</value>
@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4413" toLevel="22" name="M. Def. Modifiers">
+	<skill id="4413" toLevel="22" name="Extremely Weak M. Def.">
 		<!-- Confirmed CT2.5 -->
 		<icon>
 			<value level="1">icon.skill4413_normal</value>
@@ -1965,7 +1965,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4444" toLevel="5" name="Higher Resist Bow/Crossbow Weapons">
+	<skill id="4444" toLevel="5" name="Greater Bow/Crossbow Resistance">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill4444</icon>
 		<magicLvl>1</magicLvl>
@@ -2044,7 +2044,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4448" toLevel="5" name="Higher resist Daggers/Rapier Weapon">
+	<skill id="4448" toLevel="5" name="Greater Dagger/Rapier Resistance">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill4448</icon>
 		<magicLvl>1</magicLvl>
@@ -3370,7 +3370,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4486" toLevel="12" name="Decrease P. Def">
+	<skill id="4486" toLevel="12" name="Decrease P. Def.">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>
 			<value level="1">1</value>

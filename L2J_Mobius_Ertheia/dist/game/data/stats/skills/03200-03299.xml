@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
 		<!-- Confirmed CT2.5 -->
@@ -206,7 +206,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3205" toLevel="2" name="Item Skill: Party Recall">
+	<skill id="3205" toLevel="2" name="Item Skill: Party Return">
 		<!-- Confirmed CT2.5 -->
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -2099,7 +2099,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3252" toLevel="10" name="Item Skill: Kiss of Eva">
+	<skill id="3252" toLevel="10" name="Item Skill: Eva's Kiss">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill3238</icon>
 		<magicLvl>

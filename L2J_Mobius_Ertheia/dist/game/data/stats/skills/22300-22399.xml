@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22300" toLevel="1" name="Fantasy Isle Magic">
 		<abnormalTime>120</abnormalTime>
@@ -297,7 +297,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22313" toLevel="1" name="Pa'agrio's Warm Breeze - 4 hour">
+	<skill id="22313" toLevel="1" name="Pa'agrio's Warm Breeze (4-hour)">
 		<!-- "For 4 hours, recovers energy when Exp. is acquired through hunting." -->
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -404,7 +404,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22315" fromLevel="2" toLevel="2" name="Treasure Sack 2nd Place">
+	<skill id="22315" fromLevel="2" toLevel="2" name="2nd Place Treasure Sack">
 		<!-- This skill only has one level, 2. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -452,7 +452,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22316" fromLevel="3" toLevel="3" name="Treasure Sack 3rd Place">
+	<skill id="22316" fromLevel="3" toLevel="3" name="3rd Place Treasure Sack">
 		<!-- This skill only has one level, 3. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -494,7 +494,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22317" fromLevel="4" toLevel="4" name="Treasure Sack 4th Place">
+	<skill id="22317" fromLevel="4" toLevel="4" name="4th Place Treasure Sack">
 		<!-- This skill only has one level, 4. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -530,7 +530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22318" fromLevel="5" toLevel="5" name="Treasure Sack 5th Place">
+	<skill id="22318" fromLevel="5" toLevel="5" name="5th Place Treasure Sack">
 		<!-- This skill only has one level, 5. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -549,7 +549,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22319" fromLevel="6" toLevel="6" name="Treasure Sack 6th Place">
+	<skill id="22319" fromLevel="6" toLevel="6" name="6th Place Treasure Sack">
 		<!-- This skill only has one level, 6. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1535,7 +1535,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22359" toLevel="1" name="Scroll: Enchant Weapon of Destruction (S-Grade)">
+	<skill id="22359" toLevel="1" name="Destruction Scroll: Enchant Weapon (S-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1546,7 +1546,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22360" toLevel="1" name="Scroll: Enchant Armor of Destruction (S-Grade)">
+	<skill id="22360" toLevel="1" name="Destruction Scroll: Enchant Armor (S-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1557,7 +1557,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22361" toLevel="1" name="Scroll: Enchant Weapon of Destruction (A-Grade)">
+	<skill id="22361" toLevel="1" name="Destruction Scroll: Enchant Weapon (A-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1568,7 +1568,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22362" toLevel="1" name="Scroll: Enchant Armor of Destruction (A-Grade)">
+	<skill id="22362" toLevel="1" name="Destruction Scroll: Enchant Armor (A-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1579,7 +1579,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22363" toLevel="1" name="Scroll: Enchant Weapon of Destruction (B-Grade)">
+	<skill id="22363" toLevel="1" name="Destruction Scroll: Enchant Weapon (B-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1590,7 +1590,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22364" toLevel="1" name="Scroll: Enchant Armor of Destruction (B-Grade)">
+	<skill id="22364" toLevel="1" name="Destruction Scroll: Enchant Armor (B-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1601,7 +1601,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22365" toLevel="1" name="Scroll: Enchant Weapon of Destruction (C-Grade)">
+	<skill id="22365" toLevel="1" name="Destruction Scroll: Enchant Weapon (C-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1612,7 +1612,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22366" toLevel="1" name="Scroll: Enchant Armor of Destruction (C-Grade)">
+	<skill id="22366" toLevel="1" name="Destruction Scroll: Enchant Armor (C-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1623,7 +1623,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22367" toLevel="1" name="Scroll: Enchant Weapon of Destruction (D-Grade)">
+	<skill id="22367" toLevel="1" name="Destruction Scroll: Enchant Weapon (D-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1634,7 +1634,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22368" toLevel="1" name="Scroll: Enchant Armor of Destruction (D-Grade)">
+	<skill id="22368" toLevel="1" name="Destruction Scroll: Enchant Armor (D-grade)">
 		<!-- Desciption: There is no available description. -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1850,7 +1850,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22377" toLevel="1" name="Bad Bunny's Necklace Box">
+	<skill id="22377" toLevel="1" name="Bad Bunny's Necklace Pack">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22208</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1875,7 +1875,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22378" toLevel="1" name="Bad Bunny's Earring Box">
+	<skill id="22378" toLevel="1" name="Bad Bunny's Earring Pack">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22209</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1900,7 +1900,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22379" toLevel="1" name="Bad Bunny's Ring Box">
+	<skill id="22379" toLevel="1" name="Bad Bunny's Ring Pack">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22210</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2112,7 +2112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22386" toLevel="1" name="PC Café Transformation Scroll Box">
+	<skill id="22386" toLevel="1" name="Player Commendation - Transformation Scroll Pack">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22274</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2161,7 +2161,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22387" toLevel="1" name="PC Café Gift Box">
+	<skill id="22387" toLevel="1" name="Player Commendation - Gift Box">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22275</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2186,7 +2186,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22388" toLevel="1" name="PC Café Transformation Stick Box">
+	<skill id="22388" toLevel="1" name="Player Commendation - Transformation Stick Pack">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22276</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2211,7 +2211,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22389" toLevel="1" name="PC Café Hair Accessory Box">
+	<skill id="22389" toLevel="1" name="Player Commendation - Hair Accessory Pack">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22277</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2233,7 +2233,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22390" toLevel="1" name="PC Café Luxury Gift Box">
+	<skill id="22390" toLevel="1" name="Player Commendation - Luxury Gift Box">
 		<!-- Desciption: There is no available description. -->
 		<itemConsumeId>22278</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>

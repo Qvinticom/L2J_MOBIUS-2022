@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="22100" toLevel="1" name="Soul Scent">
 		<!-- Confirmed CT2.5 -->
@@ -474,7 +474,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22115" toLevel="1" name="Santa's Weapon Exchange Ticket Box">
+	<skill id="22115" toLevel="1" name="Santa's Weapon Coupon Box">
 		<!-- Confirmed CT2.5 -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -967,7 +967,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22130" toLevel="1" name="Food of Doubt's Effect">
+	<skill id="22130" toLevel="1" name="Mysterious Food's Effect">
 		<!-- Food of Doubt's effect.For 20 minutes, energy is recovered when Exp. is acquired. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2022,7 +2022,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22167" toLevel="1" name="April Fools' Day Vesper Weapon Gift">
+	<skill id="22167" toLevel="1" name="April Fool's Day Vesper Weapon Gift">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.skill0001</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2148,7 +2148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22170" toLevel="1" name="Hardin's Protection">
+	<skill id="22170" toLevel="1" name="Hardin's Divine Protection">
 		<!-- Maximies P. Def. for 10 seconds. -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2190,7 +2190,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22172" toLevel="1" name="Sylphide's Wings">
+	<skill id="22172" toLevel="1" name="Silpeed's Wing">
 		<!-- Increases one's own moving speed by 300 for 15 seconds. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2210,7 +2210,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22173" toLevel="1" name="Sylphide's Blessing">
+	<skill id="22173" toLevel="1" name="Silpeed's Blessing">
 		<!-- Increases the moving speed of yourself and friendly nearby targets by 300 for 15 seconds. -->
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2232,7 +2232,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="22174" toLevel="1" name="Yibein's Recovery Scroll">
+	<skill id="22174" toLevel="1" name="Evain's Recovery Scroll">
 		<!-- Recovers HP of yourself and friendly nearby targets by 500. -->
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>800</effectPoint>
@@ -2293,7 +2293,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22177" toLevel="1" name="Warrior's Breath">
+	<skill id="22177" toLevel="1" name="Warrior's Quick CP Potion">
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<icon>icon.skill0001</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->

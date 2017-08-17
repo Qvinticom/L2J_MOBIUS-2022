@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6700" toLevel="1" name="Ball Trapping Orodriel Agathion Cute Trick">
 		<!-- You can see the summoned spirit's cute tricks. -->
@@ -762,7 +762,7 @@
 			<effect name="TargetCancel" />
 		</effects>
 	</skill>
-	<skill id="6733" toLevel="1" name="Antharas's Stigma">
+	<skill id="6733" toLevel="1" name="Antharas' Stigma">
 		<!-- "Antharas's stigma. After 10 seconds, spreads the Stigma Aftermath nearby, which decreases 400 HP per second and 150 MP." -->
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
@@ -2032,7 +2032,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6784" toLevel="1" name="Presentation - Eris's Suffering">
+	<skill id="6784" toLevel="1" name="Presentation - Eris' Suffering">
 		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
@@ -2091,7 +2091,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6789" toLevel="1" name="Presentation - Etis's Defeat">
+	<skill id="6789" toLevel="1" name="Presentation - Etis' Defeat">
 		<!-- none -->
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>

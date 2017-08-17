@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5000" toLevel="1" name="Alfred Strike">
 		<!-- CT2.5 retail confirmed -->
@@ -122,7 +122,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5005" toLevel="1" name="Frintezza's Ghost Summoning">
+	<skill id="5005" toLevel="1" name="Frintezza Pose">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<abnormalLvl>1</abnormalLvl>
@@ -145,7 +145,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5006" toLevel="1" name="Frintezza's Melody">
+	<skill id="5006" toLevel="1" name="Frintezza Music">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<effectPoint>100</effectPoint>
@@ -159,7 +159,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5007" toLevel="5" name="Frintezza's Songs">
+	<skill id="5007" toLevel="5" name="Frintezza Heal Music">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<effectPoint>100</effectPoint>
@@ -179,7 +179,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5008" toLevel="5" name="Frintezza's Songs">
+	<skill id="5008" toLevel="5" name="Frintezza Heal Music">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<abnormalType>
@@ -348,7 +348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5009" toLevel="1" name="Frintezza's Ghostly Fighter">
+	<skill id="5009" toLevel="1" name="Frintezza Ghost Fighter">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>150</affectRange>
@@ -371,7 +371,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5010" toLevel="1" name="Frintezza's Ghostly Mage">
+	<skill id="5010" toLevel="1" name="Frintezza Ghost Mage">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>150</affectRange>
@@ -395,7 +395,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5011" toLevel="1" name="Frintezza's Bomber Ghost">
+	<skill id="5011" toLevel="1" name="Frintezza Ghost Bomb">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>150</affectRange>
@@ -467,7 +467,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5014" toLevel="3" name="Frintezza's Daemon Attack">
+	<skill id="5014" toLevel="3" name="Frintezza Demon Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>150</affectRange>
@@ -505,7 +505,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5015" toLevel="6" name="Frintezza's Daemon Charge">
+	<skill id="5015" toLevel="6" name="Frintezza Charge">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>
@@ -591,7 +591,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="5017" toLevel="1" name="Frintezza's Daemon Morph">
+	<skill id="5017" toLevel="1" name="Demon">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<abnormalLvl>1</abnormalLvl>
@@ -623,7 +623,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5018" toLevel="2" name="Frintezza's Daemon Field">
+	<skill id="5018" toLevel="2" name="Frintezza Demon Field">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>
@@ -651,7 +651,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5019" toLevel="1" name="Frintezza's Daemon Drain">
+	<skill id="5019" toLevel="1" name="Frintezza Demon Energy Drain">
 		<!-- Confirmed CT2.5 -->
 		<!-- Frintezza Skills -->
 		<affectRange>1000</affectRange>
@@ -2822,7 +2822,7 @@
 			<effect name="PhysicalMute" />
 		</effects>
 	</skill>
-	<skill id="5082" toLevel="4" name="NPC Spinning, Slashing Trick">
+	<skill id="5082" toLevel="4" name="Spinning Slasher">
 		<affectRange>150</affectRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8500" toLevel="1" name="Pink Talisman - CON">
 		<!-- Confirmed CT2.5 -->
@@ -188,7 +188,7 @@
 		<magicLvl>1</magicLvl>
 		<icon>BranchSys2.icon.br_worldcup_hair_i02</icon>
 	</skill>
-	<skill id="8512" toLevel="1" name="National Representative Warrior's Tenacity">
+	<skill id="8512" toLevel="1" name="Olympic Athlete's Tenacity">
 		<!-- "When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited National Representative Warrior's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked." -->
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -456,7 +456,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8522" toLevel="1" name="Release Seal on Agathion - Nevit's Messenger Kanna">
+	<skill id="8522" toLevel="1" name="Release Agathion's Seal - Nevit's Messenger Kanna">
 		<!-- High Five Skill -->
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->

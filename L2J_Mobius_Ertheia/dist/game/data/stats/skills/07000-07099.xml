@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="7000" toLevel="1" name="NPC Default">
 		<magicLvl>1</magicLvl>
@@ -1777,7 +1777,7 @@
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
-	<skill id="7085" toLevel="1" name="Self-Destruct Explosion_test">
+	<skill id="7085" toLevel="1" name="Self-Destruct Explosion">
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1936,7 +1936,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical">
+	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical Attack">
 		<!-- Confirmed CT2.5 -->
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
@@ -2105,7 +2105,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7095" toLevel="1" name="Master's Blessing - Face Harden">
+	<skill id="7095" toLevel="1" name="Master's Blessing - Encase Armor">
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2136,7 +2136,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7096" toLevel="1" name="Master's Blessing - Blessing of Noblesse">
+	<skill id="7096" toLevel="1" name="Master's Blessing - Noblesse Blessing">
 		<!-- GM Skill -->
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

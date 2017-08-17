@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8300" toLevel="1" name="Dynasty Sigil">
 		<icon>icon.dynasty_sigil_i01</icon>
@@ -351,7 +351,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8307" toLevel="1" name="Boing Hammer's Effect of Doubt">
+	<skill id="8307" toLevel="1" name="Boing Hammer's Mysterious Effect">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.weapon_bbyong_hammer_a_i00</icon>
 		<magicLvl>1</magicLvl>
@@ -510,7 +510,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8315" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8315" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>10</magicLvl>
@@ -530,7 +530,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8316" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8316" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>20</magicLvl>
@@ -562,7 +562,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8317" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8317" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>30</magicLvl>
@@ -594,7 +594,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8318" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8318" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>40</magicLvl>
@@ -626,7 +626,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8319" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8319" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>50</magicLvl>
@@ -658,7 +658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8320" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8320" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>60</magicLvl>
@@ -690,7 +690,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8321" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8321" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>70</magicLvl>
@@ -722,7 +722,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8322" toLevel="1" name="Santa Claus' Blessed Weapon">
+	<skill id="8322" toLevel="1" name="Santa's Blessed Weapon">
 		<!-- Confirmed CT2.5 -->
 		<icon>icon.etc_x_mas_tree_i00</icon>
 		<magicLvl>80</magicLvl>
@@ -1041,7 +1041,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8336" toLevel="1" name="Guardian's Strider Mount">
+	<skill id="8336" toLevel="1" name="Ride Guardian's Strider">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -1832,7 +1832,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8373" toLevel="1" name="Silent Scream's Mask">
+	<skill id="8373" toLevel="1" name="Shriek Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and wind tolerance by 5. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1852,7 +1852,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8374" toLevel="1" name="Wrathful Spirit's Mask">
+	<skill id="8374" toLevel="1" name="Red Devil Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, moving speed by 5%, and fire tolerance by 5. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1872,7 +1872,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="8375" toLevel="1" name="Unrotten Corpse's Mask">
+	<skill id="8375" toLevel="1" name="Mummy Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP consumption by 5%, and darkness tolerance by 5. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

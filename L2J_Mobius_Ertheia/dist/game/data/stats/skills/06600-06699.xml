@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6600" toLevel="28" name="Earth Attack">
 		<coolTime>500</coolTime>
@@ -1616,7 +1616,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6626" toLevel="1" name="Energy of Life's Power">
+	<skill id="6626" toLevel="1" name="Major Energy of Life">
 		<!-- This skill only has one level, 2. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1636,7 +1636,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6627" toLevel="1" name="Energy of Life's Highest Power">
+	<skill id="6627" toLevel="1" name="Superior Energy of Life">
 		<!-- This skill only has one level, 3. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1675,7 +1675,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6629" toLevel="1" name="Energy of Mana's Power">
+	<skill id="6629" toLevel="1" name="Major Energy of Mana">
 		<!-- This skill only has one level, 2. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -1695,7 +1695,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6630" toLevel="1" name="Energy of Mana's Highest Power">
+	<skill id="6630" toLevel="1" name="Superior Energy of Mana">
 		<!-- This skill only has one level, 3. -->
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
@@ -2684,7 +2684,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6679" toLevel="1" name="Summoner's Strike">
+	<skill id="6679" toLevel="1" name="Summoner's Blow">
 		<castRange>900</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-684</effectPoint>
@@ -2827,7 +2827,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6685" toLevel="1" name="Santa Claus's Gift">
+	<skill id="6685" toLevel="1" name="Santa's Gift">
 		<!-- Confirmed CT2.5 -->
 		<coolTime>1000</coolTime>
 		<hitTime>2700</hitTime>

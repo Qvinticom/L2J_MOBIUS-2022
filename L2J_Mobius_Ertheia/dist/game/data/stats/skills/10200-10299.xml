@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10244" toLevel="3" name="True Vanguard">
 		<!-- Glory Days confirmed -->
@@ -610,7 +610,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10257" toLevel="1" name="Self Heal (Warrior)">
+	<skill id="10257" toLevel="1" name="Superior Spirit Mastery">
 		<!-- Glory Days confirmed -->
 		<!-- STR + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
 		<operateType>P</operateType>
@@ -2658,7 +2658,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10289" toLevel="4" name="Brave Spear">
+	<skill id="10289" toLevel="4" name="Boost">
 		<!-- Glory Days confirmed -->
 		<!-- Increases skills' effect by 30% for 60 seconds and normal/skill attack damage by 5% during PvP. -->
 		<abnormalLvl>1</abnormalLvl>
