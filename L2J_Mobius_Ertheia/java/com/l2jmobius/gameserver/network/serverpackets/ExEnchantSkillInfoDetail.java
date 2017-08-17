@@ -50,7 +50,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 		packet.writeD(_type.ordinal());
 		packet.writeD(_skillId);
 		packet.writeD(_skillLvl);
-		if (_enchantSkillHolder != null)
+		if ((_enchantSkillHolder != null) && (_type != SkillEnchantType.UNTRAIN))
 		{
 			packet.writeQ(_enchantSkillHolder.getSp(_type));
 			packet.writeD(_enchantSkillHolder.getChance(_type));
