@@ -24,30 +24,11 @@ public class SkillEnchantConverter
 {
 	public static int levelToErtheia(int enchantLevel)
 	{
-		final String original = "" + enchantLevel;
-		String output = "";
-		for (int i = 0; i < original.length(); i++)
-		{
-			if (i != 1) // skip extra digit
-			{
-				output += original.charAt(i);
-			}
-		}
-		return Integer.valueOf(output);
+		return ((enchantLevel % 1000) + ((enchantLevel / 1000) * 100));
 	}
 	
 	public static int levelToUnderground(int enchantLevel)
 	{
-		final String original = "" + enchantLevel;
-		String output = "";
-		for (int i = 0; i < original.length(); i++)
-		{
-			output += original.charAt(i);
-			if (i == 0) // add extra digit
-			{
-				output += "0";
-			}
-		}
-		return Integer.valueOf(output);
+		return ((enchantLevel % 100) + ((enchantLevel / 100) * 1000));
 	}
 }
