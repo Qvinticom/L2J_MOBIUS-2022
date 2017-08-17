@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10600" name="Battle Manual - Soul Barrier" type="EtcItem">
 		<!-- Spellbook needed to learn Soul Barrier. Used by Berserkers and Arbalesters. Required level: 58 -->
@@ -195,7 +195,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10613" name="Bird Nest (Event)" type="Armor">
-		<!-- Bird nest shaped hair accessory. Uses 2 hair accessory slots. -->
+		<!-- Bird nest shaped hair accessory. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.accessory_nest_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -252,7 +252,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="10616" name="Straw Hat (Event)" type="Armor">
-		<!-- Straw Hat. Uses 2 hair accessory slots. -->
+		<!-- Straw Hat. Uses 2 hair accessory slots. Event item. -->
 		<set name="icon" val="icon.accessory_straw_hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1078,7 +1078,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10667" name="Sirra's Blade {PvP}" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1116,7 +1116,7 @@
 		</stats>
 	</item>
 	<item id="10668" name="Sirra's Blade {PvP}" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1154,7 +1154,7 @@
 		</stats>
 	</item>
 	<item id="10669" name="Sirra's Blade {PvP}" additionalName="Critical Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 15% chance of casting Poison on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 15% chance of casting Poison on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1192,7 +1192,7 @@
 		</stats>
 	</item>
 	<item id="10670" name="Sword of Ipos {PvP}" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1230,7 +1230,7 @@
 		</stats>
 	</item>
 	<item id="10671" name="Sword of Ipos {PvP}" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1268,7 +1268,7 @@
 		</stats>
 	</item>
 	<item id="10672" name="Sword of Ipos {PvP}" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1306,7 +1306,7 @@
 		</stats>
 	</item>
 	<item id="10673" name="Barakiel's Axe {PvP}" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1345,7 +1345,7 @@
 		</stats>
 	</item>
 	<item id="10674" name="Barakiel's Axe {PvP}" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1384,7 +1384,7 @@
 		</stats>
 	</item>
 	<item id="10675" name="Barakiel's Axe {PvP}" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1423,7 +1423,7 @@
 		</stats>
 	</item>
 	<item id="10676" name="Behemoth' Tuning Fork {PvP}" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1462,7 +1462,7 @@
 		</stats>
 	</item>
 	<item id="10677" name="Behemoth' Tuning Fork {PvP}" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1501,7 +1501,7 @@
 		</stats>
 	</item>
 	<item id="10678" name="Behemoth' Tuning Fork {PvP}" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement)  P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1540,7 +1540,7 @@
 		</stats>
 	</item>
 	<item id="10679" name="Naga Storm {PvP}" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 67. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1580,7 +1580,7 @@
 		</stats>
 	</item>
 	<item id="10680" name="Naga Storm {PvP}" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1620,7 +1620,7 @@
 		</stats>
 	</item>
 	<item id="10681" name="Naga Storm {PvP}" additionalName="Back Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 37 when attacking the target from behind. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases P. Critical Rate by 37 when attacking the target from behind. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1660,7 +1660,7 @@
 		</stats>
 	</item>
 	<item id="10682" name="Tiphon's Spear {PvP}" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1699,7 +1699,7 @@
 		</stats>
 	</item>
 	<item id="10683" name="Tiphon's Spear {PvP}" additionalName="Long Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases the attack range. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases the attack range. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1738,7 +1738,7 @@
 		</stats>
 	</item>
 	<item id="10684" name="Tiphon's Spear {PvP}" additionalName="Wild Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Broadens the angle of attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1776,7 +1776,7 @@
 		</stats>
 	</item>
 	<item id="10685" name="Shyeed's Bow {PvP}" additionalName="Cheap Shot" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1817,7 +1817,7 @@
 		</stats>
 	</item>
 	<item id="10686" name="Shyeed's Bow {PvP}" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1858,7 +1858,7 @@
 		</stats>
 	</item>
 	<item id="10687" name="Shyeed's Bow {PvP}" additionalName="Quick Recovery" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1898,7 +1898,7 @@
 		</stats>
 	</item>
 	<item id="10688" name="Sobekk's Hurricane {PvP}" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1938,7 +1938,7 @@
 		</stats>
 	</item>
 	<item id="10689" name="Sobekk's Hurricane {PvP}" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1978,7 +1978,7 @@
 		</stats>
 	</item>
 	<item id="10690" name="Sobekk's Hurricane {PvP}" additionalName="Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a chance to absorb 14 HP from the target during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a chance to absorb 14 HP from the target during a critical attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2018,7 +2018,7 @@
 		</stats>
 	</item>
 	<item id="10691" name="Themis' Tongue {PvP}" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2057,7 +2057,7 @@
 		</stats>
 	</item>
 	<item id="10692" name="Themis' Tongue {PvP}" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2096,7 +2096,7 @@
 		</stats>
 	</item>
 	<item id="10693" name="Themis' Tongue {PvP}" additionalName="Magic Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 20% chance of casting Focus on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 20% chance of casting Focus on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2135,7 +2135,7 @@
 		</stats>
 	</item>
 	<item id="10694" name="Cabrio's Hand {PvP}" additionalName="Conversion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2175,7 +2175,7 @@
 		</stats>
 	</item>
 	<item id="10695" name="Cabrio's Hand {PvP}" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2215,7 +2215,7 @@
 		</stats>
 	</item>
 	<item id="10696" name="Cabrio's Hand {PvP}" additionalName="Magic Silence" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2255,7 +2255,7 @@
 		</stats>
 	</item>
 	<item id="10697" name="Daimon Crystal {PvP}" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2295,7 +2295,7 @@
 		</stats>
 	</item>
 	<item id="10698" name="Daimon Crystal {PvP}" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2335,7 +2335,7 @@
 		</stats>
 	</item>
 	<item id="10699" name="Daimon Crystal {PvP}" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

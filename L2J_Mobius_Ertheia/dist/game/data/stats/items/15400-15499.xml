@@ -62,7 +62,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15403" name="Player Commendation - Berserker Blade" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Berserker Blade with limited ability enhancement. <Special Option>. Critical increases by 73. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Berserker Blade with limited ability enhancement. (Soul Crystal Enhancement) Critical increases by 73. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1939,7 +1939,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15492" name="Sel Mahum Salmon Porridge" type="EtcItem">
-		<!-- Sel Mahum salmon porridge. Smells better than expected... but not by much. -->
+		<!-- u,Sel Mahum salmon porridge. Smells better than expected� but not by much. -->
 		<set name="icon" val="icon.etc_salmon_soup_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />

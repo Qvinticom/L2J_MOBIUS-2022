@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="30300" name="Superior Giant's Codex - Oblivion" type="EtcItem">
-		<!-- The Superior Giant's Codex that was given the cold shoulder by heroes who were seeking for power. It can be sold in the shop. -->
+		<!-- Superior Giant's Codex. Rare item needed to restore a previous enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_forgetting" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -1475,7 +1475,7 @@
 		</skills>
 	</item>
 	<item id="30372" name="Hero's Cloak" type="Armor">
-		<!-- The cloak of an Olympiad Hero. STR/DEX/CON/INT/WIT/MEN + 3 when equipped. Decreases PvP Damage by 15%. -->
+		<!-- The cloak of a sacred hero. Increases Max HP and CP. M. Def. + 80. DEX/MEN/STR/CON/WIT/INT + 2, and Attribute Resistance + 10. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1501,7 +1501,7 @@
 		</stats>
 	</item>
 	<item id="30373" name="Glorious Cloak" type="Armor">
-		<!-- Glorious Cloak of an Olympiad Hero. STR/DEX/CON/INT/WIT/MEN + 2 when equipped. Decreases PvP Damage by 5%. -->
+		<!-- Glorious Cloak. Increases Max HP and CP. M. Def. + 50,. DEX/MEN/STR/CON/WIT/INT + 1, and Attribute Resistance + 5.  Note: Item disappears when you change classes. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1804,7 +1804,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="30392" name="Infinity Shaper" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1840,7 +1840,7 @@
 		</stats>
 	</item>
 	<item id="30393" name="Infinity Cutter" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1875,7 +1875,7 @@
 		</stats>
 	</item>
 	<item id="30394" name="Infinity Slasher" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1910,7 +1910,7 @@
 		</stats>
 	</item>
 	<item id="30395" name="Infinity Avenger" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1946,7 +1946,7 @@
 		</stats>
 	</item>
 	<item id="30396" name="Infinity Fighter" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1982,7 +1982,7 @@
 		</stats>
 	</item>
 	<item id="30397" name="Infinity Stormer" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2018,7 +2018,7 @@
 		</stats>
 	</item>
 	<item id="30398" name="Infinity Thrower" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2055,7 +2055,7 @@
 		</stats>
 	</item>
 	<item id="30399" name="Infinity Shooter" type="Weapon">
-		<!-- Holy hero's weapon. Increases Damage to PC by 30%. Increases Max HP/MP/CP by 30%, P. Atk. By 25%, Atk. Spd. by 15%, and P. Skill Critical Damage by 15%. Cannot be transferred between servers. -->
+		<!-- Holy hero's weapon. Increases Max HP, Max MP, Max CP, damage inflicted during PvP, Atk. Cannot be transferred between servers. Spd. and P. Atk. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

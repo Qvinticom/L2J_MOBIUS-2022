@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="40200" name="Sayha's Cloak" additionalName="Eviscerator" type="Armor">
 		<!-- Cloak for those that carry the power of Sayha. M. Def. + 40. -->
@@ -151,7 +151,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="40214" name="Blessed Antharas' Earring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40214" name="Blessed Antharas' Earring  Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="is_stackable" val="true" />
@@ -227,7 +227,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="40219" name="Appearance Stone: Cat Fighter (Ertheia Only)" additionalName="90-day" type="EtcItem">
-		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. 90-day. <Note> Modified items can only be equipped by Ertheia. -->
+		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. 90-day.  (Note) Modified items can only be equipped by Ertheia. -->
 		<set name="icon" val="icon.shape_shifting_dualfist_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -241,7 +241,7 @@
 		<set name="time" val="129600" />
 	</item>
 	<item id="40220" name="Appearance Stone: Cat Staff (Ertheia Only)" additionalName="90-day" type="EtcItem">
-		<!-- Changes the appearance of a two-handed magic blunt weapon into that of a Cat Staff. 90-day. <Note> Modified items can only be equipped by Ertheia. -->
+		<!-- Changes the appearance of a two-handed magic blunt weapon into that of a Cat Staff. 90-day.  (Note) Modified items can only be equipped by Ertheia. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -309,7 +309,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40226" name="Freya's Frozen Lamp" type="EtcItem">
-		<!-- Double-click to obtain a Freya's Frozen Scroll and a Freya's Recovery Potion. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
+		<!-- u,Double-click to obtain a Freya's Frozen Scroll and a Freya�s Recovery Potion. Has a chance of obtaining one of the following items: Freya's Wish Box, Sirra's Wish Box, or a Snowman's Wish Box. -->
 		<set name="icon" val="icon.freya_lamp" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -319,7 +319,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40227" name="Freya's Frozen Scroll" type="EtcItem">
-		<!-- Vitality consumption + 100% and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption x 2 and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -339,7 +339,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40229" name="Sirra's Wish Box" type="EtcItem">
-		<!-- Double-click for a chance to obtain one of the following items: Lucky Enchant Stone, High-grade Lucky Enchant Stone, Blessed Lucky Enchant Stone, Elemental Shirt Pack, Dark/Bloody Eternal Enhancement Stone, Blessed High-grade Lucky Enchant Stone, Freya's Lucky Enchant Stone, or a Dark/Bloody Amaranthine Enhancement Stone. -->
+		<!-- u,Double-click for a chance to obtain one of the following items: Lucky Enchant Stone, High-grade Lucky Enchant Stone, Blessed Lucky Enchant Stone, Elemental Shirt Pack, Dark/Bloody Eternal Enhancement Stone, Blessed High-grade Lucky Enchant Stone, Freya�s Lucky Enchant Stone, or a Dark/Bloody Amaranthine Enhancement Stone. -->
 		<set name="icon" val="icon.freya_box_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -349,7 +349,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40230" name="Snowman's Wish Box" type="EtcItem">
-		<!-- Double-click for a chance to obtain one of the following items: Energy of Destruction, Giant's Energy, Kaliel's Energy, Elemental Shirt Pack, Sealed Talisman - Longing, Seven Signs' Energy, Talisman - Anakim, Talisman - Lilith, or Talisman - Seven Signs. -->
+		<!-- u,Double-click for a chance to obtain one of the following items: Energy of Destruction, Giant�s Energy, Kaliel�s Energy, Elemental Shirt Pack, Sealed Talisman � Longing, Seven Signs� Energy, Talisman � Anakim, Talisman � Lilith, or Talisman � Seven Signs. -->
 		<set name="icon" val="icon.freya_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -359,7 +359,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40231" name="Freya's Frozen Scroll" additionalName="Event" type="EtcItem">
-		<!-- Vitality consumption + 100% and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption x 2 and XP/SP acquisition + 100% while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -423,7 +423,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40237" name="Agathion - Freya" additionalName="30-day" type="Armor">
-		<!-- Summons Freya agathion. 30-day. Cannot be used in the Olymipad. <Active Skill>. 1. Freya's Scroll of Escape: Town of Aden / Town of Rune / Talking Island Village. Cooldown is 30 min. <Passive SKill>. 1. Freya's Mind: Mental/Paralysis Resistance + 10%, Water Resistance + 10. 2. Freya's Strength: STR/INT/CON/DEX/WIT/MEN + 1. 3. Freya's Magic: P./M. Skill MP Consumption - 3%. -->
+		<!-- Summons Freya agathion. 30-day. Cannot be used in the Olymipad. (Active Skill) 1. Freya's Scroll of Escape: Town of Aden / Town of Rune / Talking Island Village. Cooldown is 30 min.  (Passive SKill) 1. Freya's Mind: Mental/Paralysis Resistance + 10%, Water Resistance + 10.  2. Freya's Strength: STR/INT/CON/DEX/WIT/MEN + 1.  3. Freya's Magic: P./M. Skill MP Consumption - 3%. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -992,7 +992,7 @@
 		</skills>
 	</item>
 	<item id="40270" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">
-		<!-- Changes the appearance of your entire armor into that of a Dark Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
+		<!-- Changes the appearance of your entire armor into that of a Dark Assassit Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
@@ -1168,8 +1168,8 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="icon" val="icon.nc_magazine" />
 	</item>
-	<item id="40290" name="Lara's Key Card Pack" additionalName="Normal" type="EtcItem">
-		<!-- Double-click to obtain Lara's Key Card. -->
+	<item id="40290" name="Lara the Cat's Card Key Pack" additionalName="Normal" type="EtcItem">
+		<!-- Double-click to obtain Lara the Cat's Card Key. -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1183,7 +1183,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40291" name="Steel Demon's Staff" additionalName="Magic Chaos" type="Weapon">
-		<!-- <Special Option>. Has a 7% chance of inflicting Curse Chaos on target when using a magical skill on them. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- Cannot augment. (Soul Crystal Enhancement) Has a 7% chance of inflicting Curse Chaos on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1210,7 +1210,7 @@
 		</stats>
 	</item>
 	<item id="40292" name="Steel Spirit's Staff" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- <Special Option>. Has a 50% chance of inflicting Mental Shield on target when using a magical skill on them. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- Cannot augment. (Soul Crystal Enhancement) Has a 50% chance of inflicting Mental Shield on target when using a magical skill on them. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1237,7 +1237,7 @@
 		</stats>
 	</item>
 	<item id="40293" name="Steel Dasparion's Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- Cannot augment. (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1264,7 +1264,7 @@
 		</stats>
 	</item>
 	<item id="40294" name="Steel Imperial Staff" additionalName="Empower" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- Cannot augment. (Soul Crystal Enhancement) M. Atk. + 60. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1291,7 +1291,7 @@
 		</stats>
 	</item>
 	<item id="40295" name="Steel Dynasty Staff" additionalName="Acumen" type="Weapon">
-		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
+		<!-- Cannot augment. (Soul Crystal Enhancement) Casting Spd. + 15%. PvP damage increased. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

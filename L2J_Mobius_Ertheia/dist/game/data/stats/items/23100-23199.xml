@@ -146,7 +146,7 @@
 		</stats>
 	</item>
 	<item id="23104" name="Vesper Pincer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. Critical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon.  Critical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -183,7 +183,7 @@
 		</stats>
 	</item>
 	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon.  Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -220,7 +220,7 @@
 		</stats>
 	</item>
 	<item id="23106" name="Vesper Nagan of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. Critical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon.  Critical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1130,7 +1130,7 @@
 		</skills>
 	</item>
 	<item id="23147" name="Ghost Potion" additionalName="Event" type="EtcItem">
-		<!-- Ghost Potion. P. Atk. + 20%, M. Atk. + 85%, and Speed + 20. Cooldown is 60 min. -->
+		<!-- Ghost Potion  P. Atk. + 20%, M. Atk. + 85%, and Speed + 20. Does not stack with Art of Seduction. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
@@ -1803,8 +1803,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23184" name="Tribal Warrior Top" type="Armor">
-		<!-- Tribal Warrior Top. Part of a costume. -->
+	<item id="23184" name="Traditional Taiwanese Top" type="Armor">
+		<!-- Traditional Taiwanese Top. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_u" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1818,8 +1818,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23185" name="Tribal Warrior Pants" type="Armor">
-		<!-- Tribal Warrior Pants. Part of a costume. -->
+	<item id="23185" name="Traditional Taiwanese Pants" type="Armor">
+		<!-- Traditional Taiwanese Pants. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_l" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1833,8 +1833,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23186" name="Tribal Warrior Gloves" type="Armor">
-		<!-- Tribal Warrior Gloves. Part of a costume. -->
+	<item id="23186" name="Traditional Taiwanese Gloves" type="Armor">
+		<!-- Traditional Taiwanese Gloves. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_g" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1848,8 +1848,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23187" name="Tribal Warrior Shoes" type="Armor">
-		<!-- Tribal Warrior Shoes. Part of a costume. -->
+	<item id="23187" name="Traditional Taiwanese Shoes" type="Armor">
+		<!-- Traditional Taiwanese Shoes. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_b" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1863,8 +1863,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="23188" name="Tribal Warrior Hair Accessory" type="Armor">
-		<!-- Tribal Warrior Hair Accessory. Hat form. Part of a costume. -->
+	<item id="23188" name="Traditional Taiwanese Hair Accessory" type="Armor">
+		<!-- Traditional Taiwanese Hair Accessory. Hat form. Part of a costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_paiwan_hair" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1955,7 +1955,7 @@
 		</skills>
 	</item>
 	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. Warning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
+		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots.  Warning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1973,8 +1973,8 @@
 			<skill id="22643" level="1" /> <!-- Ninja Hair Accessory Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23194" name="Tribal Warrior Top Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a top to that of a Tribal Warrior outfit. Abilities do not change after modification. Can be used regardless of material. -->
+	<item id="23194" name="Traditional Taiwanese Top Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a top to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1992,8 +1992,8 @@
 			<skill id="22639" level="1" /> <!-- Tribal Warrior Top Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23195" name="Tribal Warrior Pants Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a bottom to that of a Tribal Warrior outfit. Abilities do not change after modification. Can be used regardless of material. -->
+	<item id="23195" name="Traditional Taiwanese Pants Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a bottom to that of a Traditional Taiwanese outfit. Abilities do not change after modification. Can be used regardless of material. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2011,8 +2011,8 @@
 			<skill id="22640" level="1" /> <!-- Tribal Warrior Pants Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23196" name="Tribal Warrior Gloves Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of gloves to that of a Tribal Warrior outfit. Abilities do not change after modification. -->
+	<item id="23196" name="Traditional Taiwanese Gloves Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of gloves to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2030,8 +2030,8 @@
 			<skill id="22641" level="1" /> <!-- Tribal Warrior Gloves Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23197" name="Tribal Warrior Shoes Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of shoes to that of a Tribal Warrior outfit. Abilities do not change after modification. -->
+	<item id="23197" name="Traditional Taiwanese Shoes Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of shoes to that of a Traditional Taiwanese outfit. Abilities do not change after modification. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2049,8 +2049,8 @@
 			<skill id="22642" level="1" /> <!-- Tribal Warrior Shoes Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23198" name="Tribal Warrior Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Tribal Warrior outfit. Can only be used on hair accessories that use 2 slots. -->
+	<item id="23198" name="Traditional Taiwanese Hair Accessory Appearance Stone" type="EtcItem">
+		<!-- Changes the appearance of a hair accessory to that of a Traditional Taiwanese outfit. Can only be used on hair accessories that use 2 slots. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />

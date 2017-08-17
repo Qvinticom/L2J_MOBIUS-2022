@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14600" name="Schuttgart Dark Resistance Ring" type="Armor">
 		<!-- Ring given to the guardian of Schuttgart territory. Dark Resistance + 12. Only one effect is applied even when wearing two earrings with the same effect. -->
@@ -28,7 +28,7 @@
 		</stats>
 	</item>
 	<item id="14601" name="Ancient Cloak" additionalName="Kamaels Only" type="Armor">
-		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge.� -->
+		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -55,7 +55,7 @@
 		</stats>
 	</item>
 	<item id="14602" name="Ancient Cloak" type="Armor">
-		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours.� -->
+		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -883,7 +883,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14632" name="Santa's Éclair Bijou" type="Weapon">
+	<item id="14632" name="Santa's ?clair Bijou" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Santa's Sirra Blade Conversion -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />

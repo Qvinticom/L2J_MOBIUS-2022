@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14500" name="Vesper Retributer {PvP}" additionalName="Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -40,7 +40,7 @@
 		</stats>
 	</item>
 	<item id="14501" name="Vesper Retributer {PvP}" additionalName="HP Drain" type="Weapon">
-		<!-- <Special Option>. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -79,7 +79,7 @@
 		</stats>
 	</item>
 	<item id="14502" name="Vesper Caster {PvP}" additionalName="Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -119,7 +119,7 @@
 		</stats>
 	</item>
 	<item id="14503" name="Vesper Caster {PvP}" additionalName="MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -159,7 +159,7 @@
 		</stats>
 	</item>
 	<item id="14504" name="Vesper Caster {PvP}" additionalName="Mana Up" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_vesper_caster_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -199,7 +199,7 @@
 		</stats>
 	</item>
 	<item id="14505" name="Vesper Singer {PvP}" additionalName="Empower" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 151. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) M. Atk. + 151. Increases damage inflicted during PvP, and the chance to increase Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="14506" name="Vesper Singer {PvP}" additionalName="MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases MP Recovery Rate. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -279,7 +279,7 @@
 		</stats>
 	</item>
 	<item id="14507" name="Vesper Singer {PvP}" additionalName="Magic Hold" type="Weapon">
-		<!-- <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="icon.weapon_vesper_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -319,7 +319,7 @@
 		</stats>
 	</item>
 	<item id="14508" name="Vesper Thrower {PvP}" additionalName="Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Decreases MP consumption by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Decreases MP consumption by 8% during a skill attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -360,7 +360,7 @@
 		</stats>
 	</item>
 	<item id="14509" name="Vesper Thrower {PvP}" additionalName="Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 133. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -401,7 +401,7 @@
 		</stats>
 	</item>
 	<item id="14510" name="Vesper Thrower {PvP}" additionalName="Critical Slow" type="Weapon">
-		<!-- <Special Option>. Has a 33% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 33% chance of casting Slow on the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_thrower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -442,7 +442,7 @@
 		</stats>
 	</item>
 	<item id="14511" name="Vesper Pincer {PvP}" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion  (Soul Crystal Enhancement) Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -485,7 +485,7 @@
 		</stats>
 	</item>
 	<item id="14512" name="Vesper Pincer {PvP}" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Conversion  (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -528,7 +528,7 @@
 		</stats>
 	</item>
 	<item id="14513" name="Vesper Pincer {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Cutter Kamael-exclusive Weapon: Vesper Cutter Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP, and chance to recover CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get the increased P. Atk., M. Atk., healing capacity and MP consumption during skill use is decreased. -->
+		<!-- Kamael-exclusive Weapon: Vesper Cutter Kamael-exclusive Weapon: Vesper Cutter Conversion  (Soul Crystal Enhancement) Increases Critical by 131. Increases damage inflicted during PvP, and chance to recover CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get the increased P. Atk., M. Atk., healing capacity and MP consumption during skill use is decreased. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -571,7 +571,7 @@
 		</stats>
 	</item>
 	<item id="14514" name="Vesper Shooter {PvP}" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>when using the. Skill MP consumption decreases by 12%. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion (Soul Crystal Enhancement)when using the  Skill MP consumption decreases by 12%. Increases damage inflicted during PvP, and the chance to increase Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -614,7 +614,7 @@
 		</stats>
 	</item>
 	<item id="14515" name="Vesper Shooter {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive weapon Vesper Thrower Conversion. <Special Option>. Critical Attack increases by 133. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/crossbows at a fixed rate during an attack. -->
+		<!-- Kamael-exclusive weapon Vesper Thrower Conversion (Soul Crystal Enhancement) Critical Attack increases by 133. Increases damage inflicted during PvP. Increases Atk. Spd. of bows/crossbows at a fixed rate during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -657,7 +657,7 @@
 		</stats>
 	</item>
 	<item id="14516" name="Vesper Shooter {PvP}" additionalName="Critical Slow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion. <Special Option>. Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Thrower Conversion (Soul Crystal Enhancement) Casts Slow at a 24% rate during a Critical Attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -700,7 +700,7 @@
 		</stats>
 	</item>
 	<item id="14517" name="Vesper Nagan {PvP}" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. There is a chance that additional damage is applied during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion (Soul Crystal Enhancement) Increases Atk. Spd. by about 11%. Increases damage inflicted during PvP. There is a chance that additional damage is applied during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -742,7 +742,7 @@
 		</stats>
 	</item>
 	<item id="14518" name="Vesper Nagan {PvP}" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -784,7 +784,7 @@
 		</stats>
 	</item>
 	<item id="14519" name="Vesper Nagan {PvP}" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion. <Special Option>. Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
+		<!-- Kamael-exclusive Weapon: Vesper Slasher Conversion (Soul Crystal Enhancement) Increases Critical by 131. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -990,7 +990,7 @@
 		</stats>
 	</item>
 	<item id="14526" name="Dynasty Dual Dagger - Great Gale" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Atk. Spd. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1031,7 +1031,7 @@
 		</stats>
 	</item>
 	<item id="14527" name="Icarus Dual Daggers - Confusion" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Evasion. Dual daggers. P. Atk. Increases more than regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1072,7 +1072,7 @@
 		</stats>
 	</item>
 	<item id="14528" name="Dynasty Dual Dagger - Great Gale {PvP}" type="Weapon">
-		<!-- Masterwork Item that increases Atk. Spd. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases Atk. Spd. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1119,7 +1119,7 @@
 		</stats>
 	</item>
 	<item id="14529" name="Icarus Dual Daggers - Confusion {PvP}" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- Masterwork Item that increases Evasion Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1758,7 +1758,7 @@
 		</skills>
 	</item>
 	<item id="14558" name="Dynasty Dual Dagger {PvP}" type="Weapon">
-		<!-- Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- Dual daggers, P. Atk. + more than regular one-handed swords when enchanted. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -2484,7 +2484,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14579" name="Épée of Ashton Family" type="Weapon">
+	<item id="14579" name="?p?e of Ashton Family" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Ashton Family's Sword conversion. Enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. Soul Crystal Enhancement and Augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />

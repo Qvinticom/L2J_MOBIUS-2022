@@ -152,7 +152,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="7810" name="Soulfire Dirk" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -185,7 +185,7 @@
 		</stats>
 	</item>
 	<item id="7811" name="Soulfire Dirk" additionalName="Magic Hold" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Dryad Root on the target during magic use. -->
+		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -218,7 +218,7 @@
 		</stats>
 	</item>
 	<item id="7812" name="Soulfire Dirk" additionalName="Magic Silence" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. -->
+		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_dagger_of_magicflame_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -251,7 +251,7 @@
 		</stats>
 	</item>
 	<item id="7813" name="Twilight Knife" additionalName="Magic Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 30% chance of casting Regeneration on the target during magic use. -->
+		<!-- (Soul Crystal Enhancement) Has a 30% chance of casting Regeneration on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -284,7 +284,7 @@
 		</stats>
 	</item>
 	<item id="7814" name="Twilight Knife" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 50% chance of casting Mental Shield on the target during magic use. -->
+		<!-- (Soul Crystal Enhancement) Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -317,7 +317,7 @@
 		</stats>
 	</item>
 	<item id="7815" name="Twilight Knife" additionalName="Magic Weakness" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 7% chance of casting Curse Weakness on the target during magic use. -->
+		<!-- (Soul Crystal Enhancement) Has a 7% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_hell_knife_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1498,7 +1498,7 @@
 		</stats>
 	</item>
 	<item id="7860" name="Apella Helm" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1519,7 +1519,7 @@
 		</stats>
 	</item>
 	<item id="7861" name="Apella Plate Armor" type="Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1545,7 +1545,7 @@
 		</stats>
 	</item>
 	<item id="7862" name="Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1570,7 +1570,7 @@
 		</stats>
 	</item>
 	<item id="7863" name="Apella Solleret" additionalName="Heavy Armor" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1595,7 +1595,7 @@
 		</stats>
 	</item>
 	<item id="7864" name="Apella Brigandine" type="Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1618,7 +1618,7 @@
 		</stats>
 	</item>
 	<item id="7865" name="Apella Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1640,7 +1640,7 @@
 		</stats>
 	</item>
 	<item id="7866" name="Apella Boots" additionalName="Light Armor" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1662,7 +1662,7 @@
 		</stats>
 	</item>
 	<item id="7867" name="Apella Doublet" type="Armor">
-		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- One-piece upper and lower body armor for clans. May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1689,7 +1689,7 @@
 		</stats>
 	</item>
 	<item id="7868" name="Apella Silk Gloves" additionalName="Robe" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1714,7 +1714,7 @@
 		</stats>
 	</item>
 	<item id="7869" name="Apella Sandals" additionalName="Robe" type="Armor">
-		<!-- May be worn by Elder or above. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elder or above.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1739,7 +1739,7 @@
 		</stats>
 	</item>
 	<item id="7870" name="Sealed Apella Helm" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Helmet. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Helmet. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -1760,7 +1760,7 @@
 		</stats>
 	</item>
 	<item id="7871" name="Sealed Apella Plate Armor" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Plate Armor. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Plate Armor. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -1786,7 +1786,7 @@
 		</stats>
 	</item>
 	<item id="7872" name="Sealed Apella Gauntlets" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Gauntlets. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Gauntlets. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1811,7 +1811,7 @@
 		</stats>
 	</item>
 	<item id="7873" name="Sealed Apella Solleret" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Solleret. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Solleret. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1836,7 +1836,7 @@
 		</stats>
 	</item>
 	<item id="7874" name="Sealed Apella Brigandine" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Clothing. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Clothing. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1859,7 +1859,7 @@
 		</stats>
 	</item>
 	<item id="7875" name="Sealed Apella Leather Gloves" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Leather Gloves. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Leather Gloves. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1881,7 +1881,7 @@
 		</stats>
 	</item>
 	<item id="7876" name="Sealed Apella Boots" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Shoes. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Shoes. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1903,7 +1903,7 @@
 		</stats>
 	</item>
 	<item id="7877" name="Sealed Apella Doublet" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Doublet. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Doublet. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_ul_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -1930,7 +1930,7 @@
 		</stats>
 	</item>
 	<item id="7878" name="Sealed Apella Silk Gloves" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Silk Gloves. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Silk Gloves. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1955,7 +1955,7 @@
 		</stats>
 	</item>
 	<item id="7879" name="Sealed Apella Sandals" type="Armor">
-		<!-- May be worn by Elders or above. Sealed Apella Sandals. The blacksmith in a village can release the seal on this item. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- May be worn by Elders or above. Sealed Apella Sandals. The blacksmith in a village can release the seal on this item.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -2036,7 +2036,7 @@
 		</stats>
 	</item>
 	<item id="7882" name="Pa'agrian Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Focus, Health or Critical Drain. -->
 		<set name="icon" val="icon.weapon_sword_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2065,7 +2065,7 @@
 		</stats>
 	</item>
 	<item id="7883" name="Guardian's Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Critical Drain, Health or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2094,7 +2094,7 @@
 		</stats>
 	</item>
 	<item id="7884" name="Infernal Master" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or Focus. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2179,7 +2179,7 @@
 		</stats>
 	</item>
 	<item id="7887" name="Mysterious Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Acumen, M. Atk., or Magic Weakness. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2208,7 +2208,7 @@
 		</stats>
 	</item>
 	<item id="7888" name="Ecliptic Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Empower, M. Atk. or Magic Silence. -->
 		<set name="icon" val="icon.weapon_sword_of_eclipse_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2237,7 +2237,7 @@
 		</stats>
 	</item>
 	<item id="7889" name="Wizard's Tear" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Acumen, M. Atk., or Conversion. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -2295,7 +2295,7 @@
 		</stats>
 	</item>
 	<item id="7891" name="Ecliptic Axe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Conversion, M. Atk. or Magic Hold. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2325,7 +2325,7 @@
 		</stats>
 	</item>
 	<item id="7892" name="Spell Breaker" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Acumen, Mental Shield or Magic Hold. -->
 		<set name="icon" val="icon.weapon_spell_breaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2355,7 +2355,7 @@
 		</stats>
 	</item>
 	<item id="7893" name="Kaim Vanul's Bones" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Mana Up, Magic Silence, or Conversion. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2385,7 +2385,7 @@
 		</stats>
 	</item>
 	<item id="7894" name="Spiritual Eye" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Mana Up, Magic Poison, or Acumen. -->
 		<set name="icon" val="icon.weapon_eye_of_soul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2415,7 +2415,7 @@
 		</stats>
 	</item>
 	<item id="7895" name="Flaming Dragon Skull" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Acumen, M. Atk. or Magic Silence. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2473,7 +2473,7 @@
 		</stats>
 	</item>
 	<item id="7897" name="Dwarven Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, Anger, or Critical Bleed. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2502,7 +2502,7 @@
 		</stats>
 	</item>
 	<item id="7898" name="Karik Horn" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Focus, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_horn_of_karik_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2531,7 +2531,7 @@
 		</stats>
 	</item>
 	<item id="7899" name="Destroyer Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, Haste, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20500" name="Feline King Hat" type="Armor">
 		<!-- Hat that looks like the Feline King. -->
@@ -372,8 +372,8 @@
 			<skill id="22072" level="1" /> <!-- Huge Fortuna Cube -->
 		</skills>
 	</item>
-	<item id="20517" name="Scroll: Enchant Weapon (S-Grade)" type="EtcItem">
-		<!-- 10% increases in enchant success rate. P. Atk. for S-grade sword, one-handed blunt, one-handed dagger, spear, and other weapons increases by 5 when enchanted. P. Atk. for sword, two-handed blunt, two-handed dualsword, and combat and dual-handed weapons increases by 6. P. Atk. for bow weapons increases by 10. M. Atk. for all weapons increases by 4. P. Atk. and M. Atk. Increases two times after + 4. -->
+	<item id="20517" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
+		<!-- 10% increases in enchant success rate.  P. Atk. for S-grade sword, one-handed blunt, one-handed dagger, spear, and other weapons increases by 5 when enchanted. P. Atk. for sword, two-handed blunt, two-handed dualsword, and combat and dual-handed weapons increases by 6. P. Atk. for bow weapons increases by 10. M. Atk. for all weapons increases by 4. P. Atk. and M. Atk. Increases two times after + 4. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_WP" />
@@ -394,8 +394,8 @@
 			<skill id="22073" level="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="20518" name="Scroll: Enchant Armor (S-Grade)" type="EtcItem">
-		<!-- 10% increases in enchant success rate. Defense for S-grade armor or accessory by 1 and by 3 starting from + 4. It can be safely enchanted up to + 3. For one-piece armor, it can be safely enchanted up to + 4. Increases HP according to level when armor is enchanted above + 4. -->
+	<item id="20518" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
+		<!-- 10% increases in enchant success rate.  Defense for S-grade armor or accessory by 1 and by 3 starting from + 4. It can be safely enchanted up to + 3. For one-piece armor, it can be safely enchanted up to + 4. Increases HP according to level when armor is enchanted above + 4. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />
@@ -417,7 +417,7 @@
 		</skills>
 	</item>
 	<item id="20519" name="Ancient Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- 10% increases in enchant success rate. When enchant fails, the existing enchant value is retained. P. Atk. for S-grade sword, one-handed blunt, one-handed dagger, spear, and other weapons increases by 5 when enchanted. P. Atk. for sword, two-handed blunt, two-handed dualsword, and combat and dual-handed weapons increases by 6. P. Atk. for bow weapons increases by 10. M. Atk. for all weapons increases by 4. P. Atk. and M. Atk. Increases two times after + 4. Cannot use weapons enchanted by above 16. -->
+		<!-- 10% increases in enchant success rate.  When enchant fails, the existing enchant value is retained.  P. Atk. for S-grade sword, one-handed blunt, one-handed dagger, spear, and other weapons increases by 5 when enchanted. P. Atk. for sword, two-handed blunt, two-handed dualsword, and combat and dual-handed weapons increases by 6. P. Atk. for bow weapons increases by 10. M. Atk. for all weapons increases by 4. P. Atk. and M. Atk. Increases two times after + 4. Cannot use weapons enchanted by above 16. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -439,7 +439,7 @@
 		</skills>
 	</item>
 	<item id="20520" name="Ancient Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- 10% increases in enchant success rate. When enchant fails, the existing enchant value is retained. Defense for S-grade armor or accessory by 1 and by 3 starting from + 4. It can be safely enchanted up to + 3. For one-piece armor, it can be safely enchanted up to + 4. Increases HP according to level when armor is enchanted above + 4. Cannot use armors enchanted by above 16. -->
+		<!-- 10% increases in enchant success rate.  When enchant fails, the existing enchant value is retained.  Defense for S-grade armor or accessory by 1 and by 3 starting from + 4. It can be safely enchanted up to + 3. For one-piece armor, it can be safely enchanted up to + 4. Increases HP according to level when armor is enchanted above + 4. Cannot use armors enchanted by above 16. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -461,7 +461,7 @@
 		</skills>
 	</item>
 	<item id="20521" name="Heavenly Scroll: Enchant Weapon (S-grade)" type="EtcItem">
-		<!-- Enchant success rate is 100%. P. Atk. for S-grade sword, one-handed blunt, one-handed dagger, spear, and other weapons increases by 5 when enchanted. P. Atk. for sword, two-handed blunt, two-handed dualsword, and combat and dual-handed weapons increases by 6. P. Atk. for bow weapons increases by 10. M. Atk. for all weapons increases by 4. P. Atk. and M. Atk. Increases two times after + 4. Can enchant standard weapons to + 12 and magical weapons to + 7. -->
+		<!-- Enchant success rate is 100%.  P. Atk. for S-grade sword, one-handed blunt, one-handed dagger, spear, and other weapons increases by 5 when enchanted. P. Atk. for sword, two-handed blunt, two-handed dualsword, and combat and dual-handed weapons increases by 6. P. Atk. for bow weapons increases by 10. M. Atk. for all weapons increases by 4. P. Atk. and M. Atk. Increases two times after + 4. Can enchant standard weapons to + 12 and magical weapons to + 7. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -483,7 +483,7 @@
 		</skills>
 	</item>
 	<item id="20522" name="Heavenly Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- Enchant success rate is 100%. Defense for S-grade armor or accessory by 1 and by 3 starting from + 4. Increases HP according to level when armor is enchanted above + 4. Can enchant to + 7. -->
+		<!-- Enchant success rate is 100%.  Defense for S-grade armor or accessory by 1 and by 3 starting from + 4. It can be safely enchanted up to + 3. For one-piece armor, it can be safely enchanted up to + 4. Increases HP according to level when armor is enchanted above + 4. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_am_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM" />
@@ -1081,8 +1081,8 @@
 			<skill id="2437" level="1" /> <!-- Wind Walk Juice -->
 		</skills>
 	</item>
-	<item id="20548" name="XP Rune III (Lv. 1-100+) 30% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (5-hour). Timer starts once package is opened. -->
+	<item id="20548" name="XP Rune III (Lv. 1-99) 30% Pack (5-hour)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 30% (5-hour). Timer starts once package is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1102,8 +1102,8 @@
 			<item id="20335" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 5-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20549" name="XP Rune III (Lv. 1-100+) 50% Pack (5-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (5-hour). -->
+	<item id="20549" name="XP Rune III (Lv. 1-99) 50% Pack (5-hour)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 50% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1123,8 +1123,8 @@
 			<item id="20336" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20550" name="XP Rune III (Lv. 1-100+) 30% Pack (10-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (10-hour). -->
+	<item id="20550" name="XP Rune III (Lv. 1-99) 30% Pack (10-hour)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 30% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1144,8 +1144,8 @@
 			<item id="20337" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 10-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20551" name="XP Rune III (Lv. 1-100+) 50% Pack (10-hour)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (10-hour). -->
+	<item id="20551" name="XP Rune III (Lv. 1-99) 50% Pack (10-hour)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 50% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1165,8 +1165,8 @@
 			<item id="20338" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 10-hour -->
 		</capsuled_items>
 	</item>
-	<item id="20552" name="XP Rune III (Lv. 1-100+) 30% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (7-day). -->
+	<item id="20552" name="XP Rune III (Lv. 1-99) 30% Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 30% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1186,8 +1186,8 @@
 			<item id="20339" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="20553" name="XP Rune III (Lv. 1-100+) 50% Pack (7-day)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (7-day). -->
+	<item id="20553" name="XP Rune III (Lv. 1-99) 50% Pack (7-day)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 50% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1589,7 +1589,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="20572" name="XP Rune III (Lv. 1-100+) 30%" additionalName="3-hour" type="EtcItem">
+	<item id="20572" name="XP Rune III (Lv. 1-99) 30%" additionalName="3-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, increases acquired XP by 30%. The timer decreases even during log-off state. Only one XP Rune can be applied at any given time regardless of additional XP Runes in ones inventory. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1760,8 +1760,8 @@
 			<item id="20571" min="1" max="1" chance="100" /> <!-- Eva's Rune (Event) - 3-day -->
 		</capsuled_items>
 	</item>
-	<item id="20581" name="XP Rune III (Lv. 1-100+) 30% Pack (3-hour) (Event)" type="EtcItem">
-		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (3-hour). The timer start once the box is opened. -->
+	<item id="20581" name="XP Rune III (Lv. 1-99) 30% Pack (3-hour) (Event)" type="EtcItem">
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-99) 30% (3-hour). The timer start once the box is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36100" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day) (Used Skill) 1. Blessing of Star Agathion Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes) 2. Star Agathion Teleport Lets you teleport to various strongholds. (cooldown 30 minutes) 3. Gift of Star Agathion Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -31,7 +31,7 @@
 		</skills>
 	</item>
 	<item id="36101" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 minutes). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day) (Used Skill) 1. Blessing of Star Agathion Increases acquired XP and SP by 30% for 60 minutes (cooldown 5 minutes) 2. Star Agathion Teleport Lets you teleport to various strongholds. (cooldown 30 minutes) 3. Gift of Star Agathion Can get one of Vitality Replenishing/Maintaining/Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -282,7 +282,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36116" name="Scroll of Blessing: (R-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36116" name="Scroll of Blessing (R-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Requiem, Immortal, Apocalypse or Twilight equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r1" />
 		<set name="weight" val="100" />
@@ -293,7 +293,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
-	<item id="36117" name="Scroll of Blessing: (R95-grade)" additionalName="Campaign" type="EtcItem">
+	<item id="36117" name="Scroll of Blessing (R95-grade)" additionalName="Campaign" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you at a low probability. Small fee is charged. -->
 		<set name="icon" val="icon.bless_scroll_r95" />
 		<set name="weight" val="100" />
@@ -740,7 +740,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36143" name="Double Crystal Enhancement Reward: Amaranthine Box (Physical)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Amaranthine Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Double Crystal Amaranthine Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -755,7 +755,7 @@
 		</skills>
 	</item>
 	<item id="36144" name="Double Crystal Enhancement Reward: Amaranthine Box (Magical)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Amaranthine Buster, Caster, and Retributer. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Double Crystal Amaranthine Buster, Caster, and Retributer. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -770,7 +770,7 @@
 		</skills>
 	</item>
 	<item id="36145" name="Double Crystal Enhancement Reward: Amaranthine Box (Dual Weapons)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Amaranthine Dualsword, Dual Dagger, and Dual Blunt. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Double Crystal Amaranthine Dualsword, Dual Dagger, and Dual Blunt. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -975,8 +975,8 @@
 			<item id="33818" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Hair Accessory - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36158" name="Spirit Stone: Hair Accessory Pack" type="EtcItem">
-		<!-- Double-click to receive 1 Spirit Stone for Hair Accessories. The obtained stone cannot be exchanged, dropped, or sold in a store. -->
+	<item id="36158" name="Life Stone: Hair Accessory Pack" type="EtcItem">
+		<!-- Double-click to receive 1 Life Stone for Hair Accessories. The obtained stone cannot be exchanged, dropped, or sold in a store. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -990,7 +990,7 @@
 			<item id="33819" min="1" max="1" chance="100" /> <!-- Life Stone: Hair Accessory - Event -->
 		</capsuled_items>
 	</item>
-	<item id="36159" name="Scroll of Blessing: (R1-grade)" type="EtcItem">
+	<item id="36159" name="Scroll of Blessing (R1-grade)" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Requiem or Immortal equipment for Blessed equipment for you. Small fee is charged. -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -999,7 +999,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.bless_scroll_r1" />
 	</item>
-	<item id="36160" name="Scroll of Blessing: (R2-grade)" type="EtcItem">
+	<item id="36160" name="Scroll of Blessing (R2-grade)" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Apocalypse or Twilight equipment for Blessed equipment for you. Small fee is charged. -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1008,7 +1008,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.bless_scroll_r2" />
 	</item>
-	<item id="36161" name="Scroll of Blessing: (R95-grade)" type="EtcItem">
+	<item id="36161" name="Scroll of Blessing (R95-grade)" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Specter or Seraph equipment for Blessed equipment for you. Small fee is charged. -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1017,7 +1017,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="icon" val="icon.bless_scroll_r95" />
 	</item>
-	<item id="36162" name="Scroll of Blessing: (R99-grade)" type="EtcItem">
+	<item id="36162" name="Scroll of Blessing (R99-grade)" type="EtcItem">
 		<!-- The Blacksmith of Mammon can exchange standard Amaranthine or Eternal equipment for Blessed equipment for you. Small fee is charged. -->
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />

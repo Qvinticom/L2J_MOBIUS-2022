@@ -552,7 +552,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39533" name="Secret Ingredient" type="EtcItem">
-		<!-- Leaf from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
+		<!-- Leaf  from Karaphon at the deepest reaches of the Whispering Woods. Looks like a fish scale. Take this to Maestro Dolkin. -->
 		<set name="icon" val="icon.etc_rune_fish_scale_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -568,7 +568,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39534" name="Dolkin's Report" type="EtcItem">
-		<!-- A report from Maestro Dolkin, who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
+		<!-- A report from Maestro Dolkin,  who is conducting research in the Whispering Woods. Take this to Karla at the administrative grounds. -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -974,15 +974,15 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="39564" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: P. Skill Critical Damage. Cannot be used in the Olympiad. -->
+	<item id="39564" name="Talisman - Wind Pack" type="EtcItem">
+		<!-- Wrapped Pack containing a Talisman - Wind: P. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="39565" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
-		<!-- Wrapped Pack containing a Talisman - Wind: M. Skill Critical Damage. Cannot be used in the Olympiad. -->
+	<item id="39565" name="Talisman - Wind Pack" type="EtcItem">
+		<!-- Wrapped Pack containing a Talisman - Wind: M. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="false" />
@@ -1002,7 +1002,7 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="39568" name="Talisman - Wind: P. Critical Damage" additionalName="Passive" type="Armor">
+	<item id="39568" name="Talisman - Wind: P. Critical Damage" type="Armor">
 		<!-- P. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -1016,7 +1016,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="39569" name="Talisman - Wind: M. Critical Damage" additionalName="Passive" type="Armor">
+	<item id="39569" name="Talisman - Wind: M. Critical Damage" type="Armor">
 		<!-- M. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />

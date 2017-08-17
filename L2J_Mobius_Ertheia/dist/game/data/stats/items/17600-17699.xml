@@ -381,7 +381,7 @@
 		</skills>
 	</item>
 	<item id="17623" name="Earth Wyrm Heart Ring" type="Armor">
-		<!-- MP + 38, increases Physical Attack Resistance, Mental Attack Resistance, MP Recovery Rate, P. Critical Damage, and Accuracy. Poison Resistance + 50%, Poison Atk. Rate + 50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance + 20, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two of the same ring are equipped. -->
+		<!-- MP + 38, increases Physical Attack Resistance, Mental Attack Resistance, MP Recovery Rate, P. Critical Damage, and Accuracy. Poison Resistance + 50%, Poison Atk. Rate + 50%, Knock Back, Knock Down, Pulling Resistance + 20, Atk. Spd., Casting Spd., and Wind/Water Resistance. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

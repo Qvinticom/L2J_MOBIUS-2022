@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1400" name="Spellbook: Surrender to Fire" type="EtcItem">
 		<!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards. Required level: 25 -->
@@ -210,7 +210,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="1419" name="Proof of Blood" type="EtcItem">
-		<!-- Item needed to upgrade a clan to level 3. Only the Clan Leader may use it. -->
+		<!-- Item needed to upgrade a clan to level 3. -->
 		<set name="icon" val="icon.etc_broken_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -865,7 +865,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="1458" name="Crystal (D-grade)" type="EtcItem">
-		<!-- Crystal of D-grade. -->
+		<!-- Crystal of D-grade . -->
 		<set name="icon" val="icon.etc_crystal_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -877,7 +877,7 @@
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1459" name="Crystal (C-grade)" type="EtcItem">
-		<!-- Crystal of C-grade. -->
+		<!-- Crystal of C-grade . -->
 		<set name="icon" val="icon.etc_crystal_green_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -889,7 +889,7 @@
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1460" name="Crystal (B-grade)" type="EtcItem">
-		<!-- Crystal of B-grade. -->
+		<!-- Crystal of B-grade . -->
 		<set name="icon" val="icon.etc_crystal_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -901,7 +901,7 @@
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1461" name="Crystal (A-grade)" type="EtcItem">
-		<!-- Crystal of A-grade. -->
+		<!-- Crystal of A-grade . -->
 		<set name="icon" val="icon.etc_crystal_silver_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -913,7 +913,7 @@
 		<set name="commissionItemType" val="CRYSTAL" />
 	</item>
 	<item id="1462" name="Crystal (S-grade)" type="EtcItem">
-		<!-- Crystal of S-grade. -->
+		<!-- Crystal of S-grade . -->
 		<set name="icon" val="icon.etc_crystal_gold_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

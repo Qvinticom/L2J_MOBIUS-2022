@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="22700" name="Equipment Restoration Stone (R-grade)" type="EtcItem">
 		<!-- Restores the original appearance of R-grade equipment (only weapons and armor, no hair accessories) whose appearances have been modified. Double-click to use. -->
@@ -161,7 +161,7 @@
 		</skills>
 	</item>
 	<item id="22708" name="Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -181,7 +181,7 @@
 		</skills>
 	</item>
 	<item id="22709" name="Blessed Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1624,7 +1624,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22775" name="Drake Maul" type="Weapon">
-		<!-- Two-handed blunt with special powers used by the Drake Lord. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Two-handed blunt with special powers used by the Drake Lord. Bestows either Health, HP Drain, or HP Regeneration. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1656,7 +1656,7 @@
 		</stats>
 	</item>
 	<item id="22776" name="Drake Maul" additionalName="HP Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed blunt with special powers used by the Drake Lord. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1689,7 +1689,7 @@
 		</stats>
 	</item>
 	<item id="22777" name="Drake Maul" additionalName="HP Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1722,7 +1722,7 @@
 		</stats>
 	</item>
 	<item id="22778" name="Drake Maul" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1755,7 +1755,7 @@
 		</stats>
 	</item>
 	<item id="22779" name="Drake Maul (PvP)" type="Weapon">
-		<!-- Two-handed blunt with special powers used by the Drake Lord. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Two-handed blunt with special powers used by the Drake Lord. Bestows either Health, HP Drain, or HP Regeneration. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1793,7 +1793,7 @@
 		</stats>
 	</item>
 	<item id="22780" name="Drake Maul (PvP)" additionalName="HP Drain" type="Weapon">
-		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Absorbs 4% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1832,7 +1832,7 @@
 		</stats>
 	</item>
 	<item id="22781" name="Drake Maul (PvP)" additionalName="HP Regeneration" type="Weapon">
-		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1871,7 +1871,7 @@
 		</stats>
 	</item>
 	<item id="22782" name="Drake Maul (PvP)" additionalName="Health" type="Weapon">
-		<!-- <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1910,7 +1910,7 @@
 		</stats>
 	</item>
 	<item id="22783" name="Drake Maul - Evil Spirit" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. Bestows either Health, HP Drain, or HP Regeneration. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1943,7 +1943,7 @@
 		</stats>
 	</item>
 	<item id="22784" name="Drake Maul - Evil Spirit" additionalName="HP Drain" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Soul Crystal Enhancement>. Two-handed blunt with special powers used by the Drake Lord. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1977,7 +1977,7 @@
 		</stats>
 	</item>
 	<item id="22785" name="Drake Maul - Evil Spirit" additionalName="HP Regeneration" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Soul Crystal Enhancement>. Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Has a chance of inflicting additional damage when attacking. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2011,7 +2011,7 @@
 		</stats>
 	</item>
 	<item id="22786" name="Drake Maul - Evil Spirit" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Soul Crystal Enhancement>. Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Has a chance of inflicting additional damage when attacking. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2045,7 +2045,7 @@
 		</stats>
 	</item>
 	<item id="22787" name="Drake Maul - Evil Spirit (PvP)" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack. Bestows either Health, HP Drain, or HP Regeneration. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2084,7 +2084,7 @@
 		</stats>
 	</item>
 	<item id="22788" name="Drake Maul - Evil Spirit (PvP)" additionalName="HP Drain" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2124,7 +2124,7 @@
 		</stats>
 	</item>
 	<item id="22789" name="Drake Maul - Evil Spirit (PvP)" additionalName="HP Regeneration" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Increases HP Recovery Rate. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2164,7 +2164,7 @@
 		</stats>
 	</item>
 	<item id="22790" name="Drake Maul - Evil Spirit (PvP)" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item with chance of HP absorption during an attack. <Special Option>. Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. No Soul Crystal option. -->
+		<!-- Masterwork Item with chance of HP absorption during an attack (Soul Crystal Enhancement) Two-handed blunt with special powers used by the Drake Lord. Max HP increases by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage when attacking. -->
 		<set name="icon" val="BranchSys3.Icon.g_drake_maul_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2204,7 +2204,7 @@
 		</stats>
 	</item>
 	<item id="22791" name="Freya's Staff" type="Weapon">
-		<!-- Two-handed magic blunt with special powers used by Freya. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Two-handed magic blunt with special powers used by Freya. Bestows either MP Regeneration, Magic Hold, or Empower. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2236,7 +2236,7 @@
 		</stats>
 	</item>
 	<item id="22792" name="Freya's Staff" additionalName="Magic Hold" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed magic blunt with special powers used by Freya. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Two-handed magic blunt with special powers used by Freya. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2270,7 +2270,7 @@
 		</stats>
 	</item>
 	<item id="22793" name="Freya's Staff" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Two-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2303,7 +2303,7 @@
 		</stats>
 	</item>
 	<item id="22794" name="Freya's Staff" additionalName="MP Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Two-handed magic blunt with special powers used by Freya. MP Recovery Rate is raised. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Two-handed magic blunt with special powers used by Freya. MP Recovery Rate is raised. Increases damage inflicted during PvP. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2336,7 +2336,7 @@
 		</stats>
 	</item>
 	<item id="22795" name="Freya's Staff (PvP)" type="Weapon">
-		<!-- Two-handed magic blunt with special powers used by Freya. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
+		<!-- Two-handed magic blunt with special powers used by Freya. Bestows either MP Regeneration, Magic Hold, or Empower. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2374,7 +2374,7 @@
 		</stats>
 	</item>
 	<item id="22796" name="Freya's Staff (PvP)" additionalName="Magic Hold" type="Weapon">
-		<!-- <Special Option>. Two-handed magic blunt with special powers used by Freya. A 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Two-handed magic blunt with special powers used by Freya. A 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2413,7 +2413,7 @@
 		</stats>
 	</item>
 	<item id="22797" name="Freya's Staff (PvP)" additionalName="Empower" type="Weapon">
-		<!-- <Special Option>. Two-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Two-handed magic blunt with special powers used by Freya. M. Atk. Increases by 177. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2452,7 +2452,7 @@
 		</stats>
 	</item>
 	<item id="22798" name="Freya's Staff (PvP)" additionalName="MP Regeneration" type="Weapon">
-		<!-- <Special Option>. Two-handed magic blunt with special powers used by Freya. MP Recovery Rate is raised. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Two-handed magic blunt with special powers used by Freya. MP Recovery Rate is raised. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2491,7 +2491,7 @@
 		</stats>
 	</item>
 	<item id="22799" name="Freya's Staff - Cleverness" type="Weapon">
-		<!-- Masterwork Item with chance of MP absorption. Two-handed magic blunt with special powers used by Freya. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item with chance of MP absorption. Two-handed magic blunt with special powers used by Freya. Bestows either MP Regeneration, Magic Hold, or Empower. Has a chance of recovering CP during an attack. -->
 		<set name="icon" val="BranchSys3.Icon.g_glacierin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

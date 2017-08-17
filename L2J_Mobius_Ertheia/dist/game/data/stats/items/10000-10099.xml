@@ -55,7 +55,7 @@
 		</skills>
 	</item>
 	<item id="10003" name="Fleuret" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Knight Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Knight Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -91,7 +91,7 @@
 		</stats>
 	</item>
 	<item id="10004" name="Dynasty Dualsword" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more than that of a two-handed sword, blunt or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When enchanted, P. Atk. of a dualsword increases more than that of a two-handed sword, blunt or fist weapon. When enchanted by 4 or more charges, P. Critical Rate increases by 109, and Max HP increases by 10%. Enhances damage done to the target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1041,7 +1041,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10063" name="Battle Manual - Quiver of Bolts (A-grade)" type="EtcItem">
-		<!-- Battle Manual needed to learn Quiver of Bolts (A-grade). Used by Arbalesters. Required level: 60 -->
+		<!-- Battle Manual needed to learn Quiver of Bolts (A-grade) . Used by Arbalesters. Required level: 60 -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1052,7 +1052,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="10064" name="Battle Manual - Quiver of Bolts (S-grade)" type="EtcItem">
-		<!-- Battle Manual needed to learn Quiver of Bolts (S-grade). Used by Arbalesters. Required level: 74 -->
+		<!-- Battle Manual needed to learn Quiver of Bolts (S-grade) . Used by Arbalesters. Required level: 74 -->
 		<set name="icon" val="icon.etc_kamael_skill_book_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

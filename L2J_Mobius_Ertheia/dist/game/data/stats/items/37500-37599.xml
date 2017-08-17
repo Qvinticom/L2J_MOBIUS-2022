@@ -375,7 +375,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37525" name="Agathion - Pomona" additionalName="90-day" type="Armor">
-		<!-- Bracelet for summoning Pomona Agathion. 90-day. <Active Skill>. Pomona Agathion Teleport. Lets you teleport to various strongholds. (Cooldown is 30 min.) -->
+		<!-- Bracelet for summoning Pomona Agathion. 90-day. (Active Skill) Pomona Agathion Teleport Lets you teleport to various strongholds. (Cooldown is 30 min.) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -495,7 +495,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37536" name="Santa's Blessing" type="EtcItem">
-		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death. Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
+		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death.  Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -793,7 +793,7 @@
 		<set name="commissionItemType" val="WEAPON_ENCHANT_STONE" />
 	</item>
 	<item id="37567" name="Blessed Lucky Enchant Stone: Armor (R-grade)" type="EtcItem">
-		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9. For one-piece armor, enchant must be between + 4 and + 9. -->
+		<!-- Enchant success rate + 10% for armor (R-grade) when using Blessed Scroll: Enchant Armor. Only for items enchanted between + 3 and + 9.  For one-piece armor, enchant must be between + 4 and + 9. -->
 		<set name="icon" val="icon.bless_ench_amr_stone_i05" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />

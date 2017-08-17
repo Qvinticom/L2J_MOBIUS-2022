@@ -482,7 +482,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="5233" name="Keshanberk*Keshanberk" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -1130,7 +1130,7 @@
 		</skills>
 	</item>
 	<item id="5268" name="Recipe: Greater Soulshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1145,7 +1145,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5269" name="Recipe: Greater Soulshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1175,7 +1175,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5271" name="Recipe: Greater Soulshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (A-grade) . Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1190,7 +1190,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5272" name="Recipe: Greater Soulshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Soulshot Compressed Package (S-grade) . Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1205,7 +1205,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5273" name="Recipe: Greater Spiritshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1220,7 +1220,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5274" name="Recipe: Greater Spiritshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1250,7 +1250,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5276" name="Recipe: Greater Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (A-grade) . Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1265,7 +1265,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5277" name="Recipe: Greater Spiritshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Spiritshot Compressed Package (S-grade) . Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1280,7 +1280,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5278" name="Recipe: Greater Blessed Spiritshot Compressed Package (D-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (D-grade) . Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1295,7 +1295,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5279" name="Recipe: Greater Blessed Spiritshot Compressed Package (C-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (C-grade) . Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1325,7 +1325,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5281" name="Recipe: Greater Blessed Spiritshot Compressed Package (A-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (A-grade) . Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1340,7 +1340,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="5282" name="Recipe: Greater Blessed Spiritshot Compressed Package (S-grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (S-grade). Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+		<!-- For Dwarves only. Recipe for the Greater Blessed Spiritshot Compressed Package (S-grade) . Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -1423,7 +1423,7 @@
 		</stats>
 	</item>
 	<item id="5286" name="Berserker Blade" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: P. Critical Damage, Focus or Haste. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

@@ -705,7 +705,7 @@
 		</skills>
 	</item>
 	<item id="13737" name="Blessed Scroll of Escape: Goddard" type="EtcItem">
-		<!-- Magically teleports you to the Town of Goddard. -->
+		<!-- Magically teleports you to the Town of Goddard . -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1989,7 +1989,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13797" name="Tear of a Freed Soul" type="EtcItem">
-		<!-- Container having a ghosts being flown out of the Seed of Infinity. Seed of Infinity attack/defend reward -->
+		<!-- Container having a ghosts being flown out of the Seed of Infinity . Seed of Infinity attack/defend reward -->
 		<set name="icon" val="icon.etc_madicine_bottle_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="immediate_effect" val="true" />

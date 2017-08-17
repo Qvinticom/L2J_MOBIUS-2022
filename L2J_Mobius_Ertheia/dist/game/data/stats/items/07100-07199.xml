@@ -576,7 +576,7 @@
 		</skills>
 	</item>
 	<item id="7133" name="Scroll of Escape: Town of Goddard" type="EtcItem">
-		<!-- Magical scroll that relocates you to the Town of Goddard. Cannot be sold in shops. -->
+		<!-- Magical scroll that relocates you to the Town of Goddard . Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -990,7 +990,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7157" name="Gemstone Key" type="EtcItem">
-		<!-- Gemstone studded key. It Has a nickname of "bejeweled staff" that indicates the authority of the king. -->
+		<!-- "a,Gemstone studded key. It Has a nickname of ""bejeweled staff"" that indicates the authority of the king." -->
 		<set name="icon" val="icon.etc_old_key_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

@@ -1316,7 +1316,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7575" name="Draconic Bow" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Cheap Shot, Focus, or Critical Slow. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1349,7 +1349,7 @@
 		</stats>
 	</item>
 	<item id="7576" name="Draconic Bow" additionalName="Cheap Shot" type="Weapon">
-		<!-- <Special Option>. Has a 26% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 26% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1386,7 +1386,7 @@
 		</stats>
 	</item>
 	<item id="7577" name="Draconic Bow" additionalName="Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 88. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 88. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1422,7 +1422,7 @@
 		</stats>
 	</item>
 	<item id="7578" name="Draconic Bow" additionalName="Critical Slow" type="Weapon">
-		<!-- <Special Option>. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />

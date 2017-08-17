@@ -542,7 +542,7 @@
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="4233" name="Knuckle Duster" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions, Rsk. Evasion, Rsk. Haste or Haste. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />

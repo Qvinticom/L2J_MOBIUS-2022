@@ -363,8 +363,6 @@
 				</group>
 				<group chance="0.0059">
 					<item id="947" min="1" max="1" chance="42.372881355932" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-					<item id="45929" min="1" max="3" chance="42.372881355932" /> <!-- Spirit Stone -->
-					<item id="45930" min="1" max="1" chance="15.254237288136" /> <!-- Mid-grade Spirit Stone -->
 				</group>
 			</death>
 			<corpse>
@@ -542,7 +540,6 @@
 					<item id="1539" min="1" max="1" chance="93.258796448537" /> <!-- Major Healing Potion -->
 					<item id="36537" min="1" max="1" chance="4.932587964485" /> <!-- Leather Braid -->
 					<item id="36557" min="1" max="1" chance="1.644195988162" /> <!-- Accessory Gem -->
-					<item id="45929" min="1" max="4" chance="0.164419598816" /> <!-- Spirit Stone -->
 				</group>
 				<group chance="20">
 					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
@@ -629,10 +626,6 @@
 			<death>
 				<group chance="70">
 					<item id="57" min="21" max="48" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0034">
-					<item id="45929" min="1" max="3" chance="73.52941176470588" /> <!-- Spirit Stone -->
-					<item id="45930" min="1" max="1" chance="26.47058823529412" /> <!-- Mid-grade Spirit Stone -->
 				</group>
 			</death>
 			<corpse>
@@ -1099,7 +1092,6 @@
 				</group>
 				<group chance="0.0275">
 					<item id="4609" min="1" max="1" chance="90.909090909091" /> <!-- Greater MEN Dye (Men + 3 Int - 3) -->
-					<item id="45929" min="1" max="12" chance="9.090909090909" /> <!-- Spirit Stone -->
 				</group>
 			</death>
 			<corpse>
@@ -1826,7 +1818,6 @@
 				<group chance="0.0043">
 					<item id="36558" min="1" max="1" chance="58.13953488372" /> <!-- Accessory Gem (Mid-grade) -->
 					<item id="36548" min="1" max="1" chance="20.93023255814" /> <!-- Weapon Fragment (Mid-grade) -->
-					<item id="45929" min="1" max="4" chance="20.93023255814" /> <!-- Spirit Stone -->
 				</group>
 				<group chance="20">
 					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->

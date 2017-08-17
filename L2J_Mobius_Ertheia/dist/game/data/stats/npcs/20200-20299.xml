@@ -2903,9 +2903,6 @@
 				<group chance="70">
 					<item id="57" min="13" max="30" chance="100" /> <!-- Adena -->
 				</group>
-				<group chance="0.0025">
-					<item id="45929" min="1" max="4" chance="100" /> <!-- Spirit Stone -->
-				</group>
 			</death>
 			<corpse>
 				<item id="36531" min="1" max="1" chance="7.158" /> <!-- Thread -->
@@ -3049,9 +3046,6 @@
 			<death>
 				<group chance="70">
 					<item id="57" min="17" max="39" chance="100" /> <!-- Adena -->
-				</group>
-				<group chance="0.0025">
-					<item id="45929" min="1" max="4" chance="100" /> <!-- Spirit Stone -->
 				</group>
 			</death>
 			<corpse>
@@ -3284,7 +3278,6 @@
 					<item id="1539" min="1" max="1" chance="99.106256206554" /> <!-- Major Healing Potion -->
 					<item id="36519" min="1" max="1" chance="0.496524329692" /> <!-- Quality Leather -->
 					<item id="36563" min="1" max="1" chance="0.198609731877" /> <!-- Synthetic Cokes -->
-					<item id="45929" min="1" max="4" chance="0.198609731877" /> <!-- Spirit Stone -->
 				</group>
 				<group chance="20">
 					<item id="8600" min="1" max="1" chance="50" /> <!-- Herb of Life -->
@@ -3585,7 +3578,6 @@
 				</group>
 				<group chance="0.303">
 					<item id="6036" min="1" max="1" chance="99" /> <!-- Greater Magic Haste Potion -->
-					<item id="45929" min="1" max="4" chance="1" /> <!-- Spirit Stone -->
 				</group>
 			</death>
 			<corpse>

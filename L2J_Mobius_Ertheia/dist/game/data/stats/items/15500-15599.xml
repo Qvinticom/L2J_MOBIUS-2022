@@ -566,7 +566,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="15533" name="Jewel of Innocence" type="EtcItem">
-		<!-- White gem produce by animals. Looking at it reminds you of a time long ago. I wonder what my old friends are doing now... -->
+		<!-- u,White gem produce by animals. Looking at it reminds you of a time long ago. I wonder what my old friends are doing now� -->
 		<set name="icon" val="icon.etc_crystal_ball_white_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
@@ -743,7 +743,7 @@
 		</skills>
 	</item>
 	<item id="15544" name="Eternal Core Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_incessantcore_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -773,7 +773,7 @@
 		</stats>
 	</item>
 	<item id="15545" name="Mamba Edge" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: HP Drain, Haste, or P. Critical Damage. -->
 		<set name="icon" val="icon.weapon_mambaedge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -803,7 +803,7 @@
 		</stats>
 	</item>
 	<item id="15546" name="Eversor Mace" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, HP Regeneration, or HP Drain. -->
 		<set name="icon" val="icon.weapon_expowder_mace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -833,7 +833,7 @@
 		</stats>
 	</item>
 	<item id="15547" name="Contristo Hammer" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, HP Drain, or HP Regeneration. -->
 		<set name="icon" val="icon.weapon_pereztear_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -863,7 +863,7 @@
 		</stats>
 	</item>
 	<item id="15548" name="Lava Saw" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_lavamond_saw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -893,7 +893,7 @@
 		</stats>
 	</item>
 	<item id="15549" name="Jade Claw" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Health, Critical Stun, or Focus. -->
 		<set name="icon" val="icon.weapon_jademice_claw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -923,7 +923,7 @@
 		</stats>
 	</item>
 	<item id="15550" name="Demitelum" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Guidance, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_ghostcleaner_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -956,7 +956,7 @@
 		</stats>
 	</item>
 	<item id="15551" name="Sacredium" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: MP Regeneration, Mana Up, or Acumen. -->
 		<set name="icon" val="icon.weapon_sacredumors_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -987,7 +987,7 @@
 		</stats>
 	</item>
 	<item id="15552" name="Cyclic Cane" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: MP Regeneration, Magic Hold, or Empower. -->
 		<set name="icon" val="icon.weapon_psyskilt_cane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1018,7 +1018,7 @@
 		</stats>
 	</item>
 	<item id="15553" name="Archangel Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Mana Up, Magic Hold, or Acumen. -->
 		<set name="icon" val="icon.weapon_archangel_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1048,7 +1048,7 @@
 		</stats>
 	</item>
 	<item id="15554" name="Recurve Thorne Bow" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Focus, Critical Slow, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_recurvethorne_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1081,7 +1081,7 @@
 		</stats>
 	</item>
 	<item id="15555" name="Heavenstare Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Eternal Core Sword Conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Eternal Core Sword Conversion Health, Focus, or Haste can be bestowed. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_heavenstair_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1119,7 +1119,7 @@
 		</stats>
 	</item>
 	<item id="15556" name="Pyseal Blade" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Lava Saw conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Lava Saw conversion Bestows one of the following three functions, Health Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_pyseal_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1153,7 +1153,7 @@
 		</stats>
 	</item>
 	<item id="15557" name="Thorne Crossbow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Recurvethorne Bow conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Recurvethorne Bow conversion Bestows one of the following functions, Focus, Critical Slow, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_thorne_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1188,7 +1188,7 @@
 		</stats>
 	</item>
 	<item id="15558" name="Periel Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_periwing_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1218,7 +1218,7 @@
 		</stats>
 	</item>
 	<item id="15559" name="Skull Edge" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Haste, P. Critical Damage, or HP Drain. -->
 		<set name="icon" val="icon.weapon_skulledge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1248,7 +1248,7 @@
 		</stats>
 	</item>
 	<item id="15560" name="Vigwik Axe" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: HP Regeneration, HP Drain, or Health. -->
 		<set name="icon" val="icon.weapon_vigwik_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1278,7 +1278,7 @@
 		</stats>
 	</item>
 	<item id="15561" name="Devilish Maul" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: HP Drain, HP Regeneration, or Health. -->
 		<set name="icon" val="icon.weapon_evildeity_maul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1308,7 +1308,7 @@
 		</stats>
 	</item>
 	<item id="15562" name="Feather Eye Blade" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_feathereye_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1338,7 +1338,7 @@
 		</stats>
 	</item>
 	<item id="15563" name="Octo Claw" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Critical Stun, Focus, or Health. -->
 		<set name="icon" val="icon.weapon_octoclaw_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1368,7 +1368,7 @@
 		</stats>
 	</item>
 	<item id="15564" name="Doubletop Spear" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Haste, Health, or Guidance. -->
 		<set name="icon" val="icon.weapon_doubletopa_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1401,7 +1401,7 @@
 		</stats>
 	</item>
 	<item id="15565" name="Rising Star" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Mana Up, Acumen, or MP Regeneration. -->
 		<set name="icon" val="icon.weapon_cuticle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1432,7 +1432,7 @@
 		</stats>
 	</item>
 	<item id="15566" name="Black Visage" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Magic Hold, Empower, or MP Regeneration. -->
 		<set name="icon" val="icon.weapon_blackvisage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1463,7 +1463,7 @@
 		</stats>
 	</item>
 	<item id="15567" name="Veniplant Sword" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Magic Hold, Mana Up, or Acumen. -->
 		<set name="icon" val="icon.weapon_veniplant_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1493,7 +1493,7 @@
 		</stats>
 	</item>
 	<item id="15568" name="Skull Carnium Bow" type="Weapon">
-		<!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Bestows one of the following functions: Critical Slow, Cheap Shot, or Focus. -->
 		<set name="icon" val="icon.weapon_skullgrove_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1526,7 +1526,7 @@
 		</stats>
 	</item>
 	<item id="15569" name="Gemtail Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Periel Sword Conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Periel Sword Conversion Focus, Haste, or Health can be bestowed. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_gemtail_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1563,7 +1563,7 @@
 		</stats>
 	</item>
 	<item id="15570" name="Finale Blade" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Feather Eye Blade conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Feather Eye Blade conversion Bestows one of the following three functions: Focus, Haste, or Health. -->
 		<set name="icon" val="icon.weapon_findragon blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1597,7 +1597,7 @@
 		</stats>
 	</item>
 	<item id="15571" name="Dominion Crossbow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Skull Carnium Bow conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Skull Carnium Bow conversion Bestows one of the following functions, Critical Slow, Cheap Shot, or Focus. -->
 		<set name="icon" val="icon.weapon_rudecutter_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />

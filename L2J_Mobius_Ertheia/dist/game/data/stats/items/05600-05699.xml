@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="5600" name="Meteor Shower" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -34,7 +34,7 @@
 		</stats>
 	</item>
 	<item id="5601" name="Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -66,7 +66,7 @@
 		</stats>
 	</item>
 	<item id="5602" name="Elysian" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -98,7 +98,7 @@
 		</stats>
 	</item>
 	<item id="5603" name="Elysian" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -130,7 +130,7 @@
 		</stats>
 	</item>
 	<item id="5604" name="Elysian" additionalName="Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 19 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Absorbs 19 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elysian_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -163,7 +163,7 @@
 		</stats>
 	</item>
 	<item id="5605" name="Branch of the Mother Tree" additionalName="Conversion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -196,7 +196,7 @@
 		</stats>
 	</item>
 	<item id="5606" name="Branch of the Mother Tree" additionalName="Magic Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 30% chance of inflicting an additional power 8 of magical damage on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 30% chance of inflicting an additional power 8 of magical damage on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -230,7 +230,7 @@
 		</stats>
 	</item>
 	<item id="5607" name="Branch of the Mother Tree" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -263,7 +263,7 @@
 		</stats>
 	</item>
 	<item id="5608" name="Carnage Bow" additionalName="Light Armor" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -299,7 +299,7 @@
 		</stats>
 	</item>
 	<item id="5609" name="Carnage Bow" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -335,7 +335,7 @@
 		</stats>
 	</item>
 	<item id="5610" name="Carnage Bow" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -370,7 +370,7 @@
 		</stats>
 	</item>
 	<item id="5611" name="Soul Bow" additionalName="Cheap Shot" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 38% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 38% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -406,7 +406,7 @@
 		</stats>
 	</item>
 	<item id="5612" name="Soul Bow" additionalName="Quick Recovery" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Decreases cooldown by about 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Decreases cooldown by about 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -441,7 +441,7 @@
 		</stats>
 	</item>
 	<item id="5613" name="Soul Bow" additionalName="Critical Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has an 18% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has an 18% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -477,7 +477,7 @@
 		</stats>
 	</item>
 	<item id="5614" name="Bloody Orchid" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 67. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 67. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -509,7 +509,7 @@
 		</stats>
 	</item>
 	<item id="5615" name="Bloody Orchid" additionalName="Back Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -541,7 +541,7 @@
 		</stats>
 	</item>
 	<item id="5616" name="Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -574,7 +574,7 @@
 		</stats>
 	</item>
 	<item id="5617" name="Soul Separator" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. -->
+		<!-- (Soul Crystal Enhancement) Increases Accuracy by about 4. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -606,7 +606,7 @@
 		</stats>
 	</item>
 	<item id="5618" name="Soul Separator" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -638,7 +638,7 @@
 		</stats>
 	</item>
 	<item id="5619" name="Soul Separator" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_soul_separator_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -670,7 +670,7 @@
 		</stats>
 	</item>
 	<item id="5620" name="Blood Tornado" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -702,7 +702,7 @@
 		</stats>
 	</item>
 	<item id="5621" name="Blood Tornado" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 61. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -734,7 +734,7 @@
 		</stats>
 	</item>
 	<item id="5622" name="Blood Tornado" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 38 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 38 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -766,7 +766,7 @@
 		</stats>
 	</item>
 	<item id="5623" name="Dragon Grinder" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -798,7 +798,7 @@
 		</stats>
 	</item>
 	<item id="5624" name="Dragon Grinder" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -830,7 +830,7 @@
 		</stats>
 	</item>
 	<item id="5625" name="Dragon Grinder" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -862,7 +862,7 @@
 		</stats>
 	</item>
 	<item id="5626" name="Halberd" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -894,7 +894,7 @@
 		</stats>
 	</item>
 	<item id="5627" name="Halberd" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has about a 25% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -927,7 +927,7 @@
 		</stats>
 	</item>
 	<item id="5628" name="Halberd" additionalName="Wide Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Broadens the angle of attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_halbard_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1052,7 +1052,7 @@
 		</stats>
 	</item>
 	<item id="5632" name="Tallum Glaive" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by about 4. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Accuracy by about 4. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1084,7 +1084,7 @@
 		</stats>
 	</item>
 	<item id="5633" name="Tallum Glaive" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1116,7 +1116,7 @@
 		</stats>
 	</item>
 	<item id="5634" name="Tallum Glaive" additionalName="Wide Blow" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Broadens the angle of attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Broadens the angle of attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1148,7 +1148,7 @@
 		</stats>
 	</item>
 	<item id="5635" name="Tallum Blade" additionalName="Critical Poison" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1181,7 +1181,7 @@
 		</stats>
 	</item>
 	<item id="5636" name="Tallum Blade" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1213,7 +1213,7 @@
 		</stats>
 	</item>
 	<item id="5637" name="Tallum Blade" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 31 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 31 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_tallum_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1245,7 +1245,7 @@
 		</stats>
 	</item>
 	<item id="5638" name="Elemental Sword" additionalName="M. Atk." type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 153 during magic use. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases MP consumption by 15% and M. Atk. by 153 during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1277,7 +1277,7 @@
 		</stats>
 	</item>
 	<item id="5639" name="Elemental Sword" additionalName="Magic Paralyze" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 5% chance of casting Paralysis on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 5% chance of casting Paralysis on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1310,7 +1310,7 @@
 		</stats>
 	</item>
 	<item id="5640" name="Elemental Sword" additionalName="Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. + 30. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) M. Atk. + 30. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_elemental_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1342,7 +1342,7 @@
 		</stats>
 	</item>
 	<item id="5641" name="Sword of Miracles" additionalName="M. Atk." type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP consumption by 15% and M. Atk. by 167 during magic use. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases MP consumption by 15% and M. Atk. by 167 during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1374,7 +1374,7 @@
 		</stats>
 	</item>
 	<item id="5642" name="Sword of Miracles" additionalName="Magic Silence" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1407,7 +1407,7 @@
 		</stats>
 	</item>
 	<item id="5643" name="Sword of Miracles" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_sword_of_miracle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1439,7 +1439,7 @@
 		</stats>
 	</item>
 	<item id="5644" name="Dragon Slayer" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1471,7 +1471,7 @@
 		</stats>
 	</item>
 	<item id="5645" name="Dragon Slayer" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1504,7 +1504,7 @@
 		</stats>
 	</item>
 	<item id="5646" name="Dragon Slayer" additionalName="Critical Drain" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1537,7 +1537,7 @@
 		</stats>
 	</item>
 	<item id="5647" name="Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1569,7 +1569,7 @@
 		</stats>
 	</item>
 	<item id="5648" name="Dark Legion's Edge" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1601,7 +1601,7 @@
 		</stats>
 	</item>
 	<item id="5649" name="Dark Legion's Edge" additionalName="Rsk. Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="31200" name="Bound Bloody Orchid" additionalName="Back Blow" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases P. Critical Rate by 37% when attacking the target from behind. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -37,7 +37,7 @@
 		</stats>
 	</item>
 	<item id="31201" name="Bound Bloody Orchid" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 12% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_bloody_orchid_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -74,7 +74,7 @@
 		</stats>
 	</item>
 	<item id="31202" name="Bound Blood Tornado" type="Weapon">
-		<!-- Bound Item. Bestows one of the following functions: Haste, Focus or Anger. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Haste, Focus or Anger. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -107,7 +107,7 @@
 		</stats>
 	</item>
 	<item id="31203" name="Bound Blood Tornado" additionalName="Haste" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -143,7 +143,7 @@
 		</stats>
 	</item>
 	<item id="31204" name="Bound Blood Tornado" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -179,7 +179,7 @@
 		</stats>
 	</item>
 	<item id="31205" name="Bound Blood Tornado" additionalName="Anger" type="Weapon">
-		<!-- Bound Item. <Special Option>. Decreases Max HP by 15%. P. Atk. + 38. Inflicts additional damage during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Decreases Max HP by 15%. P. Atk. + 38. Inflicts additional damage during PvP. -->
 		<set name="icon" val="icon.weapon_blood_tornado_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -215,7 +215,7 @@
 		</stats>
 	</item>
 	<item id="31206" name="Bound Brigandine Helmet" type="Armor">
-		<!-- Bound brigandine Helmet. -->
+		<!-- Bound brigandine Helmet. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -238,7 +238,7 @@
 		</stats>
 	</item>
 	<item id="31207" name="Bound Brigandine Shield" type="Armor">
-		<!-- Bound brigandine Shield. -->
+		<!-- Bound brigandine Shield. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.shield_brigandine_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
@@ -263,7 +263,7 @@
 		</stats>
 	</item>
 	<item id="31208" name="Bound Brigandine Boots" type="Armor">
-		<!-- Bound brigandine Boots. -->
+		<!-- Bound brigandine Boots. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -287,7 +287,7 @@
 		</stats>
 	</item>
 	<item id="31209" name="Bound Brigandine Gauntlets" type="Armor">
-		<!-- Bound Brigandine Gauntlets. -->
+		<!-- Bound Brigandine Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -311,7 +311,7 @@
 		</stats>
 	</item>
 	<item id="31210" name="Bound Brigandine Gaiters" type="Armor">
-		<!-- Bound brigandine Gaiters. -->
+		<!-- Bound brigandine Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -336,7 +336,7 @@
 		</stats>
 	</item>
 	<item id="31211" name="Bound Brigandine" type="Armor">
-		<!-- Bound Brigandine. -->
+		<!-- Bound Brigandine. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t43_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -361,7 +361,7 @@
 		</stats>
 	</item>
 	<item id="31212" name="Bound Gloves of Seal" type="Armor">
-		<!-- Bound Gloves of Seal. -->
+		<!-- Bound Gloves of Seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t44_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -385,7 +385,7 @@
 		</stats>
 	</item>
 	<item id="31213" name="Bound Boots of Seal" type="Armor">
-		<!-- Bound Boots of seal. -->
+		<!-- Bound Boots of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t44_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -409,7 +409,7 @@
 		</stats>
 	</item>
 	<item id="31214" name="Bound Ring of Seal" type="Armor">
-		<!-- Bound Ring of seal. -->
+		<!-- Bound Ring of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_ring_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -432,7 +432,7 @@
 		</stats>
 	</item>
 	<item id="31215" name="Bound Necklace of Seal" type="Armor">
-		<!-- Bound Necklace of seal. -->
+		<!-- Bound Necklace of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_necklace_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -455,7 +455,7 @@
 		</stats>
 	</item>
 	<item id="31216" name="Bound Robe of Seal" type="Armor">
-		<!-- Bound robe of seal. -->
+		<!-- Bound robe of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t44_ul_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -480,7 +480,7 @@
 		</stats>
 	</item>
 	<item id="31217" name="Bound Earring of Seal" type="Armor">
-		<!-- Bound Earring of seal. -->
+		<!-- Bound Earring of seal. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -524,7 +524,7 @@
 		</stats>
 	</item>
 	<item id="31219" name="Bound Bonebreaker" type="Weapon">
-		<!-- Bound Bonebreaker. -->
+		<!-- Bound Bonebreaker. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bonebreaker_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -558,7 +558,7 @@
 		</stats>
 	</item>
 	<item id="31220" name="Bound Proof of Revenge" type="Weapon">
-		<!-- Bound Proof of Revenge. -->
+		<!-- Bound Proof of Revenge. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_proof_of_revenge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ETC" />
@@ -591,7 +591,7 @@
 		</stats>
 	</item>
 	<item id="31221" name="Bound Bellion Cestus" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Critical Drain, Critical Poison or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -624,7 +624,7 @@
 		</stats>
 	</item>
 	<item id="31222" name="Bound Bellion Cestus" additionalName="Critical Drain" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a chance to absorb 14 HP from the target during a critical attack. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a chance to absorb 14 HP from the target during a critical attack. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -660,7 +660,7 @@
 		</stats>
 	</item>
 	<item id="31223" name="Bound Bellion Cestus" additionalName="Critical Poison" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 12% chance of casting Poison on the target during a standard Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 12% chance of casting Poison on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -696,7 +696,7 @@
 		</stats>
 	</item>
 	<item id="31224" name="Bound Bellion Cestus" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by 9% when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Atk. Spd. by 9% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -732,7 +732,7 @@
 		</stats>
 	</item>
 	<item id="31225" name="Bound Berserker Blade" type="Weapon">
-		<!-- Bound Berserker Blade. No Soul Crystal option. -->
+		<!-- Bound Berserker Blade. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -764,8 +764,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31226" name="Player Commendation - Apocalypse Thrower (Water)" additionalName="Focus (PC-exclusive)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 73. No Soul Crystal option. -->
+	<item id="31226" name="Bound Berserker Blade" additionalName="Focus" type="Weapon">
+		<!-- (Soul Crystal Enhancement) Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -799,8 +799,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31227" name="Player Commendation - Apocalypse Thrower (Wind)" additionalName="Focus (PC-exclusive)" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 270 during a Critical Attack. No Soul Crystal option. -->
+	<item id="31227" name="Bound Berserker Blade" additionalName="Critical Damage" type="Weapon">
+		<!-- (Soul Crystal Enhancement) P. Atk. + 270 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -834,8 +834,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31228" name="Player Commendation - Apocalypse Thrower (Fire)" additionalName="Focus (PC-exclusive)" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
+	<item id="31228" name="Bound Berserker Blade" additionalName="Haste" type="Weapon">
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -870,7 +870,7 @@
 		</stats>
 	</item>
 	<item id="31229" name="Bound Battle Axe" type="Weapon">
-		<!-- Bound Battle Axe. No Soul Crystal option. -->
+		<!-- Bound Battle Axe. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -904,7 +904,7 @@
 		</stats>
 	</item>
 	<item id="31230" name="Bound Battle Axe" additionalName="Anger" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 20 and decreases Max HP by 15%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 20 and decreases Max HP by 15%. -->
 		<set name="icon" val="icon.weapon_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -940,7 +940,7 @@
 		</stats>
 	</item>
 	<item id="31231" name="Bound Battle Axe" additionalName="Rsk. Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 138 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 138 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -976,7 +976,7 @@
 		</stats>
 	</item>
 	<item id="31232" name="Bound Battle Axe" additionalName="Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by about 8%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 8%. -->
 		<set name="icon" val="icon.weapon_battle_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1012,7 +1012,7 @@
 		</stats>
 	</item>
 	<item id="31233" name="Bound Bec de Corbin" type="Weapon">
-		<!-- Bound Bec de Corbin. No Soul Crystal option. -->
+		<!-- Bound Bec de Corbin. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1049,7 +1049,7 @@
 		</stats>
 	</item>
 	<item id="31234" name="Bound Bec de Corbin" additionalName="Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 32% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has about a 32% chance of casting Stun on the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1086,7 +1086,7 @@
 		</stats>
 	</item>
 	<item id="31235" name="Bound Bec de Corbin" additionalName="Long Blow" type="Weapon">
-		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases the attack range. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1122,7 +1122,7 @@
 		</stats>
 	</item>
 	<item id="31236" name="Bound Bec de Corbin" additionalName="Light Armor" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. -->
 		<set name="icon" val="icon.weapon_bech_de_corbin_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1159,7 +1159,7 @@
 		</stats>
 	</item>
 	<item id="31237" name="Bound Ballista" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow conversion, Bound Ballista. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow conversion, Bound Ballista. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1194,7 +1194,7 @@
 		</stats>
 	</item>
 	<item id="31238" name="Bound Ballista" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Noble Elven Bow conversion, Bound Ballista. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Noble Elven Bow conversion, Bound Ballista. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1229,7 +1229,7 @@
 		</stats>
 	</item>
 	<item id="31239" name="Bound Ballista" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow (Soul Crystal Enhancement) Increases Accuracy by 5. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1266,7 +1266,7 @@
 		</stats>
 	</item>
 	<item id="31240" name="Bound Ballista" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. <Special Option>. Has a 40% chance of reducing the number of Soulshots consumed to 4 during an attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow (Soul Crystal Enhancement) Has a 40% chance of reducing the number of Soulshots consumed to 4 during an attack. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1301,7 +1301,7 @@
 		</stats>
 	</item>
 	<item id="31241" name="Bound Ballista" additionalName="Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. <Special Option>. Decreases cooldown by about 20%. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow (Soul Crystal Enhancement) Decreases cooldown by about 20%. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1335,7 +1335,7 @@
 		</stats>
 	</item>
 	<item id="31242" name="Bound Ballista" additionalName="Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Noble Elven Longbow Conversion. <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Noble Elven Longbow Conversion (Soul Crystal Enhancement) Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1372,7 +1372,7 @@
 		</stats>
 	</item>
 	<item id="31243" name="Bound Ballista" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Noble Elven Bow. <Special Option>. Has a 40% chance of reducing the number of Soulshots consumed to 4 during an attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Noble Elven Bow (Soul Crystal Enhancement) Has a 40% chance of reducing the number of Soulshots consumed to 4 during an attack. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1407,7 +1407,7 @@
 		</stats>
 	</item>
 	<item id="31244" name="Bound Ballista" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Noble Elven Bow. <Special Option>. Decreases MP consumption by 12% when using skills. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Noble Elven Bow (Soul Crystal Enhancement) Decreases MP consumption by 12% when using skills. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1444,7 +1444,7 @@
 		</stats>
 	</item>
 	<item id="31245" name="Bound Bastard Sword*Sword of Revolution" type="Weapon">
-		<!-- Bound Bastard Sword*Sword of Revolution. No Soul Crystal option. -->
+		<!-- Bound Bastard Sword*Sword of Revolution. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1477,7 +1477,7 @@
 		</stats>
 	</item>
 	<item id="31246" name="Bound Bastard Sword*Crimson Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Crimson Sword. -->
+		<!-- Bound Bastard Sword*Crimson Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1510,7 +1510,7 @@
 		</stats>
 	</item>
 	<item id="31247" name="Bound Bastard Sword*Artisan's Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Artisan's Sword. -->
+		<!-- Bound Bastard Sword*Artisan's Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1543,7 +1543,7 @@
 		</stats>
 	</item>
 	<item id="31248" name="Bound Bastard Sword*Elven Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Elven Sword -->
+		<!-- Bound Bastard Sword*Elven Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1576,7 +1576,7 @@
 		</stats>
 	</item>
 	<item id="31249" name="Bound Bastard Sword*Elven Long Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Elven Long Sword. No Soul Crystal option. -->
+		<!-- Bound Bastard Sword*Elven Long Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="31250" name="Bound Bastard Sword*Spinebone Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Spinebone Sword. -->
+		<!-- Bound Bastard Sword*Spinebone Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1642,7 +1642,7 @@
 		</stats>
 	</item>
 	<item id="31251" name="Bound Bastard Sword*Bastard Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Bastard Sword -->
+		<!-- Bound Bastard Sword*Bastard Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1675,7 +1675,7 @@
 		</stats>
 	</item>
 	<item id="31252" name="Bound Bastard Sword*Knight's Sword" type="Weapon">
-		<!-- Bound Bastard Sword*Knight's Sword. -->
+		<!-- Bound Bastard Sword*Knight's Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1708,7 +1708,7 @@
 		</stats>
 	</item>
 	<item id="31253" name="Bound Bastard Sword" type="Weapon">
-		<!-- Bound Bastard Sword -->
+		<!-- Bound Bastard Sword Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_bastard_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1741,7 +1741,7 @@
 		</stats>
 	</item>
 	<item id="31254" name="Bound Basalt Battlehammer" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: HP Drain, Health or HP Regeneration. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1775,7 +1775,7 @@
 		</stats>
 	</item>
 	<item id="31255" name="Bound Basalt Battlehammer" additionalName="HP Drain" type="Weapon">
-		<!-- Bound Item. <Special Option>. Absorbs 3% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Cannot be exchanged or dropped. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Absorbs 3% of standard melee damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1812,7 +1812,7 @@
 		</stats>
 	</item>
 	<item id="31256" name="Bound Basalt Battlehammer" additionalName="Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1849,7 +1849,7 @@
 		</stats>
 	</item>
 	<item id="31257" name="Bound Basalt Battlehammer" additionalName="HP Regeneration" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases MP Recovery Rate. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1886,7 +1886,7 @@
 		</stats>
 	</item>
 	<item id="31258" name="Bound Body Slasher" type="Weapon">
-		<!-- Bound Body Slasher. No Soul Crystal option. -->
+		<!-- Bound Body Slasher. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_body_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1923,7 +1923,7 @@
 		</stats>
 	</item>
 	<item id="31259" name="Bound Body Slasher" additionalName="Critical Stun" type="Weapon">
-		<!-- <Special Option>. Has about a 34% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1960,7 +1960,7 @@
 		</stats>
 	</item>
 	<item id="31260" name="Bound Body Slasher" additionalName="Long Blow" type="Weapon">
-		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases the attack range. -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1996,7 +1996,7 @@
 		</stats>
 	</item>
 	<item id="31261" name="Bound Body Slasher" additionalName="Wide Blow" type="Weapon">
-		<!-- <Special Option>. Broadens the angle of attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Broadens the angle of attack. -->
 		<set name="icon" val="icon.weapon_body_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2032,7 +2032,7 @@
 		</stats>
 	</item>
 	<item id="31262" name="Bound Bagh-Nakh" type="Weapon">
-		<!-- Bound Bagh-Nakh. -->
+		<!-- Bound Bagh-Nakh. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_baghnakh_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2066,7 +2066,7 @@
 		</stats>
 	</item>
 	<item id="31263" name="Bound Sword of Delusion" type="Weapon">
-		<!-- Bound Sword of Delusion. No Soul Crystal option. -->
+		<!-- Bound Sword of Delusion. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2099,7 +2099,7 @@
 		</stats>
 	</item>
 	<item id="31264" name="Bound Sword of Delusion" additionalName="Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 77. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2134,7 +2134,7 @@
 		</stats>
 	</item>
 	<item id="31265" name="Bound Sword of Delusion" additionalName="Health" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2169,7 +2169,7 @@
 		</stats>
 	</item>
 	<item id="31266" name="Bound Sword of Delusion" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by 12% when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_sword_of_delusion_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2204,7 +2204,7 @@
 		</stats>
 	</item>
 	<item id="31267" name="Bound Meteor Shower" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Focus, Critical Bleed or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2237,7 +2237,7 @@
 		</stats>
 	</item>
 	<item id="31268" name="Bound Meteor Shower" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 61. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2273,7 +2273,7 @@
 		</stats>
 	</item>
 	<item id="31269" name="Bound Meteor Shower" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 42% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2310,7 +2310,7 @@
 		</stats>
 	</item>
 	<item id="31270" name="Bound Meteor Shower" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_meteor_shower_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2346,7 +2346,7 @@
 		</stats>
 	</item>
 	<item id="31271" name="Bound Mystic Staff" type="Weapon">
-		<!-- Bound Mystic Staff. -->
+		<!-- Bound Mystic Staff. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mystic_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2380,7 +2380,7 @@
 		</stats>
 	</item>
 	<item id="31272" name="Bound Mystic Knife" type="Weapon">
-		<!-- Bound Mystic Knife. -->
+		<!-- Bound Mystic Knife. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mystic_knife_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2414,7 +2414,7 @@
 		</stats>
 	</item>
 	<item id="31273" name="Bound Mysterious Sword" type="Weapon">
-		<!-- Bound Mysterious Sword. No Soul Crystal option. -->
+		<!-- Bound Mysterious Sword. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2447,7 +2447,7 @@
 		</stats>
 	</item>
 	<item id="31274" name="Bound Mysterious Sword" additionalName="Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2482,7 +2482,7 @@
 		</stats>
 	</item>
 	<item id="31275" name="Bound Mysterious Sword" additionalName="M. Atk." type="Weapon">
-		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 75 during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases MP consumption by 15% and M. Atk. by 75 during magic use. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2517,7 +2517,7 @@
 		</stats>
 	</item>
 	<item id="31276" name="Bound Mysterious Sword" additionalName="Magic Weakness" type="Weapon">
-		<!-- <Special Option>. Has an 8% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has an 8% chance of casting Curse Weakness on the target during magic use. -->
 		<set name="icon" val="icon.weapon_mystery_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2552,7 +2552,7 @@
 		</stats>
 	</item>
 	<item id="31277" name="Bound Mithril Breastplate" type="Armor">
-		<!-- Bound Mithril Breastplate. -->
+		<!-- Bound Mithril Breastplate. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t19_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2577,7 +2577,7 @@
 		</stats>
 	</item>
 	<item id="31278" name="Bound Mithril Stockings" type="Armor">
-		<!-- Bound Mithril Stockings. -->
+		<!-- Bound Mithril Stockings. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2602,7 +2602,7 @@
 		</stats>
 	</item>
 	<item id="31279" name="Bound Mithril Stockings" type="Armor">
-		<!-- Bound Mithril Stockings. -->
+		<!-- Bound Mithril Stockings. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_l_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2625,7 +2625,7 @@
 		</stats>
 	</item>
 	<item id="31280" name="Bound Mithril Tunic" type="Armor">
-		<!-- Bound Mithril Tunic. -->
+		<!-- Bound Mithril Tunic. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2650,7 +2650,7 @@
 		</stats>
 	</item>
 	<item id="31281" name="Bound Mithril Tunic" type="Armor">
-		<!-- Bound Mithril Tunic. -->
+		<!-- Bound Mithril Tunic. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t51_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2673,7 +2673,7 @@
 		</stats>
 	</item>
 	<item id="31282" name="Bound Mithril Gloves" type="Armor">
-		<!-- Bound Mithril Gloves. -->
+		<!-- Bound Mithril Gloves. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2697,7 +2697,7 @@
 		</stats>
 	</item>
 	<item id="31283" name="Bound Mithril Gloves" type="Armor">
-		<!-- Bound Mithril Gloves. -->
+		<!-- Bound Mithril Gloves. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t46_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2719,7 +2719,7 @@
 		</stats>
 	</item>
 	<item id="31284" name="Bound Mithril Scale Gaiters" type="Armor">
-		<!-- Bound Mithril Scale Gaiters. -->
+		<!-- Bound Mithril Scale Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t40_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2744,7 +2744,7 @@
 		</stats>
 	</item>
 	<item id="31285" name="Bound Mithril Banded Mail" type="Armor">
-		<!-- Bound Mithril Banded Mail. -->
+		<!-- Bound Mithril Banded Mail. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t10_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2769,7 +2769,7 @@
 		</stats>
 	</item>
 	<item id="31286" name="Bound Mithril Banded Gaiters" type="Armor">
-		<!-- Bound Mithril Banded Gaiters. -->
+		<!-- Bound Mithril Banded Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t10_l_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2794,7 +2794,7 @@
 		</stats>
 	</item>
 	<item id="31287" name="Bound Mithril Ring" type="Armor">
-		<!-- Bound Mithril Ring. -->
+		<!-- Bound Mithril Ring. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_mithril_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2817,7 +2817,7 @@
 		</stats>
 	</item>
 	<item id="31288" name="Bound Mithril Dagger" type="Weapon">
-		<!-- Bound Mithril Dagger. -->
+		<!-- Bound Mithril Dagger. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2851,7 +2851,7 @@
 		</stats>
 	</item>
 	<item id="31289" name="Bound Mithril Gauntlets" type="Armor">
-		<!-- Bound Mithril Gauntlets. -->
+		<!-- Bound Mithril Gauntlets. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t61_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -2875,7 +2875,7 @@
 		</stats>
 	</item>
 	<item id="31290" name="Bound Mithril Gaiters" type="Armor">
-		<!-- Bound Mithril Gaiters. -->
+		<!-- Bound Mithril Gaiters. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.armor_t19_l_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2900,7 +2900,7 @@
 		</stats>
 	</item>
 	<item id="31291" name="Bound Moonstone Earring" type="Armor">
-		<!-- Bound Moonstone Earring. -->
+		<!-- Bound Moonstone Earring. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.accessary_moonstone_earing_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -2944,7 +2944,7 @@
 		</stats>
 	</item>
 	<item id="31293" name="Bound Linen Shirt" type="Armor">
-		<!-- Bound Linen Shirt. -->
+		<!-- Bound Linen Shirt. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.etc_shirts_d_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -2967,7 +2967,7 @@
 		</stats>
 	</item>
 	<item id="31294" name="Bound Morning Star" type="Weapon">
-		<!-- Bound Morning Star. -->
+		<!-- Bound Morning Star. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_morning_star_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3001,7 +3001,7 @@
 		</stats>
 	</item>
 	<item id="31295" name="Bound Maingauche" type="Weapon">
-		<!-- Bound Maingauche. -->
+		<!-- Bound Maingauche. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

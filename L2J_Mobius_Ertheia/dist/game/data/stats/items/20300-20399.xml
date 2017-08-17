@@ -758,7 +758,7 @@
 			<skill id="22038" level="1" /> <!-- Blessed Beast Spiritshot -->
 		</skills>
 	</item>
-	<item id="20335" name="XP Rune III (Lv. 1-100+) 30%" additionalName="5-hour" type="EtcItem">
+	<item id="20335" name="XP Rune III (Lv. 1-99) 30%" additionalName="5-hour" type="EtcItem">
 		<!-- Ancient charm endowed with mysterious symbols. When held in your inventory, increases acquired XP by 30%. The timer decreases even during log-off state. Only one XP Rune can be applied at any given time regardless of additional XP Runes in ones inventory. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -781,7 +781,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20336" name="XP Rune III (Lv. 1-100+) 50%" additionalName="5-hour" type="EtcItem">
+	<item id="20336" name="XP Rune III (Lv. 1-99) 50%" additionalName="5-hour" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP by 50%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -804,7 +804,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="20337" name="XP Rune III (Lv. 1-100+) 30%" additionalName="10-hour" type="EtcItem">
+	<item id="20337" name="XP Rune III (Lv. 1-99) 30%" additionalName="10-hour" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired XP by 30%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -827,7 +827,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20338" name="XP Rune III (Lv. 1-100+) 50%" additionalName="10-hour" type="EtcItem">
+	<item id="20338" name="XP Rune III (Lv. 1-99) 50%" additionalName="10-hour" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP by 50%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -850,7 +850,7 @@
 			<skill id="26046" level="5" /> <!-- XP Rune III (Lv. 1-100+) 50% -->
 		</skills>
 	</item>
-	<item id="20339" name="XP Rune III (Lv. 1-100+) 30%" additionalName="7-day" type="EtcItem">
+	<item id="20339" name="XP Rune III (Lv. 1-99) 30%" additionalName="7-day" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. It increases acquired XP by 30%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -873,7 +873,7 @@
 			<skill id="26046" level="3" /> <!-- XP Rune III (Lv. 1-100+) 30% -->
 		</skills>
 	</item>
-	<item id="20340" name="XP Rune III (Lv. 1-100+) 50%" additionalName="7-day" type="EtcItem">
+	<item id="20340" name="XP Rune III (Lv. 1-99) 50%" additionalName="7-day" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP by 50%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -2139,7 +2139,7 @@
 		</skills>
 	</item>
 	<item id="20393" name="Sweet Fruit Cocktail" type="EtcItem">
-		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hour. -->
+		<!-- A Cocktail made of various rare fruits. When consumed, the effects of Wind Walk, Haste, Vampiric Rage, Might, Shield, Death Whisper, Guidance and Blessed Body can be felt for 1 hour . -->
 		<set name="icon" val="BranchSys.icon.br_fruit_cocktail_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

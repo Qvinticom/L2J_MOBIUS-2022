@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="11300" name="Icarus Dualsword - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. When enchanted, P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon increases more significantly than that of a one-handed sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases P. Atk. When enchanted, P. Atk. of a dualsword, two-handed sword, two-handed blunt weapon and fist weapon increases more significantly than that of a one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP increases by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -35,7 +35,7 @@
 		</stats>
 	</item>
 	<item id="11301" name="Icarus Disperser - Confusion" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Evasion. Bestows one of the following functions: Focus, Evasion, or P. Critical Damage. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -68,7 +68,7 @@
 		</stats>
 	</item>
 	<item id="11302" name="Icarus Disperser - Confusion" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Evasion. (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -102,7 +102,7 @@
 		</stats>
 	</item>
 	<item id="11303" name="Icarus Disperser - Confusion" additionalName="Evasion" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Evasion. (Soul Crystal Enhancement) Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -137,7 +137,7 @@
 		</stats>
 	</item>
 	<item id="11304" name="Icarus Disperser - Confusion" additionalName="Critical Damage" type="Weapon">
-		<!-- Masterwork Item that increases Evasion. <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Evasion. (Soul Crystal Enhancement) Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_disperser_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -171,7 +171,7 @@
 		</stats>
 	</item>
 	<item id="11305" name="Icarus Sawsword - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases P. Atk. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -204,7 +204,7 @@
 		</stats>
 	</item>
 	<item id="11306" name="Icarus Sawsword - Destruction" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -238,7 +238,7 @@
 		</stats>
 	</item>
 	<item id="11307" name="Icarus Sawsword - Destruction" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -272,7 +272,7 @@
 		</stats>
 	</item>
 	<item id="11308" name="Icarus Sawsword - Destruction" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_sowsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -307,7 +307,7 @@
 		</stats>
 	</item>
 	<item id="11309" name="Icarus Shooter - Concentration" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Accuracy Kamael-exclusive Weapon: Icarus Spitter Conversion Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -345,7 +345,7 @@
 		</stats>
 	</item>
 	<item id="11310" name="Icarus Shooter - Concentration" additionalName="Cheap Shot" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy Kamael-exclusive Weapon: Icarus Spitter Conversion (Soul Crystal Enhancement)  Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -384,7 +384,7 @@
 		</stats>
 	</item>
 	<item id="11311" name="Icarus Shooter - Concentration" additionalName="Guidance" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy Kamael-exclusive Weapon: Icarus Spitter Conversion (Soul Crystal Enhancement) Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -423,7 +423,7 @@
 		</stats>
 	</item>
 	<item id="11312" name="Icarus Shooter - Concentration" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Kamael-exclusive Weapon: Icarus Spitter Conversion. <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy Kamael-exclusive Weapon: Icarus Spitter Conversion (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -462,7 +462,7 @@
 		</stats>
 	</item>
 	<item id="11313" name="Icarus Stinger - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion Focus, Health, or Light can be bestowed. When When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -500,7 +500,7 @@
 		</stats>
 	</item>
 	<item id="11314" name="Icarus Stinger - Destruction" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -539,7 +539,7 @@
 		</stats>
 	</item>
 	<item id="11315" name="Icarus Stinger - Destruction" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -578,7 +578,7 @@
 		</stats>
 	</item>
 	<item id="11316" name="Icarus Stinger - Destruction" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Enchanted to. 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Masterwork Item that increases P. Atk. Kamael-exclusive Weapon: Icarus Sawsword Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Enchanted to  4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_icarus_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -618,7 +618,7 @@
 		</stats>
 	</item>
 	<item id="11317" name="Icarus Spirit - Nature" type="Weapon">
-		<!-- Masterwork Item that increases Max MP. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Max MP Bestows one of the following functions: Acumen, Mana Up, or Conversion. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -651,7 +651,7 @@
 		</stats>
 	</item>
 	<item id="11318" name="Icarus Spirit - Nature" additionalName="Acumen" type="Weapon">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max MP. (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -685,7 +685,7 @@
 		</stats>
 	</item>
 	<item id="11319" name="Icarus Spirit - Nature" additionalName="Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max MP. (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -719,7 +719,7 @@
 		</stats>
 	</item>
 	<item id="11320" name="Icarus Spirit - Nature" additionalName="Conversion" type="Weapon">
-		<!-- Masterwork Item that increases Max MP. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max MP. (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spirits_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -753,7 +753,7 @@
 		</stats>
 	</item>
 	<item id="11321" name="Icarus Spitter - Concentration" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Accuracy.  Bestows one of the following functions: Cheap Shot, Guidance, or Focus. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -789,7 +789,7 @@
 		</stats>
 	</item>
 	<item id="11322" name="Icarus Spitter - Concentration" additionalName="Cheap Shot" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy (Soul Crystal Enhancement) Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -827,7 +827,7 @@
 		</stats>
 	</item>
 	<item id="11323" name="Icarus Spitter - Concentration" additionalName="Guidance" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Accuracy by 5.32 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy. (Soul Crystal Enhancement) Increases Accuracy by 5.32 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -864,7 +864,7 @@
 		</stats>
 	</item>
 	<item id="11324" name="Icarus Spitter - Concentration" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases Accuracy. <Soul Crystal Enhancement>. Increases Critical by 116 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Accuracy. (Soul Crystal Enhancement) Increases Critical by 116 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_spiter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -901,7 +901,7 @@
 		</stats>
 	</item>
 	<item id="11325" name="Icarus Wingblade - Lightning" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -938,7 +938,7 @@
 		</stats>
 	</item>
 	<item id="11326" name="Icarus Wingblade - Lightning" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -976,7 +976,7 @@
 		</stats>
 	</item>
 	<item id="11327" name="Icarus Wingblade - Lightning" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1014,7 +1014,7 @@
 		</stats>
 	</item>
 	<item id="11328" name="Icarus Wingblade - Lightning" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. Kamael-exclusive Weapon: Icarus Heavy Arms Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_wing_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1053,7 +1053,7 @@
 		</stats>
 	</item>
 	<item id="11329" name="Icarus Trident - Thunder" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Damage. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases P. Critical Damage. Bestows one of the following functions: Anger, Critical Stun, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1087,7 +1087,7 @@
 		</stats>
 	</item>
 	<item id="11330" name="Icarus Trident - Thunder" additionalName="Anger" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Damage. <Soul Crystal Enhancement>. One's own HP decreases by 15% and P. Atk. + 78. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Damage. (Soul Crystal Enhancement) One's own HP decreases by 15% and P. Atk. + 78. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1121,7 +1121,7 @@
 		</stats>
 	</item>
 	<item id="11331" name="Icarus Trident - Thunder" additionalName="Critical Stun" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Damage. <Soul Crystal Enhancement>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Damage. (Soul Crystal Enhancement) Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1156,7 +1156,7 @@
 		</stats>
 	</item>
 	<item id="11332" name="Icarus Trident - Thunder" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Damage. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Damage. (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_trident_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1191,7 +1191,7 @@
 		</stats>
 	</item>
 	<item id="11333" name="Icarus Hammer - Earth" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases Max HP.  Bestows one of the following functions: Anger, Health, or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1224,7 +1224,7 @@
 		</stats>
 	</item>
 	<item id="11334" name="Icarus Hammer - Earth" additionalName="Anger" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Your own HP decreases by 15% and P. Atk. + 78 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max HP. (Soul Crystal Enhancement) Your own HP decreases by 15% and P. Atk. + 78 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1258,7 +1258,7 @@
 		</stats>
 	</item>
 	<item id="11335" name="Icarus Hammer - Earth" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max HP. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1292,7 +1292,7 @@
 		</stats>
 	</item>
 	<item id="11336" name="Icarus Hammer - Earth" additionalName="Rsk. Focus" type="Weapon">
-		<!-- Masterwork Item that increases Max HP. <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases Max HP. (Soul Crystal Enhancement) Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1326,7 +1326,7 @@
 		</stats>
 	</item>
 	<item id="11337" name="Icarus Hand - Destruction" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases P. Atk. Bestows one of the following functions: Rsk. Evasion, Focus, or Haste. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1359,7 +1359,7 @@
 		</stats>
 	</item>
 	<item id="11338" name="Icarus Hand - Destruction" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. (Soul Crystal Enhancement) Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1394,7 +1394,7 @@
 		</stats>
 	</item>
 	<item id="11339" name="Icarus Hand - Destruction" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. (Soul Crystal Enhancement) Increases Critical by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1428,7 +1428,7 @@
 		</stats>
 	</item>
 	<item id="11340" name="Icarus Hand - Destruction" additionalName="Haste" type="Weapon">
-		<!-- Masterwork Item that increases P. Atk. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 10%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Atk. (Soul Crystal Enhancement) Increases Atk. Spd. by about 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_knuckle_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1462,7 +1462,7 @@
 		</stats>
 	</item>
 	<item id="11341" name="Icarus Heavy Arms - Lightning" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases P. Critical Rate. Bestows one of the following functions: Focus, Health, or Light. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1495,7 +1495,7 @@
 		</stats>
 	</item>
 	<item id="11342" name="Icarus Heavy Arms - Lightning" additionalName="Focus" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1529,7 +1529,7 @@
 		</stats>
 	</item>
 	<item id="11343" name="Icarus Heavy Arms - Lightning" additionalName="Health" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1563,7 +1563,7 @@
 		</stats>
 	</item>
 	<item id="11344" name="Icarus Heavy Arms - Lightning" additionalName="Light Armor" type="Weapon">
-		<!-- Masterwork Item that increases P. Critical Rate. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases P. Critical Rate. (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_heavy_arms_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1598,7 +1598,7 @@
 		</stats>
 	</item>
 	<item id="11345" name="Icarus Hall - Hail" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Masterwork Item that increases M. Atk. Bestows one of the following functions: Mana Up, Conversion, or Acumen. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1632,7 +1632,7 @@
 		</stats>
 	</item>
 	<item id="11346" name="Icarus Hall - Hail" additionalName="Mana Up" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1667,7 +1667,7 @@
 		</stats>
 	</item>
 	<item id="11347" name="Icarus Hall - Hail" additionalName="Conversion" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1702,7 +1702,7 @@
 		</stats>
 	</item>
 	<item id="11348" name="Icarus Hall - Hail" additionalName="Acumen" type="Weapon">
-		<!-- Masterwork Item that increases M. Atk. <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- Masterwork Item that increases M. Atk. (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_icarus_stick_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />

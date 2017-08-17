@@ -608,7 +608,7 @@
 		</stats>
 	</item>
 	<item id="9830" name="Enhanced Apella Helm" type="Armor">
-		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
@@ -629,7 +629,7 @@
 		</stats>
 	</item>
 	<item id="9831" name="Enhanced Apella Plate Armor" type="Armor">
-		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -655,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="9832" name="Enhanced Apella Gauntlets" additionalName="Heavy Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or a higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -680,7 +680,7 @@
 		</stats>
 	</item>
 	<item id="9833" name="Enhanced Apella Solleret" additionalName="Heavy Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or a higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1004_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -705,7 +705,7 @@
 		</stats>
 	</item>
 	<item id="9834" name="Enhanced Apella Brigandine" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or a higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -728,7 +728,7 @@
 		</stats>
 	</item>
 	<item id="9835" name="Enhanced Apella Leather Gloves" additionalName="Light Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or a higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -750,7 +750,7 @@
 		</stats>
 	</item>
 	<item id="9836" name="Enhanced Apella Boots" additionalName="Light Armor" type="Armor">
-		<!-- Can be worn by a Baron or a higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or a higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1005_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -772,7 +772,7 @@
 		</stats>
 	</item>
 	<item id="9837" name="Enhanced Apella Doublet" type="Armor">
-		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- This full body armor used by clan members can be worn by a Baron or higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -799,7 +799,7 @@
 		</stats>
 	</item>
 	<item id="9838" name="Enhanced Apella Silk Gloves" additionalName="Robe" type="Armor">
-		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -824,7 +824,7 @@
 		</stats>
 	</item>
 	<item id="9839" name="Enhanced Apella Sandals" additionalName="Robe" type="Armor">
-		<!-- Can be worn by a Baron or higher-level Aristocrat. Note: Equipping requirements remain even after appearance modification. -->
+		<!-- Can be worn by a Baron or higher-level Aristocrat.  Note: Equipping requirements remain even after appearance modification. -->
 		<set name="icon" val="icon.armor_t1006_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1239,7 +1239,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9854" name="Dynasty Sword" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1272,7 +1272,7 @@
 		</stats>
 	</item>
 	<item id="9855" name="Dynasty Sword" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1305,7 +1305,7 @@
 		</stats>
 	</item>
 	<item id="9856" name="Dynasty Sword" additionalName="Light Armor" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1339,7 +1339,7 @@
 		</stats>
 	</item>
 	<item id="9857" name="Dynasty Blade" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 111. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1372,7 +1372,7 @@
 		</stats>
 	</item>
 	<item id="9858" name="Dynasty Blade" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1405,7 +1405,7 @@
 		</stats>
 	</item>
 	<item id="9859" name="Dynasty Blade" additionalName="Light Armor" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1439,7 +1439,7 @@
 		</stats>
 	</item>
 	<item id="9860" name="Dynasty Phantom" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1472,7 +1472,7 @@
 		</stats>
 	</item>
 	<item id="9861" name="Dynasty Phantom" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1505,7 +1505,7 @@
 		</stats>
 	</item>
 	<item id="9862" name="Dynasty Phantom" additionalName="Conversion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1538,7 +1538,7 @@
 		</stats>
 	</item>
 	<item id="9863" name="Dynasty Bow" additionalName="Cheap Shot" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1575,7 +1575,7 @@
 		</stats>
 	</item>
 	<item id="9864" name="Dynasty Bow" additionalName="Guidance" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Accuracy by 5.32. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1611,7 +1611,7 @@
 		</stats>
 	</item>
 	<item id="9865" name="Dynasty Bow" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -1647,7 +1647,7 @@
 		</stats>
 	</item>
 	<item id="9866" name="Dynasty Knife" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 116. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1680,7 +1680,7 @@
 		</stats>
 	</item>
 	<item id="9867" name="Dynasty Knife" additionalName="Evasion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 5. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1714,7 +1714,7 @@
 		</stats>
 	</item>
 	<item id="9868" name="Dynasty Knife" additionalName="Critical Damage" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1747,7 +1747,7 @@
 		</stats>
 	</item>
 	<item id="9869" name="Dynasty Halberd" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1780,7 +1780,7 @@
 		</stats>
 	</item>
 	<item id="9870" name="Dynasty Halberd" additionalName="Critical Stun" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1814,7 +1814,7 @@
 		</stats>
 	</item>
 	<item id="9871" name="Dynasty Halberd" additionalName="Light Armor" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -1848,7 +1848,7 @@
 		</stats>
 	</item>
 	<item id="9872" name="Dynasty Cudgel" additionalName="Anger" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1881,7 +1881,7 @@
 		</stats>
 	</item>
 	<item id="9873" name="Dynasty Cudgel" additionalName="Health" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1914,7 +1914,7 @@
 		</stats>
 	</item>
 	<item id="9874" name="Dynasty Cudgel" additionalName="Rsk. Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1947,7 +1947,7 @@
 		</stats>
 	</item>
 	<item id="9875" name="Dynasty Mace" additionalName="Mana Up" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 30%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1981,7 +1981,7 @@
 		</stats>
 	</item>
 	<item id="9876" name="Dynasty Mace" additionalName="Conversion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2015,7 +2015,7 @@
 		</stats>
 	</item>
 	<item id="9877" name="Dynasty Mace" additionalName="Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2049,7 +2049,7 @@
 		</stats>
 	</item>
 	<item id="9878" name="Dynasty Bagh-Nakh" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2083,7 +2083,7 @@
 		</stats>
 	</item>
 	<item id="9879" name="Dynasty Bagh-Nakh" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 106. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 106. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -2116,7 +2116,7 @@
 		</stats>
 	</item>
 	<item id="9880" name="Dynasty Bagh-Nakh" additionalName="Haste" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />

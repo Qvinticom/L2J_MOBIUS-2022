@@ -120,7 +120,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="7607" name="Coolant of the Repaired Wilma #3" type="EtcItem">
-		<!-- The cooling system refrigerant of repaired time machine "Wilma 3". -->
+		<!-- "a,The cooling system refrigerant of repaired time machine ""Wilma 3""." -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -1091,7 +1091,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="7681" name="Outlaw's Eyepatch" type="Armor">
-		<!-- Purple eyepatch accessory. When you use the pendant, slots change. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Purple eyepatch accessory. When you use the pendant, slots change. -->
 		<set name="icon" val="icon.accessory_outlaw_eyepatch_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1105,7 +1105,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="7682" name="Maiden's Hairpin" type="Armor">
-		<!-- Pink hairpin. Hair accessory for female characters only. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Pink hairpin. Hair accessory for female characters only. -->
 		<set name="icon" val="icon.accessory_maidens_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1291,7 +1291,7 @@
 		<set name="equip_condition" val="{{ec_nobless;1}}" />
 	</item>
 	<item id="7695" name="Forget-me-not Hairpin" type="Armor">
-		<!-- Hairpin with a forget-me-not flower pattern. Hair accessory exclusively for female characters. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Hairpin with a forget-me-not flower pattern. Hair accessory exclusively for female characters. -->
 		<set name="icon" val="icon.accessory_forget_me_not_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -1308,7 +1308,7 @@
 		</cond>
 	</item>
 	<item id="7696" name="Daisy Hairpin" type="Armor">
-		<!-- Hairpin with a daisy pattern. Hair accessory exclusively for female characters. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Hairpin with a daisy pattern. Hair accessory exclusively for female characters. -->
 		<set name="icon" val="icon.accessory_daisy_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />

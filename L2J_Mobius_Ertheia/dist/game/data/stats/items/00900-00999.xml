@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="900" name="Ring of Grace" type="Armor">
 		<set name="icon" val="icon.accessary_ring_of_grace_i00" />
@@ -796,7 +796,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="947" name="Scroll: Enchant Weapon (B-Grade)" type="EtcItem">
+	<item id="947" name="Scroll: Enchant Weapon (B-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 3 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -814,7 +814,7 @@
 			<skill id="2015" level="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 		</skills>
 	</item>
-	<item id="948" name="Scroll: Enchant Armor (B-Grade)" type="EtcItem">
+	<item id="948" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -832,7 +832,7 @@
 			<skill id="2016" level="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
 		</skills>
 	</item>
-	<item id="949" name="Crystal Scroll: Enchant Weapon (B-Grade)" type="EtcItem">
+	<item id="949" name="Crystal Scroll: Enchant Weapon (B-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a B-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -844,7 +844,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="950" name="Crystal Scroll: Enchant Armor (B-Grade)" type="EtcItem">
+	<item id="950" name="Crystal Scroll: Enchant Armor (B-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a B-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -856,7 +856,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="951" name="Scroll: Enchant Weapon (C-Grade)" type="EtcItem">
+	<item id="951" name="Scroll: Enchant Weapon (C-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 3 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 4 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 6 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -874,7 +874,7 @@
 			<skill id="2017" level="1" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 		</skills>
 	</item>
-	<item id="952" name="Scroll: Enchant Armor (C-Grade)" type="EtcItem">
+	<item id="952" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -892,7 +892,7 @@
 			<skill id="2018" level="1" /> <!-- Scroll: Enchant Armor (C-grade) -->
 		</skills>
 	</item>
-	<item id="953" name="Crystal Scroll: Enchant Weapon (C-Grade)" type="EtcItem">
+	<item id="953" name="Crystal Scroll: Enchant Weapon (C-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a C-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -904,7 +904,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="954" name="Crystal Scroll: Enchant Armor (C-Grade)" type="EtcItem">
+	<item id="954" name="Crystal Scroll: Enchant Armor (C-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a C-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -916,7 +916,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="955" name="Scroll: Enchant Weapon (D-Grade)" type="EtcItem">
+	<item id="955" name="Scroll: Enchant Weapon (D-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 2 for all D-grade weapons with the exception of bows, which increases by 4. M. Atk. + 2 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -934,7 +934,7 @@
 			<skill id="2019" level="1" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 		</skills>
 	</item>
-	<item id="956" name="Scroll: Enchant Armor (D-Grade)" type="EtcItem">
+	<item id="956" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -952,7 +952,7 @@
 			<skill id="2020" level="1" /> <!-- Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
-	<item id="957" name="Crystal Scroll: Enchant Weapon (D-Grade)" type="EtcItem">
+	<item id="957" name="Crystal Scroll: Enchant Weapon (D-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a D-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -964,7 +964,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="958" name="Crystal Scroll: Enchant Armor (D-Grade)" type="EtcItem">
+	<item id="958" name="Crystal Scroll: Enchant Armor (D-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers a D-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -976,7 +976,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="959" name="Scroll: Enchant Weapon (S-Grade)" type="EtcItem">
+	<item id="959" name="Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 6 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 10 for bows. M. Atk. + 4 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -994,7 +994,7 @@
 			<skill id="2021" level="1" /> <!-- Scroll: Enchant Weapon (S-grade) -->
 		</skills>
 	</item>
-	<item id="960" name="Scroll: Enchant Armor (S-Grade)" type="EtcItem">
+	<item id="960" name="Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at + 4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to + 3, but one-piece body armor can be safely enchanted up to + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1012,7 +1012,7 @@
 			<skill id="2022" level="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
 		</skills>
 	</item>
-	<item id="961" name="Crystal Scroll: Enchant Weapon (S-Grade)" type="EtcItem">
+	<item id="961" name="Crystal Scroll: Enchant Weapon (S-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an S-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1024,7 +1024,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="962" name="Crystal Scroll: Enchant Armor (S-Grade)" type="EtcItem">
+	<item id="962" name="Crystal Scroll: Enchant Armor (S-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an S-grade armor -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

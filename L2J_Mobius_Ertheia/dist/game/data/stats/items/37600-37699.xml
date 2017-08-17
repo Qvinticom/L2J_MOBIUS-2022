@@ -211,7 +211,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37613" name="Hero's Treasure Chest" additionalName="Western Winds" type="EtcItem">
-		<!-- Double-click to obtain either a Hero's Lucky Enchant Stone Pack, Hero's Giant Enchant Scroll Pack, Hero's Blessed Enchant Scroll Pack, Hero's Unbind Scroll Pack, Hero's Attribute Crystal Pack, PK Pack, Reputation Pack, Mysterious Shot Box, Kaliel's Energy Box, Soul Bottle Pack, or Spirit Stone Pack. -->
+		<!-- Double-click to obtain either a Hero's Lucky Enchant Stone Pack, Hero's Giant Enchant Scroll Pack, Hero's Blessed Enchant Scroll Pack, Hero's Unbind Scroll Pack, Hero's Attribute Crystal Pack, PK Pack, Reputation Pack, Mysterious Shot Box, Kaliel's Energy Box, Soul Bottle Pack, or Top-grade Life Stone Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -436,7 +436,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37624" name="Top-grade Life Stone Pack" additionalName="Western Winds" type="EtcItem">
-		<!-- Double-click to obtain either a Spirit Stone, or a Life Stone Instilled with Giants' Power. -->
+		<!-- Double-click to obtain either a Top-grade Life Stone (R95 or R99-grade), or a Life Stone Instilled with Giants' Power. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_freightable" val="false" />
@@ -487,7 +487,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37628" name="Cupid's Arrow" type="Weapon">
-		<!-- Throws a love-filled heart. Can use the active skill "Heart Shot.". Warning: When using on a monster, you can receive another player's attack. -->
+		<!-- "a,Throws a love-filled heart. Can use the active skill ""Heart Shot.""  Warning: When using on a monster, you can receive another player's attack." -->
 		<set name="icon" val="icon.bm_krono_bow" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />
@@ -1466,7 +1466,7 @@
 		</stats>
 	</item>
 	<item id="37670" name="Earth Wyrm Heart Ring" additionalName="30-day" type="Armor">
-		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling, Danger Zone Resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
+		<!-- MP +38, increases physical attack resistance, Mental Attack Resistance, MP Regeneration, P. Critical Damage, and Accuracy. Poison Resistance 50% increase, Poison Attack Rate 50% increase, Knock Back, Knock Down, pulling resistance 20 increase, Atk. Spd. Increase, Casting Spd. Increase, and Wind/Water Resistance increase. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied even when the same two rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1542,7 +1542,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37676" name="Coin of Knowledge" type="EtcItem">
-		<!-- You are full of knowledge!. You can purchase useful items through the Adventurers' Guide. -->
+		<!-- You are full of knowledge! You can purchase useful items through the Adventurers' Guide. -->
 		<set name="icon" val="icon.int_coin_gm_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1609,7 +1609,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37681" name="Theamo's Talisman" additionalName="Not in Use" type="Armor">
-		<!-- Test Item -->
+		<!-- "a,Test Item -->
 		<set name="icon" val="icon.etc_talisman_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1622,7 +1622,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
-		<!-- Test Item -->
+		<!-- "a,Test Item -->
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />

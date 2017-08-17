@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9200" name="Shadow Item: Jester Hat" additionalName="Firework" type="Armor">
 		<!-- Festive, shadow-type jester hat with 2 points. Uses 2 hair accessory slots. Event hair accessory that grants a magical effect. -->
@@ -195,7 +195,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="9209" name="Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Saber Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Saber Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -331,7 +331,7 @@
 		</stats>
 	</item>
 	<item id="9213" name="Fleuret" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Bastard Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Bastard Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -367,7 +367,7 @@
 		</stats>
 	</item>
 	<item id="9214" name="Fleuret" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spinebone Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Spinebone Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -403,7 +403,7 @@
 		</stats>
 	</item>
 	<item id="9215" name="Fleuret" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Artisan's Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Artisan's Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -505,7 +505,7 @@
 		</stats>
 	</item>
 	<item id="9218" name="Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Scream Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Scream Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -541,7 +541,7 @@
 		</stats>
 	</item>
 	<item id="9219" name="Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elven Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Elven Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -643,8 +643,8 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9222" name="Épée" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Revolution Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="9222" name="?p?e" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Sword of Revolution Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -746,8 +746,8 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="9225" name="Grand Épée" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elven Long Sword Conversion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="9225" name="Grand ?p?e" type="Weapon">
+		<!-- Kamael-exclusive Weapon: Elven Long Sword Conversion When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -850,7 +850,7 @@
 		</stats>
 	</item>
 	<item id="9228" name="Soldat Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer Conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: StormBringer Conversion Bestows one of the following functions. Critical Anger, Focus, or Light. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -886,7 +886,7 @@
 		</stats>
 	</item>
 	<item id="9229" name="Soldat Estoc" additionalName="Critical Anger" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer Conversion<Soul Crystal Enhancement>. Decreases HP by 12. P. Atk. + 248 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: StormBringer Conversion(Soul Crystal Enhancement) Decreases HP by 12. P. Atk. + 248 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -925,7 +925,7 @@
 		</stats>
 	</item>
 	<item id="9230" name="Soldat Estoc" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer Conversion<Soul Crystal Enhancement>. Increases Critical by 86. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: StormBringer Conversion(Soul Crystal Enhancement) Increases Critical by 86. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -962,7 +962,7 @@
 		</stats>
 	</item>
 	<item id="9231" name="Soldat Estoc" additionalName="Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: StormBringer Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: StormBringer Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -999,7 +999,7 @@
 		</stats>
 	</item>
 	<item id="9232" name="Schlager" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge Conversion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Flamberge Conversion Bestows one of the following functions: P. Critical Damage, Focus, or Light. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1032,7 +1032,7 @@
 		</stats>
 	</item>
 	<item id="9233" name="Schlager" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge Conversion. <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Flamberge Conversion (Soul Crystal Enhancement) P. Atk. + 174 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1068,7 +1068,7 @@
 		</stats>
 	</item>
 	<item id="9234" name="Schlager" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge Conversion. <Soul Crystal Enhancement>. Increases Critical by 86. -->
+		<!-- Kamael-exclusive Weapon: Flamberge Conversion (Soul Crystal Enhancement) Increases Critical by 86. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1104,7 +1104,7 @@
 		</stats>
 	</item>
 	<item id="9235" name="Schlager" additionalName="Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Flamberge Conversion. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. -->
+		<!-- Kamael-exclusive Weapon: Flamberge Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. -->
 		<set name="icon" val="icon.weapon_schlaeger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -1140,7 +1140,7 @@
 		</stats>
 	</item>
 	<item id="9236" name="Arbalest" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow\\Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow\\Bestows one of the following functions: Guidance, Evasion, or Quick Recovery. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1174,7 +1174,7 @@
 		</stats>
 	</item>
 	<item id="9237" name="Arbalest" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion. <Soul Crystal Enhancement>. Increases Accuracy by 5. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion (Soul Crystal Enhancement) Increases Accuracy by 5. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1211,7 +1211,7 @@
 		</stats>
 	</item>
 	<item id="9238" name="Arbalest" additionalName="Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion. <Soul Crystal Enhancement>. Increases Evasion by 2. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Ice Bow Conversion (Soul Crystal Enhancement) Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1248,7 +1248,7 @@
 		</stats>
 	</item>
 	<item id="9239" name="Arbalest" additionalName="Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Crystallized Iced Bow. <Soul Crystal Enhancement>. Decreases cooldown by about 17%. -->
+		<!-- Kamael-exclusive Weapon: Crystallized Iced Bow (Soul Crystal Enhancement) Decreases cooldown by about 17%. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1282,7 +1282,7 @@
 		</stats>
 	</item>
 	<item id="9240" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Shamshir Bestows one of the following functions: Guidance, Back Blow, or Rsk. Evasion. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1318,7 +1318,7 @@
 		</stats>
 	</item>
 	<item id="9241" name="Chevalier Rapier" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. <Soul Crystal Enhancement>. Increases Accuracy by 6. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Shamshir (Soul Crystal Enhancement) Increases Accuracy by 6. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1355,7 +1355,7 @@
 		</stats>
 	</item>
 	<item id="9242" name="Chevalier Rapier" additionalName="Back Blow" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. <Soul Crystal Enhancement>. Increases P. Critical Rate by 56 when attacking the target from behind. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Shamshir (Soul Crystal Enhancement) Increases P. Critical Rate by 56 when attacking the target from behind. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1392,7 +1392,7 @@
 		</stats>
 	</item>
 	<item id="9243" name="Chevalier Rapier" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Shamshir. <Soul Crystal Enhancement>. Increases Evasion by 7 when HP drops to 60% or below. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Shamshir (Soul Crystal Enhancement) Increases Evasion by 7 when HP drops to 60% or below. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1429,7 +1429,7 @@
 		</stats>
 	</item>
 	<item id="9244" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Katana Bestows one of the following functions. Focus, P. Critical Damage, or Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1465,7 +1465,7 @@
 		</stats>
 	</item>
 	<item id="9245" name="Chevalier Rapier" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Soul Crystal Enhancement>. Increases Critical by 82. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Katana (Soul Crystal Enhancement) Increases Critical by 82. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1502,7 +1502,7 @@
 		</stats>
 	</item>
 	<item id="9246" name="Chevalier Rapier" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Soul Crystal Enhancement>. P. Atk. + 194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Katana (Soul Crystal Enhancement) P. Atk. + 194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1539,7 +1539,7 @@
 		</stats>
 	</item>
 	<item id="9247" name="Chevalier Rapier" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Katana. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Katana (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1576,7 +1576,7 @@
 		</stats>
 	</item>
 	<item id="9248" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword Bestows one of the following functions. P. Critical Damage, Critical Poison, or Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1612,7 +1612,7 @@
 		</stats>
 	</item>
 	<item id="9249" name="Chevalier Rapier" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Soul Crystal Enhancement>. P. Atk. + 194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword (Soul Crystal Enhancement) P. Atk. + 194 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1649,7 +1649,7 @@
 		</stats>
 	</item>
 	<item id="9250" name="Chevalier Rapier" additionalName="Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Soul Crystal Enhancement>. Inflicts Poison on the target with a 15% chance during an ordinary Critical Attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword (Soul Crystal Enhancement) Inflicts Poison on the target with a 15% chance during an ordinary Critical Attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1687,7 +1687,7 @@
 		</stats>
 	</item>
 	<item id="9251" name="Chevalier Rapier" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Spirit Sword. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Spirit Sword (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1724,7 +1724,7 @@
 		</stats>
 	</item>
 	<item id="9252" name="Chevalier Rapier" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword Bestows one of the following functions. Focus, Critical Drain, or Critical Poison. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1760,7 +1760,7 @@
 		</stats>
 	</item>
 	<item id="9253" name="Chevalier Rapier" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. <Soul Crystal Enhancement>. Increases Critical by 82. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword (Soul Crystal Enhancement) Increases Critical by 82. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1797,7 +1797,7 @@
 		</stats>
 	</item>
 	<item id="9254" name="Chevalier Rapier" additionalName="Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. <Soul Crystal Enhancement>. Absorbs 9 HP from the target during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword (Soul Crystal Enhancement) Absorbs 9 HP from the target during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1835,7 +1835,7 @@
 		</stats>
 	</item>
 	<item id="9255" name="Chevalier Rapier" additionalName="Critical Poison" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Raid Sword. <Soul Crystal Enhancement>. Inflicts Poison on the target with a 15% chance during an ordinary Critical Attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Raid Sword (Soul Crystal Enhancement) Inflicts Poison on the target with a 15% chance during an ordinary Critical Attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -1873,7 +1873,7 @@
 		</stats>
 	</item>
 	<item id="9256" name="Ballista" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow Bestows one of the following functions: Guidance, Miser, or Quick Recovery. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1907,7 +1907,7 @@
 		</stats>
 	</item>
 	<item id="9257" name="Ballista" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. <Soul Crystal Enhancement>. Increases Accuracy by 5. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow (Soul Crystal Enhancement) Increases Accuracy by 5. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1944,7 +1944,7 @@
 		</stats>
 	</item>
 	<item id="9258" name="Ballista" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. <Soul Crystal Enhancement>. There is a 40% chance that the number of soulshots consumed is reduced to 4. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow (Soul Crystal Enhancement) There is a 40% chance that the number of soulshots consumed is reduced to 4. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -1979,7 +1979,7 @@
 		</stats>
 	</item>
 	<item id="9259" name="Ballista" additionalName="Quick Recovery" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Elemental Bow. <Soul Crystal Enhancement>. Decreases cooldown by about 20%. -->
+		<!-- Kamael-exclusive Weapon: Elemental Bow (Soul Crystal Enhancement) Decreases cooldown by about 20%. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2013,7 +2013,7 @@
 		</stats>
 	</item>
 	<item id="9260" name="Ballista" type="Weapon">
-		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow Bestows one of the following functions: Evasion, Miser, or Cheap Shot. -->
 		<set name="icon" val="icon.weapon_arbalest_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2047,7 +2047,7 @@
 		</stats>
 	</item>
 	<item id="9261" name="Ballista" additionalName="Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow. <Soul Crystal Enhancement>. Increases Evasion by 2. -->
+		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow (Soul Crystal Enhancement) Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2084,7 +2084,7 @@
 		</stats>
 	</item>
 	<item id="9262" name="Ballista" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow. <Soul Crystal Enhancement>. There is a 40% chance that the number of soulshots consumed is reduced to 4. -->
+		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow (Soul Crystal Enhancement) There is a 40% chance that the number of soulshots consumed is reduced to 4. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2119,7 +2119,7 @@
 		</stats>
 	</item>
 	<item id="9263" name="Ballista" additionalName="Cheap Shot" type="Weapon">
-		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow. <Soul Crystal Enhancement>. Decreased MP consumption by 12% during use of skill. -->
+		<!-- Kamael-exclusive Weapon: High Lv. Elven Bow (Soul Crystal Enhancement) Decreased MP consumption by 12% during use of skill. -->
 		<set name="icon" val="icon.weapon_arbalest_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -2156,7 +2156,7 @@
 		</stats>
 	</item>
 	<item id="9264" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Caliburs Bestows one of the following functions. Guidance, Focus, or P. Critical Damage. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2192,7 +2192,7 @@
 		</stats>
 	</item>
 	<item id="9265" name="Blinzlasher" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Soul Crystal Enhancement>. Increases Accuracy by 5. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Caliburs (Soul Crystal Enhancement) Increases Accuracy by 5. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2229,7 +2229,7 @@
 		</stats>
 	</item>
 	<item id="9266" name="Blinzlasher" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Soul Crystal Enhancement>. Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Caliburs (Soul Crystal Enhancement) Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2266,7 +2266,7 @@
 		</stats>
 	</item>
 	<item id="9267" name="Blinzlasher" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Caliburs. <Soul Crystal Enhancement>. P. Atk. + 213 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Caliburs (Soul Crystal Enhancement) P. Atk. + 213 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2303,7 +2303,7 @@
 		</stats>
 	</item>
 	<item id="9268" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion Bestows one of the following functions. Focus, Health, or Rsk. Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2339,7 +2339,7 @@
 		</stats>
 	</item>
 	<item id="9269" name="Blinzlasher" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Soul Crystal Enhancement>. Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion (Soul Crystal Enhancement) Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2376,7 +2376,7 @@
 		</stats>
 	</item>
 	<item id="9270" name="Blinzlasher" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Soul Crystal Enhancement>. Increases Max HP by 25%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion (Soul Crystal Enhancement) Increases Max HP by 25%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2413,7 +2413,7 @@
 		</stats>
 	</item>
 	<item id="9271" name="Blinzlasher" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Delusion. <Soul Crystal Enhancement>. Increases Atk. Spd. by 12% when HP drops to 60% or below. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Delusion (Soul Crystal Enhancement) Increases Atk. Spd. by 12% when HP drops to 60% or below. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2450,7 +2450,7 @@
 		</stats>
 	</item>
 	<item id="9272" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tsurugi. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi Bestows one of the following functions. Focus, P. Critical Damage, or Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2486,7 +2486,7 @@
 		</stats>
 	</item>
 	<item id="9273" name="Blinzlasher" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tsurugi. <Soul Crystal Enhancement>. Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi (Soul Crystal Enhancement) Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2523,7 +2523,7 @@
 		</stats>
 	</item>
 	<item id="9274" name="Blinzlasher" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tsurugi. <Soul Crystal Enhancement>. P. Atk. + 213 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi (Soul Crystal Enhancement) P. Atk. + 213 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2560,7 +2560,7 @@
 		</stats>
 	</item>
 	<item id="9275" name="Blinzlasher" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Tsurugi. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Tsurugi (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2597,7 +2597,7 @@
 		</stats>
 	</item>
 	<item id="9276" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare Bestows one of the following functions. Health, Focus, or Light. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2633,7 +2633,7 @@
 		</stats>
 	</item>
 	<item id="9277" name="Blinzlasher" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Soul Crystal Enhancement>. Increases Max HP by 25%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare (Soul Crystal Enhancement) Increases Max HP by 25%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2670,7 +2670,7 @@
 		</stats>
 	</item>
 	<item id="9278" name="Blinzlasher" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Soul Crystal Enhancement>. Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare (Soul Crystal Enhancement) Increases Critical by 77. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2707,7 +2707,7 @@
 		</stats>
 	</item>
 	<item id="9279" name="Blinzlasher" additionalName="Light Armor" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Sword of Nightmare. <Soul Crystal Enhancement>. Increases Weight Gauge by 20%. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Sword of Nightmare (Soul Crystal Enhancement) Increases Weight Gauge by 20%. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk. and the amount of received heal, and decreased MP consumption per skill during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2744,7 +2744,7 @@
 		</stats>
 	</item>
 	<item id="9280" name="Blinzlasher" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increases P. Atk., M. Atk., and the amount of received heal, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword Bestows one of the following functions. Guidance, Critical Drain, or Health When enchanted to 4 or more, it Has a chance of increases P. Atk., M. Atk., and the amount of received heal, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2780,7 +2780,7 @@
 		</stats>
 	</item>
 	<item id="9281" name="Blinzlasher" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Soul Crystal Enhancement>. Increases Accuracy by 5. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword (Soul Crystal Enhancement) Increases Accuracy by 5. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2817,7 +2817,7 @@
 		</stats>
 	</item>
 	<item id="9282" name="Blinzlasher" additionalName="Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Soul Crystal Enhancement>. Absorbs 9 HP from the target during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword (Soul Crystal Enhancement) Absorbs 9 HP from the target during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2855,7 +2855,7 @@
 		</stats>
 	</item>
 	<item id="9283" name="Blinzlasher" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Ultimate Sword. <Soul Crystal Enhancement>. Increases Max HP by 25%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Ultimate Sword (Soul Crystal Enhancement) Increases Max HP by 25%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -2892,7 +2892,7 @@
 		</stats>
 	</item>
 	<item id="9284" name="Immortal Edge" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword Bestows one of the following functions: Focus, Health, or Critical Drain. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2925,7 +2925,7 @@
 		</stats>
 	</item>
 	<item id="9285" name="Immortal Edge" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Soul Crystal Enhancement>. Increases Critical by 77. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword (Soul Crystal Enhancement) Increases Critical by 77. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2961,7 +2961,7 @@
 		</stats>
 	</item>
 	<item id="9286" name="Immortal Edge" additionalName="Health" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Soul Crystal Enhancement>. Increases Max HP by 25%. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword (Soul Crystal Enhancement) Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -2997,7 +2997,7 @@
 		</stats>
 	</item>
 	<item id="9287" name="Immortal Edge" additionalName="Critical Drain" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Soul Crystal Enhancement>. User absorbs 9 HP from the target during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Pa'agrian Sword (Soul Crystal Enhancement) User absorbs 9 HP from the target during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3033,7 +3033,7 @@
 		</stats>
 	</item>
 	<item id="9288" name="Tathlum" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Akat Longbow. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Akat Longbow Bestows one of the following functions: Guidance, Evasion, or Miser. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3067,7 +3067,7 @@
 		</stats>
 	</item>
 	<item id="9289" name="Tathlum" additionalName="Guidance" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Akat Longbow. <Soul Crystal Enhancement>. Increases Accuracy by about 4. -->
+		<!-- Kamael-exclusive Weapon: Akat Longbow (Soul Crystal Enhancement) Increases Accuracy by about 4. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3104,7 +3104,7 @@
 		</stats>
 	</item>
 	<item id="9290" name="Tathlum" additionalName="Evasion" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Akat Longbow. <Soul Crystal Enhancement>. Increases Evasion by 2. -->
+		<!-- Kamael-exclusive Weapon: Akat Longbow (Soul Crystal Enhancement) Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3141,7 +3141,7 @@
 		</stats>
 	</item>
 	<item id="9291" name="Tathlum" additionalName="Miser" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Akat Longbow. <Soul Crystal Enhancement>. There is a 32% chance that the number of soulshots consumed is reduced to 4. -->
+		<!-- Kamael-exclusive Weapon: Akat Longbow (Soul Crystal Enhancement) There is a 32% chance that the number of soulshots consumed is reduced to 4. -->
 		<set name="icon" val="icon.weapon_taslam_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -3176,7 +3176,7 @@
 		</stats>
 	</item>
 	<item id="9292" name="Admiral's Estoc" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword Bestows one of the following functions. Focus, P. Critical Damage, or Haste. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3212,7 +3212,7 @@
 		</stats>
 	</item>
 	<item id="9293" name="Admiral's Estoc" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Soul Crystal Enhancement>. Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword (Soul Crystal Enhancement) Increases Critical by 73. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3249,7 +3249,7 @@
 		</stats>
 	</item>
 	<item id="9294" name="Admiral's Estoc" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Soul Crystal Enhancement>. P. Atk. + 231 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword (Soul Crystal Enhancement) P. Atk. + 231 during a Critical Attack. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3286,7 +3286,7 @@
 		</stats>
 	</item>
 	<item id="9295" name="Admiral's Estoc" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Samurai Long Sword. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Samurai Long Sword (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -3323,7 +3323,7 @@
 		</stats>
 	</item>
 	<item id="9296" name="Saber Tooth" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade Bestows one of the following functions: Focus, P. Critical Damage, or Haste. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3356,7 +3356,7 @@
 		</stats>
 	</item>
 	<item id="9297" name="Saber Tooth" additionalName="Focus" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. <Soul Crystal Enhancement>. Increases Critical by 73. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade (Soul Crystal Enhancement) Increases Critical by 73. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3392,7 +3392,7 @@
 		</stats>
 	</item>
 	<item id="9298" name="Saber Tooth" additionalName="Critical Damage" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. <Soul Crystal Enhancement>. P. Atk. + 270 during a Critical Attack. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade (Soul Crystal Enhancement) P. Atk. + 270 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -3428,7 +3428,7 @@
 		</stats>
 	</item>
 	<item id="9299" name="Saber Tooth" additionalName="Haste" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Berserker Blade. <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
+		<!-- Kamael-exclusive Weapon: Berserker Blade (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />

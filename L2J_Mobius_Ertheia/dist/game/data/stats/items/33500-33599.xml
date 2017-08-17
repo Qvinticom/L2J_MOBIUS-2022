@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="33500" name="Mark of Lords" type="EtcItem">
 		<!-- Proof received as a campaign reward. Can exchange for a gift from the Kingdom Mark Manager in the Town of each castle. -->
@@ -245,7 +245,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33512" name="Returning Hero's Vitality Replenishing Juice" type="EtcItem">
-		<!-- Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage. -->
+		<!-- "a,Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the ""Birthday Vitality"" buff is in effect. Cooldown is 60 minutes. Vitality item with limited usage." -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -874,7 +874,7 @@
 		</skills>
 	</item>
 	<item id="33543" name="Bound Samurai Long Sword*Samurai Long Sword" additionalName="Event" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. No Soul Crystal option. -->
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. When enchanted to 4 or more, its Atk. Spd. Increases by 4%. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -917,7 +917,7 @@
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 	</item>
 	<item id="33545" name="Bound Tallum Blade*Damascus" additionalName="Event" type="Weapon">
-		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. No Soul Crystal option. -->
+		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -961,7 +961,7 @@
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 	</item>
 	<item id="33547" name="Bound Dynasty Sword" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -996,7 +996,7 @@
 		</stats>
 	</item>
 	<item id="33548" name="Bound Dynasty Sword" additionalName="Health (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1031,7 +1031,7 @@
 		</stats>
 	</item>
 	<item id="33549" name="Bound Dynasty Sword" additionalName="Light Armor (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_blade_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1067,7 +1067,7 @@
 		</stats>
 	</item>
 	<item id="33550" name="Bound Dynasty Blade" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1102,7 +1102,7 @@
 		</stats>
 	</item>
 	<item id="33551" name="Bound Dynasty Blade" additionalName="Health (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1137,7 +1137,7 @@
 		</stats>
 	</item>
 	<item id="33552" name="Bound Dynasty Blade" additionalName="Light Armor (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1173,7 +1173,7 @@
 		</stats>
 	</item>
 	<item id="33553" name="Bound Dynasty Phantom" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1208,7 +1208,7 @@
 		</stats>
 	</item>
 	<item id="33554" name="Bound Dynasty Phantom" additionalName="Mana Up (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1243,7 +1243,7 @@
 		</stats>
 	</item>
 	<item id="33555" name="Bound Dynasty Phantom" additionalName="Conversion (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_magic_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1278,7 +1278,7 @@
 		</stats>
 	</item>
 	<item id="33556" name="Bound Dynasty Bow" additionalName="Cheap Shot (Event)" type="Weapon">
-		<!-- <Special Option>. Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Decreases MP consumption by 4% during a skill attack. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1316,7 +1316,7 @@
 		</stats>
 	</item>
 	<item id="33557" name="Bound Dynasty Bow" additionalName="Guidance (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Accuracy by 5.32. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1353,7 +1353,7 @@
 		</stats>
 	</item>
 	<item id="33558" name="Bound Dynasty Bow" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1390,7 +1390,7 @@
 		</stats>
 	</item>
 	<item id="33559" name="Bound Dynasty Knife" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1426,7 +1426,7 @@
 		</stats>
 	</item>
 	<item id="33560" name="Bound Dynasty Knife" additionalName="Evasion (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 5. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 5. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1463,7 +1463,7 @@
 		</stats>
 	</item>
 	<item id="33561" name="Bound Dynasty Knife" additionalName="Critical Damage (Event)" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 559 during a Critical Attack. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1499,7 +1499,7 @@
 		</stats>
 	</item>
 	<item id="33562" name="Bound Dynasty Halberd" additionalName="Anger (Event)" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1535,7 +1535,7 @@
 		</stats>
 	</item>
 	<item id="33563" name="Bound Dynasty Halberd" additionalName="Critical Stun (Event)" type="Weapon">
-		<!-- <Special Option>. Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 48% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1572,7 +1572,7 @@
 		</stats>
 	</item>
 	<item id="33564" name="Bound Dynasty Halberd" additionalName="Light Armor (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_spear_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="33565" name="Bound Dynasty Cudgel" additionalName="Anger (Event)" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1645,7 +1645,7 @@
 		</stats>
 	</item>
 	<item id="33566" name="Bound Dynasty Cudgel" additionalName="Health (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1681,7 +1681,7 @@
 		</stats>
 	</item>
 	<item id="33567" name="Bound Dynasty Cudgel" additionalName="Rsk. Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1717,7 +1717,7 @@
 		</stats>
 	</item>
 	<item id="33568" name="Bound Dynasty Mace" additionalName="Mana Up (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1753,7 +1753,7 @@
 		</stats>
 	</item>
 	<item id="33569" name="Bound Dynasty Mace" additionalName="Conversion (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1789,7 +1789,7 @@
 		</stats>
 	</item>
 	<item id="33570" name="Bound Dynasty Mace" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1825,7 +1825,7 @@
 		</stats>
 	</item>
 	<item id="33571" name="Bound Dynasty Bagh-Nakh" additionalName="Rsk. Evasion (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 6.8 when HP drops to 60% or below. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1862,7 +1862,7 @@
 		</stats>
 	</item>
 	<item id="33572" name="Bound Dynasty Bagh-Nakh" additionalName="Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 106. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 106. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1898,7 +1898,7 @@
 		</stats>
 	</item>
 	<item id="33573" name="Bound Dynasty Bagh-Nakh" additionalName="Haste (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 10%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_jamadhr_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1934,7 +1934,7 @@
 		</stats>
 	</item>
 	<item id="33574" name="Bound Dynasty Staff" additionalName="Mana Up (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1970,7 +1970,7 @@
 		</stats>
 	</item>
 	<item id="33575" name="Bound Dynasty Staff" additionalName="Conversion (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2006,7 +2006,7 @@
 		</stats>
 	</item>
 	<item id="33576" name="Bound Dynasty Staff" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2042,7 +2042,7 @@
 		</stats>
 	</item>
 	<item id="33577" name="Bound Dynasty Crusher" additionalName="Anger (Event)" type="Weapon">
-		<!-- <Special Option>. P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) P. Atk. + 78 and decreases HP by 15%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2078,7 +2078,7 @@
 		</stats>
 	</item>
 	<item id="33578" name="Bound Dynasty Crusher" additionalName="Health (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2114,7 +2114,7 @@
 		</stats>
 	</item>
 	<item id="33579" name="Bound Dynasty Crusher" additionalName="Rsk. Focus (Event)" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 164 when HP drops to 60% or below. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2150,7 +2150,7 @@
 		</stats>
 	</item>
 	<item id="33580" name="Bound Dynasty Dual Dagger" additionalName="Event" type="Weapon">
-		<!-- When enchanted, P. Atk. of a Dual Dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- When enchanted, P. Atk. of a Dual Dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2187,7 +2187,7 @@
 		</stats>
 	</item>
 	<item id="33581" name="Bound Dynasty Dualsword" additionalName="Event" type="Weapon">
-		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases the damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- When enchanted with a two-handed sword, a two-handed blunt weapon or a fist weapon, its P. Atk. Increases more than that of a regular one-handed sword. When enchanted to 4 or more, increases Critical Attack by 109 and Max HP by 10%. Increases the damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2223,7 +2223,7 @@
 		</stats>
 	</item>
 	<item id="33582" name="Bound Dynasty Rapier" additionalName="Focus (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2260,7 +2260,7 @@
 		</stats>
 	</item>
 	<item id="33583" name="Bound Dynasty Rapier" additionalName="Health (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2297,7 +2297,7 @@
 		</stats>
 	</item>
 	<item id="33584" name="Bound Dynasty Rapier" additionalName="Light Armor (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Sword Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_rapier_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2335,7 +2335,7 @@
 		</stats>
 	</item>
 	<item id="33585" name="Bound Dynasty Ancient Sword" additionalName="Focus (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Critical by 111. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion (Soul Crystal Enhancement) Increases Critical by 111. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2371,7 +2371,7 @@
 		</stats>
 	</item>
 	<item id="33586" name="Bound Dynasty Ancient Sword" additionalName="Health (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2407,7 +2407,7 @@
 		</stats>
 	</item>
 	<item id="33587" name="Bound Dynasty Ancient Sword" additionalName="Light Armor (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Blade Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_ancient_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2444,7 +2444,7 @@
 		</stats>
 	</item>
 	<item id="33588" name="Bound Dynasty Crossbow" additionalName="Cheap Shot (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion (Soul Crystal Enhancement) Decreases MP consumption by 12% when using skills. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2482,7 +2482,7 @@
 		</stats>
 	</item>
 	<item id="33589" name="Bound Dynasty Crossbow" additionalName="Guidance (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Increases Accuracy by 5.32. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion (Soul Crystal Enhancement) Increases Accuracy by 5.32. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2519,7 +2519,7 @@
 		</stats>
 	</item>
 	<item id="33590" name="Bound Dynasty Crossbow" additionalName="Focus (Event)" type="Weapon">
-		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion. <Special Option>. Increases Critical by 116. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Kamael-exclusive Weapon: Dynasty Bow Conversion (Soul Crystal Enhancement) Increases Critical by 116. Increases damage inflicted during PvP. Cannot be unbound through Unbind Scrolls or otherwise. -->
 		<set name="icon" val="icon.weapon_dynasty_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

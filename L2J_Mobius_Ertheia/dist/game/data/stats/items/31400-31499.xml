@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="31400" name="Bound Dragon Slayer" additionalName="Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -36,7 +36,7 @@
 		</stats>
 	</item>
 	<item id="31401" name="Bound Dragon Slayer" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -72,7 +72,7 @@
 		</stats>
 	</item>
 	<item id="31402" name="Bound Dragon Slayer" additionalName="Critical Drain" type="Weapon">
-		<!-- Bound Item. <Special Option>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -108,7 +108,7 @@
 		</stats>
 	</item>
 	<item id="31403" name="Bound Dragon Grinder" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Rsk. Evasion, Guidance or Health. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -141,7 +141,7 @@
 		</stats>
 	</item>
 	<item id="31404" name="Bound Dragon Grinder" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Evasion by 6 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -177,7 +177,7 @@
 		</stats>
 	</item>
 	<item id="31405" name="Bound Dragon Grinder" additionalName="Guidance" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Accuracy by about 5. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Accuracy by about 5. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -213,7 +213,7 @@
 		</stats>
 	</item>
 	<item id="31406" name="Bound Dragon Grinder" additionalName="Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -249,7 +249,7 @@
 		</stats>
 	</item>
 	<item id="31407" name="Bound Draconic Bow" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Cheap Shot, Focus or Critical Slow. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -284,7 +284,7 @@
 		</stats>
 	</item>
 	<item id="31408" name="Bound Draconic Bow" additionalName="Cheap Shot" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 26% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 26% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -323,7 +323,7 @@
 		</stats>
 	</item>
 	<item id="31409" name="Bound Draconic Bow" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 88. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 88. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -361,7 +361,7 @@
 		</stats>
 	</item>
 	<item id="31410" name="Bound Draconic Bow" additionalName="Critical Slow" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -493,7 +493,7 @@
 		</stats>
 	</item>
 	<item id="31415" name="Bound Doom Hammer" type="Weapon">
-		<!-- Bound Doom Hammer. -->
+		<!-- Bound Doom Hammer. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_doom_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -572,7 +572,7 @@
 		</stats>
 	</item>
 	<item id="31418" name="Bound Doom Crusher" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Health, Anger or Rsk. Haste. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -605,7 +605,7 @@
 		</stats>
 	</item>
 	<item id="31419" name="Bound Doom Crusher" additionalName="Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -641,7 +641,7 @@
 		</stats>
 	</item>
 	<item id="31420" name="Bound Doom Crusher" additionalName="Anger" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) P. Atk. + 32 and decreases Max HP by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -677,7 +677,7 @@
 		</stats>
 	</item>
 	<item id="31421" name="Bound Doom Crusher" additionalName="Rsk. Haste" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -713,7 +713,7 @@
 		</stats>
 	</item>
 	<item id="31422" name="Bound Doomchanter" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion Bestows one of the following functions: Light, Critical Bleed, or Mana Up. -->
 		<set name="icon" val="icon.weapon_doom_singer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -747,7 +747,7 @@
 		</stats>
 	</item>
 	<item id="31423" name="Bound Doomchanter" additionalName="Light Armor" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion (Soul Crystal Enhancement) Increases Weight Gauge by 20%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -785,7 +785,7 @@
 		</stats>
 	</item>
 	<item id="31424" name="Bound Doomchanter" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion. <Special Option>. Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion (Soul Crystal Enhancement) Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -823,7 +823,7 @@
 		</stats>
 	</item>
 	<item id="31425" name="Bound Doomchanter" additionalName="Mana Up" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Carnage Bow Conversion (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_doom_singer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1022,7 +1022,7 @@
 		</stats>
 	</item>
 	<item id="31433" name="Bound Dasparion's Staff" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Mana Up, Conversion or Acumen. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1055,7 +1055,7 @@
 		</stats>
 	</item>
 	<item id="31434" name="Bound Dasparion's Staff" additionalName="Mana Up" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max MP by 30%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1091,7 +1091,7 @@
 		</stats>
 	</item>
 	<item id="31435" name="Bound Dasparion's Staff" additionalName="Conversion" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1127,7 +1127,7 @@
 		</stats>
 	</item>
 	<item id="31436" name="Bound Dasparion's Staff" additionalName="Acumen" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Casting Spd. by 15%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1163,7 +1163,7 @@
 		</stats>
 	</item>
 	<item id="31437" name="Bound Undertaker" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion Bestows one of the following functions: Health, Critical Bleed or Critical Drain. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1196,7 +1196,7 @@
 		</stats>
 	</item>
 	<item id="31438" name="Bound Undertaker" additionalName="Health" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1232,7 +1232,7 @@
 		</stats>
 	</item>
 	<item id="31439" name="Bound Undertaker" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion. <Special Option>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion (Soul Crystal Enhancement) Has a 24% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1269,7 +1269,7 @@
 		</stats>
 	</item>
 	<item id="31440" name="Bound Undertaker" additionalName="Critical Drain" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion. <Special Option>. Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Dragon Slayer Conversion (Soul Crystal Enhancement) Absorbs 11 HP from the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1306,7 +1306,7 @@
 		</stats>
 	</item>
 	<item id="31441" name="Bound Sword of Whispering Death" type="Weapon">
-		<!-- Bound Sword of Whispering Death. No Soul Crystal option. -->
+		<!-- Bound Sword of Whispering Death. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1339,7 +1339,7 @@
 		</stats>
 	</item>
 	<item id="31442" name="Bound Sword of Whispering Death" additionalName="Empower" type="Weapon">
-		<!-- <Special Option>. M. Atk. + 24. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) M. Atk. + 24. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1374,7 +1374,7 @@
 		</stats>
 	</item>
 	<item id="31443" name="Bound Sword of Whispering Death" additionalName="M. Atk." type="Weapon">
-		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 99 during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases MP consumption by 15% and M. Atk. by 99 during magic use. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1409,7 +1409,7 @@
 		</stats>
 	</item>
 	<item id="31444" name="Bound Sword of Whispering Death" additionalName="Magic Silence" type="Weapon">
-		<!-- <Special Option>. Has a 10% chance of casting Silence on the target during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 10% chance of casting Silence on the target during magic use. -->
 		<set name="icon" val="icon.weapon_deathbreath_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1444,7 +1444,7 @@
 		</stats>
 	</item>
 	<item id="31445" name="Bound Demon Splinter" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Focus, Health or Critical Stun. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1478,7 +1478,7 @@
 		</stats>
 	</item>
 	<item id="31446" name="Bound Demon Splinter" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 80. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 80. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1515,7 +1515,7 @@
 		</stats>
 	</item>
 	<item id="31447" name="Bound Demon Splinter" additionalName="Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1552,7 +1552,7 @@
 		</stats>
 	</item>
 	<item id="31448" name="Bound Demon Splinter" additionalName="Critical Stun" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 27% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 27% chance of casting Stun on the target during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1590,7 +1590,7 @@
 		</stats>
 	</item>
 	<item id="31449" name="Bound Club of Nature" type="Weapon">
-		<!-- Bound Club of Nature. No Soul Crystal option. -->
+		<!-- Bound Club of Nature. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1624,7 +1624,7 @@
 		</stats>
 	</item>
 	<item id="31450" name="Bound Club of Nature" additionalName="Acumen" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Casting Spd. by 15%. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1660,7 +1660,7 @@
 		</stats>
 	</item>
 	<item id="31451" name="Bound Club of Nature" additionalName="Magic Mental Shield" type="Weapon">
-		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 50% chance of casting Mental Shield on the target during magic use. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1696,7 +1696,7 @@
 		</stats>
 	</item>
 	<item id="31452" name="Bound Club of Nature" additionalName="Magic Hold" type="Weapon">
-		<!-- <Special Option>. Has a 6% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 6% chance of casting Dryad Root on the target during magic use. -->
 		<set name="icon" val="icon.weapon_club_of_nature_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1732,7 +1732,7 @@
 		</stats>
 	</item>
 	<item id="31453" name="Bound Dark Elven Bow" type="Weapon">
-		<!-- Bound Dark Elven Bow. -->
+		<!-- Bound Dark Elven Bow. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dark_elven_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1767,7 +1767,7 @@
 		</stats>
 	</item>
 	<item id="31454" name="Bound Dark Elven Longbow" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Evasion, Critical Bleed, or Miser. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1801,7 +1801,7 @@
 		</stats>
 	</item>
 	<item id="31455" name="Bound Dark Elven Longbow" additionalName="Evasion" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1838,7 +1838,7 @@
 		</stats>
 	</item>
 	<item id="31456" name="Bound Dark Elven Longbow" additionalName="Critical Bleed" type="Weapon">
-		<!-- Bound Item. <Special Option>. Has a 41% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Has a 41% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1875,7 +1875,7 @@
 		</stats>
 	</item>
 	<item id="31457" name="Bound Dark Elven Longbow" additionalName="Miser" type="Weapon">
-		<!-- Bound Item. <Special Option>>. Has a 19% chance of reducing the number of Soulshots consumed to 2 during an attack. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement)) Has a 19% chance of reducing the number of Soulshots consumed to 2 during an attack. -->
 		<set name="icon" val="icon.weapon_dark_elven_long_bow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1910,7 +1910,7 @@
 		</stats>
 	</item>
 	<item id="31458" name="Bound Dark Screamer" type="Weapon">
-		<!-- Bound Dark Screamer. No Soul Crystal option. -->
+		<!-- Bound Dark Screamer. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1944,7 +1944,7 @@
 		</stats>
 	</item>
 	<item id="31459" name="Bound Dark Screamer" additionalName="Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 2. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1980,7 +1980,7 @@
 		</stats>
 	</item>
 	<item id="31460" name="Bound Dark Screamer" additionalName="Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 81. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 81. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2016,7 +2016,7 @@
 		</stats>
 	</item>
 	<item id="31461" name="Bound Dark Screamer" additionalName="Critical Bleed" type="Weapon">
-		<!-- <Special Option>. Has a 14% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Has a 14% chance of casting Bleed on the target during a standard Critical Attack. -->
 		<set name="icon" val="icon.weapon_dark_screamer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2324,7 +2324,7 @@
 		</stats>
 	</item>
 	<item id="31474" name="Bound Dark Elven Dagger" type="Weapon">
-		<!-- Bound Dark Elven Dagger. No Soul Crystal option. -->
+		<!-- Bound Dark Elven Dagger. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2358,7 +2358,7 @@
 		</stats>
 	</item>
 	<item id="31475" name="Bound Dark Elven Dagger" additionalName="Focus" type="Weapon">
-		<!-- <Special Option>. Increases Critical by 90. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 90. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2394,7 +2394,7 @@
 		</stats>
 	</item>
 	<item id="31476" name="Bound Dark Elven Dagger" additionalName="Back Blow" type="Weapon">
-		<!-- <Special Option>. Increases P. Critical Rate by 50% when attacking the target from behind. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases P. Critical Rate by 50% when attacking the target from behind. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2430,7 +2430,7 @@
 		</stats>
 	</item>
 	<item id="31477" name="Bound Dark Elven Dagger" additionalName="Mortal Strike" type="Weapon">
-		<!-- <Special Option>. Increases the success rate of Mortal Blow and Deadly Blow by 50%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases the success rate of Mortal Blow and Deadly Blow by 50%. -->
 		<set name="icon" val="icon.weapon_darkelven_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2466,7 +2466,7 @@
 		</stats>
 	</item>
 	<item id="31478" name="Bound Dark Legion's Edge" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Critical Damage, Health or Rsk. Focus. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2498,7 +2498,7 @@
 		</stats>
 	</item>
 	<item id="31479" name="Bound Dark Legion's Edge" additionalName="Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) P. Atk. + 326 during a Critical Attack. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2533,7 +2533,7 @@
 		</stats>
 	</item>
 	<item id="31480" name="Bound Dark Legion's Edge" additionalName="Health" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Max HP by 25%. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2568,7 +2568,7 @@
 		</stats>
 	</item>
 	<item id="31481" name="Bound Dark Legion's Edge" additionalName="Rsk. Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2603,7 +2603,7 @@
 		</stats>
 	</item>
 	<item id="31482" name="Bound Dynasty Dualsword" type="Weapon">
-		<!-- Bound Item. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Inflicts additional damage to target during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Max HP increases by 10%. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2640,7 +2640,7 @@
 		</stats>
 	</item>
 	<item id="31483" name="Bound Dynasty Dual Dagger" type="Weapon">
-		<!-- Bound Item. When enchanted, P. Atk. of a Dual Dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. No Soul Crystal option. -->
+		<!-- Bound Item. When enchanted, P. Atk. of a Dual Dagger increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Critical increases by 109 and Atk. Spd. Increases by 8%. Inflicts additional damage to target during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2678,7 +2678,7 @@
 		</stats>
 	</item>
 	<item id="31484" name="Bound Damascus*Damascus" type="Weapon">
-		<!-- Bound Item. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 6. Inflicts additional damage to target during PvP. No Soul Crystal option. -->
+		<!-- Bound Item. When enchanted, P. Atk. of a dualsword increases more significantly than that of a one-handed or fist weapon. When enchanted to 4 or more, Accuracy increases by 6. Inflicts additional damage to target during PvP. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2713,7 +2713,7 @@
 		</stats>
 	</item>
 	<item id="31485" name="Bound Damascus Sword" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Bestows one of the following functions: Focus, Critical Damage or Haste. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2745,7 +2745,7 @@
 		</stats>
 	</item>
 	<item id="31486" name="Bound Damascus Sword" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. <Special Option>. Increases Critical by 64. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) Increases Critical by 64. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2780,7 +2780,7 @@
 		</stats>
 	</item>
 	<item id="31487" name="Bound Damascus Sword" additionalName="Critical Damage" type="Weapon">
-		<!-- Bound Item. <Special Option>. P. Atk. + 262 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. (Soul Crystal Enhancement) P. Atk. + 262 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2815,7 +2815,7 @@
 		</stats>
 	</item>
 	<item id="31488" name="Bound Damascus Sword" additionalName="Haste" type="Weapon">
-		<!-- Bound Item. Cannot be exchanged or dropped. <Special Option>. Increases Atk. Spd. by about 6%. No Soul Crystal option. -->
+		<!-- Bound Item. Cannot be exchanged or dropped (Soul Crystal Enhancement) Increases Atk. Spd. by about 6%. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2850,7 +2850,7 @@
 		</stats>
 	</item>
 	<item id="31489" name="Bound Needle Wolverine" type="Weapon">
-		<!-- Bound Needle Wolverine. No Soul Crystal option. -->
+		<!-- Bound Needle Wolverine. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_needle_wolverine_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2884,7 +2884,7 @@
 		</stats>
 	</item>
 	<item id="31490" name="Bound Innominate Victory" type="Weapon">
-		<!-- Bound Item. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword Bestows one of the following functions: Health, P. Critical Damage or Focus. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2917,7 +2917,7 @@
 		</stats>
 	</item>
 	<item id="31491" name="Bound Innominate Victory" additionalName="Health" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword. <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword (Soul Crystal Enhancement) Increases Max HP by 25%. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2953,7 +2953,7 @@
 		</stats>
 	</item>
 	<item id="31492" name="Bound Innominate Victory" additionalName="Critical Damage" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword. <Special Option>. Increases P. Atk. 247 during a Critical Attack. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword (Soul Crystal Enhancement) Increases P. Atk. 247 during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2989,7 +2989,7 @@
 		</stats>
 	</item>
 	<item id="31493" name="Bound Innominate Victory" additionalName="Focus" type="Weapon">
-		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword. <Special Option>. Internal Critical by 68. No Soul Crystal option. -->
+		<!-- Bound Item. Kamael-exclusive Weapon: Great Sword (Soul Crystal Enhancement) Internal Critical by 68. -->
 		<set name="icon" val="icon.weapon_nameless_victory_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3025,7 +3025,7 @@
 		</stats>
 	</item>
 	<item id="31494" name="Bound Knuckle Duster" type="Weapon">
-		<!-- Bound Knuckle Duster. No Soul Crystal option. -->
+		<!-- Bound Knuckle Duster. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3059,7 +3059,7 @@
 		</stats>
 	</item>
 	<item id="31495" name="Bound Knuckle Duster" additionalName="Rsk. Evasion" type="Weapon">
-		<!-- <Special Option>. Increases Evasion by 7 when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Evasion by 7 when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3095,7 +3095,7 @@
 		</stats>
 	</item>
 	<item id="31496" name="Bound Knuckle Duster" additionalName="Rsk. Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by 12% when HP drops to 60% or below. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by 12% when HP drops to 60% or below. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3131,7 +3131,7 @@
 		</stats>
 	</item>
 	<item id="31497" name="Bound Knuckle Duster" additionalName="Haste" type="Weapon">
-		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases Atk. Spd. by about 7%. -->
 		<set name="icon" val="icon.weapon_knuckle_dust_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3167,7 +3167,7 @@
 		</stats>
 	</item>
 	<item id="31498" name="Bound Nirvana Axe" type="Weapon">
-		<!-- Bound Nirvana Axe. No Soul Crystal option. -->
+		<!-- Bound Nirvana Axe. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3201,7 +3201,7 @@
 		</stats>
 	</item>
 	<item id="31499" name="Bound Nirvana Axe" additionalName="M. Atk." type="Weapon">
-		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 99 during magic use. No Soul Crystal option. -->
+		<!-- (Soul Crystal Enhancement) Increases MP consumption by 15% and M. Atk. by 99 during magic use. -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

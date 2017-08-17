@@ -865,8 +865,8 @@
 			<skill id="2630" level="1" /> <!-- Presentation - Collect Items -->
 		</skills>
 	</item>
-	<item id="13845" name="Attribute Master Yin's Sword" additionalName="10-minute" type="Weapon">
-		<!-- Weapon provided by Attribute Master Yin for capturing the Reckless Water Spirits. You can feel the powerful energy of fire. The spirit's power contained in this weapon will be useful when capturing the reckless spirit. 10-minute-limited-time Item. 10-minute item. Fire power + 10. -->
+	<item id="13845" name="Attribute Master Yin's Sword" type="Weapon">
+		<!-- Weapon provided by Attribute Master Yin for capturing the Reckless Water Spirits. You can feel the powerful energy of fire. The spirit's power contained in this weapon will be useful when capturing the reckless spirit. 10-minute-limited-time Item. Fire power + 10. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1510,8 +1510,8 @@
 			<skill id="5822" level="1" /> <!-- Bait for Drakes -->
 		</skills>
 	</item>
-	<item id="13881" name="Attribute Master Yang's Sword" additionalName="10-minute" type="Weapon">
-		<!-- Weapon provided by Attribute Master Yang for capturing the Reckless Wind Spirits. You can feel the powerful energy of earth. The spirit's power contained in this weapon will be useful when capturing the reckless spirit. 10-minute-limited-time Item.10-minute item. Earth Attribute + 10. -->
+	<item id="13881" name="Attribute Master Yang's Sword" type="Weapon">
+		<!-- Weapon provided by Attribute Master Yang for capturing the Reckless Wind Spirits. You can feel the powerful energy of earth. The spirit's power contained in this weapon will be useful when capturing the reckless spirit. 10-minute-limited-time Item. Earth Attribute + 10. -->
 		<set name="icon" val="icon.weapon_long_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1545,7 +1545,7 @@
 		</stats>
 	</item>
 	<item id="13882" name="Dynasty Dual Dagger" type="Weapon">
-		<!-- P. Atk. of Dual Daggers increases more than that of regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- P. Atk. of Dual Daggers increases more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1585,7 +1585,7 @@
 		</stats>
 	</item>
 	<item id="13883" name="Icarus Dual Daggers" type="Weapon">
-		<!-- P. Atk. of Dual Daggers increases more than that of regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- P. Atk. of Dual Daggers increases more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1625,7 +1625,7 @@
 		</stats>
 	</item>
 	<item id="13884" name="Vesper Dual Daggers" type="Weapon">
-		<!-- P. Atk. of Dual Daggers increases more than that of regular one-handed swords when enchanted. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
+		<!-- P. Atk. of Dual Daggers increases more than that of regular one-handed swords when enchanted. When enchanted to 4 or more, increases Critical by 109. Increases the damage inflicted during PvP. Can be equipped by Dagger Masters above level 81. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />

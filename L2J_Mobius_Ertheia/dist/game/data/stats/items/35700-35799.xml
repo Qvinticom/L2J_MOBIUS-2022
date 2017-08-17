@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="35700" name="Santa Girl's Golden Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to acquire Santa Girl's Cloak Box and Hat Box (3-day). If you are lucky, you can acquire an additional reward. -->
@@ -880,7 +880,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35746" name="Draco's Hat: Warrior (7-day)" additionalName="Event" type="Armor">
+	<item id="35746" name="Draco's Hat:�Warrior (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. STR + 2, DEX + 2, CON + 2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -901,7 +901,7 @@
 			<skill id="9515" level="1" /> <!-- Draco's Warrior Hat -->
 		</skills>
 	</item>
-	<item id="35747" name="Draco's Hat: Wizard (7-day)" additionalName="Event" type="Armor">
+	<item id="35747" name="Draco's Hat:�Wizard (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. INT + 2, WIT + 2, MEN + 2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -967,7 +967,7 @@
 		</skills>
 	</item>
 	<item id="35751" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to acquire one of the following: Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
+		<!-- Double-click to acquire one of the following:�Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />

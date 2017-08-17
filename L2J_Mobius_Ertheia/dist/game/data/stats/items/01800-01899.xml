@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="1800" name="Recipe: Piece Bone Breastplate" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a Piece Bone Breastplate. Requires Create Item - Skill Lv. 1. The success rate is 100%. -->
@@ -60,8 +60,8 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1804" name="Recipe: Soulshot (D-Grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-D-grade. Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+	<item id="1804" name="Recipe: Soulshot (D-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a soulshot-D-grade . Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_blue_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -75,8 +75,8 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1805" name="Recipe: Soulshot (C-Grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-C-grade. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
+	<item id="1805" name="Recipe: Soulshot (C-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a soulshot-C-grade . Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_yellow_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -90,7 +90,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1806" name="Recipe: Soulshot (B-Grade)" type="EtcItem">
+	<item id="1806" name="Recipe: Soulshot (B-grade)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for a soulshot-B-grade. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_red_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -105,8 +105,8 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="1807" name="Recipe: Soulshot (A-Grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-A-grade. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+	<item id="1807" name="Recipe: Soulshot (A-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a soulshot-A-grade . Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -120,8 +120,8 @@
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 	</item>
-	<item id="1808" name="Recipe: Soulshot (S-Grade)" type="EtcItem">
-		<!-- For Dwarves only. Recipe for a soulshot-S-grade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
+	<item id="1808" name="Recipe: Soulshot (S-grade)" type="EtcItem">
+		<!-- For Dwarves only. Recipe for a soulshot-S-grade . Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -442,7 +442,7 @@
 		</skills>
 	</item>
 	<item id="1831" name="Antidote" type="EtcItem">
-		<!-- Reagent that neutralizes Poison. -->
+		<!-- Reagent that neutralizes Poison . -->
 		<set name="icon" val="icon.etc_herb_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -462,7 +462,7 @@
 		</skills>
 	</item>
 	<item id="1832" name="Greater Antidote" type="EtcItem">
-		<!-- High-quality reagent that neutralizes powerful Poison. -->
+		<!-- High-quality reagent that neutralizes powerful Poison . -->
 		<set name="icon" val="icon.etc_reagent_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

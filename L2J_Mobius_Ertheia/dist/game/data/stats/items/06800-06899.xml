@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="6800" name="Greater Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
 		<!-- Goddard/Cleric/Mobile. -->
@@ -692,7 +692,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="6844" name="Lady's Hairpin" type="Armor">
-		<!-- Hair accessory exclusive for women. Cannot be transferred between servers. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Hair accessory exclusive for women. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.accessory_hairpin_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -709,7 +709,7 @@
 		</cond>
 	</item>
 	<item id="6845" name="Pirate's Eyepatch" type="Armor">
-		<!-- Eyepatch accessory. When you use the pendant, slots change. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Eyepatch accessory. When you use the pendant, slots change. -->
 		<set name="icon" val="icon.accessory_eye_bandage_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -723,7 +723,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="6846" name="Monocle" type="Armor">
-		<!-- Monocle accessory with attached ring. Used as ingredient for quest: One Who Faces the Limit. -->
+		<!-- Monocle accessory with attached ring -->
 		<set name="icon" val="icon.accessory_glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -1036,7 +1036,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6867" name="Recipe: Sealed Draconic Leather Gloves (60%)" type="EtcItem">
+	<item id="6867" name="Recipe: Sealed Draconic�Leather�Gloves (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Gloves. Requires Create Item - Skill Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1051,7 +1051,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6868" name="Recipe: Sealed Draconic Leather Gloves" type="EtcItem">
+	<item id="6868" name="Recipe: Sealed Draconic�Leather�Gloves" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Gloves. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1066,7 +1066,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6869" name="Recipe: Sealed Draconic Leather Boots (60%)" type="EtcItem">
+	<item id="6869" name="Recipe: Sealed Draconic�Leather�Boots (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Boots. Requires Create Item - Skill Lv. 9. The success rate is 60%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1081,7 +1081,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="6870" name="Recipe: Sealed Draconic Leather Boots" type="EtcItem">
+	<item id="6870" name="Recipe: Sealed Draconic�Leather�Boots" type="EtcItem">
 		<!-- For Dwarves only. Recipe for Sealed Draconic Leather Boots. Requires Create Item - Skill Lv. 9. The success rate is 100%. -->
 		<set name="icon" val="icon.etc_recipe_black_i00" />
 		<set name="default_action" val="RECIPE" />

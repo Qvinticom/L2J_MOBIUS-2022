@@ -117,7 +117,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36708" name="Experiment Material" type="EtcItem">
-		<!-- Pouch containing unknown experiment material from Workman Chen on Alligator Island. Take it to the "Superior" he mentioned. -->
+		<!-- "a,Pouch containing unknown experiment material from Workman Chen on Alligator Island. Take it to the ""Superior"" he mentioned." -->
 		<set name="icon" val="icon.etc_pouch_yellow_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -272,8 +272,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36718" name="Augmentation Practice Spirit Stone (46)" type="EtcItem">
-		<!-- Temporary Spirit Stone for learning about augmentation. -->
+	<item id="36718" name="Augmentation Practice Life Stone (46)" type="EtcItem">
+		<!-- Temporary Life Stone for learning about augmentation. -->
 		<set name="icon" val="icon.etc_mineral_general_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -367,7 +367,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36723" name="Practice StormBringer" additionalName="Focus" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
+		<!-- (Soul Crystal Enhancement) Increases Critical by 86. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />

@@ -12,6 +12,7 @@ What is done
 -Alchemy
 -Skilltrees
 -Parsed NPC names from client
+-Parsed item names from client
 
 TODO
 -Modify all skill levels/sublevels based on client

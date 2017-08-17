@@ -41,7 +41,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36604" name="Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -53,7 +53,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="36605" name="Blessed Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -416,7 +416,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="36630" name="Hair Accessory Appearance Stone" additionalName="15-day" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -433,7 +433,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="36631" name="Blessed Hair Accessory Appearance Stone" additionalName="7-day" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use.  Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />

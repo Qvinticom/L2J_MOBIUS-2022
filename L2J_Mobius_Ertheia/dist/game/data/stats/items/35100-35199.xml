@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="35100" name="Dark Amaranthine Stormer" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -37,7 +37,7 @@
 		</stats>
 	</item>
 	<item id="35101" name="Dark Amaranthine Thrower" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -73,7 +73,7 @@
 		</stats>
 	</item>
 	<item id="35102" name="Dark Amaranthine Shooter" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Focus, Critical Slow, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -109,7 +109,7 @@
 		</stats>
 	</item>
 	<item id="35103" name="Dark Amaranthine Buster" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Acumen, Magic Hold, or Mana Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -143,7 +143,7 @@
 		</stats>
 	</item>
 	<item id="35104" name="Dark Amaranthine Caster" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Empower, Acumen, or Magic Hold. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -178,7 +178,7 @@
 		</stats>
 	</item>
 	<item id="35105" name="Dark Amaranthine Retributer" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�MP Regeneration, Acumen, or Empower. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -214,7 +214,7 @@
 		</stats>
 	</item>
 	<item id="35106" name="Dark Amaranthine Dualsword" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Haste, Damage Up, or Health. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -248,7 +248,7 @@
 		</stats>
 	</item>
 	<item id="35107" name="Dark Amaranthine Dual Dagger" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Damage Up, Focus, or Guidance. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -283,7 +283,7 @@
 		</stats>
 	</item>
 	<item id="35108" name="Dark Amaranthine Dual Blunt Weapon" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Focus, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i10" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -318,7 +318,7 @@
 		</stats>
 	</item>
 	<item id="35109" name="Dark Amaranthine Shaper" additionalName="Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -354,7 +354,7 @@
 		</stats>
 	</item>
 	<item id="35110" name="Dark Amaranthine Shaper" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -390,7 +390,7 @@
 		</stats>
 	</item>
 	<item id="35111" name="Dark Amaranthine Shaper" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 81.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 81.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -426,7 +426,7 @@
 		</stats>
 	</item>
 	<item id="35112" name="Dark Amaranthine Cutter" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -461,7 +461,7 @@
 		</stats>
 	</item>
 	<item id="35113" name="Dark Amaranthine Cutter" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -496,7 +496,7 @@
 		</stats>
 	</item>
 	<item id="35114" name="Dark Amaranthine Cutter" additionalName="Health" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -531,7 +531,7 @@
 		</stats>
 	</item>
 	<item id="35115" name="Dark Amaranthine Slasher" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -566,7 +566,7 @@
 		</stats>
 	</item>
 	<item id="35116" name="Dark Amaranthine Slasher" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -601,7 +601,7 @@
 		</stats>
 	</item>
 	<item id="35117" name="Dark Amaranthine Slasher" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -636,7 +636,7 @@
 		</stats>
 	</item>
 	<item id="35118" name="Dark Amaranthine Avenger" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -672,7 +672,7 @@
 		</stats>
 	</item>
 	<item id="35119" name="Dark Amaranthine Avenger" additionalName="Critical Damage" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -708,7 +708,7 @@
 		</stats>
 	</item>
 	<item id="35120" name="Dark Amaranthine Avenger" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -744,7 +744,7 @@
 		</stats>
 	</item>
 	<item id="35121" name="Dark Amaranthine Fighter" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 75.5. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 75.5. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -780,7 +780,7 @@
 		</stats>
 	</item>
 	<item id="35122" name="Dark Amaranthine Fighter" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -816,7 +816,7 @@
 		</stats>
 	</item>
 	<item id="35123" name="Dark Amaranthine Fighter" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -852,7 +852,7 @@
 		</stats>
 	</item>
 	<item id="35124" name="Dark Amaranthine Stormer" additionalName="HP Drain" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Recovers 4% of standard physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Recovers 4% of standard physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -888,7 +888,7 @@
 		</stats>
 	</item>
 	<item id="35125" name="Dark Amaranthine Stormer" additionalName="Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -924,7 +924,7 @@
 		</stats>
 	</item>
 	<item id="35126" name="Dark Amaranthine Stormer" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -960,7 +960,7 @@
 		</stats>
 	</item>
 	<item id="35127" name="Dark Amaranthine Thrower" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -997,7 +997,7 @@
 		</stats>
 	</item>
 	<item id="35128" name="Dark Amaranthine Thrower" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1034,7 +1034,7 @@
 		</stats>
 	</item>
 	<item id="35129" name="Dark Amaranthine Thrower" additionalName="Long Blow" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Attack range increases. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Attack range increases. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1071,7 +1071,7 @@
 		</stats>
 	</item>
 	<item id="35130" name="Dark Amaranthine Shooter" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1108,7 +1108,7 @@
 		</stats>
 	</item>
 	<item id="35131" name="Dark Amaranthine Shooter" additionalName="Critical Slow" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1146,7 +1146,7 @@
 		</stats>
 	</item>
 	<item id="35132" name="Dark Amaranthine Shooter" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1183,7 +1183,7 @@
 		</stats>
 	</item>
 	<item id="35133" name="Dark Amaranthine Buster" additionalName="Acumen" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1218,7 +1218,7 @@
 		</stats>
 	</item>
 	<item id="35134" name="Dark Amaranthine Buster" additionalName="Magic Hold" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement)  20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1254,7 +1254,7 @@
 		</stats>
 	</item>
 	<item id="35135" name="Dark Amaranthine Buster" additionalName="Mana Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1289,7 +1289,7 @@
 		</stats>
 	</item>
 	<item id="35136" name="Dark Amaranthine Caster" additionalName="Empower" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1325,7 +1325,7 @@
 		</stats>
 	</item>
 	<item id="35137" name="Dark Amaranthine Caster" additionalName="Acumen" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1361,7 +1361,7 @@
 		</stats>
 	</item>
 	<item id="35138" name="Dark Amaranthine Caster" additionalName="Magic Hold" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement)  20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1398,7 +1398,7 @@
 		</stats>
 	</item>
 	<item id="35139" name="Dark Amaranthine Retributer" additionalName="MP Regeneration" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) MP Recovery Rate increases. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1435,7 +1435,7 @@
 		</stats>
 	</item>
 	<item id="35140" name="Dark Amaranthine Retributer" additionalName="Acumen" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1472,7 +1472,7 @@
 		</stats>
 	</item>
 	<item id="35141" name="Dark Amaranthine Retributer" additionalName="Empower" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1509,7 +1509,7 @@
 		</stats>
 	</item>
 	<item id="35142" name="Dark Amaranthine Dualsword" additionalName="Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1544,7 +1544,7 @@
 		</stats>
 	</item>
 	<item id="35143" name="Dark Amaranthine Dualsword" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1579,7 +1579,7 @@
 		</stats>
 	</item>
 	<item id="35144" name="Dark Amaranthine Dualsword" additionalName="Health" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1614,7 +1614,7 @@
 		</stats>
 	</item>
 	<item id="35145" name="Dark Amaranthine Dual Dagger" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1650,7 +1650,7 @@
 		</stats>
 	</item>
 	<item id="35146" name="Dark Amaranthine Dual Dagger" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1686,7 +1686,7 @@
 		</stats>
 	</item>
 	<item id="35147" name="Dark Amaranthine Dual Dagger" additionalName="Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1722,7 +1722,7 @@
 		</stats>
 	</item>
 	<item id="35148" name="Dark Amaranthine Dual Blunt Weapon" additionalName="Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1758,7 +1758,7 @@
 		</stats>
 	</item>
 	<item id="35149" name="Dark Amaranthine Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1794,7 +1794,7 @@
 		</stats>
 	</item>
 	<item id="35150" name="Dark Amaranthine Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1830,7 +1830,7 @@
 		</stats>
 	</item>
 	<item id="35151" name="Dark Amaranthine Shaper" additionalName="Guidance + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 8. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 8. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1867,7 +1867,7 @@
 		</stats>
 	</item>
 	<item id="35152" name="Dark Amaranthine Shaper" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical increases by 81.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Critical increases by 81.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1904,7 +1904,7 @@
 		</stats>
 	</item>
 	<item id="35153" name="Dark Amaranthine Shaper" additionalName="Focus + Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1941,7 +1941,7 @@
 		</stats>
 	</item>
 	<item id="35154" name="Dark Amaranthine Cutter" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1977,7 +1977,7 @@
 		</stats>
 	</item>
 	<item id="35155" name="Dark Amaranthine Cutter" additionalName="Focus + Health" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 75.4. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 75.4. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2013,7 +2013,7 @@
 		</stats>
 	</item>
 	<item id="35156" name="Dark Amaranthine Cutter" additionalName="Health + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2049,7 +2049,7 @@
 		</stats>
 	</item>
 	<item id="35157" name="Dark Amaranthine Slasher" additionalName="Focus + Damage" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2085,7 +2085,7 @@
 		</stats>
 	</item>
 	<item id="35158" name="Dark Amaranthine Slasher" additionalName="Damage Up + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2121,7 +2121,7 @@
 		</stats>
 	</item>
 	<item id="35159" name="Dark Amaranthine Slasher" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2157,7 +2157,7 @@
 		</stats>
 	</item>
 	<item id="35160" name="Dark Amaranthine Avenger" additionalName="Haste + Critical Damage" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2194,7 +2194,7 @@
 		</stats>
 	</item>
 	<item id="35161" name="Dark Amaranthine Avenger" additionalName="Critical Damage + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 1232 during a critical attack. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 1232 during a critical attack. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2231,7 +2231,7 @@
 		</stats>
 	</item>
 	<item id="35162" name="Dark Amaranthine Avenger" additionalName="Focus + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2268,7 +2268,7 @@
 		</stats>
 	</item>
 	<item id="35163" name="Dark Amaranthine Fighter" additionalName="Focus + Damage" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 81.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 81.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2305,7 +2305,7 @@
 		</stats>
 	</item>
 	<item id="35164" name="Dark Amaranthine Fighter" additionalName="Damage Up + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2342,7 +2342,7 @@
 		</stats>
 	</item>
 	<item id="35165" name="Dark Amaranthine Fighter" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical increases by 75.5. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Critical increases by 75.5. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2379,7 +2379,7 @@
 		</stats>
 	</item>
 	<item id="35166" name="Dark Amaranthine Stormer" additionalName="HP Drain + Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2417,7 +2417,7 @@
 		</stats>
 	</item>
 	<item id="35167" name="Dark Amaranthine Stormer" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2455,7 +2455,7 @@
 		</stats>
 	</item>
 	<item id="35168" name="Dark Amaranthine Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2493,7 +2493,7 @@
 		</stats>
 	</item>
 	<item id="35169" name="Dark Amaranthine Thrower" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 415. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2531,7 +2531,7 @@
 		</stats>
 	</item>
 	<item id="35170" name="Dark Amaranthine Thrower" additionalName="Focus + Long Blow" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Attack range increases. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Attack range increases. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2569,7 +2569,7 @@
 		</stats>
 	</item>
 	<item id="35171" name="Dark Amaranthine Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Attack range increases. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Attack range increases. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2607,7 +2607,7 @@
 		</stats>
 	</item>
 	<item id="35172" name="Dark Amaranthine Shooter" additionalName="Focus + Critical Slow" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 78.7. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 78.7. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2646,7 +2646,7 @@
 		</stats>
 	</item>
 	<item id="35173" name="Dark Amaranthine Shooter" additionalName="Critical Slow + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Chance of casting Slow during a Critical Attack. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Chance of casting Slow during a Critical Attack. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2685,7 +2685,7 @@
 		</stats>
 	</item>
 	<item id="35174" name="Dark Amaranthine Shooter" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2723,7 +2723,7 @@
 		</stats>
 	</item>
 	<item id="35175" name="Dark Amaranthine Buster" additionalName="Acumen + Magic Hold" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2760,7 +2760,7 @@
 		</stats>
 	</item>
 	<item id="35176" name="Dark Amaranthine Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) 20% chance of casting Dryad Root on the target during magic use. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2797,7 +2797,7 @@
 		</stats>
 	</item>
 	<item id="35177" name="Dark Amaranthine Buster" additionalName="Mana Up + Acumen" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Max MP increases by 30%. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Max MP increases by 30%. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2833,7 +2833,7 @@
 		</stats>
 	</item>
 	<item id="35178" name="Dark Amaranthine Caster" additionalName="Empower + Acumen" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) M. Atk. Increases by 460. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2870,7 +2870,7 @@
 		</stats>
 	</item>
 	<item id="35179" name="Dark Amaranthine Caster" additionalName="Acumen + Magic Hold" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2908,7 +2908,7 @@
 		</stats>
 	</item>
 	<item id="35180" name="Dark Amaranthine Caster" additionalName="Magic Hold + Empower" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) 20% chance of casting Dryad Root on the target during magic use. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2946,7 +2946,7 @@
 		</stats>
 	</item>
 	<item id="35181" name="Dark Amaranthine Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. MP Recovery Rate increases. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) MP Recovery Rate increases. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2984,7 +2984,7 @@
 		</stats>
 	</item>
 	<item id="35182" name="Dark Amaranthine Retributer" additionalName="Acumen + Empower" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Casting Spd. Increases by 15%. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3022,7 +3022,7 @@
 		</stats>
 	</item>
 	<item id="35183" name="Dark Amaranthine Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. M. Atk. Increases by 322. MP Recovery rate increases. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) M. Atk. Increases by 322. MP Recovery rate increases. Increases damage inflicted during PvP. When enchanted to + 4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3060,7 +3060,7 @@
 		</stats>
 	</item>
 	<item id="35184" name="Dark Amaranthine Dualsword" additionalName="Haste + Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Atk. Spd. Increases by about 15%. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3096,7 +3096,7 @@
 		</stats>
 	</item>
 	<item id="35185" name="Dark Amaranthine Dualsword" additionalName="Damage Up + Health" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 457. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3132,7 +3132,7 @@
 		</stats>
 	</item>
 	<item id="35186" name="Dark Amaranthine Dualsword" additionalName="Health + Haste" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3168,7 +3168,7 @@
 		</stats>
 	</item>
 	<item id="35187" name="Dark Amaranthine Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 377. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3205,7 +3205,7 @@
 		</stats>
 	</item>
 	<item id="35188" name="Dark Amaranthine Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3242,7 +3242,7 @@
 		</stats>
 	</item>
 	<item id="35189" name="Dark Amaranthine Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3279,7 +3279,7 @@
 		</stats>
 	</item>
 	<item id="35190" name="Dark Amaranthine Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Critical increases by 79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Critical increases by 79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3316,7 +3316,7 @@
 		</stats>
 	</item>
 	<item id="35191" name="Dark Amaranthine Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3353,7 +3353,7 @@
 		</stats>
 	</item>
 	<item id="35192" name="Dark Amaranthine Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvP enchant type item. When equipped, damage to a PC + 15% and Max HP/MP/CP + 10%. (Soul Crystal Enhancement) P. Atk. Increases by 377. Critical increases by 78.7. Increases damage inflicted during PvP. When enchanted to + 4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pvp_i11" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3390,7 +3390,7 @@
 		</stats>
 	</item>
 	<item id="35193" name="Bloody Amaranthine Shaper" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Guidance, Haste, or Focus. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3425,7 +3425,7 @@
 		</stats>
 	</item>
 	<item id="35194" name="Bloody Amaranthine Cutter" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Haste, Focus, or Health. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3459,7 +3459,7 @@
 		</stats>
 	</item>
 	<item id="35195" name="Bloody Amaranthine Slasher" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3493,7 +3493,7 @@
 		</stats>
 	</item>
 	<item id="35196" name="Bloody Amaranthine Avenger" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Haste, Critical Damage, or Focus. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -3528,7 +3528,7 @@
 		</stats>
 	</item>
 	<item id="35197" name="Bloody Amaranthine Fighter" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Focus, Damage Up, or Haste. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3563,7 +3563,7 @@
 		</stats>
 	</item>
 	<item id="35198" name="Bloody Amaranthine Stormer" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal. When enchanted to + 4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�HP Drain, Guidance, or Damage Up. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3599,7 +3599,7 @@
 		</stats>
 	</item>
 	<item id="35199" name="Bloody Amaranthine Thrower" type="Weapon">
-		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Can bestow 2 regular Soul Crystals and 1 Special Soul Crystal.When enchanted to + 4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC + 15% and Max HP/MP/CP + 10%. Bestows one of the following functions:�Damage Up, Focus, or Long Blow. Two functions can be bestowed through a rare soul crystal. When enchanted to + 4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
