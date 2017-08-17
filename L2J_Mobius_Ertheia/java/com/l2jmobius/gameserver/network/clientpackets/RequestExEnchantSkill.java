@@ -149,32 +149,35 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 		
 		final EnchantSkillHolder enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(_skillSubLvl % 1000);
 		
-		// Verify if player has all the ingredients
-		for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
+		if (_type != SkillEnchantType.UNTRAIN) // TODO: Fix properly
 		{
-			if (player.getInventory().getInventoryItemCount(holder.getId(), 0) < holder.getCount())
+			// Verify if player has all the ingredients
+			for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
 			{
-				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+				if (player.getInventory().getInventoryItemCount(holder.getId(), 0) < holder.getCount())
+				{
+					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL);
+					return;
+				}
+			}
+			
+			// Consume all ingredients
+			for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
+			{
+				if (!player.destroyItemByItemId("Skill enchanting", holder.getId(), holder.getCount(), player, true))
+				{
+					return;
+				}
+			}
+			
+			if (player.getSp() < enchantSkillHolder.getSp(_type))
+			{
+				player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
 				return;
 			}
+			
+			player.getStat().removeExpAndSp(0, enchantSkillHolder.getSp(_type), false);
 		}
-		
-		// Consume all ingredients
-		for (ItemHolder holder : enchantSkillHolder.getRequiredItems(_type))
-		{
-			if (!player.destroyItemByItemId("Skill enchanting", holder.getId(), holder.getCount(), player, true))
-			{
-				return;
-			}
-		}
-		
-		if (player.getSp() < enchantSkillHolder.getSp(_type))
-		{
-			player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL);
-			return;
-		}
-		
-		player.getStat().removeExpAndSp(0, enchantSkillHolder.getSp(_type), false);
 		
 		switch (_type)
 		{
@@ -253,32 +256,27 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 			case UNTRAIN:
 			{
 				// TODO: Fix properly
-				// if (Rnd.get(100) < 80)
-				// {
-				final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
+				final Skill enchantedSkill;
+				final SystemMessage sm;
+				if ((_skillSubLvl % 1000) < 1)
+				{
+					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
+				}
+				else
+				{
+					enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
+				}
 				player.removeSkill(enchantedSkill);
 				player.addSkill(enchantedSkill, true);
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
-				sm.addSkillName(_skillId);
-				player.sendPacket(sm);
+				player.sendPacket(sm.addSkillName(_skillId));
+				player.sendPacket(ExEnchantSkillResult.STATIC_PACKET_FALSE);
 				
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
 					LOGGER_ENCHANT.log(Level.INFO, "Untrain success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " + enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
 				}
-				// }
-				// else
-				// {
-				// player.sendPacket(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED);
-				//
-				// if (Config.LOG_SKILL_ENCHANTS)
-				// {
-				// final Skill enchantedSkill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl - 1);
-				// LOGGER_ENCHANT.log(Level.INFO, "Untrain failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", +" + enchantedSkill.getLevel() + " " + enchantedSkill.getSubLevel() + " - " +
-				// enchantedSkill.getName() + " (" + enchantedSkill.getId() + "), " + enchantSkillHolder.getChance(_type));
-				// }
-				// }
-				player.sendPacket(ExEnchantSkillResult.STATIC_PACKET_FALSE);
 				break;
 			}
 		}
