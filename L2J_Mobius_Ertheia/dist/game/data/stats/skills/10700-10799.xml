@@ -53,12 +53,7 @@
 					<value level="5">21855</value>
 					<value level="6">22921</value>
 					<value level="7">23987</value>
-					<value fromLevel="7" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<pDefMod>
-					<value fromLevel="1" toLevel="7">1</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.99 - 0.006 * (subIndex - 1)}</value>
-				</pDefMod>
 			</effect>
 			<effect name="Plunder" />
 		</effects>
@@ -164,12 +159,7 @@
 					<value level="5">27142</value>
 					<value level="6">28466</value>
 					<value level="7">29790</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
-				<pDefMod>
-					<value fromLevel="1" toLevel="7">1</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{0.99 - 0.006 * (subIndex - 1)}</value>
-				</pDefMod>
 			</effect>
 			<effect name="Plunder" />
 		</effects>
@@ -838,7 +828,6 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<icon>icon.skill10757</icon>
@@ -887,18 +876,6 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10758" toLevel="4" name="Rapid Fire Stance">
@@ -912,7 +889,6 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<icon>icon.skill10758</icon>
@@ -962,18 +938,6 @@
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10759" toLevel="4" name="Sniper Stance">
@@ -987,7 +951,6 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>SHOOTING_STANCE</abnormalType>
 		<icon>icon.skill10759</icon>
@@ -1035,18 +998,6 @@
 					<item>CROSSBOW</item>
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
-			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2131,40 +2082,6 @@
 					<value fromLevel="2" toLevel="6" fromSubLevel="1030" toSubLevel="1030">5405</value>
 				</power>
 			</effect>
-			<effect name="CpHeal" fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2001" toSubLevel="2001">2421</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2002" toSubLevel="2002">2590</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2003" toSubLevel="2003">2759</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2004" toSubLevel="2004">2928</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2005" toSubLevel="2005">3097</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2006" toSubLevel="2006">3265</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2007" toSubLevel="2007">3434</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2008" toSubLevel="2008">3603</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2009" toSubLevel="2009">3772</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2010" toSubLevel="2010">3941</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2011" toSubLevel="2011">4110</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2012" toSubLevel="2012">4279</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2013" toSubLevel="2013">4448</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2014" toSubLevel="2014">4617</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2015" toSubLevel="2015">4786</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2016" toSubLevel="2016">4955</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2017" toSubLevel="2017">5124</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2018" toSubLevel="2018">5293</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2019" toSubLevel="2019">5462</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2020" toSubLevel="2020">5631</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2021" toSubLevel="2021">5743</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2022" toSubLevel="2022">5856</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2023" toSubLevel="2023">5968</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2024" toSubLevel="2024">6081</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2025" toSubLevel="2025">6194</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2026" toSubLevel="2026">6306</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2027" toSubLevel="2027">6419</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2028" toSubLevel="2028">6531</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2029" toSubLevel="2029">6644</value>
-					<value fromLevel="2" toLevel="6" fromSubLevel="2030" toSubLevel="2030">6757</value>
-				</power>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10776" toLevel="4" name="Final Ultimate Escape">
@@ -2520,12 +2437,7 @@
 				</power>
 				<criticalChance>
 					<value fromLevel="1" toLevel="4">5</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="4">1</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
-				</pDefMod>
 			</effect>
 		</effects>
 	</skill>

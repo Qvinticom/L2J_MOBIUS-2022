@@ -1680,12 +1680,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10525" toLevel="7" name="Shadow Dash">
@@ -3571,18 +3565,6 @@
 				<chance>80</chance>
 				<targetType>SELF</targetType>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
-				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10559" toLevel="1" name="Elusive Mirage">
@@ -3636,18 +3618,6 @@
 			<effect name="FatalBlowRate">
 				<amount>10</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
-				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

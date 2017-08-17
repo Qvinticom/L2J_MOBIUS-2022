@@ -74,7 +74,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">20</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType> <!-- Guessed -->
 		<operateType>A2</operateType>
@@ -104,12 +103,6 @@
 					<value level="5">6400</value>
 					<value level="6">6800</value>
 					<value level="7">7300</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1484,12 +1477,6 @@
 			<effect name="PAtk" fromLevel="2" toLevel="3" fromSubLevel="2001" toSubLevel="2030">
 				<amount>
 					<value fromLevel="2" toLevel="3" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk" fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="2" toLevel="3" fromSubLevel="3001" toSubLevel="3030">{0.4 + 0.6 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

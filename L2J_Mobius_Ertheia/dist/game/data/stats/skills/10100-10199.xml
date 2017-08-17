@@ -5,8 +5,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill10100</icon>
@@ -163,12 +161,6 @@
 				</amount>
 				<attribute>DARK</attribute>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10101" toLevel="4" name="Templar's Frenzy">
@@ -176,8 +168,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill10101</icon>
@@ -289,12 +279,6 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10102" toLevel="6" name="Shadow Slash">
@@ -307,7 +291,6 @@
 		<affectRange>150</affectRange>
 		<activateRate>
 			<value fromLevel="1" toLevel="6">50</value>
-			<value fromLevel="3" toLevel="6" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<nextAction>ATTACK</nextAction>
@@ -353,7 +336,6 @@
 					<value level="4">36897</value>
 					<value level="5">38593</value>
 					<value level="6">40289</value>
-					<value fromLevel="3" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -371,7 +353,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
 			<value fromLevel="1" toLevel="6">60</value>
-			<value fromLevel="3" toLevel="6" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
@@ -417,7 +398,6 @@
 					<value level="4">20111</value>
 					<value level="5">21091</value>
 					<value level="6">22071</value>
-					<value fromLevel="3" toLevel="6" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 			</effect>
 			<effect name="Speed">

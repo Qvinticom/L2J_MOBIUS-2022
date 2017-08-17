@@ -284,7 +284,6 @@
 					<value level="9">184</value>
 					<value level="10">192</value>
 					<value level="11">200</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -301,15 +300,8 @@
 					<value level="9">30</value>
 					<value level="10">30</value>
 					<value level="11">30</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="ManaCharge" fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{subIndex}</value>
-				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -511,7 +503,6 @@
 		</mpConsume>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">5</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<mpInitialConsume>
@@ -613,7 +604,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">5</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
@@ -688,7 +678,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">5</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<isMagic>1</isMagic>
@@ -760,40 +749,6 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>INVINCIBILITY_SPECIAL</slot>
 			</effect>
-			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
-				<power>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">2072</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">2207</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">2342</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">2477</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">2612</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">2747</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">2882</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">3017</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">3152</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">3288</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">3423</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">3558</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">3693</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">3828</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">3964</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">4099</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">4234</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">4369</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">4594</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">4684</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">4774</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">4864</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">4955</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">5044</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">5135</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">5224</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">5315</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">5405</value>
-				</power>
-			</effect>
 		</effects>
 		<endEffects>
 			<effect name="CallSkill">
@@ -842,40 +797,6 @@
 			</effect>
 			<effect name="BlockAbnormalSlot">
 				<slot>INVINCIBILITY_SPECIAL</slot>
-			</effect>
-			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
-				<power>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">1936</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">2072</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">2207</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">2342</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">2477</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">2612</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">2747</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">2882</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">3017</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">3152</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">3288</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">3423</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">3558</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">3693</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">3828</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">3964</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">4099</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">4234</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">4369</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">4594</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">4684</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">4774</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">4864</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">4955</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">5044</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">5135</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">5224</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">5315</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">5405</value>
-				</power>
 			</effect>
 		</effects>
 		<endEffects>
@@ -939,7 +860,6 @@
 		</mpInitialConsume>
 		<castRange>
 			<value fromLevel="1" toLevel="11">600</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
 		<effectPoint>
 			<value level="1">867</value>
@@ -956,7 +876,6 @@
 		</effectPoint>
 		<effectRange>
 			<value fromLevel="1" toLevel="11">1100</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</effectRange>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1098,40 +1017,6 @@
 				</power>
 				<ticks>1</ticks>
 			</effect>
-			<effect name="Heal" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2001">1936</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2002" toSubLevel="2002">2072</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2003" toSubLevel="2003">2207</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2004" toSubLevel="2004">2342</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2005" toSubLevel="2005">2477</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2006" toSubLevel="2006">2612</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2007" toSubLevel="2007">2747</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2008" toSubLevel="2008">2882</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2009" toSubLevel="2009">3017</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2010" toSubLevel="2010">3152</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2011" toSubLevel="2011">3288</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2012" toSubLevel="2012">3423</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2013" toSubLevel="2013">3558</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2014" toSubLevel="2014">3693</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2015" toSubLevel="2015">3828</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2016" toSubLevel="2016">3964</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2017" toSubLevel="2017">4099</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2018" toSubLevel="2018">4234</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2019" toSubLevel="2019">4369</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2020" toSubLevel="2020">4504</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2021" toSubLevel="2021">4594</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2022" toSubLevel="2022">4684</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2023" toSubLevel="2023">4774</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2024" toSubLevel="2024">4864</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2025" toSubLevel="2025">4955</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2026" toSubLevel="2026">5044</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2027" toSubLevel="2027">5135</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2028" toSubLevel="2028">5224</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2029" toSubLevel="2029">5315</value>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2030" toSubLevel="2030">5405</value>
-				</power>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="11762" toLevel="1" name="Balance Heal">
@@ -1162,15 +1047,8 @@
 			<effect name="HealOverTime">
 				<power>
 					<value fromLevel="1" toLevel="1">333</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 				</power>
 				<ticks>1</ticks>
-			</effect>
-			<effect name="ManaCharge" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{subIndex}</value>
-				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1831,10 +1709,6 @@
 			<effect name="CallSkill">
 				<skillId>11835</skillId>
 				<skillLevel>1</skillLevel>
-				<skillSubLevel>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{1000 + subIndex}</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{2000 + subIndex}</value>
-				</skillSubLevel>
 			</effect>
 		</selfEffects>
 	</skill>

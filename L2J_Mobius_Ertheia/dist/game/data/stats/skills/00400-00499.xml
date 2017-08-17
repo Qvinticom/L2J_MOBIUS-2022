@@ -667,12 +667,6 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="13" toLevel="17" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="405" toLevel="10" name="Banish Undead">
@@ -2613,7 +2607,6 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<effectPoint>673</effectPoint>

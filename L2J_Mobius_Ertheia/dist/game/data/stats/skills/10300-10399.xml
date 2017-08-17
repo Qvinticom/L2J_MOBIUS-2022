@@ -302,7 +302,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skill11834</icon>
@@ -374,12 +373,6 @@
 					<item> POLE</item>
 					<item> DUALBLUNT</item>
 				</weaponType>
-			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -791,17 +784,11 @@
 					<value level="5">27419</value>
 					<value level="6">28665</value>
 					<value level="7">29911</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15
 					<value fromLevel="1" toLevel="7">15</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="7">1</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
-				</pDefMod>
 				<chargeConsume>3</chargeConsume>
 			</effect>
 		</effects>
@@ -899,7 +886,6 @@
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">50</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -951,7 +937,6 @@
 					<value level="5">35788</value>
 					<value level="6">37424</value>
 					<value level="7">39060</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -959,12 +944,6 @@
 			</effect>
 			<effect name="BlockActions" />
 			<effect name="TargetCancel" />
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10322" toLevel="1" name="Wolf's Cry">
@@ -972,7 +951,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<icon>icon.skll10320</icon>
@@ -1010,12 +988,6 @@
 			</effect>
 			<effect name="MaxHp">
 				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1256,7 +1228,6 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<activateRate>
 			<value fromLevel="1" toLevel="7">60</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1306,12 +1277,10 @@
 					<value level="5">32405</value>
 					<value level="6">34205</value>
 					<value level="7">36005</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>				
 				<criticalChance>
 					<value fromLevel="1" toLevel="7">15</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>0.7</pDefMod>
 			</effect>

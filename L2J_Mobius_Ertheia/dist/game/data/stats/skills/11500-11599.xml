@@ -410,7 +410,6 @@
 		</mpConsume>
 		<castRange>
 			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
@@ -456,7 +455,6 @@
 			<condition name="OpCheckCastRange">
 				<distance>
 					<value fromLevel="1" toLevel="9">200</value>
-					<value fromLevel="5" toLevel="9" fromSubLevel="3001" toSubLevel="3030">{base - (3 * subIndex)}</value>
 				</distance>
 			</condition>
 		</conditions>
@@ -2324,12 +2322,6 @@
  				</amount>
  				<mode>PER</mode>
  			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="11534" toLevel="6" name="Angel's Touch">
@@ -2799,24 +2791,6 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6030">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="6001" toSubLevel="6030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7030">
- 				<amount>
- 					<value fromLevel="3" toLevel="7" fromSubLevel="7001" toSubLevel="7030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="7" fromSubLevel="8001" toSubLevel="8030">
-				<amount>
-					<value fromLevel="7" toLevel="7" fromSubLevel="8001" toSubLevel="8030">{2 * subIndex}</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="11541" toLevel="1" name="Polymorph">
@@ -2854,7 +2828,6 @@
 			<effect name="Speed">
 				<amount>
 					<value fromLevel="1" toLevel="1">-50</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="6001" toSubLevel="6030">{base + subIndex * 1.5}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2865,46 +2838,6 @@
 			<effect name="PhysicalDefence">
 				<amount>4500</amount>
 				<mode>DIFF</mode>
-			</effect>
-			<effect name="Heal" fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4030">
-				<power>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4001" toSubLevel="4001">1936</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4002" toSubLevel="4002">2072</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4003" toSubLevel="4003">2207</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4004" toSubLevel="4004">2342</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4005" toSubLevel="4005">2477</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4006" toSubLevel="4006">2612</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4007" toSubLevel="4007">2747</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4008" toSubLevel="4008">2882</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4009" toSubLevel="4009">3017</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4010" toSubLevel="4010">3152</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4011" toSubLevel="4011">3288</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4012" toSubLevel="4012">3423</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4013" toSubLevel="4013">3558</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4014" toSubLevel="4014">3693</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4015" toSubLevel="4015">3828</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4016" toSubLevel="4016">3964</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4017" toSubLevel="4017">4099</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4018" toSubLevel="4018">4234</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4019" toSubLevel="4019">4369</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4020" toSubLevel="4020">4504</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4021" toSubLevel="4021">4594</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4022" toSubLevel="4022">4684</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4023" toSubLevel="4023">4774</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4024" toSubLevel="4024">4864</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4025" toSubLevel="4025">4955</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4026" toSubLevel="4026">5044</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4027" toSubLevel="4027">5135</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4028" toSubLevel="4028">5224</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4029" toSubLevel="4029">5315</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="4030" toSubLevel="4030">5405</value>
-				</power>
-			</effect>
-			<effect name="ManaHealOverTime" fromLevel="1" toLevel="1" fromSubLevel="5001" toSubLevel="5030">
-				<power>
-					<value fromLevel="1" toLevel="1" fromSubLevel="5001" toSubLevel="5030">{16 + subIndex}</value>
-				</power>
-				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
@@ -3013,18 +2946,6 @@
 				<amount>-80</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6030">
- 				<amount>
- 					<value fromLevel="2" toLevel="6" fromSubLevel="6001" toSubLevel="6030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7030">
- 				<amount>
- 					<value fromLevel="2" toLevel="6" fromSubLevel="7001" toSubLevel="7030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
 		</effects>
 	</skill>
 	<skill id="11544" toLevel="1" name="Battle Rhapsody">
@@ -3077,12 +2998,6 @@
  				</amount>
  				<mode>PER</mode>
  			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
- 				</amount>
- 				<mode>DIFF</mode>
- 			</effect>
 		</effects>
 	</skill>
 	<skill id="11545" toLevel="1" name="Crazy Nocturne">
@@ -3116,24 +3031,6 @@
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
-			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
- 				</amount>
- 				<mode>DIFF</mode>
- 			</effect>
 		</effects>
 	</skill>
 	<skill id="11546" toLevel="4" name="Chaos Symphony">
@@ -4167,7 +4064,6 @@
 		<abnormalVisualEffect>CHANGEBODY</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">60</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -4176,7 +4072,6 @@
 		<trait>CHANGEBODY</trait>
 		<affectRange>
 			<value fromLevel="1" toLevel="7">200</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</affectRange>
 		<magicLvl>
 			<value level="1">85</value>
@@ -4199,11 +4094,9 @@
 		<removedOnDamage>true</removedOnDamage>
 		<castRange>
 			<value fromLevel="1" toLevel="7">900</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</castRange>
 		<effectRange>
 			<value fromLevel="1" toLevel="7">1400</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
 		</effectRange>
 		<hitTime>1410</hitTime>
 		<coolTime>500</coolTime>

@@ -517,7 +517,6 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<effectPoint>687</effectPoint>
@@ -586,18 +585,6 @@
 					<item>CROSSBOW</item>
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
-			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -670,7 +657,6 @@
 		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1030">{1800 + subIndex * 90}</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<icon>icon.skill11871</icon>
@@ -736,18 +722,6 @@
 					<item>CROSSBOW</item>
 					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
-			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{2 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>

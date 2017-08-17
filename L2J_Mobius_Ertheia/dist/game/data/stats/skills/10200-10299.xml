@@ -1168,12 +1168,6 @@
 				<chance>60</chance>
 			</effect>
 			<effect name="BlockActions" />
-			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">
-				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3030">{-0.6 - 0.4 * subIndex}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="10266" toLevel="11" name="Giant Punch">
@@ -1554,18 +1548,6 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
-				<amount>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{-1 - ((subIndex - 1} * 0.5)}</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
 		</effects>
 	</skill>
 	<skill id="10271" toLevel="2" name="Power Provoke">
@@ -1901,7 +1883,6 @@
 				</criticalChance>
 				<pDefMod>
 					<value fromLevel="1" toLevel="4">0.7</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -2284,10 +2265,6 @@
 					<value fromLevel="1" toLevel="5">5</value>
 					<value fromLevel="1" toLevel="5" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 				</criticalChance>
-				<pDefMod>
-					<value fromLevel="1" toLevel="5">1</value>
-					<value fromLevel="1" toLevel="5" fromSubLevel="3001" toSubLevel="3030">{0.99 - 0.006 * (subIndex - 1)}</value>
-				</pDefMod>
 			</effect>
 			<effect name="KnockBack">
 				<speed>700</speed>
@@ -3015,12 +2992,6 @@
 				<ANIMAL_WEAKNESS>10</ANIMAL_WEAKNESS>
 				<PLANT_WEAKNESS>10</PLANT_WEAKNESS>
 			</effect>
- 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
 		</effects>
 	</skill>
 	<skill id="10297" toLevel="1" name="Spirit of the Slayer">
@@ -3051,12 +3022,6 @@
 				<CONSTRUCT_WEAKNESS>10</CONSTRUCT_WEAKNESS>
 				<DRAGON_WEAKNESS>10</DRAGON_WEAKNESS>
 			</effect>
- 			<effect name="PAtk" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
- 				<amount>
- 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{0.6 + 0.4 * subIndex}</value>
- 				</amount>
- 				<mode>PER</mode>
- 			</effect>
 		</effects>
 	</skill>
 	<skill id="10298" toLevel="1" name="Power Revival">
@@ -3083,74 +3048,6 @@
 			</effect>
 			<effect name="ManaHealPercent">
 				<power>50</power>
-			</effect>
-			<effect name="ManaHeal" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">
-				<power>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1001">532</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1002" toSubLevel="1002">570</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1003" toSubLevel="1003">607</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1004" toSubLevel="1004">644</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1005" toSubLevel="1005">681</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1006" toSubLevel="1006">718</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1007" toSubLevel="1007">756</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1008" toSubLevel="1008">793</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1009" toSubLevel="1009">830</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1010" toSubLevel="1010">867</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1011">904</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1012" toSubLevel="1012">942</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1013" toSubLevel="1013">979</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1014" toSubLevel="1014">1016</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1015" toSubLevel="1015">1053</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1016" toSubLevel="1016">1090</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1017" toSubLevel="1017">1128</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1018" toSubLevel="1018">1165</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1019" toSubLevel="1019">1202</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">1240</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1021" toSubLevel="1021">1264</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1022" toSubLevel="1022">1289</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1023" toSubLevel="1023">1314</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1024" toSubLevel="1024">1339</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1025" toSubLevel="1025">1363</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1026" toSubLevel="1026">1389</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1027" toSubLevel="1027">1413</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1028" toSubLevel="1028">1438</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1029" toSubLevel="1029">1463</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="1030" toSubLevel="1030">1488</value>
-				</power>
-			</effect>
-			<effect name="CpHeal" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">
-				<power>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2001">2421</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2002" toSubLevel="2002">2590</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2003" toSubLevel="2003">2759</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2004" toSubLevel="2004">2928</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2005" toSubLevel="2005">3097</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2006" toSubLevel="2006">3265</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2007" toSubLevel="2007">3434</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2008" toSubLevel="2008">3603</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2009" toSubLevel="2009">3772</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2010" toSubLevel="2010">3941</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2011" toSubLevel="2011">4110</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2012" toSubLevel="2012">4279</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2013" toSubLevel="2013">4448</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2014" toSubLevel="2014">4617</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2015" toSubLevel="2015">4786</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2016" toSubLevel="2016">4955</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2017" toSubLevel="2017">5124</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2018" toSubLevel="2018">5293</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2019" toSubLevel="2019">5462</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2020" toSubLevel="2020">5631</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2021" toSubLevel="2021">5743</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2022" toSubLevel="2022">5856</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2023" toSubLevel="2023">5968</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2024" toSubLevel="2024">6081</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2025" toSubLevel="2025">6194</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2026" toSubLevel="2026">6306</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2027" toSubLevel="2027">6419</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2028" toSubLevel="2028">6531</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2029" toSubLevel="2029">6644</value>
-					<value fromLevel="1" toLevel="1" fromSubLevel="2030" toSubLevel="2030">6757</value>
-				</power>
 			</effect>
 		</effects>
 	</skill>

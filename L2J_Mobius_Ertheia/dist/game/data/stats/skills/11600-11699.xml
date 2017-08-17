@@ -300,7 +300,6 @@
 		<icon>icon.skill11606new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -339,7 +338,6 @@
 		<icon>icon.skill11605new</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -757,8 +755,6 @@
 		<abnormalLvl>1</abnormalLvl> <!-- Guessed -->
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
@@ -800,8 +796,6 @@
 		<icon>icon.skill11614</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">30</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -861,7 +855,6 @@
 		<icon>icon.skill11615</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
@@ -914,7 +907,6 @@
 		<icon>icon.skill11616</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
@@ -963,7 +955,6 @@
 		<icon>icon.skill11617</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
@@ -1014,7 +1005,6 @@
 		<icon>icon.skill11618</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
-			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>DITTY</abnormalType>
