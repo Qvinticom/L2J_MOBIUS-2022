@@ -19,6 +19,3 @@ What is done
 
 TODO
 -Modify all skill levels/sublevels based on client
-
-Known issues
--Skill enchanting must be reworked

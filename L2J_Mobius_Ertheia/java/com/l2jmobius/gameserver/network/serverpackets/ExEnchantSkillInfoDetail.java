@@ -41,14 +41,7 @@ public class ExEnchantSkillInfoDetail implements IClientOutgoingPacket
 	{
 		_type = type;
 		_skillId = skillId;
-		if (skillSubLvl > 1000)
-		{
-			_skillLvl=SkillEnchantConverter.levelToUnderground(skillSubLvl);
-		}
-		else
-		{
-			_skillLvl = skillLvl;
-		}
+		_skillLvl = skillSubLvl > 1000 ? SkillEnchantConverter.levelToErtheia(skillSubLvl) : skillLvl;
 		_enchantSkillHolder = EnchantSkillGroupsData.getInstance().getEnchantSkillHolder(skillSubLvl % 1000);
 	}
 	

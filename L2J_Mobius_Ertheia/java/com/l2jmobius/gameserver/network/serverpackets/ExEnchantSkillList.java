@@ -49,8 +49,7 @@ public class ExEnchantSkillList implements IClientOutgoingPacket
 		for (Skill skill : _skills)
 		{
 			packet.writeD(skill.getId());
-			packet.writeH(skill.getLevel());
-			packet.writeH(skill.getSubLevel());
+			packet.writeD(skill.getLevel());
 		}
 		return true;
 	}
