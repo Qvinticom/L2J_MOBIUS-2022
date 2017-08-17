@@ -30,6 +30,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.tasks.StartMovingTask;
 import com.l2jmobius.gameserver.model.L2NpcWalkerNode;
@@ -180,9 +181,16 @@ public final class WalkingManager implements IGameXmlReader
 							final int y = Integer.parseInt(attrs.getNamedItem("spawnY").getNodeValue());
 							final int z = Integer.parseInt(attrs.getNamedItem("spawnZ").getNodeValue());
 							
-							final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
-							holder.addRoute(routeName, new Location(x, y, z));
-							_routesToAttach.put(npcId, holder);
+							if (NpcData.getInstance().getTemplate(npcId) != null)
+							{
+								final NpcRoutesHolder holder = _routesToAttach.containsKey(npcId) ? _routesToAttach.get(npcId) : new NpcRoutesHolder();
+								holder.addRoute(routeName, new Location(x, y, z));
+								_routesToAttach.put(npcId, holder);
+							}
+							else
+							{
+								LOGGER.warning(getClass().getSimpleName() + ": NPC with id " + npcId + " for route '" + routeName + "' does not exist.");
+							}
 						}
 						catch (Exception e)
 						{
