@@ -15,6 +15,7 @@ What is done
 -Skilltrees
 -Parsed NPC names from client
 -Parsed item names from client
+-Parsed skill names from client
 
 TODO
 -Modify all skill levels/sublevels based on client
