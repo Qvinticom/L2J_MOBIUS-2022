@@ -16852,4 +16852,160 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
+	<door id="15240001" name="Hellfire_Du_Boss_S.Hellfire_Boss_door">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-10250">
+			<node x="-148322" y="209722" />
+			<node x="-148292" y="209722" />
+			<node x="-148289" y="210010" />
+			<node x="-148322" y="210011" />
+		</nodes>
+		<location x="-148306" y="209866" z="-10024" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="15240002" name="Hellfire_Du_Boss_S.Hellfire_Boss_door">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-10086">
+			<node x="-147408" y="210956" />
+			<node x="-147122" y="210957" />
+			<node x="-147122" y="211000" />
+			<node x="-147406" y="211000" />
+		</nodes>
+		<location x="-147264" y="210978" z="-9857" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="16200201" name="nornil_cave_S.nornil_mover" emmiterId="16200202" isInverted="true">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-12616">
+			<node x="-118879" y="87320" />
+			<node x="-118878" y="87034" />
+			<node x="-118860" y="87034" />
+			<node x="-118857" y="87320" />
+		</nodes>
+		<location x="-118868" y="87177" z="-12616" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="17230101" name="Combine_dun_S.Comb_inst_door_01">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-10501">
+			<node x="-88633" y="186044" />
+			<node x="-88384" y="186044" />
+			<node x="-88384" y="186100" />
+			<node x="-88633" y="186100" />
+		</nodes>
+		<location x="-88508" y="186074" z="-10484" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="17230104" name="Combine_dun_S.Comb_inst_door_01">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-10501">
+			<node x="-88631" y="174742" />
+			<node x="-88382" y="174742" />
+			<node x="-88382" y="174798" />
+			<node x="-88631" y="174798" />
+		</nodes>
+		<location x="-88506" y="174772" z="-10484" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="17230102" name="Combine_dun_S.Comb_inst_door_01">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-10501">
+			<node x="-88631" y="182291" />
+			<node x="-88382" y="182291" />
+			<node x="-88382" y="182347" />
+			<node x="-88631" y="182347" />
+		</nodes>
+		<location x="-88506" y="182321" z="-10484" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="17230103" name="Combine_dun_S.Comb_inst_door_01">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-10501">
+			<node x="-88631" y="178518" />
+			<node x="-88382" y="178518" />
+			<node x="-88382" y="178574" />
+			<node x="-88631" y="178574" />
+		</nodes>
+		<location x="-88506" y="178548" z="-10484" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="18170002" name="Instant_du02_s.penetration.Instant_du02_em_02" emmiterId="18170104">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-12247">
+			<node x="-44190" y="-16384" />
+			<node x="-44137" y="-16383" />
+			<node x="-44140" y="-16095" />
+			<node x="-44186" y="-16095" />
+		</nodes>
+		<location x="-44163" y="-16240" z="-12243" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status targetable="false" showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="18170008" name="Instant_du02_s.penetration.Instant_du02_em_02" emmiterId="18170404">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-11464">
+			<node x="-51276" y="-16381" />
+			<node x="-51223" y="-16380" />
+			<node x="-51226" y="-16092" />
+			<node x="-51272" y="-16092" />
+		</nodes>
+		<location x="-51249" y="-16237" z="-11460" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status targetable="false" showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="18170006" name="Instant_du02_s.penetration.Instant_du02_em_02" emmiterId="18170304">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-11724">
+			<node x="-48849" y="-16382" />
+			<node x="-48796" y="-16381" />
+			<node x="-48799" y="-16093" />
+			<node x="-48845" y="-16093" />
+		</nodes>
+		<location x="-48822" y="-16238" z="-11720" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status targetable="false" showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="18170004" name="Instant_du02_s.penetration.Instant_du02_em_02" emmiterId="18170204">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-11986">
+			<node x="-46521" y="-16383" />
+			<node x="-46468" y="-16382" />
+			<node x="-46471" y="-16094" />
+			<node x="-46517" y="-16094" />
+		</nodes>
+		<location x="-46494" y="-16239" z="-11982" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status targetable="false" showHp="false" />
+		<openStatus default="close" />
+	</door>
+	<door id="18190004" name="Embryo_Astatine_S.E_A_Gate_door_01">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-2224">
+			<node x="-55164" y="52811" />
+			<node x="-55049" y="52808" />
+			<node x="-55049" y="52833" />
+			<node x="-55163" y="52834" />
+		</nodes>
+		<location x="-55156" y="52821" z="-2212" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" />
+	</door>
 </list>
