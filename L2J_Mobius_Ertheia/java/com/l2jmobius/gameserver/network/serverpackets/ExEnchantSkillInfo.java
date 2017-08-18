@@ -47,29 +47,14 @@ public final class ExEnchantSkillInfo implements IClientOutgoingPacket
 		OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
 		
 		packet.writeD(_skillId);
-		if (_skillSubLevel > 1000)
-		{
-			packet.writeD(SkillEnchantConverter.levelToErtheia(_skillSubLevel));
-		}
-		else
-		{
-			packet.writeD(_skillLevel);
-		}
+		packet.writeD(_skillSubLevel > 1000 ? SkillEnchantConverter.levelToErtheia(_skillSubLevel) : _skillLevel);
 		packet.writeD((_skillSubLevel % 1000) == EnchantSkillGroupsData.MAX_ENCHANT_LEVEL ? 0 : 1);
 		packet.writeD(_skillSubLevel > 1000 ? 1 : 0);
 		packet.writeD(_routes.size());
 		_routes.forEach(route ->
 		{
 			int subLevel = (_currentSubLevel > 0 ? (route + (_currentSubLevel % 1000)) - 1 : route);
-			if (subLevel > 1000)
-			{
-				subLevel = SkillEnchantConverter.levelToErtheia(subLevel);
-			}
-			// Skip a level?
-			// final int routeId = route / 1000;
-			// final int currentRouteId = _skillSubLevel / 1000;
-			// packet.writeD(currentRouteId != routeId ? subLevel : subLevel + 1);
-			packet.writeD(subLevel);
+			packet.writeD(subLevel > 1000 ? SkillEnchantConverter.levelToErtheia(subLevel) : subLevel);
 		});
 		return true;
 	}

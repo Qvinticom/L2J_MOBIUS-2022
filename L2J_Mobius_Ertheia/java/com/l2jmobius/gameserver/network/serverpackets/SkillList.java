@@ -71,14 +71,7 @@ public final class SkillList implements IClientOutgoingPacket
 		for (Skill temp : _skills)
 		{
 			packet.writeD(temp.passive ? 1 : 0);
-			if (temp.subLevel > 1000)
-			{
-				packet.writeD(SkillEnchantConverter.levelToErtheia(temp.subLevel));
-			}
-			else
-			{
-				packet.writeD(temp.level);
-			}
+			packet.writeD(temp.subLevel > 1000 ? SkillEnchantConverter.levelToErtheia(temp.subLevel) : temp.level);
 			packet.writeD(temp.id);
 			packet.writeD(temp.reuseDelayGroup); // GOD ReuseDelayShareGroupID
 			packet.writeC(temp.disabled ? 1 : 0); // iSkillDisabled
