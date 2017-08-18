@@ -212,7 +212,10 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 				final ClassId newClass = ClassId.STRATOMANCER;
 				if (qs.isCond(10) && newClass.childOf(player.getClassId()))
 				{
-					player.setBaseClass(newClass);
+					if (!player.isSubClassActive())
+					{
+						player.setBaseClass(newClass);
+					}
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
 					player.sendSkillList();
@@ -231,7 +234,10 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 				final ClassId newClass = ClassId.RIPPER;
 				if (qs.isCond(11) && newClass.childOf(player.getClassId()))
 				{
-					player.setBaseClass(newClass);
+					if (!player.isSubClassActive())
+					{
+						player.setBaseClass(newClass);
+					}
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
 					player.sendSkillList();

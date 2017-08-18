@@ -127,8 +127,11 @@ public final class Q10360_CertificationOfFate extends Quest
 			case "30288-04.htm":
 			case "30289-04.htm":
 			{
-				st.startQuest();
-				htmltext = event;
+				if (!player.isSubClassActive())
+				{
+					st.startQuest();
+					htmltext = event;
+				}
 				break;
 			}
 			case "teleport":
@@ -207,6 +210,11 @@ public final class Q10360_CertificationOfFate extends Quest
 				}
 				else if (event.startsWith("classChange;"))
 				{
+					if (player.isSubClassActive())
+					{
+						return null;
+					}
+					
 					final ClassId newClassId = ClassId.getClassId(Integer.parseInt(event.replace("classChange;", "")));
 					final ClassId currentClassId = player.getClassId();
 					

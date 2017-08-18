@@ -319,7 +319,10 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				final ClassId newClass = ClassId.EVISCERATOR;
 				if (qs.isCond(18) && newClass.childOf(player.getClassId()))
 				{
-					player.setBaseClass(newClass);
+					if (!player.isSubClassActive())
+					{
+						player.setBaseClass(newClass);
+					}
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
 					player.sendSkillList();
@@ -338,7 +341,10 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				final ClassId newClass = ClassId.SAYHA_SEER;
 				if (qs.isCond(18) && newClass.childOf(player.getClassId()))
 				{
-					player.setBaseClass(newClass);
+					if (!player.isSubClassActive())
+					{
+						player.setBaseClass(newClass);
+					}
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
 					player.sendSkillList();

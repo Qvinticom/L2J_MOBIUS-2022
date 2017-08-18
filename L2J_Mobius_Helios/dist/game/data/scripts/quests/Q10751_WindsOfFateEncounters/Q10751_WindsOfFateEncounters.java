@@ -210,7 +210,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 				final ClassId newClass = ClassId.CLOUD_BREAKER;
 				if (qs.isCond(9) && newClass.childOf(player.getClassId()))
 				{
-					player.setBaseClass(newClass);
+					if (!player.isSubClassActive())
+					{
+						player.setBaseClass(newClass);
+					}
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
 					player.sendSkillList();
@@ -230,7 +233,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 				final ClassId newClass = ClassId.MARAUDER;
 				if (qs.isCond(8) && newClass.childOf(player.getClassId()))
 				{
-					player.setBaseClass(newClass);
+					if (!player.isSubClassActive())
+					{
+						player.setBaseClass(newClass);
+					}
 					player.setClassId(newClass.getId());
 					player.broadcastUserInfo();
 					player.sendSkillList();
