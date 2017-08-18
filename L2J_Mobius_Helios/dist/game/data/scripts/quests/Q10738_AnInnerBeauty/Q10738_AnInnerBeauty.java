@@ -30,7 +30,7 @@ import quests.Q10737_GrakonsWarehouse.Q10737_GrakonsWarehouse;
  */
 public final class Q10738_AnInnerBeauty extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int GRAKON = 33947;
 	private static final int EVNA = 33935;
 	// Items
@@ -66,10 +66,14 @@ public final class Q10738_AnInnerBeauty extends Quest
 			case "33947-02.htm":
 			case "33947-03.htm":
 			case "33935-02.html":
+			{
 				break;
+			}
 			case "33947-04.htm":
 			{
 				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				giveItems(player, GRAKON_S_NOTE, 1);
 				break;
 			}
@@ -84,7 +88,9 @@ public final class Q10738_AnInnerBeauty extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

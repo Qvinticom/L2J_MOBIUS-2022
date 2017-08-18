@@ -73,11 +73,15 @@ public final class Q10737_GrakonsWarehouse extends Quest
 			case "33943-02.htm":
 			case "33947-03.html":
 			case "33947-04.html":
+			{
 				break;
+			}
 			case "33942-03.htm":
 			case "33943-03.htm":
 			{
 				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				giveItems(player, APPRENTICE_SUPPORT_BOX);
 				break;
 			}
@@ -102,7 +106,9 @@ public final class Q10737_GrakonsWarehouse extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

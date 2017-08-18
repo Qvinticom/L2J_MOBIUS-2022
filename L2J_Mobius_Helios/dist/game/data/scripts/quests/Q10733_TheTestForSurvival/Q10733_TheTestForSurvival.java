@@ -63,7 +63,9 @@ public final class Q10733_TheTestForSurvival extends Quest
 		switch (event)
 		{
 			case "34005-02.html":
+			{
 				break;
+			}
 			case "33932-02.htm":
 			{
 				qs.startQuest();

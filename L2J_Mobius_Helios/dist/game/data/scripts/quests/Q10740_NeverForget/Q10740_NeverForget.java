@@ -35,7 +35,7 @@ import ai.areas.FaeronVillage.RemembranceTower.RemembranceTower;
  */
 public final class Q10740_NeverForget extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int SIVANTHE = 33951;
 	private static final int REMEMBERANCE_TOWER = 33989;
 	// Items
@@ -78,7 +78,9 @@ public final class Q10740_NeverForget extends Quest
 		switch (event)
 		{
 			case "33951-02.htm":
+			{
 				break;
+			}
 			case "33951-03.htm":
 			{
 				qs.startQuest();
@@ -99,7 +101,9 @@ public final class Q10740_NeverForget extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

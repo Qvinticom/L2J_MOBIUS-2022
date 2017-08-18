@@ -34,7 +34,7 @@ import quests.Q10738_AnInnerBeauty.Q10738_AnInnerBeauty;
  */
 public final class Q10739_SupplyAndDemand extends Quest
 {
-	// NPC's
+	// NPCs
 	private static final int EVNA = 33935;
 	private static final int DENYA = 33934;
 	private static final int PELU = 33936;
@@ -78,7 +78,9 @@ public final class Q10739_SupplyAndDemand extends Quest
 		switch (event)
 		{
 			case "33935-02.htm":
+			{
 				break;
+			}
 			case "33935-03.htm":
 			{
 				qs.startQuest();
@@ -113,7 +115,9 @@ public final class Q10739_SupplyAndDemand extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		
 		return htmltext;

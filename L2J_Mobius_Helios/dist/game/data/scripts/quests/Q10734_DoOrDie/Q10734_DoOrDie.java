@@ -83,7 +83,9 @@ public final class Q10734_DoOrDie extends Quest
 			case "33942-02.htm":
 			case "33943-02.htm":
 			case "33950-02.html":
+			{
 				break;
+			}
 			case "33942-03.htm":
 			case "33943-03.htm":
 			{
@@ -108,7 +110,9 @@ public final class Q10734_DoOrDie extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

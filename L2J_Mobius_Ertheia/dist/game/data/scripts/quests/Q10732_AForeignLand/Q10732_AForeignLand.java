@@ -58,10 +58,14 @@ public final class Q10732_AForeignLand extends Quest
 		switch (event)
 		{
 			case "33931-02.htm":
+			{
 				break;
+			}
 			case "33931-03.htm":
 			{
 				qs.startQuest();
+				qs.setCond(2); // arrow hack
+				qs.setCond(1);
 				player.sendPacket(ExShowUsm.ERTHEIA_FIRST_QUEST);
 				break;
 			}
@@ -77,7 +81,9 @@ public final class Q10732_AForeignLand extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
