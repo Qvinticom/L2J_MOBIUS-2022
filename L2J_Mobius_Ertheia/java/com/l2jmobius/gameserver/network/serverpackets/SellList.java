@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class SellList implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
-	private final L2MerchantInstance _lease;
+	private final L2MerchantInstance _merchant;
 	private final long _money;
 	private final List<L2ItemInstance> _sellList;
 	
@@ -44,10 +44,10 @@ public class SellList implements IClientOutgoingPacket
 	public SellList(L2PcInstance player, L2MerchantInstance lease)
 	{
 		_activeChar = player;
-		_lease = lease;
+		_merchant = lease;
 		_money = _activeChar.getAdena();
 		
-		if (_lease == null)
+		if (_merchant == null)
 		{
 			_sellList = new LinkedList<>();
 			final L2Summon pet = _activeChar.getPet();
@@ -71,15 +71,15 @@ public class SellList implements IClientOutgoingPacket
 		OutgoingPackets.SELL_LIST.writeId(packet);
 		
 		packet.writeQ(_money);
-		packet.writeD(_lease == null ? 0x00 : 1000000 + _lease.getTemplate().getId());
+		packet.writeD(_merchant == null ? 0x00 : 1000000 + _merchant.getTemplate().getId());
 		packet.writeH(_sellList.size());
 		
 		for (L2ItemInstance item : _sellList)
 		{
 			int price = item.getItem().getReferencePrice() / 2;
-			if (_lease != null)
+			if (_merchant != null)
 			{
-				price -= (price * _lease.getTotalTaxRate(TaxType.SELL));
+				price -= (price * _merchant.getTotalTaxRate(TaxType.SELL));
 			}
 			
 			packet.writeH(item.getItem().getType1());
@@ -92,7 +92,7 @@ public class SellList implements IClientOutgoingPacket
 			packet.writeH(item.getEnchantLevel());
 			packet.writeH(0x00); // TODO: Verify me
 			packet.writeH(item.getCustomType2());
-			packet.writeQ(item.getItem().getReferencePrice() / 2);
+			packet.writeQ(price);
 			// T1
 			packet.writeH(item.getAttackAttributeType().getClientId());
 			packet.writeH(item.getAttackAttributePower());

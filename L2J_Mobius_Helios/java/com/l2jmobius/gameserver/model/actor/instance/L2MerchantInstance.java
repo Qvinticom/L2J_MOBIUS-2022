@@ -100,11 +100,6 @@ public class L2MerchantInstance extends L2NpcInstance
 		return getCastle() != null;
 	}
 	
-	public double getCastleTaxRate()
-	{
-		return hasCastle() ? getCastle().getTaxRate() : 0.0;
-	}
-	
 	public int getTotalTax(TaxType taxType)
 	{
 		return hasCastle() ? getCastle().getTaxPercent(taxType) : 0;

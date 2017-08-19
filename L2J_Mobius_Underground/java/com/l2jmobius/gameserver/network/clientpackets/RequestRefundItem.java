@@ -21,8 +21,8 @@ import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
@@ -92,7 +92,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 		}
 		
 		final L2Object target = player.getTarget();
-		L2Character merchant = null;
+		L2MerchantInstance merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
 			if (!(target instanceof L2MerchantInstance) || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != target.getInstanceId()))
@@ -100,7 +100,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			merchant = (L2Character) target;
+			merchant = (L2MerchantInstance) target;
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
@@ -164,7 +164,12 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			
 			final long count = item.getCount();
 			weight += count * template.getWeight();
-			adena += (count * template.getReferencePrice()) / 2;
+			long price = item.getReferencePrice() / 2;
+			if (merchant != null)
+			{
+				price -= (price * merchant.getTotalTaxRate(TaxType.SELL));
+			}
+			adena += price * count;
 			if (!template.isStackable())
 			{
 				slots += count;
@@ -208,6 +213,6 @@ public final class RequestRefundItem implements IClientIncomingPacket
 		
 		// Update current load status on player
 		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true));
+		client.sendPacket(new ExBuySellList(player, true, merchant != null ? merchant.getTotalTaxRate(TaxType.SELL) : 0));
 	}
 }

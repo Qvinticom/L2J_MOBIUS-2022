@@ -27,7 +27,6 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.enums.TaxType;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
@@ -105,7 +104,7 @@ public final class RequestSellItem implements IClientIncomingPacket
 		}
 		
 		final L2Object target = player.getTarget();
-		L2Character merchant = null;
+		L2MerchantInstance merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
 			if ((target == null) || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != target.getInstanceId()))
@@ -115,7 +114,7 @@ public final class RequestSellItem implements IClientIncomingPacket
 			}
 			if (target instanceof L2MerchantInstance)
 			{
-				merchant = (L2Character) target;
+				merchant = (L2MerchantInstance) target;
 			}
 			else
 			{
@@ -153,7 +152,11 @@ public final class RequestSellItem implements IClientIncomingPacket
 				continue;
 			}
 			
-			final long price = item.getReferencePrice() / 2;
+			long price = item.getReferencePrice() / 2;
+			if (merchant != null)
+			{
+				price -= (price * merchant.getTotalTaxRate(TaxType.SELL));
+			}
 			totalPrice += price * i.getCount();
 			if (((MAX_ADENA / i.getCount()) < price) || (totalPrice > MAX_ADENA))
 			{
@@ -171,19 +174,18 @@ public final class RequestSellItem implements IClientIncomingPacket
 			}
 		}
 		
+		player.addAdena("Sell", totalPrice, merchant, false);
+		
 		// add to castle treasury
-		if (merchant instanceof L2MerchantInstance)
+		if (merchant != null)
 		{
-			final L2MerchantInstance npc = ((L2MerchantInstance) merchant);
-			final long taxCollection = (long) (totalPrice * (1.0 - npc.getTotalTaxRate(TaxType.SELL)));
-			npc.getCastle().addToTreasury(taxCollection);
+			final long taxCollection = (long) (totalPrice * (1.0 - merchant.getTotalTaxRate(TaxType.SELL)));
+			merchant.getCastle().addToTreasury(taxCollection);
 			totalPrice -= taxCollection;
 		}
 		
-		player.addAdena("Sell", totalPrice, merchant, false);
-		
 		// Update current load as well
 		client.sendPacket(new ExUserInfoInvenWeight(player));
-		client.sendPacket(new ExBuySellList(player, true));
+		client.sendPacket(new ExBuySellList(player, true, merchant != null ? merchant.getTotalTaxRate(TaxType.SELL) : 0));
 	}
 }
