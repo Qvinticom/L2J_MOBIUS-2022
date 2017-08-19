@@ -79,7 +79,7 @@ public class ExBuySellList extends AbstractItemPacket
 			{
 				writeItem(packet, item);
 				packet.writeD(i++);
-				packet.writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
+				packet.writeQ((long) ((item.getItem().getReferencePrice() / 2) * _taxRate));
 			}
 		}
 		else

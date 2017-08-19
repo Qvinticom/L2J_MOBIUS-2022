@@ -176,12 +176,11 @@ public final class RequestSellItem implements IClientIncomingPacket
 		
 		player.addAdena("Sell", totalPrice, merchant, false);
 		
-		// add to castle treasury
+		// add to castle treasury?
 		if (merchant != null)
 		{
 			final long taxCollection = (long) (totalPrice * (1.0 - merchant.getTotalTaxRate(TaxType.SELL)));
 			merchant.getCastle().addToTreasury(taxCollection);
-			totalPrice -= taxCollection;
 		}
 		
 		// Update current load as well
