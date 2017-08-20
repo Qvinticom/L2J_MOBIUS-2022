@@ -190,12 +190,6 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				qs.setCond(2, true);
 				break;
 			}
-			case "cond4":
-			{
-				qs.setCond(4, true);
-				htmltext = "30174-05.html";
-				break;
-			}
 			case "31149-03.html":
 			{
 				giveItems(player, RESTORATION_REGEANT, 1);
@@ -444,7 +438,8 @@ public final class Q10753_WindsOfFateChoices extends Quest
 						{
 							giveItems(player, CRUDE_PHILOPERS_STONE, 1);
 							giveItems(player, EMPTY_REGEANT_FLASK, 1);
-							startQuestTimer("cond4", 100, null, player);
+							qs.setCond(4, true);
+							htmltext = "30174-05.html";
 						}
 						else if (qs.isCond(4))
 						{

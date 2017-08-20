@@ -45,9 +45,9 @@ import quests.Q10302_UnsettlingShadowAndRumors.Q10302_UnsettlingShadowAndRumors;
  */
 public class Q10304_ForForgottenHeroes extends Quest
 {
-	// Npc
+	// NPC
 	private static final int ISHAEL = 32894;
-	// mobs
+	// Monsters
 	private static final int YUI = 25837;
 	private static final int KINEN = 25840;
 	private static final int KONYAR = 25845;
@@ -56,7 +56,7 @@ public class Q10304_ForForgottenHeroes extends Quest
 	private static final int HORNAFI = 25839;
 	private static final int YONTYMAK = 25846;
 	private static final int RON = 25825;
-	// items;
+	// Items
 	private static final int EWR = 17526; // Scroll: Enchant Weapon (R-grade)
 	private static final int EAR = 17527; // Scroll: Enchant Armor (R-grade)
 	private static final int COKES = 36563; // Synthetic Cokes
@@ -96,16 +96,6 @@ public class Q10304_ForForgottenHeroes extends Quest
 			{
 				qs.setCond(2);
 				htmltext = event;
-				break;
-			}
-			case "cond8":
-			{
-				qs.setCond(8);
-				break;
-			}
-			case "cond9":
-			{
-				qs.setCond(9);
 				break;
 			}
 			case "reward1":
@@ -232,11 +222,11 @@ public class Q10304_ForForgottenHeroes extends Quest
 			}
 			else if ((npcId == YONTYMAK) && (cond == 7))
 			{
-				startQuestTimer("cond8", 300, null, player);
+				qs.setCond(8);
 			}
 			else if ((npcId == RON) && (cond == 8))
 			{
-				startQuestTimer("cond9", 300, null, player);
+				qs.setCond(8);
 			}
 		}
 		final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
