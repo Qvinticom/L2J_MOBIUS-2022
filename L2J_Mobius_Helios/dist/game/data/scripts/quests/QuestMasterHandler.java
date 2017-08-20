@@ -85,6 +85,7 @@ import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
 import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
+import quests.Q00245_ComeToMe.Q00245_ComeToMe;
 import quests.Q00254_LegendaryTales.Q00254_LegendaryTales;
 import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
@@ -504,6 +505,7 @@ public class QuestMasterHandler
 		Q00238_SuccessFailureOfBusiness.class,
 		Q00239_WontYouJoinUs.class,
 		Q00240_ImTheOnlyOneYouCanTrust.class,
+		Q00245_ComeToMe.class,
 		Q00254_LegendaryTales.class,
 		Q00270_TheOneWhoEndsSilence.class,
 		Q00278_HomeSecurity.class,
