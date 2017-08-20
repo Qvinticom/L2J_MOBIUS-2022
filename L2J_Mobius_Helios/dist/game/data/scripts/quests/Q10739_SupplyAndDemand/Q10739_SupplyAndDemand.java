@@ -100,7 +100,7 @@ public final class Q10739_SupplyAndDemand extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					qs.setCond(3, true);
+					qs.setCond(3, true); // proper?
 					giveItems(player, GROCERY_SUPPLY_BOX);
 				}
 				break;
@@ -136,14 +136,20 @@ public final class Q10739_SupplyAndDemand extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "33935-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "33935-04.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
 			}
@@ -193,6 +199,7 @@ public final class Q10739_SupplyAndDemand extends Quest
 				break;
 			}
 			case SIVANTHE:
+			{
 				if (qs.isStarted() && qs.isCond(4))
 				{
 					giveItems(player, LEATHER_SHIRT);
@@ -210,6 +217,7 @@ public final class Q10739_SupplyAndDemand extends Quest
 					htmltext = getAlreadyCompletedMsg(player);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
