@@ -614,7 +614,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" showName="false" />
+		<status attackable="false" talkable="false" targetable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="25" /> <!-- Kamael -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
@@ -680,7 +680,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" targetable="false" showName="false" />
+		<status attackable="false" talkable="false" targetable="false" showName="false" />
 		<skill_list>
 			<skill id="4416" level="14" /> <!-- Humans -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
@@ -1146,7 +1146,7 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" showName="false" />
+		<status attackable="false" talkable="false" targetable="false" showName="false" />
 		<skill_list>
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="4416" level="16" /> <!-- Dark Elves -->
