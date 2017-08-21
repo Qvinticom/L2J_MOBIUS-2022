@@ -83,8 +83,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			packet.writeD(item.get1stAugmentationId());
-			packet.writeD(-1); // Classic
-			// packet.writeD(item.get2ndAugmentationId());
+			packet.writeD(item.get2ndAugmentationId());
 		}
 		if (containsMask(mask, ItemListType.ELEMENTAL_ATTRIBUTE))
 		{
