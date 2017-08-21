@@ -42,6 +42,7 @@ What is done
 -Item augmentation support
 -Retail Henna list
 -Floran Agricultural Area clan halls
+-Maille Lizardmen Barracks clan halls
 -Augmentation chances from L2Wiki
 
 Custom work
