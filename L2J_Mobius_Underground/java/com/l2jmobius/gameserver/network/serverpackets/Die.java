@@ -74,7 +74,7 @@ public class Die implements IClientOutgoingPacket
 			_toClanHall = (clan != null) && (clan.getHideoutId() > 0);
 			_toCastle = ((clan != null) && (clan.getCastleId() > 0)) || isInCastleDefense;
 			_toOutpost = ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty());
-			_useFeather = activeChar.getAccessLevel().allowFixedRes();
+			_useFeather = activeChar.getAccessLevel().allowFixedRes() || activeChar.getInventory().haveItemForSelfResurrection();
 			_toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
 		}
 		

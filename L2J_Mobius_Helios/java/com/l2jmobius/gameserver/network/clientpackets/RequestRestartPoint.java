@@ -231,7 +231,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 				}
 				break;
 			}
-			case 6: // TODO: Agathon resurrection
+			case 6: // TODO: Agathion resurrection
 			{
 				break;
 			}
