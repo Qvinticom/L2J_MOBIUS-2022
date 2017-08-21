@@ -20,3 +20,7 @@ What is done
 
 TODO
 -Modify all skill levels/sublevels based on client
+-Lindvior
+-Trasken
+-Kamaloka
+-Provisional Clan Halls

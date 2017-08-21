@@ -18,6 +18,8 @@ What is done
 -Skilltrees info from L2Wiki
 -Parsed NPC droplists from L2Wiki
 -Further manual NPC corrections from L2Wiki
+-Retail NPC dialogs
+-Retail NPC buylists
 -Basic Tutorial quest
 -Added 156 quest scripts
 -Village Master AI scripts
@@ -40,6 +42,7 @@ What is done
 -Item augmentation support
 -Retail Henna list
 -Floran Agricultural Area clan halls
+-Augmentation chances from L2Wiki
 
 Custom work
 -Newbie Helper NPC location info
@@ -48,11 +51,8 @@ Custom work
 
 TODO list
 -Parse retail monster spawns by zone
--Retail NPC dialogs
--Retail NPC buylists
 -Test quests and update rewards
 -Test castle sieges
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
 -Provisional Clan Halls
--Update augmentation retailchances.xml https://l2wiki.com/classic/Item_Augmentation_-_effects#Effects
