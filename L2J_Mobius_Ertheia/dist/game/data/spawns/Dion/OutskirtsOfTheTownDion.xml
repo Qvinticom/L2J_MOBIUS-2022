@@ -2,7 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="OutskirtsOfTheTownDion">
 		<group>
-			<npc id="30767" x="16721" y="154985" z="-3624" /> <!-- Auctioneer -->		
+			<npc id="30767" x="16721" y="154985" z="-3624" > <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="dion01"/>
+				</parameters>
+			</npc>		
 			<npc id="36729" x="16277" y="155810" z="-3616" heading="17605" /> <!-- Bremen -->
 			<npc id="36730" x="16314" y="155714" z="-3632" heading="47561" /> <!-- Faolin -->
 			<npc id="36731" x="15314" y="156000" z="-3616" heading="13606" /> <!-- Kalein -->

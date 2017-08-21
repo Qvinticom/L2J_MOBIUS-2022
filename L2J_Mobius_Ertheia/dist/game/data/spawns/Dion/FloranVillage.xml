@@ -5,7 +5,11 @@
 			<npc id="30078" x="16970" y="170391" z="-3496" heading="61440" /> <!-- Pano -->
 			<npc id="30079" x="17836" y="169853" z="-3496" heading="20000" /> <!-- Barder -->
 			<npc id="30609" x="17475" y="169556" z="-3496" heading="57344" /> <!-- Creta -->
-			<npc id="30767" x="17328" y="170574" z="-3496" heading="56099" /> <!-- Auctioneer -->
+			<npc id="30767" x="17328" y="170574" z="-3496" heading="56099" > <!-- Auctioneer -->
+				<parameters>
+					<param name="fnAgitMap" value="floran"/>
+				</parameters>
+			</npc>
 			<npc id="31571" x="17232" y="170528" z="-3496" heading="53000" /> <!-- Hufs -->
 			<npc id="31773" x="17788" y="169842" z="-3496" heading="20000" /> <!-- Sonin -->
 			<npc id="32478" x="17740" y="169800" z="-3496" heading="20000" /> <!-- Dimensional Merchant -->
