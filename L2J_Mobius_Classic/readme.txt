@@ -44,6 +44,7 @@ What is done
 -Floran Agricultural Area clan halls
 -Maille Lizardmen Barracks clan halls
 -Augmentation chances from L2Wiki
+-Working Runes system
 
 Custom work
 -Newbie Helper NPC location info
