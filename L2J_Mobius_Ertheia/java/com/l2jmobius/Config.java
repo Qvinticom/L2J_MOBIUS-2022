@@ -450,7 +450,6 @@ public final class Config
 	public static boolean CLEAR_DROPPED_ITEM_TABLE;
 	public static boolean ORDER_QUEST_LIST_BY_QUESTID;
 	public static boolean AUTODELETE_INVALID_QUEST_DATA;
-	public static boolean ENABLE_STORY_QUEST_BUFF_REWARD;
 	public static boolean PRECISE_DROP_CALCULATION;
 	public static boolean MULTIPLE_ITEM_DROP;
 	public static boolean FORCE_INVENTORY_UPDATE;
@@ -1730,7 +1729,6 @@ public final class Config
 			CLEAR_DROPPED_ITEM_TABLE = General.getBoolean("ClearDroppedItemTable", false);
 			ORDER_QUEST_LIST_BY_QUESTID = General.getBoolean("OrderQuestListByQuestId", true);
 			AUTODELETE_INVALID_QUEST_DATA = General.getBoolean("AutoDeleteInvalidQuestData", false);
-			ENABLE_STORY_QUEST_BUFF_REWARD = General.getBoolean("StoryQuestRewardBuff", true);
 			MULTIPLE_ITEM_DROP = General.getBoolean("MultipleItemDrop", true);
 			FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 			LAZY_CACHE = General.getBoolean("LazyCache", true);
