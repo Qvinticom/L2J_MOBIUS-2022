@@ -1215,6 +1215,16 @@ public final class Config
 			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
 			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 			
+			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
+			THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
+			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
+			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
+			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
+			
+			DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
+			DEADLOCK_CHECK_INTERVAL = serverSettings.getInt("DeadLockCheckInterval", 20);
+			RESTART_ON_DEADLOCK = serverSettings.getBoolean("RestartOnDeadlock", false);
+			
 			SERVER_RESTART_SCHEDULE_ENABLED = serverSettings.getBoolean("ServerRestartScheduleEnabled", false);
 			SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
 			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
@@ -1705,14 +1715,6 @@ public final class Config
 			ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
 			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
 			ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-			SCHEDULED_THREAD_POOL_COUNT = General.getInt("ScheduledThreadPoolCount", -1);
-			THREADS_PER_SCHEDULED_THREAD_POOL = General.getInt("ThreadsPerScheduledThreadPool", 4);
-			INSTANT_THREAD_POOL_COUNT = General.getInt("InstantThreadPoolCount", -1);
-			THREADS_PER_INSTANT_THREAD_POOL = General.getInt("ThreadsPerInstantThreadPool", 2);
-			IO_PACKET_THREAD_CORE_SIZE = General.getInt("UrgentPacketThreadCoreSize", 2);
-			DEADLOCK_DETECTOR = General.getBoolean("DeadLockDetector", true);
-			DEADLOCK_CHECK_INTERVAL = General.getInt("DeadLockCheckInterval", 20);
-			RESTART_ON_DEADLOCK = General.getBoolean("RestartOnDeadlock", false);
 			ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
 			AUTODESTROY_ITEM_AFTER = General.getInt("AutoDestroyDroppedItemAfter", 600);
 			HERB_AUTO_DESTROY_TIME = General.getInt("AutoDestroyHerbTime", 60) * 1000;
