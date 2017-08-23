@@ -131,7 +131,14 @@ public class AppearanceItemData implements IGameXmlReader
 								}
 							}
 						}
-						_stones.put(stone.getId(), stone);
+						if (ItemTable.getInstance().getTemplate(stone.getId()) != null)
+						{
+							_stones.put(stone.getId(), stone);
+						}
+						else
+						{
+							LOGGER.info(getClass().getSimpleName() + ": Could not find appearance stone item " + stone.getId());
+						}
 					}
 				}
 			}
