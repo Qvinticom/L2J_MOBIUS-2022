@@ -26,12 +26,14 @@ import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
  * Seize Your Destiny (10338)
- * @author Sdw
+ * @author Sdw, Mobius
  */
 public final class Q10338_SeizeYourDestiny extends Quest
 {
@@ -47,6 +49,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 	// Locations
 	private static final Location RELIQUARY_OF_THE_GIANT = new Location(-114962, 226564, -2864);
 	// Misc
+	private static final String STARTED_CLASS_VAR = "STARTED_CLASS";
 	private static final int MIN_LV = 85;
 	
 	public Q10338_SeizeYourDestiny()
@@ -88,8 +91,14 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			}
 			case "33477-03.html":
 			{
-				qs.startQuest();
-				htmltext = event;
+				if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+				{
+					qs.setSimulated(false);
+					qs.setState(State.CREATED);
+					qs.startQuest();
+					qs.set(STARTED_CLASS_VAR, player.getActiveClass());
+					htmltext = event;
+				}
 				break;
 			}
 			case "33344-05.html":
@@ -108,7 +117,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 					showOnScreenMsg(player, NpcStringId.YOU_MAY_USE_SCROLL_OF_AFTERLIFE_FROM_HERMUNCUS_TO_AWAKEN, ExShowScreenMessage.TOP_CENTER, 10000);
 					giveItems(player, SCROLL_OF_AFTERLIFE);
 					rewardItems(player, STEEL_DOOR_GUILD_COIN);
-					qs.exitQuest(false, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 				}
 				break;
@@ -140,19 +149,25 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				{
 					htmltext = "33477-06.html";
 				}
-				if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()) || qs.isCompleted())
+				else if (player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
 					htmltext = "33477-05.html";
 				}
-				else if (qs.isCreated())
+				else if (player.getLevel() > 84)
 				{
-					htmltext = "33477-01.htm";
+					// htmltext = "33477-01.htm";
+					player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), getHtm(player.getHtmlPrefix(), "33477-01.htm")));
+					htmltext = null;
+				}
+				else
+				{
+					htmltext = "33477-07.html";
 				}
 				break;
 			}
 			case HADEL:
 			{
-				if (qs.isCompleted() || player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
+				if (player.isInCategory(CategoryType.AWAKEN_GROUP) || hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
 					htmltext = "33344-07.html";
 				}
@@ -160,7 +175,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				{
 					htmltext = "33344-06.html";
 				}
-				else if (player.isSubClassActive() && !player.isDualClassActive())
+				else if ((qs.getInt(STARTED_CLASS_VAR) != player.getActiveClass()) || (player.isSubClassActive() && !player.isDualClassActive()))
 				{
 					htmltext = "33344-09.html";
 				}
@@ -189,20 +204,21 @@ public final class Q10338_SeizeYourDestiny extends Quest
 			}
 			case HERMUNCUS:
 			{
-				if (player.isSubClassActive() && !player.isDualClassActive())
+				if ((qs.getInt(STARTED_CLASS_VAR) != player.getActiveClass()) && !hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
 					htmltext = "33340-04.html";
-					break;
 				}
 				else if (qs.isCond(3))
 				{
 					htmltext = "33340-01.html";
-					break;
 				}
 				else if (hasQuestItems(player, SCROLL_OF_AFTERLIFE.getId()))
 				{
 					htmltext = "33340-03.html";
-					break;
+				}
+				else
+				{
+					htmltext = "33340-02.html";
 				}
 				break;
 			}
@@ -213,13 +229,10 @@ public final class Q10338_SeizeYourDestiny extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		if (npc.getId() == HARNAKS_WRAITH)
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(2) && (qs.getInt(STARTED_CLASS_VAR) == player.getActiveClass()))
 		{
-			final QuestState qs = getQuestState(player, false);
-			if ((qs != null) && qs.isCond(2))
-			{
-				qs.setCond(3, true);
-			}
+			qs.setCond(3, true);
 		}
 		return super.onKill(npc, player, isSummon);
 	}
