@@ -650,21 +650,15 @@ public final class MemoryOfDisaster extends AbstractInstance
 			}
 			case "TIMER_ID_END":
 			{
-				playMovie(player, Movie.SC_AWAKENING_OPENING_E);
-				getTimers().addTimer("TIMER_ID_ED_SCEN_END", 30000, npc, player);
-				break;
-			}
-			case "TIMER_ID_ED_SCEN_END":
-			{
 				playMovie(player, Movie.SC_AWAKENING_OPENING_F);
-				getTimers().addTimer("TIMER_ID_FINAL_ED_SCEN_END", 10000, npc, player);
+				getTimers().addTimer("TIMER_ID_FINAL_ED_SCEN_END", 40000, npc, player);
 				break;
 			}
 			case "TIMER_ID_FINAL_ED_SCEN_END":
 			{
 				// myself->SetOneTimeQuestFlag(myself->c_ai0, 10491, 1);
-				player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "calltochange_end.htm")));
 				finishInstance(player, 0);
+				player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "calltochange_end.htm")));
 				break;
 			}
 			case "TIMER_ID_DIE":
