@@ -205,7 +205,7 @@ public final class ThreadPoolManager
 	{
 		try
 		{
-			System.out.println("ThreadPoolManager: Shutting down.");
+			LOG.info("ThreadPoolManager: Shutting down.");
 			
 			for (ScheduledThreadPoolExecutor threadPool : _scheduledPools)
 			{
