@@ -176,7 +176,6 @@ public class GameServer
 	{
 		final long serverLoadStart = System.currentTimeMillis();
 		
-		printSection("IdFactory");
 		if (!IdFactory.getInstance().isInitialized())
 		{
 			LOGGER.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
