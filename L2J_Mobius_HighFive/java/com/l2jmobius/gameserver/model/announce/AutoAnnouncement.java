@@ -160,7 +160,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 			_task.cancel(false);
 		}
 		_currentState = _repeat;
-		_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _initial);
+		_task = ThreadPoolManager.schedule(this, _initial);
 	}
 	
 	@Override
@@ -178,6 +178,6 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 		{
 			_currentState--;
 		}
-		_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _delay);
+		_task = ThreadPoolManager.schedule(this, _delay);
 	}
 }

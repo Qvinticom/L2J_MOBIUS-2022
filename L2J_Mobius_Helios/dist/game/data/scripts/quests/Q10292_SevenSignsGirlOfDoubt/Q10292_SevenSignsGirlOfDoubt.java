@@ -160,7 +160,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 					creature1.setRandomWalking(true);
 					final L2Npc creature2 = addSpawn(CREATURE_OF_THE_DUSK2, 89524, -238131, -9632, 56, false, 0, false, player.getInstanceId());
 					creature2.setRandomWalking(true);
-					ThreadPoolManager.getInstance().scheduleGeneral(() ->
+					ThreadPoolManager.schedule(() ->
 					{
 						creature1.deleteMe();
 						creature2.deleteMe();

@@ -111,7 +111,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 		changeRoom(instance);
 		
 		// Start banish task
-		final ScheduledFuture<?> banishTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
+		final ScheduledFuture<?> banishTask = ThreadPoolManager.scheduleAtFixedRate(() ->
 		{
 			if (instance.getRemainingTime() < 60000)
 			{
@@ -410,7 +410,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 		final long nextInterval = (bossRoom) ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
 		if (world.getRemainingTime() > nextInterval)
 		{
-			final ScheduledFuture<?> roomChangeTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			final ScheduledFuture<?> roomChangeTask = ThreadPoolManager.schedule(() ->
 			{
 				try
 				{

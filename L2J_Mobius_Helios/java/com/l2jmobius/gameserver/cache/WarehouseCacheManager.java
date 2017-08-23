@@ -33,7 +33,7 @@ public class WarehouseCacheManager
 	
 	protected WarehouseCacheManager()
 	{
-		ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new CacheScheduler(), 120000, 60000);
+		ThreadPoolManager.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
 	}
 	
 	public void addCacheTask(L2PcInstance pc)

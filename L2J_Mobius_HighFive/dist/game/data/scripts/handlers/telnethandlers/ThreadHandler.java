@@ -38,7 +38,7 @@ public class ThreadHandler implements ITelnetHandler
 	{
 		if (command.equals("performance"))
 		{
-			for (String line : ThreadPoolManager.getInstance().getStats())
+			for (String line : ThreadPoolManager.getStats())
 			{
 				_print.println(line);
 			}
@@ -46,10 +46,10 @@ public class ThreadHandler implements ITelnetHandler
 		}
 		else if (command.equals("purge"))
 		{
-			ThreadPoolManager.getInstance().purge();
+			ThreadPoolManager.purge();
 			_print.println("STATUS OF THREAD POOLS AFTER PURGE COMMAND:");
 			_print.println("");
-			for (String line : ThreadPoolManager.getInstance().getStats())
+			for (String line : ThreadPoolManager.getStats())
 			{
 				_print.println(line);
 			}

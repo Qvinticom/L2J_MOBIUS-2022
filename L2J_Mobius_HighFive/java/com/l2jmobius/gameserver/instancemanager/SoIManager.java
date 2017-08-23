@@ -116,7 +116,7 @@ public class SoIManager
 		spawnOpenedSeed();
 		DoorData.getInstance().getDoor(14240102).openMe();
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			closeSeed();
 			setCurrentStage(4);

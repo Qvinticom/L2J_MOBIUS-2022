@@ -157,7 +157,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 						
 						broadcastPacket(ns);
 						setCanTalk(false);
-						ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 10000);
+						ThreadPoolManager.schedule(new ScheduleTalkTask(), 10000);
 					}
 				}
 			}

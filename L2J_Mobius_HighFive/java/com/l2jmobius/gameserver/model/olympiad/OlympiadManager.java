@@ -405,7 +405,7 @@ public class OlympiadManager
 			if ((team != null) && team.contains(objId))
 			{
 				_teamsBasedRegisters.remove(team);
-				ThreadPoolManager.getInstance().executeGeneral(new AnnounceUnregToTeam(team));
+				ThreadPoolManager.execute(new AnnounceUnregToTeam(team));
 				return true;
 			}
 		}
@@ -437,7 +437,7 @@ public class OlympiadManager
 			if ((team != null) && team.contains(objId))
 			{
 				_teamsBasedRegisters.remove(team);
-				ThreadPoolManager.getInstance().executeGeneral(new AnnounceUnregToTeam(team));
+				ThreadPoolManager.execute(new AnnounceUnregToTeam(team));
 				return;
 			}
 		}

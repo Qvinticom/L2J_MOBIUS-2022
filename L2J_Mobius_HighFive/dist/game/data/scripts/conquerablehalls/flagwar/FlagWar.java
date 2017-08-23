@@ -402,7 +402,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 							doUnSpawns(data);
 						}
 						
-						ThreadPoolManager.getInstance().scheduleGeneral(() ->
+						ThreadPoolManager.schedule(() ->
 						{
 							for (int doorId : INNER_DOORS_TO_OPEN)
 							{
@@ -457,7 +457,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 		
-		_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), 3600000);
+		_siegeTask = ThreadPoolManager.schedule(new SiegeStarts(), 3600000);
 	}
 	
 	@Override
@@ -499,7 +499,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		
 		// Schedule open doors closement and siege start in 2 minutes
-		ThreadPoolManager.getInstance().scheduleGeneral(new CloseOutterDoorsTask(this), 300000);
+		ThreadPoolManager.schedule(new CloseOutterDoorsTask(this), 300000);
 	}
 	
 	/**

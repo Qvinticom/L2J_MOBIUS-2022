@@ -110,7 +110,7 @@ public class PremiumManager
 	 */
 	private void startExpireTask(L2PcInstance player, long delay)
 	{
-		ScheduledFuture<?> task = ThreadPoolManager.getInstance().scheduleEvent(new PremiumExpireTask(player), delay);
+		ScheduledFuture<?> task = ThreadPoolManager.schedule(new PremiumExpireTask(player), delay);
 		expiretasks.put(player.getAccountName(), task);
 	}
 	

@@ -109,7 +109,7 @@ public class RecipeController
 			if (Config.ALT_GAME_CREATION)
 			{
 				_activeMakers.put(manufacturer.getObjectId(), maker);
-				ThreadPoolManager.getInstance().scheduleGeneral(maker, 100);
+				ThreadPoolManager.schedule(maker, 100);
 			}
 			else
 			{
@@ -158,7 +158,7 @@ public class RecipeController
 			if (Config.ALT_GAME_CREATION)
 			{
 				_activeMakers.put(player.getObjectId(), maker);
-				ThreadPoolManager.getInstance().scheduleGeneral(maker, 100);
+				ThreadPoolManager.schedule(maker, 100);
 			}
 			else
 			{
@@ -354,7 +354,7 @@ public class RecipeController
 					_player.broadcastPacket(msk);
 					
 					_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 100 + _delay);
+					ThreadPoolManager.schedule(this, 100 + _delay);
 				}
 				else
 				{
@@ -548,7 +548,7 @@ public class RecipeController
 						if (Config.ALT_GAME_CREATION && isWait)
 						{
 							_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
-							ThreadPoolManager.getInstance().scheduleGeneral(this, 100 + _delay);
+							ThreadPoolManager.schedule(this, 100 + _delay);
 						}
 						else
 						{
@@ -570,7 +570,7 @@ public class RecipeController
 						if (Config.ALT_GAME_CREATION && isWait)
 						{
 							_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
-							ThreadPoolManager.getInstance().scheduleGeneral(this, 100 + _delay);
+							ThreadPoolManager.schedule(this, 100 + _delay);
 						}
 						else
 						{

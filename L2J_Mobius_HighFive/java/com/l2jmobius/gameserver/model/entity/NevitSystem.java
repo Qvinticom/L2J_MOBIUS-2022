@@ -147,7 +147,7 @@ public class NevitSystem implements IUniqueId
 			{
 				if ((_adventTask == null) && (getAdventTime() < Config.NEVIT_ADVENT_TIME))
 				{
-					_adventTask = ThreadPoolManager.getInstance().scheduleGeneral(new AdventTask(), 30000);
+					_adventTask = ThreadPoolManager.schedule(new AdventTask(), 30000);
 					getPlayer().sendPacket(new ExNevitAdventTimeChange(getAdventTime(), false));
 				}
 			}
@@ -203,7 +203,7 @@ public class NevitSystem implements IUniqueId
 			getPlayer().sendPacket(new ExNevitAdventEffect(time));
 			getPlayer().sendPacket(SystemMessageId.NEVIT_HAS_BLESSED_YOU_FROM_ABOVE);
 			getPlayer().startAbnormalVisualEffect(true, AbnormalVisualEffect.NAVIT_ADVENT);
-			_nevitEffectTask = ThreadPoolManager.getInstance().scheduleGeneral(new NevitEffectEnd(), time * 1000L);
+			_nevitEffectTask = ThreadPoolManager.schedule(new NevitEffectEnd(), time * 1000L);
 		}
 	}
 	

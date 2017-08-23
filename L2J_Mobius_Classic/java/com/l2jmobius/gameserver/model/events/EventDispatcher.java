@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.model.events;
 
 import java.util.Queue;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -116,7 +115,7 @@ public final class EventDispatcher
 		
 		if (hasListeners)
 		{
-			ThreadPoolManager.getInstance().executeEvent(() -> notifyEventToMultipleContainers(event, containers, null));
+			ThreadPoolManager.execute(() -> notifyEventToMultipleContainers(event, containers, null));
 		}
 	}
 	
@@ -130,22 +129,7 @@ public final class EventDispatcher
 	{
 		if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType()))
 		{
-			ThreadPoolManager.getInstance().scheduleEvent(() -> notifyEvent(event, container, null), delay);
-		}
-	}
-	
-	/**
-	 * Scheduling current listener notification asynchronously after specified delay.
-	 * @param event
-	 * @param container
-	 * @param delay
-	 * @param unit
-	 */
-	public void notifyEventAsyncDelayed(IBaseEvent event, ListenersContainer container, long delay, TimeUnit unit)
-	{
-		if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType()))
-		{
-			ThreadPoolManager.getInstance().scheduleEvent(() -> notifyEvent(event, container, null), delay, unit);
+			ThreadPoolManager.schedule(() -> notifyEvent(event, container, null), delay);
 		}
 	}
 	

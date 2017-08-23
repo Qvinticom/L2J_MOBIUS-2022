@@ -141,7 +141,7 @@ public final class GainakSiege extends AbstractNpcAI
 		final L2SiegeZone zone = ZoneManager.getInstance().getZone(npc, L2SiegeZone.class);
 		if ((zone != null) && (zone.getId() == 60019) && zone.isActive())
 		{
-			ThreadPoolManager.getInstance().scheduleAi(new RespawnNewAssassin(npc.getLocation()), 60000);
+			ThreadPoolManager.schedule(new RespawnNewAssassin(npc.getLocation()), 60000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

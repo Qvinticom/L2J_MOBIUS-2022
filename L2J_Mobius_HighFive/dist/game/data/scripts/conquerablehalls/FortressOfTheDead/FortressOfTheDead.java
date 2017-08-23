@@ -159,7 +159,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 		{
 			cancelSiegeTask();
 			final long scheduleTime = (24 - hoursLeft) * 10 * 60000;
-			_siegeTask = ThreadPoolManager.getInstance().scheduleGeneral(new SiegeStarts(), scheduleTime);
+			_siegeTask = ThreadPoolManager.schedule(new SiegeStarts(), scheduleTime);
 		}
 		else
 		{

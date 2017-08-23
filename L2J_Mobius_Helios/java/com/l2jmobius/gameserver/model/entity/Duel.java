@@ -99,7 +99,7 @@ public class Duel
 			broadcastToTeam2(sm);
 		}
 		// Schedule duel start
-		ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartDuelTask(this), 3000);
+		ThreadPoolManager.schedule(new ScheduleStartDuelTask(this), 3000);
 	}
 	
 	public static class PlayerCondition
@@ -207,14 +207,14 @@ public class Duel
 					}
 					case Continue:
 					{
-						ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
+						ThreadPoolManager.schedule(this, 1000);
 						break;
 					}
 					default:
 					{
 						setFinished(true);
 						playKneelAnimation();
-						ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
+						ThreadPoolManager.schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
 						if (getDueldInstance() != null)
 						{
 							getDueldInstance().destroy();
@@ -255,11 +255,11 @@ public class Duel
 					_duel.teleportPlayers();
 					
 					// give players 20 seconds to complete teleport and get ready (its ought to be 30 on offical..)
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 20000);
+					ThreadPoolManager.schedule(this, 20000);
 				}
 				else if (count > 0) // duel not started yet - continue countdown
 				{
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
+					ThreadPoolManager.schedule(this, 1000);
 				}
 				else
 				{
@@ -436,7 +436,7 @@ public class Duel
 		broadcastToTeam2(B04_S01);
 		
 		// start duelling task
-		ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleDuelTask(this), 1000);
+		ThreadPoolManager.schedule(new ScheduleDuelTask(this), 1000);
 	}
 	
 	/**

@@ -101,7 +101,7 @@ public class NpcKnownList extends CharKnownList
 	{
 		if ((_trackingTask == null) && (getActiveChar().getAggroRange() > 0))
 		{
-			_trackingTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new TrackingTask(), 2000, 2000);
+			_trackingTask = ThreadPoolManager.scheduleAtFixedRate(new TrackingTask(), 2000, 2000);
 		}
 	}
 	

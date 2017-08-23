@@ -158,11 +158,11 @@ public final class Castle extends AbstractResidence
 			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate - currentTime);
+				ThreadPoolManager.schedule(new FunctionTask(cwh), _endDate - currentTime);
 			}
 			else
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), 0);
+				ThreadPoolManager.schedule(new FunctionTask(cwh), 0);
 			}
 		}
 		
@@ -196,7 +196,7 @@ public final class Castle extends AbstractResidence
 						{
 							ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(true), getRate());
+						ThreadPoolManager.schedule(new FunctionTask(true), getRate());
 					}
 					else
 					{

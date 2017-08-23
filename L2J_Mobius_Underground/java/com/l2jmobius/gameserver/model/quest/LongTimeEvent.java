@@ -91,7 +91,7 @@ public class LongTimeEvent extends Quest
 			else if (_eventPeriod.getStartDate().after(new Date()))
 			{
 				final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
-				ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStart(), delay);
+				ThreadPoolManager.schedule(new ScheduleStart(), delay);
 				_log.info("Event " + _eventName + " will be started at " + _eventPeriod.getEndDate());
 			}
 			else
@@ -301,7 +301,7 @@ public class LongTimeEvent extends Quest
 		AnnouncementsTable.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
 		
 		// Schedule event end (now only for message sending)
-		ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEnd(), millisToEventEnd);
+		ThreadPoolManager.schedule(new ScheduleEnd(), millisToEventEnd);
 	}
 	
 	/**

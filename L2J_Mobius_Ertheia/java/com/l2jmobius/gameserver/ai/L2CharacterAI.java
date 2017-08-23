@@ -308,7 +308,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		if (_actor.isAttackingNow())
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new CastTask(_actor, skill, target, item, forceUse, dontMove), _actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+			ThreadPoolManager.schedule(new CastTask(_actor, skill, target, item, forceUse, dontMove), _actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 		}
 		else
 		{

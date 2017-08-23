@@ -295,7 +295,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	{
 		if (_avoidTask == null)
 		{
-			_avoidTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(this, 100, 100);
+			_avoidTask = ThreadPoolManager.scheduleAtFixedRate(this, 100, 100);
 		}
 	}
 	

@@ -71,7 +71,7 @@ public class ServerRestartManager
 			if (lastRestart != null)
 			{
 				nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
-				ThreadPoolManager.getInstance().scheduleGeneral(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
+				ThreadPoolManager.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
 				_log.info("Scheduled server restart at " + lastRestart.getTime() + ".");
 			}
 		}

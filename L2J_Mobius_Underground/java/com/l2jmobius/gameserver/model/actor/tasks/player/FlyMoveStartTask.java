@@ -51,7 +51,7 @@ public class FlyMoveStartTask implements Runnable
 		if (!_player.hasRequest(SayuneRequest.class))
 		{
 			_player.sendPacket(ExNotifyFlyMoveStart.STATIC_PACKET);
-			ThreadPoolManager.getInstance().scheduleGeneral(this, 1000L);
+			ThreadPoolManager.schedule(this, 1000L);
 		}
 	}
 }

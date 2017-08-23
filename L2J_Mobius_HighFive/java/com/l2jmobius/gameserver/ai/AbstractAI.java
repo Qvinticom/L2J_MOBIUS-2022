@@ -836,7 +836,7 @@ public abstract class AbstractAI implements Ctrl
 		
 		// Create and Launch an AI Follow Task to execute every 1s
 		_followTarget = target;
-		_followTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FollowTask(), 5, FOLLOW_INTERVAL);
+		_followTask = ThreadPoolManager.scheduleAtFixedRate(new FollowTask(), 5, FOLLOW_INTERVAL);
 	}
 	
 	/**
@@ -853,7 +853,7 @@ public abstract class AbstractAI implements Ctrl
 		}
 		
 		_followTarget = target;
-		_followTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FollowTask(range), 5, ATTACK_FOLLOW_INTERVAL);
+		_followTask = ThreadPoolManager.scheduleAtFixedRate(new FollowTask(range), 5, ATTACK_FOLLOW_INTERVAL);
 	}
 	
 	/**

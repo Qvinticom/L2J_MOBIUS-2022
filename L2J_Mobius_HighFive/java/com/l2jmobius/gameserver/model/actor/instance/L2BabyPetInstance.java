@@ -187,7 +187,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 	{
 		if ((_majorHeal != null) || (_buffs != null) || ((_recharge != null) && (_castTask == null) && !isDead()))
 		{
-			_castTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new CastTask(this), 3000, 2000);
+			_castTask = ThreadPoolManager.scheduleAtFixedRate(new CastTask(this), 3000, 2000);
 		}
 	}
 	

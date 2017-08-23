@@ -68,7 +68,7 @@ public class QuestTimer
 		_player = player;
 		_npc = npc;
 		_isRepeating = repeating;
-		_schedular = repeating ? ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTimerTask(), time);
+		_schedular = repeating ? ThreadPoolManager.scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPoolManager.schedule(new ScheduleTimerTask(), time);
 	}
 	
 	public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player)

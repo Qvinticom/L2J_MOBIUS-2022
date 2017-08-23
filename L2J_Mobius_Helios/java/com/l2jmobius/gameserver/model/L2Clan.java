@@ -3131,7 +3131,7 @@ public class L2Clan implements IIdentifiable, INamable
 					_vars = new ClanVariables(getId());
 					if (Config.CLAN_VARIABLES_STORE_INTERVAL > 0)
 					{
-						ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
+						ThreadPoolManager.scheduleAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
 					}
 				}
 			}

@@ -109,54 +109,6 @@ public class DebugHandler implements ITelnetHandler
 					targetPlayer.sendPacket(sp);
 					_print.println("Packet sent to player " + charName);
 				}
-				else if (dbg.equals("PacketTP"))
-				{
-					final String str = ThreadPoolManager.getInstance().getPacketStats();
-					_print.println(str);
-					int i = 0;
-					File f = new File("./log/StackTrace-PacketTP-" + i + ".txt");
-					while (f.exists())
-					{
-						i++;
-						f = new File("./log/StackTrace-PacketTP-" + i + ".txt");
-					}
-					f.getParentFile().mkdirs();
-					fos = new FileOutputStream(f);
-					out = new OutputStreamWriter(fos, "UTF-8");
-					out.write(str);
-				}
-				else if (dbg.equals("IOPacketTP"))
-				{
-					final String str = ThreadPoolManager.getInstance().getIOPacketStats();
-					_print.println(str);
-					int i = 0;
-					File f = new File("./log/StackTrace-IOPacketTP-" + i + ".txt");
-					while (f.exists())
-					{
-						i++;
-						f = new File("./log/StackTrace-IOPacketTP-" + i + ".txt");
-					}
-					f.getParentFile().mkdirs();
-					fos = new FileOutputStream(f);
-					out = new OutputStreamWriter(fos, "UTF-8");
-					out.write(str);
-				}
-				else if (dbg.equals("GeneralTP"))
-				{
-					final String str = ThreadPoolManager.getInstance().getGeneralStats();
-					_print.println(str);
-					int i = 0;
-					File f = new File("./log/StackTrace-GeneralTP-" + i + ".txt");
-					while (f.exists())
-					{
-						i++;
-						f = new File("./log/StackTrace-GeneralTP-" + i + ".txt");
-					}
-					f.getParentFile().mkdirs();
-					fos = new FileOutputStream(f);
-					out = new OutputStreamWriter(fos, "UTF-8");
-					out.write(str);
-				}
 				else if (dbg.equals("full"))
 				{
 					final Calendar cal = Calendar.getInstance();
@@ -248,7 +200,7 @@ public class DebugHandler implements ITelnetHandler
 					}
 					
 					sb.append("\n\n## Thread Pool Manager Statistics ##\n");
-					for (String line : ThreadPoolManager.getInstance().getStats())
+					for (String line : ThreadPoolManager.getStats())
 					{
 						sb.append(line);
 						sb.append('\n');

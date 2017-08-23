@@ -393,7 +393,7 @@ public final class ItemAuction
 	
 	public final void broadcastToAllBidders(L2GameServerPacket packet)
 	{
-		ThreadPoolManager.getInstance().executeGeneral(() -> broadcastToAllBiddersInternal(packet));
+		ThreadPoolManager.execute(() -> broadcastToAllBiddersInternal(packet));
 	}
 	
 	public final void broadcastToAllBiddersInternal(L2GameServerPacket packet)

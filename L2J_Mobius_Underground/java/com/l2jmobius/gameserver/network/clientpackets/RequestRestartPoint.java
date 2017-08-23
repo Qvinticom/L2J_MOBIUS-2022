@@ -98,7 +98,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 			if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan()))
 			{
 				// Schedule respawn delay for attacker
-				ThreadPoolManager.getInstance().scheduleGeneral(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
+				ThreadPoolManager.schedule(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
 				if (castle.getSiege().getAttackerRespawnDelay() > 0)
 				{
 					activeChar.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");

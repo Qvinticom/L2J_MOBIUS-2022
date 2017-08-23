@@ -31,7 +31,7 @@ public final class ItemsAutoDestroy
 	
 	protected ItemsAutoDestroy()
 	{
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(this::removeItems, 5000, 5000);
+		ThreadPoolManager.scheduleAtFixedRate(this::removeItems, 5000, 5000);
 	}
 	
 	public static ItemsAutoDestroy getInstance()

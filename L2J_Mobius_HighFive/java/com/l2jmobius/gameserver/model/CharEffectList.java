@@ -1308,7 +1308,7 @@ public final class CharEffectList
 			return;
 		}
 		// Schedule the icon update packets 500miliseconds ahead, so it can gather-up most of the changes.
-		_effectIconsUpdate = ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		_effectIconsUpdate = ThreadPoolManager.schedule(() ->
 		{
 			AbnormalStatusUpdate asu = null;
 			PartySpelled ps = null;

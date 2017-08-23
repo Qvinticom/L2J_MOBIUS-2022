@@ -359,7 +359,7 @@ public class L2Party extends AbstractPlayerGroup
 		
 		if (_positionBroadcastTask == null)
 		{
-			_positionBroadcastTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
+			_positionBroadcastTask = ThreadPoolManager.scheduleAtFixedRate(() ->
 			{
 				if (_positionPacket == null)
 				{
@@ -993,7 +993,7 @@ public class L2Party extends AbstractPlayerGroup
 		}
 		_changeRequestDistributionType = partyDistributionType;
 		_changeDistributionTypeAnswers = new HashSet<>();
-		_changeDistributionTypeRequestTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
+		_changeDistributionTypeRequestTask = ThreadPoolManager.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
 		
 		broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 		

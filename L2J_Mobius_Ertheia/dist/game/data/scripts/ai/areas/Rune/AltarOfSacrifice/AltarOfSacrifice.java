@@ -109,7 +109,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	
 	private void sendMessage(L2Npc npc, NpcStringId npcString, int delay)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			if (npc != null)
 			{

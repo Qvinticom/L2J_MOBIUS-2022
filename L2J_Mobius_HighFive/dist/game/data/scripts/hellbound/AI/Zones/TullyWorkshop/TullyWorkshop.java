@@ -1207,7 +1207,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			DoorData.getInstance().getDoor(19260052).openMe();
 			
 			countdownTime = 600000;
-			_countdown = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() ->
+			_countdown = ThreadPoolManager.scheduleAtFixedRate(() ->
 			{
 				countdownTime -= 10000;
 				L2Npc _npc = null;
@@ -1570,20 +1570,20 @@ public final class TullyWorkshop extends AbstractNpcAI
 	{
 		DoorData.getInstance().getDoor(20250005).openMe();
 		DoorData.getInstance().getDoor(20250004).openMe();
-		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
+		ThreadPoolManager.schedule(new DoorTask(new int[]
 		{
 			20250006,
 			20250007
 		}, STATE_OPEN), 2000);
-		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
+		ThreadPoolManager.schedule(new DoorTask(new int[]
 		{
 			20250778
 		}, STATE_CLOSE), 3000);
-		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
+		ThreadPoolManager.schedule(new DoorTask(new int[]
 		{
 			20250777
 		}, STATE_CLOSE), 6000);
-		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
+		ThreadPoolManager.schedule(new DoorTask(new int[]
 		{
 			20250009,
 			20250008
@@ -1594,12 +1594,12 @@ public final class TullyWorkshop extends AbstractNpcAI
 	{
 		DoorData.getInstance().getDoor(20250009).closeMe();
 		DoorData.getInstance().getDoor(20250008).closeMe();
-		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
+		ThreadPoolManager.schedule(new DoorTask(new int[]
 		{
 			20250777,
 			20250778
 		}, STATE_OPEN), 1000);
-		ThreadPoolManager.getInstance().scheduleGeneral(new DoorTask(new int[]
+		ThreadPoolManager.schedule(new DoorTask(new int[]
 		{
 			20250005,
 			20250004,

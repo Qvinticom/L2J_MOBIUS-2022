@@ -103,27 +103,26 @@ public class L2RaceManagerInstance extends L2Npc
 			
 			_managers = new ArrayList<>();
 			
-			final ThreadPoolManager s = ThreadPoolManager.getInstance();
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), 0, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), 30 * SECOND, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), MINUTE + (30 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 2 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 3 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 4 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 5 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 6 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED), 7 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S), 7 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S), 8 * MINUTE, 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SECONDS), (8 * MINUTE) + (30 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS), (8 * MINUTE) + (50 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (55 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (56 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (57 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
-			s.scheduleGeneralAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), 0, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), 30 * SECOND, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), MINUTE + (30 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 2 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 3 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 4 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 5 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 6 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED), 7 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S), 7 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S), 8 * MINUTE, 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SECONDS), (8 * MINUTE) + (30 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS), (8 * MINUTE) + (50 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (55 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (56 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (57 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
+			ThreadPoolManager.scheduleAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
 		}
 		_managers.add(this);
 	}
@@ -242,7 +241,7 @@ public class L2RaceManagerInstance extends L2Npc
 			_packet = new MonRaceInfo(_codes[1][0], _codes[1][1], race.getMonsters(), race.getSpeeds());
 			sendMonsterInfo();
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(new RunRace(), 5000);
+			ThreadPoolManager.schedule(new RunRace(), 5000);
 		}
 		else
 		{
@@ -519,7 +518,7 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			_packet = new MonRaceInfo(_codes[2][0], _codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
 			sendMonsterInfo();
-			ThreadPoolManager.getInstance().scheduleGeneral(new RunEnd(), 30000);
+			ThreadPoolManager.schedule(new RunEnd(), 30000);
 		}
 	}
 	

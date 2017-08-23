@@ -74,11 +74,11 @@ public final class MailManager
 				
 				if (expiration < System.currentTimeMillis())
 				{
-					ThreadPoolManager.getInstance().scheduleGeneral(new MessageDeletionTask(msgId), 10000);
+					ThreadPoolManager.schedule(new MessageDeletionTask(msgId), 10000);
 				}
 				else
 				{
-					ThreadPoolManager.getInstance().scheduleGeneral(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
+					ThreadPoolManager.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
 				}
 			}
 		}
@@ -209,7 +209,7 @@ public final class MailManager
 			receiver.sendPacket(new ExUnReadMailCount(receiver));
 		}
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
+		ThreadPoolManager.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
 	}
 	
 	public final void markAsReadInDb(int msgId)

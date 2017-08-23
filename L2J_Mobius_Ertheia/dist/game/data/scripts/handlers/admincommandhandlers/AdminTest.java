@@ -46,7 +46,7 @@ public class AdminTest implements IAdminCommandHandler
 	{
 		if (command.equals("admin_stats"))
 		{
-			for (String line : ThreadPoolManager.getInstance().getStats())
+			for (String line : ThreadPoolManager.getStats())
 			{
 				activeChar.sendMessage(line);
 			}

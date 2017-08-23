@@ -110,7 +110,7 @@ public class NpcBufferAI implements Runnable
 				break;
 			}
 		}
-		ThreadPoolManager.getInstance().scheduleGeneral(this, _skillData.getDelay());
+		ThreadPoolManager.schedule(this, _skillData.getDelay());
 	}
 	
 	/**

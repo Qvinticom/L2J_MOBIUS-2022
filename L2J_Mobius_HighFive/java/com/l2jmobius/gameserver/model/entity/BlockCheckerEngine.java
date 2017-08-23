@@ -304,7 +304,7 @@ public final class BlockCheckerEngine
 				
 				_abnormalEnd = true;
 				
-				ThreadPoolManager.getInstance().executeGeneral(new EndEvent());
+				ThreadPoolManager.execute(new EndEvent());
 				
 				if (Config.DEBUG)
 				{
@@ -426,7 +426,7 @@ public final class BlockCheckerEngine
 			}
 			_isStarted = true;
 			// Spawn the blocks
-			ThreadPoolManager.getInstance().executeGeneral(new SpawnRound(16, 1));
+			ThreadPoolManager.execute(new SpawnRound(16, 1));
 			// Start up player parameters
 			setUpPlayers();
 			// Set the started time
@@ -460,17 +460,17 @@ public final class BlockCheckerEngine
 			{
 				case 1: // Schedule second spawn round
 				{
-					_task = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnRound(20, 2), 60000);
+					_task = ThreadPoolManager.schedule(new SpawnRound(20, 2), 60000);
 					break;
 				}
 				case 2: // Schedule third spawn round
 				{
-					_task = ThreadPoolManager.getInstance().scheduleGeneral(new SpawnRound(14, 3), 60000);
+					_task = ThreadPoolManager.schedule(new SpawnRound(14, 3), 60000);
 					break;
 				}
 				case 3: // Schedule Event End Count Down
 				{
-					_task = ThreadPoolManager.getInstance().scheduleGeneral(new EndEvent(), 180000);
+					_task = ThreadPoolManager.schedule(new EndEvent(), 180000);
 					break;
 				}
 			}
@@ -521,7 +521,7 @@ public final class BlockCheckerEngine
 					SpawnTable.getInstance().addNewSpawn(girlSpawn, false);
 					girlSpawn.init();
 					// Schedule his deletion after 9 secs of spawn
-					ThreadPoolManager.getInstance().scheduleGeneral(new CarryingGirlUnspawn(girlSpawn), 9000);
+					ThreadPoolManager.schedule(new CarryingGirlUnspawn(girlSpawn), 9000);
 				}
 				catch (Exception e)
 				{
@@ -562,7 +562,7 @@ public final class BlockCheckerEngine
 	
 	/*
 	 * private class CountDown implements Runnable {
-	 * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_ENDS_5)); ThreadPoolManager.getInstance().scheduleGeneral(new EndEvent(), 5000); } }
+	 * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_ENDS_5)); ThreadPoolManager.schedule(new EndEvent(), 5000); } }
 	 */
 	
 	/**

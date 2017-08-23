@@ -204,25 +204,25 @@ public final class FourSepulchersManager
 		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd)) // entry time check
 		{
 			clean();
-			_changeEntryTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersChangeEntryTimeTask(), 0);
+			_changeEntryTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeEntryTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in Entry time");
 		}
 		else if ((currentTime >= _entryTimeEnd) && (currentTime < _warmUpTimeEnd)) // warmup time check
 		{
 			clean();
-			_changeWarmUpTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersChangeWarmUpTimeTask(), 0);
+			_changeWarmUpTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeWarmUpTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in WarmUp time");
 		}
 		else if ((currentTime >= _warmUpTimeEnd) && (currentTime < _attackTimeEnd)) // attack time check
 		{
 			clean();
-			_changeAttackTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersChangeAttackTimeTask(), 0);
+			_changeAttackTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeAttackTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in Attack time");
 		}
 		else
 		// else cooldown time and without cleanup because it's already implemented
 		{
-			_changeCoolDownTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersChangeCoolDownTimeTask(), 0);
+			_changeCoolDownTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeCoolDownTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in Cooldown time");
 		}
 	}

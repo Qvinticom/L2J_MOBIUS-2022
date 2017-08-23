@@ -235,7 +235,7 @@ public class Auction
 		{
 			taskDelay = _endDate - currentTime;
 		}
-		ThreadPoolManager.getInstance().scheduleGeneral(new AutoEndTask(), taskDelay);
+		ThreadPoolManager.schedule(new AutoEndTask(), taskDelay);
 	}
 	
 	public static String getItemTypeName(AuctionItemType value)
@@ -470,7 +470,7 @@ public class Auction
 		else
 		{
 			/** Task waiting ClanHallManager is loaded every 3s */
-			ThreadPoolManager.getInstance().scheduleGeneral(new AutoEndTask(), 3000);
+			ThreadPoolManager.schedule(new AutoEndTask(), 3000);
 		}
 	}
 	

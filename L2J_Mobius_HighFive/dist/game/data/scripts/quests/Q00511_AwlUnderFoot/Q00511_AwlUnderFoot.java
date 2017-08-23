@@ -296,7 +296,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
 		InstanceManager.getInstance().addWorld(world);
 		_log.info("Fortress AwlUnderFoot started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
-		ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
+		ThreadPoolManager.schedule(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
 		
 		// teleport players
 		if (player.getParty() == null)
@@ -398,7 +398,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			else
 			{
 				world.incStatus();
-				ThreadPoolManager.getInstance().scheduleGeneral(new spawnRaid(world), RAID_SPAWN_DELAY);
+				ThreadPoolManager.schedule(new spawnRaid(world), RAID_SPAWN_DELAY);
 			}
 		}
 		return null;

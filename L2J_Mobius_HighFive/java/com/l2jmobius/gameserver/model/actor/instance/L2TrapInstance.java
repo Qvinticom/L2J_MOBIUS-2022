@@ -84,7 +84,7 @@ public final class L2TrapInstance extends L2Npc
 		_remainingTime = _lifeTime;
 		if (_skill != null)
 		{
-			_trapTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new TrapTask(this), TICK, TICK);
+			_trapTask = ThreadPoolManager.scheduleAtFixedRate(new TrapTask(this), TICK, TICK);
 		}
 	}
 	
@@ -409,7 +409,7 @@ public final class L2TrapInstance extends L2Npc
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(new TrapTriggerTask(this), 500);
+		ThreadPoolManager.schedule(new TrapTriggerTask(this), 500);
 	}
 	
 	public void unSummon()

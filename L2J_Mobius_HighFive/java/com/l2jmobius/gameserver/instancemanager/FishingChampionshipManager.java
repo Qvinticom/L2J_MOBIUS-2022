@@ -79,7 +79,7 @@ public class FishingChampionshipManager
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new finishChamp(), _enddate - System.currentTimeMillis());
+			ThreadPoolManager.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}
 	
@@ -305,7 +305,7 @@ public class FishingChampionshipManager
 			pl.sendPacket(html);
 			
 			refreshResult();
-			ThreadPoolManager.getInstance().scheduleGeneral(new needRefresh(), 60000);
+			ThreadPoolManager.schedule(new needRefresh(), 60000);
 			return;
 		}
 		
@@ -471,7 +471,7 @@ public class FishingChampionshipManager
 			shutdown();
 			
 			_log.info("FishingChampionshipManager : new event period start.");
-			ThreadPoolManager.getInstance().scheduleGeneral(new finishChamp(), _enddate - System.currentTimeMillis());
+			ThreadPoolManager.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}
 	

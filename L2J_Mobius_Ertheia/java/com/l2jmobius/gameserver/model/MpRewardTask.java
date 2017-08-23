@@ -41,7 +41,7 @@ public class MpRewardTask
 		_creature = creature;
 		_count = new AtomicInteger(template.getMpRewardTicks());
 		_value = calculateBaseValue(npc, creature);
-		_task = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
+		_task = ThreadPoolManager.scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
 	}
 	
 	/**

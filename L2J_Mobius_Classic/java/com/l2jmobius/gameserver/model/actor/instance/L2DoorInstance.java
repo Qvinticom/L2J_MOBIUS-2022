@@ -107,7 +107,7 @@ public final class L2DoorInstance extends L2Character
 		{
 			delay += Rnd.get(getTemplate().getRandomTime());
 		}
-		ThreadPoolManager.getInstance().scheduleGeneral(new TimerOpen(), delay * 1000);
+		ThreadPoolManager.schedule(new TimerOpen(), delay * 1000);
 	}
 	
 	@Override
@@ -646,7 +646,7 @@ public final class L2DoorInstance extends L2Character
 			_autoCloseTask = null;
 			oldTask.cancel(false);
 		}
-		_autoCloseTask = ThreadPoolManager.getInstance().scheduleGeneral(new AutoClose(), getTemplate().getCloseTime() * 1000);
+		_autoCloseTask = ThreadPoolManager.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
 	}
 	
 	class AutoClose implements Runnable
@@ -681,7 +681,7 @@ public final class L2DoorInstance extends L2Character
 			{
 				delay += Rnd.get(getTemplate().getRandomTime());
 			}
-			ThreadPoolManager.getInstance().scheduleGeneral(this, delay * 1000);
+			ThreadPoolManager.schedule(this, delay * 1000);
 		}
 	}
 	

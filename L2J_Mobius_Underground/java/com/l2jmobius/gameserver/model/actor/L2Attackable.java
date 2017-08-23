@@ -232,7 +232,7 @@ public class L2Attackable extends L2Npc
 						{
 							_commandChannelTimer = new CommandChannelTimer(this);
 							_commandChannelLastAttack = System.currentTimeMillis();
-							ThreadPoolManager.getInstance().scheduleGeneral(_commandChannelTimer, 10000); // check for last attack
+							ThreadPoolManager.schedule(_commandChannelTimer, 10000); // check for last attack
 							_firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, ChatType.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
 						}
 					}

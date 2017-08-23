@@ -65,7 +65,7 @@ public class ResidenceFunction
 		final ResidenceFunctionTemplate template = getTemplate();
 		if ((template != null) && (_expiration > System.currentTimeMillis()))
 		{
-			_task = ThreadPoolManager.getInstance().scheduleGeneral(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
+			_task = ThreadPoolManager.schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
 		}
 	}
 	

@@ -58,7 +58,7 @@ public class TimerHolder<T> implements Runnable
 		_eventScript = eventScript;
 		_cancelScript = cancelScript;
 		_postExecutor = postExecutor;
-		_task = isRepeating ? ThreadPoolManager.getInstance().scheduleEventAtFixedRate(this, _time, _time) : ThreadPoolManager.getInstance().scheduleEvent(this, _time);
+		_task = isRepeating ? ThreadPoolManager.scheduleAtFixedRate(this, _time, _time) : ThreadPoolManager.schedule(this, _time);
 		TimersManager.getInstance().registerTimer(this);
 	}
 	

@@ -291,7 +291,7 @@ public final class BuffInfo
 		// Creates a task that will stop all the effects.
 		if (_abnormalTime > 0)
 		{
-			_scheduledFutureTimeTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new BuffTimeTask(this), 0, 1000L);
+			_scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
 		}
 		
 		// Reset abnormal visual effects.
@@ -313,7 +313,7 @@ public final class BuffInfo
 			{
 				// The task for the effect ticks.
 				final EffectTickTask effectTask = new EffectTickTask(this, effect);
-				final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
+				final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
 				// Adds the task for ticking.
 				addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
 			}
@@ -448,7 +448,7 @@ public final class BuffInfo
 			{
 				_scheduledFutureTimeTask.cancel(true);
 			}
-			_scheduledFutureTimeTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new BuffTimeTask(this), 0, 1000L);
+			_scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
 		}
 	}
 }

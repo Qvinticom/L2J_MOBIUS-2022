@@ -212,7 +212,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 				{
 					_spawnMonsterTask.cancel(true);
 				}
-				_spawnMonsterTask = ThreadPoolManager.getInstance().scheduleEffect(new SpawnMonster(getId()), 3500);
+				_spawnMonsterTask = ThreadPoolManager.schedule(new SpawnMonster(getId()), 3500);
 				break;
 			}
 			case 31455:
@@ -367,12 +367,12 @@ public class L2SepulcherNpcInstance extends L2Npc
 		{
 			_closeTask.cancel(true);
 		}
-		_closeTask = ThreadPoolManager.getInstance().scheduleEffect(new CloseNextDoor(doorId), 10000);
+		_closeTask = ThreadPoolManager.schedule(new CloseNextDoor(doorId), 10000);
 		if (_spawnNextMysteriousBoxTask != null)
 		{
 			_spawnNextMysteriousBoxTask.cancel(true);
 		}
-		_spawnNextMysteriousBoxTask = ThreadPoolManager.getInstance().scheduleEffect(new SpawnNextMysteriousBox(npcId), 0);
+		_spawnNextMysteriousBoxTask = ThreadPoolManager.schedule(new SpawnNextMysteriousBox(npcId), 0);
 	}
 	
 	private static class CloseNextDoor implements Runnable

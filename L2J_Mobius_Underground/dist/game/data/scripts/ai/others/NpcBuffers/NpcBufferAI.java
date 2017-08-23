@@ -90,6 +90,6 @@ public class NpcBufferAI implements Runnable
 		
 		_npc.doCast(skill);
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(this, skill.getReuseDelay());
+		ThreadPoolManager.schedule(this, skill.getReuseDelay());
 	}
 }

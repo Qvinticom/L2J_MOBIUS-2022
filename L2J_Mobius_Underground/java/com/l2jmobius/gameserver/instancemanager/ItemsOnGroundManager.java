@@ -47,7 +47,7 @@ public final class ItemsOnGroundManager implements Runnable
 	{
 		if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
+			ThreadPoolManager.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
 		}
 		load();
 	}

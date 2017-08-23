@@ -352,7 +352,7 @@ public class CursedWeapon implements INamable
 		{
 			_player.stopTransformation(true);
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(() -> TransformData.getInstance().transformPlayer(transformationId, _player), 500);
+			ThreadPoolManager.schedule(() -> TransformData.getInstance().transformPlayer(transformationId, _player), 500);
 		}
 		else
 		{
@@ -378,7 +378,7 @@ public class CursedWeapon implements INamable
 		}
 		else
 		{
-			_removeTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPoolManager.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 		}
 	}
 	
@@ -391,7 +391,7 @@ public class CursedWeapon implements INamable
 			
 			// Start the Life Task
 			_endTime = System.currentTimeMillis() + (_duration * 60000L);
-			_removeTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPoolManager.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 			
 			return true;
 		}

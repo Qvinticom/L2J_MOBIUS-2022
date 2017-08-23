@@ -145,7 +145,7 @@ public class Message
 		_attachments = msg.getAttachments();
 		msg.removeAttachments();
 		_attachments.setNewMessageId(_messageId);
-		_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
+		_unloadTask = ThreadPoolManager.schedule(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 	}
 	
 	public static PreparedStatement getStatement(Message msg, Connection con) throws SQLException
@@ -330,7 +330,7 @@ public class Message
 		{
 			_attachments = new Mail(_senderId, _messageId);
 			_attachments.restore();
-			_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
+			_unloadTask = ThreadPoolManager.schedule(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 		}
 		return _attachments;
 	}
@@ -364,7 +364,7 @@ public class Message
 		
 		_attachments = new Mail(_senderId, _messageId);
 		_hasAttachments = true;
-		_unloadTask = ThreadPoolManager.getInstance().scheduleGeneral(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
+		_unloadTask = ThreadPoolManager.schedule(new AttachmentsUnloadTask(this), UNLOAD_ATTACHMENTS_INTERVAL + Rnd.get(UNLOAD_ATTACHMENTS_INTERVAL));
 		return _attachments;
 	}
 	

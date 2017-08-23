@@ -115,7 +115,7 @@ public class EventScheduler
 		if (timeSchedule <= (30 * 1000))
 		{
 			LOGGER.warning("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
-			ThreadPoolManager.getInstance().scheduleEvent(this::startScheduler, timeSchedule + 1000);
+			ThreadPoolManager.schedule(this::startScheduler, timeSchedule + 1000);
 			return;
 		}
 		
@@ -124,14 +124,14 @@ public class EventScheduler
 			_task.cancel(false);
 		}
 		
-		_task = ThreadPoolManager.getInstance().scheduleEvent(() ->
+		_task = ThreadPoolManager.schedule(() ->
 		{
 			run();
 			updateLastRun();
 			
 			if (isRepeating())
 			{
-				ThreadPoolManager.getInstance().scheduleEvent(this::startScheduler, 1000);
+				ThreadPoolManager.schedule(this::startScheduler, 1000);
 			}
 		}, timeSchedule);
 	}

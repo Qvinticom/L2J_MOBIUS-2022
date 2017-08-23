@@ -662,7 +662,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.HARDWARE_INFO_ENABLED)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			ThreadPoolManager.schedule(() ->
 			{
 				if (client.getHardwareInfo() == null)
 				{

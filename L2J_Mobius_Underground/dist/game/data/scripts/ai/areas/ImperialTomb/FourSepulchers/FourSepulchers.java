@@ -256,7 +256,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 							if ((doorInfo[0] == sepulcherId) && (doorInfo[1] == currentWave))
 							{
 								openDoor(doorInfo[2], 0);
-								ThreadPoolManager.getInstance().scheduleGeneral(() ->
+								ThreadPoolManager.schedule(() ->
 								{
 									closeDoor(doorInfo[2], 0);
 								}, 15000);
@@ -578,7 +578,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		showHtmlFile(player, npcId + "-OK.html", npc, null);
 		
 		// Kick all players when/if time is over
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers();
 		}, TIME_ATTACK * 60 * 1000);

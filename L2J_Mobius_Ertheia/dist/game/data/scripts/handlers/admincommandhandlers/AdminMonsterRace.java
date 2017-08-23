@@ -107,7 +107,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(new RunRace(codes, activeChar), 5000);
+			ThreadPoolManager.schedule(new RunRace(codes, activeChar), 5000);
 		}
 		
 	}
@@ -137,7 +137,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			final MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
-			ThreadPoolManager.getInstance().scheduleGeneral(new RunEnd(activeChar), 30000);
+			ThreadPoolManager.schedule(new RunEnd(activeChar), 30000);
 		}
 	}
 	

@@ -76,8 +76,8 @@ public final class CabaleBuffer extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(new CabaleAI(npc), 3000);
-		ThreadPoolManager.getInstance().scheduleGeneral(new Talk(npc), 60000);
+		ThreadPoolManager.schedule(new CabaleAI(npc), 3000);
+		ThreadPoolManager.schedule(new Talk(npc), 60000);
 		return super.onSpawn(npc);
 	}
 	
@@ -101,7 +101,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 					messages = PREACHER_MSG;
 				}
 				broadcastSay(_npc, messages[getRandom(messages.length)], null, -1);
-				ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
+				ThreadPoolManager.schedule(this, 60000);
 			}
 		}
 	}
@@ -224,7 +224,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 					break;
 				}
 			}
-			ThreadPoolManager.getInstance().scheduleGeneral(this, 3000);
+			ThreadPoolManager.schedule(this, 3000);
 		}
 		
 		/**

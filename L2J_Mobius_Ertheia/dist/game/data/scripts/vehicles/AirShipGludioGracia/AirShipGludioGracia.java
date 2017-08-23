@@ -248,7 +248,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 				case 1:
 					// _ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
+					ThreadPoolManager.schedule(this, 5000);
 					break;
 				case 2:
 					_ship.executePath(WARPGATE_TO_GRACIA);
@@ -257,7 +257,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
+					ThreadPoolManager.schedule(this, 60000);
 					break;
 				case 4:
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_ADEN_CONTINENT_HAS_DEPARTED);
@@ -267,7 +267,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 				case 5:
 					// _ship.teleToLocation(-157261, 255664, 221, 64781, false);
 					_ship.setOustLoc(OUST_GLUDIO);
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 5000);
+					ThreadPoolManager.schedule(this, 5000);
 					break;
 				case 6:
 					_ship.executePath(WARPGATE_TO_GLUDIO);
@@ -276,7 +276,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 60000);
+					ThreadPoolManager.schedule(this, 60000);
 					break;
 			}
 			_cycle++;

@@ -241,7 +241,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		{
 			activeChar.sendPacket(new ShopPreviewInfo(itemList));
 			// Schedule task
-			ThreadPoolManager.getInstance().scheduleGeneral(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
+			ThreadPoolManager.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
 		}
 	}
 	

@@ -111,7 +111,7 @@ public final class Elpies extends Event
 		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
 		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
 		
-		_eventTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		_eventTask = ThreadPoolManager.schedule(() ->
 		{
 			Broadcast.toAllOnlinePlayers("Time is up!");
 			eventStop();

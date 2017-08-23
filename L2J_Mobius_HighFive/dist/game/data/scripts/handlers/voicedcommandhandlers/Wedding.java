@@ -472,7 +472,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getLocation(), partner.isIn7sDungeon());
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(ef, teleportTimer));
+		activeChar.setSkillCast(ThreadPoolManager.schedule(ef, teleportTimer));
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		return true;

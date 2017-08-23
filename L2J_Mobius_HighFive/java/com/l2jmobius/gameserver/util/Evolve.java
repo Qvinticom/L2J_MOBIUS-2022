@@ -143,11 +143,11 @@ public final class Evolve
 		petSummon.startFeed();
 		item.setEnchantLevel(petSummon.getLevel());
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(new EvolveFinalizer(player, petSummon), 900);
+		ThreadPoolManager.schedule(new EvolveFinalizer(player, petSummon), 900);
 		
 		if (petSummon.getCurrentFed() <= 0)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new EvolveFeedWait(player, petSummon), 60000);
+			ThreadPoolManager.schedule(new EvolveFeedWait(player, petSummon), 60000);
 		}
 		else
 		{
@@ -240,11 +240,11 @@ public final class Evolve
 		final L2World world = L2World.getInstance();
 		world.removeObject(removedItem);
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(new EvolveFinalizer(player, petSummon), 900);
+		ThreadPoolManager.schedule(new EvolveFinalizer(player, petSummon), 900);
 		
 		if (petSummon.getCurrentFed() <= 0)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new EvolveFeedWait(player, petSummon), 60000);
+			ThreadPoolManager.schedule(new EvolveFeedWait(player, petSummon), 60000);
 		}
 		else
 		{

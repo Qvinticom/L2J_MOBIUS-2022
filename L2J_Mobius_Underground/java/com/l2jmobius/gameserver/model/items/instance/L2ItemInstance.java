@@ -1412,7 +1412,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		_consumingMana = true;
-		ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+		ThreadPoolManager.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
 	}
 	
 	/**
@@ -1545,7 +1545,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public final void dropMe(L2Character dropper, int x, int y, int z)
 	{
-		ThreadPoolManager.getInstance().executeGeneral(new ItemDropTask(this, dropper, x, y, z));
+		ThreadPoolManager.execute(new ItemDropTask(this, dropper, x, y, z));
 		if ((dropper != null) && dropper.isPlayer())
 		{
 			// Notify to scripts
@@ -1833,7 +1833,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				_lifeTimeTask.cancel(true);
 			}
-			_lifeTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleLifeTimeTask(this), getRemainingTime());
+			_lifeTimeTask = ThreadPoolManager.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
 		}
 	}
 	
@@ -2379,11 +2379,11 @@ public final class L2ItemInstance extends L2Object
 			final long time = getVisualLifeTime() - System.currentTimeMillis();
 			if (time > 0)
 			{
-				_appearanceLifeTimeTask = ThreadPoolManager.getInstance().scheduleGeneral(this::onVisualLifeTimeEnd, time);
+				_appearanceLifeTimeTask = ThreadPoolManager.schedule(this::onVisualLifeTimeEnd, time);
 			}
 			else
 			{
-				ThreadPoolManager.getInstance().executeGeneral(this::onVisualLifeTimeEnd);
+				ThreadPoolManager.execute(this::onVisualLifeTimeEnd);
 			}
 		}
 	}

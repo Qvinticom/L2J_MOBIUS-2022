@@ -121,7 +121,7 @@ public class L2DamageZone extends L2ZoneType
 			{
 				if (getSettings().getTask() == null)
 				{
-					getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+					getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
 				}
 			}
 		}

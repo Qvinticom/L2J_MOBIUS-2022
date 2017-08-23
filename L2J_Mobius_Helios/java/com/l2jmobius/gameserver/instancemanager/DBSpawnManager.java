@@ -226,7 +226,7 @@ public class DBSpawnManager
 			{
 				LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 				
-				_schedules.put(npc.getId(), ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(npc.getId()), respawnDelay));
+				_schedules.put(npc.getId(), ThreadPoolManager.schedule(new SpawnSchedule(npc.getId()), respawnDelay));
 				updateDb();
 			}
 		}
@@ -287,7 +287,7 @@ public class DBSpawnManager
 		else
 		{
 			final long spawnTime = respawnTime - System.currentTimeMillis();
-			_schedules.put(npcId, ThreadPoolManager.getInstance().scheduleGeneral(new SpawnSchedule(npcId), spawnTime));
+			_schedules.put(npcId, ThreadPoolManager.schedule(new SpawnSchedule(npcId), spawnTime));
 		}
 		
 		_spawns.put(npcId, spawn);

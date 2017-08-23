@@ -400,7 +400,7 @@ public final class ItemAuction
 	
 	public final void broadcastToAllBidders(IClientOutgoingPacket packet)
 	{
-		ThreadPoolManager.getInstance().executeGeneral(() -> broadcastToAllBiddersInternal(packet));
+		ThreadPoolManager.execute(() -> broadcastToAllBiddersInternal(packet));
 	}
 	
 	public final void broadcastToAllBiddersInternal(IClientOutgoingPacket packet)

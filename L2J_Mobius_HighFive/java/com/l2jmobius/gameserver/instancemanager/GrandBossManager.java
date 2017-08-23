@@ -109,7 +109,7 @@ public final class GrandBossManager implements IStorable
 		{
 			_log.log(Level.WARNING, "Error while initializing GrandBossManager: " + e.getMessage(), e);
 		}
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
+		ThreadPoolManager.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
 	}
 	
 	/**

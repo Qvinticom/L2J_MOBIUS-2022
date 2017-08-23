@@ -246,7 +246,7 @@ public final class UseItem implements IClientIncomingPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(() ->
+				ThreadPoolManager.schedule(() ->
 				{
 					// If character is still engaged in strike we should not change weapon
 					if (activeChar.isAttackingNow())

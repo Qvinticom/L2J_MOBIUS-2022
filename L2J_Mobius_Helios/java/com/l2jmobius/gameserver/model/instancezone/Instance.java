@@ -290,7 +290,7 @@ public final class Instance implements IIdentifiable, INamable
 			}
 			else if ((emptyTime >= 0) && (_emptyDestroyTask == null) && (getRemainingTime() < emptyTime))
 			{
-				_emptyDestroyTask = ThreadPoolManager.getInstance().scheduleGeneral(this::destroy, emptyTime);
+				_emptyDestroyTask = ThreadPoolManager.schedule(this::destroy, emptyTime);
 			}
 		}
 	}
@@ -684,11 +684,11 @@ public final class Instance implements IIdentifiable, INamable
 			sendWorldDestroyMessage(minutes);
 			if (minutes <= 5) // Message 1 minute before destroy
 			{
-				_cleanUpTask = ThreadPoolManager.getInstance().scheduleGeneral(this::cleanUp, millis - 60000);
+				_cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - 60000);
 			}
 			else // Message 5 minutes before destroy
 			{
-				_cleanUpTask = ThreadPoolManager.getInstance().scheduleGeneral(this::cleanUp, millis - (5 * 60000));
+				_cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - (5 * 60000));
 			}
 		}
 	}
@@ -900,13 +900,13 @@ public final class Instance implements IIdentifiable, INamable
 		player.sendPacket(sm);
 		
 		// Start eject task
-		_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
 		{
 			if (player.isDead())
 			{
 				ejectPlayer(player.getActingPlayer());
 			}
-		}, _template.getEjectTime(), TimeUnit.MINUTES));
+		}, _template.getEjectTime() * 60 * 1000)); // minutes to milliseconds
 	}
 	
 	/**
@@ -1128,12 +1128,12 @@ public final class Instance implements IIdentifiable, INamable
 		if (getRemainingTime() <= TimeUnit.MINUTES.toMillis(1))
 		{
 			sendWorldDestroyMessage(1);
-			_cleanUpTask = ThreadPoolManager.getInstance().scheduleGeneral(this::destroy, 1, TimeUnit.MINUTES);
+			_cleanUpTask = ThreadPoolManager.schedule(this::destroy, 60 * 1000); // 1 minute
 		}
 		else
 		{
 			sendWorldDestroyMessage(5);
-			_cleanUpTask = ThreadPoolManager.getInstance().scheduleGeneral(this::cleanUp, 5, TimeUnit.MINUTES);
+			_cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
 		}
 	}
 	

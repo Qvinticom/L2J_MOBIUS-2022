@@ -130,7 +130,7 @@ public class L2EffectZone extends L2ZoneType
 		{
 			synchronized (this)
 			{
-				getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+				getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
 			}
 		}
 		if (!character.isPlayer())

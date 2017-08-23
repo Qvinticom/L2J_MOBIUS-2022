@@ -1216,7 +1216,7 @@ public class L2Npc extends L2Character
 	
 	public void scheduleDespawn(long delay)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			if (!isDecayed())
 			{

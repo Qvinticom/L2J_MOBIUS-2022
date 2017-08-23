@@ -106,7 +106,7 @@ public class L2Fishing implements Runnable
 		
 		if (_fishAiTask == null)
 		{
-			_fishAiTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(this, 1000, 1000);
+			_fishAiTask = ThreadPoolManager.scheduleAtFixedRate(this, 1000, 1000);
 		}
 	}
 	

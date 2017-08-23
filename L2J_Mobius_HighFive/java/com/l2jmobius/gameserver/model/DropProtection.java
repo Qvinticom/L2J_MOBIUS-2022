@@ -84,6 +84,6 @@ public class DropProtection implements Runnable
 			throw new NullPointerException("Trying to protect dropped item to null owner");
 		}
 		
-		_task = ThreadPoolManager.getInstance().scheduleGeneral(this, PROTECTED_MILLIS_TIME);
+		_task = ThreadPoolManager.schedule(this, PROTECTED_MILLIS_TIME);
 	}
 }

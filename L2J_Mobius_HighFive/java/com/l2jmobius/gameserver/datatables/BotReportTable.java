@@ -422,11 +422,11 @@ public final class BotReportTable
 				c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) + 1);
 			}
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
+			ThreadPoolManager.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
 		}
 		catch (Exception e)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new ResetPointTask(), 24 * 3600 * 1000);
+			ThreadPoolManager.schedule(new ResetPointTask(), 24 * 3600 * 1000);
 			LOGGER.log(Level.WARNING, "BotReportTable: Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
 		}
 	}

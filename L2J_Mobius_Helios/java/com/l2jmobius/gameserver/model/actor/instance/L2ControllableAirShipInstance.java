@@ -253,8 +253,8 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	public void onSpawn()
 	{
 		super.onSpawn();
-		_checkTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckTask(), 60000, 10000);
-		_consumeFuelTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
+		_checkTask = ThreadPoolManager.scheduleAtFixedRate(new CheckTask(), 60000, 10000);
+		_consumeFuelTask = ThreadPoolManager.scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
 	}
 	
 	@Override
@@ -326,7 +326,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 			if (isSpawned() && isEmpty() && !isInDock())
 			{
 				// deleteMe() can't be called from CheckTask because task should not cancel itself
-				ThreadPoolManager.getInstance().executeGeneral(new DecayTask());
+				ThreadPoolManager.execute(new DecayTask());
 			}
 		}
 	}

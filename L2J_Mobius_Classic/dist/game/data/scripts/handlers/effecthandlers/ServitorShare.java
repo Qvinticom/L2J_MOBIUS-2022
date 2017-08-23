@@ -67,7 +67,7 @@ public final class ServitorShare extends AbstractEffect
 		
 		if (effected != null)
 		{
-			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
+			ThreadPoolManager.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
 		}
 	}
 }

@@ -74,7 +74,7 @@ public final class ServitorShare extends AbstractEffect
 		final L2Character effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
 		if (effected != null)
 		{
-			ThreadPoolManager.getInstance().scheduleEffect(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
+			ThreadPoolManager.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
 		}
 	}
 }

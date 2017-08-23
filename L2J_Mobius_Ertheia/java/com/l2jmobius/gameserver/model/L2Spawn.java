@@ -400,7 +400,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			
 			// Create a new SpawnTask to launch after the respawn Delay
 			// ClientScheduler.getInstance().scheduleLow(new SpawnTask(npcId), _respawnDelay);
-			ThreadPoolManager.getInstance().scheduleGeneral(new SpawnTask(oldNpc), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
+			ThreadPoolManager.schedule(new SpawnTask(oldNpc), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
 		}
 	}
 	

@@ -57,7 +57,7 @@ public class ClassChange extends AbstractEffect
 		{
 			final L2PcInstance player = effected.getActingPlayer();
 			// TODO: FIX ME - Executing 1 second later otherwise interupted exception during storeCharBase()
-			ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			ThreadPoolManager.schedule(() ->
 			{
 				final int activeClass = player.getClassId().getId();
 				

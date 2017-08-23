@@ -271,7 +271,7 @@ public final class WalkingManager implements IXmlReader
 					npc.sendDebugMessage("Starting to move at route '" + routeName + "'");
 					npc.setIsRunning(node.runToLocation());
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-					walk.setWalkCheckTask(ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
+					walk.setWalkCheckTask(ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
 					
 					npc.getKnownList().startTrackingTask();
 					
@@ -280,7 +280,7 @@ public final class WalkingManager implements IXmlReader
 				else
 				{
 					npc.sendDebugMessage("Failed to start moving along route '" + routeName + "', scheduled");
-					ThreadPoolManager.getInstance().scheduleGeneral(new StartMovingTask(npc, routeName), 60000);
+					ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000);
 				}
 			}
 			// walk was stopped due to some reason (arrived to node, script action, fight or something else), resume it
@@ -422,7 +422,7 @@ public final class WalkingManager implements IXmlReader
 		{
 			walk.setLastAction(System.currentTimeMillis());
 		}
-		ThreadPoolManager.getInstance().scheduleGeneral(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
+		ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
 	}
 	
 	/**

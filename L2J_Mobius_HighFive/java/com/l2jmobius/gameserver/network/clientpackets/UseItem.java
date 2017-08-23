@@ -315,7 +315,7 @@ public final class UseItem extends L2GameClientPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
+				ThreadPoolManager.schedule(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
 			}
 			else
 			{

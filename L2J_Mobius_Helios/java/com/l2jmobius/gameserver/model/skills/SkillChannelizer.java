@@ -78,7 +78,7 @@ public class SkillChannelizer implements Runnable
 		
 		// Start channeling.
 		_skill = skill;
-		_task = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(this, skill.getChannelingTickInitialDelay(), skill.getChannelingTickInterval());
+		_task = ThreadPoolManager.scheduleAtFixedRate(this, skill.getChannelingTickInitialDelay(), skill.getChannelingTickInterval());
 	}
 	
 	public void stopChanneling()

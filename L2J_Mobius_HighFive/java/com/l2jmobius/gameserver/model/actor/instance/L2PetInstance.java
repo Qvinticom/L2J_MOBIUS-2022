@@ -1100,7 +1100,7 @@ public class L2PetInstance extends L2Summon
 		stopFeed();
 		if (!isDead() && (getOwner().getSummon() == this))
 		{
-			_feedTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new FeedTask(), 10000, 10000);
+			_feedTask = ThreadPoolManager.scheduleAtFixedRate(new FeedTask(), 10000, 10000);
 		}
 	}
 	

@@ -186,7 +186,7 @@ public class SevenSigns
 		
 		// Schedule a time for the next period change.
 		final SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
-		ThreadPoolManager.getInstance().scheduleGeneral(sspc, milliToChange);
+		ThreadPoolManager.schedule(sspc, milliToChange);
 		
 		// Thanks to http://rainbow.arch.scriptmania.com/scripts/timezone_countdown.html for help with this.
 		final double numSecs = (milliToChange / 1000) % 60;
@@ -1538,7 +1538,7 @@ public class SevenSigns
 			setCalendarForNextPeriodChange();
 			
 			final SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
-			ThreadPoolManager.getInstance().scheduleGeneral(sspc, getMilliToPeriodChange());
+			ThreadPoolManager.schedule(sspc, getMilliToPeriodChange());
 		}
 	}
 	

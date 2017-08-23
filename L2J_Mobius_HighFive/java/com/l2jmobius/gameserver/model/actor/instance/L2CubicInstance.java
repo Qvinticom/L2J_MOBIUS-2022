@@ -154,7 +154,7 @@ public final class L2CubicInstance implements IIdentifiable
 				_skills.add(SkillData.getInstance().getSkill(5115, 4));
 				break;
 		}
-		_disappearTask = ThreadPoolManager.getInstance().scheduleGeneral(new CubicDisappear(this), cubicDuration * 1000); // disappear
+		_disappearTask = ThreadPoolManager.schedule(new CubicDisappear(this), cubicDuration * 1000); // disappear
 	}
 	
 	public synchronized void doAction()
@@ -180,10 +180,10 @@ public final class L2CubicInstance implements IIdentifiable
 			case SMART_CUBIC_SPECTRALMASTER:
 			case SMART_CUBIC_EVATEMPLAR:
 			case SMART_CUBIC_SHILLIENTEMPLAR:
-				_actionTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
+				_actionTask = ThreadPoolManager.scheduleAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
 				break;
 			case LIFE_CUBIC:
-				_actionTask = ThreadPoolManager.getInstance().scheduleEffectAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
+				_actionTask = ThreadPoolManager.scheduleAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
 				break;
 		}
 	}

@@ -42,9 +42,9 @@ public class Performance implements ITelnetCommand
 	@Override
 	public String handle(ChannelHandlerContext ctx, String[] args)
 	{
-		ThreadPoolManager.getInstance().purge();
+		// ThreadPoolManager.purge();
 		final StringBuilder sb = new StringBuilder();
-		for (String line : ThreadPoolManager.getInstance().getStats())
+		for (String line : ThreadPoolManager.getStats())
 		{
 			sb.append(line + Config.EOL);
 		}

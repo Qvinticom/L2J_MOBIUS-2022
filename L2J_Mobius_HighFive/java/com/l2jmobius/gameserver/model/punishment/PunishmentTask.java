@@ -147,7 +147,7 @@ public class PunishmentTask implements Runnable
 		onStart();
 		if (_expirationTime > 0) // Has expiration?
 		{
-			_task = ThreadPoolManager.getInstance().scheduleGeneral(this, _expirationTime - System.currentTimeMillis());
+			_task = ThreadPoolManager.schedule(this, _expirationTime - System.currentTimeMillis());
 		}
 	}
 	

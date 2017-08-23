@@ -197,7 +197,7 @@ public final class Instance
 			_checkTimeUpTask.cancel(true);
 		}
 		
-		_checkTimeUpTask = ThreadPoolManager.getInstance().scheduleGeneral(new CheckTimeUp(duration), 500);
+		_checkTimeUpTask = ThreadPoolManager.schedule(new CheckTimeUp(duration), 500);
 		_instanceEndTime = System.currentTimeMillis() + duration + 500;
 	}
 	
@@ -494,7 +494,7 @@ public final class Instance
 					a = n.getAttributes().getNamedItem("val");
 					if (a != null)
 					{
-						_checkTimeUpTask = ThreadPoolManager.getInstance().scheduleGeneral(new CheckTimeUp(Integer.parseInt(a.getNodeValue()) * 60000), 15000);
+						_checkTimeUpTask = ThreadPoolManager.schedule(new CheckTimeUp(Integer.parseInt(a.getNodeValue()) * 60000), 15000);
 						_instanceEndTime = System.currentTimeMillis() + (Long.parseLong(a.getNodeValue()) * 60000) + 15000;
 					}
 					break;
@@ -845,11 +845,11 @@ public final class Instance
 		cancelTimer();
 		if (remaining >= 10000)
 		{
-			_checkTimeUpTask = ThreadPoolManager.getInstance().scheduleGeneral(new CheckTimeUp(remaining), interval);
+			_checkTimeUpTask = ThreadPoolManager.schedule(new CheckTimeUp(remaining), interval);
 		}
 		else
 		{
-			_checkTimeUpTask = ThreadPoolManager.getInstance().scheduleGeneral(new TimeUp(), interval);
+			_checkTimeUpTask = ThreadPoolManager.schedule(new TimeUp(), interval);
 		}
 	}
 	
@@ -874,7 +874,7 @@ public final class Instance
 	{
 		if (player != null)
 		{
-			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
 			{
 				if (player.isDead() && (player.getInstanceId() == getId()))
 				{

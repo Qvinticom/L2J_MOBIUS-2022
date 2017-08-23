@@ -349,7 +349,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 			player.sendSkillList();
 		}
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			player.sendPacket(ExShowUsm.AWAKENING_END);
 		}, 10000);

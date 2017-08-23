@@ -331,7 +331,7 @@ public class ClanTable
 	
 	public void scheduleRemoveClan(int clanId)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			if (getClan(clanId) == null)
 			{

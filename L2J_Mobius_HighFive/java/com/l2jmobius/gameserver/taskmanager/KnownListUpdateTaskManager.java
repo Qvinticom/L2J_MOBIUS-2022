@@ -44,7 +44,7 @@ public class KnownListUpdateTaskManager
 	
 	protected KnownListUpdateTaskManager()
 	{
-		ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new KnownListUpdate(), 1000, Config.KNOWNLIST_UPDATE_INTERVAL);
+		ThreadPoolManager.scheduleAtFixedRate(new KnownListUpdate(), 1000, Config.KNOWNLIST_UPDATE_INTERVAL);
 	}
 	
 	private class KnownListUpdate implements Runnable

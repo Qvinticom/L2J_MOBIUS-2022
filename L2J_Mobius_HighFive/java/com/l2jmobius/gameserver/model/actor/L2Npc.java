@@ -314,7 +314,7 @@ public class L2Npc extends L2Character
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
 		_rAniTask = new RandomAnimationTask(this);
-		ThreadPoolManager.getInstance().scheduleGeneral(_rAniTask, interval);
+		ThreadPoolManager.schedule(_rAniTask, interval);
 	}
 	
 	/**
@@ -1498,7 +1498,7 @@ public class L2Npc extends L2Character
 	
 	public L2Npc scheduleDespawn(long delay)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			if (!isDecayed())
 			{

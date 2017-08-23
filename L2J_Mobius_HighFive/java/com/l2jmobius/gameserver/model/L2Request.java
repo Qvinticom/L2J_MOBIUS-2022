@@ -123,7 +123,7 @@ public class L2Request
 	{
 		_isRequestor = isRequestor;
 		_isAnswerer = !isRequestor;
-		ThreadPoolManager.getInstance().scheduleGeneral(() -> clear(), REQUEST_TIMEOUT * 1000);
+		ThreadPoolManager.schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
 	}
 	
 	/**

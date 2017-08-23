@@ -62,7 +62,7 @@ public abstract class Chamber extends AbstractInstance
 		{
 			currentRoom = 0;
 			partyInside = party;
-			_banishTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new BanishTask(), 60000, 60000);
+			_banishTask = ThreadPoolManager.scheduleAtFixedRate(new BanishTask(), 60000, 60000);
 		}
 		
 		protected L2Party getPartyInside()
@@ -78,7 +78,7 @@ public abstract class Chamber extends AbstractInstance
 			// Schedule next room change only if remaining time is enough
 			if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
 			{
-				_roomChangeTask = ThreadPoolManager.getInstance().scheduleGeneral(new ChangeRoomTask(), nextInterval - 5000);
+				_roomChangeTask = ThreadPoolManager.schedule(new ChangeRoomTask(), nextInterval - 5000);
 			}
 		}
 		

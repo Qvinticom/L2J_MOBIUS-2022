@@ -246,7 +246,7 @@ public final class QueenAnt extends AbstractNpcAI
 			}
 			case QUEEN:
 			{
-				_task = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				_task = ThreadPoolManager.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
 				break;
 			}
 		}

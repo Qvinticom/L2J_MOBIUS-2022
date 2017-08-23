@@ -167,7 +167,7 @@ public final class UrbanArea extends AbstractInstance
 						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 						inst.setDuration(5 * 60000);
 						inst.setEmptyDestroyTime(0);
-						ThreadPoolManager.getInstance().scheduleGeneral(new ExitInstance(party, world), 285000);
+						ThreadPoolManager.schedule(new ExitInstance(party, world), 285000);
 						htmltext = "32343-02d.htm";
 					}
 				}
@@ -221,7 +221,7 @@ public final class UrbanArea extends AbstractInstance
 								world.activeAmaskariCall.cancel(true);
 							}
 							
-							world.activeAmaskariCall = ThreadPoolManager.getInstance().scheduleGeneral(new CallAmaskari(npc), 25000);
+							world.activeAmaskariCall = ThreadPoolManager.schedule(new CallAmaskari(npc), 25000);
 						}
 					}
 				}
@@ -267,7 +267,7 @@ public final class UrbanArea extends AbstractInstance
 					{
 						world.activeAmaskariCall.cancel(true);
 					}
-					world.activeAmaskariCall = ThreadPoolManager.getInstance().scheduleGeneral(new CallAmaskari(npc), 25000);
+					world.activeAmaskariCall = ThreadPoolManager.schedule(new CallAmaskari(npc), 25000);
 				}
 			}
 		}
@@ -313,7 +313,7 @@ public final class UrbanArea extends AbstractInstance
 					{
 						world.activeAmaskariCall.cancel(true);
 					}
-					world.activeAmaskariCall = ThreadPoolManager.getInstance().scheduleGeneral(new CallAmaskari(npc), 25000);
+					world.activeAmaskariCall = ThreadPoolManager.schedule(new CallAmaskari(npc), 25000);
 				}
 			}
 		}

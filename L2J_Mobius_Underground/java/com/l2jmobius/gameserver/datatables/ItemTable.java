@@ -221,14 +221,14 @@ public class ItemTable
 				if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
 				{
 					item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-					itemLootShedule = ThreadPoolManager.getInstance().scheduleGeneral(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
+					itemLootShedule = ThreadPoolManager.schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
 					item.setItemLootShedule(itemLootShedule);
 				}
 			}
 			else if (!Config.AUTO_LOOT || ((reference instanceof L2EventMonsterInstance) && ((L2EventMonsterInstance) reference).eventDropOnGround()))
 			{
 				item.setOwnerId(actor.getObjectId());
-				itemLootShedule = ThreadPoolManager.getInstance().scheduleGeneral(new ResetOwner(item), 15000);
+				itemLootShedule = ThreadPoolManager.schedule(new ResetOwner(item), 15000);
 				item.setItemLootShedule(itemLootShedule);
 			}
 		}

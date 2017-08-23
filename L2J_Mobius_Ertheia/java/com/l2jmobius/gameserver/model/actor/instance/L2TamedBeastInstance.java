@@ -153,7 +153,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			{
 				_durationCheckTask.cancel(true);
 			}
-			_durationCheckTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
+			_durationCheckTask = ThreadPoolManager.scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 		}
 	}
 	
@@ -217,10 +217,10 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		int delay = 100;
 		for (Skill skill : _beastSkills)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new buffCast(skill), delay);
+			ThreadPoolManager.schedule(new buffCast(skill), delay);
 			delay += (100 + skill.getHitTime());
 		}
-		ThreadPoolManager.getInstance().scheduleGeneral(new buffCast(null), delay);
+		ThreadPoolManager.schedule(new buffCast(null), delay);
 	}
 	
 	private class buffCast implements Runnable
@@ -284,7 +284,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				{
 					_buffTask.cancel(true);
 				}
-				_buffTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
+				_buffTask = ThreadPoolManager.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
 			}
 		}
 		else

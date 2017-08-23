@@ -553,7 +553,7 @@ public final class AdminPForge implements IAdminCommandHandler
 						p.setBuffers(bb, activeChar.getClient(), new NioNetStringBuffer(2000));
 						if (p.read())
 						{
-							ThreadPoolManager.getInstance().executePacket(p);
+							ThreadPoolManager.execute(p);
 						}
 					}
 				}

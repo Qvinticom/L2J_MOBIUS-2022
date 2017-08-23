@@ -53,7 +53,7 @@ public class BitSetIDFactory extends IdFactory
 		
 		synchronized (BitSetIDFactory.class)
 		{
-			ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+			ThreadPoolManager.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 			initialize();
 		}
 		LOGGER.info(getClass().getSimpleName() + ": " + _freeIds.size() + " id's available.");

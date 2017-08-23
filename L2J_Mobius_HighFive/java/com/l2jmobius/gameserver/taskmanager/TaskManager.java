@@ -231,7 +231,6 @@ public final class TaskManager
 	
 	private boolean launchTask(ExecutedTask task)
 	{
-		final ThreadPoolManager scheduler = ThreadPoolManager.getInstance();
 		final TaskTypes type = task.getType();
 		long delay, interval;
 		switch (type)
@@ -244,14 +243,14 @@ public final class TaskManager
 			case TYPE_SHEDULED:
 			{
 				delay = Long.valueOf(task.getParams()[0]);
-				task.scheduled = scheduler.scheduleGeneral(task, delay);
+				task.scheduled = ThreadPoolManager.schedule(task, delay);
 				return true;
 			}
 			case TYPE_FIXED_SHEDULED:
 			{
 				delay = Long.valueOf(task.getParams()[0]);
 				interval = Long.valueOf(task.getParams()[1]);
-				task.scheduled = scheduler.scheduleGeneralAtFixedRate(task, delay, interval);
+				task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
 				return true;
 			}
 			case TYPE_TIME:
@@ -262,7 +261,7 @@ public final class TaskManager
 					final long diff = desired.getTime() - System.currentTimeMillis();
 					if (diff >= 0)
 					{
-						task.scheduled = scheduler.scheduleGeneral(task, diff);
+						task.scheduled = ThreadPoolManager.schedule(task, diff);
 						return true;
 					}
 					_log.info(getClass().getSimpleName() + ": Task " + task.getId() + " is obsoleted.");
@@ -315,7 +314,7 @@ public final class TaskManager
 				{
 					delay += interval;
 				}
-				task.scheduled = scheduler.scheduleGeneralAtFixedRate(task, delay, interval);
+				task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
 				return true;
 			}
 			default:

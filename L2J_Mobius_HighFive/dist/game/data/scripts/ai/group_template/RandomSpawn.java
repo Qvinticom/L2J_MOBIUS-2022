@@ -91,7 +91,7 @@ public final class RandomSpawn extends AbstractNpcAI
 		if (!npc.isInsideRadius(loc, 200, false, false))
 		{
 			npc.getSpawn().setLocation(loc);
-			ThreadPoolManager.getInstance().scheduleGeneral(new Teleport(npc, loc), 100);
+			ThreadPoolManager.schedule(new Teleport(npc, loc), 100);
 		}
 		return super.onSpawn(npc);
 	}

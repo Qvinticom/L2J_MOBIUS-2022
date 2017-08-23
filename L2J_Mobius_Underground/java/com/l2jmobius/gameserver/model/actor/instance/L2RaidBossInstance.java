@@ -72,7 +72,7 @@ public class L2RaidBossInstance extends L2MonsterInstance
 	@Override
 	protected void startMaintenanceTask()
 	{
-		_maintenanceTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
+		_maintenanceTask = ThreadPoolManager.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
 	}
 	
 	protected void checkAndReturnToSpawn()

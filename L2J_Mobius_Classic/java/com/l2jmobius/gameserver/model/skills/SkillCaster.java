@@ -211,7 +211,7 @@ public class SkillCaster implements Runnable
 		// Reschedule next task if we have such.
 		if (hasNextPhase)
 		{
-			_task = ThreadPoolManager.getInstance().scheduleEffect(this, nextTaskDelay);
+			_task = ThreadPoolManager.schedule(this, nextTaskDelay);
 		}
 		else
 		{
@@ -650,7 +650,7 @@ public class SkillCaster implements Runnable
 			
 			if (queuedSkill != null)
 			{
-				ThreadPoolManager.getInstance().executeGeneral(() ->
+				ThreadPoolManager.execute(() ->
 				{
 					currPlayer.setQueuedSkill(null, null, false, false);
 					currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());

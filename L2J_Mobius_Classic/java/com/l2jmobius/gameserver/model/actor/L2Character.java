@@ -1100,7 +1100,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						if (getCurrentMp() < mpConsume)
 						{
 							// If L2PcInstance doesn't have enough MP, stop the attack
-							ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+							ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
 							sendPacket(SystemMessageId.NOT_ENOUGH_MP);
 							sendPacket(ActionFailed.STATIC_PACKET);
 							return;
@@ -1118,7 +1118,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					else
 					{
 						// Cancel the action because the bow can't be re-use at this moment
-						ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+						ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
@@ -1222,7 +1222,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			
 			// Notify AI with EVT_READY_TO_ACT
-			ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk);
+			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk);
 		}
 		
 	}
@@ -1301,7 +1301,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
+		ThreadPoolManager.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
 		
 		// Calculate and set the disable delay of the bow in function of the Attack Speed
 		_disableRangedAttackEndTime = ((sAtk + reuse) / GameTimeController.MILLIS_IN_TICK) + GameTimeController.getInstance().getGameTicks();
@@ -1371,10 +1371,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority for hit 1
-		ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk / 2);
+		ThreadPoolManager.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk / 2);
 		
 		// Create a new hit task with Medium priority for hit 2 with a higher delay
-		ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, target, damage2, crit2, miss2, attack.hasSoulshot(), shld2), sAtk);
+		ThreadPoolManager.schedule(new HitTask(this, target, damage2, crit2, miss2, attack.hasSoulshot(), shld2), sAtk);
 		
 		// Add those hits to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
@@ -1401,7 +1401,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					damage /= 2;
 				}
 				
-				ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk / 2);
+				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk / 2);
 				attack.addHit(surroundTarget, damage, miss, crit, shld);
 				miss1 |= miss;
 			}
@@ -1421,7 +1421,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					damage /= 2;
 				}
 				
-				ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);
+				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);
 				attack.addHit(surroundTarget, damage, miss, crit, shld);
 				miss2 |= miss;
 			}
@@ -1471,7 +1471,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
+		ThreadPoolManager.schedule(new HitTask(this, target, damage1, crit1, miss1, attack.hasSoulshot(), shld1), sAtk);
 		
 		// Add this hit to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
@@ -1495,7 +1495,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					damage = (int) Formulas.calcAutoAttackDamage(this, surroundTarget, 0, shld, crit, attack.hasSoulshot());
 				}
 				
-				ThreadPoolManager.getInstance().scheduleAi(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);
+				ThreadPoolManager.schedule(new HitTask(this, surroundTarget, damage, crit, miss, attack.hasSoulshot(), shld), sAtk);
 				attack.addHit(surroundTarget, damage, miss, crit, shld);
 				miss1 |= miss;
 			}
@@ -3332,7 +3332,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (distFraction > 1)
 		{
-			ThreadPoolManager.getInstance().executeAi(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+			ThreadPoolManager.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
 			return true;
 		}
 		
@@ -3773,7 +3773,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Create a task to notify the AI that L2Character arrives at a check point of the movement
 		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
 		{
-			ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
@@ -3854,7 +3854,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Create a task to notify the AI that L2Character arrives at a check point of the movement
 		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
 		{
-			ThreadPoolManager.getInstance().scheduleAi(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive

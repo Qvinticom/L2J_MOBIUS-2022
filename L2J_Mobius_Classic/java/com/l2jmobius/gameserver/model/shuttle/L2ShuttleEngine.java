@@ -64,7 +64,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.openDoor(0);
 					_shuttle.closeDoor(1);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPoolManager.getInstance().scheduleGeneral(this, DELAY);
+					ThreadPoolManager.schedule(this, DELAY);
 					break;
 				}
 				case 1:
@@ -74,7 +74,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.closeDoor(0);
 					_shuttle.closeDoor(1);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
+					ThreadPoolManager.schedule(this, 1000);
 					break;
 				}
 				case 2:
@@ -89,7 +89,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.openDoor(1);
 					_shuttle.closeDoor(0);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPoolManager.getInstance().scheduleGeneral(this, DELAY);
+					ThreadPoolManager.schedule(this, DELAY);
 					break;
 				}
 				case 4:
@@ -99,7 +99,7 @@ public class L2ShuttleEngine implements Runnable
 					_shuttle.closeDoor(0);
 					_shuttle.closeDoor(1);
 					_shuttle.broadcastShuttleInfo();
-					ThreadPoolManager.getInstance().scheduleGeneral(this, 1000);
+					ThreadPoolManager.schedule(this, 1000);
 					break;
 				}
 				case 5:

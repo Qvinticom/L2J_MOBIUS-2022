@@ -113,7 +113,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		_crypt = new Crypt(this);
 		if (Config.CHAR_DATA_STORE_INTERVAL > 0)
 		{
-			_autoSaveInDB = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_DATA_STORE_INTERVAL);
+			_autoSaveInDB = ThreadPoolManager.scheduleAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_DATA_STORE_INTERVAL);
 		}
 		else
 		{
@@ -146,7 +146,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		// no long running tasks here, do it async
 		try
 		{
-			ThreadPoolManager.getInstance().executeGeneral(new DisconnectTask());
+			ThreadPoolManager.execute(new DisconnectTask());
 		}
 		catch (RejectedExecutionException e)
 		{
@@ -652,7 +652,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			{
 				cancelCleanup();
 			}
-			_cleanupTask = ThreadPoolManager.getInstance().scheduleGeneral(new CleanupTask(), 0); // instant
+			_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), 0); // instant
 		}
 	}
 	
@@ -802,7 +802,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			{
 				if (_cleanupTask == null)
 				{
-					_cleanupTask = ThreadPoolManager.getInstance().scheduleGeneral(new CleanupTask(), fast ? 5 : 15000L);
+					_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), fast ? 5 : 15000L);
 				}
 			}
 		}

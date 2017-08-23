@@ -54,7 +54,7 @@ public final class Util
 	
 	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(new IllegalPlayerActionTask(actor, message, punishment), 5000);
+		ThreadPoolManager.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
 	}
 	
 	public static String getRelativePath(File base, File file)

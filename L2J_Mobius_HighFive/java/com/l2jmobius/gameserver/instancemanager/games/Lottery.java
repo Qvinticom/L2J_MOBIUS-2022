@@ -152,12 +152,12 @@ public class Lottery
 						if (_enddate > System.currentTimeMillis())
 						{
 							_isStarted = true;
-							ThreadPoolManager.getInstance().scheduleGeneral(new finishLottery(), _enddate - System.currentTimeMillis());
+							ThreadPoolManager.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 							
 							if (_enddate > (System.currentTimeMillis() + (12 * MINUTE)))
 							{
 								_isSellingTickets = true;
-								ThreadPoolManager.getInstance().scheduleGeneral(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+								ThreadPoolManager.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 							}
 							return;
 						}
@@ -195,8 +195,8 @@ public class Lottery
 				_enddate = finishtime.getTimeInMillis();
 			}
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
-			ThreadPoolManager.getInstance().scheduleGeneral(new finishLottery(), _enddate - System.currentTimeMillis());
+			ThreadPoolManager.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+			ThreadPoolManager.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_LOTTERY))
@@ -436,7 +436,7 @@ public class Lottery
 				_log.log(Level.WARNING, "Lottery: Could not store finished lottery data: " + e.getMessage(), e);
 			}
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(new startLottery(), MINUTE);
+			ThreadPoolManager.schedule(new startLottery(), MINUTE);
 			_number++;
 			
 			_isStarted = false;

@@ -86,7 +86,7 @@ public final class HandysBlockCheckerManager
 			{
 				holder.checkAndShuffle();
 			}
-			ThreadPoolManager.getInstance().executeGeneral(holder.getEvent().new StartEvent());
+			ThreadPoolManager.execute(holder.getEvent().new StartEvent());
 		}
 		else
 		{
@@ -345,7 +345,7 @@ public final class HandysBlockCheckerManager
 	
 	private void schedulePenaltyRemoval(int objId)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(new PenaltyRemoveTask(objId), 10000);
+		ThreadPoolManager.schedule(new PenaltyRemoveTask(objId), 10000);
 	}
 	
 	/**

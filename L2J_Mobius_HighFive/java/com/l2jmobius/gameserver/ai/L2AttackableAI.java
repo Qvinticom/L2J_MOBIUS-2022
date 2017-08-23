@@ -24,7 +24,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
@@ -301,7 +300,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// If not idle - create an AI task (schedule onEvtThink repeatedly)
 		if (_aiTask == null)
 		{
-			_aiTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(this, 1000, 1000);
+			_aiTask = ThreadPoolManager.scheduleAtFixedRate(this, 1000, 1000);
 		}
 	}
 	
@@ -400,7 +399,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	{
 		if ((_fearTime > 0) && (_fearTask == null))
 		{
-			_fearTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FearTask(this, effector, start), 0, FEAR_TICKS, TimeUnit.SECONDS);
+			_fearTask = ThreadPoolManager.scheduleAtFixedRate(new FearTask(this, effector, start), 0, FEAR_TICKS * 1000); // seconds
 			_actor.startAbnormalVisualEffect(true, AbnormalVisualEffect.TURN_FLEE);
 		}
 		else

@@ -275,7 +275,7 @@ public final class TerritoryWarManager implements Siegable
 			{
 				_scheduledEndTWTask.cancel(false);
 			}
-			_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), 1000);
+			_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), 1000);
 		}
 		else
 		{
@@ -283,7 +283,7 @@ public final class TerritoryWarManager implements Siegable
 			{
 				_scheduledStartTWTask.cancel(false);
 			}
-			_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), 1000);
+			_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), 1000);
 		}
 	}
 	
@@ -1261,14 +1261,14 @@ public final class TerritoryWarManager implements Siegable
 				if (timeRemaining > 7200000)
 				{
 					_isRegistrationOver = false;
-					_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), timeRemaining - 7200000); // Prepare task for 2h before TW start to end registration
+					_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), timeRemaining - 7200000); // Prepare task for 2h before TW start to end registration
 				}
 				else if ((timeRemaining <= 7200000) && (timeRemaining > 1200000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_REQUEST_PERIOD_HAS_ENDED);
 					Broadcast.toAllOnlinePlayers(sm);
 					_isRegistrationOver = true;
-					_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), timeRemaining - 1200000); // Prepare task for 20 mins left before TW start.
+					_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), timeRemaining - 1200000); // Prepare task for 20 mins left before TW start.
 				}
 				else if ((timeRemaining <= 1200000) && (timeRemaining > 600000))
 				{
@@ -1277,7 +1277,7 @@ public final class TerritoryWarManager implements Siegable
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
 					updatePlayerTWStateFlags(false);
-					_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), timeRemaining - 600000); // Prepare task for 10 mins left before TW start.
+					_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), timeRemaining - 600000); // Prepare task for 10 mins left before TW start.
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
@@ -1286,7 +1286,7 @@ public final class TerritoryWarManager implements Siegable
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
 					updatePlayerTWStateFlags(false);
-					_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), timeRemaining - 300000); // Prepare task for 5 mins left before TW start.
+					_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), timeRemaining - 300000); // Prepare task for 5 mins left before TW start.
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 60000))
 				{
@@ -1295,7 +1295,7 @@ public final class TerritoryWarManager implements Siegable
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
 					updatePlayerTWStateFlags(false);
-					_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), timeRemaining - 60000); // Prepare task for 1 min left before TW start.
+					_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), timeRemaining - 60000); // Prepare task for 1 min left before TW start.
 				}
 				else if ((timeRemaining <= 60000) && (timeRemaining > 0))
 				{
@@ -1304,15 +1304,15 @@ public final class TerritoryWarManager implements Siegable
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
 					updatePlayerTWStateFlags(false);
-					_scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), timeRemaining); // Prepare task for TW start.
+					_scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), timeRemaining); // Prepare task for TW start.
 				}
 				else if ((timeRemaining + WARLENGTH) > 0)
 				{
 					_isTWChannelOpen = true;
 					_isRegistrationOver = true;
 					startTerritoryWar();
-					_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), 1000); // Prepare task for TW end.
-					_scheduledRewardOnlineTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new RewardOnlineParticipants(), 60000, 60000);
+					_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), 1000); // Prepare task for TW end.
+					_scheduledRewardOnlineTask = ThreadPoolManager.scheduleAtFixedRate(new RewardOnlineParticipants(), 60000, 60000);
 				}
 			}
 			catch (Exception e)
@@ -1342,41 +1342,41 @@ public final class TerritoryWarManager implements Siegable
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_HOUR_S);
 					sm.addInt(2);
 					announceToParticipants(sm, 0, 0);
-					_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), timeRemaining - 3600000); // Prepare task for 1 hr left.
+					_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), timeRemaining - 3600000); // Prepare task for 1 hr left.
 				}
 				else if ((timeRemaining <= 3600000) && (timeRemaining > 600000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
 					sm.addInt((int) (timeRemaining / 60000));
 					announceToParticipants(sm, 0, 0);
-					_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), timeRemaining - 600000); // Prepare task for 10 minute left.
+					_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), timeRemaining - 600000); // Prepare task for 10 minute left.
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
 					sm.addInt((int) (timeRemaining / 60000));
 					announceToParticipants(sm, 0, 0);
-					_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), timeRemaining - 300000); // Prepare task for 5 minute left.
+					_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), timeRemaining - 300000); // Prepare task for 5 minute left.
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 10000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_TERRITORY_WAR_WILL_END_IN_S1_MINUTE_S);
 					sm.addInt((int) (timeRemaining / 60000));
 					announceToParticipants(sm, 0, 0);
-					_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), timeRemaining - 10000); // Prepare task for 10 seconds count down
+					_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), timeRemaining - 10000); // Prepare task for 10 seconds count down
 				}
 				else if ((timeRemaining <= 10000) && (timeRemaining > 0))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_TO_THE_END_OF_TERRITORY_WAR);
 					sm.addInt((int) (timeRemaining / 1000));
 					announceToParticipants(sm, 0, 0);
-					_scheduledEndTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleEndTWTask(), timeRemaining); // Prepare task for second count down
+					_scheduledEndTWTask = ThreadPoolManager.schedule(new ScheduleEndTWTask(), timeRemaining); // Prepare task for second count down
 				}
 				else
 				{
 					endTerritoryWar();
-					// _scheduledStartTWTask = ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleStartTWTask(), 1000);
-					ThreadPoolManager.getInstance().scheduleGeneral(new closeTerritoryChannelTask(), 600000);
+					// _scheduledStartTWTask = ThreadPoolManager.schedule(new ScheduleStartTWTask(), 1000);
+					ThreadPoolManager.schedule(new closeTerritoryChannelTask(), 600000);
 				}
 			}
 			catch (Exception e)

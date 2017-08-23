@@ -145,7 +145,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 					{
 						broadcastSay(ChatType.NPC_SHOUT, npcString, npcString.getParamCount() == 1 ? attacker.getName() : null);
 						setCanTalk(false);
-						ThreadPoolManager.getInstance().scheduleGeneral(new ScheduleTalkTask(), 10000);
+						ThreadPoolManager.schedule(new ScheduleTalkTask(), 10000);
 					}
 				}
 			}

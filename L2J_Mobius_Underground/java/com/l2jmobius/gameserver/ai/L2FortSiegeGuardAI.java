@@ -217,7 +217,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		// If not idle - create an AI task (schedule onEvtThink repeatedly)
 		if (_aiTask == null)
 		{
-			_aiTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(this, 1000, 1000);
+			_aiTask = ThreadPoolManager.scheduleAtFixedRate(this, 1000, 1000);
 		}
 	}
 	

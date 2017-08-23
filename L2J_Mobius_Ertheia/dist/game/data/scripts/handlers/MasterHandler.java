@@ -307,7 +307,6 @@ import handlers.telnethandlers.server.ServerAbort;
 import handlers.telnethandlers.server.ServerRestart;
 import handlers.telnethandlers.server.ServerShutdown;
 import handlers.telnethandlers.server.Status;
-import handlers.telnethandlers.server.ThreadPoolDebug;
 import handlers.usercommandhandlers.ChannelDelete;
 import handlers.usercommandhandlers.ChannelInfo;
 import handlers.usercommandhandlers.ChannelLeave;
@@ -747,7 +746,6 @@ public class MasterHandler
 			TelnetServer.getInstance().addHandler(new ServerRestart());
 			TelnetServer.getInstance().addHandler(new ServerShutdown());
 			TelnetServer.getInstance().addHandler(new Status());
-			TelnetServer.getInstance().addHandler(new ThreadPoolDebug());
 			TelnetServer.getInstance().addHandler(new handlers.telnethandlers.server.Debug());
 		}
 		

@@ -101,7 +101,7 @@ public final class GraciaSeedsManager
 				}
 				else
 				{
-					ThreadPoolManager.getInstance().scheduleEffect(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
+					ThreadPoolManager.schedule(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
 				}
 				break;
 			case 3:

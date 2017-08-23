@@ -557,7 +557,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			{
 				removeForeigners(npcId, party);
 				startRoom(npcId);
-				ThreadPoolManager.getInstance().scheduleGeneral(new StopRoomTask(npcId), 300000);
+				ThreadPoolManager.schedule(new StopRoomTask(npcId), 300000);
 			}
 			else
 			{
@@ -847,7 +847,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - System.currentTimeMillis());
+			ThreadPoolManager.schedule(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - System.currentTimeMillis());
 		}
 	}
 	

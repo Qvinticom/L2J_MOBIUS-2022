@@ -68,7 +68,7 @@ public class Debug implements ITelnetCommand
 	@Override
 	public String getUsage()
 	{
-		return "Debug <decay/packetsend/PacketTP/IOPacketTP/GeneralTP/full>";
+		return "Debug <decay/packetsend/full>";
 	}
 	
 	@Override
@@ -107,90 +107,6 @@ public class Debug implements ITelnetCommand
 				}
 				player.sendPacket(sp);
 				return "Packet has been sent!";
-			}
-			case "PacketTP":
-			{
-				final String str = ThreadPoolManager.getInstance().getPacketStats();
-				int i = 0;
-				File f = new File("./log/StackTrace-PacketTP-" + i + ".txt");
-				while (f.exists())
-				{
-					i++;
-					f = new File("./log/StackTrace-PacketTP-" + i + ".txt");
-				}
-				f.getParentFile().mkdirs();
-				try
-				{
-					Files.write(f.toPath(), str.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE);
-				}
-				catch (IOException e)
-				{
-					LOGGER.log(Level.WARNING, "Couldn't write packet tp.", e);
-				}
-				return str;
-			}
-			case "IOPacketTP":
-			{
-				final String str = ThreadPoolManager.getInstance().getIOPacketStats();
-				int i = 0;
-				File f = new File("./log/StackTrace-IOPacketTP-" + i + ".txt");
-				while (f.exists())
-				{
-					i++;
-					f = new File("./log/StackTrace-IOPacketTP-" + i + ".txt");
-				}
-				f.getParentFile().mkdirs();
-				try
-				{
-					Files.write(f.toPath(), str.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE);
-				}
-				catch (IOException e)
-				{
-					LOGGER.log(Level.WARNING, "Couldn't write packet tp.", e);
-				}
-				return str;
-			}
-			case "GeneralTP":
-			{
-				final String str = ThreadPoolManager.getInstance().getGeneralStats();
-				int i = 0;
-				File f = new File("./log/StackTrace-GeneralTP-" + i + ".txt");
-				while (f.exists())
-				{
-					i++;
-					f = new File("./log/StackTrace-GeneralTP-" + i + ".txt");
-				}
-				f.getParentFile().mkdirs();
-				try
-				{
-					Files.write(f.toPath(), str.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE);
-				}
-				catch (IOException e)
-				{
-					LOGGER.log(Level.WARNING, "Couldn't write packet tp.", e);
-				}
-				return str;
-			}
-			case "GeneralScheduledTP":
-			{
-				final String str = ThreadPoolManager.getInstance().getGeneralStats();
-				int i = 0;
-				File f = new File("./log/StackTrace-GeneralScheduledTP-" + i + ".txt");
-				while (f.exists())
-				{
-					i++;
-					f = new File("./log/StackTrace-GeneralScheduledTP-" + i + ".txt");
-				}
-				f.getParentFile().mkdirs();
-				try
-				{
-					Files.write(f.toPath(), str.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE);
-				}
-				catch (IOException e)
-				{
-					LOGGER.log(Level.WARNING, "Couldn't write packet tp.", e);
-				}
-				return str;
 			}
 			case "full":
 			{
@@ -283,7 +199,7 @@ public class Debug implements ITelnetCommand
 				}
 				
 				sb.append("\r\n## Thread Pool Manager Statistics ##\r\n");
-				for (String line : ThreadPoolManager.getInstance().getStats())
+				for (String line : ThreadPoolManager.getStats())
 				{
 					sb.append(line);
 					sb.append("\r\n");

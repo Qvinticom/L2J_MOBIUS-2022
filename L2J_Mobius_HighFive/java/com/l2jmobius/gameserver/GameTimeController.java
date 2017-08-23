@@ -143,7 +143,7 @@ public final class GameTimeController extends Thread
 		
 		if (isNight)
 		{
-			ThreadPoolManager.getInstance().executeAi(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+			ThreadPoolManager.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
 		}
 		
 		while (true)
@@ -175,7 +175,7 @@ public final class GameTimeController extends Thread
 			{
 				isNight = !isNight;
 				
-				ThreadPoolManager.getInstance().executeAi(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+				ThreadPoolManager.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
 			}
 		}
 	}

@@ -131,11 +131,11 @@ public abstract class ClanHall
 			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), _endDate - currentTime);
+				ThreadPoolManager.schedule(new FunctionTask(cwh), _endDate - currentTime);
 			}
 			else
 			{
-				ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(cwh), 0);
+				ThreadPoolManager.schedule(new FunctionTask(cwh), 0);
 			}
 		}
 		
@@ -164,7 +164,7 @@ public abstract class ClanHall
 						{
 							ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CH_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPoolManager.getInstance().scheduleGeneral(new FunctionTask(true), getRate());
+						ThreadPoolManager.schedule(new FunctionTask(true), getRate());
 					}
 					else
 					{

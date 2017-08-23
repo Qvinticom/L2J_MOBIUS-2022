@@ -108,7 +108,7 @@ public abstract class VoteSystem implements Runnable
 		this.rewards = rewards;
 		this.checkMins = checkMins;
 		
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
+		ThreadPoolManager.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
 	}
 	
 	protected void reward()

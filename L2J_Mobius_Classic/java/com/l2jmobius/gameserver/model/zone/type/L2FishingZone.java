@@ -47,7 +47,7 @@ public class L2FishingZone extends L2ZoneType
 			if ((Config.ALLOW_FISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneId.FISHING))
 			{
 				final WeakReference<L2PcInstance> weakPlayer = new WeakReference<>(character.getActingPlayer());
-				ThreadPoolManager.getInstance().executeGeneral(new Runnable()
+				ThreadPoolManager.execute(new Runnable()
 				{
 					@Override
 					public void run()
@@ -69,7 +69,7 @@ public class L2FishingZone extends L2ZoneType
 										player.sendPacket(ExAutoFishAvailable.NO);
 									}
 								}
-								ThreadPoolManager.getInstance().scheduleGeneral(this, 1500);
+								ThreadPoolManager.schedule(this, 1500);
 							}
 							else
 							{

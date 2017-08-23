@@ -173,7 +173,7 @@ public class DimensionalRift
 			final long jumpTime = calcTimeToNextJump();
 			teleporterTimer.schedule(teleporterTimerTask, jumpTime); // Teleporter task, 8-10 minutes
 			
-			earthQuakeTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
+			earthQuakeTask = ThreadPoolManager.schedule(() ->
 			{
 				for (L2PcInstance p : _party.getMembers())
 				{

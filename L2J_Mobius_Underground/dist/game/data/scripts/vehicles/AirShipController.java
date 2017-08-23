@@ -291,11 +291,11 @@ public abstract class AirShipController extends AbstractNpcAI
 						playMovie(_dockedShip.getPassengers(), _movie);
 					}
 					
-					ThreadPoolManager.getInstance().scheduleGeneral(_decayTask, 1000);
+					ThreadPoolManager.schedule(_decayTask, 1000);
 				}
 				else
 				{
-					_departSchedule = ThreadPoolManager.getInstance().scheduleGeneral(_departTask, DEPART_INTERVAL);
+					_departSchedule = ThreadPoolManager.schedule(_departTask, DEPART_INTERVAL);
 				}
 			}
 		}

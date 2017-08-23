@@ -29,7 +29,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -107,7 +106,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 			// Schedule autosave
 			if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 			{
-				ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE, Config.ALT_MANOR_SAVE_PERIOD_RATE, TimeUnit.HOURS);
+				ThreadPoolManager.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
 			}
 			
 			// Send debug message
@@ -278,7 +277,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 				break;
 		}
 		// Schedule mode change
-		ThreadPoolManager.getInstance().scheduleGeneral(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
+		ThreadPoolManager.schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
 	}
 	
 	public final void changeMode()

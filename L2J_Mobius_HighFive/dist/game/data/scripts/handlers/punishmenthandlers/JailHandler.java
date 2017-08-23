@@ -168,7 +168,7 @@ public class JailHandler implements IPunishmentHandler
 			OlympiadManager.getInstance().removeDisconnectedCompetitor(player);
 		}
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(new TeleportTask(player, L2JailZone.getLocationIn()), 2000);
+		ThreadPoolManager.schedule(new TeleportTask(player, L2JailZone.getLocationIn()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
@@ -204,7 +204,7 @@ public class JailHandler implements IPunishmentHandler
 	 */
 	private static void removeFromPlayer(L2PcInstance player)
 	{
-		ThreadPoolManager.getInstance().scheduleGeneral(new TeleportTask(player, L2JailZone.getLocationOut()), 2000);
+		ThreadPoolManager.schedule(new TeleportTask(player, L2JailZone.getLocationOut()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();

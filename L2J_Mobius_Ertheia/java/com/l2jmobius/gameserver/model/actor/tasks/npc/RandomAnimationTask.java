@@ -91,7 +91,7 @@ public class RandomAnimationTask implements Runnable
 		final int interval = Rnd.get(minWait, maxWait) * 1000;
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
-		ThreadPoolManager.getInstance().scheduleGeneral(this, interval);
+		ThreadPoolManager.schedule(this, interval);
 	}
 	
 	/**

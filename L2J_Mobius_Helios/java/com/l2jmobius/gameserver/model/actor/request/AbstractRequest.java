@@ -55,7 +55,7 @@ public abstract class AbstractRequest
 	
 	public void scheduleTimeout(long delay)
 	{
-		_timeOutTask = ThreadPoolManager.getInstance().scheduleGeneral(this::onTimeout, delay);
+		_timeOutTask = ThreadPoolManager.schedule(this::onTimeout, delay);
 	}
 	
 	public boolean isTimeout()

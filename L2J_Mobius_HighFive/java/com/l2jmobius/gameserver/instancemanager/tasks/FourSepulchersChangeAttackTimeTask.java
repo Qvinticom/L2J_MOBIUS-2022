@@ -61,14 +61,14 @@ public final class FourSepulchersChangeAttackTimeTask implements Runnable
 				{
 					final Calendar inter = Calendar.getInstance();
 					inter.set(Calendar.MINUTE, (int) min);
-					ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersManagerSayTask(), inter.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+					ThreadPoolManager.schedule(new FourSepulchersManagerSayTask(), inter.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
 					break;
 				}
 			}
 		}
 		else
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersManagerSayTask(), 5 * 60400);
+			ThreadPoolManager.schedule(new FourSepulchersManagerSayTask(), 5 * 60400);
 		}
 		// searching time when attack time will be ended:
 		// counting difference between time when attack time ends and
@@ -83,7 +83,7 @@ public final class FourSepulchersChangeAttackTimeTask implements Runnable
 			interval = Config.FS_TIME_ATTACK * 60000L;
 		}
 		
-		manager.setChangeCoolDownTimeTask(ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersChangeCoolDownTimeTask(), interval));
+		manager.setChangeCoolDownTimeTask(ThreadPoolManager.schedule(new FourSepulchersChangeCoolDownTimeTask(), interval));
 		final ScheduledFuture<?> changeAttackTimeTask = manager.getChangeAttackTimeTask();
 		
 		if (changeAttackTimeTask != null)

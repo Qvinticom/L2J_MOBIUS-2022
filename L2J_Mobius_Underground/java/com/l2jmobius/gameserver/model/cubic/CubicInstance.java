@@ -52,8 +52,8 @@ public class CubicInstance
 	
 	private void activate()
 	{
-		_skillUseTask = ThreadPoolManager.getInstance().scheduleAiAtFixedRate(this::tryToUseSkill, 0, _template.getDelay() * 1000);
-		_expireTask = ThreadPoolManager.getInstance().scheduleAi(this::deactivate, _template.getDuration() * 1000);
+		_skillUseTask = ThreadPoolManager.scheduleAtFixedRate(this::tryToUseSkill, 0, _template.getDelay() * 1000);
+		_expireTask = ThreadPoolManager.schedule(this::deactivate, _template.getDuration() * 1000);
 	}
 	
 	public void deactivate()

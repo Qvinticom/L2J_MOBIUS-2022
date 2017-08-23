@@ -131,11 +131,11 @@ public final class Parade extends AbstractNpcAI
 		
 		// Starts at 8:00 and repeats every 6 hours.
 		final long diff = timeLeftMilli(8, 0, 0), cycle = 3600000L;
-		ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Start(), diff, cycle);
+		ThreadPoolManager.scheduleAtFixedRate(new Start(), diff, cycle);
 		
 		// Test - Starts 3 minutes after server startup and repeats every 20 minutes.
 		// final long diff = timeLeftMilli(8, 0, 0), cycle = 600000L;
-		// ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Start(), 180000L, cycle);
+		// ThreadPoolManager.scheduleAtFixedRate(new Start(), 180000L, cycle);
 		
 		_log.info("Fantasy Isle: Parade starting at " + new SimpleDateFormat("yyyy/MM/dd HH:mm").format(System.currentTimeMillis() + diff) + " and is scheduled each next " + (cycle / 3600000) + " hours.");
 	}
@@ -173,9 +173,9 @@ public final class Parade extends AbstractNpcAI
 		public void run()
 		{
 			load();
-			spawnTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Spawn(), 0, 5000);
-			deleteTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new Delete(), 10000, 1000);
-			cleanTask = ThreadPoolManager.getInstance().scheduleGeneral(new Clean(), 420000);
+			spawnTask = ThreadPoolManager.scheduleAtFixedRate(new Spawn(), 0, 5000);
+			deleteTask = ThreadPoolManager.scheduleAtFixedRate(new Delete(), 10000, 1000);
+			cleanTask = ThreadPoolManager.schedule(new Clean(), 420000);
 		}
 	}
 	

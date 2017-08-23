@@ -38,7 +38,7 @@ public class TrapTriggerTask implements Runnable
 		try
 		{
 			_trap.doCast(_trap.getSkill());
-			ThreadPoolManager.getInstance().scheduleGeneral(new TrapUnsummonTask(_trap), _trap.getSkill().getHitTime() + 300);
+			ThreadPoolManager.schedule(new TrapUnsummonTask(_trap), _trap.getSkill().getHitTime() + 300);
 		}
 		catch (Exception e)
 		{

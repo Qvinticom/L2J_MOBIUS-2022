@@ -43,7 +43,7 @@ public final class FourSepulchersManagerSayTask implements Runnable
 				// cannot be
 				// more than
 				// 59
-				ThreadPoolManager.getInstance().scheduleGeneral(new FourSepulchersManagerSayTask(), 5 * 60000);
+				ThreadPoolManager.schedule(new FourSepulchersManagerSayTask(), 5 * 60000);
 			}
 			// attack time ending chat
 			else if ((tmp.get(Calendar.MINUTE) + 5) >= Config.FS_TIME_ATTACK)

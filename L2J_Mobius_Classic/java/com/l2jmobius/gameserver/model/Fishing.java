@@ -220,10 +220,10 @@ public class Fishing
 			_player.rechargeShots(false, false, true);
 		}
 		
-		_reelInTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		_reelInTask = ThreadPoolManager.schedule(() ->
 		{
 			_player.getFishing().reelInWithReward();
-			_startFishingTask = ThreadPoolManager.getInstance().scheduleGeneral(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
+			_startFishingTask = ThreadPoolManager.schedule(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
 		}, Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()));
 		_player.stopMove(null);
 		_player.broadcastPacket(new ExFishingStart(_player, -1, baitData.getLevel(), _baitLocation));

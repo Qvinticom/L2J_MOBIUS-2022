@@ -311,7 +311,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		if (_actor.getBowAttackEndTime() > GameTimeController.getInstance().getGameTicks())
 		{
-			ThreadPoolManager.getInstance().scheduleGeneral(new CastTask(_actor, skill, target), (_actor.getBowAttackEndTime() - GameTimeController.getInstance().getGameTicks()) * GameTimeController.MILLIS_IN_TICK);
+			ThreadPoolManager.schedule(new CastTask(_actor, skill, target), (_actor.getBowAttackEndTime() - GameTimeController.getInstance().getGameTicks()) * GameTimeController.MILLIS_IN_TICK);
 		}
 		else
 		{

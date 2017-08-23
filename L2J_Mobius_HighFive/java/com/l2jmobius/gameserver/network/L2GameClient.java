@@ -131,7 +131,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		
 		if (Config.CHAR_STORE_INTERVAL > 0)
 		{
-			_autoSaveInDB = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_STORE_INTERVAL * 60000L);
+			_autoSaveInDB = ThreadPoolManager.scheduleAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_STORE_INTERVAL * 60000L);
 		}
 		else
 		{
@@ -702,7 +702,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		// no long running tasks here, do it async
 		try
 		{
-			ThreadPoolManager.getInstance().executeGeneral(new DisconnectTask());
+			ThreadPoolManager.execute(new DisconnectTask());
 		}
 		catch (RejectedExecutionException e)
 		{
@@ -723,7 +723,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			{
 				cancelCleanup();
 			}
-			_cleanupTask = ThreadPoolManager.getInstance().scheduleGeneral(new CleanupTask(), 0); // instant
+			_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), 0); // instant
 		}
 	}
 	
@@ -875,7 +875,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			{
 				if (_cleanupTask == null)
 				{
-					_cleanupTask = ThreadPoolManager.getInstance().scheduleGeneral(new CleanupTask(), fast ? 5 : 15000L);
+					_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), fast ? 5 : 15000L);
 				}
 			}
 		}
@@ -1092,20 +1092,17 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 					closeNow();
 					return;
 				}
-				ThreadPoolManager.getInstance().executeIOPacket(this);
+				ThreadPoolManager.execute(this);
 			}
 			else
 			{
-				ThreadPoolManager.getInstance().executePacket(this);
+				ThreadPoolManager.execute(this);
 			}
 		}
 		catch (RejectedExecutionException e)
 		{
 			// if the server is shutdown we ignore
-			if (!ThreadPoolManager.getInstance().isShutdown())
-			{
-				_log.severe("Failed executing: " + packet.getClass().getSimpleName() + " for Client: " + toString());
-			}
+			// _log.severe("Failed executing: " + packet.getClass().getSimpleName() + " for Client: " + toString());
 		}
 	}
 	

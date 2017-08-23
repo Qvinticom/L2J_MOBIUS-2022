@@ -358,7 +358,7 @@ public class HeartInfinityAttack extends Quest
 		}
 		
 		conquestBegun = true;
-		ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		ThreadPoolManager.schedule(() ->
 		{
 			for (int objId : world.getAllowed())
 			{
@@ -366,7 +366,7 @@ public class HeartInfinityAttack extends Quest
 				player.showQuestMovie(2); // ExStartScenePlayer.SCENE_ECHMUS_OPENING
 			}
 			
-			ThreadPoolManager.getInstance().scheduleGeneral(() -> conquestBegins(world), 62500);
+			ThreadPoolManager.schedule(() -> conquestBegins(world), 62500);
 		}, 20000);
 	}
 	
@@ -420,7 +420,7 @@ public class HeartInfinityAttack extends Quest
 		world.hounds.add(addSpawn(HOUND, -179224, 209624, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.hounds.add(addSpawn(HOUND, -179880, 209464, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.startTime = System.currentTimeMillis();
-		world.timerTask = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new TimerTask(world), 298 * 1000, 5 * 60 * 1000);
+		world.timerTask = ThreadPoolManager.scheduleAtFixedRate(new TimerTask(world), 298 * 1000, 5 * 60 * 1000);
 	}
 	
 	@Override
@@ -607,8 +607,8 @@ public class HeartInfinityAttack extends Quest
 				npc.deleteMe();
 				world.deadTumor = addSpawn(DEADTUMOR, loc, world.getInstanceId());
 				world.deadTumors.add(world.deadTumor);
-				ThreadPoolManager.getInstance().scheduleGeneral(new TumorRevival(world.deadTumor, world), tumorRespawnTime);
-				ThreadPoolManager.getInstance().scheduleGeneral(new RegenerationCoffinSpawn(world.deadTumor, world), 20000);
+				ThreadPoolManager.schedule(new TumorRevival(world.deadTumor, world), tumorRespawnTime);
+				ThreadPoolManager.schedule(new RegenerationCoffinSpawn(world.deadTumor, world), 20000);
 				if (world.tumorCount < 1)
 				{
 					houndBlocked = true;
@@ -825,7 +825,7 @@ public class HeartInfinityAttack extends Quest
 			}
 		}
 		
-		ThreadPoolManager.getInstance().scheduleGeneral(() -> broadCastPacket(world, new ExShowScreenMessage(NpcStringId.EKIMUS_HAS_SENSED_ABNORMAL_ACTIVITY_NTHE_ADVANCING_PARTY_IS_FORCEFULLY_EXPELLED, 2, 8000)), 10000);
+		ThreadPoolManager.schedule(() -> broadCastPacket(world, new ExShowScreenMessage(NpcStringId.EKIMUS_HAS_SENSED_ABNORMAL_ACTIVITY_NTHE_ADVANCING_PARTY_IS_FORCEFULLY_EXPELLED, 2, 8000)), 10000);
 	}
 	
 	protected void conquestConclusion(HIAWorld world)

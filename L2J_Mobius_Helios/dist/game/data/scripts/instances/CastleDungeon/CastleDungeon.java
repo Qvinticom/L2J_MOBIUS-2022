@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ThreadPoolManager;
@@ -203,7 +202,7 @@ public final class CastleDungeon extends AbstractInstance
 	 */
 	private void spawnRaid(Instance instance)
 	{
-		final ScheduledFuture<?> spawnTask = ThreadPoolManager.getInstance().scheduleGeneral(() ->
+		final ScheduledFuture<?> spawnTask = ThreadPoolManager.schedule(() ->
 		{
 			// Get template id of raid
 			final int npcId;
@@ -230,7 +229,7 @@ public final class CastleDungeon extends AbstractInstance
 			
 			// Unset spawn task reference
 			instance.setParameter("spawnTask", null);
-		}, 2, TimeUnit.MINUTES);
+		}, 2 * 60 * 1000); // 2 minutes
 		
 		// Save timer to instance world
 		instance.setParameter("spawnTask", spawnTask);

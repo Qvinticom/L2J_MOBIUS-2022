@@ -174,7 +174,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 							_templates.stream().forEach(t -> t.spawn(g -> String.valueOf(g.getName()).equalsIgnoreCase(zoneName.concat("_demonic")), null));
 							zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 600, 0, NpcStringId.DEMONIC_SYSTEM_ACTIVATED)));
 							currentInfo.setZoneStage(7);
-							ThreadPoolManager.getInstance().scheduleGeneral(new changeZoneStage(zone), 600000); // 10min
+							ThreadPoolManager.schedule(new changeZoneStage(zone), 600000); // 10min
 						}
 						else
 						{
@@ -202,7 +202,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 				if (currentInfo.getZoneStage() < 6)
 				{
 					currentInfo.setZoneStage(currentInfo.getZoneStage() + 1);
-					ThreadPoolManager.getInstance().scheduleGeneral(new changeZoneStage(zone), 5000);
+					ThreadPoolManager.schedule(new changeZoneStage(zone), 5000);
 				}
 			}
 			catch (Exception e)
@@ -248,7 +248,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 				if (calcPoints >= 300)
 				{
 					calcPoints = 300;
-					ThreadPoolManager.getInstance().scheduleGeneral(new changeZoneStage(currentZone.getKey()), 1000);
+					ThreadPoolManager.schedule(new changeZoneStage(currentZone.getKey()), 1000);
 				}
 				currentInfo.setCurrentPoint(calcPoints);
 				for (L2PcInstance player : currentZone.getKey().getPlayersInside())

@@ -111,7 +111,7 @@ public class Unstuck implements IUserCommandHandler
 		// End SoE Animation section
 		
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.getInstance().scheduleGeneral(new EscapeFinalizer(activeChar), unstuckTimer));
+		activeChar.setSkillCast(ThreadPoolManager.schedule(new EscapeFinalizer(activeChar), unstuckTimer));
 		
 		return true;
 	}

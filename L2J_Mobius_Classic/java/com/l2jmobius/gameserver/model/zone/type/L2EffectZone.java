@@ -136,7 +136,7 @@ public final class L2EffectZone extends L2ZoneType
 				{
 					if (getSettings().getTask() == null)
 					{
-						getSettings().setTask(ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+						getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
 					}
 				}
 			}

@@ -43,7 +43,7 @@ public class AttackStanceTaskManager
 	 */
 	protected AttackStanceTaskManager()
 	{
-		ThreadPoolManager.getInstance().scheduleAiAtFixedRate(new FightModeScheduler(), 0, 1000);
+		ThreadPoolManager.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
 	}
 	
 	/**

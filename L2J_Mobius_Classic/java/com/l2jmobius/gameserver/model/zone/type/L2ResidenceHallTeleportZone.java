@@ -62,7 +62,7 @@ public class L2ResidenceHallTeleportZone extends L2ResidenceTeleportZone
 	{
 		if ((_teleTask == null) || _teleTask.isDone())
 		{
-			_teleTask = ThreadPoolManager.getInstance().scheduleGeneral(new TeleportTask(), 30000);
+			_teleTask = ThreadPoolManager.schedule(new TeleportTask(), 30000);
 		}
 	}
 	

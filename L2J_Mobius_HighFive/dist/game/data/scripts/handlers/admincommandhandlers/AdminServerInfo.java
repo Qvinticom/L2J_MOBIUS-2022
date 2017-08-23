@@ -20,15 +20,14 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -71,14 +70,6 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%usedMem%", (RunTime.maxMemory() / mb) - (((RunTime.maxMemory() - RunTime.totalMemory()) + RunTime.freeMemory()) / mb));
 			html.replace("%freeMem%", ((RunTime.maxMemory() - RunTime.totalMemory()) + RunTime.freeMemory()) / mb);
 			html.replace("%totalMem%", Runtime.getRuntime().maxMemory() / 1048576);
-			html.replace("%theardInfoGen%", buildTheardInfo("GENERAL"));
-			html.replace("%theardInfoEff%", buildTheardInfo("EFFECTS"));
-			html.replace("%theardInfoAi%", buildTheardInfo("AI"));
-			html.replace("%theardInfoEvent%", buildTheardInfo("EVENT"));
-			html.replace("%theardInfoPack%", buildTheardInfo("PACKETS"));
-			html.replace("%theardInfoIOPack%", buildTheardInfo("IOPACKETS"));
-			html.replace("%theardInfoGenTask%", buildTheardInfo("GENERAL_TASKS"));
-			html.replace("%theardInfoEvnTask%", buildTheardInfo("EVENT_TASKS"));
 			activeChar.sendPacket(html);
 		}
 		return true;
@@ -92,25 +83,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 		time -= TimeUnit.DAYS.toMillis(days);
 		final long hours = TimeUnit.MILLISECONDS.toHours(time);
 		time -= TimeUnit.HOURS.toMillis(hours);
-		final long minutes = TimeUnit.MILLISECONDS.toMinutes(time);
-		
-		return days + " Days, " + hours + " Hours, " + minutes + " Minutes";
-	}
-	
-	private String buildTheardInfo(String category)
-	{
-		final StringBuilder tb = new StringBuilder();
-		
-		tb.append("<table width=\"270\" border=\"0\" bgcolor=\"444444\">");
-		for (Entry<String, Object> info : ThreadPoolManager.getInstance().getStats(category).getSet().entrySet())
-		{
-			tb.append("<tr>");
-			tb.append("<td>" + info.getKey() + ":</td>");
-			tb.append("<td><font color=\"00FF00\">" + info.getValue() + "</font></td>");
-			tb.append("</tr>");
-		}
-		tb.append("</table>");
-		return tb.toString();
+		return days + " Days, " + hours + " Hours, " + TimeUnit.MILLISECONDS.toMinutes(time) + " Minutes";
 	}
 	
 	private int getPlayersCount(String type)
@@ -119,7 +92,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 		{
 			case "ALL":
 			{
-				return L2World.getInstance().getAllPlayersCount();
+				return L2World.getInstance().getPlayers().size();
 			}
 			case "OFF_TRADE":
 			{
@@ -138,7 +111,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			case "GM":
 			{
 				int onlineGMcount = 0;
-				for (L2PcInstance gm : L2World.getInstance().getAllGMs())
+				for (L2PcInstance gm : AdminData.getInstance().getAllGms(true))
 				{
 					if ((gm != null) && gm.isOnline() && (gm.getClient() != null) && !gm.getClient().isDetached())
 					{
@@ -153,7 +126,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 				
 				for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
 				{
-					if (((onlinePlayer != null) && (onlinePlayer.getClient() != null)) && !onlinePlayer.getClient().isDetached())
+					if ((onlinePlayer != null) && (onlinePlayer.getClient() != null) && !onlinePlayer.getClient().isDetached())
 					{
 						realPlayers.add(onlinePlayer.getIPAddress());
 					}
