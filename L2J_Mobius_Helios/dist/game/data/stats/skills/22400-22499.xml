@@ -1876,17 +1876,17 @@
 		</conditions>
 	</skill>
 	<skill id="22472" toLevel="1" name="Blessed Scroll of Resurrection (Pet)">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
 		<castRange>400</castRange>
-		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>6387</itemConsumeId> <!-- Blessed Scroll of Resurrection for Pets -->
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>600</effectRange>
-		<magicLvl>1</magicLvl>
-		<isMagic>2</isMagic>
 		<coolTime>500</coolTime>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1896,6 +1896,11 @@
 				<type>PET</type>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22473" toLevel="1" name="Agathion Pack">
 		<!-- AUTO GENERATED SKILL -->

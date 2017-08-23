@@ -53,7 +53,7 @@ public class PcBody implements ITargetTypeHandler
 			return null;
 		}
 		
-		if (!selectedTarget.isPlayer() || selectedTarget.isPet())
+		if (!selectedTarget.isPlayer() && !selectedTarget.isPet())
 		{
 			if (sendMessage)
 			{
