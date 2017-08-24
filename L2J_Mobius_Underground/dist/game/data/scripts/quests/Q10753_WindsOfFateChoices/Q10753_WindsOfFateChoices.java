@@ -55,8 +55,6 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
-import quests.Q10752_WindsOfFateAPromise.Q10752_WindsOfFateAPromise;
-
 /**
  * Winds of Fate: Choices (10753)
  * @URL https://l2wiki.com/Winds_of_Fate:_Choices
@@ -192,33 +190,45 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			}
 			case "31149-03.html":
 			{
-				giveItems(player, RESTORATION_REGEANT, 1);
-				takeItems(player, CRUDE_PHILOPERS_STONE, -1);
-				takeItems(player, EMPTY_REGEANT_FLASK, -1);
-				takeItems(player, CRYSTAL_EYE, -1);
-				takeItems(player, BROKEN_STONE_OF_PURITY, -1);
-				takeItems(player, MIRACLE_DRUG_OF_ENCHANTMENT, -1);
-				qs.unset("EyeCount");
-				qs.unset("FlaskCount");
-				qs.unset("PurityCount");
-				qs.setCond(5, true);
+				if (qs.isCond(4))
+				{
+					giveItems(player, RESTORATION_REGEANT, 1);
+					takeItems(player, CRUDE_PHILOPERS_STONE, -1);
+					takeItems(player, EMPTY_REGEANT_FLASK, -1);
+					takeItems(player, CRYSTAL_EYE, -1);
+					takeItems(player, BROKEN_STONE_OF_PURITY, -1);
+					takeItems(player, MIRACLE_DRUG_OF_ENCHANTMENT, -1);
+					qs.unset("EyeCount");
+					qs.unset("FlaskCount");
+					qs.unset("PurityCount");
+					qs.setCond(5, true);
+				}
 				break;
 			}
 			case "30174-10.html":
 			{
-				takeItems(player, RESTORATION_REGEANT, -1);
-				qs.setCond(6, true);
+				if (qs.isCond(5))
+				{
+					takeItems(player, RESTORATION_REGEANT, -1);
+					qs.setCond(6, true);
+				}
 				break;
 			}
 			case "30832-03.html":
 			{
-				qs.setCond(7, true);
+				if (qs.isCond(6))
+				{
+					qs.setCond(7, true);
+				}
 				break;
 			}
 			case "30835-05.html":
 			{
-				giveItems(player, WHITE_ROSE, 1);
-				qs.setCond(8, true);
+				if (qs.isCond(7))
+				{
+					giveItems(player, WHITE_ROSE, 1);
+					qs.setCond(8, true);
+				}
 				break;
 			}
 			case "30758-02.html":
@@ -232,14 +242,17 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			}
 			case "30758-04.html":
 			{
-				npc.setScriptValue(1);
-				player.sendPacket(new ExSendUIEvent(player, false, false, 180, 1, NpcStringId.REMAINING_TIME));
-				for (Location loc : BOX_SPAWNS)
+				if (qs.isCond(8))
 				{
-					addSpawn(ATHREAS_BOX, loc, false, 180000);
+					npc.setScriptValue(1);
+					player.sendPacket(new ExSendUIEvent(player, false, false, 180, 1, NpcStringId.REMAINING_TIME));
+					for (Location loc : BOX_SPAWNS)
+					{
+						addSpawn(ATHREAS_BOX, loc, false, 180000);
+					}
+					startQuestTimer("despawn", 180000, npc, player);
+					qs.setCond(9);
 				}
-				startQuestTimer("despawn", 180000, npc, player);
-				qs.setCond(9);
 				break;
 			}
 			case "despawn":
@@ -268,39 +281,54 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			}
 			case "30758-09.html":
 			{
-				takeItems(player, WHITE_ROSE, -1);
-				takeItems(player, ATHREAS_BELONGINGS, -1);
-				giveItems(player, CRIMSON_ROSE, 1);
-				npc.setScriptValue(0);
-				qs.setCond(11, true);
+				if (qs.isCond(10))
+				{
+					takeItems(player, WHITE_ROSE, -1);
+					takeItems(player, ATHREAS_BELONGINGS, -1);
+					giveItems(player, CRIMSON_ROSE, 1);
+					npc.setScriptValue(0);
+					qs.setCond(11, true);
+				}
 				break;
 			}
 			case "30835-08.html":
 			{
-				if (player.isMageClass())
+				if (qs.isCond(11))
 				{
-					qs.setCond(12, true);
+					if (player.isMageClass())
+					{
+						qs.setCond(12, true);
+					}
+					else
+					{
+						qs.setCond(13, true);
+					}
+					takeItems(player, CRIMSON_ROSE, -1);
 				}
-				else
-				{
-					qs.setCond(13, true);
-				}
-				takeItems(player, CRIMSON_ROSE, -1);
 				break;
 			}
 			case "33943-10.html":
 			{
-				qs.setCond(14, true);
+				if (qs.isCond(13))
+				{
+					qs.setCond(14, true);
+				}
 				break;
 			}
 			case "33942-10.html":
 			{
-				qs.setCond(14, true);
+				if (qs.isCond(12))
+				{
+					qs.setCond(14, true);
+				}
 				break;
 			}
 			case "33932-09.html":
 			{
-				qs.setCond(18, true);
+				if (qs.isCond(17))
+				{
+					qs.setCond(18, true);
+				}
 				break;
 			}
 			case "class":
@@ -360,7 +388,6 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		final QuestState qs1 = player.getQuestState(Q10752_WindsOfFateAPromise.class.getSimpleName());
 		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
@@ -369,7 +396,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			{
 				if (npc.getId() == KATALIN)
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && qs1.isCompleted())
+					if ((player.getLevel() >= MIN_LEVEL) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
 					{
 						htmltext = !player.isMageClass() ? "33943-01.html" : "33943-00.html";
 						break;
@@ -379,7 +406,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				}
 				else if (npc.getId() == AYANTHE)
 				{
-					if ((player.getLevel() >= MIN_LEVEL) && qs1.isCompleted())
+					if ((player.getLevel() >= MIN_LEVEL) && player.isInCategory(CategoryType.FOURTH_CLASS_GROUP))
 					{
 						htmltext = player.isMageClass() ? "33942-01.html" : "33942-00.html";
 						break;
