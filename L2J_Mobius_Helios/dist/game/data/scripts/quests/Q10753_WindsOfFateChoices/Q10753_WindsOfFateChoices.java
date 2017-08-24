@@ -181,11 +181,13 @@ public final class Q10753_WindsOfFateChoices extends Quest
 			{
 				giveItems(player, PROPHECY_MACHINE, 1);
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "30174-03.html":
 			{
 				qs.setCond(2, true);
+				htmltext = event;
 				break;
 			}
 			case "31149-03.html":
@@ -203,6 +205,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					qs.unset("PurityCount");
 					qs.setCond(5, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "30174-10.html":
@@ -212,6 +215,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					takeItems(player, RESTORATION_REGEANT, -1);
 					qs.setCond(6, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "30832-03.html":
@@ -220,6 +224,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				{
 					qs.setCond(7, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "30835-05.html":
@@ -229,15 +234,19 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					giveItems(player, WHITE_ROSE, 1);
 					qs.setCond(8, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "30758-02.html":
 			{
 				if (npc.isScriptValue(0) && qs.isCond(8))
 				{
-					return htmltext;
+					htmltext = event;
 				}
-				htmltext = "busy.html";
+				else
+				{
+					htmltext = "busy.html";
+				}
 				break;
 			}
 			case "30758-04.html":
@@ -253,12 +262,12 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					startQuestTimer("despawn", 180000, npc, player);
 					qs.setCond(9);
 				}
+				htmltext = event;
 				break;
 			}
 			case "despawn":
 			{
 				npc.setScriptValue(0);
-				htmltext = "";
 				break;
 			}
 			case "open":
@@ -289,6 +298,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					npc.setScriptValue(0);
 					qs.setCond(11, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "30835-08.html":
@@ -305,6 +315,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					}
 					takeItems(player, CRIMSON_ROSE, -1);
 				}
+				htmltext = event;
 				break;
 			}
 			case "33943-10.html":
@@ -313,6 +324,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				{
 					qs.setCond(14, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "33942-10.html":
@@ -321,6 +333,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				{
 					qs.setCond(14, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "33932-09.html":
@@ -329,6 +342,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				{
 					qs.setCond(18, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "class":
@@ -356,6 +370,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					giveItems(player, MENTEE_CARTIFICATE, 1);
 					qs.exitQuest(false, true);
 				}
+				htmltext = event;
 				break;
 			}
 			case "33931-04a.html":
@@ -378,6 +393,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					giveItems(player, MENTEE_CARTIFICATE, 1);
 					qs.exitQuest(false, true);
 				}
+				htmltext = event;
 				break;
 			}
 		}
