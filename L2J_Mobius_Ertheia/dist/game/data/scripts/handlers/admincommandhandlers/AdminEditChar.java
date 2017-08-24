@@ -1135,6 +1135,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%x%", String.valueOf(player.getX()));
 		adminReply.replace("%y%", String.valueOf(player.getY()));
 		adminReply.replace("%z%", String.valueOf(player.getZ()));
+		adminReply.replace("%heading%", String.valueOf(player.getHeading()));
 		adminReply.replace("%currenthp%", String.valueOf((int) player.getCurrentHp()));
 		adminReply.replace("%maxhp%", String.valueOf(player.getMaxHp()));
 		adminReply.replace("%reputation%", String.valueOf(player.getReputation()));
