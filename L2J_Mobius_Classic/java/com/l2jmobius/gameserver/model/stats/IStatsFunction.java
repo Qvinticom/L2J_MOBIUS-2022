@@ -189,6 +189,10 @@ public interface IStatsFunction
 						break;
 					}
 				}
+				if (value == 0) // 1-3
+				{
+					value += ((2 * blessedBonus * enchant) + (4 * blessedBonus * overEnchant));
+				}
 				break;
 			}
 			case S:
@@ -265,6 +269,10 @@ public interface IStatsFunction
 						value += (25 * blessedBonus * (overEnchant - 3));
 						break;
 					}
+				}
+				if (value == 0) // 1-3
+				{
+					value += ((5 * blessedBonus * enchant) + (10 * blessedBonus * overEnchant));
 				}
 				break;
 			}
@@ -360,6 +368,10 @@ public interface IStatsFunction
 								break;
 							}
 						}
+						if (value == 0) // 1-3
+						{
+							value += ((12 * blessedBonus * enchant) + (24 * blessedBonus * overEnchant));
+						}
 					}
 					else
 					{
@@ -408,6 +420,10 @@ public interface IStatsFunction
 								value += (35 * blessedBonus * (overEnchant - 3));
 								break;
 							}
+						}
+						if (value == 0) // 1-3
+						{
+							value += ((7 * blessedBonus * enchant) + (14 * blessedBonus * overEnchant));
 						}
 					}
 				}
@@ -458,6 +474,10 @@ public interface IStatsFunction
 							value += (30 * blessedBonus * (overEnchant - 3));
 							break;
 						}
+					}
+					if (value == 0) // 1-3
+					{
+						value += ((6 * blessedBonus * enchant) + (12 * blessedBonus * overEnchant));
 					}
 				}
 				break;

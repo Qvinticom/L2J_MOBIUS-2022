@@ -230,17 +230,21 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 						}
 					}
 					
-					if (item.isArmor() && item.isEquipped())
+					if (item.isEquipped())
 					{
-						it.forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
+						if (item.isArmor())
 						{
-							// add skills bestowed from +4 armor
-							if (item.getEnchantLevel() >= holder.getValue())
+							it.forEachSkill(ItemSkillType.ON_ENCHANT, holder ->
 							{
-								activeChar.addSkill(holder.getSkill(), false);
-								activeChar.sendSkillList();
-							}
-						});
+								// add skills bestowed from +4 armor
+								if (item.getEnchantLevel() >= holder.getValue())
+								{
+									activeChar.addSkill(holder.getSkill(), false);
+									activeChar.sendSkillList();
+								}
+							});
+						}
+						activeChar.broadcastUserInfo(); // update user info
 					}
 					break;
 				}
