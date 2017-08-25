@@ -32,7 +32,7 @@ public class Q00093_SagaOfTheSpectralMaster extends AbstractSagaQuest
 		_npc = new int[]
 		{
 			30175,
-			31287,
+			0, // FIXME: 31287 - Kamilen
 			31613,
 			30175,
 			31632,
@@ -54,8 +54,8 @@ public class Q00093_SagaOfTheSpectralMaster extends AbstractSagaQuest
 			7322,
 			7353,
 			7384,
-			7415,
-			7446,
+			0, // FIXME: 7415 - Resonance Amulet - 5
+			0, // FIXME: 7446 - Resonance Amulet - 6
 			7112,
 			0
 		};

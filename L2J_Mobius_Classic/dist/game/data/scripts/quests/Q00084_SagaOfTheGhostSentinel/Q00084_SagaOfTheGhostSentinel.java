@@ -32,16 +32,16 @@ public class Q00084_SagaOfTheGhostSentinel extends AbstractSagaQuest
 		_npc = new int[]
 		{
 			30702,
-			31587,
+			0, // FIXME: 31587 - Gedrik
 			31604,
-			31640,
+			0, // FIXME: 31640 - Pilgrim of Darkness
 			31635,
 			31646,
 			31649,
 			31652,
 			31654,
 			31655,
-			31659,
+			0, // FIXME: 31659 - Tablet of Vision
 			31641
 		};
 		Items = new int[]
@@ -54,8 +54,8 @@ public class Q00084_SagaOfTheGhostSentinel extends AbstractSagaQuest
 			7313,
 			7344,
 			7375,
-			7406,
-			7437,
+			0, // FIXME: 7406 - Resonance Amulet - 5
+			0, // FIXME: 7437 - Resonance Amulet - 6
 			7107,
 			0
 		};

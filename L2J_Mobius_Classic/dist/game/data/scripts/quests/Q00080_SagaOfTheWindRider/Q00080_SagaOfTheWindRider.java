@@ -33,29 +33,29 @@ public class Q00080_SagaOfTheWindRider extends AbstractSagaQuest
 		{
 			31603,
 			31624,
-			31284,
-			31615,
+			0, // FIXME: 31284 - Elena
+			0, // FIXME: 31615 - Hermit
 			31612,
 			31646,
 			31648,
 			31652,
 			31654,
 			31655,
-			31659,
+			0, // FIXME: 31659 - Tablet of Vision
 			31616
 		};
 		Items = new int[]
 		{
 			7080,
-			7517,
+			0, // FIXME: 7517 - Donath's' Dish
 			7081,
 			7495,
 			7278,
 			7309,
 			7340,
 			7371,
-			7402,
-			7433,
+			0, // FIXME: 7402 - Resonance Amulet - 5
+			0, // FIXME: 7433 - Resonance Amulet - 6
 			7103,
 			0
 		};

@@ -17,9 +17,6 @@
 package quests.Q00073_SagaOfTheDuelist;
 
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import quests.AbstractSagaQuest;
 
@@ -32,8 +29,8 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 	/**
 	 * Third Class Transfer Quest - Duelist: The quest asks for "Top-grade Meat" which can now be acquired directly through NPC Tunatun, instead of through an additional quest from NPC Tunatun.
 	 */
-	private final int TUNATUN = 31537;
-	private final int TOPQUALITYMEAT = 7546;
+	// private final int TUNATUN = 31537;
+	// private final int TOPQUALITYMEAT = 7546;
 	
 	public Q00073_SagaOfTheDuelist()
 	{
@@ -43,7 +40,7 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 			30849,
 			31624,
 			31226,
-			31331,
+			0, // FIXME: 31331 - Valdis
 			31639,
 			31646,
 			31647,
@@ -63,10 +60,10 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 			7302,
 			7333,
 			7364,
-			7395,
-			7426,
+			0, // FIXME: 7395 - Resonance Amulet - 5
+			0, // FIXME: 7426 - Resonance Amulet - 6
 			7096,
-			7546
+			0, // FIXME: 7546 - Top Quality Meat
 		};
 		Mob = new int[]
 		{
@@ -111,27 +108,11 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 		};
 		registerNPCs();
 		
-		addTalkId(TUNATUN);
+		// addTalkId(TUNATUN);
 	}
 	
-	@Override
-	public String onTalk(L2Npc npc, L2PcInstance player)
-	{
-		if (npc.getId() == TUNATUN)
-		{
-			String htmltext = getNoQuestMsg(player);
-			QuestState st = getQuestState(player, false);
-			if ((st != null) && st.isCond(3))
-			{
-				if (!hasQuestItems(player, TOPQUALITYMEAT))
-				{
-					giveItems(player, TOPQUALITYMEAT, 1);
-					return "tunatun_01.htm";
-				}
-				return "tunatun_02.htm";
-			}
-			return htmltext;
-		}
-		return super.onTalk(npc, player);
-	}
+	/*
+	 * @Override public String onTalk(L2Npc npc, L2PcInstance player) { if (npc.getId() == TUNATUN) { String htmltext = getNoQuestMsg(player); QuestState st = getQuestState(player, false); if ((st != null) && st.isCond(3)) { if (!hasQuestItems(player, TOPQUALITYMEAT)) { giveItems(player,
+	 * TOPQUALITYMEAT, 1); return "tunatun_01.htm"; } return "tunatun_02.htm"; } return htmltext; } return super.onTalk(npc, player); }
+	 */
 }

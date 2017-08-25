@@ -34,7 +34,7 @@ public class Q00082_SagaOfTheSagittarius extends AbstractSagaQuest
 			30702,
 			31627,
 			31604,
-			31640,
+			0, // FIXME: 31640 - Pilgrim of Darkness
 			31633,
 			31646,
 			31647,
@@ -54,8 +54,8 @@ public class Q00082_SagaOfTheSagittarius extends AbstractSagaQuest
 			7311,
 			7342,
 			7373,
-			7404,
-			7435,
+			0, // FIXME: 7404 - Resonance Amulet - 5
+			0, // FIXME: 7435 - Resonance Amulet - 6
 			7105,
 			0
 		};

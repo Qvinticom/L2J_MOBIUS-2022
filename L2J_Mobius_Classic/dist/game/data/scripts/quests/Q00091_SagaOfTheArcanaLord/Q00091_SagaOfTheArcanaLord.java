@@ -54,8 +54,8 @@ public class Q00091_SagaOfTheArcanaLord extends AbstractSagaQuest
 			7320,
 			7351,
 			7382,
-			7413,
-			7444,
+			0, // FIXME: 7413 - Resonance Amulet - 5
+			0, // FIXME: 7444 - Resonance Amulet - 6
 			7110,
 			0
 		};

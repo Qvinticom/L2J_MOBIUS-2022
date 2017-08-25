@@ -33,8 +33,8 @@ public class Q00089_SagaOfTheMysticMuse extends AbstractSagaQuest
 		{
 			30174,
 			31627,
-			31283,
-			31283,
+			0, // FIXME: 31283 - Alminas
+			0, // FIXME: 31283 - Alminas
 			31643,
 			31646,
 			31648,
@@ -42,7 +42,7 @@ public class Q00089_SagaOfTheMysticMuse extends AbstractSagaQuest
 			31654,
 			31655,
 			31658,
-			31283
+			0, // FIXME: 31283 - Alminas
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00089_SagaOfTheMysticMuse extends AbstractSagaQuest
 			7318,
 			7349,
 			7380,
-			7411,
-			7442,
+			0, // FIXME: 7411 - Resonance Amulet - 5
+			0, // FIXME: 7442 - Resonance Amulet - 6
 			7083,
 			0
 		};

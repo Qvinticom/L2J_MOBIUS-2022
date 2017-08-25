@@ -33,7 +33,7 @@ public class Q00071_SagaOfEvasTemplar extends AbstractSagaQuest
 		{
 			30852,
 			31624,
-			31278,
+			0, // FIXME 31278 - Bronwyn
 			30852,
 			31638,
 			31646,
@@ -54,10 +54,10 @@ public class Q00071_SagaOfEvasTemplar extends AbstractSagaQuest
 			7300,
 			7331,
 			7362,
-			7393,
-			7424,
+			0, // FIXME: 7393 - Resonance Amulet - 5
+			0, // FIXME: 7424 - Resonance Amulet - 6
 			7094,
-			6482
+			0, // FIXME: 6482 - Big White Fat Fish
 		};
 		Mob = new int[]
 		{

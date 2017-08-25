@@ -54,10 +54,10 @@ public class Q00070_SagaOfThePhoenixKnight extends AbstractSagaQuest
 			7299,
 			7330,
 			7361,
-			7392,
-			7423,
+			0, // FIXME: 7392 - Resonance Amulet - 5
+			0, // FIXME: 7423 - Resonance Amulet - 6
 			7093,
-			6482
+			0, // FIXME: 6482 - Big White Fat Fish
 		};
 		Mob = new int[]
 		{

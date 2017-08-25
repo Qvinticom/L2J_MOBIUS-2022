@@ -624,33 +624,10 @@ public abstract class AbstractSagaQuest extends Quest
 			}
 		}
 		
-		int[] Archon_Hellisha_Norm =
-		{
-			18212,
-			18214,
-			18215,
-			18216,
-			18218
-		};
-		for (int element : Archon_Hellisha_Norm)
-		{
-			if (npcId == element)
-			{
-				QuestState st1 = findQuest(player);
-				if (st1 != null)
-				{
-					if (st1.isCond(15))
-					{
-						// This is just a guess....not really sure what it actually says, if anything
-						autoChat(npc, Text[4].replace("PLAYERNAME", st1.getPlayer().getName()));
-						giveItems(st1.getPlayer(), Items[8], 1);
-						takeItems(st1.getPlayer(), Items[3], -1);
-						st1.setCond(16, true);
-					}
-				}
-				return super.onKill(npc, player, isSummon);
-			}
-		}
+		/*
+		 * int[] Archon_Hellisha_Norm = { 18212, 18214, 18215, 18216, 18218 }; for (int element : Archon_Hellisha_Norm) { if (npcId == element) { QuestState st1 = findQuest(player); if (st1 != null) { if (st1.isCond(15)) { // This is just a guess....not really sure what it actually says, if anything
+		 * autoChat(npc, Text[4].replace("PLAYERNAME", st1.getPlayer().getName())); giveItems(st1.getPlayer(), Items[8], 1); takeItems(st1.getPlayer(), Items[3], -1); st1.setCond(16, true); } } return super.onKill(npc, player, isSummon); } }
+		 */
 		
 		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
 		{
@@ -1039,15 +1016,9 @@ public abstract class AbstractSagaQuest extends Quest
 		{
 			addKillId(Archon_Minion);
 		}
-		int[] Archon_Hellisha_Norm =
-		{
-			18212,
-			18214,
-			18215,
-			18216,
-			18218
-		};
-		addKillId(Archon_Hellisha_Norm);
+		/*
+		 * int[] Archon_Hellisha_Norm = { 18212, 18214, 18215, 18216, 18218 }; addKillId(Archon_Hellisha_Norm);
+		 */
 		for (int Guardian_Angel = 27214; Guardian_Angel < 27217; Guardian_Angel++)
 		{
 			addKillId(Guardian_Angel);

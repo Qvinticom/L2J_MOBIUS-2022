@@ -31,10 +31,10 @@ public class Q00078_SagaOfTheDoomcryer extends AbstractSagaQuest
 		super(78);
 		_npc = new int[]
 		{
-			31336,
+			0, // FIXME: 31336 - Rahorakti
 			31624,
-			31589,
-			31290,
+			0, // FIXME: 31589 - Duda-Mara Totem Spirit
+			0, // FIXME: 31290 - Skahi
 			31642,
 			31646,
 			31649,
@@ -42,7 +42,7 @@ public class Q00078_SagaOfTheDoomcryer extends AbstractSagaQuest
 			31654,
 			31655,
 			31657,
-			31290
+			0, // FIXME: 31290 - Skahi
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00078_SagaOfTheDoomcryer extends AbstractSagaQuest
 			7307,
 			7338,
 			7369,
-			7400,
-			7431,
+			0, // FIXME: 7400 - Resonance Amulet - 5
+			0, // FIXME: 7431 - Resonance Amulet - 6
 			7101,
 			0
 		};

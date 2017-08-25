@@ -54,8 +54,8 @@ public class Q00099_SagaOfTheFortuneSeeker extends AbstractSagaQuest
 			7328,
 			7359,
 			7390,
-			7421,
-			7452,
+			0, // FIXME: 7421 - Resonance Amulet - 5
+			0, // FIXME: 7452 - Resonance Amulet - 6
 			7109,
 			0
 		};

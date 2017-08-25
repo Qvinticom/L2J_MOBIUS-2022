@@ -33,8 +33,8 @@ public class Q00094_SagaOfTheSoultaker extends AbstractSagaQuest
 		{
 			30832,
 			31623,
-			31279,
-			31279,
+			0, // FIXME: 31279 - Gregory
+			0, // FIXME: 31279 - Gregory
 			31645,
 			31646,
 			31648,
@@ -42,7 +42,7 @@ public class Q00094_SagaOfTheSoultaker extends AbstractSagaQuest
 			31654,
 			31655,
 			31657,
-			31279
+			0, // FIXME: 31279 - Gregory
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00094_SagaOfTheSoultaker extends AbstractSagaQuest
 			7323,
 			7354,
 			7385,
-			7416,
-			7447,
+			0, // FIXME: 7416 - Resonance Amulet - 5
+			0, // FIXME: 7447 - Resonance Amulet - 6
 			7085,
 			0
 		};

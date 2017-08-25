@@ -33,8 +33,8 @@ public class Q00087_SagaOfEvasSaint extends AbstractSagaQuest
 		{
 			30191,
 			31626,
-			31588,
-			31280,
+			0, // FIXME: 31588 - Agnes
+			0, // FIXME: 31280 - Bastian
 			31620,
 			31646,
 			31649,
@@ -42,20 +42,20 @@ public class Q00087_SagaOfEvasSaint extends AbstractSagaQuest
 			31654,
 			31655,
 			31657,
-			31280
+			0, // FIXME: 31280 - Bastian
 		};
 		Items = new int[]
 		{
 			7080,
-			7524,
+			0, // FIXME: 7524 - Offering
 			7081,
 			7502,
 			7285,
 			7316,
 			7347,
 			7378,
-			7409,
-			7440,
+			0, // FIXME: 7409 - Resonance Amulet - 5
+			0, // FIXME: 7440 - Resonance Amulet - 6
 			7088,
 			0
 		};

@@ -33,15 +33,15 @@ public class Q00072_SagaOfTheSwordMuse extends AbstractSagaQuest
 		{
 			30853,
 			31624,
-			31583,
-			31537,
+			0, // FIXME: 31583 - Feynn
+			0, // FIXME: 31537 - Tunatun
 			31618,
 			31646,
 			31649,
 			31652,
 			31654,
 			31655,
-			31659,
+			0, // FIXME: 31659 - Tablet of Vision
 			31281
 		};
 		Items = new int[]
@@ -54,10 +54,10 @@ public class Q00072_SagaOfTheSwordMuse extends AbstractSagaQuest
 			7301,
 			7332,
 			7363,
-			7394,
-			7425,
+			0, // FIXME: 7394 - Resonance Amulet - 5
+			0, // FIXME: 7425 - Resonance Amulet - 6
 			7095,
-			6482
+			0, // FIXME: 6482 - Big White Fat Fish
 		};
 		Mob = new int[]
 		{

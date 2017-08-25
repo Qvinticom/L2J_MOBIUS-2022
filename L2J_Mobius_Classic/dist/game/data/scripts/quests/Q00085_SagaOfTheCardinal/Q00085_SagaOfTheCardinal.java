@@ -33,8 +33,8 @@ public class Q00085_SagaOfTheCardinal extends AbstractSagaQuest
 		{
 			30191,
 			31626,
-			31588,
-			31280,
+			0, // FIXME: 31588 - Agnes
+			0, // FIXME: 31280 - Bastian
 			31644,
 			31646,
 			31647,
@@ -42,20 +42,20 @@ public class Q00085_SagaOfTheCardinal extends AbstractSagaQuest
 			31654,
 			31655,
 			31658,
-			31280
+			0, // FIXME: 31280 - Bastian
 		};
 		Items = new int[]
 		{
 			7080,
-			7522,
+			0, // FIXME: 7522 - Offering
 			7081,
 			7500,
 			7283,
 			7314,
 			7345,
 			7376,
-			7407,
-			7438,
+			0, // FIXME: 7407 - Resonance Amulet - 5
+			0, // FIXME: 7438 - Resonance Amulet - 6
 			7087,
 			0
 		};

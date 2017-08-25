@@ -31,10 +31,10 @@ public class Q00077_SagaOfTheDominator extends AbstractSagaQuest
 		super(77);
 		_npc = new int[]
 		{
-			31336,
+			0, // FIXME: 31336 - Rahorakti
 			31624,
-			31371,
-			31290,
+			0, // FIXME: 31371 - Wahkan
+			0, // FIXME: 31290 - Skahi
 			31636,
 			31646,
 			31648,
@@ -42,7 +42,7 @@ public class Q00077_SagaOfTheDominator extends AbstractSagaQuest
 			31654,
 			31655,
 			31656,
-			31290
+			0, // FIXME: 31290 - Skahi
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00077_SagaOfTheDominator extends AbstractSagaQuest
 			7306,
 			7337,
 			7368,
-			7399,
-			7430,
+			0, // FIXME: 7399 - Resonance Amulet - 5
+			0, // FIXME: 7430 - Resonance Amulet - 6
 			7100,
 			0
 		};

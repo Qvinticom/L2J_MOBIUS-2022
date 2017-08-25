@@ -31,18 +31,18 @@ public class Q00076_SagaOfTheGrandKhavatari extends AbstractSagaQuest
 		super(76);
 		_npc = new int[]
 		{
-			31339,
+			0, // FIXME: 31339 - Hakran
 			31624,
-			31589,
-			31290,
+			0, // FIXME: 31589 - Duda-Mara Totem Spirit
+			0, // FIXME: 31290 - Skahi
 			31637,
 			31646,
 			31647,
 			31652,
 			31654,
 			31655,
-			31659,
-			31290
+			0, // FIXME: 31659 - Tablet of Vision
+			0, // FIXME: 31290 - Skahi
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00076_SagaOfTheGrandKhavatari extends AbstractSagaQuest
 			7305,
 			7336,
 			7367,
-			7398,
-			7429,
+			0, // FIXME: 7398 - Resonance Amulet - 5
+			0, // FIXME: 7429 - Resonance Amulet - 6
 			7099,
 			0
 		};

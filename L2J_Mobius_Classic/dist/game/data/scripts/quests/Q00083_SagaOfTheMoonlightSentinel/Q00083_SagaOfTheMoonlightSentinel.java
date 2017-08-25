@@ -34,7 +34,7 @@ public class Q00083_SagaOfTheMoonlightSentinel extends AbstractSagaQuest
 			30702,
 			31627,
 			31604,
-			31640,
+			0, // FIXME: 31640 - Pilgrim of Darkness
 			31634,
 			31646,
 			31648,
@@ -54,8 +54,8 @@ public class Q00083_SagaOfTheMoonlightSentinel extends AbstractSagaQuest
 			7312,
 			7343,
 			7374,
-			7405,
-			7436,
+			0, // FIXME: 7405 - Resonance Amulet - 5
+			0, // FIXME: 7436 - Resonance Amulet - 6
 			7106,
 			0
 		};

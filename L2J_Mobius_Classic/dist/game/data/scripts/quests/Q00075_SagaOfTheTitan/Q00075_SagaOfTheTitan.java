@@ -31,10 +31,10 @@ public class Q00075_SagaOfTheTitan extends AbstractSagaQuest
 		super(75);
 		_npc = new int[]
 		{
-			31327,
+			0, // FIXME: 31327 - Tazki
 			31624,
-			31289,
-			31290,
+			0, // FIXME: 31289 - Lakan
+			0, // FIXME: 31290 - Skahi
 			31607,
 			31646,
 			31649,
@@ -42,7 +42,7 @@ public class Q00075_SagaOfTheTitan extends AbstractSagaQuest
 			31654,
 			31655,
 			31658,
-			31290
+			0, // FIXME: 31290 - Skahi
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00075_SagaOfTheTitan extends AbstractSagaQuest
 			7304,
 			7335,
 			7366,
-			7397,
-			7428,
+			0, // FIXME: 7397 - Resonance Amulet - 5
+			0, // FIXME: 7428 - Resonance Amulet - 6
 			7098,
 			0
 		};

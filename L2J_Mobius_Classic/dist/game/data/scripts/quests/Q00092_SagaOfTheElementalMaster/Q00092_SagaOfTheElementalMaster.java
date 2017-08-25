@@ -41,7 +41,7 @@ public class Q00092_SagaOfTheElementalMaster extends AbstractSagaQuest
 			31652,
 			31654,
 			31655,
-			31659,
+			0, // FIXME: 31659 - Tablet of Vision
 			31614
 		};
 		Items = new int[]
@@ -54,8 +54,8 @@ public class Q00092_SagaOfTheElementalMaster extends AbstractSagaQuest
 			7321,
 			7352,
 			7383,
-			7414,
-			7445,
+			0, // FIXME: 7414 - Resonance Amulet - 5
+			0, // FIXME: 7445 - Resonance Amulet - 6
 			7111,
 			0
 		};

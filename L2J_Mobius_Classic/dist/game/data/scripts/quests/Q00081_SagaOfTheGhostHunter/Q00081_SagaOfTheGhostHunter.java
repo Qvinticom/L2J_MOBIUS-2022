@@ -33,8 +33,8 @@ public class Q00081_SagaOfTheGhostHunter extends AbstractSagaQuest
 		{
 			31603,
 			31624,
-			31286,
-			31615,
+			0, // FIXME: 31286 - Drakon
+			0, // FIXME: 31615 - Hermit
 			31617,
 			31646,
 			31649,
@@ -47,15 +47,15 @@ public class Q00081_SagaOfTheGhostHunter extends AbstractSagaQuest
 		Items = new int[]
 		{
 			7080,
-			7518,
+			0, // FIXME: 7518 - Donath's' Note - Vol.1
 			7081,
 			7496,
 			7279,
 			7310,
 			7341,
 			7372,
-			7403,
-			7434,
+			0, // FIXME: 7403 - Resonance Amulet - 5
+			0, // FIXME: 7434 - Resonance Amulet - 6
 			7104,
 			0
 		};

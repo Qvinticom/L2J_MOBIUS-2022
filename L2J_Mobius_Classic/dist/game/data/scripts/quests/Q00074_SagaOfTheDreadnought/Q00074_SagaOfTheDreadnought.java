@@ -32,9 +32,9 @@ public class Q00074_SagaOfTheDreadnought extends AbstractSagaQuest
 		_npc = new int[]
 		{
 			30850,
-			31624,
-			31298,
-			31276,
+			34268, // 31624 - Donath -> Rifken
+			30121, // 31298 - Ulrich -> Jeronin
+			0, // FIXME: 31276 - Bernhard
 			31595,
 			31646,
 			31648,
@@ -42,7 +42,7 @@ public class Q00074_SagaOfTheDreadnought extends AbstractSagaQuest
 			31654,
 			31655,
 			31657,
-			31522
+			0, // FIXME: 31522 - Mysterious Wizard
 		};
 		Items = new int[]
 		{
@@ -54,10 +54,10 @@ public class Q00074_SagaOfTheDreadnought extends AbstractSagaQuest
 			7303,
 			7334,
 			7365,
-			7396,
-			7427,
+			0, // FIXME: 7396 - Resonance Amulet - 5
+			0, // FIXME: 7427 - Resonance Amulet - 6
 			7097,
-			6480
+			0, // FIXME: 6480 - Big White Nimble Fish
 		};
 		Mob = new int[]
 		{

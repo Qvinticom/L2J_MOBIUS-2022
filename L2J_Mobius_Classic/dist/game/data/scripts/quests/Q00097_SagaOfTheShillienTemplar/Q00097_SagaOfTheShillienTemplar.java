@@ -33,16 +33,16 @@ public class Q00097_SagaOfTheShillienTemplar extends AbstractSagaQuest
 		{
 			31580,
 			31623,
-			31285,
-			31285,
+			0, // FIXME: 31285 - Samael
+			0, // FIXME: 31285 - Samael
 			31610,
 			31646,
 			31648,
 			31652,
 			31654,
 			31655,
-			31659,
-			31285
+			0, // FIXME: 31659 - Tablet of Vision
+			0, // FIXME: 31285 - Samael
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00097_SagaOfTheShillienTemplar extends AbstractSagaQuest
 			7326,
 			7357,
 			7388,
-			7419,
-			7450,
+			0, // FIXME: 7419 - Resonance Amulet - 5
+			0, // FIXME: 7450 - Resonance Amulet - 6
 			7091,
 			0
 		};

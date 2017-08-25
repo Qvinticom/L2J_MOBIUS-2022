@@ -33,8 +33,8 @@ public class Q00096_SagaOfTheSpectralDancer extends AbstractSagaQuest
 		{
 			31582,
 			31623,
-			31284,
-			31284,
+			0, // FIXME: 31284 - Elena
+			0, // FIXME: 31284 - Elena
 			31611,
 			31646,
 			31649,
@@ -42,7 +42,7 @@ public class Q00096_SagaOfTheSpectralDancer extends AbstractSagaQuest
 			31654,
 			31655,
 			31656,
-			31284
+			0, // FIXME: 31284 - Elena
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00096_SagaOfTheSpectralDancer extends AbstractSagaQuest
 			7325,
 			7356,
 			7387,
-			7418,
-			7449,
+			0, // FIXME: 7418 - Resonance Amulet - 5
+			0, // FIXME: 7449 - Resonance Amulet - 6
 			7092,
 			0
 		};

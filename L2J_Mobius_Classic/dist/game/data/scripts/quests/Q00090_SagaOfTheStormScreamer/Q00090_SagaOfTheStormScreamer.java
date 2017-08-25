@@ -33,16 +33,16 @@ public class Q00090_SagaOfTheStormScreamer extends AbstractSagaQuest
 		{
 			30175,
 			31627,
-			31287,
-			31287,
+			0, // FIXME: 31287 - Kamilen
+			0, // FIXME: 31287 - Kamilen
 			31598,
 			31646,
 			31649,
 			31652,
 			31654,
 			31655,
-			31659,
-			31287
+			0, // FIXME: 31659 - Tablet of Vision
+			0, // FIXME: 31287 - Kamilen
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00090_SagaOfTheStormScreamer extends AbstractSagaQuest
 			7319,
 			7350,
 			7381,
-			7412,
-			7443,
+			0, // FIXME: 7412 - Resonance Amulet - 5
+			0, // FIXME: 7443 - Resonance Amulet - 6
 			7084,
 			0
 		};

@@ -33,8 +33,8 @@ public class Q00088_SagaOfTheArchmage extends AbstractSagaQuest
 		{
 			30176,
 			31627,
-			31282,
-			31282,
+			0, // FIXME: 31282 - Justin
+			0, // FIXME: 31282 - Justin
 			31590,
 			31646,
 			31647,
@@ -42,7 +42,7 @@ public class Q00088_SagaOfTheArchmage extends AbstractSagaQuest
 			31654,
 			31655,
 			31657,
-			31282
+			0, // FIXME: 31282 - Justin
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00088_SagaOfTheArchmage extends AbstractSagaQuest
 			7317,
 			7348,
 			7379,
-			7410,
-			7441,
+			0, // FIXME: 7410 - Resonance Amulet - 5
+			0, // FIXME: 7441 - Resonance Amulet - 6
 			7082,
 			0
 		};

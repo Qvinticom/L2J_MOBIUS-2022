@@ -31,8 +31,8 @@ public class Q00100_SagaOfTheMaestro extends AbstractSagaQuest
 		super(100);
 		_npc = new int[]
 		{
-			31592,
-			31273,
+			0, // FIXME: 31592 - Telson
+			0, // FIXME: 31273 - Borodin
 			31597,
 			31597,
 			31596,
@@ -54,8 +54,8 @@ public class Q00100_SagaOfTheMaestro extends AbstractSagaQuest
 			7329,
 			7360,
 			7391,
-			7422,
-			7453,
+			0, // FIXME: 7422 - Resonance Amulet - 5
+			0, // FIXME: 7453 - Resonance Amulet - 6
 			7108,
 			0
 		};

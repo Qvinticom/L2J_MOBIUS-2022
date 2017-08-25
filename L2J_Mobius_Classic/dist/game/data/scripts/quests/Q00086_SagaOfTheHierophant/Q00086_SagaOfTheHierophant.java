@@ -33,29 +33,29 @@ public class Q00086_SagaOfTheHierophant extends AbstractSagaQuest
 		{
 			30191,
 			31626,
-			31588,
-			31280,
+			0, // FIXME: 31588 - Agnes
+			0, // FIXME: 31280 - Bastian
 			31591,
 			31646,
 			31648,
 			31652,
 			31654,
 			31655,
-			31659,
-			31280
+			0, // FIXME: 31659 - Tablet of Vision
+			0, // FIXME: 31280 - Bastian
 		};
 		Items = new int[]
 		{
 			7080,
-			7523,
+			0, // FIXME: 7523 - Offering
 			7081,
 			7501,
 			7284,
 			7315,
 			7346,
 			7377,
-			7408,
-			7439,
+			0, // FIXME: 7408 - Resonance Amulet - 5
+			0, // FIXME: 7439 - Resonance Amulet - 6
 			7089,
 			0
 		};

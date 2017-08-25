@@ -33,8 +33,8 @@ public class Q00095_SagaOfTheHellKnight extends AbstractSagaQuest
 		{
 			31582,
 			31623,
-			31297,
-			31297,
+			0, // FIXME: 31297 - Bayard
+			0, // FIXME: 31297 - Bayard
 			31599,
 			31646,
 			31647,
@@ -42,7 +42,7 @@ public class Q00095_SagaOfTheHellKnight extends AbstractSagaQuest
 			31654,
 			31655,
 			31656,
-			31297
+			0, // FIXME: 31297 - Bayard
 		};
 		Items = new int[]
 		{
@@ -54,8 +54,8 @@ public class Q00095_SagaOfTheHellKnight extends AbstractSagaQuest
 			7324,
 			7355,
 			7386,
-			7417,
-			7448,
+			0, // FIXME: 7417 - Resonance Amulet - 5
+			0, // FIXME: 7448 - Resonance Amulet - 6
 			7086,
 			0
 		};

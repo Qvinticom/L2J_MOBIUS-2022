@@ -32,9 +32,9 @@ public class Q00079_SagaOfTheAdventurer extends AbstractSagaQuest
 		_npc = new int[]
 		{
 			31603,
-			31584,
-			31579,
-			31615,
+			0, // FIXME: 31584 - Valentine
+			0, // FIXME: 31579 - Klaus
+			0, // FIXME: 31615 - Hermit
 			31619,
 			31646,
 			31647,
@@ -54,8 +54,8 @@ public class Q00079_SagaOfTheAdventurer extends AbstractSagaQuest
 			7308,
 			7339,
 			7370,
-			7401,
-			7432,
+			0, // FIXME: 7401 - Resonance Amulet - 5
+			0, // FIXME: 7432 - Resonance Amulet - 6
 			7102,
 			0
 		};

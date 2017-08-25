@@ -33,29 +33,29 @@ public class Q00098_SagaOfTheShillienSaint extends AbstractSagaQuest
 		{
 			31581,
 			31626,
-			31588,
-			31287,
+			0, // FIXME: 31588 - Agnes
+			0, // FIXME: 31287 - Kamilen
 			31621,
 			31646,
 			31647,
 			31651,
 			31654,
 			31655,
-			31658,
-			31287
+			0, // FIXME: 31658 - Tablet of Vision
+			0, // FIXME: 31287 - Kamilen
 		};
 		Items = new int[]
 		{
 			7080,
-			7525,
+			0, // FIXME: 7525 - Offering
 			7081,
 			7513,
 			7296,
 			7327,
 			7358,
 			7389,
-			7420,
-			7451,
+			0, // FIXME: 7420 - Resonance Amulet - 5
+			0, // FIXME: 7451 - Resonance Amulet - 6
 			7090,
 			0
 		};
