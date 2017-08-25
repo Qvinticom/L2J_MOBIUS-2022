@@ -107,8 +107,10 @@ FocusSouls: Increases souls by a given value.
 GetAgro: Causes enemy NPC to attack you.
 GetDamageLimit: Sets the maximum amount of damage you can receive.
 GetMomentum: Increases momentum by a given value at fixed rate.
+GiveClanReputation: Gives clan reputation points to a players clan. (l2jmobius)
 GiveRecommendation: Gives reccomendations to a player. Blue name.
 GiveSp: Gives a given amount of SP.
+GiveXp: Gives a given amount of XP. (l2jmobius)
 Grow: Sets NPC collision to its growth collision.
 HairAccessorySet: See/Unsee hair accessoary.
 Harvesting: Manor's harvesting seed.
@@ -230,6 +232,7 @@ RestorationRandom: Creates items randomly from a specified list. Its multiplied 
 Resurrection: Resurrects target Player or Summon.
 ResurrectionSpecial: Resurrects target Player or Summon only in specified instance IDs.
 Reuse: Decreases skill reuse time based on its magic type.
+RewardItemOnExit: Reward an item when effect ends. (l2jmobius)
 Root: Stops movement.
 SafeFallHeight: Minimum falling height for taking damage stat.
 SendSystemMessageToClan: Sends the specified SystemMessageId to the clan.
@@ -239,8 +242,8 @@ SetSkill: Adds a skill to the Player and saves it in the database.
 ShieldDefence: Shield P. Def stat.
 ShieldDefenceRate: Shield block success rate stat.
 SilentMove: Prevents aggressive mobs from attacking you when entering aggression range.
-SkillCriticalDamage: Skill critical damage stat.
 SkillCritical: Activates double debuff or cooldown reset critical based on the specified stat.
+SkillCriticalDamage: Skill critical damage stat.
 SkillCriticalProbability: Skill critical rate stat.
 SkillEvasion: Skill evasion stat.
 SkillTurning: Stops target's casting.
@@ -257,10 +260,10 @@ StatBonusSpeed: Changes Speed stat to depend on the specified base stat.
 StatByMoveType: Adds stat based on your movement type (standing, running, walking).
 StatUp: Increases the specified base stat.
 StealAbnormal: Steals enemy's buffs.
+Summon: Summons a servitor.
 SummonAgathion: Summons the specified agathion Npc Id.
 SummonCubic: Summons the specified Cubic ID.
 SummonHallucination: Creates a doppelganger. Clone Attack skill.
-Summon: Summons a servitor.
 SummonMulti: Summons a servitor without unsummoning previous servitors.
 SummonNpc: Summons a specified Npc Id.
 SummonPet: Summons a specified pet.
@@ -280,7 +283,6 @@ Teleport: Teleports to a specified XYZ location.
 TeleportToNpc: Teleports to a specified Npc Id.
 TeleportToSummon: Teleports to your summon.
 TeleportToTarget: Teleports to your target.
-ThrowUp: Throws enemy up in the air.
 TransferDamageToPlayer: Transfers portion of incoming damage from target to you.
 TransferDamageToSummon: Transfers portion of incoming damage towards your summon.
 TransferHate: Transfers Npc's hate from you to your target.
