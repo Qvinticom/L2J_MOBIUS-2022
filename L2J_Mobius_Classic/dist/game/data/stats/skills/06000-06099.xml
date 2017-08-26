@@ -1269,13 +1269,12 @@
 		</effects>
 	</skill>
 	<skill id="6059" toLevel="1" name="Counter Critical">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
 		<icon>icon.skill1542</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1310,7 +1309,7 @@
 		<affectRange>1000</affectRange>
 		<icon>icon.skill1543</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
 		<rideState>NONE</rideState>

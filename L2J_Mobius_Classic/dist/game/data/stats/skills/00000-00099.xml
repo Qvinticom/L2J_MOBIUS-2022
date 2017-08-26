@@ -4230,7 +4230,7 @@
 	<skill id="48" toLevel="49" name="Thunder Storm">
 		<!-- Confirmed CT2.5 and Updated to IO -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
@@ -5452,7 +5452,7 @@
 	</skill>
 	<skill id="65" toLevel="15" name="Horror">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -6661,9 +6661,8 @@
 		</effects>
 	</skill>
 	<skill id="92" toLevel="55" name="Shield Stun">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
+		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>80</activateRate>

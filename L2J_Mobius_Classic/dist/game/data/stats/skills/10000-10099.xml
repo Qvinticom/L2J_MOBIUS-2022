@@ -1,60 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10015" toLevel="9" name="Chain Strike">
-		<!-- Glory Days confirmed -->
+	<skill id="10015" toLevel="1" name="Chain Strike">
 		<!-- Pulls selected target to make them attack you. Requires a shield. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<activateRate>
-			<value fromLevel="1" toLevel="9">190</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>190</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">87</value>
-			<value level="3">90</value>
-			<value level="4">93</value>
-			<value level="5">96</value>
-			<value level="6">99</value>
-			<value level="7">101</value>
-			<value level="8">103</value>
-			<value level="9">105</value>
-		</magicLvl>
+		<magicLvl>76</magicLvl>
 		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<mpConsume>
-			<value level="1">58</value>
-			<value level="2">61</value>
-			<value level="3">63</value>
-			<value level="4">66</value>
-			<value level="5">69</value>
-			<value level="6">72</value>
-			<value level="7">75</value>
-			<value level="8">78</value>
-			<value level="9">81</value>
-		</mpConsume>
-		<castRange>
-			<value fromLevel="1" toLevel="9">600</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2030">{base + 10 * subIndex}</value>
-		</castRange>
-		<hitTime>500</hitTime>
+		<mpConsume>69</mpConsume>
+		<castRange>600</castRange>
+		<hitTime>1000</hitTime>
 		<coolTime>1000</coolTime>
-		<reuseDelay>10000</reuseDelay>
-		<effectPoint>
-			<value level="1">-2066</value>
-			<value level="2">-2080</value>
-			<value level="3">-2099</value>
-			<value level="4">-2116</value>
-			<value level="5">-2129</value>
-			<value level="6">-2140</value>
-			<value level="7">-2151</value>
-			<value level="8">-2162</value>
-			<value level="9">-2173</value>
-		</effectPoint>
+		<reuseDelay>15000</reuseDelay>
+		<effectPoint>-2173</effectPoint>
 		<rideState>NONE</rideState>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>

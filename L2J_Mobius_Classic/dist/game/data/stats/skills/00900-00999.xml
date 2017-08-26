@@ -851,7 +851,7 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0913</icon>
-		<magicLvl>81</magicLvl>
+		<magicLvl>77</magicLvl>
 		<mpConsume>37</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -862,13 +862,12 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="ResistDDMagic">
-				<amount>100</amount>
+				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="914" toLevel="1" name="Song of Purification">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SONG_OF_PURIFICATION</abnormalType>
@@ -877,8 +876,8 @@
 		<hitTime>2500</hitTime>
 		<icon>icon.skill0914</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>81</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>80</magicLvl>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -898,13 +897,12 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
-				<amount>-30</amount>
+				<amount>-50</amount>
 				<slot>DEBUFF</slot>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="915" toLevel="1" name="Dance of Berserker">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_BERSERKER</abnormalType>
@@ -913,8 +911,8 @@
 		<hitTime>2500</hitTime>
 		<icon>icon.skill0915</icon>
 		<isMagic>3</isMagic> <!-- Dance Skill -->
-		<magicLvl>81</magicLvl>
-		<mpConsume>60</mpConsume>
+		<magicLvl>80</magicLvl>
+		<mpConsume>66</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -923,46 +921,39 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<conditions>
-			<condition name="EquipWeapon">
-				<weaponType>
-					<item>DUAL</item>
-					<item>DUALBLUNT</item>
-				</weaponType>
-			</condition>
-		</conditions>
 		<effects>
-			<effect name="PAtk">
-				<amount>8</amount>
+			<effect name="PhysicalDefence">
+				<amount>-4</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>16</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>8</amount>
-				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>-16</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
 				<amount>-8</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>-4</amount>
+				<amount>-2</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
+			
+			<effect name="PAtk">
+				<amount>4</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
 				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>8</amount>
+				<amount>4</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>4</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1008,15 +999,14 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
 		<effectPoint>597</effectPoint>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0917</icon>
-		<magicLvl>81</magicLvl>
-		<mpConsume>37</mpConsume>
+		<magicLvl>79</magicLvl>
+		<mpConsume>41</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>150000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1026,22 +1016,21 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalSkillPower">
-				<amount>30</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PvpPhysicalAttackDamageBonus">
-				<amount>30</amount>
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="918" toLevel="1" name="Maximum Force Focus">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
 		<icon>icon.skill0918</icon>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -1064,12 +1053,11 @@
 		</effects>
 	</skill>
 	<skill id="919" toLevel="1" name="Maximum Sonic Focus">
-		<!-- Confirmed CT2.5 -->
 		<effectPoint>150</effectPoint>
 		<hitTime>900</hitTime>
 		<hpConsume>80</hpConsume>
 		<icon>icon.skill0919</icon>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<mpConsume>20</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -1081,7 +1069,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 			<condition name="OpEnergyMax">
@@ -1277,12 +1264,11 @@
 		</effects>
 	</skill>
 	<skill id="921" toLevel="1" name="Spike Thrust">
-		<!-- Confirmed CT2.5 -->
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
-		<hitTime>1080</hitTime>
+		<hitTime>720</hitTime>
 		<icon>icon.skill0921</icon>
 		<magicLvl>76</magicLvl>
 		<mpConsume>77</mpConsume>
@@ -4570,8 +4556,12 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="986" toLevel="25" name="Deadly Strike">
-		<!-- High Five Skill -->
+	<skill id="986" toLevel="18" name="Deadly Strike">
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<activateRate>80</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>-2320</effectPoint>
 		<effectRange>400</effectRange>
@@ -4596,13 +4586,6 @@
 			<value level="16">76</value>
 			<value level="17">77</value>
 			<value level="18">78</value>
-			<value level="19">79</value>
-			<value level="20">80</value>
-			<value level="21">81</value>
-			<value level="22">82</value>
-			<value level="23">83</value>
-			<value level="24">84</value>
-			<value level="25">85</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -4623,22 +4606,16 @@
 			<value level="16">77</value>
 			<value level="17">78</value>
 			<value level="18">78</value>
-			<value level="19">79</value>
-			<value level="20">80</value>
-			<value level="21">80</value>
-			<value level="22">81</value>
-			<value level="23">82</value>
-			<value level="24">82</value>
-			<value level="25">83</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isDebuff>true</isDebuff>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -4647,7 +4624,6 @@
 					<item>DAGGER</item>
 					<item>POLE</item>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -4672,15 +4648,12 @@
 					<value level="16">3849</value>
 					<value level="17">3945</value>
 					<value level="18">4040</value>
-					<value level="19">4133</value>
-					<value level="20">4224</value>
-					<value level="21">4312</value>
-					<value level="22">4399</value>
-					<value level="23">4482</value>
-					<value level="24">4563</value>
-					<value level="25">4640</value>
 				</power>
 				<overHit>true</overHit>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-23</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -4814,19 +4787,27 @@
 		</effects>
 	</skill>
 	<skill id="990" toLevel="1" name="Death Sting">
-		<!-- High Five Skill -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>SILENCE</abnormalType>
+		<activateRate>40</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>900</castRange>
 		<effectPoint>-1387</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3500</hitTime>
 		<icon>icon.skill0990</icon>
-		<magicLvl>83</magicLvl>
-		<mpConsume>165</mpConsume>
-		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<magicLvl>79</magicLvl>
+		<mpConsume>248</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<operateType>A2</operateType>
 		<reuseDelay>12000</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>500</coolTime>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
+		<trait>DERANGEMENT</trait>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4834,17 +4815,16 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BOW</item>
-					<item>CROSSBOW</item>
-					<item>TWOHANDCROSSBOW</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>24306</power>
+				<power>13006</power>
 				<overHit>true</overHit>
 				<criticalChance>30</criticalChance>
 			</effect>
+			<effect name="Mute" />
 		</effects>
 	</skill>
 	<skill id="991" toLevel="1" name="Throwing Dagger">
@@ -5048,14 +5028,13 @@
 		</effects>
 	</skill>
 	<skill id="994" toLevel="1" name="Rush">
-		<!-- High Five Skill -->
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-379</effectPoint>
 		<effectRange>600</effectRange>
-		<hitTime>800</hitTime>
+		<hitTime>200</hitTime>
 		<icon>icon.skill0484</icon>
-		<magicLvl>40</magicLvl>
+		<magicLvl>78</magicLvl>
 		<mpConsume>38</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>

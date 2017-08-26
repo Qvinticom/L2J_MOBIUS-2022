@@ -1004,41 +1004,77 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="RemainHpPer">
-				<amount>30</amount>
+				<amount>40</amount>
 				<percentType>LESS</percentType>
 				<affectType>CASTER</affectType>
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="Speed">
+			<effect name="ResistDispelByCategory">
 				<amount>
-					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
+					<value level="1">-20</value>
+					<value level="2">-30</value>
+					<value level="3">-40</value>
 				</amount>
-				<mode>DIFF</mode>
+				<slot>BUFF</slot>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>50</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+				</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>50</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
+				</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
 			</effect>
 			<effect name="Accuracy">
-				<amount>6</amount>
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+					<value level="3">6</value>
+				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
 				</weaponType>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">8</value>
+					<value level="3">10</value>
+				</amount>
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
 					<value level="1">10</value>
-					<value level="2">20</value>
-					<value level="3">30</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -1046,39 +1082,43 @@
 					<item>BLUNT</item>
 				</weaponType>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="1">33</value>
-					<value level="2">66</value>
-					<value level="3">100</value>
-				</amount>
-				<mode>PER</mode>
-				<weaponType>
-					<item>BLUNT</item>
-				</weaponType>
-			</effect>
-			<effect name="HealEffect">
-				<amount>-80</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-40</amount>
-				<slot>BUFF</slot>
-			</effect>
-			<effect name="ResistAbnormalByCategory">
-				<amount>-40</amount>
-				<slot>DEBUFF</slot>
-			</effect>
 			<effect name="CriticalRate">
 				<amount>
-					<value level="1">33</value>
-					<value level="2">66</value>
-					<value level="3">100</value>
+					<value level="1">20</value>
+					<value level="2">30</value>
+					<value level="3">40</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
 					<item>SWORD</item>
 				</weaponType>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+				<weaponType>
+					<item>BLUNT</item>
+				</weaponType>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-30</value>
+					<value level="3">-40</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">-40</value>
+					<value level="2">-50</value>
+					<value level="3">-60</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -1925,31 +1965,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="415" toLevel="3" name="Spirit of Sagittarius">
-		<abnormalLvl>
-			<value level="1">2</value>
-			<value level="2">4</value>
-			<value level="3">6</value>
-		</abnormalLvl>
+	<skill id="415" toLevel="1" name="Spirit of Sagittarius">
+		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_COST_DOWN</abnormalType>
-		<effectPoint>
-			<value level="1">549</value>
-			<value level="2">611</value>
-			<value level="3">655</value>
-		</effectPoint>
+		<effectPoint>549</effectPoint>
 		<hitTime>2000</hitTime>
 		<icon>icon.skill0415</icon>
-		<magicLvl>
-			<value level="1">58</value>
-			<value level="2">66</value>
-			<value level="3">74</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">27</value>
-			<value level="2">31</value>
-			<value level="3">34</value>
-		</mpConsume>
+		<magicLvl>76</magicLvl>
+		<mpConsume>27</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1959,11 +1983,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicMpCost">
-				<amount>
-					<value level="1">-10</value>
-					<value level="2">-20</value>
-					<value level="3">-30</value>
-				</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
@@ -2507,49 +2527,27 @@
 			<effect name="ShieldDefence">
 				<amount>10</amount>
 				<mode>PER</mode>
+				<armorType>
+					<item>HEAVY</item>
+				</armorType>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>10</BOW>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="430" toLevel="8" name="Master of Combat">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
+	<skill id="430" toLevel="1" name="Master of Combat">
 		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
-			<value level="1">78</value>
-			<value level="2">80</value>
-			<value level="3">82</value>
-			<value level="4">84</value>
-			<value level="5">85</value>
-			<value level="6">90</value>
-			<value level="7">95</value>
-			<value level="8">99</value>
-		</magicLvl>
+		<magicLvl>78</magicLvl>
 		<effects>
 			<effect name="MaxCp">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">8</value>
-					<value level="5">10</value>
-					<value level="6">12</value>
-					<value level="7">14</value>
-					<value level="8">16</value>
-				</amount>
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-					<value level="4">4</value>
-					<value level="5">5</value>
-					<value level="6">6</value>
-					<value level="7">7</value>
-					<value level="8">8</value>
-				</amount>
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2698,49 +2696,24 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="437" toLevel="10" name="Song of Silence">
-		<!-- Confirmed CT2.5 and Updated to Ertheia -->
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
-			<value level="5">5</value>
-			<value level="6">6</value>
-			<value level="7">7</value>
-			<value level="8">8</value>
-			<value level="9">9</value>
-			<value level="10">10</value>
-		</abnormalLvl>
+	<skill id="437" toLevel="1" name="Song of Silence">
+		<abnormalLvl>1</abnormalLvl>
+		
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="10">60</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>60</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>-507</effectPoint>
-		<hitTime>1900</hitTime>
+		<hitTime>3000</hitTime>
 		<icon>icon.skill0437</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>
-			<value level="1">79</value>
-			<value level="2">81</value>
-			<value level="3">83</value>
-			<value level="4">85</value>
-			<value level="5">90</value>
-			<value level="6">95</value>
-			<value level="7">99</value>
-			<value level="8">101</value>
-			<value level="9">103</value>
-			<value level="10">105</value>
-		</magicLvl>
-		<mpConsume>166</mpConsume>
+		<magicLvl>79</magicLvl>
+		<mpConsume>50</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2844,7 +2817,7 @@
 		<effectPoint>673</effectPoint>
 		<hitTime>2000</hitTime>
 		<icon>icon.skill0442</icon>
-		<magicLvl>79</magicLvl>
+		<magicLvl>77</magicLvl>
 		<mpConsume>65</mpConsume>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
@@ -2858,7 +2831,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DUAL</item>
-					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 			<condition name="EnergySaved">
@@ -2888,7 +2860,7 @@
 		<effectPoint>676</effectPoint>
 		<hitTime>2000</hitTime>
 		<icon>icon.skill0443</icon>
-		<magicLvl>79</magicLvl>
+		<magicLvl>77</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
@@ -2943,17 +2915,16 @@
 		</effects>
 	</skill>
 	<skill id="445" toLevel="1" name="Mirage">
-		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalType>MIRAGE</abnormalType>
 		<effectPoint>673</effectPoint>
 		<hitTime>2000</hitTime>
 		<icon>icon.skill0445</icon>
 		<magicLvl>79</magicLvl>
-		<mpConsume>43</mpConsume>
+		<mpConsume>47</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>150000</reuseDelay>
+		<reuseDelay>300000</reuseDelay>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2975,15 +2946,15 @@
 	</skill>
 	<skill id="446" toLevel="1" name="Evasion">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
 		<effectPoint>337</effectPoint>
 		<hitTime>500</hitTime>
 		<icon>icon.skill0446</icon>
 		<magicLvl>79</magicLvl>
-		<mpConsume>29</mpConsume>
+		<mpConsume>32</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>150000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2998,15 +2969,15 @@
 	</skill>
 	<skill id="447" toLevel="1" name="Counterattack">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<effectPoint>337</effectPoint>
 		<hitTime>500</hitTime>
 		<icon>icon.skill0447</icon>
 		<magicLvl>79</magicLvl>
-		<mpConsume>29</mpConsume>
+		<mpConsume>32</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>150000</reuseDelay>
+		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

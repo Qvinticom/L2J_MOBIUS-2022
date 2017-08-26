@@ -1573,7 +1573,7 @@
 			<value level="21">14</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>1000</reuseDelay>
+		<reuseDelay>4000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
@@ -2899,7 +2899,7 @@
 	</skill>
 	<skill id="1064" toLevel="16" name="Silence">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>24</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -3083,7 +3083,7 @@
 	</skill>
 	<skill id="1069" toLevel="45" name="Sleep">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
 		<activateRate>80</activateRate>
@@ -4663,7 +4663,7 @@
 	</skill>
 	<skill id="1097" toLevel="22" name="Dreaming Spirit">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
+		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
 		<activateRate>80</activateRate>

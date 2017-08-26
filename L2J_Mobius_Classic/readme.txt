@@ -45,6 +45,7 @@ What is done
 -Maille Lizardmen Barracks clan halls
 -Augmentation chances from L2Wiki
 -Working Runes system
+-Added new Savior skills
 
 Custom work
 -Newbie Helper NPC location info
@@ -56,5 +57,4 @@ TODO list
 -Test quests and update rewards
 -Test castle sieges
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
--New Savior class skills https://eu.4game.com/lineage2classic/play/saviors/classes/#newclasskills
 -Provisional Clan Halls

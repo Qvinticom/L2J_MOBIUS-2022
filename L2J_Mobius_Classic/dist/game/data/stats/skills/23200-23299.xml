@@ -41,7 +41,7 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>83</magicLvl>
+		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
 		<basicProperty>MAGIC</basicProperty>
@@ -54,7 +54,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DamOverTime">
-				<power>300</power>
+				<power>150</power>
 				<ticks>5</ticks>
 			</effect>
 		</effects>
@@ -67,7 +67,7 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<magicLvl>83</magicLvl>
+		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
 		<effectPoint>100</effectPoint>
@@ -81,7 +81,7 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DamOverTime">
-				<power>300</power>
+				<power>150</power>
 				<ticks>5</ticks>
 			</effect>
 		</effects>

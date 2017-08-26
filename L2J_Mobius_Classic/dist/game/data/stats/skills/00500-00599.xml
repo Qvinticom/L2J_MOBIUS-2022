@@ -1390,49 +1390,27 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="522" toLevel="4" name="Real Target">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+	<skill id="522" toLevel="2" name="Real Target">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
-			<value level="3">3</value>
-			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
-		<castRange>
-			<value level="1">600</value>
-			<value level="2">700</value>
-			<value level="3">800</value>
-			<value level="4">900</value>
-		</castRange>
-		<effectPoint>
-			<value level="1">-193</value>
-			<value level="2">-252</value>
-			<value level="3">-296</value>
-			<value level="4">-323</value>
-		</effectPoint>
-		<effectRange>
-			<value level="1">1100</value>
-			<value level="2">1200</value>
-			<value level="3">1300</value>
-			<value level="4">1400</value>
-		</effectRange>
+		<castRange>600</castRange>
+		<effectPoint>-252</effectPoint>
+		<effectRange>1200</effectRange>
 		<hitTime>1500</hitTime>
 		<icon>icon.skill0522</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
-			<value level="1">40</value>
-			<value level="2">52</value>
-			<value level="3">62</value>
-			<value level="4">70</value>
+			<value level="1">78</value>
+			<value level="2">80</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">11</value>
-			<value level="2">14</value>
-			<value level="3">19</value>
-			<value level="4">22</value>
+			<value level="1">55</value>
+			<value level="2">58</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -1446,15 +1424,7 @@
 				<BOW>
 					<value level="1">-12</value>
 					<value level="2">-16</value>
-					<value level="3">-20</value>
-					<value level="4">-24</value>
 				</BOW>
-				<CROSSBOW>
-					<value level="1">-16</value>
-					<value level="2">-24</value>
-					<value level="3">-32</value>
-					<value level="4">-40</value>
-				</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
@@ -1770,18 +1740,11 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="531" toLevel="8" name="Critical Wound">
+	<skill id="531" toLevel="1" name="Critical Wound">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>
-			<value fromLevel="1" toLevel="8">30</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="2011" toSubLevel="2030">{base + 10 + 0.5 * subIndex}</value>
-		</abnormalTime>
+		<abnormalTime>30</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
-		<activateRate>
-			<value fromLevel="1" toLevel="8">80</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectPoint>-671</effectPoint>
@@ -1790,26 +1753,8 @@
 		<icon>icon.skill0531</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>
-			<value level="1">79</value>
-			<value level="2">85</value>
-			<value level="3">90</value>
-			<value level="4">95</value>
-			<value level="5">99</value>
-			<value level="6">101</value>
-			<value level="7">103</value>
-			<value level="8">105</value>
-		</magicLvl>
-		<mpConsume>
-			<value level="1">43</value>
-			<value level="2">46</value>
-			<value level="3">49</value>
-			<value level="4">52</value>
-			<value level="5">55</value>
-			<value level="6">49</value>
-			<value level="7">52</value>
-			<value level="8">55</value>
-		</mpConsume>
+		<magicLvl>77</magicLvl>
+		<mpConsume>47</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
@@ -1821,22 +1766,12 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>DAGGER</item>
-					<item>DUALDAGGER</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="DefenceCriticalDamage">
-				<amount>
-					<value level="1">30</value>
-					<value level="2">32</value>
-					<value level="3">33</value>
-					<value level="4">34</value>
-					<value level="5">35</value>
-					<value level="6">35</value>
-					<value level="7">35</value>
-					<value level="8">35</value>
-				</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1926,10 +1861,9 @@
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>673</effectPoint>
-		<hitTime>2000</hitTime>
 		<icon>icon.skill0536</icon>
-		<magicLvl>79</magicLvl>
-		<mpConsume>143</mpConsume>
+		<magicLvl>78</magicLvl>
+		<mpConsume>157</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1948,28 +1882,24 @@
 				<amount>35</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>25</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="HpRegen">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Cp">
-				<amount>-100</amount>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>

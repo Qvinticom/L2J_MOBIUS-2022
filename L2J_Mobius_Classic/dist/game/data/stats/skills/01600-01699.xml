@@ -154,160 +154,378 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="1621" toLevel="1" name="Shield of Sacrifice">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="1622" toLevel="1" name="Blood of Sacrifice">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="1623" toLevel="1" name="Eva�s Protection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="1624" toLevel="1" name="Indestructible Sound">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="1625" toLevel="1" name="Throwing Spear">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="1626" toLevel="1" name="Spear Howl">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="1627" toLevel="1" name="Destroyer�s Roar">
-		<!-- Glory Days confirmed -->
-		<!-- Monster attack! Power 60580. -->
-		<icon>icon.skill0003</icon>
-		<operateType>A1</operateType>
-		<castRange>40</castRange>
-		<hitTime>2000</hitTime>
-		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
-		<reuseDelay>5000</reuseDelay>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>60580</power>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="1628" toLevel="1" name="Broad Sweep">
-		<!-- Glory Days confirmed -->
-		<!-- Monster attack! Power 277440. -->
-		<icon>icon.skill0003</icon>
-		<operateType>A1</operateType>
-		<castRange>40</castRange>
-		<hitTime>3000</hitTime>
-		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<effectRange>400</effectRange>
-		<magicLvl>85</magicLvl>
-		<reuseDelay>5000</reuseDelay>
-		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PhysicalAttack">
-				<power>277440</power>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
-		<!-- Glory Days confirmed -->
-		<!-- Increases P. Atk. by 100%. -->
-		<icon>icon.skill1068</icon>
-		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
-		<effectPoint>1</effectPoint>
-		<abnormalType>PA_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<isMagic>1</isMagic>
+		<abnormalTime>180</abnormalTime>
+		<abnormalType>SHIELD_PROB_UP</abnormalType>
+		<chargeConsume>7</chargeConsume>
+		<affectRange>1000</affectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1621</icon>
+		<operateType>A2</operateType>
+		<magicLvl>80</magicLvl>
+		<mpConsume>38</mpConsume>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipShield" />
+			<condition name="EnergySaved">
+				<amount>7</amount>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>100</amount>
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+		<effect name="MaxHp">
+				<amount>-20</amount>
+				<mode>PER</mode>
+		</effect>
+	</skill>
+	<skill id="1622" toLevel="1" name="Blood of Sacrifice">
+		<icon>icon.skill1622</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="1623" toLevel="1" name="Eva's Protection">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>180</abnormalTime>
+		<castRange>400</castRange>
+		<effectPoint>669</effectPoint>
+		<effectRange>600</effectRange>
+		<hitTime>2000</hitTime>
+		<isMagic>1</isMagic>
+		<magicLvl>80</magicLvl>
+		<mpConsume>114</mpConsume>
+		<icon>icon.skill1623</icon>
+		<operateType>A2</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1624" toLevel="1" name="Indestructible Sound">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
+		<chargeConsume>7</chargeConsume>
+		<activateRate>100</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<castRange>600</castRange>
+		<coolTime>720</coolTime>
+		<effectPoint>-1000</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>2500</hitTime>
+		<icon>icon.skill1624</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>30</lvlBonusRate>
+		<operateType>A2</operateType>
+		<magicLvl>78</magicLvl>
+		<mpConsume>120</mpConsume>
+		<nextAction>ATTACK</nextAction>
+		<reuseDelay>120000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>PHYSICAL_BLOCKADE</trait>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DUAL</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Mute" />
+			<effect name="PhysicalMute" />
+			<effect name="BlockTarget" />
+			<effect name="BlockMove" />
+			<effect name="DefenceCriticalDamage">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceMagicCriticalDamage">
+				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1630" toLevel="1" name="Throwing Blood Dagger">
-		<!-- Glory Days confirmed -->
-		<!-- Increases Critical Rate/Damage by 100%. -->
-		<icon>icon.skill1077</icon>
+	<skill id="1625" toLevel="1" name="Throwing Spear">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<activateRate>100</activateRate>
+		<castRange>900</castRange>
+		<coolTime>720</coolTime>
+		<effectPoint>-337</effectPoint>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<basicProperty>PHYSICAL</basicProperty>
+		<effectRange>1000</effectRange>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1625</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<mpConsume>63</mpConsume>
+		<magicLvl>78</magicLvl>
+		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
-		<hitTime>1000</hitTime>
+		<reuseDelay>10000</reuseDelay>
+		<rideState>NONE</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>SHOCK</trait>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>801</power>
+				<ignoreShieldDefence>true</ignoreShieldDefence>
+				<criticalChance>30</criticalChance>
+				<overHit>true</overHit>
+			</effect>
+			<effect name="BlockActions">
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1626" toLevel="1" name="Spear Howl">
+		<basicProperty>PHYSICAL</basicProperty>
+		<hitTime>500</hitTime>
+		<icon>icon.skill1626</icon>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicLvl>80</magicLvl>
+		<mpConsume>67</mpConsume>
+		<operateType>A1</operateType>
+		<reuseDelay>8000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>POLE</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>2911</power>
+			</effect>
+			<effect name="DispelBySlotProbability">
+				<dispel>IMPROVE_SPEED_AVOID_UP;SPEED_UP</dispel>
+				<rate>100</rate>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1627" toLevel="1" name="Destroyer�s Roar">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>TURN_FLEE</abnormalType>
+		<abnormalVisualEffect>TURN_FLEE</abnormalVisualEffect>
+		<activateRate>40</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<icon>icon.skill0003</icon>
+		<isDebuff>true</isDebuff>
+		<isMagic>1</isMagic>
+		<lvlBonusRate>20</lvlBonusRate>
+		<operateType>A2</operateType>
+		<castRange>40</castRange>
+		<hitTime>500</hitTime>
+		<effectPoint>-1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<trait>DERANGEMENT</trait>
+		<effectRange>400</effectRange>
+		<magicLvl>77</magicLvl>
+		<nextAction>ATTACK</nextAction>
+		<mpConsume>57</mpConsume>
+		<reuseDelay>60000</reuseDelay>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="Fear" />
+			<effect name="Speed" >
+				<amount>-90</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="1628" toLevel="1" name="Broad Sweep">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>120</abnormalTime>
+		<abnormalType>POLEARM_ATTACK</abnormalType>
+		<icon>icon.skill1628</icon>
+		<operateType>A2</operateType>
+		<castRange>40</castRange>
+		<hitTime>2000</hitTime>
+		<effectPoint>-1</effectPoint>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effectRange>400</effectRange>
+		<magicLvl>76</magicLvl>
+		<mpConsume>34</mpConsume>
+		<reuseDelay>75000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="HitNumber">
+				<amount>2</amount>
+				<mode>DIFF</mode>
+			</effect>	
+		</effects>
+	</skill>
+	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
+		<icon>icon.skill1629</icon>
+		<castRange>800</castRange>
+		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<effectPoint>1</effectPoint>
+		<basicProperty>MAGIC</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>76</magicLvl>
+		<mpConsume>60</mpConsume>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<activateRate>80</activateRate>
+		<nextAction>ATTACK</nextAction>
+		<staticReuse>true</staticReuse>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<reuseDelay>30000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>396</power>
+			</effect>
+			<effect name="PhysicalMute" />
+			<effect name="Mute" />
+		</effects>
+	</skill>
+	<skill id="1630" toLevel="1" name="Throwing Blood Dagger">
+		<icon>icon.skill1630</icon>
+		<castRange>800</castRange>
+		<operateType>A2</operateType>
+		<hitTime>1500</hitTime>
+		<mpConsume>60</mpConsume>
 		<effectPoint>1</effectPoint>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
+		<magicLvl>76</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
+		<abnormalTime>20</abnormalTime>
+		<activateRate>80</activateRate>
+		<reuseDelay>30000</reuseDelay>
+		<nextAction>ATTACK</nextAction>
 		<isMagic>1</isMagic>
-		<targetType>SELF</targetType>
+		<isDebuff>true</isDebuff>
+		<lvlBonusRate>20</lvlBonusRate>
+		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>DAGGER</item>
+				</weaponType>
+			</condition>
+		</conditions>
 		<effects>
-			<effect name="CriticalDamage">
-				<amount>100</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalRate">
-				<amount>100</amount>
-				<mode>PER</mode>
+			<effect name="PhysicalAttack">
+				<power>396</power>
+				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="1631" toLevel="1" name="Clear Movements">
-		<!-- Glory Days confirmed -->
-		<!-- Monster absolute defense. P. Def. and M. Def. + 5000. -->
-		<icon>icon.skill0110</icon>
-		<operateType>A2</operateType>
+		<icon>icon.skill1631</icon>
+		<operateType>A3</operateType>
 		<effectPoint>1</effectPoint>
-		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>85</magicLvl>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>30</abnormalTime>
-		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<magicLvl>77</magicLvl>
+		<mpConsume>80</mpConsume>
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<reuseDelay>600000</reuseDelay>
 		<effects>
-			<effect name="BlockMove">
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>5000</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>5000</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="ResistDispelByCategory">
-				<amount>-80</amount>
-				<slot>BUFF</slot>
+			<effect name="Reuse">
+				<amount>-100</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
 			</effect>
 		</effects>
 	</skill>

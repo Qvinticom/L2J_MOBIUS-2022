@@ -2408,7 +2408,6 @@
 		</effects>
 	</skill>
 	<skill id="762" toLevel="1" name="Insane Crusher">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>TOUCH_OF_DEATH</abnormalType>
@@ -2422,7 +2421,7 @@
 		<icon>icon.skill0762</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<mpConsume>80</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -2620,7 +2619,7 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0768</icon>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
@@ -2635,15 +2634,15 @@
 				<amount>40</amount>
 			</effect>
 			<effect name="Speed">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>15</amount>
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="FatalBlowRate">
-				<amount>30</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistDispelByCategory">
@@ -2660,7 +2659,7 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0769</icon>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
@@ -2672,18 +2671,18 @@
 		<effects>
 			<effect name="SkillEvasion">
 				<magicType>0</magicType>
-				<amount>75</amount>
+				<amount>60</amount>
 			</effect>
 			<effect name="Speed">
-				<amount>50</amount>
+				<amount>30</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>20</amount>
+				<amount>15</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="FatalBlowRate">
-				<amount>20</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistDispelByCategory">
@@ -2700,7 +2699,7 @@
 		<effectPoint>679</effectPoint>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0770</icon>
-		<magicLvl>81</magicLvl>
+		<magicLvl>80</magicLvl>
 		<mpConsume>36</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
@@ -2712,28 +2711,27 @@
 		<effects>
 			<effect name="SkillEvasion">
 				<magicType>0</magicType>
-				<amount>60</amount>
+				<amount>10</amount>
 			</effect>
 			<effect name="Speed">
-				<amount>33</amount>
+				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
-				<amount>15</amount>
+				<amount>50</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="FatalBlowRate">
-				<amount>40</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="ResistDispelByCategory">
-				<amount>-90</amount>
+				<amount>-80</amount>
 				<slot>BUFF</slot>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="771" toLevel="1" name="Flame Hawk">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<castRange>900</castRange>
@@ -2741,10 +2739,10 @@
 		<effectPoint>-686</effectPoint>
 		<effectRange>1400</effectRange>
 		<fanRange>0;0;900;40</fanRange>
-		<hitTime>3500</hitTime>
+		<hitTime>4500</hitTime>
 		<icon>icon.skill0771</icon>
-		<magicLvl>83</magicLvl>
-		<mpConsume>160</mpConsume>
+		<magicLvl>80</magicLvl>
+		<mpConsume>280</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2772,17 +2770,16 @@
 		</effects>
 	</skill>
 	<skill id="772" toLevel="1" name="Arrow Rain">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>600</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>-686</effectPoint>
 		<effectRange>1100</effectRange>
-		<hitTime>4000</hitTime>
+		<hitTime>5000</hitTime>
 		<icon>icon.skill0772</icon>
-		<magicLvl>83</magicLvl>
-		<mpConsume>160</mpConsume>
+		<magicLvl>80</magicLvl>
+		<mpConsume>280</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2810,7 +2807,6 @@
 		</effects>
 	</skill>
 	<skill id="773" toLevel="1" name="Ghost Piercing">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
 		<castRange>900</castRange>
@@ -2818,10 +2814,10 @@
 		<effectPoint>-686</effectPoint>
 		<effectRange>1400</effectRange>
 		<fanRange>0;0;900;100</fanRange>
-		<hitTime>3000</hitTime>
+		<hitTime>4000</hitTime>
 		<icon>icon.skill0773</icon>
-		<magicLvl>83</magicLvl>
-		<mpConsume>160</mpConsume>
+		<magicLvl>80</magicLvl>
+		<mpConsume>280</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>75000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -2983,26 +2979,31 @@
 		</effects>
 	</skill>
 	<skill id="777" toLevel="1" name="Demolition Impact">
-		<!-- TODO : Confirm me -->
-		<!-- Unleashes a shock of destruction to attack nearby enemies with 7475 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit and Critical are possible. -->
-		<!-- Confirmed CT2.5 -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>10</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>40</activateRate>
 		<affectRange>500</affectRange>
+		<hitTime>1200</hitTime>
 		<castRange>150</castRange>
 		<effectPoint>-686</effectPoint>
 		<effectRange>200</effectRange>
 		<fanRange>0;0;500;60</fanRange>
-		<hitTime>1200</hitTime>
 		<icon>icon.skill0777</icon>
-		<magicLvl>81</magicLvl>
-		<mpConsume>160</mpConsume>
-		<operateType>A1</operateType>
+		<isDebuff>true</isDebuff>
+		<magicLvl>80</magicLvl>
+		<mpConsume>240</mpConsume>
+		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
-		<rideState>NONE</rideState>
+		<trait>SHOCK</trait>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
+		<nextAction>ATTACK</nextAction>
 		<conditions>
-			<condition name="Op2hWeapon">
+			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
 					<item>BLUNT</item>
@@ -3011,9 +3012,17 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>7475</power>
+				<power>5980</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
