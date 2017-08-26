@@ -10015,10 +10015,8 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public void doRevive(double revivePower)
 	{
-		// Restore the player's lost experience,
-		// depending on the % return of the skill used (based on its power).
-		restoreExp(revivePower);
 		doRevive();
+		restoreExp(revivePower);
 	}
 	
 	public void reviveRequest(L2PcInstance reviver, Skill skill, boolean Pet, int power)
