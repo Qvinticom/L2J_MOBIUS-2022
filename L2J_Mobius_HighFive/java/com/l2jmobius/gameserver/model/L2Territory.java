@@ -149,9 +149,7 @@ public class L2Territory
 				int zmin = _zMin;
 				for (Point p1 : _points)
 				{
-					final double dx = p1._x - x;
-					final double dy = p1._y - y;
-					final double distance = Math.sqrt((dx * dx) + (dy * dy));
+					double distance = Math.hypot(p1._x - x, p1._y - y);
 					if ((curdistance == 0) || (distance < curdistance))
 					{
 						curdistance = distance;

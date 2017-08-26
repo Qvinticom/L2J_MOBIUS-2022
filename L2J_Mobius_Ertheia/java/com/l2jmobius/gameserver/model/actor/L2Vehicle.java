@@ -152,9 +152,7 @@ public abstract class L2Vehicle extends L2Character
 						m._zDestination = point.getZ();
 						m._heading = 0;
 						
-						final double dx = point.getX() - getX();
-						final double dy = point.getY() - getY();
-						final double distance = Math.sqrt((dx * dx) + (dy * dy));
+						final double distance = Math.hypot(point.getX() - getX(), point.getY() - getY());
 						if (distance > 1)
 						{
 							setHeading(Util.calculateHeadingFrom(getX(), getY(), point.getX(), point.getY()));
