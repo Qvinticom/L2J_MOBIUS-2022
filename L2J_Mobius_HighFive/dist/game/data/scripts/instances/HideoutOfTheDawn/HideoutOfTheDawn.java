@@ -16,7 +16,6 @@
  */
 package instances.HideoutOfTheDawn;
 
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -30,42 +29,54 @@ import instances.AbstractInstance;
  */
 public final class HideoutOfTheDawn extends AbstractInstance
 {
+	protected class HotDWorld extends InstanceWorld
+	{
+		
+	}
+	
 	// NPCs
 	private static final int WOOD = 32593;
 	private static final int JAINA = 32617;
 	// Location
-	private static final Location WOOD_LOC = new Location(-23758, -8959, -5384, 0, 0);
-	private static final Location JAINA_LOC = new Location(147072, 23743, -1984, 0);
+	private static final Location WOOD_LOC = new Location(-23758, -8959, -5384);
+	private static final Location JAINA_LOC = new Location(147072, 23743, -1984);
 	// Misc
 	private static final int TEMPLATE_ID = 113;
 	
 	public HideoutOfTheDawn()
 	{
 		super(HideoutOfTheDawn.class.getSimpleName());
+		addFirstTalkId(JAINA);
 		addStartNpc(WOOD);
 		addTalkId(WOOD, JAINA);
 	}
 	
 	@Override
-	public String onTalk(L2Npc npc, L2PcInstance talker)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		switch (npc.getId())
+		String htmltext = null;
+		switch (event)
 		{
-			case WOOD:
+			case "32617-01.html":
+			case "32617-02a.html":
 			{
-				enterInstance(talker, "HideoutOfTheDawn.xml", TEMPLATE_ID);
-				return "32593-01.htm";
+				htmltext = event;
+				break;
 			}
-			case JAINA:
+			case "32617-02.html":
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
-				world.removeAllowed(talker.getObjectId());
-				talker.setInstanceId(0);
-				talker.teleToLocation(JAINA_LOC);
-				return "32617-01.htm";
+				player.setInstanceId(0);
+				player.teleToLocation(JAINA_LOC, true);
+				htmltext = event;
+				break;
+			}
+			case "32593-01.html":
+			{
+				enterInstance(player, new HotDWorld(), "HideoutOfTheDawn.xml", TEMPLATE_ID);
+				htmltext = event;
 			}
 		}
-		return super.onTalk(npc, talker);
+		return htmltext;
 	}
 	
 	@Override

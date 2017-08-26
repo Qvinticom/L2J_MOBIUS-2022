@@ -41,7 +41,6 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 	private static final int SHILENS_EVIL_THOUGHTS = 27346;
 	private static final int WOOD = 32593;
 	private static final int FRANZ = 32597;
-	private static final int JAINA = 32617;
 	// Items
 	private static final int SCULPTURE_OF_DOUBT = 14355;
 	private static final int DAWNS_BRACELET = 15312;
@@ -49,12 +48,11 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 	private static final int MIN_LEVEL = 79;
 	private boolean isBusy = false;
 	// Skill
-	private static SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
+	private static final SkillHolder NPC_HEAL = new SkillHolder(4065, 8);
 	
 	public Q00198_SevenSignsEmbryo()
 	{
 		super(198, Q00198_SevenSignsEmbryo.class.getSimpleName(), "Seven Signs, Embryo");
-		addFirstTalkId(JAINA);
 		addStartNpc(WOOD);
 		addTalkId(WOOD, FRANZ);
 		addKillId(SHILENS_EVIL_THOUGHTS);
@@ -161,12 +159,6 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 			}
 		}
 		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(L2Npc npc, L2PcInstance player)
-	{
-		return "32617-01.html";
 	}
 	
 	@Override

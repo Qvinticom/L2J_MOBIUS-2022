@@ -66,7 +66,7 @@ public final class ElcadiasTent extends AbstractInstance
 			final QuestState Q10293 = talker.getQuestState(Q10293_SevenSignsForbiddenBookOfTheElmoreAdenKingdom.class.getSimpleName());
 			final QuestState Q10294 = talker.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class.getSimpleName());
 			final QuestState Q10296 = talker.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());
-			if (((Q10292 != null) && Q10292.isStarted()) //
+			if (((Q10292 != null) && (Q10292.getMemoState() > 1) && (Q10292.getMemoState() < 9)) //
 				|| ((Q10292 != null) && Q10292.isCompleted() && (Q10293 == null)) //
 				|| ((Q10293 != null) && Q10293.isStarted()) //
 				|| ((Q10293 != null) && Q10293.isCompleted() && (Q10294 == null)) //
