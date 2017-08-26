@@ -97,7 +97,7 @@ import com.l2jmobius.gameserver.enums.StatusUpdateType;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
@@ -12474,7 +12474,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// If there is no geodata loaded for the place we are client Z correction might cause falling damage.
-		if (!GeoData.getInstance().hasGeo(getX(), getY()))
+		if (!GeoEngine.getInstance().hasGeo(getX(), getY()))
 		{
 			return false;
 		}

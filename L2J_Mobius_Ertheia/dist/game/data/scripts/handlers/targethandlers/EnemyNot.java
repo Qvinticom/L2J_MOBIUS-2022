@@ -16,7 +16,7 @@
  */
 package handlers.targethandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -73,7 +73,7 @@ public class EnemyNot implements ITargetTypeHandler
 				}
 			}
 			
-			if ((skill.isFlyType()) && !GeoData.getInstance().canMove(activeChar, target))
+			if ((skill.isFlyType()) && !GeoEngine.getInstance().canMoveToTarget(activeChar.getX(), activeChar.getY(), activeChar.getZ(), target.getX(), target.getY(), target.getZ(), activeChar.getInstanceWorld()))
 			{
 				if (sendMessage)
 				{
@@ -83,7 +83,7 @@ public class EnemyNot implements ITargetTypeHandler
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoData.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
 			{
 				if (sendMessage)
 				{

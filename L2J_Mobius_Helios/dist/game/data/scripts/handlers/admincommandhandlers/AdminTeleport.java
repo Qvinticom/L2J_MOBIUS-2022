@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.AdminTeleportType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -194,7 +194,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				st.nextToken();
 				final int x = (int) Float.parseFloat(st.nextToken());
 				final int y = (int) Float.parseFloat(st.nextToken());
-				final int z = st.hasMoreTokens() ? ((int) Float.parseFloat(st.nextToken())) : GeoData.getInstance().getHeight(x, y, L2World.MAP_MAX_Z);
+				final int z = st.hasMoreTokens() ? ((int) Float.parseFloat(st.nextToken())) : GeoEngine.getInstance().getHeight(x, y, L2World.MAP_MAX_Z);
 				
 				activeChar.teleToLocation(x, y, z);
 			}

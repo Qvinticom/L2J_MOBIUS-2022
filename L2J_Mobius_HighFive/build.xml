@@ -74,6 +74,7 @@
 			<fileset dir="${build.bin}">
 				<exclude name="**/dbinstaller/**" />
 				<exclude name="**/gameserver/**" />
+				<exclude name="**/geodataconverter/**" />
 				<exclude name="**/commons/geodriver/**" />
 				<exclude name="**/commons/javaengine/**" />
 			</fileset>

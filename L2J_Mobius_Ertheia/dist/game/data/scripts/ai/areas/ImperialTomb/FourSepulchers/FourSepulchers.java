@@ -31,7 +31,7 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -294,7 +294,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					final Location destination = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + getRandom(-400, 400), npc.getSpawn().getLocation().getY() + getRandom(-400, 400), npc.getZ(), npc.getInstanceWorld());
+					final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), npc.getSpawn().getLocation().getX() + getRandom(-400, 400), npc.getSpawn().getLocation().getY() + getRandom(-400, 400), npc.getZ(), npc.getInstanceWorld());
 					if (Util.calculateDistance(npc, npc.getSpawn().getLocation(), false, false) < 600)
 					{
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);

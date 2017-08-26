@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -178,7 +178,7 @@ public class SkillChannelizer implements Runnable
 					{
 						continue;
 					}
-					else if (!GeoData.getInstance().canSeeTarget(_channelizer, character))
+					else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character))
 					{
 						continue;
 					}

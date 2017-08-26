@@ -1,5 +1,8 @@
 L2J-Mobius High Five
 
+Client: http://computergames.ro/download/lineage-ii-the-chaotic-throne-high-five-client/
+Geodata: http://www.mediafire.com/file/41cpkch7kyhhzqy/mobius_geodata_h5_l2d.zip
+
 What is done
 -Dropped Python / Javolution / Trove
 -Nevit system

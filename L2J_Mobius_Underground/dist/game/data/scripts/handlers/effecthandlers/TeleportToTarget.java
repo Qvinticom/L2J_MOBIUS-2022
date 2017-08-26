@@ -17,7 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -70,7 +70,7 @@ public final class TeleportToTarget extends AbstractEffect
 		final int y = (int) (py + (25 * Math.sin(ph)));
 		final int z = effected.getZ();
 		
-		final Location loc = GeoData.getInstance().moveCheck(effector.getX(), effector.getY(), effector.getZ(), x, y, z, effector.getInstanceWorld());
+		final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(effector.getX(), effector.getY(), effector.getZ(), x, y, z, effector.getInstanceWorld());
 		
 		effector.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		effector.broadcastPacket(new FlyToLocation(effector, loc.getX(), loc.getY(), loc.getZ(), FlyType.DUMMY));

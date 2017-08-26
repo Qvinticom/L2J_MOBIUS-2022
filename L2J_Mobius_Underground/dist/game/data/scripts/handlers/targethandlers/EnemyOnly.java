@@ -16,7 +16,7 @@
  */
 package handlers.targethandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -103,7 +103,7 @@ public class EnemyOnly implements ITargetTypeHandler
 			}
 			
 			// Geodata check when character is within range.
-			if (!GeoData.getInstance().canSeeTarget(activeChar, target))
+			if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
 			{
 				if (sendMessage)
 				{

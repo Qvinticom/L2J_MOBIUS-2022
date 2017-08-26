@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.handler.TargetHandler;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
@@ -1221,7 +1221,7 @@ public final class Skill implements IIdentifiable
 			}
 		}
 		
-		if (!GeoData.getInstance().canSeeTarget(caster, target))
+		if (!GeoEngine.getInstance().canSeeTarget(caster, target))
 		{
 			return false;
 		}

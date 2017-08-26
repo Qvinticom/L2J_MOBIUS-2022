@@ -18,7 +18,7 @@ package ai.areas.PlainsOfDion;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
@@ -78,7 +78,7 @@ public final class PlainsOfDion extends AbstractNpcAI
 			
 			L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, npc.getTemplate().getClanHelpRange(), obj ->
 			{
-				if (CommonUtil.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoData.getInstance().canSeeTarget(npc, obj))
+				if (CommonUtil.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoEngine.getInstance().canSeeTarget(npc, obj))
 				{
 					addAttackPlayerDesire(obj, player);
 					obj.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_ASSIST_MSG[getRandom(3)]);

@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.instancemanager;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.holders.WarpedSpaceHolder;
@@ -50,11 +49,6 @@ public class WarpedSpaceManager
 	public void removeWarpedSpace(L2Character creature)
 	{
 		_warpedSpace.remove(creature);
-	}
-	
-	public boolean checkForWarpedSpace(AbstractNodeLoc start, AbstractNodeLoc end, Instance instance)
-	{
-		return checkForWarpedSpace(new Location(start.getX(), start.getY(), start.getZ()), new Location(end.getX(), end.getY(), end.getZ()), instance);
 	}
 	
 	public boolean checkForWarpedSpace(Location origin, Location destination, Instance instance)

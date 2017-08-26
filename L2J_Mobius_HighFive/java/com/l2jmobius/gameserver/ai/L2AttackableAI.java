@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
@@ -233,12 +233,12 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			// Check if the L2PcInstance target has karma (=PK)
 			if ((player != null) && (player.getKarma() > 0))
 			{
-				return GeoData.getInstance().canSeeTarget(me, player); // Los Check
+				return GeoEngine.getInstance().canSeeTarget(me, player); // Los Check
 			}
 			// Check if the L2MonsterInstance target is aggressive
 			if ((target instanceof L2MonsterInstance) && Config.GUARD_ATTACK_AGGRO_MOB)
 			{
-				return (((L2MonsterInstance) target).isAggressive() && GeoData.getInstance().canSeeTarget(me, target));
+				return (((L2MonsterInstance) target).isAggressive() && GeoEngine.getInstance().canSeeTarget(me, target));
 			}
 			
 			return false;
@@ -254,7 +254,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			// Check if the L2PcInstance target has karma (=PK)
 			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getKarma() > 0))
 			{
-				return GeoData.getInstance().canSeeTarget(me, target); // Los Check
+				return GeoEngine.getInstance().canSeeTarget(me, target); // Los Check
 			}
 			return false;
 		}
@@ -269,7 +269,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				
 				if (me.isChaos() && me.isInsideRadius(target, me.getAggroRange(), false, false))
 				{
-					return !((L2Attackable) target).isInMyClan(me) && GeoData.getInstance().canSeeTarget(me, target);
+					return !((L2Attackable) target).isInMyClan(me) && GeoEngine.getInstance().canSeeTarget(me, target);
 				}
 			}
 			
@@ -291,7 +291,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Check if the actor is Aggressive
-			return (me.isAggressive() && GeoData.getInstance().canSeeTarget(me, target));
+			return (me.isAggressive() && GeoEngine.getInstance().canSeeTarget(me, target));
 		}
 	}
 	
@@ -674,7 +674,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				}
 			}
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-			final Location moveLoc = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
+			final Location moveLoc = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
 			
 			moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
 		}
@@ -831,7 +831,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					if (!npc.isInsideRadius(newX, newY, 0, collision, false, false))
 					{
 						final int newZ = npc.getZ() + 30;
-						if (GeoData.getInstance().canMove(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()))
+						if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()))
 						{
 							moveTo(newX, newY, newZ);
 						}
@@ -848,7 +848,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			final int posZ = npc.getZ() + 30;
 			posX = originalAttackTarget.getX() < posX ? posX + 300 : posX - 300;
 			posY = originalAttackTarget.getY() < posY ? posY + 300 : posY - 300;
-			if (GeoData.getInstance().canMove(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceId()))
+			if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceId()))
 			{
 				setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
 			}
@@ -924,7 +924,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 								moveToPawn(leader, healSkill.getCastRange() + collision + leader.getTemplate().getCollisionRadius());
 								return;
 							}
-							if (GeoData.getInstance().canSeeTarget(npc, leader))
+							if (GeoEngine.getInstance().canSeeTarget(npc, leader))
 							{
 								clientStopMoving(null);
 								final L2Object target = npc.getTarget();
@@ -979,7 +979,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 							}
 							
 							percentage = (targets.getCurrentHp() / targets.getMaxHp()) * 100;
-							if ((Rnd.get(100) < ((100 - percentage) / 10)) && GeoData.getInstance().canSeeTarget(npc, targets))
+							if ((Rnd.get(100) < ((100 - percentage) / 10)) && GeoEngine.getInstance().canSeeTarget(npc, targets))
 							{
 								clientStopMoving(null);
 								final L2Object target = npc.getTarget();
@@ -1021,7 +1021,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 								moveToPawn(leader, sk.getCastRange() + collision + leader.getTemplate().getCollisionRadius());
 								return;
 							}
-							if (GeoData.getInstance().canSeeTarget(npc, leader))
+							if (GeoEngine.getInstance().canSeeTarget(npc, leader))
 							{
 								clientStopMoving(null);
 								final L2Object target = npc.getTarget();
@@ -1054,7 +1054,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 							{
 								continue;
 							}
-							if ((Rnd.get(100) < 10) && GeoData.getInstance().canSeeTarget(npc, targets))
+							if ((Rnd.get(100) < 10) && GeoEngine.getInstance().canSeeTarget(npc, targets))
 							{
 								clientStopMoving(null);
 								final L2Object target = npc.getTarget();
@@ -1130,7 +1130,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		// --------------------------------------------------------------------------------
 		// Starts melee attack
-		if ((dist2 > range) || !GeoData.getInstance().canSeeTarget(npc, mostHate))
+		if ((dist2 > range) || !GeoEngine.getInstance().canSeeTarget(npc, mostHate))
 		{
 			if (npc.isMovementDisabled())
 			{
@@ -1227,7 +1227,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					return true;
 				}
 			}
-			else if (GeoData.getInstance().canSeeTarget(caster, attackTarget) && !canAOE(sk) && !attackTarget.isDead() && (dist2 <= srange))
+			else if (GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !canAOE(sk) && !attackTarget.isDead() && (dist2 <= srange))
 			{
 				if (!attackTarget.isAffectedBySkill(sk.getId()))
 				{
@@ -1239,7 +1239,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			else if (canAOE(sk))
 			{
 				if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB) //
-					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
+					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
 				{
 					clientStopMoving(null);
 					caster.doCast(sk);
@@ -1258,7 +1258,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		{
 			if (sk.getTargetType() == L2TargetType.ONE)
 			{
-				if ((attackTarget.getEffectList().getFirstEffect(L2EffectType.BUFF) != null) && GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange))
+				if ((attackTarget.getEffectList().getFirstEffect(L2EffectType.BUFF) != null) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange))
 				{
 					clientStopMoving(null);
 					caster.doCast(sk);
@@ -1275,8 +1275,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				}
 			}
 			else if (canAOE(sk) //
-				&& ((((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA)) && GeoData.getInstance().canSeeTarget(caster, attackTarget)) //
-					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange))))
+				&& ((((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget)) //
+					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange))))
 			{
 				clientStopMoving(null);
 				caster.doCast(sk);
@@ -1296,7 +1296,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					{
 						moveToPawn(leader, sk.getCastRange() + caster.getTemplate().getCollisionRadius() + leader.getTemplate().getCollisionRadius());
 					}
-					if (GeoData.getInstance().canSeeTarget(caster, leader))
+					if (GeoEngine.getInstance().canSeeTarget(caster, leader))
 					{
 						clientStopMoving(null);
 						caster.setTarget(leader);
@@ -1332,7 +1332,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					}
 					
 					percentage = (targets.getCurrentHp() / targets.getMaxHp()) * 100;
-					if ((Rnd.get(100) < ((100 - percentage) / 10)) && GeoData.getInstance().canSeeTarget(caster, targets))
+					if ((Rnd.get(100) < ((100 - percentage) / 10)) && GeoEngine.getInstance().canSeeTarget(caster, targets))
 					{
 						clientStopMoving(null);
 						caster.setTarget(obj);
@@ -1365,7 +1365,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		if (sk.hasEffectType(L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK, L2EffectType.MAGICAL_ATTACK, L2EffectType.DEATH_LINK, L2EffectType.HP_DRAIN))
 		{
-			if (canAura(sk) || (GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
+			if (canAura(sk) || (GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
 			{
 				clientStopMoving(null);
 				caster.doCast(sk);
@@ -1396,7 +1396,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			else if (canAOE(sk) && //
 				((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA)//
-					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange))))
+					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange))))
 			{
 				clientStopMoving(null);
 				caster.doCast(sk);
@@ -1406,7 +1406,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		if (sk.hasEffectType(L2EffectType.STUN, L2EffectType.ROOT, L2EffectType.PARALYZE, L2EffectType.MUTE, L2EffectType.FEAR))
 		{
-			if (GeoData.getInstance().canSeeTarget(caster, attackTarget) && !canAOE(sk) && (dist2 <= srange))
+			if (GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !canAOE(sk) && (dist2 <= srange))
 			{
 				if (!attackTarget.isAffectedBySkill(sk.getId()))
 				{
@@ -1418,7 +1418,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			else if (canAOE(sk))
 			{
 				if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA)//
-					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
+					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
 				{
 					clientStopMoving(null);
 					caster.doCast(sk);
@@ -1435,7 +1435,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		if (sk.hasEffectType(L2EffectType.DMG_OVER_TIME, L2EffectType.DMG_OVER_TIME_PERCENT))
 		{
-			if (GeoData.getInstance().canSeeTarget(caster, attackTarget) && !canAOE(sk) && !attackTarget.isDead() && (dist2 <= srange))
+			if (GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !canAOE(sk) && !attackTarget.isDead() && (dist2 <= srange))
 			{
 				if (!attackTarget.isAffectedBySkill(sk.getId()))
 				{
@@ -1447,7 +1447,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			else if (canAOE(sk))
 			{
 				if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB)//
-					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
+					|| (((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA)) && GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
 				{
 					clientStopMoving(null);
 					caster.doCast(sk);
@@ -1477,7 +1477,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						{
 							moveToPawn(leader, sk.getCastRange() + caster.getTemplate().getCollisionRadius() + leader.getTemplate().getCollisionRadius());
 						}
-						if (GeoData.getInstance().canSeeTarget(caster, leader))
+						if (GeoEngine.getInstance().canSeeTarget(caster, leader))
 						{
 							clientStopMoving(null);
 							caster.setTarget(leader);
@@ -1501,7 +1501,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						continue;
 					}
 					
-					if ((Rnd.get(100) < 10) && GeoData.getInstance().canSeeTarget(caster, targets))
+					if ((Rnd.get(100) < 10) && GeoEngine.getInstance().canSeeTarget(caster, targets))
 					{
 						clientStopMoving(null);
 						caster.setTarget(obj);
@@ -1530,7 +1530,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				}
 			}
 		}
-		if (canAura(sk) || (GeoData.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
+		if (canAura(sk) || (GeoEngine.getInstance().canSeeTarget(caster, attackTarget) && !attackTarget.isDead() && (dist2 <= srange)))
 		{
 			clientStopMoving(null);
 			caster.doCast(sk);
@@ -1591,7 +1591,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				{
 					for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.IMMOBILIZE))
 					{
-						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoData.getInstance().canSeeTarget(npc, getAttackTarget()))
+						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoEngine.getInstance().canSeeTarget(npc, getAttackTarget()))
 						{
 							continue;
 						}
@@ -1609,7 +1609,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				{
 					for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.COT))
 					{
-						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoData.getInstance().canSeeTarget(npc, getAttackTarget()))
+						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoEngine.getInstance().canSeeTarget(npc, getAttackTarget()))
 						{
 							continue;
 						}
@@ -1626,7 +1626,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				{
 					for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.DEBUFF))
 					{
-						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoData.getInstance().canSeeTarget(npc, getAttackTarget()))
+						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoEngine.getInstance().canSeeTarget(npc, getAttackTarget()))
 						{
 							continue;
 						}
@@ -1644,7 +1644,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				{
 					for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.NEGATIVE))
 					{
-						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoData.getInstance().canSeeTarget(npc, getAttackTarget()))
+						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoEngine.getInstance().canSeeTarget(npc, getAttackTarget()))
 						{
 							continue;
 						}
@@ -1662,7 +1662,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				{
 					for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.ATTACK))
 					{
-						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoData.getInstance().canSeeTarget(npc, getAttackTarget()))
+						if (!checkSkillCastConditions(npc, sk) || (((sk.getCastRange() + npc.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius()) <= dist2) && !canAura(sk)) || !GeoEngine.getInstance().canSeeTarget(npc, getAttackTarget()))
 						{
 							continue;
 						}
@@ -1685,7 +1685,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					{
 						continue;
 					}
-					if(!GeoData.getInstance().canSeeTarget(_actor,getAttackTarget()))
+					if(!GeoEngine.getInstance().canSeeTarget(_actor,getAttackTarget()))
 						continue;
 					clientStopMoving(null);
 					L2Object target = getAttackTarget();
@@ -1712,7 +1712,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			// return;
 			// }
 			
-			if ((dist > range) || !GeoData.getInstance().canSeeTarget(npc, getAttackTarget()))
+			if ((dist > range) || !GeoEngine.getInstance().canSeeTarget(npc, getAttackTarget()))
 			{
 				if (getAttackTarget().isMoving())
 				{
@@ -1784,7 +1784,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				
 				for (L2Character obj : actor.getAttackByList())
 				{
-					if ((obj == null) || obj.isDead() || !GeoData.getInstance().canSeeTarget(actor, obj) || (obj == getAttackTarget()))
+					if ((obj == null) || obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj) || (obj == getAttackTarget()))
 					{
 						continue;
 					}
@@ -1813,7 +1813,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				// If there is nearby Target with aggro, start going on random target that is attackable
 				for (L2Character obj : actor.getKnownList().getKnownCharactersInRadius(range))
 				{
-					if (obj.isDead() || !GeoData.getInstance().canSeeTarget(actor, obj))
+					if (obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj))
 					{
 						continue;
 					}
@@ -1846,7 +1846,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				int range = 0;
 				for (L2Character obj : actor.getKnownList().getKnownCharactersInRadius(range))
 				{
-					if (!(obj instanceof L2Attackable) || obj.isDead() || !GeoData.getInstance().canSeeTarget(actor, obj))
+					if (!(obj instanceof L2Attackable) || obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj))
 					{
 						continue;
 					}
@@ -1886,7 +1886,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			int range = sk.getCastRange() + actor.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius();
 			for (L2Character obj : actor.getKnownList().getKnownCharactersInRadius(range))
 			{
-				if ((obj == null) || obj.isDead() || !GeoData.getInstance().canSeeTarget(actor, obj))
+				if ((obj == null) || obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj))
 				{
 					continue;
 				}
@@ -1925,7 +1925,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		{
 			for (L2Character obj : actor.getHateList())
 			{
-				if ((obj == null) || !GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead())
+				if ((obj == null) || !GeoEngine.getInstance().canSeeTarget(actor, obj) || obj.isDead())
 				{
 					continue;
 				}
@@ -1967,7 +1967,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					continue;
 				}
 				final L2Character obj = target instanceof L2Character ? (L2Character) target : null;
-				if ((obj == null) || !GeoData.getInstance().canSeeTarget(actor, obj) || (dist2 > range))
+				if ((obj == null) || !GeoEngine.getInstance().canSeeTarget(actor, obj) || (dist2 > range))
 				{
 					continue;
 				}
@@ -2003,7 +2003,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		{
 			for (L2Character obj : actor.getHateList())
 			{
-				if ((obj == null) || !GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor))
+				if ((obj == null) || !GeoEngine.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor))
 				{
 					continue;
 				}
@@ -2036,7 +2036,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			for (L2Object target : actor.getKnownList().getKnownObjects().values())
 			{
 				final L2Character obj = target instanceof L2Character ? (L2Character) target : null;
-				if ((obj == null) || !GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor) || (obj == getAttackTarget()))
+				if ((obj == null) || !GeoEngine.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor) || (obj == getAttackTarget()))
 				{
 					continue;
 				}
@@ -2085,7 +2085,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					continue;
 				}
 				
-				if ((obj == null) || !GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj == getAttackTarget()) || (obj == actor))
+				if ((obj == null) || !GeoEngine.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj == getAttackTarget()) || (obj == actor))
 				{
 					continue;
 				}
@@ -2115,7 +2115,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					continue;
 				}
 				obj = (L2Character) target;
-				if (!GeoData.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor))
+				if (!GeoEngine.getInstance().canSeeTarget(actor, obj) || obj.isDead() || (obj != MostHate) || (obj == actor))
 				{
 					continue;
 				}

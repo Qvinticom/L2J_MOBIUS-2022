@@ -18,7 +18,7 @@ package handlers.actionhandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -58,7 +58,7 @@ public class L2SummonAction implements IActionHandler
 		{
 			if (target.isAutoAttackable(activeChar))
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 					activeChar.onActionRequest();
@@ -74,7 +74,7 @@ public class L2SummonAction implements IActionHandler
 				}
 				else
 				{
-					if (GeoData.getInstance().canSeeTarget(activeChar, target))
+					if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 					}

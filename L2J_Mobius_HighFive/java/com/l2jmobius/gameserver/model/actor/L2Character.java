@@ -49,9 +49,7 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.geodata.GeoData;
-import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -1006,7 +1004,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			stopEffectsOnAction();
 			
 			// GeoData Los Check here (or dz > 1000)
-			if (!GeoData.getInstance().canSeeTarget(this, target))
+			if (!GeoEngine.getInstance().canSeeTarget(this, target))
 			{
 				sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -3433,7 +3431,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<AbstractNodeLoc> geoPath;
+		public List<Location> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -4030,9 +4028,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		// Z coordinate will follow geodata or client values
 		if ((Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && ((GameTimeController.getInstance().getGameTicks() % 10) == 0 // once a second to reduce possible cpu load
-		) && GeoData.getInstance().hasGeo(xPrev, yPrev))
+		) && GeoEngine.getInstance().hasGeo(xPrev, yPrev))
 		{
-			final int geoHeight = GeoData.getInstance().getSpawnHeight(xPrev, yPrev, zPrev);
+			final int geoHeight = GeoEngine.getInstance().getHeight(xPrev, yPrev, zPrev);
 			dz = m._zDestination - geoHeight;
 			// quite a big difference, compare to validatePosition packet
 			if (isPlayer() && (Math.abs(getActingPlayer().getClientZ() - geoHeight) > 200) && (Math.abs(getActingPlayer().getClientZ() - geoHeight) < 1500))
@@ -4392,7 +4390,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			// Movement checks:
 			// When pathfinding enabled, for all characters except monsters returning home (could be changed later to teleport if pathfinding fails)
-			if (((Config.PATHFINDING > 0) && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()))) //
+			if ((Config.PATHFINDING && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()))) //
 				|| (isPlayer() && !(isInVehicle && (distance > 1500))) //
 				|| (this instanceof L2RiftInvaderInstance))
 			{
@@ -4423,7 +4421,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					}
 					else if (isSummon())
 					{
-						return; // preventation when summon get out of world coords, player will not loose him, unsummon handled from pcinstance
+						return; // prevention when summon get out of world coords, player will not loose him, unsummon handled from pcinstance
 					}
 					else
 					{
@@ -4431,7 +4429,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					}
 					return;
 				}
-				final Location destiny = GeoData.getInstance().moveCheck(curX, curY, curZ, x, y, z, getInstanceId());
+				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
 				// location different if destination wasn't reached (or just z coord is different)
 				x = destiny.getX();
 				y = destiny.getY();
@@ -4444,13 +4442,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
 			// than the original movement was and the LoS gives a shorter distance than 2000
 			// This way of detecting need for pathfinding could be changed.
-			if ((Config.PATHFINDING > 0) && ((originalDistance - distance) > 30) && (distance < 2000))
+			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && (distance < 2000))
 			{
 				// Path calculation
 				// Overrides previous movement check
 				if ((isPlayable() && !isInVehicle) || isMinion() || isInCombat())
 				{
-					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
+					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						// Even though there's no path found (remember geonodes aren't perfect),
@@ -4511,7 +4509,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 			}
 			// If no distance to go through, the movement is canceled
-			if ((distance < 1) && ((Config.PATHFINDING > 0) || isPlayable() || (this instanceof L2RiftInvaderInstance) || isAfraid()))
+			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || (this instanceof L2RiftInvaderInstance) || isAfraid()))
 			{
 				if (isSummon())
 				{
@@ -5064,7 +5062,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		// GeoData Los Check or dz > 1000
-		if (!GeoData.getInstance().canSeeTarget(player, this))
+		if (!GeoEngine.getInstance().canSeeTarget(player, this))
 		{
 			player.sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -5400,7 +5398,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					
 					// Healing party members should ignore LOS.
 					if (((skill.getTargetType() != L2TargetType.PARTY) || !skill.hasEffectType(L2EffectType.HEAL)) //
-						&& (mut.getSkillTime() > 550) && !GeoData.getInstance().canSeeTarget(this, target))
+						&& (mut.getSkillTime() > 550) && !GeoEngine.getInstance().canSeeTarget(this, target))
 					{
 						skipLOS++;
 						continue;

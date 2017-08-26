@@ -32,7 +32,6 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -56,7 +55,6 @@ import org.w3c.dom.Node;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.util.FloodProtectorConfig;
 import com.l2jmobius.gameserver.util.Util;
@@ -102,7 +100,8 @@ public final class Config
 	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
 	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.ini";
-	public static final String GEODATA_FILE = "./config/GeoData.ini";
+	public static final String GEODATA_FILE = "./config/GeoEngine.ini";
+	
 	// --------------------------------------------------
 	// L2J Variable Definitions
 	// --------------------------------------------------
@@ -1140,22 +1139,26 @@ public final class Config
 	public static int CHS_FAME_AMOUNT;
 	public static int CHS_FAME_FREQUENCY;
 	
-	// GeoData Settings
-	public static int PATHFINDING;
-	public static Path PATHNODE_PATH;
-	public static String PATHFIND_BUFFERS;
-	public static float LOW_WEIGHT;
-	public static float MEDIUM_WEIGHT;
-	public static float HIGH_WEIGHT;
-	public static boolean ADVANCED_DIAGONAL_STRATEGY;
-	public static float DIAGONAL_WEIGHT;
-	public static int MAX_POSTFILTER_PASSES;
-	public static boolean DEBUG_PATH;
-	public static boolean FORCE_GEODATA;
+	// --------------------------------------------------
+	// GeoEngine
+	// --------------------------------------------------
+	
+	/** Geodata */
+	public static String GEODATA_PATH;
 	public static int COORD_SYNCHRONIZE;
-	public static Path GEODATA_PATH;
-	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
-	public static Map<String, Boolean> GEODATA_REGIONS;
+	
+	/** Path checking */
+	public static int PART_OF_CHARACTER_HEIGHT;
+	public static int MAX_OBSTACLE_HEIGHT;
+	
+	/** Path finding */
+	public static boolean PATHFINDING;
+	public static String PATHFIND_BUFFERS;
+	public static int BASE_WEIGHT;
+	public static int DIAGONAL_WEIGHT;
+	public static int HEURISTIC_WEIGHT;
+	public static int OBSTACLE_MULTIPLIER;
+	public static int MAX_ITERATIONS;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -2846,31 +2849,19 @@ public final class Config
 			
 			final PropertiesParser geoData = new PropertiesParser(GEODATA_FILE);
 			
-			PATHNODE_PATH = Paths.get(Config.DATAPACK_ROOT.getPath() + "/data/" + geoData.getString("PathnodePath", "pathnode"));
-			PATHFINDING = geoData.getInt("PathFinding", 0);
-			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-			LOW_WEIGHT = geoData.getFloat("LowWeight", 0.5f);
-			MEDIUM_WEIGHT = geoData.getFloat("MediumWeight", 2);
-			HIGH_WEIGHT = geoData.getFloat("HighWeight", 3);
-			ADVANCED_DIAGONAL_STRATEGY = geoData.getBoolean("AdvancedDiagonalStrategy", true);
-			DIAGONAL_WEIGHT = geoData.getFloat("DiagonalWeight", 0.707f);
-			MAX_POSTFILTER_PASSES = geoData.getInt("MaxPostfilterPasses", 3);
-			DEBUG_PATH = geoData.getBoolean("DebugPath", false);
-			FORCE_GEODATA = geoData.getBoolean("ForceGeoData", true);
+			GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");
 			COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
-			GEODATA_PATH = Paths.get(Config.DATAPACK_ROOT.getPath() + "/data/" + geoData.getString("GeoDataPath", "geodata"));
-			TRY_LOAD_UNSPECIFIED_REGIONS = geoData.getBoolean("TryLoadUnspecifiedRegions", true);
-			GEODATA_REGIONS = new HashMap<>();
-			for (int regionX = L2World.TILE_X_MIN; regionX <= L2World.TILE_X_MAX; regionX++)
-			{
-				for (int regionY = L2World.TILE_Y_MIN; regionY <= L2World.TILE_Y_MAX; regionY++)
-				{
-					if (geoData.containskey(regionX + "_" + regionY))
-					{
-						GEODATA_REGIONS.put(regionX + "_" + regionY, geoData.getBoolean(regionX + "_" + regionY, false));
-					}
-				}
-			}
+			
+			PART_OF_CHARACTER_HEIGHT = geoData.getInt("PartOfCharacterHeight", 75);
+			MAX_OBSTACLE_HEIGHT = geoData.getInt("MaxObstacleHeight", 32);
+			
+			PATHFINDING = geoData.getBoolean("PathFinding", true);
+			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
+			BASE_WEIGHT = geoData.getInt("BaseWeight", 10);
+			DIAGONAL_WEIGHT = geoData.getInt("DiagonalWeight", 14);
+			OBSTACLE_MULTIPLIER = geoData.getInt("ObstacleMultiplier", 10);
+			HEURISTIC_WEIGHT = geoData.getInt("HeuristicWeight", 20);
+			MAX_ITERATIONS = geoData.getInt("MaxIterations", 3500);
 		}
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{

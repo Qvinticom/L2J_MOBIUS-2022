@@ -21,7 +21,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -150,7 +150,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 					if (!npc.isInsideRadius(newX, newY, 0, collision, false, false))
 					{
 						final int newZ = npc.getZ() + 30;
-						if (GeoData.getInstance().canMove(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()))
+						if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()))
 						{
 							moveTo(newX, newY, newZ);
 						}
@@ -189,7 +189,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 						posY = posY - 300;
 					}
 					
-					if (GeoData.getInstance().canMove(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
+					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
 					{
 						setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
 					}
@@ -210,7 +210,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 			}
 		}
 		
-		if ((dist2 > range) || !GeoData.getInstance().canSeeTarget(npc, originalAttackTarget))
+		if ((dist2 > range) || !GeoEngine.getInstance().canSeeTarget(npc, originalAttackTarget))
 		{
 			if (originalAttackTarget.isMoving())
 			{

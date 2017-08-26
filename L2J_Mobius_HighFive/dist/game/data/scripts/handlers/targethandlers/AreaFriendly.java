@@ -22,7 +22,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -100,7 +100,7 @@ public class AreaFriendly implements ITargetTypeHandler
 	
 	private boolean checkTarget(L2PcInstance activeChar, L2Character target)
 	{
-		if (!GeoData.getInstance().canSeeTarget(activeChar, target))
+		if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
 		{
 			return false;
 		}

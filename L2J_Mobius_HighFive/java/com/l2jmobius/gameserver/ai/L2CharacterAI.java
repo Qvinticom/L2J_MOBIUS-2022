@@ -33,7 +33,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.ItemLocation;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
@@ -911,7 +911,7 @@ public class L2CharacterAI extends AbstractAI
 		}
 		
 		// If pathfinding enabled the creature will go to the destination or it will go to the nearest obstacle.
-		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, Config.PATHFINDING > 0 ? GeoData.getInstance().moveCheck(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
+		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, Config.PATHFINDING ? GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
 	}
 	
 	protected boolean maybeMoveToPosition(ILocational worldPosition, int offset)
@@ -1155,7 +1155,7 @@ public class L2CharacterAI extends AbstractAI
 			((L2PcInstance) target).stopFakeDeath(true);
 			return false;
 		}
-		if ((target != null) && ((_actor == null) || (_skill == null) || !_skill.isBad() || (_skill.getAffectRange() <= 0) || GeoData.getInstance().canSeeTarget(_actor, target)))
+		if ((target != null) && ((_actor == null) || (_skill == null) || !_skill.isBad() || (_skill.getAffectRange() <= 0) || GeoEngine.getInstance().canSeeTarget(_actor, target)))
 		{
 			return false;
 		}
@@ -1449,7 +1449,7 @@ public class L2CharacterAI extends AbstractAI
 				boolean cancast = true;
 				for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
 				{
-					if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 					{
 						continue;
 					}
@@ -1468,7 +1468,7 @@ public class L2CharacterAI extends AbstractAI
 				boolean cancast = true;
 				for (L2Character target : getAttackTarget().getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
 				{
-					if (!GeoData.getInstance().canSeeTarget(_actor, target) || (target == null) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target == null) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 					{
 						continue;
 					}
@@ -1488,7 +1488,7 @@ public class L2CharacterAI extends AbstractAI
 			boolean cancast = false;
 			for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
 			{
-				if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 				{
 					continue;
 				}
@@ -1507,7 +1507,7 @@ public class L2CharacterAI extends AbstractAI
 			boolean cancast = true;
 			for (L2Character target : getAttackTarget().getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
 			{
-				if (!GeoData.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 				{
 					continue;
 				}
@@ -1532,7 +1532,7 @@ public class L2CharacterAI extends AbstractAI
 			int ccount = 0;
 			for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
 			{
-				if (!(target instanceof L2Attackable) || !GeoData.getInstance().canSeeTarget(_actor, target))
+				if (!(target instanceof L2Attackable) || !GeoEngine.getInstance().canSeeTarget(_actor, target))
 				{
 					continue;
 				}

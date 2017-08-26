@@ -24,7 +24,7 @@ import java.util.concurrent.Future;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -295,7 +295,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 				
 				final int targetX = ownerX + (int) (AVOID_RADIUS * Math.cos(angle));
 				final int targetY = ownerY + (int) (AVOID_RADIUS * Math.sin(angle));
-				if (GeoData.getInstance().canMove(_actor, targetX, targetY, _actor.getZ()))
+				if (GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), targetX, targetY, _actor.getZ(), _actor.getInstanceWorld()))
 				{
 					moveTo(targetX, targetY, _actor.getZ());
 				}

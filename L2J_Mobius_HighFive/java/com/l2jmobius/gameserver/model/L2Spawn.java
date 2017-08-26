@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.NpcPersonalAIData;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -612,7 +612,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 				final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 				
 				final boolean isQuestMonster = (mob.getTitle() != null) && mob.getTitle().contains("Quest");
-				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && GeoData.getInstance().canSeeTarget(newlocx, newlocy, newlocz, randX, randY, newlocz) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
+				if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && (getInstanceId() == 0) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
 				{
 					newlocx = randX;
 					newlocy = randY;
@@ -623,7 +623,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		// don't correct z of flying npc's
 		if (!mob.isFlying())
 		{
-			newlocz = GeoData.getInstance().getSpawnHeight(newlocx, newlocy, newlocz);
+			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
 		}
 		
 		mob.stopAllEffects();

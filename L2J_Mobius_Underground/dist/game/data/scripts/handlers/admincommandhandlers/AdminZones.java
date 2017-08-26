@@ -34,7 +34,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.PlayerAction;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -301,7 +301,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 			{
 				final int x = zone.getX()[i];
 				final int y = zone.getY()[i];
-				holder.addNode(new Location(x, y, GeoData.getInstance().getSpawnHeight(x, y, Rnd.get(zone.getLowZ(), zone.getHighZ()))));
+				holder.addNode(new Location(x, y, GeoEngine.getInstance().getHeight(x, y, Rnd.get(zone.getLowZ(), zone.getHighZ()))));
 			}
 			showPoints(activeChar);
 		}

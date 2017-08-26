@@ -25,7 +25,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FishingData;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -420,19 +420,19 @@ public class Fishing
 		// always use water zone, fishing zone high z is high in the air...
 		final int baitZ = waterZone.getWaterZ();
 		
-		// if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
+		// if (!GeoEngine.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
 		//
 		// return Integer.MIN_VALUE;
 		// }
 		
-		if (GeoData.getInstance().hasGeo(baitX, baitY))
+		if (GeoEngine.getInstance().hasGeo(baitX, baitY))
 		{
-			if (GeoData.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
+			if (GeoEngine.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
 			{
 				return Integer.MIN_VALUE;
 			}
 			
-			if (GeoData.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
+			if (GeoEngine.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
 			{
 				return Integer.MIN_VALUE;
 			}

@@ -19,7 +19,7 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -90,7 +90,7 @@ public final class Fear extends AbstractEffect
 		final int posY = (int) (effected.getY() + (FEAR_RANGE * Math.sin(radians)));
 		final int posZ = effected.getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), posX, posY, posZ, effected.getInstanceWorld());
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), posX, posY, posZ, effected.getInstanceWorld());
 		effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 	}
 }

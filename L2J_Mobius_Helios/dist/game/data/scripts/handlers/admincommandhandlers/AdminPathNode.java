@@ -18,78 +18,49 @@ package handlers.admincommandhandlers;
 
 import java.util.List;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class AdminPathNode implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_pn_info",
-		"admin_show_path",
-		"admin_path_debug",
-		"admin_show_pn",
-		"admin_find_path",
+		"admin_path_find",
 	};
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		if (command.equals("admin_pn_info"))
+		if (command.equals("admin_path_find"))
 		{
-			final String[] info = PathFinding.getInstance().getStat();
-			if (info == null)
-			{
-				activeChar.sendMessage("Not supported");
-			}
-			else
-			{
-				for (String msg : info)
-				{
-					activeChar.sendMessage(msg);
-				}
-			}
-		}
-		else if (command.equals("admin_show_path"))
-		{
-			
-		}
-		else if (command.equals("admin_path_debug"))
-		{
-			
-		}
-		else if (command.equals("admin_show_pn"))
-		{
-			
-		}
-		else if (command.equals("admin_find_path"))
-		{
-			if (Config.PATHFINDING == 0)
-			{
-				activeChar.sendMessage("PathFinding is disabled.");
-				return true;
-			}
 			if (activeChar.getTarget() != null)
 			{
-				final List<AbstractNodeLoc> path = PathFinding.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld(), true);
+				List<Location> path = GeoEngine.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld(), true);
 				if (path == null)
 				{
-					activeChar.sendMessage("No Route!");
-					return true;
+					activeChar.sendMessage("No route found or pathfinding disabled.");
 				}
-				for (AbstractNodeLoc a : path)
+				else
 				{
-					activeChar.sendMessage("x:" + a.getX() + " y:" + a.getY() + " z:" + a.getZ());
+					for (Location point : path)
+					{
+						activeChar.sendMessage("x:" + point.getX() + " y:" + point.getY() + " z:" + point.getZ());
+					}
 				}
 			}
 			else
 			{
-				activeChar.sendMessage("No Target!");
+				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
 		}
+		else
+		{
+			return false;
+		}
+		
 		return true;
 	}
 	

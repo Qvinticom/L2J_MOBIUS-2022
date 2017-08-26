@@ -20,7 +20,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.AffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectObjectHandler;
 import com.l2jmobius.gameserver.handler.IAffectScopeHandler;
@@ -69,7 +69,7 @@ public class RingRange implements IAffectScopeHandler
 				return false;
 			}
 			
-			if (!GeoData.getInstance().canSeeTarget(target, c))
+			if (!GeoEngine.getInstance().canSeeTarget(target, c))
 			{
 				return false;
 			}

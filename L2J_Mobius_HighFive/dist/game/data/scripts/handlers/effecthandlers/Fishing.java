@@ -17,8 +17,9 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -237,19 +238,19 @@ public final class Fishing extends AbstractEffect
 		// always use water zone, fishing zone high z is high in the air...
 		final int baitZ = waterZone.getWaterZ();
 		
-		if (!GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ(), baitX, baitY, baitZ))
+		if (!GeoEngine.getInstance().canSeeTarget(player, new Location(baitX, baitY, baitZ)))
 		{
 			return Integer.MIN_VALUE;
 		}
 		
-		if (GeoData.getInstance().hasGeo(baitX, baitY))
+		if (GeoEngine.getInstance().hasGeo(baitX, baitY))
 		{
-			if (GeoData.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
+			if (GeoEngine.getInstance().getHeight(baitX, baitY, baitZ) > baitZ)
 			{
 				return Integer.MIN_VALUE;
 			}
 			
-			if (GeoData.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
+			if (GeoEngine.getInstance().getHeight(baitX, baitY, player.getZ()) > baitZ)
 			{
 				return Integer.MIN_VALUE;
 			}

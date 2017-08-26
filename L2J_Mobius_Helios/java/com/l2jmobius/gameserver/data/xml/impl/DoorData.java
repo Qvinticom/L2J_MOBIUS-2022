@@ -34,8 +34,8 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IXmlReader;
-import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
@@ -205,7 +205,7 @@ public final class DoorData implements IGameXmlReader
 		return _doors.values();
 	}
 	
-	public boolean checkIfDoorsBetween(AbstractNodeLoc start, AbstractNodeLoc end, Instance instance)
+	public boolean checkIfDoorsBetween(Location start, Location end, Instance instance)
 	{
 		return checkIfDoorsBetween(start.getX(), start.getY(), start.getZ(), end.getX(), end.getY(), end.getZ(), instance);
 	}

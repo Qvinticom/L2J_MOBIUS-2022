@@ -3,7 +3,7 @@ L2J-Mobius Ertheia
 Client: https://mega.nz/#F!BxkyzLBA!CIuE1GQOO1JMel7S7UxPfQ
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
-Geodata: http://www.mediafire.com/file/rxdm9b97kbue8dy/Mobius_Ertheia_Geodata.zip
+Geodata: http://www.mediafire.com/file/jbnro1jm6q56bal/mobius_geodata_ertheia_l2d.zip
 
 What is done
 -Ertheia packet compatibility

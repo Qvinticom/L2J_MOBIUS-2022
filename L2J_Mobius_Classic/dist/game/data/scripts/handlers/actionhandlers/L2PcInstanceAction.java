@@ -19,7 +19,7 @@ package handlers.actionhandlers;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -93,7 +93,7 @@ public class L2PcInstanceAction implements IActionHandler
 					}
 					else
 					{
-						if (GeoData.getInstance().canSeeTarget(activeChar, target))
+						if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 						{
 							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 							activeChar.onActionRequest();
@@ -104,7 +104,7 @@ public class L2PcInstanceAction implements IActionHandler
 				{
 					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					if (GeoData.getInstance().canSeeTarget(activeChar, target))
+					if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 					}

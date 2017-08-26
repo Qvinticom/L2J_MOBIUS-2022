@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -544,7 +544,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		// don't correct z of flying npc's
 		if (!npc.isFlying())
 		{
-			newlocz = GeoData.getInstance().getSpawnHeight(newlocx, newlocy, newlocz);
+			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
 		}
 		
 		// Set is not random walk default value

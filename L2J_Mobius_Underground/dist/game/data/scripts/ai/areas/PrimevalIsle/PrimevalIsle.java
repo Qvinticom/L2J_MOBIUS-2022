@@ -19,7 +19,7 @@ package ai.areas.PrimevalIsle;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.model.L2World;
@@ -270,7 +270,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 					final double cos = Math.cos(radian);
 					final int newX = (int) (npc.getX() + (cos * distance));
 					final int newY = (int) (npc.getY() + (sin * distance));
-					final Location loc = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), newX, newY, npc.getZ(), npc.getInstanceWorld());
+					final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), newX, newY, npc.getZ(), npc.getInstanceWorld());
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, loc, 0);
 				}
 				else if (ag_type == 1)

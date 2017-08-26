@@ -18,8 +18,8 @@ package com.l2jmobius.gameserver.util;
 
 import java.awt.Color;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
-import com.l2jmobius.gameserver.geodata.geodriver.Cell;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 
@@ -30,41 +30,44 @@ public final class GeoUtils
 {
 	public static void debug2DLine(L2PcInstance player, int x, int y, int tx, int ty, int z)
 	{
-		final int gx = GeoData.getInstance().getGeoX(x);
-		final int gy = GeoData.getInstance().getGeoY(y);
+		final int gx = GeoEngine.getInstance().getGeoX(x);
+		final int gy = GeoEngine.getInstance().getGeoY(y);
 		
-		final int tgx = GeoData.getInstance().getGeoX(tx);
-		final int tgy = GeoData.getInstance().getGeoY(ty);
+		final int tgx = GeoEngine.getInstance().getGeoX(tx);
+		final int tgy = GeoEngine.getInstance().getGeoY(ty);
 		
 		final ExServerPrimitive prim = new ExServerPrimitive("Debug2DLine", x, y, z);
-		prim.addLine(Color.BLUE, GeoData.getInstance().getWorldX(gx), GeoData.getInstance().getWorldY(gy), z, GeoData.getInstance().getWorldX(tgx), GeoData.getInstance().getWorldY(tgy), z);
+		prim.addLine(Color.BLUE, GeoEngine.getInstance().getWorldX(gx), GeoEngine.getInstance().getWorldY(gy), z, GeoEngine.getInstance().getWorldX(tgx), GeoEngine.getInstance().getWorldY(tgy), z);
 		
 		final LinePointIterator iter = new LinePointIterator(gx, gy, tgx, tgy);
 		
 		while (iter.next())
 		{
-			prim.addPoint(Color.RED, GeoData.getInstance().getWorldX(iter.x()), GeoData.getInstance().getWorldY(iter.y()), z);
+			final int wx = GeoEngine.getInstance().getWorldX(iter.x());
+			final int wy = GeoEngine.getInstance().getWorldY(iter.y());
+			
+			prim.addPoint(Color.RED, wx, wy, z);
 		}
 		player.sendPacket(prim);
 	}
 	
 	public static void debug3DLine(L2PcInstance player, int x, int y, int z, int tx, int ty, int tz)
 	{
-		final int gx = GeoData.getInstance().getGeoX(x);
-		final int gy = GeoData.getInstance().getGeoY(y);
+		final int gx = GeoEngine.getInstance().getGeoX(x);
+		final int gy = GeoEngine.getInstance().getGeoY(y);
 		
-		final int tgx = GeoData.getInstance().getGeoX(tx);
-		final int tgy = GeoData.getInstance().getGeoY(ty);
+		final int tgx = GeoEngine.getInstance().getGeoX(tx);
+		final int tgy = GeoEngine.getInstance().getGeoY(ty);
 		
 		final ExServerPrimitive prim = new ExServerPrimitive("Debug3DLine", x, y, z);
-		prim.addLine(Color.BLUE, GeoData.getInstance().getWorldX(gx), GeoData.getInstance().getWorldY(gy), z, GeoData.getInstance().getWorldX(tgx), GeoData.getInstance().getWorldY(tgy), tz);
+		prim.addLine(Color.BLUE, GeoEngine.getInstance().getWorldX(gx), GeoEngine.getInstance().getWorldY(gy), z, GeoEngine.getInstance().getWorldX(tgx), GeoEngine.getInstance().getWorldY(tgy), tz);
 		
 		final LinePointIterator3D iter = new LinePointIterator3D(gx, gy, z, tgx, tgy, tz);
 		iter.next();
 		int prevX = iter.x();
 		int prevY = iter.y();
-		int wx = GeoData.getInstance().getWorldX(prevX);
-		int wy = GeoData.getInstance().getWorldY(prevY);
+		int wx = GeoEngine.getInstance().getWorldX(prevX);
+		int wy = GeoEngine.getInstance().getWorldY(prevY);
 		int wz = iter.z();
 		prim.addPoint(Color.RED, wx, wy, wz);
 		
@@ -75,8 +78,8 @@ public final class GeoUtils
 			
 			if ((curX != prevX) || (curY != prevY))
 			{
-				wx = GeoData.getInstance().getWorldX(curX);
-				wy = GeoData.getInstance().getWorldY(curY);
+				wx = GeoEngine.getInstance().getWorldX(curX);
+				wy = GeoEngine.getInstance().getWorldY(curY);
 				wz = iter.z();
 				
 				prim.addPoint(Color.RED, wx, wy, wz);
@@ -90,18 +93,23 @@ public final class GeoUtils
 	
 	private static Color getDirectionColor(int x, int y, int z, int nswe)
 	{
-		return GeoData.getInstance().checkNearestNswe(x, y, z, nswe) ? Color.GREEN : Color.RED;
+		if ((GeoEngine.getInstance().getNsweNearest(x, y, z) & nswe) == nswe)
+		{
+			return Color.GREEN;
+		}
+		return Color.RED;
 	}
 	
 	public static void debugGrid(L2PcInstance player)
 	{
-		final int geoRadius = 10;
-		final int blocksPerPacket = 49;
+		final int geoRadius = 20;
+		final int blocksPerPacket = 40;
+		
 		int iBlock = blocksPerPacket;
 		int iPacket = 0;
 		
 		ExServerPrimitive exsp = null;
-		final GeoData gd = GeoData.getInstance();
+		final GeoEngine gd = GeoEngine.getInstance();
 		final int playerGx = gd.getGeoX(player.getX());
 		final int playerGy = gd.getGeoY(player.getY());
 		for (int dx = -geoRadius; dx <= geoRadius; ++dx)
@@ -129,30 +137,30 @@ public final class GeoUtils
 				
 				final int x = gd.getWorldX(gx);
 				final int y = gd.getWorldY(gy);
-				final int z = gd.getNearestZ(gx, gy, player.getZ());
+				final int z = gd.getHeightNearest(gx, gy, player.getZ());
 				
 				// north arrow
-				Color col = getDirectionColor(gx, gy, z, Cell.NSWE_NORTH);
+				Color col = getDirectionColor(gx, gy, z, GeoStructure.CELL_FLAG_N);
 				exsp.addLine(col, x - 1, y - 7, z, x + 1, y - 7, z);
 				exsp.addLine(col, x - 2, y - 6, z, x + 2, y - 6, z);
 				exsp.addLine(col, x - 3, y - 5, z, x + 3, y - 5, z);
 				exsp.addLine(col, x - 4, y - 4, z, x + 4, y - 4, z);
 				
 				// east arrow
-				col = getDirectionColor(gx, gy, z, Cell.NSWE_EAST);
+				col = getDirectionColor(gx, gy, z, GeoStructure.CELL_FLAG_E);
 				exsp.addLine(col, x + 7, y - 1, z, x + 7, y + 1, z);
 				exsp.addLine(col, x + 6, y - 2, z, x + 6, y + 2, z);
 				exsp.addLine(col, x + 5, y - 3, z, x + 5, y + 3, z);
 				exsp.addLine(col, x + 4, y - 4, z, x + 4, y + 4, z);
 				
 				// south arrow
-				col = getDirectionColor(gx, gy, z, Cell.NSWE_SOUTH);
+				col = getDirectionColor(gx, gy, z, GeoStructure.CELL_FLAG_S);
 				exsp.addLine(col, x - 1, y + 7, z, x + 1, y + 7, z);
 				exsp.addLine(col, x - 2, y + 6, z, x + 2, y + 6, z);
 				exsp.addLine(col, x - 3, y + 5, z, x + 3, y + 5, z);
 				exsp.addLine(col, x - 4, y + 4, z, x + 4, y + 4, z);
 				
-				col = getDirectionColor(gx, gy, z, Cell.NSWE_WEST);
+				col = getDirectionColor(gx, gy, z, GeoStructure.CELL_FLAG_W);
 				exsp.addLine(col, x - 7, y - 1, z, x - 7, y + 1, z);
 				exsp.addLine(col, x - 6, y - 2, z, x - 6, y + 2, z);
 				exsp.addLine(col, x - 5, y - 3, z, x - 5, y + 3, z);
@@ -180,43 +188,47 @@ public final class GeoUtils
 		{
 			if (y > lastY)
 			{
-				return Cell.NSWE_SOUTH_EAST; // Direction.SOUTH_EAST;
+				return GeoStructure.CELL_FLAG_SE; // Direction.SOUTH_EAST;
 			}
 			else if (y < lastY)
 			{
-				return Cell.NSWE_NORTH_EAST; // Direction.NORTH_EAST;
+				return GeoStructure.CELL_FLAG_NE; // Direction.NORTH_EAST;
 			}
 			else
 			{
-				return Cell.NSWE_EAST; // Direction.EAST;
+				return GeoStructure.CELL_FLAG_E; // Direction.EAST;
 			}
 		}
 		else if (x < lastX) // west
 		{
 			if (y > lastY)
 			{
-				return Cell.NSWE_SOUTH_WEST; // Direction.SOUTH_WEST;
+				return GeoStructure.CELL_FLAG_SW; // Direction.SOUTH_WEST;
 			}
 			else if (y < lastY)
 			{
-				return Cell.NSWE_NORTH_WEST; // Direction.NORTH_WEST;
+				return GeoStructure.CELL_FLAG_NW; // Direction.NORTH_WEST;
 			}
 			else
 			{
-				return Cell.NSWE_WEST; // Direction.WEST;
+				return GeoStructure.CELL_FLAG_W; // Direction.WEST;
 			}
 		}
-		else if (y > lastY)
-		{
-			return Cell.NSWE_SOUTH; // Direction.SOUTH;
-		}
-		else if (y < lastY)
-		{
-			return Cell.NSWE_NORTH; // Direction.NORTH;
-		}
 		else
+		// unchanged x
 		{
-			throw new RuntimeException();
+			if (y > lastY)
+			{
+				return GeoStructure.CELL_FLAG_S; // Direction.SOUTH;
+			}
+			else if (y < lastY)
+			{
+				return GeoStructure.CELL_FLAG_N; // Direction.NORTH;
+			}
+			else
+			{
+				throw new RuntimeException();
+			}
 		}
 	}
 }

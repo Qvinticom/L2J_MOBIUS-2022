@@ -33,7 +33,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -569,7 +569,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 								final Location location = _spawnZoneList.get(spw.zone).getRandomPoint();
 								if (location != null)
 								{
-									spawn(world, spw.npcId, location.getX(), location.getY(), GeoData.getInstance().getSpawnHeight(location), getRandom(65535), spw.isNeededNextFlag);
+									spawn(world, spw.npcId, location.getX(), location.getY(), GeoEngine.getInstance().getHeight(location.getX(), location.getY(), location.getZ()), getRandom(65535), spw.isNeededNextFlag);
 								}
 							}
 							else

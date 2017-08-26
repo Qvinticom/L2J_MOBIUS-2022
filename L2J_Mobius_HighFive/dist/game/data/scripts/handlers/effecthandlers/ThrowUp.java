@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
@@ -95,7 +95,7 @@ public final class ThrowUp extends AbstractEffect
 		final int y = info.getEffector().getY() - (int) (offset * sin);
 		final int z = info.getEffected().getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(info.getEffected().getX(), info.getEffected().getY(), info.getEffected().getZ(), x, y, z, info.getEffected().getInstanceId());
 		
 		info.getEffected().broadcastPacket(new FlyToLocation(info.getEffected(), destination, FlyType.THROW_UP));
 		// TODO: Review.

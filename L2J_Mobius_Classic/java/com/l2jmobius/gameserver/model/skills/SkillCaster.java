@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.StatusUpdateType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -1009,7 +1009,7 @@ public class SkillCaster implements Runnable
 			}
 		}
 		
-		final Location destination = GeoData.getInstance().moveCheck(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
 		
 		creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		creature.broadcastPacket(new FlyToLocation(creature, destination, flyType, 0, 0, 333));

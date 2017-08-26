@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.zone.form;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 import com.l2jmobius.util.Rnd;
@@ -101,7 +101,7 @@ public class ZoneCylinder extends L2ZoneForm
 		{
 			(int) x,
 			(int) y,
-			GeoData.getInstance().getHeight((int) x, (int) y, _z1)
+			GeoEngine.getInstance().getHeight((int) x, (int) y, _z1)
 		};
 	}
 }

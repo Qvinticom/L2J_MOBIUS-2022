@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -62,7 +62,7 @@ public final class PullBack extends AbstractEffect
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		// In retail, you get debuff, but you are not even moved if there is obstacle. You are still disabled from using skills and moving though.
-		if (GeoData.getInstance().canMove(effected, effector))
+		if (GeoEngine.getInstance().canMoveToTarget(effected.getX(), effected.getY(), effected.getZ(), effector.getX(), effector.getY(), effector.getZ(), effector.getInstanceWorld()))
 		{
 			effected.broadcastPacket(new FlyToLocation(effected, effector, _type, _speed, _delay, _animationSpeed));
 			effected.setXYZ(effector);

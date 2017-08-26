@@ -26,7 +26,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.gameserver.ThreadPoolManager;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2Territory;
 import com.l2jmobius.gameserver.model.Location;
@@ -228,7 +228,7 @@ public class TarBeetleSpawn implements IXmlReader
 						spawn.setHeading(Rnd.get(65535));
 						spawn.setX(location.getX());
 						spawn.setY(location.getY());
-						spawn.setZ(GeoData.getInstance().getSpawnHeight(location));
+						spawn.setZ(GeoEngine.getInstance().getHeight(location.getX(), location.getY(), location.getZ()));
 						
 						final L2Npc npc = spawn.doSpawn();
 						npc.setIsNoRndWalk(true);

@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -561,7 +561,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 							player.sendPacket(new ExSendUIEvent(player, true, false, 1, 0, NpcStringId.REMAINING_TIME));
 							L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 1000, box ->
 							{
-								if ((box.getId() == ATHREAS_BOX) && GeoData.getInstance().canSeeTarget(npc, box))
+								if ((box.getId() == ATHREAS_BOX) && GeoEngine.getInstance().canSeeTarget(npc, box))
 								{
 									box.deleteMe();
 								}

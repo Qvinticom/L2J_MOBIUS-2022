@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
@@ -1505,7 +1505,7 @@ public final class L2ItemInstance extends L2Object
 			if (_dropper != null)
 			{
 				final Instance instance = _dropper.getInstanceWorld();
-				final Location dropDest = GeoData.getInstance().moveCheck(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, instance);
+				final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, instance);
 				_x = dropDest.getX();
 				_y = dropDest.getY();
 				_z = dropDest.getZ();

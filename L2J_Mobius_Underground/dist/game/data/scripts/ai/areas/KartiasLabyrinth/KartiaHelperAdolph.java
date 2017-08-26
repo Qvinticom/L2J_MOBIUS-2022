@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -92,7 +92,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 				{
 					final L2MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
 					
-					if (monster.isTargetable() && GeoData.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()))
+					if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster) && !CommonUtil.contains(MIRRORS, monster.getId()))
 					{
 						actionFound = true;
 						addAttackDesire(npc, monster);
@@ -115,7 +115,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 						final double radian = Math.toRadians(Util.convertHeadingToDegree(instancePlayer.getHeading()));
 						final int X = (int) (instancePlayer.getX() + (Math.cos(radian) * 150));
 						final int Y = (int) (instancePlayer.getY() + (Math.sin(radian) * 150));
-						final Location loc = GeoData.getInstance().moveCheck(instancePlayer.getX(), instancePlayer.getY(), instancePlayer.getZ(), X, Y, instancePlayer.getZ(), instance);
+						final Location loc = GeoEngine.getInstance().canMoveToTargetLoc(instancePlayer.getX(), instancePlayer.getY(), instancePlayer.getZ(), X, Y, instancePlayer.getZ(), instance);
 						
 						if (!npc.isInsideRadius(loc, 50, true, true))
 						{

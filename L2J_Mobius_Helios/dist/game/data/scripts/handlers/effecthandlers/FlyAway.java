@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -57,7 +57,7 @@ public final class FlyAway extends AbstractEffect
 		final int y = (int) (effector.getY() - (nRadius * (dy / distance)));
 		final int z = effector.getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), x, y, z, effected.getInstanceWorld());
 		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		effected.setXYZ(destination);

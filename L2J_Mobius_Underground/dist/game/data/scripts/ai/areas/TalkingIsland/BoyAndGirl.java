@@ -17,7 +17,8 @@
 package ai.areas.TalkingIsland;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -74,14 +75,16 @@ public final class BoyAndGirl extends AbstractNpcAI
 		getTimers().addTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
 		getTimers().addTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
 		npc.setIsRunning(true);
-		addMoveToDesire(npc, GeoData.getInstance().moveCheck(npc.getLocation(), Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600), npc.getInstanceWorld()), 23);
+		final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600);
+		addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getLocation().getX(), npc.getLocation().getY(), npc.getLocation().getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);
 		return super.onSpawn(npc);
 	}
 	
 	@Override
 	public void onMoveFinished(L2Npc npc)
 	{
-		addMoveToDesire(npc, GeoData.getInstance().moveCheck(npc.getLocation(), Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600), npc.getInstanceWorld()), 23);
+		final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600);
+		addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getLocation().getX(), npc.getLocation().getY(), npc.getLocation().getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);
 		super.onMoveFinished(npc);
 	}
 	

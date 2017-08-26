@@ -33,7 +33,7 @@ import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.TrapAction;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GraciaSeedsManager;
 import com.l2jmobius.gameserver.model.L2Territory;
 import com.l2jmobius.gameserver.model.L2World;
@@ -340,7 +340,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 						final Location location = terr.getRandomPoint();
 						if (location != null)
 						{
-							spawn(world, spw.npcId, location.getX(), location.getY(), GeoData.getInstance().getSpawnHeight(location), getRandom(65535), spw.isNeededNextFlag);
+							spawn(world, spw.npcId, location.getX(), location.getY(), GeoEngine.getInstance().getHeight(location.getX(), location.getY(), location.getZ()), getRandom(65535), spw.isNeededNextFlag);
 						}
 					}
 				}

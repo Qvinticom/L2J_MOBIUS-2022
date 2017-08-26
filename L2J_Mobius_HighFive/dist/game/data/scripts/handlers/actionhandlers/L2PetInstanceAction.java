@@ -18,7 +18,7 @@ package handlers.actionhandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -58,7 +58,7 @@ public class L2PetInstanceAction implements IActionHandler
 			// Check if the pet is attackable (without a forced attack) and isn't dead
 			if (target.isAutoAttackable(activeChar) && !isOwner)
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
@@ -67,7 +67,7 @@ public class L2PetInstanceAction implements IActionHandler
 			}
 			else if (!((L2Character) target).isInsideRadius(activeChar, 150, false, false))
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 					activeChar.onActionRequest();

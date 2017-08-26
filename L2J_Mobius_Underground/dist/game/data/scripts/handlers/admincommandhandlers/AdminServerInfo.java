@@ -60,7 +60,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%slots%", getPlayersCount("ALL") + "/" + Config.MAXIMUM_ONLINE_USERS);
 			html.replace("%gameTime%", GameTimeController.getInstance().getGameHour() + ":" + GameTimeController.getInstance().getGameMinute());
 			html.replace("%dayNight%", GameTimeController.getInstance().isNight() ? "Night" : "Day");
-			html.replace("%geodata%", Config.PATHFINDING > 0 ? "Enabled" : "Disabled");
+			html.replace("%geodata%", Config.PATHFINDING ? "Enabled" : "Disabled");
 			html.replace("%serverTime%", fmt.format(new Date(System.currentTimeMillis())));
 			html.replace("%serverUpTime%", getServerUpTime());
 			html.replace("%onlineAll%", getPlayersCount("ALL"));

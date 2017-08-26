@@ -18,7 +18,7 @@ package ai.group_template;
 
 import java.util.logging.Level;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -62,7 +62,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 			final int spawnX = (int) (radius * Math.cos(angleRadians)) + _middlePoint.getX();
 			final int spawnY = (int) (radius * Math.sin(angleRadians)) + _middlePoint.getY();
 			
-			spawn.setXYZ(spawnX, spawnY, GeoData.getInstance().getHeight(spawnX, spawnY, _middlePoint.getZ()));
+			spawn.setXYZ(spawnX, spawnY, GeoEngine.getInstance().getHeight(spawnX, spawnY, _middlePoint.getZ()));
 			spawn.stopRespawn();
 			_spawnedBoss = spawn.spawnOne(false);
 		}

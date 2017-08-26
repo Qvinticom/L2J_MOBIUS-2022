@@ -33,7 +33,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.AISkillScope;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -195,7 +195,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 		}
 		
-		return target.isAutoAttackable(me) && GeoData.getInstance().canSeeTarget(me, target);
+		return target.isAutoAttackable(me) && GeoEngine.getInstance().canSeeTarget(me, target);
 	}
 	
 	public void startAITask()
@@ -555,7 +555,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-			final Location moveLoc = GeoData.getInstance().moveCheck(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceWorld());
+			final Location moveLoc = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceWorld());
 			
 			moveTo(moveLoc.getX(), moveLoc.getY(), moveLoc.getZ());
 		}
@@ -696,7 +696,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					if (!npc.isInsideRadius(newX, newY, 0, collision, false, false))
 					{
 						final int newZ = npc.getZ() + 30;
-						if (GeoData.getInstance().canMove(npc, newX, newY, newZ))
+						if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()))
 						{
 							moveTo(newX, newY, newZ);
 						}
@@ -736,7 +736,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						posY = posY - 300;
 					}
 					
-					if (GeoData.getInstance().canMove(npc, posX, posY, posZ))
+					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
 					{
 						setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, posZ, 0));
 					}
@@ -986,7 +986,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					return false;
 				}
 				
-				if (!GeoData.getInstance().canSeeTarget(npc, target))
+				if (!GeoEngine.getInstance().canSeeTarget(npc, target))
 				{
 					return false;
 				}
@@ -998,7 +998,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 		}
 		
-		return GeoData.getInstance().canMove(npc, target);
+		return GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), target.getX(), target.getY(), target.getZ(), npc.getInstanceWorld());
 	}
 	
 	private L2Character skillTargetReconsider(Skill skill, boolean insideCastRange)

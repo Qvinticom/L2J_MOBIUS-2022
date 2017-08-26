@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import com.l2jmobius.gameserver.enums.Position;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -70,6 +70,6 @@ public class OpBlinkSkillCondition implements ISkillCondition
 		final int y = caster.getY() + y1;
 		final int z = caster.getZ();
 		
-		return GeoData.getInstance().canMove(caster.getX(), caster.getY(), caster.getZ(), x, y, z, caster.getInstanceWorld());
+		return GeoEngine.getInstance().canMoveToTarget(caster.getX(), caster.getY(), caster.getZ(), x, y, z, caster.getInstanceWorld());
 	}
 }

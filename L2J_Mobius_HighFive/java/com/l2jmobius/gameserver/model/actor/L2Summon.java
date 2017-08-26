@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
@@ -660,7 +660,7 @@ public abstract class L2Summon extends L2Playable
 			return false;
 		}
 		
-		if ((this != target) && skill.isPhysical() && (Config.PATHFINDING > 0) && (PathFinding.getInstance().findPath(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId(), true) == null))
+		if ((this != target) && skill.isPhysical() && Config.PATHFINDING && (GeoEngine.getInstance().findPath(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId(), true) == null))
 		{
 			sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 			return false;

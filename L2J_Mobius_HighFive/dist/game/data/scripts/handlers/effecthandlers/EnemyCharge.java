@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
@@ -91,7 +91,7 @@ public final class EnemyCharge extends AbstractEffect
 		final int y = curY + (int) ((distance - offset) * sin);
 		final int z = info.getEffected().getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(info.getEffector().getX(), info.getEffector().getY(), info.getEffector().getZ(), x, y, z, info.getEffector().getInstanceId());
 		
 		info.getEffector().broadcastPacket(new FlyToLocation(info.getEffector(), destination, FlyType.CHARGE));
 		

@@ -17,7 +17,8 @@
 package ai.areas.TalkingIsland;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -47,7 +48,8 @@ public final class Marsha extends AbstractNpcAI
 		{
 			if (getRandomBoolean())
 			{
-				addMoveToDesire(npc, GeoData.getInstance().moveCheck(npc.getLocation(), Util.getRandomPosition(npc.getSpawn().getLocation(), 0, 500), npc.getInstanceWorld()), 23);
+				final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 0, 500);
+				addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getLocation().getX(), npc.getLocation().getY(), npc.getLocation().getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);
 			}
 			getTimers().addTimer("NPC_MOVE", (10 + getRandom(5)) * 1000, npc, null);
 		}

@@ -19,7 +19,7 @@ package ai.areas.KartiasLabyrinth;
 import java.util.List;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -64,7 +64,7 @@ public final class KartiaSupportTroop extends AbstractNpcAI
 				{
 					final L2MonsterInstance monster = monsterList.get(getRandom(monsterList.size()));
 					
-					if (monster.isTargetable() && GeoData.getInstance().canSeeTarget(npc, monster))
+					if (monster.isTargetable() && GeoEngine.getInstance().canSeeTarget(npc, monster))
 					{
 						addAttackDesire(npc, monster);
 					}

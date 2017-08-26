@@ -16,7 +16,7 @@
  */
 package handlers.targethandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -52,7 +52,7 @@ public class Ground implements ITargetTypeHandler
 					return null;
 				}
 				
-				if (!GeoData.getInstance().canSeeTarget(activeChar, worldPosition))
+				if (!GeoEngine.getInstance().canSeeTarget(activeChar, worldPosition))
 				{
 					if (sendMessage)
 					{

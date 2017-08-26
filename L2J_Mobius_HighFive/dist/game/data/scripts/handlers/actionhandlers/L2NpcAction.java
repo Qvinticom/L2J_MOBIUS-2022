@@ -19,7 +19,7 @@ package handlers.actionhandlers;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
@@ -82,13 +82,13 @@ public class L2NpcAction implements IActionHandler
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
 			if (target.isAutoAttackable(activeChar) && !((L2Npc) target).isAlikeDead())
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 				else
 				{
-					final Location destination = GeoData.getInstance().moveCheck(activeChar, target);
+					final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), target.getX(), target.getY(), target.getZ(), activeChar.getInstanceId());
 					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 				}
 			}

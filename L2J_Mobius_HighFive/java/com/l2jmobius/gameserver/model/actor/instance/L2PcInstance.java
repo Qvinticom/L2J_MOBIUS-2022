@@ -90,7 +90,7 @@ import com.l2jmobius.gameserver.enums.Sex;
 import com.l2jmobius.gameserver.enums.ShortcutType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -106,7 +106,6 @@ import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
-import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -354,9 +353,6 @@ public final class L2PcInstance extends L2Playable
 	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
-	
-	// Character Premium System String Definitions:
-	private static final String RESTORE_PREMIUMSERVICE = "SELECT premium_service,enddate FROM account_premium WHERE account_name=?";
 	
 	// Character Teleport Bookmark:
 	private static final String INSERT_TP_BOOKMARK = "INSERT INTO character_tpbookmark (charId,Id,x,y,z,icon,tag,name) values (?,?,?,?,?,?,?,?)";
@@ -6727,7 +6723,6 @@ public final class L2PcInstance extends L2Playable
 					
 					player = new L2PcInstance(objectId, template, rset.getString("account_name"), app);
 					player.setName(rset.getString("char_name"));
-					restorePremiumSystemData(player, rset.getString("account_name"));
 					player._lastAccess = rset.getLong("lastAccess");
 					
 					player.getStat().setExp(rset.getLong("exp"));
@@ -8734,14 +8729,14 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (sklTargetType == L2TargetType.GROUND)
 			{
-				if (!GeoData.getInstance().canSeeTarget(this, worldPosition))
+				if (!GeoEngine.getInstance().canSeeTarget(this, worldPosition))
 				{
 					sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return false;
 				}
 			}
-			else if (!GeoData.getInstance().canSeeTarget(this, target))
+			else if (!GeoEngine.getInstance().canSeeTarget(this, target))
 			{
 				sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -8749,7 +8744,7 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		if ((skill.getFlyType() == FlyType.CHARGE) && !GeoData.getInstance().canMove(this, target))
+		if ((skill.getFlyType() == FlyType.CHARGE) && !GeoEngine.getInstance().canMoveToTarget(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId()))
 		{
 			sendPacket(SystemMessageId.THE_TARGET_IS_LOCATED_WHERE_YOU_CANNOT_CHARGE);
 			return false;
@@ -13404,7 +13399,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// If there is no geodata loaded for the place we are client Z correction might cause falling damage.
-		if (!GeoData.getInstance().hasGeo(getX(), getY()))
+		if (!GeoEngine.getInstance().hasGeo(getX(), getY()))
 		{
 			return false;
 		}
@@ -13950,48 +13945,6 @@ public final class L2PcInstance extends L2Playable
 	public boolean hasPremiumStatus()
 	{
 		return Config.PREMIUM_SYSTEM_ENABLED && _premiumStatus;
-	}
-	
-	private static void restorePremiumSystemData(L2PcInstance player, String account)
-	{
-		boolean success = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
-		{
-			final PreparedStatement ps = con.prepareStatement(RESTORE_PREMIUMSERVICE);
-			ps.setString(1, account);
-			final ResultSet rs = ps.executeQuery();
-			while (rs.next())
-			{
-				success = true;
-				if (Config.PREMIUM_SYSTEM_ENABLED)
-				{
-					if (rs.getLong("enddate") <= System.currentTimeMillis())
-					{
-						PremiumManager.getInstance().removePremiumStatus(account);
-						player.setPremiumStatus(false);
-					}
-					else
-					{
-						player.setPremiumStatus(rs.getBoolean("premium_service"));
-					}
-				}
-				else
-				{
-					player.setPremiumStatus(false);
-				}
-			}
-			ps.close();
-		}
-		catch (Exception e)
-		{
-			_log.warning("Premium System: Could not restore premium system data for " + account + "." + e);
-			e.printStackTrace();
-		}
-		if (!success)
-		{
-			PremiumManager.getInstance().removePremiumStatus(player.getAccountName());
-			player.setPremiumStatus(false);
-		}
 	}
 	
 	public void setLastPetitionGmName(String gmName)

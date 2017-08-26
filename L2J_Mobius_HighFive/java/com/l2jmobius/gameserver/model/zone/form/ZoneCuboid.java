@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.zone.form;
 
 import java.awt.Rectangle;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 import com.l2jmobius.util.Rnd;
@@ -134,7 +134,7 @@ public class ZoneCuboid extends L2ZoneForm
 		{
 			x,
 			y,
-			GeoData.getInstance().getHeight(x, y, _z1)
+			GeoEngine.getInstance().getHeight(x, y, _z1)
 		};
 	}
 }

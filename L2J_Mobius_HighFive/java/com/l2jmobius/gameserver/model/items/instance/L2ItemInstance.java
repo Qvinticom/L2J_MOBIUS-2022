@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.enums.ShotType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
@@ -1540,7 +1540,7 @@ public final class L2ItemInstance extends L2Object
 			
 			if (_dropper != null)
 			{
-				final Location dropDest = GeoData.getInstance().moveCheck(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, _dropper.getInstanceId());
+				final Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(_dropper.getX(), _dropper.getY(), _dropper.getZ(), _x, _y, _z, _dropper.getInstanceId());
 				_x = dropDest.getX();
 				_y = dropDest.getY();
 				_z = dropDest.getZ();

@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.TrapAction;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -682,7 +682,7 @@ public final class CrystalCaverns extends AbstractInstance
 		final int _y = effector.getY() - (int) (offset * sin);
 		final int _z = effected.getZ();
 		
-		final Location destination = GeoData.getInstance().moveCheck(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
+		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(effected.getX(), effected.getY(), effected.getZ(), _x, _y, _z, effected.getInstanceId());
 		
 		effected.broadcastPacket(new FlyToLocation(effected, destination, FlyType.THROW_UP));
 		

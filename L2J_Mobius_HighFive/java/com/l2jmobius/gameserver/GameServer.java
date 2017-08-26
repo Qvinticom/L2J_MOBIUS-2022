@@ -84,8 +84,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
-import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.EffectHandler;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
@@ -242,12 +241,8 @@ public final class GameServer
 		
 		printSection("Geodata");
 		long geodataMemory = getUsedMemoryMB();
-		GeoData.getInstance();
-		if (Config.PATHFINDING > 0)
-		{
-			PathFinding.getInstance();
-		}
-		geodataMemory -= getUsedMemoryMB();
+		GeoEngine.getInstance();
+		geodataMemory = getUsedMemoryMB() - geodataMemory;
 		if (geodataMemory < 0)
 		{
 			geodataMemory = 0;

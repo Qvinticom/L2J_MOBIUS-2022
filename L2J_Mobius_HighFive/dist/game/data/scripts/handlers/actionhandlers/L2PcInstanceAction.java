@@ -19,7 +19,7 @@ package handlers.actionhandlers;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
@@ -102,13 +102,13 @@ public class L2PcInstanceAction implements IActionHandler
 					}
 					else
 					{
-						if (GeoData.getInstance().canSeeTarget(activeChar, player))
+						if (GeoEngine.getInstance().canSeeTarget(activeChar, player))
 						{
 							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 						}
 						else
 						{
-							final Location destination = GeoData.getInstance().moveCheck(activeChar, player);
+							final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), player.getX(), player.getY(), player.getZ(), activeChar.getInstanceId());
 							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 						}
 						activeChar.onActionRequest();
@@ -118,13 +118,13 @@ public class L2PcInstanceAction implements IActionHandler
 				{
 					// This Action Failed packet avoids activeChar getting stuck when clicking three or more times
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-					if (GeoData.getInstance().canSeeTarget(activeChar, player))
+					if (GeoEngine.getInstance().canSeeTarget(activeChar, player))
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					}
 					else
 					{
-						final Location destination = GeoData.getInstance().moveCheck(activeChar, player);
+						final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), player.getX(), player.getY(), player.getZ(), activeChar.getInstanceId());
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
 				}

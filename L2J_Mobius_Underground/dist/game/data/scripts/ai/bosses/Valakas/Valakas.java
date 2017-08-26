@@ -23,7 +23,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -475,7 +475,7 @@ public final class Valakas extends AbstractNpcAI
 			{
 				final int posX = npc.getX() + getRandom(-1400, 1400);
 				final int posY = npc.getY() + getRandom(-1400, 1400);
-				if (GeoData.getInstance().canMove(npc, posX, posY, npc.getZ()))
+				if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, npc.getZ(), npc.getInstanceWorld()))
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(posX, posY, npc.getZ(), 0));
 				}
