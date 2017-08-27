@@ -89,8 +89,8 @@ public class GeoEngine
 			for (int ry = L2World.TILE_Y_MIN; ry <= L2World.TILE_Y_MAX; ry++)
 			{
 				final String filename = String.format(GeoFormat.L2D.getFilename(), rx, ry);
-				final String filepath = Config.GEODATA_PATH;
-				File f = new File(filepath + filename);
+				final String filepath = Config.GEODATA_PATH + filename;
+				final File f = new File(filepath);
 				if (f.exists() && !f.isDirectory())
 				{
 					// region file is load-able, try to load it
