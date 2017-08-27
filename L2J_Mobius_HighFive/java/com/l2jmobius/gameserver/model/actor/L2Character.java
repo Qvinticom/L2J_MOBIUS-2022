@@ -42,7 +42,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -4373,7 +4372,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.disregardingGeodata = false;
 		
 		if (!isFlying() // flying chars not checked - even canSeeTarget doesn't work yet
-			&& (!isInsideZone(ZoneId.WATER) || isInsideZone(ZoneId.SIEGE))) // swimming also not checked unless in siege zone - but distance is limited
+			&& (!isInsideZone(ZoneId.WATER) || isInsideZone(ZoneId.SIEGE)) // swimming also not checked unless in siege zone - but distance is limited
+			&& !isWalker() && !isVehicle())
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -4429,8 +4429,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					}
 					return;
 				}
-				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
 				// location different if destination wasn't reached (or just z coord is different)
+				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
 				x = destiny.getX();
 				y = destiny.getY();
 				z = destiny.getZ();
@@ -4442,70 +4442,50 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
 			// than the original movement was and the LoS gives a shorter distance than 2000
 			// This way of detecting need for pathfinding could be changed.
-			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && (distance < 2000))
+			if (Config.PATHFINDING && ((originalDistance - distance) > 30))
 			{
 				// Path calculation
 				// Overrides previous movement check
-				if ((isPlayable() && !isInVehicle) || isMinion() || isInCombat())
+				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
+				if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 				{
-					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
-					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
+					// Even though there's no path found (remember geonodes aren't perfect),
+					// the mob is attacking and right now we set it so that the mob will go
+					// after target anyway, is dz is small enough.
+					// With cellpathfinding this approach could be changed but would require taking
+					// off the geonodes and some more checks.
+					// Summons will follow their masters no matter what.
+					// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader
+					if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
 					{
-						// Even though there's no path found (remember geonodes aren't perfect),
-						// the mob is attacking and right now we set it so that the mob will go
-						// after target anyway, is dz is small enough.
-						// With cellpathfinding this approach could be changed but would require taking
-						// off the geonodes and some more checks.
-						// Summons will follow their masters no matter what.
-						// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader
-						if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
-						{
-							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							return;
-						}
-						
-						m.disregardingGeodata = true;
-						x = originalX;
-						y = originalY;
-						z = originalZ;
-						distance = originalDistance;
+						getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+						return;
 					}
-					else
-					{
-						m.onGeodataPathIndex = 0; // on first segment
-						m.geoPathGtx = gtx;
-						m.geoPathGty = gty;
-						m.geoPathAccurateTx = originalX;
-						m.geoPathAccurateTy = originalY;
-						
-						x = m.geoPath.get(m.onGeodataPathIndex).getX();
-						y = m.geoPath.get(m.onGeodataPathIndex).getY();
-						z = m.geoPath.get(m.onGeodataPathIndex).getZ();
-						
-						// check for doors in the route
-						if (DoorData.getInstance().checkIfDoorsBetween(curX, curY, curZ, x, y, z, getInstanceId()))
-						{
-							m.geoPath = null;
-							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							return;
-						}
-						for (int i = 0; i < (m.geoPath.size() - 1); i++)
-						{
-							if (DoorData.getInstance().checkIfDoorsBetween(m.geoPath.get(i), m.geoPath.get(i + 1), getInstanceId()))
-							{
-								m.geoPath = null;
-								getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-								return;
-							}
-						}
-						
-						dx = x - curX;
-						dy = y - curY;
-						dz = z - curZ;
-						distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
-						sin = dy / distance;
-						cos = dx / distance;
-					}
+					
+					m.disregardingGeodata = true;
+					x = originalX;
+					y = originalY;
+					z = originalZ;
+					distance = originalDistance;
+				}
+				else
+				{
+					m.onGeodataPathIndex = 0; // on first segment
+					m.geoPathGtx = gtx;
+					m.geoPathGty = gty;
+					m.geoPathAccurateTx = originalX;
+					m.geoPathAccurateTy = originalY;
+					
+					x = m.geoPath.get(m.onGeodataPathIndex).getX();
+					y = m.geoPath.get(m.onGeodataPathIndex).getY();
+					z = m.geoPath.get(m.onGeodataPathIndex).getZ();
+					
+					dx = x - curX;
+					dy = y - curY;
+					dz = z - curZ;
+					distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
+					sin = dy / distance;
+					cos = dx / distance;
 				}
 			}
 			// If no distance to go through, the movement is canceled

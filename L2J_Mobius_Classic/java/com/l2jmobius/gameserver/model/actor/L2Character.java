@@ -51,7 +51,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.BasicProperty;
@@ -67,7 +66,6 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
-import com.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.CreatureContainer;
@@ -3579,7 +3577,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isWalker())
+		if (!isFlying() && !isInsideZone(ZoneId.WATER) && !isWalker() && !isVehicle())
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -3598,7 +3596,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// when geodata == 2, for all characters except mobs returning home (could be changed later to teleport if pathfinding fails)
 			// when geodata == 1, for l2playableinstance
 			// assuming intention_follow only when following owner
-			if ((Config.PATHFINDING && !(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint())) || (isPlayer() && !(isInVehicle && (distance > 1500))) || (isSummon() && !(getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW)))
+			if (Config.PATHFINDING && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()) || (isSummon() && !(getAI().getIntention() == CtrlIntention.AI_INTENTION_FOLLOW))))
 			{
 				if (isOnGeodataPath())
 				{
@@ -3636,7 +3634,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return;
 				}
 				// location different if destination wasn't reached (or just z coord is different)
-				Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceWorld());
+				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceWorld());
 				x = destiny.getX();
 				y = destiny.getY();
 				z = destiny.getZ();
@@ -3647,84 +3645,51 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result than the original movement was and the LoS gives a shorter distance than 2000
 			// This way of detecting need for pathfinding could be changed.
-			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && (distance < 2000) && !isControlBlocked() && !isInVehicle)
+			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
 			{
 				// Path calculation -- overrides previous movement check
-				if (isPlayable() || isMinion() || isInCombat())
+				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld(), isPlayable());
+				if ((m.geoPath == null) || (m.geoPath.size() < 2))
 				{
-					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld(), isPlayable());
-					if ((m.geoPath == null) || (m.geoPath.size() < 2))
+					// No path found
+					// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
+					// With cellpathfinding this approach could be changed but would require taking off the geonodes and some more checks.
+					// Summons will follow their masters no matter what.
+					// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader
+					if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
 					{
-						// No path found
-						// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
-						// With cellpathfinding this approach could be changed but would require taking off the geonodes and some more checks.
-						// Summons will follow their masters no matter what.
-						// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader
-						if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
-						{
-							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							return;
-						}
-						
-						m.disregardingGeodata = true;
-						x = originalX;
-						y = originalY;
-						z = originalZ;
-						distance = originalDistance;
+						getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+						return;
 					}
-					else
-					{
-						m.onGeodataPathIndex = 0; // on first segment
-						m.geoPathGtx = gtx;
-						m.geoPathGty = gty;
-						m.geoPathAccurateTx = originalX;
-						m.geoPathAccurateTy = originalY;
-						
-						x = m.geoPath.get(m.onGeodataPathIndex).getX();
-						y = m.geoPath.get(m.onGeodataPathIndex).getY();
-						z = m.geoPath.get(m.onGeodataPathIndex).getZ();
-						
-						// check for doors in the route
-						if (DoorData.getInstance().checkIfDoorsBetween(curX, curY, curZ, x, y, z, getInstanceWorld()))
-						{
-							m.geoPath = null;
-							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							return;
-						}
-						if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(curX, curY, curZ), new Location(x, y, z), getInstanceWorld()))
-						{
-							m.geoPath = null;
-							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							return;
-						}
-						for (int i = 0; i < (m.geoPath.size() - 1); i++)
-						{
-							if (DoorData.getInstance().checkIfDoorsBetween(m.geoPath.get(i), m.geoPath.get(i + 1), getInstanceWorld()))
-							{
-								m.geoPath = null;
-								getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-								return;
-							}
-							if (WarpedSpaceManager.getInstance().checkForWarpedSpace(m.geoPath.get(i), m.geoPath.get(i + 1), getInstanceWorld()))
-							{
-								m.geoPath = null;
-								getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-								return;
-							}
-						}
-						
-						dx = x - curX;
-						dy = y - curY;
-						dz = z - curZ;
-						distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
-						sin = dy / distance;
-						cos = dx / distance;
-					}
+					
+					m.disregardingGeodata = true;
+					x = originalX;
+					y = originalY;
+					z = originalZ;
+					distance = originalDistance;
+				}
+				else
+				{
+					m.onGeodataPathIndex = 0; // on first segment
+					m.geoPathGtx = gtx;
+					m.geoPathGty = gty;
+					m.geoPathAccurateTx = originalX;
+					m.geoPathAccurateTy = originalY;
+					
+					x = m.geoPath.get(m.onGeodataPathIndex).getX();
+					y = m.geoPath.get(m.onGeodataPathIndex).getY();
+					z = m.geoPath.get(m.onGeodataPathIndex).getZ();
+					
+					dx = x - curX;
+					dy = y - curY;
+					dz = z - curZ;
+					distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
+					sin = dy / distance;
+					cos = dx / distance;
 				}
 			}
-			
 			// If no distance to go through, the movement is canceled
-			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || isControlBlocked()))
+			if ((distance < 1) && (Config.PATHFINDING || isPlayable()))
 			{
 				if (isSummon())
 				{
@@ -3746,7 +3711,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
 		m._xDestination = x;
 		m._yDestination = y;
-		m._zDestination = z;
+		m._zDestination = z; // this is what was requested from client
 		
 		// Calculate and set the heading of the L2Character
 		m._heading = 0; // initial value for coordinate sync

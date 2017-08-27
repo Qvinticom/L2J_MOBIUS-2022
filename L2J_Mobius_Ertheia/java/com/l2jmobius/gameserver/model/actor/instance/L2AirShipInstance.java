@@ -133,6 +133,7 @@ public class L2AirShipInstance extends L2Vehicle
 		player.broadcastPacket(new ExGetOnAirShip(player, this));
 		player.setXYZ(getX(), getY(), getZ());
 		player.revalidateZone(true);
+		player.stopMove(null);
 		return true;
 	}
 	

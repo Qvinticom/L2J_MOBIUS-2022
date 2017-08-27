@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.ListIterator;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 import com.l2jmobius.gameserver.geoengine.pathfinding.Node;
 import com.l2jmobius.gameserver.geoengine.pathfinding.NodeBuffer;
@@ -212,7 +211,7 @@ final class GeoEnginePathfinding extends GeoEngine
 	}
 	
 	/**
-	 * Provides optimize selection of the buffer. When all pre-initialized buffer are locked, creates new buffer and log this situation.
+	 * Provides optimize selection of the buffer. When all pre-initialized buffer are locked, creates new buffer.
 	 * @param size : pre-calculated minimal required size
 	 * @param playable : moving object is playable?
 	 * @return NodeBuffer : buffer
@@ -236,25 +235,12 @@ final class GeoEnginePathfinding extends GeoEngine
 					continue;
 				}
 				
-				holder._uses++;
-				if (playable)
-				{
-					holder._playableUses++;
-				}
-				
-				holder._elapsed += buffer.getElapsedTime();
 				return buffer;
 			}
 			
 			// NodeBuffer not found, allocate temporary buffer
 			current = new NodeBuffer(holder._size);
 			current.isLocked();
-			
-			holder._overflows++;
-			if (playable)
-			{
-				holder._playableOverflows++;
-			}
 		}
 		
 		return current;
@@ -266,43 +252,17 @@ final class GeoEnginePathfinding extends GeoEngine
 	private static final class BufferHolder
 	{
 		final int _size;
-		final int _count;
-		ArrayList<NodeBuffer> _buffer;
-		
-		// statistics
-		int _playableUses = 0;
-		int _uses = 0;
-		int _playableOverflows = 0;
-		int _overflows = 0;
-		long _elapsed = 0;
+		List<NodeBuffer> _buffer;
 		
 		public BufferHolder(int size, int count)
 		{
 			_size = size;
-			_count = count;
 			_buffer = new ArrayList<>(count);
 			
 			for (int i = 0; i < count; i++)
 			{
 				_buffer.add(new NodeBuffer(size));
 			}
-		}
-		
-		@Override
-		public String toString()
-		{
-			final StringBuilder sb = new StringBuilder(100);
-			
-			StringUtil.append(sb, "Buffer ", String.valueOf(_size), "x", String.valueOf(_size), ": count=", String.valueOf(_count), " uses=", String.valueOf(_playableUses), "/", String.valueOf(_uses));
-			
-			if (_uses > 0)
-			{
-				StringUtil.append(sb, " total/avg(ms)=", String.valueOf(_elapsed), "/", String.format("%1.2f", (double) _elapsed / _uses));
-			}
-			
-			StringUtil.append(sb, " ovf=", String.valueOf(_playableOverflows), "/", String.valueOf(_overflows));
-			
-			return sb.toString();
 		}
 	}
 }

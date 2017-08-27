@@ -134,6 +134,7 @@ public class L2AirShipInstance extends L2Vehicle
 		player.getKnownList().removeAllKnownObjects();
 		player.setXYZ(getX(), getY(), getZ());
 		player.revalidateZone(true);
+		player.stopMove(null);
 		return true;
 	}
 	
