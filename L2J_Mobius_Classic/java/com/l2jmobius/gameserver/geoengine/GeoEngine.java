@@ -84,7 +84,6 @@ public class GeoEngine
 		
 		// load geo files according to geoengine config setup
 		int loaded = 0;
-		int failed = 0;
 		for (int rx = L2World.TILE_X_MIN; rx <= L2World.TILE_X_MAX; rx++)
 		{
 			for (int ry = L2World.TILE_Y_MIN; ry <= L2World.TILE_Y_MAX; ry++)
@@ -99,10 +98,6 @@ public class GeoEngine
 					{
 						loaded++;
 					}
-					else
-					{
-						failed++;
-					}
 				}
 				else
 				{
@@ -111,7 +106,8 @@ public class GeoEngine
 				}
 			}
 		}
-		_log.info("GeoEngine: Loaded " + loaded + " L2D region files.");
+		
+		_log.info("GeoEngine: Loaded " + loaded + " geodata files.");
 		
 		// Avoid wrong config when no files loaded
 		if ((loaded == 0) && (Config.COORD_SYNCHRONIZE == 2))
@@ -122,12 +118,6 @@ public class GeoEngine
 		
 		// release multilayer block temporarily buffer
 		BlockMultilayer.release();
-		
-		if (failed > 0)
-		{
-			_log.info("GeoEngine: Failed to load " + failed + " L2D region files. Please consider to check your \"GeoEngine.ini\" settings and location of \"XX_YY.L2D\" geodata files.");
-			System.exit(1);
-		}
 	}
 	
 	/**
