@@ -4274,6 +4274,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void moveToLocation(int x, int y, int z, int offset)
 	{
+		// Do not move while character is attacking or casting.
+		// Fixes player attack glitch while target is moving.
+		if (isAttackingNow() || isCastingNow())
+		{
+			return;
+		}
+		
 		// Get the Move Speed of the L2Charcater
 		final double speed = getMoveSpeed();
 		if ((speed <= 0) || isMovementDisabled())
@@ -4282,9 +4289,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Get current position of the L2Character
-		final int curX = super.getX();
-		final int curY = super.getY();
-		final int curZ = super.getZ();
+		final int curX = getX();
+		final int curY = getY();
+		final int curZ = getZ();
 		
 		// Calculate distance (dx,dy) between current position and destination
 		// TODO: improve Z axis move/follow support when dx,dy are small compared to dz
@@ -4344,9 +4351,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				// Notify the AI that the L2Character is arrived at destination
 				getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
-				
 				return;
 			}
+			
 			// Calculate movement angles needed
 			sin = dy / distance;
 			cos = dx / distance;
@@ -4389,9 +4396,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
 			
 			// Movement checks:
-			// When pathfinding enabled, for all characters except monsters returning home (could be changed later to teleport if pathfinding fails)
+			// when geodata == 2, for all characters except mobs returning home (could be changed later to teleport if pathfinding fails)
+			// when geodata == 1, for l2playableinstance
+			// assuming intention_follow only when following owner
 			if ((Config.PATHFINDING && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()))) //
-				|| (isPlayer() && !(isInVehicle && (distance > 1500))) //
 				|| (this instanceof L2RiftInvaderInstance))
 			{
 				if (isOnGeodataPath())
@@ -4440,20 +4448,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
 			}
 			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
-			// than the original movement was and the LoS gives a shorter distance than 2000
 			// This way of detecting need for pathfinding could be changed.
-			if (Config.PATHFINDING && ((originalDistance - distance) > 30))
+			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isInVehicle)
 			{
-				// Path calculation
-				// Overrides previous movement check
-				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId(), isPlayable());
+				// Path calculation -- overrides previous movement check
+				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 				if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 				{
-					// Even though there's no path found (remember geonodes aren't perfect),
-					// the mob is attacking and right now we set it so that the mob will go
-					// after target anyway, is dz is small enough.
-					// With cellpathfinding this approach could be changed but would require taking
-					// off the geonodes and some more checks.
+					// No path found
+					// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
+					// With cellpathfinding this approach could be changed but would require taking off the geonodes and some more checks.
 					// Summons will follow their masters no matter what.
 					// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader
 					if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))

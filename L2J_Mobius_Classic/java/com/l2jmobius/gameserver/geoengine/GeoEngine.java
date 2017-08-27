@@ -1288,10 +1288,9 @@ public class GeoEngine
 	 * @param ty : target y
 	 * @param tz : target z
 	 * @param instance
-	 * @param playable : moving object is playable?
 	 * @return {@code List<Location>} : complete path from nodes
 	 */
-	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, Instance instance, boolean playable)
+	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, Instance instance)
 	{
 		return null;
 	}

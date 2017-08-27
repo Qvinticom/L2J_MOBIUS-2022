@@ -38,7 +38,7 @@ public class AdminPathNode implements IAdminCommandHandler
 		{
 			if (activeChar.getTarget() != null)
 			{
-				List<Location> path = GeoEngine.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld(), true);
+				final List<Location> path = GeoEngine.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld());
 				if (path == null)
 				{
 					activeChar.sendMessage("No route found or pathfinding disabled.");

@@ -65,7 +65,7 @@ final class GeoEnginePathfinding extends GeoEngine
 	}
 	
 	@Override
-	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, Instance instance, boolean playable)
+	public List<Location> findPath(int ox, int oy, int oz, int tx, int ty, int tz, Instance instance)
 	{
 		// get origin and check existing geo coords
 		int gox = getGeoX(ox);
@@ -88,7 +88,7 @@ final class GeoEnginePathfinding extends GeoEngine
 		short gtz = getHeightNearest(gtx, gty, tz);
 		
 		// Prepare buffer for pathfinding calculations
-		NodeBuffer buffer = getBuffer(64 + (2 * Math.max(Math.abs(gox - gtx), Math.abs(goy - gty))), playable);
+		final NodeBuffer buffer = getBuffer(64 + (2 * Math.max(Math.abs(gox - gtx), Math.abs(goy - gty))));
 		if (buffer == null)
 		{
 			return null;
@@ -213,10 +213,9 @@ final class GeoEnginePathfinding extends GeoEngine
 	/**
 	 * Provides optimize selection of the buffer. When all pre-initialized buffer are locked, creates new buffer.
 	 * @param size : pre-calculated minimal required size
-	 * @param playable : moving object is playable?
 	 * @return NodeBuffer : buffer
 	 */
-	private final NodeBuffer getBuffer(int size, boolean playable)
+	private final NodeBuffer getBuffer(int size)
 	{
 		NodeBuffer current = null;
 		for (BufferHolder holder : _buffers)

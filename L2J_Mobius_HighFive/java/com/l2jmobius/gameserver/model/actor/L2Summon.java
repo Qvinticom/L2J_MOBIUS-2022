@@ -660,7 +660,7 @@ public abstract class L2Summon extends L2Playable
 			return false;
 		}
 		
-		if ((this != target) && skill.isPhysical() && Config.PATHFINDING && (GeoEngine.getInstance().findPath(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId(), true) == null))
+		if ((this != target) && skill.isPhysical() && Config.PATHFINDING && (GeoEngine.getInstance().findPath(getX(), getY(), getZ(), target.getX(), target.getY(), target.getZ(), getInstanceId()) == null))
 		{
 			sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 			return false;

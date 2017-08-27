@@ -3521,15 +3521,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			distance = Math.hypot(dx, dy);
 		}
 		
+		// @formatter:off
 		// Define movement angles needed
 		// ^
-		// | X (x,y)
-		// | /
-		// | /distance
+		// |    X (x,y)
+		// |   /
+		// |  / distance
 		// | /
 		// |/ angle
 		// X ---------->
 		// (curx,cury)
+		// @formatter:on
 		
 		double cos;
 		double sin;
@@ -3643,13 +3645,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				dz = z - curZ;
 				distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
 			}
-			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result than the original movement was and the LoS gives a shorter distance than 2000
+			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
 			// This way of detecting need for pathfinding could be changed.
 			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
 			{
 				// Path calculation -- overrides previous movement check
-				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld(), isPlayable());
-				if ((m.geoPath == null) || (m.geoPath.size() < 2))
+				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
+				if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 				{
 					// No path found
 					// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
@@ -3735,9 +3737,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
-		
-		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
-		// to destination by GameTimeController
+		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
 	}
 	
 	public boolean moveToNextRoutePoint()

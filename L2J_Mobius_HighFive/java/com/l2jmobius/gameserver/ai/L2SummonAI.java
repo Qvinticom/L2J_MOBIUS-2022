@@ -50,7 +50,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	@Override
 	protected void onIntentionAttack(L2Character target)
 	{
-		if (Config.PATHFINDING && (GeoEngine.getInstance().findPath(_actor.getX(), _actor.getY(), _actor.getZ(), target.getX(), target.getY(), target.getZ(), _actor.getInstanceId(), true) == null))
+		if (Config.PATHFINDING && (GeoEngine.getInstance().findPath(_actor.getX(), _actor.getY(), _actor.getZ(), target.getX(), target.getY(), target.getZ(), _actor.getInstanceId()) == null))
 		{
 			return;
 		}
