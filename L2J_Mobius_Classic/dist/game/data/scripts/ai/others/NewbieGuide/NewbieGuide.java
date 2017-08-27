@@ -76,8 +76,7 @@ public class NewbieGuide extends AbstractNpcAI
 		}
 		else
 		{
-			// TODO: htmltext = npc.getId() + "-" + event + (player.isMageClass() ? "m" : "f") + ".htm";
-			htmltext = npc.getId() + "-" + event + ".htm";
+			htmltext = npc.getId() + "-" + event + (player.isMageClass() ? "m" : "f") + ".htm";
 		}
 		return htmltext;
 	}
