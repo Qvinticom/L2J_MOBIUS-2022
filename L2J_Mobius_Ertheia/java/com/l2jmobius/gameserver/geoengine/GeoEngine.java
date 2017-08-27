@@ -88,9 +88,7 @@ public class GeoEngine
 		{
 			for (int ry = L2World.TILE_Y_MIN; ry <= L2World.TILE_Y_MAX; ry++)
 			{
-				final String filename = String.format(GeoFormat.L2D.getFilename(), rx, ry);
-				final String filepath = Config.GEODATA_PATH + filename;
-				final File f = new File(filepath);
+				final File f = new File(Config.GEODATA_PATH + String.format(GeoFormat.L2D.getFilename(), rx, ry));
 				if (f.exists() && !f.isDirectory())
 				{
 					// region file is load-able, try to load it
@@ -129,10 +127,9 @@ public class GeoEngine
 	private final boolean loadGeoBlocks(int regionX, int regionY)
 	{
 		final String filename = String.format(GeoFormat.L2D.getFilename(), regionX, regionY);
-		final String filepath = Config.GEODATA_PATH + filename;
 		
 		// standard load
-		try (RandomAccessFile raf = new RandomAccessFile(filepath, "r");
+		try (RandomAccessFile raf = new RandomAccessFile(Config.GEODATA_PATH + filename, "r");
 			FileChannel fc = raf.getChannel())
 		{
 			// initialize file buffer
@@ -155,19 +152,24 @@ public class GeoEngine
 					switch (type)
 					{
 						case GeoStructure.TYPE_FLAT_L2D:
+						{
 							_blocks[blockX + ix][blockY + iy] = new BlockFlat(buffer, GeoFormat.L2D);
 							break;
-						
+						}
 						case GeoStructure.TYPE_COMPLEX_L2D:
+						{
 							_blocks[blockX + ix][blockY + iy] = new BlockComplex(buffer, GeoFormat.L2D);
 							break;
-						
+						}
 						case GeoStructure.TYPE_MULTILAYER_L2D:
+						{
 							_blocks[blockX + ix][blockY + iy] = new BlockMultilayer(buffer, GeoFormat.L2D);
 							break;
-						
+						}
 						default:
+						{
 							throw new IllegalArgumentException("Unknown block type: " + type);
+						}
 					}
 				}
 			}
