@@ -998,7 +998,8 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 		}
 		
-		return GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), target.getX(), target.getY(), target.getZ(), npc.getInstanceWorld());
+		// fixes monsters not avoiding obstacles
+		return true; // GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), target.getX(), target.getY(), target.getZ(), npc.getInstanceWorld());
 	}
 	
 	private L2Character skillTargetReconsider(Skill skill, boolean insideCastRange)

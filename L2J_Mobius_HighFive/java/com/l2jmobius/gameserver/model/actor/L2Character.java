@@ -4378,9 +4378,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if (!isFlying() // flying chars not checked - even canSeeTarget doesn't work yet
-			&& (!isInsideZone(ZoneId.WATER) || isInsideZone(ZoneId.SIEGE)) // swimming also not checked unless in siege zone - but distance is limited
-			&& !isWalker() && !isVehicle())
+		if (!isFlying() // flying chars not checked
+			&& (!isInsideZone(ZoneId.WATER) || isInsideZone(ZoneId.SIEGE)) // swimming not checked unless in siege zone
+			&& !isWalker() && !isVehicle()) // walkers and vehicles also not checked
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -4395,12 +4395,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final int gtx = (originalX - L2World.MAP_MIN_X) >> 4;
 			final int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
 			
-			// Movement checks:
-			// when geodata == 2, for all characters except mobs returning home (could be changed later to teleport if pathfinding fails)
-			// when geodata == 1, for l2playableinstance
-			// assuming intention_follow only when following owner
-			if ((Config.PATHFINDING && (!(isAttackable() && ((L2Attackable) this).isReturningToSpawnPoint()))) //
-				|| (this instanceof L2RiftInvaderInstance))
+			// Movement checks.
+			if (Config.PATHFINDING)
 			{
 				if (isOnGeodataPath())
 				{
@@ -4418,25 +4414,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					}
 				}
 				
-				if ((curX < L2World.MAP_MIN_X) || (curX > L2World.MAP_MAX_X) || (curY < L2World.MAP_MIN_Y) || (curY > L2World.MAP_MAX_Y))
-				{
-					// Temporary fix for character outside world region errors
-					_log.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
-					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					if (isPlayer())
-					{
-						getActingPlayer().logout();
-					}
-					else if (isSummon())
-					{
-						return; // prevention when summon get out of world coords, player will not loose him, unsummon handled from pcinstance
-					}
-					else
-					{
-						onDecay();
-					}
-					return;
-				}
+				// Temporary fix for character outside world region errors (should not happen)
+				/*
+				 * if ((curX < L2World.MAP_MIN_X) || (curX > L2World.MAP_MAX_X) || (curY < L2World.MAP_MIN_Y) || (curY > L2World.MAP_MAX_Y)) { _log.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
+				 * getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); if (isPlayer()) { getActingPlayer().logout(); } else if (isSummon()) { return; } else { onDecay(); } return; }
+				 */
+				
 				// location different if destination wasn't reached (or just z coord is different)
 				final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
 				x = destiny.getX();
@@ -4447,51 +4430,54 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				dz = z - curZ;
 				distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
 			}
-			// Pathfinding checks. Only when geodata setting is 2, the LoS check gives shorter result
-			// This way of detecting need for pathfinding could be changed.
+			
+			// Pathfinding checks.
 			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isInVehicle)
 			{
 				// Path calculation -- overrides previous movement check
-				m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
-				if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
+				if (isPlayable() || isMinion() || isInCombat())
 				{
-					// No path found
-					// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
-					// With cellpathfinding this approach could be changed but would require taking off the geonodes and some more checks.
-					// Summons will follow their masters no matter what.
-					// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader
-					if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
+					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
+					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-						return;
+						// No path found
+						// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
+						// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader.
+						// Summons will follow their masters no matter what.
+						if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
+						{
+							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+							return;
+						}
+						
+						m.disregardingGeodata = true;
+						x = originalX;
+						y = originalY;
+						z = originalZ;
+						distance = originalDistance;
 					}
-					
-					m.disregardingGeodata = true;
-					x = originalX;
-					y = originalY;
-					z = originalZ;
-					distance = originalDistance;
-				}
-				else
-				{
-					m.onGeodataPathIndex = 0; // on first segment
-					m.geoPathGtx = gtx;
-					m.geoPathGty = gty;
-					m.geoPathAccurateTx = originalX;
-					m.geoPathAccurateTy = originalY;
-					
-					x = m.geoPath.get(m.onGeodataPathIndex).getX();
-					y = m.geoPath.get(m.onGeodataPathIndex).getY();
-					z = m.geoPath.get(m.onGeodataPathIndex).getZ();
-					
-					dx = x - curX;
-					dy = y - curY;
-					dz = z - curZ;
-					distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
-					sin = dy / distance;
-					cos = dx / distance;
+					else
+					{
+						m.onGeodataPathIndex = 0; // on first segment
+						m.geoPathGtx = gtx;
+						m.geoPathGty = gty;
+						m.geoPathAccurateTx = originalX;
+						m.geoPathAccurateTy = originalY;
+						
+						x = m.geoPath.get(m.onGeodataPathIndex).getX();
+						y = m.geoPath.get(m.onGeodataPathIndex).getY();
+						z = m.geoPath.get(m.onGeodataPathIndex).getZ();
+						
+						dx = x - curX;
+						dy = y - curY;
+						dz = z - curZ;
+						distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
+						sin = dy / distance;
+						cos = dx / distance;
+					}
 				}
 			}
+			
 			// If no distance to go through, the movement is canceled
 			if ((distance < 1) && (Config.PATHFINDING || isPlayable() || (this instanceof L2RiftInvaderInstance) || isAfraid()))
 			{
@@ -4539,9 +4525,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
-		
-		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
-		// to destination by GameTimeController
+		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
 	}
 	
 	public boolean moveToNextRoutePoint()
