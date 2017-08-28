@@ -51,13 +51,13 @@ public class GeoLocation extends Location
 	@Override
 	public int getX()
 	{
-		return GeoEngine.getInstance().getWorldX(_x);
+		return GeoEngine.getWorldX(_x);
 	}
 	
 	@Override
 	public int getY()
 	{
-		return GeoEngine.getInstance().getWorldY(_y);
+		return GeoEngine.getWorldY(_y);
 	}
 	
 	public byte getNSWE()

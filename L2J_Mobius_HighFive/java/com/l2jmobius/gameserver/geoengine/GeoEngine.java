@@ -224,7 +224,7 @@ public class GeoEngine
 	 * @param worldX
 	 * @return int : Geo X
 	 */
-	public final int getGeoX(int worldX)
+	public static final int getGeoX(int worldX)
 	{
 		return (MathUtil.limit(worldX, L2World.MAP_MIN_X, L2World.MAP_MAX_X) - L2World.MAP_MIN_X) >> 4;
 	}
@@ -234,7 +234,7 @@ public class GeoEngine
 	 * @param worldY
 	 * @return int : Geo Y
 	 */
-	public final int getGeoY(int worldY)
+	public static final int getGeoY(int worldY)
 	{
 		return (MathUtil.limit(worldY, L2World.MAP_MIN_Y, L2World.MAP_MAX_Y) - L2World.MAP_MIN_Y) >> 4;
 	}
@@ -244,7 +244,7 @@ public class GeoEngine
 	 * @param geoX
 	 * @return int : World X
 	 */
-	public final int getWorldX(int geoX)
+	public static final int getWorldX(int geoX)
 	{
 		return (MathUtil.limit(geoX, 0, GeoStructure.GEO_CELLS_X) << 4) + L2World.MAP_MIN_X + 8;
 	}
@@ -254,7 +254,7 @@ public class GeoEngine
 	 * @param geoY
 	 * @return int : World Y
 	 */
-	public final int getWorldY(int geoY)
+	public static final int getWorldY(int geoY)
 	{
 		return (MathUtil.limit(geoY, 0, GeoStructure.GEO_CELLS_Y) << 4) + L2World.MAP_MIN_Y + 8;
 	}
@@ -566,6 +566,11 @@ public class GeoEngine
 		final int ty = target.getY();
 		final int tz = target.getZ();
 		
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), false))
+		{
+			return false;
+		}
+		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
 		final int goy = getGeoY(oy);
@@ -607,7 +612,7 @@ public class GeoEngine
 		}
 		
 		// perform geodata check
-		return door ? checkSeeOriginal(gox, goy, goz, oheight, gtx, gty, gtz, theight) : checkSee(gox, goy, goz, oheight, gtx, gty, gtz, theight);
+		return door ? checkSeeOriginal(gox, goy, goz, oheight, gtx, gty, gtz, theight, origin.getInstanceId()) : checkSee(gox, goy, goz, oheight, gtx, gty, gtz, theight, origin.getInstanceId());
 	}
 	
 	/**
@@ -625,6 +630,11 @@ public class GeoEngine
 		final int tx = position.getX();
 		final int ty = position.getY();
 		final int tz = position.getZ();
+		
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), false))
+		{
+			return false;
+		}
 		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
@@ -660,7 +670,7 @@ public class GeoEngine
 		}
 		
 		// perform geodata check
-		return checkSee(gox, goy, goz, oheight, gtx, gty, gtz, 0);
+		return checkSee(gox, goy, goz, oheight, gtx, gty, gtz, 0, origin.getInstanceId());
 	}
 	
 	/**
@@ -673,9 +683,10 @@ public class GeoEngine
 	 * @param gty : target Y geodata coordinate
 	 * @param gtz : target Z geodata coordinate
 	 * @param theight : target height (if instance of {@link Character})
+	 * @param instanceId
 	 * @return {@code boolean} : True, when target can be seen.
 	 */
-	protected final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight)
+	protected final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, int instanceId)
 	{
 		// get line of sight Z coordinates
 		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
@@ -855,9 +866,10 @@ public class GeoEngine
 	 * @param gty : target Y geodata coordinate
 	 * @param gtz : target Z geodata coordinate
 	 * @param theight : target height (if instance of {@link Character} or {@link L2DoorInstance})
+	 * @param instanceId
 	 * @return {@code boolean} : True, when target can be seen.
 	 */
-	protected final boolean checkSeeOriginal(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight)
+	protected final boolean checkSeeOriginal(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, int instanceId)
 	{
 		// get line of sight Z coordinates
 		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
@@ -1038,11 +1050,6 @@ public class GeoEngine
 	 */
 	public final boolean canMoveToTarget(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
-		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instanceId, false))
-		{
-			return false;
-		}
-		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
 		final int goy = getGeoY(oy);
@@ -1087,11 +1094,6 @@ public class GeoEngine
 	 */
 	public final Location canMoveToTargetLoc(int ox, int oy, int oz, int tx, int ty, int tz, int instanceId)
 	{
-		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instanceId, false))
-		{
-			return new Location(ox, oy, getHeight(ox, oy, oz));
-		}
-		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
 		final int goy = getGeoY(oy);
