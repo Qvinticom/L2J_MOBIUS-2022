@@ -70,7 +70,7 @@ public final class GeoDataConverter
 		_format = type.equalsIgnoreCase("J") ? GeoFormat.L2J : GeoFormat.L2OFF;
 		
 		// start conversion
-		System.out.println("GeoDataConverter: Converting all " + _format.toString() + " files.");
+		System.out.println("GeoDataConverter: Converting all " + _format + " files.");
 		
 		// initialize geodata container
 		_blocks = new ABlock[GeoStructure.REGION_BLOCKS_X][GeoStructure.REGION_BLOCKS_Y];
@@ -116,7 +116,7 @@ public final class GeoDataConverter
 				}
 			}
 		}
-		System.out.println("GeoDataConverter: Converted " + converted + " " + _format.toString() + " to L2D region file(s).");
+		System.out.println("GeoDataConverter: Converted " + converted + " " + _format + " to L2D region file(s).");
 		
 		// release multilayer block temporarily buffer
 		BlockMultilayer.release();
@@ -127,7 +127,7 @@ public final class GeoDataConverter
 	 * @param filename : The name of the to load.
 	 * @return boolean : True when successful.
 	 */
-	private static final boolean loadGeoBlocks(String filename)
+	private static boolean loadGeoBlocks(String filename)
 	{
 		// region file is load-able, try to load it
 		try (RandomAccessFile raf = new RandomAccessFile(Config.GEODATA_PATH + filename, "r");
@@ -217,7 +217,7 @@ public final class GeoDataConverter
 	 * Recalculate diagonal flags for the region file.
 	 * @return boolean : True when successful.
 	 */
-	private static final boolean recalculateNswe()
+	private static boolean recalculateNswe()
 	{
 		try
 		{
@@ -268,7 +268,7 @@ public final class GeoDataConverter
 	 * @param nswe : NSWE flag to be updated.
 	 * @return byte : Updated NSWE flag.
 	 */
-	private static final byte updateNsweBelow(int x, int y, short z, byte nswe)
+	private static byte updateNsweBelow(int x, int y, short z, byte nswe)
 	{
 		// calculate virtual layer height
 		short height = (short) (z + GeoStructure.CELL_IGNORE_HEIGHT);
@@ -306,7 +306,7 @@ public final class GeoDataConverter
 		return nswe;
 	}
 	
-	private static final byte getNsweBelow(int geoX, int geoY, short worldZ)
+	private static byte getNsweBelow(int geoX, int geoY, short worldZ)
 	{
 		// out of geo coordinates
 		if ((geoX < 0) || (geoX >= GeoStructure.REGION_CELLS_X))
@@ -333,7 +333,7 @@ public final class GeoDataConverter
 	 * @param filename : The name of file to save.
 	 * @return boolean : True when successful.
 	 */
-	private static final boolean saveGeoBlocks(String filename)
+	private static boolean saveGeoBlocks(String filename)
 	{
 		try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(Config.GEODATA_PATH + filename), GeoStructure.REGION_BLOCKS * GeoStructure.BLOCK_CELLS * 3))
 		{
@@ -357,7 +357,7 @@ public final class GeoDataConverter
 		}
 	}
 	
-	private static final void loadGeoengineConfigs()
+	private static void loadGeoengineConfigs()
 	{
 		final PropertiesParser geoData = new PropertiesParser(Config.GEODATA_FILE);
 		Config.GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");

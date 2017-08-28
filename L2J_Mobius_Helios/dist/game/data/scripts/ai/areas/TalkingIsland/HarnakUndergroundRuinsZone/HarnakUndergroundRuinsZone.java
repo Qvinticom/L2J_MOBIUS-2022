@@ -48,7 +48,7 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 	private static final int[] NORMAL_MOBS = {22931, 22932, 22933, 22934, 22935, 22936, 22937, 22938, 23349};
 	//@formatter:on
 	static Map<L2ZoneType, zoneInfo> _roomInfo = new HashMap<>(24);
-	final static Set<SpawnTemplate> _templates = ConcurrentHashMap.newKeySet();
+	static final Set<SpawnTemplate> _templates = ConcurrentHashMap.newKeySet();
 	
 	public HarnakUndergroundRuinsZone()
 	{

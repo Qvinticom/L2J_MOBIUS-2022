@@ -164,13 +164,10 @@ public class Q10447_TimingIsEverything extends Quest
 			showOnScreenMsg(qs.getPlayer(), NpcStringId.YOU_TOOK_DOWN_THE_NERVA_ORCS_AND_GOT_THEIR_TEMPORARY_PRISON_KEY, ExShowScreenMessage.BOTTOM_RIGHT, 5000);
 			qs.setCond(2, true);
 		}
-		else
+		else if (getRandom(100) < 0.03)
 		{
-			if (getRandom(100) < 0.03)
-			{
-				showOnScreenMsg(killer, NpcStringId.YOU_HAVE_OBTAINED_NERVA_S_TEMPORARY_PRISON_KEY, ExShowScreenMessage.BOTTOM_RIGHT, 5000);
-				giveItems(killer, NARVAS_PRISON_KEY, 1);
-			}
+			showOnScreenMsg(killer, NpcStringId.YOU_HAVE_OBTAINED_NERVA_S_TEMPORARY_PRISON_KEY, ExShowScreenMessage.BOTTOM_RIGHT, 5000);
+			giveItems(killer, NARVAS_PRISON_KEY, 1);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

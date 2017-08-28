@@ -31,5 +31,5 @@ interface ValueMatcher
 	 * @param value The value.
 	 * @return true if the given value matches the rules of the ValueMatcher, false otherwise.
 	 */
-	public boolean match(int value);
+	boolean match(int value);
 }

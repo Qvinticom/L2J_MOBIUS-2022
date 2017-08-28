@@ -519,19 +519,19 @@ public class SchedulingPattern
 		 * @return The parsed value.
 		 * @throws Exception If the value can't be parsed.
 		 */
-		public int parse(String value) throws Exception;
+		int parse(String value) throws Exception;
 		
 		/**
 		 * Returns the minimum value accepred by the parser.
 		 * @return The minimum value accepred by the parser.
 		 */
-		public int getMinValue();
+		int getMinValue();
 		
 		/**
 		 * Returns the maximum value accepred by the parser.
 		 * @return The maximum value accepred by the parser.
 		 */
-		public int getMaxValue();
+		int getMaxValue();
 	}
 	
 	/**

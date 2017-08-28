@@ -43,16 +43,16 @@ public class NornilsGarden extends AbstractInstance
 	private static final int BOZ_CORE = 33781;
 	private static final int SPICULA_ZERO = 25901;
 	// Monsters
-	private final static int BOZ_STAGE1 = 19298;
-	private final static int BOZ_STAGE2 = 19305;
-	private final static int BOZ_STAGE3 = 19403;
-	private final static int BOZ_STAGE4 = BOZ_STAGE2;
-	private final static int SPICULA_ELITE_CAPTAIN = 19299;
-	private final static int SPICULA_ELITE_LIEUTNANT = 19300;
-	private final static int ELITE_SOLDIER_CLONE_1 = 19301;
-	private final static int SPICULA_ELITE_GUARD_1 = 19302;
-	private final static int ELITE_SOLDIER_CLONE_2 = 19303;
-	private final static int SPICULA_ELITE_GUARD_2 = 19304;
+	private static final int BOZ_STAGE1 = 19298;
+	private static final int BOZ_STAGE2 = 19305;
+	private static final int BOZ_STAGE3 = 19403;
+	private static final int BOZ_STAGE4 = BOZ_STAGE2;
+	private static final int SPICULA_ELITE_CAPTAIN = 19299;
+	private static final int SPICULA_ELITE_LIEUTNANT = 19300;
+	private static final int ELITE_SOLDIER_CLONE_1 = 19301;
+	private static final int SPICULA_ELITE_GUARD_1 = 19302;
+	private static final int ELITE_SOLDIER_CLONE_2 = 19303;
+	private static final int SPICULA_ELITE_GUARD_2 = 19304;
 	private static final int[] ATTACABLE_MONSTERS =
 	{
 		SPICULA_ELITE_CAPTAIN,
@@ -70,11 +70,11 @@ public class NornilsGarden extends AbstractInstance
 	private static final SkillHolder DARK_BUSTER = new SkillHolder(15237, 1);
 	private static final SkillHolder DARK_BREATH = new SkillHolder(15238, 1);
 	// Chance
-	private final static int CHANCE_DARK_SPHERES = 15;
-	private final static int CHANCE_DARK_WIND = 30;
-	private final static int CHANCE_DARK_THRUST = 15;
-	private final static int CHANCE_DARK_BUSTER = 15;
-	private final static int CHANCE_DARK_BREATH = 30;
+	private static final int CHANCE_DARK_SPHERES = 15;
+	private static final int CHANCE_DARK_WIND = 30;
+	private static final int CHANCE_DARK_THRUST = 15;
+	private static final int CHANCE_DARK_BUSTER = 15;
+	private static final int CHANCE_DARK_BREATH = 30;
 	// Misc
 	private static final int TEMPLATE_ID = 231;
 	

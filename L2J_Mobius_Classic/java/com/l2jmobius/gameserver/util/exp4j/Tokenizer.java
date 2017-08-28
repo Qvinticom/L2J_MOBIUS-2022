@@ -228,7 +228,7 @@ public class Tokenizer
 		
 		while (symbol.length() > 0)
 		{
-			Operator op = this.getOperator(symbol.toString());
+			Operator op = getOperator(symbol.toString());
 			if (op == null)
 			{
 				symbol.setLength(symbol.length() - 1);

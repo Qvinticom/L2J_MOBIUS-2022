@@ -58,7 +58,7 @@ public class PcStat extends PlayableStat
 	public static final int MAX_VITALITY_POINTS = 140000;
 	public static final int MIN_VITALITY_POINTS = 0;
 	
-	private final static int FANCY_FISHING_ROD_SKILL = 21484;
+	private static final int FANCY_FISHING_ROD_SKILL = 21484;
 	
 	public PcStat(L2PcInstance activeChar)
 	{

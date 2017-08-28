@@ -43,12 +43,12 @@ import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
  */
 public class PremiumManager
 {
-	private final static Logger LOGGER = Logger.getLogger(PremiumManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PremiumManager.class.getName());
 	
 	// SQL Statement
-	private final static String LOAD_SQL = "SELECT account_name,enddate FROM account_premium";
-	private final static String UPDATE_SQL = "UPDATE account_premium SET enddate = ? WHERE account_name = ?";
-	private final static String ADD_SQL = "INSERT INTO account_premium (enddate,account_name) VALUE (?,?)";
+	private static final String LOAD_SQL = "SELECT account_name,enddate FROM account_premium";
+	private static final String UPDATE_SQL = "UPDATE account_premium SET enddate = ? WHERE account_name = ?";
+	private static final String ADD_SQL = "INSERT INTO account_premium (enddate,account_name) VALUE (?,?)";
 	
 	class PremiumExpireTask implements Runnable
 	{

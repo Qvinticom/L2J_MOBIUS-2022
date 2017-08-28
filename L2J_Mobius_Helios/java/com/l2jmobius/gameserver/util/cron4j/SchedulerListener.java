@@ -31,18 +31,18 @@ public interface SchedulerListener
 	 * This one is called by the scheduler when a task execution is starting.
 	 * @param executor The task executor.
 	 */
-	public void taskLaunching(TaskExecutor executor);
+	void taskLaunching(TaskExecutor executor);
 	
 	/**
 	 * This one is called by the scheduler to notify that a task execution has been successfully completed.
 	 * @param executor The task executor.
 	 */
-	public void taskSucceeded(TaskExecutor executor);
+	void taskSucceeded(TaskExecutor executor);
 	
 	/**
 	 * This one is called by the scheduler to notify that a task execution has failed.
 	 * @param executor The task executor.
 	 * @param exception The exception representing the failure notification.
 	 */
-	public void taskFailed(TaskExecutor executor, Throwable exception);
+	void taskFailed(TaskExecutor executor, Throwable exception);
 }

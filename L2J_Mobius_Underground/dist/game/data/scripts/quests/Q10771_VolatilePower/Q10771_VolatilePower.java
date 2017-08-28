@@ -126,47 +126,44 @@ public final class Q10771_VolatilePower extends Quest
 					break;
 			}
 		}
-		else
+		else if (qs.isStarted())
 		{
-			if (qs.isStarted())
+			if (qs.isCond(1))
 			{
-				if (qs.isCond(1))
+				final int itemCount = (int) getQuestItemsCount(player, SHINING_MYSTERIOUS_FRAGMENT);
+				int reduceCount = getRandom(1, 3);
+				if (reduceCount > itemCount)
 				{
-					final int itemCount = (int) getQuestItemsCount(player, SHINING_MYSTERIOUS_FRAGMENT);
-					int reduceCount = getRandom(1, 3);
-					if (reduceCount > itemCount)
-					{
-						reduceCount = itemCount;
-					}
-					
-					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_CRUSHER_IS_ACTIVATED);
-					npc.setScriptValue(reduceCount);
-					
-					for (int i = 0; i < 3; i++)
-					{
-						final L2Npc mob = addSpawn(FRAGMENT_EATER, player, true, 70000);
-						mob.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.KILL_THEM_DON_T_LET_THEM_GET_AWAY_WITH_THE_FRAGMENT);
-						addAttackPlayerDesire(mob, player);
-					}
-					takeItems(player, SHINING_MYSTERIOUS_FRAGMENT, reduceCount);
-					giveItems(player, NORMAL_FRAGMENT_DUST, reduceCount);
-					getTimers().addTimer("DESTROY_COUNT", 2000, npc, player);
-					
-					if (getQuestItemsCount(player, NORMAL_FRAGMENT_DUST) >= 20)
-					{
-						qs.setCond(3, true); // Looks like cond 2 is skipped.
-					}
-					htmltext = null;
+					reduceCount = itemCount;
 				}
-				else
+				
+				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_CRUSHER_IS_ACTIVATED);
+				npc.setScriptValue(reduceCount);
+				
+				for (int i = 0; i < 3; i++)
 				{
-					htmltext = "33990-02.html";
+					final L2Npc mob = addSpawn(FRAGMENT_EATER, player, true, 70000);
+					mob.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.KILL_THEM_DON_T_LET_THEM_GET_AWAY_WITH_THE_FRAGMENT);
+					addAttackPlayerDesire(mob, player);
 				}
+				takeItems(player, SHINING_MYSTERIOUS_FRAGMENT, reduceCount);
+				giveItems(player, NORMAL_FRAGMENT_DUST, reduceCount);
+				getTimers().addTimer("DESTROY_COUNT", 2000, npc, player);
+				
+				if (getQuestItemsCount(player, NORMAL_FRAGMENT_DUST) >= 20)
+				{
+					qs.setCond(3, true); // Looks like cond 2 is skipped.
+				}
+				htmltext = null;
 			}
 			else
 			{
-				htmltext = "33990-01.html";
+				htmltext = "33990-02.html";
 			}
+		}
+		else
+		{
+			htmltext = "33990-01.html";
 		}
 		return htmltext;
 	}

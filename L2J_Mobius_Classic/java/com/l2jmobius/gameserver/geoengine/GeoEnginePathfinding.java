@@ -171,7 +171,7 @@ final class GeoEnginePathfinding extends GeoEngine
 	 * @param target : the entry point
 	 * @return List<NodeLoc> : list of node location
 	 */
-	private static final List<Location> constructPath(Node target)
+	private static List<Location> constructPath(Node target)
 	{
 		// create empty list
 		LinkedList<Location> list = new LinkedList<>();

@@ -242,29 +242,26 @@ public class PlayerVariables extends AbstractVariables
 		final String data = getString(EXTEND_DROP, "");
 		if (data.isEmpty())
 		{
-			result = Integer.toString(id) + "," + Long.toString(count);
+			result = id + "," + count;
+		}
+		else if (data.contains(";"))
+		{
+			for (String s : data.split(";"))
+			{
+				final String[] drop = s.split(",");
+				if (drop[0].equals(Integer.toString(id)))
+				{
+					s += ";" + drop[0] + "," + count;
+					continue;
+				}
+				
+				result += ";" + s;
+			}
+			result = result.substring(1);
 		}
 		else
 		{
-			if (data.contains(";"))
-			{
-				for (String s : data.split(";"))
-				{
-					final String[] drop = s.split(",");
-					if (drop[0].equals(Integer.toString(id)))
-					{
-						s += ";" + drop[0] + "," + Long.toString(count);
-						continue;
-					}
-					
-					result += ";" + s;
-				}
-				result = result.substring(1);
-			}
-			else
-			{
-				result = Integer.toString(id) + "," + Long.toString(count);
-			}
+			result = id + "," + count;
 		}
 		set(EXTEND_DROP, result);
 	}

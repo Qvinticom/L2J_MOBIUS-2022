@@ -165,7 +165,7 @@ public class ExpressionBuilder
 	{
 		for (Operator o : operators)
 		{
-			this.operator(o);
+			operator(o);
 		}
 		return this;
 	}
@@ -179,7 +179,7 @@ public class ExpressionBuilder
 	{
 		for (Operator o : operators)
 		{
-			this.operator(o);
+			operator(o);
 		}
 		return this;
 	}

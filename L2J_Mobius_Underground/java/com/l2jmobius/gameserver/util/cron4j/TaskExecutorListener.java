@@ -30,38 +30,38 @@ public interface TaskExecutorListener
 	 * Called when the execution has been requested to be paused.
 	 * @param executor The source executor.
 	 */
-	public void executionPausing(TaskExecutor executor);
+	void executionPausing(TaskExecutor executor);
 	
 	/**
 	 * Called when the execution has been requested to be resumed.
 	 * @param executor The source executor.
 	 */
-	public void executionResuming(TaskExecutor executor);
+	void executionResuming(TaskExecutor executor);
 	
 	/**
 	 * Called when the executor has been requested to be stopped.
 	 * @param executor The source executor.
 	 */
-	public void executionStopping(TaskExecutor executor);
+	void executionStopping(TaskExecutor executor);
 	
 	/**
 	 * Called at execution end. If the execution has failed due to an error, the encountered exception is reported.
 	 * @param executor The source executor.
 	 * @param exception If the execution has been terminated due to an error, this is the encountered exception; otherwise the parameter is null.
 	 */
-	public void executionTerminated(TaskExecutor executor, Throwable exception);
+	void executionTerminated(TaskExecutor executor, Throwable exception);
 	
 	/**
 	 * Called every time the execution status message changes.
 	 * @param executor The source executor.
 	 * @param statusMessage The new status message.
 	 */
-	public void statusMessageChanged(TaskExecutor executor, String statusMessage);
+	void statusMessageChanged(TaskExecutor executor, String statusMessage);
 	
 	/**
 	 * Called every time the execution completeness value changes.
 	 * @param executor The source executor.
 	 * @param completenessValue The new completeness value.
 	 */
-	public void completenessValueChanged(TaskExecutor executor, double completenessValue);
+	void completenessValueChanged(TaskExecutor executor, double completenessValue);
 }

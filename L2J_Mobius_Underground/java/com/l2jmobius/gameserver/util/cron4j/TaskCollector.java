@@ -33,5 +33,5 @@ public interface TaskCollector
 	 * returned table elements, executing any task whose scheduling pattern is matching the current system time.
 	 * @return The task table that will be automatically injected in the scheduler.
 	 */
-	public TaskTable getTasks();
+	TaskTable getTasks();
 }

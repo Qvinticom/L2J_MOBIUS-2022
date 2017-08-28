@@ -151,12 +151,9 @@ public class Q00483_IntendedTactic extends Quest
 				}
 			}
 		}
-		else
+		else if (qs.isCompleted() && !qs.isNowAvailable())
 		{
-			if (qs.isCompleted() && !qs.isNowAvailable())
-			{
-				htmltext = "33357-03.html";
-			}
+			htmltext = "33357-03.html";
 		}
 		return htmltext;
 	}

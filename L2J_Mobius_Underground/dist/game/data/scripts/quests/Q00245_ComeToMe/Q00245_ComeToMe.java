@@ -41,12 +41,12 @@ public class Q00245_ComeToMe extends Quest
 	// NPC
 	private static final int FERRIS = 30847;
 	// Monsters
-	private final static int[] BLAZING_MOBS_1 = new int[]
+	private static final int[] BLAZING_MOBS_1 = new int[]
 	{
 		21110, // Swamp Predator
 		21111 // Lava Wyrm
 	};
-	private final static int[] BLAZING_MOBS_2 = new int[]
+	private static final int[] BLAZING_MOBS_2 = new int[]
 	{
 		21112, // Hames Orc Foot Soldier
 		21113, // Hames Orc Sniper
@@ -54,12 +54,12 @@ public class Q00245_ComeToMe extends Quest
 		21116 // Hames Orc Prefect
 	};
 	// Items
-	private final static int FLAME_ASHES = 30322;
-	private final static int CRYSTALS_OF_EXPERIENCE = 30323;
-	private final static int CRYSTAL_A = 1461;
-	private final static int MENTOR_RING = 30383;
-	private final static int ACADEMY_DYE_STR = 47205;
-	private final static int ACADEMY_DYE_WIT = 47210;
+	private static final int FLAME_ASHES = 30322;
+	private static final int CRYSTALS_OF_EXPERIENCE = 30323;
+	private static final int CRYSTAL_A = 1461;
+	private static final int MENTOR_RING = 30383;
+	private static final int ACADEMY_DYE_STR = 47205;
+	private static final int ACADEMY_DYE_WIT = 47210;
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
@@ -152,24 +152,21 @@ public class Q00245_ComeToMe extends Quest
 							{
 								htmltext = "30847-06.html";
 							}
-							else
+							else if (player.isMentee())
 							{
-								if (player.isMentee())
+								L2PcInstance mentor = MentorManager.getInstance().getMentor(player.getObjectId()).getPlayerInstance();
+								if ((mentor != null) && mentor.isOnline() && Util.checkIfInRange(200, npc, mentor, true))
 								{
-									L2PcInstance mentor = MentorManager.getInstance().getMentor(player.getObjectId()).getPlayerInstance();
-									if ((mentor != null) && mentor.isOnline() && Util.checkIfInRange(200, npc, mentor, true))
-									{
-										htmltext = "30847-10.html";
-									}
-									else
-									{
-										htmltext = "30847-08.html";
-									}
+									htmltext = "30847-10.html";
 								}
 								else
 								{
-									htmltext = "30847-09.html";
+									htmltext = "30847-08.html";
 								}
+							}
+							else
+							{
+								htmltext = "30847-09.html";
 							}
 							break;
 						}

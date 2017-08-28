@@ -201,12 +201,9 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 				}
 			}
 		}
-		else
+		else if (qs.isCompleted() && !qs.isNowAvailable())
 		{
-			if (qs.isCompleted() && !qs.isNowAvailable())
-			{
-				htmltext = "31595-08.html";
-			}
+			htmltext = "31595-08.html";
 		}
 		return htmltext;
 	}

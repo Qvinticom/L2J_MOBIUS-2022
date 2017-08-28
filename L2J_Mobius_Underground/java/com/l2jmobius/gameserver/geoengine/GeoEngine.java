@@ -61,7 +61,7 @@ public class GeoEngine
 	 * Returns the instance of the {@link GeoEngine}.
 	 * @return {@link GeoEngine} : The instance.
 	 */
-	public static final GeoEngine getInstance()
+	public static GeoEngine getInstance()
 	{
 		return SingletonHolder._instance;
 	}
@@ -226,7 +226,7 @@ public class GeoEngine
 	 * @param worldX
 	 * @return int : Geo X
 	 */
-	public static final int getGeoX(int worldX)
+	public static int getGeoX(int worldX)
 	{
 		return (MathUtil.limit(worldX, L2World.MAP_MIN_X, L2World.MAP_MAX_X) - L2World.MAP_MIN_X) >> 4;
 	}
@@ -236,7 +236,7 @@ public class GeoEngine
 	 * @param worldY
 	 * @return int : Geo Y
 	 */
-	public static final int getGeoY(int worldY)
+	public static int getGeoY(int worldY)
 	{
 		return (MathUtil.limit(worldY, L2World.MAP_MIN_Y, L2World.MAP_MAX_Y) - L2World.MAP_MIN_Y) >> 4;
 	}
@@ -246,7 +246,7 @@ public class GeoEngine
 	 * @param geoX
 	 * @return int : World X
 	 */
-	public static final int getWorldX(int geoX)
+	public static int getWorldX(int geoX)
 	{
 		return (MathUtil.limit(geoX, 0, GeoStructure.GEO_CELLS_X) << 4) + L2World.MAP_MIN_X + 8;
 	}
@@ -256,7 +256,7 @@ public class GeoEngine
 	 * @param geoY
 	 * @return int : World Y
 	 */
-	public static final int getWorldY(int geoY)
+	public static int getWorldY(int geoY)
 	{
 		return (MathUtil.limit(geoY, 0, GeoStructure.GEO_CELLS_Y) << 4) + L2World.MAP_MIN_Y + 8;
 	}
@@ -364,7 +364,7 @@ public class GeoEngine
 	 * @param inside : 2D description of {@link IGeoObject}
 	 * @return byte[][] : Returns NSWE flags of {@link IGeoObject}.
 	 */
-	public static final byte[][] calculateGeoObject(boolean inside[][])
+	public static byte[][] calculateGeoObject(boolean inside[][])
 	{
 		// get dimensions
 		final int width = inside.length;
@@ -1260,7 +1260,7 @@ public class GeoEngine
 	 * @param dirY : Y direction NSWE flag
 	 * @return byte : NSWE flag of combined direction
 	 */
-	private static final byte getDirXY(byte dirX, byte dirY)
+	private static byte getDirXY(byte dirX, byte dirY)
 	{
 		// check axis directions
 		if (dirY == GeoStructure.CELL_FLAG_N)

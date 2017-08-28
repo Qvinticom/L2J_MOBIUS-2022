@@ -34,7 +34,7 @@ public class BlockMultilayer extends ABlock
 	/**
 	 * Initializes the temporarily buffer.
 	 */
-	public static final void initialize()
+	public static void initialize()
 	{
 		// initialize temporarily buffer and sorting mechanism
 		_temp = ByteBuffer.allocate(GeoStructure.BLOCK_CELLS * MAX_LAYERS * 3);
@@ -44,7 +44,7 @@ public class BlockMultilayer extends ABlock
 	/**
 	 * Releases temporarily buffer.
 	 */
-	public static final void release()
+	public static void release()
 	{
 		_temp = null;
 	}
