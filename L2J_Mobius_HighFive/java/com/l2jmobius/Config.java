@@ -75,35 +75,35 @@ public final class Config
 	public static final String EOL = System.lineSeparator();
 	
 	// --------------------------------------------------
-	// L2J Initialization File Definitions
+	// Config File Definitions
 	// --------------------------------------------------
 	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
-	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
-	public static final String FORTSIEGE_CONFIGURATION_FILE = "./config/FortSiege.ini";
-	public static final String GENERAL_CONFIG_FILE = "./config/General.ini";
-	public static final String HEXID_FILE = "./config/hexid.txt";
-	public static final String ID_CONFIG_FILE = "./config/IdFactory.ini";
+	public static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
 	public static final String CUSTOM_CONFIG_FILE = "./config/Custom.ini";
-	public static final String LOGIN_CONFIGURATION_FILE = "./config/LoginServer.ini";
+	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
+	public static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
+	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
+	public static final String GENERAL_CONFIG_FILE = "./config/General.ini";
+	public static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
+	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
+	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+	public static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
+	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+	public static final String MMO_CONFIG_FILE = "./config/MMO.ini";
 	public static final String NPC_CONFIG_FILE = "./config/NPC.ini";
+	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String PVP_CONFIG_FILE = "./config/PVP.ini";
 	public static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-	public static final String CONFIGURATION_FILE = "./config/Server.ini";
-	public static final String IP_CONFIG_FILE = "./config/ipconfig.xml";
-	public static final String SIEGE_CONFIGURATION_FILE = "./config/Siege.ini";
-	public static final String TW_CONFIGURATION_FILE = "./config/TerritoryWar.ini";
-	public static final String TELNET_FILE = "./config/Telnet.ini";
-	public static final String FLOOD_PROTECTOR_FILE = "./config/FloodProtector.ini";
-	public static final String MMO_CONFIG_FILE = "./config/MMO.ini";
-	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
-	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
+	public static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
+	public static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
+	public static final String TW_CONFIG_FILE = "./config/TerritoryWar.ini";
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-	public static final String CH_SIEGE_FILE = "./config/ConquerableHallSiege.ini";
-	public static final String GEODATA_FILE = "./config/GeoEngine.ini";
+	public static final String HEXID_FILE = "./config/hexid.txt";
+	public static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 	
 	// --------------------------------------------------
-	// L2J Variable Definitions
+	// Variable Definitions
 	// --------------------------------------------------
 	public static boolean PLAYER_DELEVEL;
 	public static boolean DECREASE_SKILL_LEVEL;
@@ -1162,7 +1162,7 @@ public final class Config
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
-	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #CONFIGURATION_FILE} (properties file) for configuring your server.
+	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
 	 */
 	public static void load()
 	{
@@ -1185,7 +1185,7 @@ public final class Config
 			FLOOD_PROTECTOR_CHARACTER_SELECT = new FloodProtectorConfig("CharacterSelectFloodProtector");
 			FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 			
-			final PropertiesParser serverSettings = new PropertiesParser(CONFIGURATION_FILE);
+			final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
 			
 			GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "*");
 			PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
@@ -1754,7 +1754,7 @@ public final class Config
 			NEVIT_IGNORE_ADVENT_TIME = character.getBoolean("NevitIgnoreAdventTime", false);
 			
 			// Load Telnet L2Properties file (if exists)
-			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
+			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
 			
 			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
 			
@@ -1768,7 +1768,7 @@ public final class Config
 			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
 			
 			// Load IdFactory L2Properties file (if exists)
-			final PropertiesParser IdFactory = new PropertiesParser(ID_CONFIG_FILE);
+			final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
 			
 			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BitSet);
 			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
@@ -2018,7 +2018,7 @@ public final class Config
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 			
 			// Load FloodProtector L2Properties file
-			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_FILE);
+			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
 			
 			loadFloodProtectorConfigs(FloodProtectors);
 			
@@ -2838,7 +2838,7 @@ public final class Config
 				_log.log(Level.WARNING, "Error while loading chat filter words!", ioe);
 			}
 			
-			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_FILE);
+			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_CONFIG_FILE);
 			
 			CHS_MAX_ATTACKERS = ClanHallSiege.getInt("MaxAttackers", 500);
 			CHS_CLAN_MINLEVEL = ClanHallSiege.getInt("MinClanLevel", 4);
@@ -2847,7 +2847,7 @@ public final class Config
 			CHS_FAME_AMOUNT = ClanHallSiege.getInt("FameAmount", 0);
 			CHS_FAME_FREQUENCY = ClanHallSiege.getInt("FameFrequency", 0);
 			
-			final PropertiesParser geoData = new PropertiesParser(GEODATA_FILE);
+			final PropertiesParser geoData = new PropertiesParser(GEOENGINE_CONFIG_FILE);
 			
 			GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");
 			COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
@@ -2865,7 +2865,7 @@ public final class Config
 		}
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{
-			final PropertiesParser ServerSettings = new PropertiesParser(LOGIN_CONFIGURATION_FILE);
+			final PropertiesParser ServerSettings = new PropertiesParser(LOGIN_CONFIG_FILE);
 			
 			GAME_SERVER_LOGIN_HOST = ServerSettings.getString("LoginHostname", "127.0.0.1");
 			GAME_SERVER_LOGIN_PORT = ServerSettings.getInt("LoginPort", 9013);
@@ -2920,7 +2920,7 @@ public final class Config
 			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
 			
 			// Load Telnet L2Properties file (if exists)
-			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_FILE);
+			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
 			
 			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
 		}
@@ -3224,10 +3224,10 @@ public final class Config
 		public void load()
 		{
 			GameServer.printSection("Network Configuration");
-			if ((new File(IP_CONFIG_FILE)).exists())
+			if ((new File(IPCONFIG_FILE)).exists())
 			{
 				LOGGER.log(Level.INFO, "Using existing ipconfig.xml.");
-				parseFile(new File(IP_CONFIG_FILE));
+				parseFile(new File(IPCONFIG_FILE));
 			}
 			else
 			// Auto configuration...
@@ -3255,7 +3255,7 @@ public final class Config
 							
 							if (_hosts.size() != _subnets.size())
 							{
-								LOGGER.log(Level.WARNING, "Failed to Load " + IP_CONFIG_FILE + " File - subnets does not match server addresses.");
+								LOGGER.log(Level.WARNING, "Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
 							}
 						}
 					}
@@ -3263,7 +3263,7 @@ public final class Config
 					final Node att = n.getAttributes().getNamedItem("address");
 					if (att == null)
 					{
-						LOGGER.log(Level.WARNING, "Failed to load " + IP_CONFIG_FILE + " file - default server address is missing.");
+						LOGGER.log(Level.WARNING, "Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
 						_hosts.add("127.0.0.1");
 					}
 					else

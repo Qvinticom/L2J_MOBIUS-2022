@@ -118,7 +118,7 @@ public final class SiegeManager
 	
 	private final void load()
 	{
-		final PropertiesParser siegeSettings = new PropertiesParser(Config.SIEGE_CONFIGURATION_FILE);
+		final PropertiesParser siegeSettings = new PropertiesParser(Config.SIEGE_CONFIG_FILE);
 		
 		// Siege setting
 		_attackerMaxClans = siegeSettings.getInt("AttackerMaxClans", 500);

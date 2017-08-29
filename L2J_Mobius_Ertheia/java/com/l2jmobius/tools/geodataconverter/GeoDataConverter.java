@@ -359,7 +359,7 @@ public final class GeoDataConverter
 	
 	private static void loadGeoengineConfigs()
 	{
-		final PropertiesParser geoData = new PropertiesParser(Config.GEODATA_FILE);
+		final PropertiesParser geoData = new PropertiesParser(Config.GEOENGINE_CONFIG_FILE);
 		Config.GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");
 		Config.COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
 		Config.PART_OF_CHARACTER_HEIGHT = geoData.getInt("PartOfCharacterHeight", 75);

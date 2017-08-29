@@ -787,7 +787,7 @@ public final class TerritoryWarManager implements Siegable
 	
 	private final void load()
 	{
-		final PropertiesParser territoryWarSettings = new PropertiesParser(Config.TW_CONFIGURATION_FILE);
+		final PropertiesParser territoryWarSettings = new PropertiesParser(Config.TW_CONFIG_FILE);
 		
 		// Siege setting
 		DEFENDERMAXCLANS = territoryWarSettings.getInt("DefenderMaxClans", 500);

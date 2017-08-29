@@ -115,7 +115,7 @@ public final class FortSiegeManager
 	private void load()
 	{
 		final Properties siegeSettings = new Properties();
-		final File file = new File(Config.FORTSIEGE_CONFIGURATION_FILE);
+		final File file = new File(Config.FORTSIEGE_CONFIG_FILE);
 		try (InputStream is = new FileInputStream(file))
 		{
 			siegeSettings.load(is);

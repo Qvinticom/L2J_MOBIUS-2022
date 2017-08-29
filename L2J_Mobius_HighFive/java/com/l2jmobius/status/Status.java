@@ -100,7 +100,7 @@ public class Status extends Thread
 		super("Status");
 		_mode = mode;
 		final Properties telnetSettings = new Properties();
-		try (InputStream is = new FileInputStream(new File(Config.TELNET_FILE)))
+		try (InputStream is = new FileInputStream(new File(Config.TELNET_CONFIG_FILE)))
 		{
 			telnetSettings.load(is);
 		}
