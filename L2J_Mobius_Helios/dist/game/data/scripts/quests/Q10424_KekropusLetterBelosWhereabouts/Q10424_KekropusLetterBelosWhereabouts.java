@@ -53,7 +53,7 @@ public final class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 		addSeeCreatureId(INVISIBLE_NPC);
 		setIsErtheiaQuest(false);
 		setLevel(MIN_LEVEL, MAX_LEVEL);
-		setStartQuestSound("Npcdialog1.kekrops_quest_9");
+		setStartQuestSound("Npcdialog1.kekrops_quest_10");
 		setStartLocation(SOE_TOWN_OF_GODDARD, TELEPORT_LOC);
 		registerQuestItems(SOE_TOWN_OF_GODDARD, SOE_KETRA_ORC_OUTPOST);
 	}
@@ -70,12 +70,12 @@ public final class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 		String htmltext = null;
 		switch (event)
 		{
-			case "31292-02.html":
+			case "31292-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "31292-03.html":
+			case "31292-03.htm":
 			{
 				if (qs.isCond(1))
 				{
@@ -86,7 +86,7 @@ public final class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 				}
 				break;
 			}
-			case "33852-02.html":
+			case "33852-02.htm":
 			{
 				if (qs.isCond(2))
 				{
@@ -121,11 +121,11 @@ public final class Q10424_KekropusLetterBelosWhereabouts extends LetterQuest
 		{
 			if ((npc.getId() == ANDREI) && st.isCond(1))
 			{
-				htmltext = "31292-01.html";
+				htmltext = "31292-01.htm";
 			}
 			else if (st.isCond(2))
 			{
-				htmltext = npc.getId() == ANDREI ? "31292-04.html" : "33852-01.html";
+				htmltext = npc.getId() == ANDREI ? "31292-04.htm" : "33852-01.htm";
 			}
 		}
 		return htmltext;
