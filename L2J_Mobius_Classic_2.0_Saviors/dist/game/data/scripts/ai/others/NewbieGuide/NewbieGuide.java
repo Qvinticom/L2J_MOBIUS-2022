@@ -42,11 +42,11 @@ public class NewbieGuide extends AbstractNpcAI
 		30602,
 	};
 	// Items
-	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
-	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
+	private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
+	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
 	// Other
-	private final static String TUTORIAL_QUEST = "Q00255_Tutorial";
-	private final static String SUPPORT_MAGIC_STRING = "<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h Link default/SupportMagic.htm\">Receive help from beneficial magic.</Button>";
+	private static final String TUTORIAL_QUEST = "Q00255_Tutorial";
+	private static final String SUPPORT_MAGIC_STRING = "<Button ALIGN=LEFT ICON=\"NORMAL\" action=\"bypass -h Link default/SupportMagic.htm\">Receive help from beneficial magic.</Button>";
 	
 	private NewbieGuide()
 	{

@@ -69,7 +69,8 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			activeChar.sendMessage("You have to specify the hall id at least");
 			return false;
 		}
-		if ((hall = getHall(split[1], activeChar)) == null)
+		hall = getHall(split[1], activeChar);
+		if (hall == null)
 		{
 			activeChar.sendMessage("Couldnt find he desired siegable hall (" + split[1] + ")");
 			return false;
@@ -161,7 +162,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 							
 							if (c.getTimeInMillis() > System.currentTimeMillis())
 							{
-								activeChar.sendMessage(hall.getName() + " siege: " + c.getTime().toString());
+								activeChar.sendMessage(hall.getName() + " siege: " + c.getTime());
 								hall.setNextSiegeDate(c.getTimeInMillis());
 								hall.getSiege().updateSiege();
 								hall.updateDb();

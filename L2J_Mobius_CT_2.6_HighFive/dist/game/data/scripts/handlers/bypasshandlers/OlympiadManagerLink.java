@@ -57,8 +57,8 @@ public class OlympiadManagerLink implements IBypassHandler
 		"olympiad"
 	};
 	
-	private static final String FEWER_THAN = "Fewer than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
-	private static final String MORE_THAN = "More than " + String.valueOf(Config.ALT_OLY_REG_DISPLAY);
+	private static final String FEWER_THAN = "Fewer than " + Config.ALT_OLY_REG_DISPLAY;
+	private static final String MORE_THAN = "More than " + Config.ALT_OLY_REG_DISPLAY;
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
 	
 	private static final int[] BUFFS =

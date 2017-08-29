@@ -270,7 +270,7 @@ public final class Util
 		String result = "";
 		for (T val : array)
 		{
-			result += val.toString() + delim;
+			result += val + delim;
 		}
 		if (!result.isEmpty())
 		{
@@ -442,7 +442,7 @@ public final class Util
 			
 			if (Config.HTML_ACTION_CACHE_DEBUG)
 			{
-				LOGGER.info("Cached html bypass(" + scope.toString() + "): '" + bypass + "'");
+				LOGGER.info("Cached html bypass(" + scope + "): '" + bypass + "'");
 			}
 			player.addHtmlAction(scope, bypass);
 			bypassStart = htmlLower.indexOf("=\"bypass ", bypassEnd);
@@ -479,7 +479,7 @@ public final class Util
 			
 			if (Config.HTML_ACTION_CACHE_DEBUG)
 			{
-				LOGGER.info("Cached html link(" + scope.toString() + "): '" + htmlLink + "'");
+				LOGGER.info("Cached html link(" + scope + "): '" + htmlLink + "'");
 			}
 			// let's keep an action cache with "link " lowercase literal kept
 			player.addHtmlAction(scope, "link " + htmlLink);
@@ -505,7 +505,7 @@ public final class Util
 		
 		if (Config.HTML_ACTION_CACHE_DEBUG)
 		{
-			LOGGER.info("Set html action npc(" + scope.toString() + "): " + npcObjId);
+			LOGGER.info("Set html action npc(" + scope + "): " + npcObjId);
 		}
 		player.setHtmlActionOriginObjectId(scope, npcObjId);
 		buildHtmlBypassCache(player, scope, html);

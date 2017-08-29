@@ -164,7 +164,7 @@ public class DebugHandler implements ITelnetHandler
 						final StackTraceElement[] stes = entry.getValue();
 						final Thread t = entry.getKey();
 						sb.append("--------------\n");
-						sb.append(t.toString() + " (" + t.getId() + ")\n");
+						sb.append(t + " (" + t.getId() + ")\n");
 						sb.append("State: " + t.getState() + '\n');
 						sb.append("isAlive: " + t.isAlive() + " | isDaemon: " + t.isDaemon() + " | isInterrupted: " + t.isInterrupted() + '\n');
 						sb.append('\n');

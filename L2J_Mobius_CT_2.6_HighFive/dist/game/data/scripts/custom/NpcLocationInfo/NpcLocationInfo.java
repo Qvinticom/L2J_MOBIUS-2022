@@ -302,7 +302,7 @@ public final class NpcLocationInfo extends Quest
 		
 		if (Util.contains(NPC, npcId))
 		{
-			htmltext = String.valueOf(npcId) + ".htm";
+			htmltext = npcId + ".htm";
 		}
 		
 		return htmltext;

@@ -113,7 +113,7 @@ public final class L2AuctioneerInstance extends L2Npc
 						final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 						html.setFile(player.getHtmlPrefix(), filename);
 						html.replace("%x%", val);
-						html.replace("%AGIT_AUCTION_END%", String.valueOf(format.format(a.getEndDate())));
+						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_MIN%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getDesc());
@@ -181,8 +181,8 @@ public final class L2AuctioneerInstance extends L2Npc
 						html.replace("%AGIT_SIZE%", String.valueOf(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getGrade() * 10));
 						html.replace("%AGIT_LEASE%", String.valueOf(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLease()));
 						html.replace("%AGIT_LOCATION%", ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLocation());
-						html.replace("%AGIT_AUCTION_END%", String.valueOf(format.format(a.getEndDate())));
-						html.replace("%AGIT_AUCTION_REMAIN%", String.valueOf((a.getEndDate() - System.currentTimeMillis()) / 3600000) + " hours " + String.valueOf((((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60)) + " minutes");
+						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
+						html.replace("%AGIT_AUCTION_REMAIN%", (a.getEndDate() - System.currentTimeMillis()) / 3600000 + " hours " + (((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60) + " minutes");
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_COUNT%", String.valueOf(a.getBidders().size()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getDesc());
@@ -424,8 +424,8 @@ public final class L2AuctioneerInstance extends L2Npc
 						html.replace("%AGIT_SIZE%", String.valueOf(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getGrade() * 10));
 						html.replace("%AGIT_LEASE%", String.valueOf(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLease()));
 						html.replace("%AGIT_LOCATION%", ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLocation());
-						html.replace("%AGIT_AUCTION_END%", String.valueOf(format.format(a.getEndDate())));
-						html.replace("%AGIT_AUCTION_REMAIN%", String.valueOf((a.getEndDate() - System.currentTimeMillis()) / 3600000) + " hours " + String.valueOf((((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60)) + " minutes");
+						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
+						html.replace("%AGIT_AUCTION_REMAIN%", (a.getEndDate() - System.currentTimeMillis()) / 3600000 + " hours " + (((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60) + " minutes");
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_MYBID%", String.valueOf(a.getBidders().get(player.getClanId()).getBid()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getDesc());
@@ -455,8 +455,8 @@ public final class L2AuctioneerInstance extends L2Npc
 						html.replace("%AGIT_SIZE%", String.valueOf(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getGrade() * 10));
 						html.replace("%AGIT_LEASE%", String.valueOf(ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLease()));
 						html.replace("%AGIT_LOCATION%", ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getLocation());
-						html.replace("%AGIT_AUCTION_END%", String.valueOf(format.format(a.getEndDate())));
-						html.replace("%AGIT_AUCTION_REMAIN%", String.valueOf((a.getEndDate() - System.currentTimeMillis()) / 3600000) + " hours " + String.valueOf((((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60)) + " minutes");
+						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
+						html.replace("%AGIT_AUCTION_REMAIN%", (a.getEndDate() - System.currentTimeMillis()) / 3600000 + " hours " + (((a.getEndDate() - System.currentTimeMillis()) / 60000) % 60) + " minutes");
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
 						html.replace("%AGIT_AUCTION_BIDCOUNT%", String.valueOf(a.getBidders().size()));
 						html.replace("%AGIT_AUCTION_DESC%", ClanHallManager.getInstance().getAuctionableHallById(a.getItemId()).getDesc());
@@ -613,7 +613,7 @@ public final class L2AuctioneerInstance extends L2Npc
 					{
 						html.replace("%AGIT_AUCTION_BID%", String.valueOf(a.getBidders().get(player.getClanId()).getBid()));
 						html.replace("%AGIT_AUCTION_MINBID%", String.valueOf(a.getStartingBid()));
-						html.replace("%AGIT_AUCTION_END%", String.valueOf(format.format(a.getEndDate())));
+						html.replace("%AGIT_AUCTION_END%", format.format(a.getEndDate()));
 						html.replace("%AGIT_LINK_BACK%", "bypass -h npc_" + getObjectId() + "_selectedItems");
 						html.replace("npc_%objectId%_bid1", "npc_" + getObjectId() + "_bid1 " + a.getId());
 					}

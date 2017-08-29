@@ -425,7 +425,7 @@ public class SevenSigns
 		return reward;
 	}
 	
-	public static final String getCabalShortName(int cabal)
+	public static String getCabalShortName(int cabal)
 	{
 		switch (cabal)
 		{
@@ -438,7 +438,7 @@ public class SevenSigns
 		return "No Cabal";
 	}
 	
-	public static final String getCabalName(int cabal)
+	public static String getCabalName(int cabal)
 	{
 		switch (cabal)
 		{
@@ -451,7 +451,7 @@ public class SevenSigns
 		return "No Cabal";
 	}
 	
-	public static final String getSealName(int seal, boolean shortName)
+	public static String getSealName(int seal, boolean shortName)
 	{
 		String sealName = (!shortName) ? "Seal of " : "";
 		

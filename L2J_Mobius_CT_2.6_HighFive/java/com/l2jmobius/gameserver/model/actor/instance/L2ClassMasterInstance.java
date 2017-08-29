@@ -133,7 +133,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		}
 	}
 	
-	public static final void onTutorialLink(L2PcInstance player, String request)
+	public static void onTutorialLink(L2PcInstance player, String request)
 	{
 		if (!Config.ALTERNATE_CLASS_MASTER || (request == null) || !request.startsWith("CO"))
 		{
@@ -156,7 +156,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(TutorialCloseHtml.STATIC_PACKET);
 	}
 	
-	public static final void onTutorialQuestionMark(L2PcInstance player, int number)
+	public static void onTutorialQuestionMark(L2PcInstance player, int number)
 	{
 		if (!Config.ALTERNATE_CLASS_MASTER || (number != 1001))
 		{
@@ -166,7 +166,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		showTutorialHtml(player);
 	}
 	
-	public static final void showQuestionMark(L2PcInstance player)
+	public static void showQuestionMark(L2PcInstance player)
 	{
 		if (!Config.ALTERNATE_CLASS_MASTER)
 		{
@@ -187,7 +187,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(new TutorialShowQuestionMark(1001));
 	}
 	
-	private static final void showHtmlMenu(L2PcInstance player, int objectId, int level)
+	private static void showHtmlMenu(L2PcInstance player, int objectId, int level)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(objectId);
 		
@@ -308,7 +308,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(html);
 	}
 	
-	private static final void showTutorialHtml(L2PcInstance player)
+	private static void showTutorialHtml(L2PcInstance player)
 	{
 		final ClassId currentClassId = player.getClassId();
 		if ((getMinLevel(currentClassId.level()) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
@@ -337,7 +337,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		player.sendPacket(new TutorialShowHtml(msg));
 	}
 	
-	private static final boolean checkAndChangeClass(L2PcInstance player, int val)
+	private static boolean checkAndChangeClass(L2PcInstance player, int val)
 	{
 		final ClassId currentClassId = player.getClassId();
 		if ((getMinLevel(currentClassId.level()) > player.getLevel()) && !Config.ALLOW_ENTIRE_TREE)
@@ -409,7 +409,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	 * @param level - current skillId level (0 - start, 1 - first, etc)
 	 * @return minimum player level required for next class transfer
 	 */
-	private static final int getMinLevel(int level)
+	private static int getMinLevel(int level)
 	{
 		switch (level)
 		{
@@ -430,7 +430,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	 * @param val new class index
 	 * @return
 	 */
-	private static final boolean validateClassId(ClassId oldCID, int val)
+	private static boolean validateClassId(ClassId oldCID, int val)
 	{
 		return validateClassId(oldCID, ClassId.getClassId(val));
 	}
@@ -441,7 +441,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 	 * @param newCID new ClassId
 	 * @return true if class change is possible
 	 */
-	private static final boolean validateClassId(ClassId oldCID, ClassId newCID)
+	private static boolean validateClassId(ClassId oldCID, ClassId newCID)
 	{
 		if ((newCID == null) || (newCID.getRace() == null))
 		{

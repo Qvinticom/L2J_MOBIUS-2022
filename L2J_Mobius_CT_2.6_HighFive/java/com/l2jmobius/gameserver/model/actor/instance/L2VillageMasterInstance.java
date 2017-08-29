@@ -376,7 +376,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						final StringBuilder content1 = new StringBuilder(200);
 						for (PlayerClass subClass : subsAvailable)
 						{
-							content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 " + String.valueOf(subClass.ordinal()) + "\" msg=\"1268;" + ClassListData.getInstance().getClass(subClass.ordinal()).getClassName() + "\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
+							content1.append("<a action=\"bypass -h npc_%objectId%_Subclass 4 " + subClass.ordinal() + "\" msg=\"1268;" + ClassListData.getInstance().getClass(subClass.ordinal()).getClassName() + "\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content1.toString());
 					}
@@ -418,7 +418,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 							final SubClass subClass = subList.next();
 							if (checkVillageMaster(subClass.getClassDefinition()))
 							{
-								content2.append("<a action=\"bypass -h npc_%objectId%_Subclass 5 " + String.valueOf(subClass.getClassIndex()) + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
+								content2.append("<a action=\"bypass -h npc_%objectId%_Subclass 5 " + subClass.getClassIndex() + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
 							}
 						}
 						
@@ -451,7 +451,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						{
 							final SubClass subClass = subList.next();
 							
-							content3.append("Sub-class " + String.valueOf(classIndex++) + "<br><a action=\"bypass -h npc_%objectId%_Subclass 6 " + String.valueOf(subClass.getClassIndex()) + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
+							content3.append("Sub-class " + classIndex++ + "<br><a action=\"bypass -h npc_%objectId%_Subclass 6 " + subClass.getClassIndex() + "\">" + ClassListData.getInstance().getClass(subClass.getClassId()).getClientCode() + "</a><br>");
 						}
 						html.replace("%list%", content3.toString());
 					}
@@ -613,7 +613,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					final StringBuilder content6 = new StringBuilder(200);
 					for (PlayerClass subClass : subsAvailable)
 					{
-						content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 " + String.valueOf(paramOne) + " " + String.valueOf(subClass.ordinal()) + "\" msg=\"1445;\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
+						content6.append("<a action=\"bypass -h npc_%objectId%_Subclass 7 " + paramOne + " " + subClass.ordinal() + "\" msg=\"1445;\">" + ClassListData.getInstance().getClass(subClass.ordinal()).getClientCode() + "</a><br>");
 					}
 					
 					switch (paramOne)
@@ -879,12 +879,12 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		return checkVillageMasterRace(pclass) && checkVillageMasterTeachType(pclass);
 	}
 	
-	private static final Iterator<SubClass> iterSubClasses(L2PcInstance player)
+	private static Iterator<SubClass> iterSubClasses(L2PcInstance player)
 	{
 		return player.getSubClasses().values().iterator();
 	}
 	
-	private static final void dissolveClan(L2PcInstance player, int clanId)
+	private static void dissolveClan(L2PcInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -945,7 +945,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		ClanTable.getInstance().scheduleRemoveClan(clan.getId());
 	}
 	
-	private static final void recoverClan(L2PcInstance player, int clanId)
+	private static void recoverClan(L2PcInstance player, int clanId)
 	{
 		if (!player.isClanLeader())
 		{
@@ -958,7 +958,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		clan.updateClanInDB();
 	}
 	
-	private static final void createSubPledge(L2PcInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
+	private static void createSubPledge(L2PcInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
 	{
 		if (!player.isClanLeader())
 		{
@@ -1069,7 +1069,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		}
 	}
 	
-	private static final void renameSubPledge(L2PcInstance player, int pledgeType, String pledgeName)
+	private static void renameSubPledge(L2PcInstance player, int pledgeType, String pledgeName)
 	{
 		if (!player.isClanLeader())
 		{
@@ -1102,7 +1102,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		player.sendMessage("Pledge name changed.");
 	}
 	
-	private static final void assignSubPledgeLeader(L2PcInstance player, String clanName, String leaderName)
+	private static void assignSubPledgeLeader(L2PcInstance player, String clanName, String leaderName)
 	{
 		if (!player.isClanLeader())
 		{
@@ -1165,7 +1165,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 	 * this displays PledgeSkillList to the player.
 	 * @param player
 	 */
-	public static final void showPledgeSkillList(L2PcInstance player)
+	public static void showPledgeSkillList(L2PcInstance player)
 	{
 		if (!player.isClanLeader())
 		{

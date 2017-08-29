@@ -149,7 +149,7 @@ public final class SubClassSkills extends Quest
 		{
 			for (int j = Config.MAX_SUBCLASS; j > 0; j--)
 			{
-				qName = VARS[i] + String.valueOf(j);
+				qName = VARS[i] + j;
 				qValue = player.getVariables().getString(qName);
 				if ((qValue == null) || qValue.isEmpty())
 				{

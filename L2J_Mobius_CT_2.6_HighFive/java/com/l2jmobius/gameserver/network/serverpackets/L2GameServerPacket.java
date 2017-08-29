@@ -106,7 +106,7 @@ public abstract class L2GameServerPacket extends SendablePacket<L2GameClient>
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed writing: " + getClass().getSimpleName() + " ; " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "Client: " + getClient() + " - Failed writing: " + getClass().getSimpleName() + " ; " + e.getMessage(), e);
 		}
 	}
 	

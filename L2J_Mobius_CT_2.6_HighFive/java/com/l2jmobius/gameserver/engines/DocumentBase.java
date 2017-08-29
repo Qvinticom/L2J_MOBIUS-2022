@@ -1264,7 +1264,7 @@ public abstract class DocumentBase
 		final char ch = value.isEmpty() ? ' ' : value.charAt(0);
 		if ((ch == '#') || (ch == '-') || Character.isDigit(ch))
 		{
-			set.set(name, String.valueOf(getValue(value, level)));
+			set.set(name, getValue(value, level));
 		}
 		else
 		{

@@ -195,7 +195,7 @@ public final class Q00281_HeadForTheHills extends Quest
 	 * Give basic newbie reward.
 	 * @param player the player to reward
 	 */
-	public static final void giveNewbieReward(L2PcInstance player)
+	public static void giveNewbieReward(L2PcInstance player)
 	{
 		final PlayerVariables vars = player.getVariables();
 		if ((player.getLevel() < 25) && !vars.getBoolean("NEWBIE_SHOTS", false))

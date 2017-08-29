@@ -2171,7 +2171,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param itemObjId the item object ID
 	 * @return if the item has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized final long getItemRemainingReuseTime(int itemObjId)
+	public final synchronized long getItemRemainingReuseTime(int itemObjId)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsItems != null) ? _reuseTimeStampsItems.get(itemObjId) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -2242,7 +2242,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * Removes a skill reuse time stamp.
 	 * @param skill the skill to remove
 	 */
-	public synchronized final void removeTimeStamp(Skill skill)
+	public final synchronized void removeTimeStamp(Skill skill)
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -2253,7 +2253,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/**
 	 * Removes all skill reuse time stamps.
 	 */
-	public synchronized final void resetTimeStamps()
+	public final synchronized void resetTimeStamps()
 	{
 		if (_reuseTimeStampsSkills != null)
 		{
@@ -2266,7 +2266,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the remaining time, otherwise -1
 	 */
-	public synchronized final long getSkillRemainingReuseTime(int hashCode)
+	public final synchronized long getSkillRemainingReuseTime(int hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return reuseStamp != null ? reuseStamp.getRemaining() : -1;
@@ -2277,7 +2277,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return {@code true} if the skill is under reuse time, {@code false} otherwise
 	 */
-	public synchronized final boolean hasSkillReuse(int hashCode)
+	public final synchronized boolean hasSkillReuse(int hashCode)
 	{
 		final TimeStamp reuseStamp = (_reuseTimeStampsSkills != null) ? _reuseTimeStampsSkills.get(hashCode) : null;
 		return (reuseStamp != null) && reuseStamp.hasNotPassed();
@@ -2288,7 +2288,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param hashCode the skill hash code
 	 * @return if the skill has a reuse time stamp, the skill reuse time stamp, otherwise {@code null}
 	 */
-	public synchronized final TimeStamp getSkillReuseTimeStamp(int hashCode)
+	public final synchronized TimeStamp getSkillReuseTimeStamp(int hashCode)
 	{
 		return _reuseTimeStampsSkills != null ? _reuseTimeStampsSkills.get(hashCode) : null;
 	}
@@ -2345,7 +2345,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/**
 	 * Removes all the disabled skills.
 	 */
-	public synchronized final void resetDisabledSkills()
+	public final synchronized void resetDisabledSkills()
 	{
 		if (_disabledSkills != null)
 		{

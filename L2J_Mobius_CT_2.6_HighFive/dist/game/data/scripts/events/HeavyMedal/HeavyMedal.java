@@ -27,20 +27,20 @@ import com.l2jmobius.gameserver.model.event.LongTimeEvent;
  */
 public final class HeavyMedal extends LongTimeEvent
 {
-	private final static int CAT_ROY = 31228;
-	private final static int CAT_WINNIE = 31229;
-	private final static int GLITTERING_MEDAL = 6393;
+	private static final int CAT_ROY = 31228;
+	private static final int CAT_WINNIE = 31229;
+	private static final int GLITTERING_MEDAL = 6393;
 	
-	private final static int WIN_CHANCE = 50;
+	private static final int WIN_CHANCE = 50;
 	
-	private final static int[] MEDALS =
+	private static final int[] MEDALS =
 	{
 		5,
 		10,
 		20,
 		40
 	};
-	private final static int[] BADGES =
+	private static final int[] BADGES =
 	{
 		6399,
 		6400,
@@ -93,12 +93,12 @@ public final class HeavyMedal extends LongTimeEvent
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					level++;
 				}
-				htmltext = "31229-" + event.toLowerCase() + "-" + String.valueOf(level) + ".htm";
+				htmltext = "31229-" + event.toLowerCase() + "-" + level + ".htm";
 			}
 		}
 		else if (event.equalsIgnoreCase("talk"))
 		{
-			htmltext = String.valueOf(npc.getId()) + "-lvl-" + String.valueOf(level) + ".htm";
+			htmltext = npc.getId() + "-lvl-" + level + ".htm";
 		}
 		return htmltext;
 	}

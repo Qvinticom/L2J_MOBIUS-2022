@@ -31,7 +31,7 @@ public final class CharacterBirthday extends Quest
 	private static final int ALEGRIA = 32600;
 	private static int SPAWNS = 0;
 	
-	private final static int[] GK =
+	private static final int[] GK =
 	{
 		30006,
 		30059,

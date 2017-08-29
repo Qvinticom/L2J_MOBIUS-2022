@@ -299,7 +299,7 @@ public enum PlayerClass
 		return subclasses;
 	}
 	
-	public static final EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
+	public static EnumSet<PlayerClass> getSet(Race race, ClassLevel level)
 	{
 		final EnumSet<PlayerClass> allOf = EnumSet.noneOf(PlayerClass.class);
 		

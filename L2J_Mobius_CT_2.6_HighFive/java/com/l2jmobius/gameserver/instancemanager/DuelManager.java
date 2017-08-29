@@ -219,7 +219,7 @@ public final class DuelManager
 		return ARENAS.get(Rnd.get(ARENAS.size()));
 	}
 	
-	public static final DuelManager getInstance()
+	public static DuelManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

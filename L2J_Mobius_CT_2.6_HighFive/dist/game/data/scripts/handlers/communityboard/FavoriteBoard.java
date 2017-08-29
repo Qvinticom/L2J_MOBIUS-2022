@@ -69,7 +69,7 @@ public class FavoriteBoard implements IParseBoardHandler
 				{
 					while (rs.next())
 					{
-						String link = list.replaceAll("%fav_bypass%", String.valueOf(rs.getString("favBypass")));
+						String link = list.replaceAll("%fav_bypass%", rs.getString("favBypass"));
 						link = link.replaceAll("%fav_title%", rs.getString("favTitle"));
 						final SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 						link = link.replaceAll("%fav_add_date%", date.format(rs.getTimestamp("favAddDate")));

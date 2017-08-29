@@ -37,7 +37,7 @@ import quests.Q00281_HeadForTheHills.Q00281_HeadForTheHills;
  */
 public final class Q00257_TheGuardIsBusy extends Quest
 {
-	public final static class MobDrop extends ItemHolder
+	public static final class MobDrop extends ItemHolder
 	{
 		private final int _chance;
 		private final int _random;

@@ -998,7 +998,7 @@ public class AugmentationData
 		return new L2Augmentation(((stat34 << 16) + stat12));
 	}
 	
-	public static final AugmentationData getInstance()
+	public static AugmentationData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

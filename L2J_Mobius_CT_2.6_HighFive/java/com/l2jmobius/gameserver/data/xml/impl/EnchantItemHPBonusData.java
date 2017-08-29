@@ -142,7 +142,7 @@ public class EnchantItemHPBonusData implements IXmlReader
 	 * Gets the single instance of EnchantHPBonusData.
 	 * @return single instance of EnchantHPBonusData
 	 */
-	public static final EnchantItemHPBonusData getInstance()
+	public static EnchantItemHPBonusData getInstance()
 	{
 		return SingletonHolder._instance;
 	}

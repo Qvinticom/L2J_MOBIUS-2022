@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.util.GMAudit;
 
 public class AdminBuffs implements IAdminCommandHandler
 {
-	private final static int PAGE_LIMIT = 20;
+	private static final int PAGE_LIMIT = 20;
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -338,7 +338,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			String slots = "";
 			for (AbnormalType slot : target.getEffectList().getAllBlockedBuffSlots())
 			{
-				slots += slot.toString() + ", ";
+				slots += slot + ", ";
 			}
 			
 			if (!slots.isEmpty() && (slots.length() > 3))
@@ -352,7 +352,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		
 		if (Config.GMAUDIT)
 		{
-			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "getbuffs", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
+			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "getbuffs", target.getName() + " (" + target.getObjectId() + ")", "");
 		}
 	}
 	

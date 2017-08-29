@@ -104,7 +104,7 @@ public final class Bernarde extends AbstractNpcAI
 		}
 	}
 	
-	private static final boolean isTransformed(L2PcInstance player)
+	private static boolean isTransformed(L2PcInstance player)
 	{
 		return player.isTransformed() && (player.getTransformation().getId() == NATIVE_TRANSFORM);
 	}

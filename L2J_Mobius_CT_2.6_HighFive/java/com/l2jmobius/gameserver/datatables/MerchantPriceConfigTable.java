@@ -100,7 +100,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 				}
 			}
 			
-			final MerchantPriceConfig defaultMpc = this.getMerchantPriceConfig(defaultPriceConfigId);
+			final MerchantPriceConfig defaultMpc = getMerchantPriceConfig(defaultPriceConfigId);
 			if (defaultMpc == null)
 			{
 				throw new IllegalStateException("'defaultPriceConfig' points to an non-loaded priceConfig");

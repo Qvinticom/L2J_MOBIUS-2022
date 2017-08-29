@@ -54,7 +54,7 @@ public class IPSubnet
 		_mask = getMask(mask, _addr.length);
 		if (!applyMask(_addr))
 		{
-			throw new UnknownHostException(addr.toString() + "/" + mask);
+			throw new UnknownHostException(addr + "/" + mask);
 		}
 	}
 	
@@ -114,7 +114,7 @@ public class IPSubnet
 		
 		try
 		{
-			return InetAddress.getByAddress(_addr).toString() + "/" + size;
+			return InetAddress.getByAddress(_addr) + "/" + size;
 		}
 		catch (UnknownHostException e)
 		{

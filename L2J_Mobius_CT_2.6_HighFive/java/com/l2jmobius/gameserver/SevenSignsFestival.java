@@ -809,7 +809,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalID
 	 * @return String festivalName
 	 */
-	public static final String getFestivalName(int festivalID)
+	public static String getFestivalName(int festivalID)
 	{
 		String festivalName;
 		
@@ -840,7 +840,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param festivalId
 	 * @return int maxLevel
 	 */
-	public static final int getMaxLevelForFestival(int festivalId)
+	public static int getMaxLevelForFestival(int festivalId)
 	{
 		int maxLevel = (ExperienceData.getInstance().getMaxLevel() - 1);
 		
@@ -868,7 +868,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param npcId
 	 * @return boolean isArcher
 	 */
-	protected static final boolean isFestivalArcher(int npcId)
+	protected static boolean isFestivalArcher(int npcId)
 	{
 		if ((npcId < 18009) || (npcId > 18108))
 		{
@@ -884,7 +884,7 @@ public class SevenSignsFestival implements SpawnListener
 	 * @param npcId
 	 * @return boolean isChest
 	 */
-	protected static final boolean isFestivalChest(int npcId)
+	protected static boolean isFestivalChest(int npcId)
 	{
 		return ((npcId < 18109) || (npcId > 18118));
 	}
@@ -980,7 +980,7 @@ public class SevenSignsFestival implements SpawnListener
 				
 				for (int i = 0; i < FESTIVAL_COUNT; i++)
 				{
-					_accumulatedBonuses.add(i, rs.getInt("accumulated_bonus" + String.valueOf(i)));
+					_accumulatedBonuses.add(i, rs.getInt("accumulated_bonus" + i));
 				}
 			}
 		}

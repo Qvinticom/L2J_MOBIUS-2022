@@ -251,7 +251,7 @@ public class SoIManager
 	 * Gets the single instance of {@code GraciaSeedsManager}.
 	 * @return single instance of {@code GraciaSeedsManager}
 	 */
-	public static final SoIManager getInstance()
+	public static SoIManager getInstance()
 	{
 		return SingletonHolder._instance;
 	}

@@ -135,7 +135,7 @@ public final class CrystalCaverns extends AbstractInstance
 	private static final int CONT_CRYSTAL = 9690; // Contaminated Crystal
 	private static final int RED_CORAL = 9692; // Red Coral
 	private static final int CRYSTALFOOD = 9693; // Food item for Crystal Golems
-	final private static int RACE_KEY = 9694; // Race Key for Emerald doors
+	private static final int RACE_KEY = 9694; // Race Key for Emerald doors
 	private static final int BOSS_CRYSTAL_1 = 9695; // Clear Crystal
 	private static final int BOSS_CRYSTAL_2 = 9696; // Clear Crystal
 	private static final int BOSS_CRYSTAL_3 = 9697; // Clear Crystal
@@ -167,7 +167,7 @@ public final class CrystalCaverns extends AbstractInstance
 	private static final int KECHIGUARD = 25533;
 	private static final int BAYLOR = 29099;
 	private static final int DARNEL = 25531;
-	private final static int ALARMID = 18474;
+	private static final int ALARMID = 18474;
 	// private static final int[] BOSSCR = {9695,9696,9697};
 	private static final int[] CGMOBS =
 	{
@@ -232,7 +232,7 @@ public final class CrystalCaverns extends AbstractInstance
 		20107
 	};
 	// @formatter:off
-	private final static int[][] ALARMSPAWN =
+	private static final int[][] ALARMSPAWN =
 	{
 		{153572, 141277, -12738},
 		{153572, 142852, -12738},
@@ -1740,7 +1740,7 @@ public final class CrystalCaverns extends AbstractInstance
 				npc.broadcastPacket(new PlaySound(1, "BS01_D", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
 				final Instance baylorInstance = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 				baylorInstance.setDuration(300000);
-				this.startQuestTimer("spawn_oracle", 1000, npc, null);
+				startQuestTimer("spawn_oracle", 1000, npc, null);
 				giveRewards(player, npc.getInstanceId(), -1, true);
 			}
 		}

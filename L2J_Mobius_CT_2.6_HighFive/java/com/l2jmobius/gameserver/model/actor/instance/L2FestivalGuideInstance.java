@@ -204,7 +204,7 @@ public final class L2FestivalGuideInstance extends L2Npc
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	private static final String getStatsTable()
+	private static String getStatsTable()
 	{
 		final StringBuilder tableHtml = new StringBuilder(1000);
 		
@@ -225,13 +225,13 @@ public final class L2FestivalGuideInstance extends L2Npc
 				winningCabal = "None";
 			}
 			
-			tableHtml.append("<tr><td width=\"100\" align=\"center\">" + festivalName + "</td><td align=\"center\" width=\"35\">" + String.valueOf(duskScore) + "</td><td align=\"center\" width=\"35\">" + String.valueOf(dawnScore) + "</td><td align=\"center\" width=\"130\">" + winningCabal + "</td></tr>");
+			tableHtml.append("<tr><td width=\"100\" align=\"center\">" + festivalName + "</td><td align=\"center\" width=\"35\">" + duskScore + "</td><td align=\"center\" width=\"35\">" + dawnScore + "</td><td align=\"center\" width=\"130\">" + winningCabal + "</td></tr>");
 		}
 		
 		return tableHtml.toString();
 	}
 	
-	private static final String getBonusTable()
+	private static String getBonusTable()
 	{
 		final StringBuilder tableHtml = new StringBuilder(500);
 		
@@ -241,7 +241,7 @@ public final class L2FestivalGuideInstance extends L2Npc
 			final int accumScore = SevenSignsFestival.getInstance().getAccumulatedBonus(i);
 			final String festivalName = SevenSignsFestival.getFestivalName(i);
 			
-			tableHtml.append("<tr><td align=\"center\" width=\"150\">" + festivalName + "</td><td align=\"center\" width=\"150\">" + String.valueOf(accumScore) + "</td></tr>");
+			tableHtml.append("<tr><td align=\"center\" width=\"150\">" + festivalName + "</td><td align=\"center\" width=\"150\">" + accumScore + "</td></tr>");
 		}
 		
 		return tableHtml.toString();

@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class EchoCrystals extends Quest
 {
-	private final static int[] NPCs =
+	private static final int[] NPCs =
 	{
 		31042,
 		31043

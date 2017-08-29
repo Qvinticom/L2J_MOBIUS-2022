@@ -385,7 +385,7 @@ public class AdminPunishment implements IAdminCommandHandler
 		return true;
 	}
 	
-	private static final String findCharId(String key)
+	private static String findCharId(String key)
 	{
 		final int charId = CharNameTable.getInstance().getIdByName(key);
 		if (charId > 0) // Yeah its a char name!

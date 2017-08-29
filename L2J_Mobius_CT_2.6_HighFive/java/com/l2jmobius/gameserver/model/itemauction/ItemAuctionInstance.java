@@ -400,7 +400,7 @@ public final class ItemAuctionInstance
 				{
 					if (!_auction.setAuctionState(state, ItemAuctionState.STARTED))
 					{
-						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.STARTED.toString() + ", expected: " + state.toString());
+						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.STARTED + ", expected: " + state);
 					}
 					
 					_log.log(Level.INFO, getClass().getSimpleName() + ": Auction " + _auction.getAuctionId() + " has started for instance " + _auction.getInstanceId());
@@ -454,7 +454,7 @@ public final class ItemAuctionInstance
 					
 					if (!_auction.setAuctionState(state, ItemAuctionState.FINISHED))
 					{
-						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.FINISHED.toString() + ", expected: " + state.toString());
+						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.FINISHED + ", expected: " + state);
 					}
 					
 					onAuctionFinished(_auction);

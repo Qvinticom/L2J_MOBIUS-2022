@@ -247,7 +247,7 @@ public final class Formulas
 	 * @param cha
 	 * @return
 	 */
-	public static final double calcHpRegen(L2Character cha)
+	public static double calcHpRegen(L2Character cha)
 	{
 		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseHpRegen(cha.getLevel()) : cha.getTemplate().getBaseHpReg();
 		double hpRegenMultiplier = cha.isRaid() ? Config.RAID_HP_REGEN_MULTIPLIER : Config.HP_REGEN_MULTIPLIER;
@@ -368,7 +368,7 @@ public final class Formulas
 	 * @param cha
 	 * @return
 	 */
-	public static final double calcMpRegen(L2Character cha)
+	public static double calcMpRegen(L2Character cha)
 	{
 		double init = cha.isPlayer() ? cha.getActingPlayer().getTemplate().getBaseMpRegen(cha.getLevel()) : cha.getTemplate().getBaseMpReg();
 		double mpRegenMultiplier = cha.isRaid() ? Config.RAID_MP_REGEN_MULTIPLIER : Config.MP_REGEN_MULTIPLIER;
@@ -476,7 +476,7 @@ public final class Formulas
 	 * @param player the player
 	 * @return the CP regeneration rate
 	 */
-	public static final double calcCpRegen(L2PcInstance player)
+	public static double calcCpRegen(L2PcInstance player)
 	{
 		// With CON bonus
 		final double init = player.getActingPlayer().getTemplate().getBaseCpRegen(player.getLevel()) * player.getLevelMod() * BaseStats.CON.calcBonus(player);
@@ -496,7 +496,7 @@ public final class Formulas
 		return player.calcStat(Stats.REGENERATE_CP_RATE, Math.max(1, init), null, null) * cpRegenMultiplier;
 	}
 	
-	public static final double calcFestivalRegenModifier(L2PcInstance activeChar)
+	public static double calcFestivalRegenModifier(L2PcInstance activeChar)
 	{
 		final int[] festivalInfo = SevenSignsFestival.getInstance().getFestivalForPlayer(activeChar);
 		final int oracle = festivalInfo[0];
@@ -530,7 +530,7 @@ public final class Formulas
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}
 	
-	public static final double calcSiegeRegenModifier(L2PcInstance activeChar)
+	public static double calcSiegeRegenModifier(L2PcInstance activeChar)
 	{
 		if ((activeChar == null) || (activeChar.getClan() == null))
 		{
@@ -744,7 +744,7 @@ public final class Formulas
 	 * @param ss if weapon item was charged by soulshot
 	 * @return
 	 */
-	public static final double calcPhysDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean crit, boolean ss)
+	public static double calcPhysDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean crit, boolean ss)
 	{
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
@@ -890,7 +890,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static final double calcMagicDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
+	public static double calcMagicDam(L2Character attacker, L2Character target, Skill skill, byte shld, boolean sps, boolean bss, boolean mcrit)
 	{
 		double mDef = target.getMDef(attacker, skill);
 		switch (shld)
@@ -999,7 +999,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static final double calcMagicDam(L2CubicInstance attacker, L2Character target, Skill skill, boolean mcrit, byte shld)
+	public static double calcMagicDam(L2CubicInstance attacker, L2Character target, Skill skill, boolean mcrit, byte shld)
 	{
 		double mDef = target.getMDef(attacker.getOwner(), skill);
 		switch (shld)
@@ -1085,7 +1085,7 @@ public final class Formulas
 		return damage;
 	}
 	
-	public static final boolean calcCrit(L2Character attacker, L2Character target)
+	public static boolean calcCrit(L2Character attacker, L2Character target)
 	{
 		return calcCrit(attacker, target, null);
 	}
@@ -1097,7 +1097,7 @@ public final class Formulas
 	 * @param skill
 	 * @return
 	 */
-	public static final boolean calcCrit(L2Character attacker, L2Character target, Skill skill)
+	public static boolean calcCrit(L2Character attacker, L2Character target, Skill skill)
 	{
 		double rate = 0.d;
 		if (skill != null)
@@ -1111,7 +1111,7 @@ public final class Formulas
 		return (target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE, rate, null, null) + target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE_ADD, 0, null, null)) > Rnd.get(1000);
 	}
 	
-	public static final boolean calcMCrit(double mRate)
+	public static boolean calcMCrit(double mRate)
 	{
 		return mRate > Rnd.get(1000);
 	}
@@ -1121,7 +1121,7 @@ public final class Formulas
 	 * @param dmg
 	 * @return true in case when ATTACK is canceled due to hit
 	 */
-	public static final boolean calcAtkBreak(L2Character target, double dmg)
+	public static boolean calcAtkBreak(L2Character target, double dmg)
 	{
 		if (target.isChanneling())
 		{
@@ -1170,7 +1170,7 @@ public final class Formulas
 	 * @param rate
 	 * @return
 	 */
-	public static final int calcPAtkSpd(L2Character attacker, L2Character target, double rate)
+	public static int calcPAtkSpd(L2Character attacker, L2Character target, double rate)
 	{
 		// measured Oct 2006 by Tank6585, formula by Sami
 		// attack speed 312 equals 1500 ms delay... (or 300 + 40 ms delay?)
@@ -1188,7 +1188,7 @@ public final class Formulas
 	 * @param skillTime
 	 * @return
 	 */
-	public static final int calcAtkSpd(L2Character attacker, Skill skill, double skillTime)
+	public static int calcAtkSpd(L2Character attacker, Skill skill, double skillTime)
 	{
 		if (skill.isMagic())
 		{

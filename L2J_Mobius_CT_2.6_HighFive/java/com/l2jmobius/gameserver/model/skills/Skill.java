@@ -1140,7 +1140,7 @@ public final class Skill implements IIdentifiable
 	 * @param sourceInArena
 	 * @return
 	 */
-	public static final boolean checkForAreaOffensiveSkills(L2Character caster, L2Character target, Skill skill, boolean sourceInArena)
+	public static boolean checkForAreaOffensiveSkills(L2Character caster, L2Character target, Skill skill, boolean sourceInArena)
 	{
 		if ((target == null) || target.isDead() || (target == caster))
 		{
@@ -1228,7 +1228,7 @@ public final class Skill implements IIdentifiable
 		return true;
 	}
 	
-	public static final boolean addSummon(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
+	public static boolean addSummon(L2Character caster, L2PcInstance owner, int radius, boolean isDead)
 	{
 		if (!owner.hasSummon())
 		{
@@ -1237,7 +1237,7 @@ public final class Skill implements IIdentifiable
 		return addCharacter(caster, owner.getSummon(), radius, isDead);
 	}
 	
-	public static final boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
+	public static boolean addCharacter(L2Character caster, L2Character target, int radius, boolean isDead)
 	{
 		if (isDead != target.isDead())
 		{

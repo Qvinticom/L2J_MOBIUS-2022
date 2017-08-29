@@ -166,7 +166,7 @@ public final class NornilsGarden extends AbstractInstance
 	};
 	// @formatter:on
 	
-	private static final void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
+	private static void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
 		final int chance = getRandom(100);
 		for (int[] element : drop)
@@ -178,7 +178,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private static final void giveBuffs(L2Character ch)
+	private static void giveBuffs(L2Character ch)
 	{
 		if (skill1 != null)
 		{
@@ -395,7 +395,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	private static final String checkConditions(L2Npc npc, L2PcInstance player)
+	private static String checkConditions(L2Npc npc, L2PcInstance player)
 	{
 		final L2Party party = player.getParty();
 		// player must be in party
@@ -537,7 +537,7 @@ public final class NornilsGarden extends AbstractInstance
 				int correct = st.getInt("correct");
 				correct++;
 				st.set("correct", String.valueOf(correct));
-				htmltext = npc.getId() + "-0" + String.valueOf(correct + 2) + ".html";
+				htmltext = npc.getId() + "-0" + correct + 2 + ".html";
 			}
 			else if (event.equalsIgnoreCase("check"))
 			{

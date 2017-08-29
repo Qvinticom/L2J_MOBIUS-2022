@@ -33,24 +33,24 @@ import com.l2jmobius.gameserver.util.Util;
 public final class Q00171_ActsOfEvil extends Quest
 {
 	// NPCs
-	private final static int TRADER_ARODIN = 30207;
+	private static final int TRADER_ARODIN = 30207;
 	private static final int GUARD_ALVAH = 30381;
-	private final static int TYRA = 30420;
-	private final static int NETI = 30425;
-	private final static int TRADER_ROLENTO = 30437;
-	private final static int TUREK_CHIEF_BURAI = 30617;
+	private static final int TYRA = 30420;
+	private static final int NETI = 30425;
+	private static final int TRADER_ROLENTO = 30437;
+	private static final int TUREK_CHIEF_BURAI = 30617;
 	// Items
-	private final static int BLADE_MOLD = 4239;
-	private final static int TYRAS_BILL = 4240;
-	private final static int RANGERS_REPORT1 = 4241;
-	private final static int RANGERS_REPORT2 = 4242;
-	private final static int RANGERS_REPORT3 = 4243;
-	private final static int RANGERS_REPORT4 = 4244;
-	private final static int WEAPONS_TRADE_CONTRACT = 4245;
-	private final static int ATTACK_DIRECTIVES = 4246;
-	private final static int CERTIFICATE_OF_THE_SILVER_GUILD = 4247;
-	private final static int ROLENTOS_CARGOBOX = 4248;
-	private final static int OL_MAHUM_CAPTAINS_HEAD = 4249;
+	private static final int BLADE_MOLD = 4239;
+	private static final int TYRAS_BILL = 4240;
+	private static final int RANGERS_REPORT1 = 4241;
+	private static final int RANGERS_REPORT2 = 4242;
+	private static final int RANGERS_REPORT3 = 4243;
+	private static final int RANGERS_REPORT4 = 4244;
+	private static final int WEAPONS_TRADE_CONTRACT = 4245;
+	private static final int ATTACK_DIRECTIVES = 4246;
+	private static final int CERTIFICATE_OF_THE_SILVER_GUILD = 4247;
+	private static final int ROLENTOS_CARGOBOX = 4248;
+	private static final int OL_MAHUM_CAPTAINS_HEAD = 4249;
 	// Monster
 	private static final int TUMRAN_BUGBEAR = 20062;
 	private static final int TUMRAN_BUGBEAR_WARRIOR = 20064;

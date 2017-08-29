@@ -244,7 +244,7 @@ public class NpcLocationInfo extends AbstractNpcAI
 		int npcId = npc.getId();
 		if (NPC.contains(npcId))
 		{
-			htmltext = String.valueOf(npcId) + ".htm";
+			htmltext = npcId + ".htm";
 		}
 		return htmltext;
 	}

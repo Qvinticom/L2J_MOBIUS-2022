@@ -42,7 +42,7 @@ public class PlayerHelp implements IBypassHandler
 			}
 			
 			final String path = command.substring(12);
-			if (path.indexOf("..") != -1)
+			if (path.contains(".."))
 			{
 				return false;
 			}

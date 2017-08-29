@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
 public final class StrongholdsTeleports extends AbstractNpcAI
 {
 	// NPCs
-	private final static int[] NPCs =
+	private static final int[] NPCs =
 	{
 		32163,
 		32181,
@@ -48,9 +48,9 @@ public final class StrongholdsTeleports extends AbstractNpcAI
 	{
 		if (player.getLevel() < 20)
 		{
-			return String.valueOf(npc.getId()) + ".htm";
+			return npc.getId() + ".htm";
 		}
-		return String.valueOf(npc.getId()) + "-no.htm";
+		return npc.getId() + "-no.htm";
 	}
 	
 	public static void main(String[] args)

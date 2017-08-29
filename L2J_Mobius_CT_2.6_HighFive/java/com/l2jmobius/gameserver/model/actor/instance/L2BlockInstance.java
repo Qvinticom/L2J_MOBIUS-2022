@@ -61,7 +61,7 @@ public class L2BlockInstance extends L2MonsterInstance
 				// Change color
 				_colorEffect = 0x00;
 				// BroadCast to all known players
-				this.broadcastPacket(new AbstractNpcInfo.NpcInfo(this, attacker));
+				broadcastPacket(new AbstractNpcInfo.NpcInfo(this, attacker));
 				increaseTeamPointsAndSend(attacker, team, event);
 			}
 			else
@@ -69,7 +69,7 @@ public class L2BlockInstance extends L2MonsterInstance
 				// Change color
 				_colorEffect = 0x53;
 				// BroadCast to all known players
-				this.broadcastPacket(new AbstractNpcInfo.NpcInfo(this, attacker));
+				broadcastPacket(new AbstractNpcInfo.NpcInfo(this, attacker));
 				increaseTeamPointsAndSend(attacker, team, event);
 			}
 			// 30% chance to drop the event items

@@ -46,7 +46,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 	protected static final class HSWorld extends InstanceWorld
 	{
 		protected int doorst = 0;
-		protected final static Map<Integer, List<L2Npc>> _save_point = new HashMap<>();
+		protected static final Map<Integer, List<L2Npc>> _save_point = new HashMap<>();
 		
 		public static Map<Integer, List<L2Npc>> getMonsters()
 		{

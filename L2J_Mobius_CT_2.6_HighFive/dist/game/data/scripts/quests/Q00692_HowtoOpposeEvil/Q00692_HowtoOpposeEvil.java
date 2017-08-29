@@ -248,7 +248,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 		return htmltext;
 	}
 	
-	private static final boolean giveReward(L2PcInstance player, int itemId, int minCount, int rewardItemId, long rewardCount)
+	private static boolean giveReward(L2PcInstance player, int itemId, int minCount, int rewardItemId, long rewardCount)
 	{
 		long count = getQuestItemsCount(player, itemId);
 		if (count < minCount)

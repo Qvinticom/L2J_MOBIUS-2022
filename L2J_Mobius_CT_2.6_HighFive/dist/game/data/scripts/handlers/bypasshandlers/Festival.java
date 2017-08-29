@@ -227,7 +227,7 @@ public class Festival implements IBypassHandler
 					
 					if (dawnScore > 0)
 					{
-						strBuffer.append("Dawn: " + calculateDate(dawnData.getString("date")) + ". Score " + String.valueOf(dawnScore) + "<br>" + dawnData.getString("members") + "<br>");
+						strBuffer.append("Dawn: " + calculateDate(dawnData.getString("date")) + ". Score " + dawnScore + "<br>" + dawnData.getString("members") + "<br>");
 					}
 					else
 					{
@@ -236,7 +236,7 @@ public class Festival implements IBypassHandler
 					
 					if (duskScore > 0)
 					{
-						strBuffer.append("Dusk: " + calculateDate(duskData.getString("date")) + ". Score " + String.valueOf(duskScore) + "<br>" + duskData.getString("members") + "<br>");
+						strBuffer.append("Dusk: " + calculateDate(duskData.getString("date")) + ". Score " + duskScore + "<br>" + duskData.getString("members") + "<br>");
 					}
 					else
 					{
@@ -255,14 +255,14 @@ public class Festival implements IBypassHandler
 							cabalStr = "Children of Dusk";
 						}
 						
-						strBuffer.append("Consecutive top scores: " + calculateDate(overallData.getString("date")) + ". Score " + String.valueOf(overallScore) + "<br>Affilated side: " + cabalStr + "<br>" + overallData.getString("members") + "<br>");
+						strBuffer.append("Consecutive top scores: " + calculateDate(overallData.getString("date")) + ". Score " + overallScore + "<br>Affilated side: " + cabalStr + "<br>" + overallData.getString("members") + "<br>");
 					}
 					else
 					{
 						strBuffer.append("Consecutive top scores: No record exists. Score 0<br>");
 					}
 					
-					strBuffer.append("<a action=\"bypass -h npc_" + String.valueOf(npc.getObjectId()) + "_Chat 0\">Go back.</a></body></html>");
+					strBuffer.append("<a action=\"bypass -h npc_" + npc.getObjectId() + "_Chat 0\">Go back.</a></body></html>");
 					
 					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 					html.setHtml(strBuffer.toString());

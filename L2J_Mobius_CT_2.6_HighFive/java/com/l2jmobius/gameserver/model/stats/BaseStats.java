@@ -76,7 +76,7 @@ public enum BaseStats
 		return 1;
 	}
 	
-	public static final BaseStats valueOfXml(String name)
+	public static BaseStats valueOfXml(String name)
 	{
 		name = name.intern();
 		for (BaseStats s : values())
@@ -91,7 +91,7 @@ public enum BaseStats
 	
 	private interface BaseStat
 	{
-		public double calcBonus(L2Character actor);
+		double calcBonus(L2Character actor);
 	}
 	
 	protected static final class STR implements BaseStat

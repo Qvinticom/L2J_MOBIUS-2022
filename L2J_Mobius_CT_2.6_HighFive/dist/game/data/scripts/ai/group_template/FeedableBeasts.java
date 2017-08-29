@@ -471,7 +471,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 			
 			if (MAD_COW_POLYMORPH.containsKey(nextNpcId))
 			{
-				this.startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player);
+				startQuestTimer("polymorph Mad Cow", 10000, nextNpc, player);
 			}
 			
 			// register the player in the feedinfo for the mob that just spawned

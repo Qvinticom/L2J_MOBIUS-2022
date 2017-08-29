@@ -35,27 +35,27 @@ import ai.AbstractNpcAI;
 public final class OracleTeleport extends AbstractNpcAI
 {
 	// @formatter:off
-	private final static int[] TOWN_DAWN =
+	private static final int[] TOWN_DAWN =
 	{
 		31078, 31079, 31080, 31081, 31083, 31084, 31082, 31692, 31694, 31997, 31168
 	};
 	
-	private final static int[] TOWN_DUSK =
+	private static final int[] TOWN_DUSK =
 	{
 		31085, 31086, 31087, 31088, 31090, 31091, 31089, 31693, 31695, 31998, 31169
 	};
 	
-	private final static int[] TEMPLE_PRIEST =
+	private static final int[] TEMPLE_PRIEST =
 	{
 		31127, 31128, 31129, 31130, 31131, 31137, 31138, 31139, 31140, 31141
 	};
 	
-	private final static int[] RIFT_POSTERS =
+	private static final int[] RIFT_POSTERS =
 	{
 		31488, 31489, 31490, 31491, 31492, 31493
 	};
 	
-	private final static int[] TELEPORTERS =
+	private static final int[] TELEPORTERS =
 	{
 		31078, 31079, 31080, 31081, 31082, 31083, 31084, 31692, 31694, 31997,
 		31168, 31085, 31086, 31087, 31088, 31089, 31090, 31091, 31693, 31695,
@@ -66,7 +66,7 @@ public final class OracleTeleport extends AbstractNpcAI
 		31122, 31123, 31124, 31125
 	};
 	// @formatter:on
-	private final static Location[] RETURN_LOCS =
+	private static final Location[] RETURN_LOCS =
 	{
 		new Location(-80555, 150337, -3040),
 		new Location(-13953, 121404, -2984),

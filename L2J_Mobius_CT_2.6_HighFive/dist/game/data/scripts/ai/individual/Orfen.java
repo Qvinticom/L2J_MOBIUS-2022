@@ -246,7 +246,7 @@ public final class Orfen extends AbstractNpcAI
 			if ((skill.getEffectPoint() > 0) && (getRandom(5) == 0) && npc.isInsideRadius(originalCaster, 1000, false, false))
 			{
 				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), TEXT[getRandom(4)]);
-				packet.addStringParameter(caster.getName().toString());
+				packet.addStringParameter(caster.getName());
 				npc.broadcastPacket(packet);
 				originalCaster.teleToLocation(npc.getLocation());
 				npc.setTarget(originalCaster);
@@ -301,7 +301,7 @@ public final class Orfen extends AbstractNpcAI
 			else if (npc.isInsideRadius(attacker, 1000, false, false) && !npc.isInsideRadius(attacker, 300, false, false) && (getRandom(10) == 0))
 			{
 				final NpcSay packet = new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npcId, TEXT[getRandom(3)]);
-				packet.addStringParameter(attacker.getName().toString());
+				packet.addStringParameter(attacker.getName());
 				npc.broadcastPacket(packet);
 				attacker.teleToLocation(npc.getLocation());
 				npc.setTarget(attacker);

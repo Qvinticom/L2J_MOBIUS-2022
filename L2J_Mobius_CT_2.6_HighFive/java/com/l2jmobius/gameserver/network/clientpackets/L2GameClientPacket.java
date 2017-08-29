@@ -47,7 +47,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed reading: " + getType() + " ; " + e.getMessage(), e);
+			_log.log(Level.SEVERE, "Client: " + getClient() + " - Failed reading: " + getType() + " ; " + e.getMessage(), e);
 			
 			if (e instanceof BufferUnderflowException)
 			{
@@ -84,7 +84,7 @@ public abstract class L2GameClientPacket extends ReceivablePacket<L2GameClient>
 		}
 		catch (Throwable t)
 		{
-			_log.log(Level.SEVERE, "Client: " + getClient().toString() + " - Failed running: " + getType() + " ; " + t.getMessage(), t);
+			_log.log(Level.SEVERE, "Client: " + getClient() + " - Failed running: " + getType() + " ; " + t.getMessage(), t);
 			// in case of EnterWorld error kick player from game
 			if (this instanceof EnterWorld)
 			{

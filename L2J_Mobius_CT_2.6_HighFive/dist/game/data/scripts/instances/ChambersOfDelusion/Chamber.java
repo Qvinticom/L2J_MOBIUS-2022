@@ -375,7 +375,7 @@ public abstract class Chamber extends AbstractInstance
 			}
 			
 			// Save location for teleport back into main hall
-			partyMember.getVariables().set(RETURN, Integer.toString(partyMember.getX()) + ";" + Integer.toString(partyMember.getY()) + ";" + Integer.toString(partyMember.getZ()));
+			partyMember.getVariables().set(RETURN, partyMember.getX() + ";" + partyMember.getY() + ";" + partyMember.getZ());
 			
 			partyMember.setInstanceId(world.getInstanceId());
 			world.addAllowed(partyMember.getObjectId());

@@ -193,7 +193,7 @@ public final class SubclassCertification extends AbstractNpcAI
 		String htmltext = getHtm(player.getHtmlPrefix(), htmlFile);
 		if (replaceClass)
 		{
-			htmltext = htmltext.replace("%class%", String.valueOf(ClassListData.getInstance().getClass(player.getActiveClass()).getClientCode()));
+			htmltext = htmltext.replace("%class%", ClassListData.getInstance().getClass(player.getActiveClass()).getClientCode());
 		}
 		if (levelToReplace != null)
 		{

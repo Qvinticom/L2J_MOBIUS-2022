@@ -278,7 +278,7 @@ public final class MultisellData implements IXmlReader
 		separateAndSend(listId, player, npc, inventoryOnly, 1, 1);
 	}
 	
-	public static final boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
+	public static boolean hasSpecialIngredient(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{
@@ -310,7 +310,7 @@ public final class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static final boolean takeSpecialIngredient(int id, long amount, L2PcInstance player)
+	public static boolean takeSpecialIngredient(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{
@@ -329,7 +329,7 @@ public final class MultisellData implements IXmlReader
 		return false;
 	}
 	
-	public static final void giveSpecialProduct(int id, long amount, L2PcInstance player)
+	public static void giveSpecialProduct(int id, long amount, L2PcInstance player)
 	{
 		switch (id)
 		{

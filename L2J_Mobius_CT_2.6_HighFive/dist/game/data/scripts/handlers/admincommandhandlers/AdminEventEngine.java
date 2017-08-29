@@ -477,7 +477,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		
 		result.append("</table>");
 		
-		return note + result.toString();
+		return note + result;
 	}
 	
 	public void showMainPage(L2PcInstance activeChar)

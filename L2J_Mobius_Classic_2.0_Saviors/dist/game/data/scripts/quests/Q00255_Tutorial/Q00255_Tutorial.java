@@ -55,7 +55,7 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 public class Q00255_Tutorial extends Quest
 {
 	// NPCs
-	private final static List<Integer> NEWBIE_HELPERS = new ArrayList<>();
+	private static final List<Integer> NEWBIE_HELPERS = new ArrayList<>();
 	{
 		NEWBIE_HELPERS.add(30009); // human fighter
 		NEWBIE_HELPERS.add(30019); // human mystic
@@ -64,7 +64,7 @@ public class Q00255_Tutorial extends Quest
 		NEWBIE_HELPERS.add(30575); // orc
 		NEWBIE_HELPERS.add(30530); // dwarf
 	}
-	private final static List<Integer> SUPERVISORS = new ArrayList<>();
+	private static final List<Integer> SUPERVISORS = new ArrayList<>();
 	{
 		SUPERVISORS.add(30008); // human fighter
 		SUPERVISORS.add(30017); // human mystic
@@ -74,15 +74,15 @@ public class Q00255_Tutorial extends Quest
 		SUPERVISORS.add(30528); // dwarf
 	}
 	// Monsters
-	private final static int[] GREMLINS =
+	private static final int[] GREMLINS =
 	{
 		18342, // this is used for now
 		20001
 	};
 	// Items
-	private final static int BLUE_GEM = 6353;
-	private final static ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
-	private final static ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
+	private static final int BLUE_GEM = 6353;
+	private static final ItemHolder SOULSHOT_REWARD = new ItemHolder(5789, 200);
+	private static final ItemHolder SPIRITSHOT_REWARD = new ItemHolder(5790, 100);
 	// Others
 	private static final Map<Integer, QuestSoundHtmlHolder> STARTING_VOICE_HTML = new HashMap<>();
 	{

@@ -59,7 +59,7 @@ public class NpcBuffer extends Quest
 	
 	private static void print(Exception e)
 	{
-		_log.warning(">>>" + e.toString() + "<<<");
+		_log.warning(">>>" + e + "<<<");
 		if (DEBUG)
 		{
 			e.printStackTrace();
@@ -2023,7 +2023,7 @@ public class NpcBuffer extends Quest
 		return formatted;
 	}
 	
-	static public void main(String[] args)
+	public static void main(String[] args)
 	{
 		new NpcBuffer();
 	}

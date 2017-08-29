@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public final class Q00257_TheGuardIsBusy extends Quest
 {
-	public final static class MobDrop extends ItemHolder
+	public static final class MobDrop extends ItemHolder
 	{
 		private final int _chance;
 		private final int _random;
