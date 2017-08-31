@@ -97,11 +97,8 @@ public final class Q10443_TheAnnihilatedPlains2 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		if (qs == null)
-		{
-			return null;
-		}
+		String htmltext = getNoQuestMsg(player);
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

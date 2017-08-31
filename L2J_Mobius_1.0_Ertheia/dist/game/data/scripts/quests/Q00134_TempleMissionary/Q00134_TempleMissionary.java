@@ -173,10 +173,6 @@ public class Q00134_TempleMissionary extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

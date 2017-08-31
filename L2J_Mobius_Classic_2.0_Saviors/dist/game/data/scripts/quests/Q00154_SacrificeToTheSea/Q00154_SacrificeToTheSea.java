@@ -70,6 +70,7 @@ public final class Q00154_SacrificeToTheSea extends Quest
 	{
 		final QuestState qs = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
+		
 		switch (npc.getId())
 		{
 			case ROCKSWELL:

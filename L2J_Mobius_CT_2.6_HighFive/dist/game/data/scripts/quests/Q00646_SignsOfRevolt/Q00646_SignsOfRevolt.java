@@ -44,10 +44,7 @@ public class Q00646_SignsOfRevolt extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		if (st != null)
-		{
-			st.exitQuest(true);
-		}
+		st.exitQuest(true);
 		return (player.getLevel() >= MIN_LEVEL) ? "32016-01.html" : "32016-02.html";
 	}
 }

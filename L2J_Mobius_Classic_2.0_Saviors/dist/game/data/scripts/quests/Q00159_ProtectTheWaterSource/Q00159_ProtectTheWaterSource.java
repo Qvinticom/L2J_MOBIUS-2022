@@ -107,65 +107,63 @@ public class Q00159_ProtectTheWaterSource extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
 				{
-					htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL ? "30154-03.htm" : "30154-02.htm") : "30154-01.htm";
-					break;
-				}
-				case State.STARTED:
-				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
+						if (hasQuestItems(player, HYACINTH_CHARM) && !hasQuestItems(player, PLAGUE_DUST))
 						{
-							if (hasQuestItems(player, HYACINTH_CHARM) && !hasQuestItems(player, PLAGUE_DUST))
-							{
-								htmltext = "30154-05.html";
-							}
-							break;
+							htmltext = "30154-05.html";
 						}
-						case 2:
-						{
-							if (hasQuestItems(player, HYACINTH_CHARM, PLAGUE_DUST))
-							{
-								takeItems(player, HYACINTH_CHARM, -1);
-								takeItems(player, PLAGUE_DUST, -1);
-								giveItems(player, HYACINTH_CHARM2, 1);
-								st.setCond(3, true);
-								htmltext = "30154-06.html";
-							}
-							break;
-						}
-						case 3:
-						{
-							if (hasQuestItems(player, HYACINTH_CHARM2))
-							{
-								htmltext = "30154-07.html";
-							}
-							break;
-						}
-						case 4:
-						{
-							if (hasQuestItems(player, HYACINTH_CHARM2) && (getQuestItemsCount(player, PLAGUE_DUST) >= 5))
-							{
-								giveAdena(player, 18250, true);
-								st.exitQuest(false, true);
-								htmltext = "30154-08.html";
-							}
-							break;
-						}
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (hasQuestItems(player, HYACINTH_CHARM, PLAGUE_DUST))
+						{
+							takeItems(player, HYACINTH_CHARM, -1);
+							takeItems(player, PLAGUE_DUST, -1);
+							giveItems(player, HYACINTH_CHARM2, 1);
+							st.setCond(3, true);
+							htmltext = "30154-06.html";
+						}
+						break;
+					}
+					case 3:
+					{
+						if (hasQuestItems(player, HYACINTH_CHARM2))
+						{
+							htmltext = "30154-07.html";
+						}
+						break;
+					}
+					case 4:
+					{
+						if (hasQuestItems(player, HYACINTH_CHARM2) && (getQuestItemsCount(player, PLAGUE_DUST) >= 5))
+						{
+							giveAdena(player, 18250, true);
+							st.exitQuest(false, true);
+							htmltext = "30154-08.html";
+						}
+						break;
+					}
 				}
-				case State.COMPLETED:
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;

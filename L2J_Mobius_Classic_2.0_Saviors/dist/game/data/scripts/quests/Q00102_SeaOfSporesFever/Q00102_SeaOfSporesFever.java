@@ -121,170 +121,168 @@ public class Q00102_SeaOfSporesFever extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case ALBERIUS:
 			{
-				case ALBERIUS:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = player.getRace() == Race.ELF ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							switch (st.getCond())
-							{
-								case 1:
-								{
-									if (hasQuestItems(player, ALBERIUS_LETTER))
-									{
-										htmltext = "30284-03.html";
-									}
-									break;
-								}
-								case 2:
-								{
-									if (hasQuestItems(player, EVERGREEN_AMULET))
-									{
-										htmltext = "30284-09.html";
-									}
-									break;
-								}
-								case 4:
-								{
-									if (hasQuestItems(player, COBENDELLS_MEDICINE1))
-									{
-										takeItems(player, COBENDELLS_MEDICINE1, 1);
-										giveItems(player, ALBERIUS_LIST, 1);
-										st.setCond(5);
-										htmltext = "30284-04.html";
-									}
-									break;
-								}
-								case 5:
-								{
-									if (hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
-									{
-										htmltext = "30284-05.html";
-									}
-									break;
-								}
-								case 6:
-								{
-									if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
-									{
-										giveItems(player, LESSER_HEALING_POTION, 100);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_BATTLE, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_LOVE, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_SOLITUDE, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_FEAST, 10);
-										giveItems(player, ECHO_CRYSTAL_THEME_OF_CELEBRATION, 10);
-										if (player.isMageClass())
-										{
-											giveItems(player, STAFF_OF_SENTINEL, 1);
-											giveItems(player, SPIRITSHOT_NO_GRADE, 500);
-										}
-										else
-										{
-											giveItems(player, SWORD_OF_SENTINEL, 1);
-											giveItems(player, SOULSHOT_NO_GRADE, 500);
-										}
-										addExpAndSp(player, 30202, 1339);
-										giveAdena(player, 6331, true);
-										st.exitQuest(false, true);
-										htmltext = "30284-06.html";
-									}
-									break;
-								}
-							}
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = player.getRace() == Race.ELF ? player.getLevel() >= MIN_LVL ? "30284-07.htm" : "30284-08.htm" : "30284-00.htm";
+						break;
 					}
-					break;
+					case State.STARTED:
+					{
+						switch (st.getCond())
+						{
+							case 1:
+							{
+								if (hasQuestItems(player, ALBERIUS_LETTER))
+								{
+									htmltext = "30284-03.html";
+								}
+								break;
+							}
+							case 2:
+							{
+								if (hasQuestItems(player, EVERGREEN_AMULET))
+								{
+									htmltext = "30284-09.html";
+								}
+								break;
+							}
+							case 4:
+							{
+								if (hasQuestItems(player, COBENDELLS_MEDICINE1))
+								{
+									takeItems(player, COBENDELLS_MEDICINE1, 1);
+									giveItems(player, ALBERIUS_LIST, 1);
+									st.setCond(5);
+									htmltext = "30284-04.html";
+								}
+								break;
+							}
+							case 5:
+							{
+								if (hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
+								{
+									htmltext = "30284-05.html";
+								}
+								break;
+							}
+							case 6:
+							{
+								if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
+								{
+									giveItems(player, LESSER_HEALING_POTION, 100);
+									giveItems(player, ECHO_CRYSTAL_THEME_OF_BATTLE, 10);
+									giveItems(player, ECHO_CRYSTAL_THEME_OF_LOVE, 10);
+									giveItems(player, ECHO_CRYSTAL_THEME_OF_SOLITUDE, 10);
+									giveItems(player, ECHO_CRYSTAL_THEME_OF_FEAST, 10);
+									giveItems(player, ECHO_CRYSTAL_THEME_OF_CELEBRATION, 10);
+									if (player.isMageClass())
+									{
+										giveItems(player, STAFF_OF_SENTINEL, 1);
+										giveItems(player, SPIRITSHOT_NO_GRADE, 500);
+									}
+									else
+									{
+										giveItems(player, SWORD_OF_SENTINEL, 1);
+										giveItems(player, SOULSHOT_NO_GRADE, 500);
+									}
+									addExpAndSp(player, 30202, 1339);
+									giveAdena(player, 6331, true);
+									st.exitQuest(false, true);
+									htmltext = "30284-06.html";
+								}
+								break;
+							}
+						}
+						break;
+					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
 				}
-				case COBENDELL:
+				break;
+			}
+			case COBENDELL:
+			{
+				switch (st.getCond())
 				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
+						if (hasQuestItems(player, ALBERIUS_LETTER))
 						{
-							if (hasQuestItems(player, ALBERIUS_LETTER))
-							{
-								takeItems(player, ALBERIUS_LETTER, 1);
-								giveItems(player, EVERGREEN_AMULET, 1);
-								st.setCond(2, true);
-								htmltext = "30156-03.html";
-							}
-							break;
+							takeItems(player, ALBERIUS_LETTER, 1);
+							giveItems(player, EVERGREEN_AMULET, 1);
+							st.setCond(2, true);
+							htmltext = "30156-03.html";
 						}
-						case 2:
-						{
-							if (hasQuestItems(player, EVERGREEN_AMULET) && (getQuestItemsCount(player, DRYADS_TEAR) < 10))
-							{
-								htmltext = "30156-04.html";
-							}
-							break;
-						}
-						case 3:
-						{
-							if (getQuestItemsCount(player, DRYADS_TEAR) >= 10)
-							{
-								takeItems(player, EVERGREEN_AMULET, -1);
-								takeItems(player, DRYADS_TEAR, -1);
-								giveItems(player, COBENDELLS_MEDICINE1, 1);
-								giveItems(player, COBENDELLS_MEDICINE2, 1);
-								giveItems(player, COBENDELLS_MEDICINE3, 1);
-								giveItems(player, COBENDELLS_MEDICINE4, 1);
-								giveItems(player, COBENDELLS_MEDICINE5, 1);
-								st.setCond(4, true);
-								htmltext = "30156-05.html";
-							}
-							break;
-						}
-						case 4:
-						{
-							if (hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
-							{
-								htmltext = "30156-06.html";
-							}
-							break;
-						}
-						case 5:
-						{
-							if (hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
-							{
-								htmltext = "30156-07.html";
-							}
-							break;
-						}
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (hasQuestItems(player, EVERGREEN_AMULET) && (getQuestItemsCount(player, DRYADS_TEAR) < 10))
+						{
+							htmltext = "30156-04.html";
+						}
+						break;
+					}
+					case 3:
+					{
+						if (getQuestItemsCount(player, DRYADS_TEAR) >= 10)
+						{
+							takeItems(player, EVERGREEN_AMULET, -1);
+							takeItems(player, DRYADS_TEAR, -1);
+							giveItems(player, COBENDELLS_MEDICINE1, 1);
+							giveItems(player, COBENDELLS_MEDICINE2, 1);
+							giveItems(player, COBENDELLS_MEDICINE3, 1);
+							giveItems(player, COBENDELLS_MEDICINE4, 1);
+							giveItems(player, COBENDELLS_MEDICINE5, 1);
+							st.setCond(4, true);
+							htmltext = "30156-05.html";
+						}
+						break;
+					}
+					case 4:
+					{
+						if (hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
+						{
+							htmltext = "30156-06.html";
+						}
+						break;
+					}
+					case 5:
+					{
+						if (hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
+						{
+							htmltext = "30156-07.html";
+						}
+						break;
+					}
 				}
-				case GARTRANDELL:
-				case RAYEN:
-				case VELTRESS:
-				case BERROS:
+				break;
+			}
+			case GARTRANDELL:
+			case RAYEN:
+			case VELTRESS:
+			case BERROS:
+			{
+				if (hasQuestItems(player, ALBERIUS_LIST, SENTINELS.get(npc.getId())))
 				{
-					if (hasQuestItems(player, ALBERIUS_LIST, SENTINELS.get(npc.getId())))
+					takeItems(player, SENTINELS.get(npc.getId()), -1);
+					if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
 					{
-						takeItems(player, SENTINELS.get(npc.getId()), -1);
-						if (!hasAtLeastOneQuestItem(player, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5))
-						{
-							st.setCond(6);
-						}
-						htmltext = npc.getId() + "-01.html";
+						st.setCond(6);
 					}
-					break;
+					htmltext = npc.getId() + "-01.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

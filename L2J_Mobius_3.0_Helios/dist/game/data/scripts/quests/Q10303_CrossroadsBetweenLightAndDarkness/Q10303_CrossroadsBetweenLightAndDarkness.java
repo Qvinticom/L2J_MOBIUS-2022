@@ -155,8 +155,8 @@ public class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 	@Override
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		if (qs.isCompleted())
 		{
 			htmltext = getNoQuestMsg(player);

@@ -110,8 +110,8 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		switch (st.getState())
 		{
 			case State.CREATED:

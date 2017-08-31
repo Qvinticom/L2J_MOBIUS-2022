@@ -233,10 +233,6 @@ public final class Q00638_SeekersOfTheHolyGrail extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		if (qs.isCreated())
 		{

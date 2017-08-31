@@ -85,10 +85,6 @@ public final class Q00636_TruthBeyond extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
 		
 		if (npc.getId() == ELIYAH)
 		{

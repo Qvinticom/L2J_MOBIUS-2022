@@ -88,38 +88,36 @@ public final class Q00268_TracesOfEvil extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getLevel() >= MIN_LVL) ? "30559-02.htm" : "30559-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
 				{
-					htmltext = (player.getLevel() >= MIN_LVL) ? "30559-02.htm" : "30559-01.htm";
-					break;
-				}
-				case State.STARTED:
-				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
-						{
-							htmltext = (!hasQuestItems(player, CONTAMINATED_KASHA_SPIDER_VENOM)) ? "30559-04.html" : "30559-05.html";
-							break;
-						}
-						case 2:
-						{
-							if (getQuestItemsCount(player, CONTAMINATED_KASHA_SPIDER_VENOM) >= 30)
-							{
-								giveAdena(player, 2474, true);
-								addExpAndSp(player, 8738, 409);
-								st.exitQuest(true, true);
-								htmltext = "30559-06.html";
-							}
-							break;
-						}
+						htmltext = (!hasQuestItems(player, CONTAMINATED_KASHA_SPIDER_VENOM)) ? "30559-04.html" : "30559-05.html";
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (getQuestItemsCount(player, CONTAMINATED_KASHA_SPIDER_VENOM) >= 30)
+						{
+							giveAdena(player, 2474, true);
+							addExpAndSp(player, 8738, 409);
+							st.exitQuest(true, true);
+							htmltext = "30559-06.html";
+						}
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;

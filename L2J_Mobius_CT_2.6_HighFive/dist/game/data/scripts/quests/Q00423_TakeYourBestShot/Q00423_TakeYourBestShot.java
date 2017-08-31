@@ -109,10 +109,6 @@ public class Q00423_TakeYourBestShot extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

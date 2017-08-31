@@ -45,7 +45,7 @@ public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 		22994, // Avian
 		22995, // Rider
 		23122
-	// Eyesaroch
+		// Eyesaroch
 	};
 	// Misc
 	private static final int MIN_LEVEL = 16;
@@ -110,11 +110,7 @@ public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == SEBION)
-				{
-					htmltext = "32978-01.htm";
-					break;
-				}
+				htmltext = "32978-01.htm";
 				break;
 			}
 			case State.STARTED:

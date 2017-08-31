@@ -108,10 +108,6 @@ public final class Q00264_KeenClaws extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (st.getState())
 		{

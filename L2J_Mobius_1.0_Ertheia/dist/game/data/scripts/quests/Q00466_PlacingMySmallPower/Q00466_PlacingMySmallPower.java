@@ -135,10 +135,7 @@ public class Q00466_PlacingMySmallPower extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		switch (qs.getState())
 		{
 			case State.COMPLETED:

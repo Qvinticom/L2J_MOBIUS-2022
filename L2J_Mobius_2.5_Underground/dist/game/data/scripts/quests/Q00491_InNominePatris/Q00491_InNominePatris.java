@@ -102,13 +102,9 @@ public class Q00491_InNominePatris extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		if (npc.getId() == SIRIK)
 		{
 			switch (qs.getState())

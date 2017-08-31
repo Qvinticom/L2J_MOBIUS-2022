@@ -144,10 +144,6 @@ public class Q00239_WontYouJoinUs extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

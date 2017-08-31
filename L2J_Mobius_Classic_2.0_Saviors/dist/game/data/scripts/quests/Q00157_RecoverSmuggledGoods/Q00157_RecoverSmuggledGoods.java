@@ -97,34 +97,32 @@ public class Q00157_RecoverSmuggledGoods extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = player.getLevel() >= MIN_LVL ? "30005-02.htm" : "30005-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (st.isCond(2) && (getQuestItemsCount(player, ADAMANTITE_ORE) >= 20))
 				{
-					htmltext = player.getLevel() >= MIN_LVL ? "30005-02.htm" : "30005-01.htm";
-					break;
+					giveItems(player, BUCKLER, 1);
+					st.exitQuest(false, true);
+					htmltext = "30005-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (st.isCond(2) && (getQuestItemsCount(player, ADAMANTITE_ORE) >= 20))
-					{
-						giveItems(player, BUCKLER, 1);
-						st.exitQuest(false, true);
-						htmltext = "30005-06.html";
-					}
-					else
-					{
-						htmltext = "30005-05.html";
-					}
-					break;
+					htmltext = "30005-05.html";
 				}
-				case State.COMPLETED:
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;

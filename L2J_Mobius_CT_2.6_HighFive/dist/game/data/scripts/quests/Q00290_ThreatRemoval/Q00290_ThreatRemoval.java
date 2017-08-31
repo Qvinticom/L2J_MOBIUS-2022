@@ -196,10 +196,6 @@ public class Q00290_ThreatRemoval extends Quest
 	{
 		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (st.getState())
 		{

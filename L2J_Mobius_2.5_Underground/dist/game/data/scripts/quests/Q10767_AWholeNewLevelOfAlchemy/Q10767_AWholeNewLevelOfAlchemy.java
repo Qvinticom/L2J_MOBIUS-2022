@@ -110,11 +110,8 @@ public class Q10767_AWholeNewLevelOfAlchemy extends Quest
 		{
 			case State.CREATED:
 			{
-				if (npc.getId() == VERUTI)
-				{
-					htmltext = "33977-01.htm";
-					break;
-				}
+				htmltext = "33977-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

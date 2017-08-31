@@ -109,55 +109,53 @@ public class Q00167_DwarvenKinship extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case CARLON:
 			{
-				case CARLON:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = (player.getLevel() >= MIN_LVL) ? "30350-02.htm" : "30350-01.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
-							{
-								htmltext = "30350-04.html";
-							}
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = (player.getLevel() >= MIN_LVL) ? "30350-02.htm" : "30350-01.htm";
+						break;
 					}
-					break;
+					case State.STARTED:
+					{
+						if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
+						{
+							htmltext = "30350-04.html";
+						}
+						break;
+					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
 				}
-				case HAPROCK:
+				break;
+			}
+			case HAPROCK:
+			{
+				if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
 				{
-					if (st.isCond(1) && hasQuestItems(player, CARLONS_LETTER))
-					{
-						htmltext = "30255-01.html";
-					}
-					else if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
-					{
-						htmltext = "30255-05.html";
-					}
-					break;
+					htmltext = "30255-01.html";
 				}
-				case NORMAN:
+				else if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
 				{
-					if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
-					{
-						htmltext = "30210-01.html";
-					}
-					break;
+					htmltext = "30255-05.html";
 				}
+				break;
+			}
+			case NORMAN:
+			{
+				if (st.isCond(2) && hasQuestItems(player, NORMANS_LETTER))
+				{
+					htmltext = "30210-01.html";
+				}
+				break;
 			}
 		}
 		return htmltext;

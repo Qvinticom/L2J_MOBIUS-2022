@@ -111,10 +111,6 @@ public class Q00124_MeetingTheElroki extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

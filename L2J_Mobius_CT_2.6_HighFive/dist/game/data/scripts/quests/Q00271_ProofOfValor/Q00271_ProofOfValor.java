@@ -89,47 +89,45 @@ public final class Q00271_ProofOfValor extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE)) ? "30577-07.htm" : "30577-03.htm" : "30577-02.htm" : "30577-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
 				{
-					htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? (hasAtLeastOneQuestItem(player, NECKLACE_OF_VALOR, NECKLACE_OF_COURAGE)) ? "30577-07.htm" : "30577-03.htm" : "30577-02.htm" : "30577-01.htm";
-					break;
-				}
-				case State.STARTED:
-				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
-						{
-							htmltext = "30577-05.html";
-							break;
-						}
-						case 2:
-						{
-							if (getQuestItemsCount(player, KASHA_WOLF_FANG) >= 50)
-							{
-								if (getRandom(100) <= 13)
-								{
-									rewardItems(player, NECKLACE_OF_VALOR, 1);
-									rewardItems(player, HEALING_POTION, 10);
-								}
-								else
-								{
-									rewardItems(player, NECKLACE_OF_COURAGE, 1);
-								}
-								takeItems(player, KASHA_WOLF_FANG, -1);
-								st.exitQuest(true, true);
-								htmltext = "30577-06.html";
-							}
-							break;
-						}
+						htmltext = "30577-05.html";
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (getQuestItemsCount(player, KASHA_WOLF_FANG) >= 50)
+						{
+							if (getRandom(100) <= 13)
+							{
+								rewardItems(player, NECKLACE_OF_VALOR, 1);
+								rewardItems(player, HEALING_POTION, 10);
+							}
+							else
+							{
+								rewardItems(player, NECKLACE_OF_COURAGE, 1);
+							}
+							takeItems(player, KASHA_WOLF_FANG, -1);
+							st.exitQuest(true, true);
+							htmltext = "30577-06.html";
+						}
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;

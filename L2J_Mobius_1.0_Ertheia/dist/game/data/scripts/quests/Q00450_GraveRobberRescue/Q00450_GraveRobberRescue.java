@@ -91,11 +91,6 @@ public class Q00450_GraveRobberRescue extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
 		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		if (npc.getId() == KANEMIKA)
 		{
 			switch (st.getState())

@@ -113,21 +113,21 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30535-01.htm" : "30535-00.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (hasQuestItems(player, MINERAL_FRAGMENT)) ? "30535-08.html" : "30535-07.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

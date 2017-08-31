@@ -79,29 +79,27 @@ public class Q00324_SweetestVenom extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = player.getLevel() < MIN_LVL ? "30351-02.html" : "30351-03.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (st.isCond(2))
 				{
-					htmltext = player.getLevel() < MIN_LVL ? "30351-02.html" : "30351-03.htm";
-					break;
+					giveAdena(player, ADENA_COUNT, true);
+					st.exitQuest(true, true);
+					htmltext = "30351-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (st.isCond(2))
-					{
-						giveAdena(player, ADENA_COUNT, true);
-						st.exitQuest(true, true);
-						htmltext = "30351-06.html";
-					}
-					else
-					{
-						htmltext = "30351-05.html";
-					}
-					break;
+					htmltext = "30351-05.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

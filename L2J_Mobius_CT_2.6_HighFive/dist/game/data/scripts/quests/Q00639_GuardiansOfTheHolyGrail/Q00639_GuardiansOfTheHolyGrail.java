@@ -42,10 +42,7 @@ public final class Q00639_GuardiansOfTheHolyGrail extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		if (st != null)
-		{
-			st.exitQuest(true);
-		}
+		st.exitQuest(true);
 		return "31350-01.html";
 	}
 }

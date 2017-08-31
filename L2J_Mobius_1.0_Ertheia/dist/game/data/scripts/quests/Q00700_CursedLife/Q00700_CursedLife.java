@@ -114,33 +114,31 @@ public class Q00700_CursedLife extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = "32560-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				long bones = getQuestItemsCount(player, SWALLOWED_BONES);
+				long ribs = getQuestItemsCount(player, SWALLOWED_STERNUM);
+				long skulls = getQuestItemsCount(player, SWALLOWED_SKULL);
+				long sum = bones + ribs + skulls;
+				if (sum > 0)
 				{
-					htmltext = "32560-01.htm";
-					break;
+					giveAdena(player, ((bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0)), true);
+					takeItems(player, -1, SWALLOWED_BONES, SWALLOWED_STERNUM, SWALLOWED_SKULL);
+					htmltext = sum < 10 ? "32560-07.html" : "32560-08.html";
 				}
-				case State.STARTED:
+				else
 				{
-					long bones = getQuestItemsCount(player, SWALLOWED_BONES);
-					long ribs = getQuestItemsCount(player, SWALLOWED_STERNUM);
-					long skulls = getQuestItemsCount(player, SWALLOWED_SKULL);
-					long sum = bones + ribs + skulls;
-					if (sum > 0)
-					{
-						giveAdena(player, ((bones * SWALLOWED_BONES_ADENA) + (ribs * SWALLOWED_STERNUM_ADENA) + (skulls * SWALLOWED_SKULL_ADENA) + (sum >= 10 ? BONUS : 0)), true);
-						takeItems(player, -1, SWALLOWED_BONES, SWALLOWED_STERNUM, SWALLOWED_SKULL);
-						htmltext = sum < 10 ? "32560-07.html" : "32560-08.html";
-					}
-					else
-					{
-						htmltext = "32560-06.html";
-					}
-					break;
+					htmltext = "32560-06.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

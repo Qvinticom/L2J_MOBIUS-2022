@@ -186,7 +186,7 @@ public final class Q10326_RespectYourElders extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{

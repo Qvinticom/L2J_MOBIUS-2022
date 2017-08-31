@@ -97,16 +97,12 @@ public final class Q10705_BottleOfTautisSoul extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		final int npcId = npc.getId();
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if ((npcId == FERGASON) && (getQuestItemsCount(player, BOTTLE_OF_TAUTIS_SOUL) >= 1))
+				if (getQuestItemsCount(player, BOTTLE_OF_TAUTIS_SOUL) >= 1)
 				{
 					htmltext = "33681-01.html";
 					break;

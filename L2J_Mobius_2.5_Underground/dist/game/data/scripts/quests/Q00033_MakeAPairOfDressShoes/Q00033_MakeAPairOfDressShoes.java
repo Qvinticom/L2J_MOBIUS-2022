@@ -124,10 +124,6 @@ public class Q00033_MakeAPairOfDressShoes extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

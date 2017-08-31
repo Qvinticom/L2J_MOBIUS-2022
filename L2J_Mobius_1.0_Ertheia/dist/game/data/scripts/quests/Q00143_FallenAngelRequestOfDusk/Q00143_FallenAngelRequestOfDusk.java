@@ -169,10 +169,6 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

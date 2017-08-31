@@ -278,7 +278,7 @@ public final class Q10360_CertificationOfFate extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
 		
-		if ((st == null) || (player.getRace() == Race.ERTHEIA) || (player.getLevel() < MIN_LEVEL))
+		if ((player.getRace() == Race.ERTHEIA) || (player.getLevel() < MIN_LEVEL))
 		{
 			return htmltext;
 		}

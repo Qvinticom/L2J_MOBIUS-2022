@@ -100,32 +100,30 @@ public class Q00328_SenseForBusiness extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = player.getLevel() < MIN_LVL ? "30436-01.htm" : "30436-02.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				final long carcass = getQuestItemsCount(player, MONSTER_EYE_CARCASS);
+				final long lens = getQuestItemsCount(player, MONSTER_EYE_LENS);
+				final long gizzards = getQuestItemsCount(player, BASILISK_GIZZARD);
+				if ((carcass + lens + gizzards) > 0)
 				{
-					htmltext = player.getLevel() < MIN_LVL ? "30436-01.htm" : "30436-02.htm";
-					break;
+					giveAdena(player, ((carcass * MONSTER_EYE_CARCASS_ADENA) + (lens * MONSTER_EYE_LENS_ADENA) + (gizzards * BASILISK_GIZZARD_ADENA) + ((carcass + lens + gizzards) >= BONUS_COUNT ? BONUS : 0)), true);
+					takeItems(player, -1, MONSTER_EYE_CARCASS, MONSTER_EYE_LENS, BASILISK_GIZZARD);
+					htmltext = "30436-05.html";
 				}
-				case State.STARTED:
+				else
 				{
-					final long carcass = getQuestItemsCount(player, MONSTER_EYE_CARCASS);
-					final long lens = getQuestItemsCount(player, MONSTER_EYE_LENS);
-					final long gizzards = getQuestItemsCount(player, BASILISK_GIZZARD);
-					if ((carcass + lens + gizzards) > 0)
-					{
-						giveAdena(player, ((carcass * MONSTER_EYE_CARCASS_ADENA) + (lens * MONSTER_EYE_LENS_ADENA) + (gizzards * BASILISK_GIZZARD_ADENA) + ((carcass + lens + gizzards) >= BONUS_COUNT ? BONUS : 0)), true);
-						takeItems(player, -1, MONSTER_EYE_CARCASS, MONSTER_EYE_LENS, BASILISK_GIZZARD);
-						htmltext = "30436-05.html";
-					}
-					else
-					{
-						htmltext = "30436-04.html";
-					}
-					break;
+					htmltext = "30436-04.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

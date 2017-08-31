@@ -151,10 +151,7 @@ public class Q00618_IntoTheFlame extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		switch (npc.getId())
 		{
 			case KLEIN:

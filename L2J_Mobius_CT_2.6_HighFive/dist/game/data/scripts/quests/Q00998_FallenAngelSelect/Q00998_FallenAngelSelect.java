@@ -88,10 +88,10 @@ public class Q00998_FallenAngelSelect extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		final QuestState qs = player.getQuestState(Q00141_ShadowFoxPart3.class.getSimpleName());
-		if ((st == null) || !st.isStarted())
+		if (!st.isStarted())
 		{
 			return getNoQuestMsg(player);
 		}
-		return ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "30894-01.html" : "30894-00.html";
+		return ((player.getLevel() >= MIN_LEVEL) && qs.isCompleted()) ? "30894-01.html" : "30894-00.html";
 	}
 }

@@ -99,32 +99,30 @@ public class Q00331_ArrowOfVengeance extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = player.getLevel() < MIN_LVL ? "30125-01.htm" : "30125-02.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				final long harpyFeathers = getQuestItemsCount(player, HARPY_FEATHER);
+				final long medusaVenoms = getQuestItemsCount(player, MEDUSA_VENOM);
+				final long wyrmsTeeth = getQuestItemsCount(player, WYRMS_TOOTH);
+				if ((harpyFeathers + medusaVenoms + wyrmsTeeth) > 0)
 				{
-					htmltext = player.getLevel() < MIN_LVL ? "30125-01.htm" : "30125-02.htm";
-					break;
+					giveAdena(player, ((harpyFeathers * HARPY_FEATHER_ADENA) + (medusaVenoms * MEDUSA_VENOM_ADENA) + (wyrmsTeeth * WYRMS_TOOTH_ADENA) + ((harpyFeathers + medusaVenoms + wyrmsTeeth) >= BONUS_COUNT ? BONUS : 0)), true);
+					takeItems(player, -1, HARPY_FEATHER, MEDUSA_VENOM, WYRMS_TOOTH);
+					htmltext = "30125-05.html";
 				}
-				case State.STARTED:
+				else
 				{
-					final long harpyFeathers = getQuestItemsCount(player, HARPY_FEATHER);
-					final long medusaVenoms = getQuestItemsCount(player, MEDUSA_VENOM);
-					final long wyrmsTeeth = getQuestItemsCount(player, WYRMS_TOOTH);
-					if ((harpyFeathers + medusaVenoms + wyrmsTeeth) > 0)
-					{
-						giveAdena(player, ((harpyFeathers * HARPY_FEATHER_ADENA) + (medusaVenoms * MEDUSA_VENOM_ADENA) + (wyrmsTeeth * WYRMS_TOOTH_ADENA) + ((harpyFeathers + medusaVenoms + wyrmsTeeth) >= BONUS_COUNT ? BONUS : 0)), true);
-						takeItems(player, -1, HARPY_FEATHER, MEDUSA_VENOM, WYRMS_TOOTH);
-						htmltext = "30125-05.html";
-					}
-					else
-					{
-						htmltext = "30125-04.html";
-					}
-					break;
+					htmltext = "30125-04.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

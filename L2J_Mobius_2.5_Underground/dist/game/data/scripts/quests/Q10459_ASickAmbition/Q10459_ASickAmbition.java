@@ -96,10 +96,6 @@ public class Q10459_ASickAmbition extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

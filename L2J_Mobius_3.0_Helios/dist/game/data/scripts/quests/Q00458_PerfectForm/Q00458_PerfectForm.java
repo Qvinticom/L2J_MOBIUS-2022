@@ -288,10 +288,6 @@ public class Q00458_PerfectForm extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

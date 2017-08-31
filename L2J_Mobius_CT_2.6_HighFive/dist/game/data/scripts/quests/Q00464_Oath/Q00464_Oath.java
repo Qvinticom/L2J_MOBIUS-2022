@@ -186,8 +186,8 @@ public class Q00464_Oath extends Quest
 	@Override
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
 		boolean startQuest = false;
 		switch (qs.getState())
@@ -248,10 +248,10 @@ public class Q00464_Oath extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
-		if ((qs != null) && qs.isStarted())
+		if (qs.isStarted())
 		{
 			final int npcId = npc.getId();
 			

@@ -76,88 +76,86 @@ public class Q00153_DeliverGoods extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		
+		if (npc.getId() == ARNOLD_ID)
 		{
-			if (npc.getId() == ARNOLD_ID)
+			switch (st.getState())
 			{
-				switch (st.getState())
+				case State.CREATED:
+					htmltext = (player.getLevel() >= 2) ? "30041-01.htm" : "30041-00.htm";
+					break;
+				case State.STARTED:
+					if (st.isCond(1))
+					{
+						htmltext = "30041-03.html";
+					}
+					else if (st.isCond(2))
+					{
+						takeItems(player, DELIVERY_LIST_ID, -1);
+						takeItems(player, JACKSONS_RECEIPT_ID, -1);
+						takeItems(player, SILVIAS_RECEIPT_ID, -1);
+						takeItems(player, RANTS_RECEIPT_ID, -1);
+						// On retail it gives 2 rings but one at the time.
+						giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
+						giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
+						addExpAndSp(player, XP_REWARD_AMOUNT, 0);
+						st.exitQuest(false);
+						htmltext = "30041-04.html";
+					}
+					break;
+				case State.COMPLETED:
+					htmltext = getAlreadyCompletedMsg(player);
+					break;
+			}
+		}
+		else
+		{
+			if (npc.getId() == JACKSON_ID)
+			{
+				if (hasQuestItems(player, HEAVY_WOOD_BOX_ID))
 				{
-					case State.CREATED:
-						htmltext = (player.getLevel() >= 2) ? "30041-01.htm" : "30041-00.htm";
-						break;
-					case State.STARTED:
-						if (st.isCond(1))
-						{
-							htmltext = "30041-03.html";
-						}
-						else if (st.isCond(2))
-						{
-							takeItems(player, DELIVERY_LIST_ID, -1);
-							takeItems(player, JACKSONS_RECEIPT_ID, -1);
-							takeItems(player, SILVIAS_RECEIPT_ID, -1);
-							takeItems(player, RANTS_RECEIPT_ID, -1);
-							// On retail it gives 2 rings but one at the time.
-							giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
-							giveItems(player, RING_OF_KNOWLEDGE_ID, 1);
-							addExpAndSp(player, XP_REWARD_AMOUNT, 0);
-							st.exitQuest(false);
-							htmltext = "30041-04.html";
-						}
-						break;
-					case State.COMPLETED:
-						htmltext = getAlreadyCompletedMsg(player);
-						break;
+					takeItems(player, HEAVY_WOOD_BOX_ID, -1);
+					giveItems(player, JACKSONS_RECEIPT_ID, 1);
+					htmltext = "30002-01.html";
+				}
+				else
+				{
+					htmltext = "30002-02.html";
 				}
 			}
-			else
+			else if (npc.getId() == SILVIA_ID)
 			{
-				if (npc.getId() == JACKSON_ID)
+				if (hasQuestItems(player, CLOTH_BUNDLE_ID))
 				{
-					if (hasQuestItems(player, HEAVY_WOOD_BOX_ID))
-					{
-						takeItems(player, HEAVY_WOOD_BOX_ID, -1);
-						giveItems(player, JACKSONS_RECEIPT_ID, 1);
-						htmltext = "30002-01.html";
-					}
-					else
-					{
-						htmltext = "30002-02.html";
-					}
+					takeItems(player, CLOTH_BUNDLE_ID, -1);
+					giveItems(player, SILVIAS_RECEIPT_ID, 1);
+					giveItems(player, SOULSHOT_NO_GRADE_ID, 3);
+					htmltext = "30003-01.html";
 				}
-				else if (npc.getId() == SILVIA_ID)
+				else
 				{
-					if (hasQuestItems(player, CLOTH_BUNDLE_ID))
-					{
-						takeItems(player, CLOTH_BUNDLE_ID, -1);
-						giveItems(player, SILVIAS_RECEIPT_ID, 1);
-						giveItems(player, SOULSHOT_NO_GRADE_ID, 3);
-						htmltext = "30003-01.html";
-					}
-					else
-					{
-						htmltext = "30003-02.html";
-					}
+					htmltext = "30003-02.html";
 				}
-				else if (npc.getId() == RANT_ID)
+			}
+			else if (npc.getId() == RANT_ID)
+			{
+				if (hasQuestItems(player, CLAY_POT_ID))
 				{
-					if (hasQuestItems(player, CLAY_POT_ID))
-					{
-						takeItems(player, CLAY_POT_ID, -1);
-						giveItems(player, RANTS_RECEIPT_ID, 1);
-						htmltext = "30054-01.html";
-					}
-					else
-					{
-						htmltext = "30054-02.html";
-					}
+					takeItems(player, CLAY_POT_ID, -1);
+					giveItems(player, RANTS_RECEIPT_ID, 1);
+					htmltext = "30054-01.html";
 				}
-				
-				if (st.isCond(1) && hasQuestItems(player, JACKSONS_RECEIPT_ID) && hasQuestItems(player, SILVIAS_RECEIPT_ID) && hasQuestItems(player, RANTS_RECEIPT_ID))
+				else
 				{
-					st.setCond(2, true);
+					htmltext = "30054-02.html";
 				}
+			}
+			
+			if (st.isCond(1) && hasQuestItems(player, JACKSONS_RECEIPT_ID) && hasQuestItems(player, SILVIAS_RECEIPT_ID) && hasQuestItems(player, RANTS_RECEIPT_ID))
+			{
+				st.setCond(2, true);
 			}
 		}
 		return htmltext;

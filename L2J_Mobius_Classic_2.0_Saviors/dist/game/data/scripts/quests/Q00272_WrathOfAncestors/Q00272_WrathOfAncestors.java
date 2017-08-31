@@ -87,35 +87,33 @@ public final class Q00272_WrathOfAncestors extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30572-03.htm" : "30572-02.htm" : "30572-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
 				{
-					htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30572-03.htm" : "30572-02.htm" : "30572-01.htm";
-					break;
-				}
-				case State.STARTED:
-				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
-						{
-							htmltext = "30572-05.html";
-							break;
-						}
-						case 2:
-						{
-							giveAdena(player, 1500, true);
-							st.exitQuest(true, true);
-							htmltext = "30572-06.html";
-							break;
-						}
+						htmltext = "30572-05.html";
+						break;
 					}
-					break;
+					case 2:
+					{
+						giveAdena(player, 1500, true);
+						st.exitQuest(true, true);
+						htmltext = "30572-06.html";
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;

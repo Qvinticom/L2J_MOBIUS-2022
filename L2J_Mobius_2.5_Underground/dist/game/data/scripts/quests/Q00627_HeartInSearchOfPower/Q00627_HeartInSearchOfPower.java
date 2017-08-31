@@ -167,10 +167,7 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		
 		switch (st.getState())
 		{
 			case State.CREATED:

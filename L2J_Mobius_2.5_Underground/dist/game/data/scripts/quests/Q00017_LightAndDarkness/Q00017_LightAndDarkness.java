@@ -150,10 +150,6 @@ public final class Q00017_LightAndDarkness extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

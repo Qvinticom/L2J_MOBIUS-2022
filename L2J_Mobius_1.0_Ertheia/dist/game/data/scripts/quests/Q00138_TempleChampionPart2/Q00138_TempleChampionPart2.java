@@ -156,10 +156,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		switch (npc.getId())
 		{
 			case SYLVAIN:

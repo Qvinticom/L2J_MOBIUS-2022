@@ -158,10 +158,7 @@ public class Q00775_RetrievingTheChaosFragment extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		if (npc.getId() == LEONA_BLACKBIRD)
 		{
 			switch (qs.getState())

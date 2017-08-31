@@ -107,7 +107,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = getNoQuestMsg(player);
-		final QuestState qs = getQuestState(player, true);
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return htmltext;
@@ -241,12 +241,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		String htmltext = getNoQuestMsg(talker);
 		final QuestState qs = getQuestState(talker, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(talker);
 		
 		switch (npc.getId())
 		{

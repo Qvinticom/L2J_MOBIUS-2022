@@ -127,10 +127,6 @@ public class Q10274_CollectingInTheAir extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

@@ -113,10 +113,6 @@ public class Q00641_AttackSailren extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

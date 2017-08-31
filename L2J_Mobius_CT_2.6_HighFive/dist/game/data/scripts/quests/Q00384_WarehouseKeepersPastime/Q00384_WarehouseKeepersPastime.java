@@ -101,34 +101,32 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if ((qs != null))
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
-			{
-				case CLIFF:
-					if (qs.isCreated())
+			case CLIFF:
+				if (qs.isCreated())
+				{
+					if (player.getLevel() >= 40)
 					{
-						if (player.getLevel() >= 40)
-						{
-							return "30182-01.htm";
-						}
-						return "30182-04.html";
+						return "30182-01.htm";
 					}
+					return "30182-04.html";
+				}
+				if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) < 10)
+				{
+					return "30182-06.html";
+				}
+				return "30182-07.html";
+			case WAREHOUSE_CHIEF_BAXT:
+				if (qs.getMemoState() > 0)
+				{
 					if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) < 10)
 					{
-						return "30182-06.html";
+						return "30685-06.html";
 					}
-					return "30182-07.html";
-				case WAREHOUSE_CHIEF_BAXT:
-					if (qs.getMemoState() > 0)
-					{
-						if (getQuestItemsCount(player, Q_IRONGATE_MEDAL) < 10)
-						{
-							return "30685-06.html";
-						}
-						return "30685-07.html";
-					}
-			}
+					return "30685-07.html";
+				}
 		}
 		return htmltext;
 	}

@@ -110,11 +110,6 @@ public final class Q00490_DutyOfTheSurvivor extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
 		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		if (npc.getId() == VOLLODOS)
 		{
 			switch (st.getState())

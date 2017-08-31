@@ -96,20 +96,12 @@ public final class Q10351_OwnerOfHall extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
-		final int npcId = npc.getId();
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if (npcId == LYDIA)
-				{
-					htmltext = "32892-01.htm";
-				}
+				htmltext = "32892-01.htm";
 				break;
 			}
 			case State.STARTED:

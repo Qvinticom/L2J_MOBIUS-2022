@@ -193,13 +193,9 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		if (npc.getId() == NAMO)
 		{
 			switch (qs.getState())

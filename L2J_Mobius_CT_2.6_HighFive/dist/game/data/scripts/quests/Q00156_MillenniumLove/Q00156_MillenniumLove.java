@@ -106,65 +106,63 @@ public class Q00156_MillenniumLove extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case LILITH:
 			{
-				case LILITH:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = "30368-01.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							if (st.isCond(1) && hasQuestItems(player, LILITHS_LETTER))
-							{
-								htmltext = "30368-06.html";
-							}
-							else if (st.isCond(2) && hasQuestItems(player, THEONS_DIARY))
-							{
-								giveItems(player, GREATER_COMP_SOULSHOUT_PACKAGE_NO_GRADE, 1);
-								addExpAndSp(player, 3000, 0);
-								st.exitQuest(false, true);
-								htmltext = "30368-07.html";
-							}
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = "30368-01.htm";
+						break;
 					}
-					break;
+					case State.STARTED:
+					{
+						if (st.isCond(1) && hasQuestItems(player, LILITHS_LETTER))
+						{
+							htmltext = "30368-06.html";
+						}
+						else if (st.isCond(2) && hasQuestItems(player, THEONS_DIARY))
+						{
+							giveItems(player, GREATER_COMP_SOULSHOUT_PACKAGE_NO_GRADE, 1);
+							addExpAndSp(player, 3000, 0);
+							st.exitQuest(false, true);
+							htmltext = "30368-07.html";
+						}
+						break;
+					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
 				}
-				case BAENEDES:
+				break;
+			}
+			case BAENEDES:
+			{
+				switch (st.getCond())
 				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
+						if (hasQuestItems(player, LILITHS_LETTER))
 						{
-							if (hasQuestItems(player, LILITHS_LETTER))
-							{
-								htmltext = "30369-01.html";
-							}
-							break;
+							htmltext = "30369-01.html";
 						}
-						case 2:
-						{
-							if (hasQuestItems(player, THEONS_DIARY))
-							{
-								htmltext = "30369-04.html";
-							}
-							break;
-						}
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (hasQuestItems(player, THEONS_DIARY))
+						{
+							htmltext = "30369-04.html";
+						}
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;

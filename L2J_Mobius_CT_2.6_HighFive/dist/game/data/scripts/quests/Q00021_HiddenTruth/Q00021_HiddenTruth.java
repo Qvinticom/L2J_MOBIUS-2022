@@ -218,216 +218,214 @@ public class Q00021_HiddenTruth extends Quest
 	{
 		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case MYSTERIOUS_WIZARD:
 			{
-				case MYSTERIOUS_WIZARD:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = "31522-01.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							htmltext = "31522-05.html";
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = "31522-01.htm";
+						break;
 					}
-					break;
-				}
-				case TOMBSTONE:
-				{
-					htmltext = "31523-01.html";
-					break;
-				}
-				case GHOST_OF_VON_HELLMAN:
-				{
-					switch (st.getCond())
+					case State.STARTED:
 					{
-						case 2:
+						htmltext = "31522-05.html";
+						break;
+					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
+				}
+				break;
+			}
+			case TOMBSTONE:
+			{
+				htmltext = "31523-01.html";
+				break;
+			}
+			case GHOST_OF_VON_HELLMAN:
+			{
+				switch (st.getCond())
+				{
+					case 2:
+					{
+						htmltext = "31524-01.html";
+						break;
+					}
+					case 3:
+					{
+						if (PAGE_SPAWNED)
 						{
-							htmltext = "31524-01.html";
-							break;
+							htmltext = "31524-07b.html";
 						}
-						case 3:
+						else
 						{
-							if (PAGE_SPAWNED)
+							if (PAGE_COUNT < 5)
 							{
-								htmltext = "31524-07b.html";
+								final L2Npc PAGE = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, true, 0);
+								PAGE_COUNT++;
+								PAGE_SPAWNED = true;
+								PAGE.setScriptValue(player.getObjectId());
+								WalkingManager.getInstance().startMoving(PAGE, PAGE_ROUTE_NAME);
+								htmltext = "31524-07.html";
 							}
 							else
 							{
-								if (PAGE_COUNT < 5)
-								{
-									final L2Npc PAGE = addSpawn(GHOST_OF_VON_HELLMANS_PAGE, PAGE_LOC, true, 0);
-									PAGE_COUNT++;
-									PAGE_SPAWNED = true;
-									PAGE.setScriptValue(player.getObjectId());
-									WalkingManager.getInstance().startMoving(PAGE, PAGE_ROUTE_NAME);
-									htmltext = "31524-07.html";
-								}
-								else
-								{
-									htmltext = "31524-07a.html";
-								}
+								htmltext = "31524-07a.html";
 							}
-							break;
 						}
-						case 4:
-						{
-							htmltext = "31524-07c.html";
-							break;
-						}
+						break;
 					}
-					break;
-				}
-				case GHOST_OF_VON_HELLMANS_PAGE:
-				{
-					if (st.isCond(3))
+					case 4:
 					{
-						if (MOVE_ENDED)
-						{
-							htmltext = "31525-02.html";
-							startQuestTimer("DESPAWN", 3000, npc, player);
-						}
-						else
-						{
-							htmltext = "31525-01.html";
-						}
+						htmltext = "31524-07c.html";
+						break;
 					}
-					break;
 				}
-				case BROKEN_BOOKSHELF:
+				break;
+			}
+			case GHOST_OF_VON_HELLMANS_PAGE:
+			{
+				if (st.isCond(3))
 				{
-					switch (st.getCond())
+					if (MOVE_ENDED)
 					{
-						case 3:
-						{
-							htmltext = "31526-01.html";
-							break;
-						}
-						case 4:
-						{
-							st.setCond(5);
-							playSound(player, QuestSound.AMDSOUND_ED_CHIMES);
-							htmltext = "31526-10.html";
-							break;
-						}
-						case 5:
-						{
-							htmltext = "31526-11.html";
-							break;
-						}
-						case 6:
-						{
-							htmltext = "31526-15.html";
-							break;
-						}
+						htmltext = "31525-02.html";
+						startQuestTimer("DESPAWN", 3000, npc, player);
 					}
-					break;
+					else
+					{
+						htmltext = "31525-01.html";
+					}
 				}
-				case AGRIPEL:
+				break;
+			}
+			case BROKEN_BOOKSHELF:
+			{
+				switch (st.getCond())
 				{
-					if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+					case 3:
 					{
-						st.set("AGRIPEL", "1");
-						if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
-						{
-							htmltext = "31348-03.html";
-							st.setCond(7);
-						}
-						else if ((st.getInt("DOMINIC") == 1) || (st.getInt("BENEDICT") == 1))
-						{
-							htmltext = "31348-02.html";
-						}
-						else
-						{
-							htmltext = "31348-01.html";
-						}
+						htmltext = "31526-01.html";
+						break;
 					}
-					else if (st.isCond(7))
+					case 4:
+					{
+						st.setCond(5);
+						playSound(player, QuestSound.AMDSOUND_ED_CHIMES);
+						htmltext = "31526-10.html";
+						break;
+					}
+					case 5:
+					{
+						htmltext = "31526-11.html";
+						break;
+					}
+					case 6:
+					{
+						htmltext = "31526-15.html";
+						break;
+					}
+				}
+				break;
+			}
+			case AGRIPEL:
+			{
+				if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+				{
+					st.set("AGRIPEL", "1");
+					if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31348-03.html";
+						st.setCond(7);
 					}
-					break;
-				}
-				
-				case BENEDICT:
-				{
-					if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+					else if ((st.getInt("DOMINIC") == 1) || (st.getInt("BENEDICT") == 1))
 					{
-						
-						st.set("BENEDICT", "1");
-						if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
-						{
-							htmltext = "31349-03.html";
-							st.setCond(7);
-						}
-						else if ((st.getInt("AGRIPEL") == 1) || (st.getInt("DOMINIC") == 1))
-						{
-							htmltext = "31349-02.html";
-						}
-						else
-						{
-							htmltext = "31349-01.html";
-						}
+						htmltext = "31348-02.html";
 					}
-					else if (st.isCond(7))
+					else
+					{
+						htmltext = "31348-01.html";
+					}
+				}
+				else if (st.isCond(7))
+				{
+					htmltext = "31348-03.html";
+				}
+				break;
+			}
+			
+			case BENEDICT:
+			{
+				if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+				{
+					
+					st.set("BENEDICT", "1");
+					if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31349-03.html";
+						st.setCond(7);
 					}
-					break;
-				}
-				case DOMINIC:
-				{
-					if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+					else if ((st.getInt("AGRIPEL") == 1) || (st.getInt("DOMINIC") == 1))
 					{
-						st.set("DOMINIC", "1");
-						if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
-						{
-							htmltext = "31350-03.html";
-							st.setCond(7);
-						}
-						else if ((st.getInt("AGRIPEL") == 1) || (st.getInt("BENEDICT") == 1))
-						{
-							htmltext = "31350-02.html";
-						}
-						else
-						{
-							htmltext = "31350-01.html";
-						}
+						htmltext = "31349-02.html";
 					}
-					else if (st.isCond(7))
+					else
+					{
+						htmltext = "31349-01.html";
+					}
+				}
+				else if (st.isCond(7))
+				{
+					htmltext = "31349-03.html";
+				}
+				break;
+			}
+			case DOMINIC:
+			{
+				if (hasQuestItems(player, CROSS_OF_EINHASAD) && st.isCond(6))
+				{
+					st.set("DOMINIC", "1");
+					if ((st.getInt("AGRIPEL") == 1) && (st.getInt("DOMINIC") == 1) && (st.getInt("BENEDICT") == 1))
 					{
 						htmltext = "31350-03.html";
+						st.setCond(7);
 					}
-					break;
+					else if ((st.getInt("AGRIPEL") == 1) || (st.getInt("BENEDICT") == 1))
+					{
+						htmltext = "31350-02.html";
+					}
+					else
+					{
+						htmltext = "31350-01.html";
+					}
 				}
-				case INNOCENTIN:
+				else if (st.isCond(7))
 				{
-					if (st.isCond(7) && hasQuestItems(player, CROSS_OF_EINHASAD))
-					{
-						htmltext = "31328-01.html";
-					}
-					else if (st.isCompleted())
-					{
-						st = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
-						if (st == null)
-						{
-							htmltext = "31328-06.html";
-						}
-					}
-					break;
+					htmltext = "31350-03.html";
 				}
+				break;
+			}
+			case INNOCENTIN:
+			{
+				if (st.isCond(7) && hasQuestItems(player, CROSS_OF_EINHASAD))
+				{
+					htmltext = "31328-01.html";
+				}
+				else if (st.isCompleted())
+				{
+					st = player.getQuestState(Q00022_TragedyInVonHellmannForest.class.getSimpleName());
+					if (st == null)
+					{
+						htmltext = "31328-06.html";
+					}
+				}
+				break;
 			}
 		}
 		return htmltext;

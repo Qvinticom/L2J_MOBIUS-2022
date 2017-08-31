@@ -97,16 +97,12 @@ public final class Q10704_BottleOfOctavisSoul extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		final int npcId = npc.getId();
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if ((npcId == LYDIA) && (getQuestItemsCount(player, OCTAVIS_SOUL_BOTTLE) >= 1))
+				if (getQuestItemsCount(player, OCTAVIS_SOUL_BOTTLE) >= 1)
 				{
 					htmltext = "32892-01.html";
 				}

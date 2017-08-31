@@ -115,10 +115,6 @@ public final class Q00283_TheFewTheProudTheBrave extends Quest
 	{
 		final QuestState st = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (st.getState())
 		{

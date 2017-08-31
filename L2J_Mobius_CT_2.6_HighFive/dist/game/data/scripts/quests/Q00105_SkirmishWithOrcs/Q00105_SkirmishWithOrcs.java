@@ -156,10 +156,6 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	{
 		final QuestState st = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (st.getState())
 		{

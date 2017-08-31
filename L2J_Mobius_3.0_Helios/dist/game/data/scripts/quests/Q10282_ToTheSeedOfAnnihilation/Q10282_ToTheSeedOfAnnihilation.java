@@ -82,10 +82,6 @@ public final class Q10282_ToTheSeedOfAnnihilation extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		final int npcId = npc.getId();
 		switch (st.getState())

@@ -105,13 +105,9 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
 		final L2Clan clan = player.getClan();
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
+		
 		if (!BANDIT_STRONGHOLD.isWaitingBattle())
 		{
 			htmltext = getHtm(player.getHtmlPrefix(), "35437-09.html");

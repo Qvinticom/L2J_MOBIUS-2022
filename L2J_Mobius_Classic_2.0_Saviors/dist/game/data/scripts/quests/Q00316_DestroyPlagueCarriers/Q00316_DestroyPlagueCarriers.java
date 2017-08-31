@@ -133,10 +133,6 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		if (qs.isCreated())
 		{

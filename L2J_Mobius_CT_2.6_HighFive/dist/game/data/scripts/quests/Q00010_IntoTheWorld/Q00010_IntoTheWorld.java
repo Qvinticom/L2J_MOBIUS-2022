@@ -105,12 +105,8 @@ public class Q00010_IntoTheWorld extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{

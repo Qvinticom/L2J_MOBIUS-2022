@@ -91,13 +91,8 @@ public final class SubclassCertification extends AbstractNpcAI
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		String htmltext = getNoQuestMsg(player);
-		if (st != null)
-		{
-			st.setState(State.STARTED);
-			htmltext = "Main.html";
-		}
-		return htmltext;
+		st.setState(State.STARTED);
+		return "Main.html";
 	}
 	
 	@Override

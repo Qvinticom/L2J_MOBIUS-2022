@@ -158,15 +158,10 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "";
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
 		final QuestState qs2 = player.getQuestState(Q00727_HopeWithinTheDarkness.class.getSimpleName());
 		final String ret = checkFortCondition(player, npc, false);
+		String htmltext = getNoQuestMsg(player);
 		
 		if (ret != null)
 		{

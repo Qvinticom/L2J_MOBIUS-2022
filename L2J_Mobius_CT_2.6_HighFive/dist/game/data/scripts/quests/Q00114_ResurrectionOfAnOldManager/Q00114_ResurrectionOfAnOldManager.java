@@ -424,14 +424,8 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		
-		if (qs == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
+		String htmltext = getNoQuestMsg(player);
 		final int talk = qs.getInt("talk");
 		
 		switch (npc.getId())

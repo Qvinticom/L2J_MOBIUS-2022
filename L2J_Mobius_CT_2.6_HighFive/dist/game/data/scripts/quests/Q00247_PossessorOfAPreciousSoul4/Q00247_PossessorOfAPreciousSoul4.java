@@ -97,12 +97,8 @@ public class Q00247_PossessorOfAPreciousSoul4 extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		if (st.isStarted() && !player.isSubClassActive())
 		{
 			return "no_sub.html";

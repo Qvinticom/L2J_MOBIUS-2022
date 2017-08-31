@@ -154,10 +154,7 @@ public class Q00626_ADarkTwilight extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

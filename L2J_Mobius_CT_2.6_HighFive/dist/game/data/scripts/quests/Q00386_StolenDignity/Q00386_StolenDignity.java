@@ -113,7 +113,7 @@ public final class Q00386_StolenDignity extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		final String htmltext = getNoQuestMsg(player);
-		if ((qs != null) && (npc.getId() == WAREHOUSE_KEEPER_ROMP))
+		if (npc.getId() == WAREHOUSE_KEEPER_ROMP)
 		{
 			if (qs.isCreated())
 			{

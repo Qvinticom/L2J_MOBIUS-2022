@@ -97,11 +97,6 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
 		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		if (npc.getId() == GEORGIO)
 		{
 			switch (st.getState())

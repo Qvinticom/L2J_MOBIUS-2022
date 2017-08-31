@@ -206,10 +206,6 @@ public final class Q00457_LostAndFound extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			qs = newQuestState(player);
-		}
 		
 		switch (qs.getState())
 		{

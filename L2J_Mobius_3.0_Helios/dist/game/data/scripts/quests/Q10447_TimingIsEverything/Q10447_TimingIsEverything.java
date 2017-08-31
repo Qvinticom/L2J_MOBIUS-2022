@@ -113,20 +113,13 @@ public class Q10447_TimingIsEverything extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		final int npcId = npc.getId();
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if (npcId == BRUENER)
-				{
-					htmltext = "33840-01.htm";
-					break;
-				}
+				htmltext = "33840-01.htm";
+				break;
 			}
 			case State.STARTED:
 			{

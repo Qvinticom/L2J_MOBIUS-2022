@@ -242,8 +242,8 @@ public class Q10304_ForForgottenHeroes extends Quest
 	@Override
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		final QuestState qs1 = player.getQuestState(Q10302_UnsettlingShadowAndRumors.class.getSimpleName());
 		boolean startQuest = false;
 		switch (qs.getState())

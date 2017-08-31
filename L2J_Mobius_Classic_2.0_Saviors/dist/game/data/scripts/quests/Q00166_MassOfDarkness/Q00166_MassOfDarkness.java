@@ -79,66 +79,64 @@ public class Q00166_MassOfDarkness extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case UNDRIAS:
 			{
-				case UNDRIAS:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							if (st.isCond(2) && hasQuestItems(player, UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE))
-							{
-								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
-								addExpAndSp(player, 5672, 466);
-								giveAdena(player, 2966, true);
-								st.exitQuest(false, true);
-								htmltext = "30130-05.html";
-							}
-							else
-							{
-								htmltext = "30130-04.html";
-							}
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30130-02.htm" : "30130-01.htm" : "30130-00.htm";
+						break;
 					}
-					break;
-				}
-				case IRIA:
-				case DORANKUS:
-				case TRUDY:
-				{
-					if (st.isStarted())
+					case State.STARTED:
 					{
-						final int npcId = npc.getId();
-						final int itemId = NPCs.get(npcId);
-						if (st.isCond(1) && !hasQuestItems(player, itemId))
+						if (st.isCond(2) && hasQuestItems(player, UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE))
 						{
-							giveItems(player, itemId, 1);
-							if (hasQuestItems(player, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE))
-							{
-								st.setCond(2, true);
-							}
-							htmltext = npcId + "-01.html";
+							showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_HELPER, 2, 5000); // TODO: Newbie Guide
+							addExpAndSp(player, 5672, 466);
+							giveAdena(player, 2966, true);
+							st.exitQuest(false, true);
+							htmltext = "30130-05.html";
 						}
 						else
 						{
-							htmltext = npcId + "-02.html";
+							htmltext = "30130-04.html";
 						}
 						break;
 					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
+				}
+				break;
+			}
+			case IRIA:
+			case DORANKUS:
+			case TRUDY:
+			{
+				if (st.isStarted())
+				{
+					final int npcId = npc.getId();
+					final int itemId = NPCs.get(npcId);
+					if (st.isCond(1) && !hasQuestItems(player, itemId))
+					{
+						giveItems(player, itemId, 1);
+						if (hasQuestItems(player, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE))
+						{
+							st.setCond(2, true);
+						}
+						htmltext = npcId + "-01.html";
+					}
+					else
+					{
+						htmltext = npcId + "-02.html";
+					}
+					break;
 				}
 			}
 		}

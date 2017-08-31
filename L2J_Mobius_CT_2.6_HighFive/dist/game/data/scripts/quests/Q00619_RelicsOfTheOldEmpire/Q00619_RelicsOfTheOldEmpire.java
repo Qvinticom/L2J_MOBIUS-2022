@@ -306,10 +306,6 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		if (st.isCreated())
 		{

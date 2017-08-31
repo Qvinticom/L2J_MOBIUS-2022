@@ -114,65 +114,63 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case GALLINT:
 			{
-				case GALLINT:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							if (st.isCond(3) && hasQuestItems(player, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
-							{
-								// Q00281_HeadForTheHills.giveNewbieReward(player);
-								for (ItemHolder reward : REWARDS)
-								{
-									giveItems(player, reward);
-								}
-								addExpAndSp(player, 39750, 3407);
-								giveAdena(player, 16866, true);
-								st.exitQuest(false, true);
-								htmltext = "30017-06.html";
-							}
-							else
-							{
-								htmltext = "30017-05.html";
-							}
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30017-03.htm" : "30017-02.htm" : "30017-01.htm";
+						break;
 					}
-					break;
+					case State.STARTED:
+					{
+						if (st.isCond(3) && hasQuestItems(player, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3))
+						{
+							// Q00281_HeadForTheHills.giveNewbieReward(player);
+							for (ItemHolder reward : REWARDS)
+							{
+								giveItems(player, reward);
+							}
+							addExpAndSp(player, 39750, 3407);
+							giveAdena(player, 16866, true);
+							st.exitQuest(false, true);
+							htmltext = "30017-06.html";
+						}
+						else
+						{
+							htmltext = "30017-05.html";
+						}
+						break;
+					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
 				}
-				case ARNOLD:
-				case JOHNSTONE:
-				case KENYOS:
+				break;
+			}
+			case ARNOLD:
+			case JOHNSTONE:
+			case KENYOS:
+			{
+				if (st.isCond(1))
 				{
-					if (st.isCond(1))
+					if (!st.isSet(npc.getName()))
 					{
-						if (!st.isSet(npc.getName()))
-						{
-							st.set(npc.getName(), "1");
-						}
-						if (st.isSet("Arnold") && st.isSet("Johnstone") && st.isSet("Kenyos"))
-						{
-							st.setCond(2, true);
-						}
+						st.set(npc.getName(), "1");
 					}
-					htmltext = npc.getId() + "-01.html";
-					break;
+					if (st.isSet("Arnold") && st.isSet("Johnstone") && st.isSet("Kenyos"))
+					{
+						st.setCond(2, true);
+					}
 				}
+				htmltext = npc.getId() + "-01.html";
+				break;
 			}
 		}
 		return htmltext;

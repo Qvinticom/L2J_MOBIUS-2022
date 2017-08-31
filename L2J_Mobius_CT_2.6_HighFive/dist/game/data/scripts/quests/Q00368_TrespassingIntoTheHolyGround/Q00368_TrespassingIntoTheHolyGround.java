@@ -120,10 +120,6 @@ public final class Q00368_TrespassingIntoTheHolyGround extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		if (st.isCreated())
 		{

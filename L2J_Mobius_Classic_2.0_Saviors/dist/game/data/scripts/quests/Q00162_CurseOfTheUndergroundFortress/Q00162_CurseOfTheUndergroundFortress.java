@@ -143,36 +143,34 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if ((getQuestItemsCount(player, BONE_FRAGMENT) + getQuestItemsCount(player, ELF_SKULL)) >= REQUIRED_COUNT)
 				{
-					htmltext = (player.getRace() != Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30147-02.htm" : "30147-01.htm" : "30147-00.htm";
-					break;
+					giveItems(player, BONE_SHIELD, 1);
+					addExpAndSp(player, 22652, 1004);
+					giveAdena(player, 24000, true);
+					st.exitQuest(false, true);
+					htmltext = "30147-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if ((getQuestItemsCount(player, BONE_FRAGMENT) + getQuestItemsCount(player, ELF_SKULL)) >= REQUIRED_COUNT)
-					{
-						giveItems(player, BONE_SHIELD, 1);
-						addExpAndSp(player, 22652, 1004);
-						giveAdena(player, 24000, true);
-						st.exitQuest(false, true);
-						htmltext = "30147-06.html";
-					}
-					else
-					{
-						htmltext = "30147-05.html";
-					}
-					break;
+					htmltext = "30147-05.html";
 				}
-				case State.COMPLETED:
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;

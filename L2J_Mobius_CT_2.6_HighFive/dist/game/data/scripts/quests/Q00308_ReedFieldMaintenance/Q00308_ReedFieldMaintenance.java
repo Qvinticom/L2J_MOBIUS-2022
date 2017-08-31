@@ -235,12 +235,8 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		String htmltext = getNoQuestMsg(talker);
 		final QuestState st = getQuestState(talker, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(talker);
 		
 		final QuestState q309 = talker.getQuestState(Q00309_ForAGoodCause.class.getSimpleName());
 		if ((q309 != null) && q309.isStarted())

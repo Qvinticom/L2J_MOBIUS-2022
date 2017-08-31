@@ -117,19 +117,12 @@ public final class Q10316_UndecayingMemoryOfThePast extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		final int npcId = npc.getId();
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if (npcId == OPERA)
-				{
-					htmltext = "32946-01.htm";
-				}
+				htmltext = "32946-01.htm";
 				break;
 			}
 			case State.STARTED:

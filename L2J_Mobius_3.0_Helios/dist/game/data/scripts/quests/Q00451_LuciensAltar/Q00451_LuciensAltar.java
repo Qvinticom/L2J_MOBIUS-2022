@@ -90,11 +90,6 @@ public final class Q00451_LuciensAltar extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
 		
-		if (st == null)
-		{
-			return htmltext;
-		}
-		
 		final int npcId = npc.getId();
 		if (npcId == DAICHIR)
 		{

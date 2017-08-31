@@ -149,12 +149,9 @@ public class Q00618_IntoTheFlame extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
+		
 		switch (npc.getId())
 		{
 			case KLEIN:

@@ -85,10 +85,7 @@ public final class Q10712_TheMinstrelsSongPart1 extends LetterQuest
 	{
 		final QuestState qs = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		if (qs.isStarted() && (npc.getId() == LIBERATTO))
 		{
 			htmltext = "33955-01.html";

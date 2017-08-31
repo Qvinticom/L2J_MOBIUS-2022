@@ -101,12 +101,8 @@ public class Q00907_DragonTrophyValakas extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return getNoQuestMsg(player);
-		}
-		
 		String htmltext = getNoQuestMsg(player);
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:

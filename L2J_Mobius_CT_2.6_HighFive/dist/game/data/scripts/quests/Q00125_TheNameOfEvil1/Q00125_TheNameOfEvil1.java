@@ -279,10 +279,6 @@ public class Q00125_TheNameOfEvil1 extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

@@ -24,8 +24,8 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import quests.LetterQuest;
 
 /**
- * The Minstrel's Song, Part 1 (10712)
- * @URL https://l2wiki.com/The_Minstrel%27s_Song,_Part_1
+ * The Minstrel's Song, Part 6 (10731)
+ * @URL https://l2wiki.com/The_Minstrel%27s_Song,_Part_6
  * @author Gigi
  */
 public final class Q10731_TheMinstrelsSongPart6 extends LetterQuest

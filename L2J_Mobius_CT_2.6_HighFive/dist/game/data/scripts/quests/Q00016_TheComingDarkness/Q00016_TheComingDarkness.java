@@ -90,13 +90,8 @@ public class Q00016_TheComingDarkness extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
+		String htmltext = getNoQuestMsg(player);
 		final QuestState qs2 = player.getQuestState(Q00017_LightAndDarkness.class.getSimpleName());
 		if ((qs2 != null) && !qs2.isCompleted())
 		{

@@ -102,7 +102,7 @@ public final class Q10543_SheddingWeight extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{

@@ -109,11 +109,7 @@ public class Q10374_ThatPlaceSuccubus extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
-		String htmltext = null;
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
 		if ((npc.getId() == ZENYA) && (player.getClassId().level() == ClassLevel.THIRD.ordinal()))
 		{

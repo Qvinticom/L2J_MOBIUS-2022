@@ -108,10 +108,6 @@ public final class Q10823_ExaltedOneWhoShattersTheLimit extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

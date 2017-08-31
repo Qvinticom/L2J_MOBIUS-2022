@@ -217,12 +217,8 @@ public class Q00663_SeductiveWhispers extends Quest
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs == null)
-		{
-			return null;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
-		String htmltext = null;
 		switch (event)
 		{
 			case "30846-01a.htm":

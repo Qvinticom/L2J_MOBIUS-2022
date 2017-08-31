@@ -176,10 +176,6 @@ public class Q10275_ContainingTheAttributePower extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

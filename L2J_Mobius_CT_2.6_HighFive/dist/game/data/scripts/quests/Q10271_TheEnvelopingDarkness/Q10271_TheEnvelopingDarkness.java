@@ -78,10 +78,6 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

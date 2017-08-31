@@ -96,7 +96,7 @@ public final class Q10412_ASuspiciousVagabondInTheForest extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (st.getState())
 		{

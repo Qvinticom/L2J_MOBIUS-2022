@@ -112,10 +112,6 @@ public final class Q10318_DecayingDarkness extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		final int npcId = npc.getId();
 		switch (qs.getState())

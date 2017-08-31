@@ -110,36 +110,34 @@ public class Q00169_OffspringOfNightmares extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30145-02.htm" : "30145-01.htm" : "30145-00.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (hasQuestItems(player, CRACKED_SKULL) && !hasQuestItems(player, PERFECT_SKULL))
 				{
-					htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30145-02.htm" : "30145-01.htm" : "30145-00.htm";
-					break;
+					htmltext = "30145-05.html";
 				}
-				case State.STARTED:
+				else if (st.isCond(2) && hasQuestItems(player, PERFECT_SKULL))
 				{
-					if (hasQuestItems(player, CRACKED_SKULL) && !hasQuestItems(player, PERFECT_SKULL))
-					{
-						htmltext = "30145-05.html";
-					}
-					else if (st.isCond(2) && hasQuestItems(player, PERFECT_SKULL))
-					{
-						htmltext = "30145-06.html";
-					}
-					else if (!hasQuestItems(player, CRACKED_SKULL, PERFECT_SKULL))
-					{
-						htmltext = "30145-04.html";
-					}
-					break;
+					htmltext = "30145-06.html";
 				}
-				case State.COMPLETED:
+				else if (!hasQuestItems(player, CRACKED_SKULL, PERFECT_SKULL))
 				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
+					htmltext = "30145-04.html";
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;

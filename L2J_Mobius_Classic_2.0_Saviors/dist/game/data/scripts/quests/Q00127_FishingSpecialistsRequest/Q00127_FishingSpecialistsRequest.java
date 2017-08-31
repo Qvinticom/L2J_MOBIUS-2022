@@ -85,10 +85,7 @@ public class Q00127_FishingSpecialistsRequest extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		
 		if (qs.isCreated())
 		{
 			if (npc.getId() == PIERRE)

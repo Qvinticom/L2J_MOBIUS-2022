@@ -89,29 +89,27 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	{
 		final QuestState st = getQuestState(player, false);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = player.getLevel() >= MIN_LVL ? "30078-01.html" : "30078-02.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (st.isCond(2) && (getQuestItemsCount(player, BEAR_SKIN) >= REQUIRED_COUNT))
 				{
-					htmltext = player.getLevel() >= MIN_LVL ? "30078-01.html" : "30078-02.htm";
-					break;
+					giveAdena(player, ADENA_COUNT, true);
+					st.exitQuest(true, true);
+					htmltext = "30078-05.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (st.isCond(2) && (getQuestItemsCount(player, BEAR_SKIN) >= REQUIRED_COUNT))
-					{
-						giveAdena(player, ADENA_COUNT, true);
-						st.exitQuest(true, true);
-						htmltext = "30078-05.html";
-					}
-					else
-					{
-						htmltext = "30078-06.html";
-					}
-					break;
+					htmltext = "30078-06.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

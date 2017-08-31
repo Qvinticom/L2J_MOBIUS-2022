@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -621,12 +620,7 @@ public abstract class Chamber extends AbstractInstance
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final int npcId = npc.getId();
-		QuestState st = getQuestState(player, false);
-		
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
+		getQuestState(player, true);
 		
 		if (npcId == ENTRANCE_GATEKEEPER)
 		{

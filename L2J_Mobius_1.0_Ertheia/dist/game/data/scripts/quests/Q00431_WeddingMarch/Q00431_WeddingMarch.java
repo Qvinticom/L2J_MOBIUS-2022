@@ -106,11 +106,6 @@ public class Q00431_WeddingMarch extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

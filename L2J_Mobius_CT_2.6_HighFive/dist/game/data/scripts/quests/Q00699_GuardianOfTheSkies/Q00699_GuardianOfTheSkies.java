@@ -141,31 +141,29 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	{
 		QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+				htmltext = ((st == null) || (!st.isCompleted()) || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				final long feathers = getQuestItemsCount(player, VULTURES_GOLDEN_FEATHER);
+				if (feathers > 0)
 				{
-					st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					htmltext = ((st == null) || (!st.isCompleted()) || (player.getLevel() < MIN_LVL)) ? "32557-02.htm" : "32557-01.htm";
-					break;
+					giveAdena(player, ((feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0)), true);
+					takeItems(player, VULTURES_GOLDEN_FEATHER, -1);
+					htmltext = (feathers > BONUS_COUNT) ? "32557-07.html" : "32557-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					final long feathers = getQuestItemsCount(player, VULTURES_GOLDEN_FEATHER);
-					if (feathers > 0)
-					{
-						giveAdena(player, ((feathers * VULTURES_GOLDEN_FEATHER_ADENA) + (feathers > BONUS_COUNT ? BONUS : 0)), true);
-						takeItems(player, VULTURES_GOLDEN_FEATHER, -1);
-						htmltext = (feathers > BONUS_COUNT) ? "32557-07.html" : "32557-06.html";
-					}
-					else
-					{
-						htmltext = "32557-05.html";
-					}
-					break;
+					htmltext = "32557-05.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

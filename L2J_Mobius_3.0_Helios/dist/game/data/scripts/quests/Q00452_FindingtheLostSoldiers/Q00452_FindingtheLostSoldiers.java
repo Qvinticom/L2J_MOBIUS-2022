@@ -92,10 +92,6 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		if (npc.getId() == JAKAN)
 		{

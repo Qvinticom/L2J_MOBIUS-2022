@@ -132,12 +132,8 @@ public class Q00461_RumbleInTheBase extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
 		final QuestState prev = player.getQuestState(Q00252_ItSmellsDelicious.class.getSimpleName());
 		switch (st.getState())

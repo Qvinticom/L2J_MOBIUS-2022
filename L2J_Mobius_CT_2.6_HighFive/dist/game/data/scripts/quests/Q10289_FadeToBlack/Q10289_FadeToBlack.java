@@ -239,10 +239,6 @@ public class Q10289_FadeToBlack extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		if (qs.isCreated())
 		{

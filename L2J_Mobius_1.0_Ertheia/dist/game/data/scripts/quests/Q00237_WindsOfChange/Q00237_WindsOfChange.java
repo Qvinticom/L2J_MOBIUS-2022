@@ -152,10 +152,6 @@ public class Q00237_WindsOfChange extends Quest
 	{
 		String htmltext = getNoQuestMsg(talker);
 		final QuestState st = getQuestState(talker, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

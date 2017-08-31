@@ -104,10 +104,6 @@ public final class Q10817_ExaltedOneWhoOvercomesTheLimit extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		switch (qs.getState())
 		{

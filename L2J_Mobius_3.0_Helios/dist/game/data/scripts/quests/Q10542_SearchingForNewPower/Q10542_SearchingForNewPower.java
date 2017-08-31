@@ -124,8 +124,8 @@ public final class Q10542_SearchingForNewPower extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (qs.getState())
 		{

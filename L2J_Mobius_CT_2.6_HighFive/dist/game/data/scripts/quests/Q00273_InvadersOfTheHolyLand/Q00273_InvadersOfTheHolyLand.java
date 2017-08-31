@@ -114,33 +114,31 @@ public final class Q00273_InvadersOfTheHolyLand extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		String htmltext = null;
-		if (st != null)
+		String htmltext = getNoQuestMsg(player);
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (hasAtLeastOneQuestItem(player, BLACK_SOULSTONE, RED_SOULSTONE))
 				{
-					htmltext = (player.getRace() == Race.ORC) ? (player.getLevel() >= MIN_LVL) ? "30566-03.htm" : "30566-02.htm" : "30566-01.htm";
-					break;
+					final long black = getQuestItemsCount(player, BLACK_SOULSTONE);
+					final long red = getQuestItemsCount(player, RED_SOULSTONE);
+					giveAdena(player, (red * 10) + (black * 3) + ((red > 0) ? (((red + black) >= 10) ? 1800 : 0) : ((black >= 10) ? 1500 : 0)), true);
+					takeItems(player, -1, BLACK_SOULSTONE, RED_SOULSTONE);
+					Q00281_HeadForTheHills.giveNewbieReward(player);
+					htmltext = (red > 0) ? "30566-07.html" : "30566-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (hasAtLeastOneQuestItem(player, BLACK_SOULSTONE, RED_SOULSTONE))
-					{
-						final long black = getQuestItemsCount(player, BLACK_SOULSTONE);
-						final long red = getQuestItemsCount(player, RED_SOULSTONE);
-						giveAdena(player, (red * 10) + (black * 3) + ((red > 0) ? (((red + black) >= 10) ? 1800 : 0) : ((black >= 10) ? 1500 : 0)), true);
-						takeItems(player, -1, BLACK_SOULSTONE, RED_SOULSTONE);
-						Q00281_HeadForTheHills.giveNewbieReward(player);
-						htmltext = (red > 0) ? "30566-07.html" : "30566-06.html";
-					}
-					else
-					{
-						htmltext = "30566-05.html";
-					}
-					break;
+					htmltext = "30566-05.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

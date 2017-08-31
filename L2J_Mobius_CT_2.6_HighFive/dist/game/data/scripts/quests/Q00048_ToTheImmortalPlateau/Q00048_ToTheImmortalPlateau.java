@@ -188,10 +188,7 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 	{
 		QuestState st = getQuestState(talker, true);
 		String htmltext = getNoQuestMsg(talker);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		
 		switch (npc.getId())
 		{
 			case GALLADUCCI:

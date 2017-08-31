@@ -159,10 +159,6 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		if (st.isCreated())
 		{

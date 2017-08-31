@@ -165,135 +165,133 @@ public class Q00101_SwordOfSolidarity extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (npc.getId())
 		{
-			switch (npc.getId())
+			case ROIEN:
 			{
-				case ROIEN:
+				switch (st.getState())
 				{
-					switch (st.getState())
+					case State.CREATED:
 					{
-						case State.CREATED:
-						{
-							htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30008-02.htm" : "30008-08.htm" : "30008-01.htm";
-							break;
-						}
-						case State.STARTED:
-						{
-							switch (st.getCond())
-							{
-								case 1:
-								{
-									if (hasQuestItems(player, ROIENS_LETTER))
-									{
-										htmltext = "30008-05.html";
-									}
-									break;
-								}
-								case 2:
-								{
-									if (hasAtLeastOneQuestItem(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
-									{
-										htmltext = "30008-11.html";
-									}
-									else if (hasQuestItems(player, DIRECTIONS_TO_RUINS))
-									{
-										htmltext = "30008-10.html";
-									}
-									break;
-								}
-								case 3:
-								{
-									if (hasQuestItems(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
-									{
-										htmltext = "30008-12.html";
-									}
-									break;
-								}
-								case 4:
-								{
-									if (hasQuestItems(player, ALTRANS_NOTE))
-									{
-										takeItems(player, ALTRANS_NOTE, -1);
-										giveItems(player, BROKEN_SWORD_HANDLE, 1);
-										st.setCond(5, true);
-										htmltext = "30008-06.html";
-									}
-									break;
-								}
-								case 5:
-								{
-									if (hasQuestItems(player, BROKEN_SWORD_HANDLE))
-									{
-										htmltext = "30008-07.html";
-									}
-									break;
-								}
-							}
-							break;
-						}
-						case State.COMPLETED:
-						{
-							htmltext = getAlreadyCompletedMsg(player);
-							break;
-						}
+						htmltext = (player.getRace() == Race.HUMAN) ? (player.getLevel() >= MIN_LVL) ? "30008-02.htm" : "30008-08.htm" : "30008-01.htm";
+						break;
 					}
-					break;
+					case State.STARTED:
+					{
+						switch (st.getCond())
+						{
+							case 1:
+							{
+								if (hasQuestItems(player, ROIENS_LETTER))
+								{
+									htmltext = "30008-05.html";
+								}
+								break;
+							}
+							case 2:
+							{
+								if (hasAtLeastOneQuestItem(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
+								{
+									htmltext = "30008-11.html";
+								}
+								else if (hasQuestItems(player, DIRECTIONS_TO_RUINS))
+								{
+									htmltext = "30008-10.html";
+								}
+								break;
+							}
+							case 3:
+							{
+								if (hasQuestItems(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
+								{
+									htmltext = "30008-12.html";
+								}
+								break;
+							}
+							case 4:
+							{
+								if (hasQuestItems(player, ALTRANS_NOTE))
+								{
+									takeItems(player, ALTRANS_NOTE, -1);
+									giveItems(player, BROKEN_SWORD_HANDLE, 1);
+									st.setCond(5, true);
+									htmltext = "30008-06.html";
+								}
+								break;
+							}
+							case 5:
+							{
+								if (hasQuestItems(player, BROKEN_SWORD_HANDLE))
+								{
+									htmltext = "30008-07.html";
+								}
+								break;
+							}
+						}
+						break;
+					}
+					case State.COMPLETED:
+					{
+						htmltext = getAlreadyCompletedMsg(player);
+						break;
+					}
 				}
-				case ALTRAN:
+				break;
+			}
+			case ALTRAN:
+			{
+				switch (st.getCond())
 				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
+						if (hasQuestItems(player, ROIENS_LETTER))
 						{
-							if (hasQuestItems(player, ROIENS_LETTER))
-							{
-								htmltext = "30283-01.html";
-							}
-							break;
+							htmltext = "30283-01.html";
 						}
-						case 2:
-						{
-							if (hasAtLeastOneQuestItem(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
-							{
-								htmltext = "30283-08.html";
-							}
-							else if (hasQuestItems(player, DIRECTIONS_TO_RUINS))
-							{
-								htmltext = "30283-03.html";
-							}
-							break;
-						}
-						case 3:
-						{
-							if (hasQuestItems(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
-							{
-								takeItems(player, -1, DIRECTIONS_TO_RUINS, BROKEN_BLADE_TOP, BROKEN_BLADE_BOTTOM);
-								giveItems(player, ALTRANS_NOTE, 1);
-								st.setCond(4, true);
-								htmltext = "30283-04.html";
-							}
-							break;
-						}
-						case 4:
-						{
-							if (hasQuestItems(player, ALTRANS_NOTE))
-							{
-								htmltext = "30283-05.html";
-							}
-							break;
-						}
-						case 5:
-						{
-							if (hasQuestItems(player, BROKEN_SWORD_HANDLE))
-							{
-								htmltext = "30283-06.html";
-							}
-							break;
-						}
+						break;
 					}
-					break;
+					case 2:
+					{
+						if (hasAtLeastOneQuestItem(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
+						{
+							htmltext = "30283-08.html";
+						}
+						else if (hasQuestItems(player, DIRECTIONS_TO_RUINS))
+						{
+							htmltext = "30283-03.html";
+						}
+						break;
+					}
+					case 3:
+					{
+						if (hasQuestItems(player, BROKEN_BLADE_BOTTOM, BROKEN_BLADE_TOP))
+						{
+							takeItems(player, -1, DIRECTIONS_TO_RUINS, BROKEN_BLADE_TOP, BROKEN_BLADE_BOTTOM);
+							giveItems(player, ALTRANS_NOTE, 1);
+							st.setCond(4, true);
+							htmltext = "30283-04.html";
+						}
+						break;
+					}
+					case 4:
+					{
+						if (hasQuestItems(player, ALTRANS_NOTE))
+						{
+							htmltext = "30283-05.html";
+						}
+						break;
+					}
+					case 5:
+					{
+						if (hasQuestItems(player, BROKEN_SWORD_HANDLE))
+						{
+							htmltext = "30283-06.html";
+						}
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;

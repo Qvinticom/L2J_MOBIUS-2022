@@ -219,10 +219,6 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
 		
 		if (qs.getState() == State.CREATED)
 		{

@@ -130,32 +130,30 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getLevel() >= MIN_LVL) ? "31521-01.htm" : "31521-00.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (st.getCond())
 				{
-					htmltext = (player.getLevel() >= MIN_LVL) ? "31521-01.htm" : "31521-00.htm";
-					break;
-				}
-				case State.STARTED:
-				{
-					switch (st.getCond())
+					case 1:
 					{
-						case 1:
-						{
-							htmltext = "31521-03.html";
-							break;
-						}
-						case 2:
-						{
-							htmltext = "31521-04.html";
-							break;
-						}
+						htmltext = "31521-03.html";
+						break;
 					}
-					break;
+					case 2:
+					{
+						htmltext = "31521-04.html";
+						break;
+					}
 				}
+				break;
 			}
 		}
 		return htmltext;

@@ -176,10 +176,6 @@ public class Q10272_LightFragment extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (npc.getId())
 		{

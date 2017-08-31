@@ -138,10 +138,6 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 	{
 		String htmltext = getNoQuestMsg(talker);
 		final QuestState st = getQuestState(talker, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (st.getState())
 		{

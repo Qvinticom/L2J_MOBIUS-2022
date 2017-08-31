@@ -96,35 +96,33 @@ public class Q00165_ShilensHunt extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30348-02.htm" : "30348-01.htm" : "30348-00.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (st.isCond(2) && (getQuestItemsCount(player, DARK_BEZOAR) >= REQUIRED_COUNT))
 				{
-					htmltext = (player.getRace() == Race.DARK_ELF) ? (player.getLevel() >= MIN_LVL) ? "30348-02.htm" : "30348-01.htm" : "30348-00.htm";
-					break;
+					giveItems(player, LESSER_HEALING_POTION, 5);
+					addExpAndSp(player, 1000, 0);
+					st.exitQuest(false, true);
+					htmltext = "30348-05.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (st.isCond(2) && (getQuestItemsCount(player, DARK_BEZOAR) >= REQUIRED_COUNT))
-					{
-						giveItems(player, LESSER_HEALING_POTION, 5);
-						addExpAndSp(player, 1000, 0);
-						st.exitQuest(false, true);
-						htmltext = "30348-05.html";
-					}
-					else
-					{
-						htmltext = "30348-04.html";
-					}
-					break;
+					htmltext = "30348-04.html";
 				}
-				case State.COMPLETED:
-				{
-					htmltext = getAlreadyCompletedMsg(player);
-					break;
-				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(player);
+				break;
 			}
 		}
 		return htmltext;

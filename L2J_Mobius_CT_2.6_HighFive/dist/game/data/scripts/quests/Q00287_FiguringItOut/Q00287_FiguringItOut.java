@@ -177,23 +177,22 @@ public class Q00287_FiguringItOut extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		final QuestState prev = player.getQuestState(Q00250_WatchWhatYouEat.class.getSimpleName());
-		
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() >= MIN_LEVEL) && (prev != null) && prev.isCompleted()) ? "32742-01.htm" : "32742-14.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (getQuestItemsCount(player, VIAL_OF_TANTA_BLOOD) < 100) ? "32742-04.html" : "32742-05.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

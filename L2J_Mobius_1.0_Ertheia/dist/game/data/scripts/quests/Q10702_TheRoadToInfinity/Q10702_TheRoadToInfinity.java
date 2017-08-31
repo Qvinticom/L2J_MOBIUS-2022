@@ -91,11 +91,6 @@ public final class Q10702_TheRoadToInfinity extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

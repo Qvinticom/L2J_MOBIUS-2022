@@ -113,13 +113,9 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private void handleKillTheQuest(L2PcInstance player)
 	{
-		QuestState st = getQuestState(player, false);
+		QuestState st = getQuestState(player, true);
 		int kill = 1;
 		int max = 10;
-		if (st == null)
-		{
-			st = newQuestState(player);
-		}
 		if (!st.isCompleted())
 		{
 			if (!st.isStarted())

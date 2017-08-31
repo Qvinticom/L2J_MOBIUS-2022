@@ -75,8 +75,8 @@ public class Q00756_TopQualityPetra extends Quest
 	@Override
 	public String onItemTalk(L2ItemInstance item, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
+		String htmltext = getNoQuestMsg(player);
 		
 		boolean startQuest = false;
 		switch (qs.getState())

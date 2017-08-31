@@ -134,12 +134,8 @@ public class Q00663_SeductiveWhispers extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		String htmltext = getNoQuestMsg(talker);
 		final QuestState qs = getQuestState(talker, true);
-		if (qs == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(talker);
 		
 		switch (qs.getState())
 		{

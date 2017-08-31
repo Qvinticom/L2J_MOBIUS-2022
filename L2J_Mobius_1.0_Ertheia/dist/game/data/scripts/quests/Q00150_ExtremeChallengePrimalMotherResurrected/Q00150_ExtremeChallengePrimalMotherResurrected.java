@@ -92,16 +92,12 @@ public final class Q00150_ExtremeChallengePrimalMotherResurrected extends Quest
 	{
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		final int npcId = npc.getId();
+		
 		switch (qs.getState())
 		{
 			case State.CREATED:
 			{
-				if (npcId == RUMIESE)
+				if (npc.getId() == RUMIESE)
 				{
 					htmltext = "33293-01.htm";
 				}

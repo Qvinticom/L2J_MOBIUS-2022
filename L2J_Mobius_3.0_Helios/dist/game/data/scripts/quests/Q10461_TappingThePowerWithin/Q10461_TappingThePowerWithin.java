@@ -94,11 +94,6 @@ public final class Q10461_TappingThePowerWithin extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
 		switch (qs.getState())
 		{
 			case State.CREATED:

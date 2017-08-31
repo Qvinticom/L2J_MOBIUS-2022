@@ -92,11 +92,6 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
 		
-		if (qs == null)
-		{
-			return htmltext;
-		}
-		
 		switch (npc.getId())
 		{
 			case MOIRA:

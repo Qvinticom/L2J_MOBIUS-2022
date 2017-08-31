@@ -261,16 +261,12 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return getNoQuestMsg(player);
-		}
+		String htmltext = getNoQuestMsg(player);
 		if (st.isStarted() && !player.isSubClassActive())
 		{
 			return "no_sub.html";
 		}
 		
-		String htmltext = getNoQuestMsg(player);
 		switch (npc.getId())
 		{
 			case TALIEN:

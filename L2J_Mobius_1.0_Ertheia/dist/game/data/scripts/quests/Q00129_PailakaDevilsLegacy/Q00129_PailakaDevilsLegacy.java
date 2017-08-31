@@ -132,10 +132,6 @@ public final class Q00129_PailakaDevilsLegacy extends Quest
 	{
 		String htmltext = getNoQuestMsg(player);
 		final QuestState qs = getQuestState(player, true);
-		if (qs == null)
-		{
-			return getNoQuestMsg(player);
-		}
 		
 		switch (npc.getId())
 		{

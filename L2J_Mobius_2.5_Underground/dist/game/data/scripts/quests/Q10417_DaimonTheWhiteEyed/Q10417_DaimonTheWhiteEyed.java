@@ -108,7 +108,7 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, true);
-		String htmltext = null;
+		String htmltext = getNoQuestMsg(player);
 		
 		if (st.getState() == State.CREATED)
 		{

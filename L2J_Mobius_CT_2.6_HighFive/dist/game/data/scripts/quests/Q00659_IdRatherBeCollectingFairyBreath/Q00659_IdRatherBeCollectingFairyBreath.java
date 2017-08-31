@@ -121,10 +121,6 @@ public final class Q00659_IdRatherBeCollectingFairyBreath extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st == null)
-		{
-			return htmltext;
-		}
 		
 		if (st.isCreated())
 		{

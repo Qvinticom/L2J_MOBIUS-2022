@@ -98,34 +98,32 @@ public final class Q00267_WrathOfVerdure extends Quest
 	{
 		final QuestState st = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
-		if (st != null)
+		
+		switch (st.getState())
 		{
-			switch (st.getState())
+			case State.CREATED:
 			{
-				case State.CREATED:
+				htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				if (hasQuestItems(player, GOBLIN_CLUB))
 				{
-					htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LVL) ? "31853-03.htm" : "31853-02.htm" : "31853-01.htm";
-					break;
+					final long count = getQuestItemsCount(player, GOBLIN_CLUB);
+					rewardItems(player, SILVERY_LEAF, count);
+					if (count >= 10)
+					{
+						giveAdena(player, 600, true);
+					}
+					takeItems(player, GOBLIN_CLUB, -1);
+					htmltext = "31853-06.html";
 				}
-				case State.STARTED:
+				else
 				{
-					if (hasQuestItems(player, GOBLIN_CLUB))
-					{
-						final long count = getQuestItemsCount(player, GOBLIN_CLUB);
-						rewardItems(player, SILVERY_LEAF, count);
-						if (count >= 10)
-						{
-							giveAdena(player, 600, true);
-						}
-						takeItems(player, GOBLIN_CLUB, -1);
-						htmltext = "31853-06.html";
-					}
-					else
-					{
-						htmltext = "31853-05.html";
-					}
-					break;
+					htmltext = "31853-05.html";
 				}
+				break;
 			}
 		}
 		return htmltext;

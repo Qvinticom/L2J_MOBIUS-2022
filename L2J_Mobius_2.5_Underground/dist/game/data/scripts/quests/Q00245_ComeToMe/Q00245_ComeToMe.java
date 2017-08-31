@@ -115,12 +115,9 @@ public class Q00245_ComeToMe extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
+		
 		if (npc.getId() == FERRIS)
 		{
 			switch (st.getState())

@@ -77,35 +77,41 @@ public class Q00172_NewHorizons extends Quest
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = getNoQuestMsg(player);
 		final QuestState st = getQuestState(player, true);
-		if (st == null)
-		{
-			return htmltext;
-		}
+		String htmltext = getNoQuestMsg(player);
 		
 		switch (npc.getId())
 		{
 			case ZENYA:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getRace() == Race.KAMAEL) ? (player.getLevel() >= MIN_LEVEL) ? "32140-01.htm" : "32140-02.htm" : "32140-03.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32140-05.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case RAGARA:
+			{
 				if (st.isStarted())
 				{
 					htmltext = "32163-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
