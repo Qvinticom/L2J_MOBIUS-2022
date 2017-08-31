@@ -119,8 +119,10 @@ public final class Q10735_ASpecialPower extends Quest
 				break;
 			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -136,14 +138,20 @@ public final class Q10735_ASpecialPower extends Quest
 			switch (qs.getCond())
 			{
 				case 2:
+				{
 					npcId = FLOATO;
 					break;
+				}
 				case 4:
+				{
 					npcId = FLOATO2;
 					break;
+				}
 				case 6:
+				{
 					npcId = RATEL;
 					break;
+				}
 			}
 			if (npcId != -1)
 			{

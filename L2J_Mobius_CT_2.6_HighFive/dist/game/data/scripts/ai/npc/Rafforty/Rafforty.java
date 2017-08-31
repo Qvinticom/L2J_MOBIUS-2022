@@ -41,18 +41,23 @@ public final class Rafforty extends AbstractNpcAI
 		switch (event)
 		{
 			case "32020-01.html":
+			{
 				if (!hasQuestItems(player, NECKLACE))
 				{
 					htmltext = "32020-02.html";
 				}
 				break;
+			}
 			case "32020-04.html":
+			{
 				if (!hasQuestItems(player, BOTTLE))
 				{
 					htmltext = "32020-05.html";
 				}
 				break;
+			}
 			case "32020-07.html":
+			{
 				if (!hasQuestItems(player, BOTTLE, NECKLACE))
 				{
 					return "32020-08.html";
@@ -61,6 +66,7 @@ public final class Rafforty extends AbstractNpcAI
 				takeItems(player, BOTTLE, 1);
 				giveItems(player, BLESSED_NECKLACE, 1);
 				break;
+			}
 		}
 		return htmltext;
 	}

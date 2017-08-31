@@ -824,17 +824,25 @@ public class PcStat extends PlayableStat
 			switch (getVitalityLevel())
 			{
 				case 1:
+				{
 					vitality = Config.RATE_VITALITY_LEVEL_1;
 					break;
+				}
 				case 2:
+				{
 					vitality = Config.RATE_VITALITY_LEVEL_2;
 					break;
+				}
 				case 3:
+				{
 					vitality = Config.RATE_VITALITY_LEVEL_3;
 					break;
+				}
 				case 4:
+				{
 					vitality = Config.RATE_VITALITY_LEVEL_4;
 					break;
+				}
 			}
 		}
 		

@@ -120,21 +120,30 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case TANTA_SUMMONER:
+			{
 				if (!npc.isAffectedBySkill(DEMOTIVATION_HEX.getSkillId()))
 				{
 					npc.doCast(DEMOTIVATION_HEX.getSkill());
 				}
 				break;
+			}
 			case RAINBOW_FROG:
+			{
 				castSkill(npc, attacker, RAINBOW_FROG_SKILL);
 				break;
+			}
 			case ENERGY_PLANT:
+			{
 				castSkill(npc, attacker, ENERGY_PLANT_SKILL);
 				break;
+			}
 			case STICKY_MUSHROOM:
+			{
 				castSkill(npc, attacker, STICKY_MUSHROOM_SKILL);
 				break;
+			}
 			case FANTASY_MUSHROOM:
+			{
 				if (npc.isScriptValue(0))
 				{
 					npc.setScriptValue(1);
@@ -154,6 +163,7 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 					startQuestTimer("fantasy_mushroom", 4000, npc, attacker);
 				}
 				break;
+			}
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
 	}

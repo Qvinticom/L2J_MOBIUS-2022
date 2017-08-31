@@ -60,9 +60,12 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 		switch (event)
 		{
 			case "31574-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31574-08.htm":
+			{
 				if (st.isCond(1) && hasQuestItems(player, PURPLE_TREASURE_BOX))
 				{
 					giveItems(player, SMALL_GLASS_BOX, 1);
@@ -71,7 +74,9 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 					htmltext = "31574-07.htm";
 				}
 				break;
+			}
 			case "30909-03.htm":
+			{
 				if (st.isCond(2) && hasQuestItems(player, SMALL_GLASS_BOX))
 				{
 					giveItems(player, PLATED_LEATHER_GLOVES, 1);
@@ -79,7 +84,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 					htmltext = "30909-02.htm";
 				}
 				break;
-			
+			}
 		}
 		return htmltext;
 	}
@@ -94,9 +99,12 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				final QuestState qs = player.getQuestState(Q00052_WilliesSpecialBait.class.getSimpleName());
 				if (npcId == WILLIE)
 				{
@@ -107,32 +115,43 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 					}
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npcId)
 				{
 					case WILLIE:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31574-06.htm";
 								if (hasQuestItems(player, PURPLE_TREASURE_BOX))
 								{
 									htmltext = "31574-05.htm";
 								}
 								break;
+							}
 							case 2:
+							{
 								htmltext = "31574-09.htm";
 								break;
+							}
 						}
 						break;
+					}
 					case ANABEL:
+					{
 						if (st.isCond(2))
 						{
 							htmltext = "30909-01.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

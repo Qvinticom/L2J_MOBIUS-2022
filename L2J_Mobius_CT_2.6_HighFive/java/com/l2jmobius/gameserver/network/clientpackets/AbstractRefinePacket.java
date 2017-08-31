@@ -347,9 +347,13 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			case INVENTORY:
 			case PAPERDOLL:
+			{
 				break;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 		
 		if (item.getItem() instanceof L2Weapon)
@@ -358,9 +362,13 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 			{
 				case NONE:
 				case FISHINGROD:
+				{
 					return false;
+				}
 				default:
+				{
 					break;
+				}
 			}
 		}
 		else if (item.getItem() instanceof L2Armor)
@@ -371,9 +379,13 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 				case L2Item.SLOT_LR_FINGER:
 				case L2Item.SLOT_LR_EAR:
 				case L2Item.SLOT_NECK:
+				{
 					break;
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 		else
@@ -449,15 +461,23 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		{
 			case C:
 			case B:
+			{
 				return GEMSTONE_D;
+			}
 			case A:
 			case S:
+			{
 				return GEMSTONE_C;
+			}
 			case S80:
 			case S84:
+			{
 				return GEMSTONE_B;
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	
@@ -472,40 +492,70 @@ public abstract class AbstractRefinePacket extends L2GameClientPacket
 		switch (lifeStoneGrade)
 		{
 			case GRADE_ACC:
+			{
 				switch (itemGrade)
 				{
 					case C:
+					{
 						return 200;
+					}
 					case B:
+					{
 						return 300;
+					}
 					case A:
+					{
 						return 200;
+					}
 					case S:
+					{
 						return 250;
+					}
 					case S80:
+					{
 						return 360;
+					}
 					case S84:
+					{
 						return 480;
+					}
 					default:
+					{
 						return 0;
+					}
 				}
+			}
 			default:
+			{
 				switch (itemGrade)
 				{
 					case C:
+					{
 						return 20;
+					}
 					case B:
+					{
 						return 30;
+					}
 					case A:
+					{
 						return 20;
+					}
 					case S:
+					{
 						return 25;
+					}
 					case S80:
 					case S84:
+					{
 						return 36;
+					}
 					default:
+					{
 						return 0;
+					}
 				}
+			}
 		}
 	}
 }

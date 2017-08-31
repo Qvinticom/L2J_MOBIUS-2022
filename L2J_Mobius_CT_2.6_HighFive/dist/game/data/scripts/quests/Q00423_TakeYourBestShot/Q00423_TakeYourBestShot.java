@@ -69,16 +69,24 @@ public class Q00423_TakeYourBestShot extends Quest
 			case "32740-01.html":
 			case "32744-02.html":
 			case "32744-03.htm":
+			{
 				break;
+			}
 			case "32744-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "32744-quit.html":
+			{
 				st.exitQuest(true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -113,9 +121,11 @@ public class Q00423_TakeYourBestShot extends Quest
 		switch (npc.getId())
 		{
 			case JOHNNY:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState _prev = player.getQuestState(Q00249_PoisonedPlainsOfTheLizardmen.class.getSimpleName());
 						if ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= MIN_LEVEL))
 						{
@@ -126,7 +136,9 @@ public class Q00423_TakeYourBestShot extends Quest
 							htmltext = "32744-00.htm";
 						}
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "32744-05.html";
@@ -136,15 +148,21 @@ public class Q00423_TakeYourBestShot extends Quest
 							htmltext = "32744-06.html";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case BATRACOS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (hasQuestItems(player, SEER_UGOROS_PASS)) ? "32740-05.html" : "32740-00.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "32740-02.html";
@@ -156,7 +174,10 @@ public class Q00423_TakeYourBestShot extends Quest
 							htmltext = "32740-04.html";
 						}
 						break;
+					}
 				}
+				break;
+			}
 		}
 		return htmltext;
 	}

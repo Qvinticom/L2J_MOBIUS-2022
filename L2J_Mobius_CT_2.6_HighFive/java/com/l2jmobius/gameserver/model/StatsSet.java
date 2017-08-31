@@ -502,7 +502,6 @@ public class StatsSet implements IParserAdvUtils
 		return val == null ? defaultValue : String.valueOf(val);
 	}
 	
-	
 	@Override
 	@SuppressWarnings("unchecked")
 	public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass)

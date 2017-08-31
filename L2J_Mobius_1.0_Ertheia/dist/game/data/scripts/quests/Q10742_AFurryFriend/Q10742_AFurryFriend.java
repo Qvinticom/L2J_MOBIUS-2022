@@ -74,8 +74,10 @@ public final class Q10742_AFurryFriend extends Quest
 		{
 			case "33952-02.htm":
 			case "33952-05.html":
+			{
 				htmltext = event;
 				break;
+			}
 			case "33952-03.htm":
 			{
 				qs.startQuest();
@@ -183,8 +185,10 @@ public final class Q10742_AFurryFriend extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "33952-01.htm";
 					break;
+				}
 				case State.STARTED:
 				{
 					if (qs.isCond(1))
@@ -201,8 +205,10 @@ public final class Q10742_AFurryFriend extends Quest
 					break;
 				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		return htmltext;

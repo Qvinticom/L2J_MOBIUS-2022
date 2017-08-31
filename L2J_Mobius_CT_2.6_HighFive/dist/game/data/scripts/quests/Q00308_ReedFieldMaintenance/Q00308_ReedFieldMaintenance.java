@@ -143,45 +143,65 @@ public class Q00308_ReedFieldMaintenance extends Quest
 			case "32646-07.html":
 			case "32646-08.html":
 			case "32646-10.html":
+			{
 				htmltext = event;
 				break;
+			}
 			case "32646-04.html":
+			{
 				st.startQuest();
 				player.sendPacket(new RadarControl(0, 2, 77325, 205773, -3432));
 				htmltext = event;
 				break;
+			}
 			case "claimreward":
+			{
 				final QuestState q238 = player.getQuestState(Q00238_SuccessFailureOfBusiness.class.getName());
 				htmltext = ((q238 != null) && q238.isCompleted()) ? "32646-09.html" : "32646-12.html";
 				break;
+			}
 			case "100":
 			case "120":
+			{
 				htmltext = onItemExchangeRequest(player, MOIRAI_PIECES[getRandom(MOIRAI_PIECES.length - 1)], Integer.parseInt(event));
 				break;
+			}
 			case "192":
 			case "230":
+			{
 				htmltext = onItemExchangeRequest(player, REC_DYNASTY_EARRINGS_70, Integer.parseInt(event));
 				break;
+			}
 			case "256":
 			case "308":
+			{
 				htmltext = onItemExchangeRequest(player, REC_DYNASTY_NECKLACE_70, Integer.parseInt(event));
 				break;
+			}
 			case "128":
 			case "154":
+			{
 				htmltext = onItemExchangeRequest(player, REC_DYNASTY_RING_70, Integer.parseInt(event));
 				break;
+			}
 			case "206":
 			case "246":
+			{
 				htmltext = onItemExchangeRequest(player, REC_DYNASTY_SIGIL_60, Integer.parseInt(event));
 				break;
+			}
 			case "180":
 			case "216":
+			{
 				htmltext = onItemExchangeRequest(player, MOIRAI_RECIPES[getRandom(MOIRAI_RECIPES.length - 1)], Integer.parseInt(event));
 				break;
+			}
 			case "32646-11.html":
+			{
 				st.exitQuest(true, true);
 				htmltext = event;
 				break;
+			}
 		}
 		return htmltext;
 	}

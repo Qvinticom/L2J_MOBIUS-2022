@@ -61,9 +61,12 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		switch (event)
 		{
 			case "31570-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31570-07.html":
+			{
 				if ((st.isCond(2)) && (getQuestItemsCount(player, ESSENCE_OF_WIND) >= 100))
 				{
 					htmltext = "31570-06.htm";
@@ -71,6 +74,7 @@ public class Q00050_LanoscosSpecialBait extends Quest
 					st.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -114,14 +118,20 @@ public class Q00050_LanoscosSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 27) ? "31570-01.htm" : "31570-02.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(1)) ? "31570-05.html" : "31570-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

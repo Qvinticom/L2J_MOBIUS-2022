@@ -72,6 +72,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		switch (targetItem.getItem().getCrystalType())
 		{
 			case C:
+			{
 				if (targetItem.getCrystalCount() < 1720)
 				{
 					price = 95000;
@@ -85,7 +86,9 @@ public final class RequestRefineCancel extends L2GameClientPacket
 					price = 210000;
 				}
 				break;
+			}
 			case B:
+			{
 				if (targetItem.getCrystalCount() < 1746)
 				{
 					price = 240000;
@@ -95,7 +98,9 @@ public final class RequestRefineCancel extends L2GameClientPacket
 					price = 270000;
 				}
 				break;
+			}
 			case A:
+			{
 				if (targetItem.getCrystalCount() < 2160)
 				{
 					price = 330000;
@@ -109,17 +114,24 @@ public final class RequestRefineCancel extends L2GameClientPacket
 					price = 420000;
 				}
 				break;
+			}
 			case S:
+			{
 				price = 480000;
 				break;
+			}
 			case S80:
 			case S84:
+			{
 				price = 920000;
 				break;
+			}
 			// any other item type is not augmentable
 			default:
+			{
 				activeChar.sendPacket(new ExVariationCancelResult(0));
 				return;
+			}
 		}
 		
 		// try to reduce the players adena

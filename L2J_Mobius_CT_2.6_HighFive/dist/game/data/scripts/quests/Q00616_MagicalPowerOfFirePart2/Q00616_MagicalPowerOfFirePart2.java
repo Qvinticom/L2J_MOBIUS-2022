@@ -76,14 +76,18 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 				switch (st.getCond())
 				{
 					case 1: // take the item and give the heart
+					{
 						takeItems(player, RED_TOTEM, 1);
+					}
 					case 2:
+					{
 						if (!hasQuestItems(player, NASTRON_HEART))
 						{
 							giveItems(player, NASTRON_HEART, 1);
 						}
 						st.setCond(3, true);
 						break;
+					}
 				}
 			}
 		}
@@ -104,10 +108,13 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 			switch (event)
 			{
 				case "31379-02.html":
+				{
 					st.startQuest();
 					htmltext = event;
 					break;
+				}
 				case "give_heart":
+				{
 					if (hasQuestItems(player, NASTRON_HEART))
 					{
 						addExpAndSp(player, 10000, 0);
@@ -119,9 +126,12 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 						htmltext = "31379-07.html";
 					}
 					break;
+				}
 				case "spawn_totem":
+				{
 					htmltext = (hasQuestItems(player, RED_TOTEM)) ? spawnNastron(npc, st) : "31558-04.html";
 					break;
+				}
 			}
 		}
 		else
@@ -162,33 +172,47 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 		switch (npc.getId())
 		{
 			case UDAN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? (hasQuestItems(player, RED_TOTEM)) ? "31379-01.htm" : "31379-00a.html" : "31379-00b.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (st.isCond(1)) ? "31379-03.html" : (hasQuestItems(player, NASTRON_HEART)) ? "31379-04.html" : "31379-05.html";
 						break;
+					}
 				}
 				break;
+			}
 			case KETRA_TOTEM:
+			{
 				if (st.isStarted())
 				{
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "31558-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = spawnNastron(npc, st);
 							break;
+						}
 						case 3:
+						{
 							htmltext = "31558-05.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

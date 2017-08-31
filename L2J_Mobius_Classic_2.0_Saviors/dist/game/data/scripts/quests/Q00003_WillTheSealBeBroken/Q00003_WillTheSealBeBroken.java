@@ -69,13 +69,19 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		switch (event)
 		{
 			case "30141-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30141-05.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -92,17 +98,23 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		switch (npc.getId())
 		{
 			case OMEN_BEAST:
+			{
 				giveItem(member, st, OMEN_BEAST_EYE, getRegisteredItemIds());
 				break;
+			}
 			case STINK_ZOMBIE:
 			case TAINTED_ZOMBIE:
+			{
 				giveItem(member, st, TAINT_STONE, getRegisteredItemIds());
 				break;
+			}
 			case LESSER_SUCCUBUS:
 			case LESSER_SUCCUBUS_TILFO:
 			case LESSER_SUCCUBUS_TUREN:
+			{
 				giveItem(member, st, SUCCUBUS_BLOOD, getRegisteredItemIds());
 				break;
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -115,9 +127,12 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getRace() != Race.DARK_ELF) ? "30141-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30141-02.htm" : "30141-01.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					htmltext = "30141-04.html";
@@ -129,9 +144,12 @@ public class Q00003_WillTheSealBeBroken extends Quest
 					htmltext = "30141-06.html";
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

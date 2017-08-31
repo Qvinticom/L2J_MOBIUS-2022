@@ -695,29 +695,45 @@ public final class L2AuctioneerInstance extends L2Npc
 		switch (nearestTownId)
 		{
 			case 911:
+			{
 				nearestTown = "GLUDIN";
 				break;
+			}
 			case 912:
+			{
 				nearestTown = "GLUDIO";
 				break;
+			}
 			case 916:
+			{
 				nearestTown = "DION";
 				break;
+			}
 			case 918:
+			{
 				nearestTown = "GIRAN";
 				break;
+			}
 			case 1537:
+			{
 				nearestTown = "RUNE";
 				break;
+			}
 			case 1538:
+			{
 				nearestTown = "GODARD";
 				break;
+			}
 			case 1714:
+			{
 				nearestTown = "SCHUTTGART";
 				break;
+			}
 			default:
+			{
 				nearestTown = "ADEN";
 				break;
+			}
 		}
 		
 		return nearestTown;

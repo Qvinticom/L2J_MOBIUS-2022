@@ -88,23 +88,33 @@ public class ExEnchantSkillInfoDetail extends L2GameServerPacket
 		switch (type)
 		{
 			case TYPE_NORMAL_ENCHANT:
+			{
 				bookId = EnchantSkillGroupsData.NORMAL_ENCHANT_BOOK;
 				reqCount = (((_skilllvl % 100) > 1) ? 0 : 1);
 				break;
+			}
 			case TYPE_SAFE_ENCHANT:
+			{
 				bookId = EnchantSkillGroupsData.SAFE_ENCHANT_BOOK;
 				reqCount = 1;
 				break;
+			}
 			case TYPE_UNTRAIN_ENCHANT:
+			{
 				bookId = EnchantSkillGroupsData.UNTRAIN_ENCHANT_BOOK;
 				reqCount = 1;
 				break;
+			}
 			case TYPE_CHANGE_ENCHANT:
+			{
 				bookId = EnchantSkillGroupsData.CHANGE_ENCHANT_BOOK;
 				reqCount = 1;
 				break;
+			}
 			default:
+			{
 				return;
+			}
 		}
 		
 		if ((type != TYPE_SAFE_ENCHANT) && !Config.ES_SP_BOOK_NEEDED)

@@ -1631,11 +1631,15 @@ public final class TullyWorkshop extends AbstractNpcAI
 					switch (_state)
 					{
 						case STATE_OPEN:
+						{
 							door.openMe();
 							break;
+						}
 						case STATE_CLOSE:
+						{
 							door.closeMe();
 							break;
+						}
 					}
 				}
 			}

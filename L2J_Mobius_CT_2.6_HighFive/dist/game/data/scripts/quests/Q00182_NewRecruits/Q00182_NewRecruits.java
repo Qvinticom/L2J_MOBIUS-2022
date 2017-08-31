@@ -86,6 +86,7 @@ public class Q00182_NewRecruits extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
+				{
 					final int level = player.getLevel();
 					if (player.getRace() == Race.KAMAEL)
 					{
@@ -100,15 +101,20 @@ public class Q00182_NewRecruits extends Quest
 						htmltext = "32138-00b.html";
 					}
 					break;
+				}
 				case State.STARTED:
+				{
 					if (st.getInt("cond") == 1)
 					{
 						htmltext = "32138-04.html";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if ((npcId == MENACING_MACHINE) && st.isStarted())

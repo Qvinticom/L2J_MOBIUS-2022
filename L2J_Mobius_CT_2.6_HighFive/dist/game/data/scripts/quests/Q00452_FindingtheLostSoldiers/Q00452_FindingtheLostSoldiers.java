@@ -98,9 +98,12 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() < 84) ? "32773-0.html" : "32773-1.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (qs.isCond(1))
 					{
 						htmltext = "32773-4.html";
@@ -114,7 +117,9 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 						qs.exitQuest(QuestType.DAILY, true);
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					if (qs.isNowAvailable())
 					{
 						qs.setState(State.CREATED);
@@ -125,6 +130,7 @@ public class Q00452_FindingtheLostSoldiers extends Quest
 						htmltext = "32773-6.html";
 					}
 					break;
+				}
 			}
 		}
 		else if (qs.isCond(1))

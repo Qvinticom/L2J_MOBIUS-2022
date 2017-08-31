@@ -41,6 +41,7 @@ public class PartyOther implements ITargetTypeHandler
 					{
 						// FORCE BUFFS may cancel here but there should be a proper condition
 						case 426:
+						{
 							if (!target.getActingPlayer().isMageClass())
 							{
 								return new L2Character[]
@@ -49,7 +50,9 @@ public class PartyOther implements ITargetTypeHandler
 								};
 							}
 							return EMPTY_TARGET_LIST;
+						}
 						case 427:
+						{
 							if (target.getActingPlayer().isMageClass())
 							{
 								return new L2Character[]
@@ -58,6 +61,7 @@ public class PartyOther implements ITargetTypeHandler
 								};
 							}
 							return EMPTY_TARGET_LIST;
+						}
 					}
 				}
 				return new L2Character[]

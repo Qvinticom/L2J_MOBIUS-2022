@@ -81,20 +81,30 @@ public class L2ClanHallDoormenInstance extends L2DoormenInstance
 				switch (Integer.parseInt(st.nextToken()))
 				{
 					case 1:
+					{
 						ok = Evolve.doEvolve(player, this, 9882, 10307, 55);
 						break;
+					}
 					case 2:
+					{
 						ok = Evolve.doEvolve(player, this, 4422, 10308, 55);
 						break;
+					}
 					case 3:
+					{
 						ok = Evolve.doEvolve(player, this, 4423, 10309, 55);
 						break;
+					}
 					case 4:
+					{
 						ok = Evolve.doEvolve(player, this, 4424, 10310, 55);
 						break;
+					}
 					case 5:
+					{
 						ok = Evolve.doEvolve(player, this, 10426, 10611, 70);
 						break;
+					}
 				}
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				if (ok)

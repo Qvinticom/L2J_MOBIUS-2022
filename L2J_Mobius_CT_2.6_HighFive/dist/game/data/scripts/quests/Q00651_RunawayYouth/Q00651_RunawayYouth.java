@@ -80,17 +80,24 @@ public class Q00651_RunawayYouth extends Quest
 		switch (npc.getId())
 		{
 			case IVAN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "32014-01.htm" : "32014-01a.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32014-02.html";
 						break;
+					}
 				}
 				break;
+			}
 			case BATIDAE:
+			{
 				if (st.isStarted())
 				{
 					giveAdena(player, 2883, true);
@@ -98,6 +105,7 @@ public class Q00651_RunawayYouth extends Quest
 					htmltext = "31989-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

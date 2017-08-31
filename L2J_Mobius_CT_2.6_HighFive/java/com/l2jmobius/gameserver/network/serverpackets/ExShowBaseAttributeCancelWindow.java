@@ -53,6 +53,7 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 		switch (item.getItem().getCrystalType())
 		{
 			case S:
+			{
 				if (item.getItem() instanceof L2Weapon)
 				{
 					_price = 50000;
@@ -62,7 +63,9 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 					_price = 40000;
 				}
 				break;
+			}
 			case S80:
+			{
 				if (item.getItem() instanceof L2Weapon)
 				{
 					_price = 100000;
@@ -72,7 +75,9 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 					_price = 80000;
 				}
 				break;
+			}
 			case S84:
+			{
 				if (item.getItem() instanceof L2Weapon)
 				{
 					_price = 200000;
@@ -82,6 +87,7 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 					_price = 160000;
 				}
 				break;
+			}
 		}
 		
 		return _price;

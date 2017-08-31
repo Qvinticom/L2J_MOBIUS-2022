@@ -151,20 +151,30 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		switch (world.countKill)
 		{
 			case 4:
+			{
 				openDoor(DOOR_1, world.getInstanceId());
 				break;
+			}
 			case 10:
+			{
 				openDoor(DOOR_2, world.getInstanceId());
 				break;
+			}
 			case 18:
+			{
 				openDoor(DOOR_3, world.getInstanceId());
 				break;
+			}
 			case 28:
+			{
 				openDoor(DOOR_4, world.getInstanceId());
 				break;
+			}
 			case 40:
+			{
 				openDoor(DOOR_5, world.getInstanceId());
 				break;
+			}
 		}
 	}
 	

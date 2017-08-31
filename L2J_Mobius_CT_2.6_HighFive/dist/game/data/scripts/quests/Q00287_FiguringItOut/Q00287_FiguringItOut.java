@@ -108,9 +108,12 @@ public class Q00287_FiguringItOut extends Quest
 		switch (event)
 		{
 			case "32742-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "Icarus":
+			{
 				if (getQuestItemsCount(player, VIAL_OF_TANTA_BLOOD) >= 500)
 				{
 					final ItemHolder holder = ICARUS[getRandom(ICARUS.length)];
@@ -124,7 +127,9 @@ public class Q00287_FiguringItOut extends Quest
 					htmltext = "32742-07.html";
 				}
 				break;
+			}
 			case "Moirai":
+			{
 				if (getQuestItemsCount(player, VIAL_OF_TANTA_BLOOD) >= 100)
 				{
 					final ItemHolder holder = MOIRAI[getRandom(MOIRAI.length)];
@@ -138,22 +143,31 @@ public class Q00287_FiguringItOut extends Quest
 					htmltext = "32742-09.html";
 				}
 				break;
+			}
 			case "32742-11.html":
+			{
 				if (!hasQuestItems(player, VIAL_OF_TANTA_BLOOD))
 				{
 					st.exitQuest(true, true);
 					htmltext = "32742-12.html";
 				}
 				break;
+			}
 			case "32742-13.html":
+			{
 				st.exitQuest(true, true);
 				break;
+			}
 			case "32742-02.htm":
 			case "32742-10.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}

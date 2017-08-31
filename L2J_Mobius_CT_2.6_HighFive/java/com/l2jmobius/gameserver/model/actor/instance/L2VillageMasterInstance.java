@@ -359,9 +359,12 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			switch (cmdChoice)
 			{
 				case 0: // Subclass change menu
+				{
 					html.setFile(player.getHtmlPrefix(), getSubClassMenu(player.getRace()));
 					break;
+				}
 				case 1: // Add Subclass - Initial
+				{
 					// Avoid giving player an option to add a new sub class, if they have max sub-classes already.
 					if (player.getTotalSubClasses() >= Config.MAX_SUBCLASS)
 					{
@@ -400,7 +403,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						return;
 					}
 					break;
+				}
 				case 2: // Change Class - Initial
+				{
 					if (player.getSubClasses().isEmpty())
 					{
 						html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ChangeNo.htm");
@@ -433,7 +438,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						}
 					}
 					break;
+				}
 				case 3: // Change/Cancel Subclass - Initial
+				{
 					if ((player.getSubClasses() == null) || player.getSubClasses().isEmpty())
 					{
 						html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyEmpty.htm");
@@ -487,7 +494,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						}
 					}
 					break;
+				}
 				case 4: // Add Subclass - Action (Subclass 4 x[x])
+				{
 					/**
 					 * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice.
 					 */
@@ -553,7 +562,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						html.setFile(player.getHtmlPrefix(), getSubClassFail());
 					}
 					break;
+				}
 				case 5: // Change Class - Action
+				{
 					/**
 					 * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice. Note: paramOne = classIndex
 					 */
@@ -594,7 +605,9 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					player.setActiveClass(paramOne);
 					player.sendPacket(SystemMessageId.YOU_HAVE_SUCCESSFULLY_SWITCHED_TO_YOUR_SUBCLASS); // Transfer completed.
 					return;
+				}
 				case 6: // Change/Cancel Subclass - Choice
+				{
 					// validity check
 					if ((paramOne < 1) || (paramOne > Config.MAX_SUBCLASS))
 					{
@@ -619,20 +632,30 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					switch (paramOne)
 					{
 						case 1:
+						{
 							html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyChoice1.htm");
 							break;
+						}
 						case 2:
+						{
 							html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyChoice2.htm");
 							break;
+						}
 						case 3:
+						{
 							html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyChoice3.htm");
 							break;
+						}
 						default:
+						{
 							html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/SubClass_ModifyChoice.htm");
+						}
 					}
 					html.replace("%list%", content6.toString());
 					break;
+				}
 				case 7: // Change Subclass - Action
+				{
 					/**
 					 * Warning: the information about this subclass will be removed from the subclass list even if false!
 					 */
@@ -671,6 +694,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 						return;
 					}
 					break;
+				}
 			}
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);

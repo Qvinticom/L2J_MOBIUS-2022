@@ -60,7 +60,9 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 		{
 			case "31616-02.htm":
 			case "31616-03.htm":
+			{
 				break;
+			}
 			case "31616-04.htm":
 			{
 				qs.startQuest();
@@ -111,8 +113,8 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 				{
 					htmltext = getAlreadyCompletedMsg(player);
 				}
-			}
 				break;
+			}
 		}
 		return htmltext;
 	}

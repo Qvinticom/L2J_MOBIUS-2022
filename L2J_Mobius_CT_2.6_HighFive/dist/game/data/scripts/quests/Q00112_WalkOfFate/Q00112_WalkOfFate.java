@@ -82,9 +82,12 @@ public class Q00112_WalkOfFate extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < MIN_LEVEL) ? "30572-03.html" : "30572-01.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npc.getId())
 				{
 					case LIVINA:
@@ -99,6 +102,7 @@ public class Q00112_WalkOfFate extends Quest
 					}
 				}
 				break;
+			}
 			case State.COMPLETED:
 			{
 				htmltext = getAlreadyCompletedMsg(player);

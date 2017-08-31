@@ -61,13 +61,19 @@ public class Q00998_FallenAngelSelect extends Quest
 			case "30894-01.html":
 			case "30894-02.html":
 			case "30894-03.html":
+			{
 				return event;
+			}
 			case "dawn":
+			{
 				startQuest(Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), player);
 				break;
+			}
 			case "dusk":
+			{
 				startQuest(Q00143_FallenAngelRequestOfDusk.class.getSimpleName(), player);
 				break;
+			}
 		}
 		return null;
 	}

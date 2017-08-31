@@ -129,7 +129,6 @@ public class Q10383_FergasonsOffer extends Quest
 				{
 					htmltext = "maestro_ferguson_q10383_05.html";
 				}
-				
 				break;
 			}
 			case AKU:
@@ -142,7 +141,6 @@ public class Q10383_FergasonsOffer extends Quest
 				{
 					htmltext = "sofa_aku_q10383_02.html";
 				}
-				
 				break;
 			}
 		}

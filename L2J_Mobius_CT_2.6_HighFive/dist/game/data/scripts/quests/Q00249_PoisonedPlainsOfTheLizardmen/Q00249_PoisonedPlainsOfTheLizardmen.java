@@ -77,17 +77,23 @@ public class Q00249_PoisonedPlainsOfTheLizardmen extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= 82) ? "30196-01.htm" : "30196-00.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (st.isCond(1))
 					{
 						htmltext = "30196-04.htm";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = "30196-05.htm";
 					break;
+				}
 			}
 		}
 		else if (npc.getId() == JOHNNY)

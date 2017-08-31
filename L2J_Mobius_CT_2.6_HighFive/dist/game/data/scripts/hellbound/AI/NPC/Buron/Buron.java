@@ -91,13 +91,19 @@ public final class Buron extends AbstractNpcAI
 		switch (HellboundEngine.getInstance().getLevel())
 		{
 			case 1:
+			{
 				return "32345-01.htm";
+			}
 			case 2:
 			case 3:
 			case 4:
+			{
 				return "32345-02.htm";
+			}
 			default:
+			{
 				return "32345-01a.htm";
+			}
 		}
 	}
 }

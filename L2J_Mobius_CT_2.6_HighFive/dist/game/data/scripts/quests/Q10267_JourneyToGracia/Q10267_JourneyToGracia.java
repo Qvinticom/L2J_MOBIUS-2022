@@ -56,17 +56,23 @@ public class Q10267_JourneyToGracia extends Quest
 		switch (event)
 		{
 			case "30857-06.html":
+			{
 				st.startQuest();
 				giveItems(player, LETTER, 1);
 				break;
+			}
 			case "32564-02.html":
+			{
 				st.setCond(2, true);
 				break;
+			}
 			case "32548-02.html":
+			{
 				giveAdena(player, 92500, true);
 				addExpAndSp(player, 75480, 7570);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -80,26 +86,37 @@ public class Q10267_JourneyToGracia extends Quest
 		switch (npc.getId())
 		{
 			case ORVEN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() < 75) ? "30857-00.html" : "30857-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "30857-07.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "30857-0a.html";
 						break;
+					}
 				}
 				break;
+			}
 			case PAPIKU:
+			{
 				if (st.isStarted())
 				{
 					htmltext = st.isCond(1) ? "32564-01.html" : "32564-03.html";
 				}
 				break;
+			}
 			case KEUCEREUS:
+			{
 				if (st.isStarted() && st.isCond(2))
 				{
 					htmltext = "32548-01.html";
@@ -109,6 +126,7 @@ public class Q10267_JourneyToGracia extends Quest
 					htmltext = "32548-03.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

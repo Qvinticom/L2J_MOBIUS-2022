@@ -612,8 +612,10 @@ public abstract class L2Summon extends L2Playable
 		{
 			// OWNER_PET should be cast even if no target has been found
 			case OWNER_PET:
+			{
 				target = getOwner();
 				break;
+			}
 			// PARTY, AURA, SELF should be cast even if no target has been found
 			case PARTY:
 			case AURA:
@@ -622,12 +624,16 @@ public abstract class L2Summon extends L2Playable
 			case SELF:
 			case AURA_CORPSE_MOB:
 			case COMMAND_CHANNEL:
+			{
 				target = this;
 				break;
+			}
 			default:
+			{
 				// Get the first target of the list
 				target = skill.getFirstOfTargetList(this);
 				break;
+			}
 		}
 		
 		// Check the validity of the target

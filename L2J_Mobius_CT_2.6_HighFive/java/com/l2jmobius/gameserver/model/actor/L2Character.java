@@ -430,16 +430,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		switch (zone)
 		{
 			case PVP:
+			{
 				if ((instance != null) && instance.isPvPInstance())
 				{
 					return true;
 				}
 				return (_zones[ZoneId.PVP.ordinal()] > 0) && (_zones[ZoneId.PEACE.ordinal()] == 0);
+			}
 			case PEACE:
+			{
 				if ((instance != null) && instance.isPvPInstance())
 				{
 					return false;
 				}
+			}
 		}
 		return _zones[zone.ordinal()] > 0;
 	}
@@ -1616,15 +1620,19 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		switch (skill.getTargetType())
 		{
 			case AREA_SUMMON: // We need it to correct facing
+			{
 				target = getSummon();
 				break;
+			}
 			case AURA:
 			case AURA_CORPSE_MOB:
 			case FRONT_AURA:
 			case BEHIND_AURA:
 			case GROUND:
+			{
 				target = this;
 				break;
+			}
 			case SELF:
 			case PET:
 			case SERVITOR:
@@ -1634,8 +1642,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			case CLAN:
 			case PARTY_CLAN:
 			case COMMAND_CHANNEL:
+			{
 				doit = true;
+			}
 			default:
+			{
 				if (targets.length == 0)
 				{
 					if (simultaneously)
@@ -1668,6 +1679,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					target = (L2Character) getTarget();
 				}
+			}
 		}
 		beginCast(skill, simultaneously, target, targets);
 	}
@@ -5142,9 +5154,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			switch (getAttackType())
 			{
 				case BOW:
+				{
 					return (int) ((1500 * 333 * getStat().getWeaponReuseModifier(null)) / getStat().getPAtkSpd());
+				}
 				case CROSSBOW:
+				{
 					return (int) ((1200 * 333 * getStat().getWeaponReuseModifier(null)) / getStat().getPAtkSpd());
+				}
 			}
 		}
 		
@@ -5330,10 +5346,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				case FRONT_AURA:
 				case BEHIND_AURA:
 				case AURA_CORPSE_MOB:
+				{
 					break;
+				}
 				default:
+				{
 					abortCast();
 					return;
+				}
 			}
 		}
 		
@@ -5788,10 +5808,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 								{
 									case 51: // Lure
 									case 511: // Temptation
+									{
 										break;
+									}
 									default:
+									{
 										// add attacker into list
 										((L2Character) target).addAttackerToAttackByList(this);
+									}
 								}
 							}
 							// notify target AI about the attack

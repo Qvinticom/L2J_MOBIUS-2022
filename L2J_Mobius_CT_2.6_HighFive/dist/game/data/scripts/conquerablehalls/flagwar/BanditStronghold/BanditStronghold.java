@@ -98,20 +98,30 @@ public final class BanditStronghold extends FlagWar
 		switch (flag)
 		{
 			case 35423:
+			{
 				result = "messenger_flag1.htm";
 				break;
+			}
 			case 35424:
+			{
 				result = "messenger_flag2.htm";
 				break;
+			}
 			case 35425:
+			{
 				result = "messenger_flag3.htm";
 				break;
+			}
 			case 35426:
+			{
 				result = "messenger_flag4.htm";
 				break;
+			}
 			case 35427:
+			{
 				result = "messenger_flag5.htm";
 				break;
+			}
 		}
 		
 		return result;
@@ -125,20 +135,30 @@ public final class BanditStronghold extends FlagWar
 		switch (ally)
 		{
 			case 35428:
+			{
 				result = "messenger_ally1result.htm";
 				break;
+			}
 			case 35429:
+			{
 				result = "messenger_ally2result.htm";
 				break;
+			}
 			case 35430:
+			{
 				result = "messenger_ally3result.htm";
 				break;
+			}
 			case 35431:
+			{
 				result = "messenger_ally4result.htm";
 				break;
+			}
 			case 35432:
+			{
 				result = "messenger_ally5result.htm";
 				break;
+			}
 		}
 		
 		return result;

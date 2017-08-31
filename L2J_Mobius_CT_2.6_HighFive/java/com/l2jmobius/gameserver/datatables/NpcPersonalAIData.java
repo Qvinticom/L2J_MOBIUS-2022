@@ -99,12 +99,16 @@ public class NpcPersonalAIData
 					switch (key)
 					{
 						case "disableRandomAnimation":
+						{
 							npc.setRandomAnimationEnabled((map.get(key) == 0));
 							break;
+						}
 						case "disableRandomWalk":
+						{
 							npc.setIsNoRndWalk((map.get(key) == 1));
 							spawn.setIsNoRndWalk((map.get(key) == 1));
 							break;
+						}
 					}
 				}
 			}

@@ -66,9 +66,12 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		switch (event)
 		{
 			case "31577-1.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31577-3.htm":
+			{
 				if (st.isCond(2) && (getQuestItemsCount(player, CRIMSON_DRAKE_HEART) >= 100))
 				{
 					giveItems(player, FLAMING_FISHING_LURE, 4);
@@ -79,6 +82,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 					htmltext = "31577-5.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -122,14 +126,20 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() > 59) && (fishingLevel(player) > 19)) ? "31577-0.htm" : "31577-0a.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(1)) ? "31577-4.html" : "31577-2.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

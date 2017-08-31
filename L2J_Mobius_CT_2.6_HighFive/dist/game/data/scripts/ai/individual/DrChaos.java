@@ -277,14 +277,20 @@ public class DrChaos extends AbstractNpcAI
 			switch (chance)
 			{
 				case 0:
+				{
 					message = "Bwah-ha-ha! Your doom is at hand! Behold the Ultra Secret Super Weapon!";
 					break;
+				}
 				case 1:
+				{
 					message = "Foolish, insignificant creatures! How dare you challenge me!";
 					break;
+				}
 				default:
+				{
 					message = "I see that none will challenge me now!";
 					break;
+				}
 			}
 			
 			// Make him speak.

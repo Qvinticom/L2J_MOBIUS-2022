@@ -133,7 +133,9 @@ public class Q10272_LightFragment extends Quest
 				break;
 			}
 			default:
+			{
 				break;
+			}
 		}
 		return event;
 	}
@@ -184,6 +186,7 @@ public class Q10272_LightFragment extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						if (player.getLevel() < 75)
 						{
 							htmltext = "32560-03.html";
@@ -194,12 +197,17 @@ public class Q10272_LightFragment extends Quest
 							htmltext = ((st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						}
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32560-06.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32560-04.html";
 						break;
+					}
 				}
 				break;
 			}
@@ -214,18 +222,27 @@ public class Q10272_LightFragment extends Quest
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "32559-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "32559-04.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "32559-08.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32559-10.html";
 							break;
+						}
 						case 5:
+						{
 							if (getQuestItemsCount(player, FRAGMENT_POWDER) >= 100)
 							{
 								htmltext = "32559-15.html";
@@ -236,7 +253,9 @@ public class Q10272_LightFragment extends Quest
 								htmltext = hasQuestItems(player, FRAGMENT_POWDER) ? "32559-14.html" : "32559-13.html";
 							}
 							break;
+						}
 						case 6:
+						{
 							if (getQuestItemsCount(player, LIGHT_FRAGMENT_POWDER) < 100)
 							{
 								htmltext = "32559-16.html";
@@ -247,15 +266,20 @@ public class Q10272_LightFragment extends Quest
 								st.setCond(7, true);
 							}
 							break;
+						}
 						case 7:
+						{
 							// TODO Nothing here?
 							break;
+						}
 						case 8:
+						{
 							htmltext = "32559-18.html";
 							giveAdena(player, 556980, true);
 							addExpAndSp(player, 1009016, 91363);
 							st.exitQuest(false, true);
 							break;
+						}
 					}
 				}
 				break;
@@ -266,20 +290,30 @@ public class Q10272_LightFragment extends Quest
 				{
 					case 1:
 					case 2:
+					{
 						htmltext = "32566-02.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "32566-01.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "32566-09.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "32566-10.html";
 						break;
+					}
 					case 6:
+					{
 						htmltext = "32566-10.html";
 						break;
+					}
 				}
 				break;
 			}
@@ -288,11 +322,15 @@ public class Q10272_LightFragment extends Quest
 				switch (st.getCond())
 				{
 					case 3:
+					{
 						htmltext = "32567-01.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "32567-05.html";
 						break;
+					}
 				}
 				break;
 			}
@@ -301,6 +339,7 @@ public class Q10272_LightFragment extends Quest
 				switch (st.getCond())
 				{
 					case 7:
+					{
 						if (st.getInt("wait") == 1)
 						{
 							htmltext = "32557-05.html";
@@ -313,9 +352,12 @@ public class Q10272_LightFragment extends Quest
 							htmltext = "32557-01.html";
 						}
 						break;
+					}
 					case 8:
+					{
 						htmltext = "32557-06.html";
 						break;
+					}
 				}
 				break;
 			}

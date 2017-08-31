@@ -364,12 +364,14 @@ public final class ItemAuction
 					break;
 				}
 				case EXTEND_BY_3_MIN:
+				{
 					if ((Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID > 0) && (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()))
 					{
 						_auctionEndingExtendState = ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A;
 						_endingTime += Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
 					}
 					break;
+				}
 				case EXTEND_BY_CONFIG_PHASE_A:
 				{
 					if ((getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()) && (_scheduledAuctionEndingExtendState == ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B))

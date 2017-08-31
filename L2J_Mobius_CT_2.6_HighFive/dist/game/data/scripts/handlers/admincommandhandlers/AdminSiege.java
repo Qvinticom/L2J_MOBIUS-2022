@@ -94,25 +94,23 @@ public class AdminSiege implements IAdminCommandHandler
 					switch (command)
 					{
 						case "admin_clanhallset":
+						{
 							if ((player == null) || (player.getClan() == null))
 							{
 								activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 								return false;
 							}
-							
 							if (clanhall.getOwnerId() > 0)
 							{
 								activeChar.sendMessage("This Clan Hall is not free!");
 								return false;
 							}
-							
 							clan = player.getClan();
 							if (clan.getHideoutId() > 0)
 							{
 								activeChar.sendMessage("You have already a Clan Hall!");
 								return false;
 							}
-							
 							if (!clanhall.isSiegableHall())
 							{
 								ClanHallManager.getInstance().setOwner(clanhall.getId(), clan);
@@ -127,8 +125,9 @@ public class AdminSiege implements IAdminCommandHandler
 								clan.setHideoutId(clanhall.getId());
 							}
 							break;
+						}
 						case "admin_clanhalldel":
-							
+						{
 							if (!clanhall.isSiegableHall())
 							{
 								if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
@@ -156,20 +155,28 @@ public class AdminSiege implements IAdminCommandHandler
 								}
 							}
 							break;
+						}
 						case "admin_clanhallopendoors":
+						{
 							clanhall.openCloseDoors(true);
 							break;
+						}
 						case "admin_clanhallclosedoors":
+						{
 							clanhall.openCloseDoors(false);
 							break;
+						}
 						case "admin_clanhallteleportself":
+						{
 							final L2ClanHallZone zone = clanhall.getZone();
 							if (zone != null)
 							{
 								activeChar.teleToLocation(zone.getSpawnLoc(), true);
 							}
 							break;
+						}
 						default:
+						{
 							if (!clanhall.isSiegableHall())
 							{
 								showClanHallPage(activeChar, clanhall);
@@ -179,6 +186,7 @@ public class AdminSiege implements IAdminCommandHandler
 								showSiegableHallPage(activeChar, (SiegableHall) clanhall);
 							}
 							break;
+						}
 					}
 				}
 			}
@@ -188,6 +196,7 @@ public class AdminSiege implements IAdminCommandHandler
 				switch (command)
 				{
 					case "admin_add_attacker":
+					{
 						if (player == null)
 						{
 							activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -197,7 +206,9 @@ public class AdminSiege implements IAdminCommandHandler
 							castle.getSiege().registerAttacker(player, true);
 						}
 						break;
+					}
 					case "admin_add_defender":
+					{
 						if (player == null)
 						{
 							activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -207,7 +218,9 @@ public class AdminSiege implements IAdminCommandHandler
 							castle.getSiege().registerDefender(player, true);
 						}
 						break;
+					}
 					case "admin_add_guard":
+					{
 						if (st.hasMoreTokens())
 						{
 							val = st.nextToken();
@@ -220,19 +233,29 @@ public class AdminSiege implements IAdminCommandHandler
 						// If doesn't have more tokens or token is not a number.
 						activeChar.sendMessage("Usage: //add_guard castle npcId");
 						break;
+					}
 					case "admin_clear_siege_list":
+					{
 						castle.getSiege().clearSiegeClan();
 						break;
+					}
 					case "admin_endsiege":
+					{
 						castle.getSiege().endSiege();
 						break;
+					}
 					case "admin_list_siege_clans":
+					{
 						castle.getSiege().listRegisterClan(activeChar);
 						break;
+					}
 					case "admin_move_defenders":
+					{
 						activeChar.sendMessage("Not implemented yet.");
 						break;
+					}
 					case "admin_setcastle":
+					{
 						if ((player == null) || (player.getClan() == null))
 						{
 							activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
@@ -242,7 +265,9 @@ public class AdminSiege implements IAdminCommandHandler
 							castle.setOwner(player.getClan());
 						}
 						break;
+					}
 					case "admin_removecastle":
+					{
 						final L2Clan clan = ClanTable.getInstance().getClan(castle.getOwnerId());
 						if (clan != null)
 						{
@@ -253,14 +278,14 @@ public class AdminSiege implements IAdminCommandHandler
 							activeChar.sendMessage("Unable to remove castle.");
 						}
 						break;
+					}
 					case "admin_setsiegetime":
+					{
 						if (st.hasMoreTokens())
 						{
 							final Calendar cal = Calendar.getInstance();
 							cal.setTimeInMillis(castle.getSiegeDate().getTimeInMillis());
-							
 							val = st.nextToken();
-							
 							if ("month".equals(val))
 							{
 								final int month = cal.get(Calendar.MONTH) + Integer.parseInt(st.nextToken());
@@ -301,7 +326,6 @@ public class AdminSiege implements IAdminCommandHandler
 								}
 								cal.set(Calendar.MINUTE, min);
 							}
-							
 							if (cal.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 							{
 								activeChar.sendMessage("Unable to change Siege Date");
@@ -315,15 +339,22 @@ public class AdminSiege implements IAdminCommandHandler
 						}
 						showSiegeTimePage(activeChar, castle);
 						break;
+					}
 					case "admin_spawn_doors":
+					{
 						castle.spawnDoor();
 						break;
+					}
 					case "admin_startsiege":
+					{
 						castle.getSiege().startSiege();
 						break;
+					}
 					default:
+					{
 						showSiegePage(activeChar, castle.getName());
 						break;
+					}
 				}
 			}
 		}

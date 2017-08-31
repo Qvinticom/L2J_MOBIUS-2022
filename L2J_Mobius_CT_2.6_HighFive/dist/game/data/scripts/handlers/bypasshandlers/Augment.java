@@ -44,11 +44,15 @@ public class Augment implements IBypassHandler
 			switch (Integer.parseInt(command.substring(8, 9).trim()))
 			{
 				case 1:
+				{
 					activeChar.sendPacket(ExShowVariationMakeWindow.STATIC_PACKET);
 					return true;
+				}
 				case 2:
+				{
 					activeChar.sendPacket(ExShowVariationCancelWindow.STATIC_PACKET);
 					return true;
+				}
 			}
 		}
 		catch (Exception e)

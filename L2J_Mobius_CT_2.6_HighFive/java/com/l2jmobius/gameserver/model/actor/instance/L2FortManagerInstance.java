@@ -407,11 +407,15 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								switch (percent)
 								{
 									case 300:
+									{
 										cost = Config.FS_HPREG1_FEE;
 										break;
+									}
 									default: // 400
+									{
 										cost = Config.FS_HPREG2_FEE;
 										break;
+									}
 								}
 								
 								html.replace("%cost%", cost + "</font>Adena /" + Config.FS_HPREG_FEE_RATIO / 1000 / 60 / 60 / 24 + " Day</font>)");
@@ -431,11 +435,15 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								switch (percent)
 								{
 									case 40:
+									{
 										cost = Config.FS_MPREG1_FEE;
 										break;
+									}
 									default: // 50
+									{
 										cost = Config.FS_MPREG2_FEE;
 										break;
+									}
 								}
 								html.replace("%cost%", cost + "</font>Adena /" + Config.FS_MPREG_FEE_RATIO / 1000 / 60 / 60 / 24 + " Day</font>)");
 								html.replace("%use%", "Provides additional MP recovery for clan members in the fortress.<font color=\"00FFFF\">" + percent + "%</font>");
@@ -454,11 +462,15 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								switch (percent)
 								{
 									case 45:
+									{
 										cost = Config.FS_EXPREG1_FEE;
 										break;
+									}
 									default: // 50
+									{
 										cost = Config.FS_EXPREG2_FEE;
 										break;
+									}
 								}
 								html.replace("%cost%", cost + "</font>Adena /" + Config.FS_EXPREG_FEE_RATIO / 1000 / 60 / 60 / 24 + " Day</font>)");
 								html.replace("%use%", "Restores the Exp of any clan member who is resurrected in the fortress.<font color=\"00FFFF\">" + percent + "%</font>");
@@ -492,15 +504,21 @@ public class L2FortManagerInstance extends L2MerchantInstance
 									switch (percent)
 									{
 										case 0:
+										{
 											fee = 0;
 											html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-cancel_confirmed.htm");
 											break;
+										}
 										case 300:
+										{
 											fee = Config.FS_HPREG1_FEE;
 											break;
+										}
 										default: // 400
+										{
 											fee = Config.FS_HPREG2_FEE;
 											break;
+										}
 									}
 									if (!getFort().updateFunctions(player, Fort.FUNC_RESTORE_HP, percent, fee, Config.FS_HPREG_FEE_RATIO, (getFort().getFunction(Fort.FUNC_RESTORE_HP) == null)))
 									{
@@ -537,15 +555,21 @@ public class L2FortManagerInstance extends L2MerchantInstance
 									switch (percent)
 									{
 										case 0:
+										{
 											fee = 0;
 											html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-cancel_confirmed.htm");
 											break;
+										}
 										case 40:
+										{
 											fee = Config.FS_MPREG1_FEE;
 											break;
+										}
 										default: // 50
+										{
 											fee = Config.FS_MPREG2_FEE;
 											break;
+										}
 									}
 									if (!getFort().updateFunctions(player, Fort.FUNC_RESTORE_MP, percent, fee, Config.FS_MPREG_FEE_RATIO, (getFort().getFunction(Fort.FUNC_RESTORE_MP) == null)))
 									{
@@ -582,15 +606,21 @@ public class L2FortManagerInstance extends L2MerchantInstance
 									switch (percent)
 									{
 										case 0:
+										{
 											fee = 0;
 											html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-cancel_confirmed.htm");
 											break;
+										}
 										case 45:
+										{
 											fee = Config.FS_EXPREG1_FEE;
 											break;
+										}
 										default: // 50
+										{
 											fee = Config.FS_EXPREG2_FEE;
 											break;
+										}
 									}
 									if (!getFort().updateFunctions(player, Fort.FUNC_RESTORE_EXP, percent, fee, Config.FS_EXPREG_FEE_RATIO, (getFort().getFunction(Fort.FUNC_RESTORE_EXP) == null)))
 									{
@@ -682,11 +712,15 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								switch (stage)
 								{
 									case 1:
+									{
 										cost = Config.FS_SUPPORT1_FEE;
 										break;
+									}
 									default:
+									{
 										cost = Config.FS_SUPPORT2_FEE;
 										break;
+									}
 								}
 								html.replace("%cost%", cost + "</font>Adena /" + Config.FS_SUPPORT_FEE_RATIO / 1000 / 60 / 60 / 24 + " Day</font>)");
 								html.replace("%use%", "Enables the use of supplementary magic.");
@@ -705,11 +739,15 @@ public class L2FortManagerInstance extends L2MerchantInstance
 								switch (stage)
 								{
 									case 1:
+									{
 										cost = Config.FS_TELE1_FEE;
 										break;
+									}
 									default:
+									{
 										cost = Config.FS_TELE2_FEE;
 										break;
+									}
 								}
 								html.replace("%cost%", cost + "</font>Adena /" + Config.FS_TELE_FEE_RATIO / 1000 / 60 / 60 / 24 + " Day</font>)");
 								html.replace("%use%", "Teleports clan members in a fort to the target <font color=\"00FFFF\">Stage " + stage + "</font> staging area");
@@ -743,15 +781,21 @@ public class L2FortManagerInstance extends L2MerchantInstance
 									switch (lvl)
 									{
 										case 0:
+										{
 											fee = 0;
 											html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-cancel_confirmed.htm");
 											break;
+										}
 										case 1:
+										{
 											fee = Config.FS_TELE1_FEE;
 											break;
+										}
 										default:
+										{
 											fee = Config.FS_TELE2_FEE;
 											break;
+										}
 									}
 									if (!getFort().updateFunctions(player, Fort.FUNC_TELEPORT, lvl, fee, Config.FS_TELE_FEE_RATIO, (getFort().getFunction(Fort.FUNC_TELEPORT) == null)))
 									{
@@ -788,15 +832,21 @@ public class L2FortManagerInstance extends L2MerchantInstance
 									switch (lvl)
 									{
 										case 0:
+										{
 											fee = 0;
 											html.setFile(player.getHtmlPrefix(), "data/html/fortress/functions-cancel_confirmed.htm");
 											break;
+										}
 										case 1:
+										{
 											fee = Config.FS_SUPPORT1_FEE;
 											break;
+										}
 										default:
+										{
 											fee = Config.FS_SUPPORT2_FEE;
 											break;
+										}
 									}
 									if (!getFort().updateFunctions(player, Fort.FUNC_SUPPORT, lvl, fee, Config.FS_SUPPORT_FEE_RATIO, (getFort().getFunction(Fort.FUNC_SUPPORT) == null)))
 									{

@@ -257,17 +257,25 @@ public final class BeastFarm extends AbstractNpcAI
 			switch (nextNpcId)
 			{
 				case 18869:
+				{
 					name = name.replace("%name%", "Alpine Kookaburra");
 					break;
+				}
 				case 18870:
+				{
 					name = name.replace("%name%", "Alpine Cougar");
 					break;
+				}
 				case 18871:
+				{
 					name = name.replace("%name%", "Alpine Buffalo");
 					break;
+				}
 				case 18872:
+				{
 					name = name.replace("%name%", "Alpine Grendel");
 					break;
+				}
 			}
 			nextNpc.setName(name);
 			nextNpc.broadcastPacket(new AbstractNpcInfo.NpcInfo(nextNpc, player));

@@ -48,12 +48,17 @@ public class ShuntingYard
 			{
 				case Token.TOKEN_NUMBER:
 				case Token.TOKEN_VARIABLE:
+				{
 					output.add(token);
 					break;
+				}
 				case Token.TOKEN_FUNCTION:
+				{
 					stack.add(token);
 					break;
+				}
 				case Token.TOKEN_SEPARATOR:
+				{
 					while (!stack.empty() && (stack.peek().getType() != Token.TOKEN_PARENTHESES_OPEN))
 					{
 						output.add(stack.pop());
@@ -63,7 +68,9 @@ public class ShuntingYard
 						throw new IllegalArgumentException("Misplaced function separator ',' or mismatched parentheses");
 					}
 					break;
+				}
 				case Token.TOKEN_OPERATOR:
+				{
 					while (!stack.empty() && (stack.peek().getType() == Token.TOKEN_OPERATOR))
 					{
 						OperatorToken o1 = (OperatorToken) token;
@@ -83,10 +90,14 @@ public class ShuntingYard
 					}
 					stack.push(token);
 					break;
+				}
 				case Token.TOKEN_PARENTHESES_OPEN:
+				{
 					stack.push(token);
 					break;
+				}
 				case Token.TOKEN_PARENTHESES_CLOSE:
+				{
 					while (stack.peek().getType() != Token.TOKEN_PARENTHESES_OPEN)
 					{
 						output.add(stack.pop());
@@ -97,8 +108,11 @@ public class ShuntingYard
 						output.add(stack.pop());
 					}
 					break;
+				}
 				default:
+				{
 					throw new IllegalArgumentException("Unknown Token type encountered. This should not happen");
+				}
 			}
 		}
 		while (!stack.empty())

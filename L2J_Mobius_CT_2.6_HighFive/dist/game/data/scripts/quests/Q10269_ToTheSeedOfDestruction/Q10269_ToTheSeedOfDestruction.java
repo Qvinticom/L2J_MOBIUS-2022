@@ -69,35 +69,51 @@ public class Q10269_ToTheSeedOfDestruction extends Quest
 		switch (npc.getId())
 		{
 			case KEUCEREUS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() < 75) ? "32548-00.html" : "32548-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32548-06.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32548-0a.html";
 						break;
+					}
 				}
 				break;
+			}
 			case ALLENOS:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = "32526-01.html";
 						giveAdena(player, 29174, true);
 						addExpAndSp(player, 176121, 7671);
 						st.exitQuest(false, true);
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32526-02.html";
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

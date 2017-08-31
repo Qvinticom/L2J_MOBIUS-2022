@@ -121,6 +121,7 @@ public final class StakatoNest extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case STAKATO_NURSE:
+			{
 				monster = checkMinion(npc);
 				if (monster != null)
 				{
@@ -132,14 +133,18 @@ public final class StakatoNest extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case STAKATO_BABY:
+			{
 				monster = ((L2MonsterInstance) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("nurse_change", 5000, monster, killer);
 				}
 				break;
+			}
 			case STAKATO_MALE:
+			{
 				monster = checkMinion(npc);
 				if (monster != null)
 				{
@@ -151,14 +156,18 @@ public final class StakatoNest extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case STAKATO_FEMALE:
+			{
 				monster = ((L2MonsterInstance) npc).getLeader();
 				if ((monster != null) && !monster.isDead())
 				{
 					startQuestTimer("male_change", 5000, monster, killer);
 				}
 				break;
+			}
 			case STAKATO_CHIEF:
+			{
 				if (killer.isInParty())
 				{
 					final List<L2PcInstance> party = killer.getParty().getMembers();
@@ -172,6 +181,7 @@ public final class StakatoNest extends AbstractNpcAI
 					giveCocoon(killer, npc);
 				}
 				break;
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -200,11 +210,15 @@ public final class StakatoNest extends AbstractNpcAI
 		switch (event)
 		{
 			case "nurse_change":
+			{
 				npcId = STAKATO_NURSE_2;
 				break;
+			}
 			case "male_change":
+			{
 				npcId = STAKATO_MALE_2;
 				break;
+			}
 		}
 		if (npcId > 0)
 		{

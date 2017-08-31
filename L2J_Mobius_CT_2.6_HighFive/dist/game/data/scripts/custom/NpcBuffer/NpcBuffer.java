@@ -633,34 +633,52 @@ public class NpcBuffer extends Quest
 				switch (buffType)
 				{
 					case "buff":
+					{
 						price = BUFF_PRICE;
 						break;
+					}
 					case "resist":
+					{
 						price = RESIST_PRICE;
 						break;
+					}
 					case "song":
+					{
 						price = SONG_PRICE;
 						break;
+					}
 					case "dance":
+					{
 						price = DANCE_PRICE;
 						break;
+					}
 					case "chant":
+					{
 						price = CHANT_PRICE;
 						break;
+					}
 					case "others":
+					{
 						price = OTHERS_PRICE;
 						break;
+					}
 					case "special":
+					{
 						price = SPECIAL_PRICE;
 						break;
+					}
 					case "cubic":
+					{
 						price = CUBIC_PRICE;
 						break;
+					}
 					default:
+					{
 						if (DEBUG)
 						{
 							throw new RuntimeException();
 						}
+					}
 				}
 				HTML_MESSAGE += "All special buffs cost <font color=LEVEL>" + formatAdena(price) + "</font> adena!";
 			}
@@ -1196,6 +1214,7 @@ public class NpcBuffer extends Quest
 		switch (eventParam0)
 		{
 			case "reloadscript":
+			{
 				if (eventParam1.equals("1"))
 				{
 					return reloadConfig(st);
@@ -1208,38 +1227,62 @@ public class NpcBuffer extends Quest
 				{
 					throw new RuntimeException();
 				}
-				
+			}
 			case "redirect":
+			{
 				switch (eventParam1)
 				{
 					case "main":
+					{
 						return rebuildMainHtml(st);
+					}
 					case "manage_buffs":
+					{
 						return viewAllBuffTypes();
+					}
 					case "view_buffs":
+					{
 						return buildHtml("buff");
+					}
 					case "view_resists":
+					{
 						return buildHtml("resist");
+					}
 					case "view_songs":
+					{
 						return buildHtml("song");
+					}
 					case "view_dances":
+					{
 						return buildHtml("dance");
+					}
 					case "view_chants":
+					{
 						return buildHtml("chant");
+					}
 					case "view_others":
+					{
 						return buildHtml("others");
+					}
 					case "view_special":
+					{
 						return buildHtml("special");
+					}
 					case "view_cubic":
+					{
 						return buildHtml("cubic");
+					}
 					default:
+					{
 						if (DEBUG)
 						{
 							throw new RuntimeException();
 						}
+					}
 				}
-				
+			}
 			case "buffpet":
+			{
 				if ((int) (System.currentTimeMillis() / 1000) > st.getInt("blockUntilTime"))
 				{
 					st.set("Pet-On-Off", eventParam1);
@@ -1249,7 +1292,7 @@ public class NpcBuffer extends Quest
 					}
 				}
 				return rebuildMainHtml(st);
-			
+			}
 			case "create":
 			{
 				final String param = eventParam1.replaceAll("[ !\"#$%&'()*+,/:;<=>?@\\[\\\\\\]\\^`{|}~]", "");
@@ -1274,6 +1317,7 @@ public class NpcBuffer extends Quest
 			}
 			
 			case "delete":
+			{
 				try (Connection con = DatabaseFactory.getInstance().getConnection())
 				{
 					PreparedStatement statement = con.prepareStatement("DELETE FROM npcbuffer_scheme_list WHERE id=? LIMIT 1");
@@ -1290,23 +1334,35 @@ public class NpcBuffer extends Quest
 					print(e);
 				}
 				return rebuildMainHtml(st);
-			
+			}
 			case "delete_c":
+			{
 				return "<html><head><title>" + TITLE_NAME + "</title></head><body><center><img src=\"L2UI_CH3.herotower_deco\" width=256 height=32><br>Do you really want to delete '" + eventParam2 + "' scheme?<br><br><button value=\"Yes\" action=\"bypass -h Quest " + QUEST_LOADING_INFO + " delete " + eventParam1 + " x x\" width=50 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><button value=\"No\" action=\"bypass -h Quest " + QUEST_LOADING_INFO + " delete_1 x x x\" width=50 height=25 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"><br><font color=303030>" + TITLE_NAME + "</font></center></body></html>";
-			
+			}
 			case "create_1":
+			{
 				return createScheme();
+			}
 			case "edit_1":
+			{
 				return editScheme(player);
+			}
 			case "delete_1":
+			{
 				return deleteScheme(player);
+			}
 			case "manage_scheme_1":
+			{
 				return viewAllSchemeBuffs(eventParam1, eventParam2, "add");
+			}
 			case "manage_scheme_2":
+			{
 				return viewAllSchemeBuffs(eventParam1, eventParam2, "remove");
+			}
 			case "manage_scheme_select":
+			{
 				return getOptionList(eventParam1);
-			
+			}
 			case "remove_buff":
 			{
 				final String[] split = eventParam1.split("_");
@@ -1374,9 +1430,11 @@ public class NpcBuffer extends Quest
 			}
 			
 			case "edit_buff_list":
+			{
 				return viewAllBuffs(eventParam1, eventParam2, eventParam3);
-			
+			}
 			case "changeBuffSet":
+			{
 				if (eventParam2.equals(SET_FIGHTER))
 				{
 					eventParam2 = "0";
@@ -1398,7 +1456,7 @@ public class NpcBuffer extends Quest
 					throw new RuntimeException();
 				}
 				return manageSelectedSet(eventParam1, eventParam2, eventParam3);
-			
+			}
 			case "editSelectedBuff":
 			{
 				eventParam2 = eventParam2.replace("-", " ");
@@ -1410,49 +1468,69 @@ public class NpcBuffer extends Quest
 				switch (eventParam3)
 				{
 					case "buff":
+					{
 						typeName = "Buffs";
 						break;
+					}
 					case "resist":
+					{
 						typeName = "Resists";
 						break;
+					}
 					case "song":
+					{
 						typeName = "Songs";
 						break;
+					}
 					case "dance":
+					{
 						typeName = "Dances";
 						break;
+					}
 					case "chant":
+					{
 						typeName = "Chants";
 						break;
+					}
 					case "others":
+					{
 						typeName = "Others_Buffs";
 						break;
+					}
 					case "special":
+					{
 						typeName = "Special_Buffs";
 						break;
+					}
 					case "cubic":
+					{
 						typeName = "Cubics";
 						break;
+					}
 					default:
+					{
 						throw new RuntimeException();
+					}
 				}
 				return viewAllBuffs(eventParam3, typeName, page);
 			}
 			
 			case "viewSelectedConfig":
+			{
 				throw new RuntimeException();
-				
+			}
 			case "changeConfig":
+			{
 				throw new RuntimeException();
-				
+			}
 			case "heal":
+			{
 				if ((int) (System.currentTimeMillis() / 1000) > st.getInt("blockUntilTime"))
 				{
 					if (player.isInCombat() && !ENABLE_HEAL_IN_COMBAT)
 					{
 						return showText(st, "Info", "You can't use the heal function while in combat.", false, "Return", "main");
 					}
-					
 					if (getQuestItemsCount(player, CONSUMABLE_ID) < HEAL_PRICE)
 					{
 						return showText(st, "Sorry", "You don't have the enough items:<br>You need: <font color=LEVEL>" + HEAL_PRICE + " " + getItemNameHtml(st, CONSUMABLE_ID) + "!", false, "0", "0");
@@ -1480,8 +1558,9 @@ public class NpcBuffer extends Quest
 					}
 				}
 				return SMART_WINDOW ? null : rebuildMainHtml(st);
-			
+			}
 			case "removeBuffs":
+			{
 				if ((int) (System.currentTimeMillis() / 1000) > st.getInt("blockUntilTime"))
 				{
 					if (getQuestItemsCount(player, CONSUMABLE_ID) < BUFF_REMOVE_PRICE)
@@ -1519,8 +1598,9 @@ public class NpcBuffer extends Quest
 					}
 				}
 				return SMART_WINDOW ? null : rebuildMainHtml(st);
-			
+			}
 			case "cast":
+			{
 				if ((int) (System.currentTimeMillis() / 1000) > st.getInt("blockUntilTime"))
 				{
 					final List<Integer> buffs = new ArrayList<>();
@@ -1537,6 +1617,7 @@ public class NpcBuffer extends Quest
 							switch (getBuffType(id))
 							{
 								case "buff":
+								{
 									if (ENABLE_BUFFS)
 									{
 										if (isEnabled(id, level))
@@ -1546,7 +1627,9 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								case "resist":
+								{
 									if (ENABLE_RESIST)
 									{
 										if (isEnabled(id, level))
@@ -1556,7 +1639,9 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								case "song":
+								{
 									if (ENABLE_SONGS)
 									{
 										if (isEnabled(id, level))
@@ -1566,7 +1651,9 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								case "dance":
+								{
 									if (ENABLE_DANCES)
 									{
 										if (isEnabled(id, level))
@@ -1576,7 +1663,9 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								case "chant":
+								{
 									if (ENABLE_CHANTS)
 									{
 										if (isEnabled(id, level))
@@ -1586,7 +1675,9 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								case "others":
+								{
 									if (ENABLE_OTHERS)
 									{
 										if (isEnabled(id, level))
@@ -1596,7 +1687,9 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								case "special":
+								{
 									if (ENABLE_SPECIAL)
 									{
 										if (isEnabled(id, level))
@@ -1606,11 +1699,14 @@ public class NpcBuffer extends Quest
 										}
 									}
 									break;
+								}
 								default:
+								{
 									if (DEBUG)
 									{
 										throw new RuntimeException();
 									}
+								}
 							}
 						}
 						statement.close();
@@ -1677,38 +1773,56 @@ public class NpcBuffer extends Quest
 					}
 				}
 				return SMART_WINDOW ? null : rebuildMainHtml(st);
-			
+			}
 			case "giveBuffs":
 			{
 				final int cost;
 				switch (eventParam3)
 				{
 					case "buff":
+					{
 						cost = BUFF_PRICE;
 						break;
+					}
 					case "resist":
+					{
 						cost = RESIST_PRICE;
 						break;
+					}
 					case "song":
+					{
 						cost = SONG_PRICE;
 						break;
+					}
 					case "dance":
+					{
 						cost = DANCE_PRICE;
 						break;
+					}
 					case "chant":
+					{
 						cost = CHANT_PRICE;
 						break;
+					}
 					case "others":
+					{
 						cost = OTHERS_PRICE;
 						break;
+					}
 					case "special":
+					{
 						cost = SPECIAL_PRICE;
 						break;
+					}
 					case "cubic":
+					{
 						cost = CUBIC_PRICE;
 						break;
+					}
 					default:
+					{
 						throw new RuntimeException();
+					}
 				}
 				
 				if ((int) (System.currentTimeMillis() / 1000) > st.getInt("blockUntilTime"))
@@ -1786,8 +1900,8 @@ public class NpcBuffer extends Quest
 				}
 				return SMART_WINDOW ? null : buildHtml(eventParam3);
 			}
-			
 			case "castBuffSet":
+			{
 				if ((int) (System.currentTimeMillis() / 1000) > st.getInt("blockUntilTime"))
 				{
 					if (!FREE_BUFFS)
@@ -1833,7 +1947,6 @@ public class NpcBuffer extends Quest
 						{
 							print(e);
 						}
-						
 						player.setTarget(player);
 						player.broadcastPacket(new MagicSkillUse(player, SKILL_BUFF_1, 1, 1000, 0));
 						player.broadcastPacket(new MagicSkillUse(player, SKILL_BUFF_2, 1, 1000, 0));
@@ -1869,7 +1982,6 @@ public class NpcBuffer extends Quest
 							{
 								print(e);
 							}
-							
 							player.getSummon().setTarget(player.getSummon());
 							player.getSummon().broadcastPacket(new MagicSkillUse(player.getSummon(), SKILL_BUFF_1, 1, 1000, 0));
 							player.getSummon().broadcastPacket(new MagicSkillUse(player.getSummon(), SKILL_BUFF_2, 1, 1000, 0));
@@ -1890,7 +2002,7 @@ public class NpcBuffer extends Quest
 					}
 				}
 				return SMART_WINDOW ? null : rebuildMainHtml(st);
-			
+			}
 		}
 		return rebuildMainHtml(st);
 	}

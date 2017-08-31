@@ -255,11 +255,15 @@ public enum PlayerClass
 				switch (player.getRace())
 				{
 					case ELF:
+					{
 						subclasses.removeAll(getSet(Race.DARK_ELF, Third));
 						break;
+					}
 					case DARK_ELF:
+					{
 						subclasses.removeAll(getSet(Race.ELF, Third));
 						break;
+					}
 				}
 				
 				subclasses.removeAll(getSet(Race.KAMAEL, Third));

@@ -1005,10 +1005,14 @@ public final class Formulas
 		switch (shld)
 		{
 			case SHIELD_DEFENSE_SUCCEED:
+			{
 				mDef += target.getShldDef(); // kamael
 				break;
+			}
 			case SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
+			{
 				return 1;
+			}
 		}
 		
 		final int mAtk = attacker.getCubicPower();
@@ -1277,11 +1281,15 @@ public final class Formulas
 			switch (shldSuccess)
 			{
 				case SHIELD_DEFENSE_SUCCEED:
+				{
 					enemy.sendPacket(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
 					break;
+				}
 				case SHIELD_DEFENSE_PERFECT_BLOCK:
+				{
 					enemy.sendPacket(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS);
 					break;
+				}
 			}
 		}
 		
@@ -1370,23 +1378,35 @@ public final class Formulas
 		switch (skill.getBasicProperty())
 		{
 			case STR:
+			{
 				targetBaseStat = target.getSTR();
 				break;
+			}
 			case DEX:
+			{
 				targetBaseStat = target.getDEX();
 				break;
+			}
 			case CON:
+			{
 				targetBaseStat = target.getCON();
 				break;
+			}
 			case INT:
+			{
 				targetBaseStat = target.getINT();
 				break;
+			}
 			case MEN:
+			{
 				targetBaseStat = target.getMEN();
 				break;
+			}
 			case WIT:
+			{
 				targetBaseStat = target.getWIT();
 				break;
+			}
 		}
 		
 		final double baseMod = ((((((magicLevel - target.getLevel()) + 3) * skill.getLvlBonusRate()) + activateRate) + 30.0) - targetBaseStat);
@@ -1552,10 +1572,14 @@ public final class Formulas
 		switch (shld)
 		{
 			case SHIELD_DEFENSE_SUCCEED:
+			{
 				mDef += target.getShldDef();
 				break;
+			}
 			case SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
+			{
 				return 1;
+			}
 		}
 		
 		// Bonus Spiritshot
@@ -1976,7 +2000,6 @@ public final class Formulas
 				final double prof = activeChar.calcStat(Stats.CANCEL_PROF, 0, target, null);
 				final double resMod = 1 + (((vuln + prof) * -1) / 100);
 				final double finalRate = rate / resMod;
-				
 				if (activeChar.isDebug())
 				{
 					final StatsSet set = new StatsSet();
@@ -1986,7 +2009,6 @@ public final class Formulas
 					set.set("rate", finalRate);
 					Debug.sendSkillDebug(activeChar, target, skill, set);
 				}
-				
 				// Prevent initialization.
 				final List<BuffInfo> buffs = target.getEffectList().hasBuffs() ? new ArrayList<>(target.getEffectList().getBuffs()) : new ArrayList<>(1);
 				if (target.getEffectList().hasTriggered())

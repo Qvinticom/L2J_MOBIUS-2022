@@ -274,6 +274,7 @@ public class Q00702_ATrapForRevenge extends Quest
 		switch (npc.getId())
 		{
 			case 22612:
+			{
 				if (chance < 413)
 				{
 					giveItems(player, DRAKES_FLESH, 2);
@@ -283,7 +284,9 @@ public class Q00702_ATrapForRevenge extends Quest
 					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
+			}
 			case 22613:
+			{
 				if (chance < 440)
 				{
 					giveItems(player, DRAKES_FLESH, 2);
@@ -293,13 +296,17 @@ public class Q00702_ATrapForRevenge extends Quest
 					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
+			}
 			case 25632:
+			{
 				if (chance < 996)
 				{
 					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
+			}
 			case 22610:
+			{
 				if (chance < 485)
 				{
 					giveItems(player, DRAKES_FLESH, 2);
@@ -309,7 +316,9 @@ public class Q00702_ATrapForRevenge extends Quest
 					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
+			}
 			case 22611:
+			{
 				if (chance < 451)
 				{
 					giveItems(player, DRAKES_FLESH, 2);
@@ -319,7 +328,9 @@ public class Q00702_ATrapForRevenge extends Quest
 					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
+			}
 			case 25631:
+			{
 				if (chance < 485)
 				{
 					giveItems(player, DRAKES_FLESH, 2);
@@ -329,7 +340,9 @@ public class Q00702_ATrapForRevenge extends Quest
 					giveItems(player, DRAKES_FLESH, 1);
 				}
 				break;
+			}
 			case 25626:
+			{
 				int count = 0;
 				if (chance < 708)
 				{
@@ -353,6 +366,7 @@ public class Q00702_ATrapForRevenge extends Quest
 				}
 				giveItems(player, VARIANT_DRAKE_WING_HORNS, count);
 				break;
+			}
 		}
 		playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 		return null;
@@ -369,12 +383,16 @@ public class Q00702_ATrapForRevenge extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
+				{
 					final QuestState prev = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 					htmltext = ((prev != null) && prev.isCompleted() && (player.getLevel() >= 78)) ? "32563-01.htm" : "32563-02.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					htmltext = (st.isCond(1)) ? "32563-05.html" : "32563-06.html";
 					break;
+				}
 			}
 		}
 		if (st.getState() == State.STARTED)
@@ -384,11 +402,15 @@ public class Q00702_ATrapForRevenge extends Quest
 				switch (st.getCond())
 				{
 					case 1:
+					{
 						htmltext = "32557-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "32557-02.html";
 						break;
+					}
 				}
 			}
 			else if (npc.getId() == TENIUS)
@@ -396,11 +418,15 @@ public class Q00702_ATrapForRevenge extends Quest
 				switch (st.getCond())
 				{
 					case 1:
+					{
 						htmltext = "32555-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "32555-04.html";
 						break;
+					}
 				}
 			}
 		}

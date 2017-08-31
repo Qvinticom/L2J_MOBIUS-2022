@@ -152,6 +152,7 @@ public class Q10376_BloodyGoodTime extends Quest
 		switch (npc.getId())
 		{
 			case ZENYA:
+			{
 				switch (qs.getState())
 				{
 					case State.CREATED:
@@ -179,7 +180,7 @@ public class Q10376_BloodyGoodTime extends Quest
 					}
 				}
 				break;
-			
+			}
 			case CASCA:
 			{
 				if (qs.isStarted())
@@ -203,7 +204,6 @@ public class Q10376_BloodyGoodTime extends Quest
 				}
 				break;
 			}
-			
 			case AGNES:
 			{
 				if (qs.isStarted())
@@ -219,7 +219,6 @@ public class Q10376_BloodyGoodTime extends Quest
 				}
 				break;
 			}
-			
 			case ANDREI:
 			{
 				if (qs.isStarted() && qs.isCond(6))

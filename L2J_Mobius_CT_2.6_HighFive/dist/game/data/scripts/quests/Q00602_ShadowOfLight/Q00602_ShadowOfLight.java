@@ -93,14 +93,16 @@ public class Q00602_ShadowOfLight extends Quest
 		switch (event)
 		{
 			case "31683-02.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31683-05.html":
+			{
 				if (getQuestItemsCount(player, EYE_OF_DARKNESS) < 100)
 				{
 					return "31683-06.html";
 				}
-				
 				final int i = getRandom(4);
 				if (i < 3)
 				{
@@ -110,9 +112,12 @@ public class Q00602_ShadowOfLight extends Quest
 				addExpAndSp(player, REWARD[i][2], REWARD[i][3]);
 				st.exitQuest(true, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -153,11 +158,15 @@ public class Q00602_ShadowOfLight extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 68) ? "31683-01.htm" : "31683-00.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(1)) ? "31683-03.html" : "31683-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

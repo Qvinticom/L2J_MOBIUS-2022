@@ -137,9 +137,12 @@ public class Expression
 			{
 				case Token.TOKEN_NUMBER:
 				case Token.TOKEN_VARIABLE:
+				{
 					count++;
 					break;
+				}
 				case Token.TOKEN_FUNCTION:
+				{
 					final Function func = ((FunctionToken) tok).getFunction();
 					final int argsNum = func.getNumArguments();
 					if (argsNum > count)
@@ -156,13 +159,16 @@ public class Expression
 						count++;
 					}
 					break;
+				}
 				case Token.TOKEN_OPERATOR:
+				{
 					Operator op = ((OperatorToken) tok).getOperator();
 					if (op.getNumOperands() == 2)
 					{
 						count--;
 					}
 					break;
+				}
 			}
 			if (count < 1)
 			{

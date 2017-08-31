@@ -63,12 +63,16 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		switch (event)
 		{
 			case "31981-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31972-03.htm":
+			{
 				giveAdena(player, 210000, true);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -116,32 +120,48 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 		switch (npc.getId())
 		{
 			case VISHOTSKY:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 57) ? "31981-01.htm" : "31981-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_VS) && hasQuestItems(player, TISSUE_KB)) ? "31981-05.htm" : "31981-04.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "31981-06.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case ATRAXIA:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_VS) && hasQuestItems(player, TISSUE_KB)) ? "31972-02.htm" : "31972-01.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

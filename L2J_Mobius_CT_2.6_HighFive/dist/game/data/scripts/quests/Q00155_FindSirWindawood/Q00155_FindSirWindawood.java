@@ -67,20 +67,29 @@ public class Q00155_FindSirWindawood extends Quest
 		switch (npc.getId())
 		{
 			case ABELLOS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30042-02.htm" : "30042-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "30042-04.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case SIR_COLLIN_WINDAWOOD:
+			{
 				if (st.isStarted() && hasQuestItems(player, OFFICIAL_LETTER))
 				{
 					giveItems(player, HASTE_POTION, 1);
@@ -88,6 +97,7 @@ public class Q00155_FindSirWindawood extends Quest
 					htmltext = "30311-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

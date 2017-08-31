@@ -357,9 +357,11 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		switch (npc.getId())
 		{
 			case MESSENGER:
+			{
 				switch (event)
 				{
 					case "register":
+					{
 						if (!player.isClanLeader())
 						{
 							html = "messenger_yetti010.htm";
@@ -397,7 +399,9 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							}
 						}
 						break;
+					}
 					case "cancel":
+					{
 						if (!player.isClanLeader())
 						{
 							html = "messenger_yetti010.htm";
@@ -416,7 +420,9 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							html = "messenger_yetti018.htm";
 						}
 						break;
+					}
 					case "unregister":
+					{
 						if (_rainbow.isRegistering())
 						{
 							if (_warDecreesCount.containsKey(clan.getId()))
@@ -436,9 +442,12 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 							html = "messenger_yetti020.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case CARETAKER:
+			{
 				if (event.equals("portToArena"))
 				{
 					final L2Party party = player.getParty();
@@ -470,7 +479,6 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 								break;
 							}
 						}
-						
 						if (nonClanMemberInParty)
 						{
 							html = "game_manager007.htm";
@@ -510,6 +518,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 					}
 				}
 				break;
+			}
 		}
 		
 		if (event.startsWith("enterText"))

@@ -85,17 +85,25 @@ public final class SiegeDefenderList extends L2GameServerPacket
 				switch (siegeclan.getType())
 				{
 					case OWNER:
+					{
 						writeD(0x01); // owner
 						break;
+					}
 					case DEFENDER_PENDING:
+					{
 						writeD(0x02); // approved
 						break;
+					}
 					case DEFENDER:
+					{
 						writeD(0x03); // waiting approved
 						break;
+					}
 					default:
+					{
 						writeD(0x00);
 						break;
+					}
 				}
 				writeD(clan.getAllyId());
 				writeS(clan.getAllyName());

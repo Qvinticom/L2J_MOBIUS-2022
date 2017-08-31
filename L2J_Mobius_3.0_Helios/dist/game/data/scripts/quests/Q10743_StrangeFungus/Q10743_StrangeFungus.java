@@ -78,7 +78,9 @@ public final class Q10743_StrangeFungus extends Quest
 		{
 			case "33952-02.htm":
 			case "33953-02.html":
+			{
 				break;
+			}
 			case "33952-03.htm":
 			{
 				qs.startQuest();
@@ -97,7 +99,9 @@ public final class Q10743_StrangeFungus extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -115,14 +119,20 @@ public final class Q10743_StrangeFungus extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "33952-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (qs.isCond(1)) ? "33952-04.html" : "33952-05.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
 			}

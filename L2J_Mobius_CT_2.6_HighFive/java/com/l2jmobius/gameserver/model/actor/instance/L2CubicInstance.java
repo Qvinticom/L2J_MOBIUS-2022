@@ -103,56 +103,84 @@ public final class L2CubicInstance implements IIdentifiable
 		switch (_cubicId)
 		{
 			case STORM_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4049, level));
 				break;
+			}
 			case VAMPIRIC_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4050, level));
 				break;
+			}
 			case LIFE_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4051, level));
 				doAction();
 				break;
+			}
 			case VIPER_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4052, level));
 				break;
+			}
 			case POLTERGEIST_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4053, level));
 				_skills.add(SkillData.getInstance().getSkill(4054, level));
 				_skills.add(SkillData.getInstance().getSkill(4055, level));
 				break;
+			}
 			case BINDING_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4164, level));
 				break;
+			}
 			case AQUA_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4165, level));
 				break;
+			}
 			case SPARK_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4166, level));
 				break;
+			}
 			case ATTRACT_CUBIC:
+			{
 				_skills.add(SkillData.getInstance().getSkill(5115, level));
 				_skills.add(SkillData.getInstance().getSkill(5116, level));
 				break;
+			}
 			case SMART_CUBIC_ARCANALORD:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4051, 7));
 				_skills.add(SkillData.getInstance().getSkill(4165, 9));
 				break;
+			}
 			case SMART_CUBIC_ELEMENTALMASTER:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4049, 8));
 				_skills.add(SkillData.getInstance().getSkill(4166, 9));
 				break;
+			}
 			case SMART_CUBIC_SPECTRALMASTER:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4049, 8));
 				_skills.add(SkillData.getInstance().getSkill(4052, 6));
 				break;
+			}
 			case SMART_CUBIC_EVATEMPLAR:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4053, 8));
 				_skills.add(SkillData.getInstance().getSkill(4165, 9));
 				break;
+			}
 			case SMART_CUBIC_SHILLIENTEMPLAR:
+			{
 				_skills.add(SkillData.getInstance().getSkill(4049, 8));
 				_skills.add(SkillData.getInstance().getSkill(5115, 4));
 				break;
+			}
 		}
 		_disappearTask = ThreadPoolManager.schedule(new CubicDisappear(this), cubicDuration * 1000); // disappear
 	}
@@ -180,11 +208,15 @@ public final class L2CubicInstance implements IIdentifiable
 			case SMART_CUBIC_SPECTRALMASTER:
 			case SMART_CUBIC_EVATEMPLAR:
 			case SMART_CUBIC_SHILLIENTEMPLAR:
+			{
 				_actionTask = ThreadPoolManager.scheduleAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
 				break;
+			}
 			case LIFE_CUBIC:
+			{
 				_actionTask = ThreadPoolManager.scheduleAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
 				break;
+			}
 		}
 	}
 	

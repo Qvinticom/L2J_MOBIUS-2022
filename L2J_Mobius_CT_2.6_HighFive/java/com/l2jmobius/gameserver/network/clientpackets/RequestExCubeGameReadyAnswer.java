@@ -52,15 +52,21 @@ public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket
 		switch (_answer)
 		{
 			case 0:
+			{
 				// Cancel - Answer No
 				break;
+			}
 			case 1:
+			{
 				// OK or Time Over
 				HandysBlockCheckerManager.getInstance().increaseArenaVotes(_arena);
 				break;
+			}
 			default:
+			{
 				_log.warning("Unknown Cube Game Answer ID: " + _answer);
 				break;
+			}
 		}
 	}
 	

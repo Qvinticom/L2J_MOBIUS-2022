@@ -55,20 +55,28 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 		switch (event)
 		{
 			case "32560-05.html":
+			{
 				st.startQuest();
 				break;
+			}
 			case "32556-06.html":
+			{
 				st.setCond(2, true);
 				break;
+			}
 			case "32556-09.html":
+			{
 				if (hasQuestItems(player, MEDIBAL_DOCUMENT))
 				{
 					takeItems(player, MEDIBAL_DOCUMENT, -1);
 					st.setCond(4, true);
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		return event;
 	}
@@ -82,39 +90,55 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 		switch (npc.getId())
 		{
 			case ORBYU:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						st = player.getQuestState(Q10269_ToTheSeedOfDestruction.class.getSimpleName());
 						htmltext = ((player.getLevel() >= 75) && (st != null) && st.isCompleted()) ? "32560-01.htm" : "32560-02.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "32560-05.html"; // TODO this html should most probably be different
 								break;
+							}
 							case 2:
+							{
 								htmltext = "32560-06.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "32560-07.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "32560-08.html";
 								giveAdena(player, 62516, true);
 								addExpAndSp(player, 377403, 37867);
 								st.exitQuest(false, true);
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32560-03.html";
 						break;
+					}
 				}
-				
 				break;
+			}
 			case EL:
+			{
 				if (st.isCompleted())
 				{
 					htmltext = "32556-02.html";
@@ -124,21 +148,31 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "32556-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "32556-07.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "32556-08.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32556-09.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case MEDIBAL_CORPSE:
+			{
 				if (st.isCompleted())
 				{
 					htmltext = "32528-02.html";
@@ -148,17 +182,22 @@ public class Q10271_TheEnvelopingDarkness extends Quest
 					switch (st.getCond())
 					{
 						case 2:
+						{
 							htmltext = "32528-01.html";
 							st.setCond(3, true);
 							giveItems(player, MEDIBAL_DOCUMENT, 1);
 							break;
+						}
 						case 3:
 						case 4:
+						{
 							htmltext = "32528-03.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -63,15 +63,22 @@ public class Lindvior extends AbstractNpcAI
 		switch (event)
 		{
 			case "tomaris_shout1":
+			{
 				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.HUH_THE_SKY_LOOKS_FUNNY_WHAT_S_THAT);
 				break;
+			}
 			case "artius_shout":
+			{
 				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.A_POWERFUL_SUBORDINATE_IS_BEING_HELD_BY_THE_BARRIER_ORB_THIS_REACTION_MEANS);
 				break;
+			}
 			case "tomaris_shout2":
+			{
 				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.BE_CAREFUL_SOMETHING_S_COMING);
 				break;
+			}
 			case "lindvior_scene":
+			{
 				if (npc != null)
 				{
 					for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(4000))
@@ -83,17 +90,19 @@ public class Lindvior extends AbstractNpcAI
 					}
 				}
 				break;
+			}
 			case "start":
+			{
 				_lindviorCamera = SpawnTable.getInstance().findAny(LINDVIOR_CAMERA).getLastSpawn();
 				_tomaris = SpawnTable.getInstance().findAny(TOMARIS).getLastSpawn();
 				_artius = SpawnTable.getInstance().findAny(ARTIUS).getLastSpawn();
-				
 				startQuestTimer("tomaris_shout1", 1000, _tomaris, null);
 				startQuestTimer("artius_shout", 60000, _artius, null);
 				startQuestTimer("tomaris_shout2", 90000, _tomaris, null);
 				startQuestTimer("lindvior_scene", 120000, _lindviorCamera, null);
 				scheduleNextLindviorVisit();
 				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

@@ -205,17 +205,29 @@ public final class L2ArmorSet
 		switch (slot)
 		{
 			case Inventory.PAPERDOLL_CHEST:
+			{
 				return _chestId == itemId;
+			}
 			case Inventory.PAPERDOLL_LEGS:
+			{
 				return _legs.contains(itemId);
+			}
 			case Inventory.PAPERDOLL_HEAD:
+			{
 				return _head.contains(itemId);
+			}
 			case Inventory.PAPERDOLL_GLOVES:
+			{
 				return _gloves.contains(itemId);
+			}
 			case Inventory.PAPERDOLL_FEET:
+			{
 				return _feet.contains(itemId);
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	

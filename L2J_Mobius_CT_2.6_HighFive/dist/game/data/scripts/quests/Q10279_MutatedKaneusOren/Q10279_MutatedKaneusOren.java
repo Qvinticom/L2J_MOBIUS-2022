@@ -63,12 +63,16 @@ public class Q10279_MutatedKaneusOren extends Quest
 		switch (event)
 		{
 			case "30196-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30189-03.htm":
+			{
 				giveAdena(player, 100000, true);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -116,32 +120,48 @@ public class Q10279_MutatedKaneusOren extends Quest
 		switch (npc.getId())
 		{
 			case MOUEN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 47) ? "30196-01.htm" : "30196-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_KA) && hasQuestItems(player, TISSUE_KM)) ? "30196-05.htm" : "30196-04.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "30916-06.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case ROVIA:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_KA) && hasQuestItems(player, TISSUE_KM)) ? "30189-02.htm" : "30189-01.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

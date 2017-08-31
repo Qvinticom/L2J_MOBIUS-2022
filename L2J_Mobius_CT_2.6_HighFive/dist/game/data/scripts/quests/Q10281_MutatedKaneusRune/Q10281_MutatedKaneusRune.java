@@ -61,12 +61,16 @@ public class Q10281_MutatedKaneusRune extends Quest
 		switch (event)
 		{
 			case "31340-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31335-03.htm":
+			{
 				giveAdena(player, 360000, true);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -114,32 +118,48 @@ public class Q10281_MutatedKaneusRune extends Quest
 		switch (npc.getId())
 		{
 			case MATHIAS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 67) ? "31340-01.htm" : "31340-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = hasQuestItems(player, TISSUE_WA) ? "31340-05.htm" : "31340-04.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "31340-06.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case KAYAN:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = hasQuestItems(player, TISSUE_WA) ? "31335-02.htm" : "31335-01.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

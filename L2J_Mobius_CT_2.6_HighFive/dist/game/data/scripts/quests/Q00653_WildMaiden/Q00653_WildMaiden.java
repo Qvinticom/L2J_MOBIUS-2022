@@ -80,17 +80,24 @@ public class Q00653_WildMaiden extends Quest
 		switch (npc.getId())
 		{
 			case SUKI:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "32013-01.htm" : "32013-01a.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32013-02.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case GALIBREDO:
+			{
 				if (st.isStarted())
 				{
 					giveAdena(player, 2553, true);
@@ -98,6 +105,7 @@ public class Q00653_WildMaiden extends Quest
 					htmltext = "30181-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

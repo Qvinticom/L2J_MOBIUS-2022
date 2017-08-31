@@ -111,7 +111,6 @@ public class Q10384_AnAudienceWithTauti extends Quest
 					{
 						htmltext = "maestro_ferguson_q10384_09.html";
 					}
-					
 				}
 				else if (qs.isCompleted())
 				{

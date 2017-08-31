@@ -590,13 +590,17 @@ public final class Q00334_TheWishingPotion extends Quest
 						switch (qs.getInt(I_QUEST0))
 						{
 							case 1:
+							{
 								i0 = getRandom(2);
 								break;
+							}
 							case 2:
 							case 3:
 							case 4:
+							{
 								i0 = getRandom(3);
 								break;
+							}
 						}
 						switch (i0)
 						{

@@ -73,9 +73,12 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 		switch (event)
 		{
 			case "31377-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31377-07.html":
+			{
 				if (hasQuestItems(player, TAYR_HEAD) && st.isCond(2))
 				{
 					giveItems(player, WISDOM_FEATHER, 1);
@@ -87,9 +90,12 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 					htmltext = getNoQuestMsg(player);
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -110,11 +116,15 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? (hasQuestItems(player, VARKA_ALLIANCE_FOUR)) ? "31377-01.htm" : "31377-02.htm" : "31377-03.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(2) && hasQuestItems(player, TAYR_HEAD)) ? "31377-05.html" : "31377-06.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

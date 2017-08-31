@@ -40,53 +40,85 @@ public final class EquipUpdate extends L2GameServerPacket
 		switch (_item.getItem().getBodyPart())
 		{
 			case L2Item.SLOT_L_EAR:
+			{
 				bodypart = 0x01;
 				break;
+			}
 			case L2Item.SLOT_R_EAR:
+			{
 				bodypart = 0x02;
 				break;
+			}
 			case L2Item.SLOT_NECK:
+			{
 				bodypart = 0x03;
 				break;
+			}
 			case L2Item.SLOT_R_FINGER:
+			{
 				bodypart = 0x04;
 				break;
+			}
 			case L2Item.SLOT_L_FINGER:
+			{
 				bodypart = 0x05;
 				break;
+			}
 			case L2Item.SLOT_HEAD:
+			{
 				bodypart = 0x06;
 				break;
+			}
 			case L2Item.SLOT_R_HAND:
+			{
 				bodypart = 0x07;
 				break;
+			}
 			case L2Item.SLOT_L_HAND:
+			{
 				bodypart = 0x08;
 				break;
+			}
 			case L2Item.SLOT_GLOVES:
+			{
 				bodypart = 0x09;
 				break;
+			}
 			case L2Item.SLOT_CHEST:
+			{
 				bodypart = 0x0a;
 				break;
+			}
 			case L2Item.SLOT_LEGS:
+			{
 				bodypart = 0x0b;
 				break;
+			}
 			case L2Item.SLOT_FEET:
+			{
 				bodypart = 0x0c;
 				break;
+			}
 			case L2Item.SLOT_BACK:
+			{
 				bodypart = 0x0d;
 				break;
+			}
 			case L2Item.SLOT_LR_HAND:
+			{
 				bodypart = 0x0e;
 				break;
+			}
 			case L2Item.SLOT_HAIR:
+			{
 				bodypart = 0x0f;
 				break;
+			}
 			case L2Item.SLOT_BELT:
+			{
 				bodypart = 0x10;
 				break;
+			}
 		}
 		writeD(bodypart);
 	}

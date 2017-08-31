@@ -66,15 +66,20 @@ public class Q00002_WhatWomenWant extends Quest
 		switch (event)
 		{
 			case "30223-04.htm":
+			{
 				st.startQuest();
 				giveItems(player, ARUJIENS_LETTER1, 1);
 				break;
+			}
 			case "30223-08.html":
+			{
 				takeItems(player, ARUJIENS_LETTER3, -1);
 				giveItems(player, POETRY_BOOK, 1);
 				st.setCond(4, true);
 				break;
+			}
 			case "30223-09.html":
+			{
 				giveAdena(player, 450, true);
 				st.exitQuest(false, true);
 				// Newbie Guide
@@ -82,11 +87,16 @@ public class Q00002_WhatWomenWant extends Quest
 				addExpAndSp(player, 4254, 335);
 				giveAdena(player, 1850, true);
 				break;
+			}
 			case "30223-03.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -99,27 +109,40 @@ public class Q00002_WhatWomenWant extends Quest
 		switch (npc.getId())
 		{
 			case ARUJIEN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = ((player.getRace() != Race.ELF) && (player.getRace() != Race.HUMAN)) ? "30223-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30223-02.htm" : "30223-01.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30223-05.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30223-06.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "30223-07.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "30223-10.html";
 								break;
+							}
 							case 5:
+							{
 								giveItems(player, EARRING, 1);
 								st.exitQuest(false, true);
 								htmltext = "30223-11.html";
@@ -128,14 +151,20 @@ public class Q00002_WhatWomenWant extends Quest
 								addExpAndSp(player, 4254, 335);
 								giveAdena(player, 1850, true);
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case MIRABEL:
+			{
 				if (st.isStarted())
 				{
 					if (st.isCond(1))
@@ -151,7 +180,9 @@ public class Q00002_WhatWomenWant extends Quest
 					}
 				}
 				break;
+			}
 			case HERBIEL:
+			{
 				if (st.isStarted() && (st.getCond() > 1))
 				{
 					if (st.isCond(2))
@@ -167,7 +198,9 @@ public class Q00002_WhatWomenWant extends Quest
 					}
 				}
 				break;
+			}
 			case GREENIS:
+			{
 				if (st.isStarted())
 				{
 					if (st.isCond(4))
@@ -187,6 +220,7 @@ public class Q00002_WhatWomenWant extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

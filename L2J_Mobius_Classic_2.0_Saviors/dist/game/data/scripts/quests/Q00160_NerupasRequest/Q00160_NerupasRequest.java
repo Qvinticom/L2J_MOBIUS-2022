@@ -174,7 +174,6 @@ public final class Q00160_NerupasRequest extends Quest
 							}
 							qs.setCond(4, true);
 							htmltext = "30152-01.html";
-							
 						}
 						else if (hasQuestItems(player, NIGHTSHADE_LEAF))
 						{

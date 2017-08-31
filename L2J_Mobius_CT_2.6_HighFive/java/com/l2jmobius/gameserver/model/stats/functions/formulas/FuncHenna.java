@@ -56,23 +56,35 @@ public class FuncHenna extends AbstractFunction
 			switch (getStat())
 			{
 				case STAT_STR:
+				{
 					value += pc.getHennaStatSTR();
 					break;
+				}
 				case STAT_CON:
+				{
 					value += pc.getHennaStatCON();
 					break;
+				}
 				case STAT_DEX:
+				{
 					value += pc.getHennaStatDEX();
 					break;
+				}
 				case STAT_INT:
+				{
 					value += pc.getHennaStatINT();
 					break;
+				}
 				case STAT_WIT:
+				{
 					value += pc.getHennaStatWIT();
 					break;
+				}
 				case STAT_MEN:
+				{
 					value += pc.getHennaStatMEN();
 					break;
+				}
 			}
 		}
 		return value;

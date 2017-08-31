@@ -81,23 +81,29 @@ public class FuncEnchant extends AbstractFunction
 			switch (item.getItem().getItemGradeSPlus())
 			{
 				case S:
+				{
 					// M. Atk. increases by 4 for all weapons.
 					// Starting at +4, M. Atk. bonus double.
 					value += (4 * enchant) + (8 * overenchant);
 					break;
+				}
 				case A:
 				case B:
 				case C:
+				{
 					// M. Atk. increases by 3 for all weapons.
 					// Starting at +4, M. Atk. bonus double.
 					value += (3 * enchant) + (6 * overenchant);
 					break;
+				}
 				case D:
 				case NONE:
+				{
 					// M. Atk. increases by 2 for all weapons. Starting at +4, M. Atk. bonus double.
 					// Starting at +4, M. Atk. bonus double.
 					value += (2 * enchant) + (4 * overenchant);
 					break;
+				}
 			}
 			return value;
 		}
@@ -108,6 +114,7 @@ public class FuncEnchant extends AbstractFunction
 			switch (item.getItem().getItemGradeSPlus())
 			{
 				case S:
+				{
 					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
 					{
 						if ((type == WeaponType.BOW) || (type == WeaponType.CROSSBOW))
@@ -130,7 +137,9 @@ public class FuncEnchant extends AbstractFunction
 						value += (5 * enchant) + (10 * overenchant);
 					}
 					break;
+				}
 				case A:
+				{
 					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
 					{
 						if ((type == WeaponType.BOW) || (type == WeaponType.CROSSBOW))
@@ -153,8 +162,10 @@ public class FuncEnchant extends AbstractFunction
 						value += (4 * enchant) + (8 * overenchant);
 					}
 					break;
+				}
 				case B:
 				case C:
+				{
 					if (item.getWeaponItem().getBodyPart() == L2Item.SLOT_LR_HAND)
 					{
 						if ((type == WeaponType.BOW) || (type == WeaponType.CROSSBOW))
@@ -177,8 +188,10 @@ public class FuncEnchant extends AbstractFunction
 						value += (3 * enchant) + (6 * overenchant);
 					}
 					break;
+				}
 				case D:
 				case NONE:
+				{
 					switch (type)
 					{
 						case BOW:
@@ -190,12 +203,15 @@ public class FuncEnchant extends AbstractFunction
 							break;
 						}
 						default:
+						{
 							// P. Atk. increases by 2 for all weapons with the exception of bows.
 							// Starting at +4, P. Atk. bonus double.
 							value += (2 * enchant) + (4 * overenchant);
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 		return value;

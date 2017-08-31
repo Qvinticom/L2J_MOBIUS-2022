@@ -84,16 +84,24 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 			case "30535-05.htm":
 			case "30535-09.html":
 			case "30535-10.html":
+			{
 				break;
+			}
 			case "30535-06.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30535-11.html":
+			{
 				st.exitQuest(true, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}

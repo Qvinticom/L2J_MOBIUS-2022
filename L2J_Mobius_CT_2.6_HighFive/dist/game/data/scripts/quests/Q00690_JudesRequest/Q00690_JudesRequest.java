@@ -162,6 +162,7 @@ public class Q00690_JudesRequest extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (player.getLevel() >= 78)
 				{
 					htmltext = "32356-01.htm";
@@ -171,7 +172,9 @@ public class Q00690_JudesRequest extends Quest
 					htmltext = "32356-02.htm";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				if (getQuestItemsCount(player, EVIL_WEAPON) >= 200)
 				{
 					htmltext = "32356-04.htm";
@@ -185,6 +188,7 @@ public class Q00690_JudesRequest extends Quest
 					htmltext = "32356-05.htm";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -231,7 +231,6 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 								}
 								break;
 							}
-							
 						}
 						break;
 					}

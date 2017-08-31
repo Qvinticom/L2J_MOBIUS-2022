@@ -191,9 +191,12 @@ public class Q00288_HandleWithCare extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() < MIN_LEVEL) ? "32741-01.html" : "32741-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1) && !hasQuestItems(player, HIGH_GRADE_LIZARD_SCALE) && !hasQuestItems(player, MIDDLE_GRADE_LIZARD_SCALE))
 				{
 					htmltext = "32741-05.html";
@@ -202,12 +205,12 @@ public class Q00288_HandleWithCare extends Quest
 				{
 					htmltext = "32741-06.html";
 				}
-				
 				if (st.isCond(2) && hasQuestItems(player, HIGH_GRADE_LIZARD_SCALE))
 				{
 					htmltext = "32741-07.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

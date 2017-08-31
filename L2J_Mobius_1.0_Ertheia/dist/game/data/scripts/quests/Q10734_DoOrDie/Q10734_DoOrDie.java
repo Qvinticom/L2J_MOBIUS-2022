@@ -132,8 +132,10 @@ public final class Q10734_DoOrDie extends Quest
 					switch (qs.getState())
 					{
 						case State.CREATED:
+						{
 							htmltext = (meetStartRestrictions(player)) ? "33943-01.htm" : "33943-08.htm";
 							break;
+						}
 						case State.STARTED:
 						{
 							switch (qs.getCond())
@@ -182,8 +184,10 @@ public final class Q10734_DoOrDie extends Quest
 					switch (qs.getState())
 					{
 						case State.CREATED:
+						{
 							htmltext = (meetStartRestrictions(player)) ? "33942-01.htm" : "33942-08.htm";
 							break;
+						}
 						case State.STARTED:
 						{
 							switch (qs.getCond())
@@ -219,8 +223,10 @@ public final class Q10734_DoOrDie extends Quest
 							break;
 						}
 						case State.COMPLETED:
+						{
 							htmltext = getAlreadyCompletedMsg(player);
 							break;
+						}
 					}
 				}
 				break;

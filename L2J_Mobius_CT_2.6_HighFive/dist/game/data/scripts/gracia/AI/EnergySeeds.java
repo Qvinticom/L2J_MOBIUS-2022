@@ -292,13 +292,19 @@ public class EnergySeeds extends AbstractNpcAI
 		switch (seed)
 		{
 			case INFINITY:
+			{
 				return false;
+			}
 			case DESTRUCTION:
+			{
 				return SoDManager.getInstance().getSoDState() == 2;
+			}
 			case ANNIHILATION_BISTAKON:
 			case ANNIHILATION_REPTILIKON:
 			case ANNIHILATION_COKRAKON:
+			{
 				return true;
+			}
 		}
 		return true;
 	}
@@ -325,25 +331,39 @@ public class EnergySeeds extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case 18678: // Water
+					{
 						itemId = 14016;
 						break;
+					}
 					case 18679: // Fire
+					{
 						itemId = 14015;
 						break;
+					}
 					case 18680: // Wind
+					{
 						itemId = 14017;
 						break;
+					}
 					case 18681: // Earth
+					{
 						itemId = 14018;
 						break;
+					}
 					case 18682: // Divinity
+					{
 						itemId = 14020;
 						break;
+					}
 					case 18683: // Darkness
+					{
 						itemId = 14019;
 						break;
+					}
 					default:
+					{
 						return super.onSkillSee(npc, caster, skill, targets, isSummon);
+					}
 				}
 				if (getRandom(100) < 33)
 				{
@@ -445,17 +465,21 @@ public class EnergySeeds extends AbstractNpcAI
 			switch (zone.getId())
 			{
 				case SOD_ZONE:
+				{
 					if (!isSeedActive(GraciaSeeds.DESTRUCTION) && !character.isGM())
 					{
 						character.teleToLocation(SOD_EXIT_POINT);
 					}
 					break;
+				}
 				case SOI_ZONE:
+				{
 					if ((SoIManager.getCurrentStage() != 3) && !SoIManager.isSeedOpen())
 					{
 						character.teleToLocation(SOI_EXIT_POINT);
 					}
 					break;
+				}
 			}
 		}
 		return super.onEnterZone(character, zone);
@@ -506,18 +530,23 @@ public class EnergySeeds extends AbstractNpcAI
 		switch (seedType)
 		{
 			case INFINITY:
+			{
 				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(player, 13798);
 				}
 				break;
+			}
 			case DESTRUCTION:
+			{
 				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(player, 13867);
 				}
 				break;
+			}
 			case ANNIHILATION_BISTAKON:
+			{
 				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(player, 15535);
@@ -530,7 +559,9 @@ public class EnergySeeds extends AbstractNpcAI
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				}
 				break;
+			}
 			case ANNIHILATION_REPTILIKON:
+			{
 				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(player, 15535);
@@ -543,7 +574,9 @@ public class EnergySeeds extends AbstractNpcAI
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				}
 				break;
+			}
 			case ANNIHILATION_COKRAKON:
+			{
 				if ((st != null) && st.isCond(3))
 				{
 					handleQuestDrop(player, 15535);
@@ -556,6 +589,7 @@ public class EnergySeeds extends AbstractNpcAI
 					mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
 				}
 				break;
+			}
 		}
 	}
 	

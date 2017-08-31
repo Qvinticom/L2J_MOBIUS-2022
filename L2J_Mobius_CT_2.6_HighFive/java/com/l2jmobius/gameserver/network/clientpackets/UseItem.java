@@ -255,8 +255,10 @@ public final class UseItem extends L2GameClientPacket
 								switch (wpn.getItemType())
 								{
 									case NONE:
+									{
 										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 										return;
+									}
 								}
 								break;
 							}
@@ -271,8 +273,10 @@ public final class UseItem extends L2GameClientPacket
 									case RAPIER:
 									case CROSSBOW:
 									case ANCIENTSWORD:
+									{
 										activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 										return;
+									}
 								}
 								break;
 							}

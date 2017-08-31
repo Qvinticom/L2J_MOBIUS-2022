@@ -56,6 +56,7 @@ public class SSQStatus extends L2GameServerPacket
 		switch (_page)
 		{
 			case 1:
+			{
 				// [ddd cc dd ddd c ddd c]
 				
 				writeD(SevenSigns.getInstance().getCurrentCycle());
@@ -65,29 +66,41 @@ public class SSQStatus extends L2GameServerPacket
 				switch (currentPeriod)
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
+					{
 						writeD(SystemMessageId.THIS_IS_THE_INITIAL_PERIOD.getId());
 						break;
+					}
 					case SevenSigns.PERIOD_COMPETITION:
+					{
 						writeD(SystemMessageId.THE_SSQ_COMPETITION_PERIOD_IS_UNDERWAY.getId());
 						break;
+					}
 					case SevenSigns.PERIOD_COMP_RESULTS:
+					{
 						writeD(SystemMessageId.THIS_IS_A_PERIOD_WHEN_SERVER_STATISTICS_ARE_CALCULATED.getId());
 						break;
+					}
 					case SevenSigns.PERIOD_SEAL_VALIDATION:
+					{
 						writeD(SystemMessageId.THIS_IS_THE_SEAL_VALIDATION_PERIOD.getId());
 						break;
+					}
 				}
 				
 				switch (currentPeriod)
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
 					case SevenSigns.PERIOD_COMP_RESULTS:
+					{
 						writeD(SystemMessageId.UNTIL_TODAY_AT_6_00_P_M.getId());
 						break;
+					}
 					case SevenSigns.PERIOD_COMPETITION:
 					case SevenSigns.PERIOD_SEAL_VALIDATION:
+					{
 						writeD(SystemMessageId.UNTIL_NEXT_MONDAY_AT_6_00_P_M.getId());
 						break;
+					}
 				}
 				
 				writeC(SevenSigns.getInstance().getPlayerCabal(_objectId));
@@ -159,7 +172,9 @@ public class SSQStatus extends L2GameServerPacket
 				
 				writeC(dawnPercent); // Dawn %
 				break;
+			}
 			case 2:
+			{
 				// c cc hc [cd (dc (S))]
 				writeH(1);
 				
@@ -214,7 +229,9 @@ public class SSQStatus extends L2GameServerPacket
 					}
 				}
 				break;
+			}
 			case 3:
+			{
 				// c cc [ccc (cccc)]
 				writeC(10); // Minimum limit for winning cabal to retain their seal
 				writeC(35); // Minimum limit for winning cabal to claim a seal
@@ -261,7 +278,9 @@ public class SSQStatus extends L2GameServerPacket
 					}
 				}
 				break;
+			}
 			case 4:
+			{
 				// c cc [cc (ccD)] CT 2.3 update
 				writeC(winningCabal); // Overall predicted winner
 				writeC(3); // Total number of seals
@@ -279,13 +298,17 @@ public class SSQStatus extends L2GameServerPacket
 					switch (sealOwner)
 					{
 						case SevenSigns.CABAL_NULL:
+						{
 							switch (winningCabal)
 							{
 								case SevenSigns.CABAL_NULL:
+								{
 									writeC(SevenSigns.CABAL_NULL);
 									writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									break;
+								}
 								case SevenSigns.CABAL_DAWN:
+								{
 									if (dawnPercent >= 35)
 									{
 										writeC(SevenSigns.CABAL_DAWN);
@@ -297,7 +320,9 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
+								}
 								case SevenSigns.CABAL_DUSK:
+								{
 									if (duskPercent >= 35)
 									{
 										writeC(SevenSigns.CABAL_DUSK);
@@ -309,12 +334,16 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
+								}
 							}
 							break;
+						}
 						case SevenSigns.CABAL_DAWN:
+						{
 							switch (winningCabal)
 							{
 								case SevenSigns.CABAL_NULL:
+								{
 									if (dawnPercent >= 10)
 									{
 										writeC(SevenSigns.CABAL_DAWN);
@@ -326,7 +355,9 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									}
 									break;
+								}
 								case SevenSigns.CABAL_DAWN:
+								{
 									if (dawnPercent >= 10)
 									{
 										writeC(sealOwner);
@@ -338,7 +369,9 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
+								}
 								case SevenSigns.CABAL_DUSK:
+								{
 									if (duskPercent >= 35)
 									{
 										writeC(SevenSigns.CABAL_DUSK);
@@ -355,12 +388,16 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
+								}
 							}
 							break;
+						}
 						case SevenSigns.CABAL_DUSK:
+						{
 							switch (winningCabal)
 							{
 								case SevenSigns.CABAL_NULL:
+								{
 									if (duskPercent >= 10)
 									{
 										writeC(SevenSigns.CABAL_DUSK);
@@ -372,7 +409,9 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									}
 									break;
+								}
 								case SevenSigns.CABAL_DAWN:
+								{
 									if (dawnPercent >= 35)
 									{
 										writeC(SevenSigns.CABAL_DAWN);
@@ -389,7 +428,9 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
+								}
 								case SevenSigns.CABAL_DUSK:
+								{
 									if (duskPercent >= 10)
 									{
 										writeC(sealOwner);
@@ -401,11 +442,14 @@ public class SSQStatus extends L2GameServerPacket
 										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
+								}
 							}
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 	}
 }

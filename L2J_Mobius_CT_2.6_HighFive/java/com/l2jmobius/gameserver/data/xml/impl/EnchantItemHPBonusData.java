@@ -99,10 +99,14 @@ public class EnchantItemHPBonusData implements IXmlReader
 						case L2Item.SLOT_UNDERWEAR:
 						case L2Item.SLOT_L_HAND:
 						case L2Item.SLOT_BELT:
+						{
 							item.attach(new FuncTemplate(null, null, StatFunction.ENCHANTHP.getName(), -1, Stats.MAX_HP, 0));
 							break;
+						}
 						default:
+						{
 							break;
+						}
 					}
 				}
 			}

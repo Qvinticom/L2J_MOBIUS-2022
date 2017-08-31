@@ -111,44 +111,52 @@ public class BoatRunePrimeval implements Runnable
 			switch (_cycle)
 			{
 				case 0:
+				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, false);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, LEAVING_RUNE, RUNE_SOUND);
 					_boat.payForRide(8925, 1, 34513, -38009, -3640);
 					_boat.executePath(RUNE_TO_PRIMEVAL);
 					break;
+				}
 				case 1:
+				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], ARRIVED_AT_PRIMEVAL, ARRIVED_AT_PRIMEVAL_2, PRIMEVAL_SOUND);
 					ThreadPoolManager.schedule(this, 180000);
 					break;
+				}
 				case 2:
+				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], LEAVING_PRIMEVAL, PRIMEVAL_SOUND);
 					_boat.payForRide(8924, 1, 10447, -24982, -3664);
 					_boat.executePath(PRIMEVAL_TO_RUNE);
 					break;
+				}
 				case 3:
+				{
 					if (BoatManager.getInstance().dockBusy(BoatManager.RUNE_HARBOR))
 					{
 						if (_shoutCount == 0)
 						{
 							BoatManager.getInstance().broadcastPacket(RUNE_DOCK[0], PRIMEVAL_DOCK, BUSY_RUNE);
 						}
-						
 						_shoutCount++;
 						if (_shoutCount > 35)
 						{
 							_shoutCount = 0;
 						}
-						
 						ThreadPoolManager.schedule(this, 5000);
 						return;
 					}
 					_boat.executePath(RUNE_DOCK);
 					break;
+				}
 				case 4:
+				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, true);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, ARRIVED_AT_RUNE, ARRIVED_AT_RUNE_2, RUNE_SOUND);
 					ThreadPoolManager.schedule(this, 180000);
 					break;
+				}
 			}
 			_shoutCount = 0;
 			_cycle++;

@@ -63,12 +63,16 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		switch (event)
 		{
 			case "30916-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30907-03.htm":
+			{
 				giveAdena(player, 50000, true);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -116,32 +120,48 @@ public class Q10278_MutatedKaneusHeine extends Quest
 		switch (npc.getId())
 		{
 			case GOSTA:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 37) ? "30916-01.htm" : "30916-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_BO) && hasQuestItems(player, TISSUE_WB)) ? "30916-05.htm" : "30916-04.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "30916-06.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case MINEVIA:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_BO) && hasQuestItems(player, TISSUE_WB)) ? "30907-02.htm" : "30907-01.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -197,23 +197,35 @@ public final class SkillTreesData implements IXmlReader
 									switch (b.getNodeName())
 									{
 										case "item":
+										{
 											skillLearn.addRequiredItem(new ItemHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count")));
 											break;
+										}
 										case "preRequisiteSkill":
+										{
 											skillLearn.addPreReqSkill(new SkillHolder(parseInteger(attrs, "id"), parseInteger(attrs, "lvl")));
 											break;
+										}
 										case "race":
+										{
 											skillLearn.addRace(Race.valueOf(b.getTextContent()));
 											break;
+										}
 										case "residenceId":
+										{
 											skillLearn.addResidenceId(Integer.valueOf(b.getTextContent()));
 											break;
+										}
 										case "socialClass":
+										{
 											skillLearn.setSocialClass(Enum.valueOf(SocialClass.class, b.getTextContent()));
 											break;
+										}
 										case "subClassConditions":
+										{
 											skillLearn.addSubclassConditions(parseInteger(attrs, "slot"), parseInteger(attrs, "lvl"));
 											break;
+										}
 									}
 								}
 								
@@ -885,29 +897,45 @@ public final class SkillTreesData implements IXmlReader
 		switch (skillType)
 		{
 			case CLASS:
+			{
 				sl = getClassSkill(id, lvl, player.getLearningClass());
 				break;
+			}
 			case TRANSFORM:
+			{
 				sl = getTransformSkill(id, lvl);
 				break;
+			}
 			case FISHING:
+			{
 				sl = getFishingSkill(id, lvl);
 				break;
+			}
 			case PLEDGE:
+			{
 				sl = getPledgeSkill(id, lvl);
 				break;
+			}
 			case SUBPLEDGE:
+			{
 				sl = getSubPledgeSkill(id, lvl);
 				break;
+			}
 			case TRANSFER:
+			{
 				sl = getTransferSkill(id, lvl, player.getClassId());
 				break;
+			}
 			case SUBCLASS:
+			{
 				sl = getSubClassSkill(id, lvl);
 				break;
+			}
 			case COLLECT:
+			{
 				sl = getCollectSkill(id, lvl);
 				break;
+			}
 		}
 		return sl;
 	}

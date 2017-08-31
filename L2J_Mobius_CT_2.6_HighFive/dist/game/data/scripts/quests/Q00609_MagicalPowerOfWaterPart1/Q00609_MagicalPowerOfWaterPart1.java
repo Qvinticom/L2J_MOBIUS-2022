@@ -102,10 +102,13 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 		switch (event)
 		{
 			case "31371-02.html":
+			{
 				st.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "open_box":
+			{
 				if (!hasQuestItems(player, KEY))
 				{
 					htmltext = "31561-02.html";
@@ -126,10 +129,13 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 					}
 				}
 				break;
+			}
 			case "eye_despawn":
+			{
 				npc.broadcastPacket(new NpcSay(npc, ChatType.NPC_GENERAL, NpcStringId.UDAN_HAS_ALREADY_SEEN_YOUR_FACE));
 				npc.deleteMe();
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -159,29 +165,39 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 		switch (npc.getId())
 		{
 			case WAHKAN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? (hasAtLeastOneQuestItem(player, KETRA_MARKS)) ? "31371-01.htm" : "31371-00a.html" : "31371-00b.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "31371-03.html";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case ASEFA:
+			{
 				if (st.isStarted())
 				{
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "31372-01.html";
 							st.setCond(2, true);
 							break;
+						}
 						case 2:
+						{
 							if (st.isSet("spawned"))
 							{
 								st.unset("spawned");
@@ -194,21 +210,27 @@ public class Q00609_MagicalPowerOfWaterPart1 extends Quest
 								htmltext = "31372-02.html";
 							}
 							break;
+						}
 						case 3:
+						{
 							giveItems(player, GREEN_TOTEM, 1);
 							giveItems(player, WISDOM_STONE, 1);
 							st.exitQuest(true, true);
 							htmltext = "31372-04.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case UDANS_BOX:
+			{
 				if (st.isCond(2))
 				{
 					htmltext = "31561-01.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

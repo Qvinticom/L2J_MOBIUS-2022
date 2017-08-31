@@ -121,9 +121,12 @@ public class Q00251_NoSecrets extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() > 81) ? "30201-01.htm" : "30201-00.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					htmltext = "30201-05.htm";
@@ -136,9 +139,12 @@ public class Q00251_NoSecrets extends Quest
 					st.exitQuest(false, true);
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = "30201-06.htm";
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -147,6 +147,7 @@ public class Q00043_HelpTheSister extends Quest
 		switch (npc.getId())
 		{
 			case COOPER:
+			{
 				switch (qs.getState())
 				{
 					case State.CREATED:
@@ -193,6 +194,7 @@ public class Q00043_HelpTheSister extends Quest
 					}
 				}
 				break;
+			}
 			case GALLADUCCI:
 			{
 				if (qs.isStarted())

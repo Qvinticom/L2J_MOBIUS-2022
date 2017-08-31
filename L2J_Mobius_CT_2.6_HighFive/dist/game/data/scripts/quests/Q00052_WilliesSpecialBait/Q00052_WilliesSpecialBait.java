@@ -60,9 +60,12 @@ public class Q00052_WilliesSpecialBait extends Quest
 		switch (event)
 		{
 			case "31574-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31574-07.html":
+			{
 				if (st.isCond(2) && (getQuestItemsCount(player, TARLK_EYE) >= 100))
 				{
 					htmltext = "31574-06.htm";
@@ -70,6 +73,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 					st.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -110,14 +114,20 @@ public class Q00052_WilliesSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 48) ? "31574-01.htm" : "31574-02.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(1)) ? "31574-05.html" : "31574-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

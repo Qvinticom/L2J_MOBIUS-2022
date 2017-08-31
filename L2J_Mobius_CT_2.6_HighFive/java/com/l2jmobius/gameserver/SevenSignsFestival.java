@@ -816,20 +816,30 @@ public class SevenSignsFestival implements SpawnListener
 		switch (festivalID)
 		{
 			case FESTIVAL_LEVEL_MAX_31:
+			{
 				festivalName = "Level 31 or lower";
 				break;
+			}
 			case FESTIVAL_LEVEL_MAX_42:
+			{
 				festivalName = "Level 42 or lower";
 				break;
+			}
 			case FESTIVAL_LEVEL_MAX_53:
+			{
 				festivalName = "Level 53 or lower";
 				break;
+			}
 			case FESTIVAL_LEVEL_MAX_64:
+			{
 				festivalName = "Level 64 or lower";
 				break;
+			}
 			default:
+			{
 				festivalName = "No Level Limit";
 				break;
+			}
 		}
 		
 		return festivalName;
@@ -847,17 +857,25 @@ public class SevenSignsFestival implements SpawnListener
 		switch (festivalId)
 		{
 			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_31:
+			{
 				maxLevel = 31;
 				break;
+			}
 			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_42:
+			{
 				maxLevel = 42;
 				break;
+			}
 			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_53:
+			{
 				maxLevel = 53;
 				break;
+			}
 			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_64:
+			{
 				maxLevel = 64;
 				break;
+			}
 		}
 		
 		return maxLevel;
@@ -1609,14 +1627,20 @@ public class SevenSignsFestival implements SpawnListener
 		switch (stoneType)
 		{
 			case SevenSigns.SEAL_STONE_BLUE_ID:
+			{
 				eachStoneBonus = SevenSigns.SEAL_STONE_BLUE_VALUE;
 				break;
+			}
 			case SevenSigns.SEAL_STONE_GREEN_ID:
+			{
 				eachStoneBonus = SevenSigns.SEAL_STONE_GREEN_VALUE;
 				break;
+			}
 			case SevenSigns.SEAL_STONE_RED_ID:
+			{
 				eachStoneBonus = SevenSigns.SEAL_STONE_RED_VALUE;
 				break;
+			}
 		}
 		
 		final int newTotalBonus = _accumulatedBonuses.get(festivalId) + (stoneAmount * eachStoneBonus);
@@ -2209,16 +2233,24 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				case 0:
 				case 1:
+				{
 					_npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_PRIMARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_PRIMARY_SPAWNS[_levelRange];
 					break;
+				}
 				case 2:
+				{
 					_npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_SECONDARY_SPAWNS[_levelRange] : FESTIVAL_DUSK_SECONDARY_SPAWNS[_levelRange];
 					break;
+				}
 				case 3:
+				{
 					_npcSpawns = (_cabal == SevenSigns.CABAL_DAWN) ? FESTIVAL_DAWN_CHEST_SPAWNS[_levelRange] : FESTIVAL_DUSK_CHEST_SPAWNS[_levelRange];
 					break;
+				}
 				default:
+				{
 					return;
+				}
 			}
 			
 			for (int[] _npcSpawn : _npcSpawns)

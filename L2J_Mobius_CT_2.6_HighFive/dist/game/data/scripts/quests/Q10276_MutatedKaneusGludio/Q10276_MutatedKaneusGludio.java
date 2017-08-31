@@ -63,12 +63,16 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		switch (event)
 		{
 			case "30332-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30344-03.htm":
+			{
 				giveAdena(player, 8500, true);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -116,32 +120,48 @@ public class Q10276_MutatedKaneusGludio extends Quest
 		switch (npc.getId())
 		{
 			case BATHIS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 17) ? "30332-01.htm" : "30332-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_TK) && hasQuestItems(player, TISSUE_OA)) ? "30332-05.htm" : "30332-04.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "30332-06.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case ROHMER:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_TK) && hasQuestItems(player, TISSUE_OA)) ? "30344-02.htm" : "30344-01.htm";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

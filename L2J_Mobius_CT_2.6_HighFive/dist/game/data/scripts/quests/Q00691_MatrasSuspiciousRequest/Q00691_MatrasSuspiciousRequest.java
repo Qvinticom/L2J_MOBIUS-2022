@@ -78,13 +78,18 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		{
 			case "32245-02.htm":
 			case "32245-11.html":
+			{
 				htmltext = event;
 				break;
+			}
 			case "32245-04.htm":
+			{
 				st.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "take_reward":
+			{
 				if (st.isStarted())
 				{
 					final int gemsCount = st.getInt("submitted_gems");
@@ -100,7 +105,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					}
 				}
 				break;
+			}
 			case "32245-08.html":
+			{
 				if (st.isStarted())
 				{
 					final int submittedCount = st.getInt("submitted_gems");
@@ -111,7 +118,9 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					htmltext = getHtm(player.getHtmlPrefix(), "32245-08.html").replace("%itemcount%", Integer.toString(finalCount));
 				}
 				break;
+			}
 			case "32245-12.html":
+			{
 				if (st.isStarted())
 				{
 					giveAdena(player, (st.getInt("submitted_gems") * 10000), true);
@@ -119,6 +128,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					htmltext = event;
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -152,9 +162,12 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32245-01.htm" : "32245-03.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (hasQuestItems(player, RED_GEM))
 				{
 					htmltext = "32245-05.html";
@@ -168,6 +181,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					htmltext = "32245-06.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

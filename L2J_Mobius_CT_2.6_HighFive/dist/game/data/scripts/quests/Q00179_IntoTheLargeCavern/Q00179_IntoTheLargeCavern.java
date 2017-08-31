@@ -88,6 +88,7 @@ public class Q00179_IntoTheLargeCavern extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
+				{
 					if (player.getRace() != Race.KAMAEL)
 					{
 						htmltext = "32138-00b.html";
@@ -110,15 +111,20 @@ public class Q00179_IntoTheLargeCavern extends Quest
 						}
 					}
 					break;
+				}
 				case State.STARTED:
+				{
 					if (st.isCond(1))
 					{
 						htmltext = "32138-03.htm";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if ((npc.getId() == MENACING_MACHINE) && (st.getState() == State.STARTED))

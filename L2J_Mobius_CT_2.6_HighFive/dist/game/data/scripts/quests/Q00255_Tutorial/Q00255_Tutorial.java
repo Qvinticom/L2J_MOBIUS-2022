@@ -281,11 +281,13 @@ public class Q00255_Tutorial extends Quest
 						break;
 					}
 					case 2:
+					{
 						qs.playTutorialVoice("tutorial_voice_003");
 						html = "tutorial_02.htm";
 						qs.onTutorialClientEvent(1);
 						qs.set("Ex", "-5");
 						break;
+					}
 					case 3:
 					{
 						html = "tutorial_03.htm";

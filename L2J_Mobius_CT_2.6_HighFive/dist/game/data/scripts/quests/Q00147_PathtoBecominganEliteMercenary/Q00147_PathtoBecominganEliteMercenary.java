@@ -88,6 +88,7 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getClan() != null) && (player.getClan().getCastleId() > 0))
 				{
 					htmltext = "castle.htm";
@@ -97,7 +98,9 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 					htmltext = "elite-01.htm";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.getCond() < 4)
 				{
 					htmltext = "elite-05.htm";
@@ -110,9 +113,12 @@ public class Q00147_PathtoBecominganEliteMercenary extends Quest
 					htmltext = "elite-06.htm";
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

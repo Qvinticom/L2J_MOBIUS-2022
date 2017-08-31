@@ -203,6 +203,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			switch (jobLevel)
 			{
 				case 0:
+				{
 					if (Config.CLASS_MASTER_SETTINGS.isAllowed(1))
 					{
 						sb.append("Come back here when you reached level 20 to change your class.<br>");
@@ -220,7 +221,9 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 						sb.append("I can't change your occupation.<br>");
 					}
 					break;
+				}
 				case 1:
+				{
 					if (Config.CLASS_MASTER_SETTINGS.isAllowed(2))
 					{
 						sb.append("Come back here when you reached level 40 to change your class.<br>");
@@ -234,7 +237,9 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 						sb.append("I can't change your occupation.<br>");
 					}
 					break;
+				}
 				case 2:
+				{
 					if (Config.CLASS_MASTER_SETTINGS.isAllowed(3))
 					{
 						sb.append("Come back here when you reached level 76 to change your class.<br>");
@@ -244,9 +249,12 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 						sb.append("I can't change your occupation.<br>");
 					}
 					break;
+				}
 				case 3:
+				{
 					sb.append("There is no class change available for you anymore.<br>");
 					break;
+				}
 			}
 			sb.append("</body></html>");
 			html.setHtml(sb.toString());
@@ -414,13 +422,21 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		switch (level)
 		{
 			case 0:
+			{
 				return 20;
+			}
 			case 1:
+			{
 				return 40;
+			}
 			case 2:
+			{
 				return 76;
+			}
 			default:
+			{
 				return Integer.MAX_VALUE;
+			}
 		}
 	}
 	

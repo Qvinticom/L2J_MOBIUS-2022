@@ -190,6 +190,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 			switch (qs.getState())
 			{
 				case State.COMPLETED:
+				{
 					if (!qs.isNowAvailable())
 					{
 						htmltext = "32864-02.html";
@@ -197,10 +198,14 @@ public final class Q00456_DontKnowDontCare extends Quest
 					}
 					qs.setState(State.CREATED);
 					// intentional fall-through
+				}
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32864-01.htm" : "32864-03.html";
 					break;
+				}
 				case State.STARTED:
+				{
 					switch (qs.getCond())
 					{
 						case 1:
@@ -220,6 +225,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 						}
 					}
 					break;
+				}
 			}
 		}
 		return htmltext;
@@ -236,22 +242,28 @@ public final class Q00456_DontKnowDontCare extends Quest
 			case "32864-04.htm":
 			case "32864-05.htm":
 			case "32864-06.htm":
+			{
 				if ((qs != null) && qs.isCreated())
 				{
 					htmltext = event;
 				}
 				break;
+			}
 			case "32864-07.htm":
+			{
 				if ((qs != null) && qs.isCreated())
 				{
 					qs.startQuest();
 					htmltext = event;
 				}
 				break;
+			}
 			case "unspawnRaidCorpse":
+			{
 				allowedPlayerMap.remove(npc.getObjectId());
 				npc.deleteMe();
 				break;
+			}
 		}
 		
 		return htmltext;

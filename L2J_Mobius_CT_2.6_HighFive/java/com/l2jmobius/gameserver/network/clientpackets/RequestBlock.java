@@ -61,6 +61,7 @@ public final class RequestBlock extends L2GameClientPacket
 		{
 			case BLOCK:
 			case UNBLOCK:
+			{
 				// can't use block/unblock for locating invisible characters
 				if (targetId <= 0)
 				{
@@ -68,19 +69,16 @@ public final class RequestBlock extends L2GameClientPacket
 					activeChar.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST);
 					return;
 				}
-				
 				if (targetAL > 0)
 				{
 					// Cannot block a GM character.
 					activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM);
 					return;
 				}
-				
 				if (activeChar.getObjectId() == targetId)
 				{
 					return;
 				}
-				
 				if (_type == BLOCK)
 				{
 					BlockList.addToBlockList(activeChar, targetId);
@@ -90,19 +88,28 @@ public final class RequestBlock extends L2GameClientPacket
 					BlockList.removeFromBlockList(activeChar, targetId);
 				}
 				break;
+			}
 			case BLOCKLIST:
+			{
 				BlockList.sendListToOwner(activeChar);
 				break;
+			}
 			case ALLBLOCK:
+			{
 				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 				BlockList.setBlockAll(activeChar, true);
 				break;
+			}
 			case ALLUNBLOCK:
+			{
 				activeChar.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);
 				BlockList.setBlockAll(activeChar, false);
 				break;
+			}
 			default:
+			{
 				_log.info("Unknown 0xA9 block type: " + _type);
+			}
 		}
 	}
 	

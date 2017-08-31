@@ -68,14 +68,22 @@ public final class Jude extends AbstractNpcAI
 			case 0:
 			case 1:
 			case 2:
+			{
 				return "32356-01.htm";
+			}
 			case 3:
 			case 4:
+			{
 				return "32356-01c.htm";
+			}
 			case 5:
+			{
 				return "32356-01a.htm";
+			}
 			default:
+			{
 				return "32356-01b.htm";
+			}
 		}
 	}
 }

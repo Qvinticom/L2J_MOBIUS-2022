@@ -443,6 +443,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 		switch (mainlvlInfo.getAbsorbCrystalType())
 		{
 			case PARTY_ONE_RANDOM:
+			{
 				// This is a naive method for selecting a random member. It gets any random party member and
 				// then checks if the member has a valid crystal. It does not select the random party member
 				// among those who have crystals, only. However, this might actually be correct (same as retail).
@@ -456,7 +457,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					levelCrystal(killer, players.get(killer), mob);
 				}
 				break;
+			}
 			case PARTY_RANDOM:
+			{
 				if (killer.getParty() != null)
 				{
 					final List<L2PcInstance> luckyParty = new ArrayList<>();
@@ -475,7 +478,9 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					levelCrystal(killer, players.get(killer), mob);
 				}
 				break;
+			}
 			case FULL_PARTY:
+			{
 				if (killer.getParty() != null)
 				{
 					for (L2PcInstance pl : killer.getParty().getMembers())
@@ -488,9 +493,12 @@ public class Q00350_EnhanceYourWeapon extends Quest
 					levelCrystal(killer, players.get(killer), mob);
 				}
 				break;
+			}
 			case LAST_HIT:
+			{
 				levelCrystal(killer, players.get(killer), mob);
 				break;
+			}
 		}
 	}
 	

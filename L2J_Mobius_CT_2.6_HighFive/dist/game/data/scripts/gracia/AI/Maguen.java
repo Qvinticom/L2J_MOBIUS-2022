@@ -219,14 +219,20 @@ public final class Maguen extends AbstractNpcAI
 				switch (getRandom(3))
 				{
 					case 0:
+					{
 						skillToCast = (getRandom(100) < 70) ? B_BUFF_1 : B_BUFF_2;
 						break;
+					}
 					case 1:
+					{
 						skillToCast = (getRandom(100) < 70) ? C_BUFF_1 : C_BUFF_2;
 						break;
+					}
 					case 2:
+					{
 						skillToCast = (getRandom(100) < 70) ? R_BUFF_1 : R_BUFF_2;
 						break;
+					}
 				}
 				
 				if (skillToCast != null)
@@ -285,14 +291,20 @@ public final class Maguen extends AbstractNpcAI
 						switch (i1)
 						{
 							case 0:
+							{
 								skillToCast = B_PLASMA1;
 								break;
+							}
 							case 1:
+							{
 								skillToCast = B_PLASMA2;
 								break;
+							}
 							case 2:
+							{
 								skillToCast = B_PLASMA3;
 								break;
+							}
 						}
 						break;
 					}
@@ -301,14 +313,20 @@ public final class Maguen extends AbstractNpcAI
 						switch (i2)
 						{
 							case 0:
+							{
 								skillToCast = C_PLASMA1;
 								break;
+							}
 							case 1:
+							{
 								skillToCast = C_PLASMA2;
 								break;
+							}
 							case 2:
+							{
 								skillToCast = C_PLASMA3;
 								break;
+							}
 						}
 						break;
 					}
@@ -317,14 +335,20 @@ public final class Maguen extends AbstractNpcAI
 						switch (i3)
 						{
 							case 0:
+							{
 								skillToCast = R_PLASMA1;
 								break;
+							}
 							case 1:
+							{
 								skillToCast = R_PLASMA2;
 								break;
+							}
 							case 2:
+							{
 								skillToCast = R_PLASMA3;
 								break;
+							}
 						}
 						break;
 					}

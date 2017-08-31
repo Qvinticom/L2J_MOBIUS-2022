@@ -1046,13 +1046,16 @@ public class SeedOfDestruction extends AbstractNpcAI
 		switch (world.getStatus())
 		{
 			case 0:
+			{
 				spawn(world, ENTRANCE_GROUND_SPAWNS_1, true, false);
 				spawn(world, ENTRANCE_GROUND_SPAWNS_2, false, false);
 				spawn(world, ENTRANCE_UPPER_SPAWNS, false, true);
 				closeDoor(SCOUTPASS_DOOR, world.getInstanceId());
 				closeDoor(THRONE_DOOR, world.getInstanceId());
 				break;
+			}
 			case 1:
+			{
 				final ExShowScreenMessage message1 = new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 5000);
 				sendScreenMessage(world, message1);
 				for (int i : ENTRANCE_ROOM_DOORS)
@@ -1062,11 +1065,15 @@ public class SeedOfDestruction extends AbstractNpcAI
 				spawn(world, SQUARE_SPAWNS_STATIC, false, true);
 				spawn(world, SQUARE_SPAWNS_MAIN, true, false);
 				break;
+			}
 			case 2:
 			case 3:
+			{
 				// handled elsewhere
 				return;
+			}
 			case 4:
+			{
 				final ExShowScreenMessage message2 = new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 5000);
 				sendScreenMessage(world, message2);
 				for (int i : SQUARE_DOORS)
@@ -1077,7 +1084,9 @@ public class SeedOfDestruction extends AbstractNpcAI
 				spawn(world, CORRIDOR_SPAWNS_GROUND, false, false);
 				world.killedDevice = 0;
 				break;
+			}
 			case 5:
+			{
 				openDoor(SCOUTPASS_DOOR, world.getInstanceId());
 				spawn(world, SQUARE_SPAWNS_HALF, false, false);
 				spawn(world, SCOUTPASS_SPAWNS_UPPER, false, true);
@@ -1089,19 +1098,28 @@ public class SeedOfDestruction extends AbstractNpcAI
 				spawn(world, FORT_SPAWNS_GROUND, false, false);
 				world.killedDevice = 0;
 				break;
+			}
 			case 6:
+			{
 				runThrone(world);
 				openDoor(THRONE_DOOR, world.getInstanceId());
 				spawn(world, FORT_PORTALS, false, true);
 				break;
+			}
 			case 7:
+			{
 				// handled elsewhere
 				return;
+			}
 			case 8:
+			{
 				break;
+			}
 			case 9:
+			{
 				// instance end
 				break;
+			}
 		}
 		world.incStatus();
 	}

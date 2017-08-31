@@ -73,6 +73,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 		{
 			// Dorian
 			case "31389-02.htm":
+			{
 				final QuestState qs = player.getQuestState(Q00023_LidiasHeart.class.getSimpleName());
 				if ((player.getLevel() >= 65) && (qs != null) && qs.isCompleted())
 				{
@@ -81,18 +82,26 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 					return "31389-03.htm";
 				}
 				break;
+			}
 			case "31389-08.html":
+			{
 				st.set("var", "1");
 				break;
+			}
 			case "31389-13.html":
+			{
 				giveItems(player, SILVER_CROSS_OF_EINHASAD, 1);
 				st.setCond(3, true);
 				st.unset("var");
 				break;
+			}
 			case "31389-18.html":
+			{
 				playSound(player, QuestSound.INTERFACESOUND_CHARSTAT_OPEN);
 				break;
+			}
 			case "31389-19.html":
+			{
 				if (!hasQuestItems(player, BROKEN_SILVER_CROSS_OF_EINHASAD))
 				{
 					return getNoQuestMsg(player);
@@ -100,6 +109,7 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				takeItems(player, BROKEN_SILVER_CROSS_OF_EINHASAD, -1);
 				st.setCond(5, true);
 				break;
+			}
 			case "31389-06.html":
 			case "31389-07.html":
 			case "31389-10.html":
@@ -107,13 +117,18 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 			case "31389-12.html":
 			case "31389-16.html":
 			case "31389-17.html":
+			{
 				break;
+			}
 			// Lidia Maid
 			case "31532-04.html":
+			{
 				giveItems(player, LIDIA_LETTER, 1);
 				st.setCond(6, true);
 				break;
+			}
 			case "31532-07.html":
+			{
 				if (st.isCond(8))
 				{
 					if (!hasQuestItems(player, LIDIA_HAIRPIN, LIDIA_LETTER))
@@ -133,16 +148,23 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 					}
 				}
 				break;
+			}
 			case "31532-10.html":
+			{
 				st.set("var", "2");
 				break;
+			}
 			case "31532-14.html":
+			{
 				st.set("var", "3");
 				break;
+			}
 			case "31532-19.html":
+			{
 				st.unset("var");
 				st.setCond(9, true);
 				break;
+			}
 			case "31532-02.html":
 			case "31532-03.html":
 			case "31532-09.html":
@@ -152,9 +174,12 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 			case "31532-16.html":
 			case "31532-17.html":
 			case "31532-18.html":
+			{
 				break;
+			}
 			// Mysterious Wizard
 			case "31522-03.html":
+			{
 				if (!hasQuestItems(player, SUSPICIOUS_TOTEM_DOLL))
 				{
 					return getNoQuestMsg(player);
@@ -162,18 +187,25 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				takeItems(player, SUSPICIOUS_TOTEM_DOLL, 1);
 				st.set("var", "1");
 				break;
+			}
 			case "31522-08.html":
+			{
 				st.unset("var");
 				st.setCond(11, true);
 				break;
+			}
 			case "31522-17.html":
+			{
 				st.set("var", "1");
 				break;
+			}
 			case "31522-21.html":
+			{
 				giveItems(player, TOTEM, 1);
 				addExpAndSp(player, 242105, 22529); // GoD: Harmony: 6191140 exp and 6118650 sp
 				st.exitQuest(false, true);
 				break;
+			}
 			case "31522-02.html":
 			case "31522-05.html":
 			case "31522-06.html":
@@ -187,9 +219,12 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 			case "31522-16.html":
 			case "31522-19.html":
 			case "31522-20.html":
+			{
 				break;
+			}
 			// Tombstone
 			case "31531-02.html":
+			{
 				if (!hasQuestItems(player, FLOWER_BOUQUET))
 				{
 					return getNoQuestMsg(player);
@@ -197,9 +232,12 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 				takeItems(player, FLOWER_BOUQUET, -1);
 				st.setCond(2, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -226,46 +264,69 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 		switch (npc.getId())
 		{
 			case DORIAN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "31389-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31389-04.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = (st.getInt("var") == 0) ? "31389-05.html" : "31389-09.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "31389-14.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "31389-15.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "31389-20.html";
 								break;
+							}
 							case 6:
 							case 8:
+							{
 								htmltext = "31389-22.html";
 								break;
+							}
 							case 7:
+							{
 								giveItems(player, LIDIA_HAIRPIN, 1);
 								st.setCond(8, true);
 								htmltext = "31389-21.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case MYSTERIOUS_WIZARD:
+			{
 				if (st.isStarted())
 				{
 					if (st.isCond(10))
@@ -286,7 +347,9 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 					}
 				}
 				break;
+			}
 			case TOMBSTONE:
+			{
 				if (st.isStarted())
 				{
 					if (st.isCond(1))
@@ -300,44 +363,65 @@ public class Q00024_InhabitantsOfTheForestOfTheDead extends Quest
 					}
 				}
 				break;
+			}
 			case LIDIA_MAID:
+			{
 				if (st.isStarted())
 				{
 					switch (st.getCond())
 					{
 						case 5:
+						{
 							htmltext = "31532-01.html";
 							break;
+						}
 						case 6:
+						{
 							htmltext = "31532-05.html";
 							break;
+						}
 						case 7:
+						{
 							htmltext = "31532-07a.html";
 							break;
+						}
 						case 8:
+						{
 							switch (st.getInt("var"))
 							{
 								case 0:
+								{
 									htmltext = "31532-07a.html";
 									break;
+								}
 								case 1:
+								{
 									htmltext = "31532-08.html";
 									break;
+								}
 								case 2:
+								{
 									htmltext = "31532-11.html";
 									break;
+								}
 								case 3:
+								{
 									htmltext = "31532-15.html";
 									break;
+								}
 							}
 							break;
+						}
 						case 9:
 						case 10:
+						{
 							htmltext = "31532-20.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

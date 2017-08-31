@@ -84,9 +84,12 @@ public class Q00153_DeliverGoods extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= 2) ? "30041-01.htm" : "30041-00.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (st.isCond(1))
 					{
 						htmltext = "30041-03.html";
@@ -105,9 +108,12 @@ public class Q00153_DeliverGoods extends Quest
 						htmltext = "30041-04.html";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else

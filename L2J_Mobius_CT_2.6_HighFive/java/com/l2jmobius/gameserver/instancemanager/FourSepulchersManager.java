@@ -280,29 +280,37 @@ public final class FourSepulchersManager
 				switch (npcId)
 				{
 					case 31921: // conquerors
+					{
 						spawnDat.setX(181061);
 						spawnDat.setY(-85595);
 						spawnDat.setZ(-7200);
 						spawnDat.setHeading(-32584);
 						break;
+					}
 					case 31922: // emperors
+					{
 						spawnDat.setX(179292);
 						spawnDat.setY(-88981);
 						spawnDat.setZ(-7200);
 						spawnDat.setHeading(-33272);
 						break;
+					}
 					case 31923: // sages
+					{
 						spawnDat.setX(173202);
 						spawnDat.setY(-87004);
 						spawnDat.setZ(-7200);
 						spawnDat.setHeading(-16248);
 						break;
+					}
 					case 31924: // judges
+					{
 						spawnDat.setX(175606);
 						spawnDat.setY(-82853);
 						spawnDat.setZ(-7200);
 						spawnDat.setHeading(-16248);
 						break;
+					}
 				}
 				_managers.add(spawnDat);
 				SpawnTable.getInstance().addNewSpawn(spawnDat, false);

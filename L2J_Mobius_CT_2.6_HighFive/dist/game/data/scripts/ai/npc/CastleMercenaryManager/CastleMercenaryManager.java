@@ -126,13 +126,19 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 				switch (SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE))
 				{
 					case SevenSigns.CABAL_DUSK:
+					{
 						htmltext = "mercmanager-dusk.html";
 						break;
+					}
 					case SevenSigns.CABAL_DAWN:
+					{
 						htmltext = "mercmanager-dawn.html";
 						break;
+					}
 					default:
+					{
 						htmltext = "mercmanager.html";
+					}
 				}
 			}
 		}

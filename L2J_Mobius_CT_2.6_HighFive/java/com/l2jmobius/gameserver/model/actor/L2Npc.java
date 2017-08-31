@@ -987,24 +987,32 @@ public class L2Npc extends L2Character
 			case 31129: // Dawn Festival Guides
 			case 31130: //
 			case 31131: //
+			{
 				filename += "festival/dawn_guide.htm";
 				break;
+			}
 			case 31137: //
 			case 31138: //
 			case 31139: // Dusk Festival Guides
 			case 31140: //
 			case 31141: //
+			{
 				filename += "festival/dusk_guide.htm";
 				break;
+			}
 			case 31092: // Black Marketeer of Mammon
+			{
 				filename += "blkmrkt_1.htm";
 				break;
+			}
 			case 31113: // Merchant of Mammon
+			{
 				if (Config.ALT_STRICT_SEVENSIGNS)
 				{
 					switch (compWinner)
 					{
 						case SevenSigns.CABAL_DAWN:
+						{
 							if ((playerCabal != compWinner) || (playerCabal != sealAvariceOwner))
 							{
 								player.sendPacket(SystemMessageId.ONLY_A_LORD_OF_DAWN_MAY_USE_THIS);
@@ -1012,7 +1020,9 @@ public class L2Npc extends L2Character
 								return;
 							}
 							break;
+						}
 						case SevenSigns.CABAL_DUSK:
+						{
 							if ((playerCabal != compWinner) || (playerCabal != sealAvariceOwner))
 							{
 								player.sendPacket(SystemMessageId.ONLY_A_REVOLUTIONARY_OF_DUSK_MAY_USE_THIS);
@@ -1020,19 +1030,25 @@ public class L2Npc extends L2Character
 								return;
 							}
 							break;
+						}
 						default:
+						{
 							player.sendPacket(SystemMessageId.THE_SSQ_COMPETITION_PERIOD_IS_UNDERWAY);
 							return;
+						}
 					}
 				}
 				filename += "mammmerch_1.htm";
 				break;
+			}
 			case 31126: // Blacksmith of Mammon
+			{
 				if (Config.ALT_STRICT_SEVENSIGNS)
 				{
 					switch (compWinner)
 					{
 						case SevenSigns.CABAL_DAWN:
+						{
 							if ((playerCabal != compWinner) || (playerCabal != sealGnosisOwner))
 							{
 								player.sendPacket(SystemMessageId.ONLY_A_LORD_OF_DAWN_MAY_USE_THIS);
@@ -1040,7 +1056,9 @@ public class L2Npc extends L2Character
 								return;
 							}
 							break;
+						}
 						case SevenSigns.CABAL_DUSK:
+						{
 							if ((playerCabal != compWinner) || (playerCabal != sealGnosisOwner))
 							{
 								player.sendPacket(SystemMessageId.ONLY_A_REVOLUTIONARY_OF_DUSK_MAY_USE_THIS);
@@ -1048,13 +1066,17 @@ public class L2Npc extends L2Character
 								return;
 							}
 							break;
+						}
 						default:
+						{
 							player.sendPacket(SystemMessageId.THE_SSQ_COMPETITION_PERIOD_IS_UNDERWAY);
 							return;
+						}
 					}
 				}
 				filename += "mammblack_1.htm";
 				break;
+			}
 			case 31132:
 			case 31133:
 			case 31134:
@@ -1065,9 +1087,12 @@ public class L2Npc extends L2Character
 			case 31144:
 			case 31145:
 			case 31146:
+			{
 				filename += "festival/festival_witch.htm";
 				break;
+			}
 			case 31688:
+			{
 				if (player.isNoble())
 				{
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";
@@ -1077,11 +1102,13 @@ public class L2Npc extends L2Character
 					filename = (getHtmlPath(npcId, val));
 				}
 				break;
+			}
 			case 31690:
 			case 31769:
 			case 31770:
 			case 31771:
 			case 31772:
+			{
 				if (player.isHero() || player.isNoble())
 				{
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "hero_main.htm";
@@ -1091,7 +1118,9 @@ public class L2Npc extends L2Character
 					filename = (getHtmlPath(npcId, val));
 				}
 				break;
+			}
 			case 36402:
+			{
 				if (player.getOlympiadBuffCount() > 0)
 				{
 					filename = (player.getOlympiadBuffCount() == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
@@ -1101,7 +1130,9 @@ public class L2Npc extends L2Character
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm";
 				}
 				break;
+			}
 			case 30298: // Blacksmith Pinter
+			{
 				if (player.isAcademyMember())
 				{
 					filename = (getHtmlPath(npcId, 1));
@@ -1111,7 +1142,9 @@ public class L2Npc extends L2Character
 					filename = (getHtmlPath(npcId, val));
 				}
 				break;
+			}
 			default:
+			{
 				if ((npcId >= 31865) && (npcId <= 31918))
 				{
 					if (val == 0)
@@ -1131,6 +1164,7 @@ public class L2Npc extends L2Character
 				// Get the text of the selected HTML file in function of the npcId and of the page number
 				filename = (getHtmlPath(npcId, val));
 				break;
+			}
 		}
 		
 		// Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance

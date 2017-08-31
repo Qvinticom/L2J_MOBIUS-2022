@@ -63,12 +63,16 @@ public class Q10277_MutatedKaneusDion extends Quest
 		switch (event)
 		{
 			case "30071-03.html":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30461-03.html":
+			{
 				giveAdena(player, 20000, true);
 				st.exitQuest(false, true);
 				break;
+			}
 		}
 		return event;
 	}
@@ -116,32 +120,48 @@ public class Q10277_MutatedKaneusDion extends Quest
 		switch (npc.getId())
 		{
 			case LUKAS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 27) ? "30071-01.htm" : "30071-00.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_CH) && hasQuestItems(player, TISSUE_SF)) ? "30071-05.html" : "30071-04.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "30071-06.html";
 						break;
+					}
 				}
 				break;
+			}
 			case MIRIEN:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = (hasQuestItems(player, TISSUE_CH) && hasQuestItems(player, TISSUE_SF)) ? "30461-02.html" : "30461-01.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

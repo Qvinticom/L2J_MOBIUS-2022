@@ -148,17 +148,23 @@ public class SoIManager
 		{
 			case 1:
 			case 4:
+			{
 				// EnergySeeds.SoiMouthSpawn();
 				// EnergySeeds.SoiAbyssGaze2Spawn();
 				break;
+			}
 			case 5:
+			{
 				// EnergySeeds.SoiCloseMouthSpawn();
 				// EnergySeeds.SoiAbyssGaze2Spawn();
 				break;
+			}
 			default:
+			{
 				// EnergySeeds.SoiCloseMouthSpawn();
 				// EnergySeeds.SoiAbyssGaze1Spawn();
 				break;
+			}
 		}
 	}
 	

@@ -93,9 +93,12 @@ public class Q00277_GatekeepersOffering extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "30576-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					htmltext = "30576-04.html";
@@ -107,6 +110,7 @@ public class Q00277_GatekeepersOffering extends Quest
 					htmltext = "30576-05.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

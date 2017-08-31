@@ -77,10 +77,15 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 		switch (classloader)
 		{
 			case "ThreadContext":
+			{
 				return Thread.currentThread().getContextClassLoader();
+			}
 			case "System":
+			{
 				return ClassLoader.getSystemClassLoader();
+			}
 			default:
+			{
 				try
 				{
 					return Class.forName(classloader).getClassLoader();
@@ -89,6 +94,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 				{
 					return ClassLoader.getSystemClassLoader();
 				}
+			}
 		}
 	}
 	

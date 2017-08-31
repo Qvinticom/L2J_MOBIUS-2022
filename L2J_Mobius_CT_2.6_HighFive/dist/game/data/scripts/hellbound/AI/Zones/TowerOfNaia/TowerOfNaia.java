@@ -762,14 +762,20 @@ public final class TowerOfNaia extends AbstractNpcAI
 		{
 			case SPORE_FIRE:
 			case SPORE_WATER:
+			{
 				ret = 0;
 				break;
+			}
 			case SPORE_WIND:
 			case SPORE_EARTH:
+			{
 				ret = 1;
 				break;
+			}
 			default:
+			{
 				ret = -1;
+			}
 		}
 		return ret;
 	}

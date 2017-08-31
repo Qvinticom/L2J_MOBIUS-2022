@@ -319,15 +319,25 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		switch (room)
 		{
 			case 0:
+			{
 				return ROOM_1_MOBS;
+			}
 			case 1:
+			{
 				return ROOM_2_MOBS;
+			}
 			case 2:
+			{
 				return ROOM_3_MOBS;
+			}
 			case 3:
+			{
 				return ROOM_4_MOBS;
+			}
 			case 4:
+			{
 				return ROOM_5_MOBS;
+			}
 		}
 		return new int[][] {};
 	}

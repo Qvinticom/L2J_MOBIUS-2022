@@ -82,7 +82,9 @@ public final class Q10746_SeeTheWorld extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -100,8 +102,10 @@ public final class Q10746_SeeTheWorld extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "33933-01.htm";
 						break;
+					}
 					case State.STARTED:
 					{
 						if (qs.isCond(1))
@@ -111,8 +115,10 @@ public final class Q10746_SeeTheWorld extends Quest
 						break;
 					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
 			}

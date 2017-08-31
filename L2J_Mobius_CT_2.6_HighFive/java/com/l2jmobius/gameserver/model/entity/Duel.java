@@ -795,6 +795,7 @@ public class Duel
 		{
 			case Team1Win:
 			case Team2Surrender:
+			{
 				restorePlayerConditions(false);
 				// send SystemMessage
 				if (_partyDuel)
@@ -810,8 +811,10 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 			case Team1Surrender:
 			case Team2Win:
+			{
 				restorePlayerConditions(false);
 				// send SystemMessage
 				if (_partyDuel)
@@ -827,7 +830,9 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 			case Canceled:
+			{
 				stopFighting();
 				// Don't restore hp, mp, cp
 				restorePlayerConditions(true);
@@ -838,7 +843,9 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 			case Timeout:
+			{
 				stopFighting();
 				// hp,mp,cp seem to be restored in a timeout too...
 				restorePlayerConditions(false);
@@ -848,6 +855,7 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 		}
 		
 		final ExDuelEnd duelEnd = _partyDuel ? ExDuelEnd.PARTY_DUEL : ExDuelEnd.PLAYER_DUEL;

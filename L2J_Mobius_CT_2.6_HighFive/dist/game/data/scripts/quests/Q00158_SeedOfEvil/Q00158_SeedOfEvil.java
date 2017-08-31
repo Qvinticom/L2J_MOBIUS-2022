@@ -96,9 +96,12 @@ public class Q00158_SeedOfEvil extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30031-02.htm" : "30031-01.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					htmltext = "30031-04.html";
@@ -112,9 +115,12 @@ public class Q00158_SeedOfEvil extends Quest
 					htmltext = "30031-05.html";
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

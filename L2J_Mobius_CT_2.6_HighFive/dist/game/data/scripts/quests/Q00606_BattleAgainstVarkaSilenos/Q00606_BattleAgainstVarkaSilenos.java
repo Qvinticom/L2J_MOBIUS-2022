@@ -83,11 +83,16 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 		switch (event)
 		{
 			case "31370-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31370-06.html":
+			{
 				break;
+			}
 			case "31370-07.html":
+			{
 				if (getQuestItemsCount(player, MANE) < MANE_COUNT)
 				{
 					return "31370-08.html";
@@ -95,12 +100,17 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 				takeItems(player, MANE, MANE_COUNT);
 				giveItems(player, HORN, 20);
 				break;
+			}
 			case "31370-09.html":
+			{
 				st.exitQuest(true, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -126,11 +136,15 @@ public class Q00606_BattleAgainstVarkaSilenos extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "31370-01.htm" : "31370-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (hasQuestItems(player, MANE)) ? "31370-04.html" : "31370-05.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

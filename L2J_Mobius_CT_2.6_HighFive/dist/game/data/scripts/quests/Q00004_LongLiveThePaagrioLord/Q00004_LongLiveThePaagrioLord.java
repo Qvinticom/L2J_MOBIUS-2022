@@ -71,13 +71,19 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		switch (event)
 		{
 			case "30578-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30578-05.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -90,12 +96,16 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		switch (npc.getId())
 		{
 			case NAKUSIN:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getRace() != Race.ORC) ? "30578-00.htm" : (player.getLevel() >= MIN_LEVEL) ? "30578-02.htm" : "30578-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "30578-04.html";
@@ -111,29 +121,45 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 							htmltext = "30578-06.html";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case VARKEES:
+			{
 				htmltext = giveItem(player, st, npc.getId(), HONEY_KHANDAR, getRegisteredItemIds());
 				break;
+			}
 			case URUTU:
+			{
 				htmltext = giveItem(player, st, npc.getId(), DEEP_SEA_ORB, getRegisteredItemIds());
 				break;
+			}
 			case HESTUI:
+			{
 				htmltext = giveItem(player, st, npc.getId(), BEAR_FUR_CLOAK, getRegisteredItemIds());
 				break;
+			}
 			case KUNAI:
+			{
 				htmltext = giveItem(player, st, npc.getId(), SPIDER_DUST, getRegisteredItemIds());
 				break;
+			}
 			case USKA:
+			{
 				htmltext = giveItem(player, st, npc.getId(), ANCESTOR_SKULL, getRegisteredItemIds());
 				break;
+			}
 			case GROOKIN:
+			{
 				htmltext = giveItem(player, st, npc.getId(), BLOODY_AXE, getRegisteredItemIds());
 				break;
+			}
 		}
 		return htmltext;
 	}

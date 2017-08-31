@@ -256,14 +256,20 @@ public final class DragonValley extends AbstractNpcAI
 					switch (moraleBoostLv)
 					{
 						case 1:
+						{
 							MORALE_BOOST1.getSkill().applyEffects(member, member);
 							break;
+						}
 						case 2:
+						{
 							MORALE_BOOST2.getSkill().applyEffects(member, member);
 							break;
+						}
 						case 3:
+						{
 							MORALE_BOOST3.getSkill().applyEffects(member, member);
 							break;
+						}
 					}
 				}
 			}

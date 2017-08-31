@@ -59,15 +59,20 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 		switch (event)
 		{
 			case "30362-04.htm":
+			{
 				st.startQuest();
 				giveItems(player, ANDELLRIAS_LETTER, 1);
 				break;
+			}
 			case "30371-03.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
-			
+			}
 		}
 		return htmltext;
 	}
@@ -81,12 +86,16 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 		switch (npc.getId())
 		{
 			case ANDELLIA:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getRace() == Race.ELF) ? (player.getLevel() >= MIN_LEVEL) ? "30362-03.htm" : "30362-02.htm" : "30362-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "30362-05.html";
@@ -99,12 +108,17 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 							htmltext = "30362-06.html";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case THALIA:
+			{
 				if (st.isStarted())
 				{
 					if (st.isCond(1) && hasQuestItems(player, ANDELLRIAS_LETTER))
@@ -120,6 +134,7 @@ public class Q00161_FruitOfTheMotherTree extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

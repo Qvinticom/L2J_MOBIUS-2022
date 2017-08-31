@@ -76,14 +76,18 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 				switch (st.getCond())
 				{
 					case 1: // take the item and give the heart
+					{
 						takeItems(player, GREEN_TOTEM, 1);
+					}
 					case 2:
+					{
 						if (!hasQuestItems(player, ASHUTAR_HEART))
 						{
 							giveItems(player, ASHUTAR_HEART, 1);
 						}
 						st.setCond(3, true);
 						break;
+					}
 				}
 			}
 		}
@@ -104,10 +108,13 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 			switch (event)
 			{
 				case "31372-02.html":
+				{
 					st.startQuest();
 					htmltext = event;
 					break;
+				}
 				case "give_heart":
+				{
 					if (hasQuestItems(player, ASHUTAR_HEART))
 					{
 						addExpAndSp(player, 10000, 0);
@@ -119,9 +126,12 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 						htmltext = "31372-07.html";
 					}
 					break;
+				}
 				case "spawn_totem":
+				{
 					htmltext = (hasQuestItems(player, GREEN_TOTEM)) ? spawnAshutar(npc, st) : "31560-04.html";
 					break;
+				}
 			}
 		}
 		else
@@ -162,33 +172,47 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 		switch (npc.getId())
 		{
 			case ASEFA:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? (hasQuestItems(player, GREEN_TOTEM)) ? "31372-01.htm" : "31372-00a.html" : "31372-00b.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (st.isCond(1)) ? "31372-03.html" : (hasQuestItems(player, ASHUTAR_HEART)) ? "31372-04.html" : "31372-05.html";
 						break;
+					}
 				}
 				break;
+			}
 			case VARKA_TOTEM:
+			{
 				if (st.isStarted())
 				{
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "31560-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = spawnAshutar(npc, st);
 							break;
+						}
 						case 3:
+						{
 							htmltext = "31560-05.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

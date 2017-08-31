@@ -144,9 +144,12 @@ public class Q00250_WatchWhatYouEat extends Quest
 			switch (st.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= 82) ? "32743-01.htm" : "32743-00.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (st.isCond(1))
 					{
 						htmltext = "32743-04.htm";
@@ -167,9 +170,12 @@ public class Q00250_WatchWhatYouEat extends Quest
 						}
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = "32743-done.htm";
 					break;
+				}
 			}
 		}
 		return htmltext;

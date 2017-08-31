@@ -73,9 +73,12 @@ public class Q00607_ProveYourCourageKetra extends Quest
 		switch (event)
 		{
 			case "31370-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31370-07.html":
+			{
 				if (hasQuestItems(player, SHADITH_HEAD) && st.isCond(2))
 				{
 					giveItems(player, VALOR_TOTEM, 1);
@@ -87,9 +90,12 @@ public class Q00607_ProveYourCourageKetra extends Quest
 					htmltext = getNoQuestMsg(player);
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -110,11 +116,15 @@ public class Q00607_ProveYourCourageKetra extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? (hasQuestItems(player, KETRA_ALLIANCE_THREE)) ? "31370-01.htm" : "31370-02.htm" : "31370-03.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(2) && hasQuestItems(player, SHADITH_HEAD)) ? "31370-05.html" : "31370-06.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

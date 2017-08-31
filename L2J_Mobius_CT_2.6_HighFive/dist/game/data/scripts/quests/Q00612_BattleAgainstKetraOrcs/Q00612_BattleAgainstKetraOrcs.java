@@ -83,11 +83,16 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 		switch (event)
 		{
 			case "31377-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31377-06.html":
+			{
 				break;
+			}
 			case "31377-07.html":
+			{
 				if (getQuestItemsCount(player, MOLAR) < MOLAR_COUNT)
 				{
 					return "31377-08.html";
@@ -95,12 +100,17 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 				takeItems(player, MOLAR, MOLAR_COUNT);
 				giveItems(player, SEED, 20);
 				break;
+			}
 			case "31377-09.html":
+			{
 				st.exitQuest(true, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -126,11 +136,15 @@ public class Q00612_BattleAgainstKetraOrcs extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "31377-01.htm" : "31377-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (hasQuestItems(player, MOLAR)) ? "31377-04.html" : "31377-05.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -63,6 +63,7 @@ public class L2DawnPriestInstance extends L2SignsPriestInstance
 		switch (playerCabal)
 		{
 			case SevenSigns.CABAL_DAWN:
+			{
 				if (isCompResultsPeriod)
 				{
 					filename += "dawn_priest_5.htm";
@@ -98,7 +99,9 @@ public class L2DawnPriestInstance extends L2SignsPriestInstance
 					filename += "dawn_priest_1b.htm";
 				}
 				break;
+			}
 			case SevenSigns.CABAL_DUSK:
+			{
 				if (isSealValidationPeriod)
 				{
 					filename += "dawn_priest_3a.htm";
@@ -108,7 +111,9 @@ public class L2DawnPriestInstance extends L2SignsPriestInstance
 					filename += "dawn_priest_3b.htm";
 				}
 				break;
+			}
 			default:
+			{
 				if (isCompResultsPeriod)
 				{
 					filename += "dawn_priest_5.htm";
@@ -137,6 +142,7 @@ public class L2DawnPriestInstance extends L2SignsPriestInstance
 					filename += "dawn_priest_1a.htm";
 				}
 				break;
+			}
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());

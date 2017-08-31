@@ -99,45 +99,71 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket
 		switch (itemtype)
 		{
 			case WEAPON:
+			{
 				_objects = createWeaponList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case ARMOR:
+			{
 				_objects = createArmorList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case ETCITEM:
+			{
 				_objects = createEtcItemList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case MATERIAL:
+			{
 				_objects = createMatList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case RECIPE:
+			{
 				_objects = createRecipeList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case AMULETT:
+			{
 				_objects = createAmulettList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case SPELLBOOK:
+			{
 				_objects = createSpellbookList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case CONSUMABLE:
+			{
 				_objects = createConsumableList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case SHOT:
+			{
 				_objects = createShotList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case SCROLL:
+			{
 				_objects = createScrollList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case SEED:
+			{
 				_objects = createSeedList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case OTHER:
+			{
 				_objects = createOtherList(player.getActiveWarehouse().getItems());
 				break;
+			}
 			case ALL:
 			default:
+			{
 				_objects = createAllList(player.getActiveWarehouse().getItems());
 				break;
+			}
 		}
 		
 		try
@@ -146,36 +172,46 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket
 			{
 				case A2Z:
 				case Z2A:
+				{
 					Collections.sort(_objects, new WarehouseItemNameComparator(sortorder));
 					break;
+				}
 				case GRADE:
+				{
 					if ((itemtype == WarehouseListType.ARMOR) || (itemtype == WarehouseListType.WEAPON))
 					{
 						Collections.sort(_objects, new WarehouseItemNameComparator(A2Z));
 						Collections.sort(_objects, new WarehouseItemGradeComparator(A2Z));
 					}
 					break;
+				}
 				case LEVEL:
+				{
 					if (itemtype == WarehouseListType.RECIPE)
 					{
 						Collections.sort(_objects, new WarehouseItemNameComparator(A2Z));
 						Collections.sort(_objects, new WarehouseItemRecipeComparator(A2Z));
 					}
 					break;
+				}
 				case TYPE:
+				{
 					if (itemtype == WarehouseListType.MATERIAL)
 					{
 						Collections.sort(_objects, new WarehouseItemNameComparator(A2Z));
 						Collections.sort(_objects, new WarehouseItemTypeComparator(A2Z));
 					}
 					break;
+				}
 				case WEAR:
+				{
 					if (itemtype == WarehouseListType.ARMOR)
 					{
 						Collections.sort(_objects, new WarehouseItemNameComparator(A2Z));
 						Collections.sort(_objects, new WarehouseItemBodypartComparator(A2Z));
 					}
 					break;
+				}
 			}
 		}
 		catch (Exception e)

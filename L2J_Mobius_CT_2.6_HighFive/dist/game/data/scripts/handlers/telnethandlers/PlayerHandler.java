@@ -123,52 +123,84 @@ public class PlayerHandler implements ITelnetHandler
 				switch (itemType)
 				{
 					case 1:
+					{
 						itemType = Inventory.PAPERDOLL_HEAD;
 						break;
+					}
 					case 2:
+					{
 						itemType = Inventory.PAPERDOLL_CHEST;
 						break;
+					}
 					case 3:
+					{
 						itemType = Inventory.PAPERDOLL_GLOVES;
 						break;
+					}
 					case 4:
+					{
 						itemType = Inventory.PAPERDOLL_FEET;
 						break;
+					}
 					case 5:
+					{
 						itemType = Inventory.PAPERDOLL_LEGS;
 						break;
+					}
 					case 6:
+					{
 						itemType = Inventory.PAPERDOLL_RHAND;
 						break;
+					}
 					case 7:
+					{
 						itemType = Inventory.PAPERDOLL_LHAND;
 						break;
+					}
 					case 8:
+					{
 						itemType = Inventory.PAPERDOLL_LEAR;
 						break;
+					}
 					case 9:
+					{
 						itemType = Inventory.PAPERDOLL_REAR;
 						break;
+					}
 					case 10:
+					{
 						itemType = Inventory.PAPERDOLL_LFINGER;
 						break;
+					}
 					case 11:
+					{
 						itemType = Inventory.PAPERDOLL_RFINGER;
 						break;
+					}
 					case 12:
+					{
 						itemType = Inventory.PAPERDOLL_NECK;
 						break;
+					}
 					case 13:
+					{
 						itemType = Inventory.PAPERDOLL_UNDER;
 						break;
+					}
 					case 14:
+					{
 						itemType = Inventory.PAPERDOLL_CLOAK;
 						break;
+					}
 					case 15:
+					{
 						itemType = Inventory.PAPERDOLL_BELT;
 						break;
+					}
 					default:
+					{
 						itemType = 0;
+					}
 				}
 				
 				if (enchant > 65535)

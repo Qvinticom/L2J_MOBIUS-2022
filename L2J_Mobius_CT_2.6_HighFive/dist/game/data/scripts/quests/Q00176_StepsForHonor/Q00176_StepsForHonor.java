@@ -64,9 +64,12 @@ public class Q00176_StepsForHonor extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "36479-03.html" : "36479-02.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (TerritoryWarManager.getInstance().isTWInProgress())
 				{
 					return "36479-05.html";
@@ -74,39 +77,58 @@ public class Q00176_StepsForHonor extends Quest
 				switch (st.getCond())
 				{
 					case 1:
+					{
 						htmltext = "36479-06.html";
 						break;
+					}
 					case 2:
+					{
 						st.setCond(3, true);
 						htmltext = "36479-07.html";
 						break;
+					}
 					case 3:
+					{
 						htmltext = "36479-08.html";
 						break;
+					}
 					case 4:
+					{
 						st.setCond(5, true);
 						htmltext = "36479-09.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "36479-10.html";
 						break;
+					}
 					case 6:
+					{
 						st.setCond(7, true);
 						htmltext = "36479-11.html";
 						break;
+					}
 					case 7:
+					{
 						htmltext = "36479-12.html";
 						break;
+					}
 					case 8:
+					{
 						giveItems(player, CLOAK, 1);
 						st.exitQuest(false, true);
 						htmltext = "36479-13.html";
 						break;
+					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = "36479-01.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

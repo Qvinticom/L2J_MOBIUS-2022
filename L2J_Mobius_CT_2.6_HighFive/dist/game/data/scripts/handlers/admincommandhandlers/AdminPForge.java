@@ -132,34 +132,50 @@ public final class AdminPForge implements IAdminCommandHandler
 				case 'B':
 				case 'x':
 				case 'X':
+				{
 					// array
 					break;
+				}
 				case 'c':
 				case 'C':
+				{
 					// byte
 					break;
+				}
 				case 'h':
 				case 'H':
+				{
 					// word
 					break;
+				}
 				case 'd':
 				case 'D':
+				{
 					// dword
 					break;
+				}
 				case 'q':
 				case 'Q':
+				{
 					// qword
 					break;
+				}
 				case 'f':
 				case 'F':
+				{
 					// double
 					break;
+				}
 				case 's':
 				case 'S':
+				{
 					// string
 					break;
+				}
 				default:
+				{
 					return false;
+				}
 			}
 		}
 		
@@ -173,7 +189,9 @@ public final class AdminPForge implements IAdminCommandHandler
 			case "sc":
 			case "sb":
 			case "cs":
+			{
 				return true;
+			}
 		}
 		
 		return false;
@@ -405,9 +423,12 @@ public final class AdminPForge implements IAdminCommandHandler
 						switch (value)
 						{
 							case "$oid":
+							{
 								value = String.valueOf(activeChar.getObjectId());
 								break;
+							}
 							case "$boid":
+							{
 								boat = activeChar.getBoat();
 								if (boat != null)
 								{
@@ -418,28 +439,44 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$title":
+							{
 								value = activeChar.getTitle();
 								break;
+							}
 							case "$name":
+							{
 								value = activeChar.getName();
 								break;
+							}
 							case "$x":
+							{
 								value = String.valueOf(activeChar.getX());
 								break;
+							}
 							case "$y":
+							{
 								value = String.valueOf(activeChar.getY());
 								break;
+							}
 							case "$z":
+							{
 								value = String.valueOf(activeChar.getZ());
 								break;
+							}
 							case "$heading":
+							{
 								value = String.valueOf(activeChar.getHeading());
 								break;
+							}
 							case "$toid":
+							{
 								value = String.valueOf(activeChar.getTargetId());
 								break;
+							}
 							case "$tboid":
+							{
 								target = activeChar.getTarget();
 								if ((target != null) && (target instanceof L2Playable))
 								{
@@ -454,7 +491,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									}
 								}
 								break;
+							}
 							case "$ttitle":
+							{
 								target = activeChar.getTarget();
 								if ((target != null) && (target instanceof L2Character))
 								{
@@ -465,7 +504,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "";
 								}
 								break;
+							}
 							case "$tname":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -476,7 +517,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "";
 								}
 								break;
+							}
 							case "$tx":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -487,7 +530,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$ty":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -498,7 +543,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$tz":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -509,7 +556,9 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 							case "$theading":
+							{
 								target = activeChar.getTarget();
 								if (target != null)
 								{
@@ -520,6 +569,7 @@ public final class AdminPForge implements IAdminCommandHandler
 									value = "0";
 								}
 								break;
+							}
 						}
 						
 						if (method.equals("sc") || method.equals("sb"))

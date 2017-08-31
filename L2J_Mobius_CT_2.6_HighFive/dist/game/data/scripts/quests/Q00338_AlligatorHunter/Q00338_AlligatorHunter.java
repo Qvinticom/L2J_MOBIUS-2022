@@ -65,9 +65,12 @@ public class Q00338_AlligatorHunter extends Quest
 		switch (event)
 		{
 			case "30892-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30892-06.html":
+			{
 				if (!hasQuestItems(player, ALLIGATOR_LEATHER))
 				{
 					return "30892-05.html";
@@ -77,16 +80,23 @@ public class Q00338_AlligatorHunter extends Quest
 				giveAdena(player, amount, true);
 				takeItems(player, ALLIGATOR_LEATHER, -1);
 				break;
+			}
 			case "30892-10.html":
+			{
 				st.exitQuest(true, true);
 				break;
+			}
 			case "30892-07.html":
 			case "30892-08.html":
 			case "30892-09.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -116,11 +126,15 @@ public class Q00338_AlligatorHunter extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "30892-02.htm" : "30892-01.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = "30892-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

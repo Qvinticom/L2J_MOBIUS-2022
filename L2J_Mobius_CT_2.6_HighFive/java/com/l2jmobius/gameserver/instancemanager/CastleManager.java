@@ -200,14 +200,20 @@ public final class CastleManager implements InstanceListManager
 		switch (sealStrifeOwner)
 		{
 			case SevenSigns.CABAL_DUSK:
+			{
 				maxTax = 5;
 				break;
+			}
 			case SevenSigns.CABAL_DAWN:
+			{
 				maxTax = 25;
 				break;
+			}
 			default: // no owner
+			{
 				maxTax = 15;
 				break;
+			}
 		}
 		for (Castle castle : _castles)
 		{

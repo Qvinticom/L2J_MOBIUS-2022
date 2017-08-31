@@ -60,9 +60,12 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 		switch (event)
 		{
 			case "31570-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31570-05.htm":
+			{
 				if (st.isCond(1) && hasQuestItems(player, BLUE_TREASURE_BOX))
 				{
 					htmltext = "31570-06.htm";
@@ -71,7 +74,9 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 					takeItems(player, BLUE_TREASURE_BOX, -1);
 				}
 				break;
+			}
 			case "31434-02.htm":
+			{
 				if (st.isCond(2) && hasQuestItems(player, STRANGE_BLUESPRINT))
 				{
 					giveItems(player, BLACK_PEARL_RING, 1);
@@ -79,7 +84,7 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 					htmltext = "31434-01.htm";
 				}
 				break;
-			
+			}
 		}
 		return htmltext;
 	}
@@ -93,9 +98,12 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				final QuestState qs = player.getQuestState(Q00050_LanoscosSpecialBait.class.getSimpleName());
 				if (npc.getId() == LANOSCO)
 				{
@@ -106,10 +114,13 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 					}
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npc.getId())
 				{
 					case LANOSCO:
+					{
 						if (st.isCond(1))
 						{
 							if (hasQuestItems(player, BLUE_TREASURE_BOX))
@@ -126,13 +137,17 @@ public class Q00027_ChestCaughtWithABaitOfWind extends Quest
 							htmltext = "31570-07.htm";
 						}
 						break;
+					}
 					case SHALING:
+					{
 						if (st.isCond(2))
 						{
 							htmltext = "31434-00.htm";
 						}
 						break;
+					}
 				}
+			}
 		}
 		return htmltext;
 	}

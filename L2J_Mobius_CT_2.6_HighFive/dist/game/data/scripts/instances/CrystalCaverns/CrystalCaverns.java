@@ -948,10 +948,14 @@ public final class CrystalCaverns extends AbstractInstance
 			case 2360:
 			case 2369:
 			case 5146:
+			{
 				doReturn = false;
 				break;
+			}
 			default:
+			{
 				doReturn = true;
+			}
 		}
 		if (doReturn)
 		{
@@ -1668,16 +1672,23 @@ public final class CrystalCaverns extends AbstractInstance
 					switch (world.getStatus())
 					{
 						case 22:
+						{
 							closeDoor(DOOR6, npc.getInstanceId());
 							oracleOrder = ordreOracle1;
 							break;
+						}
 						case 23:
+						{
 							oracleOrder = ordreOracle2;
 							break;
+						}
 						case 24:
+						{
 							oracleOrder = ordreOracle3;
 							break;
+						}
 						case 25:
+						{
 							world.setStatus(26);
 							final L2Party party = player.getParty();
 							if (party != null)
@@ -1694,9 +1705,12 @@ public final class CrystalCaverns extends AbstractInstance
 							final L2Npc kechi = addSpawn(KECHI, 154069, 149525, -12158, 51165, false, 0, false, world.getInstanceId());
 							startQuestTimer("checkKechiAttack", 1000, kechi, null);
 							return "";
+						}
 						default:
+						{
 							_log.warning("CrystalCavern-SteamCorridor: status " + world.getStatus() + " error. OracleOrder not found in " + world.getInstanceId());
 							return "";
+						}
 					}
 					runSteamOracles(world, oracleOrder);
 				}
@@ -1778,6 +1792,7 @@ public final class CrystalCaverns extends AbstractInstance
 				switch (npc.getId())
 				{
 					case 32275:
+					{
 						if (world.getStatus() == 22)
 						{
 							runSteamRooms(world, STEAM2_SPAWNS, 23);
@@ -1805,7 +1820,9 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						startQuestTimer("Timer31", 600000, npc, null);
 						break;
+					}
 					case 32276:
+					{
 						if (world.getStatus() == 23)
 						{
 							runSteamRooms(world, STEAM3_SPAWNS, 24);
@@ -1833,7 +1850,9 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						startQuestTimer("Timer41", 1200000, npc, null);
 						break;
+					}
 					case 32277:
+					{
 						if (world.getStatus() == 24)
 						{
 							runSteamRooms(world, STEAM4_SPAWNS, 25);
@@ -1861,9 +1880,12 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						startQuestTimer("Timer51", 900000, npc, null);
 						break;
+					}
 					default:
+					{
 						// something is wrong
 						doTeleport = false;
+					}
 				}
 				if (doTeleport && (loc != null))
 				{
@@ -1951,12 +1973,14 @@ public final class CrystalCaverns extends AbstractInstance
 			switch (action)
 			{
 				case TRAP_DISARMED:
+				{
 					if (trap.getId() == DOOR_OPENING_TRAP[0])
 					{
 						openDoor(24220001, world.getInstanceId());
 						runEmeraldRooms(world, ROOM1_SPAWNS, 1);
 					}
 					break;
+				}
 			}
 		}
 		return null;
@@ -1978,19 +2002,27 @@ public final class CrystalCaverns extends AbstractInstance
 					switch (zone.getId())
 					{
 						case 20105:
+						{
 							spawns = ROOM2_SPAWNS;
 							room = 2;
 							break;
+						}
 						case 20106:
+						{
 							spawns = ROOM3_SPAWNS;
 							room = 3;
 							break;
+						}
 						case 20107:
+						{
 							spawns = ROOM4_SPAWNS;
 							room = 4;
 							break;
+						}
 						default:
+						{
 							return super.onEnterZone(character, zone);
+						}
 					}
 					for (L2DoorInstance door : InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoors())
 					{
@@ -2036,16 +2068,24 @@ public final class CrystalCaverns extends AbstractInstance
 					switch (zone.getId())
 					{
 						case 20105:
+						{
 							doorId = 24220002;
 							break;
+						}
 						case 20106:
+						{
 							doorId = 24220003;
 							break;
+						}
 						case 20107:
+						{
 							doorId = 24220004;
 							break;
+						}
 						default:
+						{
 							return super.onExitZone(character, zone);
+						}
 					}
 					for (L2DoorInstance door : InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoors())
 					{

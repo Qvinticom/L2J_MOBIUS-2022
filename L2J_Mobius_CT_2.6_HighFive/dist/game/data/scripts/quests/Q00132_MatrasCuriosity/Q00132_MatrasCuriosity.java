@@ -97,13 +97,13 @@ public final class Q00132_MatrasCuriosity extends Quest
 		switch (npc.getId())
 		{
 			case DEMON_PRINCE:
+			{
 				pl = getRandomPartyMember(player, "rewarded_prince", "1");
 				if (pl != null)
 				{
 					final QuestState st = getQuestState(pl, false);
 					giveItems(player, BLUEPRINT_PRINCE, 1);
 					st.set("rewarded_prince", "2");
-					
 					if (hasQuestItems(player, BLUEPRINT_RANKU))
 					{
 						st.setCond(2, true);
@@ -114,14 +114,15 @@ public final class Q00132_MatrasCuriosity extends Quest
 					}
 				}
 				break;
+			}
 			case RANKU:
+			{
 				pl = getRandomPartyMember(player, "rewarded_ranku", "1");
 				if (pl != null)
 				{
 					final QuestState st = getQuestState(pl, false);
 					giveItems(player, BLUEPRINT_RANKU, 1);
 					st.set("rewarded_ranku", "2");
-					
 					if (hasQuestItems(player, BLUEPRINT_PRINCE))
 					{
 						st.setCond(2, true);
@@ -132,6 +133,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return null;
 	}
@@ -156,6 +158,7 @@ public final class Q00132_MatrasCuriosity extends Quest
 			{
 				case 1:
 				case 2:
+				{
 					if (hasQuestItems(player, BLUEPRINT_RANKU) && hasQuestItems(player, BLUEPRINT_PRINCE))
 					{
 						takeItems(player, BLUEPRINT_RANKU, -1);
@@ -167,10 +170,12 @@ public final class Q00132_MatrasCuriosity extends Quest
 					{
 						htmltext = "32245-04.htm";
 					}
-					
 					break;
+				}
 				case 3:
+				{
 					htmltext = "32245-06.htm";
+				}
 			}
 		}
 		return htmltext;

@@ -821,13 +821,19 @@ public final class TerritoryWarManager implements Siegable
 					case 0: // town npcs
 					case 1: // fortress npcs
 					case 2: // castle npcs
+					{
 						_territoryList.get(castleId).getSpawnList().add(new TerritoryNPCSpawn(castleId, loc, npcId, spawnType, null));
 						break;
+					}
 					case 3: // ward spawns
+					{
 						_territoryList.get(castleId).addWardSpawnPlace(loc);
 						break;
+					}
 					default:
+					{
 						_log.warning(getClass().getSimpleName() + ": Unknown npc type for " + rs.getInt("id"));
+					}
 				}
 			}
 		}

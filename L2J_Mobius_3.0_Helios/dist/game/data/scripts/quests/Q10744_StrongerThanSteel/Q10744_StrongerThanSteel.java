@@ -67,7 +67,9 @@ public final class Q10744_StrongerThanSteel extends Quest
 		{
 			case "33953-02.htm":
 			case "33954-02.html":
+			{
 				break;
+			}
 			case "33953-03.htm":
 			{
 				qs.startQuest();
@@ -82,7 +84,9 @@ public final class Q10744_StrongerThanSteel extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

@@ -161,10 +161,14 @@ public final class SpawnTable implements IXmlReader
 									{
 										case "disableRandomAnimation":
 										case "disableRandomWalk":
+										{
 											val = Boolean.parseBoolean(c.getTextContent()) ? 1 : 0;
 											break;
+										}
 										default:
+										{
 											val = Integer.parseInt(c.getTextContent());
+										}
 									}
 									map.put(c.getNodeName(), val);
 								}
@@ -324,16 +328,22 @@ public final class SpawnTable implements IXmlReader
 			switch (spawnInfo.getInt("periodOfDay", 0))
 			{
 				case 0: // default
+				{
 					ret += spawnDat.init();
 					break;
+				}
 				case 1: // Day
+				{
 					DayNightSpawnManager.getInstance().addDayCreature(spawnDat);
 					ret = 1;
 					break;
+				}
 				case 2: // Night
+				{
 					DayNightSpawnManager.getInstance().addNightCreature(spawnDat);
 					ret = 1;
 					break;
+				}
 			}
 			
 			addSpawn(spawnDat);

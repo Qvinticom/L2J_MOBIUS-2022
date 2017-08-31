@@ -139,9 +139,12 @@ public class Q00461_RumbleInTheBase extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = ((player.getLevel() >= 82) && (prev != null) && prev.isCompleted()) ? "30200-01.htm" : "30200-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					htmltext = "30200-06.html";
@@ -153,7 +156,9 @@ public class Q00461_RumbleInTheBase extends Quest
 					htmltext = "30200-07.html";
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				if (!st.isNowAvailable())
 				{
 					htmltext = "30200-03.htm";
@@ -164,6 +169,7 @@ public class Q00461_RumbleInTheBase extends Quest
 					htmltext = ((player.getLevel() >= 82) && (prev != null) && (prev.getState() == State.COMPLETED)) ? "30200-01.htm" : "30200-02.htm";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

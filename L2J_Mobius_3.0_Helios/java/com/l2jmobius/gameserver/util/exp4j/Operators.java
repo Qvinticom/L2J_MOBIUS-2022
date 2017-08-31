@@ -109,27 +109,41 @@ public abstract class Operators
 		switch (symbol)
 		{
 			case '+':
+			{
 				if (numArguments != 1)
 				{
 					return builtinOperators[INDEX_ADDITION];
 				}
 				return builtinOperators[INDEX_UNARYPLUS];
+			}
 			case '-':
+			{
 				if (numArguments != 1)
 				{
 					return builtinOperators[INDEX_SUBTRACTION];
 				}
 				return builtinOperators[INDEX_UNARYMINUS];
+			}
 			case '*':
+			{
 				return builtinOperators[INDEX_MUTLIPLICATION];
+			}
 			case '/':
+			{
 				return builtinOperators[INDEX_DIVISION];
+			}
 			case '^':
+			{
 				return builtinOperators[INDEX_POWER];
+			}
 			case '%':
+			{
 				return builtinOperators[INDEX_MODULO];
+			}
 			default:
+			{
 				return null;
+			}
 		}
 	}
 }

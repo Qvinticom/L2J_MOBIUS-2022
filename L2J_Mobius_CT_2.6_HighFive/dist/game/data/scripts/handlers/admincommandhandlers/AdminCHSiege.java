@@ -305,14 +305,20 @@ public final class AdminCHSiege implements IAdminCommandHandler
 			switch (hall.getSiegeStatus())
 			{
 				case REGISTERING:
+				{
 					siegable.prepareOwner();
 					break;
+				}
 				case WAITING_BATTLE:
+				{
 					siegable.startSiege();
 					break;
+				}
 				case RUNNING:
+				{
 					siegable.endSiege();
 					break;
+				}
 			}
 		}
 		

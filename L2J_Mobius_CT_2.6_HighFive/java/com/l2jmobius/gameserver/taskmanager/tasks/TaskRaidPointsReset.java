@@ -57,36 +57,57 @@ public class TaskRaidPointsReset extends Task
 						switch (entry.getValue())
 						{
 							case 1:
+							{
 								reputation = Config.RAID_RANKING_1ST;
 								break;
+							}
 							case 2:
+							{
 								reputation = Config.RAID_RANKING_2ND;
 								break;
+							}
 							case 3:
+							{
 								reputation = Config.RAID_RANKING_3RD;
 								break;
+							}
 							case 4:
+							{
 								reputation = Config.RAID_RANKING_4TH;
 								break;
+							}
 							case 5:
+							{
 								reputation = Config.RAID_RANKING_5TH;
 								break;
+							}
 							case 6:
+							{
 								reputation = Config.RAID_RANKING_6TH;
 								break;
+							}
 							case 7:
+							{
 								reputation = Config.RAID_RANKING_7TH;
 								break;
+							}
 							case 8:
+							{
 								reputation = Config.RAID_RANKING_8TH;
 								break;
+							}
 							case 9:
+							{
 								reputation = Config.RAID_RANKING_9TH;
 								break;
+							}
 							case 10:
+							{
 								reputation = Config.RAID_RANKING_10TH;
 								break;
+							}
 							default:
+							{
 								if (entry.getValue() <= 50)
 								{
 									reputation = Config.RAID_RANKING_UP_TO_50TH;
@@ -96,6 +117,7 @@ public class TaskRaidPointsReset extends Task
 									reputation = Config.RAID_RANKING_UP_TO_100TH;
 								}
 								break;
+							}
 						}
 						c.addReputationScore(reputation, true);
 					}

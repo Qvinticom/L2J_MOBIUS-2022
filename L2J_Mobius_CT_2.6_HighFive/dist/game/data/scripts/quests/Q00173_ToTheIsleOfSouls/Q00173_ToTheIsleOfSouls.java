@@ -63,22 +63,30 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 		switch (event)
 		{
 			case "30097-03.htm":
+			{
 				st.startQuest();
 				giveItems(player, GALLADUCCIS_ORDER, 1);
 				break;
+			}
 			case "30097-06.html":
+			{
 				giveItems(player, SCROLL_OF_ESCAPE_KAMAEL_VILLAGE, 1);
 				takeItems(player, MARK_OF_TRAVELER, 1);
 				st.exitQuest(false, true);
 				break;
+			}
 			case "30094-02.html":
+			{
 				st.setCond(2, true);
 				takeItems(player, GALLADUCCIS_ORDER, -1);
 				giveItems(player, MAGIC_SWORD_HILT, 1);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -92,26 +100,36 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 		switch (npc.getId())
 		{
 			case GALLADUCCI:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState qs = player.getQuestState(Q00172_NewHorizons.class.getSimpleName());
 						htmltext = ((qs != null) && qs.isCompleted() && (player.getRace() == Race.KAMAEL) && hasQuestItems(player, MARK_OF_TRAVELER)) ? "30097-01.htm" : "30097-02.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = (st.isCond(1)) ? "30097-04.html" : "30097-05.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case GENTLER:
+			{
 				if (st.isStarted())
 				{
 					htmltext = (st.isCond(1)) ? "30094-01.html" : "30094-03.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

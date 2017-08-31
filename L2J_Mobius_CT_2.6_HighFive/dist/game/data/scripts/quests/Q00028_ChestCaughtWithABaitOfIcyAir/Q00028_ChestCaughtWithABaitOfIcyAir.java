@@ -60,9 +60,12 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 		switch (event)
 		{
 			case "31572-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31572-08.htm":
+			{
 				if (st.isCond(1) && hasQuestItems(player, YELLOW_TREASURE_BOX))
 				{
 					giveItems(player, KIKIS_LETTER, 1);
@@ -71,7 +74,9 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 					htmltext = "31572-07.htm";
 				}
 				break;
+			}
 			case "31442-03.htm":
+			{
 				if (st.isCond(2) && hasQuestItems(player, KIKIS_LETTER))
 				{
 					giveItems(player, ELVEN_RING, 1);
@@ -79,7 +84,7 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 					htmltext = "31442-02.htm";
 				}
 				break;
-			
+			}
 		}
 		return htmltext;
 	}
@@ -94,9 +99,12 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				final QuestState qs = player.getQuestState(Q00051_OFullesSpecialBait.class.getSimpleName());
 				if (npcId == OFULLE)
 				{
@@ -107,32 +115,43 @@ public class Q00028_ChestCaughtWithABaitOfIcyAir extends Quest
 					}
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npcId)
 				{
 					case OFULLE:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31572-06.htm";
 								if (hasQuestItems(player, YELLOW_TREASURE_BOX))
 								{
 									htmltext = "31572-05.htm";
 								}
 								break;
+							}
 							case 2:
+							{
 								htmltext = "31572-09.htm";
 								break;
+							}
 						}
 						break;
+					}
 					case KIKI:
+					{
 						if (st.isCond(2))
 						{
 							htmltext = "31442-01.htm";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

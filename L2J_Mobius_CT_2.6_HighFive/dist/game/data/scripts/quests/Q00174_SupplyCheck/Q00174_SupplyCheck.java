@@ -84,26 +84,37 @@ public class Q00174_SupplyCheck extends Quest
 		switch (npc.getId())
 		{
 			case MARCELA:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "32173-01.htm" : "32173-02.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "32173-04.html";
 								break;
+							}
 							case 2:
+							{
 								st.setCond(3, true);
 								takeItems(player, WAREHOUSE_MANIFEST, -1);
 								htmltext = "32173-05.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "32173-06.html";
 								break;
+							}
 							case 4:
+							{
 								for (int itemId : REWARD)
 								{
 									giveItems(player, itemId, 1);
@@ -115,52 +126,73 @@ public class Q00174_SupplyCheck extends Quest
 								showOnScreenMsg(player, NpcStringId.DELIVERY_DUTY_COMPLETE_N_GO_FIND_THE_NEWBIE_GUIDE, 2, 5000);
 								htmltext = "32173-07.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case BENIS:
+			{
 				if (st.isStarted())
 				{
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							st.setCond(2, true);
 							giveItems(player, WAREHOUSE_MANIFEST, 1);
 							htmltext = "32170-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "32170-02.html";
 							break;
+						}
 						default:
+						{
 							htmltext = "32170-03.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case NIKA:
+			{
 				if (st.isStarted())
 				{
 					switch (st.getCond())
 					{
 						case 1:
 						case 2:
+						{
 							htmltext = "32167-01.html";
 							break;
+						}
 						case 3:
+						{
 							st.setCond(4, true);
 							giveItems(player, GROCERY_STORE_MANIFEST, 1);
 							htmltext = "32167-02.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32167-03.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

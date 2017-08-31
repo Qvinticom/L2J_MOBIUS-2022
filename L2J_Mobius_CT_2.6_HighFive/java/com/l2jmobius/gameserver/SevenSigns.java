@@ -207,6 +207,7 @@ public class SevenSigns
 		{
 			case PERIOD_SEAL_VALIDATION:
 			case PERIOD_COMPETITION:
+			{
 				lastPeriodChange.set(Calendar.DAY_OF_WEEK, PERIOD_START_DAY);
 				lastPeriodChange.set(Calendar.HOUR_OF_DAY, PERIOD_START_HOUR);
 				lastPeriodChange.set(Calendar.MINUTE, PERIOD_START_MINS);
@@ -217,11 +218,14 @@ public class SevenSigns
 					lastPeriodChange.add(Calendar.HOUR, -24 * 7);
 				}
 				break;
+			}
 			case PERIOD_COMP_RECRUITING:
 			case PERIOD_COMP_RESULTS:
+			{
 				// because of the short duration of this period, just check it from last save
 				lastPeriodChange.setTimeInMillis(_lastSave.getTimeInMillis() + PERIOD_MINOR_LENGTH);
 				break;
+			}
 		}
 		
 		// because of previous "date" column usage, check only if it already contains usable data for us
@@ -312,13 +316,12 @@ public class SevenSigns
 				switch (getCabalHighestScore())
 				{
 					case CABAL_DAWN:
+					{
 						if (!AutoSpawnHandler.getInstance().getAutoSpawnInstance(lilithSpawn.getObjectId(), true).isSpawnActive())
 						{
 							AutoSpawnHandler.getInstance().setSpawnActive(lilithSpawn, true);
 						}
-						
 						AutoSpawnHandler.getInstance().setSpawnActive(anakimSpawn, false);
-						
 						for (AutoSpawnInstance dawnCrest : crestOfDawnSpawns)
 						{
 							if (!AutoSpawnHandler.getInstance().getAutoSpawnInstance(dawnCrest.getObjectId(), true).isSpawnActive())
@@ -326,21 +329,19 @@ public class SevenSigns
 								AutoSpawnHandler.getInstance().setSpawnActive(dawnCrest, true);
 							}
 						}
-						
 						for (AutoSpawnInstance duskCrest : crestOfDuskSpawns)
 						{
 							AutoSpawnHandler.getInstance().setSpawnActive(duskCrest, false);
 						}
 						break;
-					
+					}
 					case CABAL_DUSK:
+					{
 						if (!AutoSpawnHandler.getInstance().getAutoSpawnInstance(anakimSpawn.getObjectId(), true).isSpawnActive())
 						{
 							AutoSpawnHandler.getInstance().setSpawnActive(anakimSpawn, true);
 						}
-						
 						AutoSpawnHandler.getInstance().setSpawnActive(lilithSpawn, false);
-						
 						for (AutoSpawnInstance duskCrest : crestOfDuskSpawns)
 						{
 							if (!AutoSpawnHandler.getInstance().getAutoSpawnInstance(duskCrest.getObjectId(), true).isSpawnActive())
@@ -348,12 +349,12 @@ public class SevenSigns
 								AutoSpawnHandler.getInstance().setSpawnActive(duskCrest, true);
 							}
 						}
-						
 						for (AutoSpawnInstance dawnCrest : crestOfDawnSpawns)
 						{
 							AutoSpawnHandler.getInstance().setSpawnActive(dawnCrest, false);
 						}
 						break;
+					}
 				}
 			}
 			else
@@ -430,9 +431,13 @@ public class SevenSigns
 		switch (cabal)
 		{
 			case CABAL_DAWN:
+			{
 				return "dawn";
+			}
 			case CABAL_DUSK:
+			{
 				return "dusk";
+			}
 		}
 		
 		return "No Cabal";
@@ -443,9 +448,13 @@ public class SevenSigns
 		switch (cabal)
 		{
 			case CABAL_DAWN:
+			{
 				return "Lords of Dawn";
+			}
 			case CABAL_DUSK:
+			{
 				return "Revolutionaries of Dusk";
+			}
 		}
 		
 		return "No Cabal";
@@ -458,14 +467,20 @@ public class SevenSigns
 		switch (seal)
 		{
 			case SEAL_AVARICE:
+			{
 				sealName += "Avarice";
 				break;
+			}
 			case SEAL_GNOSIS:
+			{
 				sealName += "Gnosis";
 				break;
+			}
 			case SEAL_STRIFE:
+			{
 				sealName += "Strife";
 				break;
+			}
 		}
 		
 		return sealName;
@@ -504,8 +519,8 @@ public class SevenSigns
 		{
 			case PERIOD_SEAL_VALIDATION:
 			case PERIOD_COMPETITION:
+			{
 				int daysToChange = getDaysToPeriodChange();
-				
 				if (daysToChange == 7)
 				{
 					if (_nextPeriodChange.get(Calendar.HOUR_OF_DAY) < PERIOD_START_HOUR)
@@ -517,20 +532,21 @@ public class SevenSigns
 						daysToChange = 0;
 					}
 				}
-				
 				// Otherwise...
 				if (daysToChange > 0)
 				{
 					_nextPeriodChange.add(Calendar.DATE, daysToChange);
 				}
-				
 				_nextPeriodChange.set(Calendar.HOUR_OF_DAY, PERIOD_START_HOUR);
 				_nextPeriodChange.set(Calendar.MINUTE, PERIOD_START_MINS);
 				break;
+			}
 			case PERIOD_COMP_RECRUITING:
 			case PERIOD_COMP_RESULTS:
+			{
 				_nextPeriodChange.add(Calendar.MILLISECOND, PERIOD_MINOR_LENGTH);
 				break;
+			}
 		}
 		_log.info("SevenSigns: Next period change set to " + _nextPeriodChange.getTime());
 	}
@@ -542,17 +558,25 @@ public class SevenSigns
 		switch (_activePeriod)
 		{
 			case PERIOD_COMP_RECRUITING:
+			{
 				periodName = "Quest Event Initialization";
 				break;
+			}
 			case PERIOD_COMPETITION:
+			{
 				periodName = "Competition (Quest Event)";
 				break;
+			}
 			case PERIOD_COMP_RESULTS:
+			{
 				periodName = "Quest Event Results";
 				break;
+			}
 			case PERIOD_SEAL_VALIDATION:
+			{
 				periodName = "Seal Validation";
 				break;
+			}
 		}
 		return periodName;
 	}
@@ -598,21 +622,29 @@ public class SevenSigns
 		switch (getCurrentPeriod())
 		{
 			case PERIOD_COMP_RECRUITING:
+			{
 				nextValidStart = nextPeriodChange + PERIOD_MAJOR_LENGTH;
 				nextQuestStart = nextValidStart + PERIOD_MAJOR_LENGTH + PERIOD_MINOR_LENGTH;
 				break;
+			}
 			case PERIOD_COMPETITION:
+			{
 				nextValidStart = nextPeriodChange;
 				nextQuestStart = nextPeriodChange + PERIOD_MAJOR_LENGTH + PERIOD_MINOR_LENGTH;
 				break;
+			}
 			case PERIOD_COMP_RESULTS:
+			{
 				nextQuestStart = nextPeriodChange + PERIOD_MAJOR_LENGTH;
 				nextValidStart = nextQuestStart + PERIOD_MAJOR_LENGTH + PERIOD_MINOR_LENGTH;
 				break;
+			}
 			case PERIOD_SEAL_VALIDATION:
+			{
 				nextQuestStart = nextPeriodChange;
 				nextValidStart = nextPeriodChange + PERIOD_MAJOR_LENGTH + PERIOD_MINOR_LENGTH;
 				break;
+			}
 		}
 		
 		if (((nextQuestStart < tillDate) && (tillDate < nextValidStart)) || ((nextValidStart < nextQuestStart) && ((tillDate < nextValidStart) || (nextQuestStart < tillDate))))
@@ -629,11 +661,17 @@ public class SevenSigns
 		switch (cabal)
 		{
 			case CABAL_NULL:
+			{
 				return 0;
+			}
 			case CABAL_DAWN:
+			{
 				return Math.round((float) (_dawnStoneScore / ((float) totalStoneScore == 0 ? 1 : totalStoneScore)) * 500) + _dawnFestivalScore;
+			}
 			case CABAL_DUSK:
+			{
 				return Math.round((float) (_duskStoneScore / ((float) totalStoneScore == 0 ? 1 : totalStoneScore)) * 500) + _duskFestivalScore;
+			}
 		}
 		
 		return 0;
@@ -644,11 +682,17 @@ public class SevenSigns
 		switch (cabal)
 		{
 			case CABAL_NULL:
+			{
 				return 0;
+			}
 			case CABAL_DAWN:
+			{
 				return _dawnStoneScore;
+			}
 			case CABAL_DUSK:
+			{
 				return _duskStoneScore;
+			}
 		}
 		
 		return 0;
@@ -659,11 +703,17 @@ public class SevenSigns
 		switch (cabal)
 		{
 			case CABAL_NULL:
+			{
 				return 0;
+			}
 			case CABAL_DAWN:
+			{
 				return _dawnFestivalScore;
+			}
 			case CABAL_DUSK:
+			{
 				return _duskFestivalScore;
+			}
 		}
 		
 		return 0;
@@ -1100,11 +1150,15 @@ public class SevenSigns
 		switch (getPlayerCabal(objectId))
 		{
 			case CABAL_DAWN:
+			{
 				_dawnStoneScore += contribScore;
 				break;
+			}
 			case CABAL_DUSK:
+			{
 				_duskStoneScore += contribScore;
 				break;
+			}
 		}
 		
 		if (!Config.ALT_SEVENSIGNS_LAZY_UPDATE)
@@ -1156,17 +1210,25 @@ public class SevenSigns
 		switch (getCurrentPeriod())
 		{
 			case PERIOD_COMP_RECRUITING:
+			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_PREPARATIONS_HAVE_BEGUN_FOR_THE_NEXT_QUEST_EVENT);
 				break;
+			}
 			case PERIOD_COMPETITION:
+			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_THE_QUEST_EVENT_PERIOD_HAS_BEGUN_SPEAK_WITH_A_PRIEST_OF_DAWN_OR_DUSK_PRIESTESS_IF_YOU_WISH_TO_PARTICIPATE_IN_THE_EVENT);
 				break;
+			}
 			case PERIOD_COMP_RESULTS:
+			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_QUEST_EVENT_HAS_ENDED_RESULTS_ARE_BEING_TALLIED);
 				break;
+			}
 			case PERIOD_SEAL_VALIDATION:
+			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.SEVEN_SIGNS_THIS_IS_THE_SEAL_VALIDATION_PERIOD_A_NEW_QUEST_EVENT_PERIOD_BEGINS_NEXT_MONDAY);
 				break;
+			}
 		}
 		
 		player.sendPacket(sm);
@@ -1248,12 +1310,16 @@ public class SevenSigns
 			switch (prevSealOwner)
 			{
 				case CABAL_NULL:
+				{
 					switch (getCabalHighestScore())
 					{
 						case CABAL_NULL:
+						{
 							newSealOwner = CABAL_NULL;
 							break;
+						}
 						case CABAL_DAWN:
+						{
 							if (dawnPercent >= 35)
 							{
 								newSealOwner = CABAL_DAWN;
@@ -1263,7 +1329,9 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 						case CABAL_DUSK:
+						{
 							if (duskPercent >= 35)
 							{
 								newSealOwner = CABAL_DUSK;
@@ -1273,12 +1341,16 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case CABAL_DAWN:
+				{
 					switch (getCabalHighestScore())
 					{
 						case CABAL_NULL:
+						{
 							if (dawnPercent >= 10)
 							{
 								newSealOwner = CABAL_DAWN;
@@ -1288,7 +1360,9 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 						case CABAL_DAWN:
+						{
 							if (dawnPercent >= 10)
 							{
 								newSealOwner = CABAL_DAWN;
@@ -1298,7 +1372,9 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 						case CABAL_DUSK:
+						{
 							if (duskPercent >= 35)
 							{
 								newSealOwner = CABAL_DUSK;
@@ -1312,12 +1388,16 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 					}
 					break;
+				}
 				case CABAL_DUSK:
+				{
 					switch (getCabalHighestScore())
 					{
 						case CABAL_NULL:
+						{
 							if (duskPercent >= 10)
 							{
 								newSealOwner = CABAL_DUSK;
@@ -1327,7 +1407,9 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 						case CABAL_DAWN:
+						{
 							if (dawnPercent >= 35)
 							{
 								newSealOwner = CABAL_DAWN;
@@ -1341,7 +1423,9 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 						case CABAL_DUSK:
+						{
 							if (duskPercent >= 10)
 							{
 								newSealOwner = CABAL_DUSK;
@@ -1351,8 +1435,10 @@ public class SevenSigns
 								newSealOwner = CABAL_NULL;
 							}
 							break;
+						}
 					}
 					break;
+				}
 			}
 			
 			_signsSealOwners.put(currSeal, newSealOwner);
@@ -1361,6 +1447,7 @@ public class SevenSigns
 			switch (currSeal)
 			{
 				case SEAL_AVARICE:
+				{
 					if (newSealOwner == CABAL_DAWN)
 					{
 						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_OBTAINED_THE_SEAL_OF_AVARICE);
@@ -1370,7 +1457,9 @@ public class SevenSigns
 						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_OBTAINED_THE_SEAL_OF_AVARICE);
 					}
 					break;
+				}
 				case SEAL_GNOSIS:
+				{
 					if (newSealOwner == CABAL_DAWN)
 					{
 						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_OBTAINED_THE_SEAL_OF_GNOSIS);
@@ -1380,7 +1469,9 @@ public class SevenSigns
 						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_OBTAINED_THE_SEAL_OF_GNOSIS);
 					}
 					break;
+				}
 				case SEAL_STRIFE:
+				{
 					if (newSealOwner == CABAL_DAWN)
 					{
 						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_OBTAINED_THE_SEAL_OF_STRIFE);
@@ -1389,9 +1480,9 @@ public class SevenSigns
 					{
 						sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_OBTAINED_THE_SEAL_OF_STRIFE);
 					}
-					
 					CastleManager.getInstance().validateTaxes(newSealOwner);
 					break;
+				}
 			}
 		}
 	}
@@ -1445,34 +1536,34 @@ public class SevenSigns
 			switch (periodEnded)
 			{
 				case PERIOD_COMP_RECRUITING: // Initialization
-					
+				{
 					// Start the Festival of Darkness cycle.
 					SevenSignsFestival.getInstance().startFestivalManager();
-					
 					// Send message that Competition has begun.
 					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_COMPETITION_PERIOD_HAS_BEGUN_VISIT_A_PRIEST_OF_DAWN_OR_PRIESTESS_OF_DUSK_TO_PARTICIPATE_IN_THE_EVENT);
 					break;
+				}
 				case PERIOD_COMPETITION: // Results Calculation
-					
+				{
 					// Send message that Competition has ended.
 					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_COMPETITION_PERIOD_HAS_ENDED_THE_NEXT_QUEST_EVENT_WILL_START_IN_ONE_WEEK);
-					
 					final int compWinner = getCabalHighestScore();
-					
 					// Schedule a stop of the festival engine and reward highest ranking members from cycle
 					SevenSignsFestival.getInstance().getFestivalManagerSchedule().cancel(false);
 					SevenSignsFestival.getInstance().rewardHighestRanked();
-					
 					calcNewSealOwners();
-					
 					switch (compWinner)
 					{
 						case CABAL_DAWN:
+						{
 							sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_LORDS_OF_DAWN_HAVE_WON);
 							break;
+						}
 						case CABAL_DUSK:
+						{
 							sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_REVOLUTIONARIES_OF_DUSK_HAVE_WON);
 							break;
+						}
 					}
 					
 					_previousWinner = compWinner;
@@ -1483,24 +1574,22 @@ public class SevenSigns
 						castle.setTicketBuyCount(0);
 					}
 					break;
+				}
 				case PERIOD_COMP_RESULTS: // Seal Validation
-					
+				{
 					// Perform initial Seal Validation set up.
 					initializeSeals();
-					
 					// Buff/Debuff members of the event when Seal of Strife captured.
 					giveCPMult(getSealOwner(SEAL_STRIFE));
-					
 					// Send message that Seal Validation has begun.
 					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_SEAL_VALIDATION_PERIOD_HAS_BEGUN);
-					
 					_log.info("SevenSigns: The " + getCabalName(_previousWinner) + " have won the competition with " + getCurrentScore(_previousWinner) + " points!");
 					break;
+				}
 				case PERIOD_SEAL_VALIDATION: // Reset for New Cycle
-					
+				{
 					// Ensure a cycle restart when this period ends.
 					_activePeriod = PERIOD_COMP_RECRUITING;
-					
 					// Send message that Seal Validation has ended.
 					sendMessageToAll(SystemMessageId.SEVEN_SIGNS_THE_SEAL_VALIDATION_PERIOD_HAS_ENDED);
 					// Clear Seal of Strife influence.
@@ -1508,18 +1597,16 @@ public class SevenSigns
 					// Reset all data
 					resetPlayerData();
 					resetSeals();
-					
 					_currentCycle++;
 					// Reset all Festival-related data and remove any unused blood offerings.
 					// NOTE: A full update of Festival data in the database is also performed.
 					SevenSignsFestival.getInstance().resetFestivalData(false);
-					
 					_dawnStoneScore = 0;
 					_duskStoneScore = 0;
-					
 					_dawnFestivalScore = 0;
 					_duskFestivalScore = 0;
 					break;
+				}
 			}
 			
 			// Make sure all Seven Signs data is saved for future use.

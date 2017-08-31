@@ -565,13 +565,17 @@ public abstract class Chamber extends AbstractInstance
 		switch (eventName)
 		{
 			case "SCE_LUCKY":
+			{
 				receiver.setBusy(true);
 				receiver.doCast(SUCCESS_SKILL.getSkill());
 				break;
+			}
 			case "SCE_DREAM_FIRE_IN_THE_HOLE":
+			{
 				receiver.setBusy(true);
 				receiver.doCast(FAIL_SKILL.getSkill());
 				break;
+			}
 		}
 		
 		return null;

@@ -304,23 +304,35 @@ public class AdminTeleport implements IAdminCommandHandler
 		switch (player.getRace())
 		{
 			case ELF:
+			{
 				regionName = "elf_town";
 				break;
+			}
 			case DARK_ELF:
+			{
 				regionName = "darkelf_town";
 				break;
+			}
 			case ORC:
+			{
 				regionName = "orc_town";
 				break;
+			}
 			case DWARF:
+			{
 				regionName = "dwarf_town";
 				break;
+			}
 			case KAMAEL:
+			{
 				regionName = "kamael_town";
 				break;
+			}
 			case HUMAN:
 			default:
+			{
 				regionName = "talking_island_town";
+			}
 		}
 		
 		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true);

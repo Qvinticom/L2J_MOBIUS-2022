@@ -68,11 +68,14 @@ public class Q00005_MinersFavor extends Quest
 		switch (event)
 		{
 			case "30554-03.htm":
+			{
 				st.startQuest();
 				giveItems(player, BOLTERS_LIST, 1);
 				giveItems(player, BOLTERS_SMELLY_SOCKS, 1);
 				break;
+			}
 			case "30526-02.html":
+			{
 				if (!hasQuestItems(player, BOLTERS_SMELLY_SOCKS))
 				{
 					return "30526-04.html";
@@ -81,11 +84,16 @@ public class Q00005_MinersFavor extends Quest
 				giveItems(player, MINERS_PICK, 1);
 				checkProgress(player, st);
 				break;
+			}
 			case "30554-05.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -98,12 +106,16 @@ public class Q00005_MinersFavor extends Quest
 		switch (npc.getId())
 		{
 			case BOLTER:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30554-02.htm" : "30554-01.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "30554-04.html";
@@ -119,26 +131,38 @@ public class Q00005_MinersFavor extends Quest
 							htmltext = "30554-06.html";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case BRUNON:
+			{
 				if (st.isStarted())
 				{
 					htmltext = (hasQuestItems(player, MINERS_PICK)) ? "30526-03.html" : "30526-01.html";
 				}
 				break;
+			}
 			case REED:
+			{
 				htmltext = giveItem(player, st, npc.getId(), REDSTONE_BEER);
 				break;
+			}
 			case SHARI:
+			{
 				htmltext = giveItem(player, st, npc.getId(), BOOMBOOM_POWDER);
 				break;
+			}
 			case GARITA:
+			{
 				htmltext = giveItem(player, st, npc.getId(), MINING_BOOTS);
 				break;
+			}
 		}
 		return htmltext;
 	}

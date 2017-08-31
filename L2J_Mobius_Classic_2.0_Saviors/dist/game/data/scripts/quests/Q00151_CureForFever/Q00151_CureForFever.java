@@ -89,12 +89,16 @@ public class Q00151_CureForFever extends Quest
 		switch (npc.getId())
 		{
 			case ELLIAS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= MIN_LEVEL) ? "30050-02.htm" : "30050-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(3) && hasQuestItems(player, FEVER_MEDICINE))
 						{
 							giveItems(player, ROUND_SHIELD, 1);
@@ -112,12 +116,17 @@ public class Q00151_CureForFever extends Quest
 							htmltext = "30050-04.html";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case YOHANES:
+			{
 				if (st.isStarted())
 				{
 					if (st.isCond(2) && hasQuestItems(player, POISON_SAC))
@@ -133,6 +142,7 @@ public class Q00151_CureForFever extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -114,7 +114,9 @@ public final class Q10745_TheSecretIngredients extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

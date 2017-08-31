@@ -159,19 +159,24 @@ public final class GeoDataConverter
 						switch (type)
 						{
 							case GeoStructure.TYPE_FLAT_L2J_L2OFF:
+							{
 								_blocks[ix][iy] = new BlockFlat(buffer, _format);
 								break;
-							
+							}
 							case GeoStructure.TYPE_COMPLEX_L2J:
+							{
 								_blocks[ix][iy] = new BlockComplex(buffer, _format);
 								break;
-							
+							}
 							case GeoStructure.TYPE_MULTILAYER_L2J:
+							{
 								_blocks[ix][iy] = new BlockMultilayer(buffer, _format);
 								break;
-							
+							}
 							default:
+							{
 								throw new IllegalArgumentException("Unknown block type: " + type);
+							}
 						}
 					}
 					else
@@ -183,16 +188,20 @@ public final class GeoDataConverter
 						switch (type)
 						{
 							case GeoStructure.TYPE_FLAT_L2J_L2OFF:
+							{
 								_blocks[ix][iy] = new BlockFlat(buffer, _format);
 								break;
-							
+							}
 							case GeoStructure.TYPE_COMPLEX_L2OFF:
+							{
 								_blocks[ix][iy] = new BlockComplex(buffer, _format);
 								break;
-							
+							}
 							default:
+							{
 								_blocks[ix][iy] = new BlockMultilayer(buffer, _format);
 								break;
+							}
 						}
 					}
 				}

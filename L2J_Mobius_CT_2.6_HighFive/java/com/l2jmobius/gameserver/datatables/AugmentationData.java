@@ -524,9 +524,13 @@ public class AugmentationData
 			case L2Item.SLOT_LR_FINGER:
 			case L2Item.SLOT_LR_EAR:
 			case L2Item.SLOT_NECK:
+			{
 				return generateRandomAccessoryAugmentation(lifeStoneLevel, bodyPart, lifeStoneId);
+			}
 			default:
+			{
 				return generateRandomWeaponAugmentation(lifeStoneLevel, lifeStoneGrade, lifeStoneId, targetItem);
+			}
 		}
 	}
 	
@@ -568,19 +572,29 @@ public class AugmentationData
 				switch (lifeStoneGrade)
 				{
 					case AbstractRefinePacket.GRADE_NONE:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_MID:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_HIGH:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_TOP:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
 						break;
+					}
 					default:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
+					}
 				}
 				
 				int c = Rnd.get(100);
@@ -653,19 +667,29 @@ public class AugmentationData
 				switch (lifeStoneGrade)
 				{
 					case AbstractRefinePacket.GRADE_NONE:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_MID:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_HIGH:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_TOP:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
 						break;
+					}
 					default:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
+					}
 				}
 				
 				int c = Rnd.get(100);
@@ -715,6 +739,7 @@ public class AugmentationData
 		switch (lifeStoneGrade)
 		{
 			case AbstractRefinePacket.GRADE_NONE:
+			{
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_NG_SKILL_CHANCE)
 				{
 					generateSkill = true;
@@ -724,7 +749,9 @@ public class AugmentationData
 					generateGlow = true;
 				}
 				break;
+			}
 			case AbstractRefinePacket.GRADE_MID:
+			{
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_MID_SKILL_CHANCE)
 				{
 					generateSkill = true;
@@ -734,7 +761,9 @@ public class AugmentationData
 					generateGlow = true;
 				}
 				break;
+			}
 			case AbstractRefinePacket.GRADE_HIGH:
+			{
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_HIGH_SKILL_CHANCE)
 				{
 					generateSkill = true;
@@ -744,7 +773,9 @@ public class AugmentationData
 					generateGlow = true;
 				}
 				break;
+			}
 			case AbstractRefinePacket.GRADE_TOP:
+			{
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_TOP_SKILL_CHANCE)
 				{
 					generateSkill = true;
@@ -754,11 +785,14 @@ public class AugmentationData
 					generateGlow = true;
 				}
 				break;
+			}
 			case AbstractRefinePacket.GRADE_ACC:
+			{
 				if (Rnd.get(1, 100) <= Config.AUGMENTATION_ACC_SKILL_CHANCE)
 				{
 					generateSkill = true;
 				}
+			}
 		}
 		
 		if (!generateSkill && (Rnd.get(1, 100) <= Config.AUGMENTATION_BASESTAT_CHANCE))
@@ -805,14 +839,20 @@ public class AugmentationData
 			switch (resultColor)
 			{
 				case 1: // blue skill
+				{
 					stat34 = _blueSkills.get(lifeStoneLevel).get(Rnd.get(0, _blueSkills.get(lifeStoneLevel).size() - 1));
 					break;
+				}
 				case 2: // purple skill
+				{
 					stat34 = _purpleSkills.get(lifeStoneLevel).get(Rnd.get(0, _purpleSkills.get(lifeStoneLevel).size() - 1));
 					break;
+				}
 				case 3: // red skill
+				{
 					stat34 = _redSkills.get(lifeStoneLevel).get(Rnd.get(0, _redSkills.get(lifeStoneLevel).size() - 1));
 					break;
+				}
 			}
 		}
 		
@@ -951,19 +991,27 @@ public class AugmentationData
 		switch (bodyPart)
 		{
 			case L2Item.SLOT_LR_FINGER:
+			{
 				base = ACC_RING_START + (ACC_RING_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_RING_SKILLS;
 				break;
+			}
 			case L2Item.SLOT_LR_EAR:
+			{
 				base = ACC_EAR_START + (ACC_EAR_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_EAR_SKILLS;
 				break;
+			}
 			case L2Item.SLOT_NECK:
+			{
 				base = ACC_NECK_START + (ACC_NECK_BLOCKSIZE * lifeStoneLevel);
 				skillsLength = ACC_NECK_SKILLS;
 				break;
+			}
 			default:
+			{
 				return null;
+			}
 		}
 		
 		final int resultColor = Rnd.get(0, 3);

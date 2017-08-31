@@ -88,7 +88,9 @@ public class Q10790_AMercenaryHelper extends Quest
 		{
 			case "33847-02.htm":
 			case "33847-03.htm":
+			{
 				break;
+			}
 			case "33847-04.htm":
 			{
 				qs.startQuest();
@@ -118,14 +120,20 @@ public class Q10790_AMercenaryHelper extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33847-01.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33847-05.html" : "33847-06.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -60,9 +60,12 @@ public class Q00051_OFullesSpecialBait extends Quest
 		switch (event)
 		{
 			case "31572-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31572-07.html":
+			{
 				if ((st.isCond(2)) && (getQuestItemsCount(player, LOST_BAIT) >= 100))
 				{
 					htmltext = "31572-06.htm";
@@ -70,6 +73,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 					st.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -110,14 +114,20 @@ public class Q00051_OFullesSpecialBait extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= 36) ? "31572-01.htm" : "31572-02.html";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (st.isCond(1)) ? "31572-05.html" : "31572-04.html";
 				break;
+			}
 		}
 		return htmltext;
 	}

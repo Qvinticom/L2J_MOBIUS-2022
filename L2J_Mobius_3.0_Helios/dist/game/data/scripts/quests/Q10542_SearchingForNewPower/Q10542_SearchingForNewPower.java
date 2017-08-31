@@ -211,7 +211,9 @@ public final class Q10542_SearchingForNewPower extends Quest
 								break;
 							}
 							default:
+							{
 								break;
+							}
 						}
 						if (npcStringId != null)
 						{

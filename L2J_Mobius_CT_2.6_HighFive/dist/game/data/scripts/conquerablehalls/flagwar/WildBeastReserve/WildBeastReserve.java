@@ -98,20 +98,30 @@ public final class WildBeastReserve extends FlagWar
 		switch (flag)
 		{
 			case 35607:
+			{
 				result = "messenger_flag1.htm";
 				break;
+			}
 			case 35608:
+			{
 				result = "messenger_flag2.htm";
 				break;
+			}
 			case 35609:
+			{
 				result = "messenger_flag3.htm";
 				break;
+			}
 			case 35610:
+			{
 				result = "messenger_flag4.htm";
 				break;
+			}
 			case 35611:
+			{
 				result = "messenger_flag5.htm";
 				break;
+			}
 		}
 		
 		return result;
@@ -125,20 +135,30 @@ public final class WildBeastReserve extends FlagWar
 		switch (ally)
 		{
 			case 35618:
+			{
 				result = "messenger_ally1result.htm";
 				break;
+			}
 			case 35619:
+			{
 				result = "messenger_ally2result.htm";
 				break;
+			}
 			case 35620:
+			{
 				result = "messenger_ally3result.htm";
 				break;
+			}
 			case 35621:
+			{
 				result = "messenger_ally4result.htm";
 				break;
+			}
 			case 35622:
+			{
 				result = "messenger_ally5result.htm";
 				break;
+			}
 		}
 		
 		return result;

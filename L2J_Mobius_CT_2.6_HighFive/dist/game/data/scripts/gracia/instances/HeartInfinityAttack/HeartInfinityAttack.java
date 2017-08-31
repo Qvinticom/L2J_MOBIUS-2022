@@ -777,40 +777,54 @@ public class HeartInfinityAttack extends Quest
 		switch (world.tumorCount)
 		{
 			case 6:
+			{
 				a[0] = 2;
 				a[1] = 1;
 				a[2] = 4;
 				break;
+			}
 			case 5:
+			{
 				a[0] = 1.9;
 				a[1] = 0.9;
 				a[2] = 3.5;
 				break;
+			}
 			case 4:
+			{
 				a[0] = 1.5;
 				a[1] = 0.6;
 				a[2] = 3.0;
 				break;
+			}
 			case 3:
+			{
 				a[0] = 1.0;
 				a[1] = 0.4;
 				a[2] = 2.5;
 				break;
+			}
 			case 2:
+			{
 				a[0] = 0.7;
 				a[1] = 0.3;
 				a[2] = 2.0;
 				break;
+			}
 			case 1:
+			{
 				a[0] = 0.3;
 				a[1] = 0.15;
 				a[2] = 1.0;
 				break;
+			}
 			case 0:
+			{
 				a[0] = 0.12;
 				a[1] = 0.06;
 				a[2] = 0.25;
 				break;
+			}
 		}
 		return a;
 	}

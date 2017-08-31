@@ -41,6 +41,7 @@ public class CastleVCmd implements IVoicedCommandHandler
 		switch (command)
 		{
 			case "opendoors":
+			{
 				if (!params.equals("castle"))
 				{
 					activeChar.sendMessage("Only Castle doors can be open.");
@@ -79,7 +80,9 @@ public class CastleVCmd implements IVoicedCommandHandler
 					door.openMe();
 				}
 				break;
+			}
 			case "closedoors":
+			{
 				if (!params.equals("castle"))
 				{
 					activeChar.sendMessage("Only Castle doors can be closed.");
@@ -115,12 +118,15 @@ public class CastleVCmd implements IVoicedCommandHandler
 					door2.closeMe();
 				}
 				break;
+			}
 			case "ridewyvern":
+			{
 				if (activeChar.isClanLeader() && (activeChar.getClan().getCastleId() > 0))
 				{
 					activeChar.mount(12621, 0, true);
 				}
 				break;
+			}
 		}
 		return true;
 	}

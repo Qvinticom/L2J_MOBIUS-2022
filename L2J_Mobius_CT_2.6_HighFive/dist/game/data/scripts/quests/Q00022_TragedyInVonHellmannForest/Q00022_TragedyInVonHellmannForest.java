@@ -595,7 +595,9 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 									break;
 								}
 								default:
+								{
 									break;
+								}
 							}
 						}
 						break;

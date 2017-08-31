@@ -70,7 +70,9 @@ public final class Q10741_ADraughtForTheCold extends Quest
 		switch (event)
 		{
 			case "33951-02.htm":
+			{
 				break;
+			}
 			case "33951-03.htm":
 			{
 				qs.startQuest();
@@ -88,7 +90,9 @@ public final class Q10741_ADraughtForTheCold extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -106,8 +110,10 @@ public final class Q10741_ADraughtForTheCold extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "33951-01.htm";
 						break;
+					}
 					case State.STARTED:
 					{
 						if (qs.isCond(1))
@@ -117,8 +123,10 @@ public final class Q10741_ADraughtForTheCold extends Quest
 						break;
 					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
 			}

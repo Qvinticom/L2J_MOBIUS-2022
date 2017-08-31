@@ -289,16 +289,22 @@ public final class UrbanArea extends AbstractInstance
 				switch (npc.getId())
 				{
 					case TOWN_GUARD:
+					{
 						msgId = 0;
 						range = 1000;
 						break;
+					}
 					case KEYMASTER:
+					{
 						msgId = 1;
 						range = 5000;
 						break;
+					}
 					default:
+					{
 						msgId = -1;
 						range = 0;
+					}
 				}
 				if (msgId >= 0)
 				{

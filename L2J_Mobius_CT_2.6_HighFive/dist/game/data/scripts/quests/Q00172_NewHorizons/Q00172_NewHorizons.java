@@ -60,16 +60,22 @@ public class Q00172_NewHorizons extends Quest
 		switch (event)
 		{
 			case "32140-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "32163-02.html":
+			{
 				giveItems(player, SCROLL_OF_ESCAPE_GIRAN, 1);
 				giveItems(player, MARK_OF_TRAVELER, 1);
 				st.exitQuest(false, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}

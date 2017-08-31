@@ -52,20 +52,28 @@ public final class SoDManager
 		switch (seedType)
 		{
 			case SODTYPE:
+			{
 				// Seed of Destruction
 				GlobalVariablesManager.getInstance().set("SoDState", _SoDState);
 				GlobalVariablesManager.getInstance().set("SoDTiatKilled", _SoDTiatKilled);
 				GlobalVariablesManager.getInstance().set("SoDLSCDate", _SoDLastStateChangeDate.getTimeInMillis());
 				break;
+			}
 			case SOITYPE:
+			{
 				// Seed of Infinity
 				break;
+			}
 			case SOATYPE:
+			{
 				// Seed of Annihilation
 				break;
+			}
 			default:
+			{
 				_log.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
 				break;
+			}
 		}
 	}
 	
@@ -90,9 +98,12 @@ public final class SoDManager
 		switch (_SoDState)
 		{
 			case 1:
+			{
 				// do nothing, players should kill Tiat a few times
 				break;
+			}
 			case 2:
+			{
 				// Conquest Complete state, if too much time is passed than change to defense state
 				final long timePast = System.currentTimeMillis() - _SoDLastStateChangeDate.getTimeInMillis();
 				if (timePast >= Config.SOD_STAGE_2_LENGTH)
@@ -105,12 +116,17 @@ public final class SoDManager
 					ThreadPoolManager.schedule(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
 				}
 				break;
+			}
 			case 3:
+			{
 				// not implemented
 				setSoDState(1, true);
 				break;
+			}
 			default:
+			{
 				_log.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
+			}
 		}
 	}
 	
@@ -178,15 +194,23 @@ public final class SoDManager
 		switch (_SoDState)
 		{
 			case 1:
+			{
 				return -1;
+			}
 			case 2:
+			{
 				return ((_SoDLastStateChangeDate.getTimeInMillis() + Config.SOD_STAGE_2_LENGTH) - System.currentTimeMillis());
+			}
 			case 3:
+			{
 				// not implemented yet
 				return -1;
+			}
 			default:
+			{
 				// this should not happen!
 				return -1;
+			}
 		}
 	}
 	

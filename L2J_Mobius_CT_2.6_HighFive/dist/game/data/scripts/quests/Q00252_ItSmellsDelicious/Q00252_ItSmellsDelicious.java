@@ -70,16 +70,21 @@ public class Q00252_ItSmellsDelicious extends Quest
 		switch (event)
 		{
 			case "30200-04.htm":
+			{
 				htmltext = event;
 				break;
+			}
 			case "30200-05.htm":
+			{
 				if (qs.isCreated())
 				{
 					qs.startQuest();
 					htmltext = event;
 				}
 				break;
+			}
 			case "30200-08.html":
+			{
 				if (qs.isCond(2))
 				{
 					giveAdena(player, 147656, true);
@@ -88,6 +93,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 					htmltext = event;
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -148,14 +154,18 @@ public class Q00252_ItSmellsDelicious extends Quest
 			switch (qs.getCond())
 			{
 				case 1:
+				{
 					htmltext = "30200-06.html";
 					break;
+				}
 				case 2:
+				{
 					if (hasMaxDiaries(qs) && hasMaxCookbookPages(qs))
 					{
 						htmltext = "30200-07.html";
 					}
 					break;
+				}
 			}
 		}
 		else

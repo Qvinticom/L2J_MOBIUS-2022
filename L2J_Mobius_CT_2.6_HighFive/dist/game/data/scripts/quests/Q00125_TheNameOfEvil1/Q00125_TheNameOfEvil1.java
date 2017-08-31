@@ -87,40 +87,55 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		switch (event)
 		{
 			case "32114-05.html":
+			{
 				qs.startQuest();
 				break;
+			}
 			case "32114-08.html":
+			{
 				if (qs.isCond(1))
 				{
 					giveItems(player, GAZKH_FRAGMENT, 1);
 					qs.setCond(2, true);
 				}
 				break;
+			}
 			case "32117-09.html":
+			{
 				if (qs.isCond(2))
 				{
 					qs.setCond(3, true);
 				}
 				break;
+			}
 			case "32117-15.html":
+			{
 				if (qs.isCond(4))
 				{
 					qs.setCond(5, true);
 				}
 				break;
+			}
 			case "T_One":
+			{
 				qs.set("T", "1");
 				htmltext = "32119-04.html";
 				break;
+			}
 			case "E_One":
+			{
 				qs.set("E", "1");
 				htmltext = "32119-05.html";
 				break;
+			}
 			case "P_One":
+			{
 				qs.set("P", "1");
 				htmltext = "32119-06.html";
 				break;
+			}
 			case "U_One":
+			{
 				qs.set("U", "1");
 				if (qs.isCond(5) && (qs.getInt("T") > 0) && (qs.getInt("E") > 0) && (qs.getInt("P") > 0) && (qs.getInt("U") > 0))
 				{
@@ -136,32 +151,44 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				qs.unset("P");
 				qs.unset("U");
 				break;
+			}
 			case "32119-07.html":
+			{
 				qs.unset("T");
 				qs.unset("E");
 				qs.unset("P");
 				qs.unset("U");
 				break;
+			}
 			case "32119-18.html":
+			{
 				if (qs.isCond(5))
 				{
 					qs.setCond(6, true);
 					qs.unset("Memo");
 				}
 				break;
+			}
 			case "T_Two":
+			{
 				qs.set("T", "1");
 				htmltext = "32120-04.html";
 				break;
+			}
 			case "O_Two":
+			{
 				qs.set("O", "1");
 				htmltext = "32120-05.html";
 				break;
+			}
 			case "O2_Two":
+			{
 				qs.set("O2", "1");
 				htmltext = "32120-06.html";
 				break;
+			}
 			case "N_Two":
+			{
 				qs.set("N", "1");
 				if (qs.isCond(6) && (qs.getInt("T") > 0) && (qs.getInt("O") > 0) && (qs.getInt("O2") > 0) && (qs.getInt("N") > 0))
 				{
@@ -177,31 +204,43 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				qs.unset("O2");
 				qs.unset("N");
 				break;
+			}
 			case "32120-07.html":
+			{
 				qs.unset("T");
 				qs.unset("O");
 				qs.unset("O2");
 				qs.unset("N");
+			}
 			case "32120-17.html":
+			{
 				if (qs.isCond(6))
 				{
 					qs.setCond(7, true);
 					qs.unset("Memo");
 				}
 				break;
+			}
 			case "W_Three":
+			{
 				qs.set("W", "1");
 				htmltext = "32121-04.html";
 				break;
+			}
 			case "A_Three":
+			{
 				qs.set("A", "1");
 				htmltext = "32121-05.html";
 				break;
+			}
 			case "G_Three":
+			{
 				qs.set("G", "1");
 				htmltext = "32121-06.html";
 				break;
+			}
 			case "U_Three":
+			{
 				qs.set("U", "1");
 				if (qs.isCond(7) && (qs.getInt("W") > 0) && (qs.getInt("A") > 0) && (qs.getInt("G") > 0) && (qs.getInt("U") > 0))
 				{
@@ -217,19 +256,27 @@ public class Q00125_TheNameOfEvil1 extends Quest
 				qs.unset("G");
 				qs.unset("U");
 				break;
+			}
 			case "32121-07.html":
+			{
 				qs.unset("W");
 				qs.unset("A");
 				qs.unset("G");
 				qs.unset("U");
 				break;
+			}
 			case "32121-11.html":
+			{
 				qs.set("Memo", "2");
 				break;
+			}
 			case "32121-16.html":
+			{
 				qs.set("Memo", "3");
 				break;
+			}
 			case "32121-18.html":
+			{
 				if (qs.isCond(7) && hasQuestItems(player, GAZKH_FRAGMENT))
 				{
 					giveItems(player, EPITAPH_OF_WISDOM, 1);
@@ -238,6 +285,7 @@ public class Q00125_TheNameOfEvil1 extends Quest
 					qs.unset("Memo");
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -283,9 +331,11 @@ public class Q00125_TheNameOfEvil1 extends Quest
 		switch (npc.getId())
 		{
 			case MUSHIKA:
+			{
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						if (player.getLevel() < 76)
 						{
 							htmltext = "32114-01a.htm";
@@ -296,23 +346,32 @@ public class Q00125_TheNameOfEvil1 extends Quest
 							htmltext = ((qs != null) && qs.isCompleted()) ? "32114-01.htm" : "32114-01b.htm";
 						}
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "32114-09.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "32114-10.html";
 								break;
+							}
 							case 3:
 							case 4:
 							case 5:
 							case 6:
 							case 7:
+							{
 								htmltext = "32114-11.html";
 								break;
+							}
 							case 8:
+							{
 								if (hasQuestItems(player, EPITAPH_OF_WISDOM))
 								{
 									htmltext = "32114-12.html";
@@ -320,28 +379,41 @@ public class Q00125_TheNameOfEvil1 extends Quest
 									qs.exitQuest(false, true);
 								}
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
+			}
 			case KARAKAWEI:
+			{
 				if (qs.isStarted())
 				{
 					switch (qs.getCond())
 					{
 						case 1:
+						{
 							htmltext = "32117-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "32117-02.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "32117-10.html";
 							break;
+						}
 						case 4:
+						{
 							if ((getQuestItemsCount(player, ORNITHOMIMUS_CLAW) >= 2) && (getQuestItemsCount(player, DEINONYCHUS_BONE) >= 2))
 							{
 								takeItems(player, ORNITHOMIMUS_CLAW, -1);
@@ -349,20 +421,29 @@ public class Q00125_TheNameOfEvil1 extends Quest
 								htmltext = "32117-11.html";
 							}
 							break;
+						}
 						case 5:
+						{
 							htmltext = "32117-16.html";
 							break;
+						}
 						case 6:
 						case 7:
+						{
 							htmltext = "32117-17.html";
 							break;
+						}
 						case 8:
+						{
 							htmltext = "32117-18.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case ULU_KAIMU:
+			{
 				if (qs.isStarted())
 				{
 					switch (qs.getCond())
@@ -371,9 +452,12 @@ public class Q00125_TheNameOfEvil1 extends Quest
 						case 2:
 						case 3:
 						case 4:
+						{
 							htmltext = "32119-01.html";
 							break;
+						}
 						case 5:
+						{
 							if (qs.get("Memo") == null)
 							{
 								htmltext = "32119-02.html";
@@ -388,16 +472,23 @@ public class Q00125_TheNameOfEvil1 extends Quest
 								htmltext = "32119-09.html";
 							}
 							break;
+						}
 						case 6:
+						{
 							htmltext = "32119-18.html";
 							break;
+						}
 						default:
+						{
 							htmltext = "32119-19.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case BALU_KAIMU:
+			{
 				if (qs.isStarted())
 				{
 					switch (qs.getCond())
@@ -407,9 +498,12 @@ public class Q00125_TheNameOfEvil1 extends Quest
 						case 3:
 						case 4:
 						case 5:
+						{
 							htmltext = "32120-01.html";
 							break;
+						}
 						case 6:
+						{
 							if (qs.get("Memo") == null)
 							{
 								htmltext = "32120-02.html";
@@ -424,16 +518,23 @@ public class Q00125_TheNameOfEvil1 extends Quest
 								htmltext = "32120-09.html";
 							}
 							break;
+						}
 						case 7:
+						{
 							htmltext = "32120-17.html";
 							break;
+						}
 						default:
+						{
 							htmltext = "32119-18.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case CHUTA_KAIMU:
+			{
 				if (qs.isStarted())
 				{
 					switch (qs.getCond())
@@ -444,12 +545,16 @@ public class Q00125_TheNameOfEvil1 extends Quest
 						case 4:
 						case 5:
 						case 6:
+						{
 							htmltext = "32121-01.html";
 							break;
+						}
 						case 7:
+						{
 							switch (qs.getInt("Memo"))
 							{
 								case 0:
+								{
 									htmltext = "32121-02.html";
 									npc.broadcastPacket(new MagicSkillUse(npc, player, 5089, 1, 1000, 0));
 									qs.unset("W");
@@ -457,23 +562,34 @@ public class Q00125_TheNameOfEvil1 extends Quest
 									qs.unset("G");
 									qs.unset("U");
 									break;
+								}
 								case 1:
+								{
 									htmltext = "32121-09.html";
 									break;
+								}
 								case 2:
+								{
 									htmltext = "32121-19.html";
 									break;
+								}
 								case 3:
+								{
 									htmltext = "32121-20.html";
 									break;
+								}
 							}
 							break;
+						}
 						case 8:
+						{
 							htmltext = "32121-21.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

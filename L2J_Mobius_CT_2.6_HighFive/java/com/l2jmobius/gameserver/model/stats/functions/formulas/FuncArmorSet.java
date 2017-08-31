@@ -65,23 +65,35 @@ public class FuncArmorSet extends AbstractFunction
 					switch (getStat())
 					{
 						case STAT_STR:
+						{
 							value += set.getSTR();
 							break;
+						}
 						case STAT_DEX:
+						{
 							value += set.getDEX();
 							break;
+						}
 						case STAT_INT:
+						{
 							value += set.getINT();
 							break;
+						}
 						case STAT_MEN:
+						{
 							value += set.getMEN();
 							break;
+						}
 						case STAT_CON:
+						{
 							value += set.getCON();
 							break;
+						}
 						case STAT_WIT:
+						{
 							value += set.getWIT();
 							break;
+						}
 					}
 				}
 			}

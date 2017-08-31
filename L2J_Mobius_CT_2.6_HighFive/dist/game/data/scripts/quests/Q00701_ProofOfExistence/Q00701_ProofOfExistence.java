@@ -77,16 +77,24 @@ public class Q00701_ProofOfExistence extends Quest
 		{
 			case "32559-03.htm":
 			case "32559-08.html":
+			{
 				break;
+			}
 			case "32559-04.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "32559-09.html":
+			{
 				st.exitQuest(true, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -143,10 +151,13 @@ public class Q00701_ProofOfExistence extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState qs = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
 				htmltext = ((player.getLevel() >= MIN_LEVEL) && (qs != null) && qs.isCompleted()) ? "32559-01.htm" : "32559-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (hasQuestItems(player, BANSHEE_QUEENS_EYE))
 				{
 					giveAdena(player, (getQuestItemsCount(player, DEADMANS_REMAINS) * 2500) + (getQuestItemsCount(player, BANSHEE_QUEENS_EYE) * 50000) + 23835, true);
@@ -165,6 +176,7 @@ public class Q00701_ProofOfExistence extends Quest
 					htmltext = "32559-05.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -275,17 +275,25 @@ public class Loto implements IBypassHandler
 						switch ((int) check[0])
 						{
 							case 1:
+							{
 								message += "- 1st Prize";
 								break;
+							}
 							case 2:
+							{
 								message += "- 2nd Prize";
 								break;
+							}
 							case 3:
+							{
 								message += "- 3th Prize";
 								break;
+							}
 							case 4:
+							{
 								message += "- 4th Prize";
 								break;
+							}
 						}
 						message += " " + check[1] + "a.";
 					}

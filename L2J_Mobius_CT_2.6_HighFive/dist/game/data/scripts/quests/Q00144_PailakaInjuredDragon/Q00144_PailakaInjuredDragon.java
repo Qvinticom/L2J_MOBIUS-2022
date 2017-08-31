@@ -480,128 +480,133 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		{
 			case VARKA_SILENOS_FOOTMAN:
 			case VARKA_SILENOS_RECRUIT:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_MEDIUM);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case VARKA_SILENOS_WARRIOR:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_PRIEST);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case VARKA_ELITE_GUARD:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_SHAMAN);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case VARKAS_COMMANDER:
 			case VARKA_SILENOS_OFFICER:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_SEER);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case VARKA_SILENOS_GREAT_MAGUS:
 			case VARKA_SILENOS_GENERAL:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_MAGNUS);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case VARKAS_PROPHET:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, DISCIPLE_OF_PROPHET);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case VARKA_SILENOS_HEAD_GUARD:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_HEAD_MAGUS);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case PROPHET_GUARD:
+			{
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
 				}
-				
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_GREAT_SEER);
-				
 				// Check if all the first row have been killed. Despawn mages.
 				checkIfLastInWall(npc);
 				break;
+			}
 			case LATANA:
+			{
 				qs.setCond(4, true);
-				
 				// Spawns Ketra Orc Supporter.
 				addSpawn(KETRA_ORC_SUPPORTER2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, npc.getInstanceId());
 				break;
+			}
 			case ANTYLOPE_1:
 			case ANTYLOPE_2:
 			case ANTYLOPE_3:
 			case FLAVA:
+			{
 				dropItem(npc, player);
 				break;
+			}
 			default:
+			{
 				// hardcoded herb drops.
 				dropHerb(npc, player, HP_HERBS_DROPLIST);
 				dropHerb(npc, player, MP_HERBS_DROPLIST);
 				break;
+			}
 		}
 		return super.onKill(npc, player, isSummon);
 	}
@@ -679,45 +684,61 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				case VARKA_SILENOS_FOOTMAN:
 				case VARKA_SILENOS_RECRUIT:
 				case VARKA_SILENOS_WARRIOR:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_SILENOS_FOOTMAN:
 						case VARKA_SILENOS_RECRUIT:
 						case VARKA_SILENOS_WARRIOR:
+						{
 							return;
+						}
 					}
 					break;
+				}
 				case VARKA_ELITE_GUARD:
 				case VARKAS_COMMANDER:
 				case VARKA_SILENOS_OFFICER:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_ELITE_GUARD:
 						case VARKAS_COMMANDER:
 						case VARKA_SILENOS_OFFICER:
+						{
 							return;
+						}
 					}
 					break;
+				}
 				case VARKA_SILENOS_GREAT_MAGUS:
 				case VARKA_SILENOS_GENERAL:
 				case VARKAS_PROPHET:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_SILENOS_GREAT_MAGUS:
 						case VARKA_SILENOS_GENERAL:
 						case VARKAS_PROPHET:
+						{
 							return;
+						}
 					}
 					break;
+				}
 				case VARKA_SILENOS_HEAD_GUARD:
 				case PROPHET_GUARD:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_SILENOS_HEAD_GUARD:
 						case PROPHET_GUARD:
+						{
 							return;
+						}
 					}
 					break;
+				}
 			}
 		}
 		
@@ -735,50 +756,66 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				case VARKA_SILENOS_FOOTMAN:
 				case VARKA_SILENOS_RECRUIT:
 				case VARKA_SILENOS_WARRIOR:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_SILENOS_MEDIUM:
 						case VARKA_SILENOS_PRIEST:
+						{
 							knownNpc.abortCast();
 							knownNpc.deleteMe();
 							break;
+						}
 					}
 					break;
+				}
 				case VARKA_ELITE_GUARD:
 				case VARKAS_COMMANDER:
 				case VARKA_SILENOS_OFFICER:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_SILENOS_SHAMAN:
 						case VARKA_SILENOS_SEER:
+						{
 							knownNpc.abortCast();
 							knownNpc.deleteMe();
 							break;
+						}
 					}
 					break;
+				}
 				case VARKA_SILENOS_GREAT_MAGUS:
 				case VARKA_SILENOS_GENERAL:
 				case VARKAS_PROPHET:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_SILENOS_MAGNUS:
 						case DISCIPLE_OF_PROPHET:
+						{
 							knownNpc.abortCast();
 							knownNpc.deleteMe();
 							break;
+						}
 					}
 					break;
+				}
 				case VARKA_SILENOS_HEAD_GUARD:
 				case PROPHET_GUARD:
+				{
 					switch (knownNpc.getId())
 					{
 						case VARKA_HEAD_MAGUS:
 						case VARKA_SILENOS_GREAT_SEER:
+						{
 							knownNpc.abortCast();
 							knownNpc.deleteMe();
 							break;
+						}
 					}
 					break;
+				}
 			}
 		}
 	}

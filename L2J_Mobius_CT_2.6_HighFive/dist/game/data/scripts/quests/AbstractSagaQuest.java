@@ -168,14 +168,19 @@ public abstract class AbstractSagaQuest extends Quest
 				case "0-013.htm":
 				case "0-014.htm":
 				case "0-015.htm":
+				{
 					htmltext = event;
 					break;
+				}
 				case "accept":
+				{
 					st.startQuest();
 					giveItems(player, Items[10], 1);
 					htmltext = "0-03.htm";
 					break;
+				}
 				case "0-1":
+				{
 					if (player.getLevel() < 76)
 					{
 						htmltext = "0-02.htm";
@@ -189,7 +194,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "0-05.htm";
 					}
 					break;
+				}
 				case "0-2":
+				{
 					if (player.getLevel() < 76)
 					{
 						takeItems(player, Items[10], -1);
@@ -215,11 +222,15 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "0-07.htm";
 					}
 					break;
+				}
 				case "1-3":
+				{
 					st.setCond(3);
 					htmltext = "1-05.htm";
 					break;
+				}
 				case "1-4":
+				{
 					st.setCond(4);
 					takeItems(player, Items[0], 1);
 					if (Items[11] != 0)
@@ -229,42 +240,60 @@ public abstract class AbstractSagaQuest extends Quest
 					giveItems(player, Items[1], 1);
 					htmltext = "1-06.htm";
 					break;
+				}
 				case "2-1":
+				{
 					st.setCond(2);
 					htmltext = "2-05.htm";
 					break;
+				}
 				case "2-2":
+				{
 					st.setCond(5);
 					takeItems(player, Items[1], 1);
 					giveItems(player, Items[4], 1);
 					htmltext = "2-06.htm";
 					break;
+				}
 				case "3-5":
+				{
 					htmltext = "3-07.htm";
 					break;
+				}
 				case "3-6":
+				{
 					st.setCond(11);
 					htmltext = "3-02.htm";
 					break;
+				}
 				case "3-7":
+				{
 					st.setCond(12);
 					htmltext = "3-03.htm";
 					break;
+				}
 				case "3-8":
+				{
 					st.setCond(13);
 					takeItems(player, Items[2], 1);
 					giveItems(player, Items[7], 1);
 					htmltext = "3-08.htm";
 					break;
+				}
 				case "4-1":
+				{
 					htmltext = "4-010.htm";
 					break;
+				}
 				case "4-2":
+				{
 					giveItems(player, Items[9], 1);
 					st.setCond(18, true);
 					htmltext = "4-011.htm";
 					break;
+				}
 				case "4-3":
+				{
 					giveItems(player, Items[9], 1);
 					st.setCond(18, true);
 					autoChat(npc, Text[13].replace("PLAYERNAME", player.getName()));
@@ -272,19 +301,25 @@ public abstract class AbstractSagaQuest extends Quest
 					cancelQuestTimer("Mob_2 has despawned", npc, player);
 					DeleteSpawn(st, npc);
 					return null;
+				}
 				case "5-1":
+				{
 					st.setCond(6, true);
 					takeItems(player, Items[4], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "5-02.htm";
 					break;
+				}
 				case "6-1":
+				{
 					st.setCond(8, true);
 					takeItems(player, Items[5], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "6-03.htm";
 					break;
+				}
 				case "7-1":
+				{
 					if (st.getInt("spawned") == 1)
 					{
 						htmltext = "7-03.htm";
@@ -303,25 +338,33 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "7-04.htm";
 					}
 					break;
+				}
 				case "7-2":
+				{
 					st.setCond(10, true);
 					takeItems(player, Items[6], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "7-06.htm";
 					break;
+				}
 				case "8-1":
+				{
 					st.setCond(14, true);
 					takeItems(player, Items[7], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "8-02.htm";
 					break;
+				}
 				case "9-1":
+				{
 					st.setCond(17, true);
 					takeItems(player, Items[8], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "9-03.htm";
 					break;
+				}
 				case "10-1":
+				{
 					if (st.getInt("Quest0") == 0)
 					{
 						final L2Npc Mob_3 = addSpawn(Mob[2], npcSpawnLocations[1], false, 0);
@@ -346,30 +389,42 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "10-04.htm";
 					}
 					break;
+				}
 				case "10-2":
+				{
 					st.setCond(19, true);
 					takeItems(player, Items[9], 1);
 					cast(npc, player, 4546, 1);
 					htmltext = "10-06.htm";
 					break;
+				}
 				case "11-9":
+				{
 					st.setCond(15);
 					htmltext = "11-03.htm";
 					break;
+				}
 				case "Mob_1 Timer 1":
+				{
 					autoChat(npc, Text[0].replace("PLAYERNAME", player.getName()));
 					return null;
+				}
 				case "Mob_1 has despawned":
+				{
 					autoChat(npc, Text[1].replace("PLAYERNAME", player.getName()));
 					st.set("spawned", "0");
 					DeleteSpawn(st, npc);
 					return null;
+				}
 				case "Archon Hellisha has despawned":
+				{
 					autoChat(npc, Text[6].replace("PLAYERNAME", player.getName()));
 					st.set("spawned", "0");
 					DeleteSpawn(st, npc);
 					return null;
+				}
 				case "Mob_3 Timer 1":
+				{
 					final L2Npc Mob_2 = FindSpawn(player, (L2Npc) L2World.getInstance().findObject(st.getInt("Mob_2")));
 					if (npc.getKnownList().knowsObject(Mob_2))
 					{
@@ -380,12 +435,16 @@ public abstract class AbstractSagaQuest extends Quest
 						cancelQuestTimer("Mob_3 Timer 1", npc, player);
 					}
 					return null;
+				}
 				case "Mob_3 has despawned":
+				{
 					autoChat(npc, Text[15].replace("PLAYERNAME", player.getName()));
 					st.set("Quest0", "2");
 					DeleteSpawn(st, npc);
 					return null;
+				}
 				case "Mob_2 Timer 1":
+				{
 					autoChat(npc, Text[7].replace("PLAYERNAME", player.getName()));
 					startQuestTimer("Mob_2 Timer 2", 1500, npc, player);
 					if (st.getInt("Quest1") == 45)
@@ -393,11 +452,15 @@ public abstract class AbstractSagaQuest extends Quest
 						st.set("Quest1", "0");
 					}
 					return null;
+				}
 				case "Mob_2 Timer 2":
+				{
 					autoChat(npc, Text[8].replace("PLAYERNAME", player.getName()));
 					startQuestTimer("Mob_2 Timer 3", 10000, npc, player);
 					return null;
+				}
 				case "Mob_2 Timer 3":
+				{
 					if (st.getInt("Quest0") == 0)
 					{
 						startQuestTimer("Mob_2 Timer 3", 13000, npc, player);
@@ -411,7 +474,9 @@ public abstract class AbstractSagaQuest extends Quest
 						}
 					}
 					return null;
+				}
 				case "Mob_2 has despawned":
+				{
 					st.set("Quest1", String.valueOf(st.getInt("Quest1") + 1));
 					if ((st.getInt("Quest0") == 1) || (st.getInt("Quest0") == 2) || (st.getInt("Quest1") > 3))
 					{
@@ -432,6 +497,7 @@ public abstract class AbstractSagaQuest extends Quest
 						startQuestTimer("Mob_2 has despawned", 1000, npc, player);
 					}
 					return null;
+				}
 			}
 		}
 		return htmltext;
@@ -756,12 +822,15 @@ public abstract class AbstractSagaQuest extends Quest
 			switch (st.getCond())
 			{
 				case 0:
+				{
 					if (npcId == _npc[0])
 					{
 						htmltext = "0-01.htm";
 					}
 					break;
+				}
 				case 1:
+				{
 					if (npcId == _npc[0])
 					{
 						htmltext = "0-04.htm";
@@ -771,7 +840,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "2-01.htm";
 					}
 					break;
+				}
 				case 2:
+				{
 					if (npcId == _npc[2])
 					{
 						htmltext = "2-02.htm";
@@ -781,7 +852,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "1-01.htm";
 					}
 					break;
+				}
 				case 3:
+				{
 					if ((npcId == _npc[1]) && hasQuestItems(player, Items[0]))
 					{
 						if ((Items[11] == 0) || hasQuestItems(player, Items[11]))
@@ -794,7 +867,9 @@ public abstract class AbstractSagaQuest extends Quest
 						}
 					}
 					break;
+				}
 				case 4:
+				{
 					if (npcId == _npc[1])
 					{
 						htmltext = "1-04.htm";
@@ -804,7 +879,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "2-03.htm";
 					}
 					break;
+				}
 				case 5:
+				{
 					if (npcId == _npc[2])
 					{
 						htmltext = "2-04.htm";
@@ -814,7 +891,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "5-01.htm";
 					}
 					break;
+				}
 				case 6:
+				{
 					if (npcId == _npc[5])
 					{
 						htmltext = "5-03.htm";
@@ -824,13 +903,17 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "6-01.htm";
 					}
 					break;
+				}
 				case 7:
+				{
 					if (npcId == _npc[6])
 					{
 						htmltext = "6-02.htm";
 					}
 					break;
+				}
 				case 8:
+				{
 					if (npcId == _npc[6])
 					{
 						htmltext = "6-04.htm";
@@ -840,13 +923,17 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "7-01.htm";
 					}
 					break;
+				}
 				case 9:
+				{
 					if (npcId == _npc[7])
 					{
 						htmltext = "7-05.htm";
 					}
 					break;
+				}
 				case 10:
+				{
 					if (npcId == _npc[7])
 					{
 						htmltext = "7-07.htm";
@@ -856,8 +943,10 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "3-01.htm";
 					}
 					break;
+				}
 				case 11:
 				case 12:
+				{
 					if (npcId == _npc[3])
 					{
 						if (hasQuestItems(player, Items[2]))
@@ -870,7 +959,9 @@ public abstract class AbstractSagaQuest extends Quest
 						}
 					}
 					break;
+				}
 				case 13:
+				{
 					if (npcId == _npc[3])
 					{
 						htmltext = "3-06.htm";
@@ -880,7 +971,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "8-01.htm";
 					}
 					break;
+				}
 				case 14:
+				{
 					if (npcId == _npc[8])
 					{
 						htmltext = "8-03.htm";
@@ -890,7 +983,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "11-01.htm";
 					}
 					break;
+				}
 				case 15:
+				{
 					if (npcId == _npc[11])
 					{
 						htmltext = "11-02.htm";
@@ -900,13 +995,17 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "9-01.htm";
 					}
 					break;
+				}
 				case 16:
+				{
 					if (npcId == _npc[9])
 					{
 						htmltext = "9-02.htm";
 					}
 					break;
+				}
 				case 17:
+				{
 					if (npcId == _npc[9])
 					{
 						htmltext = "9-04.htm";
@@ -916,13 +1015,17 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "10-01.htm";
 					}
 					break;
+				}
 				case 18:
+				{
 					if (npcId == _npc[10])
 					{
 						htmltext = "10-05.htm";
 					}
 					break;
+				}
 				case 19:
+				{
 					if (npcId == _npc[10])
 					{
 						htmltext = "10-07.htm";
@@ -932,7 +1035,9 @@ public abstract class AbstractSagaQuest extends Quest
 						htmltext = "0-06.htm";
 					}
 					break;
+				}
 				case 20:
+				{
 					if (npcId == _npc[0])
 					{
 						if (player.getLevel() >= 76)
@@ -961,6 +1066,7 @@ public abstract class AbstractSagaQuest extends Quest
 						}
 					}
 					break;
+				}
 			}
 		}
 		return htmltext;

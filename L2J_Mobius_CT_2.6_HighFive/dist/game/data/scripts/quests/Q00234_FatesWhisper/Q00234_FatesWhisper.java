@@ -197,11 +197,17 @@ public final class Q00234_FatesWhisper extends Quest
 				switch (qs.getMemoState())
 				{
 					case 6:
+					{
 						return "30178-01.html";
+					}
 					case 7:
+					{
 						return "30178-03.html";
+					}
 					case 8:
+					{
 						return "30178-04.html";
+					}
 				}
 				break;
 			}
@@ -346,83 +352,109 @@ public final class Q00234_FatesWhisper extends Quest
 				switch (qs.getMemoState())
 				{
 					case 11:
+					{
 						if (hasAtLeastOneQuestItem(player, SWORD_OF_DAMASCUS, SWORD_OF_DAMASCUS_FOCUS, SWORD_OF_DAMASCUS_CRT_DAMAGE, SWORD_OF_DAMASCUS_HASTE))
 						{
 							return "31002-35.html";
 						}
 						return "31002-35a.html";
+					}
 					case 12:
+					{
 						if (hasAtLeastOneQuestItem(player, HAZARD_BOW_GUIDENCE, HAZARD_BOW_QUICKRECOVERY, HAZARD_BOW_CHEAPSHOT, HAZARD_BOW))
 						{
 							return "31002-36.html";
 						}
 						return "31002-36a.html";
+					}
 					case 13:
+					{
 						if (hasAtLeastOneQuestItem(player, LANCIA_ANGER, LANCIA_CRT_STUN, LANCIA_LONGBLOW, LANCIA))
 						{
 							return "31002-37.html";
 						}
 						return "31002-37a.html";
+					}
 					case 14:
+					{
 						if (hasAtLeastOneQuestItem(player, ART_OF_BATTLE_AXE_HEALTH, ART_OF_BATTLE_AXE_RSK_FOCUS, ART_OF_BATTLE_AXE_HASTE, ART_OF_BATTLE_AXE))
 						{
 							return "31002-38.html";
 						}
 						return "31002-38a.html";
+					}
 					case 15:
+					{
 						if (hasAtLeastOneQuestItem(player, STAFF_OF_EVIL_SPRIT_MAGICFOCUS, STAFF_OF_EVIL_SPRIT_MAGICBLESSTHEBODY, STAFF_OF_EVIL_SPRIT_MAGICPOISON, STAFF_OF_EVIL_SPRIT))
 						{
 							return "31002-39.html";
 						}
 						return "31002-39a.html";
+					}
 					case 16:
+					{
 						if (hasAtLeastOneQuestItem(player, DEMONS_SWORD_CRT_BLEED, DEMONS_SWORD_CRT_POISON, DEMONS_SWORD_MIGHTMOTAL, DEMONS_SWORD))
 						{
 							return "31002-40.html";
 						}
 						return "31002-40a.html";
+					}
 					case 17:
+					{
 						if (hasAtLeastOneQuestItem(player, BELLION_CESTUS_CRT_DRAIN, BELLION_CESTUS_CRT_POISON, BELLION_CESTUS_RSK_HASTE, BELLION_CESTUS))
 						{
 							return "31002-41.html";
 						}
 						return "31002-41a.html";
+					}
 					case 18:
+					{
 						if (hasAtLeastOneQuestItem(player, DEADMANS_GLORY_ANGER, DEADMANS_GLORY_HEALTH, DEADMANS_GLORY_HASTE, DEADMANS_GLORY))
 						{
 							return "31002-42.html";
 						}
 						return "31002-42a.html";
+					}
 					case 19:
+					{
 						if (hasAtLeastOneQuestItem(player, SAMURAI_LONGSWORD_SAMURAI_LONGSWORD))
 						{
 							return "31002-43.html";
 						}
 						return "31002-43a.html";
+					}
 					case 41:
+					{
 						if (hasAtLeastOneQuestItem(player, GUARDIANS_SWORD, GUARDIANS_SWORD_CRT_DRAIN, GUARDIANS_SWORD_HEALTH, GUARDIANS_SWORD_CRT_BLEED))
 						{
 							return "31002-43b.html";
 						}
 						return "31002-43c.html";
+					}
 					case 42:
+					{
 						if (hasAtLeastOneQuestItem(player, TEARS_OF_WIZARD, TEARS_OF_WIZARD_ACUMEN, TEARS_OF_WIZARD_MAGICPOWER, TEARS_OF_WIZARD_UPDOWN))
 						{
 							return "31002-43d.html";
 						}
 						return "31002-43e.html";
+					}
 					case 43:
+					{
 						if (hasAtLeastOneQuestItem(player, STAR_BUSTER, STAR_BUSTER_HEALTH, STAR_BUSTER_HASTE, STAR_BUSTER_RSK_FOCUS))
 						{
 							return "31002-43f.html";
 						}
 						return "31002-43g.html";
+					}
 					case 44:
+					{
 						if (hasAtLeastOneQuestItem(player, BONE_OF_KAIM_VANUL, BONE_OF_KAIM_VANUL_MANAUP, BONE_OF_KAIM_VANUL_MAGICSILENCE, BONE_OF_KAIM_VANUL_UPDOWN))
 						{
 							return "31002-43h.html";
 						}
 						return "31002-43i.html";
+					}
 				}
 				break;
 			}
@@ -605,11 +637,17 @@ public final class Q00234_FatesWhisper extends Quest
 				switch (eventID)
 				{
 					case 1:
+					{
 						return "31002-02.htm";
+					}
 					case 2:
+					{
 						return "31002-03.html";
+					}
 					case 3:
+					{
 						return "31002-04.html";
+					}
 					case 4:
 					{
 						if (!qs.isCompleted() && (player.getLevel() >= 75))
@@ -996,31 +1034,57 @@ public final class Q00234_FatesWhisper extends Quest
 		switch (qs.getMemoState())
 		{
 			case 11:
+			{
 				return getReward(qs, player, SWORD_OF_DAMASCUS, SWORD_OF_DAMASCUS_FOCUS, SWORD_OF_DAMASCUS_CRT_DAMAGE, SWORD_OF_DAMASCUS_HASTE, REWARD);
+			}
 			case 12:
+			{
 				return getReward(qs, player, HAZARD_BOW, HAZARD_BOW_GUIDENCE, HAZARD_BOW_QUICKRECOVERY, HAZARD_BOW_CHEAPSHOT, REWARD);
+			}
 			case 13:
+			{
 				return getReward(qs, player, LANCIA, LANCIA_ANGER, LANCIA_CRT_STUN, LANCIA_LONGBLOW, REWARD);
+			}
 			case 14:
+			{
 				return getReward(qs, player, ART_OF_BATTLE_AXE, ART_OF_BATTLE_AXE_HEALTH, ART_OF_BATTLE_AXE_RSK_FOCUS, ART_OF_BATTLE_AXE_HASTE, REWARD);
+			}
 			case 15:
+			{
 				return getReward(qs, player, STAFF_OF_EVIL_SPRIT, STAFF_OF_EVIL_SPRIT_MAGICFOCUS, STAFF_OF_EVIL_SPRIT_MAGICBLESSTHEBODY, STAFF_OF_EVIL_SPRIT_MAGICPOISON, REWARD);
+			}
 			case 16:
+			{
 				return getReward(qs, player, DEMONS_SWORD, DEMONS_SWORD_CRT_BLEED, DEMONS_SWORD_CRT_POISON, DEMONS_SWORD_MIGHTMOTAL, REWARD);
+			}
 			case 17:
+			{
 				return getReward(qs, player, BELLION_CESTUS, BELLION_CESTUS_CRT_DRAIN, BELLION_CESTUS_CRT_POISON, BELLION_CESTUS_RSK_HASTE, REWARD);
+			}
 			case 18:
+			{
 				return getReward(qs, player, DEADMANS_GLORY, DEADMANS_GLORY_ANGER, DEADMANS_GLORY_HEALTH, DEADMANS_GLORY_HASTE, REWARD);
+			}
 			case 19:
+			{
 				return getReward(qs, player, SAMURAI_LONGSWORD_SAMURAI_LONGSWORD, 0, 0, 0, REWARD);
+			}
 			case 41:
+			{
 				return getReward(qs, player, GUARDIANS_SWORD, GUARDIANS_SWORD_CRT_DRAIN, GUARDIANS_SWORD_HEALTH, GUARDIANS_SWORD_CRT_BLEED, REWARD);
+			}
 			case 42:
+			{
 				return getReward(qs, player, TEARS_OF_WIZARD, TEARS_OF_WIZARD_ACUMEN, TEARS_OF_WIZARD_MAGICPOWER, TEARS_OF_WIZARD_UPDOWN, REWARD);
+			}
 			case 43:
+			{
 				return getReward(qs, player, STAR_BUSTER, STAR_BUSTER_HEALTH, STAR_BUSTER_HASTE, STAR_BUSTER_RSK_FOCUS, REWARD);
+			}
 			case 44:
+			{
 				return getReward(qs, player, BONE_OF_KAIM_VANUL, BONE_OF_KAIM_VANUL_MANAUP, BONE_OF_KAIM_VANUL_MAGICSILENCE, BONE_OF_KAIM_VANUL_UPDOWN, REWARD);
+			}
 		}
 		return false;
 	}

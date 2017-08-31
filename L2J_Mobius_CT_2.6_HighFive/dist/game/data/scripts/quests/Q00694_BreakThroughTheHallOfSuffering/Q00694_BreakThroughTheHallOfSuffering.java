@@ -73,6 +73,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				if ((player.getLevel() >= 75) && (player.getLevel() <= 82))
 				{
 					htmltext = "32603-01.htm";
@@ -83,15 +84,19 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 					qs.exitQuest(true);
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npc.getId())
 				{
 					case TEPIOS:
+					{
 						htmltext = "32603-01a.html";
 						break;
+					}
 					case TEPIOS2:
+					{
 						final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-						
 						if ((world != null) && (world.getTemplateId() == 115))
 						{
 							if (world.tag == -1)
@@ -262,8 +267,10 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 							htmltext = "32530-11.html";
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

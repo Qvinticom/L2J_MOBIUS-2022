@@ -69,35 +69,51 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 		switch (npc.getId())
 		{
 			case KEUCEREUS:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() < 75) ? "32548-00.html" : "32548-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32548-06.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32548-0a.html";
 						break;
+					}
 				}
 				break;
+			}
 			case TEPIOS:
+			{
 				switch (st.getState())
 				{
 					case State.STARTED:
+					{
 						htmltext = "32530-01.html";
 						giveAdena(player, 16671, true);
 						addExpAndSp(player, 100640, 10098);
 						st.exitQuest(false, true);
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32530-02.html";
 						break;
+					}
 					default:
+					{
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
