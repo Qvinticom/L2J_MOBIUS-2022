@@ -116,7 +116,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 					final String fileName = template.getSpawnTemplate().getFile().getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/');
 					html.replace("%spawnfile%", fileName);
 					html.replace("%spawnname%", template.getSpawnTemplate().getName());
-					html.replace("%spawngroup%", template.getGroup().getName());
+					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // used String.valueOf because it can be null
 					if (template.getSpawnTemplate().getAI() != null)
 					{
 						final Quest script = QuestManager.getInstance().getQuest(template.getSpawnTemplate().getAI());
@@ -137,11 +137,11 @@ public class L2NpcActionShift implements IActionShiftHandler
 				}
 				else if (npc.getSpawn().hasRespawnRandom())
 				{
-					html.replace("%resp%", npc.getSpawn().getRespawnMinDelay() / 1000 + "-" + (npc.getSpawn().getRespawnMaxDelay() / 1000) + " sec");
+					html.replace("%resp%", (npc.getSpawn().getRespawnMinDelay() / 1000) + "-" + (npc.getSpawn().getRespawnMaxDelay() / 1000) + " sec");
 				}
 				else
 				{
-					html.replace("%resp%", npc.getSpawn().getRespawnMinDelay() / 1000 + " sec");
+					html.replace("%resp%", (npc.getSpawn().getRespawnMinDelay() / 1000) + " sec");
 				}
 			}
 			else
