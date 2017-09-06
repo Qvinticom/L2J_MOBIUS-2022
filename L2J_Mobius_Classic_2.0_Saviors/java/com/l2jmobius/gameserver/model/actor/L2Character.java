@@ -1051,6 +1051,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// GeoData Los Check here (or dz > 1000)
 			if (!GeoEngine.getInstance().canSeeTarget(this, target))
 			{
+				if (target.isDoor() && target.isAutoAttackable(this))
+				{
+					getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, target.getLocation());
+					return;
+				}
 				sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -1220,7 +1225,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// Notify AI with EVT_READY_TO_ACT
 			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), timeAtk);
 		}
-		
 	}
 	
 	/**
