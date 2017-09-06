@@ -292,7 +292,7 @@ public final class ThreadPoolManager
 			}
 			catch (RuntimeException e)
 			{
-				LOG.warning("Exception in a Runnable execution: " + _runnable.getClass().getSimpleName() + " " + e);
+				LOG.warning("Exception in " + _runnable.getClass().getName() + " execution: " + e.getMessage());
 			}
 		}
 	}
