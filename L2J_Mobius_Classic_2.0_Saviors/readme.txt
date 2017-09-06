@@ -55,6 +55,5 @@ Custom work
 TODO list
 -Parse retail monster spawns by zone
 -Test quests and update rewards
--Test castle sieges
 -Dungeon of Abyss https://www.youtube.com/watch?v=FZEu0hjCAK8
 -Provisional Clan Halls
