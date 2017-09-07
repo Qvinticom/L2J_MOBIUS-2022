@@ -99,7 +99,11 @@ public final class DragonVortex extends AbstractNpcAI
 				raid = RAIDS[0]; // Emerald Horn
 			}
 			addSpawn(raid, npc.getX() + getRandom(-500, 500), npc.getY() + getRandom(-500, 500), npc.getZ() + 10, 0, false, DESPAWN_DELAY, true);
-			getTimers().addTimer("RESET", 60000, t -> npc.setScriptValue(0));
+			startQuestTimer("RESET", 60000, npc, null);
+		}
+		else if ("RESET".equals(event))
+		{
+			npc.setScriptValue(0);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}

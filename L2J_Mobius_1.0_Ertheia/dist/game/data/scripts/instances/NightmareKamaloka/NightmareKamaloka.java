@@ -19,7 +19,6 @@ package instances.NightmareKamaloka;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -63,28 +62,24 @@ public final class NightmareKamaloka extends AbstractInstance
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
-	{
-		final Instance instance = npc.getInstanceWorld();
-		if (isInInstance(instance))
-		{
-			switch (event)
-			{
-				case "SPAWN_BOSSES":
-				{
-					instance.spawnGroup("BOSSES");
-					break;
-				}
-			}
-		}
-	}
-	
-	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("enterInstance"))
+		switch (event)
 		{
-			enterInstance(player, npc, TEMPLATE_ID);
+			case "enterInstance":
+			{
+				enterInstance(player, npc, TEMPLATE_ID);
+				break;
+			}
+			case "SPAWN_BOSSES":
+			{
+				final Instance instance = npc.getInstanceWorld();
+				if (isInInstance(instance))
+				{
+					instance.spawnGroup("BOSSES");
+				}
+				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -97,7 +92,7 @@ public final class NightmareKamaloka extends AbstractInstance
 		{
 			if (npc.getId() == INVISIBLE_NPC)
 			{
-				getTimers().addTimer("SPAWN_BOSSES", 10000, npc, null);
+				startQuestTimer("SPAWN_BOSSES", 10000, npc, null);
 			}
 		}
 		return super.onSpawn(npc);

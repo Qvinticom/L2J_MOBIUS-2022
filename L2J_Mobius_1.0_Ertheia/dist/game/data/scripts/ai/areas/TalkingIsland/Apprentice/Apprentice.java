@@ -18,7 +18,6 @@ package ai.areas.TalkingIsland.Apprentice;
 
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -71,22 +70,17 @@ public final class Apprentice extends AbstractNpcAI
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_T_RIDE_A_KUKURI_NOW);
 			}
 		}
-		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equals("SPAM_TEXT") && (npc != null))
+		else if (event.equals("SPAM_TEXT") && (npc != null))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TRY_RIDING_A_KUKURI, 1000);
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addRepeatingTimer("SPAM_TEXT", 12000, npc, null);
+		startQuestTimer("SPAM_TEXT", 12000, npc, null, true);
 		return super.onSpawn(npc);
 	}
 	

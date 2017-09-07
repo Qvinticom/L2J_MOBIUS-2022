@@ -19,7 +19,6 @@ package ai.areas.TalkingIsland;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -46,7 +45,7 @@ public final class BoyAndGirl extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equals("NPC_CHANGEWEAP"))
 		{
@@ -60,20 +59,21 @@ public final class BoyAndGirl extends AbstractNpcAI
 				npc.setRHandId(WEAPON);
 				npc.setScriptValue(1);
 			}
-			getTimers().addTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
+			startQuestTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
 		}
 		else if (event.equals("NPC_SHOUT"))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, npc.getId() == BOY ? NpcStringId.WEEE : NpcStringId.BOYS_ARE_SO_ANNOYING);
-			getTimers().addTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
+			startQuestTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
-		getTimers().addTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
+		startQuestTimer("NPC_CHANGEWEAP", 15000 + (getRandom(5) * 1000), npc, null);
+		startQuestTimer("NPC_SHOUT", 10000 + (getRandom(5) * 1000), npc, null);
 		npc.setIsRunning(true);
 		final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 200, 600);
 		addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getLocation().getX(), npc.getLocation().getY(), npc.getLocation().getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);

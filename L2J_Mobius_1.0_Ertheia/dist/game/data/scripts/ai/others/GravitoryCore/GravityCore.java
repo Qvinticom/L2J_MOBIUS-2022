@@ -17,7 +17,6 @@
 package ai.others.GravitoryCore;
 
 import com.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -40,6 +39,16 @@ public class GravityCore extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("DELETE_ME") && (npc != null))
+		{
+			npc.deleteMe();
+		}
+		return super.onAdvEvent(event, npc, player);
+	}
+	
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		final L2Character summoner = npc.getSummoner();
@@ -53,7 +62,7 @@ public class GravityCore extends AbstractNpcAI
 			}
 			
 			final int despawnTime = npc.getTemplate().getParameters().getInt("i_despawn_time", 30000);
-			getTimers().addTimer("DELETE_ME", despawnTime, npc, player);
+			startQuestTimer("DELETE_ME", despawnTime, npc, player);
 			
 			WarpedSpaceManager.getInstance().addWarpedSpace(npc, 100);
 		}
@@ -65,15 +74,6 @@ public class GravityCore extends AbstractNpcAI
 	public void onNpcDespawn(L2Npc npc)
 	{
 		WarpedSpaceManager.getInstance().removeWarpedSpace(npc);
-	}
-	
-	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equals("DELETE_ME"))
-		{
-			npc.deleteMe();
-		}
 	}
 	
 	public static void main(String[] args)

@@ -16,7 +16,6 @@
  */
 package ai.areas.GardenOfGenesis;
 
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -43,7 +42,7 @@ public final class GenesisVines extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equals("CAST_SKILL") && npc.isScriptValue(1))
 		{
@@ -52,13 +51,14 @@ public final class GenesisVines extends AbstractNpcAI
 			{
 				addSkillCastDesire(npc, npc, skill, 23);
 			}
-			getTimers().addTimer("CAST_SKILL", 3000, npc, null);
+			startQuestTimer("CAST_SKILL", 3000, npc, null);
 		}
 		else if (event.equals("DELETE"))
 		{
 			npc.setScriptValue(0);
 			npc.deleteMe();
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
@@ -66,8 +66,8 @@ public final class GenesisVines extends AbstractNpcAI
 	{
 		npc.disableCoreAI(true);
 		npc.setScriptValue(1);
-		getTimers().addTimer("CAST_SKILL", 3000, npc, null);
-		getTimers().addTimer("DELETE", 150000, npc, null);
+		startQuestTimer("CAST_SKILL", 3000, npc, null);
+		startQuestTimer("DELETE", 150000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

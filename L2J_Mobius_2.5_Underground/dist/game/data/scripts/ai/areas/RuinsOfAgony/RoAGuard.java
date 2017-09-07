@@ -17,7 +17,6 @@
 package ai.areas.RuinsOfAgony;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -39,19 +38,20 @@ public final class RoAGuard extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equals("NPC_SHOUT"))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THIS_IS_RUINS_OF_AGONY_WHERE_KANILOV_IS);
-			getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
+			startQuestTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
+		startQuestTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

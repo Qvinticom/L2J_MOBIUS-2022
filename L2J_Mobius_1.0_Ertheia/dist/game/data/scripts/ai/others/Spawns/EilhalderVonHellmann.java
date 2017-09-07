@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -47,12 +48,22 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		if (event.equals("delete") && (npc != null))
+		{
+			npc.deleteMe();
+		}
+		return super.onAdvEvent(event, npc, player);
+	}
+	
+	@Override
 	public String onSpawn(L2Npc npc)
 	{
 		// Spawn that comes from RaidBossSpawnManager
 		if ((npc.getSpawn() == null) || (npc.getSpawn().getNpcSpawnTemplate() == null))
 		{
-			getTimers().addTimer("delete", 1000, event -> npc.deleteMe());
+			startQuestTimer("delete", 1000, npc, null);
 		}
 		return super.onSpawn(npc);
 	}

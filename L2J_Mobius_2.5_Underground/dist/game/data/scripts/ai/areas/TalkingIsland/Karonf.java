@@ -19,7 +19,6 @@ package ai.areas.TalkingIsland;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -42,7 +41,7 @@ public final class Karonf extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equals("NPC_MOVE"))
 		{
@@ -51,7 +50,7 @@ public final class Karonf extends AbstractNpcAI
 				final Location randomLoc = Util.getRandomPosition(npc.getSpawn().getLocation(), 0, 500);
 				addMoveToDesire(npc, GeoEngine.getInstance().canMoveToTargetLoc(npc.getLocation().getX(), npc.getLocation().getY(), npc.getLocation().getZ(), randomLoc.getX(), randomLoc.getY(), randomLoc.getZ(), npc.getInstanceWorld()), 23);
 			}
-			getTimers().addTimer("NPC_MOVE", (10 + getRandom(5)) * 1000, npc, null);
+			startQuestTimer("NPC_MOVE", (10 + getRandom(5)) * 1000, npc, null);
 		}
 		else if (event.equals("NPC_SHOUT"))
 		{
@@ -64,15 +63,16 @@ public final class Karonf extends AbstractNpcAI
 			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SOME_FOLKS_DON_T_KNOW_WHAT_THEY_ARE_DOING);
 			}
-			getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
+			startQuestTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addTimer("NPC_MOVE", (10 + getRandom(5)) * 1000, npc, null);
-		getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
+		startQuestTimer("NPC_MOVE", (10 + getRandom(5)) * 1000, npc, null);
+		startQuestTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

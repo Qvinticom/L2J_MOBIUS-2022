@@ -17,7 +17,6 @@
 package ai.areas.CrumaTower;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -47,23 +46,20 @@ public final class CrumaTower extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		if (event.equals("MESSAGE") && (npc != null))
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_CAN_GO_TO_UNDERGROUND_LV_3_USING_THE_ELEVATOR_IN_THE_BACK);
-			getTimers().addTimer(event, 15000, npc, player);
+			startQuestTimer(event, 15000, npc, player);
 		}
-		else
-		{
-			super.onTimerEvent(event, params, npc, player);
-		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addTimer("MESSAGE", 15000, npc, null);
+		startQuestTimer("MESSAGE", 15000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

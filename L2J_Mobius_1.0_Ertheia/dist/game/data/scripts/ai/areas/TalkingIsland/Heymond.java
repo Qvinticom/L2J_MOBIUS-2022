@@ -17,7 +17,6 @@
 package ai.areas.TalkingIsland;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -39,27 +38,37 @@ public final class Heymond extends AbstractNpcAI
 	}
 	
 	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		switch (getRandom(4))
+		if (event.equals("NPC_SHOUT"))
 		{
-			case 0:
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.VIEW_OUR_WIDE_VARIETY_OF_ACCESSORIES);
-				break;
-			case 1:
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_BEST_WEAPON_DOESN_T_MAKE_YOU_THE_BEST);
-				break;
-			case 2:
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WE_BUY_AND_SELL_COME_TAKE_A_LOOK);
-				break;
+			switch (getRandom(4))
+			{
+				case 0:
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.VIEW_OUR_WIDE_VARIETY_OF_ACCESSORIES);
+					break;
+				}
+				case 1:
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THE_BEST_WEAPON_DOESN_T_MAKE_YOU_THE_BEST);
+					break;
+				}
+				case 2:
+				{
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WE_BUY_AND_SELL_COME_TAKE_A_LOOK);
+					break;
+				}
+			}
+			startQuestTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		}
-		getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
+		return super.onAdvEvent(event, npc, player);
 	}
 	
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
+		startQuestTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

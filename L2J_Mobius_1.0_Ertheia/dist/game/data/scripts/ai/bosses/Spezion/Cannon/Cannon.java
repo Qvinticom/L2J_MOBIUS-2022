@@ -78,34 +78,29 @@ public final class Cannon extends AbstractNpcAI
 	{
 		String htmltext = null;
 		
-		if (event.equals("useCannonBall"))
-		{
-			if (npc.isScriptValue(0))
-			{
-				htmltext = "cannon-recharge.html";
-			}
-			else if (getQuestItemsCount(player, CANNONBALL) == 0)
-			{
-				htmltext = "cannon-noItem.html";
-			}
-			else
-			{
-				takeItems(player, CANNONBALL, 1);
-				npc.setScriptValue(0);
-				npc.setTitleString(NpcStringId.CANNON_IS_LOADING);
-				npc.broadcastInfo();
-				addSkillCastDesire(npc, npc, PRESENT_SKILL, 23);
-				getTimers().addTimer("CANNON_RECHARGE", 300000, npc, null);
-			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
-	{
 		switch (event)
 		{
+			case "useCannonBall":
+			{
+				if (npc.isScriptValue(0))
+				{
+					htmltext = "cannon-recharge.html";
+				}
+				else if (getQuestItemsCount(player, CANNONBALL) == 0)
+				{
+					htmltext = "cannon-noItem.html";
+				}
+				else
+				{
+					takeItems(player, CANNONBALL, 1);
+					npc.setScriptValue(0);
+					npc.setTitleString(NpcStringId.CANNON_IS_LOADING);
+					npc.broadcastInfo();
+					addSkillCastDesire(npc, npc, PRESENT_SKILL, 23);
+					startQuestTimer("CANNON_RECHARGE", 300000, npc, null);
+				}
+				break;
+			}
 			case "CANNON_RECHARGE":
 			{
 				npc.setScriptValue(1);
@@ -123,7 +118,7 @@ public final class Cannon extends AbstractNpcAI
 						final L2Npc transformed = addSpawn(TRANSFORM_DATA.get(monster.getId()), monster);
 						transformed.getVariables().set("DROP_MEMORY_FRAGMENT", true);
 						transformed.getVariables().set("COUNTDOWN_TIME", 21);
-						getTimers().addTimer("COUTDOWN", 100, transformed, null);
+						startQuestTimer("COUTDOWN", 100, transformed, null);
 						monster.deleteMe();
 					}
 				});
@@ -141,11 +136,12 @@ public final class Cannon extends AbstractNpcAI
 				else if (!npc.isDead())
 				{
 					npc.getVariables().set("COUNTDOWN_TIME", time);
-					getTimers().addTimer("COUTDOWN", 1000, npc, null);
+					startQuestTimer("COUTDOWN", 1000, npc, null);
 				}
 				break;
 			}
 		}
+		return htmltext;
 	}
 	
 	@Override
@@ -166,7 +162,7 @@ public final class Cannon extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		getTimers().addTimer("CANNON_RECHARGE", 1000, npc, null);
+		startQuestTimer("CANNON_RECHARGE", 1000, npc, null);
 		return super.onSpawn(npc);
 	}
 	
@@ -180,7 +176,7 @@ public final class Cannon extends AbstractNpcAI
 			npc.broadcastPacket(new Earthquake(npc, 10, 5));
 			npc.broadcastPacket(new OnEventTrigger(npcParams.getInt("TRIGGER_ID"), true));
 			final L2Npc light = addSpawn(INVISIBLE_NPC, npcParams.getInt("LIGHT_ZONE_POS_X"), npcParams.getInt("LIGHT_ZONE_POS_Y"), npcParams.getInt("LIGHT_ZONE_POS_Z"), 0, false, 10000);
-			getTimers().addTimer("LIGHT_CHECK", 500, light, null);
+			startQuestTimer("LIGHT_CHECK", 500, light, null);
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}

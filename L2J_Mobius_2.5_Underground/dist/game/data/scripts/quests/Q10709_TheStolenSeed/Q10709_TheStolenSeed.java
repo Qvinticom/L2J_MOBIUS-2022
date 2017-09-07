@@ -17,7 +17,6 @@
 package quests.Q10709_TheStolenSeed;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -83,7 +82,7 @@ public final class Q10709_TheStolenSeed extends Quest
 				embryo.setIsInvul(true);
 				akum.setIsInvul(true);
 				
-				getTimers().addTimer("EMBRYO_DELAY", 3000, embryo, player);
+				startQuestTimer("EMBRYO_DELAY", 3000, embryo, player);
 			}
 			else
 			{
@@ -126,29 +125,23 @@ public final class Q10709_TheStolenSeed extends Quest
 				}
 				break;
 			}
-		}
-		return htmltext;
-	}
-	
-	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equals("EMBRYO_DELAY"))
-		{
-			final L2Npc akum = (L2Npc) npc.getTarget();
-			final QuestState st = getQuestState(player, true);
-			
-			if ((akum != null) && (st != null))
+			case "EMBRYO_DELAY":
 			{
-				st.setCond(2, true);
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.KARTIA_S_SEED_GOT_IT);
-				akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARGHH);
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WORTHLESS_GIANT_CURSE_YOU_FOR_ETERNITY);
-				addSpawn(CURSED_AKUM, akum);
-				npc.deleteMe();
-				akum.deleteMe();
+				final L2Npc akum = (L2Npc) npc.getTarget();
+				if (akum != null)
+				{
+					st.setCond(2, true);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.KARTIA_S_SEED_GOT_IT);
+					akum.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ARGHH);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_WORTHLESS_GIANT_CURSE_YOU_FOR_ETERNITY);
+					addSpawn(CURSED_AKUM, akum);
+					npc.deleteMe();
+					akum.deleteMe();
+				}
+				break;
 			}
 		}
+		return htmltext;
 	}
 	
 	@Override

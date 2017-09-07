@@ -84,9 +84,13 @@ public final class OlyBuffer extends AbstractNpcAI
 				if (npc.getScriptValue() >= 5)
 				{
 					htmltext = "OlyBuffer-noMore.html";
-					getTimers().addTimer("DELETE_ME", 5000, evnt -> npc.deleteMe());
+					startQuestTimer("DELETE_ME", 5000, npc, null);
 				}
 			}
+		}
+		else if (event.equals("DELETE_ME") && (npc != null))
+		{
+			npc.deleteMe();
 		}
 		return htmltext;
 	}

@@ -16,7 +16,6 @@
  */
 package ai.others.ArenaManager;
 
-import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -72,7 +71,7 @@ public final class ArenaManager extends AbstractNpcAI
 				if (player.getAdena() >= CP_COST)
 				{
 					takeItems(player, Inventory.ADENA_ID, CP_COST);
-					getTimers().addTimer("CPrecovery_delay", 2000, npc, player);
+					startQuestTimer("CPrecovery_delay", 2000, npc, player);
 				}
 				else
 				{
@@ -85,7 +84,7 @@ public final class ArenaManager extends AbstractNpcAI
 				if (player.getAdena() >= HP_COST)
 				{
 					takeItems(player, Inventory.ADENA_ID, HP_COST);
-					getTimers().addTimer("HPrecovery_delay", 2000, npc, player);
+					startQuestTimer("HPrecovery_delay", 2000, npc, player);
 				}
 				else
 				{
@@ -110,26 +109,26 @@ public final class ArenaManager extends AbstractNpcAI
 				}
 				break;
 			}
+			case "CPrecovery_delay":
+			{
+				if ((player != null) && !player.isInsideZone(ZoneId.PVP))
+				{
+					npc.setTarget(player);
+					npc.doCast(CP_RECOVERY.getSkill());
+				}
+				break;
+			}
+			case "HPrecovery_delay":
+			{
+				if ((player != null) && !player.isInsideZone(ZoneId.PVP))
+				{
+					npc.setTarget(player);
+					npc.doCast(HP_RECOVERY.getSkill());
+				}
+				break;
+			}
 		}
 		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
-	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
-	{
-		if ((player != null) && !player.isInsideZone(ZoneId.PVP))
-		{
-			if (event.equals("CPrecovery_delay"))
-			{
-				npc.setTarget(player);
-				npc.doCast(CP_RECOVERY.getSkill());
-			}
-			else if (event.equals("HPrecovery_delay"))
-			{
-				npc.setTarget(player);
-				npc.doCast(HP_RECOVERY.getSkill());
-			}
-		}
 	}
 	
 	public static void main(String[] args)

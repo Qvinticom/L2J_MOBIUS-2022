@@ -65,23 +65,29 @@ public final class Statues extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case STATUE_1:
+					{
 						loc = LOC_1;
 						npcId = STATUE_KEEPER_1;
 						break;
+					}
 					case STATUE_2:
+					{
 						loc = LOC_2;
 						npcId = STATUE_KEEPER_2;
 						break;
+					}
 					case STATUE_3:
+					{
 						loc = LOC_3;
 						npcId = STATUE_KEEPER_3;
 						break;
+					}
 				}
 				
 				if ((loc != null) && (npcId != -1))
 				{
 					npc.setScriptValue(1);
-					getTimers().addTimer("FUNCTION_REUSE", 900000, evnt -> npc.setScriptValue(0));
+					startQuestTimer("FUNCTION_REUSE", 900000, npc, null);
 					final L2Npc keeper = addSpawn(npcId, loc, false, 900000);
 					addAttackPlayerDesire(keeper, player);
 				}
@@ -90,6 +96,10 @@ public final class Statues extends AbstractNpcAI
 			{
 				htmltext = npc.getId() + "-no.html";
 			}
+		}
+		else if (event.equals("FUNCTION_REUSE"))
+		{
+			npc.setScriptValue(0);
 		}
 		return htmltext;
 	}

@@ -112,16 +112,24 @@ public final class TersisHerald extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case ANTHARAS:
+			{
 				npcStringId = NpcStringId.THE_EVIL_LAND_DRAGON_ANTHARAS_HAS_BEEN_DEFEATED_BY_BRAVE_HEROES;
 				break;
+			}
 			case VALAKAS:
+			{
 				npcStringId = NpcStringId.THE_EVIL_FIRE_DRAGON_VALAKAS_HAS_BEEN_DEFEATED;
 				break;
+			}
 			case LINDVIOR:
+			{
 				npcStringId = NpcStringId.HONORABLE_WARRIORS_HAVE_DRIVEN_OFF_LINDVIOR_THE_EVIL_WIND_DRAGON;
 				break;
+			}
 			default:
+			{
 				return super.onKill(npc, killer, isSummon);
+			}
 		}
 		
 		L2World.getInstance().getPlayers().stream().forEach(p -> showOnScreenMsg(p, npcStringId, 2, 10000, true));
