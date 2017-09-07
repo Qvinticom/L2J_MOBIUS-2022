@@ -510,7 +510,7 @@
 	</skill>
 	<skill id="1631" toLevel="1" name="Clear Movements">
 		<icon>icon.skill1631</icon>
-		<operateType>A3</operateType>
+		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -521,11 +521,13 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<reuseDelay>600000</reuseDelay>
+		<isMagic>1</isMagic>
 		<effects>
-			<effect name="Reuse">
-				<amount>-100</amount>
-				<mode>PER</mode>
-				<magicType>0</magicType>
+			<effect name="ReuseSkillById">
+				<skillId>821</skillId>
+			</effect>
+			<effect name="ReuseSkillById">
+				<skillId>922</skillId>
 			</effect>
 		</effects>
 	</skill>
