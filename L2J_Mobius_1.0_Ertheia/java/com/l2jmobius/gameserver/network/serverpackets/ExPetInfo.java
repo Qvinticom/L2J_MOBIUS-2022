@@ -147,6 +147,11 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.SUMMONED);
 		}
 		
+		if (summon.getReputation() != 0)
+		{
+			addComponentType(NpcInfoType.REPUTATION);
+		}
+		
 		if (summon.getOwner().getClan() != null)
 		{
 			_clanId = summon.getOwner().getAppearance().getVisibleClanId();
@@ -366,9 +371,9 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeC(_summon.getPvpFlag()); // PVP flag
 		}
-		if (containsMask(NpcInfoType.NAME_COLOR))
+		if (containsMask(NpcInfoType.REPUTATION))
 		{
-			packet.writeD(0x00); // Name color
+			packet.writeD(_summon.getReputation()); // Name color
 		}
 		if (containsMask(NpcInfoType.CLAN))
 		{

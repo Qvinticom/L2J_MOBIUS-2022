@@ -62,7 +62,7 @@ public enum NpcInfoType implements IUpdateTypeComponent
 	// 4
 	TITLE_NPCSTRINGID(0x20, 4),
 	PVP_FLAG(0x21, 1),
-	NAME_COLOR(0x22, 4),
+	REPUTATION(0x22, 4),
 	CLAN(0x23, (5 * 4)),
 	ABNORMALS(0x24, 0),
 	VISUAL_STATE(0x25, 1);

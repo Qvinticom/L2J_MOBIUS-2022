@@ -191,20 +191,19 @@ public abstract class L2Summon extends L2Playable
 	{
 		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
+			if (player == getOwner())
+			{
+				player.sendPacket(new PetInfo(this, 1));
+				return;
+			}
+			
 			if (isPet())
 			{
 				player.sendPacket(new ExPetInfo(this, player, 1));
 			}
 			else
 			{
-				if (player == getOwner())
-				{
-					player.sendPacket(new PetInfo(this, 1));
-				}
-				else
-				{
-					player.sendPacket(new SummonInfo(this, player, 1));
-				}
+				player.sendPacket(new SummonInfo(this, player, 1));
 			}
 		});
 	}
@@ -364,6 +363,8 @@ public abstract class L2Summon extends L2Playable
 	
 	public void deleteMe(L2PcInstance owner)
 	{
+		super.deleteMe();
+		
 		if (owner != null)
 		{
 			owner.sendPacket(new PetDelete(getSummonType(), getObjectId()));
@@ -372,16 +373,7 @@ public abstract class L2Summon extends L2Playable
 			{
 				party.broadcastToPartyMembers(owner, new ExPartyPetWindowDelete(this));
 			}
-		}
-		
-		// pet will be deleted along with all his items
-		if (getInventory() != null)
-		{
-			getInventory().destroyAllItems("pet deleted", getOwner(), this);
-		}
-		decayMe();
-		if (owner != null)
-		{
+			
 			if (isPet())
 			{
 				owner.setPet(null);
@@ -391,7 +383,13 @@ public abstract class L2Summon extends L2Playable
 				owner.removeServitor(getObjectId());
 			}
 		}
-		super.deleteMe();
+		
+		// pet will be deleted along with all his items
+		if (getInventory() != null)
+		{
+			getInventory().destroyAllItems("pet deleted", getOwner(), this);
+		}
+		decayMe();
 	}
 	
 	public void unSummon(L2PcInstance owner)
@@ -842,7 +840,7 @@ public abstract class L2Summon extends L2Playable
 		// Check if the L2PcInstance is the owner of the Pet
 		if (activeChar == getOwner())
 		{
-			activeChar.sendPacket(new PetInfo(this, 1));
+			activeChar.sendPacket(new PetInfo(this, isDead() ? 0 : 1));
 			// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
 			updateEffectIcons(true);
 			if (isPet())

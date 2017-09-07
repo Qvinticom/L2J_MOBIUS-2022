@@ -400,7 +400,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType>
 		{
 			packet.writeC(_npc.getPvpFlag()); // PVP flag
 		}
-		if (containsMask(NpcInfoType.NAME_COLOR))
+		if (containsMask(NpcInfoType.REPUTATION))
 		{
 			packet.writeD(0x00); // Name color
 		}
