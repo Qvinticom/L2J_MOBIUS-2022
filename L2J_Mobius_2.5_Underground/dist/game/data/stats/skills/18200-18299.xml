@@ -318,19 +318,85 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18254" toLevel="1" name="Wooden Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18254</icon>
+		<itemConsumeId>45486</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="45575" count="1" /> <!-- Special Bait Pack -->
+					</item>
+					<item chance="5">
+						<item id="45576" count="1" /> <!-- SP Scroll Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18255" toLevel="1" name="Silver Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18255</icon>
+		<itemConsumeId>45486</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="5">
+						<item id="45572" count="1" /> <!-- Zodiac Agathion Pack (15-day) -->
+					</item>
+					<item chance="70">
+						<item id="45576" count="1" /> <!-- SP Scroll Pack -->
+					</item>
+					<item chance="1">
+						<item id="45494" count="1" /> <!-- Sturdy Fishing Rod -->
+					</item>
+					<item chance="24">
+						<item id="8034" count="1" /> <!-- Rainbow Springs Clan Hall War Decree -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18256" toLevel="1" name="Golden Treasure Chest">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18256</icon>
+		<itemConsumeId>45486</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="80">
+						<item id="45574" count="1" /> <!-- Shining Star Agathion Pack (30 day) -->
+					</item>
+					<item chance="20">
+						<item id="45573" count="1" /> <!-- Brilliant Star Agathion Pack (30 day) -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18257" toLevel="1" name="Zodiac Agathion Pack (15-day)">
 		<!-- AUTO GENERATED SKILL -->

@@ -967,6 +967,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="18254" level="1" /> <!-- Wooden Treasure Chest -->
+		</skills>
 	</item>
 	<item id="45487" name="Silver Treasure Chest" type="EtcItem">
 		<!-- Double-click to get an item. -->
@@ -976,6 +982,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="18255" level="1" /> <!-- Silver Treasure Chest -->
+		</skills>
 	</item>
 	<item id="45488" name="Golden Treasure Chest" type="EtcItem">
 		<!-- Double-click to get an item. -->
@@ -985,6 +997,12 @@
 		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="18256" level="1" /> <!-- Golden Treasure Chest -->
+		</skills>
 	</item>
 	<item id="45489" name="Crafted Fish" type="EtcItem">
 		<!-- Can be used as a crafting ingredient or trade for an appearance modification item through a fishing guild member. -->
