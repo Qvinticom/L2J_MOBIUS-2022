@@ -68,7 +68,7 @@ public class Q10434_TheSealOfPunishmentSelMahumTrainingGrounds extends Quest
 		addCondMaxLevel(MAX_LEVEL, "noLevel.html");
 		addCondMinLevel(MIN_LEVEL, "noLevel.html");
 		addCondNotRace(Race.ERTHEIA, "noErtheia.html");
-		addCondInCategory(CategoryType.WEAPON_MASTER, "nocond.html");
+		addCondInCategory(CategoryType.WEAPON_MASTER, "no-class.html");
 	}
 	
 	@Override
