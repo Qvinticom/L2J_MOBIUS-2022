@@ -56,6 +56,7 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 			case "31279-02.html":
 			case "31616-02.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "31279-03.html":
@@ -64,6 +65,7 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 				{
 					qs.setCond(2, true);
 					giveItems(player, SOE_WAAL_OF_ARGOS, 1);
+					htmltext = event;
 				}
 				break;
 			}
@@ -76,6 +78,7 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 					addExpAndSp(player, 1088640, 261);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_76, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}
