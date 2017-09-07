@@ -80,11 +80,13 @@ public class Q10791_TheManOfMystery extends Quest
 			case "33847-02.htm":
 			case "33847-03.htm":
 			{
+				htmltext = event;
 				break;
 			}
 			case "33847-04.htm":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "thank":
