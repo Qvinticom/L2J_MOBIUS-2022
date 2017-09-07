@@ -37,7 +37,7 @@ public final class SacrificeSummon extends AbstractEffect
 	@Override
 	public boolean canStart(BuffInfo info)
 	{
-		return info.getEffected().isSummon() && !info.getEffected().isAlikeDead();
+		return info.getEffected().isSummon();
 	}
 	
 	@Override
