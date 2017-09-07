@@ -120,7 +120,7 @@ public final class Parade extends AbstractNpcAI
 	// @formatter:on
 	
 	int npcIndex;
-	CopyOnWriteArrayList<L2Npc> spawns;
+	CopyOnWriteArrayList<L2Npc> spawns = new CopyOnWriteArrayList<>();
 	ScheduledFuture<?> spawnTask;
 	ScheduledFuture<?> deleteTask;
 	ScheduledFuture<?> cleanTask;
@@ -141,16 +141,12 @@ public final class Parade extends AbstractNpcAI
 	void load()
 	{
 		npcIndex = 0;
-		spawns = new CopyOnWriteArrayList<>();
 	}
 	
 	void clean()
 	{
-		if (spawns != null)
-		{
-			spawns.forEach(L2Npc::deleteMe);
-		}
-		spawns = null;
+		spawns.forEach(L2Npc::deleteMe);
+		spawns.clear();
 	}
 	
 	private long timeLeftMilli(int hh, int mm, int ss)
@@ -199,6 +195,7 @@ public final class Parade extends AbstractNpcAI
 					final int[] start = START[route][i];
 					final int[] goal = GOAL[route][i];
 					final L2Npc actor = addSpawn(npcId, start[0], start[1], start[2], start[3], false, 0);
+					actor.setRunning();
 					actor.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(goal[0], goal[1], goal[2], goal[3]));
 					spawns.add(actor);
 				}
@@ -242,12 +239,9 @@ public final class Parade extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			spawnTask.cancel(false);
-			spawnTask = null;
-			deleteTask.cancel(false);
-			deleteTask = null;
-			cleanTask.cancel(false);
-			cleanTask = null;
+			spawnTask.cancel(true);
+			deleteTask.cancel(true);
+			cleanTask.cancel(true);
 			clean();
 		}
 	}
