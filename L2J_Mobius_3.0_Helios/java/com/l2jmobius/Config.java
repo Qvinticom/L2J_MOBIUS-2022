@@ -1058,6 +1058,7 @@ public final class Config
 	public static boolean COMMUNITY_PREMIUM_SYSTEM_ENABLED;
 	public static int COMMUNITY_PREMIUM_COIN_ID;
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
+	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
 	public static int FACTION_MANAGER_NPCID;
@@ -2337,6 +2338,12 @@ public final class Config
 			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CommunityBoard.getBoolean("CommunityPremiumSystem", false);
 			COMMUNITY_PREMIUM_COIN_ID = CommunityBoard.getInt("CommunityPremiumBuyCoinId", 57);
 			COMMUNITY_PREMIUM_PRICE_PER_DAY = CommunityBoard.getInt("CommunityPremiumPricePerDay", 1000000);
+			final String[] allowedBuffs = CommunityBoard.getString("CommunityAvailableBuffs", "").split(",");
+			COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
+			for (String s : allowedBuffs)
+			{
+				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
+			}
 			
 			// Load DebugVoiceCommand config file (if exists)
 			final PropertiesParser DebugVoiceCommand = new PropertiesParser(CUSTOM_DEBUG_VOICE_COMMAND_CONFIG_FILE);

@@ -806,6 +806,7 @@ public final class Config
 	public static boolean COMMUNITY_PREMIUM_SYSTEM_ENABLED;
 	public static int COMMUNITY_PREMIUM_COIN_ID;
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
+	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -2606,6 +2607,12 @@ public final class Config
 			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("CommunityPremiumSystem", false);
 			COMMUNITY_PREMIUM_COIN_ID = CustomSettings.getInt("CommunityPremiumBuyCoinId", 57);
 			COMMUNITY_PREMIUM_PRICE_PER_DAY = CustomSettings.getInt("CommunityPremiumPricePerDay", 1000000);
+			final String[] allowedBuffs = CustomSettings.getString("CommunityAvailableBuffs", "").split(",");
+			COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
+			for (String s : allowedBuffs)
+			{
+				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
+			}
 			
 			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
 			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);

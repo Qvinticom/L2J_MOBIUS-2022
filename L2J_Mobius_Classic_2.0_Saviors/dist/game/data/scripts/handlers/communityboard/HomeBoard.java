@@ -90,7 +90,7 @@ public final class HomeBoard implements IParseBoardHandler
 		return commandCheck && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
 	};
 	
-	public static final Predicate<L2PcInstance> KARMAR_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
+	public static final Predicate<L2PcInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
 	
 	@Override
 	public String[] getCommunityBoardCommands()
@@ -111,7 +111,7 @@ public final class HomeBoard implements IParseBoardHandler
 			return false;
 		}
 		
-		if (KARMAR_CHECK.test(activeChar))
+		if (KARMA_CHECK.test(activeChar))
 		{
 			activeChar.sendMessage("Players with Karma cannot use the Community Board.");
 			return false;
@@ -201,7 +201,10 @@ public final class HomeBoard implements IParseBoardHandler
 				for (int i = 0; i < buffCount; i++)
 				{
 					final Skill skill = SkillData.getInstance().getSkill(Integer.parseInt(buypassOptions[i].split(",")[0]), Integer.parseInt(buypassOptions[i].split(",")[1]));
-					
+					if (!Config.COMMUNITY_AVAILABLE_BUFFS.contains(skill.getId()))
+					{
+						continue;
+					}
 					targets.stream().filter(target -> !target.isSummon() || !skill.isSharedWithSummon()).forEach(target ->
 					{
 						skill.applyEffects(activeChar, target);

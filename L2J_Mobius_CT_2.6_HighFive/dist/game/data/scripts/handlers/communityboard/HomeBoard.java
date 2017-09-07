@@ -198,7 +198,10 @@ public final class HomeBoard implements IParseBoardHandler
 				for (int i = 0; i < buffCount; i++)
 				{
 					final Skill skill = SkillData.getInstance().getSkill(Integer.parseInt(buypassOptions[i].split(",")[0]), Integer.parseInt(buypassOptions[i].split(",")[1]));
-					
+					if (!Config.COMMUNITY_AVAILABLE_BUFFS.contains(skill.getId()))
+					{
+						continue;
+					}
 					targets.stream().filter(target -> !target.isSummon()).forEach(target ->
 					{
 						skill.applyEffects(activeChar, target);
