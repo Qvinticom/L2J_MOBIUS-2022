@@ -87,11 +87,13 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 			case "33973-03.htm":
 			case "33973-07.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "33973-04.htm":
 			{
 				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			default:
