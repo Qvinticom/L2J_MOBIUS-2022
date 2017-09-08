@@ -51,9 +51,10 @@ public final class KartiaSupportTroop extends AbstractNpcAI
 	@Override
 	public void onTimerEvent(String event, StatsSet params, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("NPC_SAY"))
+		if (event.equals("NPC_SAY") && !npc.isDead())
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DEFEAT_ALL_THE_MONSTERS);
+			getTimers().addTimer("NPC_SAY", 20000, npc, null);
 		}
 		else if (event.equals("CHECK_TARGET"))
 		{
@@ -79,7 +80,7 @@ public final class KartiaSupportTroop extends AbstractNpcAI
 		if (npc.getInstanceWorld() != null)
 		{
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.VANGUARD_OF_ADEN_WE_HAVE_RETURNED);
-			getTimers().addRepeatingTimer("NPC_SAY", 20000, npc, null);
+			getTimers().addTimer("NPC_SAY", 20000, npc, null);
 			getTimers().addRepeatingTimer("CHECK_TARGET", 1000, npc, null);
 		}
 		return super.onSpawn(npc);
