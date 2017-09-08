@@ -349,12 +349,14 @@ public final class L2TeleporterInstance extends L2Npc
 			{
 				case 32534: // Seed of Infinity
 				case 32539:
+				{
 					if (player.isFlyingMounted())
 					{
 						player.sendPacket(SystemMessageId.YOU_CANNOT_ENTER_A_SEED_WHILE_IN_A_FLYING_TRANSFORMATION_STATE);
 						return;
 					}
 					break;
+				}
 			}
 			
 			if (st.countTokens() <= 0)

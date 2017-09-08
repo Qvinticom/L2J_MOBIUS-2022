@@ -225,10 +225,15 @@ public class L2Event
 		switch (eventState)
 		{
 			case OFF:
+			{
 				return false;
+			}
 			case STANDBY:
+			{
 				return _registeredPlayers.contains(player);
+			}
 			case ON:
+			{
 				for (Set<L2PcInstance> teamList : _teams.values())
 				{
 					if (teamList.contains(player))
@@ -236,9 +241,9 @@ public class L2Event
 						return true;
 					}
 				}
+			}
 		}
 		return false;
-		
 	}
 	
 	/**
@@ -343,12 +348,18 @@ public class L2Event
 			switch (eventState)
 			{
 				case ON:
+				{
 					return "Cannot start event, it is already on.";
+				}
 				case STANDBY:
+				{
 					return "Cannot start event, it is on standby mode.";
+				}
 				case OFF: // Event is off, so no problem turning it on.
+				{
 					eventState = EventState.STANDBY;
 					break;
+				}
 			}
 			
 			// Register the event at AntiFeedManager and clean it for just in case if the event is already registered.
@@ -409,12 +420,18 @@ public class L2Event
 			switch (eventState)
 			{
 				case ON:
+				{
 					return "Cannot start event, it is already on.";
+				}
 				case STANDBY:
+				{
 					eventState = EventState.ON;
 					break;
+				}
 				case OFF: // Event is off, so no problem turning it on.
+				{
 					return "Cannot start event, it is off. Participation start is required.";
+				}
 			}
 			
 			// Clean the things we will use, just in case.
@@ -478,8 +495,11 @@ public class L2Event
 		switch (eventState)
 		{
 			case OFF:
+			{
 				return "Cannot finish event, it is already off.";
+			}
 			case STANDBY:
+			{
 				for (L2PcInstance player : _registeredPlayers)
 				{
 					removeAndResetPlayer(player);
@@ -494,7 +514,9 @@ public class L2Event
 				_eventName = "";
 				eventState = EventState.OFF;
 				return "The event has been stopped at STANDBY mode, all players unregistered and all event npcs unspawned.";
+			}
 			case ON:
+			{
 				for (Set<L2PcInstance> teamList : _teams.values())
 				{
 					for (L2PcInstance player : teamList)
@@ -516,6 +538,7 @@ public class L2Event
 				_eventCreator = "";
 				_eventInfo = "";
 				return "The event has been stopped, all players unregistered and all event npcs unspawned.";
+			}
 		}
 		
 		return "The event has been successfully finished.";

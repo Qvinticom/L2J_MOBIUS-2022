@@ -103,25 +103,35 @@ public final class CastleTeleporter extends AbstractNpcAI
 					final int unknowInt = Integer.parseInt(st.nextToken());
 					final StatsSet npcParams = npc.getParameters();
 					Location teleLoc = null;
-					
 					switch (unknowInt)
 					{
 						case 0:
+						{
 							teleLoc = getTeleportLocation(npcParams, "01", "02", "03");
 							break;
+						}
 						case 1:
+						{
 							teleLoc = getTeleportLocation(npcParams, "11", "12", "13");
 							break;
+						}
 						case 2:
+						{
 							teleLoc = getTeleportLocation(npcParams, "21", "22", "23");
 							break;
+						}
 						case 3:
+						{
 							teleLoc = getTeleportLocation(npcParams, "31", "32", "33");
 							break;
+						}
 						case 4:
+						{
 							teleLoc = getTeleportLocation(npcParams, "41", "42", "43");
 							break;
+						}
 						case 5:
+						{
 							if (isOwner(player, npc))
 							{
 								teleLoc = new Location(npcParams.getInt("pos_x51"), npcParams.getInt("pos_y51"), npcParams.getInt("pos_z51"));
@@ -131,6 +141,7 @@ public final class CastleTeleporter extends AbstractNpcAI
 								return "CastleTeleporter-noAuthority.html";
 							}
 							break;
+						}
 					}
 					
 					if (teleLoc != null)
@@ -209,7 +220,9 @@ public final class CastleTeleporter extends AbstractNpcAI
 			case 35308:
 			case 35352:
 			case 35544:
+			{
 				return "CastleTeleporter-01";
+			}
 			case 35093:
 			case 35135:
 			case 35177:
@@ -217,7 +230,9 @@ public final class CastleTeleporter extends AbstractNpcAI
 			case 35309:
 			case 35353:
 			case 35545:
+			{
 				return "CastleTeleporter-02";
+			}
 			case 35094:
 			case 35136:
 			case 35178:
@@ -225,7 +240,9 @@ public final class CastleTeleporter extends AbstractNpcAI
 			case 35310:
 			case 35354:
 			case 35546:
+			{
 				return "CastleTeleporter-03";
+			}
 		}
 		return String.valueOf(npc.getId());
 	}

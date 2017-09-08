@@ -83,7 +83,9 @@ public final class Trandon extends AbstractNpcAI
 			case "33490-10.html":
 			case "33490-11.html":
 			case "33490-19.html":
+			{
 				break;
+			}
 			case "33490-12.html":
 			{
 				if (player.getRace().equals(Race.ERTHEIA) || hasAllSubCertifications(player))

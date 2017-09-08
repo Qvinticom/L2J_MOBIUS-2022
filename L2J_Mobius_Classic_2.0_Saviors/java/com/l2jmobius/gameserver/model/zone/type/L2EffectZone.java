@@ -75,24 +75,37 @@ public final class L2EffectZone extends L2ZoneType
 		switch (name)
 		{
 			case "chance":
+			{
 				_chance = Integer.parseInt(value);
 				break;
+			}
 			case "initialDelay":
+			{
 				_initialDelay = Integer.parseInt(value);
 				break;
+			}
 			case "reuse":
+			{
 				_reuse = Integer.parseInt(value);
 				break;
+			}
 			case "bypassSkillConditions":
+			{
 				_bypassConditions = Boolean.parseBoolean(value);
 				break;
+			}
 			case "maxDynamicSkillCount":
+			{
 				_skills = new ConcurrentHashMap<>(Integer.parseInt(value));
 				break;
+			}
 			case "showDangerIcon":
+			{
 				_isShowDangerIcon = Boolean.parseBoolean(value);
 				break;
+			}
 			case "skillIdLvl":
+			{
 				final String[] propertySplit = value.split(";");
 				_skills = new ConcurrentHashMap<>(propertySplit.length);
 				for (String skill : propertySplit)
@@ -118,6 +131,7 @@ public final class L2EffectZone extends L2ZoneType
 					}
 				}
 				break;
+			}
 			default:
 			{
 				super.setParameter(name, value);

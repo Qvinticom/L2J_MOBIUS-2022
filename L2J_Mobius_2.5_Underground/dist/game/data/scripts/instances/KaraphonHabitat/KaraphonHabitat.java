@@ -56,11 +56,15 @@ public final class KaraphonHabitat extends AbstractInstance
 			switch (event)
 			{
 				case "enter_instance":
+				{
 					enterInstance(player, npc, TEMPLATE_ID);
 					break;
+				}
 				case "exit_instance":
+				{
 					finishInstance(player, 0);
 					break;
+				}
 			}
 		}
 		return null;

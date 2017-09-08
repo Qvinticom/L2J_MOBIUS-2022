@@ -85,7 +85,9 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 			case "33992-02.html":
 			case "33992-03.html":
 			case "30485-07.html":
+			{
 				break;
+			}
 			case "30485-03.htm":
 			{
 				qs.startQuest();
@@ -144,7 +146,9 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -159,28 +163,38 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "30485-01.htm";
 					break;
+				}
 				case State.STARTED:
 				{
 					switch (qs.getCond())
 					{
 						case 1:
+						{
 							htmltext = "30485-04.html";
 							break;
+						}
 						case 2:
 						case 3:
+						{
 							htmltext = "30485-05.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "30485-06.html";
 							break;
+						}
 					}
 					break;
 				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted())
@@ -192,8 +206,10 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 					case 1:
 					case 2:
 					case 3:
+					{
 						htmltext = "32366-01.html";
 						break;
+					}
 				}
 			}
 			else if (npc.isScriptValue(player.getObjectId()) && (qs.isCond(2) || qs.isCond(3)))
@@ -276,7 +292,9 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 				break;
 			}
 			default:
+			{
 				super.onTimerEvent(event, params, npc, player);
+			}
 		}
 	}
 }

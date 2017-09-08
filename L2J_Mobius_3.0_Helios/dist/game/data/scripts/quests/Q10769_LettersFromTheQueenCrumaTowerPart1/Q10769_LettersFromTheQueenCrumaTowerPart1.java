@@ -71,7 +71,9 @@ public final class Q10769_LettersFromTheQueenCrumaTowerPart1 extends LetterQuest
 		{
 			case "30070-02.html":
 			case "30673-02.html":
+			{
 				break;
+			}
 			case "30070-03.html":
 			{
 				if (qs.isCond(1))
@@ -96,7 +98,9 @@ public final class Q10769_LettersFromTheQueenCrumaTowerPart1 extends LetterQuest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

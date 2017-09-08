@@ -61,11 +61,16 @@ public final class CastleWarehouse extends AbstractNpcAI
 			case "warehouse-01.html":
 			case "warehouse-02.html":
 			case "warehouse-03.html":
+			{
 				break;
+			}
 			case "warehouse-04.html":
+			{
 				htmltext = (!isMyLord) ? "warehouse-no.html" : getHtm(player.getHtmlPrefix(), "warehouse-04.html").replace("%blood%", Integer.toString(player.getClan().getBloodAllianceCount()));
 				break;
+			}
 			case "Receive":
+			{
 				if (!isMyLord)
 				{
 					htmltext = "warehouse-no.html";
@@ -81,7 +86,9 @@ public final class CastleWarehouse extends AbstractNpcAI
 					htmltext = "warehouse-06.html";
 				}
 				break;
+			}
 			case "Exchange":
+			{
 				if (!isMyLord)
 				{
 					htmltext = "warehouse-no.html";
@@ -97,9 +104,12 @@ public final class CastleWarehouse extends AbstractNpcAI
 					htmltext = "warehouse-07.html";
 				}
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}

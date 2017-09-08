@@ -122,31 +122,40 @@ public class Q00463_IMustBeaGenius extends Quest
 		switch (event)
 		{
 			case "32069-03.htm":
+			{
 				st.startQuest();
 				final int number = getRandom(51) + 550;
 				st.set("number", String.valueOf(number));
 				st.set("chance", String.valueOf(getRandom(4)));
 				htmltext = getHtm(player.getHtmlPrefix(), event).replace("%num%", String.valueOf(number));
 				break;
+			}
 			case "32069-05.htm":
+			{
 				htmltext = getHtm(player.getHtmlPrefix(), event).replace("%num%", st.get("number"));
 				break;
+			}
 			case "reward":
+			{
 				if (st.isCond(2))
 				{
 					final int rnd = getRandom(REWARD.length);
 					final String str = (REWARD[rnd][2] < 10) ? "0" + REWARD[rnd][2] : String.valueOf(REWARD[rnd][2]);
-					
 					addExpAndSp(player, REWARD[rnd][0], REWARD[rnd][1]);
 					st.exitQuest(QuestType.DAILY, true);
 					htmltext = "32069-" + str + ".html";
 				}
 				break;
+			}
 			case "32069-02.htm":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -205,16 +214,21 @@ public class Q00463_IMustBeaGenius extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				if (!st.isNowAvailable())
 				{
 					htmltext = "32069-07.htm";
 					break;
 				}
 				st.setState(State.CREATED);
+			}
 			case State.CREATED:
+			{
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? "32069-01.htm" : "32069-00.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					htmltext = "32069-04.html";
@@ -230,6 +244,7 @@ public class Q00463_IMustBeaGenius extends Quest
 					htmltext = "32069-06.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

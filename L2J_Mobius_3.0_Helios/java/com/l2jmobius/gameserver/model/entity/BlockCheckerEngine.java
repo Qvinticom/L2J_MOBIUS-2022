@@ -462,17 +462,23 @@ public final class BlockCheckerEngine
 			switch (_round)
 			{
 				case 1:
+				{
 					// Schedule second spawn round
 					_task = ThreadPoolManager.schedule(new SpawnRound(20, 2), 60000);
 					break;
+				}
 				case 2:
+				{
 					// Schedule third spawn round
 					_task = ThreadPoolManager.schedule(new SpawnRound(14, 3), 60000);
 					break;
+				}
 				case 3:
+				{
 					// Schedule Event End Count Down
 					_task = ThreadPoolManager.schedule(new EndEvent(), 180000);
 					break;
+				}
 			}
 			// random % 2, if == 0 will spawn a red block
 			// if != 0, will spawn a blue block

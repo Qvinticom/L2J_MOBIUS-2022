@@ -73,12 +73,18 @@ public final class Q00474_WaitingForTheSummer extends Quest
 		{
 			case "32327-02.htm":
 			case "32327-03.htm":
+			{
 				break;
+			}
 			case "32327-04.htm":
+			{
 				qs.startQuest();
 				break;
+			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -102,11 +108,15 @@ public final class Q00474_WaitingForTheSummer extends Quest
 					qs.setState(State.CREATED);
 				}
 				case State.CREATED:
+				{
 					htmltext = "32327-01.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					htmltext = (qs.isCond(1)) ? "32327-05.html" : "32327-06.html";
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted() && qs.isCond(2))
@@ -138,18 +148,26 @@ public final class Q00474_WaitingForTheSummer extends Quest
 			{
 				case LOST_BUFFALO:
 				case FROST_BUFFALO:
+				{
 					itemId = BUFFALO_MEAT;
 					break;
+				}
 				case URSUS:
 				case URSUS_CUB:
+				{
 					itemId = URSUS_MEAT;
 					break;
+				}
 				case LOST_YETI:
 				case FROST_YETI:
+				{
 					itemId = YETI_MEAT;
 					break;
+				}
 				default:
+				{
 					itemId = -1;
+				}
 			}
 			
 			// Give item

@@ -423,16 +423,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		switch (zone)
 		{
 			case PVP:
+			{
 				if ((instance != null) && instance.isPvP())
 				{
 					return true;
 				}
 				return (_zones[ZoneId.PVP.ordinal()] > 0) && (_zones[ZoneId.PEACE.ordinal()] == 0);
+			}
 			case PEACE:
+			{
 				if ((instance != null) && instance.isPvP())
 				{
 					return false;
 				}
+			}
 		}
 		return _zones[zone.ordinal()] > 0;
 	}

@@ -122,14 +122,20 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 			switch (st.getCond())
 			{
 				case 1:
+				{
 					htmltext = npc.getId() == EYE_OF_ARGOS ? "31683-05.html" : "33851-01.html";
 					break;
+				}
 				case 2:
+				{
 					htmltext = npc.getId() == EYE_OF_ARGOS ? "31683-06.html" : "33851-01.html";
 					break;
+				}
 				case 3:
+				{
 					htmltext = npc.getId() == EYE_OF_ARGOS ? "31683-07.html" : "33851-02.html";
 					break;
+				}
 			}
 		}
 		return htmltext;

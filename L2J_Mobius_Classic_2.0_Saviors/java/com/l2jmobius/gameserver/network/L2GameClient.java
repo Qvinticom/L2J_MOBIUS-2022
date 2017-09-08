@@ -669,13 +669,21 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			switch (state)
 			{
 				case CONNECTED:
+				{
 					return "[IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+				}
 				case AUTHENTICATED:
+				{
 					return "[Account: " + getAccountName() + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+				}
 				case IN_GAME:
+				{
 					return "[Character: " + (getActiveChar() == null ? "disconnected" : getActiveChar().getName() + "[" + getActiveChar().getObjectId() + "]") + " - Account: " + getAccountName() + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+				}
 				default:
+				{
 					throw new IllegalStateException("Missing state on switch");
+				}
 			}
 		}
 		catch (NullPointerException e)

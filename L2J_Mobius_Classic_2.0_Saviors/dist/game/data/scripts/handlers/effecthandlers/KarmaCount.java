@@ -78,11 +78,15 @@ public class KarmaCount extends AbstractEffect
 		switch (_mode)
 		{
 			case 0: // diff
+			{
 				final int newReputation = Math.min(player.getReputation() + _amount, 0);
 				player.setReputation(newReputation);
 				break;
+			}
 			case 1: // reset
+			{
 				player.setReputation(0);
+			}
 		}
 	}
 }

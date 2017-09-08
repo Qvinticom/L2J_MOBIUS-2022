@@ -52,15 +52,19 @@ public final class QueenShyeed extends AbstractNpcAI
 		switch (event)
 		{
 			case "respawn":
+			{
 				spawnShyeed();
 				break;
+			}
 			case "despawn":
+			{
 				if (!npc.isDead())
 				{
 					npc.deleteMe();
 					startRespawn();
 				}
 				break;
+			}
 		}
 		return null;
 	}

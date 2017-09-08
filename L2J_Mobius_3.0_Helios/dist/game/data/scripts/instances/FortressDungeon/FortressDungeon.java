@@ -232,13 +232,19 @@ public final class FortressDungeon extends AbstractInstance
 			switch (instance.getStatus())
 			{
 				case 0:
+				{
 					npcId = RAIDS1[getRandom(RAIDS1.length)];
 					break;
+				}
 				case 1:
+				{
 					npcId = RAIDS2[getRandom(RAIDS2.length)];
 					break;
+				}
 				default:
+				{
 					npcId = RAIDS3[getRandom(RAIDS3.length)];
+				}
 			}
 			
 			// Spawn raid

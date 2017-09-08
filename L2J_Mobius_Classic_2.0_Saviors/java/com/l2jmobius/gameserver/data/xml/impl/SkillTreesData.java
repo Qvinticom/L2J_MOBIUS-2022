@@ -1175,41 +1175,65 @@ public final class SkillTreesData implements IGameXmlReader
 		switch (skillType)
 		{
 			case CLASS:
+			{
 				sl = getClassSkill(id, lvl, player.getClassId());
 				break;
+			}
 			case TRANSFORM:
+			{
 				sl = getTransformSkill(id, lvl);
 				break;
+			}
 			case FISHING:
+			{
 				sl = getFishingSkill(id, lvl);
 				break;
+			}
 			case PLEDGE:
+			{
 				sl = getPledgeSkill(id, lvl);
 				break;
+			}
 			case SUBPLEDGE:
+			{
 				sl = getSubPledgeSkill(id, lvl);
 				break;
+			}
 			case TRANSFER:
+			{
 				sl = getTransferSkill(id, lvl, player.getClassId());
 				break;
+			}
 			case SUBCLASS:
+			{
 				sl = getSubClassSkill(id, lvl);
 				break;
+			}
 			case COLLECT:
+			{
 				sl = getCollectSkill(id, lvl);
 				break;
+			}
 			case REVELATION:
+			{
 				sl = getRevelationSkill(SubclassType.BASECLASS, id, lvl);
 				break;
+			}
 			case REVELATION_DUALCLASS:
+			{
 				sl = getRevelationSkill(SubclassType.DUALCLASS, id, lvl);
 				break;
+			}
 			case ALCHEMY:
+			{
 				sl = getAlchemySkill(id, lvl);
 				break;
+			}
 			case DUALCLASS:
+			{
 				sl = getDualClassSkill(id, lvl);
 				break;
+			}
 		}
 		return sl;
 	}

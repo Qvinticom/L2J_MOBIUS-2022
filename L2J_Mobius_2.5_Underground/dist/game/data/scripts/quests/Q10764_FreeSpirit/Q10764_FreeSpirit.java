@@ -75,7 +75,9 @@ public final class Q10764_FreeSpirit extends Quest
 		switch (event)
 		{
 			case "33966-02.htm":
+			{
 				break;
+			}
 			case "33966-03.htm":
 			{
 				qs.startQuest();
@@ -94,7 +96,9 @@ public final class Q10764_FreeSpirit extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -110,14 +114,20 @@ public final class Q10764_FreeSpirit extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "33966-01.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					htmltext = (qs.isCond(1)) ? "33966-04.html" : "33966-05.html";
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted() && qs.isCond(1))

@@ -97,14 +97,20 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest
 				switch (qs.getCond())
 				{
 					case 3:
+					{
 						htmltext = "32041-12.html";
 						break;
+					}
 					case 4:
+					{
 						htmltext = "32041-13.html";
 						break;
+					}
 					case 5:
+					{
 						htmltext = "32041-14.html";
 						break;
+					}
 				}
 				break;
 			}

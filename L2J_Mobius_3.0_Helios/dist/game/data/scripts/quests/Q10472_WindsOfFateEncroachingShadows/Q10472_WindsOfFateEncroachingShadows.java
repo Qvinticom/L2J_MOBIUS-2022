@@ -125,7 +125,9 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			case "33491-02.html":
 			case "33491-03.html":
 			case "33491-04.html":
+			{
 				break;
+			}
 			case "33931-05.htm": // Navari
 			{
 				qs.startQuest();
@@ -246,36 +248,54 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 					switch (event.split("-")[1])
 					{
 						case "fire":
+						{
 							giveItems(player, FIRE_STONE);
 							break;
+						}
 						case "water":
+						{
 							giveItems(player, WATER_STONE);
 							break;
+						}
 						case "earth":
+						{
 							giveItems(player, EARTH_STONE);
 							break;
+						}
 						case "wind":
+						{
 							giveItems(player, WIND_STONE);
 							break;
+						}
 						case "dark":
+						{
 							giveItems(player, DARK_STONE);
 							break;
+						}
 						case "holy":
+						{
 							giveItems(player, HOLY_STONE);
 							break;
+						}
 					}
 					// Give soul crystal
 					switch (qs.get("SoulCrystal"))
 					{
 						case "red":
+						{
 							giveItems(player, RED_SOUL_CRYSTAL_15);
 							break;
+						}
 						case "blue":
+						{
 							giveItems(player, BLUE_SOUL_CRYSTAL_15);
 							break;
+						}
 						case "green":
+						{
 							giveItems(player, GREEN_SOUL_CRYSTAL_15);
 							break;
+						}
 					}
 					giveItems(player, CRYSTAL_R);
 					giveItems(player, RECIPE_TWILIGHT_NECKLACE);
@@ -286,7 +306,9 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -302,17 +324,23 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "33931-01.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (qs.isCond(1))
 					{
 						htmltext = "33931-06.html";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if ((npc.getId() == ZEPHYRA) && qs.isStarted())
@@ -320,17 +348,25 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			switch (qs.getCond())
 			{
 				case 1:
+				{
 					htmltext = "33978-01.html";
 					break;
+				}
 				case 2:
+				{
 					htmltext = "33978-04.html";
 					break;
+				}
 				case 17:
+				{
 					htmltext = "33978-05.html";
 					break;
+				}
 				case 18:
+				{
 					htmltext = "33978-08.html";
 					break;
+				}
 			}
 		}
 		else if ((npc.getId() == MOMET) && qs.isStarted())
@@ -349,17 +385,25 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			switch (qs.getCond())
 			{
 				case 3:
+				{
 					htmltext = "31092-01.html";
 					break;
+				}
 				case 4:
+				{
 					htmltext = "31092-04.html";
 					break;
+				}
 				case 5:
+				{
 					htmltext = (qs.isMemoState(1)) ? "31092-06.html" : "31092-05.html";
 					break;
+				}
 				case 6:
+				{
 					htmltext = "31092-08.html";
 					break;
+				}
 			}
 		}
 		else if ((npc.getId() == BLACKSMITH_OF_MAMMON) && qs.isStarted())
@@ -378,18 +422,26 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			switch (qs.getCond())
 			{
 				case 7:
+				{
 					htmltext = "33870-01.html";
 					break;
+				}
 				case 8:
+				{
 					htmltext = "33870-06.html";
 					break;
+				}
 				// TODO: Unknown html for cond 9 - 15
 				case 16:
+				{
 					htmltext = "33870-07.html";
 					break;
+				}
 				case 17:
+				{
 					htmltext = "33870-10.html";
 					break;
+				}
 			}
 		}
 		else if ((npc.getId() == KARLA) && qs.isStarted())

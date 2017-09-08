@@ -86,13 +86,19 @@ public final class AdminClanHall implements IAdminCommandHandler
 						switch (actionVal)
 						{
 							case "inside":
+							{
 								loc = clanHall.getOwnerLocation();
 								break;
+							}
 							case "outside":
+							{
 								loc = clanHall.getBanishLocation();
 								break;
+							}
 							default:
+							{
 								loc = player.getLocation();
+							}
 						}
 						player.teleToLocation(loc);
 					}

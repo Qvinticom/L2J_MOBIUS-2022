@@ -1518,29 +1518,45 @@ public class L2Attackable extends L2Npc
 				switch (skillId)
 				{
 					case 4303: // Strong type x2
+					{
 						count *= 2;
 						break;
+					}
 					case 4304: // Strong type x3
+					{
 						count *= 3;
 						break;
+					}
 					case 4305: // Strong type x4
+					{
 						count *= 4;
 						break;
+					}
 					case 4306: // Strong type x5
+					{
 						count *= 5;
 						break;
+					}
 					case 4307: // Strong type x6
+					{
 						count *= 6;
 						break;
+					}
 					case 4308: // Strong type x7
+					{
 						count *= 7;
 						break;
+					}
 					case 4309: // Strong type x8
+					{
 						count *= 8;
 						break;
+					}
 					case 4310: // Strong type x9
+					{
 						count *= 9;
 						break;
+					}
 				}
 			}
 			

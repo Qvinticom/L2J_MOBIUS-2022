@@ -205,20 +205,30 @@ public final class CastleChamberlain extends AbstractNpcAI
 		switch (func)
 		{
 			case Castle.FUNC_RESTORE_EXP:
+			{
 				fee = (level == 45) ? Config.CS_EXPREG1_FEE : Config.CS_EXPREG2_FEE;
 				break;
+			}
 			case Castle.FUNC_RESTORE_HP:
+			{
 				fee = (level == 300) ? Config.CS_HPREG1_FEE : Config.CS_HPREG2_FEE;
 				break;
+			}
 			case Castle.FUNC_RESTORE_MP:
+			{
 				fee = (level == 40) ? Config.CS_MPREG1_FEE : Config.CS_MPREG2_FEE;
 				break;
+			}
 			case Castle.FUNC_SUPPORT:
+			{
 				fee = (level == 5) ? Config.CS_SUPPORT1_FEE : Config.CS_SUPPORT2_FEE;
 				break;
+			}
 			case Castle.FUNC_TELEPORT:
+			{
 				fee = (level == 1) ? Config.CS_TELE1_FEE : Config.CS_TELE2_FEE;
 				break;
+			}
 		}
 		return fee;
 	}
@@ -229,20 +239,30 @@ public final class CastleChamberlain extends AbstractNpcAI
 		switch (func)
 		{
 			case Castle.FUNC_RESTORE_EXP:
+			{
 				ratio = Config.CS_EXPREG_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_RESTORE_HP:
+			{
 				ratio = Config.CS_HPREG_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_RESTORE_MP:
+			{
 				ratio = Config.CS_MPREG_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_SUPPORT:
+			{
 				ratio = Config.CS_SUPPORT_FEE_RATIO;
 				break;
+			}
 			case Castle.FUNC_TELEPORT:
+			{
 				ratio = Config.CS_TELE_FEE_RATIO;
 				break;
+			}
 		}
 		return ratio;
 	}
@@ -257,14 +277,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 				switch (level)
 				{
 					case 2:
+					{
 						price = Config.OUTER_DOOR_UPGRADE_PRICE2;
 						break;
+					}
 					case 3:
+					{
 						price = Config.OUTER_DOOR_UPGRADE_PRICE3;
 						break;
+					}
 					case 5:
+					{
 						price = Config.OUTER_DOOR_UPGRADE_PRICE5;
 						break;
+					}
 				}
 				break;
 			}
@@ -273,14 +299,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 				switch (level)
 				{
 					case 2:
+					{
 						price = Config.INNER_DOOR_UPGRADE_PRICE2;
 						break;
+					}
 					case 3:
+					{
 						price = Config.INNER_DOOR_UPGRADE_PRICE3;
 						break;
+					}
 					case 5:
+					{
 						price = Config.INNER_DOOR_UPGRADE_PRICE5;
 						break;
+					}
 				}
 				break;
 			}
@@ -289,14 +321,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 				switch (level)
 				{
 					case 2:
+					{
 						price = Config.WALL_UPGRADE_PRICE2;
 						break;
+					}
 					case 3:
+					{
 						price = Config.WALL_UPGRADE_PRICE3;
 						break;
+					}
 					case 5:
+					{
 						price = Config.WALL_UPGRADE_PRICE5;
 						break;
+					}
 				}
 				break;
 			}
@@ -310,17 +348,25 @@ public final class CastleChamberlain extends AbstractNpcAI
 		switch (level)
 		{
 			case 1:
+			{
 				price = Config.TRAP_UPGRADE_PRICE1;
 				break;
+			}
 			case 2:
+			{
 				price = Config.TRAP_UPGRADE_PRICE2;
 				break;
+			}
 			case 3:
+			{
 				price = Config.TRAP_UPGRADE_PRICE3;
 				break;
+			}
 			case 4:
+			{
 				price = Config.TRAP_UPGRADE_PRICE4;
 				break;
+			}
 		}
 		return price;
 	}
@@ -379,14 +425,20 @@ public final class CastleChamberlain extends AbstractNpcAI
 						switch (fortress.getFortState())
 						{
 							case 1:
+							{
 								fortStatus = "1300122";
 								break;
+							}
 							case 2:
+							{
 								fortStatus = "1300124";
 								break;
+							}
 							default:
+							{
 								fortStatus = "1300123";
 								break;
+							}
 						}
 						sb.append("<fstring>1300" + fortId + "</fstring>");
 						sb.append(" (<fstring>" + fortType + "</fstring>)");
@@ -1144,15 +1196,22 @@ public final class CastleChamberlain extends AbstractNpcAI
 			switch (evt.getRequest())
 			{
 				case 3: // Seed info
+				{
 					player.sendPacket(new ExShowSeedInfo(castleId, evt.isNextPeriod(), true));
 					break;
+				}
 				case 4: // Crop info
+				{
 					player.sendPacket(new ExShowCropInfo(castleId, evt.isNextPeriod(), true));
 					break;
+				}
 				case 5: // Basic info
+				{
 					player.sendPacket(new ExShowManorDefaultInfo(true));
 					break;
+				}
 				case 7: // Seed settings
+				{
 					if (manor.isManorApproved())
 					{
 						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
@@ -1160,7 +1219,9 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					player.sendPacket(new ExShowSeedSetting(castleId));
 					break;
+				}
 				case 8: // Crop settings
+				{
 					if (manor.isManorApproved())
 					{
 						player.sendPacket(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM);
@@ -1168,8 +1229,11 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					player.sendPacket(new ExShowCropSetting(castleId));
 					break;
+				}
 				default:
+				{
 					_log.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
+				}
 			}
 		}
 	}

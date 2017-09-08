@@ -127,13 +127,17 @@ public class Q10283_RequestOfIceMerchant extends Quest
 		switch (npc.getId())
 		{
 			case RAFFORTY:
+			{
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						final QuestState _prev = player.getQuestState(Q00115_TheOtherSideOfTruth.class.getSimpleName());
 						htmltext = ((_prev != null) && _prev.isCompleted() && (player.getLevel() >= 82)) ? "32020-01.htm" : "32020-00.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "32020-04.htm";
@@ -143,23 +147,31 @@ public class Q10283_RequestOfIceMerchant extends Quest
 							htmltext = "32020-08.htm";
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "32020-09.htm";
 						break;
+					}
 				}
 				break;
+			}
 			case KIER:
+			{
 				if (st.isCond(2))
 				{
 					htmltext = "32022-01.html";
 				}
 				break;
+			}
 			case JINIA:
+			{
 				if (st.isCond(2))
 				{
 					htmltext = "32760-02.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

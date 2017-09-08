@@ -144,11 +144,15 @@ public final class Q10386_MysteriousJourney extends Quest
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "33780-01.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "33780-05.html";
 								break;
+							}
 							case 4:
 							{
 								giveAdena(player, 58_707, true);

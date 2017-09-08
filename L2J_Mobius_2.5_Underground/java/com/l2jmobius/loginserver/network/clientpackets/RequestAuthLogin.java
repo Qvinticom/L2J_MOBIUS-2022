@@ -141,6 +141,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		switch (result)
 		{
 			case AUTH_SUCCESS:
+			{
 				client.setAccount(info.getLogin());
 				client.setState(LoginClientState.AUTHED_LOGIN);
 				client.setSessionKey(lc.assignSessionKeyToClient(info.getLogin(), client));
@@ -154,13 +155,19 @@ public class RequestAuthLogin extends L2LoginClientPacket
 					client.sendPacket(new ServerList(client));
 				}
 				break;
+			}
 			case INVALID_PASSWORD:
+			{
 				client.close(LoginFailReason.REASON_USER_OR_PASS_WRONG);
 				break;
+			}
 			case ACCOUNT_BANNED:
+			{
 				client.close(new AccountKicked(AccountKickedReason.REASON_PERMANENTLY_BANNED));
 				return;
+			}
 			case ALREADY_ON_LS:
+			{
 				final L2LoginClient oldClient = lc.getAuthedClient(info.getLogin());
 				if (oldClient != null)
 				{
@@ -171,12 +178,13 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				// kick also current client
 				client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
 				break;
+			}
 			case ALREADY_ON_GS:
+			{
 				final GameServerInfo gsi = lc.getAccountOnGameServer(info.getLogin());
 				if (gsi != null)
 				{
 					client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
-					
 					// kick from there
 					if (gsi.isAuthed())
 					{
@@ -184,6 +192,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 					}
 				}
 				break;
+			}
 		}
 	}
 }

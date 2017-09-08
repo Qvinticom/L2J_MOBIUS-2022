@@ -129,8 +129,10 @@ public class NpcData implements IGameXmlReader
 								}
 								case "race":
 								case "sex":
+								{
 									set.set(npc_node.getNodeName(), npc_node.getTextContent().toUpperCase());
 									break;
+								}
 								case "equipment":
 								{
 									set.set("chestId", parseInteger(attrs, "chest"));
@@ -218,23 +220,35 @@ public class NpcData implements IGameXmlReader
 															switch (attackAttributeType.toUpperCase())
 															{
 																case "FIRE":
+																{
 																	set.set("baseFire", parseInteger(attrs, "value"));
 																	break;
+																}
 																case "WATER":
+																{
 																	set.set("baseWater", parseInteger(attrs, "value"));
 																	break;
+																}
 																case "WIND":
+																{
 																	set.set("baseWind", parseInteger(attrs, "value"));
 																	break;
+																}
 																case "EARTH":
+																{
 																	set.set("baseEarth", parseInteger(attrs, "value"));
 																	break;
+																}
 																case "DARK":
+																{
 																	set.set("baseDark", parseInteger(attrs, "value"));
 																	break;
+																}
 																case "HOLY":
+																{
 																	set.set("baseHoly", parseInteger(attrs, "value"));
 																	break;
+																}
 															}
 															break;
 														}
@@ -279,8 +293,10 @@ public class NpcData implements IGameXmlReader
 												break;
 											}
 											case "hit_time":
+											{
 												set.set("hit_time", npc_node.getTextContent()); // TODO: Implement me default 600 (value in ms)
 												break;
+											}
 										}
 									}
 									break;

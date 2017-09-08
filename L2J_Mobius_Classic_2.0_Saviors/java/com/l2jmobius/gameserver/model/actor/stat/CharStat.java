@@ -506,19 +506,33 @@ public class CharStat
 		switch (attackAttribute)
 		{
 			case FIRE:
+			{
 				return (int) getValue(Stats.FIRE_POWER);
+			}
 			case WATER:
+			{
 				return (int) getValue(Stats.WATER_POWER);
+			}
 			case WIND:
+			{
 				return (int) getValue(Stats.WIND_POWER);
+			}
 			case EARTH:
+			{
 				return (int) getValue(Stats.EARTH_POWER);
+			}
 			case HOLY:
+			{
 				return (int) getValue(Stats.HOLY_POWER);
+			}
 			case DARK:
+			{
 				return (int) getValue(Stats.DARK_POWER);
+			}
 			default:
+			{
 				return 0;
+			}
 		}
 	}
 	
@@ -527,19 +541,33 @@ public class CharStat
 		switch (defenseAttribute)
 		{
 			case FIRE:
+			{
 				return (int) getValue(Stats.FIRE_RES);
+			}
 			case WATER:
+			{
 				return (int) getValue(Stats.WATER_RES);
+			}
 			case WIND:
+			{
 				return (int) getValue(Stats.WIND_RES);
+			}
 			case EARTH:
+			{
 				return (int) getValue(Stats.EARTH_RES);
+			}
 			case HOLY:
+			{
 				return (int) getValue(Stats.HOLY_RES);
+			}
 			case DARK:
+			{
 				return (int) getValue(Stats.DARK_RES);
+			}
 			default:
+			{
 				return (int) getValue(Stats.BASE_ATTRIBUTE_RES);
+			}
 		}
 	}
 	

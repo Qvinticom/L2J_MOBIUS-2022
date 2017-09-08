@@ -187,6 +187,7 @@ public class Olympiad extends ListenersContainer
 		switch (_period)
 		{
 			case 0:
+			{
 				if ((_olympiadEnd == 0) || (_olympiadEnd < Calendar.getInstance().getTimeInMillis()))
 				{
 					setNewOlympiadEnd();
@@ -196,7 +197,9 @@ public class Olympiad extends ListenersContainer
 					scheduleWeeklyChange();
 				}
 				break;
+			}
 			case 1:
+			{
 				if (_validationEnd > Calendar.getInstance().getTimeInMillis())
 				{
 					loadNoblesRank();
@@ -210,9 +213,12 @@ public class Olympiad extends ListenersContainer
 					setNewOlympiadEnd();
 				}
 				break;
+			}
 			default:
+			{
 				LOGGER.warning(getClass().getSimpleName() + ": Omg something went wrong in loading!! Period = " + _period);
 				return;
+			}
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -922,19 +928,29 @@ public class Olympiad extends ListenersContainer
 		switch (_noblesRank.get(objId))
 		{
 			case 1:
+			{
 				points += Config.ALT_OLY_RANK1_POINTS;
 				break;
+			}
 			case 2:
+			{
 				points += Config.ALT_OLY_RANK2_POINTS;
 				break;
+			}
 			case 3:
+			{
 				points += Config.ALT_OLY_RANK3_POINTS;
 				break;
+			}
 			case 4:
+			{
 				points += Config.ALT_OLY_RANK4_POINTS;
 				break;
+			}
 			default:
+			{
 				points += Config.ALT_OLY_RANK5_POINTS;
+			}
 		}
 		
 		// Win/no win matches point bonus

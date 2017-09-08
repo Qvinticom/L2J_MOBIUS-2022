@@ -73,23 +73,34 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		{
 			case "30839-02.html":
 			case "31307-02.html":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30839-05.html":
+			{
 				st.setCond(2, true);
 				break;
+			}
 			case "31307-05.html":
+			{
 				st.setCond(7, true);
 				break;
+			}
 			case "32325-03.html":
+			{
 				st.setCond(3, true);
 				giveItems(player, YINSWORD, 1, AttributeType.FIRE, 10);
 				break;
+			}
 			case "32326-03.html":
+			{
 				st.setCond(8, true);
 				giveItems(player, YANGSWORD, 1, AttributeType.EARTH, 10);
 				break;
+			}
 			case "32325-06.html":
+			{
 				if (hasQuestItems(player, YINSWORD))
 				{
 					takeItems(player, YINSWORD, 1);
@@ -97,7 +108,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				}
 				giveItems(player, YINSWORD, 1, AttributeType.FIRE, 10);
 				break;
+			}
 			case "32326-06.html":
+			{
 				if (hasQuestItems(player, YANGSWORD))
 				{
 					takeItems(player, YANGSWORD, 1);
@@ -105,16 +118,21 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				}
 				giveItems(player, YANGSWORD, 1, AttributeType.EARTH, 10);
 				break;
+			}
 			case "32325-09.html":
+			{
 				st.setCond(5, true);
 				BLESSING_OF_FIRE.getSkill().applyEffects(player, player);
 				giveItems(player, YINSWORD, 1, AttributeType.FIRE, 10);
 				break;
+			}
 			case "32326-09.html":
+			{
 				st.setCond(10, true);
 				BLESSING_OF_EARTH.getSkill().applyEffects(player, player);
 				giveItems(player, YANGSWORD, 1, AttributeType.EARTH, 10);
 				break;
+			}
 		}
 		
 		if (Util.isDigit(event))
@@ -139,6 +157,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 		switch (npc.getId())
 		{
 			case AIR:
+			{
 				if ((st.isCond(8) || st.isCond(10)) && (getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == YANGSWORD) && (getQuestItemsCount(player, SOULPIECEAIR) < 6) && (getRandom(100) < 30))
 				{
 					giveItems(player, SOULPIECEAIR, 1);
@@ -152,7 +171,9 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					}
 				}
 				break;
+			}
 			case WATER:
+			{
 				if (((st.getCond() >= 3) || (st.getCond() <= 5)) && (getItemEquipped(player, Inventory.PAPERDOLL_RHAND) == YINSWORD) && (getQuestItemsCount(player, SOULPIECEWATER) < 6) && (getRandom(100) < 30))
 				{
 					giveItems(player, SOULPIECEWATER, 1);
@@ -166,6 +187,7 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					}
 				}
 				break;
+			}
 		}
 		return null;
 		
@@ -184,22 +206,32 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 75) ? "30839-01.htm" : "30839-00.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "30839-03.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30839-05.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "30839-0a.html";
 						break;
+					}
 				}
 				break;
 			}
@@ -208,22 +240,32 @@ public class Q10275_ContainingTheAttributePower extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() > 75) ? "31307-01.htm" : "31307-00.html";
 						break;
+					}
 					case State.STARTED:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31307-03.html";
 								break;
+							}
 							case 7:
+							{
 								htmltext = "31307-05.html";
 								break;
+							}
 						}
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = "31307-0a.html";
 						break;
+					}
 				}
 				break;
 			}
@@ -234,20 +276,28 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					switch (st.getCond())
 					{
 						case 2:
+						{
 							htmltext = "32325-01.html";
 							break;
+						}
 						case 3:
 						case 5:
+						{
 							htmltext = "32325-04.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "32325-08.html";
 							takeItems(player, YINSWORD, 1);
 							takeItems(player, SOULPIECEWATER, -1);
 							break;
+						}
 						case 6:
+						{
 							htmltext = "32325-10.html";
 							break;
+						}
 					}
 				}
 				break;
@@ -259,20 +309,28 @@ public class Q10275_ContainingTheAttributePower extends Quest
 					switch (st.getCond())
 					{
 						case 7:
+						{
 							htmltext = "32326-01.html";
 							break;
+						}
 						case 8:
 						case 10:
+						{
 							htmltext = "32326-04.html";
 							break;
+						}
 						case 9:
+						{
 							htmltext = "32326-08.html";
 							takeItems(player, YANGSWORD, 1);
 							takeItems(player, SOULPIECEAIR, -1);
 							break;
+						}
 						case 11:
+						{
 							htmltext = "32326-10.html";
 							break;
+						}
 					}
 				}
 				break;

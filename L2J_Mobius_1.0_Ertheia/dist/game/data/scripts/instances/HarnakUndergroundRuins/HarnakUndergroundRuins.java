@@ -123,50 +123,80 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 		switch (event)
 		{
 			case "enter_instance":
+			{
 				enterInstance(player, npc, TEMPLATE_ID);
 				break;
+			}
 			case "message1":
+			{
 				showOnScreenMsg(player, NpcStringId.AN_INTRUDER_INTERESTING, ExShowScreenMessage.TOP_CENTER, 5000);
 				break;
+			}
 			case "message2":
+			{
 				showOnScreenMsg(player, NpcStringId.PROVE_YOUR_WORTH, ExShowScreenMessage.TOP_CENTER, 5000);
 				break;
+			}
 			case "message3":
+			{
 				showOnScreenMsg(player, NpcStringId.ONLY_THOSE_STRONG_ENOUGH_SHALL_PROCEED, ExShowScreenMessage.TOP_CENTER, 5000);
 				break;
+			}
 			case "message4":
+			{
 				showOnScreenMsg(player, NpcStringId.THOUGH_SMALL_THIS_POWER_WILL_HELP_YOU_GREATLY, ExShowScreenMessage.TOP_CENTER, 5000);
 				break;
+			}
 			case "message5":
+			{
 				showOnScreenMsg(player, NpcStringId.ARE_YOU_STRONG_OR_WEAK_OF_THE_LIGHT_OR_DARKNESS, ExShowScreenMessage.TOP_CENTER, 5000);
 				break;
+			}
 			case "message6":
+			{
 				showOnScreenMsg(player, NpcStringId.ONLY_THOSE_OF_LIGHT_MAY_PASS_OTHERS_MUST_PROVE_THEIR_STRENGTH, ExShowScreenMessage.TOP_CENTER, 5000);
 				break;
+			}
 			case "razkan_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.COME_ATTACK_ME_IF_YOU_DARE);
 				break;
+			}
 			case "bathus_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IT_S_THE_END_FOR_YOU_TRAITOR);
 				break;
+			}
 			case "bamonti_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WANT_TO_HEAR_YOU_CRY);
 				break;
+			}
 			case "carcass_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_WANT_TO_HEAR_YOU_CRY);
 				break;
+			}
 			case "khan_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_LL_HAVE_TO_KILL_US_FIRST);
 				break;
+			}
 			case "seknus_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LETS_SEE_WHAT_YOU_ARE_MADE_OF);
 				break;
+			}
 			case "lotus_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.REPENT_AND_YOUR_DEATH_WILL_BE_QUICK);
 				break;
+			}
 			case "ele_say":
+			{
 				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DIE_TRAITOR);
 				break;
+			}
 			case "spawn_npc1":
 			{
 				final Instance world = player.getInstanceWorld();
@@ -321,8 +351,10 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 				break;
 			}
 			case "exit":
+			{
 				finishInstance(player, 0);
 				break;
+			}
 			case "spawn_npc4":
 			{
 				final Instance world = player.getInstanceWorld();
@@ -372,35 +404,55 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					switch (timerCount)
 					{
 						case 0:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING41);
 							break;
+						}
 						case 1:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING42);
 							break;
+						}
 						case 2:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING43);
 							break;
+						}
 						case 3:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING44);
 							break;
+						}
 						case 4:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS_ARE_REMAINING45);
 							break;
+						}
 						case 5:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS);
 							break;
+						}
 						case 6:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS2);
 							break;
+						}
 						case 7:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS3);
 							break;
+						}
 						case 8:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECONDS4);
 							break;
+						}
 						case 9:
+						{
 							npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.SECOND);
 							break;
+						}
 					}
 					if (timerCount <= 4)
 					{
@@ -464,29 +516,45 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 					switch (npc.getId())
 					{
 						case RAKZAN:
+						{
 							moveNpcRoom1(KRAKIA_BATHUS, NpcStringId.ARE_YOU_PLANNING_TO_BETRAY_THE_GODS_AND_FOLLOW_A_GIANT, "bathus_say", world);
 							break;
+						}
 						case KRAKIA_BATHUS:
+						{
 							moveNpcRoom1(BAMONTI, NpcStringId.HAHA, "bamonti_say", world);
 							break;
+						}
 						case BAMONTI:
+						{
 							moveNpcRoom1(KRAKIA_CARCASS, NpcStringId.HAHA, "carcass_say", world);
 							break;
+						}
 						case KRAKIA_CARCASS:
+						{
 							moveNpcRoom1(WEISS_KHAN, NpcStringId.YOU_WILL_NOT_FREE_HERMUNCUS, "khan_say", world);
 							break;
+						}
 						case WEISS_KHAN:
+						{
 							moveNpcRoom1(SEKNUS, NpcStringId.MORTAL, "seknus_say", world);
 							break;
+						}
 						case SEKNUS:
+						{
 							moveNpcRoom1(KRAKIA_LOTUS, NpcStringId.TRYING_TO_FREE_HERMUNCUS, "lotus_say", world);
 							break;
+						}
 						case KRAKIA_LOTUS:
+						{
 							moveNpcRoom1(WEISS_ELE, NpcStringId.YOU_WILL_NEVER_BREAK_THE_SEAL, "ele_say", world);
 							break;
+						}
 						case WEISS_ELE:
+						{
 							startQuestTimer("spawn_npc2", 100, npc, killer);
 							break;
+						}
 					}
 					break;
 				}
@@ -499,14 +567,20 @@ public final class HarnakUndergroundRuins extends AbstractInstance
 						switch (params.getInt("wave"))
 						{
 							case 1:
+							{
 								startQuestTimer("spawn_wave2", 100, npc, killer);
 								break;
+							}
 							case 2:
+							{
 								startQuestTimer("spawn_wave3", 100, npc, killer);
 								break;
+							}
 							case 3:
+							{
 								world.openCloseDoor(DOOR_TWO, true);
 								break;
+							}
 						}
 					}
 					break;

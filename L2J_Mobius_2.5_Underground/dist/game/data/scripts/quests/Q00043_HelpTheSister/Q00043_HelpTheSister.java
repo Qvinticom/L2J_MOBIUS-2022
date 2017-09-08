@@ -168,20 +168,30 @@ public final class Q00043_HelpTheSister extends Quest
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = (hasQuestItems(player, CRAFTED_DAGGER)) ? "30829-02.html" : "30829-02a.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30829-04.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "30829-05.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "30829-07.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "30829-08.html";
 								break;
+							}
 						}
 						break;
 					}

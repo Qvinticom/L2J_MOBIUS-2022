@@ -152,6 +152,7 @@ public final class Venom extends AbstractNpcAI
 		switch (event)
 		{
 			case "tower_check":
+			{
 				if (CastleManager.getInstance().getCastleById(CASTLE).getSiege().getControlTowerCount() <= 1)
 				{
 					changeLocation(MoveTo.THRONE);
@@ -160,18 +161,23 @@ public final class Venom extends AbstractNpcAI
 					startQuestTimer("raid_check", 10000, npc, null, true);
 				}
 				break;
+			}
 			case "raid_check":
+			{
 				if (!npc.isInsideZone(ZoneId.SIEGE) && !npc.isTeleporting())
 				{
 					npc.teleToLocation(_loc);
 				}
 				break;
+			}
 			case "cube_despawn":
+			{
 				if (npc != null)
 				{
 					npc.deleteMe();
 				}
 				break;
+			}
 		}
 		return event;
 	}
@@ -225,13 +231,18 @@ public final class Venom extends AbstractNpcAI
 		switch (skill.getId())
 		{
 			case 4222:
+			{
 				npc.teleToLocation(_loc);
 				break;
+			}
 			case 4995:
+			{
 				teleportTarget(player);
 				((L2Attackable) npc).stopHating(player);
 				break;
+			}
 			case 4996:
+			{
 				teleportTarget(player);
 				((L2Attackable) npc).stopHating(player);
 				if ((_targets != null) && (_targets.size() > 0))
@@ -251,6 +262,7 @@ public final class Venom extends AbstractNpcAI
 					_targets.clear();
 				}
 				break;
+			}
 		}
 		return super.onSpellFinished(npc, player, skill);
 	}
@@ -268,7 +280,6 @@ public final class Venom extends AbstractNpcAI
 			case VENOM:
 			{
 				_venom = npc;
-				
 				_loc = _venom.getLocation();
 				_venom.disableSkill(VENOM_TELEPORT.getSkill(), -1);
 				_venom.disableSkill(RANGE_TELEPORT.getSkill(), -1);
@@ -344,9 +355,12 @@ public final class Venom extends AbstractNpcAI
 		switch (loc)
 		{
 			case THRONE:
+			{
 				_venom.teleToLocation(TRHONE, false);
 				break;
+			}
 			case PRISON:
+			{
 				if ((_venom == null) || _venom.isDead() || _venom.isDecayed())
 				{
 					_venom = addSpawn(VENOM, DUNGEON, false, 0);
@@ -358,6 +372,7 @@ public final class Venom extends AbstractNpcAI
 				cancelQuestTimer("raid_check", _venom, null);
 				cancelQuestTimer("tower_check", _venom, null);
 				break;
+			}
 		}
 		_loc.setLocation(_venom.getLocation());
 	}

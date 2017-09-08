@@ -61,6 +61,7 @@ public final class RequestBlock implements IClientIncomingPacket
 		{
 			case BLOCK:
 			case UNBLOCK:
+			{
 				// can't use block/unblock for locating invisible characters
 				if (targetId <= 0)
 				{
@@ -90,19 +91,28 @@ public final class RequestBlock implements IClientIncomingPacket
 					BlockList.removeFromBlockList(activeChar, targetId);
 				}
 				break;
+			}
 			case BLOCKLIST:
+			{
 				BlockList.sendListToOwner(activeChar);
 				break;
+			}
 			case ALLBLOCK:
+			{
 				activeChar.sendPacket(SystemMessageId.MESSAGE_REFUSAL_MODE);
 				BlockList.setBlockAll(activeChar, true);
 				break;
+			}
 			case ALLUNBLOCK:
+			{
 				activeChar.sendPacket(SystemMessageId.MESSAGE_ACCEPTANCE_MODE);
 				BlockList.setBlockAll(activeChar, false);
 				break;
+			}
 			default:
+			{
 				_log.info("Unknown 0xA9 block type: " + _type);
+			}
 		}
 	}
 }

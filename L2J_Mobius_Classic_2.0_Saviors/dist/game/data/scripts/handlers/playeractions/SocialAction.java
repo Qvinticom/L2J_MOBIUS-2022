@@ -57,18 +57,24 @@ public final class SocialAction implements IPlayerActionHandler
 			case 15: // Shyness
 			case 28: // Propose
 			case 29: // Provoke
+			{
 				useSocial(activeChar, data.getOptionId());
 				break;
+			}
 			case 30: // Beauty Shop
+			{
 				if (useSocial(activeChar, data.getOptionId()))
 				{
 					activeChar.broadcastInfo();
 				}
 				break;
+			}
 			case 16: // Exchange Bows
 			case 17: // High Five
 			case 18: // Couple Dance
+			{
 				useCoupleSocial(activeChar, data.getOptionId());
+			}
 		}
 	}
 	

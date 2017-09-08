@@ -336,17 +336,23 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 										switch (flute.getId())
 										{
 											case DRAGONFLUTE_OF_WIND:
+											{
 												takeItems(talker, DRAGONFLUTE_OF_WIND, -1);
 												giveItems(talker, DRAGON_BUGLE_OF_WIND, 1);
 												break;
+											}
 											case DRAGONFLUTE_OF_STAR:
+											{
 												takeItems(talker, DRAGONFLUTE_OF_STAR, -1);
 												giveItems(talker, DRAGON_BUGLE_OF_STAR, 1);
 												break;
+											}
 											case DRAGONFLUTE_OF_TWILIGHT:
+											{
 												takeItems(talker, DRAGONFLUTE_OF_TWILIGHT, -1);
 												giveItems(talker, DRAGON_BUGLE_OF_TWILIGHT, 1);
 												break;
+											}
 										}
 										
 										qs.exitQuest(true, true);
@@ -418,14 +424,20 @@ public final class Q00421_LittleWingsBigAdventure extends Quest
 					switch (getRandom(3))
 					{
 						case 0:
+						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHY_DO_YOU_BOTHER_ME_AGAIN);
 							break;
+						}
 						case 1:
+						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, data.message);
 							break;
+						}
 						case 2:
+						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LEAVE_NOW_BEFORE_YOU_INCUR_THE_WRATH_OF_THE_GUARDIAN_GHOST);
 							break;
+						}
 					}
 				}
 			}

@@ -60,13 +60,18 @@ public class Q10289_FadeToBlack extends Quest
 		switch (event)
 		{
 			case "32757-02.htm":
+			{
 				htmltext = event;
 				break;
+			}
 			case "32757-03.htm":
+			{
 				qs.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "32757-06.html":
+			{
 				if (qs.isCond(2) && hasQuestItems(player, MARK_OF_DARKNESS))
 				{
 					htmltext = "32757-07.html";
@@ -80,6 +85,7 @@ public class Q10289_FadeToBlack extends Quest
 					htmltext = event;
 				}
 				break;
+			}
 			case "11":
 			case "12":
 			case "13":
@@ -100,90 +106,131 @@ public class Q10289_FadeToBlack extends Quest
 			case "28":
 			case "29":
 			case "30":
+			{
 				if (qs.isCond(3) && hasQuestItems(player, MARK_OF_SPLENDOR))
 				{
 					// see 32757-08.html for recipe list (all moirai armor 60%)
 					switch (event)
 					{
 						case "11":
+						{
 							rewardItems(player, 15775, 1);
 							giveAdena(player, 420920, true);
 							break;
+						}
 						case "12":
+						{
 							rewardItems(player, 15776, 1);
 							giveAdena(player, 420920, true);
 							break;
+						}
 						case "13":
+						{
 							rewardItems(player, 15777, 1);
 							giveAdena(player, 420920, true);
 							break;
+						}
 						case "14":
+						{
 							rewardItems(player, 15778, 1);
 							break;
+						}
 						case "15":
+						{
 							rewardItems(player, 15779, 1);
 							giveAdena(player, 168360, true);
 							break;
+						}
 						case "16":
+						{
 							rewardItems(player, 15780, 1);
 							giveAdena(player, 168360, true);
 							break;
+						}
 						case "17":
+						{
 							rewardItems(player, 15781, 1);
 							giveAdena(player, 252540, true);
 							break;
+						}
 						case "18":
+						{
 							rewardItems(player, 15782, 1);
 							giveAdena(player, 357780, true);
 							break;
+						}
 						case "19":
+						{
 							rewardItems(player, 15783, 1);
 							giveAdena(player, 357780, true);
 							break;
+						}
 						case "20":
+						{
 							rewardItems(player, 15784, 1);
 							giveAdena(player, 505100, true);
 							break;
+						}
 						case "21":
+						{
 							rewardItems(player, 15785, 1);
 							giveAdena(player, 505100, true);
 							break;
+						}
 						case "22":
+						{
 							rewardItems(player, 15786, 1);
 							giveAdena(player, 505100, true);
 							break;
+						}
 						case "23":
+						{
 							rewardItems(player, 15787, 1);
 							giveAdena(player, 505100, true);
 							break;
+						}
 						case "24":
+						{
 							rewardItems(player, 15787, 1);
 							giveAdena(player, 505100, true);
 							break;
+						}
 						case "25":
+						{
 							rewardItems(player, 15789, 1);
 							giveAdena(player, 505100, true);
 							break;
+						}
 						case "26":
+						{
 							rewardItems(player, 15790, 1);
 							giveAdena(player, 496680, true);
 							break;
+						}
 						case "27":
+						{
 							rewardItems(player, 15791, 1);
 							giveAdena(player, 496680, true);
 							break;
+						}
 						case "28":
+						{
 							rewardItems(player, 15792, 1);
 							giveAdena(player, 563860, true);
 							break;
+						}
 						case "29":
+						{
 							rewardItems(player, 15793, 1);
 							giveAdena(player, 509040, true);
 							break;
+						}
 						case "30":
+						{
 							rewardItems(player, 15794, 1);
 							giveAdena(player, 454240, true);
 							break;
+						}
 					}
 					
 					final long marksOfDarkness = getQuestItemsCount(player, MARK_OF_DARKNESS);
@@ -195,6 +242,7 @@ public class Q10289_FadeToBlack extends Quest
 					htmltext = "32757-09.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -257,12 +305,16 @@ public class Q10289_FadeToBlack extends Quest
 			switch (qs.getCond())
 			{
 				case 1:
+				{
 					htmltext = "32757-04.html";
 					break;
+				}
 				case 2:
 				case 3:
+				{
 					htmltext = "32757-05.html";
 					break;
+				}
 			}
 		}
 		else

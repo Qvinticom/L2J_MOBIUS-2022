@@ -121,8 +121,10 @@ public final class Q10740_NeverForget extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "33951-01.htm";
 						break;
+					}
 					case State.STARTED:
 					{
 						switch (qs.getCond())

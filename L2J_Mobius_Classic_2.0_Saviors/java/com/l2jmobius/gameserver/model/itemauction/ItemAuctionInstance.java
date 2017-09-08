@@ -245,7 +245,6 @@ public final class ItemAuctionInstance
 				nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 				break;
 			}
-			
 			case 1:
 			{
 				switch (auctions[0].getAuctionState())
@@ -263,23 +262,22 @@ public final class ItemAuctionInstance
 						}
 						break;
 					}
-					
 					case STARTED:
 					{
 						currentAuction = auctions[0];
 						nextAuction = createAuction(Math.max(currentAuction.getEndingTime() + FINISH_TIME_SPACE, System.currentTimeMillis() + START_TIME_SPACE));
 						break;
 					}
-					
 					case FINISHED:
 					{
 						currentAuction = auctions[0];
 						nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 						break;
 					}
-					
 					default:
+					{
 						throw new IllegalArgumentException();
+					}
 				}
 				break;
 			}
@@ -287,10 +285,8 @@ public final class ItemAuctionInstance
 			default:
 			{
 				Arrays.sort(auctions, Comparator.comparingLong(ItemAuction::getStartingTime).reversed());
-				
 				// just to make sure we won't skip any auction because of little different times
 				final long currentTime = System.currentTimeMillis();
-				
 				for (ItemAuction auction : auctions)
 				{
 					if (auction.getAuctionState() == ItemAuctionState.STARTED)
@@ -304,7 +300,6 @@ public final class ItemAuctionInstance
 						break; // only first
 					}
 				}
-				
 				for (ItemAuction auction : auctions)
 				{
 					if ((auction.getStartingTime() > currentTime) && (currentAuction != auction))
@@ -313,7 +308,6 @@ public final class ItemAuctionInstance
 						break;
 					}
 				}
-				
 				if (nextAuction == null)
 				{
 					nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
@@ -414,12 +408,10 @@ public final class ItemAuctionInstance
 					{
 						throw new IllegalStateException("Could not set auction state: " + ItemAuctionState.STARTED + ", expected: " + state);
 					}
-					
 					LOGGER.info(getClass().getSimpleName() + ": Auction " + _auction.getAuctionId() + " has started for instance " + _auction.getInstanceId());
 					checkAndSetCurrentAndNextAuction();
 					break;
 				}
-				
 				case STARTED:
 				{
 					switch (_auction.getAuctionEndingExtendState())
@@ -434,7 +426,6 @@ public final class ItemAuctionInstance
 							}
 							break;
 						}
-						
 						case EXTEND_BY_3_MIN:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_3_MIN)
@@ -445,7 +436,6 @@ public final class ItemAuctionInstance
 							}
 							break;
 						}
-						
 						case EXTEND_BY_CONFIG_PHASE_A:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_B)
@@ -456,7 +446,6 @@ public final class ItemAuctionInstance
 							}
 							break;
 						}
-						
 						case EXTEND_BY_CONFIG_PHASE_B:
 						{
 							if (_auction.getScheduledAuctionEndingExtendState() != ItemAuctionExtendState.EXTEND_BY_CONFIG_PHASE_A)
@@ -479,7 +468,9 @@ public final class ItemAuctionInstance
 				}
 				
 				default:
+				{
 					throw new IllegalStateException("Invalid state: " + state);
+				}
 			}
 		}
 	}

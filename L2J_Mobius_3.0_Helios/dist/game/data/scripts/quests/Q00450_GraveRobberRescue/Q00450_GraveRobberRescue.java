@@ -69,18 +69,26 @@ public class Q00450_GraveRobberRescue extends Quest
 			case "32650-04.htm":
 			case "32650-05.htm":
 			case "32650-06.html":
+			{
 				break;
+			}
 			case "32650-07.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "despawn":
+			{
 				npc.setBusy(false);
 				npc.deleteMe();
 				htmltext = null;
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -96,16 +104,21 @@ public class Q00450_GraveRobberRescue extends Quest
 			switch (st.getState())
 			{
 				case State.COMPLETED:
+				{
 					if (!st.isNowAvailable())
 					{
 						htmltext = "32650-03.html";
 						break;
 					}
 					st.setState(State.CREATED);
+				}
 				case State.CREATED:
+				{
 					htmltext = (player.getLevel() >= MIN_LEVEL) ? "32650-01.htm" : "32650-02.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (st.isCond(1))
 					{
 						htmltext = (!hasQuestItems(player, EVIDENCE_OF_MIGRATION)) ? "32650-08.html" : "32650-09.html";
@@ -117,6 +130,7 @@ public class Q00450_GraveRobberRescue extends Quest
 						htmltext = "32650-10.html";
 					}
 					break;
+				}
 			}
 		}
 		else if (st.isCond(1))

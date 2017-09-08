@@ -84,11 +84,15 @@ public class Q00652_AnAgedExAdventurer extends Quest
 				switch (qs.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = (player.getLevel() >= 46) ? "32012-01.htm" : "32012-01a.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "32012-02.html";
 						break;
+					}
 				}
 				break;
 			}

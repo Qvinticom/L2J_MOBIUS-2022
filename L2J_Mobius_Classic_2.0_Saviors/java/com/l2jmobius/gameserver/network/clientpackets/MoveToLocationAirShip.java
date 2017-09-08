@@ -74,6 +74,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 		switch (_command)
 		{
 			case 0:
+			{
 				if (!ship.canBeControlled())
 				{
 					return;
@@ -83,14 +84,18 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_param1, _param2, z));
 				}
 				break;
+			}
 			case 1:
+			{
 				if (!ship.canBeControlled())
 				{
 					return;
 				}
 				ship.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 				break;
+			}
 			case 2:
+			{
 				if (!ship.canBeControlled())
 				{
 					return;
@@ -101,7 +106,9 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(ship.getX(), ship.getY(), z));
 				}
 				break;
+			}
 			case 3:
+			{
 				if (!ship.canBeControlled())
 				{
 					return;
@@ -112,7 +119,9 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 					ship.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(ship.getX(), ship.getY(), z));
 				}
 				break;
+			}
 			case 4:
+			{
 				if (!ship.isInDock() || ship.isMoving())
 				{
 					return;
@@ -138,6 +147,7 @@ public class MoveToLocationAirShip implements IClientIncomingPacket
 				
 				ship.executePath(dst);
 				break;
+			}
 		}
 	}
 }

@@ -70,7 +70,9 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 		{
 			case "30857-02.html":
 			case "33867-02.html":
+			{
 				break;
+			}
 			case "30857-03.html":
 			{
 				if (qs.isCond(1))
@@ -93,7 +95,9 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

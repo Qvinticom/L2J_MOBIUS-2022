@@ -84,21 +84,32 @@ public class Q00141_ShadowFoxPart3 extends Quest
 			case "30894-17.html":
 			case "30894-19.html":
 			case "30894-20.html":
+			{
 				break;
+			}
 			case "30894-03.htm":
+			{
 				st.startQuest();
 				break;
+			}
 			case "30894-06.html":
+			{
 				st.setCond(2, true);
 				break;
+			}
 			case "30894-15.html":
+			{
 				st.set("talk", "2");
 				break;
+			}
 			case "30894-18.html":
+			{
 				st.setCond(4, true);
 				st.unset("talk");
 				break;
+			}
 			case "30894-21.html":
+			{
 				giveAdena(player, 88888, true);
 				if (player.getLevel() <= MAX_REWARD_LEVEL)
 				{
@@ -106,9 +117,12 @@ public class Q00141_ShadowFoxPart3 extends Quest
 				}
 				st.exitQuest(false, true);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -146,19 +160,27 @@ public class Q00141_ShadowFoxPart3 extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				final QuestState qs = player.getQuestState(Q00140_ShadowFoxPart2.class.getSimpleName());
 				htmltext = (player.getLevel() >= MIN_LEVEL) ? ((qs != null) && qs.isCompleted()) ? "30894-01.htm" : "30894-00.html" : "30894-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (st.getCond())
 				{
 					case 1:
+					{
 						htmltext = "30894-04.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "30894-07.html";
 						break;
+					}
 					case 3:
+					{
 						if (st.getInt("talk") == 1)
 						{
 							htmltext = "30894-09.html";
@@ -174,14 +196,20 @@ public class Q00141_ShadowFoxPart3 extends Quest
 							st.set("talk", "1");
 						}
 						break;
+					}
 					case 4:
+					{
 						htmltext = "30894-19.html";
 						break;
+					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

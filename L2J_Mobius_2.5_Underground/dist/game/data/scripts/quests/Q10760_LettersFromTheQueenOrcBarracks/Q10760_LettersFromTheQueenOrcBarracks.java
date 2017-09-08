@@ -69,7 +69,9 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 		{
 			case "30037-02.html":
 			case "30597-02.html":
+			{
 				break;
+			}
 			case "30037-03.html":
 			{
 				if (qs.isCond(1))
@@ -92,7 +94,9 @@ public class Q10760_LettersFromTheQueenOrcBarracks extends LetterQuest
 				break;
 			}
 			default:
+			{
 				htmltext = event;
+			}
 		}
 		return htmltext;
 	}

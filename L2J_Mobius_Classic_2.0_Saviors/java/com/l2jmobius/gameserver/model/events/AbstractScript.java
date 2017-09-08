@@ -2517,21 +2517,31 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 					switch (((L2EtcItem) item).getItemType())
 					{
 						case POTION:
+						{
 							count *= Config.RATE_QUEST_REWARD_POTION;
 							break;
+						}
 						case ENCHT_WP:
 						case ENCHT_AM:
 						case SCROLL:
+						{
 							count *= Config.RATE_QUEST_REWARD_SCROLL;
 							break;
+						}
 						case RECIPE:
+						{
 							count *= Config.RATE_QUEST_REWARD_RECIPE;
 							break;
+						}
 						case MATERIAL:
+						{
 							count *= Config.RATE_QUEST_REWARD_MATERIAL;
 							break;
+						}
 						default:
+						{
 							count *= Config.RATE_QUEST_REWARD;
+						}
 					}
 				}
 			}

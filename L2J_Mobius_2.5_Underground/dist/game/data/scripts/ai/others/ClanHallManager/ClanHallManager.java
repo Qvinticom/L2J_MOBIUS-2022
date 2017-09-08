@@ -272,10 +272,14 @@ public final class ClanHallManager extends AbstractNpcAI
 										case 1:
 										case 2:
 										case 3:
+										{
 											((L2MerchantInstance) npc).showBuyWindow(player, Integer.parseInt(npc.getId() + "0" + (itemLevel - 1)));
 											break;
+										}
 										default:
+										{
 											htmltext = "ClanHallManager-noFunction.html";
+										}
 									}
 									break;
 								}

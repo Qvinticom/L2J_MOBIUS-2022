@@ -362,6 +362,7 @@ public final class ItemAuction
 					break;
 				}
 				case EXTEND_BY_3_MIN:
+				{
 					if (Config.ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID > 0)
 					{
 						if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
@@ -371,6 +372,7 @@ public final class ItemAuction
 						}
 					}
 					break;
+				}
 				case EXTEND_BY_CONFIG_PHASE_A:
 				{
 					if (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId())
@@ -429,14 +431,17 @@ public final class ItemAuction
 		switch (getAuctionState())
 		{
 			case CREATED:
+			{
 				return false;
-			
+			}
 			case FINISHED:
+			{
 				if (_startingTime < (System.currentTimeMillis() - TimeUnit.MILLISECONDS.convert(Config.ALT_ITEM_AUCTION_EXPIRED_AFTER, TimeUnit.DAYS)))
 				{
 					return false;
 				}
 				break;
+			}
 		}
 		
 		final int playerObjId = player.getObjectId();

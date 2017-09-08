@@ -750,6 +750,7 @@ public class L2Npc extends L2Character
 		switch (npcId)
 		{
 			case 31688:
+			{
 				if (player.isNoble())
 				{
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "noble_main.htm";
@@ -759,11 +760,13 @@ public class L2Npc extends L2Character
 					filename = (getHtmlPath(npcId, val));
 				}
 				break;
+			}
 			case 31690:
 			case 31769:
 			case 31770:
 			case 31771:
 			case 31772:
+			{
 				if (player.isHero() || player.isNoble())
 				{
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "hero_main.htm";
@@ -773,7 +776,9 @@ public class L2Npc extends L2Character
 					filename = (getHtmlPath(npcId, val));
 				}
 				break;
+			}
 			case 36402:
+			{
 				if (player.getOlympiadBuffCount() > 0)
 				{
 					filename = (player.getOlympiadBuffCount() == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
@@ -783,7 +788,9 @@ public class L2Npc extends L2Character
 					filename = Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm";
 				}
 				break;
+			}
 			case 30298: // Blacksmith Pinter
+			{
 				if (player.isAcademyMember())
 				{
 					filename = (getHtmlPath(npcId, 1));
@@ -793,7 +800,9 @@ public class L2Npc extends L2Character
 					filename = (getHtmlPath(npcId, val));
 				}
 				break;
+			}
 			default:
+			{
 				if (((npcId >= 31093) && (npcId <= 31094)) || ((npcId >= 31172) && (npcId <= 31201)) || ((npcId >= 31239) && (npcId <= 31254)))
 				{
 					return;
@@ -801,6 +810,7 @@ public class L2Npc extends L2Character
 				// Get the text of the selected HTML file in function of the npcId and of the page number
 				filename = (getHtmlPath(npcId, val));
 				break;
+			}
 		}
 		
 		// Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance

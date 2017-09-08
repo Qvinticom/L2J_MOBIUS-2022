@@ -575,19 +575,29 @@ public class AugmentationData
 				switch (lifeStoneGrade)
 				{
 					case AbstractRefinePacket.GRADE_NONE:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_MID:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_HIGH:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
 						break;
+					}
 					case AbstractRefinePacket.GRADE_TOP:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
 						break;
+					}
 					default:
+					{
 						gradeChance = Config.RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
+					}
 				}
 				
 				int c = Rnd.get(100);

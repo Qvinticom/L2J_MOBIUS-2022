@@ -93,14 +93,18 @@ public final class ForgeOfTheGods extends AbstractNpcAI
 		switch (event)
 		{
 			case "suicide":
+			{
 				if (npc != null)
 				{
 					npc.doDie(null);
 				}
 				break;
+			}
 			case "refresh":
+			{
 				_npcCount = 0;
 				break;
+			}
 		}
 		return null;
 	}

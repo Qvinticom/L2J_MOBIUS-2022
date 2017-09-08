@@ -79,7 +79,9 @@ public class Q10761_AnOrcInLove extends Quest
 			case "33966-02.htm":
 			case "33966-03.htm":
 			case "33966-04.htm":
+			{
 				break;
+			}
 			case "33966-05.htm":
 			{
 				qs.startQuest();
@@ -96,7 +98,9 @@ public class Q10761_AnOrcInLove extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -110,14 +114,20 @@ public class Q10761_AnOrcInLove extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33966-01.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33966-06.html" : "33966-07.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

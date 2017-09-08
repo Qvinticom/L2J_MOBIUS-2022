@@ -175,29 +175,41 @@ public final class Q10360_CertificationOfFate extends Quest
 				switch (player.getRace())
 				{
 					case HUMAN:
+					{
 						st.setCond(player.isMageClass() ? 9 : 8);
 						htmltext = player.isMageClass() ? "33518-06.htm" : "33518-07.htm";
 						break;
+					}
 					case DARK_ELF:
+					{
 						st.setCond(12);
 						htmltext = "33518-08.htm";
 						break;
+					}
 					case ORC:
+					{
 						st.setCond(13);
 						htmltext = "33518-09.htm";
 						break;
+					}
 					case DWARF:
+					{
 						st.setCond(14);
 						htmltext = "33518-10.htm";
 						break;
+					}
 					case KAMAEL:
+					{
 						st.setCond(15);
 						htmltext = "33518-11.htm";
 						break;
+					}
 					case ELF:
+					{
 						st.setCond(player.isMageClass() ? 11 : 10);
 						htmltext = player.isMageClass() ? "33518-12.htm" : "33518-13.htm";
 						break;
+					}
 				}
 				playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 				break;

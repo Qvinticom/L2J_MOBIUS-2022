@@ -138,9 +138,12 @@ public final class Q00381_LetsBecomeARoyalMember extends Quest
 				switch (qs.getMemoState())
 				{
 					case 1:
+					{
 						htmltext = "30090-01.html";
 						break;
+					}
 					case 2:
+					{
 						if (hasQuestItems(talker, COIN_ALBUM))
 						{
 							htmltext = "30090-05.html";
@@ -157,6 +160,7 @@ public final class Q00381_LetsBecomeARoyalMember extends Quest
 							htmltext = "30090-03.html";
 						}
 						break;
+					}
 				}
 				break;
 			}

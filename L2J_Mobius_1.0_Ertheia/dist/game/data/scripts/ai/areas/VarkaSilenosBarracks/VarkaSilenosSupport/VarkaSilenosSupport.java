@@ -149,58 +149,88 @@ public final class VarkaSilenosSupport extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case ASHAS:
+			{
 				htmltext = (AllianceLevel < 0) ? "31377-friend.html" : "31377-no.html";
 				break;
+			}
 			case NARAN:
+			{
 				htmltext = (AllianceLevel < 0) ? "31378-friend.html" : "31378-no.html";
 				break;
+			}
 			case UDAN:
+			{
 				htmltext = (AllianceLevel < 0) ? (AllianceLevel > -3) ? "31379-01.html" : "31379-04.html" : "31379-03.html";
 				break;
+			}
 			case DIYABU:
+			{
 				htmltext = (AllianceLevel < 0) ? "31380-friend.html" : "31380-no.html";
 				break;
+			}
 			case HAGOS:
+			{
 				htmltext = (AllianceLevel < 0) ? (AllianceLevel == -1) ? "31381-01.html" : "31381-02.html" : "31381-no.html";
 				break;
+			}
 			case SHIKON:
+			{
 				switch (AllianceLevel)
 				{
 					case -1:
 					case -2:
+					{
 						htmltext = "31382-01.html";
 						break;
+					}
 					case -3:
 					case -4:
+					{
 						htmltext = "31382-02.html";
 						break;
+					}
 					case -5:
+					{
 						htmltext = "31382-03.html";
 						break;
+					}
 					default:
+					{
 						htmltext = "31382-no.html";
 						break;
+					}
 				}
 				break;
+			}
 			case TERANU:
+			{
 				switch (AllianceLevel)
 				{
 					case -1:
 					case -2:
 					case -3:
+					{
 						htmltext = "31383-01.html";
 						break;
+					}
 					case -4:
+					{
 						htmltext = "31383-02.html";
 						break;
+					}
 					case -5:
+					{
 						htmltext = "31383-03.html";
 						break;
+					}
 					default:
+					{
 						htmltext = "31383-no.html";
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

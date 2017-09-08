@@ -114,6 +114,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 		switch (_actionId)
 		{
 			case 51: // General Manufacture
+			{
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 				if (activeChar.isAlikeDead())
 				{
@@ -139,9 +140,12 @@ public final class RequestActionUse implements IClientIncomingPacket
 				
 				client.sendPacket(new RecipeShopManageList(activeChar, false));
 				break;
+			}
 			default:
+			{
 				_log.warning(activeChar.getName() + ": unhandled action type " + _actionId);
 				break;
+			}
 		}
 	}
 }

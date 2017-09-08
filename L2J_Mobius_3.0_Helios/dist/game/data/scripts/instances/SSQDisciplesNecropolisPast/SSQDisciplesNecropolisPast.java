@@ -125,20 +125,30 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		switch (count)
 		{
 			case 4:
+			{
 				world.openCloseDoor(DOOR_1, true);
 				break;
+			}
 			case 10:
+			{
 				world.openCloseDoor(DOOR_2, true);
 				break;
+			}
 			case 18:
+			{
 				world.openCloseDoor(DOOR_3, true);
 				break;
+			}
 			case 28:
+			{
 				world.openCloseDoor(DOOR_4, true);
 				break;
+			}
 			case 40:
+			{
 				world.openCloseDoor(DOOR_5, true);
 				break;
+			}
 		}
 	}
 	

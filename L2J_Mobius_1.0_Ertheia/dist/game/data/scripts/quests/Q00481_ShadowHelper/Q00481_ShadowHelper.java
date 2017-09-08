@@ -91,14 +91,18 @@ public final class Q00481_ShadowHelper extends Quest
 			case "33302-03.htm":
 			case "33302-04.htm":
 			case "33302-07.html":
+			{
 				break;
+			}
 			case "33302-05.htm":
 			{
 				qs.startQuest();
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -121,8 +125,10 @@ public final class Q00481_ShadowHelper extends Quest
 				qs.setState(State.CREATED);
 			}
 			case State.CREATED:
+			{
 				htmltext = "33302-01.htm";
 				break;
+			}
 			case State.STARTED:
 			{
 				if (qs.isCond(1))

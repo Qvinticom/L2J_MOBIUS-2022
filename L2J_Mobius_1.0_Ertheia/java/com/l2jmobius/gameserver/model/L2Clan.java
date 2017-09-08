@@ -567,58 +567,86 @@ public class L2Clan implements IIdentifiable, INamable
 		switch (pledgeType)
 		{
 			case 0:
+			{
 				switch (getLevel())
 				{
 					case 3:
+					{
 						limit = 30;
 						break;
+					}
 					case 2:
+					{
 						limit = 20;
 						break;
+					}
 					case 1:
+					{
 						limit = 15;
 						break;
+					}
 					case 0:
+					{
 						limit = 10;
 						break;
+					}
 					default:
+					{
 						limit = 40;
 						break;
+					}
 				}
 				break;
+			}
 			case -1:
+			{
 				limit = 20;
 				break;
+			}
 			case 100:
 			case 200:
+			{
 				switch (getLevel())
 				{
 					case 11:
+					{
 						limit = 30;
 						break;
+					}
 					default:
+					{
 						limit = 20;
 						break;
+					}
 				}
 				break;
+			}
 			case 1001:
 			case 1002:
 			case 2001:
 			case 2002:
+			{
 				switch (getLevel())
 				{
 					case 9:
 					case 10:
 					case 11:
+					{
 						limit = 25;
 						break;
+					}
 					default:
+					{
 						limit = 10;
 						break;
+					}
 				}
 				break;
+			}
 			default:
+			{
 				break;
+			}
 		}
 		
 		return limit;
@@ -1903,23 +1931,37 @@ public class L2Clan implements IIdentifiable, INamable
 			switch (pledgeType)
 			{
 				case SUBUNIT_ACADEMY:
+				{
 					return 0;
+				}
 				case SUBUNIT_ROYAL1:
+				{
 					pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
 					break;
+				}
 				case SUBUNIT_ROYAL2:
+				{
 					return 0;
+				}
 				case SUBUNIT_KNIGHT1:
+				{
 					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
 					break;
+				}
 				case SUBUNIT_KNIGHT2:
+				{
 					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
 					break;
+				}
 				case SUBUNIT_KNIGHT3:
+				{
 					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
 					break;
+				}
 				case SUBUNIT_KNIGHT4:
+				{
 					return 0;
+				}
 			}
 		}
 		return pledgeType;
@@ -2593,6 +2635,7 @@ public class L2Clan implements IIdentifiable, INamable
 				break;
 			}
 			case 5:
+			{
 				// Upgrade to 6
 				if ((getReputationScore() >= Config.CLAN_LEVEL_6_COST) && (getMembersCount() >= Config.CLAN_LEVEL_6_REQUIREMENT))
 				{
@@ -2603,8 +2646,9 @@ public class L2Clan implements IIdentifiable, INamable
 					increaseClanLevel = true;
 				}
 				break;
-			
+			}
 			case 6:
+			{
 				// Upgrade to 7
 				if ((getReputationScore() >= Config.CLAN_LEVEL_7_COST) && (getMembersCount() >= Config.CLAN_LEVEL_7_REQUIREMENT))
 				{
@@ -2615,7 +2659,9 @@ public class L2Clan implements IIdentifiable, INamable
 					increaseClanLevel = true;
 				}
 				break;
+			}
 			case 7:
+			{
 				// Upgrade to 8
 				if ((getReputationScore() >= Config.CLAN_LEVEL_8_COST) && (getMembersCount() >= Config.CLAN_LEVEL_8_REQUIREMENT))
 				{
@@ -2626,7 +2672,9 @@ public class L2Clan implements IIdentifiable, INamable
 					increaseClanLevel = true;
 				}
 				break;
+			}
 			case 8:
+			{
 				// Upgrade to 9
 				if ((getReputationScore() >= Config.CLAN_LEVEL_9_COST) && (player.getInventory().getItemByItemId(9910) != null) && (getMembersCount() >= Config.CLAN_LEVEL_9_REQUIREMENT))
 				{
@@ -2645,7 +2693,9 @@ public class L2Clan implements IIdentifiable, INamable
 					}
 				}
 				break;
+			}
 			case 9:
+			{
 				// Upgrade to 10
 				if ((getReputationScore() >= Config.CLAN_LEVEL_10_COST) && (player.getInventory().getItemByItemId(9911) != null) && (getMembersCount() >= Config.CLAN_LEVEL_10_REQUIREMENT))
 				{
@@ -2664,7 +2714,9 @@ public class L2Clan implements IIdentifiable, INamable
 					}
 				}
 				break;
+			}
 			case 10:
+			{
 				// Upgrade to 11
 				if ((getReputationScore() >= Config.CLAN_LEVEL_11_COST) && (getMembersCount() >= Config.CLAN_LEVEL_11_REQUIREMENT))
 				{
@@ -2675,8 +2727,11 @@ public class L2Clan implements IIdentifiable, INamable
 					increaseClanLevel = true;
 				}
 				break;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 		
 		if (!increaseClanLevel)

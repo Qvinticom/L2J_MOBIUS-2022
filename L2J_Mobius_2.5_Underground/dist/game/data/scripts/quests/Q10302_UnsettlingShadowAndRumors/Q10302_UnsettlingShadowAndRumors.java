@@ -180,17 +180,25 @@ public final class Q10302_UnsettlingShadowAndRumors extends Quest
 						switch (qs.getCond())
 						{
 							case 1:
+							{
 								htmltext = "32894-01.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "32894-03.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "32894-04.html";
 								break;
+							}
 							case 6:
+							{
 								htmltext = "32894-07.html";
 								break;
+							}
 						}
 						break;
 					}

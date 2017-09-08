@@ -80,17 +80,29 @@ public final class MobGroup
 			switch (mobGroupAI.getAlternateAI())
 			{
 				case L2ControllableMobAI.AI_NORMAL:
+				{
 					return "Idle";
+				}
 				case L2ControllableMobAI.AI_FORCEATTACK:
+				{
 					return "Force Attacking";
+				}
 				case L2ControllableMobAI.AI_FOLLOW:
+				{
 					return "Following";
+				}
 				case L2ControllableMobAI.AI_CAST:
+				{
 					return "Casting";
+				}
 				case L2ControllableMobAI.AI_ATTACK_GROUP:
+				{
 					return "Attacking Group";
+				}
 				default:
+				{
 					return "Idle";
+				}
 			}
 		}
 		catch (Exception e)

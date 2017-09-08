@@ -74,7 +74,9 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 		{
 			case "33846-03.htm":
 			case "33846-04.htm":
+			{
 				break;
+			}
 			case "33846-05.htm":
 			{
 				qs.startQuest();
@@ -92,7 +94,9 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -106,14 +110,20 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33846-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33846-06.html" : "33846-07.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

@@ -133,14 +133,20 @@ public class DoppelgangerAI extends L2CharacterAI
 			switch (getIntention())
 			{
 				case AI_INTENTION_ATTACK:
+				{
 					thinkAttack();
 					break;
+				}
 				case AI_INTENTION_CAST:
+				{
 					thinkCast();
 					break;
+				}
 				case AI_INTENTION_INTERACT:
+				{
 					thinkInteract();
 					break;
+				}
 			}
 		}
 		finally
@@ -173,7 +179,9 @@ public class DoppelgangerAI extends L2CharacterAI
 			case AI_INTENTION_IDLE:
 			case AI_INTENTION_MOVE_TO:
 			case AI_INTENTION_PICK_UP:
+			{
 				getActor().followSummoner(_startFollow);
+			}
 		}
 	}
 	

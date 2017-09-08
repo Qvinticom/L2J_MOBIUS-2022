@@ -128,18 +128,24 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 					switch (spawn2.getMessageId())
 					{
 						case 1:
+						{
 							npcString = NpcStringId.ATTACKING_THE_ENEMY_S_REINFORCEMENTS_IS_NECESSARY_TIME_TO_DIE;
 							break;
+						}
 						case 2:
+						{
 							if (attacker.isSummon())
 							{
 								attacker = ((L2Summon) attacker).getOwner();
 							}
 							npcString = NpcStringId.EVERYONE_CONCENTRATE_YOUR_ATTACKS_ON_S1_SHOW_THE_ENEMY_YOUR_RESOLVE;
 							break;
+						}
 						case 3:
+						{
 							npcString = NpcStringId.FIRE_SPIRIT_UNLEASH_YOUR_POWER_BURN_THE_ENEMY;
 							break;
+						}
 					}
 					if (npcString != null)
 					{

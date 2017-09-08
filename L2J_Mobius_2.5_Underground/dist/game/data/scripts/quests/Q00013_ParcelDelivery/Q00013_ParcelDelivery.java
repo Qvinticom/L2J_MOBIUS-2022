@@ -58,10 +58,13 @@ public class Q00013_ParcelDelivery extends Quest
 		switch (event)
 		{
 			case "31274-02.html":
+			{
 				st.startQuest();
 				giveItems(player, PACKAGE, 1);
 				break;
+			}
 			case "31539-01.html":
+			{
 				if (st.isCond(1) && hasQuestItems(player, PACKAGE))
 				{
 					giveAdena(player, 271980, true);
@@ -73,6 +76,7 @@ public class Q00013_ParcelDelivery extends Quest
 					htmltext = "31539-02.html";
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -87,28 +91,38 @@ public class Q00013_ParcelDelivery extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (npcId == FUNDIN)
 				{
 					htmltext = "31274-00.htm";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				if (st.isCond(1))
 				{
 					switch (npcId)
 					{
 						case FUNDIN:
+						{
 							htmltext = "31274-02.html";
 							break;
+						}
 						case VULCAN:
+						{
 							htmltext = "31539-00.html";
 							break;
+						}
 					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

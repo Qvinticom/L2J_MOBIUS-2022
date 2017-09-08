@@ -70,7 +70,9 @@ public final class Q10779_LettersFromTheQueenSeaOfSpores extends LetterQuest
 		{
 			case "30191-02.html":
 			case "33845-02.html":
+			{
 				break;
+			}
 			case "30191-03.html":
 			{
 				if (qs.isCond(1))
@@ -93,7 +95,9 @@ public final class Q10779_LettersFromTheQueenSeaOfSpores extends LetterQuest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

@@ -103,13 +103,19 @@ public final class EnergySeeds extends AbstractNpcAI
 		switch (seed)
 		{
 			case INFINITY:
+			{
 				return false;
+			}
 			case DESTRUCTION:
+			{
 				return GraciaSeedsManager.getInstance().getSoDState() == 2;
+			}
 			case ANNIHILATION_BISTAKON:
 			case ANNIHILATION_REPTILIKON:
 			case ANNIHILATION_COKRAKON:
+			{
 				return true;
+			}
 		}
 		return true;
 	}
@@ -136,25 +142,39 @@ public final class EnergySeeds extends AbstractNpcAI
 				switch (npc.getId())
 				{
 					case 18678: // Water
+					{
 						itemId = 14016;
 						break;
+					}
 					case 18679: // Fire
+					{
 						itemId = 14015;
 						break;
+					}
 					case 18680: // Wind
+					{
 						itemId = 14017;
 						break;
+					}
 					case 18681: // Earth
+					{
 						itemId = 14018;
 						break;
+					}
 					case 18682: // Divinity
+					{
 						itemId = 14020;
 						break;
+					}
 					case 18683: // Darkness
+					{
 						itemId = 14019;
 						break;
+					}
 					default:
+					{
 						return super.onSkillSee(npc, caster, skill, targets, isSummon);
+					}
 				}
 				
 				if (getRandom(100) < 33)

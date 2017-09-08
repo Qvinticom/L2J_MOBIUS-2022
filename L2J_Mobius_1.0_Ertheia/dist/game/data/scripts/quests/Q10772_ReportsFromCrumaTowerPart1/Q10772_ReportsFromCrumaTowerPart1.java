@@ -77,7 +77,9 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			case "30484-04.htm":
 			case "30484-05.htm":
 			case "33991-02.html":
+			{
 				break;
+			}
 			case "30484-06.htm":
 			{
 				qs.startQuest();
@@ -116,7 +118,9 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -132,14 +136,20 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "30484-01.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					htmltext = (qs.isCond(1)) ? "30484-07.html" : "30484-08.html";
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted() && qs.isCond(1))

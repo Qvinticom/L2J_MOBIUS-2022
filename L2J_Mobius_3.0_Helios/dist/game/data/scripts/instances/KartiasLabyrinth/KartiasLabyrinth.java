@@ -649,6 +649,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 			switch (stage)
 			{
 				case 1:
+				{
 					switch (wave)
 					{
 						case 1:
@@ -676,7 +677,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					break;
+				}
 				case 2:
+				{
 					switch (wave)
 					{
 						case 1:
@@ -704,7 +707,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					break;
+				}
 				case 3:
+				{
 					switch (wave)
 					{
 						case 1:
@@ -763,7 +768,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					break;
+				}
 				case 4:
+				{
 					switch (wave)
 					{
 						case 1:
@@ -791,7 +798,9 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					break;
+				}
 				case 5:
+				{
 					switch (wave)
 					{
 						case 1:
@@ -826,6 +835,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 						}
 					}
 					break;
+				}
 			}
 		}
 		else if (room == 2)

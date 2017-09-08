@@ -627,17 +627,25 @@ public class FortSiege implements Siegable
 						switch (spawn2.getMessageId())
 						{
 							case 1:
+							{
 								npcString = NpcStringId.YOU_MAY_HAVE_BROKEN_OUR_ARROWS_BUT_YOU_WILL_NEVER_BREAK_OUR_WILL_ARCHERS_RETREAT;
 								break;
+							}
 							case 2:
+							{
 								npcString = NpcStringId.AIIEEEE_COMMAND_CENTER_THIS_IS_GUARD_UNIT_WE_NEED_BACKUP_RIGHT_AWAY;
 								break;
+							}
 							case 3:
+							{
 								npcString = NpcStringId.AT_LAST_THE_MAGIC_CIRCLE_THAT_PROTECTS_THE_FORTRESS_HAS_WEAKENED_VOLUNTEERS_STAND_BACK;
 								break;
+							}
 							case 4:
+							{
 								npcString = NpcStringId.I_FEEL_SO_MUCH_GRIEF_THAT_I_CAN_T_EVEN_TAKE_CARE_OF_MYSELF_THERE_ISN_T_ANY_REASON_FOR_ME_TO_STAY_HERE_ANY_LONGER;
 								break;
+							}
 						}
 						if (npcString != null)
 						{
@@ -908,13 +916,19 @@ public class FortSiege implements Siegable
 		switch (teleportWho)
 		{
 			case Owner:
+			{
 				players = getOwnersInZone();
 				break;
+			}
 			case Attacker:
+			{
 				players = getAttackersInZone();
 				break;
+			}
 			default:
+			{
 				players = getPlayersInZone();
+			}
 		}
 		
 		for (L2PcInstance player : players)

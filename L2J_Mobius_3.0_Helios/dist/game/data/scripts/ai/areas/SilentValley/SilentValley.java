@@ -77,15 +77,21 @@ public final class SilentValley extends AbstractNpcAI
 			switch (event)
 			{
 				case "CLEAR":
+				{
 					npc.doDie(null);
 					break;
+				}
 				case "CLEAR_EVENT":
+				{
 					npc.broadcastEvent("CLEAR_ALL_INSTANT", 2000, null);
 					npc.doDie(null);
 					break;
+				}
 				case "SPAWN_CHEST":
+				{
 					addSpawn(CHEST, npc.getX() - 100, npc.getY(), npc.getZ() - 100, 0, false, 0);
 					break;
+				}
 			}
 		}
 		return null;
@@ -190,11 +196,15 @@ public final class SilentValley extends AbstractNpcAI
 			switch (eventName)
 			{
 				case "CLEAR_ALL":
+				{
 					startQuestTimer("CLEAR", 60000, receiver, null);
 					break;
+				}
 				case "CLEAR_ALL_INSTANT":
+				{
 					receiver.doDie(null);
 					break;
+				}
 			}
 		}
 		return super.onEventReceived(eventName, sender, receiver, reference);

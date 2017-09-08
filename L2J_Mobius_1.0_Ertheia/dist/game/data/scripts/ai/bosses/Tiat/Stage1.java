@@ -364,9 +364,12 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 		switch (world.getStatus() - 1)
 		{
 			case 0:
+			{
 				spawnFlaggedNPCs(world, 0);
 				break;
+			}
 			case 1:
+			{
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_ENEMIES_HAVE_ATTACKED_EVERYONE_COME_OUT_AND_FIGHT_URGH, 5, 1000));
 				for (int i : ENTRANCE_ROOM_DOORS)
 				{
@@ -374,7 +377,9 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 				}
 				spawnFlaggedNPCs(world, 1);
 				break;
+			}
 			case 4:
+			{
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.OBELISK_HAS_COLLAPSED_DON_T_LET_THE_ENEMIES_JUMP_AROUND_WILDLY_ANYMORE, 5, 1000));
 				for (int i : SQUARE_DOORS)
 				{
@@ -382,22 +387,31 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 				}
 				spawnFlaggedNPCs(world, 4);
 				break;
+			}
 			case 5:
+			{
 				world.openCloseDoor(SCOUTPASS_DOOR, true);
 				spawnFlaggedNPCs(world, 3);
 				spawnFlaggedNPCs(world, 5);
 				break;
+			}
 			case 6:
+			{
 				world.openCloseDoor(THRONE_DOOR, true);
 				break;
+			}
 			case 7:
+			{
 				spawnFlaggedNPCs(world, 7);
 				break;
+			}
 			case 8:
+			{
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.COME_OUT_WARRIORS_PROTECT_SEED_OF_DESTRUCTION, 5, 1000));
 				world.setParameter("deviceCount", 0);
 				spawnFlaggedNPCs(world, 8);
 				break;
+			}
 		}
 	}
 	

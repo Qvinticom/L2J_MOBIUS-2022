@@ -333,14 +333,20 @@ public final class IstinaCavern extends AbstractInstance
 						switch (random)
 						{
 							case 1:
+							{
 								showOnScreenMsg(instance, NpcStringId.ISTINA_S_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_RED, ExShowScreenMessage.TOP_CENTER, 6000);
 								break;
+							}
 							case 2:
+							{
 								showOnScreenMsg(instance, NpcStringId.ISTINA_S_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_BLUE, ExShowScreenMessage.TOP_CENTER, 6000);
 								break;
+							}
 							case 3:
+							{
 								showOnScreenMsg(instance, NpcStringId.ISTINA_S_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_GREEN, ExShowScreenMessage.TOP_CENTER, 6000);
 								break;
+							}
 						}
 					}
 					getTimers().addTimer("AUTHORITY_TIMER", 70000 + getRandom(25000), npc, null);
@@ -598,20 +604,30 @@ public final class IstinaCavern extends AbstractInstance
 			switch (instance.getStatus())
 			{
 				case 0:
+				{
 					htmltext = "33293-01.html";
 					break;
+				}
 				case 1:
+				{
 					htmltext = "33293-02.html";
 					break;
+				}
 				case 2:
+				{
 					htmltext = "33293-03.html";
 					break;
+				}
 				case 3:
+				{
 					htmltext = "33293-04.html";
 					break;
+				}
 				case 4:
+				{
 					htmltext = "33293-05.html";
 					break;
+				}
 			}
 		}
 		return htmltext;

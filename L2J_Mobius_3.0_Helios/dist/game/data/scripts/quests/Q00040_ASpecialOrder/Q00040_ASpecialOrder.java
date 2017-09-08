@@ -143,14 +143,20 @@ public final class Q00040_ASpecialOrder extends Quest
 						switch (npc.getId())
 						{
 							case HELVETIA:
+							{
 								htmltext = "30081-03.html";
 								break;
+							}
 							case O_FULLE:
+							{
 								htmltext = "31572-03.html";
 								break;
+							}
 							case GESTO:
+							{
 								htmltext = "30511-01.html";
 								break;
+							}
 						}
 						break;
 					}

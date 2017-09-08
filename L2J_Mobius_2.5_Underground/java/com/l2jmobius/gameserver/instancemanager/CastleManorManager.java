@@ -260,6 +260,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		switch (_mode)
 		{
 			case MODIFIABLE:
+			{
 				_nextModeChange.set(Calendar.HOUR_OF_DAY, Config.ALT_MANOR_APPROVE_TIME);
 				_nextModeChange.set(Calendar.MINUTE, Config.ALT_MANOR_APPROVE_MIN);
 				if (_nextModeChange.before(Calendar.getInstance()))
@@ -267,14 +268,19 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 					_nextModeChange.add(Calendar.DATE, 1);
 				}
 				break;
+			}
 			case MAINTENANCE:
+			{
 				_nextModeChange.set(Calendar.HOUR_OF_DAY, Config.ALT_MANOR_REFRESH_TIME);
 				_nextModeChange.set(Calendar.MINUTE, Config.ALT_MANOR_REFRESH_MIN + Config.ALT_MANOR_MAINTENANCE_MIN);
 				break;
+			}
 			case APPROVED:
+			{
 				_nextModeChange.set(Calendar.HOUR_OF_DAY, Config.ALT_MANOR_REFRESH_TIME);
 				_nextModeChange.set(Calendar.MINUTE, Config.ALT_MANOR_REFRESH_MIN);
 				break;
+			}
 		}
 		// Schedule mode change
 		ThreadPoolManager.schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));

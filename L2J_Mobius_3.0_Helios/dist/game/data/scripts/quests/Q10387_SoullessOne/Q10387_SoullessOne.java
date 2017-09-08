@@ -169,14 +169,20 @@ public final class Q10387_SoullessOne extends Quest
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "33796-01.htm";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "33796-06.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "33796-07.html";
 							break;
+						}
 					}
 				}
 				break;

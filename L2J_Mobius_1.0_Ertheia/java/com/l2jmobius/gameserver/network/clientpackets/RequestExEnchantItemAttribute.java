@@ -320,17 +320,25 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 				{
 					case Stone:
 					case Roughore:
+					{
 						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_STONE;
 						break;
+					}
 					case Crystal:
+					{
 						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_CRYSTAL;
 						break;
+					}
 					case Jewel:
+					{
 						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_JEWEL;
 						break;
+					}
 					case Energy:
+					{
 						success = Rnd.get(100) < Config.ENCHANT_CHANCE_ELEMENT_ENERGY;
 						break;
+					}
 				}
 			}
 		}

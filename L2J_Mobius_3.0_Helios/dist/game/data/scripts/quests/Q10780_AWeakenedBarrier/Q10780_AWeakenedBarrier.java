@@ -79,7 +79,9 @@ public final class Q10780_AWeakenedBarrier extends Quest
 		{
 			case "33845-04.htm":
 			case "33845-05.htm":
+			{
 				break;
+			}
 			case "33845-06.htm":
 			{
 				qs.startQuest();
@@ -97,7 +99,9 @@ public final class Q10780_AWeakenedBarrier extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -113,17 +117,23 @@ public final class Q10780_AWeakenedBarrier extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "33845-03.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (qs.isCond(1))
 					{
 						htmltext = "33845-07.html";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted())

@@ -336,11 +336,15 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		switch (_enterLocationType)
 		{
 			case RANDOM:
+			{
 				loc = _enterLocations.get(Rnd.get(_enterLocations.size()));
 				break;
+			}
 			case FIXED:
+			{
 				loc = _enterLocations.get(0);
 				break;
+			}
 		}
 		return loc;
 	}
@@ -365,11 +369,15 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		switch (_exitLocationType)
 		{
 			case RANDOM:
+			{
 				location = _exitLocations.get(Rnd.get(_exitLocations.size()));
 				break;
+			}
 			case FIXED:
+			{
 				location = _exitLocations.get(0);
 				break;
+			}
 			case ORIGIN:
 			{
 				final PlayerVariables vars = player.getVariables();

@@ -148,14 +148,20 @@ public final class Nursery extends AbstractInstance
 			switch (gameStage)
 			{
 				case 0:
+				{
 					htmltext = "GameManager-01.html";
 					break;
+				}
 				case 2:
+				{
 					htmltext = "GameManager-02.html";
 					break;
+				}
 				case 3:
+				{
 					htmltext = "GameManager-03.html";
 					break;
+				}
 			}
 			
 			final BuffInfo energyInfo = player.getEffectList().getBuffInfoByAbnormalType(ENERGY_SKILL_1.getSkill().getAbnormalType());
@@ -324,14 +330,20 @@ public final class Nursery extends AbstractInstance
 				switch (getRandom(3))
 				{
 					case 0:
+					{
 						ENERGY_SKILL_1.getSkill().applyEffects(npc, killer);
 						break;
+					}
 					case 1:
+					{
 						ENERGY_SKILL_2.getSkill().applyEffects(npc, killer);
 						break;
+					}
 					case 2:
+					{
 						ENERGY_SKILL_3.getSkill().applyEffects(npc, killer);
 						break;
+					}
 				}
 				instance.broadcastPacket(new Earthquake(npc, 50, 3));
 				showOnScreenMsg(instance, NpcStringId.RECEIVED_REGENERATION_ENERGY, ExShowScreenMessage.MIDDLE_CENTER, 2000);

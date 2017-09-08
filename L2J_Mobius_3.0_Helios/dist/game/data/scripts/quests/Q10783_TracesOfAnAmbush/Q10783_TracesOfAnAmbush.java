@@ -92,7 +92,9 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 		{
 			case "33866-03.htm":
 			case "33866-04.htm":
+			{
 				break;
+			}
 			case "33866-05.htm":
 			{
 				qs.startQuest();
@@ -107,7 +109,9 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -121,14 +125,20 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33866-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33866-06.html" : "33866-07.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

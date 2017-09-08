@@ -162,20 +162,30 @@ public final class Q00044_HelpTheSon extends Quest
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = (hasQuestItems(player, WORK_HAMMER)) ? "30827-02.html" : "30827-02a.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30827-04.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "30827-05.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "30827-07.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "30827-08.html";
 								break;
+							}
 						}
 						break;
 					}

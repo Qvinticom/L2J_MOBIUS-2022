@@ -70,19 +70,25 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 		switch (event)
 		{
 			case "32461-02.htm":
+			{
 				htmltext = event;
 				break;
+			}
 			case "32461-03.html":
+			{
 				st.startQuest();
 				htmltext = event;
 				break;
+			}
 			case "32461-06.html":
+			{
 				if (st.isCond(2))
 				{
 					st.setCond(3, true);
 					htmltext = event;
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -142,9 +148,12 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 		switch (st.getState())
 		{
 			case State.COMPLETED:
+			{
 				htmltext = "32461-09.html";
 				break;
+			}
 			case State.CREATED:
+			{
 				final QuestState q237 = st.getPlayer().getQuestState(Q00237_WindsOfChange.class.getSimpleName());
 				final QuestState q239 = st.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
 				if ((q239 != null) && q239.isCompleted())
@@ -160,23 +169,32 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 					htmltext = "32461-00.html";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (st.getCond())
 				{
 					case 1:
+					{
 						htmltext = "32461-04.html";
 						break;
+					}
 					case 2:
+					{
 						if (getQuestItemsCount(talker, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 						{
 							htmltext = "32461-05.html";
 							takeItems(talker, BROKEN_PIECE_OF_MAGIC_FORCE, -1);
 						}
 						break;
+					}
 					case 3:
+					{
 						htmltext = "32461-07.html";
 						break;
+					}
 					case 4:
+					{
 						if (getQuestItemsCount(talker, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 						{
 							htmltext = "32461-08.html";
@@ -186,8 +204,10 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 							st.exitQuest(false, true);
 						}
 						break;
+					}
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}

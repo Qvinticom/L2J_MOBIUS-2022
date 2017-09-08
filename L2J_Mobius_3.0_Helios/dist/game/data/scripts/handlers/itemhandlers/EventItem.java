@@ -48,13 +48,19 @@ public class EventItem implements IItemHandler
 		switch (itemId)
 		{
 			case 13787: // Handy's Block Checker Bond
+			{
 				used = useBlockCheckerItem(activeChar, item);
 				break;
+			}
 			case 13788: // Handy's Block Checker Land Mine
+			{
 				used = useBlockCheckerItem(activeChar, item);
 				break;
+			}
 			default:
+			{
 				_log.warning("EventItemHandler: Item with id: " + itemId + " is not handled");
+			}
 		}
 		return used;
 	}

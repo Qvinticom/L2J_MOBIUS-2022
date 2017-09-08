@@ -82,14 +82,20 @@ public final class Q00122_OminousNews extends Quest
 				switch (st.getState())
 				{
 					case State.CREATED:
+					{
 						htmltext = "31979-01.htm";
 						break;
+					}
 					case State.STARTED:
+					{
 						htmltext = "31979-03.html";
 						break;
+					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
 			}

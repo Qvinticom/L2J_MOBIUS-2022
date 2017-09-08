@@ -50,16 +50,24 @@ public abstract class L2ZoneRespawn extends L2ZoneType
 			switch (type)
 			{
 				case "other":
+				{
 					addOtherSpawn(x, y, z);
 					break;
+				}
 				case "chaotic":
+				{
 					addChaoticSpawn(x, y, z);
 					break;
+				}
 				case "banish":
+				{
 					addBanishSpawn(x, y, z);
 					break;
+				}
 				default:
+				{
 					_log.warning(getClass().getSimpleName() + ": Unknown location type: " + type);
+				}
 			}
 		}
 	}

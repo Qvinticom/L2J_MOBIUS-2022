@@ -70,7 +70,9 @@ public final class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
 		{
 			case "31328-02.html":
 			case "33849-02.html":
+			{
 				break;
+			}
 			case "31328-03.html":
 			{
 				if (qs.isCond(1))
@@ -93,7 +95,9 @@ public final class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

@@ -177,29 +177,41 @@ public final class Q10359_TracesOfEvil extends Quest
 								switch (player.getRace())
 								{
 									case HUMAN:
+									{
 										st.setCond(player.isMageClass() ? 4 : 5);
 										htmltext = player.isMageClass() ? "33179-06.htm" : "33179-11.htm";
 										break;
+									}
 									case DARK_ELF:
+									{
 										st.setCond(6);
 										htmltext = "33179-05.htm";
 										break;
+									}
 									case ORC:
+									{
 										st.setCond(7);
 										htmltext = "33179-07.htm";
 										break;
+									}
 									case DWARF:
+									{
 										st.setCond(8);
 										htmltext = "33179-08.htm";
 										break;
+									}
 									case KAMAEL:
+									{
 										st.setCond(9);
 										htmltext = "33179-09.htm";
 										break;
+									}
 									case ELF:
+									{
 										st.setCond(player.isMageClass() ? 11 : 10);
 										htmltext = player.isMageClass() ? "33179-12.htm" : "33179-10.htm";
 										break;
+									}
 								}
 								takeItems(player, FRAGMENT, 20);
 								playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
@@ -215,23 +227,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30289-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30289-08.html" : "30289-02.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30289-03.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30289-04.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30289-05.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30289-06.html" : "30289-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -243,23 +267,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30288-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30288-02.html" : "30288-08.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30288-03.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30288-04.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30288-05.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30288-06.html" : "30288-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -271,23 +307,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30297-08.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30297-01.html" : "30297-02.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30297-03.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30297-04.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30297-05.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30297-06.html" : "30297-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -299,23 +347,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30505-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30505-02.html" : "30505-03.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30505-08.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30505-04.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30505-05.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30505-06.html" : "30505-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -327,23 +387,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30504-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30504-02.html" : "30504-03.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30504-04.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30504-08.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30504-05.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30504-06.html" : "30504-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -355,23 +427,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "32196-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "32196-02.html" : "32196-03.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "32196-04.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "32196-05.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "32196-08.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "32196-06.html" : "32196-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -383,23 +467,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30158-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30158-02.html" : "30158-03.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30158-04.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30158-05.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30158-06.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30158-08.html" : "30158-07.html";
 									break;
+								}
 							}
 						}
 						break;
@@ -411,23 +507,35 @@ public final class Q10359_TracesOfEvil extends Quest
 							switch (player.getRace())
 							{
 								case DARK_ELF:
+								{
 									htmltext = "30155-01.html";
 									break;
+								}
 								case HUMAN:
+								{
 									htmltext = player.isMageClass() ? "30155-02.html" : "30155-03.html";
 									break;
+								}
 								case ORC:
+								{
 									htmltext = "30155-04.html";
 									break;
+								}
 								case DWARF:
+								{
 									htmltext = "30155-05.html";
 									break;
+								}
 								case KAMAEL:
+								{
 									htmltext = "30155-06.html";
 									break;
+								}
 								case ELF:
+								{
 									htmltext = player.isMageClass() ? "30155-07.html" : "30155-08.html";
 									break;
+								}
 							}
 						}
 						break;

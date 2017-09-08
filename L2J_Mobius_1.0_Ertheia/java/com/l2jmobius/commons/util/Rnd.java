@@ -355,16 +355,21 @@ public final class Rnd
 		switch (type)
 		{
 			case UNSECURE_ATOMIC:
+			{
 				return new RandomContainer(new Random());
-			
+			}
 			case UNSECURE_VOLATILE:
+			{
 				return new RandomContainer(new NonAtomicRandom());
-			
+			}
 			case UNSECURE_THREAD_LOCAL:
+			{
 				return new RandomContainer(new ThreadLocalRandom());
-			
+			}
 			case SECURE:
+			{
 				return new RandomContainer(new SecureRandom());
+			}
 		}
 		
 		throw new IllegalArgumentException();

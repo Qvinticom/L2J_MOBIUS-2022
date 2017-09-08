@@ -157,20 +157,30 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 							switch (qs.getCond())
 							{
 								case 2:
+								{
 									htmltext = "next-item-01.html";
 									break;
+								}
 								case 3:
+								{
 									htmltext = "next-item-02.html";
 									break;
+								}
 								case 4:
+								{
 									htmltext = "next-item-03.html";
 									break;
+								}
 								case 5:
+								{
 									htmltext = "next-item-04.html";
 									break;
+								}
 								case 6:
+								{
 									htmltext = "30097-07.html";
 									break;
+								}
 							}
 						}
 						else
@@ -194,22 +204,34 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 			switch (qs.getCond())
 			{
 				case 1:
+				{
 					htmlfile = "list-01.html";
 					break;
+				}
 				case 2:
+				{
 					htmlfile = "list-02.html";
 					break;
+				}
 				case 3:
+				{
 					htmlfile = "list-03.html";
 					break;
+				}
 				case 4:
+				{
 					htmlfile = "list-04.html";
 					break;
+				}
 				case 5:
+				{
 					htmlfile = "list-05.html";
 					break;
+				}
 				default:
+				{
 					htmlfile = "list-01.html";
+				}
 			}
 			
 			final NpcHtmlMessage htmlFile = getNpcHtmlMessage(player, npc, htmlfile);

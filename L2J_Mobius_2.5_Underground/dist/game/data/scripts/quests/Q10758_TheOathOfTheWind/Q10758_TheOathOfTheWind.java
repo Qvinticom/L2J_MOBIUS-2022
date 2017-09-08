@@ -67,7 +67,9 @@ public final class Q10758_TheOathOfTheWind extends Quest
 		{
 			case "33963-01.htm":
 			case "33963-02.htm":
+			{
 				break;
+			}
 			case "33963-03.htm":
 			{
 				qs.startQuest();
@@ -94,7 +96,9 @@ public final class Q10758_TheOathOfTheWind extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -108,14 +112,20 @@ public final class Q10758_TheOathOfTheWind extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33963-01.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33963-04.html" : "33963-05.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

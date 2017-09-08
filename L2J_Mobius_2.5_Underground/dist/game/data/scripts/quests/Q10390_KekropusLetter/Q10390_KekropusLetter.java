@@ -224,23 +224,35 @@ public final class Q10390_KekropusLetter extends Quest
 								switch (player.getRace())
 								{
 									case HUMAN:
+									{
 										htmltext = player.isMageClass() ? "30332-01.html" : "30332-02.html";
 										break;
+									}
 									case DARK_ELF:
+									{
 										htmltext = "30332-03.html";
 										break;
+									}
 									case ORC:
+									{
 										htmltext = "30332-04.html";
 										break;
+									}
 									case DWARF:
+									{
 										htmltext = "30332-05.html";
 										break;
+									}
 									case KAMAEL:
+									{
 										htmltext = "30332-06.html";
 										break;
+									}
 									case ELF:
+									{
 										htmltext = player.isMageClass() ? "30332-08.html" : "30332-07.html";
 										break;
+									}
 								}
 								break;
 							}

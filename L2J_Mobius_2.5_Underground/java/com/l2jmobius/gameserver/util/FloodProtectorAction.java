@@ -210,6 +210,7 @@ public final class FloodProtectorAction
 		switch (state)
 		{
 			case IN_GAME:
+			{
 				if (_client.getActiveChar() != null)
 				{
 					output.append(_client.getActiveChar().getName());
@@ -218,21 +219,28 @@ public final class FloodProtectorAction
 					output.append(") ");
 				}
 				break;
+			}
 			case AUTHENTICATED:
+			{
 				if (_client.getAccountName() != null)
 				{
 					output.append(_client.getAccountName());
 					output.append(" ");
 				}
 				break;
+			}
 			case CONNECTED:
+			{
 				if (address != null)
 				{
 					output.append(address);
 				}
 				break;
+			}
 			default:
+			{
 				throw new IllegalStateException("Missing state on switch");
+			}
 		}
 		
 		Arrays.stream(lines).forEach(output::append);

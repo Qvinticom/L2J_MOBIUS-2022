@@ -291,21 +291,32 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 							switch (qs.getCond())
 							{
 								case 1:
+								{
 									htmltext = "31281-03.html";
 									break;
+								}
 								case 2:
+								{
 									htmltext = "31281-06.html";
 									break;
+								}
 								case 3:
+								{
 									htmltext = "31281-07.html";
 									break;
+								}
 								case 4:
+								{
 									htmltext = "31281-08.html";
 									break;
+								}
 								case 5:
+								{
 									htmltext = "31281-10.html";
 									break;
+								}
 								case 14:
+								{
 									final Quest instance = QuestManager.getInstance().getQuest(EvasHiddenSpace.class.getSimpleName());
 									if (instance != null)
 									{
@@ -313,9 +324,12 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 									}
 									htmltext = null;
 									break;
+								}
 								case 17:
+								{
 									htmltext = "31281-11.html";
 									break;
+								}
 							}
 							break;
 						}
@@ -324,18 +338,27 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 							switch (qs.getCond())
 							{
 								case 5:
+								{
 									htmltext = "33686-01.html";
 									break;
+								}
 								case 6:
+								{
 									htmltext = "33686-04.html";
 									break;
+								}
 								case 15:
+								{
 									htmltext = "33686-05.html";
 									break;
+								}
 								case 16:
+								{
 									htmltext = "33686-06.html";
 									break;
+								}
 								case 18:
+								{
 									player.doCast(NOBLESSE_PRESENTATION.getSkill());
 									showOnScreenMsg(player, NpcStringId.CONGRATULATIONS_YOU_ARE_NOW_A_NOBLESSE, ExShowScreenMessage.TOP_CENTER, 5000);
 									player.setNoble(true);
@@ -348,6 +371,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 									qs.exitQuest(false, true);
 									htmltext = "33686-07.html";
 									break;
+								}
 							}
 							break;
 						}
@@ -356,30 +380,44 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 							switch (qs.getCond())
 							{
 								case 7:
+								{
 									htmltext = "33696-02.html";
 									break;
+								}
 								case 8:
+								{
 									htmltext = "33696-04.html";
 									break;
+								}
 								case 9:
+								{
 									htmltext = "33696-05.html";
 									break;
+								}
 								case 10:
+								{
 									htmltext = "33696-07.html";
 									break;
+								}
 								case 11:
+								{
 									htmltext = "33696-08.html";
 									break;
+								}
 								case 12:
+								{
 									htmltext = "33696-10.html";
 									break;
+								}
 								case 13:
+								{
 									qs.setCond(14, true);
 									takeItems(player, HARD_FOSSIL_CONTAINING_WATER_ENERGY, -1);
 									giveItems(player, SACK_CONTAINING_INGREDIENTS, 1);
 									giveItems(player, SOE_SECRET_ROOM, 1);
 									htmltext = "33696-11.html";
 									break;
+								}
 							}
 							break;
 						}

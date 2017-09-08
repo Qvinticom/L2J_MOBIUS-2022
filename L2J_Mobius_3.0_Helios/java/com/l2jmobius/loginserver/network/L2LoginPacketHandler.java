@@ -52,11 +52,15 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				switch (opcode)
 				{
 					case 0x07:
+					{
 						packet = new AuthGameGuard();
 						break;
+					}
 					default:
+					{
 						debugOpcode(opcode, state);
 						break;
+					}
 				}
 				break;
 			}
@@ -65,11 +69,15 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				switch (opcode)
 				{
 					case 0x00:
+					{
 						packet = new RequestAuthLogin();
 						break;
+					}
 					default:
+					{
 						debugOpcode(opcode, state);
 						break;
+					}
 				}
 				break;
 			}

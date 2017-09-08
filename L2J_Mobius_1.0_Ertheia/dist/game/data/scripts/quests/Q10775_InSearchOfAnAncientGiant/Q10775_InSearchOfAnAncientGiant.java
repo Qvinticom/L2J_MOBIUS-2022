@@ -80,7 +80,9 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 			case "30487-04.htm":
 			case "30485-02.html":
 			case "30485-03.html":
+			{
 				break;
+			}
 			case "30487-05.htm":
 			{
 				qs.startQuest();
@@ -98,7 +100,9 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -114,17 +118,23 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "30487-01.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					if (qs.isCond(1))
 					{
 						htmltext = "30487-06.html";
 					}
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted() && qs.isCond(2))

@@ -111,14 +111,20 @@ public final class Spirit extends AbstractNpcAI
 		switch (npc.getId())
 		{
 			case EXECUTED_MAIDEN_VENGEFUL_SPIRIT:
+			{
 				startQuestTimer("SPAM_TEXT1", 50000, npc, null, true);
 				break;
+			}
 			case SPIRIT_OF_THE_TORTURED_DWARF:
+			{
 				startQuestTimer("SPAM_TEXT2", 50000, npc, null, true);
 				break;
+			}
 			case SPIRIT_OF_ONE_BURNED_ALIVE:
+			{
 				startQuestTimer("SPAM_TEXT3", 50000, npc, null, true);
 				break;
+			}
 		}
 		return super.onSpawn(npc);
 	}

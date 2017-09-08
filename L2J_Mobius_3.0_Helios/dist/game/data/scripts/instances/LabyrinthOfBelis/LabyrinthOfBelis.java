@@ -310,20 +310,30 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					switch (world.getStatus())
 					{
 						case 0:
+						{
 							htmltext = "19155-01.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "19155-03.html";
 							break;
+						}
 						case 5:
+						{
 							htmltext = "19155-04.html";
 							break;
+						}
 						case 7:
+						{
 							htmltext = "19155-05.html";
 							break;
+						}
 						case 9:
+						{
 							htmltext = "19155-06.html";
 							break;
+						}
 					}
 				}
 				else
@@ -334,11 +344,15 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				break;
 			}
 			case BELIS_VERITIFICATION_SYSTEM:
+			{
 				htmltext = "33215.html";
 				break;
+			}
 			case ELECTRICITY_GENERATOR:
+			{
 				htmltext = "33216.html";
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -450,17 +464,25 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					switch (world.getStatus())
 					{
 						case 0:
+						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.LET_ME_KNOW_WHEN_YOU_RE_ALL_READY);
 							break;
+						}
 						case 4:
+						{
 							showOnScreenMsg(player, NpcStringId.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES_NUSE_THEM_IN_THE_BELIS_VERIFICATION_SYSTEM, ExShowScreenMessage.TOP_CENTER, 4500);
 							break;
+						}
 						case 6:
+						{
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE);
 							break;
+						}
 						default:
+						{
 							getTimers().cancelTimer("MESSAGE", npc, null);
 							break;
+						}
 					}
 					break;
 				}

@@ -130,8 +130,10 @@ public final class DarkCloudMansion extends AbstractInstance
 			switch (event)
 			{
 				case "DELETE_ONE":
+				{
 					npc.deleteMe();
 					break;
+				}
 				case "DELETE":
 				{
 					world.getNpcs(BELETH_SAMPLE).stream().filter(n -> n != npc).forEach(L2Npc::deleteMe);
@@ -140,8 +142,10 @@ public final class DarkCloudMansion extends AbstractInstance
 					break;
 				}
 				case "CHAT":
+				{
 					world.getNpcs(BELETH_SAMPLE).stream().filter(n -> n.isScriptValue(1)).forEach(n -> n.broadcastSay(ChatType.NPC_GENERAL, DECAY_CHAT[getRandom(DECAY_CHAT.length)]));
 					break;
+				}
 			}
 		}
 		return null;

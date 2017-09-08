@@ -47,20 +47,30 @@ public class PartyInfo implements IUserCommandHandler
 			switch (party.getDistributionType())
 			{
 				case FINDERS_KEEPERS:
+				{
 					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS);
 					break;
+				}
 				case RANDOM:
+				{
 					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM);
 					break;
+				}
 				case RANDOM_INCLUDING_SPOIL:
+				{
 					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL);
 					break;
+				}
 				case BY_TURN:
+				{
 					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN);
 					break;
+				}
 				case BY_TURN_INCLUDING_SPOIL:
+				{
 					activeChar.sendPacket(SystemMessageId.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL);
 					break;
+				}
 			}
 			
 			// Not used in Infinite Odissey

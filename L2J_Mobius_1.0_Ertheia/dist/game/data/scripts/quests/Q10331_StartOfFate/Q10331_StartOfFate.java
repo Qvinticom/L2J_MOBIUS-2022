@@ -110,9 +110,11 @@ public final class Q10331_StartOfFate extends Quest
 			case "32160-08.html": // Dark Elven Mage
 			case "32150-07.html": // Orc Fighter
 			case "32150-08.html": // Orc Mage
+			{
 				/**
 				 * 1st class transfer htmls for each class
 				 */
+			}
 			case "32146-09.html": // Trooper
 			case "32146-10.html": // Warder
 			case "32153-09.html": // Warrior
@@ -185,7 +187,6 @@ public final class Q10331_StartOfFate extends Quest
 				if (qs.isCond(5))
 				{
 					takeItems(player, SARIL_NECKLACE, 1);
-					
 					switch (player.getRace())
 					{
 						case HUMAN:
@@ -234,7 +235,6 @@ public final class Q10331_StartOfFate extends Quest
 				{
 					final ClassId newClassId = ClassId.getClassId(Integer.parseInt(event.replace("classChange;", "")));
 					final ClassId currentClassId = player.getClassId();
-					
 					if (!newClassId.childOf(currentClassId) || ((qs.getCond() < 6) && (qs.getCond() > 11)))
 					{
 						Util.handleIllegalPlayerAction(player, "Player " + player.getName() + " tried to cheat the 1st class transfer!", Config.DEFAULT_PUNISH);
@@ -243,65 +243,105 @@ public final class Q10331_StartOfFate extends Quest
 					switch (newClassId)
 					{
 						case WARRIOR:
+						{
 							htmltext = "32153-15.htm";
 							break;
+						}
 						case KNIGHT:
+						{
 							htmltext = "32153-16.htm";
 							break;
+						}
 						case ROGUE:
+						{
 							htmltext = "32153-17.htm";
 							break;
+						}
 						case WIZARD:
+						{
 							htmltext = "32153-18.htm";
 							break;
+						}
 						case CLERIC:
+						{
 							htmltext = "32153-19.htm";
 							break;
+						}
 						case ELVEN_KNIGHT:
+						{
 							htmltext = "32147-14.htm";
 							break;
+						}
 						case ELVEN_SCOUT:
+						{
 							htmltext = "32147-15.htm";
 							break;
+						}
 						case ELVEN_WIZARD:
+						{
 							htmltext = "32147-16.htm";
 							break;
+						}
 						case ORACLE:
+						{
 							htmltext = "32147-17.htm";
 							break;
+						}
 						case PALUS_KNIGHT:
+						{
 							htmltext = "32160-14.htm";
 							break;
+						}
 						case ASSASSIN:
+						{
 							htmltext = "32160-15.htm";
 							break;
+						}
 						case DARK_WIZARD:
+						{
 							htmltext = "32160-16.htm";
 							break;
+						}
 						case SHILLIEN_ORACLE:
+						{
 							htmltext = "32160-17.htm";
 							break;
+						}
 						case ORC_RAIDER:
+						{
 							htmltext = "32150-14.htm";
 							break;
+						}
 						case ORC_MONK:
+						{
 							htmltext = "32150-15.htm";
 							break;
+						}
 						case ORC_SHAMAN:
+						{
 							htmltext = "32150-16.htm";
 							break;
+						}
 						case SCAVENGER:
+						{
 							htmltext = "32157-11.htm";
 							break;
+						}
 						case ARTISAN:
+						{
 							htmltext = "32157-12.htm";
 							break;
+						}
 						case TROOPER:
+						{
 							htmltext = "32146-12.htm";
 							break;
+						}
 						case WARDER:
+						{
 							htmltext = "32146-13.htm";
 							break;
+						}
 					}
 					player.setBaseClass(newClassId);
 					player.setClassId(newClassId.getId());

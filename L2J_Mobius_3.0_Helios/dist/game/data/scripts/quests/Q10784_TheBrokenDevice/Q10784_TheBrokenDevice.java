@@ -79,10 +79,14 @@ public final class Q10784_TheBrokenDevice extends Quest
 		{
 			case "33866-03.htm":
 			case "33866-04.htm":
+			{
 				break;
+			}
 			case "33866-05.htm":
+			{
 				qs.startQuest();
 				break;
+			}
 			case "33866-08.html":
 			{
 				if (qs.isCond(2))
@@ -99,7 +103,9 @@ public final class Q10784_TheBrokenDevice extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -113,14 +119,20 @@ public final class Q10784_TheBrokenDevice extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33866-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33866-06.html" : "33866-07.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

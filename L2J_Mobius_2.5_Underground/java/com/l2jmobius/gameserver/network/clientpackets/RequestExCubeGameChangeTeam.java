@@ -53,11 +53,15 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 		{
 			case 0:
 			case 1:
+			{
 				// Change Player Team
 				HandysBlockCheckerManager.getInstance().changePlayerToTeam(player, _arena, _team);
 				break;
+			}
 			case -1:
+			{
 			// Remove Player (me)
+			}
 			{
 				final int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(player);
 				// client sends two times this packet if click on exit
@@ -69,8 +73,10 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 				break;
 			}
 			default:
+			{
 				_log.warning("Wrong Cube Game Team ID: " + _team);
 				break;
+			}
 		}
 	}
 }

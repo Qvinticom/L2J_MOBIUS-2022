@@ -69,7 +69,9 @@ public final class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 		{
 			case "30037-02.html":
 			case "33963-02.html":
+			{
 				break;
+			}
 			case "30037-03.html":
 			{
 				if (qs.isCond(1))
@@ -92,7 +94,9 @@ public final class Q10755_LettersFromTheQueenWindyHill extends LetterQuest
 				break;
 			}
 			default:
+			{
 				htmltext = event;
+			}
 		}
 		return htmltext;
 	}

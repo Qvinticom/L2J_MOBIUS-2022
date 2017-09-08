@@ -164,6 +164,7 @@ public class L2RaceManagerInstance extends L2Npc
 		{
 			case 816: // SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1
 			case 817: // SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1
+			{
 				if (_state != ACCEPTING_BETS)
 				{// LOGGER.info("Race Initializing");
 					_state = ACCEPTING_BETS;
@@ -171,9 +172,11 @@ public class L2RaceManagerInstance extends L2Npc
 				} // else{LOGGER.info("Race open");}
 				sm.addInt(_raceNumber);
 				break;
+			}
 			case 818: // SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S
 			case 820: // SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S
 			case 823: // SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S
+			{
 				sm.addInt(_minutes);
 				if (type.getId() == 820)
 				{
@@ -181,24 +184,31 @@ public class L2RaceManagerInstance extends L2Npc
 				}
 				_minutes--;
 				break;
+			}
 			case 819: // SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED
+			{
 				// LOGGER.info("Sales closed");
 				sm.addInt(_raceNumber);
 				_state = WAITING;
 				_minutes = 2;
 				break;
+			}
 			case 821: // SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SECONDS
 			case 822: // SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS
 			case 825: // SystemMessageId.MONSTER_RACE_S1_IS_FINISHED
+			{
 				sm.addInt(_raceNumber);
 				_minutes = 5;
 				break;
+			}
 			case 826: // SystemMessageId.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2
+			{
 				// LOGGER.info("Placing");
 				_state = RACE_END;
 				sm.addInt(MonsterRace.getInstance().getFirstPlace());
 				sm.addInt(MonsterRace.getInstance().getSecondPlace());
 				break;
+			}
 		}
 		// _logn.info("Counter: "+minutes);
 		// LOGGER.info("State: "+state);

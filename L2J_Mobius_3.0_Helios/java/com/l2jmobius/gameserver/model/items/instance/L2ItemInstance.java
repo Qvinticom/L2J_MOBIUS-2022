@@ -1334,20 +1334,26 @@ public final class L2ItemInstance extends L2Object
 			switch (_mana)
 			{
 				case 10:
+				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_10);
 					sm.addItemName(_item);
 					player.sendPacket(sm);
 					break;
+				}
 				case 5:
+				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_5);
 					sm.addItemName(_item);
 					player.sendPacket(sm);
 					break;
+				}
 				case 1:
+				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_1_IT_WILL_DISAPPEAR_SOON);
 					sm.addItemName(_item);
 					player.sendPacket(sm);
 					break;
+				}
 			}
 			
 			if (_mana == 0) // The life time has expired

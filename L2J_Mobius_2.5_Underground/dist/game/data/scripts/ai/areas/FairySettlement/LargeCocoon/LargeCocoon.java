@@ -87,35 +87,47 @@ public final class LargeCocoon extends AbstractNpcAI
 					switch (getRandom(6))
 					{
 						case 0:
+						{
 							addAttackPlayerDesire(addSpawn(FAIRY_WARRIOR_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_ROGUE_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WIZARD_HARD, npc, false, 90000), player);
 							break;
+						}
 						case 1:
+						{
 							addAttackPlayerDesire(addSpawn(FAIRY_KNIGHT_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WITCH_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_SUMMONER_HARD, npc, false, 90000), player);
 							break;
+						}
 						case 2:
+						{
 							addAttackPlayerDesire(addSpawn(FAIRY_WARRIOR_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WIZARD_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WITCH_HARD, npc, false, 90000), player);
 							break;
+						}
 						case 3:
+						{
 							addAttackPlayerDesire(addSpawn(FAIRY_ROGUE_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WARRIOR_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_ROGUE_HARD, npc, false, 90000), player);
 							break;
+						}
 						case 4:
+						{
 							addAttackPlayerDesire(addSpawn(FAIRY_WIZARD_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_SUMMONER_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WITCH_HARD, npc, false, 90000), player);
 							break;
+						}
 						case 5:
+						{
 							addAttackPlayerDesire(addSpawn(FAIRY_KNIGHT_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_KNIGHT_HARD, npc, false, 90000), player);
 							addAttackPlayerDesire(addSpawn(FAIRY_WITCH_HARD, npc, false, 90000), player);
 							break;
+						}
 					}
 				}
 				npc.deleteMe();
@@ -136,85 +148,121 @@ public final class LargeCocoon extends AbstractNpcAI
 		switch (getRandom(6))
 		{
 			case 0:
+			{
 				addSpawn(FAIRY_WARRIOR, npc.getX() + 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_ROGUE, npc.getX() + 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 1:
+			{
 				addSpawn(FAIRY_KNIGHT, npc.getX() + 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_ROGUE, npc.getX() + 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 2:
+			{
 				addSpawn(FAIRY_WARRIOR, npc.getX() + 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_KNIGHT, npc.getX() + 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 3:
+			{
 				addSpawn(FAIRY_SUMMONER, npc.getX() + 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WARRIOR, npc.getX() + 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 4:
+			{
 				addSpawn(FAIRY_WITCH, npc.getX() + 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_SUMMONER, npc.getX() + 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 5:
+			{
 				addSpawn(FAIRY_SUMMONER, npc.getX() + 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WITCH, npc.getX() + 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 		}
 		
 		switch (getRandom(6))
 		{
 			case 0:
+			{
 				addSpawn(FAIRY_ROGUE, npc.getX() - 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WARRIOR, npc.getX() - 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 1:
+			{
 				addSpawn(FAIRY_KNIGHT, npc.getX() - 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_ROGUE, npc.getX() - 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 2:
+			{
 				addSpawn(FAIRY_WARRIOR, npc.getX() - 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_KNIGHT, npc.getX() - 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 3:
+			{
 				addSpawn(FAIRY_SUMMONER, npc.getX() - 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WIZARD, npc.getX() - 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 4:
+			{
 				addSpawn(FAIRY_WITCH, npc.getX() - 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_SUMMONER, npc.getX() - 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 5:
+			{
 				addSpawn(FAIRY_WIZARD, npc.getX() - 270, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WITCH, npc.getX() - 230, npc.getY(), npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 		}
 		
 		switch (getRandom(6))
 		{
 			case 0:
+			{
 				addSpawn(FAIRY_ROGUE, npc.getX(), npc.getY() + 270, npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WARRIOR, npc.getX(), npc.getY() + 230, npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 1:
+			{
 				addSpawn(FAIRY_KNIGHT, npc.getX(), npc.getY() + 270, npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_ROGUE, npc.getX(), npc.getY() + 230, npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 2:
+			{
 				addSpawn(FAIRY_WARRIOR, npc.getX(), npc.getY() + 270, npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_KNIGHT, npc.getX(), npc.getY() + 230, npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 3:
+			{
 				addSpawn(FAIRY_SUMMONER, npc.getX(), npc.getY() + 270, npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WIZARD, npc.getX(), npc.getY() + 230, npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 4:
+			{
 				addSpawn(FAIRY_WITCH, npc.getX(), npc.getY() + 270, npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_SUMMONER, npc.getX(), npc.getY() + 230, npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 			case 5:
+			{
 				addSpawn(FAIRY_WIZARD, npc.getX(), npc.getY() + 270, npc.getZ(), npc.getHeading(), false, 0);
 				addSpawn(FAIRY_WITCH, npc.getX(), npc.getY() + 230, npc.getZ(), npc.getHeading(), false, 0);
 				break;
+			}
 		}
 		
 		return super.onSpawn(npc);
@@ -241,35 +289,47 @@ public final class LargeCocoon extends AbstractNpcAI
 			switch (getRandom(6))
 			{
 				case 0:
+				{
 					addAttackPlayerDesire(addSpawn(FAIRY_WARRIOR, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_ROGUE, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WIZARD, npc, false, 90000), playable);
 					break;
+				}
 				case 1:
+				{
 					addAttackPlayerDesire(addSpawn(FAIRY_KNIGHT, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WITCH, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_SUMMONER, npc, false, 90000), playable);
 					break;
+				}
 				case 2:
+				{
 					addAttackPlayerDesire(addSpawn(FAIRY_WARRIOR, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WIZARD, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WITCH, npc, false, 90000), playable);
 					break;
+				}
 				case 3:
+				{
 					addAttackPlayerDesire(addSpawn(FAIRY_ROGUE, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WARRIOR, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_ROGUE, npc, false, 90000), playable);
 					break;
+				}
 				case 4:
+				{
 					addAttackPlayerDesire(addSpawn(FAIRY_WIZARD, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_SUMMONER, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WITCH, npc, false, 90000), playable);
 					break;
+				}
 				case 5:
+				{
 					addAttackPlayerDesire(addSpawn(FAIRY_KNIGHT, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_KNIGHT, npc, false, 90000), playable);
 					addAttackPlayerDesire(addSpawn(FAIRY_WITCH, npc, false, 90000), playable);
 					break;
+				}
 			}
 		}
 		npc.deleteMe();

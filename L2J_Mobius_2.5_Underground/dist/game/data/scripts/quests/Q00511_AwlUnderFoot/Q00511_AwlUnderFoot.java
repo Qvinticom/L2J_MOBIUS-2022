@@ -87,15 +87,23 @@ public final class Q00511_AwlUnderFoot extends Quest
 			case "Warden-05.html":
 			case "Warden-06.html":
 			case "Warden-09.html":
+			{
 				break;
+			}
 			case "Warden-02.htm":
+			{
 				qs.startQuest();
 				break;
+			}
 			case "Warden-10.html":
+			{
 				qs.exitQuest(QuestType.REPEATABLE);
 				break;
+			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}

@@ -76,7 +76,9 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 			case "30673-02.htm":
 			case "30673-03.htm":
 			case "30673-04.htm":
+			{
 				break;
+			}
 			case "30673-05.htm":
 			{
 				qs.startQuest();
@@ -104,7 +106,9 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -120,8 +124,10 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "30673-01.htm";
 					break;
+				}
 				case State.STARTED:
 				{
 					if (qs.isCond(1))
@@ -135,8 +141,10 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 					break;
 				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted())

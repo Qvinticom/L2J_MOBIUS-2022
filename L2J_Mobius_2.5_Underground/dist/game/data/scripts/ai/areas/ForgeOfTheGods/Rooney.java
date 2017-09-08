@@ -92,21 +92,31 @@ public final class Rooney extends AbstractNpcAI
 			switch (aiVal)
 			{
 				case 1:
+				{
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HURRY_HURRY);
 					break;
+				}
 				case 2:
+				{
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_AM_NOT_THAT_TYPE_OF_PERSON_WHO_STAYS_IN_ONE_PLACE_FOR_A_LONG_TIME);
 					break;
+				}
 				case 3:
+				{
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.IT_S_HARD_FOR_ME_TO_KEEP_STANDING_LIKE_THIS);
 					break;
+				}
 				case 4:
+				{
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.WHY_DON_T_I_GO_THAT_WAY_THIS_TIME);
 					break;
+				}
 				default:
+				{
 					npc.teleToLocation(LOCATIONS[getRandom(LOCATIONS.length)], false);
 					npc.setScriptValue(0);
 					return null;
+				}
 			}
 			npc.setScriptValue(aiVal + 1);
 			startQuestTimer("teleport", 60000, npc, null);

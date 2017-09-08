@@ -85,10 +85,14 @@ public final class Q10793_SaveTheSouls extends Quest
 		{
 			case "33849-03.htm":
 			case "33849-04.htm":
+			{
 				break;
+			}
 			case "33849-05.htm":
+			{
 				qs.startQuest();
 				break;
+			}
 			case "33849-08.html":
 			{
 				if (qs.isCond(2))
@@ -104,7 +108,9 @@ public final class Q10793_SaveTheSouls extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -118,14 +124,20 @@ public final class Q10793_SaveTheSouls extends Quest
 		switch (qs.getState())
 		{
 			case State.CREATED:
+			{
 				htmltext = "33849-02.htm";
 				break;
+			}
 			case State.STARTED:
+			{
 				htmltext = (qs.isCond(1)) ? "33849-06.html" : "33849-07.html";
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

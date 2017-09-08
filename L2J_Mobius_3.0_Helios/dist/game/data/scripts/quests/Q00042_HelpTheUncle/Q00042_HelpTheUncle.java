@@ -165,20 +165,30 @@ public final class Q00042_HelpTheUncle extends Quest
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = (hasQuestItems(player, TRIDENT)) ? "30828-02.html" : "30828-02a.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "30828-04.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "30828-05.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "30828-07.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "30828-08.html";
 								break;
+							}
 						}
 						break;
 					}

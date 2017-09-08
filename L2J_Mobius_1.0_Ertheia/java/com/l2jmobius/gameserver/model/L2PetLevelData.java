@@ -200,17 +200,29 @@ public class L2PetLevelData
 		switch (stat)
 		{
 			case WALK_SPEED:
+			{
 				return _walkSpeedOnRide;
+			}
 			case RUN_SPEED:
+			{
 				return _runSpeedOnRide;
+			}
 			case SWIM_WALK_SPEED:
+			{
 				return _slowSwimSpeedOnRide;
+			}
 			case SWIM_RUN_SPEED:
+			{
 				return _fastSwimSpeedOnRide;
+			}
 			case FLY_RUN_SPEED:
+			{
 				return _slowFlySpeedOnRide;
+			}
 			case FLY_WALK_SPEED:
+			{
 				return _fastFlySpeedOnRide;
+			}
 		}
 		
 		return 0;

@@ -760,6 +760,7 @@ public class Duel
 		{
 			case Team1Win:
 			case Team2Surrender:
+			{
 				restorePlayerConditions(false);
 				sm = _partyDuel ? SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_WON_THE_DUEL) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_WON_THE_DUEL);
 				sm.addString(_playerA.getName());
@@ -767,8 +768,10 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 			case Team1Surrender:
 			case Team2Win:
+			{
 				restorePlayerConditions(false);
 				sm = _partyDuel ? SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_WON_THE_DUEL) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_WON_THE_DUEL);
 				sm.addString(_playerB.getName());
@@ -776,7 +779,9 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 			case Canceled:
+			{
 				stopFighting();
 				// Don't restore hp, mp, cp
 				restorePlayerConditions(true);
@@ -785,7 +790,9 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 			case Timeout:
+			{
 				stopFighting();
 				restorePlayerConditions(false);
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE);
@@ -793,6 +800,7 @@ public class Duel
 				broadcastToTeam1(sm);
 				broadcastToTeam2(sm);
 				break;
+			}
 		}
 		
 		// Send end duel packet

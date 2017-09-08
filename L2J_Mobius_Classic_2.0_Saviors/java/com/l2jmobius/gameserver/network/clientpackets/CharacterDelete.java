@@ -66,13 +66,17 @@ public final class CharacterDelete implements IClientIncomingPacket
 			switch (failType)
 			{
 				case NONE:// Success!
+				{
 					client.sendPacket(new CharDeleteSuccess());
 					final CharSelectInfoPackage charInfo = client.getCharSelection(_charSlot);
 					EventDispatcher.getInstance().notifyEvent(new OnPlayerDelete(charInfo.getObjectId(), charInfo.getName(), client), Containers.Players());
 					break;
+				}
 				default:
+				{
 					client.sendPacket(new CharDeleteFail(failType));
 					break;
+				}
 			}
 		}
 		catch (Exception e)

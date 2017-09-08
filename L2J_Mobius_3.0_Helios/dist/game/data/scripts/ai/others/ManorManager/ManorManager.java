@@ -79,8 +79,10 @@ public final class ManorManager extends AbstractNpcAI
 			case "manager-help-01.htm":
 			case "manager-help-02.htm":
 			case "manager-help-03.htm":
+			{
 				htmltext = event;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -130,25 +132,39 @@ public final class ManorManager extends AbstractNpcAI
 				break;
 			}
 			case 2: // Crop sales
+			{
 				player.sendPacket(new ExShowSellCropList(player.getInventory(), castleId));
 				break;
+			}
 			case 3: // Seed info
+			{
 				player.sendPacket(new ExShowSeedInfo(castleId, evt.isNextPeriod(), false));
 				break;
+			}
 			case 4: // Crop info
+			{
 				player.sendPacket(new ExShowCropInfo(castleId, evt.isNextPeriod(), false));
 				break;
+			}
 			case 5: // Basic info
+			{
 				player.sendPacket(new ExShowManorDefaultInfo(false));
 				break;
+			}
 			case 6: // Buy harvester
+			{
 				((L2MerchantInstance) npc).showBuyWindow(player, 300000 + npc.getId());
 				break;
+			}
 			case 9: // Edit sales (Crop sales)
+			{
 				player.sendPacket(new ExShowProcureCropDetail(evt.getManorId()));
 				break;
+			}
 			default:
+			{
 				_log.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
+			}
 		}
 	}
 	

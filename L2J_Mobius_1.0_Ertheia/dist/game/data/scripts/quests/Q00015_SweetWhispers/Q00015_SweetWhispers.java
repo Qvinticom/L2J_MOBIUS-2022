@@ -56,21 +56,27 @@ public class Q00015_SweetWhispers extends Quest
 		switch (event)
 		{
 			case "31302-01.html":
+			{
 				st.startQuest();
 				break;
+			}
 			case "31518-01.html":
+			{
 				if (st.isCond(1))
 				{
 					st.setCond(2);
 				}
 				break;
+			}
 			case "31517-01.html":
+			{
 				if (st.isCond(2))
 				{
 					addExpAndSp(player, 714215, 171);
 					st.exitQuest(false, true);
 				}
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -85,42 +91,58 @@ public class Q00015_SweetWhispers extends Quest
 		switch (st.getState())
 		{
 			case State.CREATED:
+			{
 				if (npcId == VLADIMIR)
 				{
 					htmltext = "31302-00.htm";
 				}
 				break;
+			}
 			case State.STARTED:
+			{
 				switch (npcId)
 				{
 					case VLADIMIR:
+					{
 						if (st.isCond(1))
 						{
 							htmltext = "31302-01a.html";
 						}
 						break;
+					}
 					case M_NECROMANCER:
+					{
 						switch (st.getCond())
 						{
 							case 1:
+							{
 								htmltext = "31518-00.html";
 								break;
+							}
 							case 2:
+							{
 								htmltext = "31518-01a.html";
 								break;
+							}
 						}
 						break;
+					}
 					case HIERARCH:
+					{
 						if (st.isCond(2))
 						{
 							htmltext = "31517-00.html";
 						}
 						break;
+					}
 				}
 				break;
+			}
 			case State.COMPLETED:
+			{
 				htmltext = getAlreadyCompletedMsg(player);
 				break;
+			}
 		}
 		return htmltext;
 	}

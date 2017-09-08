@@ -309,8 +309,10 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 						break;
 					}
 					case State.COMPLETED:
+					{
 						htmltext = getAlreadyCompletedMsg(player);
 						break;
+					}
 				}
 				break;
 			}

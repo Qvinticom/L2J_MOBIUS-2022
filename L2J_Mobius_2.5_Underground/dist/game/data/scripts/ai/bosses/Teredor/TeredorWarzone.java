@@ -364,20 +364,28 @@ public final class TeredorWarzone extends AbstractInstance
 							switch (npc.getParameters().getInt("Spot", 0))
 							{
 								case 1:
+								{
 									npcId = getRandomBoolean() ? TEREDOR_LARVA : MUTANTED_MILLIPADE;
 									break;
+								}
 								case 2:
 								case 3:
+								{
 									npcId = getRandomBoolean() ? MUTANTED_MILLIPADE : HATCHET_UNDERBUG;
 									break;
+								}
 								case 4:
 								case 5:
 								case 6:
+								{
 									npcId = getRandomBoolean() ? MUTANTED_MILLIPADE : HATCHET_UNDERBUG;
 									break;
+								}
 								case 7:
+								{
 									npcId = getRandomEntry(MUTANTED_MILLIPADE, HATCHET_UNDERBUG, HATCHET_MILLIPADE);
 									break;
+								}
 							}
 							
 							if (npcId > 0)

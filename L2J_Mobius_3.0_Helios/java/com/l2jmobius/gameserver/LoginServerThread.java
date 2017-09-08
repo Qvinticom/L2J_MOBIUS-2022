@@ -210,6 +210,7 @@ public class LoginServerThread extends Thread
 					switch (packetType)
 					{
 						case 0x00:
+						{
 							final InitLS init = new InitLS(incoming);
 							if (init.getRevision() != REVISION)
 							{
@@ -238,12 +239,16 @@ public class LoginServerThread extends Thread
 							_blowfish = new NewCrypt(blowfishKey);
 							sendPacket(new AuthRequest(_requestID, _acceptAlternate, _hexID, _gamePort, _reserveHost, _maxPlayer, _subnets, _hosts));
 							break;
+						}
 						case 0x01:
+						{
 							final LoginServerFail lsf = new LoginServerFail(incoming);
 							LOGGER.info(getClass().getSimpleName() + ": Damn! Registeration Failed: " + lsf.getReasonString());
 							// login will close the connection here
 							break;
+						}
 						case 0x02:
+						{
 							final AuthResponse aresp = new AuthResponse(incoming);
 							final int serverID = aresp.getServerId();
 							_serverName = aresp.getServerName();
@@ -290,7 +295,9 @@ public class LoginServerThread extends Thread
 								sendPacket(new PlayerInGame(playerList));
 							}
 							break;
+						}
 						case 0x03:
+						{
 							final PlayerAuthResponse par = new PlayerAuthResponse(incoming);
 							final String account = par.getAccount();
 							WaitingClient wcToRemove = null;
@@ -327,17 +334,24 @@ public class LoginServerThread extends Thread
 								_waitingClients.remove(wcToRemove);
 							}
 							break;
+						}
 						case 0x04:
+						{
 							final KickPlayer kp = new KickPlayer(incoming);
 							doKickPlayer(kp.getAccount());
 							break;
+						}
 						case 0x05:
+						{
 							final RequestCharacters rc = new RequestCharacters(incoming);
 							getCharsOnServer(rc.getAccount());
 							break;
+						}
 						case 0x06:
+						{
 							new ChangePasswordResponse(incoming);
 							break;
+						}
 					}
 				}
 			}
@@ -724,31 +738,45 @@ public class LoginServerThread extends Thread
 		switch (status)
 		{
 			case ServerStatus.STATUS_AUTO:
+			{
 				sendServerStatus(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_AUTO);
 				_status = status;
 				break;
+			}
 			case ServerStatus.STATUS_DOWN:
+			{
 				sendServerStatus(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_DOWN);
 				_status = status;
 				break;
+			}
 			case ServerStatus.STATUS_FULL:
+			{
 				sendServerStatus(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_FULL);
 				_status = status;
 				break;
+			}
 			case ServerStatus.STATUS_GM_ONLY:
+			{
 				sendServerStatus(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_GM_ONLY);
 				_status = status;
 				break;
+			}
 			case ServerStatus.STATUS_GOOD:
+			{
 				sendServerStatus(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_GOOD);
 				_status = status;
 				break;
+			}
 			case ServerStatus.STATUS_NORMAL:
+			{
 				sendServerStatus(ServerStatus.SERVER_LIST_STATUS, ServerStatus.STATUS_NORMAL);
 				_status = status;
 				break;
+			}
 			default:
+			{
 				throw new IllegalArgumentException("Status does not exists:" + status);
+			}
 		}
 	}
 	

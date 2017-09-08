@@ -474,17 +474,25 @@ public final class Q10385_RedThreadOfFate extends Quest
 						switch (qs.getCond())
 						{
 							case 2:
+							{
 								htmltext = "33783-01.html";
 								break;
+							}
 							case 3:
+							{
 								htmltext = "33783-03.html";
 								break;
+							}
 							case 4:
+							{
 								htmltext = "33783-04.html";
 								break;
+							}
 							case 5:
+							{
 								htmltext = "33783-04.html";
 								break;
+							}
 						}
 						break;
 					}
@@ -553,17 +561,25 @@ public final class Q10385_RedThreadOfFate extends Quest
 						switch (qs.getCond())
 						{
 							case 10:
+							{
 								htmltext = "31539-01.html";
 								break;
+							}
 							case 11:
+							{
 								htmltext = "31539-05.html";
 								break;
+							}
 							case 13:
+							{
 								htmltext = "31539-06.html";
 								break;
+							}
 							case 14:
+							{
 								htmltext = "31539-10.html";
 								break;
+							}
 						}
 						break;
 					}

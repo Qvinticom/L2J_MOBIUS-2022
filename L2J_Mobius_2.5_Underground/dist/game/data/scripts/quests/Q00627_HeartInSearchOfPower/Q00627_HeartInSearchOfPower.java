@@ -130,10 +130,14 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 				break;
 			}
 			case "31518-09.html":
+			{
 				break;
+			}
 			default:
+			{
 				htmltext = null;
 				break;
+			}
 		}
 		return htmltext;
 	}
@@ -185,17 +189,25 @@ public final class Q00627_HeartInSearchOfPower extends Quest
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "31518-03.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "31518-04.html";
 							break;
+						}
 						case 3:
+						{
 							htmltext = "31518-07.html";
 							break;
+						}
 						case 4:
+						{
 							htmltext = "31518-08.html";
 							break;
+						}
 					}
 				}
 				else if (npc.getId() == ENFEUX)

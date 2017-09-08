@@ -144,9 +144,13 @@ public enum SkillOperateType
 			case DA2:
 			case DA4:
 			case DA5:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -165,9 +169,13 @@ public enum SkillOperateType
 			case DA2:
 			case DA4:
 			case DA5:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -234,9 +242,13 @@ public enum SkillOperateType
 			case CA1:
 			case CA2:
 			case CA5:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 	
@@ -258,9 +270,13 @@ public enum SkillOperateType
 			case DA3:
 			case DA4:
 			case DA5:
+			{
 				return true;
+			}
 			default:
+			{
 				return false;
+			}
 		}
 	}
 }

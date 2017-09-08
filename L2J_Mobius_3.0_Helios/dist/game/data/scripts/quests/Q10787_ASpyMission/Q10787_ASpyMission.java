@@ -72,10 +72,14 @@ public final class Q10787_ASpyMission extends Quest
 		{
 			case "33867-03.htm":
 			case "33867-04.htm":
+			{
 				break;
+			}
 			case "33867-05.htm":
+			{
 				qs.startQuest();
 				break;
+			}
 			case "33994-02.html":
 			{
 				if (qs.isCond(1))
@@ -110,7 +114,9 @@ public final class Q10787_ASpyMission extends Quest
 				break;
 			}
 			default:
+			{
 				htmltext = null;
+			}
 		}
 		return htmltext;
 	}
@@ -126,14 +132,20 @@ public final class Q10787_ASpyMission extends Quest
 			switch (qs.getState())
 			{
 				case State.CREATED:
+				{
 					htmltext = "33867-02.htm";
 					break;
+				}
 				case State.STARTED:
+				{
 					htmltext = (qs.isCond(1)) ? "33867-06.html" : "33867-07.html";
 					break;
+				}
 				case State.COMPLETED:
+				{
 					htmltext = getAlreadyCompletedMsg(player);
 					break;
+				}
 			}
 		}
 		else if (qs.isStarted() && qs.isCond(1))

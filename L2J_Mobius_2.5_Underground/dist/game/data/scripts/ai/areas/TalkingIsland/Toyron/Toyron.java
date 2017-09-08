@@ -82,11 +82,15 @@ public final class Toyron extends AbstractNpcAI
 				switch (qs.getCond())
 				{
 					case 1:
+					{
 						htmltext = "33004-01.html";
 						break;
+					}
 					case 2:
+					{
 						htmltext = "33004-02.html";
 						break;
+					}
 				}
 			}
 		}

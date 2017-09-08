@@ -192,26 +192,40 @@ public class AdminLogin implements IAdminCommandHandler
 				switch (currentType)
 				{
 					case 0x01:
+					{
 						nameType += "Normal";
 						break;
+					}
 					case 0x02:
+					{
 						nameType += "Relax";
 						break;
+					}
 					case 0x04:
+					{
 						nameType += "Test";
 						break;
+					}
 					case 0x08:
+					{
 						nameType += "NoLabel";
 						break;
+					}
 					case 0x10:
+					{
 						nameType += "Restricted";
 						break;
+					}
 					case 0x20:
+					{
 						nameType += "Event";
 						break;
+					}
 					case 0x40:
+					{
 						nameType += "Free";
 						break;
+					}
 				}
 			}
 		}

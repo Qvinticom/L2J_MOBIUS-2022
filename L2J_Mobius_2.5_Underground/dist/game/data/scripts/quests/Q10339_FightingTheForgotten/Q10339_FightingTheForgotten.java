@@ -135,11 +135,15 @@ public final class Q10339_FightingTheForgotten extends Quest
 					switch (st.getCond())
 					{
 						case 1:
+						{
 							htmltext = "33344-01.html";
 							break;
+						}
 						case 2:
+						{
 							htmltext = "33344-02.html";
 							break;
+						}
 						case 3:
 						{
 							st.exitQuest(false, true);

@@ -1094,14 +1094,20 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			switch (getIntention())
 			{
 				case AI_INTENTION_ACTIVE:
+				{
 					thinkActive();
 					break;
+				}
 				case AI_INTENTION_ATTACK:
+				{
 					thinkAttack();
 					break;
+				}
 				case AI_INTENTION_CAST:
+				{
 					thinkCast();
 					break;
+				}
 			}
 		}
 		catch (Exception e)
