@@ -71,6 +71,7 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 			case "30120-02.html":
 			case "33973-02.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "30120-03.html":
@@ -79,6 +80,7 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 				{
 					qs.setCond(2, true);
 					giveItems(player, SOE_DRAGON_VALLEY, 1);
+					htmltext = event;
 				}
 				break;
 			}
@@ -91,6 +93,7 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 					addExpAndSp(player, 1277640, 306);
 					showOnScreenMsg(player, NpcStringId.YOU_HAVE_FINISHED_ALL_OF_QUEEN_NAVARI_S_LETTERS_GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_LETTERS_FROM_A_MINSTREL_AT_LV_85, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}
