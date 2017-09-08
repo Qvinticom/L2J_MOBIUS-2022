@@ -32,6 +32,7 @@ import ai.AbstractNpcAI;
 public final class MercenaryTeleport extends AbstractNpcAI
 {
 	// NPCs
+	private static final int NAMO = 33973;
 	private static final int MERCENARY = 33971;
 	private static final int MERCENARY_CAPTAIN = 33970;
 	// Locations
@@ -55,8 +56,8 @@ public final class MercenaryTeleport extends AbstractNpcAI
 	
 	private MercenaryTeleport()
 	{
-		addStartNpc(MERCENARY, MERCENARY_CAPTAIN);
-		addFirstTalkId(MERCENARY, MERCENARY_CAPTAIN);
+		addStartNpc(NAMO, MERCENARY, MERCENARY_CAPTAIN);
+		addFirstTalkId(NAMO, MERCENARY, MERCENARY_CAPTAIN);
 	}
 	
 	@Override
