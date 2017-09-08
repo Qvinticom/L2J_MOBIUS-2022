@@ -86,6 +86,7 @@ public class Q10799_StrangeThingsAfootInTheValley extends Quest
 			case "33973-03.htm":
 			case "33973-07.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "33973-04.htm":
