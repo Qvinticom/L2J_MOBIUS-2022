@@ -181,6 +181,8 @@ public final class Config
 	public static double MAX_BONUS_EXP;
 	public static double MAX_BONUS_SP;
 	public static int MAX_RUN_SPEED;
+	public static int MAX_PATK;
+	public static int MAX_MATK;
 	public static int MAX_PCRIT_RATE;
 	public static int MAX_MCRIT_RATE;
 	public static int MAX_PATK_SPEED;
@@ -1444,6 +1446,8 @@ public final class Config
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
 			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);
+			MAX_PATK = Character.getInt("MaxPAtk", 999999);
+			MAX_MATK = Character.getInt("MaxMAtk", 999999);
 			MAX_PCRIT_RATE = Character.getInt("MaxPCritRate", 500);
 			MAX_MCRIT_RATE = Character.getInt("MaxMCritRate", 200);
 			MAX_PATK_SPEED = Character.getInt("MaxPAtkSpeed", 1500);

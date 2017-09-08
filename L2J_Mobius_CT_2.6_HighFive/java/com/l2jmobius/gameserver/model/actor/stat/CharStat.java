@@ -287,7 +287,7 @@ public class CharStat
 		}
 		
 		// Calculate modifiers Magic Attack
-		return calcStat(Stats.MAGIC_ATTACK, _activeChar.getTemplate().getBaseMAtk() * bonusAtk, target, skill);
+		return Math.min(calcStat(Stats.MAGIC_ATTACK, _activeChar.getTemplate().getBaseMAtk() * bonusAtk, target, skill), Config.MAX_MATK);
 	}
 	
 	/**
@@ -512,7 +512,7 @@ public class CharStat
 		{
 			bonusAtk *= Config.RAID_PATTACK_MULTIPLIER;
 		}
-		return calcStat(Stats.POWER_ATTACK, _activeChar.getTemplate().getBasePAtk() * bonusAtk, target, null);
+		return Math.min(calcStat(Stats.POWER_ATTACK, _activeChar.getTemplate().getBasePAtk() * bonusAtk, target, null), Config.MAX_PATK);
 	}
 	
 	/**
