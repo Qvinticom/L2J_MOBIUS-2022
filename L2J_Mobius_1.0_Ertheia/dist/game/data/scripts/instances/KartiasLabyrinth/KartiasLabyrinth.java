@@ -312,6 +312,8 @@ public final class KartiasLabyrinth extends AbstractInstance
 					if (npc != null)
 					{
 						npc.setTargetable(true);
+						final L2PcInstance randomPlayer = instance.getPlayers().stream().findAny().get();
+						npc.moveToLocation(randomPlayer.getX(), randomPlayer.getY(), randomPlayer.getZ(), 10);
 					}
 					break;
 				}
