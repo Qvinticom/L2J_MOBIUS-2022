@@ -74,7 +74,7 @@ public class Q00787_TheRoleOfAWatcher extends Quest
 		addKillId(MONSTERS);
 		registerQuestItems(DRAGON_BONE_DUST, DRAGON_BONE_FRAGMENT);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "no_level.html");
-		addCondRace(Race.ERTHEIA, "noErtheya.html");
+		addCondRace(Race.ERTHEIA, "noErtheia.html");
 	}
 	
 	@Override
