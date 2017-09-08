@@ -4547,7 +4547,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public void doCast(Skill skill)
 	{
-		if (!checkUseMagicConditions(skill, getCurrentSkill().isCtrlPressed(), getCurrentSkill().isShiftPressed()))
+		if ((_currentSkill != null) && !checkUseMagicConditions(skill, _currentSkill.isCtrlPressed(), _currentSkill.isShiftPressed()))
 		{
 			setIsCastingNow(false);
 			setIsCastingSimultaneouslyNow(false);
