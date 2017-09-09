@@ -23,8 +23,8 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
@@ -149,7 +149,7 @@ public final class Wastelands extends AbstractNpcAI
 						if (guard.getId() == SCHUAZEN)
 						{
 							//@formatter:off
-							final L2QuestGuardInstance decoGuard = (L2QuestGuardInstance) L2World.getInstance().getVisibleObjects(guard, L2Npc.class, 500)
+							final FriendlyNpcInstance decoGuard = (FriendlyNpcInstance) L2World.getInstance().getVisibleObjects(guard, L2Npc.class, 500)
 								.stream()
 								.filter(obj -> (obj.getId() == DECO_GUARD2))
 								.findFirst()
@@ -202,7 +202,7 @@ public final class Wastelands extends AbstractNpcAI
 			{
 				final int guardId = npc.getId() == REGENERATED_KANILOV ? JOEL : SCHUAZEN;
 				//@formatter:off
-				final L2QuestGuardInstance guard = (L2QuestGuardInstance) L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 500)
+				final FriendlyNpcInstance guard = (FriendlyNpcInstance) L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 500)
 					.stream()
 					.filter(obj -> (obj.getId() == guardId))
 					.findFirst()

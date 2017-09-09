@@ -24,8 +24,8 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.Id;
@@ -153,7 +153,7 @@ public final class MuseumDungeon extends AbstractInstance
 		if (npc.isScriptValue(0) && (skill == SPOIL.getSkill()) && (caster.getTarget() == npc) && (npc.calculateDistance(caster, false, false) < 200))
 		{
 			final L2Npc toyron = npc.getInstanceWorld().getNpc(TOYRON);
-			((L2QuestGuardInstance) toyron).addDamageHate(npc, 0, 9999); // TODO: Find better way for attack
+			((FriendlyNpcInstance) toyron).addDamageHate(npc, 0, 9999); // TODO: Find better way for attack
 			npc.reduceCurrentHp(1, toyron, null);
 			npc.setScriptValue(1);
 		}
@@ -277,7 +277,7 @@ public final class MuseumDungeon extends AbstractInstance
 					}
 					
 					final L2Npc toyron = instance.getNpc(TOYRON);
-					((L2QuestGuardInstance) toyron).addDamageHate(target, 0, 9999); // TODO: Find better way for attack
+					((FriendlyNpcInstance) toyron).addDamageHate(target, 0, 9999); // TODO: Find better way for attack
 					target.reduceCurrentHp(1, toyron, null);
 					((L2Npc) target).setScriptValue(1);
 					return new DamageReturn(false, true, false, target.getMaxHp() * DAMAGE_BY_SKILL);

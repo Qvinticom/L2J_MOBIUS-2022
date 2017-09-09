@@ -42,7 +42,6 @@ public enum InstanceType
 	// Attackable
 	L2Attackable(L2Npc),
 	L2GuardInstance(L2Attackable),
-	L2QuestGuardInstance(L2GuardInstance),
 	L2MonsterInstance(L2Attackable),
 	L2BlockInstance(L2Attackable),
 	L2ChestInstance(L2MonsterInstance),

@@ -1846,7 +1846,7 @@
 			<height normal="0.1" />
 		</collision>
 	</npc>
-	<npc id="18846" level="85" type="L2QuestGuard" name="Kegor">
+	<npc id="18846" level="85" type="FriendlyNpc" name="Kegor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Buff" id="6286" level="1" />
@@ -1924,7 +1924,7 @@
 			<height normal="98.5" />
 		</collision>
 	</npc>
-	<npc id="18848" level="85" type="L2QuestGuard" name="Battalion Leader" title="Jinia Guild">
+	<npc id="18848" level="85" type="FriendlyNpc" name="Battalion Leader" title="Jinia Guild">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="10" />
@@ -1963,7 +1963,7 @@
 			<height normal="23.75" />
 		</collision>
 	</npc>
-	<npc id="18849" level="85" type="L2QuestGuard" name="Legionnaire" title="Jinia Guild">
+	<npc id="18849" level="85" type="FriendlyNpc" name="Legionnaire" title="Jinia Guild">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="4032" level="10" />
@@ -2002,7 +2002,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="18850" level="85" type="L2QuestGuard" name="Jinia">
+	<npc id="18850" level="85" type="FriendlyNpc" name="Jinia">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6641" level="1" />
@@ -2042,7 +2042,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="18851" level="85" type="L2QuestGuard" name="Kegor">
+	<npc id="18851" level="85" type="FriendlyNpc" name="Kegor">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6643" level="1" />

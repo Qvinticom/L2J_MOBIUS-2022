@@ -82,7 +82,6 @@ import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.character.HitTask;
@@ -3631,7 +3630,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isControlBlocked() && !isInVehicle)
 			{
 				// Path calculation -- overrides previous movement check
-				if (isPlayable() || isMinion() || isInCombat() || (this instanceof FriendlyNpcInstance) || (this instanceof L2QuestGuardInstance))
+				if (isPlayable() || isMinion() || isInCombat() || (this instanceof FriendlyNpcInstance))
 				{
 					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
