@@ -114,55 +114,6 @@ public final class Q10331_StartOfFate extends Quest
 				htmltext = event;
 				break;
 			}
-			case "HTML":
-			{
-				if (qs.isCond(2))
-				{
-					qs.setCond(0);
-					giveItems(player, SARIL_NECKLACE, 1);
-					switch (player.getRace())
-					{
-						case HUMAN:
-						{
-							qs.setCond(3, true);
-							htmltext = "32978-04.html";
-							break;
-						}
-						case ELF:
-						{
-							qs.setCond(4, true);
-							htmltext = "32978-06.html";
-							break;
-						}
-						case DARK_ELF:
-						{
-							qs.setCond(5, true);
-							htmltext = "32978-07.html";
-							break;
-						}
-						case ORC:
-						{
-							qs.setCond(6, true);
-							htmltext = "32978-08.html";
-							break;
-						}
-						case DWARF:
-						{
-							qs.setCond(7, true);
-							htmltext = "32978-09.html";
-							break;
-						}
-						case KAMAEL:
-						{
-							qs.setCond(8, true);
-							htmltext = "32978-10.html";
-							break;
-						}
-					}
-					break;
-				}
-				break;
-			}
 			default:
 			{
 				if (event.startsWith("classChange;") && (getQuestItemsCount(player, SARIL_NECKLACE) >= 1))
@@ -178,85 +129,125 @@ public final class Q10331_StartOfFate extends Quest
 					switch (newClassId)
 					{
 						case WARRIOR:
+						{
 							htmltext = "32153-15.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case KNIGHT:
+						{
 							htmltext = "32153-16.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ROGUE:
+						{
 							htmltext = "32153-17.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case WIZARD:
+						{
 							htmltext = "32153-18.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case CLERIC:
+						{
 							htmltext = "32153-19.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ELVEN_KNIGHT:
+						{
 							htmltext = "32147-14.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ELVEN_SCOUT:
+						{
 							htmltext = "32147-15.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ELVEN_WIZARD:
+						{
 							htmltext = "32147-16.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ORACLE:
+						{
 							htmltext = "32147-17.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case PALUS_KNIGHT:
+						{
 							htmltext = "32160-14.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ASSASSIN:
+						{
 							htmltext = "32160-15.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case DARK_WIZARD:
+						{
 							htmltext = "32160-16.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case SHILLIEN_ORACLE:
+						{
 							htmltext = "32160-17.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ORC_RAIDER:
+						{
 							htmltext = "32150-14.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ORC_MONK:
+						{
 							htmltext = "32150-15.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ORC_SHAMAN:
+						{
 							htmltext = "32150-16.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case SCAVENGER:
+						{
 							htmltext = "32157-11.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case ARTISAN:
+						{
 							htmltext = "32157-12.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case TROOPER:
+						{
 							htmltext = "32146-12.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 						case WARDER:
+						{
 							htmltext = "32146-13.htm";
 							qs.exitQuest(false, true);
 							break;
+						}
 					}
 					player.setBaseClass(newClassId);
 					player.setClassId(newClassId.getId());
@@ -458,7 +449,46 @@ public final class Q10331_StartOfFate extends Quest
 						{
 							case 2:
 							{
-								startQuestTimer("HTML", 300, npc, player);
+								giveItems(player, SARIL_NECKLACE, 1);
+								switch (player.getRace())
+								{
+									case HUMAN:
+									{
+										qs.setCond(3, true);
+										htmltext = "32978-04.html";
+										break;
+									}
+									case ELF:
+									{
+										qs.setCond(4, true);
+										htmltext = "32978-06.html";
+										break;
+									}
+									case DARK_ELF:
+									{
+										qs.setCond(5, true);
+										htmltext = "32978-07.html";
+										break;
+									}
+									case ORC:
+									{
+										qs.setCond(6, true);
+										htmltext = "32978-08.html";
+										break;
+									}
+									case DWARF:
+									{
+										qs.setCond(7, true);
+										htmltext = "32978-09.html";
+										break;
+									}
+									case KAMAEL:
+									{
+										qs.setCond(8, true);
+										htmltext = "32978-10.html";
+										break;
+									}
+								}
 								break;
 							}
 							case 3:
