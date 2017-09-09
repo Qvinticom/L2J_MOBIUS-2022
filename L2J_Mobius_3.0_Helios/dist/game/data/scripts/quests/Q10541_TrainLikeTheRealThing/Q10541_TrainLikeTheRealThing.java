@@ -124,20 +124,6 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 				htmltext = "32981-04.html";
 				break;
 			}
-			case "HTML":
-			{
-				htmltext = "32974-08.html";
-				break;
-			}
-			case "HTML1":
-			{
-				qs.setCond(0);
-				qs.setCond(3, true);
-				qs.unset("KillCount");
-				showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_ADVENTURERS_GUIDE_FOR_TRAINING, ExShowScreenMessage.TOP_CENTER, 5000);
-				htmltext = "32974-06.html";
-				break;
-			}
 		}
 		return htmltext;
 	}
@@ -173,7 +159,10 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 							}
 							case 2:
 							{
-								startQuestTimer("HTML1", 100, npc, player);
+								qs.setCond(3, true);
+								qs.unset("KillCount");
+								showOnScreenMsg(player, NpcStringId.SPEAK_WITH_THE_ADVENTURERS_GUIDE_FOR_TRAINING, ExShowScreenMessage.TOP_CENTER, 5000);
+								htmltext = "32974-06.html";
 								break;
 							}
 							case 3:
@@ -186,7 +175,7 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 							{
 								addExpAndSp(player, 2550, 7);
 								qs.exitQuest(false, true);
-								startQuestTimer("HTML", 200, npc, player);
+								htmltext = "32974-08.html";
 								break;
 							}
 						}
