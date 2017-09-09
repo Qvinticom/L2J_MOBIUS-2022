@@ -66,6 +66,7 @@ import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2RiftInvaderInstance;
 import com.l2jmobius.gameserver.model.actor.knownlist.CharKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
@@ -4450,7 +4451,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			if (Config.PATHFINDING && ((originalDistance - distance) > 30) && !isInVehicle)
 			{
 				// Path calculation -- overrides previous movement check
-				if (isPlayable() || isMinion() || isInCombat())
+				if (isPlayable() || isMinion() || isInCombat() || (this instanceof L2QuestGuardInstance))
 				{
 					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
