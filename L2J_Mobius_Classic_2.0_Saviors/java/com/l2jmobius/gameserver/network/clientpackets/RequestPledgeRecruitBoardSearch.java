@@ -76,8 +76,5 @@ public class RequestPledgeRecruitBoardSearch implements IClientIncomingPacket
 		{
 			activeChar.sendPacket(new ExPledgeRecruitBoardSearch(ClanEntryManager.getInstance().getSortedClanListByName(_query.toLowerCase(), _type), _page));
 		}
-		
-		// tempfix for clan entry hiding clan crest
-		activeChar.sendInfo(activeChar);
 	}
 }

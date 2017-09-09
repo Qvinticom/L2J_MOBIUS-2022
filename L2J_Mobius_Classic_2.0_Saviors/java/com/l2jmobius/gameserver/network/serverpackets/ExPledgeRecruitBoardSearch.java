@@ -64,16 +64,16 @@ public class ExPledgeRecruitBoardSearch implements IClientOutgoingPacket
 		for (int i = _startIndex; i < _endIndex; i++)
 		{
 			final L2Clan clan = _clanList.get(i).getClan();
-			packet.writeD(clan.getAllyCrestId());
-			packet.writeD(clan.getCrestId());
+			packet.writeD(clan.getRank());
+			packet.writeD(clan.getReputationScore());
 			packet.writeS(clan.getName());
 			packet.writeS(clan.getLeaderName());
 			packet.writeD(clan.getLevel());
 			packet.writeD(clan.getMembersCount());
 			packet.writeD(_clanList.get(i).getKarma());
 			packet.writeS(_clanList.get(i).getInformation());
-			packet.writeD(_clanList.get(i).getApplicationType());
-			packet.writeD(_clanList.get(i).getRecruitType());
+			packet.writeD(_clanList.get(i).getApplicationType()); // Helios
+			packet.writeD(_clanList.get(i).getRecruitType()); // Helios
 		}
 		return true;
 	}
