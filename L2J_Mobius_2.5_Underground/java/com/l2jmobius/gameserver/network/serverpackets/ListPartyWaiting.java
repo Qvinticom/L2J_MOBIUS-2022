@@ -20,6 +20,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
@@ -35,9 +36,9 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 	
 	private static final int NUM_PER_PAGE = 64;
 	
-	public ListPartyWaiting(int level, int location, int page)
+	public ListPartyWaiting(PartyMatchingRoomLevelType type, int location, int page, int requestorLevel)
 	{
-		final List<MatchingRoom> rooms = MatchingRoomManager.getInstance().getPartyMathchingRooms(location, level);
+		final List<MatchingRoom> rooms = MatchingRoomManager.getInstance().getPartyMathchingRooms(location, type, requestorLevel);
 		
 		_size = rooms.size();
 		final int startIndex = (page - 1) * NUM_PER_PAGE;

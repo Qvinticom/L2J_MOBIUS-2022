@@ -25,6 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.enums.MatchingRoomType;
+import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
@@ -87,12 +88,12 @@ public class MatchingRoomManager
 		return _rooms.get(MatchingRoomType.PARTY);
 	}
 	
-	public List<MatchingRoom> getPartyMathchingRooms(int location, int level)
+	public List<MatchingRoom> getPartyMathchingRooms(int location, PartyMatchingRoomLevelType type, int requestorLevel)
 	{
 		//@formatter:off
 		return _rooms.getOrDefault(MatchingRoomType.PARTY, Collections.emptyMap()).values().stream()
-				.filter(r -> (location < 0) || (r.getLocation() == location))
-				.filter(r -> (r.getMinLvl() <= level) && (r.getMaxLvl() >= level))
+				.filter(room -> (location < 0) || (room.getLocation() == location))
+				.filter(room -> (type == PartyMatchingRoomLevelType.ALL) || ((room.getMinLvl() >= requestorLevel) && (room.getMaxLvl() <= requestorLevel)))
 				.collect(Collectors.toList());
 		//@formatter:on
 	}

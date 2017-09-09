@@ -21,6 +21,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
@@ -93,6 +94,9 @@ public final class L2World
 	// private final Map<Integer, String> _allObjectsDebug = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
 	private final Map<Integer, L2PetInstance> _petsInstance = new ConcurrentHashMap<>();
+	
+	private final AtomicInteger _partyNumber = new AtomicInteger();
+	private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
 	
 	private final L2WorldRegion[][][] _worldRegions = new L2WorldRegion[REGIONS_X + 1][REGIONS_Y + 1][REGIONS_Z + 1];
 	
@@ -811,6 +815,36 @@ public final class L2World
 			}
 		}
 		_log.info(getClass().getSimpleName() + ": All visible NPC's deleted.");
+	}
+	
+	public void incrementParty()
+	{
+		_partyNumber.incrementAndGet();
+	}
+	
+	public void decrementParty()
+	{
+		_partyNumber.decrementAndGet();
+	}
+	
+	public void incrementPartyMember()
+	{
+		_memberInPartyNumber.incrementAndGet();
+	}
+	
+	public void decrementPartyMember()
+	{
+		_memberInPartyNumber.decrementAndGet();
+	}
+	
+	public int getPartyCount()
+	{
+		return _partyNumber.get();
+	}
+	
+	public int getPartyMemberCount()
+	{
+		return _memberInPartyNumber.get();
 	}
 	
 	/**

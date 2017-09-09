@@ -33,6 +33,7 @@ public class RequestDismissPartyRoom implements IClientIncomingPacket
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_roomid = packet.readD();
+		packet.readD();
 		return true;
 	}
 	

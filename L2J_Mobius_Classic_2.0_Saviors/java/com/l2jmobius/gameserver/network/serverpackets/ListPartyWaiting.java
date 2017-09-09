@@ -20,7 +20,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.matching.MatchingRoom;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -35,9 +37,9 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 	
 	private static final int NUM_PER_PAGE = 64;
 	
-	public ListPartyWaiting(int level, int location, int page)
+	public ListPartyWaiting(PartyMatchingRoomLevelType type, int location, int page, int requestorLevel)
 	{
-		final List<MatchingRoom> rooms = MatchingRoomManager.getInstance().getPartyMathchingRooms(location, level);
+		final List<MatchingRoom> rooms = MatchingRoomManager.getInstance().getPartyMathchingRooms(location, type, requestorLevel);
 		
 		_size = rooms.size();
 		final int startIndex = (page - 1) * NUM_PER_PAGE;
@@ -75,8 +77,8 @@ public class ListPartyWaiting implements IClientOutgoingPacket
 				packet.writeS(member.getName());
 			}
 		}
-		packet.writeD(0);
-		packet.writeD(0);
+		packet.writeD(L2World.getInstance().getPartyCount()); // Helios
+		packet.writeD(L2World.getInstance().getPartyMemberCount()); // Helios
 		return true;
 	}
 }

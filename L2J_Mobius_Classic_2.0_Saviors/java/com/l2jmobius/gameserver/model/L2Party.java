@@ -126,6 +126,7 @@ public class L2Party extends AbstractPlayerGroup
 		_members.add(leader);
 		_partyLvl = leader.getLevel();
 		_distributionType = partyDistributionType;
+		L2World.getInstance().incrementParty();
 	}
 	
 	/**
@@ -393,6 +394,7 @@ public class L2Party extends AbstractPlayerGroup
 			}, PARTY_POSITION_BROADCAST_INTERVAL.toMillis() / 2, PARTY_POSITION_BROADCAST_INTERVAL.toMillis());
 		}
 		applyTacticalSigns(player, false);
+		L2World.getInstance().incrementPartyMember();
 	}
 	
 	private Map<Integer, L2Character> getTacticalSigns()
@@ -553,6 +555,8 @@ public class L2Party extends AbstractPlayerGroup
 				broadcastPacket(msg);
 			}
 			
+			L2World.getInstance().decrementPartyMember();
+			
 			// UI update.
 			player.sendPacket(PartySmallWindowDeleteAll.STATIC_PACKET);
 			player.setParty(null);
@@ -632,6 +636,7 @@ public class L2Party extends AbstractPlayerGroup
 				}
 			}
 		}
+		L2World.getInstance().decrementParty();
 	}
 	
 	/**

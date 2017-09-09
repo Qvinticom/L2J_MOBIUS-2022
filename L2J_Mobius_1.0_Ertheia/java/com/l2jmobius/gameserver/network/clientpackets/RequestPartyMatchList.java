@@ -57,7 +57,7 @@ public class RequestPartyMatchList implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_roomId <= 0)
+		if ((_roomId <= 0) && (activeChar.getMatchingRoom() == null))
 		{
 			final PartyMatchingRoom room = new PartyMatchingRoom(_roomTitle, _lootType, _minLevel, _maxLevel, _maxMembers, activeChar);
 			activeChar.setMatchingRoom(room);

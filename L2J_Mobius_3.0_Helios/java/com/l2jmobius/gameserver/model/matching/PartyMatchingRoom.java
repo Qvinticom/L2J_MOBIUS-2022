@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.matching;
 
 import com.l2jmobius.gameserver.enums.MatchingMemberType;
 import com.l2jmobius.gameserver.enums.MatchingRoomType;
+import com.l2jmobius.gameserver.enums.PartyMatchingRoomLevelType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.instancemanager.MatchingRoomManager;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -43,7 +44,8 @@ public final class PartyMatchingRoom extends MatchingRoom
 	protected void onRoomCreation(L2PcInstance player)
 	{
 		player.broadcastUserInfo(UserInfoType.CLAN);
-		player.sendPacket(new ListPartyWaiting(player.getLevel(), -1, 1));
+		player.sendPacket(new ListPartyWaiting(PartyMatchingRoomLevelType.ALL, -1, 1, player.getLevel()));
+		player.sendPacket(SystemMessageId.YOU_HAVE_CREATED_A_PARTY_ROOM);
 	}
 	
 	@Override
