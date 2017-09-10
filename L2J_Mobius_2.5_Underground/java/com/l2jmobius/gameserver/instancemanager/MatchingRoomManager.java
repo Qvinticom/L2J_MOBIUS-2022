@@ -75,12 +75,12 @@ public class MatchingRoomManager
 		return _waitingList.stream() //
 			.filter(p -> (p != null) //
 				&& (p.getLevel() >= minLevel) //
-				&& (p.getLevel() <= maxLevel) //
-			).filter(p -> (classIds == null) //
-				|| classIds.contains(p.getClassId()) //
-			).filter(p -> query.isEmpty() //
-				|| p.getName().toLowerCase().contains(query) //
-			).collect(Collectors.toList());
+				&& (p.getLevel() <= maxLevel)) //
+			.filter(p -> (classIds == null) //
+				|| classIds.contains(p.getClassId())) //
+			.filter(p -> query.isEmpty() //
+				|| p.getName().toLowerCase().contains(query)) //
+			.collect(Collectors.toList());
 	}
 	
 	public int addMatchingRoom(MatchingRoom room)
