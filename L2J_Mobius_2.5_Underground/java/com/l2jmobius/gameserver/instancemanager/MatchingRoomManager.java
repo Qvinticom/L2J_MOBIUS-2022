@@ -78,7 +78,8 @@ public class MatchingRoomManager
 				&& (p.getLevel() <= maxLevel)) //
 			.filter(p -> (classIds == null) //
 				|| classIds.contains(p.getClassId())) //
-			.filter(p -> query.isEmpty() //
+			.filter(p -> (query == null) //
+				|| query.isEmpty() //
 				|| p.getName().toLowerCase().contains(query)) //
 			.collect(Collectors.toList());
 	}
