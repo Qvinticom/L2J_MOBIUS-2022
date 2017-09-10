@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package ai.areas.KartiasLabyrinth;
+package instances.KartiasLabyrinth;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.events.impl.instance.OnInstanceStatusChange;
