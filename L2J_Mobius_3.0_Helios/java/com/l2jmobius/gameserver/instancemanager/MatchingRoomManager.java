@@ -68,7 +68,19 @@ public class MatchingRoomManager
 	
 	public List<L2PcInstance> getPlayerInWaitingList(int minLevel, int maxLevel, List<ClassId> classIds, String query)
 	{
-		return _waitingList == null ? Collections.emptyList() : _waitingList.stream().filter(p -> (p.getLevel() >= minLevel) && (p.getLevel() <= maxLevel)).filter(p -> (classIds == null) || classIds.contains(p.getClassId())).filter(p -> query.isEmpty() || p.getName().toLowerCase().contains(query)).collect(Collectors.toList());
+		if (_waitingList == null)
+		{
+			return Collections.emptyList();
+		}
+		return _waitingList.stream() //
+			.filter(p -> (p != null) //
+				&& (p.getLevel() >= minLevel) //
+				&& (p.getLevel() <= maxLevel) //
+			).filter(p -> (classIds == null) //
+				|| classIds.contains(p.getClassId()) //
+			).filter(p -> query.isEmpty() //
+				|| p.getName().toLowerCase().contains(query) //
+			).collect(Collectors.toList());
 	}
 	
 	public int addMatchingRoom(MatchingRoom room)
