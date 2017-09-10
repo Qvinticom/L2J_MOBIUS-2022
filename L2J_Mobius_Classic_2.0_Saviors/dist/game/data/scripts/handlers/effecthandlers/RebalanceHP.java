@@ -165,6 +165,9 @@ public final class RebalanceHP extends AbstractEffect
 					}
 				}
 				
+				fullHP += effector.getMaxHp();
+				fullHP += effector.getCurrentHp();
+				
 				final double percentHP = currentHPs / fullHP;
 				for (L2Summon summon : effector.getServitors().values())
 				{
@@ -187,8 +190,21 @@ public final class RebalanceHP extends AbstractEffect
 						summon.setCurrentHp(newHP);
 					}
 				}
+				
+				double newHP = effector.getMaxHp() * percentHP;
+				if (newHP > effector.getCurrentHp())
+				{
+					if (effector.getCurrentHp() > effector.getMaxRecoverableHp())
+					{
+						newHP = effector.getCurrentHp();
+					}
+					else if (newHP > effector.getMaxRecoverableHp())
+					{
+						newHP = effector.getMaxRecoverableHp();
+					}
+				}
+				effector.setCurrentHp(newHP);
 			}
 		}
-		
 	}
 }
