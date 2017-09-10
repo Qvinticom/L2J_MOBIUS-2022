@@ -2823,7 +2823,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="32988" level="85" type="L2Npc" name="Bloodhound" title="">
+	<npc id="32988" level="85" type="FriendlyNpc" name="Bloodhound" usingServerSideTitle="true">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="NoFnHi" value="1" />
