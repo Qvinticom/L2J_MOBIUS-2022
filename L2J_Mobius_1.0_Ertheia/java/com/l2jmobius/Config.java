@@ -891,6 +891,13 @@ public final class Config
 	public static int KELBIM_SPAWN_INTERVAL;
 	public static int KELBIM_SPAWN_RANDOM;
 	
+	// Lindvior
+	public static int LINDVIOR_SPAWN_INTERVAL;
+	public static int LINDVIOR_SPAWN_RANDOM;
+	public static int LINDVIOR_MIN_PLAYERS;
+	public static int LINDVIOR_MAX_PLAYERS;
+	public static int LINDVIOR_MIN_PLAYER_LVL;
+	
 	// Anakim
 	public static int ANAKIM_MIN_PLAYERS;
 	public static int ANAKIM_MAX_PLAYERS;
@@ -2223,6 +2230,11 @@ public final class Config
 			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLilithSpawn", 148);
 			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
 			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
+			LINDVIOR_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLindviorSpawn", 264);
+			LINDVIOR_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLindviorSpawn", 72);
+			LINDVIOR_MIN_PLAYERS = GrandBossSettings.getInt("LindviorMinPlayers", 49);
+			LINDVIOR_MAX_PLAYERS = GrandBossSettings.getInt("LindviorMaxPlayers", 112);
+			LINDVIOR_MIN_PLAYER_LVL = GrandBossSettings.getInt("LindviorMinPlayerLvl", 99);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);

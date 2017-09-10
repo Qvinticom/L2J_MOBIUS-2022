@@ -75,7 +75,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	@Override
 	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		if (creature.isPlayer() && _jenas_guard.isScriptValue(0))
+		if ((creature != null) && creature.isPlayer() && _jenas_guard.isScriptValue(0))
 		{
 			startQuestTimer("msg_text", 3000, npc, null);
 			_jenas_guard.setScriptValue(1);

@@ -49,23 +49,38 @@
 		<effectPoint>2</effectPoint>
 		<castRange>1800</castRange>
 	</skill>
-	<skill id="15605" toLevel="1" name="Recharge Possible">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="15605" toLevel="1" name="Recharge Possible"> 
 		<!-- Recharge possible. -->
 		<icon>icon.skill0005</icon>
+		<abnormalTime>20</abnormalTime>
 		<operateType>A2</operateType>
+		<castRange>1000</castRange>
+		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
-		<hitTime>25000</hitTime>
+		<hitTime>10000</hitTime> <!-- retail 25000 -->
+		<targetType>SELF</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="15606" toLevel="1" name="Recharge">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Recharge. -->
-		<icon>icon.skill1449</icon>
+		<icon>icon.skill14444</icon>
 		<operateType>A1</operateType>
+		<isDebuff>1</isDebuff>
 		<castRange>900</castRange>
 		<hitTime>10000</hitTime>
 		<effectPoint>-2</effectPoint>
-		<coolTime>200</coolTime>
+		<coolTime>200</coolTime>		
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpTargetNpc">
+				<npcIds>
+					<item>19477</item> <!-- Generator -->
+				</npcIds>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="15607" toLevel="1" name="Depleted">
 		<!-- AUTO GENERATED SKILL -->

@@ -825,58 +825,76 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19423" level="99" type="L2Npc" name="Lindvior" title="Wind Dragon">
+	<npc id="19423" level="104" type="L2GrandBoss" name="Lindvior" title="Wind Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="209461939" hpRegen="10.5" mp="47100.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
-				<run ground="1" />
+				<run ground="270" />
 			</speed>
-			<attack physical="1518.8555746574" magical="695.44490591753" critical="4" attackSpeed="180" range="40" />
-			<defence physical="335.10638297872" magical="245.06705989748" />
+			<attack physical="63862.33880135" magical="11469.742130133" critical="4" attackSpeed="253" range="40" />
+			<defence physical="7772.0207253886" magical="3235.1068620499" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" />
+				<attack type="WIND" value="370" />
 			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" />
 		<skill_list>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="10"/> <!-- Dragons -->			
+			<skill id="4408" level="1"/> <!-- HP 1x -->			
+			<skill id="4409" level="1"/> <!-- MP 1x -->			
+			<skill id="4410" level="11"/> <!-- P. Atk. Modifiers. -->			
+			<skill id="4411" level="11"/> <!-- M. Atk. Modifiers. -->			
+			<skill id="4412" level="11"/> <!-- P. Def. Modifiers. -->			
+			<skill id="4413" level="11"/> <!-- M. Def. Modifiers. -->			
+			<skill id="4414" level="2"/> <!-- Heavy Armor Type -->			
+			<skill id="4415" level="1"/> <!-- Bare Hands -->
 		</skill_list>
+		<ai aggroRange="2000" isAggressive="true" />		
 		<collision>
 			<radius normal="190" />
 			<height normal="1500" />
 		</collision>
 	</npc>
-	<npc id="19424" level="99" type="L2Monster" name="Lindvior" title="Wind Dragon">
+	<npc id="19424" level="104" type="L2GrandBoss" name="Lindvior" title="Wind Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="133921719" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="209461939" hpRegen="10.5" mp="47100.0" mpRegen="3.6" />
 			<speed>
-				<walk ground="270" />
+				<walk ground="100" />
 				<run ground="270" />
 			</speed>
-			<attack physical="17349.336782171" magical="5807.1057427324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="936.17021276596" magical="621.44512323573" />
+			<attack physical="63862.33880135" magical="11469.742130133" critical="4" attackSpeed="253" range="40" />
+			<defence physical="7772.0207253886" magical="3235.1068620499" />
 			<attribute>
-				<defence fire="20" water="20" wind="20" earth="20" holy="20" dark="20" />
+				<defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" />
+				<attack type="WIND" value="370" />
 			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" />
 		<skill_list>
-			<skill id="15638" level="1" /> <!-- Lindvior -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
+			<skill id="4416" level="10"/> <!-- Dragons -->				
+			<skill id="5464" level="1"/> <!-- Wind Attack -->
+			<skill id="4408" level="1"/> <!-- HP 1x -->			
+			<skill id="4409" level="1"/> <!-- MP 1x -->			
+			<skill id="4410" level="11"/> <!-- P. Atk. Modifiers. -->			
+			<skill id="4411" level="11"/> <!-- M. Atk. Modifiers. -->			
+			<skill id="4412" level="11"/> <!-- P. Def. Modifiers. -->
+			<skill id="4413" level="11"/> <!-- M. Def. Modifiers. -->			
+			<skill id="4414" level="2"/> <!-- Heavy Armor Type -->			
+			<skill id="4415" level="1"/> <!-- Bare Hands -->	
+			<skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->		
+			<skill id="15638" level="1"/> <!-- Lindvior -->
+			<skill id="15274" level="1" /> <!-- Mighty Wind Strike -->
+			<skill id="15279" level="1" /> <!-- Soar -->
 		</skill_list>
+		<ai aggroRange="2000" isAggressive="true" />
 		<collision>
 			<radius normal="430" />
 			<height normal="500" />
@@ -984,7 +1002,7 @@
 			</attribute>
 			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" showName="false" targetable="false" />
 		<skill_list>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
@@ -2307,7 +2325,7 @@
 			<height normal="10" />
 		</collision>
 	</npc>
-	<npc id="19477" level="99" type="L2Monster" name="Generator" title="">
+	<npc id="19477" level="99" type="FriendlyNpc" name="Generator" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2323,7 +2341,10 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" showName="false" canMove="false" />
+		<skill_list>
+			<skill id="15605" level="1" /> <!-- Recharge -->
+		</skill_list>
 		<collision>
 			<radius normal="200" />
 			<height normal="160" />
@@ -2351,7 +2372,7 @@
 			<height normal="21.2" />
 		</collision>
 	</npc>
-	<npc id="19479" level="99" type="L2Npc" name="Generator Guard" title="">
+	<npc id="19479" level="99" type="FriendlyNpc" name="Generator Guard" title="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -2362,7 +2383,7 @@
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<defence physical="4405.85106382979" magical="5297.0297029703" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>

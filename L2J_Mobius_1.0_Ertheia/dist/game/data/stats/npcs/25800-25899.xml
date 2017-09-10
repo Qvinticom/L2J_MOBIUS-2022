@@ -4791,7 +4791,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="25895" level="99" type="L2Monster" name="Lyn Draco">
+	<npc id="25895" level="102" type="L2Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -4801,8 +4801,8 @@
 				<walk ground="60" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1" magical="1" critical="4" attackSpeed="253" range="0" type="FIST" distance="0" width="0" random="0" accuracy="4.75" />
-			<defence physical="1" magical="1" />
+			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="5" accuracy="5" />
+			<defence physical="405.66735" magical="296.84976" />
 			<attribute>
 				<attack type="WIND" value="430" />
 				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
@@ -4822,7 +4822,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25896" level="99" type="L2Monster" name="Lyn Draco">
+	<npc id="25896" level="102" type="L2Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -4853,7 +4853,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="25897" level="99" type="L2Monster" name="Lyn Draco">
+	<npc id="25897" level="102" type="L2Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
@@ -4877,6 +4877,12 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4408" level="1"/> <!-- HP 1x -->			
+			<skill id="4409" level="1"/> <!-- MP 1x -->
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -4884,15 +4890,18 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25898" level="99" type="L2Npc" name="Cyclone">
+	<npc id="25898" level="99" type="L2Monster" name="Cyclone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="200" />
+		</parameters>
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="140" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="5" accuracy="5" />
 			<defence physical="405.66735" magical="296.84976" />
@@ -4910,29 +4919,29 @@
 			<skill id="15599" level="1" /> <!-- Cyclone -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skill_list>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai aggroRange="600" isAggressive="true" clanHelpRange="300" />
 		<collision>
 			<radius normal="60" />
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25899" level="99" type="L2Monster" name="Lindvior" title="Wind Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="25899" level="102" type="L2GrandBoss" name="Lindvior" title="Wind Dragon">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="322249137" hpRegen="8.5" mp="47100" mpRegen="3" />
+		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="209461939" hpRegen="10.5" mp="47100.0" mpRegen="3.6" />
 			<speed>
 				<walk ground="100" />
 				<run ground="270" />
 			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="5" accuracy="5" />
-			<defence physical="1605.82654" magical="1423.83569" />
+			<attack physical="63862.33880135" magical="11469.742130133" critical="4" attackSpeed="253" range="40" />
+			<defence physical="7772.0207253886" magical="3235.1068620499" />
 			<attribute>
-				<attack type="WIND" value="430" />
-				<defence fire="350" water="350" wind="350" earth="300" holy="350" dark="350" />
+				<defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" />
+				<attack type="WIND" value="370" />
 			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" />
 		<skill_list>
@@ -4941,11 +4950,16 @@
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4415" level="1" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="15274" level="1" /> <!-- Mighty Wind Strike -->
+			<skill id="15591" level="1" /> <!-- Wind Pull -->
+			<skill id="15430" level="1" /> <!-- Lindvior's Jump -->
+			<skill id="15271" level="1" /> <!-- Body Slam -->
+			<skill id="15273" level="1" /> <!-- Tail Swipe -->
 		</skill_list>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="350" />
-			<height normal="210" />
+			<radius normal="190" />
+			<height normal="390" />
 		</collision>
 	</npc>
 </list>

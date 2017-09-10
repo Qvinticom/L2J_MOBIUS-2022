@@ -1954,7 +1954,7 @@
 			<attack physical="689.07320120658" magical="470.63282486066" critical="4" attackSpeed="253" range="40" />
 			<defence physical="296.22641509434" magical="216.70091537456" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" targetable="false" showName="false" />
 		<collision>
 			<radius normal="11" />
 			<height normal="25" />
