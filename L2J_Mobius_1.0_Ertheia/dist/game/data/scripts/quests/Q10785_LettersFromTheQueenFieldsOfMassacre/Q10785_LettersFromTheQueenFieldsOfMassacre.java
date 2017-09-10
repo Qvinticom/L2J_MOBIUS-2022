@@ -71,6 +71,7 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 			case "30857-02.html":
 			case "33867-02.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "30857-03.html":
@@ -79,6 +80,7 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 				{
 					qs.setCond(2, true);
 					giveItems(player, SOE_FIELDS_OF_MASSACRE, 1);
+					htmltext = event;
 				}
 				break;
 			}
@@ -91,6 +93,7 @@ public final class Q10785_LettersFromTheQueenFieldsOfMassacre extends LetterQues
 					addExpAndSp(player, 807240, 193);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_65, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}

@@ -71,6 +71,7 @@ public final class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 			case "30857-02.html":
 			case "33866-02.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "30857-03.html":
@@ -79,6 +80,7 @@ public final class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 				{
 					qs.setCond(2, true);
 					giveItems(player, SOE_FORSAKEN_PLAINS, 1);
+					htmltext = event;
 				}
 				break;
 			}
@@ -91,6 +93,7 @@ public final class Q10782_LettersFromTheQueenForsakenPlains extends LetterQuest
 					addExpAndSp(player, 731010, 175);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_61, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}

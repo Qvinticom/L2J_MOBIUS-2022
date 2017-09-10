@@ -71,6 +71,7 @@ public final class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 			case "31328-02.html":
 			case "33847-02.html":
 			{
+				htmltext = event;
 				break;
 			}
 			case "31328-03.html":
@@ -79,6 +80,7 @@ public final class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 				{
 					qs.setCond(2, true);
 					giveItems(player, SOE_SWAMP_OF_SCREAMS, 1);
+					htmltext = event;
 				}
 				break;
 			}
@@ -91,6 +93,7 @@ public final class Q10789_LettersFromTheQueenSwampOfScreams extends LetterQuest
 					addExpAndSp(player, 942690, 226);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_70, ExShowScreenMessage.TOP_CENTER, 8000);
 					qs.exitQuest(false, true);
+					htmltext = event;
 				}
 				break;
 			}
