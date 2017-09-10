@@ -385,7 +385,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 					if (world.getAliveNpcs(ATTACABLE_MONSTERS).isEmpty())
 					{
 						world.setStatus(5);
-						world.spawnGroup("wof_room4"); // TODO spawn animation
+						world.spawnGroup("wof_room4");
 						final int halter = world.getTemplateParameters().getInt("vanhalter");
 						final int ferin = world.getTemplateParameters().getInt("ferin");
 						final L2Npc npcss = world.getNpc(halter);
