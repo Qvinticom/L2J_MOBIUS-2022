@@ -143,22 +143,20 @@ public final class LabyrinthOfBelis extends AbstractInstance
 							world.setStatus(6);
 							world.openCloseDoor(DOOR_ID_ROOM_3_2, true);
 							
-							final L2Npc generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN, false, 0, true, world.getId());
-							generator.reduceCurrentHp(1, npc, null);
-							generator.setDisplayEffect(1);
+							final L2Npc generator = addSpawn(ELECTRICITY_GENERATOR, GENERATOR_SPAWN, false, 0, false, world.getId());
 							generator.disableCoreAI(true);
 							
 							npc.setScriptValue(1);
 							npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DON_T_COME_BACK_HERE);
 							npc.setTarget(generator);
-							
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, INFILTRATION_OFFICER_ROOM_3_INSIDE);
 							
+							getTimers().addTimer("GENERATOR_EFFECT", 300, generator, null);
 							getTimers().addRepeatingTimer("MESSAGE", 7000, npc, null);
 							getTimers().addRepeatingTimer("ATTACKERS", 12500, npc, player);
 							
-							((L2Attackable) npc).addDamageHate(generator, 0, 9999);
-							npc.reduceCurrentHp(1, generator, null); // TODO: Find better way for attack
+							((L2Attackable) npc).addDamageHate(generator, 0, 9999); // TODO: Find better way for attack
+							npc.reduceCurrentHp(1, generator, null);
 						}
 						break;
 					}
@@ -561,6 +559,11 @@ public final class LabyrinthOfBelis extends AbstractInstance
 						final L2Npc officer = world.getNpc(INFILTRATION_OFFICER);
 						officer.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, NEMERTESS_SPAWN);
 					}
+					break;
+				}
+				case "GENERATOR_EFFECT":
+				{
+					npc.setDisplayEffect(1);
 					break;
 				}
 				case "SPAWN_NEMERTESS":

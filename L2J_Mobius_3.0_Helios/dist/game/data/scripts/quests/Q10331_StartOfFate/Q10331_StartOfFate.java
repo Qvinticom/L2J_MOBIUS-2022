@@ -131,121 +131,101 @@ public final class Q10331_StartOfFate extends Quest
 						case WARRIOR:
 						{
 							htmltext = "32153-15.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case KNIGHT:
 						{
 							htmltext = "32153-16.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ROGUE:
 						{
 							htmltext = "32153-17.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case WIZARD:
 						{
 							htmltext = "32153-18.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case CLERIC:
 						{
 							htmltext = "32153-19.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ELVEN_KNIGHT:
 						{
 							htmltext = "32147-14.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ELVEN_SCOUT:
 						{
 							htmltext = "32147-15.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ELVEN_WIZARD:
 						{
 							htmltext = "32147-16.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ORACLE:
 						{
 							htmltext = "32147-17.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case PALUS_KNIGHT:
 						{
 							htmltext = "32160-14.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ASSASSIN:
 						{
 							htmltext = "32160-15.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case DARK_WIZARD:
 						{
 							htmltext = "32160-16.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case SHILLIEN_ORACLE:
 						{
 							htmltext = "32160-17.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ORC_RAIDER:
 						{
 							htmltext = "32150-14.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ORC_MONK:
 						{
 							htmltext = "32150-15.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ORC_SHAMAN:
 						{
 							htmltext = "32150-16.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case SCAVENGER:
 						{
 							htmltext = "32157-11.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case ARTISAN:
 						{
 							htmltext = "32157-12.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case TROOPER:
 						{
 							htmltext = "32146-12.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 						case WARDER:
 						{
 							htmltext = "32146-13.htm";
-							qs.exitQuest(false, true);
 							break;
 						}
 					}
@@ -261,6 +241,7 @@ public final class Q10331_StartOfFate extends Quest
 					giveItems(player, PAULINAS_SET_D_GRADE, 1);
 					giveItems(player, PROOF_OF_COURAGE, 40);
 					addExpAndSp(player, 296000, 15);
+					qs.exitQuest(false, true);
 				}
 			}
 		}
@@ -447,6 +428,11 @@ public final class Q10331_StartOfFate extends Quest
 					{
 						switch (qs.getCond())
 						{
+							case 1:
+							{
+								htmltext = "32978-03.htm";
+								break;
+							}
 							case 2:
 							{
 								giveItems(player, SARIL_NECKLACE, 1);
@@ -518,7 +504,7 @@ public final class Q10331_StartOfFate extends Quest
 						break;
 					}
 				}
-				
+				break;
 			}
 		}
 		return htmltext;
