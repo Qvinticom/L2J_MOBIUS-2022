@@ -859,11 +859,6 @@ public final class Config
 	public static int ANTHARAS_SPAWN_INTERVAL;
 	public static int ANTHARAS_SPAWN_RANDOM;
 	
-	// Valakas
-	public static int VALAKAS_WAIT_TIME;
-	public static int VALAKAS_SPAWN_INTERVAL;
-	public static int VALAKAS_SPAWN_RANDOM;
-	
 	// Baium
 	public static int BAIUM_SPAWN_INTERVAL;
 	public static int BAIUM_SPAWN_RANDOM;
@@ -879,36 +874,6 @@ public final class Config
 	// Queen Ant
 	public static int QUEEN_ANT_SPAWN_INTERVAL;
 	public static int QUEEN_ANT_SPAWN_RANDOM;
-	
-	// Beleth
-	public static int BELETH_WAIT_TIME;
-	public static int BELETH_MIN_PLAYERS;
-	public static int BELETH_MAX_PLAYERS;
-	public static int BELETH_SPAWN_INTERVAL;
-	public static int BELETH_SPAWN_RANDOM;
-	
-	// Kelbim
-	public static int KELBIM_WAIT_TIME;
-	public static int KELBIM_MIN_PLAYERS;
-	public static int KELBIM_MAX_PLAYERS;
-	public static int KELBIM_SPAWN_INTERVAL;
-	public static int KELBIM_SPAWN_RANDOM;
-	
-	// Anakim
-	public static int ANAKIM_MIN_PLAYERS;
-	public static int ANAKIM_MAX_PLAYERS;
-	public static int ANAKIM_SPAWN_INTERVAL;
-	public static int ANAKIM_SPAWN_RANDOM;
-	public static int ANAKIM_MIN_PLAYER_LVL;
-	public static int ANAKIM_MAX_PLAYER_LVL;
-	
-	// Lilith
-	public static int LILITH_MIN_PLAYERS;
-	public static int LILITH_MAX_PLAYERS;
-	public static int LILITH_SPAWN_INTERVAL;
-	public static int LILITH_SPAWN_RANDOM;
-	public static int LILITH_MIN_PLAYER_LVL;
-	public static int LILITH_MAX_PLAYER_LVL;
 	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
@@ -2188,10 +2153,6 @@ public final class Config
 			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
 			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
 			
-			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
-			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
-			VALAKAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfValakasSpawn", 72);
-			
 			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
 			BAIUM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBaiumSpawn", 48);
 			
@@ -2203,32 +2164,6 @@ public final class Config
 			
 			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
 			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
-			
-			BELETH_WAIT_TIME = GrandBossSettings.getInt("BelethWaitTime", 5);
-			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
-			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
-			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 49);
-			BELETH_MAX_PLAYERS = GrandBossSettings.getInt("BelethMaxPlayers", 350);
-			
-			KELBIM_WAIT_TIME = GrandBossSettings.getInt("KelbimWaitTime", 5);
-			KELBIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfKelbimSpawn", 192);
-			KELBIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfKelbimSpawn", 148);
-			KELBIM_MIN_PLAYERS = GrandBossSettings.getInt("KelbimMinPlayers", 49);
-			KELBIM_MAX_PLAYERS = GrandBossSettings.getInt("KelbimMaxPlayers", 350);
-			
-			ANAKIM_MIN_PLAYERS = GrandBossSettings.getInt("AnakimMinPlayers", 98);
-			ANAKIM_MAX_PLAYERS = GrandBossSettings.getInt("AnakimMaxPlayers", 120);
-			ANAKIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAnakimSpawn", 192);
-			ANAKIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAnakimSpawn", 148);
-			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
-			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
-			
-			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("LilithMinPlayers", 98);
-			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("LilithMaxPlayers", 120);
-			LILITH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLilithSpawn", 192);
-			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLilithSpawn", 148);
-			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
-			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
