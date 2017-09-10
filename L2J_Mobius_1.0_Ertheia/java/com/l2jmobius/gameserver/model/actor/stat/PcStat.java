@@ -31,6 +31,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLevel
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -665,13 +666,7 @@ public class PcStat extends PlayableStat
 		super.onRecalculateStats(broadcast);
 		
 		final L2PcInstance player = getActiveChar();
-		
-		// Upon master stats recalculation trigger pet/servitor recalculation too
-		if (player.hasPet())
-		{
-			player.getPet().getStat().recalculateStats(broadcast);
-		}
-		if (player.hasServitors())
+		if (player.hasAbnormalType(AbnormalType.ABILITY_CHANGE) && player.hasServitors())
 		{
 			player.getServitors().values().forEach(servitor -> servitor.getStat().recalculateStats(broadcast));
 		}

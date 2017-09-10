@@ -2950,16 +2950,30 @@
 			<condition name="OpHaveSummon" />
 		</conditions>
 		<effects>
-			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="0.60" />
-				<share stat="pDef" val="0.50" />
-				<share stat="mDef" val="0.30" />
-				<share stat="maxHp" val="0.15" />
-				<share stat="maxMp" val="0.15" />
-				<share stat="pAtkSpd" val="0.10" />
-				<share stat="rCrit" val="0.30" />
-				<share stat="cAtk" val="0.15" />
+				<PHYSICAL_ATTACK>
+					<value level="1">60</value>
+					<value level="2">65</value>
+					<value level="3">70</value>
+					<value level="4">70</value>
+				</PHYSICAL_ATTACK>
+				<PHYSICAL_DEFENCE>
+					<value level="1">50</value>
+					<value level="2">53</value>
+					<value level="3">55</value>
+					<value level="4">60</value>
+				</PHYSICAL_DEFENCE>
+				<MAGICAL_DEFENCE>
+					<value level="1">30</value>
+					<value level="2">35</value>
+					<value level="3">40</value>
+					<value level="4">50</value>
+				</MAGICAL_DEFENCE>
+				<MAX_HP>15</MAX_HP>
+				<MAX_MP>15</MAX_MP>
+				<PHYSICAL_ATTACK_SPEED>10</PHYSICAL_ATTACK_SPEED>
+				<CRITICAL_RATE>30</CRITICAL_RATE>
+				<CRITICAL_DAMAGE>15</CRITICAL_DAMAGE>
 			</effect>
 		</effects>
 	</skill>

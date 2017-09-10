@@ -239,7 +239,6 @@ public abstract class DocumentBase
 				case "mul":
 				case "div":
 				case "set":
-				case "share":
 				case "enchant":
 				case "enchanthp":
 				{

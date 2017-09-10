@@ -40,6 +40,7 @@ import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillConditionScope;
@@ -783,6 +784,19 @@ public class CharStat
 				.filter(effect -> effect.canPump(info.getEffector(), info.getEffected(), info.getSkill()))
 				.forEach(effect -> effect.pump(info.getEffected(), info.getSkill())));
 			//@formatter:on
+			
+			if (_activeChar.isSummon() && (_activeChar.getActingPlayer() != null) && _activeChar.getActingPlayer().hasAbnormalType(AbnormalType.ABILITY_CHANGE))
+			{
+				//@formatter:off
+				_activeChar.getActingPlayer().getEffectList().getEffects().stream()
+					.filter(BuffInfo::isInUse)
+					.filter(info -> info.isAbnormalType(AbnormalType.ABILITY_CHANGE))
+					.forEach(info -> info.getEffects().stream()
+						.filter(effect -> effect.canStart(info))
+						.filter(effect -> effect.canPump(_activeChar, _activeChar, info.getSkill()))
+						.forEach(effect -> effect.pump(_activeChar, info.getSkill())));
+				//@formatter:on
+			}
 			
 			// Merge with additional stats
 			_additionalAdd.stream().filter(holder -> holder.verifyCondition(_activeChar)).forEach(holder -> mergeAdd(holder.getStat(), holder.getValue()));

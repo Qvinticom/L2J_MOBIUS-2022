@@ -16,58 +16,53 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.effects.EffectFlag;
-import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
- * Servitor Share effect implementation.<br>
- * Synchronizing effects on player and servitor if one of them gets removed for some reason the same will happen to another. Partner's effect exit is executed in own thread, since there is no more queue to schedule the effects,<br>
- * partner's effect is called while this effect is still exiting issuing an exit call for the effect, causing a stack over flow.
- * @author UnAfraid, Zoey76
+ * Servitor Share effect implementation.
  */
 public final class ServitorShare extends AbstractEffect
 {
-	private static final class ScheduledEffectExitTask implements Runnable
-	{
-		private final L2Character _effected;
-		private final int _skillId;
-		
-		public ScheduledEffectExitTask(L2Character effected, int skillId)
-		{
-			_effected = effected;
-			_skillId = skillId;
-		}
-		
-		@Override
-		public void run()
-		{
-			_effected.stopSkillEffects(false, _skillId);
-		}
-	}
+	private final Map<Stats, Float> _sharedStats = new HashMap<>();
 	
 	public ServitorShare(StatsSet params)
 	{
-	}
-	
-	@Override
-	public long getEffectFlags()
-	{
-		return EffectFlag.SERVITOR_SHARE.getMask();
-	}
-	
-	@Override
-	public void onExit(BuffInfo info)
-	{
-		final L2Character effected = info.getEffected().isSummon() ? ((L2Summon) info.getEffected()).getOwner() : info.getEffected();
-		
-		if (effected != null)
+		if (params.isEmpty())
 		{
-			ThreadPoolManager.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
+			return;
+		}
+		
+		for (Entry<String, Object> param : params.getSet().entrySet())
+		{
+			_sharedStats.put(Stats.valueOf(param.getKey()), (Float.parseFloat((String) param.getValue())) / 100);
+		}
+	}
+	
+	@Override
+	public boolean canPump(L2Character effector, L2Character effected, Skill skill)
+	{
+		return effected.isSummon();
+	}
+	
+	@Override
+	public void pump(L2Character effected, Skill skill)
+	{
+		final L2PcInstance owner = effected.getActingPlayer();
+		if (owner != null)
+		{
+			for (Entry<Stats, Float> stats : _sharedStats.entrySet())
+			{
+				effected.getStat().mergeAdd(stats.getKey(), owner.getStat().getValue(stats.getKey()) * stats.getValue());
+			}
 		}
 	}
 }

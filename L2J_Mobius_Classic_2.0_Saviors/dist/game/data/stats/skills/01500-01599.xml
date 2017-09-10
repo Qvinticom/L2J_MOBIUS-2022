@@ -3318,9 +3318,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ABILITY_CHANGE</abnormalType>
-		<castRange>400</castRange> <!-- No cast range -->
 		<effectPoint>379</effectPoint>
-		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill1557</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3334,29 +3332,25 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<irreplacableBuff>true</irreplacableBuff>
-		<!-- Should be self -->
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<isSharedWithSummon>false</isSharedWithSummon>
 		<conditions>
 			<condition name="OpHaveSummon" />
 		</conditions>
 		<effects>
-			<!-- Note: 0.5 means 50% of owner's patk! -->
 			<effect name="ServitorShare">
-				<share stat="pAtk" val="0.3" />
-				<share stat="pDef" val="0.3" />
-				<share stat="mAtk" val="0.1" />
-				<share stat="mDef" val="0.1" />
-				<share stat="maxHp" val="0.1" />
-				<share stat="maxMp" val="0.1" />
-				<share stat="pAtkSpd" val="0.1" />
-				<share stat="mAtkSpd" val="0.03" />
-			</effect>
+				<PHYSICAL_ATTACK>50</PHYSICAL_ATTACK>
+				<PHYSICAL_DEFENCE>50</PHYSICAL_DEFENCE>
+				<MAGIC_ATTACK>25</MAGIC_ATTACK>
+				<MAGICAL_DEFENCE>25</MAGICAL_DEFENCE>
+				<MAX_HP>10</MAX_HP>
+				<MAX_MP>10</MAX_MP>
+				<CRITICAL_RATE>20</CRITICAL_RATE>
+				<PHYSICAL_ATTACK_SPEED>10</PHYSICAL_ATTACK_SPEED>
+				<MAGIC_ATTACK_SPEED>3</MAGIC_ATTACK_SPEED>
+ 			</effect>
 		</effects>
-		<!-- Shouldn't have any self effects -->
-		<selfEffects>
-			<effect name="ServitorShare" /> <!-- This effect is used to cancel pet's effect when player's have been canceled. -->
-		</selfEffects>
 	</skill>
 	<skill id="1558" toLevel="24" name="Dimension Spiral">
 		<!-- Glory Days confirmed -->

@@ -27,7 +27,6 @@ public enum StatFunction
 	ENCHANTHP("EnchantHp", 40),
 	MUL("Mul", 20),
 	SET("Set", 0),
-	SHARE("Share", 30),
 	SUB("Sub", 30);
 	
 	String name;

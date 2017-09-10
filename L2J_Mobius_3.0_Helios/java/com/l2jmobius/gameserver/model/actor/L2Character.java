@@ -3009,7 +3009,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					broadcastPacket(su);
 				}
-				if (hasServitors() && isAffected(EffectFlag.SERVITOR_SHARE))
+				if (hasServitors() && hasAbnormalType(AbnormalType.ABILITY_CHANGE))
 				{
 					getServitors().values().forEach(L2Summon::broadcastStatusUpdate);
 				}

@@ -451,4 +451,9 @@ public final class BuffInfo
 			_scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
 		}
 	}
+	
+	public boolean isAbnormalType(AbnormalType type)
+	{
+		return _skill.getAbnormalType().equals(type);
+	}
 }
