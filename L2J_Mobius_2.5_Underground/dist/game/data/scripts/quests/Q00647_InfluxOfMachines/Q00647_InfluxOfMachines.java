@@ -52,7 +52,7 @@ public class Q00647_InfluxOfMachines extends Quest
 		MOBS.put(22812, 463); // Boom Golem
 	}
 	// Item
-	private static final int BROKEN_GOLEM_FRAGMENT = 15521;
+	private static final int BROKEN_GOLEM_FRAGMENT = 46412;
 	private static final int[] RECIPES =
 	{
 		6881, // Recipe: Forgotten Blade (60%)
@@ -68,7 +68,7 @@ public class Q00647_InfluxOfMachines extends Quest
 	};
 	// Misc
 	private static final int MIN_LEVEL = 70;
-	private static final int FRAGMENT_COUNT = 500;
+	private static final int FRAGMENT_COUNT = 100;
 	
 	public Q00647_InfluxOfMachines()
 	{
