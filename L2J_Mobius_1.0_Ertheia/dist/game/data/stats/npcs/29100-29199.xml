@@ -701,6 +701,34 @@
 				<clan>BERES</clan>
 			</clan_list>
 		</ai>
+		<drop_lists>
+			<death>
+				<item id="13893" min="1" max="1" chance="38.2799" /> <!-- Sealed Holy Spirit's Cloak -->
+				<item id="10215" min="1" max="1" chance="5.662" /> <!-- Icarus Sawsword -->
+				<item id="10216" min="1" max="1" chance="5.483" /> <!-- Icarus Disperser -->
+				<item id="10217" min="1" max="1" chance="5.506" /> <!-- Icarus Spirit -->
+				<item id="10218" min="1" max="1" chance="5.508" /> <!-- Icarus Heavy Arms -->
+				<item id="14219" min="1" max="1" chance="19.47" /> <!-- Forgotten Scroll: Magician's Will -->
+				<item id="10219" min="1" max="1" chance="5.592" /> <!-- Icarus Trident -->
+				<item id="10220" min="1" max="1" chance="5.491" /> <!-- Icarus Hammer -->
+				<item id="10221" min="1" max="1" chance="5.57" /> <!-- Icarus Hand -->
+				<item id="10222" min="1" max="1" chance="5.5359" /> <!-- Icarus Hall -->
+				<item id="10223" min="1" max="1" chance="5.489" /> <!-- Icarus Spitter -->
+				<item id="13457" min="1" max="1" chance="3.808" /> <!-- Vesper Cutter -->
+				<item id="13458" min="1" max="1" chance="3.7859" /> <!-- Vesper Slasher -->
+				<item id="13459" min="1" max="1" chance="3.817" /> <!-- Vesper Buster -->
+				<item id="13460" min="1" max="1" chance="3.8219" /> <!-- Vesper Shaper -->
+				<item id="13461" min="1" max="1" chance="3.825" /> <!-- Vesper Fighter -->
+				<item id="13462" min="1" max="1" chance="3.743" /> <!-- Vesper Stormer -->
+				<item id="13463" min="1" max="1" chance="3.798" /> <!-- Vesper Avenger -->
+				<item id="10552" min="1" max="1" chance="19.86" /> <!-- Forgotten Scroll: Fighter's Will -->
+				<item id="13464" min="1" max="1" chance="3.697" /> <!-- Vesper Retributer -->
+				<item id="10553" min="1" max="1" chance="19.38" /> <!-- Forgotten Scroll: Archer's Will -->
+				<item id="13465" min="1" max="1" chance="3.714" /> <!-- Vesper Caster -->
+				<item id="13466" min="1" max="1" chance="3.82" /> <!-- Vesper Singer -->
+				<item id="13467" min="1" max="1" chance="3.766" /> <!-- Vesper Thrower -->
+			</death>
+		</drop_lists>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
