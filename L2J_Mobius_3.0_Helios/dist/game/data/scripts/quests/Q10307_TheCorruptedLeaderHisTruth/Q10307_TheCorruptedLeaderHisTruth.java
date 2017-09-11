@@ -16,6 +16,8 @@
  */
 package quests.Q10307_TheCorruptedLeaderHisTruth;
 
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -23,19 +25,18 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import quests.Q10306_TheCorruptedLeader.Q10306_TheCorruptedLeader;
 
-//import quests.Q10306_TheCorruptedLeader.Q10306_TheCorruptedLeader;
-
 /**
  * The Corrupted Leader: His Truth (10307)
  * @URL https://l2wiki.com/The_Corrupted_Leader:_His_Truth
+ * @VIDEO https://www.youtube.com/watch?v=MI5Hyu7TtLw
  * @author Gigi
  */
 public final class Q10307_TheCorruptedLeaderHisTruth extends Quest
 {
-	// Npc's
+	// NPCs
+	private static final int NEOTI_MIMILEAD = 32895;
 	private static final int NAOMI_KASHERON = 32896;
-	private static final int MIMILEAD = 32895;
-	private static final int[] MOB =
+	private static final int[] BOSS =
 	{
 		25745,
 		25747
@@ -48,8 +49,8 @@ public final class Q10307_TheCorruptedLeaderHisTruth extends Quest
 	{
 		super(10307);
 		addStartNpc(NAOMI_KASHERON);
-		addTalkId(NAOMI_KASHERON, MIMILEAD);
-		addKillId(MOB);
+		addTalkId(NAOMI_KASHERON, NEOTI_MIMILEAD);
+		addKillId(BOSS);
 		addCondMinLevel(MIN_LEVEL, "32896-03.html");
 		addCondCompletedQuest(Q10306_TheCorruptedLeader.class.getSimpleName(), "32896-03.html");
 	}
@@ -65,23 +66,38 @@ public final class Q10307_TheCorruptedLeaderHisTruth extends Quest
 		}
 		switch (event)
 		{
-			case "32896-04.htm":
+			case "32896-07.html":
+			case "32895-02.html":
+			case "32895-03.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "32896-05.htm":
+			case "32896-04.htm":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32895-03.html":
+			case "32896-08.html":
 			{
-				giveItems(player, ENCHANT_ARMOR_R, 4);
-				addExpAndSp(player, 11779522, 2827);
-				qs.exitQuest(false, true);
+				qs.setCond(3, true);
 				htmltext = event;
+				break;
+			}
+			case "32895-04.html":
+			{
+				if (player.getLevel() >= MIN_LEVEL)
+				{
+					addExpAndSp(player, 11779522, 2827);
+					giveItems(player, ENCHANT_ARMOR_R, 5);
+					qs.exitQuest(QuestType.ONE_TIME, true);
+					htmltext = event;
+				}
+				else
+				{
+					htmltext = getNoQuestLevelRewardMsg(player);
+				}
 				break;
 			}
 		}
@@ -101,10 +117,17 @@ public final class Q10307_TheCorruptedLeaderHisTruth extends Quest
 				if (qs.isCreated())
 				{
 					htmltext = "32896-01.htm";
+					break;
 				}
 				else if (qs.isCond(1))
 				{
 					htmltext = "32896-05.htm";
+					break;
+				}
+				else if (qs.isCond(2))
+				{
+					htmltext = "32895-06.html";
+					break;
 				}
 				else if (qs.isCompleted())
 				{
@@ -112,14 +135,26 @@ public final class Q10307_TheCorruptedLeaderHisTruth extends Quest
 				}
 				break;
 			}
-			case MIMILEAD:
+			case NEOTI_MIMILEAD:
 			{
-				if (qs.isCond(1))
+				if (qs.isCond(3))
 				{
 					htmltext = "32895-01.html";
+					break;
 				}
 			}
 		}
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if ((qs != null) && qs.isCond(1) && CommonUtil.contains(BOSS, npc.getId()))
+		{
+			qs.setCond(2, true);
+		}
+		return super.onKill(npc, player, isSummon);
 	}
 }
