@@ -620,11 +620,12 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			}
 		}
 		
+		// DO NOT CORRECT SPAWN Z IN GENERAL - Prevent NPC spawns on top of buildings
 		// don't correct z of flying npc's
-		if (!mob.isFlying())
-		{
-			newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
-		}
+		// if (!npc.isFlying())
+		// {
+		// newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
+		// }
 		
 		mob.stopAllEffects();
 		
