@@ -37,8 +37,8 @@ public class Q00645_GhostsOfBatur extends Quest
 	private static final int CONTAMINATED_BATUR_WARRIOR = 22704;
 	private static final int CONTAMINATED_BATUR_COMMANDER = 22705;
 	// Items
-	private static final int CURSED_GRAVE_GOODS = 8089; // Old item
-	private static final int CURSED_BURIAL_ITEMS = 14861; // New item
+	private static final int CURSED_GRAVE_GOODS = 46433; // Old item
+	private static final int CURSED_BURIAL_ITEMS = 46433; // New item
 	// Misc
 	private static final int MIN_LEVEL = 80;
 	private static final int[] CHANCES =
