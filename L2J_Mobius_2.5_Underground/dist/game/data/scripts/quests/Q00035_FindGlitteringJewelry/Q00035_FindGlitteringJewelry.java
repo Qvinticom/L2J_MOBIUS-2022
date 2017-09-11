@@ -35,17 +35,17 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	// Monster
 	private static final int ALLIGATOR = 20135;
 	// Items
-	private static final int SILVER_NUGGET = 1873;
-	private static final int ORIHARUKON = 1893;
-	private static final int THONS = 4044;
+	private static final int ACCESSORY_GEM = 36556;
+	private static final int IRON_ORE = 36521;
+	private static final int ARMOR_FRAGMENT = 36551;
 	private static final int JEWEL_BOX = 7077;
 	private static final int ROUGH_JEWEL = 7162;
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	private static final int JEWEL_COUNT = 10;
-	private static final int ORIHARUKON_COUNT = 5;
-	private static final int NUGGET_COUNT = 500;
-	private static final int THONS_COUNT = 150;
+	private static final int IRON_ORE_COUNT = 95;
+	private static final int ACCESSORY_GEM_COUNT = 385;
+	private static final int ARMOR_FRAGMENT_COUNT = 405;
 	
 	public Q00035_FindGlitteringJewelry()
 	{
@@ -90,11 +90,11 @@ public class Q00035_FindGlitteringJewelry extends Quest
 			}
 			case "30091-11.html":
 			{
-				if ((getQuestItemsCount(player, ORIHARUKON) >= ORIHARUKON_COUNT) && (getQuestItemsCount(player, SILVER_NUGGET) >= NUGGET_COUNT) && (getQuestItemsCount(player, THONS) >= THONS_COUNT))
+				if ((getQuestItemsCount(player, IRON_ORE) >= IRON_ORE_COUNT) && (getQuestItemsCount(player, ACCESSORY_GEM) >= ACCESSORY_GEM_COUNT) && (getQuestItemsCount(player, ARMOR_FRAGMENT) >= ARMOR_FRAGMENT_COUNT))
 				{
-					takeItems(player, ORIHARUKON, ORIHARUKON_COUNT);
-					takeItems(player, SILVER_NUGGET, NUGGET_COUNT);
-					takeItems(player, THONS, THONS_COUNT);
+					takeItems(player, IRON_ORE, IRON_ORE_COUNT);
+					takeItems(player, ACCESSORY_GEM, ACCESSORY_GEM_COUNT);
+					takeItems(player, ARMOR_FRAGMENT, ARMOR_FRAGMENT_COUNT);
 					giveItems(player, JEWEL_BOX, 1);
 					qs.exitQuest(false, true);
 				}
@@ -165,7 +165,7 @@ public class Q00035_FindGlitteringJewelry extends Quest
 							}
 							case 4:
 							{
-								htmltext = ((getQuestItemsCount(player, ORIHARUKON) >= ORIHARUKON_COUNT) && (getQuestItemsCount(player, SILVER_NUGGET) >= NUGGET_COUNT) && (getQuestItemsCount(player, THONS) >= THONS_COUNT)) ? "30091-09.html" : "30091-10.html";
+								htmltext = ((getQuestItemsCount(player, IRON_ORE) >= IRON_ORE_COUNT) && (getQuestItemsCount(player, ACCESSORY_GEM) >= ACCESSORY_GEM_COUNT) && (getQuestItemsCount(player, ARMOR_FRAGMENT) >= ARMOR_FRAGMENT_COUNT)) ? "30091-09.html" : "30091-10.html";
 								break;
 							}
 						}
