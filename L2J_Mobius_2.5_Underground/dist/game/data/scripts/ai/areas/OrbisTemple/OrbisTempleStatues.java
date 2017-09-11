@@ -38,6 +38,7 @@ public final class OrbisTempleStatues extends AbstractNpcAI
 	private static final int THROWER_2 = 22918;
 	private static final int THROWER_3 = 22919;
 	private static final int ANCIENT_HERO = 22925;
+	private static final int CURATOR = 22923;
 	private static final int CHIEF_CURATOR = 22927;
 	// Items
 	private static final int SWORD = 15280;
@@ -45,8 +46,8 @@ public final class OrbisTempleStatues extends AbstractNpcAI
 	
 	public OrbisTempleStatues()
 	{
-		addSpawnId(VICTIM_1, VICTIM_2, VICTIM_3, GUARD_1, GUARD_2, GUARD_3, THROWER_1, THROWER_2, THROWER_3, ANCIENT_HERO, CHIEF_CURATOR);
-		addAttackId(VICTIM_1, VICTIM_2, VICTIM_3, GUARD_1, GUARD_2, GUARD_3, THROWER_1, THROWER_2, THROWER_3);
+		addSpawnId(VICTIM_1, VICTIM_2, VICTIM_3, GUARD_1, GUARD_2, GUARD_3, THROWER_1, THROWER_2, THROWER_3, CURATOR, ANCIENT_HERO, CHIEF_CURATOR);
+		addAttackId(VICTIM_1, VICTIM_2, VICTIM_3, GUARD_1, GUARD_2, GUARD_3, THROWER_1, THROWER_2, THROWER_3, CURATOR);
 	}
 	
 	@Override
@@ -60,6 +61,7 @@ public final class OrbisTempleStatues extends AbstractNpcAI
 			case GUARD_1:
 			case GUARD_2:
 			case GUARD_3:
+			case CURATOR:
 			{
 				if (npc.isImmobilized())
 				{
