@@ -40,16 +40,16 @@ public class Q00034_InSearchOfCloth extends Quest
 		23308, // Explosive Spider
 	};
 	// Items
-	private static final int SUEDE = 1866;
-	private static final int THREAD = 1868;
+	private static final int ARMOR_FRAGMENT = 36551;
+	private static final int ACCESSORY_GEM = 36556;
 	private static final int MYSTERIOUS_CLOTH = 7076;
 	private static final int SKEIN_OF_YARN = 7161;
 	private static final int SPINNERET = 7528;
 	// Misc
 	private static final int MIN_LEVEL = 60;
 	private static final int SPINNERET_COUNT = 10;
-	private static final int SUEDE_COUNT = 3000;
-	private static final int THREAD_COUNT = 5000;
+	private static final int ARMOR_FRAGMENT_COUNT = 420;
+	private static final int ACCESSORY_GEM_COUNT = 750;
 	
 	public Q00034_InSearchOfCloth()
 	{
@@ -105,11 +105,11 @@ public class Q00034_InSearchOfCloth extends Quest
 			}
 			case "30088-10.html":
 			{
-				if ((getQuestItemsCount(player, SUEDE) >= SUEDE_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT) && hasQuestItems(player, SKEIN_OF_YARN))
+				if ((getQuestItemsCount(player, ARMOR_FRAGMENT) >= ARMOR_FRAGMENT_COUNT) && (getQuestItemsCount(player, ACCESSORY_GEM) >= ACCESSORY_GEM_COUNT) && hasQuestItems(player, SKEIN_OF_YARN))
 				{
 					takeItems(player, SKEIN_OF_YARN, 1);
-					takeItems(player, SUEDE, SUEDE_COUNT);
-					takeItems(player, THREAD, THREAD_COUNT);
+					takeItems(player, ARMOR_FRAGMENT, ARMOR_FRAGMENT_COUNT);
+					takeItems(player, ACCESSORY_GEM, ACCESSORY_GEM_COUNT);
 					giveItems(player, MYSTERIOUS_CLOTH, 1);
 					qs.exitQuest(false, true);
 				}
@@ -186,7 +186,7 @@ public class Q00034_InSearchOfCloth extends Quest
 							}
 							case 6:
 							{
-								htmltext = ((getQuestItemsCount(player, SUEDE) >= SUEDE_COUNT) && (getQuestItemsCount(player, THREAD) >= THREAD_COUNT)) ? "30088-08.html" : "30088-09.html";
+								htmltext = ((getQuestItemsCount(player, ARMOR_FRAGMENT) >= ARMOR_FRAGMENT_COUNT) && (getQuestItemsCount(player, ACCESSORY_GEM) >= ACCESSORY_GEM_COUNT)) ? "30088-08.html" : "30088-09.html";
 								break;
 							}
 						}
