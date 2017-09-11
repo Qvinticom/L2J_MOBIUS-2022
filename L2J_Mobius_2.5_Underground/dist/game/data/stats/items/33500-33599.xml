@@ -42,14 +42,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="CHANGE_ATTR" />
-		<set name="handler" val="ItemSkills" />
+		<set name="handler" val="ChangeAttributeCrystal" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="12881" level="1" /> <!-- Change Attribute -->
-		</skills>
 	</item>
 	<item id="33503" name="Hero's Blessed Buff Scroll" type="EtcItem">
 		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate + 20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->

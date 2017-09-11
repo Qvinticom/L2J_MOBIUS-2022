@@ -186,6 +186,7 @@ import handlers.itemhandlers.BlessedSpiritShot;
 import handlers.itemhandlers.Book;
 import handlers.itemhandlers.Bypass;
 import handlers.itemhandlers.Calculator;
+import handlers.itemhandlers.ChangeAttributeCrystal;
 import handlers.itemhandlers.CharmOfCourage;
 import handlers.itemhandlers.Elixir;
 import handlers.itemhandlers.EnchantAttribute;
@@ -525,6 +526,7 @@ public class MasterHandler
 			Book.class,
 			Bypass.class,
 			Calculator.class,
+			ChangeAttributeCrystal.class,
 			CharmOfCourage.class,
 			Elixir.class,
 			EnchantAttribute.class,
