@@ -96,7 +96,7 @@ public class Q00459_TheVillainOfTheUndergroundMineTeredor extends Quest
 				{
 					case 1:
 					{
-						htmltext = "30535-05.html";
+						htmltext = "30535-05.htm";
 						break;
 					}
 					case 2:
