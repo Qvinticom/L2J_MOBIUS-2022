@@ -115,7 +115,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 				{
 					final String fileName = template.getSpawnTemplate().getFile().getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/');
 					html.replace("%spawnfile%", fileName);
-					html.replace("%spawnname%", template.getSpawnTemplate().getName());
+					html.replace("%spawnname%", String.valueOf(template.getSpawnTemplate().getName())); // used String.valueOf because it can be null
 					html.replace("%spawngroup%", String.valueOf(template.getGroup().getName())); // used String.valueOf because it can be null
 					if (template.getSpawnTemplate().getAI() != null)
 					{
