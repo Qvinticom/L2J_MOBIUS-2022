@@ -20,6 +20,5 @@ What is done
 
 TODO
 -Modify all skill levels/sublevels based on client
--Trasken
 -Kamaloka
 -Provisional Clan Halls

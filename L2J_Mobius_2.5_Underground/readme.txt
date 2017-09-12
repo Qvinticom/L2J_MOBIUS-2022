@@ -19,7 +19,6 @@ What is done
 -Addition of many retail AIs
 
 TODO list
--Trasken
 -Underground five man dungeons
 -Kamaloka
 -Provisional Clan Halls
