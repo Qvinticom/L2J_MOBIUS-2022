@@ -40,6 +40,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<effects>
+			<effect name="MaxMp">
+				<amount>216</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
 			</effect>
@@ -1380,6 +1384,10 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<effects>
+			<effect name="MaxMp">
+				<amount>216</amount>
+				<mode>DIFF</mode>
+			</effect>
 			<effect name="TalismanSlot">
 				<slots>5</slots>
 			</effect>
