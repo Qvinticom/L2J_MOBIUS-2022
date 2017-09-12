@@ -36,7 +36,7 @@ public final class EarthWyrmCave extends AbstractInstance
 {
 	// NPCs
 	private static final int DAICHIR = 30537;
-	private static final int TRASKEN = 19159;
+	private static final int TRASKEN = 29197;
 	// Location
 	private static final Location TRASKEN_SPAWN_LOC = new Location(82383, -183527, -9892, 26533);
 	// Door
