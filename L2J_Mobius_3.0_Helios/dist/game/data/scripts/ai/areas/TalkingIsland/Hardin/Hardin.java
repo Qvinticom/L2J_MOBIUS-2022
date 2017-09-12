@@ -16,22 +16,41 @@
  */
 package ai.areas.TalkingIsland.Hardin;
 
+import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.Race;
+import com.l2jmobius.gameserver.enums.SubclassInfoType;
+import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
+import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import ai.AbstractNpcAI;
 import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 
 /**
- * Hardin AI.
- * @author malyelfik
+ * Hardin (Agent of Chaos) AI.
+ * @author Mobius
  */
 public final class Hardin extends AbstractNpcAI
 {
 	// NPC
 	private static final int HARDIN = 33870;
+	// Items
+	private static final int CHAOS_ESSENCE = 36949;
+	private static final int CHAOS_ESSENCE_DUAL_CLASS = 37494;
+	private static final int CHAOS_POMANDER = 37374;
+	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
+	// Enable changing to other non related classes as well.
+	private static final boolean ENABLE_ALL_RACES = false; // Will change player race as well!
+	private static final boolean ENABLE_ALL_SPECS = false; // Will disable mage/fighter check!
+	private static final boolean ENABLE_DUALCLASS_CHECKS = true; // Will enable above checks for dual class.
 	
 	private Hardin()
 	{
@@ -40,15 +59,125 @@ public final class Hardin extends AbstractNpcAI
 	}
 	
 	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final String htmltext = getHtmlMessage(player);
+		if (htmltext != null)
+		{
+			return htmltext;
+		}
+		
+		if (event.equals("list"))
+		{
+			StringBuilder classes = new StringBuilder();
+			for (ClassId c : ClassId.values())
+			{
+				if ((c.level() != 4) || (c.getRace() == Race.ERTHEIA) || (c == player.getClassId()))
+				{
+					continue;
+				}
+				if (!player.isDualClassActive() || (player.isDualClassActive() && ENABLE_DUALCLASS_CHECKS))
+				{
+					if (!ENABLE_ALL_RACES)
+					{
+						if (c.getRace() != player.getClassId().getRace())
+						{
+							continue;
+						}
+					}
+					if (!ENABLE_ALL_SPECS)
+					{
+						if (c.isMage() != player.isMageClass())
+						{
+							continue;
+						}
+					}
+				}
+				classes.append("<button value=\"");
+				classes.append(ClassListData.getInstance().getClass(c.ordinal()).getClassName());
+				classes.append("\" action=\"bypass -h Quest Hardin try_");
+				classes.append(String.valueOf(c.getId()));
+				classes.append("\" width=\"200\" height=\"31\" back=\"L2UI_CT1.HtmlWnd_DF_Awake_Down\" fore=\"L2UI_CT1.HtmlWnd_DF_Awake\"><br1>");
+			}
+			classes.append("<br><br><br><br><br>"); // prettify
+			final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
+			html.setHtml(getHtm(player.getHtmlPrefix(), "33870-reawake_list.html"));
+			html.replace("%CLASS_LIST%", classes.toString());
+			player.sendPacket(html);
+		}
+		else if (event.contains("try"))
+		{
+			// take item
+			takeItems(player, player.isDualClassActive() ? CHAOS_ESSENCE_DUAL_CLASS : CHAOS_ESSENCE, 1);
+			// give item
+			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 1);
+			// change class
+			player.setClassId(ClassId.getClassId(Integer.parseInt(event.replace("try_", ""))).getId());
+			if (player.isDualClassActive())
+			{
+				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
+			}
+			else
+			{
+				player.setBaseClass(player.getActiveClass());
+			}
+			// adjustments
+			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
+			for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
+			{
+				player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+			}
+			player.store(false);
+			player.broadcastUserInfo();
+			player.sendSkillList();
+			player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
+			player.sendPacket(new ExUserInfoInvenWeight(player));
+		}
+		return null;
+	}
+	
+	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String htmltext = "33870-01.html"; // Anybody except Ertheia race.
+		final String htmltext = getHtmlMessage(player);
+		return htmltext == null ? "33870-01.html" : htmltext;
+	}
+	
+	private String getHtmlMessage(L2PcInstance player)
+	{
 		if (player.getRace().equals(Race.ERTHEIA))
 		{
-			final QuestState st = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
-			htmltext = ((st != null) && (st.getCond() >= 7) && (st.getCond() <= 17)) ? "33870-03.html" : "33870-02.html";
+			final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
+			return ((qs != null) && (qs.getCond() >= 7) && (qs.getCond() <= 17)) ? "33870-03.html" : "33870-02.html";
 		}
-		return htmltext;
+		if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
+		{
+			return "33870-no.html";
+		}
+		if (player.isDualClassActive()) // dual class
+		{
+			if (!hasQuestItems(player, CHAOS_ESSENCE_DUAL_CLASS))
+			{
+				return "33870-no_already_reawakened.html";
+			}
+		}
+		else if (player.isSubClassActive()) // subclass
+		{
+			return "33870-no.html";
+		}
+		else if (!hasQuestItems(player, CHAOS_ESSENCE)) // main class
+		{
+			return "33870-no_already_reawakened.html";
+		}
+		if (player.hasServitors())
+		{
+			return "33870-no_summon.html";
+		}
+		if (player.isInOlympiadMode())
+		{
+			return "33870-no.html";
+		}
+		return null;
 	}
 	
 	public static void main(String[] args)
