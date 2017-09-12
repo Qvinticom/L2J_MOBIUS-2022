@@ -78,19 +78,13 @@ public final class Hardin extends AbstractNpcAI
 				}
 				if (!player.isDualClassActive() || (player.isDualClassActive() && ENABLE_DUALCLASS_CHECKS))
 				{
-					if (!ENABLE_ALL_RACES)
+					if (!ENABLE_ALL_RACES && (c.getRace() != player.getClassId().getRace()))
 					{
-						if (c.getRace() != player.getClassId().getRace())
-						{
-							continue;
-						}
+						continue;
 					}
-					if (!ENABLE_ALL_SPECS)
+					if (!ENABLE_ALL_SPECS && (c.isMage() != player.isMageClass()))
 					{
-						if (c.isMage() != player.isMageClass())
-						{
-							continue;
-						}
+						continue;
 					}
 				}
 				classes.append("<button value=\"");
