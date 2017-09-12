@@ -16,6 +16,7 @@
  */
 package ai.areas.TalkingIsland.Hardin;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
@@ -47,11 +48,6 @@ public final class Hardin extends AbstractNpcAI
 	private static final int CHAOS_ESSENCE_DUAL_CLASS = 37494;
 	private static final int CHAOS_POMANDER = 37374;
 	private static final int CHAOS_POMANDER_DUAL_CLASS = 37375;
-	// Enable changing to other non related classes as well.
-	private static final boolean ENABLE_ALL_RACES = false; // Will change player race as well!
-	private static final boolean ENABLE_ALL_SPECS = false; // Will disable mage/fighter check!
-	private static final boolean ENABLE_DUALCLASS_CHECKS = true; // Will enable above checks for dual class.
-	private static final boolean ENABLE_ERTHEIAS = false; // Enable Hardin for Ertheias as well.
 	
 	private Hardin()
 	{
@@ -59,7 +55,6 @@ public final class Hardin extends AbstractNpcAI
 		addFirstTalkId(HARDIN);
 	}
 	
-	@SuppressWarnings("unused")
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -74,17 +69,20 @@ public final class Hardin extends AbstractNpcAI
 			StringBuilder classes = new StringBuilder();
 			for (ClassId c : ClassId.values())
 			{
-				if ((((c.level() != 4) && (c.getRace() != Race.ERTHEIA)) || (ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA) && (c.level() != 3))) || (!ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA)) || (c == player.getClassId()))
+				if ((((c.level() != 4) && (c.getRace() != Race.ERTHEIA)) //
+					|| (Config.HARDIN_ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA) && (c.level() != 3))) //
+					|| (!Config.HARDIN_ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA)) //
+					|| (c == player.getClassId()))
 				{
 					continue;
 				}
-				if (!player.isDualClassActive() || (player.isDualClassActive() && ENABLE_DUALCLASS_CHECKS))
+				if (!player.isDualClassActive() || (player.isDualClassActive() && Config.HARDIN_ENABLE_DUALCLASS_CHECKS))
 				{
-					if (!ENABLE_ALL_RACES && (c.getRace() != player.getClassId().getRace()))
+					if (!Config.HARDIN_ENABLE_ALL_RACES && (c.getRace() != player.getClassId().getRace()))
 					{
 						continue;
 					}
-					if (!ENABLE_ALL_SPECS && (c.isMage() != player.isMageClass()))
+					if (!Config.HARDIN_ENABLE_ALL_SPECS && (c.isMage() != player.isMageClass()))
 					{
 						continue;
 					}
@@ -103,17 +101,17 @@ public final class Hardin extends AbstractNpcAI
 		}
 		else if (event.contains("try"))
 		{
-			// take item
+			// Take item
 			takeItems(player, player.isDualClassActive() ? CHAOS_ESSENCE_DUAL_CLASS : CHAOS_ESSENCE, 1);
-			// give item
+			// Give item
 			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 1);
-			// ertheias can only be female
+			// Ertheias can only be female
 			final ClassId newClass = ClassId.getClassId(Integer.parseInt(event.replace("try_", "")));
 			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().getSex())
 			{
 				player.getAppearance().setSex(true);
 			}
-			// change class
+			// Change class
 			player.setClassId(newClass.getId());
 			if (player.isDualClassActive())
 			{
@@ -123,7 +121,7 @@ public final class Hardin extends AbstractNpcAI
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			// adjustments
+			// Adjustments
 			SkillTreesData.getInstance().cleanSkillUponAwakening(player);
 			for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
 			{
@@ -154,7 +152,7 @@ public final class Hardin extends AbstractNpcAI
 			{
 				return "33870-03.html";
 			}
-			if (!ENABLE_ERTHEIAS)
+			if (!Config.HARDIN_ENABLE_ERTHEIAS)
 			{
 				return "33870-02.html";
 			}

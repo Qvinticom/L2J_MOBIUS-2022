@@ -773,6 +773,14 @@ public final class Config
 	public static boolean MMO_TCP_NODELAY;
 	
 	// --------------------------------------------------
+	// Hardin (Agent of Chaos)
+	// --------------------------------------------------
+	public static boolean HARDIN_ENABLE_ALL_RACES;
+	public static boolean HARDIN_ENABLE_ALL_SPECS;
+	public static boolean HARDIN_ENABLE_DUALCLASS_CHECKS;
+	public static boolean HARDIN_ENABLE_ERTHEIAS;
+	
+	// --------------------------------------------------
 	// Vitality Settings
 	// --------------------------------------------------
 	public static boolean ENABLE_VITALITY;
@@ -1451,6 +1459,10 @@ public final class Config
 			FEE_DELETE_SUBCLASS_SKILLS = Character.getInt("FeeDeleteSubClassSkills", 10000000);
 			FEE_DELETE_DUALCLASS_SKILLS = Character.getInt("FeeDeleteDualClassSkills", 20000000);
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
+			HARDIN_ENABLE_ALL_RACES = Character.getBoolean("HardinEnableAllRaces", false);
+			HARDIN_ENABLE_ALL_SPECS = Character.getBoolean("HardinEnableAllSpecs", false);
+			HARDIN_ENABLE_DUALCLASS_CHECKS = Character.getBoolean("HardinEnableDualClassChecks", true);
+			HARDIN_ENABLE_ERTHEIAS = Character.getBoolean("HardinEnableErtheias", false);
 			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
