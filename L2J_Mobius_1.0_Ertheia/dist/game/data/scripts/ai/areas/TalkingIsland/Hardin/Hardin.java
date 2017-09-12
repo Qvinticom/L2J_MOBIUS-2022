@@ -51,6 +51,7 @@ public final class Hardin extends AbstractNpcAI
 	private static final boolean ENABLE_ALL_RACES = false; // Will change player race as well!
 	private static final boolean ENABLE_ALL_SPECS = false; // Will disable mage/fighter check!
 	private static final boolean ENABLE_DUALCLASS_CHECKS = true; // Will enable above checks for dual class.
+	private static final boolean ENABLE_ERTHEIAS = false; // Enable Hardin for Ertheias as well.
 	
 	private Hardin()
 	{
@@ -58,6 +59,7 @@ public final class Hardin extends AbstractNpcAI
 		addFirstTalkId(HARDIN);
 	}
 	
+	@SuppressWarnings("unused")
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
@@ -72,7 +74,7 @@ public final class Hardin extends AbstractNpcAI
 			StringBuilder classes = new StringBuilder();
 			for (ClassId c : ClassId.values())
 			{
-				if ((c.level() != 4) || (c.getRace() == Race.ERTHEIA) || (c == player.getClassId()))
+				if ((((c.level() != 4) && (c.getRace() != Race.ERTHEIA)) || (ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA) && (c.level() != 3))) || (!ENABLE_ERTHEIAS && (c.getRace() == Race.ERTHEIA)) || (c == player.getClassId()))
 				{
 					continue;
 				}
@@ -105,8 +107,14 @@ public final class Hardin extends AbstractNpcAI
 			takeItems(player, player.isDualClassActive() ? CHAOS_ESSENCE_DUAL_CLASS : CHAOS_ESSENCE, 1);
 			// give item
 			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 1);
+			// ertheias can only be female
+			final ClassId newClass = ClassId.getClassId(Integer.parseInt(event.replace("try_", "")));
+			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().getSex())
+			{
+				player.getAppearance().setSex(true);
+			}
 			// change class
-			player.setClassId(ClassId.getClassId(Integer.parseInt(event.replace("try_", ""))).getId());
+			player.setClassId(newClass.getId());
 			if (player.isDualClassActive())
 			{
 				player.getSubClasses().get(player.getClassIndex()).setClassId(player.getActiveClass());
@@ -142,7 +150,14 @@ public final class Hardin extends AbstractNpcAI
 		if (player.getRace().equals(Race.ERTHEIA))
 		{
 			final QuestState qs = player.getQuestState(Q10472_WindsOfFateEncroachingShadows.class.getSimpleName());
-			return ((qs != null) && (qs.getCond() >= 7) && (qs.getCond() <= 17)) ? "33870-03.html" : "33870-02.html";
+			if ((qs != null) && (qs.getCond() >= 7) && (qs.getCond() <= 17))
+			{
+				return "33870-03.html";
+			}
+			if (!ENABLE_ERTHEIAS)
+			{
+				return "33870-02.html";
+			}
 		}
 		if (!player.isInCategory(CategoryType.AWAKEN_GROUP))
 		{
