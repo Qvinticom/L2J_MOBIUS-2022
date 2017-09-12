@@ -61,7 +61,16 @@ public final class EarthWyrmCave extends AbstractInstance
 			case "enterInstance":
 			{
 				enterInstance(player, npc, TEMPLATE_ID);
-				startQuestTimer("OPEN_DOOR", OPEN_DOOR * 60 * 1000, null, player, false);
+				startQuestTimer("OPEN_DOOR", OPEN_DOOR * 60 * 1000, null, player);
+				break;
+			}
+			case "exitInstance":
+			{
+				if (player.getInstanceId() == 0)
+				{
+					return null;
+				}
+				player.getInstanceWorld().ejectPlayer(player);
 				break;
 			}
 			case "OPEN_DOOR":
@@ -73,8 +82,8 @@ public final class EarthWyrmCave extends AbstractInstance
 				final Instance world = player.getInstanceWorld();
 				world.openCloseDoor(DOOR_ID, true);
 				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.ELIMINATE_THOSE_WHO_PROTECT_THE_HEART_OF_THE_EARTH_WYRM, ExShowScreenMessage.TOP_CENTER, 7000));
-				startQuestTimer("CLOSE_DOOR", 60000, null, player, false); // close door after a minute
-				startQuestTimer("WAIT_TO_CLEAR_MONSTERS", 5000, null, player, false);
+				startQuestTimer("CLOSE_DOOR", 60000, null, player); // close door after a minute
+				startQuestTimer("WAIT_TO_CLEAR_MONSTERS", 5000, null, player);
 				break;
 			}
 			case "CLOSE_DOOR":
@@ -97,12 +106,11 @@ public final class EarthWyrmCave extends AbstractInstance
 				if (world.getAliveNpcs(L2MonsterInstance.class).isEmpty())
 				{
 					addSpawn(TRASKEN, TRASKEN_SPAWN_LOC, false, 0, false, player.getInstanceId());
-					
 					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.FIND_THE_EARTH_WYRM_S_WEAKNESS_TO_DEFEAT_IT, ExShowScreenMessage.TOP_CENTER, 5000));
 				}
 				else
 				{
-					startQuestTimer("WAIT_TO_CLEAR_MONSTERS", 5000, null, player, false);
+					startQuestTimer("WAIT_TO_CLEAR_MONSTERS", 5000, null, player);
 				}
 				return null;
 			}
