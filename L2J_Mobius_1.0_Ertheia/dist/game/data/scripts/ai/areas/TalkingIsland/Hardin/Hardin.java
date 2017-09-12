@@ -135,7 +135,7 @@ public final class Hardin extends AbstractNpcAI
 			player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.CLASS_CHANGED));
 			player.sendPacket(new ExUserInfoInvenWeight(player));
 		}
-		return null;
+		return htmltext;
 	}
 	
 	@Override
