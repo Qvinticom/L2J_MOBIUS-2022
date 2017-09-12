@@ -36,8 +36,8 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2GuardInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -119,7 +119,7 @@ public class Lindvior extends AbstractNpcAI
 	protected L2Npc _vortex = null;
 	protected L2Npc _lionel = null;
 	protected List<L2Npc> _guardSpawn = new ArrayList<>();
-	protected List<L2GuardInstance> _generatorSpawn = new ArrayList<>();
+	protected List<FriendlyNpcInstance> _generatorSpawn = new ArrayList<>();
 	protected List<L2Npc> _monsterSpawn = new ArrayList<>();
 	protected List<L2Npc> _LinDracoSpawn = new ArrayList<>();
 	protected int _activeMask = 0;
@@ -492,7 +492,7 @@ public class Lindvior extends AbstractNpcAI
 			case NPC_ATTACKER_GENERATORS:
 			case NPC_ATTACKER_GENERATORS_1:
 			{
-				L2World.getInstance().forEachVisibleObjectInRange(npc, L2GuardInstance.class, 800, cha ->
+				L2World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 800, cha ->
 				{
 					
 					if (cha.getId() == GENERATOR_GUARD)
@@ -517,7 +517,7 @@ public class Lindvior extends AbstractNpcAI
 			case GENERATOR_GUARD:
 			{
 				getTimers().addTimer("NPC_SHOUT", (10 + getRandom(5)) * 1000, npc, null);
-				((L2GuardInstance) npc).setIsInvul(true);
+				((FriendlyNpcInstance) npc).setIsInvul(true);
 				break;
 			}
 			case NPC_GENERATOR:
@@ -551,10 +551,10 @@ public class Lindvior extends AbstractNpcAI
 			{
 				_zoneLair.broadcastPacket(new OnEventTrigger(FIRST_STAGE_EVENT_TRIGGER, true));
 				int i = 0;
-				L2GuardInstance guard;
+				FriendlyNpcInstance guard;
 				for (Location loc : CONTROL_GENERATOR_SPAWNS)
 				{
-					guard = (L2GuardInstance) addSpawn(NPC_GENERATOR, loc, true);
+					guard = (FriendlyNpcInstance) addSpawn(NPC_GENERATOR, loc, true);
 					guard.setDisplayEffect(0x01);
 					guard.setScriptValue(i++);
 					_generatorSpawn.add(guard);
@@ -716,7 +716,7 @@ public class Lindvior extends AbstractNpcAI
 				}
 				break;
 			}
-			case "show_shield_animation": // zone brodcat shield event triger
+			case "show_shield_animation": // zone broadcast shield event triger
 			{
 				_zoneLair.getPlayersInside().forEach(p ->
 				{
@@ -728,7 +728,7 @@ public class Lindvior extends AbstractNpcAI
 				});
 				break;
 			}
-			case "show_movie": // zone brodcat Lindvior scene movie
+			case "show_movie": // zone broadcast Lindvior scene movie
 			{
 				_zoneLair.getPlayersInside().forEach(p ->
 				{
@@ -786,7 +786,7 @@ public class Lindvior extends AbstractNpcAI
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					L2World.getInstance().forEachVisibleObjectInRange(npc, L2GuardInstance.class, 3000, generator ->
+					L2World.getInstance().forEachVisibleObjectInRange(npc, FriendlyNpcInstance.class, 3000, generator ->
 					{
 						if (generator.getId() == NPC_GENERATOR)
 						{
