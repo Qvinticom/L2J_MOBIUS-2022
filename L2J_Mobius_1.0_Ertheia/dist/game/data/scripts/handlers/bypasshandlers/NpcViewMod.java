@@ -527,7 +527,7 @@ public class NpcViewMod implements IBypassHandler
 				}
 			}
 			
-			if ((rightSb.length() + leftSb.length()) < 13000) // limit of 32766
+			if ((sb.length() + rightSb.length() + leftSb.length()) < 16000) // limit of 32766?
 			{
 				if (leftHeight >= (rightHeight + height))
 				{
