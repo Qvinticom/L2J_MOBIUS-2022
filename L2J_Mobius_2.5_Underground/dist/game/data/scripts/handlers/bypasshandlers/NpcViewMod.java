@@ -403,6 +403,7 @@ public class NpcViewMod implements IBypassHandler
 		int rightHeight = 0;
 		final StringBuilder leftSb = new StringBuilder();
 		final StringBuilder rightSb = new StringBuilder();
+		String limitReachedMsg = "";
 		for (int i = start; i < end; i++)
 		{
 			final StringBuilder sb = new StringBuilder();
@@ -526,15 +527,22 @@ public class NpcViewMod implements IBypassHandler
 				}
 			}
 			
-			if (leftHeight >= (rightHeight + height))
+			if ((rightSb.length() + leftSb.length()) < 13000) // limit of 32766
 			{
-				rightSb.append(sb);
-				rightHeight += height;
+				if (leftHeight >= (rightHeight + height))
+				{
+					rightSb.append(sb);
+					rightHeight += height;
+				}
+				else
+				{
+					leftSb.append(sb);
+					leftHeight += height;
+				}
 			}
 			else
 			{
-				leftSb.append(sb);
-				leftHeight += height;
+				limitReachedMsg = "<br><center>Too many drops! Could not display them all!</center>";
 			}
 		}
 		
@@ -556,7 +564,7 @@ public class NpcViewMod implements IBypassHandler
 		html = html.replaceAll("%name%", npc.getName());
 		html = html.replaceAll("%dropListButtons%", getDropListButtons(npc));
 		html = html.replaceAll("%pages%", pagesSb.toString());
-		html = html.replaceAll("%items%", bodySb.toString());
+		html = html.replaceAll("%items%", bodySb.toString() + limitReachedMsg);
 		Util.sendCBHtml(activeChar, html);
 	}
 }
