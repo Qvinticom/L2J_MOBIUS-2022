@@ -6,16 +6,20 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="weight" val="220" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player class_id_restriction="188" />
+		</cond>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
@@ -27,16 +31,20 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="crystal_type" val="R" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_freightable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="weight" val="220" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="1518">
+			<player class_id_restriction="189" />
+		</cond>
 		<stats>
 			<stat type="pDef">50</stat>
 			<stat type="mDef">40</stat>
