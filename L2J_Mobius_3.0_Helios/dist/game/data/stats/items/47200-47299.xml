@@ -136,6 +136,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="46311000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16747" level="1" /> <!-- Ring of the Beginning -->
+		</skills>
 		<stats>
 			<stat type="mDef">98</stat>
 			<stat type="maxMp">42</stat>
@@ -152,9 +155,11 @@
 		<set name="weight" val="150" />
 		<set name="price" val="151920000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16748" level="1" /> <!-- Ring of Authority -->
+		</skills>
 		<stats>
 			<stat type="mDef">101</stat>
-			<stat type="maxMp">43</stat>
 		</stats>
 	</item>
 	<item id="47216" name="Ruler's Ring of Authority" type="Armor">
@@ -168,9 +173,11 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16748" level="2" /> <!-- Ring of Authority -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
-			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
 	<item id="47217" name="Ring of the Truth" type="Armor">
@@ -184,9 +191,11 @@
 		<set name="weight" val="150" />
 		<set name="price" val="151920000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16749" level="1" /> <!-- Ring of the Truth -->
+		</skills>
 		<stats>
 			<stat type="mDef">101</stat>
-			<stat type="maxMp">43</stat>
 		</stats>
 	</item>
 	<item id="47218" name="Ring of the Truth-Seeker" type="Armor">
@@ -200,9 +209,11 @@
 		<set name="weight" val="150" />
 		<set name="price" val="192622000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16749" level="2" /> <!-- Ring of the Truth -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
-			<stat type="maxMp">46</stat>
 		</stats>
 	</item>
 	<item id="47219" name="Source of the Emperor" type="EtcItem">
@@ -466,6 +477,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="889600" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16750" level="1" /> <!-- Ramonas Fansy Earrings -->
+		</skills>
 		<stats>
 			<stat type="mDef">147</stat>
 			<stat type="maxMp">64</stat>
@@ -482,6 +496,9 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1112000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="16751" level="1" /> <!-- Helios Majestic Earrings -->
+		</skills>
 		<stats>
 			<stat type="mDef">147</stat>
 			<stat type="maxMp">64</stat>

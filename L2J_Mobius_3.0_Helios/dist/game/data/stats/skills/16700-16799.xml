@@ -238,29 +238,264 @@
 	<targetType>SELF</targetType>
 	</skill>
 	<skill id="16747" toLevel="1" name="Ring of the Beginning">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
+	<icon>icon.skillboss</icon>
+	<operateType>P</operateType>
+	<targetType>SELF</targetType>
+		<effects>
+			<effect name="AttackTrait">
+				<SHOCK>15</SHOCK>
+				<PARALYZE>15</PARALYZE>
+				<KNOCKBACK>15</KNOCKBACK>				
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>15</SHOCK>
+				<PARALYZE>15</PARALYZE>
+				<KNOCKBACK>15</KNOCKBACK>				
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16748" toLevel="2" name="Ruler's Ring of Authority">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="16748" toLevel="2" name="Ring of Authority">
+	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
+	<icon>icon.skillboss</icon>
+	<operateType>P</operateType>
+	<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">43</value>
+					<value level="2">46</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+			<SHOCK>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</SHOCK>
+			<PARALYZE>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</PARALYZE>
+			<KNOCKBACK>			
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</KNOCKBACK>
+			</effect>
+			<effect name="DefenceTrait">
+			<SHOCK>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</SHOCK>
+			<PARALYZE>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</PARALYZE>
+			<KNOCKBACK>			
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</KNOCKBACK>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16749" toLevel="2" name="Ring of the Truth-Seeker">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="16749" toLevel="2" name="Ring of the Truth">
+	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
+	<icon>icon.skillboss</icon>
+	<operateType>P</operateType>
+	<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">43</value>
+					<value level="2">46</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+			<SHOCK>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</SHOCK>
+			<PARALYZE>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</PARALYZE>
+			<KNOCKBACK>			
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</KNOCKBACK>
+			</effect>
+			<effect name="DefenceTrait">
+			<SHOCK>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</SHOCK>
+			<PARALYZE>
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</PARALYZE>
+			<KNOCKBACK>			
+				<value level="1">25</value>
+				<value level="2">30</value>
+			</KNOCKBACK>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">2</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16750" toLevel="1" name="Ramona's Fancy Earrings">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="16750" toLevel="1" name="Ramonas Fansy Earrings">
+	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
+	<icon>icon.skillboss</icon>
+	<operateType>P</operateType>
+	<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>80</chance>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="16751" toLevel="1" name="Helios' Majestic Earrings">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+	<skill id="16751" toLevel="1" name="Helios Majestic Earrings">
+	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
+	<icon>icon.skillboss</icon>
+	<operateType>P</operateType>
+	<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>80</chance>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16752" toLevel="1" name="Harnak's Deformed Necklace">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
