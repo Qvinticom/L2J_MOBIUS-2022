@@ -1991,7 +1991,10 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<!-- TODO mul stat="magicalSkillPower" val="1.27" / -->
+			<effect name="MagicalSkillPower">
+				<amount>27</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalSkillPower">
 				<amount>27</amount>
 				<mode>PER</mode>

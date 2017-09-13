@@ -183,6 +183,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("MagicalDamOverTime", MagicalDamOverTime::new);
 		EffectHandler.getInstance().registerHandler("MagicalDefence", MagicalDefence::new);
 		EffectHandler.getInstance().registerHandler("MagicalEvasion", MagicalEvasion::new);
+		EffectHandler.getInstance().registerHandler("MagicalSkillPower", MagicalSkillPower::new);
 		EffectHandler.getInstance().registerHandler("MagicalSoulAttack", MagicalSoulAttack::new);
 		EffectHandler.getInstance().registerHandler("MagicCriticalDamage", MagicCriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("MagicCriticalRate", MagicCriticalRate::new);
