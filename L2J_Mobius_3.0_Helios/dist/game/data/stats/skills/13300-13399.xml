@@ -896,29 +896,355 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="13339" toLevel="3" name="R-grade Heavy Armor Set 10 Enchant">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13339" toLevel="5" name="Enchant Heavy Armor Set + 6 +7 +8 +9 +10 (R-grade)">
 		<!-- Set item is enchanted. P. Def. + 93, and MP Recovery Bonus + 32 when standing/ sitting. -->
 		<icon>icon.skill0231</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">93</value>
+					<value level="2">93</value>
+					<value level="3">93</value>
+					<value level="4">93</value>
+					<value level="5">93</value>
+				</amount>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">32</value>
+					<value level="2">32</value>
+					<value level="3">32</value>
+					<value level="4">32</value>
+					<value level="5">32</value>
+				</amount>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">-7</value>
+					<value level="3">-7</value>
+					<value level="4">-7</value>
+					<value level="5">-7</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="ReflectSkill" fromLevel="3" toLevel="5">
+				<chance>5</chance>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">11</value>
+					<value level="4">11</value>
+					<value level="5">11</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13340" toLevel="3" name="R-grade Light Armor Set 10 Enchant">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13340" toLevel="5" name="Enchant Light Armor Set + 6 +7 +8 +9 +10 (R-grade)">
 		<!-- Set item is enchanted. M. Def. + 55, P. Evasion + 2, and Debuff Resistance + 10%. MP Recovery Bonus + 8 when standing/ sitting. -->
 		<icon>icon.skill0233</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">55</value>
+					<value level="2">55</value>
+					<value level="3">55</value>
+					<value level="4">55</value>
+					<value level="5">55</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">2</value>
+					<value level="3">2</value>
+					<value level="4">2</value>
+					<value level="5">2</value>
+				</amount>
+			</effect>
+			<effect name="AbnormalShield">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">10</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">8</value>
+					<value level="5">8</value>
+				</amount>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">14</value>
+					<value level="3">14</value>
+					<value level="4">14</value>
+					<value level="5">14</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VampiricAttack" fromLevel="2" toLevel="5">
+				<amount>4</amount>
+				<chance>100</chance>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-10</value>
+					<value level="4">-10</value>
+					<value level="5">-10</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="13341" toLevel="3" name="R-grade Robe Set 10 Enchant">
-		<!-- AUTO GENERATED SKILL -->
+	<skill id="13341" toLevel="5" name="Enchant Robe Set + 6 +7 +8 +9 +10 (R-grade)">
 		<!-- Set item is enchanted. P. Def. + 60, Weight Limit + 30%, and Skill Cooldown - 3%. MP Recovery Bonus + 8 when standing/ sitting. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">60</value>
+					<value level="3">60</value>
+					<value level="4">60</value>
+					<value level="5">60</value>
+				</amount>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">30</value>
+					<value level="4">30</value>
+					<value level="5">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">8</value>
+					<value level="5">8</value>
+				</amount>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-3</value>
+					<value level="2">-3</value>
+					<value level="3">-3</value>
+					<value level="4">-3</value>
+					<value level="5">-3</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">4890</value>
+					<value level="3">4890</value>
+					<value level="4">4890</value>
+					<value level="5">4890</value>
+				</amount>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-11</value>
+					<value level="4">-11</value>
+					<value level="5">-11</value>
+				</amount>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</BOW>
+				<CROSSBOW>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</CROSSBOW>
+				<DAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</DAGGER>
+				<DUALDAGGER>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">10</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</DUALDAGGER>
+			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">10</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">1</value>
+				</amount>
+				<stat>LUC</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13342" toLevel="1" name="T-shirt of Destiny">
 		<!-- AUTO GENERATED SKILL -->
