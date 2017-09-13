@@ -379,9 +379,15 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="8845" level="1" /> <!-- PvE Defense -->
+			<skill id="13812" level="1" /> <!-- Additional Ability Might -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
-			<stat type="mDef">56</stat>
 			<stat type="pDef">238</stat>
+			<stat type="mDef">56</stat>
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
@@ -633,9 +639,15 @@
 		<set name="weight" val="1750" />
 		<set name="price" val="422292000" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13063" level="1" /> <!-- Cloak Slot Activation (R-grade) -->
+			<skill id="8845" level="1" /> <!-- PvE Defense -->
+			<skill id="13812" level="1" /> <!-- Additional Ability Might -->
+			<skill id="13312" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Robe Upper Special Ability -->
+		</skills>
 		<stats>
-			<stat type="mDef">56</stat>
 			<stat type="pDef">238</stat>
+			<stat type="mDef">56</stat>
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
