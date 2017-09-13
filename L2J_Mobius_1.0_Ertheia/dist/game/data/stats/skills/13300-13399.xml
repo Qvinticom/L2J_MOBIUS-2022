@@ -910,12 +910,23 @@
 					<value level="3">93</value>
 				</amount>
 			</effect>
-			<effect name="MpRegen">
-				<amount>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
 					<value level="1">32</value>
 					<value level="2">32</value>
 					<value level="3">32</value>
-				</amount>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">32</value>
+					<value level="2">32</value>
+					<value level="3">32</value>
+				</value>
 			</effect>
 			<effect name="MagicMpCost">
 				<amount>
@@ -1000,12 +1011,23 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
 					<value level="1">8</value>
 					<value level="2">8</value>
 					<value level="3">8</value>
-				</amount>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+				</value>
 			</effect>
 			<effect name="PhysicalSkillPower">
 				<amount>
@@ -1061,12 +1083,23 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>SITTING</type>
+				<value>
 					<value level="1">8</value>
 					<value level="2">8</value>
 					<value level="3">8</value>
-				</amount>
+				</value>
+			</effect>
+			<effect name="StatByMoveType">
+				<stat>REGENERATE_MP_RATE</stat>
+				<type>STANDING</type>
+				<value>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+				</value>
 			</effect>
 			<effect name="Reuse">
 				<amount>
