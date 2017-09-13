@@ -367,6 +367,10 @@ public class AdminEditChar implements IAdminCommandHandler
 				final L2PcInstance player = target.getActingPlayer();
 				if ((ClassId.getClassId(classidval) != null) && (player.getClassId().getId() != classidval))
 				{
+					if (!player.isDualClassActive() && !player.isSubClassActive())
+					{
+						player.resetOriginalClass(); // revert agent of chaos changes
+					}
 					player.setClassId(classidval);
 					if (player.isSubClassActive())
 					{

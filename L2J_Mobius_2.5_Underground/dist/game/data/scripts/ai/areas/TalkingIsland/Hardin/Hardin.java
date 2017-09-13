@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubjobInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExUserInfoInvenWeight;
@@ -86,6 +87,26 @@ public final class Hardin extends AbstractNpcAI
 					{
 						continue;
 					}
+					if (Config.HARDIN_SAME_AWAKEN_GROUP)
+					{
+						final String original = c.toString().contains("_") ? c.toString().substring(0, c.toString().indexOf("_") - 1) : c.toString();
+						final String search = player.getClassId().toString().contains("_") ? player.getClassId().toString().substring(0, player.getClassId().toString().indexOf("_") - 1) : player.getClassId().toString();
+						if (!original.equals(search))
+						{
+							continue;
+						}
+					}
+					if (Config.HARDIN_RETAIL_LIMITATIONS)
+					{
+						if (c.equals(ClassId.TYRR_MAESTRO) && (player.getRace() != Race.DWARF))
+						{
+							continue;
+						}
+						if (c.equals(ClassId.ISS_DOMINATOR) && (player.getRace() != Race.ORC))
+						{
+							continue;
+						}
+					}
 				}
 				classes.append("<button value=\"");
 				classes.append(ClassListData.getInstance().getClass(c.ordinal()).getClassName());
@@ -105,6 +126,11 @@ public final class Hardin extends AbstractNpcAI
 			takeItems(player, player.isDualClassActive() ? CHAOS_ESSENCE_DUAL_CLASS : CHAOS_ESSENCE, 1);
 			// Give item
 			giveItems(player, player.isDualClassActive() ? CHAOS_POMANDER_DUAL_CLASS : CHAOS_POMANDER, 1);
+			// Save original ClassId
+			if (!player.isDualClassActive() && (player.getOriginalClass() == null))
+			{
+				player.setOriginalClass(player.getClassId());
+			}
 			// Ertheias can only be female
 			final ClassId newClass = ClassId.getClassId(Integer.parseInt(event.replace("try_", "")));
 			if ((newClass.getRace() == Race.ERTHEIA) && (player.getClassId().getRace() != Race.ERTHEIA) && !player.getAppearance().getSex())
@@ -180,9 +206,9 @@ public final class Hardin extends AbstractNpcAI
 		{
 			return "33870-no_summon.html";
 		}
-		if (player.isInOlympiadMode())
+		if (player.isInOlympiadMode() || (Olympiad.getInstance().getCompetitionDone(player.getObjectId()) > 0))
 		{
-			return "33870-no.html";
+			return "33870-no_olympiad.html";
 		}
 		return null;
 	}

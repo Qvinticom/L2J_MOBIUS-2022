@@ -436,6 +436,8 @@ public final class L2PcInstance extends L2Playable
 	/** The list of sub-classes this character has. */
 	private volatile Map<Integer, SubClass> _subClasses;
 	
+	private static final String ORIGINAL_CLASS_VAR = "OriginalClass";
+	
 	private final PcAppearance _appearance;
 	
 	/** The Experience of the L2PcInstance before the last Death Penalty */
@@ -1173,7 +1175,27 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public final L2PcTemplate getBaseTemplate()
 	{
+		final ClassId originalClass = getOriginalClass();
+		if (originalClass != null)
+		{
+			return PlayerTemplateData.getInstance().getTemplate(originalClass.getId());
+		}
 		return PlayerTemplateData.getInstance().getTemplate(_baseClass);
+	}
+	
+	public ClassId getOriginalClass()
+	{
+		return getVariables().getEnum(ORIGINAL_CLASS_VAR, ClassId.class, null);
+	}
+	
+	public void setOriginalClass(ClassId newClass)
+	{
+		getVariables().set(ORIGINAL_CLASS_VAR, newClass);
+	}
+	
+	public void resetOriginalClass()
+	{
+		getVariables().remove(ORIGINAL_CLASS_VAR);
 	}
 	
 	/**
@@ -2656,6 +2678,11 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (!isSubClassActive())
 		{
+			final ClassId originalClass = getOriginalClass();
+			if (originalClass != null)
+			{
+				return originalClass.getRace();
+			}
 			return getTemplate().getRace();
 		}
 		return PlayerTemplateData.getInstance().getTemplate(_baseClass).getRace();
