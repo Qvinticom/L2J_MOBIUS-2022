@@ -1074,6 +1074,7 @@ public final class Config
 	public static int COMMUNITY_PREMIUM_COIN_ID;
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
 	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
+	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
 	public static int FACTION_MANAGER_NPCID;
@@ -2367,6 +2368,13 @@ public final class Config
 			for (String s : allowedBuffs)
 			{
 				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
+			}
+			final String[] availableTeleports = CommunityBoard.getString("CommunityTeleportList", "").split(";");
+			COMMUNITY_AVAILABLE_TELEPORTS = new HashMap<>(availableTeleports.length);
+			for (String s : availableTeleports)
+			{
+				final String splitInfo[] = s.split(",");
+				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
 			}
 			
 			// Load DebugVoiceCommand config file (if exists)

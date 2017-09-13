@@ -55,6 +55,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.util.FloodProtectorConfig;
 import com.l2jmobius.gameserver.util.Util;
@@ -809,6 +810,7 @@ public final class Config
 	public static int COMMUNITY_PREMIUM_COIN_ID;
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
 	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
+	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -2616,6 +2618,13 @@ public final class Config
 			for (String s : allowedBuffs)
 			{
 				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
+			}
+			final String[] availableTeleports = CustomSettings.getString("CommunityTeleportList", "").split(";");
+			COMMUNITY_AVAILABLE_TELEPORTS = new HashMap<>(availableTeleports.length);
+			for (String s : availableTeleports)
+			{
+				final String splitInfo[] = s.split(",");
+				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
 			}
 			
 			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);

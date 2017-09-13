@@ -159,20 +159,16 @@ public final class HomeBoard implements IParseBoardHandler
 		}
 		else if (command.startsWith("_bbsteleport"))
 		{
-			final String fullBypass = command.replace("_bbsteleport;", "");
-			final String[] buypassOptions = fullBypass.split(",");
-			final int x = Integer.parseInt(buypassOptions[0]);
-			final int y = Integer.parseInt(buypassOptions[1]);
-			final int z = Integer.parseInt(buypassOptions[2]);
+			final String teleBuypass = command.replace("_bbsteleport;", "");
 			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_TELEPORT_PRICE)
 			{
 				activeChar.sendMessage("Not enough currency!");
 			}
-			else
+			else if (Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass) != null)
 			{
 				activeChar.sendPacket(new ShowBoard());
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
-				activeChar.teleToLocation(x, y, z, 0);
+				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
 			}
 		}
 		else if (command.startsWith("_bbsbuff"))
