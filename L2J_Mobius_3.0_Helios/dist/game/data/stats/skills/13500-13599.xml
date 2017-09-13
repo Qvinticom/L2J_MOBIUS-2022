@@ -312,94 +312,410 @@
 		</effects>
 	</skill>
 	<skill id="13527" toLevel="1" name="Enhanced Octavis' Ring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 3%, P. Critical Rate + 10, P. Critical Damage + 15%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13528" toLevel="1" name="Enhanced Octavis' Earring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 3%, P. Skill MP Consumption - 5%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_earring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13529" toLevel="1" name="Enhanced Octavis' Necklace (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 3%, P. Skill Cooldown - 10%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13530" toLevel="1" name="Enhanced Istina' Ring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Atk. Spd. + 2%, P. Critical Rate + 10, P. Critical Damage + 10%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13531" toLevel="1" name="Enhanced Istina' Earring (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Def. + 2%, P. Skill MP Consumption - 3%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_earring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>80</chance>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13532" toLevel="1" name="Enhanced Istina' Necklace (Warrior)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 2%, P. Skill Cooldown - 5%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13533" toLevel="1" name="Enhanced Octavis' Ring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Casting Spd. + 2%, M. Critical Rate + 10, M. Critical Damage + 10%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13534" toLevel="1" name="Enhanced Octavis' Earring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 2%, M. Skill MP Consumption - 3%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_earring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>80</chance>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13535" toLevel="1" name="Enhanced Octavis' Necklace (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 3%, M. Skill Cooldown - 5%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13536" toLevel="1" name="Enhanced Istina' Ring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Casting Spd. + 3%, M. Critical Rate + 10, M. Critical Damage + 15%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_ring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>37</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13537" toLevel="1" name="Enhanced Istina' Earring (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Def. + 3%, M. Skill MP Consumption - 5%, Vampiric Rage + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_earring_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>56</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>80</chance>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="13538" toLevel="1" name="Enhanced Istina' Necklace (Wizard)">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- M. Atk. + 5%, M. Skill Cooldown - 10%, Damage Reflect + 5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_necklace_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxMp">
+				<amount>74</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13539" toLevel="1" name="Baium's Soul Ring">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Stun/Hold/Mental Resistance + 25%, Stun/Hold/Mental Attack Rate + 25%, P./ M. Critical Damage + 15%, Atk./Casting Spd. + 5%, P. Accuracy/M. Accuracy + 4. Wearing two of the items will only give the effect of one. -->
+		<!-- Stun/Hold/Mental Attack Rate + 25%, P./ M. Critical Damage + 15%, Atk./Casting Spd. + 5%, P. Accuracy/M. Accuracy + 4. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.accessory_ring_of_baium_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackTrait">
+				<HOLD>25</HOLD>
+				<SHOCK>25</SHOCK>
+				<DERANGEMENT>25</DERANGEMENT>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>			
+			<effect name="PhysicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>			
+			<effect name="MagicalAttackSpeed">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>			
+			<effect name="Accuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>31</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13540" toLevel="1" name="Frintezza's Soul Necklace">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Poison/Bleed/Stun/Hold/Paralyze Resistance + 20%, Poison/Bleed/Stun/Hold/Paralyze Attack Rate + 20%, Damage Reflect + 5%, Speed + 5. Cooldown - 10%. -->
 		<icon>icon.accessory_necklace_of_frintessa_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="AttackTrait">
+				<BLEED>20</BLEED>
+				<SHOCK>20</SHOCK>
+				<DERANGEMENT>20</DERANGEMENT>
+				<PARALYZE>20</PARALYZE>
+				<SLEEP>20</SLEEP>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>20</BLEED>
+				<SHOCK>20</SHOCK>
+				<DERANGEMENT>20</DERANGEMENT>
+				<PARALYZE>20</PARALYZE>
+				<SLEEP>20</SLEEP>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>62</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13541" toLevel="1" name="Octavis' Shirt">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- STR + 2, DEX + 1, CON + 2, INT + 2, WIT + 1, MEN + 2. Speed + 7. Dark Resistance + 30. -->
 		<icon>icon.istina_shirt_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<stat>STR</stat>
+				<amount>2</amount>
+			</effect>
+			<effect name="StatUp">
+				<stat>DEX</stat>
+				<amount>1</amount>
+			</effect>
+			<effect name="StatUp">
+				<stat>CON</stat>
+				<amount>2</amount>
+			</effect>
+			<effect name="StatUp">
+				<stat>INT</stat>
+				<amount>2</amount>
+			</effect>
+			<effect name="StatUp">
+				<stat>WIT</stat>
+				<amount>1</amount>
+			</effect>			
+			<effect name="StatUp">
+				<stat>MEN</stat>
+				<amount>2</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13542" toLevel="1" name="Lindvior's Earring">
 		<!-- Removes Knock Back/ Knock Down effect. For 5 sec., has Knock Back/ Knock Down Resistance. -->
