@@ -1559,40 +1559,112 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="13584" toLevel="1" name="Aria's Bracelet: CON">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- You can equip 5 Talismans. CON + 3. Max HP + 531. Max HP + 531. -->
+		<!-- You can equip 5 Talismans. CON + 3. Max HP + 531. -->
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>531</amount>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13585" toLevel="1" name="Aria's Bracelet: MEN">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. MEN + 3. Max HP + 531. -->
 		<icon>icon.istina_bangel</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>531</amount>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13586" toLevel="1" name="Aria's Bracelet: DEX">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. DEX + 3. Max HP + 531. -->
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>531</amount>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13587" toLevel="1" name="Aria's Bracelet: WIT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. WIT + 3. Max HP + 531. -->
 		<icon>icon.octavis_bangel</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>531</amount>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13588" toLevel="1" name="Aria's Bracelet: STR">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. STR + 3. Max HP + 531. -->
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>531</amount>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13589" toLevel="1" name="Aria's Bracelet: INT">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- You can equip 5 Talismans. INT + 3. Max HP + 531. -->
 		<icon>icon.accessory_bangel_of_tauti_i01</icon>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MaxHp">
+				<amount>531</amount>
+			</effect>
+			<effect name="TalismanSlot">
+				<slots>5</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="13590" toLevel="1" name="Augment Option - P. Def.">
 		<!-- AUTO GENERATED SKILL -->
