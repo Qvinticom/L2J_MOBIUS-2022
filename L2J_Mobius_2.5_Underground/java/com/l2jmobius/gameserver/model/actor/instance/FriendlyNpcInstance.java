@@ -65,7 +65,7 @@ public class FriendlyNpcInstance extends L2Attackable
 	@Override
 	public void addDamage(L2Character attacker, int damage, Skill skill)
 	{
-		if (!attacker.isPlayer())
+		if (!attacker.isPlayable())
 		{
 			super.addDamage(attacker, damage, skill);
 		}
