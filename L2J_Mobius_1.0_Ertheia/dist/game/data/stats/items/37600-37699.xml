@@ -1295,16 +1295,25 @@
 	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" type="EtcItem">
 		<!-- Mysterious juice that momentarily replenishes 30,000 HP and CP. Cannot be used in the Olympiad or Ceremony of Chaos. -->
 		<set name="icon" val="icon.bm_health_juice_violet" />
-		<set name="weight" val="60" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="60" />
+		<set name="reuse_delay" val="10000" />
 		<set name="is_stackable" val="true" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="for_npc" val="true" />
+		<set name="is_freightable" val="false" />
+		<set name="is_coc_restricted" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<cond addName="1" msgId="113">
+			<player flyMounted="false" />
+		</cond>
+		<skills>
+			<skill id="17152" level="1" /> <!-- Mysterious Healthy Juice -->
+		</skills>
 	</item>
 	<item id="37660" name="Magmeld's Instrument" type="Weapon">
 		<!-- Magmeld's special instrument. Can play lively music. -->

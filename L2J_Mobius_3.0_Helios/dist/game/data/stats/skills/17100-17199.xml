@@ -380,11 +380,28 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17152" toLevel="1" name="Mysterious Healthy Juice">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Instantly recovers your HP/CP by 30000. -->
 		<icon>icon.skill0000</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>37659</itemConsumeId> <!-- Mysterious Healthy Juice (HP/CP) -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<reuseDelay>300000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="Hp">
+				<amount>30000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Cp">
+				<amount>30000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17153" toLevel="1" name="Heavenly Recovery Potion">
 		<!-- AUTO GENERATED SKILL -->

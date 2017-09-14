@@ -806,7 +806,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21344" toLevel="2" name="Adenia's Invincibility">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: Removes all abnormal states and grants invincibility for 3 sec. Cannot use when rendered immobile. Usable in the Olympiad. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -834,7 +833,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21345" toLevel="2" name="Adenia's Return">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Active: Teleport to town. Unusable in special places such as GM Consultation Room. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
@@ -1068,11 +1066,164 @@
 		<icon>BranchSys3.icon1.g_premium_hena_kamael</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="21364" toLevel="1" name="Talisman - Abundance (High-grade) - Lv. 4">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- P. Atk. + 154, M. Atk. + 181, P./ M. Evasion + 4. -->
+	<skill id="21364" toLevel="4" name="Talisman - Abundance (High-grade) - Lv. 4">
+		<!-- Level 1 :  P. Atk. + 154, M. Atk. + 181, P./ M. Evasion + 4. -->
+		<!-- Level 2 : Attribute Resistance + 10 and Debuff Resistance + 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Level 3 : P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Level 4 : Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
+		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="MAtk">
+				<value level="1">154</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<value level="1">154</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<value level="1">4</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<value level="1">4</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="ResistAbnormalByCategory">
+				<value level="1">0</value>
+				<value level="2">10</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<slot>DEBUFF</slot>
+			</effect>
+			<effect name="CriticalRate">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">8</value>
+				<value level="4">0</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">-10</value>
+				<value level="4">0</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">-10</value>
+				<value level="4">0</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">-10</value>
+				<value level="4">0</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">325</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">325</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">325</value>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">5</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">5</value>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CpRegen">
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">5</value>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21365" toLevel="5" name="Talisman - Hunter">
 		<!-- P. Atk. + 231, M. Atk. + 271, P./M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage -15%, Received Skill Damage during PVP - 15%. Extra defense against skill damage in PvP. Note: Equipping 2 will give the effect of 1. -->

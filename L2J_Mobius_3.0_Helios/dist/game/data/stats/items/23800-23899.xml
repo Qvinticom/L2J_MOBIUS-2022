@@ -388,41 +388,67 @@
 		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="weight" val="150" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="weight" val="5" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="1" />
+		</skills>
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
 		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="weight" val="150" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="weight" val="5" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="2" />
+		</skills>
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
 		<!-- P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="weight" val="150" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="weight" val="5" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="3" />
+		</skills>
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
 		<!-- Max HP/MP/CP + 325 and HP/MP/CP Recovery Rate + 5. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="weight" val="150" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="weight" val="5" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21364" level="4" />
+		</skills>
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. 271, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%. Received Critical Damage - 15%, and skill damage during PvP - 15%. Additionally, skill damage received during PvP is decreased. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="weight" val="150" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="weight" val="5" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21373" level="1" />
+			<skill id="21364" level="5" />
+		</skills>
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
 		<!-- P. Atk. + 231, M. Atk. + 271 P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 13%, Max HP, MP, and CP + 490, and HP, MP, and CP Recovery + 7. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
