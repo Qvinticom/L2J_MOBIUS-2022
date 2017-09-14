@@ -48,7 +48,37 @@ public class FindPvP implements IBypassHandler
 			return false;
 		}
 		
-		final L2PcInstance mostPvP = getMostPvP();
+		L2PcInstance mostPvP = null;
+		int max = -1;
+		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		{
+			if ((player == null) //
+				|| (player.getPvpFlag() == 0) //
+				|| (player.getInstanceId() != 0) //
+				|| player.isGM() //
+				|| player.isInsideZone(ZoneId.PEACE) //
+				|| player.isInsideZone(ZoneId.SIEGE) //
+				|| player.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
+			{
+				continue;
+			}
+			
+			int count = 0;
+			for (L2PcInstance pl : player.getKnownList().getKnownPlayers().values())
+			{
+				if ((pl.getPvpFlag() > 0) && !pl.isInsideZone(ZoneId.PEACE))
+				{
+					count++;
+				}
+			}
+			
+			if (count > max)
+			{
+				max = count;
+				mostPvP = player;
+			}
+		}
+		
 		if (mostPvP != null)
 		{
 			// Check if the player's clan is already outnumbering the PvP
@@ -112,42 +142,6 @@ public class FindPvP implements IBypassHandler
 			activeChar.sendPacket(new CreatureSay(0, ChatType.WHISPER, target.getName(), "Sorry, I can't find anyone in flag status right now."));
 		}
 		return false;
-	}
-	
-	private L2PcInstance getMostPvP()
-	{
-		L2PcInstance mostPvP = null;
-		int max = -1;
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
-		{
-			if ((player == null) //
-				|| (player.getPvpFlag() == 0) //
-				|| (player.getInstanceId() != 0) //
-				|| player.isGM() //
-				|| player.isInsideZone(ZoneId.PEACE) //
-				|| player.isInsideZone(ZoneId.SIEGE) //
-				|| player.isInsideZone(ZoneId.NO_SUMMON_FRIEND))
-			{
-				continue;
-			}
-			
-			int count = 0;
-			for (L2PcInstance pl : player.getKnownList().getKnownPlayers().values())
-			{
-				if ((pl.getPvpFlag() > 0) && !pl.isInsideZone(ZoneId.PEACE))
-				{
-					count++;
-				}
-			}
-			
-			if (count > max)
-			{
-				max = count;
-				mostPvP = player;
-			}
-		}
-		
-		return mostPvP;
 	}
 	
 	@Override
