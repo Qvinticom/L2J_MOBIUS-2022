@@ -447,11 +447,6 @@ public final class L2World
 						{
 							objectCreature.setTarget(null);
 						}
-						
-						if (object.isPlayer())
-						{
-							object.sendPacket(new DeleteObject(wo));
-						}
 					}
 					
 					if (wo.isCharacter())
