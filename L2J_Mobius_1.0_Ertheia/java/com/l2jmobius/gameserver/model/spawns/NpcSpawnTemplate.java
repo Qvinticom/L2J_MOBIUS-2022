@@ -93,6 +93,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		_spawnAnimation = set.getBoolean("spawnAnimation", false);
 		_saveInDB = set.getBoolean("dbSave", false);
 		_dbName = set.getString("dbName", null);
+		_parameters = mergeParameters(spawnTemplate, group);
 		
 		final int x = set.getInt("x", Integer.MAX_VALUE);
 		final int y = set.getInt("y", Integer.MAX_VALUE);
@@ -123,6 +124,31 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 				_zone = zone;
 			}
 		}
+		
+		mergeParameters(spawnTemplate, group);
+	}
+	
+	private StatsSet mergeParameters(SpawnTemplate spawnTemplate, SpawnGroup group)
+	{
+		if ((_parameters == null) && (spawnTemplate.getParameters() == null) && (group.getParameters() == null))
+		{
+			return null;
+		}
+		
+		final StatsSet set = new StatsSet();
+		if (spawnTemplate.getParameters() != null)
+		{
+			set.merge(spawnTemplate.getParameters());
+		}
+		if (group.getParameters() != null)
+		{
+			set.merge(group.getParameters());
+		}
+		if (_parameters != null)
+		{
+			set.merge(_parameters);
+		}
+		return set;
 	}
 	
 	public void addSpawnLocation(ChanceLocation loc)
@@ -188,7 +214,14 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 	@Override
 	public void setParameters(StatsSet parameters)
 	{
-		_parameters = parameters;
+		if (_parameters == null)
+		{
+			_parameters = parameters;
+		}
+		else
+		{
+			_parameters.merge(parameters);
+		}
 	}
 	
 	public boolean hasSpawnAnimation()
@@ -233,8 +266,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 			float cumulativeChance = 0;
 			for (ChanceLocation loc : _locations)
 			{
-				cumulativeChance += loc.getChance();
-				if (locRandom <= cumulativeChance)
+				if (locRandom <= (cumulativeChance += loc.getChance()))
 				{
 					return loc;
 				}
@@ -285,75 +317,97 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet>
 		try
 		{
 			final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_id);
-			if (npcTemplate != null)
+			if (npcTemplate == null)
 			{
-				if (npcTemplate.isType("L2Defender"))
-				{
-					LOGGER.warning("Attempting to spawn npc id: " + _id + " type: " + npcTemplate.getType() + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
-					return;
-				}
-				
-				final L2Spawn spawn = new L2Spawn(npcTemplate);
-				final Location loc = getSpawnLocation();
-				if (loc == null)
-				{
-					LOGGER.warning("Couldn't initialize new spawn, no location found!");
-					return;
-				}
-				
-				spawn.setInstanceId(instance != null ? instance.getId() : 0);
-				spawn.setXYZ(loc);
-				spawn.setHeading(loc.getHeading());
-				spawn.setAmount(_count);
-				spawn.setLocation(loc);
-				int respawn = 0, respawnRandom = 0;
-				if (_respawnTime != null)
-				{
-					respawn = (int) _respawnTime.getSeconds();
-				}
-				if (_respawnTimeRandom != null)
-				{
-					respawnRandom = (int) _respawnTimeRandom.getSeconds();
-				}
-				
-				if (respawn > 0)
-				{
-					spawn.setRespawnDelay(respawn, respawnRandom);
-					spawn.startRespawn();
-				}
-				else
-				{
-					spawn.stopRespawn();
-				}
-				
-				spawn.setSpawnTemplate(this);
-				
-				if (_saveInDB)
-				{
-					if (!DBSpawnManager.getInstance().isDefined(_id))
-					{
-						DBSpawnManager.getInstance().addNewSpawn(spawn, true);
-					}
-				}
-				else
-				{
-					for (int i = 0; i < spawn.getAmount(); i++)
-					{
-						final L2Npc npc = spawn.doSpawn(_spawnAnimation);
-						if (npc.isMonster() && (_minions != null))
-						{
-							((L2MonsterInstance) npc).getMinionList().spawnMinions(_minions);
-						}
-						_spawnedNpcs.add(npc);
-					}
-					
-					SpawnTable.getInstance().addNewSpawn(spawn, false);
-				}
+				LOGGER.warning("Attempting to spawn unexisting npc id: " + _id + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
+				return;
+			}
+			
+			if (npcTemplate.isType("L2Defender"))
+			{
+				LOGGER.warning("Attempting to spawn npc id: " + _id + " type: " + npcTemplate.getType() + " file: " + _spawnTemplate.getFile().getName() + " spawn: " + _spawnTemplate.getName() + " group: " + _group.getName());
+				return;
+			}
+			
+			for (int i = 0; i < _count; i++)
+			{
+				spawnNpc(npcTemplate, instance);
 			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.WARNING, "Couldn't spawn npc " + _id, e);
+		}
+	}
+	
+	/**
+	 * @param npcTemplate
+	 * @param instance
+	 * @throws ClassCastException
+	 * @throws NoSuchMethodException
+	 * @throws ClassNotFoundException
+	 * @throws SecurityException
+	 */
+	private void spawnNpc(L2NpcTemplate npcTemplate, Instance instance) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
+	{
+		final L2Spawn spawn = new L2Spawn(npcTemplate);
+		final Location loc = getSpawnLocation();
+		if (loc == null)
+		{
+			LOGGER.warning("Couldn't initialize new spawn, no location found!");
+			return;
+		}
+		
+		spawn.setInstanceId(instance != null ? instance.getId() : 0);
+		spawn.setAmount(1);
+		spawn.setXYZ(loc);
+		spawn.setHeading(loc.getHeading());
+		spawn.setLocation(loc);
+		int respawn = 0, respawnRandom = 0;
+		if (_respawnTime != null)
+		{
+			respawn = (int) _respawnTime.getSeconds();
+		}
+		if (_respawnTimeRandom != null)
+		{
+			respawnRandom = (int) _respawnTimeRandom.getSeconds();
+		}
+		
+		if (respawn > 0)
+		{
+			spawn.setRespawnDelay(respawn, respawnRandom);
+			spawn.startRespawn();
+		}
+		else
+		{
+			spawn.stopRespawn();
+		}
+		
+		spawn.setSpawnTemplate(this);
+		
+		if (_saveInDB)
+		{
+			if (!DBSpawnManager.getInstance().isDefined(_id))
+			{
+				final L2Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
+				if ((spawnedNpc != null) && spawnedNpc.isMonster() && (_minions != null))
+				{
+					((L2MonsterInstance) spawnedNpc).getMinionList().spawnMinions(_minions);
+				}
+				
+				_spawnedNpcs.add(spawnedNpc);
+			}
+		}
+		else
+		{
+			final L2Npc npc = spawn.doSpawn(_spawnAnimation);
+			if (npc.isMonster() && (_minions != null))
+			{
+				((L2MonsterInstance) npc).getMinionList().spawnMinions(_minions);
+			}
+			_spawnedNpcs.add(npc);
+			
+			SpawnTable.getInstance().addNewSpawn(spawn, false);
 		}
 	}
 	

@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.interfaces.IParameterized;
 import com.l2jmobius.gameserver.model.interfaces.ITerritorized;
 import com.l2jmobius.gameserver.model.zone.type.L2BannedSpawnTerritory;
 import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
@@ -30,13 +31,14 @@ import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
 /**
  * @author UnAfraid
  */
-public class SpawnGroup implements Cloneable, ITerritorized
+public class SpawnGroup implements Cloneable, ITerritorized, IParameterized<StatsSet>
 {
 	private final String _name;
 	private final boolean _spawnByDefault;
 	private List<L2SpawnTerritory> _territories;
 	private List<L2BannedSpawnTerritory> _bannedTerritories;
 	private final List<NpcSpawnTemplate> _spawns = new ArrayList<>();
+	private StatsSet _parameters;
 	
 	public SpawnGroup(StatsSet set)
 	{
@@ -99,6 +101,18 @@ public class SpawnGroup implements Cloneable, ITerritorized
 	public List<L2BannedSpawnTerritory> getBannedTerritories()
 	{
 		return _bannedTerritories != null ? _bannedTerritories : Collections.emptyList();
+	}
+	
+	@Override
+	public StatsSet getParameters()
+	{
+		return _parameters;
+	}
+	
+	@Override
+	public void setParameters(StatsSet parameters)
+	{
+		_parameters = parameters;
 	}
 	
 	public List<NpcSpawnTemplate> getSpawnsById(int id)

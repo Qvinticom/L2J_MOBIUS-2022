@@ -159,41 +159,24 @@ public class DBSpawnManager
 		}
 	}
 	
-	private class SpawnSchedule implements Runnable
+	private void scheduleSpawn(int npcId)
 	{
-		private final Logger LOGGER = Logger.getLogger(SpawnSchedule.class.getName());
-		
-		private final int _npcId;
-		
-		/**
-		 * Instantiates a new spawn schedule.
-		 * @param npcId the npc id
-		 */
-		public SpawnSchedule(int npcId)
+		final L2Npc npc = _spawns.get(npcId).doSpawn();
+		if (npc != null)
 		{
-			_npcId = npcId;
-		}
-		
-		@Override
-		public void run()
-		{
-			final L2Npc npc = _spawns.get(_npcId).doSpawn();
-			if (npc != null)
-			{
-				npc.setDBStatus(DBStatusType.ALIVE);
-				
-				final StatsSet info = new StatsSet();
-				info.set("currentHP", npc.getCurrentHp());
-				info.set("currentMP", npc.getCurrentMp());
-				info.set("respawnTime", 0L);
-				
-				_storedInfo.put(_npcId, info);
-				_npcs.put(_npcId, npc);
-				LOGGER.info(getClass().getSimpleName() + ": Spawning NPC " + npc.getName());
-			}
+			npc.setDBStatus(DBStatusType.ALIVE);
 			
-			_schedules.remove(_npcId);
+			final StatsSet info = new StatsSet();
+			info.set("currentHP", npc.getCurrentHp());
+			info.set("currentMP", npc.getCurrentMp());
+			info.set("respawnTime", 0L);
+			
+			_storedInfo.put(npcId, info);
+			_npcs.put(npcId, npc);
+			LOGGER.info(getClass().getSimpleName() + ": Spawning NPC " + npc.getName());
 		}
+		
+		_schedules.remove(npcId);
 	}
 	
 	/**
@@ -226,7 +209,7 @@ public class DBSpawnManager
 			{
 				LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 				
-				_schedules.put(npc.getId(), ThreadPoolManager.schedule(new SpawnSchedule(npc.getId()), respawnDelay));
+				_schedules.put(npc.getId(), ThreadPoolManager.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
 				updateDb();
 			}
 		}
@@ -287,7 +270,7 @@ public class DBSpawnManager
 		else
 		{
 			final long spawnTime = respawnTime - System.currentTimeMillis();
-			_schedules.put(npcId, ThreadPoolManager.schedule(new SpawnSchedule(npcId), spawnTime));
+			_schedules.put(npcId, ThreadPoolManager.schedule(() -> scheduleSpawn(npcId), spawnTime));
 		}
 		
 		_spawns.put(npcId, spawn);
@@ -315,17 +298,18 @@ public class DBSpawnManager
 		}
 	}
 	
-	public void addNewSpawn(L2Spawn spawn, boolean storeInDb)
+	public L2Npc addNewSpawn(L2Spawn spawn, boolean storeInDb)
 	{
 		if (spawn == null)
 		{
-			return;
+			return null;
 		}
 		
 		final int npcId = spawn.getId();
-		if (_spawns.containsKey(npcId))
+		final L2Spawn existingSpawn = _spawns.get(npcId);
+		if (existingSpawn != null)
 		{
-			return;
+			return existingSpawn.getLastSpawn();
 		}
 		
 		SpawnTable.getInstance().addNewSpawn(spawn, false);
@@ -368,6 +352,8 @@ public class DBSpawnManager
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store npc #" + npcId + " in the DB: ", e);
 			}
 		}
+		
+		return npc;
 	}
 	
 	/**
