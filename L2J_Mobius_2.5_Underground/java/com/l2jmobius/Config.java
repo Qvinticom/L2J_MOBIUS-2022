@@ -115,6 +115,7 @@ public final class Config
 	public static final String CUSTOM_DEBUG_VOICE_COMMAND_CONFIG_FILE = "./config/Custom/DebugVoiceCommand.ini";
 	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
 	public static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
+	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
 	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
 	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	public static final String CUSTOM_OLD_DROP_BEHAVIOR_CONFIG_FILE = "./config/Custom/OldDropBehavior.ini";
@@ -1097,6 +1098,7 @@ public final class Config
 	public static boolean FACTION_SPECIFIC_CHAT;
 	public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
 	public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
+	public static boolean ENABLE_FIND_PVP;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -2450,6 +2452,10 @@ public final class Config
 			FACTION_SPECIFIC_CHAT = FactionSystem.getBoolean("EnableFactionChat", true);
 			FACTION_BALANCE_ONLINE_PLAYERS = FactionSystem.getBoolean("BalanceOnlinePlayers", true);
 			FACTION_BALANCE_PLAYER_EXCEED_LIMIT = FactionSystem.getInt("BalancePlayerExceedLimit", 20);
+			
+			// Load FindPvP config file (if exists)
+			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
+			ENABLE_FIND_PVP = FindPvP.getBoolean("EnableFindPvP", false);
 			
 			// Load MultilingualSupport config file (if exists)
 			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);

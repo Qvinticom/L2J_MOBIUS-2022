@@ -821,6 +821,7 @@ public final class Config
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
+	public static boolean ENABLE_FIND_PVP;
 	// --------------------------------------------------
 	// NPC Settings
 	// --------------------------------------------------
@@ -2688,6 +2689,8 @@ public final class Config
 					}
 				}
 			}
+			
+			ENABLE_FIND_PVP = CustomSettings.getBoolean("EnableFindPvP", false);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
