@@ -96,13 +96,13 @@ public class Q00460_PreciousResearchMaterial extends Quest
 					}
 					case State.CREATED:
 					{
-						htmltext = "33092-01.htm";
+						htmltext = "33092-01.html";
 						qs.isStarted();
 						break;
 					}
 					case State.STARTED:
 					{
-						htmltext = "33092-01.htm";
+						htmltext = "33092-01.html";
 						break;
 					}
 				}
