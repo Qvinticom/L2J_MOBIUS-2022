@@ -911,7 +911,7 @@ public class L2CharacterAI extends AbstractAI
 		}
 		
 		// If pathfinding enabled the creature will go to the destination or it will go to the nearest obstacle.
-		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, Config.PATHFINDING ? GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
+		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, Config.PATHFINDING ? GeoEngine.getInstance().canMoveToTargetLoc(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
 	}
 	
 	protected boolean maybeMoveToPosition(ILocational worldPosition, int offset)

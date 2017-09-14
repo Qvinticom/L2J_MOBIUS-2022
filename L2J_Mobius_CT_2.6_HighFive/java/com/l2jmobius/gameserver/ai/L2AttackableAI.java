@@ -88,10 +88,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		@Override
 		public void run()
 		{
-			final int fearTimeLeft = _ai.getFearTime() - FEAR_TICKS;
-			_ai.setFearTime(fearTimeLeft);
-			_ai.onEvtAfraid(_effector, _start);
-			_start = false;
+			if (_effector != null)
+			{
+				final int fearTimeLeft = _ai.getFearTime() - FEAR_TICKS;
+				_ai.setFearTime(fearTimeLeft);
+				_ai.onEvtAfraid(_effector, _start);
+				_start = false;
+			}
 		}
 	}
 	
