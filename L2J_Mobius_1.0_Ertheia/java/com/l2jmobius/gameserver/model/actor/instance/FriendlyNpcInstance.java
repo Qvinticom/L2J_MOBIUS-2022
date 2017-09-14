@@ -16,24 +16,28 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.FriendlyNpcAI;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableAttack;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**
- * @author Sdw
+ * @author GKR, Sdw
  */
 public class FriendlyNpcInstance extends L2Attackable
 {
+	private boolean _isAutoAttackable = true;
+	
 	public FriendlyNpcInstance(L2NpcTemplate template)
 	{
 		super(template);
@@ -44,6 +48,58 @@ public class FriendlyNpcInstance extends L2Attackable
 	public boolean isAttackable()
 	{
 		return false;
+	}
+	
+	@Override
+	public boolean isAutoAttackable(L2Character attacker)
+	{
+		return _isAutoAttackable && !attacker.isPlayable();
+	}
+	
+	@Override
+	public void setAutoAttackable(boolean state)
+	{
+		_isAutoAttackable = state;
+	}
+	
+	@Override
+	public void addDamage(L2Character attacker, int damage, Skill skill)
+	{
+		if (!attacker.isPlayer())
+		{
+			super.addDamage(attacker, damage, skill);
+		}
+		
+		if (attacker.isAttackable())
+		{
+			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(null, this, damage, skill, false), this);
+		}
+	}
+	
+	@Override
+	public void addDamageHate(L2Character attacker, int damage, int aggro)
+	{
+		if (!attacker.isPlayable())
+		{
+			super.addDamageHate(attacker, damage, aggro);
+		}
+	}
+	
+	@Override
+	public boolean doDie(L2Character killer)
+	{
+		// Kill the L2NpcInstance (the corpse disappeared after 7 seconds)
+		if (!super.doDie(killer))
+		{
+			return false;
+		}
+		
+		if (killer.isAttackable())
+		{
+			// Delayed notification
+			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(null, this, false), this);
+		}
+		return true;
 	}
 	
 	@Override
@@ -70,10 +126,6 @@ public class FriendlyNpcInstance extends L2Attackable
 			}
 			else
 			{
-				// Send a Server->Client packet SocialAction to the all L2PcInstance on the _knownPlayer of the L2NpcInstance
-				// to display a social action of the L2GuardInstance on their client
-				broadcastPacket(new SocialAction(getObjectId(), Rnd.nextInt(8)));
-				
 				player.setLastFolkNPC(this);
 				
 				// Open a chat window on client with the text of the L2GuardInstance

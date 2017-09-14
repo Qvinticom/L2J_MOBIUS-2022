@@ -39,12 +39,6 @@ public class FriendlyNpcAI extends L2AttackableAI
 	}
 	
 	@Override
-	protected void thinkActive()
-	{
-		
-	}
-	
-	@Override
 	protected void onEvtAttacked(L2Character attacker)
 	{
 		
