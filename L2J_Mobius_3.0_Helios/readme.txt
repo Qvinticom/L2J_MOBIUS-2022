@@ -22,5 +22,4 @@ TODO list
 -Helios grandboss
 -Underground five man dungeons
 -Check all quests rewards
--Kamaloka
 -Provisional Clan Halls

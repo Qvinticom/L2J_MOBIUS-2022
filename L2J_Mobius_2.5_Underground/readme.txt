@@ -20,5 +20,4 @@ What is done
 
 TODO list
 -Underground five man dungeons
--Kamaloka
 -Provisional Clan Halls

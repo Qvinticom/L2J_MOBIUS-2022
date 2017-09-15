@@ -20,5 +20,4 @@ What is done
 
 TODO
 -Modify all skill levels/sublevels based on client
--Kamaloka
 -Provisional Clan Halls
