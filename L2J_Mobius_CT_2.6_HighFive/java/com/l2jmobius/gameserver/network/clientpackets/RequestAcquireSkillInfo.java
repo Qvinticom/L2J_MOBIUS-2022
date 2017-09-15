@@ -63,7 +63,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 		}
 		
 		final L2Npc trainer = activeChar.getLastFolkNPC();
-		if (!(trainer instanceof L2NpcInstance))
+		if ((trainer == null) || !(trainer instanceof L2NpcInstance))
 		{
 			return;
 		}
@@ -86,7 +86,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 		{
 			if (prevSkillLevel == _level)
 			{
-				_log.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is trequesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
+				_log.warning(RequestAcquireSkillInfo.class.getSimpleName() + ": Player " + activeChar.getName() + " is requesting info for a skill that already knows, Id: " + _id + " level: " + _level + "!");
 			}
 			else if (prevSkillLevel != (_level - 1))
 			{
