@@ -695,7 +695,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	protected void thinkAttack()
 	{
 		final L2Attackable npc = getActiveChar();
-		if (npc.isCastingNow())
+		if ((npc == null) || npc.isCastingNow())
 		{
 			return;
 		}

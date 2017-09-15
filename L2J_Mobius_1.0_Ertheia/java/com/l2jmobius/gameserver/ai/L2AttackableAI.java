@@ -575,7 +575,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	{
 		final L2Attackable npc = getActiveChar();
 		
-		if (npc.isCastingNow())
+		if ((npc == null) || npc.isCastingNow())
 		{
 			return;
 		}
