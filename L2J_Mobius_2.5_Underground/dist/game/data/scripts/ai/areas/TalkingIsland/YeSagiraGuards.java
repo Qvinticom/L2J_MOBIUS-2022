@@ -54,9 +54,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 					{
 						monster.setScriptValue(1);
 						npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
-						// one target only - schedule / return
-						startQuestTimer("GUARD_AGGRO", 5000, npc, null, false);
-						return;
+						return; // one target only
 					}
 				});
 			}
