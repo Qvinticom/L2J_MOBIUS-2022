@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -128,14 +129,14 @@ public final class Wastelands extends AbstractNpcAI
 				if (attackId > 0)
 				{
 					//@formatter:off
-					final L2Npc monster = L2World.getInstance().getVisibleObjects(guard, L2Npc.class, 1000)
+					final L2MonsterInstance monster = L2World.getInstance().getVisibleObjects(guard, L2MonsterInstance.class, 1000)
 						.stream()
 						.filter(obj -> (obj.getId() == attackId))
 						.findFirst()
 						.orElse(null);
 					//@formatter:on
 					
-					if (monster != null)
+					if ((monster != null) && !guard.isInCombat())
 					{
 						guard.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 						monster.reduceCurrentHp(1, guard, null);
@@ -149,7 +150,7 @@ public final class Wastelands extends AbstractNpcAI
 						if (guard.getId() == SCHUAZEN)
 						{
 							//@formatter:off
-							final FriendlyNpcInstance decoGuard = (FriendlyNpcInstance) L2World.getInstance().getVisibleObjects(guard, L2Npc.class, 500)
+							final FriendlyNpcInstance decoGuard = L2World.getInstance().getVisibleObjects(guard, FriendlyNpcInstance.class, 500)
 								.stream()
 								.filter(obj -> (obj.getId() == DECO_GUARD2))
 								.findFirst()
@@ -158,7 +159,7 @@ public final class Wastelands extends AbstractNpcAI
 							
 							if (decoGuard != null)
 							{
-								decoGuard.reduceCurrentHp(0, monster, null); // TODO: Find better way for attack
+								decoGuard.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 								monster.reduceCurrentHp(1, decoGuard, null);
 								decoGuard.setCanStopAttackByTime(false);
 								decoGuard.setIsInvul(true);
@@ -167,7 +168,7 @@ public final class Wastelands extends AbstractNpcAI
 					}
 					else
 					{
-						startQuestTimer("START_ATTACK", 250, guard, null);
+						startQuestTimer("START_ATTACK", 5000, guard, null);
 					}
 				}
 				break;
@@ -202,7 +203,7 @@ public final class Wastelands extends AbstractNpcAI
 			{
 				final int guardId = npc.getId() == REGENERATED_KANILOV ? JOEL : SCHUAZEN;
 				//@formatter:off
-				final FriendlyNpcInstance guard = (FriendlyNpcInstance) L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 500)
+				final FriendlyNpcInstance guard =  L2World.getInstance().getVisibleObjects(npc, FriendlyNpcInstance.class, 500)
 					.stream()
 					.filter(obj -> (obj.getId() == guardId))
 					.findFirst()
