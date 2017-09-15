@@ -63,7 +63,7 @@ public class Q00460_PreciousResearchMaterial extends Quest
 		}
 		switch (event)
 		{
-			case "30535-02.htm":
+			case "30535-02.html":
 			{
 				giveItems(player, PROOF_OF_FIDELITY, 3);
 				qs.exitQuest(QuestType.DAILY, true);
@@ -96,13 +96,13 @@ public class Q00460_PreciousResearchMaterial extends Quest
 					}
 					case State.CREATED:
 					{
-						htmltext = "33092-01.html";
-						qs.isStarted();
+						htmltext = "33092-02.html";
+						qs.startQuest();
 						break;
 					}
 					case State.STARTED:
 					{
-						htmltext = "33092-01.html";
+						htmltext = "33092-01.htm";
 						break;
 					}
 				}
@@ -112,7 +112,7 @@ public class Q00460_PreciousResearchMaterial extends Quest
 			{
 				if (qs.isCond(2) && (getQuestItemsCount(player, TEREDOR_EGG_FRAGMENT) >= 20))
 				{
-					htmltext = "30535-01.htm";
+					htmltext = "30535-01.html";
 				}
 			}
 		}
@@ -125,7 +125,7 @@ public class Q00460_PreciousResearchMaterial extends Quest
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
 		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
 		{
-			if (giveItemRandomly(killer, EGG, 1, 20, 0.7, true))
+			if (giveItemRandomly(killer, TEREDOR_EGG_FRAGMENT, 1, 20, 0.7, true))
 			{
 				qs.setCond(2, true);
 			}
