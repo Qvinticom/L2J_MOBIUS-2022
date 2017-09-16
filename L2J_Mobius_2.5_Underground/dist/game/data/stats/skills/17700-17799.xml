@@ -503,292 +503,1540 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="17742" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17743" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17744" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17745" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17746" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17747" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17748" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17749" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17750" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17751" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17752" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17753" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17754" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17755" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17756" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17757" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17758" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 5%, HP + 15%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17759" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17760" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17761" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17762" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17763" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17764" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17765" toLevel="1" name="Dandy's Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 5%, HP + 15%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17766" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17767" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17768" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17769" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17770" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17771" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17772" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17773" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17774" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17775" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17776" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17777" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17778" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17779" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17780" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17781" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17782" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17783" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17784" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17785" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17786" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
+		<!-- PvP damage + 10%, HP/MP/CP + 20%, and MAtk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17787" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17788" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17789" toLevel="1" name="Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 10%, HP/MP/CP + 20%, and Atk. Spd. + 15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17790" toLevel="1" name="Great Assisting Strength">
 		<!-- AUTO GENERATED SKILL -->
