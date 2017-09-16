@@ -390,8 +390,6 @@ import quests.Q10707_FlamesOfSorrow.Q10707_FlamesOfSorrow;
 import quests.Q10708_StrengthenTheBarrier.Q10708_StrengthenTheBarrier;
 import quests.Q10709_TheStolenSeed.Q10709_TheStolenSeed;
 import quests.Q10710_LifeEnergyRepository.Q10710_LifeEnergyRepository;
-import quests.Q10712_TheMinstrelsSongPart1.Q10712_TheMinstrelsSongPart1;
-import quests.Q10731_TheMinstrelsSongPart6.Q10731_TheMinstrelsSongPart6;
 import quests.Q10732_AForeignLand.Q10732_AForeignLand;
 import quests.Q10733_TheTestForSurvival.Q10733_TheTestForSurvival;
 import quests.Q10734_DoOrDie.Q10734_DoOrDie;
@@ -831,8 +829,6 @@ public class QuestMasterHandler
 		Q10708_StrengthenTheBarrier.class,
 		Q10709_TheStolenSeed.class,
 		Q10710_LifeEnergyRepository.class,
-		Q10712_TheMinstrelsSongPart1.class,
-		Q10731_TheMinstrelsSongPart6.class,
 		Q10732_AForeignLand.class,
 		Q10733_TheTestForSurvival.class,
 		Q10734_DoOrDie.class,
