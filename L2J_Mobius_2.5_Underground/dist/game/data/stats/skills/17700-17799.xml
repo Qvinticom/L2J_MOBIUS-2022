@@ -2039,63 +2039,433 @@
 		</effects>
 	</skill>
 	<skill id="17790" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17791" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17792" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17793" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Casting Spd. + 1999, M. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>1999</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17794" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17795" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17796" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17797" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17798" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17799" toLevel="1" name="Great Assisting Strength">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- PvP damage + 30%, HP/MP + 100%, CP + 200%, Atk. Spd. + 1500, P. Critical Rate + 500 and additional damage to dragons + 300%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>200</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>1500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>500</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<DRAGON_WEAKNESS>300</DRAGON_WEAKNESS>
+			</effect>
+		</effects>
 	</skill>
 </list>
