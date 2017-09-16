@@ -375,6 +375,7 @@
 	<item id="23724" name="Adenian Tattoo: Wings" type="Armor">
 		<!-- Adenian Collection P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i01" />
+		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -383,14 +384,24 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<skills>
+			<skill id="21380" level="1" /> <!-- Adenian Tattoo: Speed -->
+		</skills>
 		<stats>
 			<stat type="pDef">35</stat>
 			<stat type="mDef">15</stat>
+			<stat type="fireRes">15</stat>
+			<stat type="waterRes">15</stat>
+			<stat type="windRes">15</stat>
+			<stat type="earthRes">15</stat>
+			<stat type="holyRes">15</stat>
+			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
 	<item id="23725" name="Adenian Tattoo: Tribal" type="Armor">
 		<!-- Adenian Collection P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i02" />
+		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -399,14 +410,24 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<skills>
+			<skill id="21381" level="1" /> <!-- Adenian Tattoo: Speed -->
+		</skills>
 		<stats>
 			<stat type="pDef">35</stat>
 			<stat type="mDef">15</stat>
+			<stat type="fireRes">15</stat>
+			<stat type="waterRes">15</stat>
+			<stat type="windRes">15</stat>
+			<stat type="earthRes">15</stat>
+			<stat type="holyRes">15</stat>
+			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
 	<item id="23726" name="Adenian Tattoo: Evil" type="Armor">
 		<!-- Adenian Collection P. Def. + 35, M. Def. + 15, Attribute Resistance + 15, and Speed + 7. Can augment through the town blacksmith using the Adenian Life Stone. Augmenting with a Life Stone: Tattoo can specialize stats for either attack or defense. -->
 		<set name="icon" val="BranchSys3.icon1.g_co_tatu_i03" />
+		<set name="bodypart" val="underwear" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -415,9 +436,18 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="EQUIP" />
+		<skills>
+			<skill id="21382" level="1" /> <!-- Adenian Tattoo: Speed -->
+		</skills>
 		<stats>
 			<stat type="pDef">35</stat>
 			<stat type="mDef">15</stat>
+			<stat type="fireRes">15</stat>
+			<stat type="waterRes">15</stat>
+			<stat type="windRes">15</stat>
+			<stat type="earthRes">15</stat>
+			<stat type="holyRes">15</stat>
+			<stat type="darkRes">15</stat>
 		</stats>
 	</item>
 	<item id="23727" name="Life Stone: Tattoo" type="EtcItem">

@@ -1561,27 +1561,134 @@
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="21377" toLevel="3" name="Adenian Tattoo: Protection">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Active Skill: P./ M. Def. + 5%, Max HP/CP + 200. Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i01</icon>
 		<operateType>A2</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>600</hitTime>
 		<effectPoint>10</effectPoint>
 		<abnormalTime>60</abnormalTime>
 		<reuseDelay>3600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+			<value level="1">200</value>
+			<value level="2">300</value>
+			<value level="3">400</value>			
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+			<value level="1">200</value>
+			<value level="2">300</value>
+			<value level="3">400</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+			<value level="1">5</value>
+			<value level="2">15</value>
+			<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+			<value level="1">5</value>
+			<value level="2">15</value>
+			<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">5</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">5</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">5</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">5</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">5</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">0</value>
+			<value level="3">5</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21378" toLevel="3" name="Adenian Tattoo: Valor">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Active Skill: P. Atk. + 5%, M. Atk. + 10% . Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i02</icon>
 		<operateType>A2</operateType>
-		<hitTime>500</hitTime>
+		<hitTime>600</hitTime>
 		<effectPoint>10</effectPoint>
 		<abnormalTime>60</abnormalTime>
 		<reuseDelay>3600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+			<value level="1">5</value>
+			<value level="2">7</value>
+			<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+			<value level="1">10</value>
+			<value level="2">15</value>
+			<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+			<value level="1">0</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21379" toLevel="3" name="Adenian Tattoo: Deviance">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Active Skill: P./ M. Def. + 3%, P. Atk. + 3%, M. Atk. + 5% . Lasts 1 min. Cooldown is 1 hr. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i03</icon>
 		<operateType>A2</operateType>
@@ -1589,24 +1696,77 @@
 		<effectPoint>10</effectPoint>
 		<abnormalTime>60</abnormalTime>
 		<reuseDelay>3600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+			<value level="1">3</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+			<value level="1">3</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+			<value level="1">3</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+			<value level="1">5</value>
+			<value level="2">10</value>
+			<value level="3">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21380" toLevel="1" name="Adenian Tattoo: Speed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i01</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21381" toLevel="1" name="Adenian Tattoo: Speed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i02</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21382" toLevel="1" name="Adenian Tattoo: Speed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Speed + 7. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i03</icon>
 		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="Speed">
+				<amount>7</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="21383" toLevel="1" name="Transform: Uthanka">
 		<!-- AUTO GENERATED SKILL -->
