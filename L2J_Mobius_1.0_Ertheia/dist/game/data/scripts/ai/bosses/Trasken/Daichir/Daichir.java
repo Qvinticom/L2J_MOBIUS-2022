@@ -64,15 +64,15 @@ public class Daichir extends AbstractNpcAI
 			{
 				if (status == FIGHTING)
 				{
-					return "33881-1.html";
+					return "30537-1.html";
 				}
 				if (status == DEAD)
 				{
-					return "33881-2.html";
+					return "30537-2.html";
 				}
 				if (!player.isInParty())
 				{
-					return "33881-3.html";
+					return "30537-3.html";
 				}
 				final L2Party party = player.getParty();
 				final boolean isInCC = party.isInCommandChannel();
@@ -80,12 +80,12 @@ public class Daichir extends AbstractNpcAI
 				final boolean isPartyLeader = (isInCC) ? party.getCommandChannel().isLeader(player) : party.isLeader(player);
 				if (!isPartyLeader)
 				{
-					return "33881-3.html";
+					return "30537-3.html";
 				}
 				if ((members.size() < Config.TRASKEN_MIN_PLAYERS) || (members.size() > Config.TRASKEN_MAX_PLAYERS))
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "33881-4.html"));
+					packet.setHtml(getHtm(player.getHtmlPrefix(), "30537-4.html"));
 					packet.replace("%min%", Integer.toString(Config.TRASKEN_MIN_PLAYERS));
 					packet.replace("%max%", Integer.toString(Config.TRASKEN_MAX_PLAYERS));
 					player.sendPacket(packet);
@@ -96,7 +96,7 @@ public class Daichir extends AbstractNpcAI
 					if (member.getLevel() < Config.TRASKEN_MIN_PLAYER_LVL)
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player.getHtmlPrefix(), "33881-5.html"));
+						packet.setHtml(getHtm(player.getHtmlPrefix(), "30537-5.html"));
 						packet.replace("%minlvl%", Integer.toString(Config.TRASKEN_MIN_PLAYER_LVL));
 						player.sendPacket(packet);
 						return null;
