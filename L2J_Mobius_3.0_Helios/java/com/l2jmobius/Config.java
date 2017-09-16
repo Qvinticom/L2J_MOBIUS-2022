@@ -904,6 +904,13 @@ public final class Config
 	public static int KELBIM_SPAWN_INTERVAL;
 	public static int KELBIM_SPAWN_RANDOM;
 	
+	// Trasken
+	public static int TRASKEN_SPAWN_INTERVAL;
+	public static int TRASKEN_SPAWN_RANDOM;
+	public static int TRASKEN_MIN_PLAYERS;
+	public static int TRASKEN_MAX_PLAYERS;
+	public static int TRASKEN_MIN_PLAYER_LVL;
+	
 	// Lindvior
 	public static int LINDVIOR_SPAWN_INTERVAL;
 	public static int LINDVIOR_SPAWN_RANDOM;
@@ -2253,6 +2260,11 @@ public final class Config
 			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLilithSpawn", 148);
 			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
 			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
+			TRASKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfTraskenSpawn", 264);
+			TRASKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfTraskenSpawn", 72);
+			TRASKEN_MIN_PLAYERS = GrandBossSettings.getInt("TraskenMinPlayers", 49);
+			TRASKEN_MAX_PLAYERS = GrandBossSettings.getInt("TraskenMaxPlayers", 112);
+			TRASKEN_MIN_PLAYER_LVL = GrandBossSettings.getInt("TraskenMinPlayerLvl", 85);
 			LINDVIOR_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLindviorSpawn", 264);
 			LINDVIOR_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLindviorSpawn", 72);
 			LINDVIOR_MIN_PLAYERS = GrandBossSettings.getInt("LindviorMinPlayers", 49);

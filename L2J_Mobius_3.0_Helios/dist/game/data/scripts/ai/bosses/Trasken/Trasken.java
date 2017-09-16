@@ -70,6 +70,7 @@ public class Trasken extends AbstractNpcAI
 	private static final int DIGISTIVE = 29206;
 	private static final int TRADJAN = 19160;
 	private static final int HEART_ERTHWYRM = 19081;
+	private static final int TELEPORT_ORB = 33513;
 	// Zone
 	private static final int ZONE_ID = 12108;
 	private static final int ZONE_ID_HEART = 12109;
@@ -81,7 +82,6 @@ public class Trasken extends AbstractNpcAI
 		22120846
 	};
 	private static final int DOOR = 22120001;
-	private static final Location ENTER_LOCATION = new Location(75445, -182112, -9880);
 	private static final Location EXIT_LOCATION = new Location(87679, -141982, -1341);
 	static final Location CENTER_LOCATION = new Location(81208, -182095, -9895);
 	static final Location HEART_LOCATION = new Location(81208, -182095, -9895);
@@ -579,14 +579,12 @@ public class Trasken extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "enterZone":
-			{
-				player.teleToLocation(ENTER_LOCATION);
-				break;
-			}
 			case "exitZone":
 			{
-				player.teleToLocation(EXIT_LOCATION);
+				if (npc.getId() == TELEPORT_ORB)
+				{
+					player.teleToLocation(EXIT_LOCATION);
+				}
 				break;
 			}
 			case "finish":
