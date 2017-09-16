@@ -3,23 +3,118 @@ L2J-Mobius Helios
 Client: https://mega.nz/#!Uo9TTCSQ!JDstscgcLFY3GeM3Q6j8nUq7jpixzqIV1Gl4z2ob0eA
 Use mega downloader to download https://megadownloader.en.softonic.com/
 
-What is done
--Helios packet compatibility
--Parsed item data from client
--Reworked new quests
--Gainak Underground
--Custom community board
--Factions system (GvE)
--Premium system
--Vote reward system
--Fixed server lag on many occasions
--Store offline trader transactions in realtime
--Addition of many retail AIs
--New spawns for Giants Cave
--Paulina's item rewards
 
-TODO list
--Helios grandboss
+Working features...
+
+Before Goddess of Destruction:
+-Fantasy Isle Parade
+-Pailaka Injured Dragon
+-All Seven Sign Quests
+-Imperial Tomb
+-Gracia Area
+-Kamaloka
+-Castle Dungeons
+-Fortress Dungeons
+-Prime Shop
+
+Goddess of Destruction:
+-New Talking Island
+-Ancient City Arcan
+-Bloody Swampland
+-Fairy Settlement
+-Garden of Genesis
+-Guillotine Fortress
+-Orbis Temple
+-Nursery
+-Kimerian
+-Istina
+-Octavis
+-Tauti
+-Teredor
+-Trasken
+-Lindvior
+-Appearance stones
+-Beauty Shop
+-Mentoring
+-Goddess class changes
+-Harnak Underground Ruins
+-Sayune Jump System
+-Agent of Chaos
+-Attribute Crystals
+-Ability Points
+
+Ertheia:
+-Ertheia Race
+-Alchemy
+-Lucky drops
+-Auto fishing
+
+Infinite Odyssey:
+-Garden of Spirits
+-Isabella
+-Atelia Fortress
+-Kelbim
+-Enchanted Valley
+
+Underground:
+-Underground Gainak
+-Automated soulshots
+-Daily rewards
+
+Helios:
+-Giants Cave
+-Ramona
+-Updated Daily Rewards
+-Updated quests
+
+Events:
+-Character Birthday
+-Eve the Fortune Teller
+-Freya Celebration
+-Gift of Vitality
+-Heavy Medal
+-Hunt for Santa
+-Letter Collector
+-Love your Gatekeeper
+-Master of Enchanting
+-The Power of Love
+-Custom Elpies Event
+-Custom Rabbits Event
+-Custom Race Event
+
+Customs:
+-Allowed player races
+-Banking
+-Champion monsters
+-Classmaster
+-Community board
+-Faction system
+-Find PvP
+-Realtime offline trade
+-Password change
+-Pc Cafe
+-Premium system
+-Private store range
+-PvP announce
+-PvP reward item
+-PvP title color
+-Sayune for all
+-Screen welcome message
+-Sell buffs
+-Starting location
+-Vote reward
+
+Others:
+-Reworked tax system
+-Reworked quest system
+-Reworked spawn system
+-Skill system from L2jUnity
+-GeoEngine from aCis
+-Threadpool manager from aCis
+
+TODO:
 -Underground five man dungeons
--Check all quests rewards
 -Provisional Clan Halls
+-Check all quests rewards
+-Faction system
+-Superion Fortress

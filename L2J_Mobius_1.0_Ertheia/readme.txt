@@ -5,19 +5,96 @@ Use mega downloader to download https://megadownloader.en.softonic.com/
 
 Geodata: http://www.mediafire.com/file/jbnro1jm6q56bal/mobius_geodata_ertheia_l2d.zip
 
-What is done
--Ertheia packet compatibility
--Level up crystals
--Added some Ertheia quests
--Recipes
--Hennas
--Augments
--Alchemy
--Skilltrees
--Parsed NPC names from client
--Parsed item names from client
--Parsed skill names from client
 
-TODO
+Working features...
+
+Before Goddess of Destruction:
+-Fantasy Isle Parade
+-Pailaka Injured Dragon
+-All Seven Sign Quests
+-Imperial Tomb
+-Gracia Area
+-Kamaloka
+-Castle Dungeons
+-Fortress Dungeons
+
+Goddess of Destruction:
+-New Talking Island
+-Ancient City Arcan
+-Bloody Swampland
+-Fairy Settlement
+-Garden of Genesis
+-Guillotine Fortress
+-Orbis Temple
+-Nursery
+-Kimerian
+-Istina
+-Octavis
+-Tauti
+-Teredor
+-Trasken
+-Lindvior
+-Appearance stones
+-Beauty Shop
+-Mentoring
+-Goddess class changes
+-Harnak Underground Ruins
+-Sayune Jump System
+-Agent of Chaos
+-Attribute Crystals
+-Ability Points
+
+Ertheia:
+-Ertheia Race
+-Alchemy
+-Lucky drops
+-Auto fishing
+
+Events:
+-Character Birthday
+-Eve the Fortune Teller
+-Freya Celebration
+-Gift of Vitality
+-Heavy Medal
+-Hunt for Santa
+-Letter Collector
+-Love your Gatekeeper
+-Master of Enchanting
+-The Power of Love
+-Custom Elpies Event
+-Custom Rabbits Event
+-Custom Race Event
+
+Customs:
+-Allowed player races
+-Banking
+-Champion monsters
+-Classmaster
+-Community board
+-Faction system
+-Find PvP
+-Realtime offline trade
+-Password change
+-Pc Cafe
+-Premium system
+-Private store range
+-PvP announce
+-PvP reward item
+-PvP title color
+-Sayune for all
+-Screen welcome message
+-Sell buffs
+-Starting location
+-Vote reward
+
+Others:
+-Reworked tax system
+-Reworked quest system
+-Reworked spawn system
+-Skill system from L2jUnity
+-GeoEngine from aCis
+-Threadpool manager from aCis
+
+TODO:
 -Modify all skill levels/sublevels based on client
 -Provisional Clan Halls
