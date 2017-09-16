@@ -52,7 +52,7 @@ public class Daichir extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("enterZone"))
+		if (event.equals("enterEarthWyrnCave"))
 		{
 			final int status = GrandBossManager.getInstance().getBossStatus(TRASKEN);
 			if (player.isGM())

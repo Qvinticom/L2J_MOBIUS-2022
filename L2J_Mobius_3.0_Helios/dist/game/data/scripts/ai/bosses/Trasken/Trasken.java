@@ -579,7 +579,7 @@ public class Trasken extends AbstractNpcAI
 	{
 		switch (event)
 		{
-			case "exitZone":
+			case "exitEarthWyrnCave":
 			{
 				if (npc.getId() == TELEPORT_ORB)
 				{
