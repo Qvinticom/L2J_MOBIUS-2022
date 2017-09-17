@@ -2289,6 +2289,10 @@
 		<set name="spiritshots" val="1" />
 		<set name="bodypart" val="rhand" />
 		<set name="weight" val="500" />
+		<set name="time" val="60" />
+		<skills>
+			<skill id="17766" level="1" /> <!-- Assisting Strength -->
+		</skills>
 		<stats>
 			<stat type="pAtk">673</stat>
 			<stat type="mAtk">360</stat>
