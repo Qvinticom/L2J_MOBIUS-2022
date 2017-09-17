@@ -273,6 +273,7 @@ public final class LabyrinthOfBelis extends AbstractInstance
 				}
 				case 7:
 				{
+					npc.abortAttack();
 					npc.setScriptValue(0);
 					npc.broadcastInfo();
 					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.SOMETHING_OMINOUS_IN_THERE_I_HOPE_YOU_RE_REALLY_READY_FOR_THIS_LET_ME_KNOW);
@@ -539,16 +540,21 @@ public final class LabyrinthOfBelis extends AbstractInstance
 					{
 						world.setStatus(7);
 						world.openCloseDoor(DOOR_ID_ROOM_4_1, true);
-						
 						showOnScreenMsg(player, NpcStringId.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, ExShowScreenMessage.TOP_CENTER, 4500);
 						
 						final L2Npc generator = world.getNpc(ELECTRICITY_GENERATOR);
-						generator.deleteMe();
-						
 						final L2Npc officer = world.getNpc(INFILTRATION_OFFICER);
-						officer.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, INFILTRATION_OFFICER_ROOM_4);
-						officer.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT);
+						generator.doDie(officer);
+						generator.deleteMe();
+						getTimers().addTimer("MOVE_TO_ROOM_4", 3000, officer, null);
 					}
+					break;
+				}
+				case "MOVE_TO_ROOM_4":
+				{
+					npc.setRunning();
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, INFILTRATION_OFFICER_ROOM_4);
+					npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.DEVICE_DESTROYED_LET_S_GO_ONTO_THE_NEXT);
 					break;
 				}
 				case "ROOM_4_DONE":
