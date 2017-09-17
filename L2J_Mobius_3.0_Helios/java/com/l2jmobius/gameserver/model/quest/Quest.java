@@ -3327,7 +3327,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void addFactionLevel(Faction faction, int factionLevel, String html)
 	{
-		addCondStart(p -> (p.getFactionLevel(faction)) > factionLevel, html);
+		addCondStart(p -> p.getFactionLevel(faction) > factionLevel, html);
 	}
 	
 	public void onQuestAborted(L2PcInstance player)
