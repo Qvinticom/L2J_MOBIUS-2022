@@ -66,6 +66,7 @@ Helios:
 -Ramona
 -Updated Daily Rewards
 -Updated quests
+-Faction system
 
 Events:
 -Character Birthday
@@ -116,5 +117,4 @@ TODO:
 -Underground five man dungeons
 -Provisional Clan Halls
 -Check all quests rewards
--Faction system
 -Superion Fortress
