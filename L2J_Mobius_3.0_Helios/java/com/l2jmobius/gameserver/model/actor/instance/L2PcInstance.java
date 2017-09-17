@@ -79,6 +79,7 @@ import com.l2jmobius.gameserver.enums.BroochJewel;
 import com.l2jmobius.gameserver.enums.CastleSide;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Faction;
 import com.l2jmobius.gameserver.enums.GroupType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -13982,6 +13983,41 @@ public final class L2PcInstance extends L2Playable
 	public void setTrueHero(boolean val)
 	{
 		_trueHero = val;
+	}
+	
+	public int getFactionLevel(Faction faction)
+	{
+		final int currentPoints = getVariables().getInt(faction.toString(), 0);
+		for (int i = 0; i < faction.getLevelCount(); i++)
+		{
+			if (currentPoints <= faction.getPointsOfLevel(i))
+			{
+				return i;
+			}
+		}
+		return 0;
+	}
+	
+	public float getFactionProgress(Faction faction)
+	{
+		final int currentLevel = getFactionLevel(faction);
+		final int currentLevelPoints = getVariables().getInt(faction.toString(), 0);
+		final int previousLevelPoints = faction.getPointsOfLevel(currentLevel - 1);
+		final int nextLevelPoints = faction.getPointsOfLevel(currentLevel + 1);
+		return (float) (currentLevelPoints - previousLevelPoints) / (nextLevelPoints - previousLevelPoints);
+	}
+	
+	public void addFactionPoints(Faction faction, int count)
+	{
+		final int currentPoints = getVariables().getInt(faction.toString(), 0);
+		if ((currentPoints + count) > faction.getPointsOfLevel(faction.getLevelCount() - 1))
+		{
+			getVariables().set(faction.toString(), faction.getPointsOfLevel(faction.getLevelCount() - 1));
+		}
+		else
+		{
+			getVariables().set(faction.toString(), currentPoints + count);
+		}
 	}
 	
 	@Override

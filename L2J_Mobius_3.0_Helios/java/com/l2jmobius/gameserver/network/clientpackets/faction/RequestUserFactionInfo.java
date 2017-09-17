@@ -26,14 +26,12 @@ import com.l2jmobius.gameserver.network.serverpackets.faction.ExFactionInfo;
  */
 public class RequestUserFactionInfo implements IClientIncomingPacket
 {
-	
-	private int _playerId;
 	private boolean _openDialog;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_playerId = packet.readD();
+		packet.readD();
 		_openDialog = packet.readC() != 0;
 		
 		return true;
@@ -42,6 +40,6 @@ public class RequestUserFactionInfo implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		client.getActiveChar().sendPacket(new ExFactionInfo(_playerId, _openDialog));
+		client.getActiveChar().sendPacket(new ExFactionInfo(client.getActiveChar(), _openDialog));
 	}
 }

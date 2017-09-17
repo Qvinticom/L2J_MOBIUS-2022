@@ -17,21 +17,22 @@
 package com.l2jmobius.gameserver.network.serverpackets.faction;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.Faction;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author Mathael
+ * @author Mathael, Mobius
  */
 public class ExFactionInfo implements IClientOutgoingPacket
 {
-	
-	private final int _playerId;
+	private final L2PcInstance _player;
 	private final boolean _openDialog;
 	
-	public ExFactionInfo(int playerId, boolean openDialog)
+	public ExFactionInfo(L2PcInstance player, boolean openDialog)
 	{
-		_playerId = playerId;
+		_player = player;
 		_openDialog = openDialog;
 	}
 	
@@ -40,15 +41,15 @@ public class ExFactionInfo implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_FACTION_INFO.writeId(packet);
 		
-		packet.writeD(_playerId);
+		packet.writeD(_player.getObjectId());
 		packet.writeC(_openDialog ? 1 : 0);
-		packet.writeD(6);
+		packet.writeD(Faction.values().length);
 		
-		for (int i = 0; i < 6; i++)
+		for (Faction faction : Faction.values())
 		{
-			packet.writeC(i);
-			packet.writeH(0);
-			packet.writeE(0);
+			packet.writeC(faction.getId());
+			packet.writeH(_player.getFactionLevel(faction));
+			packet.writeE(_player.getFactionProgress(faction));
 		}
 		
 		return true;

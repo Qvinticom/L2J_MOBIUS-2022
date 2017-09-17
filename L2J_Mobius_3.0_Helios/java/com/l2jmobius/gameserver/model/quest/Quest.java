@@ -42,6 +42,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CategoryType;
+import com.l2jmobius.gameserver.enums.Faction;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.TrapAction;
@@ -3316,6 +3317,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public final void addCondClanLevel(int clanLevel, KeyValuePair<Integer, String>... pairs)
 	{
 		addCondStart(p -> (p.getClan() != null) && (p.getClan().getLevel() > clanLevel), pairs);
+	}
+	
+	/**
+	 * Adds a faction level start condition to the quest.
+	 * @param faction the faction
+	 * @param factionLevel the faction level
+	 * @param html the HTML to display if the condition is not met
+	 */
+	public void addFactionLevel(Faction faction, int factionLevel, String html)
+	{
+		addCondStart(p -> (p.getFactionLevel(faction)) > factionLevel, html);
 	}
 	
 	public void onQuestAborted(L2PcInstance player)
