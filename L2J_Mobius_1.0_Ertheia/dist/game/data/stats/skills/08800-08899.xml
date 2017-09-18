@@ -2025,76 +2025,181 @@
 		</effects>
 	</skill>
 	<skill id="8881" toLevel="1" name="Top-grade Resistance Earring - Stun">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Stun Bonus by 20%, and Stun Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<SHOCK>20</SHOCK>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>20</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8882" toLevel="1" name="Top-grade Resistance Earring - Hold">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Hold Bonus by 20%, and Hold Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<HOLD>20</HOLD>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>20</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8883" toLevel="1" name="Top-grade Resistance Earring - Bleed">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Bleed Bonus by 20%, and Bleed Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<BLEED>20</BLEED>
+			</effect>
+			<effect name="DefenceTrait">
+				<BLEED>20</BLEED>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8884" toLevel="1" name="Top-grade Resistance Earring - Paralyze">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Paralyze Bonus by 20%, and Paralysis Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<PARALYZE>20</PARALYZE>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>20</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8885" toLevel="1" name="Top-grade Resistance Earring - Mental Attack">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Mental Bonus by 20%, and Mental Attack Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<HOLD>20</HOLD>
+				<DERANGEMENT>20</DERANGEMENT>
+				<SLEEP>20</SLEEP>
+			</effect>
+			<effect name="DefenceTrait">
+				<HOLD>20</HOLD>
+				<DERANGEMENT>20</DERANGEMENT>
+				<SLEEP>20</SLEEP>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8886" toLevel="1" name="Top-grade Resistance Earring - Sleep">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Sleep Bonus by 20%, and Sleep Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<SLEEP>20</SLEEP>
+			</effect>
+			<effect name="DefenceTrait">
+				<SLEEP>20</SLEEP>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8887" toLevel="1" name="Top-grade Resistance Earring - Poison">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Poison Bonus by 20%, and Poison Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<POISON>20</POISON>
+			</effect>
+			<effect name="DefenceTrait">
+				<POISON>20</POISON>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8888" toLevel="1" name="Top-grade Resistance Earring - Knock Back/Knock Down">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Knock Back/Knock Down Bonus by 20%, and Knock Back/Knock Down Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<KNOCKBACK>20</KNOCKBACK>
+				<KNOCKDOWN>20</KNOCKDOWN>
+			</effect>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>20</KNOCKBACK>
+				<KNOCKDOWN>20</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8889" toLevel="1" name="Top-grade Resistance Earring - Aerial Yoke">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Aerial Yoke Bonus by 20%, and Aerial Yoke Resistance by 20. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="MaxCp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="AttackTrait">
+				<AIRBIND>20</AIRBIND>
+			</effect>
+			<effect name="DefenceTrait">
+				<AIRBIND>20</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8890" toLevel="1" name="Protection">
 		<!-- For 2 minutes, Speed + 100 and becomes resistant to all Debuffs. Requires 1 Dragon Blood. Cooldown is 10 minutes. -->
