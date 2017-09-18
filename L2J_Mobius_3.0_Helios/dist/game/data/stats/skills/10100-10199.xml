@@ -453,6 +453,13 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="1">25</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.7 + 0.3 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="HealEffect">
 				<amount>25</amount>
 				<mode>PER</mode>
@@ -511,7 +518,7 @@
 		</effects>
 	</skill>
 	<skill id="10106" toLevel="1" name="Sentinel's Aura">
-		<!-- Increases M. Def. by 25%, Attribute Resistance by 50, and Debuff Resistance by 25%. Increases party members' M. Def. by 20%, Attribute Resistance by 40, and Debuff Resistance by 20%. Only one Knight's Aura can be active at any time. -->
+		<!-- Increases P./M. Def. by 25%, Attribute Resistance by 50, and Debuff Resistance by 25%. Increases party members' M. Def. by 20%, Attribute Resistance by 40, and Debuff Resistance by 20%. Only one Knight's Aura can be active at any time. -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
@@ -529,6 +536,13 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2030">{2000 + subIndex}</value>
 				</skillSubLevel>
 				<ticks>7</ticks>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="1">25</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.7 + 0.3 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
 				<amount>
@@ -647,6 +661,13 @@
 		<reuseDelay>1000</reuseDelay>
 		<effects>
 			<effect name="PhysicalDefence">
+				<amount>
+					<value fromLevel="1" toLevel="1">20</value>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.7 + 0.3 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="1">20</value>
 					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{0.7 + 0.3 * subIndex}</value>

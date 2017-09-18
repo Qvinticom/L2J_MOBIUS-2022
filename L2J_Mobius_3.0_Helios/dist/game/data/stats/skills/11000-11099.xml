@@ -3687,7 +3687,7 @@
 			<value level="2">85</value>
 		</mpConsume>
 		<hitTime>200</hitTime>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>180000</reuseDelay>
 		<effectPoint>
 			<value level="1">696</value>
 			<value level="2">705</value>
@@ -3710,7 +3710,10 @@
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="MAtk">
-				<amount>30</amount>
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
