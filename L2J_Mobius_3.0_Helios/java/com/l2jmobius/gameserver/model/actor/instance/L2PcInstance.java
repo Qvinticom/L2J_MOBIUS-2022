@@ -281,6 +281,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestItemList;
 import com.l2jmobius.gameserver.network.serverpackets.ExSetCompassZoneCode;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ExStartScenePlayer;
 import com.l2jmobius.gameserver.network.serverpackets.ExStopScenePlayer;
 import com.l2jmobius.gameserver.network.serverpackets.ExStorageMaxCount;
@@ -14013,10 +14014,16 @@ public final class L2PcInstance extends L2Playable
 		if ((currentPoints + count) > faction.getPointsOfLevel(faction.getLevelCount() - 1))
 		{
 			getVariables().set(faction.toString(), faction.getPointsOfLevel(faction.getLevelCount() - 1));
+			final String message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction is at the highest level possible.";
+			sendPacket(new ExShowScreenMessage(message, 5000));
+			sendMessage(message);
 		}
 		else
 		{
 			getVariables().set(faction.toString(), currentPoints + count);
+			final String message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction was increased by " + count + " points.";
+			sendPacket(new ExShowScreenMessage(message, 5000));
+			sendMessage(message);
 		}
 	}
 	
