@@ -1621,7 +1621,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8793" toLevel="1" name="Top-grade Royal Guard Earring - Rune">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Max CP by 5%, Hold Resistance by 15%, effectiveness of Poison attacks by 15% and Fire Resistance by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
@@ -1637,36 +1636,56 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8795" toLevel="1" name="Top-grade Royal Guard Ring - Gludio">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8796" toLevel="1" name="Top-grade Royal Guard Ring - Dion">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Water Resistance by 15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>WATER</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8797" toLevel="1" name="Top-grade Royal Guard Ring - Giran">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Fire Resistance by 15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8798" toLevel="1" name="Top-grade Royal Guard Ring - Oren">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases Earth Resistance by 15. -->
 		<icon>icon.accessory_ring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>15</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="8799" toLevel="1" name="Top-grade Royal Guard Ring - Aden">
 		<!-- AUTO GENERATED SKILL -->
