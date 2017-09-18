@@ -618,220 +618,418 @@
 		<!-- MP + 107, Dark Resistance + 50, STR + 3, INT + 3, CON + 3, Skill Cooldown - 10%, Damage Reflect + 5%, P. Atk. + 15%, M. Atk. + 10%, Max HP + 3%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 25%, Hate + 25%, Windstorm + 25%, Exile + 25%, Disarmament + 15%, Slip + 15%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27634" level="1" /> <!-- Gran Kain's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">292.0</stat>
+			<stat type="maxMp">107</stat>
 		</stats>
 	</item>
 	<item id="27679" name="Gran Kain's Necklace" additionalName="Stage 2" type="Armor">
 		<!-- MP + 114, Dark Resistance + 50, STR + 3, INT + 3, CON + 3, Skill Cooldown - 11%, Damage Reflect + 6%, P. Atk. + 16%, M. Atk. + 11%, Max HP + 3%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 26%, Hate + 26%, Windstorm + 26%, Exile + 26%, Disarmament + 16%, Slip + 16%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27635" level="2" /> <!-- Gran Kain's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">333.0</stat>
+			<stat type="maxMp">114</stat>
 		</stats>
 	</item>
 	<item id="27680" name="Gran Kain's Necklace" additionalName="Stage 3" type="Armor">
 		<!-- MP + 121, Dark Resistance + 60, STR + 4, INT + 4, CON + 4, Skill Cooldown - 12%, Damage Reflect + 7%, P. Atk. + 17%, M. Atk. + 12%, Max HP + 5%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 27%, Hate + 27%, Windstorm + 27%, Exile + 27%, Disarmament + 17%, Slip + 17%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27636" level="3" /> <!-- Gran Kain's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">374.0</stat>
+			<stat type="maxMp">121</stat>
 		</stats>
 	</item>
 	<item id="27681" name="Gran Kain's Necklace" additionalName="Stage 4" type="Armor">
 		<!-- MP + 126, Dark Resistance + 60, STR + 4, INT + 4, CON + 4, Skill Cooldown - 13%, Damage Reflect + 8%, P. Atk. + 18%, M. Atk. + 13%, Max HP + 5%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 28%, Hate + 28%, Windstorm + 28%, Exile + 28%, Disarmament + 18%, Slip + 18%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27637" level="4" /> <!-- Gran Kain's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">407.0</stat>
+			<stat type="maxMp">126</stat>
 		</stats>
 	</item>
 	<item id="27682" name="Gran Kain's Necklace" additionalName="Stage 5" type="Armor">
 		<!-- MP + 131, Dark Resistance + 70, STR + 5, INT + 5, CON + 5, Skill Cooldown - 14%, Damage Reflect + 9%, P. Atk. + 19%, M. Atk. + 14%, Max HP + 7%, Max MP + 10%. Resistance to the following abnormal conditions: Shock + 29%, Hate + 29%, Windstorm + 29%, Exile + 29%, Disarmament + 19%, Slip + 19%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27638" level="5" /> <!-- Gran Kain's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">437.0</stat>
+			<stat type="maxMp">131</stat>
 		</stats>
 	</item>
 	<item id="27683" name="Gran Kain's Necklace" additionalName="Stage 6" type="Armor">
 		<!-- MP + 136, Dark Resistance + 70, STR + 5, INT + 5, CON + 5, Skill Cooldown - 15%, Damage Reflect + 10%, P. Atk. + 20%, M. Atk. + 15%, Max HP + 7%, Max MP + 10%. Resistance to the following abnormal conditions: Shock + 30%, Hate + 30%, Windstorm + 30%, Exile + 30%, Disarmament + 20%, Slip + 20%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_grankein_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27639" level="6" /> <!-- Gran Kain's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">479.0</stat>
+			<stat type="maxMp">136</stat>
 		</stats>
 	</item>
 	<item id="27684" name="Einhasad's Necklace" additionalName="Stage 1" type="Armor">
 		<!-- MP + 107, Holy Resistance + 50, STR + 3, INT + 3, CON + 3, Skill Cooldown - 10%, Damage Reflect + 5%, P. Atk. + 10%, M. Atk. + 15%, Max HP + 5%, Max MP + 3%. Resistance to the following abnormal conditions: Shock + 25%, Hate + 25%, Disarmament + 25%, Slip + 25%, Windstorm + 15%, Exile + 15%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27640" level="1" /> <!-- Einhasad's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">292.0</stat>
+			<stat type="maxMp">107</stat>
 		</stats>
 	</item>
 	<item id="27685" name="Einhasad's Necklace" additionalName="Stage 2" type="Armor">
 		<!-- MP + 114, Holy Resistance + 50, STR + 3, INT + 3, CON + 3, Skill Cooldown - 11%, Damage Reflect + 6%, P. Atk. + 11%, M. Atk. + 16%, Max HP + 5%, Max MP + 3%. Resistance to the following abnormal conditions: Shock + 26%, Hate + 26%, Disarmament + 26%, Slip + 26%, Windstorm + 16%, Exile + 16%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27641" level="2" /> <!-- Einhasad's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">333.0</stat>
+			<stat type="maxMp">114</stat>
 		</stats>
 	</item>
 	<item id="27686" name="Einhasad's Necklace" additionalName="Stage 3" type="Armor">
 		<!-- MP + 121, Holy Resistance + 60, STR + 4, INT + 4, CON + 4, Skill Cooldown - 12%, Damage Reflect + 7%, P. Atk. + 12%, M. Atk. + 17%, Max HP + 7%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 27%, Hate + 27%, Disarmament + 27%, Slip + 27%, Windstorm + 17%, Exile + 17%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27642" level="3" /> <!-- Einhasad's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">374.0</stat>
+			<stat type="maxMp">121</stat>
 		</stats>
 	</item>
 	<item id="27687" name="Einhasad's Necklace" additionalName="Stage 4" type="Armor">
 		<!-- MP + 126, Holy Resistance + 60, STR + 4, INT + 4, CON + 4, Skill Cooldown - 13%, Damage Reflect + 8%, P. Atk. + 13%, M. Atk. + 18%, Max HP + 7%, Max MP + 5%. Resistance to the following abnormal conditions: Shock + 28%, Hate + 28%, Disarmament + 28%, Slip + 28%, Windstorm + 18%, Exile + 18%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27643" level="4" /> <!-- Einhasad's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">407.0</stat>
+			<stat type="maxMp">126</stat>
 		</stats>
 	</item>
 	<item id="27688" name="Einhasad's Necklace" additionalName="Stage 5" type="Armor">
 		<!-- MP + 131, Holy Resistance + 70, STR + 5, INT + 5, CON + 5, Skill Cooldown - 14%, Damage Reflect + 9%, P. Atk. + 14%, M. Atk. + 19%, Max HP + 10%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 29%, Hate + 29%, Disarmament + 29%, Slip + 29%, Windstorm + 19%, Exile + 19%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27644" level="5" /> <!-- Einhasad's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">437.0</stat>
+			<stat type="maxMp">131</stat>
 		</stats>
 	</item>
 	<item id="27689" name="Einhasad's Necklace" additionalName="Stage 6" type="Armor">
 		<!-- MP + 136, Holy Resistance + 70, STR + 5, INT + 5, CON + 5, Skill Cooldown - 15%, Damage Reflect + 10%, P. Atk. + 15%, M. Atk. + 20%, Max HP + 10%, Max MP + 7%. Resistance to the following abnormal conditions: Shock + 30%, Hate + 30%, Disarmament + 30%, Slip + 30%, Windstorm + 20%, Exile + 20%. -->
 		<set name="icon" val="BranchIcon.Icon.necklace_of_einhasad_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<skills>
+			<skill id="27645" level="6" /> <!-- Einhasad's Necklace -->
+		</skills>
 		<stats>
 			<stat type="mDef">479.0</stat>
+			<stat type="maxMp">136</stat>
 		</stats>
 	</item>
 	<item id="27690" name="Pa'agrio's Earring" additionalName="Stage 1" type="Armor">
 		<!-- MP + 80, Fire Resistance + 50, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 15%, M. Def. + 10%, Received Heal Amount + 10%, Recovery Skill Power + 80. Resistance to the following abnormal conditions: Paralysis + 15%, Bluff + 15%, Mental + 15%, Slip + 15%, Aerial Yoke + 10%, Mutation + 10%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27646" level="1" /> <!-- Pa'agrio's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">219.0</stat>
+			<stat type="maxMp">80</stat>
 		</stats>
 	</item>
 	<item id="27691" name="Pa'agrio's Earring" additionalName="Stage 2" type="Armor">
 		<!-- MP + 86, Fire Resistance + 50, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 15%, M. Def. + 10%, Received Heal Amount + 10%, Recovery Skill Power + 88. Resistance to the following abnormal conditions: Paralysis + 16%, Bluff + 16%, Mental + 16%, Slip + 16%, Aerial Yoke + 11%, Mutation + 11%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27647" level="2" /> <!-- Pa'agrio's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">250.0</stat>
+			<stat type="maxMp">86</stat>
 		</stats>
 	</item>
 	<item id="27692" name="Pa'agrio's Earring" additionalName="Stage 3" type="Armor">
 		<!-- MP + 91, Fire Resistance + 60, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 16%, M. Def. + 11%, Received Heal Amount + 11%, Recovery Skill Power + 96. Resistance to the following abnormal conditions: Paralysis + 17%, Bluff + 17%, Mental + 17%, Slip + 17%, Aerial Yoke + 12%, Mutation + 12%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27648" level="3" /> <!-- Pa'agrio's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">280.0</stat>
+			<stat type="maxMp">91</stat>
 		</stats>
 	</item>
 	<item id="27693" name="Pa'agrio's Earring" additionalName="Stage 4" type="Armor">
 		<!-- MP + 94, Fire Resistance + 60, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 16%, M. Def. + 11%, Received Heal Amount + 11%, Recovery Skill Power + 104. Resistance to the following abnormal conditions: Paralysis + 18%, Bluff + 18%, Mental + 18%, Slip + 18%, Aerial Yoke + 13%, Mutation + 13%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27649" level="4" /> <!-- Pa'agrio's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">300.0</stat>
+			<stat type="maxMp">94</stat>
 		</stats>
 	</item>
 	<item id="27694" name="Pa'agrio's Earring" additionalName="Stage 5" type="Armor">
 		<!-- MP + 98, Fire Resistance + 70, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 17%, M. Def. + 12%, Received Heal Amount + 12%, Recovery Skill Power + 108. Resistance to the following abnormal conditions: Paralysis + 19%, Bluff + 19%, Mental + 19%, Slip + 19%, Aerial Yoke + 14%, Mutation + 14%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27650" level="5" /> <!-- Pa'agrio's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">320.0</stat>
+			<stat type="maxMp">98</stat>
 		</stats>
 	</item>
 	<item id="27695" name="Pa'agrio's Earring" additionalName="Stage 6" type="Armor">
 		<!-- MP + 102, Fire Resistance + 70, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 17%, M. Def. + 12%, Received Heal Amount + 12%, Recovery Skill Power + 112. Resistance to the following abnormal conditions: Paralysis + 20%, Bluff + 20%, Mental + 20%, Slip + 20%, Aerial Yoke + 15%, Mutation + 15%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_paagrio_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27651" level="6" /> <!-- Pa'agrio's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">359.0</stat>
+			<stat type="maxMp">102</stat>
 		</stats>
 	</item>
 	<item id="27696" name="Eva's Earring" additionalName="Stage 1" type="Armor">
 		<!-- MP + 80, Water Resistance + 50, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 10%, M. Def. + 15%, Received Heal Amount + 5%, Recovery Skill Power + 160. Resistance to the following abnormal conditions: Paralysis + 15%, Bluff + 15%, Aerial Yoke + 15%, Mutation + 15%, Mental + 10%, Slip + 10%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27652" level="1" /> <!-- Eva's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">219.0</stat>
+			<stat type="maxMp">80</stat>
 		</stats>
 	</item>
 	<item id="27697" name="Eva's Earring" additionalName="Stage 2" type="Armor">
 		<!-- MP + 86, Water Resistance + 50, DEX + 3, WIT + 3, MEN + 3, Vampiric Effect 5%, MP Consumption - 5%, P. Def. + 10%, M. Def. + 15%, Received Heal Amount + 5%, Recovery Skill Power + 168. Resistance to the following abnormal conditions: Paralysis + 16%, Bluff + 16%, Aerial Yoke + 16%, Mutation + 16%, Mental + 11%, Slip + 11%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27653" level="2" /> <!-- Eva's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">250.0</stat>
+			<stat type="maxMp">86</stat>
 		</stats>
 	</item>
 	<item id="27698" name="Eva's Earring" additionalName="Stage 3" type="Armor">
 		<!-- MP + 91, Water Resistance + 60, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 11%, M. Def. + 16%, Received Heal Amount + 6%, Recovery Skill Power + 176. Resistance to the following abnormal conditions: Paralysis + 17%, Bluff + 17%, Aerial Yoke + 17%, Mutation + 17%, Mental + 12%, Slip + 12%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27654" level="3" /> <!-- Eva's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">280.0</stat>
+			<stat type="maxMp">91</stat>
 		</stats>
 	</item>
 	<item id="27699" name="Eva's Earring" additionalName="Stage 4" type="Armor">
 		<!-- MP + 94, Water Resistance + 60, DEX + 4, WIT + 4, MEN + 4, Vampiric Effect 6%, MP Consumption - 6%, P. Def. + 11%, M. Def. + 16%, Received Heal Amount + 6%, Recovery Skill Power + 184. Resistance to the following abnormal conditions: Paralysis + 18%, Bluff + 18%, Aerial Yoke + 18%, Mutation + 18%, Mental + 13%, Slip + 13%. -->
 		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27655" level="4" /> <!-- Eva's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">300.0</stat>
+			<stat type="maxMp">94</stat>
 		</stats>
 	</item>
 </list>

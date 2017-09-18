@@ -2,142 +2,268 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="27700" name="Eva's Earring" additionalName="Stage 5" type="Armor">
 		<!-- MP + 98, Water Resistance + 70, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 12%, M. Def. + 17%, Received Heal Amount + 7%, Recovery Skill Power + 188. Resistance to the following abnormal conditions: Paralysis + 19%, Bluff + 19%, Aerial Yoke + 19%, Mutation + 19%, Mental + 14%, Slip + 14%. -->
-		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27656" level="5" /> <!-- Eva's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">320.0</stat>
+			<stat type="maxMp">98</stat>
 		</stats>
 	</item>
 	<item id="27701" name="Eva's Earring" additionalName="Stage 6" type="Armor">
 		<!-- MP + 102, Water Resistance + 70, DEX + 5, WIT + 5, MEN + 5, Vampiric Effect 7%, MP Consumption - 7%, P. Def. + 12%, M. Def. + 17%, Received Heal Amount + 7%, Recovery Skill Power + 192. Resistance to the following abnormal conditions: Paralysis + 20%, Bluff + 20%, Aerial Yoke + 20%, Mutation + 20%, Mental + 15%, Slip + 15%. -->
-		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
+		<set name="icon" val="BranchIcon.Icon.earring_of_eva_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="immediate_effect" val="true" />
+		<set name="commissionItemType" val="EARRING" />
+		<skills>
+			<skill id="27657" level="6" /> <!-- Eva's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">359.0</stat>
+			<stat type="maxMp">102</stat>
 		</stats>
 	</item>
 	<item id="27702" name="Sayha's Ring" additionalName="Stage 1" type="Armor">
 		<!-- MP + 53, Wind Resistance + 50, CHA + 3, LUC + 3, P. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, PvP Damage + 8%, Received PvP Damage - 5%, P. Skill Critical Damage + 10%, M. Skill Critical Damage + 5%. Resistance to the following abnormal conditions: Shock + 15%, Pull + 15%, Knock Back/Knock Down + 15%, Hold + 15%, Seduction + 10%, Petrification + 10%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27658" level="1" /> <!-- Sayha's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">146.0</stat>
+			<stat type="maxMp">53</stat>
 		</stats>
 	</item>
 	<item id="27703" name="Sayha's Ring" additionalName="Stage 2" type="Armor">
 		<!-- MP + 57, Wind Resistance + 50, CHA + 3, LUC + 3, P. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, PvP Damage + 8%, Received PvP Damage - 5%, P. Skill Critical Damage + 10%, M. Skill Critical Damage + 5%. Resistance to the following abnormal conditions: Shock + 16%, Pull + 16%, Knock Back/Knock Down + 16%, Hold + 16%, Seduction + 11%, Petrification + 11%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27659" level="2" /> <!-- Sayha's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">167.0</stat>
+			<stat type="maxMp">57</stat>
 		</stats>
 	</item>
 	<item id="27704" name="Sayha's Ring" additionalName="Stage 3" type="Armor">
 		<!-- MP + 60, Wind Resistance + 60, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 9%, Received PvP Damage - 6%, P. Skill Critical Damage + 11%, M. Skill Critical Damage + 6%. Resistance to the following abnormal conditions: Shock + 17%, Pull + 17%, Knock Back/Knock Down + 17%, Hold + 17%, Seduction + 12%, Petrification + 12%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27660" level="3" /> <!-- Sayha's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">187.0</stat>
+			<stat type="maxMp">60</stat>
 		</stats>
 	</item>
 	<item id="27705" name="Sayha's Ring" additionalName="Stage 4" type="Armor">
 		<!-- MP + 62, Wind Resistance + 60, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 9%, Received PvP Damage - 6%, P. Skill Critical Damage + 11%, M. Skill Critical Damage + 6%. Resistance to the following abnormal conditions: Shock + 18%, Pull + 18%, Knock Back/Knock Down + 18%, Hold + 18%, Seduction + 13%, Petrification + 13%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27661" level="4" /> <!-- Sayha's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">206.0</stat>
+			<stat type="maxMp">62</stat>
 		</stats>
 	</item>
 	<item id="27706" name="Sayha's Ring" additionalName="Stage 5" type="Armor">
 		<!-- MP + 64, Wind Resistance + 70, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 10%, Received PvP Damage - 7%, P. Skill Critical Damage + 12%, M. Skill Critical Damage + 7%. Resistance to the following abnormal conditions: Shock + 19%, Pull + 19%, Knock Back/Knock Down + 19%, Hold + 19%, Seduction + 14%, Petrification + 14%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27662" level="5" /> <!-- Sayha's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">225.0</stat>
+			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
 	<item id="27707" name="Sayha's Ring" additionalName="Stage 6" type="Armor">
 		<!-- MP + 68, Wind Resistance + 70, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 10%, Received PvP Damage - 7%, P. Skill Critical Damage + 12%, M. Skill Critical Damage + 7%. Resistance to the following abnormal conditions: Shock + 20%, Pull + 20%, Knock Back/Knock Down + 20%, Hold + 20%, Seduction + 15%, Petrification + 15%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_sayhas_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27663" level="6" /> <!-- Sayha's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">239.0</stat>
+			<stat type="maxMp">68</stat>
 		</stats>
 	</item>
 	<item id="27708" name="Maphr's Ring" additionalName="Stage 1" type="Armor">
 		<!-- MP + 53, Earth Resistance + 50, CHA + 3, LUC + 3, P. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, PvP Damage + 5%, Received PvP Damage - 8%, P. Skill Critical Damage + 5%, M. Skill Critical Damage + 10%. Resistance to the following abnormal conditions: Shock + 15%, Pull + 15%, Seduction + 15%, Petrification + 15%, Knock Back/Knock Down + 10%, Hold + 10%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27664" level="1" /> <!-- Maphr's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">146.0</stat>
+			<stat type="maxMp">53</stat>
 		</stats>
 	</item>
 	<item id="27709" name="Maphr's Ring" additionalName="Stage 2" type="Armor">
 		<!-- MP + 57, Earth Resistance + 50, CHA + 3, LUC + 3, P. Critical Damage + 20%, Atk. Spd. + 6%, Casting Spd. + 6%, PvP Damage + 5%, Received PvP Damage - 8%, P. Skill Critical Damage + 5%, M. Skill Critical Damage + 10%. Resistance to the following abnormal conditions: Shock + 16%, Pull + 16%, Seduction + 16%, Petrification + 16%, Knock Back/Knock Down + 11%, Hold + 11%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27665" level="2" /> <!-- Maphr's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">167.0</stat>
+			<stat type="maxMp">57</stat>
 		</stats>
 	</item>
 	<item id="27710" name="Maphr's Ring" additionalName="Stage 3" type="Armor">
 		<!-- MP + 60, Earth Resistance + 60, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 6%, Received PvP Damage - 9%, P. Skill Critical Damage + 6%, M. Skill Critical Damage + 11%. Resistance to the following abnormal conditions: Shock + 17%, Pull + 17%, Seduction + 17%, Petrification + 17%, Knock Back/Knock Down + 12%, Hold + 12%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27666" level="3" /> <!-- Maphr's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">187.0</stat>
+			<stat type="maxMp">60</stat>
 		</stats>
 	</item>
 	<item id="27711" name="Maphr's Ring" additionalName="Stage 4" type="Armor">
 		<!-- MP + 62, Earth Resistance + 60, CHA + 4, LUC + 4, P. Critical Damage + 21%, Atk. Spd. + 7%, Casting Spd. + 7%, PvP Damage + 6%, Received PvP Damage - 9%, P. Skill Critical Damage + 6%, M. Skill Critical Damage + 11%. Resistance to the following abnormal conditions: Shock + 18%, Pull + 18%, Seduction + 18%, Petrification + 18%, Knock Back/Knock Down + 13%, Hold + 13%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27667" level="4" /> <!-- Maphr's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">206.0</stat>
+			<stat type="maxMp">62</stat>
 		</stats>
 	</item>
 	<item id="27712" name="Maphr's Ring" additionalName="Stage 5" type="Armor">
 		<!-- MP + 64, Earth Resistance + 70, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 7%, Received PvP Damage - 10%, P. Skill Critical Damage + 7%, M. Skill Critical Damage + 12%. Resistance to the following abnormal conditions: Shock + 19%, Pull + 19%, Seduction + 19%, Petrification + 19%, Knock Back/Knock Down + 14%, Hold + 14%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27668" level="5" /> <!-- Maphr's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">225.0</stat>
+			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
 	<item id="27713" name="Maphr's Ring" additionalName="Stage 6" type="Armor">
 		<!-- MP + 68, Earth Resistance + 70, CHA + 5, LUC + 5, P. Critical Damage + 22%, Atk. Spd. + 8%, Casting Spd. + 8%, PvP Damage + 7%, Received PvP Damage - 10%, P. Skill Critical Damage + 7%, M. Skill Critical Damage + 12%. Resistance to the following abnormal conditions: Shock + 20%, Pull + 20%, Seduction + 20%, Petrification + 20%, Knock Back/Knock Down + 15%, Hold + 15%. -->
-		<set name="icon" val="icon.ring_earthworm_heart" />
+		<set name="icon" val="BranchIcon.Icon.ring_of_maphr_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="crystal_type" val="R" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="enchant_enabled" val="1" />
+		<set name="commissionItemType" val="RING" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="27669" level="6" /> <!-- Maphr's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">239.0</stat>
+			<stat type="maxMp">68</stat>
 		</stats>
 	</item>
 	<item id="27714" name="Recipe: Gran Kain's Necklace - Stage 1" type="EtcItem">
