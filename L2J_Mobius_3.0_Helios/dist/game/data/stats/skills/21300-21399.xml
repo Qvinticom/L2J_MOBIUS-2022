@@ -1066,7 +1066,7 @@
 		<icon>BranchSys3.icon1.g_premium_hena_kamael</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="21364" toLevel="8" name="Talisman - Abundance (High-grade) - Lv. 4">
+	<skill id="21364" toLevel="12" name="Talisman - Abundance (High-grade) - Lv. 4">
 		<!-- Level 1 :  P. Atk. + 154, M. Atk. + 181, P./ M. Evasion + 4. -->
 		<!-- Level 2 : Attribute Resistance + 10 and Debuff Resistance + 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<!-- Level 3 : P./M. Critical Rate + 8%, Received Critical Damage - 10%, and PvP skill power - 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
@@ -1075,6 +1075,10 @@
 		<!-- Level 6 : P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<!-- Level 7 : P. Atk. + 231, M. Atk. + 271, P. Evasion/M. Evasion + 7, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<!-- Level 8 : Attribute Resistance + 15, Debuff Resistance + 13%, P./M. Critical Rate + 13%, Max HP, MP, and CP + 490, HP, MP, and CP Recovery + 7. Received Critical Damage - 15%, and skill damage during PvP - 15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Level 9 : Max HP/MP/CP + 510, P. Def. + 971, M. Def. + 552, P. Evasion/M. Evasion + 7, Attribute Resistance + 15, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 15%, M. Atk. + 15%, Skill Power + 15%, Skill Critical Rate + 15%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Level 10: HP/MP/CP + 531, P. Def. + 1051, M. Def. + 609, P. Evasion/M. Evasion + 8, Attribute Resistance + 17, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 16%, M. Atk. + 16%, Skill Power + 16%, Skill Critical Rate + 16%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- Level 11: Max HP/MP/CP + 563, P. Def. + 1184, M. Def. + 706, P. Evasion/M. Evasion + 9, Attribute Resistance + 20, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 17%, M. Atk. + 17%, Skill Power + 17%, Skill Critical Rate + 17%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
+		<!-- LEvel 12: HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25, Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<icon>
 			<value level="1">BranchSys2.icon.g_giant_gem</value>
 			<value level="2">BranchSys2.icon.g_giant_gem</value>
@@ -1084,6 +1088,10 @@
 			<value level="6">BranchSys2.icon.g_twilight_gem</value>
 			<value level="7">BranchSys2.icon.g_twilight_gem</value>
 			<value level="8">BranchSys2.icon.g_twilight_gem</value>
+			<value level="9">BranchSys2.icon.g_therich_i00</value>
+			<value level="10">BranchSys2.icon.g_therich_i01</value>
+			<value level="11">BranchSys2.icon.g_therich_i02</value>
+			<value level="11">BranchSys2.icon.g_therich_i02</value>
 		</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -1098,6 +1106,10 @@
 				<value level="6">271</value>
 				<value level="7">271</value>
 				<value level="8">0</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1111,8 +1123,46 @@
 				<value level="6">231</value>
 				<value level="7">231</value>
 				<value level="8">0</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+			<amount>
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<value level="5">0</value>
+				<value level="6">0</value>
+				<value level="7">0</value>
+				<value level="8">0</value>
+				<value level="9">971</value>
+				<value level="10">1051</value>
+				<value level="11">1184</value>
+				<value level="12">1307</value>
+			</amount>
+			<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+			<amount>
+				<value level="1">0</value>
+				<value level="2">0</value>
+				<value level="3">0</value>
+				<value level="4">0</value>
+				<value level="5">0</value>
+				<value level="6">0</value>
+				<value level="7">0</value>
+				<value level="8">0</value>
+				<value level="9">971</value>
+				<value level="10">1051</value>
+				<value level="11">1184</value>
+				<value level="12">1307</value>
+			</amount>
+			<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalEvasion">
 			<amount>
@@ -1124,6 +1174,10 @@
 				<value level="6">7</value>
 				<value level="7">7</value>
 				<value level="8">0</value>
+				<value level="9">7</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1137,6 +1191,10 @@
 				<value level="6">7</value>
 				<value level="7">7</value>
 				<value level="8">0</value>
+				<value level="9">7</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1150,8 +1208,12 @@
 				<value level="6">15</value>
 				<value level="7">0</value>
 				<value level="8">15</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<attribute>FIRE</attribute>
 			</amount>
-			<attribute>FIRE</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 			<amount>
@@ -1163,8 +1225,12 @@
 				<value level="6">15</value>
 				<value level="7">0</value>
 				<value level="8">15</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<attribute>WATER</attribute>
 			</amount>
-			<attribute>WATER</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 			<amount>
@@ -1176,8 +1242,12 @@
 				<value level="6">15</value>
 				<value level="7">0</value>
 				<value level="8">15</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<attribute>WIND</attribute>
 			</amount>
-			<attribute>WIND</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 			<amount>
@@ -1189,8 +1259,12 @@
 				<value level="6">15</value>
 				<value level="7">0</value>
 				<value level="8">15</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<attribute>EARTH</attribute>
 			</amount>
-			<attribute>EARTH</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 			<amount>
@@ -1202,8 +1276,12 @@
 				<value level="6">15</value>
 				<value level="7">0</value>
 				<value level="8">15</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<attribute>DARK</attribute>
 			</amount>
-			<attribute>DARK</attribute>
 			</effect>
 			<effect name="DefenceAttribute">
 			<amount>
@@ -1215,8 +1293,12 @@
 				<value level="6">15</value>
 				<value level="7">0</value>
 				<value level="8">15</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<attribute>HOLY</attribute>
 			</amount>
-			<attribute>HOLY</attribute>
 			</effect>
 			<effect name="ResistAbnormalByCategory">
 			<amount>
@@ -1228,8 +1310,12 @@
 				<value level="6">13</value>
 				<value level="7">0</value>
 				<value level="8">13</value>
+				<value level="9">15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
+				<slot>DEBUFF</slot>
 			</amount>
-			<slot>DEBUFF</slot>
 			</effect>
 			<effect name="CriticalRate">
 			<amount>
@@ -1241,6 +1327,10 @@
 				<value level="6">0</value>
 				<value level="7">0</value>
 				<value level="8">13</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1254,6 +1344,10 @@
 				<value level="6">0</value>
 				<value level="7">0</value>
 				<value level="8">-15</value>
+				<value level="9">-15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1267,6 +1361,10 @@
 				<value level="6">0</value>
 				<value level="7">-15</value>
 				<value level="8">-15</value>
+				<value level="9">-15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1280,6 +1378,10 @@
 				<value level="6">0</value>
 				<value level="7">-15</value>
 				<value level="8">-15</value>
+				<value level="9">-15</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1293,6 +1395,10 @@
 				<value level="6">490</value>
 				<value level="7">490</value>
 				<value level="8">490</value>
+				<value level="9">510</value>
+				<value level="10">531</value>
+				<value level="11">563</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1306,6 +1412,10 @@
 				<value level="6">490</value>
 				<value level="7">490</value>
 				<value level="8">490</value>
+				<value level="9">510</value>
+				<value level="10">531</value>
+				<value level="11">563</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1319,6 +1429,10 @@
 				<value level="6">490</value>
 				<value level="7">490</value>
 				<value level="8">490</value>
+				<value level="9">510</value>
+				<value level="10">531</value>
+				<value level="11">563</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1332,6 +1446,10 @@
 				<value level="6">7</value>
 				<value level="7">7</value>
 				<value level="8">7</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1345,6 +1463,10 @@
 				<value level="6">7</value>
 				<value level="7">7</value>
 				<value level="8">7</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1358,6 +1480,10 @@
 				<value level="6">7</value>
 				<value level="7">7</value>
 				<value level="8">7</value>
+				<value level="9">0</value>
+				<value level="10">0</value>
+				<value level="11">0</value>
+				<value level="12">0</value>
 			</amount>
 				<mode>PER</mode>
 			</effect>
