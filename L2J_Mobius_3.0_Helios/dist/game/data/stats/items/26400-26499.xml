@@ -476,9 +476,15 @@
 		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="bodypart" val="deco1" />
 		<set name="weight" val="150" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="21477" level="3" />
+			<skill id="21364" level="11" />
+		</skills>
 	</item>
 	<item id="26448" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
 		<!-- Attribute Resistance + 10 and Debuff Resistance + 10%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
@@ -559,7 +565,7 @@
 	</item>
 	<item id="26458" name="Talisman - Abundance Lv. 4 (High-grade)" type="Armor">
 		<!-- HP/MP/CP + 591, P. Def. + 1307, M. Def. + 799, P. Evasion/M. Evasion + 10, Attribute Resistance + 25,  Debuff Resistance + 15%, Received P. Critical Damage - 15%, PVP Damage - 15% when equipped. Can use the Power of Abundance skill. (P. Atk. + 20%, M. Atk. + 20%, Skill Power + 20%, Skill Critical Rate + 20%. Duration 1 minute. Cooldown 10 minutes.). Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
-		<set name="icon" val="BranchIcon.Icon.g_therich_i03" />
+		<set name="icon" val="BranchIcon.Icon.g_therich_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_freightable" val="false" />
 		<set name="weight" val="150" />
