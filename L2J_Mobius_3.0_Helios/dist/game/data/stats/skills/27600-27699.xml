@@ -273,184 +273,2536 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27634" toLevel="1" name="Gran Kain's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>5</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>25</SHOCK>
+				<HATE>25</HATE>
+				<BOW>25</BOW>
+				<CROSSBOW>25</CROSSBOW>
+				<DEPORT>25</DEPORT>
+				<DISARM>15</DISARM>
+				<KNOCKBACK>15</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27635" toLevel="2" name="Gran Kain's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>6</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>26</SHOCK>
+				<HATE>26</HATE>
+				<BOW>26</BOW>
+				<CROSSBOW>26</CROSSBOW>
+				<DEPORT>26</DEPORT>
+				<DISARM>16</DISARM>
+				<KNOCKBACK>16</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27636" toLevel="3" name="Gran Kain's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>7</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>27</SHOCK>
+				<HATE>27</HATE>
+				<BOW>27</BOW>
+				<CROSSBOW>27</CROSSBOW>
+				<DEPORT>27</DEPORT>
+				<DISARM>17</DISARM>
+				<KNOCKBACK>17</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27637" toLevel="4" name="Gran Kain's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>8</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>18</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>13</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>28</SHOCK>
+				<HATE>28</HATE>
+				<BOW>28</BOW>
+				<CROSSBOW>28</CROSSBOW>
+				<DEPORT>28</DEPORT>
+				<DISARM>18</DISARM>
+				<KNOCKBACK>18</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27638" toLevel="5" name="Gran Kain's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>9</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>19</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>14</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>29</SHOCK>
+				<HATE>29</HATE>
+				<BOW>29</BOW>
+				<CROSSBOW>29</CROSSBOW>
+				<DEPORT>29</DEPORT>
+				<DISARM>19</DISARM>
+				<KNOCKBACK>19</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27639" toLevel="6" name="Gran Kain's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>10</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>30</SHOCK>
+				<HATE>30</HATE>
+				<BOW>30</BOW>
+				<CROSSBOW>30</CROSSBOW>
+				<DEPORT>30</DEPORT>
+				<DISARM>20</DISARM>
+				<KNOCKBACK>20</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27640" toLevel="1" name="Einhasad's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>5</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>25</SHOCK>
+				<HATE>25</HATE>
+				<DISARM>25</DISARM>
+				<KNOCKBACK>25</KNOCKBACK>
+				<BOW>15</BOW>
+				<CROSSBOW>15</CROSSBOW>
+				<DEPORT>15</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27641" toLevel="2" name="Einhasad's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-11</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>6</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>26</SHOCK>
+				<HATE>26</HATE>
+				<DISARM>26</DISARM>
+				<KNOCKBACK>26</KNOCKBACK>
+				<BOW>16</BOW>
+				<CROSSBOW>16</CROSSBOW>
+				<DEPORT>16</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27642" toLevel="3" name="Einhasad's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-12</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>7</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>27</SHOCK>
+				<HATE>27</HATE>
+				<DISARM>27</DISARM>
+				<KNOCKBACK>27</KNOCKBACK>
+				<BOW>17</BOW>
+				<CROSSBOW>17</CROSSBOW>
+				<DEPORT>17</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27643" toLevel="4" name="Einhasad's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-13</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>8</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>13</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>18</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>28</SHOCK>
+				<HATE>28</HATE>
+				<DISARM>28</DISARM>
+				<KNOCKBACK>28</KNOCKBACK>
+				<BOW>18</BOW>
+				<CROSSBOW>18</CROSSBOW>
+				<DEPORT>18</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27644" toLevel="5" name="Einhasad's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-14</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>9</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>14</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>19</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>29</SHOCK>
+				<HATE>29</HATE>
+				<DISARM>29</DISARM>
+				<KNOCKBACK>29</KNOCKBACK>
+				<BOW>19</BOW>
+				<CROSSBOW>19</CROSSBOW>
+				<DEPORT>19</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27645" toLevel="6" name="Einhasad's Necklace">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="DamageShieldResist">
+				<amount>10</amount>
+			</effect>
+			<effect name="PAtk">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>30</SHOCK>
+				<HATE>30</HATE>
+				<DISARM>30</DISARM>
+				<KNOCKBACK>30</KNOCKBACK>
+				<BOW>20</BOW>
+				<CROSSBOW>20</CROSSBOW>
+				<DEPORT>20</DEPORT>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27646" toLevel="1" name="Pa'agrio's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>80</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>15</PARALYZE>
+				<DERANGEMENT>15</DERANGEMENT>
+				<SHOCK>15</SHOCK>
+				<KNOCKBACK>15</KNOCKBACK>
+				<AIRBIND>10</AIRBIND>
+				<CHANGEBODY>10</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27647" toLevel="2" name="Pa'agrio's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>88</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>88</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>16</PARALYZE>
+				<DERANGEMENT>16</DERANGEMENT>
+				<SHOCK>16</SHOCK>
+				<KNOCKBACK>16</KNOCKBACK>
+				<AIRBIND>11</AIRBIND>
+				<CHANGEBODY>11</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27648" toLevel="3" name="Pa'agrio's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>96</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>96</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>17</PARALYZE>
+				<DERANGEMENT>17</DERANGEMENT>
+				<SHOCK>17</SHOCK>
+				<KNOCKBACK>17</KNOCKBACK>
+				<AIRBIND>12</AIRBIND>
+				<CHANGEBODY>12</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27649" toLevel="4" name="Pa'agrio's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>104</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>104</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>18</PARALYZE>
+				<DERANGEMENT>18</DERANGEMENT>
+				<SHOCK>18</SHOCK>
+				<KNOCKBACK>18</KNOCKBACK>
+				<AIRBIND>13</AIRBIND>
+				<CHANGEBODY>13</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27650" toLevel="5" name="Pa'agrio's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>7</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>108</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>108</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>19</PARALYZE>
+				<DERANGEMENT>19</DERANGEMENT>
+				<SHOCK>19</SHOCK>
+				<KNOCKBACK>19</KNOCKBACK>
+				<AIRBIND>14</AIRBIND>
+				<CHANGEBODY>14</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27651" toLevel="6" name="Pa'agrio's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>7</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>112</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>112</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>20</PARALYZE>
+				<DERANGEMENT>20</DERANGEMENT>
+				<SHOCK>20</SHOCK>
+				<KNOCKBACK>20</KNOCKBACK>
+				<AIRBIND>15</AIRBIND>
+				<CHANGEBODY>15</CHANGEBODY>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27652" toLevel="1" name="Eva's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>160</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>15</PARALYZE>
+				<DERANGEMENT>15</DERANGEMENT>
+				<AIRBIND>15</AIRBIND>
+				<CHANGEBODY>15</CHANGEBODY>
+				<SHOCK>10</SHOCK>
+				<KNOCKBACK>10</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27653" toLevel="2" name="Eva's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>5</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-5</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>15</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>168</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>168</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>16</PARALYZE>
+				<DERANGEMENT>16</DERANGEMENT>
+				<AIRBIND>16</AIRBIND>
+				<CHANGEBODY>16</CHANGEBODY>
+				<SHOCK>11</SHOCK>
+				<KNOCKBACK>11</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27654" toLevel="3" name="Eva's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>176</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>176</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>17</PARALYZE>
+				<DERANGEMENT>17</DERANGEMENT>
+				<AIRBIND>17</AIRBIND>
+				<CHANGEBODY>17</CHANGEBODY>
+				<SHOCK>12</SHOCK>
+				<KNOCKBACK>12</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27655" toLevel="4" name="Eva's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>6</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-6</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>16</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>184</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>184</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>18</PARALYZE>
+				<DERANGEMENT>18</DERANGEMENT>
+				<AIRBIND>18</AIRBIND>
+				<CHANGEBODY>18</CHANGEBODY>
+				<SHOCK>13</SHOCK>
+				<KNOCKBACK>13</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27656" toLevel="5" name="Eva's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>7</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>188</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>188</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>19</PARALYZE>
+				<DERANGEMENT>19</DERANGEMENT>
+				<AIRBIND>19</AIRBIND>
+				<CHANGEBODY>19</CHANGEBODY>
+				<SHOCK>14</SHOCK>
+				<KNOCKBACK>14</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27657" toLevel="6" name="Eva's Earring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="VampiricAttack">
+				<amount>7</amount>
+				<chance>100</chance>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-7</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>17</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>192</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>192</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<PARALYZE>20</PARALYZE>
+				<DERANGEMENT>20</DERANGEMENT>
+				<AIRBIND>20</AIRBIND>
+				<CHANGEBODY>20</CHANGEBODY>
+				<SHOCK>15</SHOCK>
+				<KNOCKBACK>15</KNOCKBACK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27658" toLevel="1" name="Sayha's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>15</SHOCK>
+				<PULL>15</PULL>
+				<KNOCKBACK>15</KNOCKBACK>
+				<KNOCKDOWN>15</KNOCKDOWN>
+				<HOLD>15</HOLD>
+				<AGGRESSION>10</AGGRESSION>
+				<TURN_STONE>10</TURN_STONE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27659" toLevel="2" name="Sayha's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>16</SHOCK>
+				<PULL>16</PULL>
+				<KNOCKBACK>16</KNOCKBACK>
+				<KNOCKDOWN>16</KNOCKDOWN>
+				<HOLD>16</HOLD>
+				<AGGRESSION>11</AGGRESSION>
+				<TURN_STONE>11</TURN_STONE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27660" toLevel="3" name="Sayha's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>21</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>17</SHOCK>
+				<PULL>17</PULL>
+				<KNOCKBACK>17</KNOCKBACK>
+				<KNOCKDOWN>17</KNOCKDOWN>
+				<HOLD>17</HOLD>
+				<AGGRESSION>12</AGGRESSION>
+				<TURN_STONE>12</TURN_STONE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27661" toLevel="4" name="Sayha's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>21</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>18</SHOCK>
+				<PULL>18</PULL>
+				<KNOCKBACK>18</KNOCKBACK>
+				<KNOCKDOWN>18</KNOCKDOWN>
+				<HOLD>18</HOLD>
+				<AGGRESSION>13</AGGRESSION>
+				<TURN_STONE>13</TURN_STONE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27662" toLevel="5" name="Sayha's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>22</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>19</SHOCK>
+				<PULL>19</PULL>
+				<KNOCKBACK>19</KNOCKBACK>
+				<KNOCKDOWN>19</KNOCKDOWN>
+				<HOLD>19</HOLD>
+				<AGGRESSION>14</AGGRESSION>
+				<TURN_STONE>14</TURN_STONE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27663" toLevel="6" name="Sayha's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>22</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>20</SHOCK>
+				<PULL>20</PULL>
+				<KNOCKBACK>20</KNOCKBACK>
+				<KNOCKDOWN>20</KNOCKDOWN>
+				<HOLD>20</HOLD>
+				<AGGRESSION>15</AGGRESSION>
+				<TURN_STONE>15</TURN_STONE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27664" toLevel="1" name="Maphr's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>15</SHOCK>
+				<PULL>15</PULL>
+				<AGGRESSION>15</AGGRESSION>
+				<TURN_STONE>15</TURN_STONE>
+				<KNOCKBACK>10</KNOCKBACK>
+				<KNOCKDOWN>10</KNOCKDOWN>
+				<HOLD>10</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27665" toLevel="2" name="Maphr's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>3</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>16</SHOCK>
+				<PULL>16</PULL>
+				<AGGRESSION>16</AGGRESSION>
+				<TURN_STONE>16</TURN_STONE>
+				<KNOCKBACK>11</KNOCKBACK>
+				<KNOCKDOWN>11</KNOCKDOWN>
+				<HOLD>11</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27666" toLevel="3" name="Maphr's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>21</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>17</SHOCK>
+				<PULL>17</PULL>
+				<AGGRESSION>17</AGGRESSION>
+				<TURN_STONE>17</TURN_STONE>
+				<KNOCKBACK>12</KNOCKBACK>
+				<KNOCKDOWN>12</KNOCKDOWN>
+				<HOLD>12</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27667" toLevel="4" name="Maphr's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>60</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>4</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>21</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>9</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>6</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>18</SHOCK>
+				<PULL>18</PULL>
+				<AGGRESSION>18</AGGRESSION>
+				<TURN_STONE>18</TURN_STONE>
+				<KNOCKBACK>13</KNOCKBACK>
+				<KNOCKDOWN>13</KNOCKDOWN>
+				<HOLD>13</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27668" toLevel="5" name="Maphr's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>22</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>19</SHOCK>
+				<PULL>19</PULL>
+				<AGGRESSION>19</AGGRESSION>
+				<TURN_STONE>19</TURN_STONE>
+				<KNOCKBACK>14</KNOCKBACK>
+				<KNOCKDOWN>14</KNOCKDOWN>
+				<HOLD>14</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27669" toLevel="6" name="Maphr's Ring">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>70</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CHA</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>LUC</stat>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>22</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>8</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>7</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>12</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<SHOCK>20</SHOCK>
+				<PULL>20</PULL>
+				<AGGRESSION>20</AGGRESSION>
+				<TURN_STONE>20</TURN_STONE>
+				<KNOCKBACK>15</KNOCKBACK>
+				<KNOCKDOWN>15</KNOCKDOWN>
+				<HOLD>15</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27670" toLevel="1" name="Lucky Box 1">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
