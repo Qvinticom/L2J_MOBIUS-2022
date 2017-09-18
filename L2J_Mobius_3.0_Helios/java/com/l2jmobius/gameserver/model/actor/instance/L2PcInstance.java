@@ -14011,20 +14011,19 @@ public final class L2PcInstance extends L2Playable
 	public void addFactionPoints(Faction faction, int count)
 	{
 		final int currentPoints = getVariables().getInt(faction.toString(), 0);
+		final String message;
 		if ((currentPoints + count) > faction.getPointsOfLevel(faction.getLevelCount() - 1))
 		{
 			getVariables().set(faction.toString(), faction.getPointsOfLevel(faction.getLevelCount() - 1));
-			final String message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction is at the highest level possible.";
-			sendPacket(new ExShowScreenMessage(message, 5000));
-			sendMessage(message);
+			message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction is at the highest level possible.";
 		}
 		else
 		{
 			getVariables().set(faction.toString(), currentPoints + count);
-			final String message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction was increased by " + count + " points.";
-			sendPacket(new ExShowScreenMessage(message, 5000));
-			sendMessage(message);
+			message = "Your reputation with the " + faction.toString().toLowerCase().replace("_", " ") + " faction was increased by " + count + " points.";
 		}
+		sendPacket(new ExShowScreenMessage(message, 5000));
+		sendMessage(message);
 	}
 	
 	@Override
