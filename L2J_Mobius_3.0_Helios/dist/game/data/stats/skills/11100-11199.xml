@@ -3028,7 +3028,7 @@
 		</effects>
 	</skill>
 	<skill id="11176" toLevel="4" name="Superior Wizardry">
-		<!-- M. Skill cooldown - 5%. -->
+		<!-- Player’s M. Atk increases by 5%, maximum MP, MP recovery speed +5%, and magic skill cooldown time decreases by 10%. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3038,13 +3038,35 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="Reuse">
+			<effect name="MAtk">
 				<amount>
-					<value level="1">-5</value>
-					<value level="2">-6</value>
-					<value level="3">-7</value>
-					<value level="4">-10</value>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
 				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">7</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>1</magicType>
 			</effect>

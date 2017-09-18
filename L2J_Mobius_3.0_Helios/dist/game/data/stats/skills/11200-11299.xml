@@ -68,8 +68,8 @@
 		</effects>
 	</skill>
 	<skill id="11225" toLevel="7" name="Physical Soul Barrier">
-		<!-- Updated to IO -->
-		<!-- For 20 sec., P. Def. + 5000. -->
+		<!-- Updated to HELIOS -->
+		<!-- Player’s P. Def increases by 100%, bow/crossbow resistance +25% for 20 seconds, and receiving critical damage decreases by 25%.  -->
 		<icon>icon.skill11869</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -97,26 +97,28 @@
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">5000</value>
-					<value level="2">5300</value>
-					<value level="3">5600</value>
-					<value level="4">6000</value>
-					<value level="5">6400</value>
-					<value level="6">6800</value>
-					<value level="7">7300</value>
+					<value level="1">100</value>
+					<value level="2">105</value>
+					<value level="3">110</value>
+					<value level="4">120</value>
+					<value level="5">130</value>
+					<value level="6">140</value>
+					<value level="7">150</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2030">{2 * subIndex}</value>
-				</amount>
-				<mode>DIFF</mode>
+			<effect name="DefenceCriticalDamage">
+				<amount>25</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait">
+				<BOW>25</BOW>
+				<CROSSBOW>25</CROSSBOW>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="11226" toLevel="4" name="Superior Wizardry">
-		<!-- M. Critical Rate + 5% and PvP damage + 5%. -->
+		<!-- MAtk/M. Critical Rate + 5% and PvP damage + 10%. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -126,7 +128,7 @@
 		</magicLvl>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="PvpMagicalSkillDamageBonus">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">5</value>
 					<value level="2">6</value>
@@ -142,6 +144,10 @@
 					<value level="3">7</value>
 					<value level="4">10</value>
 				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1183,7 +1189,7 @@
 		</effects>
 	</skill>
 	<skill id="11263" toLevel="10" name="Invoke">
-		<!-- Updated to IO -->
+		<!-- Updated to HELIOS -->
 		<!-- Glory Days confirmed -->
 		<!-- Calls forth the fist of a Giant from the outer world to inflict powerful damage on target and nearby enemies with 147 power. -->
 		<icon>icon.skill11263</icon>
@@ -1219,7 +1225,7 @@
 		</castRange>
 		<hitTime>2560</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>15000</reuseDelay>
+		<reuseDelay>10000</reuseDelay>
 		<effectPoint>
 			<value level="1">-700</value>
 			<value level="2">-704</value>

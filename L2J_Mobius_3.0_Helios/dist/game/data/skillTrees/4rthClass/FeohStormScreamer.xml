@@ -45,7 +45,9 @@
 			<removeSkill id="481" /> <!-- Dark Armor -->
 			<removeSkill id="1442" /> <!-- Darkness Protection -->
 		</skill>
-		<skill skillName="Superior Wizardry" skillId="11125" skillLvl="1" getLevel="85" levelUpSp="10000" />
+		<skill skillName="Superior Wizardry" skillId="11125" skillLvl="1" getLevel="85" levelUpSp="10000">
+			<removeSkill id="337" /> <!-- Arcane Power -->
+		</skill>
 		<skill skillName="Superior Wizard Mastery" skillId="11005" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="228" /> <!-- Fast Spell Casting -->
 			<removeSkill id="285" /> <!-- Higher Mana Gain -->
