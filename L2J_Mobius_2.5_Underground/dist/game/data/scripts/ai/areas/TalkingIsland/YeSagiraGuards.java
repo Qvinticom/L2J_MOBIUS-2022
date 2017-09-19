@@ -48,7 +48,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 		{
 			L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 1000, monster ->
 			{
-				if (monster.isScriptValue(0)) // not retail - but looks better
+				if ((monster != null) && monster.isScriptValue(0)) // not retail - but looks better
 				{
 					monster.setScriptValue(1);
 					npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack

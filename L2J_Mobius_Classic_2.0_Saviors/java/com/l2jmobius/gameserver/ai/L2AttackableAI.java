@@ -1079,8 +1079,13 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 	@Override
 	protected void onEvtThink()
 	{
-		// Check if the actor can't use skills and if a thinking action isn't already in progress
-		if (_thinking || getActiveChar().isAllSkillsDisabled())
+		// Check if the actor can't use skills
+		if (getActiveChar().isAllSkillsDisabled())
+		{
+			return;
+		}
+		// Check if a thinking action isn't already in progress
+		if (_thinking)
 		{
 			return;
 		}
@@ -1112,13 +1117,11 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, this + " -  onEvtThink() failed", e);
+			LOGGER.log(Level.WARNING, this + " - " + getIntention().toString() + " - onEvtThink() failed", e);
 		}
-		finally
-		{
-			// Stop thinking action
-			_thinking = false;
-		}
+		
+		// Finish thinking action
+		_thinking = false;
 	}
 	
 	/**
